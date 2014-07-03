@@ -33,15 +33,15 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/" {% ifequal path "/index.html" %}
+            <li{% ifequal path "/index.html" %}
                    class="active"
-                   {% endifequal %}>Home</a></li>
-            <li><a href="/about" {% ifequal path "/about.html" %}
+                   {% endifequal %}><a href="/">Home</a></li>
+            <li{% ifequal path "/about.html" %}
                    class="active"
-                   {% endifequal %}>About</a></li>
-            <li><a href="/contact" {% ifequal path "/contact.html" %}
+                   {% endifequal %}><a href="/about">About</a></li>
+            <li{% ifequal path "/contact.html" %}
                    class="active"
-                   {% endifequal %}>Contact</a></li>
+                   {% endifequal %}><a href="/contact">Contact</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">More... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -54,9 +54,9 @@
                 <li><a href="/clients">Clients</a></li>
                 <li><a href="/essays">Essays</a></li>
               </ul>
-              <li><a href="/powered-by"{% ifequal path "/powered-by.html" %}
+              <li{% ifequal path "/powered-by.html" %}
                      class="active"
-                     {% endifequal %}> by the Apache CMS!</a></li>
+                     {% endifequal %}><a href="/powered-by"> by the Apache CMS!</a></li>
             </li>
           </ul>
         </div><!--/.nav-collapse -->
