@@ -9,7 +9,7 @@ our @patterns = (
         nest       => 1,
         quick_deps => 1,
     }],
-    [qr/\.md(?:text)?$/,  single_narrative => { template => "main.html" }],
+    [qr/\.md(?:text)?$/,  single_narrative => { template => "main.html", preprocess => 1 }],
 );
 
 our %dependencies;
