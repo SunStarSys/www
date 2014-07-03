@@ -8,4 +8,4 @@ years serving a variety of clients, from Property Management Corporations to
 
 We specialize in providing full-service System Administration needs
 from a hands-on leadership and development standpoint.  Let us bring our knowledge
-and experience to you, to better service your enterprise infrastructure needs.
+and experience to you, to better serve your enterprise infrastructure needs.
