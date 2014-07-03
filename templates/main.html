@@ -1,8 +1,11 @@
 <html>
   <head>
     <title>{% block title %}{{ conf.title }} - {{ headers.title }}{% endblock %}</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap-theme.min.css" />
   </head>
   <body>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
     <div>{% block content %}{{ content|markdown }}{% endblock %}</div>
   </body>
 </html>
