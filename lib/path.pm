@@ -12,6 +12,11 @@ our @patterns = (
         quick_deps => 1,
         conf       => $conf,
     }],
+    [qr!/index\.html$!, sitemap => {
+        headers    => {title => "Index"},
+        quick_deps => 1,
+        conf       => $conf,
+    }],
     [qr/\.md(?:text)?$/,  single_narrative => {
         template   => "main.html",
         preprocess => 1,
@@ -24,6 +29,12 @@ our %dependencies;
 walk_content_tree {
     if (/\.md(?:text)?$/ or m!/index\.html$!) {
         push @{$dependencies{"/sitemap.html"}}, $_;
+    }
+    if (s!/index\.html$!!) {
+        $dependencies{"$_/index.html"} = [
+            grep s/^content//, glob("content$_/*.{md,mdtext}"),
+                               glob("content$_/*/index.html")
+        ];
     }
 };
 
