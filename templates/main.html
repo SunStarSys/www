@@ -62,6 +62,7 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
+        <h1>{{ headers.title }}</h1>
         {% block content %}{{ content|markdown }}{% endblock %}
       </div>
 
