@@ -18,7 +18,7 @@ walk_content_tree {
     if (/\.md(?:text)?$/ or m!/index\.html$!) {
         push @{$dependencies{"/sitemap.html"}}, $_;
     }
-}
+};
 
 
 1;
