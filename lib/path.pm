@@ -22,6 +22,11 @@ our @patterns = (
         preprocess => 1,
         conf       => $conf,
     }],
+    [qr!^/clients/.*\.md(?:text)?$!,  single_narrative => {
+        template   => "client.html",
+        preprocess => 1,
+        conf       => $conf,
+    }],
     [qr/\.md(?:text)?$/,  single_narrative => {
         template   => "main.html",
         preprocess => 1,
