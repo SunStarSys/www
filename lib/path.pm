@@ -17,6 +17,11 @@ our @patterns = (
         quick_deps => 1,
         conf       => $conf,
     }],
+    [qr!^/essays/.*\.md(?:text)?$!,  single_narrative => {
+        template   => "essay.html",
+        preprocess => 1,
+        conf       => $conf,
+    }],
     [qr/\.md(?:text)?$/,  single_narrative => {
         template   => "main.html",
         preprocess => 1,
