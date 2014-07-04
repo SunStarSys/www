@@ -62,12 +62,12 @@
                      {% endifequal %}><a href="/powered-by">Powered by...</a></li>
             </li>
           </ul>
-           {{ breadcrumbs|safe }}
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
     <div class="container theme-showcase" role="main">
+      <div style="text-align:right; width: 100%">{{ breadcrumbs|safe }}</div>
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       {% block content %}
