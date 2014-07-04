@@ -18,5 +18,5 @@ derived from or originated at [The Apache Software Foundation](http://www.apache
 
 - [at](https://github.com/joesuf4/at) - TAP-Compliant C unit test framework.
 
-- svnpubsub - Distributed commit hooks for subversion.
+- [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) - Distributed commit hooks for subversion.
 
