@@ -8,17 +8,15 @@ derived from or originated at [The Apache Software Foundation](http://www.apache
 
 #### List of Projects we've been involved with, in whole or in part:
 
-- [mod_perl](http://perl.apache.org/)
+- [mod_perl](http://perl.apache.org/) - Embedded perl interpreter inside httpd.
 
-- [libapreq](http://httpd.apache.org/apreq/)
+- [libapreq](http://httpd.apache.org/apreq/) - Safe/Fast form-data and cookie parsing library.
 
-- [Apache CMS](http://www.apache.org/dev/cms)
+- [Apache CMS](http://www.apache.org/dev/cms) - CMS serving over 100 Apache projects.
 
-- qpsmtpd
+- orthrus - OTP security application; drop in replacement for OPIE.
 
-- orthrus
+- [at](https://github.com/joesuf4/at) - TAP-Compliant C unit test framework.
 
-- [at](https://github.com/joesuf4/at)
-
-- svnpubsub
+- svnpubsub - Distributed commit hooks for subversion.
 
