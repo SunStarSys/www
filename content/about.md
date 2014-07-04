@@ -4,7 +4,7 @@ Title: About SunStar Systems
 img { width: 200px; style:inline }
 </style>
 
-![Fiona and I](/images/fiona-and-i.jpg)
+![Fiona and I](images/fiona-and-i.jpg)
 
 SunStar Systems, Inc. is the consulting and contracting vehicle (S-Corp.) for
 engagements with [Joe Schaefer](https://www.linkedin.com/pub/joe-schaefer/0/702/51b).
