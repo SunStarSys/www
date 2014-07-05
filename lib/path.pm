@@ -17,7 +17,7 @@ our @patterns = (
         quick_deps => 1,
         conf       => $conf,
     }],
-    [qr!^/(essay|client)s/.*\.md(?:text)?$!,  set_template => {
+    [qr!^/(essay|client)s/.*\.md(?:text)?$!,  set_template_from_capture => {
         view => "single_narrative",
         preprocess => 1,
         conf       => $conf,
