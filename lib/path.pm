@@ -3,7 +3,7 @@ use ASF::Util qw/walk_content_tree Load/;
 use strict;
 use warnings;
 
-my $conf = Load(join "", <DATA>);
+my $conf = Load join "", <DATA>;
 
 our @patterns = (
     [qr!^/sitemap\.html$!, sitemap => {
