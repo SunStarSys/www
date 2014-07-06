@@ -1,6 +1,6 @@
 Title: Contact Us
 
-<table>
+<table style="width: 100%">
 <tr><td style="width: 50%">
 {% filter markdown %}
 
