@@ -9,5 +9,4 @@ sub set_template_from_capture {
     return view->can($view)->(%args);
 }
 
-
 1;
