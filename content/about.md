@@ -1,9 +1,5 @@
 Title: About SunStar Systems
 
-<style type="text/css">
-div.jumbotron img { width: 200px; }
-</style>
-
 ![Fiona and I](images/fiona-and-i.jpg)
 
 SunStar Systems, Inc. is the consulting and contracting vehicle (S-Corp.) for
