@@ -41,7 +41,7 @@ walk_content_tree {
                                glob("content$_/*/index.html"))
         ];
         push @{$dependencies{"$_/index.html"}}, grep s/^content// && !m!/index\.html$!,
-            glob("content$_/*") if m!/files$!;
+            glob("content$_/*") if m!/files\b!;
     }
 };
 
