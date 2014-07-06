@@ -1,6 +1,6 @@
 Title: Contact Us
 
-<div style="width: 50%; float: left">
+<div style="width: 50%; float: top">
 {% filter markdown %}
 
 ![SunStar Systems](/images/sunstarlogowhole.png)
@@ -21,8 +21,9 @@ Title: Contact Us
     +1-954-727-5386 (business land line) 
 
 {% endfilter %}
+
 </div>
-<div style="width: 50%; float: right">
+<div style="width: 50%; float: top">
 
 {% filter markdown %}
 
