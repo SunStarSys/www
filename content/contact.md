@@ -1,7 +1,7 @@
 Title: Contact Us
 
-<div style="width: 50%">
-
+<table>
+<tr><td>
 {% filter markdown %}
 
 ![SunStar Systems](/images/sunstarlogowhole.png)
@@ -23,7 +23,7 @@ Title: Contact Us
 
 {% endfilter %}
 
-</div><div style="width: 50%; float: left">
+</td><td>
 
 {% filter markdown %}
 
@@ -37,4 +37,4 @@ Title: Contact Us
 
 {% endfilter %}
 
-</div>
+</td></tr></table>
