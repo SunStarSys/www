@@ -1,5 +1,6 @@
 package view;
 use base 'ASF::View';
+
 sub set_template_from_capture {
     my %args = @_;
     $args{template} = "$1.html";
