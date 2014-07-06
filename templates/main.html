@@ -30,7 +30,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand">SunStar
+          <a class="navbar-brand"><img src="/images/sunstarlogostar.png" style="width:100px"/>
+SunStar
           Systems, Inc.</a>
         </div>
         <div class="navbar-collapse collapse">
@@ -72,9 +73,8 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       {% block content %}
-      <div class="page-header"><div style="float:top;text-align:right; padding-top:
+      <div class="page-header"><div style="text-align:right; padding-top:
       10px">{{ breadcrumbs|safe }}</div>
-      <img src="/images/sunstarlogowhole.png" style="width:200px"/>
         <h1>{{ headers.title }}</h1></div>
       <div class="jumbotron">{{ content|markdown }}</div>
       {% endblock %}
