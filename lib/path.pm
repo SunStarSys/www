@@ -32,7 +32,7 @@ our @patterns = (
 our %dependencies;
 
 walk_content_tree {
-    if (/\.md(?:text)?$/ or m!/index\.html$!) {
+    if (/\.md(?:text)?$/ or m!/index\.html$! or m!/files/!) {
         push @{$dependencies{"/sitemap.html"}}, $_;
     }
     if (s!/index\.html$!!) {
@@ -40,6 +40,8 @@ walk_content_tree {
             grep s/^content//, glob("content$_/*.{md,mdtext}"),
                                glob("content$_/*/index.html")
         ];
+        push @{$dependencies{"$_/index.html"}, grep s/^content//,
+                   glob "content$_/*" if m!/files$!;
     }
 };
 
