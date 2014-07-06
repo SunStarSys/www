@@ -1,8 +1,8 @@
 Title: Mailing Lists
 
-## ezmlm
+## ezmlm-idx
 
-## BATV and SRS
+### BATV and SRS
 
-## DMARC
+### DMARC
 
