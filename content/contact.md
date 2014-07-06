@@ -1,10 +1,10 @@
 Title: Contact Us
 
+<table style="width: 100%">
+<tr><td style="width: 50%" valign="top">
+{% filter markdown %}
 ![SunStar Systems](/images/sunstarlogowhole.png)
 
-<table style="width: 100%">
-<tr><td style="width: 50%">
-{% filter markdown %}
 ### Email:
 
 - [Joe Schaefer](mailto:joe_schaefer@yahoo.com)
@@ -21,7 +21,7 @@ Title: Contact Us
     +1-954-727-5386 (business land line) 
 {% endfilter %}
 
-</td><td style="width: 50%">
+</td><td style="width: 50%" valign="top">
 
 {% filter markdown %}
 ### Twitter:
