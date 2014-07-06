@@ -1,7 +1,7 @@
 Title: About SunStar Systems
 
 <style type="text/css">
-img { width: 200px; }
+div.jumbotron img { width: 200px; }
 </style>
 
 ![Fiona and I](images/fiona-and-i.jpg)
