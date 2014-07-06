@@ -3,7 +3,6 @@ Title: Contact Us
 <table style="width: 100%">
 <tr><td style="width: 50%">
 {% filter markdown %}
-
 ![SunStar Systems](/images/sunstarlogowhole.png)
 
 ### Email:
