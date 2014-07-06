@@ -1,10 +1,10 @@
 Title: Contact Us
 
+![SunStar Systems](/images/sunstarlogowhole.png)
+
 <table style="width: 100%">
 <tr><td style="width: 50%">
 {% filter markdown %}
-![SunStar Systems](/images/sunstarlogowhole.png)
-
 ### Email:
 
 - [Joe Schaefer](mailto:joe_schaefer@yahoo.com)
@@ -19,21 +19,17 @@ Title: Contact Us
 
     +1-954-253-3732  (my cell)
     +1-954-727-5386 (business land line) 
-
 {% endfilter %}
 
 </td><td style="width: 50%">
 
 {% filter markdown %}
-
 ### Twitter:
 
 <center>
 <a class="twitter-timeline" href="https://twitter.com/joesuf" data-widget-id="484825803566235648">Tweets by @joesuf</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </center>
-
-
 {% endfilter %}
 
 </td></tr></table>
