@@ -1,5 +1,7 @@
 Title: Contact Us
 
+![SunStar Systems](/images/sunstarlogowhole.png)
+
 ### Email:
 
 * [Joe Schaefer](mailto:joe_schaefer@yahoo.com)
