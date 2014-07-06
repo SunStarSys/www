@@ -4,7 +4,7 @@ Title: Mailing Lists
 
 ### BATV and SRS
 
-See [sender_demunger](files/bin/sender_demunger)
+See [sender-demunger](files/bin/sender-demunger)
 
 
 ### DMARC
