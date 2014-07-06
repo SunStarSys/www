@@ -15,6 +15,7 @@ our @patterns = (
     [qr!/index\.html$!, sitemap => {
         headers    => {title => "Index"},
         quick_deps => 1,
+        nest       => 1,
         conf       => $conf,
     }],
     [qr!^/(essay|client)s/.*\.md(?:text)?$!,  set_template_from_capture => {
@@ -44,6 +45,9 @@ walk_content_tree {
             glob("content$_/*") if m!/files\b!;
     }
 };
+
+push @{$dependencies{"/essays/files/index.html"}}, grep -f && s/^content// && !m!/index\.html$!,
+    glob("content/essays/files/*/*");
 
 1;
 
