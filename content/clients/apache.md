@@ -40,7 +40,7 @@ Besides the routine chores facing every System Administrator, my other chief acc
 at The ASF was the creation of the `Apache CMS`.  The reasons and rationale behind it are
 [documented](http://www.apache.org/dev/cms), but it is important to note that this software
 was rapidly developed over a 3 month period before being pressed into production for the
-<www.apache.org> website.  It has achieved a popularity within The ASF beyond my wildest
+<http://www.apache.org/> website.  It has achieved a popularity within The ASF beyond my wildest
 expectations: over 100 projects currently rely on it for their website needs.  It downscales
 to small but intricate sites like [Apache Thrift](http://thrift.apache.org/), while also scaling
 up to meet the needs of a 9GB website like [OpenOffice.org](http://www.openoffice.org/).
