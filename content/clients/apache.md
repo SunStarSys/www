@@ -36,7 +36,7 @@ dropped the number of daily inbound spam connections **ten-fold**, down to aroun
 day, spead across two servers.  Spammers were simply **opting out** of sending messages to
 apache.org, which was the best anti-spam solution possible.
 
-Besides the routine chores facing every System Administrator, my other chief accomplishment
+Beyond the routine chores facing every System Administrator, my other chief accomplishment
 at The ASF was the creation of the `Apache CMS`.  The reasons and rationale behind it are
 [documented](http://www.apache.org/dev/cms), but it is important to note that this software
 was rapidly developed over a 3 month period before being pressed into production for the
