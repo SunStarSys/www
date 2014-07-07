@@ -33,7 +33,7 @@ started seeing measurable improvements.
 
 Over an 8 year span, the ecological impact of my earlytalker adjustments were clear: we had
 dropped the number of daily inbound spam connections **ten-fold**, down to around 150K per
-day, spead across two servers.  Spammers were simply **opting out** of sending messages to
+day, spread across two servers.  Spammers were simply **opting out** of sending messages to
 apache.org, which was the best anti-spam solution possible.
 
 Beyond the routine chores facing every System Administrator, my other chief accomplishment
