@@ -40,3 +40,7 @@ was rapidly developed over a 3 month period before being pressed into production
 expectations: over 100 projects currently rely on it for their website needs.  It downscales
 to small but intricate sites like [Apache Thrift](http://thrift.apache.org/), while also scaling
 up to meet the needs of a 9GB website like [OpenOffice.org](http://www.openoffice.org/).
+
+I enjoyed the bulk of my time serving the needs of the Apache community, but after 8 years
+it was time for a change.  I will always look fondly on the many memories and friends I made
+while there, and wish Apache all the best going forward.
