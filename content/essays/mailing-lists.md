@@ -23,7 +23,7 @@ again on your lists, edit the `owner` file within your list directories.
 See [ezmlm-dmarc-filter](files/bin/ezmlm-dmarc-filter) and
 [ezmlm-seekable-stdin](files/bin/ezmlm-seekable-stdin) and
 [pull_header](files/lib/pull_header.pm).  To use these scripts,
-change the lines in your '&lt;owner$gt;' section of `.ezmlmrc` that
+change the lines in your '&lt;owner&gt;' section of `.ezmlmrc` that
 call `ezmlm-gate` or `ezmlm-store` to look like the following:
 
     |/path/to/bin/ezmlm-dmarc-filter '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin /path/to/bin/sender-demunger <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
