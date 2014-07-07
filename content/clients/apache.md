@@ -31,3 +31,12 @@ Over an 8 year span, the ecological impact of my earlytalker adjustments were cl
 dropped the number of daily inbound spam connections **ten-fold**, down to around 150K per
 day, spead across two servers.  Spammers were simply **opting out** of sending messages to
 apache.org, which was the best anti-spam solution possible.
+
+Besides the routine chores facing every System Administrator, my other chief accomplishment
+at Apache was the creation of the `Apache CMS`.  The reasons and rationale behind it are
+[documented](http://www.apache.org/dev/cms), but it is important to note that this software
+was rapidly developed over a 3 month period before being pressed into production for the
+`www.apache.org` website.  It has achieved a popularity within Apache beyond my wildest
+expectations: over 100 projects currently rely on it for their website needs.  It downscales
+to small but intricate sites like [Apache Thrift](http://thrift.apache.org/), while also scaling
+up to meet the needs of a 9GB website like [Apache Openoffice](http://www.openoffice.org/).
