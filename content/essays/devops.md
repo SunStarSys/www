@@ -13,3 +13,6 @@ all bottlenecks in the system, you can refocus your efforts on optimizing
 those resources to perform to maximum effect.  Optimizations beyond those
 areas are almost always not worth the bother- the workflow will still be
 constrained by those resources.
+
+It is also important to distinguish between planned and unplanned work,
+and how resources are allocated to those tasks.
