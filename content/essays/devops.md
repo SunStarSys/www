@@ -18,4 +18,6 @@ It is also important to distinguish between planned and unplanned work,
 and how resources are allocated to those tasks.  Unplanned work amounts
 to firefighting, and if too much time is spent on these tasks the planned
 work, which is the real business need for the enterprise, gets backlogged.
+The bottlenecks in the system rarely can cope with unplanned work, so it
+is important to have enough additional resources to cope with the load.
 
