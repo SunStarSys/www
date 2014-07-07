@@ -17,18 +17,18 @@ into an inbound mail server.
 provided.  That took care of the immediate concerns revolving around the crushing load on
 the service, but if the growth trends continued it would mean continual investments in more
 and better hardware and software, primarily to service all the spam connection growth. We
-even attempted an abortive effort to deploy `ecelerity`, which on Apple hardware wasn't quite
+even attempted an abortive effort to deploy `ecelerity`, which on Apple gear wasn't quite
 stable enough for us to migrate to in 2006.  `Ecelerity` (now known as `Momentum` from
 [Message Systems](http://www.messagesystems.com)) is a beautifully engineered piece of software,
 but ultimately overkill for the org.  Open source solutions were "good enough".
 
-Enter the second part of my approach: an attempt to dissuade spammers from hitting Apache's
+Enter the second part of my approach: an attempt to dissuade spammers from hitting The ASF's
 mail servers in the first place.  That involved patching `qpsmtpd`'s earlytalker plugin to
 run in the DATA phase, combined with ratcheting up the delay to 20 seconds- a high but
 tolerable amount for all RFC-compliant message delivery agents.  It was a delicate balance
 as the spam levels rose to 2 million then 2.5 million, because the `earlytalker` delay
 increased concurrency levels 3-4 times above "normal" levels and the spam continued to grow.
-We were pushing `httpd`'s MaxClients settings during that period, but after a few months we
+We were pushing `httpd`'s `MaxClients` settings during that period, but after a few months we
 started seeing measurable improvements.
 
 Over an 8 year span, the ecological impact of my earlytalker adjustments were clear: we had
@@ -37,10 +37,10 @@ day, spead across two servers.  Spammers were simply **opting out** of sending m
 apache.org, which was the best anti-spam solution possible.
 
 Besides the routine chores facing every System Administrator, my other chief accomplishment
-at Apache was the creation of the `Apache CMS`.  The reasons and rationale behind it are
+at The ASF was the creation of the `Apache CMS`.  The reasons and rationale behind it are
 [documented](http://www.apache.org/dev/cms), but it is important to note that this software
 was rapidly developed over a 3 month period before being pressed into production for the
-`www.apache.org` website.  It has achieved a popularity within Apache beyond my wildest
+<www.apache.org> website.  It has achieved a popularity within The ASF beyond my wildest
 expectations: over 100 projects currently rely on it for their website needs.  It downscales
 to small but intricate sites like [Apache Thrift](http://thrift.apache.org/), while also scaling
 up to meet the needs of a 9GB website like [OpenOffice.org](http://www.openoffice.org/).
