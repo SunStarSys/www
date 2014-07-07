@@ -1,4 +1,4 @@
-Title: Git and Non-Repudiation
+Title: Git and Non Repudiation
 
 This essay really pertains to DVCS in general, not just git per se.  But I will focus
 attention on git because it remains the most popular DVCS around today.
