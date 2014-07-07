@@ -1,7 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
-<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;<a href="javascript:location.href='https://www.sunstarsys.com/redirect?uri='+escape(http://www.sunstarsys.com{{
-      path }})"><img src="/images/edit.png" /></a></div>
+<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;<a href="javascript:void(location.href='https://www.sunstarsys.com/redirect?uri='+escape(http://www.sunstarsys.com{{
+      path }}))"><img src="/images/edit.png" /></a></div>
   <h1>{{ headers.title }}</h1></div>
 <div class="jumbotron">
 {% filter markdown %}
