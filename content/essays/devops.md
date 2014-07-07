@@ -23,6 +23,6 @@ is important to have enough additional resources to cope with the load.
 
 At the management level, a global change management perspective between 
 both devs and ops changes is vital. Both sets of teams need to be aware
-of each other's changes, preferably with planning details made available
+of each other's changes, ideally with planning details made available
 along the way.
 
