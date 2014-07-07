@@ -10,7 +10,7 @@ When I started working at Apache in 2006 the most pressing issue was the overloa
 mail services.  The organization was drowning in spam, and at 1.5 million inbound connections
 per day it was exceeding the org's outbound delivery and overwhelming the software.  My first
 task was to resolve this situation, so what I came up with was a two-fold approach: first
-upgrade `qpsmtpd` to `Apache::Qpsmtpd`, the mod_perl experimental variant that converts `httpd`
+upgrade `qpsmtpd` to `Apache::Qpsmtpd`, the `mod_perl` experimental variant that converts `httpd`
 into an inbound mail server.
 
 `Apache::Qpsmtpd` needed a few patches to make it suitable for enterprise service, which I
