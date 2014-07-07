@@ -16,7 +16,11 @@ into an inbound mail server.
 `Apache::Qpsmtpd` needed a few patches to make it suitable for enterprise service, which I
 provided.  That took care of the immediate concerns revolving around the crushing load on
 the service, but if the growth trends continued it would mean continual investments in more
-and better hardware and software, primarily to service all the spam connection growth.
+and better hardware and software, primarily to service all the spam connection growth. We
+even attempted an abortive effort to deploy `ecelerity`, which on Apple hardware wasn't quite
+stable enough for us to migrate to in 2006.  `Ecelerity` (now known as `Momentum` from
+[Message Systems](http://www.messagesystems.com) is a beautifully engineered piece of software,
+but ultimately overkill for the org.  Open source solutions were "good enough".
 
 Enter the second part of my approach: an attempt to dissuade spammers from hitting Apache's
 mail servers in the first place.  That involved patching `qpsmtpd`'s earlytalker plugin to
