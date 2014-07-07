@@ -39,4 +39,4 @@ was rapidly developed over a 3 month period before being pressed into production
 `www.apache.org` website.  It has achieved a popularity within Apache beyond my wildest
 expectations: over 100 projects currently rely on it for their website needs.  It downscales
 to small but intricate sites like [Apache Thrift](http://thrift.apache.org/), while also scaling
-up to meet the needs of a 9GB website like [Apache Openoffice](http://www.openoffice.org/).
+up to meet the needs of a 9GB website like [OpenOffice.org](http://www.openoffice.org/).
