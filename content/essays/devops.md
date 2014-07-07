@@ -5,5 +5,11 @@ Title: The DevOps "Movement"
 The big idea behind the "movement" is not giving developers more rope; it's
 about ensuring better lines of communications between the developers and
 the sysadmins in the enterprise.  Much of this is not new, in fact its a
-rehash of the "agile" movement within traditional supply chains during the
-80s.  Kanban boards are just the latest wave.
+rehash of the "agile" movement within traditional industrial supply chains
+during the 80s.  Kanban boards are just the latest wave.
+
+Constraint management is key to the process.  By first identifying any and
+all bottlenecks in the system, you can refocus your efforts on optimizing
+those resources to perform to maximum effect.  Optimizations beyond those
+areas are almost always not worth the bother- the workflow will still be
+constrained by those resources.
