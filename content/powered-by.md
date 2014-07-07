@@ -1,4 +1,4 @@
-Title: Powered by The Apache CMS!
+Title: Powered by ...
 
 ### Site technologies
 
