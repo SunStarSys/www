@@ -28,7 +28,8 @@ to The ASF's git repo.
 Why is this important?  Well for starters let me address a common misconception about the
 need for Contributor License Agreements (ICLAs) for Apache committers.  Many people don't
 seem to understand that as far as a committer's individual works of authorship, there is
-no difference between the applicable language in the ICLA and the Apache License 2.0.
+no difference between the applicable language in the [ICLA](http://www.apache.org/licenses/icla.txt)
+and the [Apache License 2.0](http://www.apache.org/licenses/license-2.0).
 The distinction lies in the fact that the org needs a contractual agreement between committers
 and The ASF to handle the proper process for dealing with third-party contributions.
 It is these forms of contributions that necessitate the ICLA, not some bizarre 
