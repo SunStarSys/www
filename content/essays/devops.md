@@ -15,4 +15,7 @@ areas are almost always not worth the bother- the workflow will still be
 constrained by those resources.
 
 It is also important to distinguish between planned and unplanned work,
-and how resources are allocated to those tasks.
+and how resources are allocated to those tasks.  Unplanned work amounts
+to firefighting, and if too much time is spent on these tasks the planned
+work, which is the real business need for the enterprise, gets backlogged.
+
