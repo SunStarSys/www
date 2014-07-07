@@ -21,7 +21,7 @@ is here that the push records come into play.
 
 With [The Apache Software Foundation](http://www.apache.org/)'s rollout of git, we baked into
 the system a way of recording those push records in a way that brings parallel levels of
-non repudiatable records that the org enjoyed with its longstanding subversion service.
+non repudiatable records that the org enjoys with its longstanding subversion service.
 For the system to work properly, it is imperative that committers push their changes directly
 to The ASF's git repo.
 
