@@ -26,7 +26,7 @@ Enter the second part of my approach: an attempt to dissuade spammers from hitti
 mail servers in the first place.  That involved patching `qpsmtpd`'s earlytalker plugin to
 run in the DATA phase, combined with ratcheting up the delay to 20 seconds- a high but
 tolerable amount for all RFC-compliant message delivery agents.  It was a delicate balance
-as the spam levels rose to 2 million then 2.5 million, because the `earlytalker` delay
+as the spam levels rose to 2 million then 2.5 million per day, because the `earlytalker` delay
 increased concurrency levels 3-4 times above "normal" levels and the spam continued to grow.
 We were pushing `httpd`'s `MaxClients` settings during that period, but after a few months we
 started seeing measurable improvements.
