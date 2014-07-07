@@ -7,7 +7,7 @@ Title: Contact Us
 
 ### Email:
 
-- [Joe Schaefer](mailto:joe_schaefer@yahoo.com)
+- [Joe Schaefer](mailto:joe_schaefer@yahoo.com), Owner
 
 ### Postal Address:
 
