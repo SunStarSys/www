@@ -15,9 +15,9 @@ is responsible for uploading each line of code to the software in question.
 
 With git, or distributed version control in general, there is a clear distinction between
 the "commit" history and the "upload" history- which I will hereto refer to as "push records".
-Commits in git are not authenticated, because they happen locally, with local metadata added
-to the history.  The upload step, aka `git push` is a separate step, and it is here that
-the push records come into play.
+Commits in git are not authenticated, because they happen locally, with local, unverified
+metadata added to the history.  The upload step, aka `git push` is a separate step, and it 
+is here that the push records come into play.
 
 With [The Apache Software Foundation](http://www.apache.org/)'s rollout of git, we baked into
 the system a way of recording those push records in a way that brings parallel levels of
