@@ -26,4 +26,4 @@ both devs and ops changes is vital. Both sets of teams need to be aware
 of each other's changes, ideally with planning details made available
 along the way.
 
-$Date:$
+$Date$
