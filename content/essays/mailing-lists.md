@@ -18,13 +18,14 @@ add it as a prefix to all of the lines in your `</editor/>` block within `.ezmlm
 run `ezmlm-make -+` on your lists, or in a pinch assuming you will not run `ezmlm-make`
 again on your lists, edit the `editor` file within your list directories.
 
-`BATV` and `SRS` pose unique problems for `ezmlm-idx` because unlike other mailing list
-software it operates on the `MAIL FROM` portion of the `SMTP` envelope, not the "From"
-address in the message headers.  Both specifications revolve around providing temporary
-addresses to the `MAIL FROM` envelope portion, which embed the original address in an
-easily decipherable way.  But these temporary addresses are anathema to `ezmlm-idx`'s
-subscription and moderation systems, and the `sender-demunger` script mentioned above
-will fix that once deployed.
+[`BATV`](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) and 
+[`SRS`](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) pose unique problems
+for `ezmlm-idx` because unlike other mailing list software it operates on the 
+`MAIL FROM` portion of the `SMTP` envelope, not the "From" address in the message headers.
+Both specifications revolve around providing temporary addresses to the `MAIL FROM`
+envelope portion, which embed the original address in an easily decipherable way.  But
+these temporary addresses are anathema to `ezmlm-idx`'s subscription and moderation systems,
+and the `sender-demunger` script mentioned above will fix that once deployed.
 
 ### DMARC
 
