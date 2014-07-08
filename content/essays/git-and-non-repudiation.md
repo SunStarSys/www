@@ -39,9 +39,9 @@ What push records provide then is a way of tracing back, to each line of code in
 the individual committer responsible for pushing that code to The ASF's git repository.
 This is critically important in determining provenance of a third-party contribution with git,
 because it is unfortunately possible for such a contributor to "walk away" from his contribution
-to a git project because of the nature of DVCS commit logs.  The responsible party then,
-according to the ICLA, becomes the committer who pushed the code.  Without such things we'd need
-to mandate at least PGP-signing of each contributor's commit, which is onerous for many
+to a git project because of the distributed nature of DVCS commit logs.  The responsible party
+then, according to the ICLA, becomes the committer who pushed the code.  Without such things
+we'd need to mandate at least PGP-signing of each contributor's commit, which is onerous for many
 projects.  This is a transparent process that does not impact a project's workflow, other
 than to ensure The ASF's git repo is the true master repo.
 
