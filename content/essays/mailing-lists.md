@@ -42,3 +42,5 @@ to that file:
 
 The only list configurations that run afoul of DMARC are those with `-f`, `-t` or `-x` set.
 The above configuration will adjust for that.
+
+$Date$
