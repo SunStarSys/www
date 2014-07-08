@@ -15,9 +15,10 @@ are comfortable adjusting the paths in the scripts yourself.
 
 [bin/sender-demunger](files/bin/sender-demunger) is a little wrapper script that
 enables `BATV` and `SRS` `SENDER` demunging for `ezmlm-idx`.  To use it you simply
-add it as a prefix to all of the lines in your `</editor/>` block within `.ezmlmrc` and
-run `ezmlm-make -+` on your lists, or in a pinch assuming you will not run `ezmlm-make`
-again on your lists, edit the `editor` file within your list directories.
+add it as a prefix to all of the lines in your `</editor/>` and `</manager/>` blocks within
+`.ezmlmrc` and run `ezmlm-make -+` on your lists, or in a pinch assuming you will not 
+run `ezmlm-make` again on your lists, edit the `editor` and `manager` files within
+your list directories.
 
 [BATV](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) and 
 [SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) pose unique problems
