@@ -7,7 +7,7 @@ Title: Contact Us
 
 ### Email:
 
-- [Joe Schaefer](mailto:joe_schaefer@yahoo.com), Owner
+- [Joe Schaefer](mailto:joe@sunstarsys.com), Owner
 
 ### Postal Address:
 
