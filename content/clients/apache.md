@@ -32,9 +32,9 @@ increased concurrency levels 4-5 times above "normal" levels and the spam contin
 We were pushing `httpd`'s `MaxClients` settings during that period, but after a few months we
 started seeing measurable improvements.  Normally `earlytalker` runs before the banner is
 delivered, which is suboptimal when your primary plugin for dealing with spammers revolves
-around dns blacklists.  Running `earlytalker` as late as possible meant that other, faster-
-acting, anti-spam plugins could drop the connection as soon as possible, before the delays
-started kicking in and tieing up `httpd` kids.
+around dns blacklists.  Running `earlytalker` as late as possible meant that other, 
+faster-acting, anti-spam plugins could drop the connection as soon as possible, before the
+delays started kicking in and tieing up `httpd` kids.
 
 Over an 8 year span, the ecological impact of my `earlytalker` adjustments were clear: we had
 dropped the number of daily inbound spam connections **ten-fold**, down to around 150K per
