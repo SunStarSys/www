@@ -2,7 +2,8 @@ Title: Mailing Lists
 
 ## ezmlm-idx
 
-My experience with mailing list software revolves around `qmail` and `ezmlm-idx`.
+My experience with mailing list software revolves around [qmail](http://cr.yp.to/qmail.html)
+and [ezmlm-idx](http://untroubled.org/ezmlm/).
 With a few small scripts, I was able to support a wide variety of new use cases
 not inherently supported by `ezmlm-idx` itself.  The features that are generically
 useful outside of [The Apache Software Foundation](http://www.apache.org) are
