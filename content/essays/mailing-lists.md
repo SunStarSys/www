@@ -55,7 +55,8 @@ The above configuration will adjust for that.
 
 In case you haven't kept up with the times, there is a recent movement afoot to introduce
 strong [DMARC](http://en.wikipedia.org/wiki/DMARC) policies that reject messages which
-fail `DKIM-Signature` tests.  Facebook, Twitter, LinkedIn and Yahoo! have been leading this
+fail [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) signature tests.
+Facebook, Twitter, LinkedIn and Yahoo! have been leading this
 charge into new territory, forcing mailing list operators to deal with the situation.
 What the `ezmlm-dmarc-filter` does, and this isn't the only possible solution to the problem,
 is drop the `DKIM-Signature` header for any such domain, and add an `.INVALID` suffix to the
