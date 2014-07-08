@@ -4,6 +4,9 @@ Title: Home
 
 Welcome to the new site!  Content is evolving rapidly, so check back often!
 
+**NEWS** We are pleased to announce our availability for taking on new business at this time.
+Interested parties please see our [Contact Page](/contact) to get in touch.
+
 ## Featured pages
 
 - [The Apache Software Foundation](/clients/apache) - long farewell to a great org!
