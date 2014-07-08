@@ -49,7 +49,7 @@ to that file:
     </dmarc#t/>
     </dmarc#x/>
 
-The only list configurations that run afoul of DMARC are those with `-f`, `-t` or `-x` set.
+The only list configurations that run afoul of `DMARC` are those with `-f`, `-t` or `-x` set.
 The above configuration will adjust for that.
 
 In case you haven't kept up with the times, there is a recent movement afoot to introduce
