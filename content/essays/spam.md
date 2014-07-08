@@ -1,16 +1,16 @@
 Title: On the Spam Problem...
 
 As I wrote about [elsewhere](/clients/apache), one of the best open source tools
-available to a mail adminstrator's arsenal of anti-spam tools is `qpsmtpd`, which
-is merely a frontend inbound mail server which needs a fully-functional mail server
-like `qmail` or `postfix` for outbound delivery.  What `qpsmtpd` does is very similar to
-what `httpd` did for webservers: it introduces customizable hooks into each phase of
-the SMTP session.
+available to a mail adminstrator's arsenal of anti-spam tools is
+[qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), which is merely a frontend inbound mail
+server which needs a fully-functional mail server like `qmail`, `sendmail`, or `postfix`
+for outbound delivery.  What `qpsmtpd` does is very similar to what `httpd` did for
+webservers: it introduces customizable hooks into each phase of the `SMTP` session.
 
 The single best plugin for `qpsmtpd`, although it is difficult to understand why it is,
 is the `earlytalker` plugin.  What `earlytalker` does is put `qpsmtpd` to sleep for 
-a configurable amount of time, listening on the socket for non-RFC-compliant "early"
-communications coming from the other end of the socket (`qpsmtpd` typically forks a
+a configurable amount of time, listening on the socket (via `select(2)`) for non-RFC-compliant
+"early" communications coming from the other end of the socket (`qpsmtpd` typically forks a
 server for each inbound connection so it's only that kid process sleeping). If it sees any
 input on the connection it simply drops the connection after issuing an appropriate
 4xx or 5xx response, depending on the mail administrator's tastes.
@@ -20,14 +20,14 @@ mandatory delays for each mail connection, which as it turns out hits most spamm
 where they can measure it, in terms of tying up their mail delivery agent from dealing
 with the rest of their queue.  It is important to realize that spammers are running
 a business, many of whom have no direct interest in the contents of what they deliver.
-They are paid for managing a sophisticated, and often illegal, network of sending
-agents, and will provide delivery services for any client with the cash to cover it
+They are paid for managing a sophisticated, and typically illegal, (zombie) network of sending
+agents, and will provide delivery services for any client with the cash to cover its use
 plus profits.  Many of them make annual incomes well above mine or yours :-).
 
 There are more sophisticated approaches to be sure, like only delaying messages
 from "untrusted" senders, but you can go a lot farther than that if your server
 has that kind of knowledge available to it.  But in terms of bang for the buck,
 running `earlytalker` with a substantial delay of up to 30 seconds will drive
-spammers off your servers for good.
+spammers off your servers for good.  Promise.
 
 $Date$
