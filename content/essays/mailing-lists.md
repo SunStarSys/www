@@ -57,6 +57,8 @@ have been leading this charge into new territory, forcing mailing list operators
 What the `ezmlm-dmarc-filter` does, and this isn't the only possible solution to the problem, is drop
 the `DKIM-Signature` header for any such domain, and add an ".INVALID" suffix to the sender's "From"
 address.  It has the advantage of being one of the simplest solutions that works, so I'm offering it here.
-
+So far the domains that deploy strict `DMARC` policies all provide appropriate "Reply-To" headers,
+so these changes made by `ezmlm-dmarc-filter` will not impact the operation of any RFC-compliant
+reply emails sent to such messages.
 
 $Date$
