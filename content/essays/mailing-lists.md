@@ -52,14 +52,15 @@ to that file:
 The only list configurations that run afoul of DMARC are those with `-f`, `-t` or `-x` set.
 The above configuration will adjust for that.
 
-In case you haven't kept up with the times, there is a recent movement afoot to introduce strong
-`DMARC` policies that reject messages which fail DKIM-Signature tests.  Facebook, Twitter, LinkedIn and Yahoo!
-have been leading this charge into new territory, forcing mailing list operators to deal with the situation.
-What the `ezmlm-dmarc-filter` does, and this isn't the only possible solution to the problem, is drop
-the `DKIM-Signature` header for any such domain, and add an ".INVALID" suffix to the sender's "From"
-address.  It has the advantage of being one of the simplest solutions that works, so I'm offering it here.
-So far the domains that deploy strict `DMARC` policies all provide appropriate "Reply-To" headers,
-so these changes made by `ezmlm-dmarc-filter` will not impact the operation of any RFC-compliant
-email responses to such messages.
+In case you haven't kept up with the times, there is a recent movement afoot to introduce
+strong [`DMARC`](http://en.wikipedia.org/wiki/DMARC) policies that reject messages which
+fail `DKIM-Signature` tests.  Facebook, Twitter, LinkedIn and Yahoo! have been leading this
+charge into new territory, forcing mailing list operators to deal with the situation.
+What the `ezmlm-dmarc-filter` does, and this isn't the only possible solution to the problem,
+is drop the `DKIM-Signature` header for any such domain, and add an ".INVALID" suffix to the
+sender's "From" address.  It has the advantage of being one of the simplest solutions that
+works, so I'm offering it here.  So far the domains that deploy strict `DMARC` policies all
+provide appropriate "Reply-To" headers, so these changes made by `ezmlm-dmarc-filter` will
+not impact the operation of any RFC-compliant email responses to such messages.
 
 $Date$
