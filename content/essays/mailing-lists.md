@@ -12,7 +12,7 @@ are comfortable adjusting the paths in the scripts yourself.
 
 ### BATV and SRS
 
-[sender-demunger](files/bin/sender-demunger) is a little wrapper script that
+[bin/sender-demunger](files/bin/sender-demunger) is a little wrapper script that
 enables `BATV` and `SRS` `SENDER` demunging for `ezmlm-idx`.  To use it you simply
 add it as a prefix to all of the lines in your `</editor/>` block within `.ezmlmrc` and
 run `ezmlm-make -+` on your lists, or in a pinch assuming you will not run `ezmlm-make`
@@ -28,9 +28,9 @@ will fix that once deployed.
 
 ### DMARC
 
-See [ezmlm-dmarc-filter](files/bin/ezmlm-dmarc-filter) and
-[ezmlm-seekable-stdin](files/bin/ezmlm-seekable-stdin) and
-[pull_header.pm](files/lib/pull_header.pm).  To use these scripts,
+See [bin/ezmlm-dmarc-filter](files/bin/ezmlm-dmarc-filter) and
+[bin/ezmlm-seekable-stdin](files/bin/ezmlm-seekable-stdin) and
+[lib/pull_header.pm](files/lib/pull_header.pm).  To use these scripts,
 change the lines in your `</editor/>` section of `.ezmlmrc` that
 call `ezmlm-gate`, `ezmlm-store`, or `ezmlm-send`, to look like the following:
 
