@@ -41,3 +41,4 @@ Without such things we'd need to mandate at least PGP-signing of each contributo
 which is onerous for many projects.  This is a transparent process that does not impact
 a project's workflow, other than to ensure The ASF's git repo is the true master repo.
 
+$Date$
