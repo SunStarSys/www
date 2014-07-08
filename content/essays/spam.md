@@ -11,9 +11,9 @@ The single best plugin for `qpsmtpd`, although it is difficult to understand why
 is the `earlytalker` plugin.  What `earlytalker` does is put `qpsmtpd` to sleep for 
 a configurable amount of time, listening on the socket (via `select(2)`) for non-RFC-compliant
 "early" communications coming from the other end of the socket (`qpsmtpd` typically forks a
-server for each inbound connection so it's only that kid process sleeping). If it sees any
-input on the connection it simply drops the connection after issuing an appropriate
-4xx or 5xx response, depending on the mail administrator's tastes.
+server for each inbound connection so it's only that kid process sleeping in `select(2)`).
+If it sees any input on the connection it simply drops the connection after issuing an
+appropriate 4xx or 5xx response, depending on the mail administrator's tastes.
 
 Why is such a simple tool so powerful in the admin's arsenal?  Because it introduces
 mandatory delays for each mail connection, which as it turns out hits most spammers
