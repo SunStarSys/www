@@ -44,7 +44,9 @@ then, according to the ICLA, becomes the committer who pushed the code.  Early a
 mitigation strategies all revolve around removing the abandoned contribution, but the damage
 to the project may already have been done.  And without the push records, we'd literally have
 no authoritative process for determining how that code actually got into our repo, other than
-trawling through alternative records in issue trackers or on-list communications.
+trawling through alternative records in issue trackers or on-list communications.  Relying
+on merge-commit logs alone for determining provenance is not very satisfying from a security
+standpoint.
 
 Without such things we'd need to mandate at least PGP-signing of each contributor's commit,
 which is onerous for many projects.  Push records provide a transparent process that does
