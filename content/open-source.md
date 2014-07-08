@@ -14,7 +14,7 @@ derived from or originated at [The Apache Software Foundation](http://www.apache
 
 - [Apache CMS](http://www.apache.org/dev/cms) - CMS serving over 100 Apache projects.
 
-- [orthrus](https://code.google.com/p/orthrus/) - OTP security application; drop in replacement for OPIE.
+- [orthrus](https://code.google.com/p/orthrus/) - OTP security application; Apache Licensed drop in replacement for OPIE.
 
 - [at](https://github.com/joesuf4/at) - TAP-Compliant C unit test framework.
 
