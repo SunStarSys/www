@@ -29,8 +29,9 @@ envelope portion, which embed the original address in an easily decipherable way
 these temporary addresses are anathema to `ezmlm-idx`'s subscription and moderation systems,
 and the `sender-demunger` script mentioned above will fix that once deployed.
 
-**NOTE**: since version `7.0.0`, ezmlm-idx should have support for BATV and SRS built in.
-In any case `sender-demunger` really won't hurt just in case :-).
+**NOTE**: According to the release notes, since version `7.0.0`, ezmlm-idx should
+have support for BATV and SRS built in. In any case `sender-demunger` really won't
+hurt just in case :-).
 
 ### DMARC
 
