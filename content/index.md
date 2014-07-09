@@ -10,7 +10,7 @@ Welcome to the new site!  Content is evolving rapidly, so check back often!
    </div>
    <div class="panel-body">
 We are pleased to announce our availability for taking on new business at this time.
-Interested parties please see our [Contact Page](/contact) to get in touch.
+Interested parties please see our <a href="/contact">Contact Page</a> to get in touch.
    </div>
 </div>
 
