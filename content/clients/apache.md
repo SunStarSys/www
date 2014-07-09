@@ -29,7 +29,8 @@ run in the DATA phase, combined with ratcheting up the delay to 20 seconds- a hi
 tolerable amount for all RFC-compliant message delivery agents.  It was a delicate balance
 as the spam levels rose to 2 million then 2.5 million per day, because the `earlytalker` delay
 increased concurrency levels 4-5 times above "normal" levels and the spam continued to grow.
-We were pushing `httpd`'s `MaxClients` settings during that period, but after a few months we
+We were pushing `httpd`'s `MaxClients` settings during that period, even to the point of having
+to custom-compile `httpd` to raise the compiled-in limit, but after a few months we
 started seeing measurable improvements.  Normally `earlytalker` runs before the banner is
 delivered, which is suboptimal when your primary plugin for dealing with spammers revolves
 around dns blacklists.  Running `earlytalker` as late as possible meant that other, 
