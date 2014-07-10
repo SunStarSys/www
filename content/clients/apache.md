@@ -32,15 +32,16 @@ as the spam levels rose to 2 million then 2.5 million per day, because the `earl
 increased concurrency levels 4-5 times above "normal" levels and the spam continued to grow.
 We were pushing `httpd`'s `MaxClients` settings during that period, even to the point of having
 to custom-compile `httpd` to raise the compiled-in limit, but after a few months we
-started seeing measurable improvements.  Normally `earlytalker` runs before the banner is
-delivered, which is suboptimal when your primary plugin for dealing with spammers revolves
-around dns blacklists.  Running `earlytalker` as late as possible in the `SMTP` session
-meant that other, faster-acting, anti-spam plugins could drop the connection as soon as
-possible, before the delays started kicking in and tieing up `httpd` kids.  Also spammers
-pay this delay price for each message sent when `earlytalker` runs in the `DATA` phase, not
-just on the initiation of a connection which is what happens when you run it before the
-banner.  In other words there's no way around it other than by sending a lengthy recipients
-list which may trigger other anti-spam tools.
+started seeing measurable improvements.
+
+Normally `earlytalker` runs before the banner is delivered, which is suboptimal when 
+your primary plugin for dealing with spammers revolves around dns blacklists.  Running 
+`earlytalker` as late as possible in the `SMTP` session meant that other, faster-acting,
+anti-spam plugins could drop the connection as soon as possible, before the delays started
+kicking in and tieing up `httpd` kids.  Also spammers pay this delay price for each message
+sent when `earlytalker` runs in the `DATA` phase, not just on the initiation of a connection
+which is what happens when you run it before the banner.  In other words there's no way around
+it other than by sending a lengthy recipients list which may trigger other anti-spam tools.
 
 Over an 8 year span, the ecological impact of my `earlytalker` adjustments were clear: we had
 dropped the number of daily inbound spam connections **ten-fold**, down to around 150K per
