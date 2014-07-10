@@ -1,4 +1,5 @@
 Title: On the Spam Problem...
+Keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,anti-spam
 
 As I wrote about [elsewhere](/clients/apache), one of the best open source tools
 available to a mail administrator's arsenal of anti-spam tools is
