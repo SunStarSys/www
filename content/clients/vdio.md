@@ -1,4 +1,5 @@
 Title: VDIO
+Keywords: Startup,Project WBS,streaming video
 
 VDIO was a sister site for [rdio](http://www.rdio.com) dedicated to offering online
 streaming video to its customers.  My involvement in that startup spanned a six-month
