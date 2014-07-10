@@ -1,5 +1,6 @@
 Title: About SunStar Systems
 Keywords: South Florida, System Administration, IT
+
 ![Fiona and I](images/fiona-and-i.jpg)
 
 SunStar Systems, Inc. is the consulting and contracting vehicle (S-Corp.) for
