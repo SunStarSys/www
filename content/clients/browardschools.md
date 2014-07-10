@@ -1,4 +1,5 @@
 Title: Broward Schools
+Keywords: BCPS,Broward County Public Schools,Prevention,Child Safety
 
 My work with [Broward County Schools](http://www.browardschools.com) spanned a two
 year period in 2005-2006 as The Office of Prevention Programs' webmaster.  I developed
