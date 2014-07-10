@@ -1,5 +1,5 @@
 Title: Git and Non Repudiation
-Keywords: non repudiation,DVCS,version control,icla
+Keywords: security,non repudiation,DVCS,version control,icla
 
 This essay really pertains to DVCS in general, not just git per se.  But I will focus
 attention on git because it remains the most popular DVCS around today.
