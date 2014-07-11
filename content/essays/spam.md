@@ -1,10 +1,10 @@
 Title: On the Spam Problem...
-Keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,anti-spam,sendmail,postfix
+Keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,anti-spam,sendmail,postfix,exim
 
 As I wrote about [elsewhere](/clients/apache), one of the best open source tools
 available to a mail administrator's arsenal of anti-spam tools is
 [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), which is merely a frontend inbound mail
-server which needs a fully-functional mail server like `qmail`, `sendmail`, or `postfix`
+server which needs a fully-functional mail server like `qmail`, `sendmail`, `exim`, or `postfix`
 for outbound delivery.  What `qpsmtpd` does is very similar to what `httpd` did for
 webservers: it introduces customizable hooks into each phase of the `SMTP` session.
 
