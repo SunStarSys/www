@@ -1,4 +1,5 @@
 Title:  Open Source Projects
+Keywords: open source,osi,apache-license
 
 ### Open Source Participation
 
