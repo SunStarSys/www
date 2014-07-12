@@ -2,7 +2,8 @@ Title: Home
 
 ![SunStar Systems](images/sunstarlogowhole.png)
 
-Welcome to the new site!  Content is evolving rapidly, so check back often!
+Welcome to the new site!  If you're looking for quality System Administration services,
+you've come to the right place.  Content is evolving rapidly, so check back often!
 
 <div class="panel panel-warning">
    <div class="panel-heading">
