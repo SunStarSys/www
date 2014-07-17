@@ -8,13 +8,13 @@ and [ezmlm-idx](http://untroubled.org/ezmlm/).
 With a few small scripts, I was able to support a wide variety of new use cases
 not inherently supported by `ezmlm-idx` itself.  The features that are generically
 useful outside of [The Apache Software Foundation](http://www.apache.org) are
-laid out below.  To use these files follow this [layout](files/) unless you
+laid out below.  To use these files follow this [layout](ezmlm/) unless you
 are comfortable adjusting the paths in the scripts yourself.
 
 
 ### BATV and SRS
 
-[bin/sender-demunger](files/bin/sender-demunger) is a little wrapper script that
+[bin/sender-demunger](ezmlm/bin/sender-demunger) is a little wrapper script that
 enables `BATV` and `SRS` `SENDER` demunging for `ezmlm-idx`.  To use it you simply
 add it as a prefix to all of the lines in your `</editor/>` and `</manager/>` blocks within
 `.ezmlmrc` and run `ezmlm-make -+` on your lists, or in a pinch assuming you will not 
@@ -43,9 +43,9 @@ hurt just in case :-).
 
 ### DMARC
 
-See [bin/ezmlm-dmarc-filter](files/bin/ezmlm-dmarc-filter) and
-[bin/ezmlm-seekable-stdin](files/bin/ezmlm-seekable-stdin) and
-[lib/pull_header.pm](files/lib/pull_header.pm).  To use these scripts,
+See [bin/ezmlm-dmarc-filter](ezmlm/bin/ezmlm-dmarc-filter) and
+[bin/ezmlm-seekable-stdin](ezmlm/bin/ezmlm-seekable-stdin) and
+[lib/pull_header.pm](ezmlm/lib/pull_header.pm).  To use these scripts,
 change the lines in your `</editor/>` section of `.ezmlmrc` that
 call `ezmlm-gate`, `ezmlm-store`, or `ezmlm-send`, to look like the following:
 
