@@ -11,8 +11,9 @@ principally in technologies derived from or originated at
 
 Do you have an open source strategy for your product line?  How modular is your software, and 
 does it make sense to give users access to those extension points?  Never heard of the
-Hollywood Principle?  We can help you successfully navigate the wave of user innovation and tap
-into the potential of your most active customers, while leaving the traps and pitfalls to your competition.
+[Hollywood Principle](http://en.wikipedia.org/wiki/Hollywood_principle)?  We can help you successfully
+navigate the wave of user innovation and tap into the potential of your most active customers, while
+leaving the traps and pitfalls to your competition.
 
 #### List of Projects we've been involved with, in whole or in part:
 
