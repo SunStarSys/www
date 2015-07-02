@@ -9,8 +9,8 @@ Title: Test
 testing 123 [#quux]
 
 456 [#now]
-:   789
+:   78910
 
-[1011121314 # [#hi]](test)
+[1011121314 [#hi]](test)
 
 
