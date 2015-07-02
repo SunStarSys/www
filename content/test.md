@@ -8,7 +8,8 @@ Title: Test
 
 testing 123 [#quux]
 
-456
-789
-(1011121314 [#ok])[test]
+456 [# now]
+    : 789
+
+(1011121314)[test]
 
