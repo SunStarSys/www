@@ -13,5 +13,5 @@ testing 123 [#quux]
 
 [1011121314 [#hi]](test)
 
-Lorem ipsum
+Loren ipsum
 {: #foo .bar }
