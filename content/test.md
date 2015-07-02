@@ -2,6 +2,6 @@ Title: Test
 
 [TOC]
 
-# heading # {# foo}
+# heading # [# foo]
 
-## bar {# bar}
+## bar [# bar]
