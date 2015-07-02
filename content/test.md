@@ -4,7 +4,7 @@ Title: Test
 
 # heading # [#foo]
 
-## bar [#bar]
+## bar {: #bar }
 
 testing 123 [#quux]
 
