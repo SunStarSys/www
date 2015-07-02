@@ -16,4 +16,4 @@ testing 123 [#quux]
 Loren ipsum
 {: #foo .bar }
 
-LOLZ
+LOLZ ;-)
