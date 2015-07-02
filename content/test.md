@@ -2,8 +2,8 @@ Title: Test
 
 [TOC]
 
-# heading # [# foo]
+# heading # [#foo]
 
-## bar [# bar]
+## bar [#bar]
 
 testing 123
