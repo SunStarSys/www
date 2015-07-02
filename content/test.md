@@ -13,4 +13,5 @@ testing 123 [#quux]
 
 [1011121314 [#hi]](test)
 
-Loren ipsum {: #foo .bar }
+Loren ipsum
+{: #foo .bar }
