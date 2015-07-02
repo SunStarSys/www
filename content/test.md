@@ -6,7 +6,7 @@ Title: Test
 
 ## bar [#bar]
 
-testing 123
+testing 123 [#quux]
 
 456
 789
