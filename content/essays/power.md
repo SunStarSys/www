@@ -15,7 +15,7 @@ which means eventually it will hit a point where the increases are astronomical.
 To illustrate this by analogy: imagine how fast you’d be going now if your car’s speed were always tied,
 by a proportionality constant, to the mileage on its odometer. Under this hypothetical, for every fixed interval of time that passes,
 both your car’s speed and total distance traveled *multiplies* by the same fixed amount (larger than one). In fact, it’s turtles all the
-way down: your car’s acceleration, jerk, etc would all have the same multiplier.
+way down: your car’s acceleration, jerk, etc would all have the same multiplier (over those same intervals).
 
 On a logarithmic scale, power functions appear as straight lines.  The pair of graphs below have parallel growth lines, and
 reflect worldwide totals.
