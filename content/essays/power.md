@@ -6,7 +6,7 @@ and how it applies to the covid-19 epidemic sweeping the planet.
 
 ### The Math
 
-At first the exponential function’s values are microscopically small, and barely increasing over time (on the x axis).
+At first the exponential function’s values are microscopically small, and barely increasing over time (on the `x-axis`).
 But the fundamental issue is that its rate of change is always in fixed proportion to its current value,
 which means eventually it will hit a point where the increases are astronomical.
 
