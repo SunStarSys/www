@@ -12,12 +12,12 @@ which means eventually it will hit a point where the increases are astronomical.
 
 To illustrate this by analogy: imagine how fast you’d be going now if your car’s speed were always tied,
 by a proportionality constant, to the mileage on its odometer. Under this hypothetical, for every fixed interval of time that passes,
-both your car’s speed and distance traveled *multiplies* by the same fixed amount (larger than one). In fact, it’s turtles all the
+both your car’s speed and total distance traveled *multiplies* by the same fixed amount (larger than one). In fact, it’s turtles all the
 way down: your car’s acceleration, jerk, etc would all have the same multiplier.
 
 ### The COVID-19 pandemic
 
-The 5-day-period doubling of the total infected population count in NY this week, as well as the 3-day-period doubling for the US,
+The `5-day-period doubling` of the total infected population count in NY this week, as well as the `3-day-period doubling` for the US,
 are stark reminders of this effect (multiplier for both cases is 2).
 
 Here’s the good news- epidemics only follow exponential functions for the initial portion of the outbreak- eventually the rate of
