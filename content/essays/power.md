@@ -17,7 +17,7 @@ way down: your car’s acceleration, jerk, etc would all have the same multiplie
 
 On a logarithmic scale, power functions appear as straight lines.
 
-![March 2020 COVID-19 logarithmic scale][/images/covid-march-2020.jpg]
+![March 2020 COVID-19 logarithmic scale](/images/covid-march-2020.jpg)
 
 ### The COVID-19 pandemic
 
