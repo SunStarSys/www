@@ -27,9 +27,9 @@ The `5-day-period doubling` of the total infected population count in NY this we
 are stark reminders of this effect (multiplier for both cases is 2).  The US biweekly figures are even more sobering: *everything*
 increases 10-fold!
 
-![March 2020 COVID-19 US logarithmic scale](images/covid-march-2020-us.png)
+![March 2020 COVID-19 US logarithmic scale](images/covid-us-march-2020.png)
 
-![March 2020 COVID-19 US Deaths logarithmic scale](images/covid-march-2020-us-deaths.png)
+![March 2020 COVID-19 US Deaths logarithmic scale](images/covid-us-march-2020-deaths.png)
 
 Here’s the good news- epidemics only follow exponential functions for the initial portion of the outbreak- eventually the rate of
 change will flatten out and go negative, indicative of a falling level of the total population that’s currently ill.
