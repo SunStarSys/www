@@ -27,7 +27,7 @@ The bad news is that the WHO is reporting that the world is nowhere close to tha
 Logan’s Run US politics. According to them, the daily infection rates are still increasing (ie the epidemic is accelerating- the
 world is still stomping on the gas pedal).
 
-### Remediation Strategies
+### Fallout
 
 It’s not voodoo to get the epidemic to start moving away from exponential growth- that means it’s running into some
 environmental resource constraints: some natural, like the infected population no longer being contagious after a period of time;
