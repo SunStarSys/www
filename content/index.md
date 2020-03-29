@@ -18,7 +18,7 @@ For more about what we offer, see our <a href="/about">About Page</a> to learn m
 
 ## Featured pages
 
-- [Exponential Growth and COVID-19] (/essays/power)  Timely article about 2020 pandemic.
+- [Exponential Growth and COVID-19](/essays/power)  Timely article about 2020 pandemic.
 - [The Apache Software Foundation](/clients/apache) - long farewell to a great org!
 - [Mailing Lists](/essays/mailing-lists) - things ezmlm admins might find useful.
 - [Git and Non Repudiation](/essays/git-and-non-repudiation) - the case for push records.
