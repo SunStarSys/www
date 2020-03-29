@@ -1,7 +1,6 @@
 Title: Exponential Growth and COVID-19
 Keywords: exponential, power, covid-19, epidemic, pandemic
 
-
 Let me try to give you a qualitative analysis of what an exponential (aka power) function’s graph is operationally,
 and how it applies to the covid-19 epidemic sweeping the planet.
 
@@ -35,4 +34,4 @@ Inevitably the flattening will happen, but if it’s not because of human social
 victims, and it simply infects the majority of the population before petering out and lingering to infect newborns, or just
 vanishing entirely.
 
-$Date: 2014-07-11 00:35:50 +0000 (Fri, 11 Jul 2014) $
+$Date: $
