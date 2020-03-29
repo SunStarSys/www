@@ -32,3 +32,5 @@ accelerating loss of life, and greater risk of totally overwhelming the health c
 Inevitably the flattening will happen, but if it’s not because of human social wisdom, it’s because the virus cannot reinfect past
 victims, and it simply infects the majority of the population before petering out and lingering to infect newborns, or just
 vanishing entirely.
+
+$Date:$
