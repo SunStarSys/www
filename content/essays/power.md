@@ -18,7 +18,8 @@ way down: your car’s acceleration, jerk, etc would all have the same multiplie
 ### The COVID-19 pandemic
 
 The `5-day-period doubling` of the total infected population count in NY this week, as well as the `3-day-period doubling` for the US,
-are stark reminders of this effect (multiplier for both cases is 2).
+are stark reminders of this effect (multiplier for both cases is 2).  The US biweekly figures are even more sobering: *everything*
+increases 10-fold!
 
 Here’s the good news- epidemics only follow exponential functions for the initial portion of the outbreak- eventually the rate of
 change will flatten out and go negative, indicative of a falling level of the total population that’s currently ill.
