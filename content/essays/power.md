@@ -34,7 +34,8 @@ environmental resource constraints: some natural, like the infected population n
 and some manmade, like a vaccine, or mass voluntary quarantine.
 
 What epidemiologists are trying to accomplish is to kick that process off as soon as possible, because every lost day means an
-accelerating loss of life, and greater risk of totally overwhelming the health care system as the graph crests.
+accelerating loss of life, increased momentum of severe cases, and greater risk of totally overwhelming the health care system
+as the graph crests.
 
 Inevitably the flattening will happen, but if it’s not because of human social wisdom, it’s because the virus cannot reinfect past
 victims, and it simply infects the majority of the population before petering out and lingering to infect newborns, or just
