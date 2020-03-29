@@ -15,6 +15,10 @@ by a proportionality constant, to the mileage on its odometer. Under this hypoth
 both your car’s speed and total distance traveled *multiplies* by the same fixed amount (larger than one). In fact, it’s turtles all the
 way down: your car’s acceleration, jerk, etc would all have the same multiplier.
 
+On a logarithmic scale, power functions appear as straight lines.
+
+![March 2020 COVID-19 logarithmic scale][/images/covid-march-2020.jpg]
+
 ### The COVID-19 pandemic
 
 The `5-day-period doubling` of the total infected population count in NY this week, as well as the `3-day-period doubling` for the US,
@@ -43,3 +47,4 @@ victims, and it simply infects the majority of the population before petering ou
 vanishing entirely.
 
 $Date$
+
