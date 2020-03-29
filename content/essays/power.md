@@ -4,6 +4,8 @@ Keywords: exponential, power, covid-19, epidemic, pandemic
 Let me try to give you a qualitative analysis of what an exponential (aka power) function’s graph is operationally,
 and how it applies to the covid-19 epidemic sweeping the planet.
 
+# The Math
+
 At first the exponential function’s values are microscopically small, and barely increasing over time (on the x axis).
 But the fundamental issue is that its rate of change is always in fixed proportion to its current value,
 which means eventually it will hit a point where the increases are astronomical.
@@ -12,6 +14,8 @@ To illustrate this by analogy: imagine how fast you’d be going now if your car
 by a proportionality constant, to the mileage on its odometer. Under this hypothetical, for every fixed interval of time that passes,
 both your car’s speed and distance traveled *multiplies* by the same fixed amount (larger than one). In fact, it’s turtles all the
 way down: your car’s acceleration, jerk, etc would all have the same multiplier.
+
+# The COVID-19 pandemic
 
 The 5-day-period doubling of the total infected population count in NY this week, as well as the 3-day-period doubling for the US,
 are stark reminders of this effect (multiplier for both cases is 2).
@@ -22,6 +26,8 @@ change will flatten out and go negative, indicative of a falling level of the to
 The bad news is that the WHO is reporting that the world is nowhere close to that eventuality- and won’t be pleased with the
 Logan’s Run US politics. According to them, the daily infection rates are still increasing (ie the epidemic is accelerating- the
 world is still stomping on the gas pedal).
+
+# Remediation Strategies
 
 It’s not voodoo to get the epidemic to start moving away from exponential growth- that means it’s running into some
 environmental resource constraints: some natural, like the infected population no longer being contagious after a period of time;
