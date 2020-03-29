@@ -10,6 +10,8 @@ At first the exponential function’s values are microscopically small, and bare
 But the fundamental issue is that its rate of change is always in fixed proportion to its current value,
 which means eventually it will hit a point where the increases are astronomical.
 
+![March 2020 COVID-19](/images/covid-march-2020-e.png)
+
 To illustrate this by analogy: imagine how fast you’d be going now if your car’s speed were always tied,
 by a proportionality constant, to the mileage on its odometer. Under this hypothetical, for every fixed interval of time that passes,
 both your car’s speed and total distance traveled *multiplies* by the same fixed amount (larger than one). In fact, it’s turtles all the
