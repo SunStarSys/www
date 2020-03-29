@@ -33,4 +33,4 @@ Inevitably the flattening will happen, but if it’s not because of human social
 victims, and it simply infects the majority of the population before petering out and lingering to infect newborns, or just
 vanishing entirely.
 
-$Date: $
+$Date: 2014-07-11 00:35:50 +0000 (Fri, 11 Jul 2014) $
