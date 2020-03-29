@@ -17,7 +17,8 @@ by a proportionality constant, to the mileage on its odometer. Under this hypoth
 both your car’s speed and total distance traveled *multiplies* by the same fixed amount (larger than one). In fact, it’s turtles all the
 way down: your car’s acceleration, jerk, etc would all have the same multiplier.
 
-On a logarithmic scale, power functions appear as straight lines.
+On a logarithmic scale, power functions appear as straight lines.  The pair of graphs below have parallel growth lines, and
+reflect worldwide totals.
 
 ![March 2020 COVID-19 logarithmic scale](/images/covid-march-2020.png)
 
