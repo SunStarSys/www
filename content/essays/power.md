@@ -21,7 +21,7 @@ passes, both your car’s speed and total distance traveled *multiplies* by the 
 
 On a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale) for the `y-axis`, graphs of such power functions
 appear as straight lines.  The pair of graphs below have parallel growth lines, and reflect *worldwide* totals as of March 2020.
-If we represent the lines in `log y = mx + b` form, the `m`-values (`slopes`) would agree; only the `b`-values (`y-intercepts`)
+If we represent the lines in `log y = mx + b` form, the `m`-values (`slopes`) would agree; only the `b`-values (`log y-intercepts`)
 would differ.
 
 ![March 2020 COVID-19 logarithmic scale](../images/covid-march-2020.png)
