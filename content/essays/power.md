@@ -25,7 +25,8 @@ appear as straight lines.  The pair of graphs below have parallel growth lines (
 sources), and reflect the same *worldwide* totals as the pair above. If we represent these "lines" in `log y = mx + b` form, the `m`-values
 (`slopes`) would agree; only the `b`-values (`log y-intercepts`) differ.  The key point here is to focus attention on the
 **invariant** `slope`, not the varying `intercepts`, for any set of per-age-demographic or per-geographic-region pandemic
-statistics, or combinations thereof.
+statistics, or combinations thereof.  Multiplying `ln 10 = 2.302585...` with the `slope` here yields the fundamental proportionality
+constant relating the  depicted exponential function's values to its *instantaneous* rate of change.
 
 ![March 2020 COVID-19 logarithmic scale](../images/covid-march-2020.png)
 
