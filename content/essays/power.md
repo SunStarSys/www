@@ -28,7 +28,8 @@ above. If we represent these "lines" in `log y = mx + b` form, the `m`-values (`
 (`log y-intercepts`) differ.  The key point here is to focus attention on the **invariant** `slope`, not the varying `intercepts`,
 for any set of per-age-demographic or per-geographic-region pandemic statistics, or combinations thereof.  Multiplying
 `ln 10 = 2.302585...` with the `slope` here yields the fundamental proportionality constant equating the depicted exponential
-functions' values with their *instantaneous* rates of change.
+functions' values with their *instantaneous* rates of change.  In other words, focusing on the relative percentages between
+different statistics is missing the point: that's a conversation about the `b` values, not the `m` values.
 
 ![March 2020 COVID-19 logarithmic scale](../images/covid-march-2020.png)
 
