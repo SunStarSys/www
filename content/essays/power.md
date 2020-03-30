@@ -1,7 +1,7 @@
 Title: Exponential Growth and COVID-19
 Keywords: exponential, power, covid-19, epidemic, pandemic
 
-Let me try to give you a qualitative analysis of what an exponential (aka power) function’s graph is operationally,
+Let me try to give you a qualitative analysis of what an exponential (aka power) function’s graph is geometrically,
 and how it applies to the covid-19 epidemic sweeping the planet.  It's not a long, complex read, so take your time with the
 math section - it's important to being an educated consumer of statistics relevant to the pandemic.
 
