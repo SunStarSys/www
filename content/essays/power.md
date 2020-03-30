@@ -22,7 +22,7 @@ passes, both your car’s speed and total distance traveled *multiplies* by the 
 (ie all [derivatives](https://en.wikipedia.org/wiki/Derivative)) would all have this same *multiplier* (over those same intervals).
 
 On a [logarithmic scale](https://en.wikipedia.org/wiki/Logarithmic_scale) for the `y-axis`, graphs of such power functions
-appear as straight lines.  The pair of graphs below have parallel growth lines (which I added in black to these
+appear as **straight lines**.  The pair of graphs below have parallel growth lines (which I added in black to these
 [worldometers](https://www.worldometers.info/coronavirus/) sources), and reflect the same *worldwide* totals as the pair
 above. If we represent these "lines" in `log y = mx + b` form, the `m`-values (`slopes`) would agree; only the `b`-values
 (`log y-intercepts`) differ.  The key point here is to focus attention on the **invariant** `slope`, not the varying `intercepts`,
