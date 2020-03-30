@@ -19,8 +19,8 @@ passes, both your car’s speed and total distance traveled *multiplies* by the 
 [turtles all the way down](https://en.wikipedia.org/wiki/Turtles_all_the_way_down): your car’s acceleration, jerk, etc.
 (ie all [derivatives](https://en.wikipedia.org/wiki/Derivative)) would all have this same multiplier (over those same intervals).
 
-On a `logarithmic` scale, graphs of such power functions appear as straight lines.  The pair of graphs below have parallel growth lines, and
-reflect *worldwide* totals as of March 2020.
+On a `logarithmic` scale, graphs of such power functions appear as straight lines.  The pair of graphs below have parallel
+growth lines, and reflect *worldwide* totals as of March 2020.
 
 ![March 2020 COVID-19 logarithmic scale](../images/covid-march-2020.png)
 
@@ -37,8 +37,9 @@ the US, are stark reminders of this effect (multiplier for both cases is 2).  Th
 Here’s the good news- epidemics only follow exponential functions for the initial portion of the outbreak- eventually the rate of
 change will flatten out and go negative, indicative of a falling level of the total population that’s currently ill.
 
-The bad news is that the [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) is reporting that the world is nowhere close to that eventuality. According to them, the daily
-infection rates are still increasing (ie the epidemic is accelerating- the world is still *stomping on the gas pedal*).
+The bad news is that the [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) is reporting that the world
+is nowhere close to that eventuality. According to them, the daily infection rates are still increasing (ie the epidemic is 
+accelerating- the world is still *stomping on the gas pedal*).
 
 ### Fallout
 
