@@ -10,7 +10,7 @@ math section - it's important to being an educated consumer of statistics releva
 At first the exponential function’s values are microscopically small, and barely increasing over time (on the `x-axis`).
 But the fundamental issue is that **its rate of change is always in fixed proportion to its current value**,
 which means eventually it will hit a point where the increases are astronomical.  The following graphs depict this phenomenon
-rather succinctly, as they represent *worldwide* totals for cover-19 at the end of March 2020.
+rather succinctly, as they represent *worldwide* totals for covid-19 at the end of March 2020.
 
 ![March 2020 COVID-19](../images/covid-march-2020-e.png)
 
