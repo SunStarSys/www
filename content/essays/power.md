@@ -33,7 +33,7 @@ statistics, or totals thereof.
 
 The `5-day-period doubling` of the total infected population count in NY this week, as well as the `3-day-period doubling` for
 the US, are stark reminders of this effect (the above *multiplier* for both cases is 2).  The US **biweekly** figures are even more sobering:
- **everything increases 10-fold**, just as indicated by the parallel lines in the following graphs.
+ **everything increases 10-fold**, just as indicated by the black parallel lines I added to the following worldometers graphs.
 
 ![March 2020 COVID-19 US logarithmic scale](../images/covid-us-march-2020.png)
 
