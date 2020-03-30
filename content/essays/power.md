@@ -4,7 +4,7 @@ Keywords: exponential, power, covid-19, epidemic, pandemic
 Let me try to give you a qualitative analysis of what an exponential (aka power) function’s graph is geometrically,
 and how it applies to the covid-19 epidemic sweeping the planet.  It's not a long, complex read, so take your time with **the
 math** section - it's important to being an educated consumer of statistics relevant to the current pandemic.  A background
-in freshman calculus surely helps, but this is meant to be accessible to any college educated person.
+in freshman [calculus](https://en.wikipedia.org/wiki/Calculus) surely helps, but this is meant to be accessible to any college educated person.
 
 ### The Math
 
