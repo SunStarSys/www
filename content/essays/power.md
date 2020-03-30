@@ -42,7 +42,7 @@ infection rates are still increasing (ie the epidemic is accelerating- the world
 
 ### Fallout
 
-It’s not voodoo to get the epidemic to start moving away from exponential growth- that means it’s running into some
+It’s not voodoo to get an epidemic to start moving away from exponential growth- that means it’s running into some
 environmental resource constraints: some natural, like geographic divides, or the infected population no longer being
 contagious after a period of time; and some manmade, like a developed and deployed vaccine, or mass voluntary quarantine.
 
