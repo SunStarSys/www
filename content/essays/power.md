@@ -44,7 +44,7 @@ change will flatten out and go negative, indicative of a falling level of the to
 
 The bad news is that the [WHO](https://www.who.int/emergencies/diseases/novel-coronavirus-2019) is reporting that the world
 is nowhere close to that eventuality.  According to them, the daily infection rates are still increasing (ie the epidemic is 
-accelerating- the world is still *stomping on the gas pedal*).
+accelerating; the world is still *stomping on the gas pedal*).
 
 ### Fallout
 
