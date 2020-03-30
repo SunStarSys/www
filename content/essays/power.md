@@ -29,7 +29,7 @@ above. If we represent these "lines" in `log y = mx + b` form, the `m`-values (`
 for any set of per-age-demographic or per-geographic-region pandemic statistics, or combinations thereof.  Multiplying
 `ln 10 = 2.302585...` with the `slope` here yields the fundamental proportionality constant equating the depicted exponential
 functions' values with their *instantaneous* rates of change.  In other words, focusing on the relative percentages between
-different statistics, like relative death rates, is missing the point: that's a conversation about the `b`-values, not the `m`-values which govern the dynamics.
+different statistics, like relative ([conditional](https://en.wikipedia.org/wiki/Conditional_expectation)) death rates, is missing the point: that's a conversation about the `b`-values, not the `m`-values which govern the dynamics.
 
 ![March 2020 COVID-19 logarithmic scale](../images/covid-march-2020.png)
 
