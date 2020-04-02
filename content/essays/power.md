@@ -38,6 +38,9 @@ different statistics, like [conditional](https://en.wikipedia.org/wiki/Condition
 The `5-day-period doubling` of the total infected population count in NY this week, as well as the `3-day-period doubling` for
 the US, are stark reminders of this effect (the above *multiplier* for both cases is 2).  The US **biweekly** figures are even more sobering:
  **everything increases 10-fold**, just as indicated by the black parallel lines I added to the following worldometers graphs.
+Projecting these out to a full month leaves us with a *multiplier* somewhere between 100x and 1000x, depending on which measures
+hold up better.  By any reasonable standard, this makes long-range projections blind guesswork to try and pin down as absolute
+figures.
 
 ![March 2020 COVID-19 US logarithmic scale](../images/covid-us-march-2020.png)
 
