@@ -30,7 +30,7 @@ for any set of per-age-demographic or per-geographic-region pandemic statistics,
 `ln 10 = 2.302585...` with the `slope` here yields the fundamental proportionality constant equating the depicted exponential
 functions' values with their *instantaneous* rates of change.  In other words, focusing on the relative percentages between
 different statistics, like [conditional](https://en.wikipedia.org/wiki/Conditional_expectation) death rates, is *missing the point*:
-that's a conversation about the `b`-values, not the `m`-values which govern the dynamics.
+that's a conversation about the `b`-values, not the `m`-values which *govern the dynamics*.
 
 To be clear, the difference in `b`-values is more about time differences on the `x-axis` than it is differences in `y`-values; in
 terms of equations: `log y = mx + b = m(x + b/m)` is an implicit translation of the line `y = mx`, `b` units along the `y-axis`,
