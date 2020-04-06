@@ -34,7 +34,7 @@ that's a conversation about the `b`-values, not the `m`-values which *govern the
 
 To be clear, the difference in `b`-values is more about time differences on the `x-axis` than it is differences in `y`-values; in
 terms of equations: `log y = mx + b = m(x + b/m)` is an implicit translation of the line `y = mx`, `b` units along the `y-axis`,
-or equivalently `b/m` units along the `x-axis`.   **Any** type of relative statistic (like Case Fatality Rate) can be captured in
+or equivalently `b/m` units along the `x-axis` (in the opposite direction).   **Any** type of relative statistic (like Case Fatality Rate) can be captured in
 terms of such time translations, once `m` is known (and non-zero).  Again, the *critical* statistic is `m`!
 
 ![March 2020 COVID-19 logarithmic scale](../images/covid-march-2020.png)
