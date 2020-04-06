@@ -29,7 +29,13 @@ above. If we represent these "lines" in `log y = mx + b` form, the `m`-values (`
 for any set of per-age-demographic or per-geographic-region pandemic statistics, or combinations thereof.  Multiplying
 `ln 10 = 2.302585...` with the `slope` here yields the fundamental proportionality constant equating the depicted exponential
 functions' values with their *instantaneous* rates of change.  In other words, focusing on the relative percentages between
-different statistics, like [conditional](https://en.wikipedia.org/wiki/Conditional_expectation) death rates, is missing the point: that's a conversation about the `b`-values, not the `m`-values which govern the dynamics.
+different statistics, like [conditional](https://en.wikipedia.org/wiki/Conditional_expectation) death rates, is *missing the point*:
+that's a conversation about the `b`-values, not the `m`-values which govern the dynamics.
+
+To be clear, the difference in `b`-values is more about time differences on the `x-axis` than it is differences in `y`-values; in
+terms of equations: `log y = mx + b = m(x + b/m)` is an implicit translation of the line `y = mx`, `b` units along the `y-axis`,
+or equivalently `b/m` units along the `x-axis`.   **Any** type of relative statistic (like Case Fatality Rate) can be captured in
+terms of such time translations, once `m` is known (and non-zero).  Again, the *critical* statistic is `m`!
 
 ![March 2020 COVID-19 logarithmic scale](../images/covid-march-2020.png)
 
