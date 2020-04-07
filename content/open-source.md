@@ -29,4 +29,6 @@ leaving the traps and pitfalls to your competition.
 
 - [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) - Distributed commit hooks for subversion.
 
+<!--
 - [Apache's 2019 qmail + CMS dirty laundry](/laundry/postmortem.txt) - Ugly internal mess about myopic Apache Infrastructure decisions since 2015 leading into ApacheCon NA 2019
+-->
