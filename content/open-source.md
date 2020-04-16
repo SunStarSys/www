@@ -27,7 +27,7 @@ leaving the traps and pitfalls to your competition.
 
 - [at](https://github.com/joesuf4/at) - [TAP](https://testanything.org)-Compliant C unit test framework.
 
-- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials-prompt responses.  In the spirit of TCL Expect, but *portable*.
+- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials-prompt responses.  In the spirit of [TCL Expect](https://en.wikipedia.org/wiki/Expect), but *portable*.
 
 - [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) - Distributed commit hooks for subversion.
 
