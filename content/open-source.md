@@ -23,11 +23,11 @@ leaving the traps and pitfalls to your competition.
 
 - [Apache CMS](http://www.apache.org/dev/cms) - CMS serving over 100 Apache projects.
 
-- [orthrus](https://code.google.com/p/orthrus/) - OTP security application; AL-2.0 **portable** drop in replacement for OPIE.
+- [orthrus](https://code.google.com/p/orthrus/) - [OTP](https://en.wikipedia.org/wiki/One-time_password) security application; AL-2.0 *portable* drop in replacement for OPIE.
 
-- [at](https://github.com/joesuf4/at) - TAP-Compliant C unit test framework.
+- [at](https://github.com/joesuf4/at) - [TAP](https://testanything.org)-Compliant C unit test framework.
 
-- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials prompt response.
+- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials-prompt responses.  In the spirit of TCL Expect, but *portable*.
 
 - [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) - Distributed commit hooks for subversion.
 
