@@ -23,7 +23,7 @@ leaving the traps and pitfalls to your competition.
 
 - [Apache CMS](http://www.apache.org/dev/cms) - CMS serving over 100 Apache projects.
 
-- [orthrus](https://code.google.com/p/orthrus/) - OTP security application; Apache Licensed drop in replacement for OPIE.
+- [orthrus](https://code.google.com/p/orthrus/) - OTP security application; AL-2.0 **portable** drop in replacement for OPIE.
 
 - [at](https://github.com/joesuf4/at) - TAP-Compliant C unit test framework.
 
