@@ -27,6 +27,8 @@ leaving the traps and pitfalls to your competition.
 
 - [at](https://github.com/joesuf4/at) - TAP-Compliant C unit test framework.
 
+- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials prompt response.
+
 - [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) - Distributed commit hooks for subversion.
 
 <!--
