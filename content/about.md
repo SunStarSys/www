@@ -1,7 +1,7 @@
 Title: About SunStar Systems
 Keywords: South Florida, System Administration, IT
 
-![Fiona and I](images/fiona-and-i.jpg)
+![Autumn and I](images/autumn-and-i.jpg)
 
 SunStar Systems, Inc. is the consulting and contracting vehicle (S-Corp.) for
 engagements with [Joe Schaefer](https://www.linkedin.com/pub/joe-schaefer/0/702/51b).
