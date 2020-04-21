@@ -29,7 +29,7 @@ leaving the traps and pitfalls to your competition.
 
 - [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials-prompt responses.  In the spirit of [TCL Expect](https://en.wikipedia.org/wiki/Expect), but *portable*.
 
-- [pffxg](https://github.com/joesuf4/home/blob/master/bin/pffxg.sh) - Parallelized recursive grep functionality similar to The Silver Surfer, but 4x faster.
+- [pffxg](https://github.com/joesuf4/home/blob/master/bin/pffxg.sh) - Parallelized recursive grep functionality similar to The Silver Searcher, but 4x faster.
 
 - [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) - Distributed commit hooks for subversion.
 
