@@ -31,8 +31,7 @@ on the existing production/release branch source code.  Basically, you engineer 
 development strategies within the limitations of the physics of the natural world, which says:
 
 
-    Surgery on a patient must result in good outcomes (at all times) for that patient,
-    not just for siblings or future generations.
+    Surgery on a patient must result in good outcomes (at all times) for that patient, not just for siblings or future generations.
 
 One of the other key things to recognize is to distinguish between *planned*
 and *unplanned* work in any of your productivity tracking metrics, and how
