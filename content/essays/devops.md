@@ -45,6 +45,6 @@ At the management level, a global change management perspective between
 both devs and ops changes is vital. Both sets of teams need to be aware
 of each other's changes, ideally with planning details made available
 along the way.  **Great things can happen** when the teams are a healthy mix
-of devs and ops personnel, in a data-driven, transparent culture of work.
+of devs and ops personnel, in a data-driven, transparent culture of collaborative work.
 
 $Date$
