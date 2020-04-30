@@ -23,7 +23,7 @@ of quality control in SaaS/PaaS deployments involves adopting
 *[trunk based development](https://trunkbaseddevelopment.com)*
 and its *branch by abstraction* concepts.
 
-Basically, the multiverses of long-term`git` branches creates the psychological fiction
+Basically, the multiverses of long-term `git` branches creates the psychological fiction
 that the combined merging of all of that local development work will lead to a whole
 that is at least as great as the sum of its parts.  Experience is the better judge, which
 indicates that extensive-new-feature-sets should be engineered *in-situ* with the existing
