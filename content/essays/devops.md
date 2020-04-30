@@ -29,8 +29,10 @@ to a whole that is at least as great as the sum of its parts.  Experience is the
 which indicates that extensive-new-feature-sets should be engineered *incrementally*, *in-situ*,
 on the existing production/release branch source code.  Basically, you engineer your
 development strategies within the limitations of the physics of the natural world, which says:
-surgery on a patient must result in good outcomes (at *all* times) for *that* patient,
-not just for siblings or future generations.
+
+
+    Surgery on a patient must result in good outcomes (at all times) for that patient,
+    not just for siblings or future generations.
 
 One of the other key things to recognize is to distinguish between *planned*
 and *unplanned* work in any of your productivity tracking metrics, and how
