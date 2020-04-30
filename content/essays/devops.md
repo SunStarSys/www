@@ -24,25 +24,27 @@ of quality control in SaaS/PaaS deployments involves adopting
 and its *branch by abstraction* concepts.
 
 Basically, the multiverses of long-term `git` branches creates the psychological fiction
-that the combined merging of all of that local development work will lead to a whole
-that is at least as great as the sum of its parts.  Experience is the better judge, which
-indicates that extensive-new-feature-sets should be engineered *in-situ* with the existing
-production codebase.  Basically, you engineer your development strategies with the
-limitations of the laws of the natural world, which says surgery on a patient must result in
-good outcomes for *that* patient, not just for siblings or future generations.
+that the combined merging of all of that local development work (and testing!) will lead
+to a whole that is at least as great as the sum of its parts.  Experience is the better judge,
+which indicates that extensive-new-feature-sets should be engineered *incrementally*, *in-situ*,
+on the existing production/release branch source code.  Basically, you engineer your
+development strategies within the limitations of the physics of the natural world, which says:
+surgery on a patient must result in good outcomes (at *all* times) for *that* patient,
+not just for siblings or future generations.
 
 One of the other key things to recognize is to distinguish between *planned*
 and *unplanned* work in any of your productivity tracking metrics, and how
 resources are allocated to those tasks.  Unplanned work amounts
-to firefighting, and if too much time is spent on these tasks, the planned
-work, which is the real business need for the enterprise, gets backlogged.
+to **firefighting**, and if too much time (more than ~20%) is spent on these tasks,
+the planned work, which is the real business need for the enterprise, gets backlogged.
 The bottlenecks in the system rarely can cope with unplanned work, so it
-is important to have enough additional resources to cope with the load.
+is important to have enough additional resources to handle with the load and
+consequent backlog.
 
 At the management level, a global change management perspective between 
 both devs and ops changes is vital. Both sets of teams need to be aware
 of each other's changes, ideally with planning details made available
 along the way.  **Great things can happen** when the teams are a healthy mix
-of devs and ops personnel.
+of devs and ops personnel, in a data-driven, transparent culture of work.
 
 $Date$
