@@ -39,7 +39,7 @@ resources are allocated to those tasks.  Unplanned work amounts
 to **firefighting**, and if too much time (more than ~20%) is spent on these tasks,
 the planned work, which is the real business need for the enterprise, gets backlogged.
 The bottlenecks in the system rarely can cope with unplanned work, so it
-is important to have enough additional resources to handle with the load and
+is important to have enough additional resources to handle the increased load and
 consequent backlog.
 
 At the management level, a global change management perspective between 
