@@ -1,7 +1,7 @@
 Title: The DevOps Movement
 Keywords: devops
 
-### More than just giving developers root access!
+### More than Just Giving Developers Root Access!
 
 Or not even that.  The big idea behind the "movement" is not giving developers
 more rope; it's about ensuring better lines of communications between the developers
@@ -17,7 +17,7 @@ those resources to perform to maximum effect.  Optimizations beyond those
 areas are almost always not worth the bother- the workflow will still be
 constrained by those resources.
 
-#### Trunk Based Development
+### Trunk Based Development
 
 Encouraging incremental changes with automated promotion and release processes
 on a scheduled cadence is a great way to get the ball rolling, but a big part
@@ -35,7 +35,7 @@ development strategies within the limitations of the physics of the natural worl
 
     Surgery on a patient must result in good outcomes (at all times) for that patient, not just for siblings or future generations.
 
-#### Curb Firefighting
+### Measure, Curb and Control Firefighting Efforts
 
 One of the other key things to recognize is to distinguish between *planned*
 and *unplanned* work in any of your productivity tracking metrics, and how
@@ -46,8 +46,7 @@ The bottlenecks in the system rarely can cope with unplanned work, so it
 is important to have enough additional resources to handle the increased load and
 consequent backlog.
 
-
-#### Getting with the program
+### Getting with the Program
 
 At the management level, a global change management perspective between 
 both devs and ops changes is vital. Both sets of teams need to be aware
