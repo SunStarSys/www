@@ -17,6 +17,8 @@ those resources to perform to maximum effect.  Optimizations beyond those
 areas are almost always not worth the bother- the workflow will still be
 constrained by those resources.
 
+#### Trunk Based Development
+
 Encouraging incremental changes with automated promotion and release processes
 on a scheduled cadence is a great way to get the ball rolling, but a big part
 of quality control in SaaS/PaaS deployments involves adopting
@@ -33,6 +35,8 @@ development strategies within the limitations of the physics of the natural worl
 
     Surgery on a patient must result in good outcomes (at all times) for that patient, not just for siblings or future generations.
 
+#### Curb Firefighting
+
 One of the other key things to recognize is to distinguish between *planned*
 and *unplanned* work in any of your productivity tracking metrics, and how
 resources are allocated to those tasks.  Unplanned work amounts
@@ -41,6 +45,9 @@ the planned work, which is the real business need for the enterprise, gets backl
 The bottlenecks in the system rarely can cope with unplanned work, so it
 is important to have enough additional resources to handle the increased load and
 consequent backlog.
+
+
+#### Getting with the program
 
 At the management level, a global change management perspective between 
 both devs and ops changes is vital. Both sets of teams need to be aware
