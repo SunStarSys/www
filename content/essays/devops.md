@@ -3,9 +3,9 @@ Keywords: devops
 
 ### More than Just Giving Developers Root Access!
 
-Or not even that.  The big idea behind the "movement" is not giving developers
-more rope; it's about ensuring better lines of communications between the developers
-and the *sysadmins* in the enterprise.  Much of this is not new, in fact it's a
+Or not even that.  The big idea behind the "movement" is not simply giving developers
+more rope; it's about ensuring better lines of communication between the developers
+and the *operations* teams in the enterprise.  Much of this is not new, in fact it's a
 rehash of the "agile" movement within traditional industrial supply chains
 during the prior century.  Kanban boards are just the latest rehash of birds-eye
 dashboards covering the collective daily effort to ship quality products that delight
@@ -30,7 +30,7 @@ that the combined merging of all of that local development work (and testing!) w
 to a whole that is at least as great as the sum of its parts.  Experience is the better judge,
 which indicates that extensive-new-feature-sets should be engineered *incrementally*, *in-situ*,
 on the existing production/release branch source code.  Basically, you engineer your
-development strategies within the limitations of the physics of the natural world, which says:
+development strategies within the limitations of the physics of the biological world, which says:
 
 
     Surgery on a patient must result in good outcomes (at all times) for that patient, not just for siblings or future generations.
