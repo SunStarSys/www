@@ -14,7 +14,7 @@ customers and business partners alike.
 Constraint management is key to the process.  By first identifying any and
 all bottlenecks in the system, you can refocus your efforts on optimizing
 those resources to perform to maximum effect.  Optimizations beyond those
-areas are almost always not worth the bother-- the workflow will still be
+areas are almost always not worth the bother &dash; the workflow will still be
 constrained by those resources.
 
 ### Trunk Based Development
@@ -26,7 +26,7 @@ of quality control in SaaS/PaaS deployments involves adopting
 and its *branch by abstraction* concepts.  (Please visit the link for a thorough
 discussion of the features and drawbacks).
 
-Basically, the multiverse of long-term `git` branches creates the psychological fiction
+In essence, the multiverse of long-term `git` branches creates the psychological fiction
 that the combined merging of all of that local development work (and testing!) will lead
 to a whole that is at least as great as the sum of its parts.  Experience is the better judge,
 which indicates that extensive-new-feature-sets should be engineered *incrementally*, *in-situ*,
