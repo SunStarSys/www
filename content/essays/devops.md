@@ -23,7 +23,8 @@ Encouraging incremental changes with automated promotion and release processes
 on a scheduled cadence is a great way to get the ball rolling, but a big part
 of quality control in SaaS/PaaS deployments involves adopting
 *[trunk based development](https://trunkbaseddevelopment.com)*
-and its *branch by abstraction* concepts.
+and its *branch by abstraction* concepts.  (Please visit the link for a thorough
+discussion of the features and drawbacks).
 
 Basically, the multiverse of long-term `git` branches creates the psychological fiction
 that the combined merging of all of that local development work (and testing!) will lead
