@@ -59,6 +59,6 @@ of a tangible work product has implications well beyond just *dev* and *ops* tea
 control and responsibility for a server engineering effort. This lesson keeps being
 repeated throughout the modern corporate world, as new domains for creative
 human expression take form in the business sector, as well as in reinventing old
-ways of doing busines together.
+ways of doing business together.
  
 $Date$
