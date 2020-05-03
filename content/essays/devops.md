@@ -32,7 +32,8 @@ which indicates that extensive-new-feature-sets should be engineered *incrementa
 on the existing production/release branch source code.  Basically, you engineer your
 development strategies within the limitations of the physics of the biological world, which says:
 
-    Surgery on a patient must result in good outcomes (at all times) for that patient, not just for siblings or future generations.
+    Surgery on a patient must result in good outcomes (at all times) for
+    that patient, not just for siblings or future generations.
 
 ### Measure, Curb and Control Firefighting Efforts
 
@@ -53,8 +54,8 @@ of each other's changes. Ideally with planning details made available
 along the way.  **Great things can happen** when the teams are a healthy mix
 of devs and ops personnel, in a data-driven, transparent culture of collaborative work.
 
-The philosophy of inclusion of all stakeholders into the creation of a tangible
-collaborative work, has implications well beyond just dev and ops teams sharing
+The philosophy of inclusion of manifold stakeholders into the creation, and **evolution**,
+of a tangible work product has implications well beyond just *dev* and *ops* teams sharing
 control and responsibility for a server engineering effort. This lesson keeps being
 repeated throughout the modern corporate world, as new domains for creative
 human expression take form in the business sector, as well as in reinventing old
