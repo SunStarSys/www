@@ -14,7 +14,7 @@ customers and business partners alike.
 Constraint management is key to the process.  By first identifying any and
 all bottlenecks in the system, you can refocus your efforts on optimizing
 those resources to perform to maximum effect.  Optimizations beyond those
-areas are almost always not worth the bother &dash; the workflow will still be
+areas are almost always not worth the bother &mdash; the workflow will still be
 constrained by those resources.
 
 ### Trunk Based Development
