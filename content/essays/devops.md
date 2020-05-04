@@ -8,8 +8,8 @@ more rope; it's about ensuring better lines of communication between the develop
 and the *operations* teams in the enterprise.  Much of this is not new, in fact it's a
 rehash of the "agile" movement within traditional industrial supply chains
 during the prior century.  Kanban boards are just the latest rehash of birds-eye
-dashboards covering the collective daily effort to ship quality products that delight
-customers and business partners alike.
+dashboards (doubling as workflow managers) covering the collective daily effort to
+ship quality products that delight customers and business partners alike.
 
 Constraint management is key to the process.  By first identifying any and
 all bottlenecks in the system, you can refocus your efforts on optimizing
