@@ -49,7 +49,7 @@ consequent backlog.
 
 One of the major throwback lessons of 2020 is that there is such a thing as being
 *too lean*, at least when it comes to devops staffing (hardware is another story).  Capacity
-planning for a rainy day, either with "excess" staff or cross-training initiatives, not
+planning for a rainy day, either with "redundant" staff or cross-training initiatives, not
 only keeps the doctor away, but is actually **mission critical**.
 
 ### Getting with the Program
