@@ -47,6 +47,11 @@ The bottlenecks in the system rarely can cope with unplanned work, so it
 is important to have enough additional resources to handle the increased load and
 consequent backlog.
 
+One of the major throwback lessons of 2020 is that there is such a thing as being
+*too lean*, at least when it comes to staffing (hardware is another story).  Capacity
+planning for a rainy day, either with "excess" staff or cross-training initiatives, not
+only keeps the doctor away, but is actually **mission critical**.
+
 ### Getting with the Program
 
 At the management level, a global change management perspective between 
