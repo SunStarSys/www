@@ -8,4 +8,7 @@ Title: Information Architecture
 
 ### Beautiful URLs
 
+### The SunStar Systems CMS for Solaris and FreeBSD platforms
+
+
 $Date$
