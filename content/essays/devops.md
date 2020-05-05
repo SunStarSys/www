@@ -19,7 +19,7 @@ constrained by those resources.
 
 ### Trunk Based Development
 
-Encouraging incremental changes with automated promotion and release processes
+Encouraging incremental changes with automated testing, promotion and release processes
 on a scheduled cadence is a great way to get the ball rolling, but a big part
 of quality control in SaaS/PaaS deployments involves adopting
 *[trunk based development](https://trunkbaseddevelopment.com)*
