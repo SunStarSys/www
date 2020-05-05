@@ -2,7 +2,9 @@ Title: Information Architecture
 
 ### Accessibility: the Big Picture
 
-### REST, HATES, and Content Negotiation
+### Contrasting Heirarchies with Seach
+
+### REST, HATEOAS, and Content Negotiation
 
 ### Beautiful URLs
 
