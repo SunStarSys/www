@@ -8,7 +8,9 @@ Title: Information Architecture
 
 ### Beautiful URLs
 
-### The SunStar Systems CMS for Solaris and FreeBSD platforms
+### SunStar Systems CMS for Solaris and FreeBSD platforms
+
+### StageMaster: experimentation with pure client-side state engine
 
 
 $Date$
