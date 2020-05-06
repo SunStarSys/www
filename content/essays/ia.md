@@ -6,7 +6,7 @@ Title: Information Architecture
 
 ### REST, HATEOAS, and Content Negotiation
 
-### Beautiful URLs
+### Beautiful URLs and Transient URLs
 
 ### SunStar Systems CMS for ZFS-backed Platforms
 
