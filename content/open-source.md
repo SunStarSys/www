@@ -27,7 +27,7 @@ leaving the traps and pitfalls to your competition.
 
 - [at](https://github.com/joesuf4/at) - [TAP](https://testanything.org)-Compliant C unit test framework.
 
-- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials-prompt responses.  In the spirit of [TCL Expect](https://en.wikipedia.org/wiki/Expect), but *portable*.
+- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials-prompt responses.  In the spirit of [TCL Expect](https://en.wikipedia.org/wiki/Expect), but *portable*. across different programming languages
 
 - [pffxg](https://github.com/joesuf4/home/blob/master/bin/pffxg.sh) - Parallelized recursive grep functionality similar to The Silver Searcher, but 4x faster.
 
