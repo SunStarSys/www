@@ -1,6 +1,6 @@
 Title: Information Architecture
 
-### Usability and Link Topology: the Big Picture
+### Usability, Discovery, and Link Topology: the Big Picture
 
 ### Contrasting Heirarchies with Search
 
