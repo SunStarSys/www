@@ -2,7 +2,7 @@ Title: Home
 
 ![SunStar Systems](images/sunstarlogowhole.png)
 
-Welcome to the new site!  If you're looking for quality System Administration services,
+Welcome to the new site!  If you're looking for quality Information Technology services,
 you've come to the right place.  Content is evolving rapidly, so check back often!
 
 <div class="panel panel-warning">
@@ -16,7 +16,7 @@ For more about what we offer, see our <a href="/about">About Page</a> to learn m
    </div>
 </div>
 
-## Featured pages
+## Featured Pages
 
 - [The DevOps Movement](/essays/devops) - Finally filled in the missing details on this article.
 - [Exponential Growth and COVID-19](/essays/power) - Timely article about 2020 pandemic.
