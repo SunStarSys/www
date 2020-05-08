@@ -4,7 +4,7 @@ Title: Information Architecture
 
 ### Introduction
 
-To me, Information Architecture covers the entire gamut of technologies relevant to the design,
+To me, Information Architecture **organizes** the entire gamut of technologies relevant to the design,
 presentation, relationships, and architectural constraints that cover every URL you serve over
 http(s), both publicly and privately.  This essay is a high-level survey of my expertise in these
 areas; it is far from comprehensive given the vast field it intends to cover.
