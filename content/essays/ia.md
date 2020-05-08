@@ -1,5 +1,12 @@
 Title: Information Architecture
 
+### Introduction
+
+This is such a wonderful field to explore!  My perspective is that Information Architecture
+covers the entire gamut of technologies relevant to the design, presentation, relationships,
+and architectural constraints that cover every URL you serve over http(s), both publicly and
+privately.
+
 ### Usability, Discovery, and Link Topology: the Big Picture
 
 ### Contrasting Heirarchies with Search
