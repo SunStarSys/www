@@ -1,5 +1,7 @@
 Title: Information Architecture
 
+[TOC]
+
 ### Introduction
 
 This is such a wonderful field to explore!  My perspective is that Information Architecture
