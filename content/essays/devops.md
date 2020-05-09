@@ -62,7 +62,7 @@ by the puppet master will eventually deploy updates as the puppet agents check-b
 to this day.
 
 A survey of the state of the art, where changes are tested/provisioned/deployed on demand in IaC/CaC settings,
-is on my friend Paul Hammant's website  [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
+is on my friend and visionary Paul Hammant's website  [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 Please have a look!
 
 ### Virtualization vs. Containerization: a Pets vs. Cattle Redux
