@@ -36,17 +36,27 @@ development strategies within the limitations of the physics of the biological w
     Surgery on a patient must result in good outcomes (at all times) for
     that patient, not just for siblings or future generations.
 
-### Infrastructure as Code, Configuration as Code
+### Code is Law (Infrastructure, Configuration)
 
 Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation
 kept all their IT config files and support scripts in CVS, and subsequently Subversion.  In
 addition, each service we ran had an associated "runbook" to guide admins with their hands-on
 maintenance chores. 
 
+The workflow was less than ideal- staff had to exercise hard-to-enforce *discipline* when
+deploying changes to production, by first committing to version control, logging into target
+server, updating its checkout, and potentially restarting the service &mdash; all of this toil performed by hand.
+In reality, most of the time sysadmins hacked directly on the target server and committed from that
+server's checkout, risking a lot of merge conflicts along the way as the tree was re-updated (either then,
+or at some point down the road by future actions executed by some other staff member): a rather
+less-than-transparent workflow for collaborative ops teams.
+
 Nowadays, they keep everything in a `git`-backed puppet source tree, and provision/deploy
-directly to the cloud, which is a very modern approach to their IT-ops work.  A survey of the
-state of the art in DevOps IaC/CaC is on my friend Paul Hammant's website 
-[here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/?fbclid=IwAR35MRNXMlJJEbPQfB8BS95ZNOmm5nJb6584H-eQJ2XR900v5DDinrmU2jU).
+directly to the cloud, which is a very modern approach to their IT-ops work, since scheduled `git` pulls
+by the puppet master will eventually deploy updates as the puppet agents check-back-in.
+
+A survey of the state of the art, where changes are provisioned/deployed on demand in IaC/CaC settings,
+is on my friend Paul Hammant's website  [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/?fbclid=IwAR35MRNXMlJJEbPQfB8BS95ZNOmm5nJb6584H-eQJ2XR900v5DDinrmU2jU).
 Please have a look!
 
 ### Measure, Curb and Control Firefighting Efforts
