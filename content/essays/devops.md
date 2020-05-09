@@ -36,6 +36,11 @@ development strategies within the limitations of the physics of the biological w
     Surgery on a patient must result in good outcomes (at all times) for
     that patient, not just for siblings or future generations.
 
+#### CI / CD Pipelines
+
+Trunk Based Development is the basis for all of the consequent automated change
+control pipelines that have grown up over the last two decades.
+
 ### Code is Law (Development + Infrastructure + Configuration)
 
 Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation
