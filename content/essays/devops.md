@@ -36,7 +36,7 @@ development strategies within the limitations of the physics of the biological w
     Surgery on a patient must result in good outcomes (at all times) for
     that patient, not just for siblings or future generations.
 
-### Code is Law (Infrastructure, Configuration)
+### Code is Law (Development + Infrastructure + Configuration)
 
 Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation
 kept all their IT config files and support scripts in CVS, and subsequently Subversion.  In
