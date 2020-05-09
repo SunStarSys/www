@@ -36,6 +36,10 @@ development strategies within the limitations of the physics of the biological w
     Surgery on a patient must result in good outcomes (at all times) for
     that patient, not just for siblings or future generations.
 
+### Infrastructure as Code
+
+[Link](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/?fbclid=IwAR35MRNXMlJJEbPQfB8BS95ZNOmm5nJb6584H-eQJ2XR900v5DDinrmU2jU)
+
 ### Measure, Curb and Control Firefighting Efforts
 
 One of the other key things to recognize is to distinguish between *planned*
