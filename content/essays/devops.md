@@ -52,18 +52,29 @@ point down the road by future actions executed by some other staff member): a ra
 collaborative ops teams.
 
 Nowadays, they keep everything in a `git`-backed puppet source tree, and provision/deploy/configure directly to the cloud
-using generic upstream Ubuntu packages, which is a very modern approach to their IT-ops work, since scheduled `git` pulls
-by the puppet master will eventually deploy updates as the puppet agents check-back-in.
+using generic upstream Ubuntu packages, which is a somewhat modern approach to their IT-ops work, since scheduled `git` pulls
+by the puppet master will eventually deploy updates as the puppet agents check-back-in.  But CI/CD is a work-in-progress, even
+to this day.
 
-A survey of the state of the art, where changes are provisioned/deployed on demand in IaC/CaC settings,
+A survey of the state of the art, where changes are tested/provisioned/deployed on demand in IaC/CaC settings,
 is on my friend Paul Hammant's website  [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 Please have a look!
 
 ### Virtualization vs. Containerization: a Pets vs. Cattle Redux
 
+Container systems like Docker are customizable, redeployable virtualization technologies that are typically used to support
+a MicroService Architecture application cluster framework.  They pick up where virtualization systems left off, trading unlimited
+support of (fully) isolated per-VM operating systems for Linux-kernel based VM's that have considerably more programmable
+customization and integration with the parent Linux host on which they run.  In addition, they can be rebuilt and *uploaded* to
+a central distribution service (like artifactory) for wide-scale reuse across multiple dependency chains and raw executable
+server deployments. 
+
 #### Vertical vs. Horizontal Scaling
-#### Centralization and Reusability
-#### Isolation, Discovery, and Redundancy in a Distributed Service Mesh.
+
+Reconfigurable containers downloadable from a central server allow for possibilities difficult to realize with basic virtualization
+tech- you aren't locked in to any single server's hardware limits for scaling out your services to meet demand.  In other words,
+horizontal scaling by deploying the same container across collections of hosts is an immediately achievable first-class feature
+of MSA frameworks based on Docker.
 
 ### Measure, Curb and Control Firefighting Efforts
 
