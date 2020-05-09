@@ -38,7 +38,16 @@ development strategies within the limitations of the physics of the biological w
 
 ### Infrastructure as Code, Configuration as Code
 
-[Link](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/?fbclid=IwAR35MRNXMlJJEbPQfB8BS95ZNOmm5nJb6584H-eQJ2XR900v5DDinrmU2jU)
+Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation
+kept all their IT config files and support scripts in CVS, and subsequently Subversion.  In
+addition, each service we ran had an associated "runbook" to guide admins with their hands-
+on maintenance chores. 
+
+Nowadays, they keep everything in a `git`-backed puppet source tree, and provision/deploy
+directly to the cloud, which is a very modern approach to their IT-ops work.  A survey of the
+state of the art in DevOps IaC/CaC is on my friend Paul Hammant's website 
+[here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/?fbclid=IwAR35MRNXMlJJEbPQfB8BS95ZNOmm5nJb6584H-eQJ2XR900v5DDinrmU2jU).
+Please have a look!
 
 ### Measure, Curb and Control Firefighting Efforts
 
