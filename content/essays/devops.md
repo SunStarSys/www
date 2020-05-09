@@ -61,7 +61,9 @@ Please have a look!
 
 ### Virtualization vs. Containerization: a Pets vs. Cattle Redux
 
-vertical vs. horizontal scaling, centralization and reuse, isolation and discovery in a service mesh.
+#### Vertical vs. Horizontal Scaling
+#### Centralization and Reusability
+#### Isolation, Discovery, and Redundancy in a Distributed Service Mesh.
 
 ### Measure, Curb and Control Firefighting Efforts
 
