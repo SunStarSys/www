@@ -43,8 +43,8 @@ kept all their IT config files and support scripts in CVS, and subsequently Subv
 addition, each service we ran had an associated "runbook" to guide admins with their hands-on
 maintenance chores. 
 
-The workflow was less than ideal- staff had to exercise hard-to-enforce *discipline* when
-deploying changes to production, by first committing to version control, logging into target
+The workflow was less than ideal: besides building our own FreeBSD ports trees into deployable packages from scratch, 
+staff had to exercise hard-to-enforce *discipline* when deploying changes to production, by first committing to version control, logging into target
 server, updating its checkout, and potentially restarting the service &mdash; all of this toil performed by hand.
 In reality, most of the time sysadmins hacked directly on the target server and committed from that
 server's checkout, risking a lot of merge conflicts along the way as the tree was re-updated (either then,
