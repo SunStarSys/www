@@ -59,9 +59,9 @@ A survey of the state of the art, where changes are provisioned/deployed on dema
 is on my friend Paul Hammant's website  [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 Please have a look!
 
-### Virtualization vs. Containerization, a Pets vs. Cattle Redux
+### Virtualization vs. Containerization: a Pets vs. Cattle Redux
 
-
+vertical vs. horizontal scaling, centralization and reuse, isolation and discovery in a service mesh.
 
 ### Measure, Curb and Control Firefighting Efforts
 
