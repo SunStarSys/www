@@ -1,6 +1,8 @@
 Title: The DevOps Movement
 Keywords: devops
 
+[TOC]
+
 ### More than Just Giving Developers Root Access!
 
 Or not even that.  The big idea behind the "movement" is not simply giving developers
