@@ -45,6 +45,8 @@ control pipelines that have grown up over the last two decades.
 
 ### Code Is Law (Development + Infrastructure + Configuration)
 
+A bit of historical perspective first- the punchline follows these four paragraphs.
+
 Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation
 kept all their IT config files and support scripts in CVS, and subsequently Subversion.  In
 addition, each service we ran had an associated "runbook" to guide admins with their hands-on
@@ -64,7 +66,7 @@ by the puppet master will eventually deploy updates as the puppet agents check-b
 to this day.
 
 On the other hand, an early, groundbreaking CI-like initiative at The ASF (for actual Apache software TLP projects) was [Apache Gump](https://gump.apache.org/), which was the brainchild of
-brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD of the trunk of every
+brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD (including all deps) of the trunk of every
 codebase in the Subversion repository, for every project it could successfully figure out how to build (which was by and large limited
 to Java projects originally). Reports were automatically sent to each development community and archived for posterity.  This activity still goes on (with git) to this day!
 
