@@ -53,7 +53,7 @@ packages from scratch, staff had to exercise hard-to-enforce *discipline* when d
 committing to version control, logging into target server, updating its checkout, and potentially restarting the service &mdash;
 all of this toil performed by hand. In reality, most of the time sysadmins hacked directly on the target server and committed
 from that server's checkout, risking a lot of merge conflicts along the way as the tree was re-updated (either then, or at some
-point down the road by future actions executed by some other staff member): a rather less-than-transparent workflow for
+point down the road by future actions executed by some other staff member). A rather less-than-transparent workflow for
 collaborative ops teams.
 
 Nowadays, they keep everything in a `git`-backed puppet source tree, and provision/deploy/configure directly to the cloud
