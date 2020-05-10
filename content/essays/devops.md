@@ -73,7 +73,7 @@ Please have a look!
 ### Virtualization vs. Containerization: a [Pets vs. Cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) Redux
 
 Container systems like Docker are customizable, redeployable virtualization technologies that are typically used to support
-a MicroService Architecture (MSA) application cluster framework (aka service mesh manager like Kubernetes or Rancher). They pick up where virtualization systems left off, trading unlimited
+a MicroService Architecture (MSA) application cluster framework (aka *service mesh* manager like Kubernetes or Rancher). They pick up where virtualization systems left off, trading unlimited
 support of (fully) isolated per-VM operating systems for Linux-kernel based VM's that have considerably more programmable
 customization and integration with the parent Linux host on which they run.  In addition, they can be rebuilt and *uploaded* to
 a central distribution service (like artifactory) for wide-scale reuse across multiple dependency chains and raw executable
