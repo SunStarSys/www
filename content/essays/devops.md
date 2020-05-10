@@ -45,7 +45,8 @@ control pipelines that have grown up over the last two decades.
 
 ### Code Is Law (Development + Infrastructure + Configuration)
 
-A bit of historical perspective first; the punchline follows these four paragraphs.
+A bit of historical perspective first; the punchline follows these four paragraphs.  The common thread here
+is that Apache has almost always been ahead of its time.
 
 Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation
 kept all their IT config files and support scripts in CVS, and subsequently Subversion.  In
