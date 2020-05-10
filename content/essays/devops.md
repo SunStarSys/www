@@ -61,7 +61,7 @@ using generic upstream Ubuntu packages, which is a somewhat modern approach to t
 by the puppet master will eventually deploy updates as the puppet agents check-back-in.  But CI/CD is a work-in-progress, even
 to this day.
 
-Oh the other hand, another early, groundbreaking CI-like initiative at The ASF (for actual projects) was [Apache Gump](https://gump.apache.org/), which was the brainchild of
+Oh the other hand, another early, groundbreaking CI-like initiative at The ASF (for actual Apache software TLP projects) was [Apache Gump](https://gump.apache.org/), which was the brainchild of
 brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD of the trunk of every
 codebase in the Subversion repository, for every project it could successfully figure out how to build (which was by and large limited
 to Java projects originally). This activity still goes on to this day!
