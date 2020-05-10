@@ -65,7 +65,7 @@ A survey of the state of the art, where changes are tested/provisioned/deployed 
 is on my friend and visionary Paul Hammant's website  [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 Please have a look!
 
-### Virtualization vs. Containerization: a Pets vs. Cattle Redux
+### Virtualization vs. Containerization: a [Pets vs. Cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) Redux
 
 Container systems like Docker are customizable, redeployable virtualization technologies that are typically used to support
 a MicroService Architecture (MSA) application cluster framework (aka service mesh manager like Kubernetes or Rancher). They pick up where virtualization systems left off, trading unlimited
