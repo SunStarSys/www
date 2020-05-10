@@ -66,7 +66,7 @@ by the puppet master will eventually deploy updates as the puppet agents check-b
 to this day.
 
 On the other hand, an early, groundbreaking CI-like initiative at The ASF (for actual Apache software TLP projects) was [Apache Gump](https://gump.apache.org/), which was the brainchild of
-brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD (including all deps) of the trunk of every
+brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD (including HEAD of all deps) of the trunk of every
 codebase in the Subversion repository, for every project it could successfully figure out how to build (which was by and large limited
 to Java projects originally). Reports were automatically sent to each development community and archived for posterity.  This activity still goes on (with git) to this day!
 
