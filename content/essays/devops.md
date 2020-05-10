@@ -88,7 +88,7 @@ server deployments.
 Reconfigurable containers downloadable from a central server allow for possibilities difficult to realize with basic virtualization
 tech- you aren't locked in to any single server's hardware limits for scaling out your services to meet demand.  In other words,
 horizontal scaling by deploying the same container across collections of hosts is an immediately achievable first-class feature
-of MSA frameworks based on Docker.  As is deploying dozens more containers than CPUs on the *same* host.
+of MSA frameworks based on Docker.  As is deploying dozens more containers than CPU cores on the *same* host.
 
 ### Measure, Curb and Control Firefighting Efforts, Both Real and Practiced
 
