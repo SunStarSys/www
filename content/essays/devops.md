@@ -88,7 +88,7 @@ tech- you aren't locked in to any single server's hardware limits for scaling ou
 horizontal scaling by deploying the same container across collections of hosts is an immediately achievable first-class feature
 of MSA frameworks based on Docker.
 
-### Measure, Curb and Control Firefighting Efforts
+### Measure, Curb and Control Firefighting Efforts, Both Real and Practiced
 
 One of the other key things to recognize is to distinguish between *planned*
 and *unplanned* work in any of your productivity tracking metrics, and how
