@@ -61,6 +61,11 @@ using generic upstream Ubuntu packages, which is a somewhat modern approach to t
 by the puppet master will eventually deploy updates as the puppet agents check-back-in.  But CI/CD is a work-in-progress, even
 to this day.
 
+Another early, groundbreaking CI-like initiative at The ASF was [Apache Gump](https://gump.apache.org/), which was the brainchild of
+brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD of the trunk of every
+codebase in the Subversion repository, for every project it could successfully figure out how to build (which was by and large limited
+to Java projects originally). This activity still goes on to this day!
+
 A survey of the state of the art, where changes are tested/provisioned/deployed on demand in IaC/CaC settings,
 is on my friend and visionary Paul Hammant's website  [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/).
 Please have a look!
