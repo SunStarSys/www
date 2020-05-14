@@ -18,8 +18,7 @@ Keywords: South Florida, System Administration
 
 ### Telephone:
 
-    +1-954-253-3732  (my cell)
-    +1-954-727-5386  (business land line)
+    [+1 (954) 253-3732](tel://1.954.253.3732/)
 
 {% endfilter %}
 
