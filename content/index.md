@@ -4,7 +4,7 @@ Title: Home
 
 Welcome to the new site!  If you're looking for quality Information Technology services,
 you've come to the right place.  Content is evolving rapidly, so check back often!
-Test 1234
+Test 123
 <div class="panel panel-warning">
    <div class="panel-heading">
      <h3 class="panel-title">NEWS</h3>
