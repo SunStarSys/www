@@ -1,5 +1,5 @@
 package view;
-use base 'ASF::View';
+use base 'SunStarSys::View';
 
 # template set from first capture in regex in @path::patterns
 sub set_template_from_capture {
