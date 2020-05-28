@@ -1,5 +1,5 @@
 package path;
-use ASF::Util qw/walk_content_tree Load/;
+use SunStarSys::Util qw/walk_content_tree Load/;
 use strict;
 use warnings;
 
