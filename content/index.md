@@ -5,16 +5,11 @@ Title: Home
 Welcome to the new site!  If you're looking for quality Information Technology services,
 you've come to the right place.  Content is evolving rapidly, so check back often!
 
-<div class="panel panel-warning">
-   <div class="panel-heading">
-     <h3 class="panel-title">NEWS</h3>
-   </div>
-   <div class="panel-body">
-We are pleased to announce our availability for taking on new business at this time.
+## NEWS
+
 Interested parties please see our <a href="/contact">Contact Page</a> to get in touch.
 For more about what we offer, see our <a href="/about">About Page</a> to learn more.
-   </div>
-</div>
+
 
 ## Featured Pages
 
