@@ -6,6 +6,16 @@ Welcome to the new site!  If you're looking for quality Information Technology s
 you've come to the right place.  Content is evolving rapidly, so check back often!
 
 $$ E = mc^2 $$
+```flow
+st=>start: Login
+op=>operation: Login operation
+cond=>condition: Successful Yes or No?
+e=>end: To admin
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
 
 ## NEWS
 
