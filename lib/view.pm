@@ -10,4 +10,3 @@ sub set_template_from_capture {
 }
 
 1;
-
