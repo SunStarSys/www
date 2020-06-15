@@ -1,6 +1,6 @@
 Title: Features
 
-## Fast 
+## Fast
 
 - runs on NVMe
 - Solaris 11.4 for ZFS stability
