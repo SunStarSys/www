@@ -39,4 +39,3 @@ What epidemiologists are trying to accomplish is to kick that process off as soo
 Inevitably the flattening will happen. If it’s not because of human social wisdom, then it’s because the virus cannot reinfect past victims, and it simply infects the majority of the population before petering out and lingering to infect newborns, or just vanishing entirely.
 
 $Date$
-
