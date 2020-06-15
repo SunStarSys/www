@@ -14,3 +14,7 @@ Title: Features
 
 - PCRE based
 
+## Dropped Features
+
+- mdx_elementid.py (new implementation is node.js based)
+- Only the perl-based build system is available.
