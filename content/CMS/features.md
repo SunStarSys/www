@@ -1,5 +1,14 @@
 Title: Features
 
+## Fast 
+
+- runs on NVMe
+- Solaris 11.4 for ZFS stability
+
+## Not the ugly duckling it used to be
+
+- Bootstrap (Solarized) styling
+
 ## Consistent Common Markdown (gfm) rendering with Editor.md
 
 - TeX
