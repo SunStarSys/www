@@ -1,7 +1,7 @@
 Title: Contact Us
 Keywords: South Florida, System Administration
 
-![SunStar Systems](/images/sunstarlogowhole.png)
+![SunStar Systems](images/sunstarlogowhole.png)
 
 ### Email:
 
