@@ -22,8 +22,11 @@ Title: Features
 ## Live code search engine
 
 - PCRE based
+- Offers global search and replace functionality as well
 
 ## Dropped Features
 
 - mdx_elementid.py (new implementation is node.js based)
 - Only the perl-based build system is available.
+- New editor treates newlines within markdown text blocks as hard breaks.
+
