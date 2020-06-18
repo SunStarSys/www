@@ -3,7 +3,6 @@ use SunStarSys::Util qw/walk_content_tree Load/;
 use strict;
 use warnings;
 
-
 my $conf = Load join "", <DATA>;
 
 our @patterns = (
@@ -51,7 +50,6 @@ push @{$dependencies{"/essays/files/index.html"}}, grep -f && s/^content// && !m
     glob("content/essays/files/*/*");
 
 1;
-
 
 __DATA__
 title: "SunStar Systems"
