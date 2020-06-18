@@ -2,7 +2,9 @@ Title: Home
 
 ![SunStar Systems](images/sunstarlogowhole.png)
 
-Welcome to the new site!  If you're looking for quality Information Technology services, you've come to the right place.  Content is evolving rapidly, so check back often!
+Welcome to the new site!  If you're looking for quality Information Technology services,
+you've come to the right place.  Content is evolving rapidly, so check back often!
+FOO
 
 $$ E = mc^2 $$
 
