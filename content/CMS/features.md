@@ -23,7 +23,7 @@ Title: Features
 ## Live code search engine
 
 - PCRE based
-- Offers global search and replace functionality as well
+- Global search and replace functionality as well (unique given PCRE support), supports regex captures.
 
 ## Dropped Features
 
