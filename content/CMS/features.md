@@ -4,6 +4,7 @@ Title: Features
 
 - runs on NVMe
 - Solaris 11.4 for ZFS stability
+- node.js for markdown rendering with CPU clustering
 
 ## Not the ugly duckling it used to be
 
@@ -29,4 +30,5 @@ Title: Features
 - mdx_elementid.py (new implementation is node.js based)
 - Only the perl-based build system is available.
 - New editor treates newlines within markdown text blocks as hard breaks.
+- Common Markdown (GFM) uses a different delimiter for code blocks.
 
