@@ -51,7 +51,6 @@ push @{$dependencies{"/essays/files/index.html"}}, grep -f && s/^content// && !m
 
 1;
 
-
 __DATA__
 title: "SunStar Systems"
 keywords: "sysadmin,sunstar systems,perl,mod_perl,c,xs,httpd,apache,puppet,qmail,ezmlm,git,subversion,mysql,postgresql,linux,freebsd,solaris,nagios"
