@@ -2,7 +2,7 @@ Title: SunStar Systems CMS Primer
 
 {% extends "main.html" %}
 {% block content %}
-<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape('http://www.sunstarsys.com{{
+<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}  <a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape('http://www.sunstarsys.com{{
       path }}')+';action=edit')"><img src="/images/edit.png" /></a></div>
   <h1>{{ headers.title }}</h1></div>
 <div class="jumbotron">
@@ -22,6 +22,5 @@ Work with partners to create content in this space.
 {% endfilter %}
 
 {{ content|markdown }}
-
 </div>
 {% endblock %}
