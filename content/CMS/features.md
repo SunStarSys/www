@@ -5,6 +5,7 @@ Title: Features
 - runs on NVMe
 - Solaris 11.4 for ZFS stability
 - node.js for markdown rendering with CPU clustering
+- Quick Commit now the default setting.
 
 ## Not the ugly duckling it used to be
 
