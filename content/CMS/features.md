@@ -7,7 +7,7 @@ Title: Features
 - node.js for markdown rendering with CPU clustering
 - Quick Commit now the default setting.
 
-## Not the ugly duckling it used to be
+## Not the ugly duckling it used to be!
 
 - Bootstrap (Solarized) styling
 
