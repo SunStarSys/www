@@ -5,7 +5,7 @@ Keywords: South Florida, System Administration
 
 ### Email:
 
-- [Joe Schaefer](mailto://joe@sunstarsys.com)
+- [Joe Schaefer](mailto:joe@sunstarsys.com)
 
 ### Postal Address:
 
