@@ -4,6 +4,8 @@ Title: Home
 
 Welcome to the new site!  If you're looking for quality Information Technology services, you've come to the right place.  Content is evolving rapidly, so check back often!
 
+$$ E = mc^2 $$
+
 ## NEWS
 
 Interested parties please see our <a href="/contact">Contact Page</a> to get in touch. For more about what we offer, see our <a href="/about">About Page</a> to learn more.
