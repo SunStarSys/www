@@ -28,7 +28,7 @@ Title: Features
 
 ## Dropped Features
 
-- mdx_elementid.py (new implementation is node.js based)
+- all mdx_elementid.py features (new implementation is node.js based)
 - Only the perl-based build system is available.
 - New editor treates newlines within markdown text blocks as hard breaks.
 - Common Markdown (GFM) uses a different delimiter for code blocks.
