@@ -27,7 +27,7 @@ Title: Features
 - PCRE based
 - Global search and replace functionality as well (unique given PCRE support), supports regex captures.
 
-## Dropped ASF::CMS Features
+## Dropped `ASF::CMS` Features
 
 - all mdx_elementid.py features (new implementation is node.js based)
 - Only the perl-based build system is available.
