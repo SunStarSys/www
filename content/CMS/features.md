@@ -13,7 +13,8 @@ Title: Features
 
 ## Consistent Common Markdown (gfm) rendering with Editor.md
 
-- TeX
+- TeX $$ E = mc^2 $$
+
 - Flowcharts (coming soon)
 
 ## Full support for branch builds
