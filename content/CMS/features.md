@@ -18,7 +18,7 @@ Title: Features
 
 ## Full support for branch builds
 
-- No more staging/publishing: replaced with branch promotion
+- No more staging/publishing: replaced with per-resource branch promotion
 - Rollback functionality available
 
 ## Live code search engine
