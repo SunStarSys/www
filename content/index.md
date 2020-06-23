@@ -16,9 +16,3 @@ Interested parties please see our <a href="/contact">Contact Page</a> to get in 
 - [Mailing Lists](/essays/mailing-lists) - things ezmlm admins might find useful.
 - [Git and Non Repudiation](/essays/git-and-non-repudiation) - the case for push records.
 - [On the Spam Problem](/essays/spam) - qpsmtpd and earlytalker ftw.
-
-    ```diff
-    - www ok 
-    + foo bar quux
-       alpheta
-    ```
