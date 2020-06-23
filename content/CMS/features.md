@@ -15,9 +15,7 @@ Title: Features
 
 - YAML headers in text files now fully supported
 
-- TeX
-
-$$ E = mc^2 $$
+- TeX: $$ E = mc^2 $$
 
 - Flowcharts (coming soon)
 
