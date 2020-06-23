@@ -13,7 +13,11 @@ Title: Features
 
 ## Consistent Common Markdown (gfm) rendering with Editor.md
 
-- TeX $$ E = mc^2 $$
+- YAML headers in text files now fully supported
+
+- TeX
+
+$$ E = mc^2 $$
 
 - Flowcharts (coming soon)
 
