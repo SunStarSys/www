@@ -6,9 +6,7 @@ Welcome to the new site!  If you're looking for quality Information Technology s
 
 ## NEWS
 
-Interested parties please see our <a href="/contact">Contact Page</a> to get in touch.
-For more about what we offer, see our <a href="/about">About Page</a> to learn more.
-
+Interested parties please see our <a href="/contact">Contact Page</a> to get in touch. For more about what we offer, see our <a href="/about">About Page</a> to learn more.
 
 ## Featured Pages
 
