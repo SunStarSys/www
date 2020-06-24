@@ -15,14 +15,14 @@ Title: Features
 
 - YAML headers in text files now fully supported
 
-- TeX: $$ E = mc^2 $$
-
 - Flowcharts (coming soon)
+
+- TeX: $$ E = mc^2 $$
 
 ## Full support for branch builds
 
-- No more staging/publishing: replaced with per-resource branch promotion
-- Rollback functionality available
+- No more staging/publishing: replaced with per-resource branch Promotion
+- Rollback and Sync Merge fully supported
 
 ## Live code search engine
 
