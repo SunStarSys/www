@@ -8,6 +8,8 @@ Welcome to the new site!  If you're looking for quality Information Technology s
 
 Interested parties please see our <a href="/contact">Contact Page</a> to get in touch. For more about what we offer, see our <a href="/about">About Page</a> to learn more.
 
+------------
+
 ## Featured Pages
 
 - [The DevOps Movement](/essays/devops) - Finally filled in the missing details on this article.
