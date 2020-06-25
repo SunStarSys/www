@@ -13,7 +13,7 @@ Title: Features
 
 ## Consistent Common Markdown (gfm) rendering with Editor.md
 
-- YAML headers in text files now fully supported
+- YAML headers in source (markdown) files now fully supported
 
 - Flowcharts (coming soon)
 
