@@ -13,7 +13,7 @@ Title: Features
 
 ## Consistent Common Markdown (gfm) rendering with Editor.md
 
-- YAML headers in text files now fully supported
+- YAML headers in source (markdown) files now fully supported
 
 - Flowcharts (coming soon)
 
@@ -36,4 +36,4 @@ Title: Features
 - New editor treates newlines within markdown text blocks as hard breaks.
 - Common Markdown (GFM) uses a different delimiter for code blocks.
 - extpaths.txt is no longer supported: select individuals from each project will be granted write access to the production website tree in subversion for uploading externally produced material (javadocs, etc.).
-- Uses ezmlm-compatible SRS scheme for sending diffs and clone URLs to lists, instead of relying on `apache.org` domain whitelists.
+- Uses ezmlm-compatible SRS scheme to bypass moderation for sending diffs with clone URLs to mailing lists, instead of relying on `apache.org` domain whitelists.

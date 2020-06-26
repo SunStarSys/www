@@ -1,4 +1,4 @@
-Title: SunStar Systems CMS Primer
+Title: SunStar Systems CMS
 
 {% extends "main.html" %}
 {% block content %}
@@ -10,7 +10,7 @@ Title: SunStar Systems CMS Primer
 <div class="jumbotron">
 
 {% filter markdown %}
-## SunStar Systems CMS Primer
+## SunStar Systems CMS
 
 The SunStar Systems CMS is an online, Subversion-backed IDE for developing and maintaining static websites with some basic CGI/SSI features.  It does this by either interfacing with a customer-provided Subversion server, or by using one of ours.  It builds each committed change using a lightning fast Perl5-based build system based on the Hollywood principle: it calls out to the customer-supplied perl modules (`path.pm` and `view.pm`) to do whatever the customer needs done.
 
@@ -34,7 +34,11 @@ To use the bookmarklet simply browse your live production site (NOT in the CMS!)
 - ithread-safe svn client code (much hackery this week, should be done Friday)
 - Fully Scalable to Oracle Cloud for private server deployments (Solaris zfs only)
 - Hardware is here: will deploy to server before start of next week (this thing will `hum` for OOo site builds!)
-- TBD: pre-build zfs snapshots of websites plus administrative interface; build progress tracking using streams (done).
+- TBD: pre-build zfs snapshots of websites (unnecessary) plus administrative interface; build progress tracking using streams (done).
+
+------------
+
+## Details
 
 {% endfilter %}
 
