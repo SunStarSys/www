@@ -1,4 +1,4 @@
-Title: Features
+Title: CMS Features
 
 ## Fast
 
