@@ -1,3 +1,4 @@
 /* local overrides */
 div.jumbotron img { width: 200px; }
 .katex-html { display: none }
+body { padding-top: 90px }
