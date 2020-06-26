@@ -7,11 +7,11 @@ My experience with mailing list software revolves around [qmail](http://cr.yp.to
 
 ### BATV and SRS
 
-[bin/sender-demunger](ezmlm/bin/sender-demunger) is a little wrapper script that enables `BATV` and `SRS` `SENDER` demunging for `ezmlm-idx`.  To use it you simply add it as a prefix to all of the lines in your `</editor/>` and `</manager/>` blocks within `.ezmlmrc` and run `ezmlm-make -+` on your lists, or in a pinch assuming you will not run `ezmlm-make` again on your lists, edit the `editor` and `manager` files within your list directories.
+[bin/sender-demunger](ezmlm/bin/sender-demunger.pl) is a little wrapper script that enables `BATV` and `SRS` `SENDER` demunging for `ezmlm-idx`.  To use it you simply add it as a prefix to all of the lines in your `</editor/>` and `</manager/>` blocks within `.ezmlmrc` and run `ezmlm-make -+` on your lists, or in a pinch assuming you will not run `ezmlm-make` again on your lists, edit the `editor` and `manager` files within your list directories.
 
 [BATV](http://en.wikipedia.org/wiki/Bounce_Address_Tag_Validation) and [SRS](http://en.wikipedia.org/wiki/Sender_Rewriting_Scheme) pose unique problems for `ezmlm-idx` because unlike other mailing list software it operates on the `MAIL FROM` portion of the `SMTP` envelope, not the "From" address in the message headers.
 
-Both specifications revolve around providing temporary addresses to the `MAIL FROM` envelope portion, which embed the original address in an easily decipherable way.  But these temporary addresses are anathema to `ezmlm-idx`'s subscription and moderation systems, and the `sender-demunger` script mentioned above will fix that once deployed.
+Both specifications revolve around providing temporary addresses to the `MAIL FROM` envelope portion, which embed the original address in an easily decipherable way.  But these temporary addresses are anathema to `ezmlm-idx`'s subscription and moderation systems, and the `sender-demunger.pl` script mentioned above will fix that once deployed.
 
 <div class="panel panel-warning">
    <div class="panel-heading">
@@ -24,12 +24,12 @@ According to the release notes, since version 7.0.0, ezmlm-idx should have suppo
 
 ### DMARC
 
-See [bin/ezmlm-dmarc-filter](ezmlm/bin/ezmlm-dmarc-filter) and [bin/ezmlm-seekable-stdin](ezmlm/bin/ezmlm-seekable-stdin) and [lib/pull_header.pm](ezmlm/lib/pull_header.pm).  To use these scripts, change the lines in your `</editor/>` section of `.ezmlmrc` that call `ezmlm-gate`, `ezmlm-store`, or `ezmlm-send`, to look like the following:
+See [bin/ezmlm-dmarc-filter.pl](ezmlm/bin/ezmlm-dmarc-filter.pl) and [bin/ezmlm-seekable-stdin.pl](ezmlm/bin/ezmlm-seekable-stdin.pl) and [lib/pull_header.pm](ezmlm/lib/pull_header.pm).  To use these scripts, change the lines in your `</editor/>` section of `.ezmlmrc` that call `ezmlm-gate`, `ezmlm-store`, or `ezmlm-send`, to look like the following:
 
 ```shell
-    |/path/to/bin/ezmlm-dmarc-filter '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin /path/to/bin/sender-demunger <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
-    |/path/to/bin/ezmlm-dmarc-filter '<#D#>/dmarc' | /path/to/bin/sender-demunger <#B#>/ezmlm-store '<#D#>'
-    |/path/to/bin/ezmlm-dmarc-filter '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/ezmlm-seekable-stdin.pl /path/to/bin/sender-demunger.pl <#B#>/ezmlm-gate -rY '<#D#>' '<#D#>' '<#D#>/digest' '<#D#>/allow' '<#D#>/mod'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | /path/to/bin/sender-demunger.pl <#B#>/ezmlm-store '<#D#>'
+    |/path/to/bin/ezmlm-dmarc-filter.pl '<#D#>/dmarc' | <#B#>/ezmlm-send -r '<#D#>'
 ```
 
 This assumes you will touch a file named `dmarc` in any list directories where you want to enable the filter.  You can configure `.ezmlmrc` to do this by adding the following block to that file:
@@ -42,6 +42,6 @@ This assumes you will touch a file named `dmarc` in any list directories where y
 ```
 The only list configurations that run afoul of `DMARC` are those with `-f`, `-t` or `-x` set. The above configuration will adjust for that.
 
-In case you haven't kept up with the times, there is a recent movement afoot to introduce strong [DMARC](http://en.wikipedia.org/wiki/DMARC) policies that reject messages which fail [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) signature tests. Facebook, Twitter, LinkedIn, Yahoo! and now AOL have been leading this charge into new territory, forcing mailing list operators to deal with the situation. What the `ezmlm-dmarc-filter` does, and this isn't the only possible solution to the problem, is drop the `DKIM-Signature` header for any such domain, and add an `.INVALID` suffix to the sender's `From` header address.  It has the advantage of being one of the simplest solutions that works, so I'm offering it here.  So far the domains that deploy strict `DMARC` policies all provide appropriate `Reply-To` headers, so these changes made by `ezmlm-dmarc-filter` will not impact the operation of any RFC-compliant email responses to such messages.
+In case you haven't kept up with the times, there is a recent movement afoot to introduce strong [DMARC](http://en.wikipedia.org/wiki/DMARC) policies that reject messages which fail [DKIM](http://en.wikipedia.org/wiki/DomainKeys_Identified_Mail) signature tests. Facebook, Twitter, LinkedIn, Yahoo! and now AOL have been leading this charge into new territory, forcing mailing list operators to deal with the situation. What the `ezmlm-dmarc-filter.pl` does, and this isn't the only possible solution to the problem, is drop the `DKIM-Signature` header for any such domain, and add an `.INVALID` suffix to the sender's `From` header address.  It has the advantage of being one of the simplest solutions that works, so I'm offering it here.  So far the domains that deploy strict `DMARC` policies all provide appropriate `Reply-To` headers, so these changes made by `ezmlm-dmarc-filter.pl` will not impact the operation of any RFC-compliant email responses to such messages.
 
 $Date$
