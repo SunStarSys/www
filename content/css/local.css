@@ -3,3 +3,9 @@ div.jumbotron img { width: 200px; }
 .katex-html { display: none }
 body { padding-top: 90px }
 .navbar img {background-color: white; height: 38px;}
+h1 {height: 18px}
+h2 {height: 16px}
+h3 {height: 14px}
+h4 {height: 12px}
+h5 {height: 10px}
+h6 {height: 8px }
