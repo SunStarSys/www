@@ -3,126 +3,59 @@ Keywords: devops
 
 [TOC]
 
-### More than Just Giving Developers Root Access!
+## More than Just Giving Developers Root Access!
 
-Or not even that.  The big idea behind the "movement" is not simply giving developers
-more rope; it's about ensuring better lines of communication between the developers
-and the *operations* teams in the enterprise.  Much of this is not new, in fact it's a
-rehash of the "agile" movement within traditional industrial supply chains
-during the prior century.  Kanban boards are just the latest rehash of birds-eye
-dashboards (doubling as workflow inventory managers) covering the collective daily effort to
-ship quality products that delight customers and business partners alike.
+Or not even that.  The big idea behind the "movement" is not simply giving developers more rope; it's about ensuring better lines of communication between the developers and the *operations* teams in the enterprise.  Much of this is not new, in fact it's a rehash of the "agile" movement within traditional industrial supply chains during the prior century.  Kanban boards are just the latest rehash of birds-eye dashboards (doubling as workflow inventory managers) covering the collective daily effort to ship quality products that delight customers and business partners alike.
 
-Constraint management is key to the process.  By first identifying any and
-all bottlenecks in the system, you can refocus your efforts on optimizing
-those resources to perform to maximum effect.  Optimizations beyond those
-areas are almost always not worth the bother &mdash; the workflow will still be
-constrained by those resources.
+Constraint management is key to the process.  By first identifying any and all bottlenecks in the system, you can refocus your efforts on optimizing those resources to perform to maximum effect.  Optimizations beyond those areas are almost always not worth the bother &mdash; the workflow will still be constrained by those resources.
 
-### Trunk Based Development
+## Trunk Based Development
 
-Encouraging incremental changes with automated testing, promotion, and release processes
-on a scheduled cadence is a great way to get the ball rolling, but a big part
-of quality control in SaaS/PaaS deployments involves adopting
-*[trunk based development](https://trunkbaseddevelopment.com)*
-and its *branch by abstraction* concepts.  (Please visit the link for a thorough
-discussion of the features and drawbacks).
+Encouraging incremental changes with automated testing, promotion, and release processes on a scheduled cadence is a great way to get the ball rolling, but a big part of quality control in SaaS/PaaS deployments involves adopting *[trunk based development](https://trunkbaseddevelopment.com)* and its *branch by abstraction* concepts.  (Please visit the link for a thorough discussion of the features and drawbacks).
 
-In essence, the multiverse of long-term `git` branches creates the psychological fiction
-that the combined merging of all of that local development work (and testing!) will lead
-to a whole that is at least as great as the sum of its parts.  Experience is the better judge,
-which indicates that extensive-new-feature-sets should be engineered *incrementally*, *in-situ*,
-on the existing production/release branch source code.  Basically, you engineer your
-development strategies within the limitations of the physics of the biological world, which says:
+In essence, the multiverse of long-term `git` branches creates the psychological fiction that the combined merging of all of that local development work (and testing!) will lead to a whole that is at least as great as the sum of its parts.  Experience is the better judge, which indicates that extensive-new-feature-sets should be engineered *incrementally*, *in-situ*, on the existing production/release branch source code.  Basically, you engineer your development strategies within the limitations of the physics of the biological world, which says:
 
     Surgery on a patient must result in good outcomes (at all times) for
     that patient, not just for siblings or future generations.
 
-#### CI / CD Pipelines
+### CI / CD Pipelines
 
-Trunk Based Development is the basis for all of the consequent automated change
-control pipelines that have grown up over the last two decades.
+Trunk Based Development is the basis for all of the consequent automated change control pipelines that have grown up over the last two decades.
 
-### Code Is Law (Development + Infrastructure + Configuration)
+## Code Is Law (Development + Infrastructure + Configuration)
 
-A bit of historical perspective first; the punchline follows these four paragraphs.  The common thread here
-is that Apache has almost always been ahead of its time.
+A bit of historical perspective first; the punchline follows these four paragraphs.  The common thread here is that Apache has almost always been ahead of its time.
 
-Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation
-kept all their IT config files and support scripts in CVS, and subsequently Subversion.  In
-addition, each service we ran had an associated "runbook" to guide admins with their hands-on
-maintenance chores. 
+Back in the pre-[CFEngine](https://cfengine.com) days, The Apache Software Foundation kept all their IT config files and support scripts in CVS, and subsequently Subversion.  In addition, each service we ran had an associated "runbook" to guide admins with their hands-on maintenance chores.
 
-The workflow was less than ideal: besides building our own locally patched FreeBSD ports trees into deployable (binary)
-packages from scratch, staff had to exercise hard-to-enforce *discipline* when deploying changes to production, by first
-committing to version control, logging into target server, updating its checkout, and potentially restarting the service &mdash;
-all of this toil performed by hand. In reality, most of the time sysadmins hacked directly on the target server and committed
-from that server's checkout, risking a lot of merge conflicts along the way as the tree was re-updated (either then, or at some
-point down the road by future actions executed by some other staff member). A rather less-than-transparent workflow, with dubious
-password management security, for a collaborative ops team.
+The workflow was less than ideal: besides building our own locally patched FreeBSD ports trees into deployable (binary) packages from scratch, staff had to exercise hard-to-enforce *discipline* when deploying changes to production, by first committing to version control, logging into target server, updating its checkout, and potentially restarting the service &mdash; all of this toil performed by hand. In reality, most of the time sysadmins hacked directly on the target server and committed from that server's checkout, risking a lot of merge conflicts along the way as the tree was re-updated (either then, or at some point down the road by future actions executed by some other staff member). A rather less-than-transparent workflow, with dubious password management security, for a collaborative ops team.
 
-Nowadays, they keep everything in a `git`-backed puppet source tree, and provision/deploy/configure directly to the cloud
-using generic upstream Ubuntu packages, which is a somewhat modern approach to their IT-ops work, since scheduled `git` pulls
-by the puppet master will eventually deploy updates as the puppet agents check-back-in.  But CI/CD is a work-in-progress, even
-to this day.
+Nowadays, they keep everything in a `git`-backed puppet source tree, and provision/deploy/configure directly to the cloud using generic upstream Ubuntu packages, which is a somewhat modern approach to their IT-ops work, since scheduled `git` pulls by the puppet master will eventually deploy updates as the puppet agents check-back-in.  But CI/CD is a work-in-progress, even to this day.
 
-On the other hand, an early, groundbreaking CI-like initiative at The ASF (for actual Apache software TLP projects) was [Apache Gump](https://gump.apache.org/), which was the brainchild of
-brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD (including HEAD of all deps) of the trunk of every
-codebase in the Subversion repository (but dates back to CVS) for every project it could successfully figure out how to build (which was by and large limited
-to Java projects originally). Reports were automatically sent to each development community and archived for posterity.  This activity still goes on (with git) to this day!
+On the other hand, an early, groundbreaking CI-like initiative at The ASF (for actual Apache software TLP projects) was [Apache Gump](https://gump.apache.org/), which was the brainchild of brilliant colleagues like Sam Ruby and company.  What gump did was periodically checkout, build and test HEAD (including HEAD of all deps) of the trunk of every codebase in the Subversion repository (but dates back to CVS) for every project it could successfully figure out how to build (which was by and large limited to Java projects originally). Reports were automatically sent to each development community and archived for posterity.  This activity still goes on (with git) to this day!
 
-Here's *the point in a nutshell*: all of your sources (development, infrastructure, and configuration) belong in version control
-(not necessarily sharing the same repository) that is reviewable by all devops personnel, and is part of your full set of
-automation pipelines between patch revisions and production deployments.  A survey of the state of the art, where changes
-are tested/provisioned/deployed on demand in IaC/CaC settings, is on my friend and visionary Paul Hammant's website
-[here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/). Please have a look!
+Here's *the point in a nutshell*: all of your sources (development, infrastructure, and configuration) belong in version control (not necessarily sharing the same repository) that is reviewable by all devops personnel, and is part of your full set of automation pipelines between patch revisions and production deployments.  A survey of the state of the art, where changes are tested/provisioned/deployed on demand in IaC/CaC settings, is on my friend and visionary Paul Hammant's website [here](https://paulhammant.com/2014/08/27/provisioning-deployment-and-app-config-cycles/). Please have a look!
 
-### Virtualization vs. Containerization: a [Pets vs. Cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) Redux
+## Virtualization vs. Containerization: a [Pets vs. Cattle](http://cloudscaling.com/blog/cloud-computing/the-history-of-pets-vs-cattle/) Redux
 
-Container systems like Docker are customizable, redeployable virtualization technologies that are typically used to support
-a MicroService Architecture (MSA) application cluster framework (aka *service mesh* manager like Kubernetes or Rancher). They pick up where virtualization systems left off, trading unlimited
-support of (fully) isolated per-VM operating systems for Linux-kernel based VM's that have considerably more programmable
-customization and integration with the parent Linux host on which they run.  In addition, they can be rebuilt and *uploaded* to
-a central distribution service (like artifactory) for wide-scale reuse across multiple dependency chains and raw executable
-server deployments. 
+Container systems like Docker are customizable, redeployable virtualization technologies that are typically used to support a MicroService Architecture (MSA) application cluster framework (aka *service mesh* manager like Kubernetes or Rancher). They pick up where virtualization systems left off, trading unlimited support of (fully) isolated per-VM operating systems for Linux-kernel based VM's that have considerably more programmable customization and integration with the parent Linux host on which they run.  In addition, they can be rebuilt and *uploaded* to a central distribution service (like artifactory) for wide-scale reuse across multiple dependency chains and raw executable server deployments.
 
-#### Vertical vs. Horizontal Scaling
+### Vertical vs. Horizontal Scaling
 
-Reconfigurable containers downloadable from a central server allow for possibilities difficult to realize with basic virtualization
-tech- you aren't locked in to any single server's hardware limits for scaling out your services to meet demand.  In other words,
-horizontal scaling by deploying the same container across collections of hosts is an immediately achievable first-class feature
-of MSA frameworks based on Docker.  As is deploying dozens more containers than CPU cores on the *same* host.
+Reconfigurable containers downloadable from a central server allow for possibilities difficult to realize with basic virtualization tech- you aren't locked in to any single server's hardware limits for scaling out your services to meet demand.  In other words, horizontal scaling by deploying the same container across collections of hosts is an immediately achievable first-class feature of MSA frameworks based on Docker.  As is deploying dozens more containers than CPU cores on the *same* host.
 
-### Measure, Curb and Control Firefighting Efforts, Both Real and Practiced
+## Measure, Curb and Control Firefighting Efforts, Both Real and Practiced
 
-One of the other key things to recognize is to distinguish between *planned*
-and *unplanned* work in any of your productivity tracking metrics, and how
-resources are allocated to those tasks.  Unplanned work amounts
-to **firefighting**, and if too much time (more than ~20%) is spent on these tasks,
-the planned work, which is the real business need for the enterprise, gets backlogged.
-The bottlenecks in the system rarely can cope with unplanned work, so it
-is important to have enough additional resources to handle the increased load and
-consequent backlog.
+One of the other key things to recognize is to distinguish between *planned* and *unplanned* work in any of your productivity tracking metrics, and how resources are allocated to those tasks.  Unplanned work amounts to **firefighting**, and if too much time (more than ~20%) is spent on these tasks, the planned work, which is the real business need for the enterprise, gets backlogged.
 
-One of the major throwback lessons of COVID-19 in early 2020, as hospital capacity
-in terms of IT, is that there is such a thing as being *too lean*, at least when it comes
-to devops staffing (hardware is another story).  Contingency planning for a rainy day,
-either with "redundant" staff or cross-training initiatives, combined with regular preparatory
-drills, not only keeps the doctor away, but is actually **mission critical**.
+The bottlenecks in the system rarely can cope with unplanned work, so it is important to have enough additional resources to handle the increased load and consequent backlog.
 
-### Getting with the Program
+One of the major throwback lessons of COVID-19 in early 2020, as hospital capacity in terms of IT, is that there is such a thing as being *too lean*, at least when it comes to devops staffing (hardware is another story).  Contingency planning for a rainy day, either with "redundant" staff or cross-training initiatives, combined with regular preparatory drills, not only keeps the doctor away, but is actually **mission critical**.
 
-At the management level, a global change management perspective between 
-both devs and ops changes is vital. Both sets of teams need to be aware
-of each other's changes. Ideally with planning details made available
-along the way.  **Great things can happen** when the teams are a healthy mix
-of devs and ops personnel, in a data-driven, transparent culture of collaborative work.
+## Getting with the Program
 
-The philosophy of inclusion of manifold stakeholders into the creation, and **evolution**,
-of a tangible work product has implications well beyond just *dev* and *ops* teams sharing
-control and responsibility for a server engineering effort. This lesson keeps being
-repeated throughout the modern corporate world, as new domains for creative
-human expression take form in the business sector, as well as in reinventing old
-ways of doing business together.
- 
+At the management level, a global change management perspective between both devs and ops changes is vital. Both sets of teams need to be aware of each other's changes. Ideally with planning details made available along the way.  **Great things can happen** when the teams are a healthy mix of devs and ops personnel, in a data-driven, transparent culture of collaborative work.
+
+The philosophy of inclusion of manifold stakeholders into the creation, and **evolution**, of a tangible work product has implications well beyond just *dev* and *ops* teams sharing control and responsibility for a server engineering effort. This lesson keeps being repeated throughout the modern corporate world, as new domains for creative human expression take form in the business sector, as well as in reinventing old ways of doing business together.
+
 $Date$
