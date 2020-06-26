@@ -20,6 +20,8 @@ Title: CMS Features
 
 ## Consistent Common Markdown (gfm) rendering with Editor.md
 
+- WYSIWYG: Same javascript code rendering engine in both your browser and in the markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
+
 - YAML headers in source (markdown) files now fully supported
 
 - Flowcharts (coming soon)
