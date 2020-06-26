@@ -40,7 +40,17 @@
             <li class="nav-item{% ifequal path "/contact.html" %}
 				  active
                    {% endifequal %}"><a class="nav-link" href="/contact">Contact</a></li>
-            <li class="nav-item{% ifequal path "/CMS/index.html" %}
+ 			<li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+				<li class="dropdown-item{% ifequal path "/CMS/index.html" %}
+				  active
+                   {% endifequal %}"><a class="nav-link" href="/CMS/">CMS</a></li>
+				<li class="dropdown-item{% ifequal path "/StageMaster/index.html" %}
+				  active
+                   {% endifequal %}"><a class="nav-link" href="/StageMaster/">StageMaster</a></li>
+              </ul>
+            </li>            <li class="nav-item{% ifequal path "/CMS/index.html" %}
 				  active
                    {% endifequal %}"><a class="nav-link" href="/CMS/">CMS</a></li>
             <li class="nav-item{% ifequal path "/open-source.html" %}
