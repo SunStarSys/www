@@ -1,7 +1,6 @@
 {% extends "main.html" %}
 {% block content %}
-<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://www.sunstarsys.com/redirect?uri='+escape('http://www.sunstarsys.com{{
-      path }}')+';action=edit')"><img src="/images/edit.png" /></a></div>
+<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://www.sunstarsys.com/redirect?uri='+escape(location.href)"><img src="/images/edit.png" /></a></div>
   <h1>{{ headers.title }}</h1></div>
 <div class="jumbotron">
 {% filter markdown %}
@@ -11,7 +10,7 @@ The executable files should be in `bin/`, and a parallel `lib/` dir for
 pull_header.pm.  If you have an `svn` client handy, the simplest way
 to fetch this tree "in-situ" is via:
 
-    % svn co http://www.sunstarsys.com/repos/svn/public/site/trunk/content/essays/ezmlm
+    % svn co https://vcs.sunstarsys.com/repos/svn/public/site/trunk/content/essays/ezmlm
 
 {% endfilter %}
 
