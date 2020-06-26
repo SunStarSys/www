@@ -7,6 +7,12 @@ Title: Features
 - node.js for markdown rendering with CPU clustering
 - Quick Commit now the default setting for most circumstances.
 
+## Better support for Mailing Diffs and Creating Clones
+
+- DMARC-protected
+- Uses SRS and Reply-To for ezmlm-compatibility
+- All users are Authenticated via Google's OpenID-Connect Service
+
 ## Not the ugly duckling it used to be
 
 - Bootstrap (Solarized) styling
