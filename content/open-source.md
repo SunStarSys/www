@@ -5,7 +5,7 @@ Keywords: open source,osi,apache-license,lead user
 
 Core to our beliefs is the innate value proposition of open source software.  Collaborative [lead-user](http://en.wikipedia.org/wiki/Lead_user) communities and their surrounding networks have been a part of our work since the inception of SunStar Systems, principally in technologies derived from or originated at [The Apache Software Foundation](http://www.apache.org/).
 
-Do you have an open source strategy for your product line?  How modular is your software, and does it make sense to give users access to those extension points?  Never heard of the [Hollywood Principle](http://en.wikipedia.org/wiki/Hollywood_principle)?  We can help you successfully navigate the wave of user innovation and tap into the potential of your most active customers, whileleaving the traps and pitfalls to your competition.
+Do you have an open source strategy for your product line?  How modular is your software, and does it make sense to give users access to those extension points?  Never heard of the [Hollywood Principle](http://en.wikipedia.org/wiki/Hollywood_principle)?  We can help you successfully navigate the wave of user innovation and tap into the potential of your most active customers, while leaving the traps and pitfalls to your competition.
 
 #### List of Projects we've been involved with, in whole or in part:
 

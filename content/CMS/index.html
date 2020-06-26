@@ -1,10 +1,7 @@
-Title: SunStar Systems CMS
-
 {% extends "main.html" %}
 {% block content %}
 <div class="page-header">
-	<div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}  <a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape('http://www.sunstarsys.com{{
-      path }}')+';action=edit')"><img src="/images/edit.png" /></a>
+	<div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}  <a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a>
 	</div>
   <h1>{{ headers.title }}</h1>
 </div>
@@ -16,30 +13,6 @@ Title: SunStar Systems CMS
 The SunStar Systems CMS is an online, Subversion-backed IDE for developing and maintaining static websites with some basic CGI/SSI features.  It does this by either interfacing with a customer-provided Subversion server, or by using one of ours.  It builds each committed change using a lightning fast Perl5-based build system based on the Hollywood principle: it calls out to the customer-supplied perl modules (`path.pm` and `view.pm`) to do whatever the customer needs done.
 
 We provide a Django-1.0 based template system based on a customized `Dotiac::DTL` module from CPAN, but can provide any other (secure) Perl-based Template system.  The build system is available on [github](https://github.com/joesuf4/cms) with a large collection of support modules to take advantage  of.
-
-## Recommended Bookmarklet
-
-Please be sure to install the bookmarklet on your browser toolbar by opening a "New Bookmark" dialog screen from your browser's menu and typing the following into the Location/URL field:
-
-```javascript
-	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
-```
-
-Without this bookmarklet installed you will not be able to browse the live site and instantly edit pages in the CMS by clicking on the bookmarklet. This is an essential component of the CMS and is therefore strongly recommended.
-
-To use the bookmarklet simply browse your live production site (NOT in the CMS!), locate a page you'd like to edit, and click on the bookmarklet. You'll be taken to a page within this CMS that allows you to edit the content.
-
-## Brainstorming...
-
-- [CMS Build Toolchain](https://github.com/joesuf4/cms)
-- ithread-safe svn client code (much hackery this week, should be done Friday)
-- Fully Scalable to Oracle Cloud for private server deployments (Solaris zfs only)
-- Hardware is here: will deploy to server before start of next week (this thing will `hum` for OOo site builds!)
-- TBD: pre-build zfs snapshots of websites (unnecessary) plus administrative interface; build progress tracking using streams (done).
-
-------------
-
-## Details
 
 {% endfilter %}
 

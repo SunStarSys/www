@@ -10,86 +10,84 @@
 
 
     <!-- Bootstrap core CSS -->
-    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <!-- code highlighting -->
-    <link href="/css/code.css" rel="stylesheet">
+    <link href="/css/code.css" rel="stylesheet" media="screen">
     <!-- local overrides -->
-    <link href="/css/local.css" rel="stylesheet">
+    <link href="/css/local.css" rel="stylesheet" media="screen">
     <!-- favicon -->
     <link href="/favicon.ico" rel="shortcut icon">
 
-  <style id="holderjs-style" type="text/css"></style></head>
-
-  <body role="document">
+  <body>
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
       <div class="container">
-		<a class="navbar-brand" href="/" style="background:white"><img src="/images/sunstarlinear.png" style="height:25px"/></a>
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
           </button>
+          <div class="navbar-brand" style="background:white"><img src="/images/sunstarlinear.png" /></div>
         </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li{% ifequal path "/index.html" %}
-                   class="active"
-                   {% endifequal %}><a href="/">Home</a></li>
-            <li{% ifequal path "/about.html" %}
-                   class="active"
-                   {% endifequal %}><a href="/about">About</a></li>
-            <li{% ifequal path "/contact.html" %}
-                   class="active"
-                   {% endifequal %}><a href="/contact">Contact</a></li>
-			<li{% ifequal path "/CMS/index.html" %}
-                   class="active"
-				  {% endifequal %}><a href="/CMS/">CMS</a></li>
-			<li{% ifequal path "/open-source.html" %}
-                   class="active"
-                   {% endifequal %}><a href="/open-source">Open Source</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">More... <span class="caret"></span></a>
+        <div class="navbar-collapse collapse" id="navbarResponsive">
+          <ul class="navbar-nav">
+            <li class="nav-item{% ifequal path "/index.html" %}
+                   active
+                   {% endifequal %}"><a class="nav-link" href="/">Home</a></li>
+            <li class="nav-item{% ifequal path "/about.html" %}
+                   active
+                   {% endifequal %}"><a class="nav-link" href="/about">About</a></li>
+            <li class="nav-item{% ifequal path "/contact.html" %}
+				  active
+                   {% endifequal %}"><a class="nav-link" href="/contact">Contact</a></li>
+ 			<li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/sitemap">Site Map</a></li>
-				  <li><a href="https://www.sunstarsys.com/repos/svn/public/site/trunk/">Site Source</a></li>
-				  <li><a href="https://svn.apache.org/repos/infra/websites/cms/">Apache
-                CMS source</a></li>
-                <li class="divider"></li>
+				<li class="dropdown-item{% ifequal path "/CMS/index.html" %}
+				  active
+                   {% endifequal %}"><a class="nav-link" href="/CMS/">CMS</a></li>
+				<li class="dropdown-item{% ifequal path "/StageMaster/index.html" %}
+				  active
+                   {% endifequal %}"><a class="nav-link" href="/StageMaster/">StageMaster</a></li>
+              </ul>
+			</li>
+            <li class="nav-item{% ifequal path "/open-source.html" %}
+                   active
+                   {% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
+            <li class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More... <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-item"><a class="nav-link" href="/sitemap">Site Map</a></li>
+				<li class="dropdown-item"><a class="nav-link" href="https://vcs.sunstarsys.com/repos/svn/public/site/trunk/">Site Source</a></li>
+			 	<li class="dropdown-item"><a class="nav-link" href="https://svn.apache.org/repos/infra/websites/cms/">Apache CMS source</a></li>
+                <li class="dropdown-item divider"></li>
                 <li class="dropdown-header">Engagements</li>
-                <li><a href="/clients">Clients</a></li>
-                <li><a href="/essays">Essays</a></li>
+                <li class="dropdown-item"><a class="nav-link" href="/clients">Clients</a></li>
+                <li class="dropdown-item"><a class="nav-link" href="/essays">Essays</a></li>
               </ul>
             </li>
-            <li{% ifequal path "/powered-by.html" %}
-                     class="active"
-                     {% endifequal %}><a href="/powered-by">Powered by...</a></li>
+            <li class="nav-item{% ifequal path "/powered-by.html" %}
+                     active
+                     {% endifequal %}"><a class="nav-link" href="/powered-by">Powered by...</a>
             </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
 	</div>
-    <div class="container theme-showcase" role="main">
+    <div class="container theme-showcase">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       {% block content %}
       <div class="page-header"><div style="text-align:right; padding-top:
       10px">{{ breadcrumbs|safe
-      }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape('https://www.sunstarsys.com{{
-      path }}')+';action=edit')"><img src="/images/edit.png" /></a></div>
+      }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
         <h1>{{ headers.title }}</h1></div>
       <div class="jumbotron">{{ content|markdown }}</div>
       {% endblock %}
-<!-- Bootstrap core JavaScript
-    ================================================== -->
+<!-- Bootstrap core JavaScript ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
 	</div>
 	</body>
 </html>
