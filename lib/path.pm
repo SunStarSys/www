@@ -38,7 +38,7 @@ walk_content_tree {
     }
     if (s!/index\.html$!!) {
         $dependencies{"$_/index.html"} = [
-            grep s/^content//, (glob("content$_/*.{md,mdtext}"),
+            grep s/^content//, (glob("content$_/*.{md,mdtext,pl,pm}"),
                                glob("content$_/*/index.html"))
         ];
         push @{$dependencies{"$_/index.html"}}, grep -f && s/^content// && !m!/index\.html$!,
