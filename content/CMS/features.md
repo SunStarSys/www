@@ -16,7 +16,7 @@ Title: CMS Features
 ## Not the ugly duckling it used to be
 
 - Bootstrap (Solarized) styling
-- Editor.md is amazing: by using relative href urls, your linked images will render in the editor preview.
+- Editor.md is amazing: by using relative `src` urls, your linked images will render in the editor preview.
 
 ## Consistent Common Markdown (gfm) rendering with Editor.md
 
