@@ -2,9 +2,7 @@ Title: Home
 
 ![SunStar Systems](images/sunstarlogowhole.png)
 
-Welcome to the new site!  If you're looking for quality Information Technology services, you've come to the right place.  Content is evolving rapidly, so check back often!
-
-<div class="card border-success text-white" style="max-width:25rem">
+<div class="card border-success text-white float-lg-right" style="max-width:25rem">
 	<div class="card-header">NEWS</div>
 	<div class="card-body">
 		<h4 class="card-title">SunStar Systems CMS Product Launch</h4>
