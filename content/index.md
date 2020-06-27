@@ -4,13 +4,10 @@ Title: Home
 
 Welcome to the new site!  If you're looking for quality Information Technology services, you've come to the right place.  Content is evolving rapidly, so check back often!
 
-<div class="card bg-primary text-white" style="max-width:20rem">
+<div class="card border-primary text-white" style="max-width:25rem">
 	<div class="card-header">NEWS</div>
-		<div class="card-body">
-			<p class="card-text">Interested parties please see our <a 	href="/contact">Contact Page</a> to get in touch. For more about what we offer, see our <a href="/about">About Page</a> to learn more.
-			</p>
-		</div>
-	</div>
+	<h4 class="card-title">SunStar Systems CMS Product Launch</h4>
+	<p class="card-body">Starting July 4, 2020, our totally revamped and modernized version of the Apache CMS is available for immediate customer adoption.  Check out the <a href="/CMS/">CMS</a> information <span class="text-success">NOW</span> for a special limited time offer!</p>
 </div>
 
 ## Featured Pages
