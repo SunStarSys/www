@@ -13,7 +13,7 @@ Title: CMS Features
 - Uses SRS and Reply-To for ezmlm-compatibility
 - All users are Authenticated via Google's OpenID-Connect Service
 
-## Not the ugly duckling it used to be
+## The curious-looking duckling is now an elegant swan
 
 - Bootstrap (Solarized) styling.
 - Editor.md is amazing: by using relative `src` urls, your linked images will render in the editor preview.
