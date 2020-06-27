@@ -10,6 +10,8 @@ Title: CMS Pricing
 	- This is introductory pricing good through August 1, 2020, and includes `unlimited seating for self-hosted Subversion source trees` for Public Charities and many other types of NGO's.
 	- SLA's and Premium Support Packages are sold separately; contact us for pricing on these items if you need them.
 
+------------
+
 - Volume discounts available.
 
 - Enterprise Private Server/Oracle Cloud Plans Coming Soon.
