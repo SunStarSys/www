@@ -12,6 +12,9 @@ Without this bookmarklet installed you will not be able to browse the live site 
 
 To use the bookmarklet simply browse your live production site (NOT in the CMS!), locate a page you'd like to edit, and click on the bookmarklet. You'll be taken to a page within this CMS that allows you to edit the content.
 
+For a demonstration of the CMS, visit <https://www.openoffice.org/> and click on the bookmarklet to view a live prototype in action.
+
+
 ## Exceptions
 
 ## Search
