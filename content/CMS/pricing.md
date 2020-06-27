@@ -3,6 +3,7 @@ Title: CMS Pricing
 ## Pricing Details
 
 - LIMITED TIME OFFER: `$200/month/managed site`
+
 	- Covers one SunStar Systems CMS-managed public website (includes Subversion hosting for sources, if desired, for 20 seats).
 	- Production web hosting is not a part of this offer.
 	- Up to 10 GB covering total SunStar Systems server filesystem storage.  Basically, this includes checkouts (at least 2 per project) and build trees, and potentially the Subversion server's source DB if we are hosting it).
