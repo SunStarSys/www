@@ -1,6 +1,6 @@
 Title: CMS Features
 
-## Fast
+## Blazing Fast
 
 - runs on NVMe
 - Solaris 11.4 for ZFS stability
