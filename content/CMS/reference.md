@@ -16,7 +16,7 @@ For a demonstration of the CMS's IDE, visit <https://www.openoffice.org/> for a 
 
 ## Onboarding Process
 
-For most customers, the CMS service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple:
+For most customers, the CMS service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple for organizations already running their own svnpubsub-enabled Subversion service:
 
 1. Provide us with the URL of your site's sources in Subversion.
 2. Provide us with the (mailing list) email address for discussing site development and maintenance issues, and ensure that address is SRS-compliant in terms of moderation facilities.
