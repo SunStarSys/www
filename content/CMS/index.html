@@ -14,7 +14,7 @@
 
 The SunStar Systems CMS is an online, flexible, cost-effective, very high performance Subversion-backed IDE for developing and maintaining static (massive, intricate, etc.) website content with some basic CGI/SSI features.  It does this by either interfacing with a customer-provided Subversion server, or by using one of ours.  It builds each committed change using a lightning fast `Perl5+node.js` build system based on the Hollywood principle: it calls out to the customer-supplied perl modules (`path.pm` and `view.pm`) to do whatever the customer needs done.
 
-Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in seconds, not hours and minutes.  But given its unique dependency mangement functionality, it almost never needs to resort to them: *it only builds what you need built.*&trade;
+	Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in seconds, not hours and minutes.  But given its unique dependency mangement functionality, it almost never needs to resort to them: *<span class="text-success">it only builds what you need built.</span>*&trade;
 
 REST compliance has its benefits to CMS users.  You'll like the fact that your browser's `Back` button doesn't break the service- in fact it's an essential component of the `Rollback` functionality. In an emergency site breakage situation, going back to the bad `Commit` submission's result page will provide you with the ability to reverse merge **that** errant applied change, and rebuild the site back to a known good state.
 
