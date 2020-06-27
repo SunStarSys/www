@@ -5,7 +5,7 @@ This essay really pertains to DVCS in general, not just git per se.  But we will
 
 [Non repudiation](http://en.wikipedia.org/wiki/Non-repudiation) is an important concept in security circles.  What it amounts to is satisfying an enterprise's need for acquiring activity records that "cannot be walked away from after the fact".
 
-With a traditional centralized version control tool, such records are readily available from the commit history.  Each commit to the system goes through an authorization mechanism to ensure the person who made the change is authorized to upload it.  Those records are vital to the enterprise to ensure that accurate records are kept which indicates who is responsible for uploading each line of code to the software in question.
+With a traditional centralized version control tool, such records are readily available from the commit history.  Each commit to the system goes through an authorization mechanism to ensure the person who made the change is authorized to upload it.  Those records are vital to the enterprise to ensure that accurate records are kept which indicate who is responsible for uploading each line of code to the software in question.
 
 With git, or distributed version control in general, there is a clear distinction between the "commit" history and the "upload" history- which I will hereto refer to as "push records". Commits in git are not authenticated, because they happen locally, with local, unverified metadata added to the history.  The upload step, aka `git push` is a separate step, and it is here that the push records come into play.
 
