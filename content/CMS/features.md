@@ -44,4 +44,4 @@ Title: CMS Features
 - Only the perl-based build system is available.
 - New editor treates newlines within markdown text blocks as hard breaks.
 - Common Markdown (GFM) uses a different delimiter for code blocks.
-- extpaths.txt is no longer supported: select individuals from each project will be granted write access to the production website tree in subversion for uploading externally produced material (javadocs, etc.).
+- extpaths.txt is no longer supported: select individuals from each project will be granted write access to the production website tree in subversion for uploading externally produced material (javadocs, software release artifacts, etc.).
