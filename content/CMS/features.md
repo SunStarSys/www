@@ -41,7 +41,7 @@ Title: CMS Features
 ## Dropped `ASF::CMS` Features
 
 - all mdx_elementid.py features (new implementation is node.js based)
-- Only the perl-based build system is available.
+- Only the Perl-based build system is available.
 - New editor treates newlines within markdown text blocks as hard breaks.
-- Common Markdown (GFM) uses a different delimiter for code blocks.
+- GFM uses a different delimiter for code blocks.
 - extpaths.txt is no longer supported: select individuals from each project will be granted write access to the production website tree in our subversion repos for uploading externally produced material (javadocs, software release artifacts, etc.)
