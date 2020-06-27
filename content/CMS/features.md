@@ -40,7 +40,7 @@ Title: CMS Features
 
 ## Dropped `ASF::CMS` Features
 
-- all mdx_elementid.py features (new implementation is node.js based)
+- all `mdx_elementid.py` features (new implementation is javascript, not python, and GFM based, so nothing from the py-markdown module carries across).
 - Only the Perl-based build system is available.
 - New editor treates newlines within markdown text blocks as hard breaks.
 - GFM uses a different delimiter for code blocks.
