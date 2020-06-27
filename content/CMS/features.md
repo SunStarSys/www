@@ -36,7 +36,7 @@ Title: CMS Features
 ## Live code search engine
 
 - PCRE based.
-- Global search and replace functionality as well (unique given PCRE support), supports regex captures.
+- Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 
 ## Dropped `ASF::CMS` Features
 
