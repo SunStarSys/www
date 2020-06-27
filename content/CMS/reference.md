@@ -14,6 +14,13 @@ To use the bookmarklet simply browse your live production site (NOT in the CMS!)
 
 For a demonstration of the CMS, visit <https://www.openoffice.org/> and click on the bookmarklet to view a live prototype in action.
 
+## Onboarding Process
+
+For most customers, the CMS service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple:
+
+1. Provide us with the URL of your site's sources in Subversion.
+2. Provide us with the (mailing list) email address for discussing site development and maintenance issues, and ensure that address is SRS-compliant in terms of moderation facilities.
+3. Subscribe your production webservers' `svnwcsub` daemon to our public `svnpubsub` service.  This software is a standard component of new each subversion source release, and is reasonably mature and well supported by the Subversion Development team.
 
 ## Exceptions
 
