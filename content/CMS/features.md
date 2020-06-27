@@ -18,7 +18,7 @@ Title: CMS Features
 - Bootstrap (Solarized) styling.
 - Editor.md is amazing: by using relative `src` urls, your linked images will render in the editor preview.
 
-## Consistent Common Markdown (gfm) rendering with Editor.md
+## Consistent Github-Flavored Markdown (GFM) rendering with Editor.md
 
 - **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 
@@ -26,7 +26,7 @@ Title: CMS Features
 
 - Flowcharts (coming soon).
 
-- TeX: $$ E = mc^2 $$
+- Don Knuth's TeX support (for Mathematical Expressions): $$ E = mc^2 $$
 
 ## Full support for branch builds
 
@@ -35,7 +35,7 @@ Title: CMS Features
 
 ## Live code search engine
 
-- PCRE based.
+- Perl Compatible Regex Engine (PCRE) based.
 - Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 
 ## Dropped `ASF::CMS` Features
