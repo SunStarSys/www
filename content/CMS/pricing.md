@@ -5,7 +5,7 @@ Title: CMS Pricing
 - LIMITED TIME OFFER: <span class="text-success">$200 / month / managed site</span> (90% discount over WordPress Enterprise)
 
 	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website (includes Subversion hosting for sources, if desired, for 20 seats).
-	- Production web hosting is not a part of this offer.
+	- Production web hosting is not a part of this offer, but we can provide it based on provisioned bandwidth capacity add-on costs.
 	- Up to 10 GB covering total SunStar Systems server filesystem storage.  Basically, this includes source tree checkouts (2 per project) and one resultant build tree, and potentially the Subversion server's source DB if we are hosting it for you).
 	- This is introductory pricing good through August 1, 2020, and includes <span class="text-success">unlimited seating for self-hosted Subversion source trees</span> for Public Charities and many other types of NGO's.
 	- SLA's and Premium Support Packages are sold separately; contact us for pricing on these items if you need them.
