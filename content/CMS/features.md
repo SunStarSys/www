@@ -40,7 +40,7 @@ Title: CMS Features
 
 ## Deltas from <span class='text-warning'>Apache CMS</span> Features
 
-- Dropped `mdx_elementid.py` features (new implementation is javascript, not python, and GFM based, so nothing from the py-markdown module carries across).
+- Dropped `mdx_elementid.py` features (new implementation is javascript, not python, and GFM based, so only [TOC] from the py-markdown module carries across).
 - Only the Perl-based build system is available.
 - New editor treates newlines within markdown text blocks as hard breaks.
 - GFM uses a different delimiter for code blocks.
