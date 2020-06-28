@@ -24,7 +24,7 @@ Title: CMS Features
 
 - YAML headers in source (markdown) files now fully supported.
 
-- Coming as soon as `jsdom` finishes their SVG implementation: Flowcharts!
+- Coming as soon as [jsdom](https://github.com/jsdom/jsdom) finishes their SVG implementation: Flowcharts!
 
 - Don Knuth's TeX support (for Mathematical Expressions): $$ E = mc^2 $$
 
