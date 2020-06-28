@@ -10,7 +10,7 @@ Keywords: South Florida, System Administration
 ### Postal Address:
 
     SunStar Systems, Inc.
-    2519 Sugarloaf Ln
+    2519 Sugarloaf Lane
     Ft. Lauderdale, FL  USA 33312
 
 ### Telephone:
