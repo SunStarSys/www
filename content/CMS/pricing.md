@@ -6,7 +6,7 @@ Title: CMS Pricing
 
 	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website (includes Subversion hosting for sources, if desired, for 20 seats).
 	- Production web hosting is not a part of this offer.
-	- Up to 10 GB covering total SunStar Systems server filesystem storage.  Basically, this includes checkouts (at least 2 per project) and one resultant build tree, and potentially the Subversion server's source DB if we are hosting it for you).
+	- Up to 10 GB covering total SunStar Systems server filesystem storage.  Basically, this includes source tree checkouts (2 per project) and one resultant build tree, and potentially the Subversion server's source DB if we are hosting it for you).
 	- This is introductory pricing good through August 1, 2020, and includes <span class="text-success">unlimited seating for self-hosted Subversion source trees</span> for Public Charities and many other types of NGO's.
 	- SLA's and Premium Support Packages are sold separately; contact us for pricing on these items if you need them.
 
