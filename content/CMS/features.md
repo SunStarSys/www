@@ -3,7 +3,7 @@ Title: CMS Features
 ## Blazing Fast
 
 - runs on NVMe
-- Solaris 11.4 for ZFS stability
+- Solaris 11.4 for ZFS stability, with Full Oracle Customer Support
 - node.js for markdown rendering with CPU clustering
 - Quick Commit now the default setting for most circumstances.
 
