@@ -35,7 +35,7 @@ Title: CMS Features
 
 ## Live code search engine
 
-- Perl Compatible Regex Engine (PCRE) based.
+- Perl Compatible Regular Expression (PCRE) based.
 - Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 
 ## Dropped `Apache CMS` Features
