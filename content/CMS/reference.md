@@ -14,7 +14,7 @@ To use the bookmarklet simply browse to your live production site (NOT in the CM
 
 ## Live Demo
 
-For a demonstration of the CMS's IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the bookmarklet to view a live prototype in action.
+For a demonstration of the CMS's IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
 
 ## Onboarding Process
 
