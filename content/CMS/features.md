@@ -16,7 +16,7 @@ Title: CMS Features
 ## The curious-looking duckling is now an elegant swan
 
 - Bootstrap (Solarized) styling.
-- Editor.md is amazing: by using relative `src` urls, your linked images will render in the editor preview.
+- Editor.md is amazing: by using relative `src` urls, your linked images will render in the editor preview pane.
 
 ## Consistent Github-Flavored Markdown (GFM) rendering with Editor.md
 
