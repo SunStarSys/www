@@ -24,7 +24,7 @@ Title: CMS Features
 
 - YAML headers in source (markdown) files now fully supported.
 
-- Flowcharts (coming soon).
+- Coming as soon as `jsdom` finishes their SVG implementation: Flowcharts!
 
 - Don Knuth's TeX support (for Mathematical Expressions): $$ E = mc^2 $$
 
@@ -38,7 +38,7 @@ Title: CMS Features
 - Perl Compatible Regex Engine (PCRE) based.
 - Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 
-## Dropped `ASF::CMS` Features
+## Dropped `Apache CMS` Features
 
 - all `mdx_elementid.py` features (new implementation is javascript, not python, and GFM based, so nothing from the py-markdown module carries across).
 - Only the Perl-based build system is available.
