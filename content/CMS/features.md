@@ -33,7 +33,7 @@ Title: CMS Features
 - No more staging/publishing: replaced with per-resource branch Promotion.
 - Rollback and Sync Merge fully supported.
 
-## Live code search engine
+## Live source tree search engine
 
 - Perl Compatible Regular Expression (PCRE) based.
 - Global search and replace functionality as well (unique given PCRE support); supports regex captures.
