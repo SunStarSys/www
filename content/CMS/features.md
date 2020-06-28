@@ -26,7 +26,7 @@ Title: CMS Features
 
 - Coming as soon as [jsdom](https://github.com/jsdom/jsdom) finishes their SVG implementation: Flowcharts!
 
-- Don Knuth's TeX support (for Mathematical Expressions): $$ E = mc^2 $$
+- Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for Mathematical Expressions): $$ E = mc^2 $$
 
 ## Full support for branch builds
 
