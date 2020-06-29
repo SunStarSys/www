@@ -2,7 +2,7 @@ Title: CMS Pricing
 
 ## Pricing Details
 
-- LIMITED TIME OFFER: <span class="text-success">$200 / month / managed site</span> (90% discount over WordPress Enterprise)
+- LIMITED TIME OFFER: <span class="text-success">$200 / month / managed site</span> (90% discount over WordPress/Netlify Enterprise)
 
 	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website (includes Subversion hosting for sources, if desired, for 20 seats).
 	- Production web hosting is not a part of this offer, but we can provide it based on provisioned bandwidth capacity add-on costs.
