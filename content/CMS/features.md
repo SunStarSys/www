@@ -17,7 +17,7 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 	- mod_perl
 	- mod_apreq2
 	- TLS 1.2
-    - Custom SVN::Client w/ ithread support.
+    - Custom `SVN::Client` w/ ithread support.
 
 ## Better support for Mailing Diffs and Creating Clones
 
