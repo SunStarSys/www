@@ -7,7 +7,7 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 - Solaris 11.4 for ZFS stability, backed by Full Oracle Customer Support
 - node.js for markdown rendering with CPU clustering
 - Quick Commit now the default setting for most circumstances.
-- Apache httpd-based IDE:
+- Apache httpd 2.4 based IDE:
 	- HTTP/2
 	- event mpm
 	- mod_perl
