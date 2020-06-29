@@ -1,4 +1,5 @@
 Title: CMS Features
+Keywords: perl, jamstack,markdown,cms,ide,node.js,node,oracle,solaris,zfs,cloud,cdn,http
 
 ## Blazing Fast
 
