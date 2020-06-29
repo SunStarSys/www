@@ -1,5 +1,9 @@
 Title: CMS Reference
 
+<div class="float-lg-right">
+	<img src="/images/sunstarstaronly.png" style="height:200px"></img>	
+</div>
+
 ## Recommended Bookmarklet
 
 Please be sure to install the bookmarklet on your browser toolbar by opening a "New Bookmark" dialog screen from your browser's menu and typing the following into the Location/URL field:
