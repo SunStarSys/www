@@ -42,6 +42,6 @@ Title: CMS Features
 
 - Dropped `mdx_elementid.py` features (new implementation is javascript, not python, and GFM based, so only [TOC] from the py-markdown module carries across).  A problem tailor-made for the above Search and Replace Feature of the IDE.
 - Only the Perl-based build system is available.
-- New editor treates newlines within markdown text blocks as hard breaks.
+- New editor treats newlines within markdown text blocks as hard breaks.
 - GFM uses a different delimiter for code blocks.
 - `extpaths.txt` is no longer supported: select individuals from each project will be granted write access to the production website tree in our subversion repos for uploading externally produced material (javadocs, software release artifacts, etc.)
