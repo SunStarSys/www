@@ -1,6 +1,10 @@
 Title: CMS Features
 Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,http
 
+<div class="float-lg-right">
+	<img src="/images/sunstarstaronly.png" style="height:200px"></img>	
+</div>
+
 ## Blazing Fast
 
 - runs on NVMe

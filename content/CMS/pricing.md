@@ -1,5 +1,9 @@
 Title: CMS Pricing
 
+<div class="float-lg-right">
+	<img src="/images/sunstarstaronly.png" style="height:200px">		</img>
+</div>
+
 ## Pricing Details
 
 - LIMITED TIME OFFER: <span class="text-success">$200 / month / managed site</span> (90% discount over WordPress/Netlify Enterprise)
