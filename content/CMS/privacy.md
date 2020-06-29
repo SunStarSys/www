@@ -1,5 +1,9 @@
 Title: CMS Privacy Policy
 
+<div class="float-lg-right">
+	<img src="/images/sunstarstaronly.png" style="height:200px"></img>	
+</div>
+
 ## Outline
 
 - NO SHARING/RESELLING OF CUSTOMER DATA.
