@@ -40,7 +40,8 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 
 - Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for Mathematical Expressions): $$ E = mc^2 $$
 
-- Electric! Editor will autocomplete and autoindent, has full screen mode.
+- Electric! Editor will autocomplete and autoindent; has full screen mode.
+
 ## Full support for branch builds
 
 - No more staging/publishing: replaced with per-resource branch Promotion.
