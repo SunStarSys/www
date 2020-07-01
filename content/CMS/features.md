@@ -17,7 +17,7 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 	- mod_perl
 	- mod_apreq2
 	- TLS 1.2
-    - Custom `SVN::Client` w/ ithread support.
+    - Custom `SVN::Client` module w/ ithread support.
 
 ## Better support for Mailing Diffs and Creating Clones
 
@@ -38,7 +38,7 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 
 - Coming as soon as [jsdom](https://github.com/jsdom/jsdom) finishes their SVG implementation: Flowcharts!
 
-- Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for Mathematical Expressions): $$ E = mc^2 $$
+- Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for mathematical expressions): $$ E = mc^2 $$
 
 - Electric! Editor will autocomplete and autoindent; has full screen mode.
 
