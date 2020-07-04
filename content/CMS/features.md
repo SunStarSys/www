@@ -14,7 +14,7 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 - Apache httpd 2.4 based IDE:
 	- HTTP/2
 	- event mpm
-	- mod_perl
+	- mod_perl w/ ithreads
 	- mod_apreq2
 	- TLS 1.2
     - Custom `SVN::Client` module w/ ithread support.
