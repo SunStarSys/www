@@ -53,4 +53,4 @@ $r->content_type();
 
 What `:sealed` should cause is to ensure `$r` is **not** a subtype, but its type class exactly equals `Apache2::RequestRec`.  This would allow perl to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors. CPAN authors can be given a `:virtual` keyword that results in the default (unadorned) typed lexical behavior.
 
-This idea is gratuitously stolen from Dylan.
+This idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm/interim-5.html).
