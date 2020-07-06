@@ -15,19 +15,20 @@ What Doug was looking for was a way to tell perl to perform the method lookup at
 {
   package Foo;
   sub foo { shift }
+  sub MODIFY_SCALAR_ATTRIBUTES {}
 }
 use Benchmark ':all';
 
 my $x = bless {}, "Foo";
-my Foo $y = $x;
+my Foo $y :sealed = $x;
 
 sub func   { Foo::foo($x) }
 
 sub method { $x->foo }
 
-sub typed  { $y->foo }
+sub sealed  { $y->foo }
 
-cmpthese 10_000_000, { func => \&func, method => \&method, typed => \&typed };
+cmpthese 10_000_000, { func => \&func, method => \&method, sealed => \&sealed };
 ```
 
 Here's the results of a run:
@@ -35,11 +36,11 @@ Here's the results of a run:
 ```
            Rate method  typed   func
 method 1869159/s     --    -4%   -43%
-typed  1937984/s     4%     --   -41%
+sealed  1937984/s     4%     --   -41%
 func   3300330/s    77%    70%     --
 ```
 
-The delta between `typed` and `method` is statistical noise.
+The delta between `sealed` and `method` is statistical noise.
 
 
 ## Proposed Perl 7 solution: typed, `:sealed` lexicals.
