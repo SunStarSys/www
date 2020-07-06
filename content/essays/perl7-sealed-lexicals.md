@@ -7,7 +7,7 @@ Perl 5's OO runtime method lookup has 50% more performance overhead than a direc
 
 ## The initial solution: Doug MacEachern's typed lexical optimizations.
 
-Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his forte.  One of his many contributions to p5p was to cut the performance penalty of OO method lookup overhead in half, by using typed lexicals and an @ISA cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
+Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his forte.  One of his many contributions to p5p was to cut the performance penalty of OO method lookup overhead in half, by using a method + `@ISA` cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
 
 What Doug was looking for was a way to tell perl to perform the method lookup at compile time, the way it does with named subroutine calls.
 
@@ -20,6 +20,6 @@ my Apache2::RequestRec :sealed $r = shift;
 $r->content_type();
 ```
 
-What `:sealed` should cause is to ensure `$r` is **not** a subtype, but its type class exactly equals `Apache2::RequestRec`.  This would allow a Perl 7 compiler to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors, who can be given an `:virtual` keyword that results in the default (unadorned) typed lexical behavior.
+What `:sealed` should cause is to ensure `$r` is **not** a subtype, but its type class exactly equals `Apache2::RequestRec`.  This would allow perl to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors. CPAN authors can be given an `:virtual` keyword that results in the default (unadorned) typed lexical behavior.
 
 This idea is gratuitously stolen from Dylan.
