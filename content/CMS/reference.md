@@ -1,7 +1,7 @@
 Title: CMS Reference
 
 <div class="float-lg-right">
-	<img src="/images/sunstarstaronly.png" style="height:200px"></img>	
+	<img src="/images/sunstarstaronly.png" style="height:200px"></img>
 </div>
 
 ## Recommended Bookmarklet
