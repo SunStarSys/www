@@ -48,7 +48,7 @@ The delta between `sealed` and `method` is statistical noise.
 Sample code:
 
 ```perl
-my Apache2::RequestRec :sealed $r = shift;
+my Apache2::RequestRec $r :sealed = shift;
 $r->content_type();
 ```
 
