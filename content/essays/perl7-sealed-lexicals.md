@@ -14,16 +14,13 @@ What Doug was looking for was a way to tell perl to perform the method lookup at
 ```perl
 use strict;
 use Benchmark ':all';
-use B::Generate;
 use B::Deparse;
-
 our ($x, $z);
 
 $x = bless {}, "Foo";
 $z = Foo->can("foo");
 
 sub Foo::foo;
-
 sub method {$x->foo}
 sub class  {Foo->foo}
 sub func   {Foo::foo($x)}
@@ -31,79 +28,35 @@ sub anon   {$z->($x)}
 
 BEGIN {
   package Foo;
-  my @code;
-  my %method;
-  my %valid_attrs;
-  BEGIN  {%valid_attrs = (sealed => 1)}
-
   sub foo { shift }
-
-  sub MODIFY_CODE_ATTRIBUTES {
-      my ($class, $rv, @attrs) = @_;
-      if (grep exists $valid_attrs{$_}, @attrs) {
-          my $cv_obj = B::svref_2object($rv);
-          my $op = $cv_obj->START;
-          my ($pad_names, @pads) = $cv_obj->PADLIST->ARRAY;
-          my @lexical_names = $pad_names->ARRAY;
-          while ($op->name ne "leavesub") {
-              if ($op->name eq "pushmark" and $op->next->name eq "padsv") {
-                  $op = $op->next;
-                  my $lex = $lexical_names[$op->targ];
-                  if ($lex->TYPE->isa("B::HV")) {
-                      my $class = $lex->TYPE->NAME;
-                      while ($op->next->name ne "entersub") {
-                          if ($op->next->name eq "method_named" and exists $method{${$op->next}}) {
-                              my $method = $method{${$op->next}};
-                              no strict 'refs';
-                              my $sym    = *{"$class\::$method"};
-                              *$sym = $class->can($method) or die "WTF?: $method";
-                              my $p_obj = B::svref_2object(my $s = eval "sub {&$class\::$method}");
-                              push @code, $s;
-                              my $methop = $op->next;
-                              my $targ   = $methop->targ;
-                              my $start = $p_obj->START->next->next;
-                              my $avref = $pads[0]->object_2svref;
-                              $avref->[$targ] = *$sym{CODE};
-                              $start->padix($targ);
-                              $op->next($start);
-                              my $end = $start;
-                              $end = $end->next unless $end->next->name eq "entersub";
-                              $end->next($methop->next);
-                          }
-                          $op = $op->next;
-                      }
-                  }
-              }
-              $op = $op->next;
-          }
-      }
-      return grep !$valid_attrs{$_}, @attrs;
-  }
-
-  use optimizer 'extend-c' => sub {
-      no warnings;
-      my $op = shift;
-      if ($op->can("name") and $op->name eq "method_named") {
-          bless $op, "B::METHOP";
-          my $meth_sv = $op->meth_sv;
-          $method{$$op} = ${$meth_sv->object_2svref};
-      }
-  };
-
+  use sealed;
 }
 
-BEGIN{@main::ISA=('Foo')}
-
+BEGIN{our @ISA=('Foo')}
 my main $y = $x;
+
 sub sealed :sealed {
     $y->foo();
 }
-use optimizer 'C';
+no sealed;
+use sealed;
+sub also_sealed :sealed {
+    my main $a = bless {};
+    $a->foo();
+}
+my %tests = (
+    func => \&func,
+    method => \&method,
+    sealed => \&sealed,
+    class => \&class,
+    anon => \&anon,
+);
 print B::Deparse->new->coderef2text(\&sealed), "\n";
+print B::Deparse->new->coderef2text(\&also_sealed), "\n";
 print sealed(), "\n";
-
-cmpthese 25_000_000, { func => \&func, method => \&method, sealed => \&sealed, class => \&class, anon => \&anon};
-
+print also_sealed(), "\n";
+no sealed; # below line requires this
+cmpthese 10_000_000, \%tests;
 ```
 
 Here's the results of a run:
@@ -113,14 +66,19 @@ Here's the results of a run:
     use strict;
     $y->;
 }
+{
+    use strict;
+    my main $a = bless({});
+    $a->;
+}
 Foo=HASH(0x415fb0)
-            Rate  class method   func   anon sealed
-class  1968504/s     --    -3%   -31%   -34%   -41%
-method 2021019/s     3%     --   -29%   -33%   -39%
-func   2834467/s    44%    40%     --    -6%   -15%
-anon   3004808/s    53%    49%     6%     --   -10%
-sealed 3328895/s    69%    65%    17%    11%     --
-
+main=HASH(0xceaec0)
+            Rate  class method   func sealed   anon
+class  1745201/s     --    -2%   -35%   -40%   -41%
+method 1782531/s     2%     --   -34%   -38%   -39%
+func   2695418/s    54%    51%     --    -7%    -8%
+sealed 2890173/s    66%    62%     7%     --    -2%
+anon   2941176/s    69%    65%     9%     2%     --
 ```
 
 
@@ -129,11 +87,12 @@ sealed 3328895/s    69%    65%    17%    11%     --
 Sample code:
 
 ```perl
-
+use sealed;
 sub handler :sealed {
 	my Apache2::RequestRec $r = shift;
 	$r->content_type();
 }
+no sealed;
 ```
 
 This would allow perl to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors.
