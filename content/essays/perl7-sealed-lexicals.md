@@ -16,7 +16,6 @@ use strict;
 use Benchmark ':all';
 use B::Generate;
 use B::Deparse;
-use optimizer 'C';
 
 our ($x, $z);
 
@@ -54,8 +53,8 @@ BEGIN {
                       my $class = $lex->TYPE->NAME;
                       while ($op->next->name ne "entersub") {
                           if ($op->next->name eq "method_named" and exists $method{${$op->next}}) {
-                              no strict 'refs';
                               my $method = $method{${$op->next}};
+                              no strict 'refs';
                               my $sym    = *{"$class\::$method"};
                               *$sym = $class->can($method) or die "WTF?: $method";
                               my $p_obj = B::svref_2object(my $s = eval "sub {&$class\::$method}");
@@ -67,7 +66,7 @@ BEGIN {
                               $avref->[$targ] = *$sym{CODE};
                               $start->padix($targ);
                               $op->next($start);
-                              my $end = $start->next;
+                              my $end = $start;
                               $end = $end->next unless $end->next->name eq "entersub";
                               $end->next($methop->next);
                           }
@@ -81,12 +80,13 @@ BEGIN {
       return grep !$valid_attrs{$_}, @attrs;
   }
 
-  use optimizer 'callback' => sub {
+  use optimizer 'extend-c' => sub {
+      no warnings;
       my $op = shift;
       if ($op->can("name") and $op->name eq "method_named") {
+          bless $op, "B::METHOP";
           my $meth_sv = $op->meth_sv;
-          $method{$$op} = ${$meth_sv->object_2svref}
-            if $meth_sv->can("object_2svref");
+          $method{$$op} = ${$meth_sv->object_2svref};
       }
   };
 
@@ -98,8 +98,9 @@ my main $y = $x;
 sub sealed :sealed {
     $y->foo();
 }
-
+use optimizer 'C';
 print B::Deparse->new->coderef2text(\&sealed), "\n";
+print sealed(), "\n";
 
 cmpthese 25_000_000, { func => \&func, method => \&method, sealed => \&sealed, class => \&class, anon => \&anon};
 
@@ -112,12 +113,13 @@ Here's the results of a run:
     use strict;
     $y->;
 }
-            Rate  class method   anon sealed   func
-class  2024291/s     --    -4%   -23%   -26%   -32%
-method 2102607/s     4%     --   -20%   -23%   -30%
-anon   2626050/s    30%    25%     --    -4%   -12%
-sealed 2738226/s    35%    30%     4%     --    -8%
-func   2990431/s    48%    42%    14%     9%     --
+Foo=HASH(0x415fb0)
+            Rate  class method   func   anon sealed
+class  1968504/s     --    -3%   -31%   -34%   -41%
+method 2021019/s     3%     --   -29%   -33%   -39%
+func   2834467/s    44%    40%     --    -6%   -15%
+anon   3004808/s    53%    49%     6%     --   -10%
+sealed 3328895/s    69%    65%    17%    11%     --
 
 ```
 
