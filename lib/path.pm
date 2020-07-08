@@ -20,7 +20,7 @@ our @patterns = (
     }],
     [qr!^/(essay|client)s/.*\.md(?:text)?$!,  set_template_from_capture => {
         view       => "single_narrative",
-        preprocess => 1,
+        preprocess => 0,
         conf       => $conf,
     }],
     [qr/\.md(?:text)?$/,  single_narrative => {
