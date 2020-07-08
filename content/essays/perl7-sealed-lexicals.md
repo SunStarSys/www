@@ -38,8 +38,7 @@ my main $y = $x;
 sub sealed :sealed {
     $y->foo();
 }
-no sealed;
-use sealed;
+
 sub also_sealed :sealed {
     my main $a = bless {};
     $a->foo();
