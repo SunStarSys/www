@@ -14,35 +14,43 @@ What Doug was looking for was a way to tell perl to perform the method lookup at
 ```perl
 use strict;
 use Benchmark ':all';
-use B::Deparse;
 our ($x, $z);
 
 $x = bless {}, "Foo";
 $z = Foo->can("foo");
 
-sub Foo::foo;
 sub method {$x->foo}
 sub class  {Foo->foo}
-sub func   {Foo::foo($x)}
 sub anon   {$z->($x)}
 
 BEGIN {
   package Foo;
   sub foo { shift }
-  use sealed;
+  sub bar { shift() . "->::Foo::bar" }
 }
+
+sub func   {Foo::foo($x)}
 
 BEGIN{our @ISA=('Foo')}
 my main $y = $x;
+
+use sealed;
 
 sub sealed :sealed {
     $y->foo();
 }
 
 sub also_sealed :sealed {
-    my main $a = bless {};
-    $a->foo();
+    my main $a = shift;
+    if ($a) {
+        my $inner;
+        return $a->foo($inner);
+    }
+    $a->bar();
 }
+
+no sealed;
+
 my %tests = (
     func => \&func,
     method => \&method,
@@ -50,11 +58,9 @@ my %tests = (
     class => \&class,
     anon => \&anon,
 );
-print B::Deparse->new->coderef2text(\&sealed), "\n";
-print B::Deparse->new->coderef2text(\&also_sealed), "\n";
-print sealed(), "\n";
-print also_sealed(), "\n";
-no sealed; # below line requires this
+
+print sealed(), "\n", also_sealed($y), "\n";
+
 cmpthese 10_000_000, \%tests;
 ```
 
@@ -63,21 +69,25 @@ Here's the results of a run:
 ```
 {
     use strict;
-    $y->;
+    $y->foo;
 }
 {
     use strict;
-    my main $a = bless({});
-    $a->;
+    my main $a = shift();
+    if ($a) {
+        my $inner;
+        return $a->foo($inner);
+    }
+    $a->bar;
 }
 Foo=HASH(0x415fb0)
-main=HASH(0xceaec0)
-            Rate  class method   func sealed   anon
-class  1745201/s     --    -2%   -35%   -40%   -41%
-method 1782531/s     2%     --   -34%   -38%   -39%
-func   2695418/s    54%    51%     --    -7%    -8%
-sealed 2890173/s    66%    62%     7%     --    -2%
-anon   2941176/s    69%    65%     9%     2%     --
+Foo=HASH(0x415fb0)
+            Rate  class method   anon   func sealed
+class  2008032/s     --    -6%   -32%   -46%   -46%
+method 2136752/s     6%     --   -27%   -43%   -43%
+anon   2932551/s    46%    37%     --   -21%   -22%
+func   3717472/s    85%    74%    27%     --    -1%
+sealed 3745318/s    87%    75%    28%     1%     --
 ```
 
 
