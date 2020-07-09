@@ -82,12 +82,12 @@ Here's the results of a run:
 }
 Foo=HASH(0x415fb0)
 Foo=HASH(0x415fb0)
-            Rate  class method   anon   func sealed
-class  2008032/s     --    -6%   -32%   -46%   -46%
-method 2136752/s     6%     --   -27%   -43%   -43%
-anon   2932551/s    46%    37%     --   -21%   -22%
-func   3717472/s    85%    74%    27%     --    -1%
-sealed 3745318/s    87%    75%    28%     1%     --
+             Rate  class method   anon sealed   func
+class  1851852/s     --    -4%   -36%   -45%   -46%
+method 1919386/s     4%     --   -34%   -43%   -44%
+anon   2890173/s    56%    51%     --   -15%   -15%
+sealed 3389831/s    83%    77%    17%     --    -0%
+func   3401361/s    84%    77%    18%     0%     --
 ```
 
 
