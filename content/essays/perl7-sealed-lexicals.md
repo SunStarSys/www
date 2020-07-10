@@ -72,17 +72,18 @@ cmpthese 10_000_000, \%tests;
 ## Benchmark Results
 
 ```
-sealed: compiling main->foo lookup.
+ealed: compiling main->foo lookup.
 {
     use strict;
     $y->;
 }
 sealed: compiling Benchmark->cmpthese lookup.
+sealed: compiling Foo->foo lookup.
 sealed: compiling main->foo lookup.
 {
     use strict;
     my Foo $b = $a;
-    $b->foo($bench->, $inner);
+    $b->($bench->, $inner);
     $a->;
 }
 sealed: compiling main->bar lookup.
@@ -93,17 +94,15 @@ sealed: compiling main->bar lookup.
         my($bench, $inner);
         return sub {
             my Foo $b = $a;
-            $b->foo($bench->, $inner);
+            $b->($bench->, $inner);
             $a->;
         }
         ;
     }
     $a->;
 }
-
 Foo=HASH(0x415fb0)
-CODE(0x4b7480)
-
+CODE(0x4b73c0)
 
             Rate  class method   anon sealed   func
 class  2028398/s     --    -4%   -30%   -34%   -36%
