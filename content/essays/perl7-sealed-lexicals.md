@@ -26,7 +26,7 @@ sub anon   {$z->($x)}
 
 BEGIN {
   package Foo;
-  use sealed 'debug';
+  use sealed 'deparse';
   use base 'sealed';
   sub foo  { shift }
   sub bar  { shift . "->::Foo::bar" }
@@ -125,7 +125,7 @@ sub handler :sealed {
 }
 ```
 
-## Production-Quality Perl 5 Prototype: sealed.pm v0.9.1
+## Production-Quality Perl 5 Prototype: sealed.pm v0.9.9
 
 <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>
 
