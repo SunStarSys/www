@@ -26,7 +26,7 @@ sub anon   {$z->($x)}
 
 BEGIN {
   package Foo;
-  use sealed;
+  use sealed 'debug';
   sub foo  { shift }
   sub bar  { shift . "->::Foo::bar" }
 }
@@ -66,18 +66,18 @@ cmpthese 10_000_000, \%tests;
 ## Benchmark Results
 
 ```
-sealed: caching main->foo lookup.
+sealed: compiling main->foo lookup.
 {
     use strict;
-    $y->foo;
+    $y->;
 }
-sealed: caching Foo->foo lookup.
+sealed: compiling Foo->foo lookup.
 {
     use strict;
     my Foo $b = $a;
-    $b->foo($inner);
+    $b->($inner);
 }
-sealed: caching main->bar lookup.
+sealed: compiling main->bar lookup.
 {
     use strict;
     my main $a = shift();
@@ -85,14 +85,15 @@ sealed: caching main->bar lookup.
         my $inner;
         return sub {
             my Foo $b = $a;
-            $b->foo($inner);
+            $b->($inner);
         }
         ;
     }
-    $a->bar;
+    $a->;
 }
 Foo=HASH(0x415fb0)
-CODE(0x4b73c0)
+CODE(0x4b73f0)
+
             Rate  class method   anon sealed   func
 class  2028398/s     --    -4%   -30%   -34%   -36%
 method 2118644/s     4%     --   -27%   -31%   -33%
