@@ -111,7 +111,6 @@ sub handler :sealed {
 	my Apache2::RequestRec $r = shift;
 	$r->content_type(); #compile time method lookup
 }
-
 ```
 
 ## Prototype sealed.pm module on github
