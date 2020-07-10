@@ -27,6 +27,7 @@ sub anon   {$z->($x)}
 BEGIN {
   package Foo;
   use sealed 'debug';
+  use base 'sealed';
   sub foo  { shift }
   sub bar  { shift . "->::Foo::bar" }
 }
