@@ -15,7 +15,3 @@ Title: Home
 - [Sealed Lexicals for Perl 7](/essays/perl7-sealed-lexicals) - add `:sealed` to a function definition and enjoy the extra speed of compile-time method lookups.
 - [The DevOps Movement](/essays/devops) - Finally filled in the missing details on this article.
 - [Exponential Growth and COVID-19](/essays/power) - Timely article about 2020 pandemic.
-- [The Apache Software Foundation](/clients/apache) - long farewell to a great org!
-- [Mailing Lists](/essays/mailing-lists) - things ezmlm admins might find useful.
-- [Git and Non Repudiation](/essays/git-and-non-repudiation) - the case for push records.
-- [On the Spam Problem](/essays/spam) - qpsmtpd and earlytalker ftw.
