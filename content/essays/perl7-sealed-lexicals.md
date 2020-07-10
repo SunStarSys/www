@@ -45,12 +45,13 @@ sub sealed :sealed {
 sub also_sealed :sealed {
     my main $a = shift;
     if ($a) {
+        my Benchmark $bench;
         my $inner;
         return sub :sealed {
-			my Foo $b = $a;
-			$b->foo($inner);
-			$a->foo();
-	    };
+            my Foo $b = $a;
+            $b->foo($bench->cmpthese, $inner);
+            $a->foo;
+        };
     }
     $a->bar();
 }
@@ -76,12 +77,12 @@ sealed: compiling main->foo lookup.
     use strict;
     $y->;
 }
-sealed: compiling Foo->foo lookup.
+sealed: compiling Benchmark->cmpthese lookup.
 sealed: compiling main->foo lookup.
 {
     use strict;
     my Foo $b = $a;
-    $b->($inner);
+    $b->foo($bench->, $inner);
     $a->;
 }
 sealed: compiling main->bar lookup.
@@ -89,10 +90,10 @@ sealed: compiling main->bar lookup.
     use strict;
     my main $a = shift();
     if ($a) {
-        my $inner;
+        my($bench, $inner);
         return sub {
             my Foo $b = $a;
-            $b->($inner);
+            $b->foo($bench->, $inner);
             $a->;
         }
         ;
@@ -101,7 +102,8 @@ sealed: compiling main->bar lookup.
 }
 
 Foo=HASH(0x415fb0)
-CODE(0x4b73f0)
+CODE(0x4b7480)
+
 
             Rate  class method   anon sealed   func
 class  2028398/s     --    -4%   -30%   -34%   -36%
