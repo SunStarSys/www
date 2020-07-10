@@ -109,7 +109,7 @@ use Apache2::RequestRec;
 use sealed;
 sub handler :sealed {
 	my Apache2::RequestRec $r = shift;
-	$r->content_type();
+	$r->content_type(); #compile time method lookup
 }
 
 ```
