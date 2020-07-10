@@ -114,7 +114,7 @@ sub handler :sealed {
 }
 ```
 
-## Beta-Quality Perl 5 Prototype: sealed.pm module on github
+## Beta-Quality Perl 5 Prototype: sealed.pm
 
 <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>
 
