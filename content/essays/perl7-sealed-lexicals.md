@@ -1,4 +1,4 @@
-Title: Perl 7 Feature Request: sealed, typed lexicals
+Title: Perl 7 Feature Request: sealed subs for typed lexicals
 
 ##  The Problem
 
