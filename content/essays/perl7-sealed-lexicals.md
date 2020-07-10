@@ -72,7 +72,7 @@ cmpthese 10_000_000, \%tests;
 ## Benchmark Results
 
 ```
-ealed: compiling main->foo lookup.
+sealed: compiling main->foo lookup.
 {
     use strict;
     $y->;
