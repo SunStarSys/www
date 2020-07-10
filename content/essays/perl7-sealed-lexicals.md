@@ -45,7 +45,11 @@ sub also_sealed :sealed {
     my main $a = shift;
     if ($a) {
         my $inner;
-        return sub :sealed { my Foo $b = $a; $b->foo($inner) };
+        return sub :sealed {
+			my Foo $b = $a;
+			$b->foo($inner);
+			$a->foo();
+	    };
     }
     $a->bar();
 }
@@ -72,10 +76,12 @@ sealed: compiling main->foo lookup.
     $y->;
 }
 sealed: compiling Foo->foo lookup.
+sealed: compiling main->foo lookup.
 {
     use strict;
     my Foo $b = $a;
     $b->($inner);
+    $a->;
 }
 sealed: compiling main->bar lookup.
 {
@@ -86,11 +92,13 @@ sealed: compiling main->bar lookup.
         return sub {
             my Foo $b = $a;
             $b->($inner);
+            $a->;
         }
         ;
     }
     $a->;
 }
+
 Foo=HASH(0x415fb0)
 CODE(0x4b73f0)
 
