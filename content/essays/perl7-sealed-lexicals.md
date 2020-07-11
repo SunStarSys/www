@@ -71,7 +71,7 @@ cmpthese 10_000_000, \%tests;
 
 ## Benchmark Results
 
-```text
+```
 sealed: compiling main->foo lookup.
 {
     use strict;
