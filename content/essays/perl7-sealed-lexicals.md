@@ -71,7 +71,7 @@ cmpthese 10_000_000, \%tests;
 
 ## Benchmark Results
 
-```
+```text
 sealed: compiling main->foo lookup.
 {
     use strict;
@@ -103,7 +103,6 @@ sealed: compiling main->bar lookup.
 }
 Foo=HASH(0x415fb0)
 CODE(0x4b73c0)
-
             Rate  class method   anon sealed   func
 class  2028398/s     --    -4%   -30%   -34%   -36%
 method 2118644/s     4%     --   -27%   -31%   -33%
@@ -123,13 +122,12 @@ sub handler :sealed {
 	my Apache2::RequestRec $r = shift;
 	$r->content_type(); #compile time method lookup
 }
-
 ```
 
 ## Production-Quality Perl 5 Prototype: sealed.pm v0.9.9
 
 <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>
 
-This will allow perl 5 to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors.
+This will allow Perl 5 to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors.
 
 This idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm/interim-5.html).
