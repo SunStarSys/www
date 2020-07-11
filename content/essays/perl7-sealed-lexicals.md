@@ -128,6 +128,6 @@ sub handler :sealed {
 
 <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>
 
-This will allow Perl 5 to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors.
+This will allow perl 5 to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors.
 
 This idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm/interim-5.html).
