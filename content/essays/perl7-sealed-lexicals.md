@@ -57,11 +57,11 @@ sub also_sealed :sealed {
 }
 
 my %tests = (
-    func      => \&func,
+    func => \&func,
     method => \&method,
-    sealed   => \&sealed,
-    class     => \&class,
-    anon     => \&anon,
+    sealed => \&sealed,
+    class => \&class,
+    anon => \&anon,
 );
 
 print sealed(), "\n", also_sealed($y), "\n";
