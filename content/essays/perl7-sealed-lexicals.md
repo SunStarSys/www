@@ -119,8 +119,8 @@ Sample code:
 	use Apache2::RequestRec;
 
 	sub handler :sealed {
-    	my Apache2::RequestRec $r = shift;
-    	$r->content_type(); #compile time method lookup
+		my Apache2::RequestRec $r = shift;
+		$r->content_type(); #compile time method lookup
 	}
 ```
 
