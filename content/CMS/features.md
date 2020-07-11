@@ -2,7 +2,7 @@ Title: CMS Features
 Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,http
 
 <div class="float-lg-right">
-	<img src="/images/sunstarstaronly.png" style="height:200px"></img>	
+	<img src="/images/sunstarstaronly.png" style="height:200px"></img>
 </div>
 
 ## Blazing Fast
@@ -17,7 +17,7 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 	- mod_perl w/ ithreads
 	- mod_apreq2
 	- TLS 1.2
-    - Custom `SVN::Client` module w/ ithread support.
+    - Custom `SVN::Client` module w/ ithread support for per-request pools
 
 ## Better support for Mailing Diffs and Creating Clones
 
