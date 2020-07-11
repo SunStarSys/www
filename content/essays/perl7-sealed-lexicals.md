@@ -116,12 +116,12 @@ func   3154574/s    56%    49%     9%     3%     --
 Sample code:
 
 ```perl
-use Apache2::RequestRec;
+	use Apache2::RequestRec;
 
-sub handler :sealed {
-    my Apache2::RequestRec $r = shift;
-    $r->content_type(); #compile time method lookup
-}
+	sub handler :sealed {
+    	my Apache2::RequestRec $r = shift;
+    	$r->content_type(); #compile time method lookup
+	}
 ```
 
 ## Production-Quality Perl 5 Prototype: sealed.pm v0.9.9
