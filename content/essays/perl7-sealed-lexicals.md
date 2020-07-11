@@ -116,6 +116,7 @@ func   3154574/s    56%    49%     9%     3%     --
 Sample code:
 
 ```perl
+	use v7.0;
 	use Apache2::RequestRec;
 
 	sub handler :sealed {
