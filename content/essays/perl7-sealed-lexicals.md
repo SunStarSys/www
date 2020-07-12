@@ -128,7 +128,7 @@ Sample code:
 	}
 ```
 
-## Production-Quality Perl 5 Prototype: sealed.pm v0.9.9
+## Production-Quality Perl 5 Prototype: sealed.pm v1.0.0
 
 <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>
 
