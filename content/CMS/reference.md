@@ -28,7 +28,7 @@ For most customers, the CMS service sits between your Subversion repository's we
 2. Provide us with the (role, or mailing list) email address for discussing site development and maintenance issues, and ensure that address is [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-compliant in terms of moderation facilities.
 3. Subscribe your production webservers' `svnwcsub` daemon to our public `svnpubsub` service.  These stand-alone software components are a part of each new Subversion source release, and are reasonably mature and well supported by the Subversion Development Team.
 
-## Layout
+## Directory Layout
 
 - trunk/
 	- cgi-bin/
