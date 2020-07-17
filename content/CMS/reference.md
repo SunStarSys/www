@@ -40,7 +40,7 @@ For most customers, the CMS service sits between your Subversion repository's we
 - branches/
 	.. each branch follows trunk layout above ...
 
-See <https://vcs.sunstarsys.com/repos/svn/public/site> for a live example.
+See <https://vcs.sunstarsys.com/repos/svn/public/site/> for a live example.
 
 ## Exceptions
 
