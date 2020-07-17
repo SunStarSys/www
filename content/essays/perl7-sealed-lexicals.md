@@ -130,7 +130,7 @@ Sample code:
 
 ## Production-Quality Perl 5 Prototype: sealed.pm v1.0.0
 
-See <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>.
+<https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>
 
 This will allow perl 5 to do the `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors.
 
