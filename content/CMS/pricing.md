@@ -20,7 +20,7 @@ Title: CMS Pricing
 
 - Enterprise Private Server/Oracle Cloud Plans Coming Soon.
 
-- Full End-to-End Hosting with CDN partner packages Coming Soon.
+- Full End-to-End Enterprise Hosting with CDN partner packages Coming Soon.
 
 ### [Contact Us](/contact) to start the conversation!
 
