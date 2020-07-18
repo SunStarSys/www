@@ -6,7 +6,7 @@ Perl 5's OO runtime method lookup has 50% more performance overhead than a direc
 
 ## The initial solution: Doug MacEachern's method lookup optimizations.
 
-Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his forte.  One of his many contributions to p5p was to cut the performance penalty of OO method lookup overhead in half, by using a method + `@ISA` heirarchy cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
+Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his forté.  One of his many contributions to p5p was to cut the performance penalty of OO method lookup overhead in half, by using a method + `@ISA` heirarchy cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
 
 This isn't a trifling issue with calls to `C struct` get-set accessor methods- the common situation with many mod_perl APIs.  Perl's runtime method-call lookup penalty on httpd's `request_rec struct` mod_perl exposes is on the same order of magnitude of the full execution of the call.  For mod_perl backed sites making millions of XS method calls a second, this is an awful waste of precious CPU cycles.
 
