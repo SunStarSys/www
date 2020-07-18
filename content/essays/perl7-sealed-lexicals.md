@@ -40,7 +40,7 @@ BEGIN {
 
 sub func   {Foo::foo($x)}
 
-BEGIN{our @ISA=('Foo')}
+BEGIN{@::ISA=('Foo')}
 
 my main $y = $x;
 
