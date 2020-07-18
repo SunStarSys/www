@@ -1,6 +1,9 @@
 Title: Perl 7 Feature Request: sealed subs for typed lexicals
 
-##  The Problem
+<div class="float-lg-right">
+ <img src="../images/sunstarstaronly.png" style="height:200px"></img>
+</div>
+## The Problem
 
 Perl 5's OO runtime method lookup has 50% more performance overhead than a direct, named subroutine invocation.
 
