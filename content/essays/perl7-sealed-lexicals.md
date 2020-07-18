@@ -124,7 +124,7 @@ Sample code:
 
 	sub handler :sealed {
 		my Apache2::RequestRec $r = shift;
-		$r->content_type(); #compile time method lookup
+		$r->content_type("text/html"); #compile time method lookup
 	}
 ```
 
