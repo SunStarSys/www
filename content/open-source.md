@@ -15,7 +15,7 @@ Do you have an open source strategy for your product line?  How modular is your 
 
 - [Apache CMS](http://www.apache.org/dev/cms) - CMS serving over 100 Apache projects.
 
-- [orthrus](https://code.google.com/p/orthrus/) - [OTP](https://en.wikipedia.org/wiki/One-time_password) security application; AL-2.0 *portable* drop in replacement for OPIE.
+- [orthrus](https://github.com/joesuf4/orthrus) - [OTP](https://en.wikipedia.org/wiki/One-time_password) security application; AL-2.0 *portable* drop in replacement for OPIE.
 
 - [at](https://github.com/joesuf4/at) - [TAP](https://testanything.org)-Compliant C unit test framework.
 
