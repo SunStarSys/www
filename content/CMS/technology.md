@@ -2,8 +2,7 @@ Title: CMS Technology
 
 ## Solaris 11.4
 
-- DTrace &mdash; the kitchen sink approach (everything but httpd itself).
-
+- DTrace &mdash; the kitchen sink approach: all dyamic programming language tooling.
 
 - ZFS &mdash; better with Solaris, backed by Oracle Support.
 
@@ -13,7 +12,7 @@ Title: CMS Technology
 
 ## Perl 7 (coming soon)
 
-- mod_perl w/ ithreads + httpd w/ event mpm.
+- Perl 5.30.2 mod_perl w/ ithreads + httpd w/ event mpm.
 
 ## Subversion 1.14
 
