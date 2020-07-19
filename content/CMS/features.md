@@ -1,8 +1,8 @@
 Title: CMS Features
 Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,http
 
-<div class="float-lg-right">
-	<img src="/images/sunstarstaronly.png"></img>
+<div class="float-lg-right" style="margin-left: 20px">
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/nNzXg-iO98g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 ## Blazing Fast
