@@ -42,6 +42,18 @@ For most customers, the CMS service sits between your Subversion repository's we
 
 See <https://vcs.sunstarsys.com/repos/svn/public/site/> for a live example.
 
+## Dynamic Content
+
+### Example script to regenerate a page (`$file`) with dynamic content:
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m 'rebuild $file'
+```
+
 ## Exceptions
 
 ## Search
