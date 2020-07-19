@@ -2,19 +2,19 @@ Title: CMS Technology
 
 ## Solaris 11.4
 
-### DTrace
+- DTrace
 
-### ZFS
+- ZFS
 
 ## node.js
 
-### Editor.md
+- Editor.md
 
 ## Perl 7 (coming soon)
 
-### mod_perl w/ ithreads + httpd w/ event mpm
+- mod_perl w/ ithreads + httpd w/ event mpm
 
-## Subversion 1.14
+- Subversion 1.14 w/ custom `SVN::Client` bindings
 
 
 
