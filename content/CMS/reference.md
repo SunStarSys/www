@@ -51,7 +51,7 @@ See <https://vcs.sunstarsys.com/repos/svn/public/site/> for a live example.
 % svn rm $file
 % mv $file.tmp $file
 % svn add $file
-% svn commit -m 'rebuild $file'
+% svn commit -m "rebuild $file"
 ```
 
 ## Exceptions
