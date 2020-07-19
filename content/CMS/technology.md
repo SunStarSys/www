@@ -2,27 +2,26 @@ Title: CMS Technology
 
 ## Solaris 11.4
 
-- DTrace
+- DTrace &mdash; the kitchen sink approach (everything but httpd itself).
 
-- ZFS
+
+- ZFS &mdash; better with Solaris, backed by Oracle Support.
 
 ## node.js
 
-- Editor.md
+- Editor.md &mdash; WYSIWYG.
 
 ## Perl 7 (coming soon)
 
-- mod_perl w/ ithreads + httpd w/ event mpm
+- mod_perl w/ ithreads + httpd w/ event mpm.
 
 ## Subversion 1.14
 
-- custom `SVN::Client` bindings
+- custom `SVN::Client` bindings.
 
-- python3 support
+- python3 support.
 
-- svnpubsub
-
-- svnwcsub
+- svnpubsub and svnwcsub &mdash; the whole kit and caboodle for distributed enterprise site deployment.
 
 
 
