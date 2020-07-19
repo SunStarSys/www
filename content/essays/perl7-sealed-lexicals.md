@@ -16,6 +16,7 @@ This isn't a trifling issue with calls to `C struct` get-set accessor methods &m
 
 What Doug was looking for was a way to tell perl to perform the method lookup at compile time, the way it does with named subroutine calls.  Every time Doug tried, he hit roadblocks of either a social or technical nature.  Perhaps it's time to make another pass at this idea with the advent of Perl 7.
 
+
 ## Benchmark Script
 
 ```perl
