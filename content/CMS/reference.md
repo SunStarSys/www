@@ -44,7 +44,7 @@ See <https://vcs.sunstarsys.com/repos/svn/public/site/> for a live example.
 
 ## Dynamic Content
 
-### Example script to regenerate a page (`$file`) with dynamic content:
+### Example script to regenerate a source page (`$file`) with dynamic content:
 
 ```shell
 % cp $file $file.tmp
