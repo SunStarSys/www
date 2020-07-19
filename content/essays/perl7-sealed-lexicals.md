@@ -131,7 +131,7 @@ Sample code:
 	}
 ```
 
-## Production-Quality Perl 5 Prototype: sealed.pm v1.0.0
+## Production-Quality Perl 5 Prototype: sealed.pm v1.0.1
 
 See <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>.
 
