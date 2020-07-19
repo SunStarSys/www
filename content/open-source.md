@@ -9,18 +9,20 @@ Do you have an open source strategy for your product line?  How modular is your 
 
 #### List of Projects we've been involved with, in whole or in part:
 
-- [mod_perl](http://perl.apache.org/) - Embedded perl interpreter inside httpd.
+- [mod_perl](http://perl.apache.org/) &mdash; Embedded perl interpreter inside httpd.
 
-- [libapreq](http://httpd.apache.org/apreq/) - Safe/Fast form-data and cookie parsing library.
+- [libapreq](http://httpd.apache.org/apreq/) &mdash; Safe/Fast form-data and cookie parsing library.
 
-- [Apache CMS](http://www.apache.org/dev/cms) - CMS serving over 100 Apache projects.
+- [Apache CMS](http://www.apache.org/dev/cms) &mdash; CMS serving over 100 Apache projects.
 
-- [orthrus](https://github.com/joesuf4/orthrus) - [OTP](https://en.wikipedia.org/wiki/One-time_password) security application; AL-2.0 *portable* drop in replacement for OPIE.
+- [orthrus](https://github.com/joesuf4/orthrus) &mdash; [OTP](https://en.wikipedia.org/wiki/One-time_password) security application; AL-2.0 *portable* drop in replacement for OPIE.
 
-- [at](https://github.com/joesuf4/at) - [TAP](https://testanything.org)-Compliant C unit test framework.
+- [at](https://github.com/joesuf4/at) &mdash; [TAP](https://testanything.org)-Compliant C unit test framework.
 
-- [pty](https://github.com/joesuf4/pty) - Tools for Automated terminal credentials-prompt responses.  In the spirit of [TCL Expect](https://en.wikipedia.org/wiki/Expect), but *portable* across different programming languages.
+- [pty](https://github.com/joesuf4/pty) &mdash; Tools for Automated terminal credentials-prompt responses.  In the spirit of [TCL Expect](https://en.wikipedia.org/wiki/Expect), but *portable* across different programming languages.
 
-- [pffxg](https://github.com/joesuf4/home/blob/master/bin/pffxg.sh) - Parallelized recursive grep functionality similar to The Silver Searcher, but 4x faster.
+- [pffxg](https://github.com/joesuf4/home/blob/master/bin/pffxg.sh) &mdash; Parallelized recursive grep functionality similar to The Silver Searcher, but 4x faster.
 
-- [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) - Distributed commit hooks for subversion.
+- [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; Distributed commit hooks for subversion.
+
+- [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; Fresh Solaris 11.4 port including segfault-free ZFS/Zone support.
