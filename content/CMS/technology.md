@@ -12,13 +12,13 @@ Title: CMS Technology
 
 ## Perl 7 (coming soon)
 
-- Perl 5.30.2 mod_perl w/ ithreads + httpd w/ event mpm.
+- Perl v5.30.2 mod_perl w/ ithreads + httpd w/ event mpm.
 
 ## Subversion 1.14
 
 - custom `SVN::Client` bindings.
 
-- python3 support.
+- python3 support (v3.8)
 
 - svnpubsub and svnwcsub &mdash; the whole kit and caboodle for distributed enterprise site deployment.
 
