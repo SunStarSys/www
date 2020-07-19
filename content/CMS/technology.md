@@ -14,8 +14,15 @@ Title: CMS Technology
 
 - mod_perl w/ ithreads + httpd w/ event mpm
 
-- Subversion 1.14 w/ custom `SVN::Client` bindings
+## Subversion 1.14
 
+- custom `SVN::Client` bindings
+
+- python3 support
+
+- svnpubsub
+
+- svnwcsub
 
 
 
