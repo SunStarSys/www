@@ -30,7 +30,7 @@ Title: CMS Technology
 
 - If you need to distribute and deal with resulting build trees using version control, you will not like git at large scale. Especially when integrating binary artifacts, built using this system or using a third party builder that you use locally to just upload those build results directly to our target repositories. This way you can avoid unnecessary clutter and bloat in your site's source tree, unlike how it'd work with git, using branches in a repository common to both your source and build trees.
 
-- Subversion lets you do partial/sparse checkouts of `HEAD`; with Git it's the entire branch (which includes history) or nothing.
+- Subversion lets you do partial/sparse checkouts of `HEAD`; with Git you must clone the entire branch (which includes history) or nothing.
 
 - We would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple server-side on-disk git repositories of client website trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.
 
