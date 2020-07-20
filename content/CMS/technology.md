@@ -32,5 +32,9 @@ Title: CMS Technology
 
 - Subversion lets you do partial/sparse checkouts of `HEAD`; with Git it's the entire branch (which includes history) or nothing.
 
-- We would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple server-side on-disk checkouts of client website source trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.  mod_python still has a way to go before it reaches the maturity of mod_perl in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.  Porting the 5K LOC codebase to a different programming environment would result in a 10-100 fold ballooning of the line count, and consequently a major performance degradation in any other dynamic programming language.
+- We would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple server-side on-disk checkouts of client website source trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.
+
+## Why not Python or Ruby?
+
+- mod_python still has a way to go before it reaches the maturity of mod_perl in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.  mod_ruby was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl sources of the CMS to a different programming environment would result in a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
 
