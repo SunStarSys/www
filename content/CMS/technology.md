@@ -6,27 +6,27 @@ Title: CMS Technology
 
 - ZFS &mdash; better with Solaris, backed by Oracle Support.
 
-## node.js
+## node.js v12.18.0
 
 - Editor.md &mdash; WYSIWYG.
 
 ## Perl 7 (coming soon)
 
-- Perl v5.30.2 mod_perl w/ ithreads + httpd w/ event mpm.
+- Now w/ Perl v5.30.2, mod_perl v2.0 w/ ithreads and httpd v2.4.43 w/ event mpm.
 
-## Subversion 1.14
+## Subversion v1.14.0-dev
 
 - custom `SVN::Client` bindings.
 
-- python3 support (v3.8)
+- python3 support (v3.8.3)
 
-- svnpubsub and svnwcsub &mdash; the whole kit and caboodle for distributed enterprise site deployment.
+- threaded python3 ports of svnpubsub and svnwcsub &mdash; the whole kit and caboodle for distributed enterprise/CDN site deployment using Subversion.
 
 ## Why not Git?
 
-- The `git svn` bridge already exists if you prefer to work with git yourself, instead of using the online IDE.  You have options.
+- The `git svn` bridge already exists if you prefer to work with git yourself, instead of using the online IDE for the CMS.  You have options!
 
-- Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  It's more aligned with devops / trunk-based-development than it is with gitflow.
+- Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  It's more aligned with devops / `trunk-based development` than it is with `gitflow`.
 
 - If you need to distribute and deal with resulting build trees using version control, you will not like git at large scale. Especially when integrating binary artifacts, built using this system or using a third party builder that you just provide those build results to our repositories.
 
