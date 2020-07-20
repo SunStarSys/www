@@ -6,7 +6,7 @@ Title: CMS Technology
 
 - ZFS &mdash; better with Solaris, backed by Oracle Support.  Accept no substitutes.
 
-- Zones for service isolation and suitably sandboxed site builds.
+- Zones &mdash; provides service isolation and suitably sandboxed site builds.
 
 ## node.js v12.18.0
 
