@@ -87,7 +87,7 @@ joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
 
 - Trying to embed `Go` into httpd, with native version-control bindings, would be a fun challenge; just not for me personally.  Good language with interesting tradeoffs when it comes to dynamic linking, but a definite maybe for future investigation.
 
-- As far as the Perl 5 build system is concerned, stay tuned.  *No reason it can't* be ported to any other programming language, and the build system is completely isolated from the CMS's online IDE (outside of the markdown renderer daemon based on `node.js`, which is a stand-alone system itself) for a million security/architectural design reasons.
+- As far as the Perl 5 build system is concerned, stay tuned!  *No reason it can't* be ported to any other programming language, as the build system is completely isolated from the CMS's online IDE (outside of the markdown renderer daemon based on `node.js`, which is a stand-alone system itself) for a million security/architectural design reasons.
 
 - Yes, Perl's popularity trajectory ironically tracks Common Lisp's, but some things age better than others: the solid ithread engineering out of `p5p` in preparation for the advent of Perl 7 is welcome news to mod_perl developers still clinging to Doug's original dream.  If you find yourself knee-deep in 100+ LOC Perl sources to get what you need out of our current Perl-only build system, let's chat &mdash;  maybe we can collaborate on something less complex for you to use to build your site.  Less is more with Perl.
 
