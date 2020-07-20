@@ -6,6 +6,8 @@ Title: CMS Technology
 
 - ZFS &mdash; better with Solaris, backed by Oracle Support.  Accept no substitutes.
 
+- Zones for service isolation and suitably sandboxed site builds.
+
 ## node.js v12.18.0
 
 - Because Editor.md is **awesome**, we ported it to `node.js` &mdash; WYSIWYG, regardless of the viewer's context (editing in our online IDE, or browsing the resultant production site).
