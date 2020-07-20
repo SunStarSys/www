@@ -8,7 +8,7 @@ Title: CMS Technology
 
 ## node.js v12.18.0
 
-- Editor.md &mdash; WYSIWYG.
+- Because Editor.md is awesome, so I ported it to `node.js` &mdash; WYSIWYG, regardless of the viewer's context (editing or views of production builds).
 
 ## Perl 7 (coming soon)
 
@@ -39,6 +39,49 @@ Title: CMS Technology
 - `mod_python` still has a way to go before it reaches the maturity of `mod_perl` in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.
 
 - `mod_ruby` was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl 5 sources of the CMS to a different programming environment would result in roughly a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
+
+To be sure, here is a snapshot, dated July 19, 2020, of the SunStar Systems portion of the production source tree for the entire CMS (IDE+build).  There is little else involved beyond our `Dotiac::DTL` fork.  All of the build-related code has already been open-sourced on GitHub already.  What remains private are the C-based customizations to third party source trees, which are unique to us.
+
+```
+joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
+     1 build/lib/SunStarSys/ASF.pm
+   128 build/lib/SunStarSys/SVNUtil.pm
+   270 build/lib/SunStarSys/Util.pm
+    36 build/lib/SunStarSys/Value.pm
+    82 build/lib/SunStarSys/Value/Blogs.pm
+    61 build/lib/SunStarSys/Value/Jira.pm
+    77 build/lib/SunStarSys/Value/Mail.pm
+    70 build/lib/SunStarSys/Value/SVN.pm
+   106 build/lib/SunStarSys/Value/Snippet.pm
+    85 build/lib/SunStarSys/Value/Twitter.pm
+   378 build/lib/SunStarSys/View.pm
+  1260 webgui/lib/SunStarSys/CMS.pm
+   112 webgui/lib/SunStarSys/CMS/Cookie.pm
+   183 webgui/lib/SunStarSys/CMS/Filter.pm
+    90 webgui/lib/SunStarSys/CMS/MapToStorage.pm
+    59 webgui/lib/SunStarSys/CMS/WC.pm
+   194 webgui/lib/SunStarSys/CMS/WC/Add.pm
+    97 webgui/lib/SunStarSys/CMS/WC/Browse.pm
+   133 webgui/lib/SunStarSys/CMS/WC/Commit.pm
+    79 webgui/lib/SunStarSys/CMS/WC/Copy.pm
+    66 webgui/lib/SunStarSys/CMS/WC/Delete.pm
+    47 webgui/lib/SunStarSys/CMS/WC/Diff.pm
+   182 webgui/lib/SunStarSys/CMS/WC/Edit.pm
+   116 webgui/lib/SunStarSys/CMS/WC/Mail.pm
+    70 webgui/lib/SunStarSys/CMS/WC/Merge.pm
+    67 webgui/lib/SunStarSys/CMS/WC/Move.pm
+    52 webgui/lib/SunStarSys/CMS/WC/Production.pm
+    47 webgui/lib/SunStarSys/CMS/WC/Promote.pm
+    60 webgui/lib/SunStarSys/CMS/WC/Resolve.pm
+    64 webgui/lib/SunStarSys/CMS/WC/Revert.pm
+    82 webgui/lib/SunStarSys/CMS/WC/Rollback.pm
+   123 webgui/lib/SunStarSys/CMS/WC/Search.pm
+    78 webgui/lib/SunStarSys/CMS/WC/Staged.pm
+    24 webgui/lib/SunStarSys/CMS/WC/Static.pm
+    49 webgui/lib/SunStarSys/CMS/WC/Update.pm
+   220 webgui/lib/SunStarSys/SVN/Client.pm
+  4848 total
+```
 
 - `mod_js` never made the cut for httpd v2, much less threaded mpm's.
 
