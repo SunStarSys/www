@@ -34,9 +34,11 @@ Title: CMS Technology
 
 - We would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple server-side on-disk checkouts of client website source trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.
 
-## Why not Python or Ruby?
+## Why not Python or Ruby or Go?
 
 - mod_python still has a way to go before it reaches the maturity of mod_perl in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.  mod_ruby was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl sources of the CMS to a different programming environment would result in a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
+
+- Trying to embed `Go` into httpd would be a fun challenge, just not for me personally.  Good language with interesting tradeoffs when it comes to dynamic linking, but a definite maybe for future investigation.
 
 ## Why not with something based on the JVM?
 
