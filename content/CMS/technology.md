@@ -36,7 +36,7 @@ Title: CMS Technology
 
 ## Why not Python or Ruby or Javascript or Go?
 
-- `mod_python` still has a way to go before it reaches the maturity of `mod_perl` in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides. 
+- `mod_python` still has a way to go before it reaches the maturity of `mod_perl` in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.
 
 - `mod_ruby` was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl 5 sources of the CMS to a different programming environment would result in roughly a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
 
@@ -44,7 +44,7 @@ Title: CMS Technology
 
 - Trying to embed `Go` into httpd would be a fun challenge, just not for me personally.  Good language with interesting tradeoffs when it comes to dynamic linking, but a definite maybe for future investigation.
 
-- As far as the Perl 5 build system is concerned, stay tuned.  No reason it can't be ported to any other programming language, and the build system is completely isolated from the CMS's online IDE (outside of the markdown renderer daemon based on `node.js`, which is a stand-alone system itself) for a million security/architectural design reasons.
+- As far as the Perl 5 build system is concerned, stay tuned.  *No reason it can't* be ported to any other programming language, and the build system is completely isolated from the CMS's online IDE (outside of the markdown renderer daemon based on `node.js`, which is a stand-alone system itself) for a million security/architectural design reasons.
 
 - Yes, Perl's popularity trajectory ironically tracks Common Lisp's, but some things age better than others: the solid ithread engineering out of `p5p` in preparation for the advent of Perl 7 is welcome news to mod_perl developers still clinging to Doug's original dream.  If you find yourself knee-deep in 100+ LOC Perl sources to get what you need out of our current Perl-only build system, let's chat &mdash;  maybe we can collaborate on something less complex for you to use to build your site.  Less is more with Perl.
 
