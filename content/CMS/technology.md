@@ -32,7 +32,7 @@ Title: CMS Technology
 
 - Subversion lets you do partial/sparse checkouts of `HEAD`; with Git you must clone the entire branch (which includes history) or nothing.
 
-- For the IDE, we would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple server-side on-disk git repositories of client website trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.
+- For the IDE, we would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple server-side on-disk git repositories of client website trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.  Looking at you, `Git::Raw`!
 
 ## Why not Python or Ruby or Javascript or Go?
 
