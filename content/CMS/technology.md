@@ -28,7 +28,7 @@ Title: CMS Technology
 
 - Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  It's more aligned with devops / `trunk-based development` than it is with `gitflow`.
 
-- If you need to distribute and deal with resulting build trees using version control, you will not like git at large scale. Especially when integrating binary artifacts, built using this system or using a third party builder that you just provide those build results to our repositories.
+- If you need to distribute and deal with resulting build trees using version control, you will not like git at large scale. Especially when integrating binary artifacts, built using this system or using a third party builder that you use locally to just uplaod those build results directly to our target repositories.
 
 - Subversion lets you do partial/sparse checkouts of `HEAD`; with Git it's the entire branch (which includes history) or nothing.
 
@@ -36,7 +36,7 @@ Title: CMS Technology
 
 ## Why not Python or Ruby or Javascript or Go?
 
-- `mod_python` still has a way to go before it reaches the maturity of `mod_perl` in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.  
+- `mod_python` still has a way to go before it reaches the maturity of `mod_perl` in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides. 
 
 - `mod_ruby` was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl 5 sources of the CMS to a different programming environment would result in roughly a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
 
