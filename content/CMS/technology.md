@@ -8,7 +8,7 @@ Title: CMS Technology
 
 ## node.js v12.18.0
 
-- Because Editor.md is awesome, so I ported it to `node.js` &mdash; WYSIWYG, regardless of the viewer's context (editing in our online IDE, or browsing the resultant production site).
+- Because Editor.md is awesome, so we ported it to `node.js` &mdash; WYSIWYG, regardless of the viewer's context (editing in our online IDE, or browsing the resultant production site).
 
 ## Perl 7 (coming soon)
 
