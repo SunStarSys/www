@@ -36,7 +36,7 @@ Title: CMS Technology
 
 ## Why not Python or Ruby or Javascript or Go?
 
-- `mod_python` still has a way to go before it reaches the maturity of `mod_perl` in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.
+- `mod_python` still has a way to go before it reaches the maturity of `mod_perl` in a threaded mpm. Moreover, this product's current implementation is tightly integrated with the Apache HTTPd server's full module API, which only `mod_perl` provides.
 
 - `mod_ruby` was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl 5 sources of the CMS to a different programming environment would result in roughly a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
 
