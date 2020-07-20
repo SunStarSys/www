@@ -22,7 +22,7 @@ Title: CMS Technology
 
 - native python3 bindings (v3.8.3)
 
-- threaded python3 ports of svnpubsub and svnwcsub &mdash; the whole kit and caboodle for distributed enterprise/CDN site deployment using Subversion.
+- threaded python3 ports of svnpubsub and svnwcsub &mdash; the whole *kit and caboodle* for distributed enterprise/CDN site deployment using Subversion.
 
 - completed the python3 viewvc port.  Will look into a pull request for my changes upstream as time permits.
 
