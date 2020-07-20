@@ -85,7 +85,7 @@ joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
 
 - `mod_js` never made the cut for httpd v2, much less threaded mpm's.
 
-- Trying to embed `Go` into httpd would be a fun challenge, just not for me personally.  Good language with interesting tradeoffs when it comes to dynamic linking, but a definite maybe for future investigation.
+- Trying to embed `Go` into httpd, with native version-control bindings, would be a fun challenge; just not for me personally.  Good language with interesting tradeoffs when it comes to dynamic linking, but a definite maybe for future investigation.
 
 - As far as the Perl 5 build system is concerned, stay tuned.  *No reason it can't* be ported to any other programming language, and the build system is completely isolated from the CMS's online IDE (outside of the markdown renderer daemon based on `node.js`, which is a stand-alone system itself) for a million security/architectural design reasons.
 
