@@ -44,7 +44,10 @@ See <https://vcs.sunstarsys.com/repos/svn/public/site/> for a live example.
 
 ## Dynamic Content
 
-### Example script to regenerate a source page (`$file`) with dynamic content:
+### Example script to regenerate a source page with changing content, even when the sources do not.
+
+Basic idea is that some or your high-profile source pages build with "dynamic" content (build incorporates ever-changing snippets from other online sites, like Jira waterfalls or current mailing list threads).
+A good example of this is [The ASF Home Page](https://www.apache.org/).
 
 ```shell
 % cp $file $file.tmp
