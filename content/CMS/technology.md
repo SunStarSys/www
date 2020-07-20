@@ -26,7 +26,7 @@ Title: CMS Technology
 
 - The `git svn` bridge already exists if you prefer to work with git yourself, instead of using the online IDE for the CMS.  You have options!
 
-- Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  It's more aligned with devops / `trunk-based development` than it is with `gitflow`.
+- Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  It's more aligned with [devops / `trunk-based development`](/essays/devops) than it is with `gitflow`.
 
 - If you need to distribute and deal with resulting build trees using version control, you will not like git at large scale. Especially when integrating binary artifacts, built using this system or using a third party builder that you use locally to just upload those build results directly to our target repositories. This way you can avoid unnecessary clutter and bloat in your site's source tree, unlike how it'd work with git, using branches in a repository common to both your source and built trees.
 
