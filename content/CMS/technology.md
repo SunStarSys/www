@@ -32,5 +32,5 @@ Title: CMS Technology
 
 - Subversion lets you do partial/sparse checkouts of `HEAD`; with Git it's the entire branch (which includes history) or nothing.
 
-- We would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple client on-disk checkouts.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.
+- We would need Perl bindings for `libgit2` (which is **not provided by the actual git development team**) in order to match svn's httpd-compatible memory management regime and POSIX thread safety, in a persistent runtime, and across multiple server-side on-disk checkouts of client website source trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.
 
