@@ -40,7 +40,7 @@ Title: CMS Technology
 
 - `mod_ruby` was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl 5 sources of the CMS to a different programming environment would result in roughly a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
 
-To be sure, here is a snapshot, dated July 19, 2020, of the SunStar Systems portion of the production source tree for the entire CMS (IDE+build).  There is little else involved beyond our `Dotiac::DTL` fork.  All of the build-related code has already been open-sourced on GitHub already.  What remains private are the C-based customizations to third party source trees, which are unique to us.
+To be sure, here is a snapshot, dated July 19, 2020, of the SunStar Systems portion of the production source tree for the entire CMS (IDE+build).  There is little else involved beyond our `Dotiac::DTL` fork.  All of the build-related code has already been open-sourced on GitHub already.  What remains private are the C-based customizations to third party source trees, which are unique differentiators for our product.
 
 ```
 joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
