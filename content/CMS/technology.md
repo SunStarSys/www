@@ -38,3 +38,6 @@ Title: CMS Technology
 
 - mod_python still has a way to go before it reaches the maturity of mod_perl in a threaded mpm, and this system is fully integrated with the Apache http server's full API, which only mod_perl provides.  mod_ruby was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl sources of the CMS to a different programming environment would result in a 10-100 fold ballooning of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
 
+## Why not with something based on the JVM?
+
+-  Just worked out that way, given my 20 year history with the LAMP stack and constructive contributions to the extended Apache HTTPd webserver community.  Doable, but again a massive undertaking with lots of hard engineering problems to solve along the way.
