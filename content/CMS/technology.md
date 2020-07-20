@@ -2,9 +2,9 @@ Title: CMS Technology
 
 ## Solaris 11.4
 
-- DTrace &mdash; the kitchen sink approach: all dyamic programming language tooling.
+- DTrace &mdash; we took the kitchen sink approach: all of our dyamic programming language tooling integrates with it.
 
-- ZFS &mdash; better with Solaris, backed by Oracle Support.
+- ZFS &mdash; better with Solaris, backed by Oracle Support.  Accept no substitutes.
 
 ## node.js v12.18.0
 
