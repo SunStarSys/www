@@ -28,7 +28,7 @@ Title: CMS Technology
 
 - Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  It's more aligned with devops / `trunk-based development` than it is with `gitflow`.
 
-- If you need to distribute and deal with resulting build trees using version control, you will not like git at large scale. Especially when integrating binary artifacts, built using this system or using a third party builder that you use locally to just uplaod those build results directly to our target repositories.
+- If you need to distribute and deal with resulting build trees using version control, you will not like git at large scale. Especially when integrating binary artifacts, built using this system or using a third party builder that you use locally to just upload those build results directly to our target repositories.
 
 - Subversion lets you do partial/sparse checkouts of `HEAD`; with Git it's the entire branch (which includes history) or nothing.
 
