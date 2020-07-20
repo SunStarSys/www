@@ -54,6 +54,8 @@ See <https://vcs.sunstarsys.com/repos/svn/public/site/> for a live example.
 % svn commit -m "rebuild $file"
 ```
 
+Incorporate this into a little shell script that will use your cached svn credentials on your own PC, and have cron execute it for you on a fixed schedule.  No need for server-side tooling on our end; you have full control of your own password security, scheduling, and dynamic page targets.  If you are using your own svnpubsub-enabled Subversion service, none of that transaction directly involves any of our hardware, your commit will trigger our svnwcsub client to build and deploy those changes on demand, pronto.
+
 ## Exceptions
 
 ## Search
