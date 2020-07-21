@@ -20,7 +20,7 @@ Title: CMS Technology
 
 - custom ithread-safe `SVN::Client` bindings w/ per-request memory pools.
 
-- native python3 bindings (v3.8.3)
+- native python3 bindings (v3.8.3).
 
 - threaded python3 ports of svnpubsub and svnwcsub &mdash; the whole *kit and caboodle* for distributed enterprise/CDN site deployment using Subversion.
 
