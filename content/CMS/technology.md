@@ -31,6 +31,8 @@ Title: CMS Technology
 
 # Some Remarks on the Roads Not Taken...
 
+<br/>
+
 ## Why not Git?
 
 - The `git svn` bridge already exists if you prefer to work with git yourself, instead of using the online IDE for the CMS.  You have options!
