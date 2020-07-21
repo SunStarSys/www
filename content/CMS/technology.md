@@ -2,7 +2,7 @@ Title: CMS Technology
 
 ## Solaris 11.4
 
-- DTrace &mdash; we took the kitchen sink approach: all of our dyamic programming language tooling integrates with it.
+- DTrace &mdash; we took the kitchen sink approach: all of our dyamic programming language tooling integrates with it.  While bpftrace is a nice recent development for Linux, having it do useful things in the dynamic language space is a long way off, which is where the action is.
 
 - ZFS &mdash; better with Solaris, backed by Oracle Support.  Accept no substitutes.
 
