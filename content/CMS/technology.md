@@ -24,7 +24,7 @@ Title: CMS Technology
 
 - threaded python3 ports of svnpubsub and svnwcsub &mdash; the whole *kit and caboodle* for distributed enterprise/CDN site deployment using Subversion.
 
-- completed the python3 viewvc port.  Will look into a pull request for my changes upstream as time permits.
+- completed the python3 [viewvc](https://vcs.sunstarsys.com/viewvc/public/site) port.  Will look into a pull request for my changes upstream as time permits.
 
 ## Why not Git?
 
