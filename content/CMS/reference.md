@@ -48,8 +48,9 @@ See <https://vcs.sunstarsys.com/repos/svn/public/site/> for a live example.
 
 ### Example script to regenerate a source page with changing content, even when the sources do not.
 
-Basic idea is that some or your high-profile source pages build with "dynamic" content (build incorporates ever-changing snippets from other online sites, like Jira waterfalls or current mailing list threads).
-A good example of this is "Latest News" section of [The ASF Home Page](https://www.apache.org/), and here's the behind-the-scenes way it works, with a little shell+svn+cron magic as exemplified here (dynamic build's source file as `$file` below):
+The basic idea is that some of your high-profile source pages build with "dynamic" content (build incorporates ever-changing snippets from other online sites, like Jira waterfalls or current mailing list threads).
+
+A good example of this is "Latest News" section of [The ASF Home Page](https://www.apache.org/), and here's the behind-the-scenes way it works, with a little shell+svn+cron magic as exemplified here (take the dynamic build's source file as `$file` below):
 
 ```shell
 % cp $file $file.tmp
