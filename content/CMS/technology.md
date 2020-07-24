@@ -26,7 +26,6 @@ Title: CMS Technology
 
 - completed the python3 [viewvc](https://vcs.sunstarsys.com/viewvc/public/site) port.  Will look into a pull request for my changes upstream as time permits.
 
-
 ------------
 
 # Some Remarks on the Roads Not (Yet?) Taken...
