@@ -30,6 +30,8 @@ For most customers, the CMS service sits between your Subversion repository's we
 
 3. Subscribe your production webservers' `svnwcsub` daemon to our public `svnpubsub` service.  These stand-alone software components are a part of each new Subversion source release, and are reasonably mature and well supported by the Subversion Development Team.
 
+4. Let us know if you'd like content diffs of the builds sent out, and to which email address you want them delivered.
+
 ## Source Directory Layout
 
 - trunk/
