@@ -13,7 +13,7 @@ Title: CMS Pricing
 	- Up to 10 GB covering total SunStar Systems server filesystem storage.  Basically, this includes two source tree checkouts and one resultant build tree, and potentially the Subversion server's source DB if we are hosting it for you.  Does not include `.svn` dirs (containing pristine copies of all your files) in calculating total size.
 	- This is introductory pricing good through September 7, 2020, and includes <span class="text-success">unlimited seating for self-hosted Subversion source trees</span>.
 	- SLA's and Premium Support Packages are sold separately; contact us for pricing on these items if you need them.
-	- Unlike our competition, <span class="text-success">there are no add-on fees for required CPU cycles: neither for your builds nor IDE usage.</span>.
+	- Unlike our competition, <span class="text-success">there are no add-on fees for required CPU cycles: neither for your builds nor IDE usage</span>.
 ------------
 
 - Volume discounts available.
