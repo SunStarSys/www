@@ -54,7 +54,7 @@ EOT
 
     render "inquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
-        headers => { title => "Sales Inquiry" };
+        headers => { title => "CMS Sales Inquiry" };
 }
 
 render "inquiry_get.html";
