@@ -10,7 +10,7 @@ Keywords: South Florida, System Administration
 		<label for="subject">Subject</label>
 		<input name="subject" class="form-control" value="CMS Sales"  style="width:400px"/>
 		<label for="content">Content</label>
-		<textarea name="content" class="form-control" style="width:400px; height:400px"></textarea>
+		<textarea name="content" class="form-control" style="width:400px;" rows=20></textarea>
 		<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
 	</form>
 </div>
