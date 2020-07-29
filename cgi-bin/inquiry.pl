@@ -19,6 +19,7 @@ sub render {
 my $DOMAIN = q/sunstarsys.com/;
 my $pool = APR::Pool->new;
 my $body = APR::Request::CGI->handle($pool)->body || {};
+my $date = gmtime;
 
 if (our $REQUEST_METHOD eq "POST") {
     my ($email, $subject, $content) = @$body{qw/email subject mailmsg/};
@@ -32,6 +33,7 @@ if (our $REQUEST_METHOD eq "POST") {
             $_ = "=?utf-8?Q?$_?=";
         }
     }
+
 
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/ for my $srs_sender = $email;
 
