@@ -37,7 +37,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     }
 
 
-    s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, s/^.*\s// for my $srs_sender = $email;
+     s/^.*\s//, s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/ for my $srs_sender = $email;
 
     local %ENV;
     open my $sendmail, "|-", "/usr/sbin/sendmail -oi -t -f $srs_sender\@$DOMAIN"
