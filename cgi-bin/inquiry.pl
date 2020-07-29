@@ -28,8 +28,8 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     s/\r//g for $email, $subject, $content;
     s/\n//g for $email, $subject;
 
-    s/\s*[<\(]?(\S+\@\S+)[\)>]?\s*$// for my $cn = $email;
-    my $srs_sender = $1 or die "ODD EMAIL: '$cn' => '$email'";
+    my ($cn, $srs_sender) = $email =~ m/^(.*?)\s*[<\(]?(\S+\@\S+)[\)>]?\s*$//;
+
     for ($cn, $subject) {
         if (s/([^^A-Za-z0-9\-_.,!~*' ])/sprintf "=%02X", ord $1/ge) {
             tr/ /_/;
@@ -37,7 +37,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
         }
     }
 
-    s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/;
+    $srs_sender =~ s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/;
 
     local %ENV;
     open my $sendmail, "|-", "/usr/sbin/sendmail -oi -t -f '$srs_sender\@$DOMAIN'"
