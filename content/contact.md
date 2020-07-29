@@ -5,7 +5,7 @@ Keywords: South Florida, System Administration
 	<h3>CMS Sales Inquiries</h3>
 	<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
     	<label for="name">Your Name</label>
-		<input name="name" class="form-control" style="width:400px" required />
+		<input name="name" type="text" class="form-control" style="width:400px" required />
         <label for="email">Your Email Address</label>
 		<input type="email" name="email" class="form-control" style="width:400px" required />
 		<label for="subject">Subject</label>
