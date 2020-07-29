@@ -4,8 +4,10 @@ Keywords: South Florida, System Administration
 <div class="float-lg-right">
 	<h3>CMS Sales Inquiries</h3>
 	<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
-		<label for="email">Your Contact Address</label>
-		<input type="email" name="email" class="form-control" style="width:400px" placeholder="John Doe <john@example.com>" required />
+    	<label for="name">Your Name</label>
+		<input name="name" class="form-control" style="width:400px" placeholder="John Doe" required />
+        <label for="email">Your Email Address</label>
+		<input type="email" name="email" class="form-control" style="width:400px" placeholder="john@example.com" required />
 		<label for="subject">Subject</label>
 		<input name="subject" class="form-control" value="CMS Sales"  style="width:400px"/ required>
 		<label for="content">Message for Sales</label>
