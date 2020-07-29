@@ -3,6 +3,7 @@ use SunStarSys::Util qw/walk_content_tree Load/;
 use strict;
 use warnings;
 
+
 my $conf = Load join "", <DATA>;
 
 our @patterns = (
