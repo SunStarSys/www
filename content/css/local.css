@@ -32,6 +32,11 @@ input:valid {
 table {
 	background-color: #258fc1;
 	width: 800px;
+	border-color: #90cdea;
+}
+
+table > td {
+	background-color: #484848;
 }
 
 h1 {font-size: 28px}
