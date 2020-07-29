@@ -3,6 +3,8 @@
 use APR::Request::CGI;
 use APR::Pool;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
+use strict;
+use warnings;
 
 sub render {
     my $template = shift;
@@ -18,7 +20,7 @@ my $DOMAIN = q/sunstarsys.com/;
 my $pool = APR::Pool->new;
 my $body = APR::Request::CGI->handle($pool)->body || {};
 
-if ($HTTP_METHOD eq "POST") {
+if (our $REQUEST_METHOD eq "POST") {
     my ($email, $subject, $content) = @$body{qw/email subject mailmsg/};
     s/\r//g for $email, $subject, $content;
     s/\n//g for $email, $subject;
