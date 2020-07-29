@@ -18,7 +18,8 @@ my $DOMAIN = q/sunstarsys.com/;
 my $pool = APR::Pool->new;
 my $body = APR::Request::CGI->handle($pool)->body || {};
 
-if ((my ($email, $subject, $content) = @$body{qw/email subject mailmsg/}) == 3) {
+if ($HTTP_METHOD eq "POST") {
+    my ($email, $subject, $content) = @$body{qw/email subject mailmsg/};
     s/\r//g for $email, $subject, $content;
     s/\n//g for $email, $subject;
 
