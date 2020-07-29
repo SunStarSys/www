@@ -26,5 +26,5 @@ Keywords: South Florida, System Administration
 <input name="subject" class="form-control" value="CMS Sales"  style="width:400px"/>
 <label for="content">Content</label>
 <textarea name="content" class="form-control" style="width:400px; height:400px"></textarea>
-<button name="submit" class="btn btn-outline-danger" value=1 >Submit</button>
+<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
 </form>
