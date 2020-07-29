@@ -24,7 +24,7 @@ sub render {
 
 
 if ($ENV{REQUEST_METHOD} eq "POST") {
-    my ($email, $subject, $content) = @$body{qw/email subject mailmsg/};
+    my ($email, $subject, $content) = @$body{qw/email subject content/};
     s/\r//g for $email, $subject, $content;
     s/\n//g for $email, $subject;
 
@@ -37,7 +37,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     }
 
 
-    s/^.*\s//, s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/ for my $srs_sender = $email;
+    s/^.*\s//, tr/<>()//d, s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/ for my $srs_sender = $email;
 
     local %ENV;
     open my $sendmail, "|-", "/usr/sbin/sendmail -oi -t -f '$srs_sender\@$DOMAIN'"
