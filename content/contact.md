@@ -8,7 +8,7 @@ Keywords: South Florida, System Administration
 		<input name="email" class="form-control" style="width:400px" placeholder="Jon Doe <jon@example.com>" />
 		<label for="subject">Subject</label>
 		<input name="subject" class="form-control" value="CMS Sales"  style="width:400px"/>
-		<label for="content">Content</label>
+		<label for="content">Message for Sales</label>
 		<textarea name="content" class="form-control" style="width:400px;" rows=20></textarea>
 		<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
 	</form>
