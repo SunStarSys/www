@@ -23,7 +23,7 @@ sub render {
 
 if ($ENV{REQUEST_METHOD} eq "POST") {
     my ($name, $email, $subject, $content) = @$body{qw/name email subject content/};
-    s/\r//g for $name $email, $subject, $content;
+    s/\r//g for $name, $email, $subject, $content;
     s/\n//g for $name, $email, $subject;
 
     my ($cn, $srs_sender) = "$name <$email>" =~ m/^(.*?)\s*[<\(]?(\S+\@\S+?)[\)>]?\s*$/;
