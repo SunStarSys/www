@@ -29,7 +29,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     s/\n//g for $email, $subject;
 
     s/\s*[<(]?(\S+\@\S+)[)>]?\s*$// for my $cn = $email;
-    my $srs_sender = $1;
+    my $srs_sender = $1 or die "ODD EMAIL: $email";
     for ($cn, $subject) {
         if (s/([^^A-Za-z0-9\-_.,!~*' ])/sprintf "=%02X", ord $1/ge) {
             tr/ /_/;
