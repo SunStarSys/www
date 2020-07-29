@@ -7,10 +7,10 @@ use strict;
 use warnings;
 
 my $DOMAIN = q/sunstarsys.com/;
-my $to = q/joe@sunstarsys.com/;
-my $pool = APR::Pool->new;
-my $body = APR::Request::CGI->handle($pool)->body || {};
-my $date = gmtime;
+my $to     = q/joe@sunstarsys.com/;
+my $pool   = APR::Pool->new;
+my $body   = APR::Request::CGI->handle($pool)->body || {};
+my $date   = gmtime;
 
 sub render {
     my $template = shift;
@@ -20,8 +20,6 @@ sub render {
     print Template($template)->render(\%args);
     exit 0;
 }
-
-
 
 if ($ENV{REQUEST_METHOD} eq "POST") {
     my ($email, $subject, $content) = @$body{qw/email subject content/};
@@ -53,7 +51,9 @@ Content-Type: text/plain; charset="utf-8"
 $content
 EOT
     close $sendmail or die "Sendmail failed: " . ($! || $? >> 8) . "\n";
-    render "inquiry_post.html", content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
+
+    render "inquiry_post.html",
+        content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
         headers => { title => "Sales Inquiry" };
 }
 
