@@ -22,11 +22,11 @@ sub render {
 }
 
 if ($ENV{REQUEST_METHOD} eq "POST") {
-    my ($email, $subject, $content) = @$body{qw/email subject content/};
-    s/\r//g for $email, $subject, $content;
-    s/\n//g for $email, $subject;
+    my ($name, $email, $subject, $content) = @$body{qw/name email subject content/};
+    s/\r//g for $name $email, $subject, $content;
+    s/\n//g for $name, $email, $subject;
 
-    my ($cn, $srs_sender) = $email =~ m/^(.*?)\s*[<\(]?(\S+\@\S+?)[\)>]?\s*$/;
+    my ($cn, $srs_sender) = "$name <$email>" =~ m/^(.*?)\s*[<\(]?(\S+\@\S+?)[\)>]?\s*$/;
 
     for ($cn, $subject) {
         if (s/([^^A-Za-z0-9\-_.,!~*' ])/sprintf "=%02X", ord $1/ge) {
@@ -43,7 +43,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
-Reply-To: $email
+Reply-To: $cn <$email>
 Subject: $subject
 Date: $date +0000
 Content-Type: text/plain; charset="utf-8"
