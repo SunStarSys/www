@@ -23,7 +23,7 @@ sub render {
 
 
 
-if (our $REQUEST_METHOD eq "POST") {
+if ($ENV{REQUEST_METHOD} eq "POST") {
     my ($email, $subject, $content) = @$body{qw/email subject mailmsg/};
     s/\r//g for $email, $subject, $content;
     s/\n//g for $email, $subject;
