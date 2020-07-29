@@ -22,7 +22,7 @@ Title: CMS Pricing
 
 - Full End-to-End Enterprise Hosting with CDN partner packages Coming Soon.
 
-<div class="float-lg-right">
+<div class="col-lg-12">
 	<h3>CMS Sales Inquiries</h3>
 	<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
     	<label for="name">Your Name</label>
