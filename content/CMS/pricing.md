@@ -22,5 +22,19 @@ Title: CMS Pricing
 
 - Full End-to-End Enterprise Hosting with CDN partner packages Coming Soon.
 
-### [Contact Us](/contact) to start the conversation!
+<div class="float-lg-right">
+	<h3>CMS Sales Inquiries</h3>
+	<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
+    	<label for="name">Your Name</label>
+		<input name="name" class="form-control" style="width:400px" required />
+        <label for="email">Your Email Address</label>
+		<input type="email" name="email" class="form-control" style="width:400px" required />
+		<label for="subject">Subject</label>
+		<input name="subject" class="form-control" value="CMS Sales"  style="width:400px" pattern="CMS Sales.*" required />
+		<label for="content">Message for Sales</label>
+		<textarea name="content" class="form-control" style="width:400px;" rows=20></textarea>
+		<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
+	</form>
+</div>
+
 
