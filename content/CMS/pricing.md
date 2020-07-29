@@ -26,11 +26,11 @@ Title: CMS Pricing
 	<h3>CMS Sales Inquiries</h3>
 	<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
     	<label for="name">Your Name</label>
-		<input name="name" type="name" class="form-control" style="width:400px" required />
+		<input name="name" class="form-control" style="width:400px" required />
         <label for="email">Your Email Address</label>
 		<input type="email" name="email" class="form-control" style="width:400px" required />
 		<label for="subject">Subject</label>
-		<input name="subject" type="text" class="form-control" value="CMS Sales"  style="width:400px" pattern="CMS Sales.*" required />
+		<input name="subject" class="form-control" value="CMS Sales"  style="width:400px" pattern="CMS Sales.*" required />
 		<label for="content">Message for Sales</label>
 		<textarea name="content" class="form-control" style="width:400px;" rows=20></textarea>
 		<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
