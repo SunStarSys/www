@@ -48,7 +48,7 @@ Multi-gigabyte source trees are simply no match for it &mdash; full site build d
 
 This technology was first invented in late 2011 by members of the Apache Infrastructure Team.  The phrase "[JAM Stack](https://jamstack.wtf)" was coined years later, by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
 
-### Back to the Product...
+### More on the Product...
 
 It does all this by either interfacing with an [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub/)-enabled, customer hosted Subversion service, or by using one of ours.  It automatically builds each committed change using a lightning fast `node.js` + `Perl v5.30.2` (the stable forerunner of [Perl 7](https://www.perl.com/article/announcing-perl-7/)) build system based on the [Hollywood principle](https://deviq.com/hollywood-principle/): it calls out to customer-supplied Perl modules to do whatever the customer needs done (don't worry, there are basic layout templates available that will do all the heavy lifting for you).  It also goes the extra mile and instantly distributes the change-sets for the build, atomically, to your live website servers / CDN providers.
 
