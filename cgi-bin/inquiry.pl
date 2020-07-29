@@ -1,0 +1,52 @@
+#!/usr/local/bin/perl -I/x1/cms/build/lib -I/x1/cms/webgui/lib
+
+use APR::Request::CGI;
+use APR::Pool;
+use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
+
+sub render {
+    my $template = shift;
+    my %args = (%$body, @_);
+    local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/www.sunstarsys.com/trunk/templates);
+    print "Content-Type: text/html; charset='utf-8'\n\n";
+    print Template($template)->render(\%args);
+    exit 0;
+}
+
+
+my $DOMAIN = q/sunstarsys.com/;
+my $pool = APR::Pool->new;
+my $body = APR::Request::CGI->handle($pool)->body || {};
+
+if ((my ($email, $subject, $content) = @$body{qw/email subject mailmsg/}) == 3) {
+    s/\r//g for $email, $subject, $content;
+    s/\n//g for $email, $subject;
+
+    s/\s+\S+\@\S+// for my $cn = my $name = $email;
+    for ($cn, $subject) {
+        if (s/([^^A-Za-z0-9\-_.,!~*' ])/sprintf "=%02X", ord $1/ge) {
+            tr/ /_/;
+            $_ = "=?utf-8?Q?$_?=";
+        }
+    }
+
+    s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/ for my $srs_sender = $email;
+
+    local %ENV;
+    open my $sendmail, "|-", "/usr/sbin/sendmail -oi -t -f $srs_sender\@$DOMAIN"
+        or die "Can't open sendmail: $!";
+    print $sendmail <<EOT;
+To: $to
+From: $cn <$srs_sender\@$DOMAIN>
+Reply-To: $cn <$email>
+Subject: $subject
+Date: $date +0000
+Content-Type: text/plain; charset="utf-8"
+
+$content
+EOT
+    close $sendmail or die "Sendmail failed: " . ($! || $? >> 8) . "\n";
+    render "inquiry_post.html";
+}
+
+render "inquiry_get.html";
