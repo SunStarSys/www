@@ -6,6 +6,12 @@ use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use strict;
 use warnings;
 
+my $DOMAIN = q/sunstarsys.com/;
+my $to = q/joe@sunstarsys.com/;
+my $pool = APR::Pool->new;
+my $body = APR::Request::CGI->handle($pool)->body || {};
+my $date = gmtime;
+
 sub render {
     my $template = shift;
     my %args = (%$body, @_);
@@ -16,11 +22,6 @@ sub render {
 }
 
 
-my $DOMAIN = q/sunstarsys.com/;
-my $to = q/joe@sunstarsys.com/;
-my $pool = APR::Pool->new;
-my $body = APR::Request::CGI->handle($pool)->body || {};
-my $date = gmtime;
 
 if (our $REQUEST_METHOD eq "POST") {
     my ($email, $subject, $content) = @$body{qw/email subject mailmsg/};
