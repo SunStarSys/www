@@ -18,18 +18,18 @@ Keywords: South Florida, System Administration
 - [+1 (954) 253-3732](tel://1.954.253.3732/)
 
 
-------------
 
 
+<div class="float-lg-right">
+	<h3>CMS Sales Inquiries</h3>
 
-### CMS Sales Inquiries
-
-<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
-<label for="email">Your Contact Address</label>
-<input name="email" class="form-control" style="width:400px" placeholder="Jon Doe <jon@example.com>" />
-<label for="subject">Subject</label>
-<input name="subject" class="form-control" value="CMS Sales"  style="width:400px"/>
-<label for="content">Content</label>
-<textarea name="content" class="form-control" style="width:400px; height:400px"></textarea>
-<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
-</form>
+	<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
+		<label for="email">Your Contact Address</label>
+		<input name="email" class="form-control" style="width:400px" placeholder="Jon Doe <jon@example.com>" />
+		<label for="subject">Subject</label>
+		<input name="subject" class="form-control" value="CMS Sales"  style="width:400px"/>
+		<label for="content">Content</label>
+		<textarea name="content" class="form-control" style="width:400px; height:400px"></textarea>
+		<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
+	</form>
+</div>
