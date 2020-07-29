@@ -3,7 +3,6 @@ Keywords: South Florida, System Administration
 
 <div class="float-lg-right">
 	<h3>CMS Sales Inquiries</h3>
-
 	<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
 		<label for="email">Your Contact Address</label>
 		<input name="email" class="form-control" style="width:400px" placeholder="Jon Doe <jon@example.com>" />
@@ -31,4 +30,4 @@ Keywords: South Florida, System Administration
 
 - [+1 (954) 253-3732](tel://1.954.253.3732/)
 
-<div style="height:800px">&nbsp;<br/></div>
+<div style="height:400px">&nbsp;<br/></div>
