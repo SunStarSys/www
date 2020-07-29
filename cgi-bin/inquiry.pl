@@ -24,9 +24,9 @@ sub render {
 }
 
 if ($ENV{REQUEST_METHOD} eq "POST") {
-    my ($name, $email, $subject, $content, $hosting) = @$body{qw/name email subject content hosting/};
-    s/\r//g for $name, $email, $subject, $content, $hosting;
-    s/\n//g for $name, $email, $subject, $hosting;
+    my ($name, $email, $subject, $content, $hosting, $lang) = @$body{qw/name email subject content hosting lang/};
+    s/\r//g for $name, $email, $subject, $content, $hosting, $lang;
+    s/\n//g for $name, $email, $subject, $hosting, $lang;
 
     my ($cn, $srs_sender) = ($name, $email);
 
@@ -52,7 +52,8 @@ Content-Type: text/plain; charset="utf-8"
 
 $content
 
-$hosting
+HOSTING: $hosting
+LANGUAGE: $lang
 EOT
     close $sendmail or die "Sendmail failed: " . ($! || $? >> 8) . "\n";
 
