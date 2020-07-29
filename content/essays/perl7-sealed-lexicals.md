@@ -44,16 +44,16 @@ BEGIN{@::ISA=('Foo')}
 
 my main $y = $x;
 
-sub sealed :sealed {
+sub sealed :Sealed {
     $y->foo();
 }
 
-sub also_sealed :sealed {
+sub also_sealed :Sealed {
     my main $a = shift;
     if ($a) {
         my Benchmark $bench;
         my $inner;
-        return sub :sealed {
+        return sub :Sealed {
             my Foo $b = $a;
             $b->foo($bench->cmpthese, $inner);
             $a->foo;
@@ -131,7 +131,7 @@ Sample code:
 	}
 ```
 
-## Production-Quality Perl 5 Prototype: sealed.pm v1.0.1
+## Production-Quality Perl 5 Prototype: sealed.pm v1.0.2
 
 See <https://github.com/joesuf4/cms/blob/master/lib/sealed.pm>.
 
