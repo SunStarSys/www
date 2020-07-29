@@ -16,6 +16,8 @@ Title: CMS Pricing
 	- Unlike our competition, <span class="text-success">there are no add-on fees for required CPU cycles: neither for your builds nor IDE usage</span>.
 ------------
 
+- Annual up-front pricing discounts available (up to 20% off pay-as-you-go monthly billing).
+
 - Volume discounts available.
 
 - Enterprise Private Server/Oracle Cloud Plans Coming Soon.
