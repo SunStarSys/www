@@ -53,7 +53,8 @@ Content-Type: text/plain; charset="utf-8"
 $content
 EOT
     close $sendmail or die "Sendmail failed: " . ($! || $? >> 8) . "\n";
-    render "inquiry_post.html", content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n";
+    render "inquiry_post.html", content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
+        headers => { title => "Sales Inquiry" };
 }
 
 render "inquiry_get.html";
