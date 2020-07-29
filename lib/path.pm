@@ -15,7 +15,6 @@ our @patterns = (
     [qr!/index\.html$!, sitemap => {
         headers    => {title => "Index"},
         quick_deps => 1,
-        sort_tables => 1,
 	    nest       => 1,
         conf       => $conf,
     }],
