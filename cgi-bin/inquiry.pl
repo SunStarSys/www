@@ -28,7 +28,8 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     s/\r//g for $email, $subject, $content;
     s/\n//g for $email, $subject;
 
-    s/\s+\S+\@\S+// for my $cn = $email;
+    s/\s*(\S+\@\S+)\s*$// for my $cn = $email;
+    my $srs_sender = $1;
     for ($cn, $subject) {
         if (s/([^^A-Za-z0-9\-_.,!~*' ])/sprintf "=%02X", ord $1/ge) {
             tr/ /_/;
@@ -36,8 +37,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
         }
     }
 
-
-    s/^.*\s//, tr/<>()//d, s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/ for my $srs_sender = $email;
+    $srs_sender =~ s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/;
 
     local %ENV;
     open my $sendmail, "|-", "/usr/sbin/sendmail -oi -t -f '$srs_sender\@$DOMAIN'"
@@ -45,7 +45,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
-Reply-To: $cn <$email>
+Reply-To: $email
 Subject: $subject
 Date: $date +0000
 Content-Type: text/plain; charset="utf-8"
