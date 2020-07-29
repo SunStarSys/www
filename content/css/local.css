@@ -5,7 +5,7 @@ div.float-lg-right img { margin-left: 20px }
 body { padding-top: 90px }
 .navbar img {background-color: white; height: 38px;}
 
-input, textarea {
+input.form-control, textarea.form-control {
 	width: 400px;
 }
 
