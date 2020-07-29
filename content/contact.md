@@ -22,12 +22,9 @@ Keywords: South Florida, System Administration
 <form method="POST" action="/cgi-bin/inquiry.pl" class="form">
 <label for="email">Your Contact Address</label>
 <input name="email" class="form-control" style="width:400px" />
-<br />
 <label for="subject">Subject</label>
 <input name="subject" class="form-control" value="CMS Sales"  style="width:400px"/>
-<br />
 <label for="content">Content</label>
 <textarea name="content" class="form-control" style="width:400px; height:400px"></textarea>
-<br />
 <button name="submit" class="btn btn-outline-danger" value=1 >Submit</button>
 </form>
