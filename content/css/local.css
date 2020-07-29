@@ -34,13 +34,13 @@ table { width: 800px; margin: 2 auto 2 auto; }
 table tr th {
 	background-color: #258fc1;
 	border-top: 1px solid #90cdea;
-	padding: 2 2 2 2;
+	padding: 10 5 10 5;
 }
 
 table tr td {
 	background-color: #151515;
 	border-top: 1px solid #90cdea;
-	padding: 2 2 2 2;
+	padding: 10 5 10 5;
 }
 
 h1 {font-size: 28px}
