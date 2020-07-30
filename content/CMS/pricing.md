@@ -30,6 +30,8 @@ Title: CMS Pricing
 
 - Full End-to-End Enterprise Hosting with CDN partner packages Coming Soon.
 
+- Serverless Technology (eg AWS Lambda) integration Coming Soon.
+
 ------------
 
 <div class="col-lg-12">
