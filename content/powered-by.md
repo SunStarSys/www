@@ -1,5 +1,5 @@
 Title: Powered by ...
-Keywords: subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logo
+Keywords: Subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logo
 
 ## Site technologies
 
