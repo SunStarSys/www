@@ -14,6 +14,7 @@ Title: CMS Pricing
 	- This is introductory pricing good through September 7, 2020, and includes <span class="text-success">unlimited seating for self-hosted Subversion source trees</span>.
 	- SLA's and Premium Support Packages are sold separately; contact us for pricing on these items if you need them.
 	- Unlike our competition, <span class="text-success">there are no add-on fees for required CPU cycles: neither for your builds nor IDE usage</span>.
+
 ------------
 
 - Annual up-front pricing discounts available (up to 20% off pay-as-you-go monthly billing).
@@ -23,6 +24,8 @@ Title: CMS Pricing
 - Enterprise Private Server/Oracle Cloud Plans Coming Soon.
 
 - Full End-to-End Enterprise Hosting with CDN partner packages Coming Soon.
+
+------------
 
 <div class="col-lg-12">
 {% include "inquiry_get.html" %}
