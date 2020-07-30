@@ -6,8 +6,8 @@ body { padding-top: 90px }
 .navbar img {background-color: white; height: 38px;}
 
 input.form-control, textarea.form-control {
-	max-width: 25em;
-	width: 100%;
+    width: 25em;
+	max-width: 100%;
 }
 
 input:invalid {
