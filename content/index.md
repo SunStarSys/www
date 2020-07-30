@@ -6,6 +6,7 @@ Title: Home
 		<h4 class="card-title">SunStar Systems CMS Product Launch</h4>
 		<p class="card-text">Starting <span class='text-danger'>July 4, 2020</span>, our totally revamped and modernized version of the Apache CMS is available for immediate customer adoption.  Check out the <a href="/CMS/">CMS</a> information <span class="text-success">NOW</span> for a special limited time offer!</p>
 	</div>
+	<br />
 </div>
 
 ![SunStar Systems](images/sunstarlogowhole.png)
