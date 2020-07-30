@@ -1,10 +1,11 @@
 Title: Home
 
-<div class="card border-success text-white float-lg-right" style="max-width:25rem">
+<div class="float-lg-right"><div class="card border-success text-white" style="max-width:25rem">
 	<div class="card-header">NEWS</div>
 	<div class="card-body">
 		<h4 class="card-title">SunStar Systems CMS Product Launch</h4>
 		<p class="card-text">Starting <span class='text-danger'>July 4, 2020</span>, our totally revamped and modernized version of the Apache CMS is available for immediate customer adoption.  Check out the <a href="/CMS/">CMS</a> information <span class="text-success">NOW</span> for a special limited time offer!</p>
+	</div>
 	</div>
 	<br />
 </div>
