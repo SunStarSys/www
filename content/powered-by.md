@@ -1,7 +1,7 @@
 Title: Powered by ...
-Keywords: Subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logo
+Keywords: subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logo
 
-## Site technologies
+## Site Technologies
 
 - [Subversion](http://subversion.apache.org/) as data store.
 - [SvnPubSub](https://journal.paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/) for distributed commit hooks.
