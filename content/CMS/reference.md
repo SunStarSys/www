@@ -62,7 +62,7 @@ A good example of this is "Latest News" section of [The ASF Home Page](https://w
 % svn commit -m "rebuild $file"
 ```
 
-Incorporate this into a little shell script that will use your cached svn credentials on your own PC, and have cron execute it for you on a fixed schedule.  No need for server-side tooling on our end; you have full control of your own password security, scheduling, and dynamic page targets.  If you are using your own svnpubsub-enabled Subversion service, none of that transaction directly involves any of our hardware. Your commit will trigger our svnwcsub client, always listening to your svnpubsub server, to build and deploy those changes on demand &mdash; pronto.
+Incorporate this into a little shell script that will use your cached svn credentials on your own PC, and have cron execute it for you on a fixed schedule (based on your frontend webserver / CDN HTTP cache's TTL).  No need for server-side tooling on our end; you have full control of your own password security, scheduling, and dynamic page targets.  If you are using your own svnpubsub-enabled Subversion service, none of that transaction directly involves any of our hardware. Your commit will trigger our svnwcsub client, always listening to your svnpubsub server, to build and deploy those changes on demand &mdash; pronto.
 
 ## Exceptions
 
