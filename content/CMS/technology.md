@@ -107,4 +107,4 @@ joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
 
 ## Why not with something based on the JVM?
 
--  Just worked out that way, given my 20 year history with the LAMP stack and constructive contributions to the extended Apache HTTPd webserver community.  Doable, but again a massive undertaking with lots of hard engineering problems to solve along the way.
+-  Just worked out that way, given my 20 year history with the LAMP Stack and constructive contributions to the extended Apache HTTPd webserver community.  Doable, but again a massive undertaking with lots of hard engineering problems to solve along the way.
