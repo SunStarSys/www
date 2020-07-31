@@ -12,7 +12,7 @@ Title: CMS Pricing
 
 	- <span class="text-success">Up to 10 GB</span> covering total SunStar Systems server filesystem storage.  Basically, this includes two source tree checkouts and one resultant build tree, and potentially the Subversion server's source DB if we are hosting it for you.  Does not include `.svn` dirs (containing pristine copies of all your files), nor the results of site branch builds, in calculating total size.  Additional storage available at <span class="text-success">$50 / GB / month</span>.
 
-	- Production web hosting is not a part of this offer, but we can provide it based on provisioned bandwidth capacity add-on costs, or at  <span class="text-success">15 cents per GB</span> (in arrears) network transfer as metered by our (compression-enabled) web servers.  We expect to have a global POP network in place, with this same flat rate, and a competitive 99.99% SLA, before 2020 Q4.
+	- Production web hosting is not a part of this offer, but we can provide it based on provisioned bandwidth capacity add-on costs, or at  <span class="text-success">15 cents per GB</span> (in arrears) network transfer as metered by our (compression-enabled) web servers.  We expect to have a global POP network in place, with this same flat rate, and a market-leading 100% uptime SLA, before 2020 Q4.
 
 	- This is introductory pricing good through September 7, 2020, and includes <span class="text-success">unlimited seating for self-hosted Subversion source trees</span>.
 
