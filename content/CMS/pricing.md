@@ -22,7 +22,7 @@ Title: CMS Pricing
 
 ------------
 
-- Pay-as-you-go plan (with a flat $50 / GB / month + $10 / user / month + $.20 / GB / month outbound transfer costs) coming August 1, 2020.
+- Pay-as-you-go plan (with a flat $50 / GB / month + $10 / user / month + $.20 / GB / month outbound transfer) coming August 1, 2020.
 
 - Annual up-front pricing discounts available (up to 20% off pay-as-you-go monthly billing).
 
