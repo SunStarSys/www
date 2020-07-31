@@ -24,7 +24,7 @@ Title: CMS Pricing
 
 - Soup to Nuts, pay-as-you-go plan: <span class="text-success">unlimited number of websites; $50 / GB / month storage space + $10 / user / month + $.20 / GB / month outbound transfer</span>. Includes automated SSL cert/key management via LetsEncrypt. Starting **August 1, 2020**.
 
-- Annual up-front pricing discounts available (up to 20% off pay-as-you-go monthly billing).
+- Annual up-front pricing discounts available (up to 20% off monthly billing costs).
 
 - Volume discounts available.
 
