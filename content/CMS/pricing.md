@@ -8,9 +8,9 @@ Title: CMS Pricing
 
 - LIMITED TIME OFFER: <span class="text-success">$200 / month / managed site</span> (90% discount over WordPress/Netlify Enterprise).  First month is <span class="text-success">FREE</span>.
 
-	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website (includes public Subversion hosting for sources, if desired, for 10 seats; <span class="text-success">$10 / user / month</span> for each additional. There are plenty of subversion service providers, including on cloud and for free, that will give you the ability to manage this infra far better than we can offer in 2020, but in a pinch, we'll manage).
+	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website (includes public Subversion hosting for sources, if desired, for 10 seats; <span class="text-success">$10 / user / month</span> for each additional.
 
-	- <span class="text-success">Up to 10 GB</span> covering total SunStar Systems server filesystem storage.  Basically, this includes two source tree checkouts and one resultant build tree, and potentially the Subversion server's source DB if we are hosting it for you.  Includes `.svn` dirs (containing pristine copies of all your files), but not the results of site branch builds, nor the per user IDE checkouts, in calculating total size.  Additional storage available at <span class="text-success">$50 / GB / month</span>.
+	- <span class="text-success">Up to 10 GB</span> covering total SunStar Systems server filesystem storage.  Basically, this includes two source tree checkouts and one resultant build tree (also a checkout), and potentially the Subversion server's source DB if we are hosting it for you.  Includes `.svn` dirs (containing pristine copies of all your files), but not the results of site branch builds, nor the per user IDE checkouts, in calculating total size.  Additional storage available at <span class="text-success">$50 / GB / month</span>.
 
 	- Production web hosting is not a part of this offer, but we can provide on a best-effort basis at  <span class="text-success">15 cents per GB</span> (in arrears) network transfer as metered by our (compression-enabled) web servers.  We expect to have a intercontinental POP network in place, with this same flat rate, and a market-leading 100% uptime SLA, before this offer expires in early September.
 
