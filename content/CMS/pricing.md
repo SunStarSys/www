@@ -8,7 +8,7 @@ Title: CMS Pricing
 
 - LIMITED TIME OFFER: <span class="text-success">$200 / month / managed site</span> (90% discount over WordPress/Netlify Enterprise).  First month is <span class="text-success">FREE</span>.
 
-	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website (includes public Subversion hosting for sources, if desired, for 10 seats; <span class="text-success">$10 / user / month</span> for each additional).
+	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website (includes public Subversion hosting for sources, if desired, for 10 seats; <span class="text-success">$10 / user / month</span> for each additional).  There are plenty of subversion server providers, including on cloud and for free, that will give you the ability to manage this infra far better than we can offer in 2020, but in a pinch, we'll manage.
 
 	- Production web hosting is not a part of this offer, but we can provide it based on provisioned bandwidth capacity add-on costs, or at  <span class="text-success">15 cents per GB</span> (in arrears) network transfer as metered by our (compression-enabled) web servers.  We expect to have a global POP network in place, with this same flat rate, and a competitive 99.99% SLA, before 2020 Q4.
 
