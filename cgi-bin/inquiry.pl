@@ -24,9 +24,9 @@ sub render {
 }
 
 if ($ENV{REQUEST_METHOD} eq "POST") {
-    my ($name, $email, $subject, $content, $hosting, $lang) = @$body{qw/name email subject content hosting lang/};
-    s/\r//g for $name, $email, $subject, $content, $hosting, $lang;
-    s/\n//g for $name, $email, $subject, $hosting, $lang;
+    my ($name, $email, $subject, $content, $site, $hosting, $lang) = @$body{qw/name email subject content site hosting lang/};
+    s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
+    s/\n//g for $name, $email, $subject, $hosting, $site, $lang;
 
     my ($cn, $srs_sender) = ($name, $email);
 
@@ -52,6 +52,7 @@ Content-Type: text/plain; charset="utf-8"
 
 $content
 
+WEBSITE: $site
 HOSTING: $hosting
 LANGUAGE: $lang
 EOT
