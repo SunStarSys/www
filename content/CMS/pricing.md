@@ -14,7 +14,7 @@ Title: CMS Pricing
 
 	- Production web hosting is not a part of this offer, but we can provide on a best-effort basis at  <span class="text-success">15 cents per GB</span> (in arrears) network transfer as metered by our (compression-enabled) web servers.  We expect to have a intercontinental POP network in place, with this same flat rate, and a market-leading 100% uptime SLA, before this offer expires in early September.
 
-	- This is introductory pricing good through September 7, 2020, and includes <span class="text-success">unlimited seating for self-hosted Subversion source trees</span>.
+	- This is introductory pricing good through **September 7, 2020**, and includes <span class="text-success">unlimited seating for self-hosted Subversion source trees</span>.
 
 	- SLA's and Premium Support Packages are sold separately; contact us for pricing on these items if you need them.
 
