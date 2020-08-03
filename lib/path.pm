@@ -6,24 +6,24 @@ use warnings;
 my $conf = Load join "", <DATA>;
 
 our @patterns = (
-    [qr!^/sitemap\.html$!, sitemap => {
+    [qr!^/sitemap\.html!, sitemap => {
         headers    => {title => "Sitemap"},
         nest       => 1,
         quick_deps => 1,
         conf       => $conf,
     }],
-    [qr!/index\.html$!, sitemap => {
+    [qr!/index\.html!, sitemap => {
         headers    => {title => "Index"},
         quick_deps => 1,
 	    nest       => 1,
         conf       => $conf,
     }],
-    [qr!^/(essay|client)s/.*\.md(?:text)?$!,  set_template_from_capture => {
+    [qr!^/(essay|client)s/.*\.md(?:text)?!,  set_template_from_capture => {
         view       => "single_narrative",
         preprocess => 0,
         conf       => $conf,
     }],
-    [qr/\.md(?:text)?$/,  single_narrative => {
+    [qr/\.md(?:text)?/,  single_narrative => {
         template   => "main.html",
         preprocess => 1,
         conf       => $conf,
