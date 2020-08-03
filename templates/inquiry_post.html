@@ -1,5 +1,10 @@
 
-
 {% extends "main.html" %}
 {% load markup %}
-{% block title %}Message Received{% endblock %}
+{% block title %}
+{% ifequal lang ".en" %}
+Message Received
+{% endifequal %}
+{% ifequal lang ".es" %}
+Mensaje recibido
+{% endblock %}
