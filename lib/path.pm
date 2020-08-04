@@ -33,7 +33,7 @@ our @patterns = (
 our %dependencies;
 
 walk_content_tree {
-	for my $lang (qw/en es/) {}
+	for my $lang (qw/en es/) {
     	if (/\.md(?:text).$lang/ or m!/index\.html.$lang$! or m!/files/!) {
         	push @{$dependencies{"/sitemap.html.$lang"}}, $_;
     	}
