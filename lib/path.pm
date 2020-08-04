@@ -34,11 +34,11 @@ our %dependencies;
 
 walk_content_tree {
 	for my $lang (qw/en es/) {
-    	if (/\.md(?:text).$lang/ or m!/index\.html.$lang$! or m!/files/!) {
+    	if (/\.md(?:text).$lang$/ or m!/index\.html.$lang$! or m!/files/!) {
         	push @{$dependencies{"/sitemap.html.$lang"}}, $_;
     	}
     	if (s!/index\.html.$lang!!) {
-        	$dependencies{"$_/index.html"} = [
+        	$dependencies{"$_/index.html.$lang"} = [
             	grep s/^content//, (glob("content$_/*.{md.$lang,mdtext.$lang,pl,pm}"),
                 	               glob("content$_/*/index.html.$lang"))
         	];
