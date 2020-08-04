@@ -1,4 +1,4 @@
-Title: Home
+Title: Hogar
 
 <div class="float-lg-right"><div class="card border-success text-white" style="max-width:25rem">
 	<div class="card-header">NEWS</div>
