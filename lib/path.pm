@@ -33,21 +33,26 @@ our @patterns = (
 our %dependencies;
 
 walk_content_tree {
-    if (/\.md(?:text)?$/ or m!/index\.html$! or m!/files/!) {
-        push @{$dependencies{"/sitemap.html"}}, $_;
-    }
-    if (s!/index\.html$!!) {
-        $dependencies{"$_/index.html"} = [
-            grep s/^content//, (glob("content$_/*.{md,mdtext,pl,pm}"),
-                               glob("content$_/*/index.html"))
-        ];
-        push @{$dependencies{"$_/index.html"}}, grep -f && s/^content// && !m!/index\.html$!,
-            glob("content$_/*") if m!/files\b!;
-    }
+	for my $lang (qw/en es/) {}
+    	if (/\.md(?:text).$lang/ or m!/index\.html.$lang$! or m!/files/!) {
+        	push @{$dependencies{"/sitemap.html.$lang"}}, $_;
+    	}
+    	if (s!/index\.html.$lang!!) {
+        	$dependencies{"$_/index.html"} = [
+            	grep s/^content//, (glob("content$_/*.{md.$lang,mdtext.$lang,pl,pm}"),
+                	               glob("content$_/*/index.html.$lang"))
+        	];
+        	push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html.$lang$!,
+            	glob("content$_/*") if m!/files\b!;
+    	}
+	}
 };
 
-push @{$dependencies{"/essays/files/index.html"}}, grep -f && s/^content// && !m!/index\.html$!,
-    glob("content/essays/files/*/*");
+my @essays_glob = glob("content/essays/files/*/*");
+for my $lang (qw/en es/) {
+	push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html.$lang!,
+    	@essays_glob;
+}
 
 1;
 
