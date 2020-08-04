@@ -1,4 +1,5 @@
-<h3>CMS Sales Inquiries</h3>
+{% ifequal lang ".en" %}
+<h3>CMS Sales Enquiries</h3>
 <form method="POST" action="/cgi-bin/inquiry.pl" class="form">
     <label for="name">Your Name</label>
 	<input name="name" class="form-control" required />
@@ -7,7 +8,7 @@
 	<input type="email" name="email" class="form-control" required />
 
     <label for="site">Your Target Website</label>
-	<input name="site" class="form-control" required />
+	<input name="site" type="url" class="form-control" required />
 
 	<label for="hosting">Subversion Hosting Plan</label>
 	<input type="radio" name="hosting" value="self" checked /> &nbsp; Self Hosting
@@ -18,7 +19,7 @@
 	<input type="radio" name="lang" value="perl" checked /> &nbsp; Perl 7
 	<input type="radio" name="lang" value="python" /> &nbsp; Python 3
 	<input type="radio" name="lang" value="typescript" /> &nbsp; TypeScript
-	<input type="radio" name="lang" value="go" /> &nbsp; Go
+	<input type="radio" name="lang" value="golang" /> &nbsp; GoLang
 
 	<label for="subject">Subject</label>
 	<input name="subject" class="form-control" value="CMS Sales" pattern="CMS Sales.*" required />
@@ -28,3 +29,39 @@
 
 	<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
 </form>
+{% endifequal %}
+{% ifequal lang ".es" %}
+
+Santiago!
+
+<h3>CMS Sales Enquiries</h3>
+<form method="POST" action="/cgi-bin/inquiry.pl" class="form">
+    <label for="name">Your Name</label>
+	<input name="name" class="form-control" required />
+
+	<label for="email">Your Email Address</label>
+	<input type="email" name="email" class="form-control" required />
+
+    <label for="site">Your Target Website</label>
+	<input name="site" type="url" class="form-control" required />
+
+	<label for="hosting">Subversion Hosting Plan</label>
+	<input type="radio" name="hosting" value="self" checked /> &nbsp; Self Hosting
+	<input type="radio" name="hosting" value="private" /> &nbsp; SunStar Systems Private Repository
+	<input type="radio" name="hosting" value="public" /> &nbsp; SunStar Systems Public Repository
+
+	<label for="lang">Preferred Build System Programming Language</label>
+	<input type="radio" name="lang" value="perl" checked /> &nbsp; Perl 7
+	<input type="radio" name="lang" value="python" /> &nbsp; Python 3
+	<input type="radio" name="lang" value="typescript" /> &nbsp; TypeScript
+	<input type="radio" name="lang" value="golang" /> &nbsp; GoLang
+
+	<label for="subject">Subject</label>
+	<input name="subject" class="form-control" value="CMS Sales" pattern="CMS Sales.*" required />
+
+	<label for="content">Message for Sales</label>
+	<textarea name="content" class="form-control" rows=10></textarea>
+
+	<button name="submit" class="btn btn-outline-success" value=1 >Submit</button>
+</form>
+{% endifequal %}
