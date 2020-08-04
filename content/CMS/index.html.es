@@ -6,7 +6,6 @@
   <h1>{{ headers.title }}</h1>
 </div>
 <div class="jumbotron">
-SANTIAGO!
 {% filter markdown %}
 <div class="float-lg-right" style="padding:0 0 20 20">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/96m8G9jCiyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
