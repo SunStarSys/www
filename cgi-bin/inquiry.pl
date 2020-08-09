@@ -9,7 +9,7 @@ use strict;
 use warnings;
 
 my $DOMAIN = q/sunstarsys.com/;
-my $to     = q/joe@sunstarsys.com/;
+my $to     = q/sales@sunstarsys.com/;
 my $pool   = APR::Pool->new;
 my $body   = APR::Request::CGI->handle($pool)->body || {};
 my $date   = gmtime;
