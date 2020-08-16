@@ -4,7 +4,6 @@ use APR::Request::CGI;
 use APR::Pool;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
-
 use strict;
 use warnings;
 
