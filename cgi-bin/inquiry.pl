@@ -17,7 +17,7 @@ my $date   = gmtime;
 sub render {
     my $template = shift;
     my %args = (%$body, @_);
-    local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/www.sunstarsys.com/trunk/templates);
+    local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
     print "Content-Type: text/html; charset='utf-8'\n\n";
     print Template($template)->render(\%args);
     exit 0;
