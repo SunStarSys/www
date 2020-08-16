@@ -1,7 +1,6 @@
-#!/usr/local/bin/perl -I/x1/cms/build/lib -I/x1/cms/webgui/lib
-
-use APR::Request::CGI;
-use APR::Pool;
+#!/usr/local/bin/perl
+use Apache2::RequestUtil;
+use APR::Request::Apache2;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 
@@ -9,21 +8,24 @@ use strict;
 use warnings;
 
 my $DOMAIN = q/sunstarsys.com/;
-my $to     = q/sales@sunstarsys.com/;
-my $pool   = APR::Pool->new;
-my $body   = APR::Request::CGI->handle($pool)->body || {};
+my $to      = q/sales@sunstarsys.com/;
 my $date   = gmtime;
 
 sub render {
-    my $template = shift;
+ 	my $r = Apache2::RequestUtil->request;
+	my $body  = APR::Request::Apache2->handle($r)->body || {};
+	my $template = shift;
     my %args = (%$body, @_);
     local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
-    print "Content-Type: text/html; charset='utf-8'\n\n";
-    print Template($template)->render(\%args);
-    exit 0;
+    $r->content_type("text/html; charset='utf-8'");
+    $r->print(Template($template)->render(\%args));
+    return 0;
 }
 
-if ($ENV{REQUEST_METHOD} eq "POST") {
+my $r = Apache2::RequestUtil->request;
+my $body  = APR::Request::Apache2->handle($r)->body || {};
+
+if ($r->method eq "POST") {
     my ($name, $email, $subject, $content, $site, $hosting, $lang) = @$body{qw/name email subject content site hosting lang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
     s/\n//g for $name, $email, $subject, $hosting, $site, $lang;
@@ -58,9 +60,9 @@ LANGUAGE: $lang
 EOT
     close $sendmail or die "Sendmail failed: " . ($! || $? >> 8) . "\n";
 
-    render "inquiry_post.html",
+    return render "inquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
-        headers => { title => "CMS Sales Inquiry" };
+        headers => { title => "CMS Sales Enquiry" };
 }
 
 render "inquiry_get.html";
