@@ -37,7 +37,7 @@ if ($r->method eq "POST") {
             $_ = "=?utf-8?Q?$_?=";
         }
     }
-
+	%ENV = ();
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
 
