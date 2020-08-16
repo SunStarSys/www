@@ -17,6 +17,5 @@ to fetch this tree "in-situ" is via:
 {% endfilter %}
 
 {{ content|markdown }}
-
 </div>
 {% endblock %}
