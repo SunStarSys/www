@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -T -I/x1/cms/build/lib -I/x1/cms/webgui/lib
+#!/usr/local/bin/perl -T -I/x1/cms/build/lib
 use Apache2::RequestUtil;
 use APR::Request::Apache2;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
@@ -39,9 +39,10 @@ if ($r->method eq "POST") {
     }
 
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
+	$srs_sender =~ /(.*)/;
 
     local %ENV;
-    open my $sendmail, "|-", "/usr/sbin/sendmail -oi -t -f '$srs_sender\@$DOMAIN'"
+    open my $sendmail, "|-", "/usr/sbin/sendmail -oi -t -f '$1\@$DOMAIN'"
         or die "Can't open sendmail: $!";
     print $sendmail <<EOT;
 To: $to
