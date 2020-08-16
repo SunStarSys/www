@@ -3,7 +3,7 @@ use Apache2::RequestUtil;
 use APR::Request::Apache2;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
-die "WTF";
+
 use strict;
 use warnings;
 
