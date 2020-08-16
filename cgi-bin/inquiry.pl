@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl
+#!/usr/local/bin/perl -T -I/x1/cms/build/lib -I/x1/cms/webgui/lib
 use Apache2::RequestUtil;
 use APR::Request::Apache2;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
