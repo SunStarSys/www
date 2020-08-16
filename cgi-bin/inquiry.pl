@@ -8,17 +8,17 @@ use strict;
 use warnings;
 
 my $DOMAIN = q/sunstarsys.com/;
-my $to      = q/sales@sunstarsys.com/;
-my $date   = gmtime;
+my $to          = q/sales@sunstarsys.com/;
+my $date       = gmtime;
 
 sub render {
- 	my $r = Apache2::RequestUtil->request;
-	my $body  = APR::Request::Apache2->handle($r)->body || {};
+ 	my $r            = Apache2::RequestUtil->request;
+	my $body       = APR::Request::Apache2->handle($r)->body || {};
 	my $template = shift;
-    my %args = (%$body, @_);
+    my %args      = (%$body, @_);
     local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
     $r->content_type("text/html; charset='utf-8'");
-    print Template($template)->render(\%args);
+    $r->print(Template($template)->render(\%args));
 }
 
 my $r = Apache2::RequestUtil->request;
