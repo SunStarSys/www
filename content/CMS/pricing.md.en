@@ -10,9 +10,9 @@ Title: CMS Pricing
 
 	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website. This is introductory pricing good through **September 7, 2020**.
 
-	- <span class="text-success">Up to 10 MB</span> covering total SunStar Systems server filesystem storage.  Basically, this includes two source tree checkouts and one resultant build tree (also a checkout), and potentially the Subversion server's source repository if we are hosting it for you.  Includes `.svn` dirs (containing pristine copies of all your files), but not the results of site branch builds, nor the per user IDE checkouts, in calculating total size.  Additional storage available at <span class="text-success">$1.00 / MB / month (in blocks of 10)</span>.
+	- <span class="text-success">Up to 10 MB</span> covering total SunStar Systems server filesystem storage.  Basically, this includes two source tree checkouts and one resultant build tree (also a checkout), Includes `.svn` dirs (containing pristine copies of all your files), but not the results of site branch builds, nor the per user IDE checkouts, in calculating total size.  Additional storage available at <span class="text-success">$1.00 / MB / month (in blocks of 10)</span>.
 
-	-  Oracle Cloud US-based web hosting with 15 cents per GB</span> (in arrears) network transfer as metered by our (compression-enabled) web servers.  First 100 MB is free.
+	-  US-based web hosting with 15 cents per GB</span> (in arrears) network transfer as metered by our (compression-enabled) web servers.  First 100 MB is free.
 
 	- SLA's and Premium Support Packages are sold separately; contact us for pricing on these items if you need them.
 
@@ -26,7 +26,7 @@ Title: CMS Pricing
 
 - Enterprise Kerberos-based Private Server/Oracle Cloud Plans Coming Soon.
 
-- Enterprise Private Hosting Plans with unlimited seating and a 99.99% SLA coming soon.
+- Enterprise Private Hosting Plans with unlimited seating, global POP, and a 99.99% SLA coming soon.
 
 - Serverless Technology Integration Coming Soon.
 
