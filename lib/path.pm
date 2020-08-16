@@ -5,18 +5,17 @@ use warnings;
 
 my $conf = Load join "", <DATA>;
 
-my %sitemap_title = (
-	en => "Sitemap",
-	es => "Mapa del sitio",
-	de => "Seitenverzeichnis",
-);
-
 our @patterns = (
-    [qr!^/sitemap\.html\.(\w+)$!, sitemap => {
-        headers      => {title => $sitemap_title{$1}},
+    [qr!^/sitemap\.html\.(\w+)$!, set_title_from_capture => {
+	    view           => "sitemap",
         nest           => 1,
         quick_deps => 1,
         conf          => $conf,
+		choices      => {
+			en => "Sitemap",
+			es => "Mapa del sitio",
+			de => "Seitenverzeichnis",
+		}
     }],
     [qr!/index\.html!, sitemap => {
         headers    => {title => "Index"},
