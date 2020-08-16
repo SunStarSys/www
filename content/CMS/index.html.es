@@ -123,3 +123,4 @@ We currently provide a basic <span class="text-white">Django</span> based templa
 <center><img src="../images/ide-search.png" style="width:800px"></img></center>
 </div>
 {% endblock %}
+
