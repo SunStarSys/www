@@ -18,6 +18,7 @@ sub render {
     my %args = (%$body, @_);
     local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
     $r->content_type("text/html; charset='utf-8'");
+	$r->send_http_header();
     $r->print(Template($template)->render(\%args));
     return 0;
 }
