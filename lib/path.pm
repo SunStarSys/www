@@ -26,7 +26,7 @@ our @patterns = (
 our %dependencies;
 
 walk_content_tree {
-	for my $lang (qw/en es/) {
+	for my $lang (qw/en es de/) {
     	if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/!) {
         	push @{$dependencies{"/sitemap.html.$lang"}}, $_;
     	}
@@ -42,7 +42,7 @@ walk_content_tree {
 };
 
 my @essays_glob = glob("content/essays/files/*/*");
-for my $lang (qw/en es/) {
+for my $lang (qw/en es de/) {
 	push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\b!,
     	@essays_glob;
 }
