@@ -6,7 +6,19 @@ use warnings;
 my $conf = Load join "", <DATA>;
 
 our @patterns = (
-    [qr!/(index|sitemap)\.html!, sitemap => {
+    [qr!^/sitemap\.html\.(\w+)$!, set_title_from_capture => {
+	    view           => "sitemap",
+        nest           => 1,
+        quick_deps => 1,
+        conf          => $conf,
+		choices      => {
+			en => "Sitemap",
+			es => "Mapa del sitio",
+			de => "Seitenverzeichnis",
+		}
+    }],
+    [qr!/index\.html!, sitemap => {
+        headers    => {title => "Index"},
         quick_deps => 1,
 	    nest       => 1,
         conf       => $conf,
