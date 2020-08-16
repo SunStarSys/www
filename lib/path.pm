@@ -8,8 +8,8 @@ my $conf = Load join "", <DATA>;
 our @patterns = (
     [qr!/(index|sitemap)\.html!, sitemap => {
         quick_deps => 1,
-	    nest          => 1,
-        conf          => $conf,
+	    nest       => 1,
+        conf       => $conf,
     }],
     [qr!^/(essay|client)s/.*\.md(?:text)?!,  set_template_from_capture => {
         view       => "single_narrative",
