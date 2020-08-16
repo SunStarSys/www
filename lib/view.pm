@@ -9,4 +9,12 @@ sub set_template_from_capture {
     return view->can($view)->(%args);
 }
 
+sub set_title_from_capture {
+	my %args = @_;
+	$args{headers}{title} = $args{choices}{$1};
+	delete $args{choices};
+    my $view = view->next_view(\%args);
+    return view->can($view)->(%args);
+}
+
 1;
