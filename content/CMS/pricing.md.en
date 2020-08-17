@@ -2,7 +2,8 @@ Title: CMS Pricing
 
 ## Pricing Details
 
-<div class="row" style="width:100%;margin:auto">
+<div class="row">
+<div class="col-lg-4">
 	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
 		<div class="card-header">Professional Plan</div>
 		<div class="card-body">
@@ -26,7 +27,9 @@ Title: CMS Pricing
 			</ul>
 		</div>
 	</div>
-	<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
 		<div class="card-header">Business Plan</div>
 		<div class="card-body">
 			$50 / month / managed public site, ~50% off all competitor pricing models!
@@ -48,7 +51,9 @@ Title: CMS Pricing
 			</ul>
 		</div>
 	</div>
-	<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
 		<div class="card-header">Enterprise Plan</div>
 		<div class="card-body">
 			$500 / month / managed public site; ~67% off all competitor pricing models!
@@ -74,7 +79,7 @@ Title: CMS Pricing
 		</div>
 	</div>
 </div>
-
+</div>
 ------------
 
 - Annual up-front pricing discounts available (up to 20% off monthly billing costs).
