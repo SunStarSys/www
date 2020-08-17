@@ -1,4 +1,5 @@
 <h3>CMS {% ifequal lang ".en" %}Sales Enquiries{% endifequal %}{% ifequal lang ".es" %}Consultas de ventas{% endifequal %}{% ifequal lang ".de" %}Verkaufsanfragen{% endifequal %}</h3>
+
 <form method="POST" action="/cgi-bin/inquiry.pl" class="form">
     <label for="name">{% ifequal lang ".en" %}Your Name{% endifequal %}{% ifequal lang ".es" %}Tu nombre{% endifequal %}{% ifequal lang ".de" %}Dein Name{% endifequal %}</label>
 	<input name="name" class="form-control" required />
