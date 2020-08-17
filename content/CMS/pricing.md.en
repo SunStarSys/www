@@ -11,7 +11,7 @@ Title: CMS Pricing
 			<ul style="min-height:400px">
 				<li>Included Monthly Resources (per website):
 					<ol>
-						<li>50 MB storage space</li>
+						<li>50 MB storage space <sup>1</sup></li>
 						<li>500 GB data transfer</li>
 						<li>Unlimited builds and IDE usage for one seat</li>
 						<li>Email-based Customer Support</li>
@@ -20,7 +20,7 @@ Title: CMS Pricing
 			</ul><ul style="min-height:200px">
 				<li>Additional Monthly Resource Rates (per website):
 					<ol>
-						<li>$10 / 10 MB storage space</li>
+						<li>$10 / 10 MB storage space <sup>1</sup></li>
 						<li>$10 / 50 GB data transfer</li>
 						<li>$10 / seat</li>
 					</ol>
@@ -37,7 +37,7 @@ Title: CMS Pricing
 			<ul style="min-height:400px">
 				<li>Included Monthly Resources (per website):
 					<ol>
-						<li>500 MB storage space</li>
+						<li>500 MB storage space<sup>1</sup></li>
 						<li>1 TB data transfer</li>
 						<li>Unlimited builds and IDE usage for three seats</li>
 						<li>Email-based Customer Support</li>
@@ -46,7 +46,7 @@ Title: CMS Pricing
 			</ul><ul style="min-height:200px">
 				<li>Additional Monthly Resource Rates (per website):
 					<ol>
-						<li>$10 / 20 MB storage space</li>
+						<li>$10 / 20 MB storage space<sup>1</sup></li>
 						<li>$20 / 100 GB data transfer</li>
 						<li>$25 / seat</li>
 					</ol>
@@ -63,7 +63,7 @@ Title: CMS Pricing
 			<ul style="min-height:400px">
 				<li>Included Monthly Resources:
 					<ol>
-						<li>1 GB storage space in your own repository</li>
+						<li>1 GB storage space in your own repository<sup>2</sup></li>
 						<li>5 TB data transfer</li>
 						<li>Unlimited websites, builds and seats</li>
 						<li>Full control over Subversion authorization configuration</li>
@@ -74,7 +74,7 @@ Title: CMS Pricing
 			</ul><ul style="min-height:200px">
 				<li>Additional Monthly Resource Rates:
 					<ol>
-						<li>$100 / 500 MB storage space</li>
+						<li>$100 / 500 MB storage space<sup>2</sup></li>
 						<li>$150 / TB data transfer</li>
 						<li>$100 / ithread mod_perl registry-based hosting</li>
 					</ol>
@@ -94,6 +94,12 @@ Title: CMS Pricing
 - Enterprise Kerberos-based VPN plans coming soon.
 
 - Serverless Technology Integration Coming Soon.
+
+####### Footnotes
+
+1.  Storage Utilization calculated based on size of three working copy checkouts of each site: two source trees and one resulting build tree.
+
+2. Storage Utilization calculated based on total size of SunStar Systems Hosted Subversion Repository for Enterprise Customers, not individual checkouts, which is  a *comparatively smaller number*.
 
 ------------
 
