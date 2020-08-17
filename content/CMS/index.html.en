@@ -58,7 +58,7 @@ Go at your own pace, use as many employees/previews/edits/commits/branches as yo
 | Easy 3rd Party Contributor Workflow | <span class="text-success">Y</span> | Y | Y |
 | No Per-Preview Billing | <span class="text-success">Y</span> | Enterprise Only ($$) | Y |
 | No Per-Build Billing |  <span class="text-success">Y</span> | Enterprise Only ($$) | Y (for public repos)  |
-| No Per-Seat Billing | <span class="text-success">Y</span> | <span class="text-danger">N</span> | Y (for public repos) |
+| No Per-Seat Billing | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | Y (for public repos) |
 | WebSite Hosting | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
 | SSI / CGI Support | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
 | Fine-Grained ACL on Source Repo | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
