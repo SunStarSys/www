@@ -21,7 +21,7 @@
  <body>
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light text-white">
+    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,10 +45,10 @@
               <ul class="dropdown-menu" role="menu">
 				<li class="dropdown-item{% ifequal path "/CMS/index.html" %}
 				  active
-                   {% endifequal %}"><a class="nav-link" href="/CMS/">CMS</a></li>
+                   {% endifequal %}"><a class="nav-link text-white" href="/CMS/">CMS</a></li>
 				<li class="dropdown-item{% ifequal path "/StageMaster/index.html" %}
 				  active
-                   {% endifequal %}"><a class="nav-link" href="/StageMaster/">StageMaster (coming soon)</a></li>
+                   {% endifequal %}"><a class="nav-link text-white" href="/StageMaster/">StageMaster (coming soon)</a></li>
               </ul>
 			</li>
             <li class="nav-item{% ifequal path "/open-source.html" %}
@@ -56,13 +56,13 @@
                    {% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
             <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More... <span class="caret"></span></a>
-              <ul class="dropdown-menu bg-light" role="menu">
-                <li class="dropdown-item"><a class="nav-link" href="/sitemap">Site Map</a></li>
-				<li class="dropdown-item"><a class="nav-link" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Site Source</a></li>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap">Site Map</a></li>
+				<li class="dropdown-item"><a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Site Source</a></li>
                 <li class="dropdown-item divider"></li>
                 <li class="dropdown-header">Engagements</li>
-                <li class="dropdown-item"><a class="nav-link" href="/clients">Clients</a></li>
-                <li class="dropdown-item"><a class="nav-link" href="/essays">Essays</a></li>
+                <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Clients</a></li>
+                <li class="dropdown-item"><a class="nav-link text-white" href="/essays">Essays</a></li>
               </ul>
             </li>
             <li class="nav-item{% ifequal path "/powered-by.html" %}
