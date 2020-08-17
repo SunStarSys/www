@@ -34,7 +34,7 @@ Title: CMS Precios
 		<div class="card-body">
 			$ 50 / mes / sitio público administrado, ~ 50% de descuento en todos los modelos de precios de la competencia.
 			<ul style="min-height:400px">
-				<li>
+				<li>Recursos mensuales incluidos (por sitio web):
 					<ol>
 						<li>500 MB espacio de almacenamiento del sistema de archivos<sup>1</sup></li>
 						<li>1 TB banda ancha</li>
