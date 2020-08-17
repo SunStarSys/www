@@ -6,24 +6,78 @@ Title: CMS Pricing
 
 ## Pricing Details
 
-- LIMITED TIME OFFER: <span class="text-success">$10 / month / managed public site</span>, ~50% off all competitor pricing models!
-
-	- Covers one <span class="text-white">SunStar Systems CMS</span>-managed public website, and one IDE seat.
-
-	- <span class="text-success">Up to 50 MB</span> covering total SunStar Systems server filesystem storage.  Basically, this includes two source tree checkouts and one resultant build tree (also a checkout), Includes `.svn` dirs (containing pristine copies of all your files), but not the results of site branch builds, nor the per user IDE checkouts, in calculating total size.
-
-	-  Includes <span class="text-success">up to 500 GB</span> monthly data transfer.
-
-	- Additions at <span class="text-success">$10 / (10 MB storage, or extra IDE seat, or 50 GB data transfer)</span>.
-
-	- Email-based Customer Support.
-
-	- Unlike our competition, <span class="text-success">there are no add-on fees for required CPU cycles: neither for your builds nor IDE usage</span>.
-
-
-- <span class="text-white">Business Plans</span> (SunStar Systems private Subversion hosting) starting at $50 / site, $10 / IDE seat, 100 MB storage and 1 TB data transfer.  <span class="text-white">Starting in September 2020</span>.
-
-- <span class="text-white">Enterprise Plans</span> (SunStar Systems Subversion hosting in your own dedicated repository) starting at $500 / month, with an unlimited number of both IDE seats and sites, 1 GB storage (as measured by the Subversion repository size alone, not individual checkouts), and 5 TB data transfer.  Premium Support and `mod_perl` based-hosting available. Nationwide POP, expanding globally, with 99.99% SLA. <span class="text-white">Coming early 2020 Q4</span>.
+<div class="row">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+		<div class="card-header">Professional Plan</div>
+		<div class="card-body">
+			<span class="text-dark">$10 / month / managed public site</span>, ~50% off all competitor pricing models!
+			<ul>
+				<li>Included Monthly Resources (per website):
+					<ol>
+						<li>50 MB storage space *</li>
+						<li>500 GB data transfer</li>
+						<li>Unlimited builds and IDE usage for one seat.</li>
+						<li>Email-based Customer Support</li>
+					</ol>
+				</li>
+				<li>Additional Monthly Resource Rates (per website):
+					<ol>
+						<li>$10 / 10 MB storage space *</li>
+						<li>$10 / 50 GB data transfer</li>
+						<li>$10 / seat</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="card text-white bg-success mb-3" style="max-width: 20rem;">
+		<div class="card-header">Business Plan</div>
+		<div class="card-body">
+			<span class="text-dark">$50 / month / managed public site</span>, ~50% off all competitor pricing models!
+			<ul>
+				<li>Included Monthly Resources (per website):
+					<ol>
+						<li>500 MB storage space</li>
+						<li>1 TB data transfer</li>
+						<li>Unlimited builds and IDE usage for three seats</li>
+					</ol>
+				</li>
+				<li>Additional Monthly Resource Rates (per website):
+					<ol>
+						<li>$10 / 20 MB storage space</li>
+						<li>$10 / 50 GB data transfer</li>
+						<li>$50 / seat</li>
+						<li>`mod_perl` registry-based hosting</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="card text-white bg-info mb-3" style="max-width: 20rem;">
+		<div class="card-header">Enterprise Plan</div>
+		<div class="card-body">
+			<span class="text-dark">$500 / month / managed public site</span>, ~67% off all competitor pricing models!
+			<ul>
+				<li>Included Monthly Resources:
+					<ol>
+						<li>1 GB storage space in your own repository</li>
+						<li>5 TB data transfer</li>
+						<li>Unlimited websites, builds and seats</li>
+						<li>Full control over Subversion authorization configuration</li>
+						<li>99.99% Live Site SLA</li>
+						<li>Premium Support SLA</li>
+					</ol>
+				</li>
+				<li>Additional Monthly Resource Rates:
+					<ol>
+						<li>$100 / 500 MB storage space</li>
+						<li>$150 / TB data transfer</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
 
 ------------
 
@@ -31,9 +85,7 @@ Title: CMS Pricing
 
 - Volume discounts available.
 
-- Enterprise Kerberos-based Private Server/Oracle Cloud Plans Coming Soon.
-
-- Enterprise Private Hosting Plans with unlimited seating, global POP, and a 99.99% SLA coming soon.
+- Enterprise Kerberos-based VPN plans coming soon.
 
 - Serverless Technology Integration Coming Soon.
 
