@@ -21,7 +21,7 @@
  <body>
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+    <div class="navbar navbar-expand-lg fixed-top navbar-light bg-light text-white">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,7 +42,7 @@
                    {% endifequal %}"><a class="nav-link" href="/contact">Contact</a></li>
  			<li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
-              <ul class="dropdown-menu text-white" role="menu">
+              <ul class="dropdown-menu" role="menu">
 				<li class="dropdown-item{% ifequal path "/CMS/index.html" %}
 				  active
                    {% endifequal %}"><a class="nav-link" href="/CMS/">CMS</a></li>
@@ -54,7 +54,7 @@
             <li class="nav-item{% ifequal path "/open-source.html" %}
                    active
                    {% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
-            <li class="nav-item dropdown text-white">
+            <li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More... <span class="caret"></span></a>
               <ul class="dropdown-menu bg-light" role="menu">
                 <li class="dropdown-item"><a class="nav-link" href="/sitemap">Site Map</a></li>
