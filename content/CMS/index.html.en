@@ -61,7 +61,7 @@ Go at your own pace, use as many employees/previews/edits/commits/branches as yo
 | No Per-Seat Billing | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | Y (for public repos) |
 | WebSite Hosting | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
 | SSI / CGI Support | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| Fine-Grained ACL on Source Repo | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
+| Fine-Grained ACL on Source Repo | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
 | +500 MB/s Full Site Builds | <span class="text-success">Y</span> | <span class="text-warning">?</span> | <span class="text-danger">N</span> |
 | 8-64 Way Concurrent Builds | <span class="text-success">Y</span> | Enterprise Only ($$) | <span class="text-danger">N</span> |
 | TCO &lt; $5000/yr for Enterprise | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-warning">?</span> |
