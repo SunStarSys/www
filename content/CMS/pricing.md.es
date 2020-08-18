@@ -11,7 +11,7 @@ Title: CMS Precios
 				<li>Recursos mensuales incluidos (por sitio web):
 					<ol>
 						<li>50 MB espacio de almacenamiento del sistema de archivos<sup>1</sup></li>
-						<li>500 GB banda ancha</li>
+						<li>250 GB banda ancha</li>
 						<li>Construcciones ilimitadas y uso de IDE para un puesto</li>
 						<li>Atención al cliente por correo electrónico</li>
 					</ol>
@@ -62,7 +62,7 @@ Title: CMS Precios
 			<ul style="min-height:400px">
 				<li>Recursos mensuales incluidos:
 					<ol>
-						<li>2 GB espacio de almacenamiento del sistema de archivos en su propio repositorio<sup>2</sup></li>
+						<li>1 GB espacio de almacenamiento del sistema de archivos en su propio repositorio<sup>2</sup></li>
 						<li>5 TB banda ancha</li>
 						<li>Sitios web, construcciones y asientos ilimitados</li>
 						<li>Control total sobre la configuración de autorización de Subversion</li>
