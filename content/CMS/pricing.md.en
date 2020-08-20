@@ -67,7 +67,7 @@ Title: CMS Pricing
 						<li>5 TB data transfer</li>
 						<li>Unlimited websites, builds and seats</li>
 						<li>Full control over Subversion authorization configuration</li>
-						<li>99.99% Live Site SLA</li>
+						<li>99.99% Comprehensive SLA<sup>3</sup></li>
 						<li>Premium Support SLA</li>
 					</ol>
 				</li>
@@ -102,6 +102,8 @@ Title: CMS Pricing
 1.  Storage Utilization calculated based on size of three working copy checkouts of each site: two source trees and one resulting build tree.
 
 2. Storage Utilization calculated based on total size of SunStar Systems-hosted Subversion repository for Enterprise customers, not individual checkouts, which is  a *comparatively smaller number*.
+
+3. SLA covers website assets *and* CMS online IDE availabilty, but excludes Subversion version control system, which we expect to remain competitive with GitHub's general availability metrics.
 
 ------------
 
