@@ -37,11 +37,15 @@ if ($r->method eq "POST") {
             $_ = "=?utf-8?Q?$_?=";
         }
     }
-	%ENV = ();
+	%ENV = (
+	    PATH => "/usr/bin",
+		LANG => "en_US.UTF-8",
+		HOME => "/",
+    );
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
 
-    open my $sendmail, "|-", "/usr/sbin/sendmail -v -t -oi -odq"
+    open my $sendmail, "|-", "/usr/sbin/sendmail -v -t -oi -odq -f '$1\@$DOMAIN'"
         or die "Can't open sendmail: $!";
     print $sendmail <<EOT;
 To: $to
