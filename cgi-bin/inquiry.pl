@@ -1,5 +1,6 @@
 #!/usr/local/bin/perl -T -I/x1/cms/build/lib
 use Apache2::RequestUtil;
+use Apache2::SubProcess;
 use APR::Request::Apache2;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
@@ -45,9 +46,8 @@ if ($r->method eq "POST") {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
 
-    open my $sendmail, "|-", "/usr/sbin/sendmail -v -t -oi -odq -f '$1\@$DOMAIN'"
-        or die "Can't open sendmail: $!";
-    print $sendmail <<EOT;
+   my ($sendmail) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/t -oi -odq -f/, "$1\@$DOMAIN"]);
+   print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
 Reply-To: $cn <$email>
