@@ -41,7 +41,7 @@ if ($r->method eq "POST") {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
 
-    open my $sendmail, "|-", "/usr/sbin/sendmail -oi -odq-t -f '$1\@$DOMAIN'"
+    open my $sendmail, "|-", "/usr/sbin/sendmail -oi -odq -t -f '$1\@$DOMAIN'"
         or die "Can't open sendmail: $!";
     print $sendmail <<EOT;
 To: $to
