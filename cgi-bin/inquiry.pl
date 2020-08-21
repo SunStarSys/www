@@ -59,7 +59,7 @@ LANGUAGE: $lang
 EOT
 
    	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
-	my $content = join "", <$sendmail_out>, <$sendmail_error>;
+	my $content = join "", <$sendmail_out>, <$sendmail_err>;
     return render "inquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n<pre>$content</pre>",
         headers => { title => "CMS Sales Enquiry" };
