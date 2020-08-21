@@ -8,11 +8,12 @@
 <div class="jumbotron">
 
 {% filter markdown %}
-<div class="row">
-
-	<div class="col-6-lg">
 
 ## SunStar Systems CMS
+
+<div class="row">
+
+	<div class="col-lg-6">
 
 <span class="text-success"><em>The Original Markdown JAM Stack.</em></span>&trade;
 
@@ -43,7 +44,7 @@ But the real win is when you realize you have limitless control over which perso
 Go at your own pace, use as many employees/previews/edits/commits/branches as you like, and only pay for what you *actually use* on our infrastructure. See our [CMS Pricing](pricing) for the current deals.
 
 	</div>
-	<div class="col-6-lg">
+	<div class="col-lg-6">
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/96m8G9jCiyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Here's Why, Full Stack Developer / Content Author / DevOps Guru...
