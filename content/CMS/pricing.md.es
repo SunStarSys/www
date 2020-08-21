@@ -102,5 +102,5 @@ Title: CMS Precios
 ------------
 
 <div class="col-lg-12">
-{% include "inquiry_get.html" %}
+{% include "enquiry_get.html" %}
 </div>
