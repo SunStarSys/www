@@ -7,12 +7,12 @@ use Dotiac::DTL::Addon::markup;
 use strict;
 use warnings;
 
-%ENV = ();
-
 my $DOMAIN = q/sunstarsys.com/;
 my $to          = q/sales@sunstarsys.com/;
 my $date       = gmtime;
-my $body       = APR::Request::CGI->handle(APR::Pool->new)->body ;
+
+my $pool       = APR::Pool->new;
+my $body       = APR::Request::CGI->handle($pool)->body;
 
 sub render {
 	my $template = shift;
@@ -23,7 +23,7 @@ sub render {
     exit 0;
 }
 
-if ($body) {
+if ($ENV{REQUEST_METHOD} eq "POST") {
     my ($name, $email, $subject, $content, $site, $hosting, $lang) = @$body{qw/name email subject content site hosting lang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
     s/\n//g for $name, $email, $subject, $hosting, $site, $lang;
@@ -39,7 +39,7 @@ if ($body) {
 
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
-    length $1 or die "Invalid sender: $email";
+    %ENV = ();
     open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
    	print $sendmail <<EOT;
 To: $to
