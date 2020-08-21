@@ -38,17 +38,13 @@ if ($r->method eq "POST") {
             $_ = "=?utf-8?Q?$_?=";
         }
     }
-	%ENV = (
-	    PATH => "/usr/bin",
-		LANG => "en_US.UTF-8",
-		HOME => "/",
-    );
+
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
 
-   my ($sendmail) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/-t -oi -odq -f/, "$1\@$DOMAIN"]);
-   $|++, select $_ for select $sendmail;
-   print $sendmail <<EOT;
+   	my ($sendmail) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/-t -oi -odq -f/, "$1\@$DOMAIN"]);
+	sleep 3;
+   	print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
 Reply-To: $cn <$email>
@@ -63,7 +59,7 @@ HOSTING: $hosting
 LANGUAGE: $lang
 EOT
 
-	sleep 5;
+	sleep 2;
    	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
 
     return render "inquiry_post.html",
