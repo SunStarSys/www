@@ -33,12 +33,12 @@ What differentiates this product from our competitors is the [CMS Technology](te
 <li>or really any business-person dissatisfied with the cost structure of anything else out there, including free offerings bogging down your staff's time and energy.</li>
 </ul>
 <span class="text-white">It's time for a sea change in how you manage and deliver your site to your target audience.</span>
+
 The switching costs are trivial in most circumstances: our default file layout and processing logic matches up well with any other static site generator (Jekyll, Pelican, Hugo, etc.).  Our extensive experience migrating sites both on to, and off of, the forerunner of this system at The Apache Software Foundation (The ASF) lets us say with conviction: *there is no vendor lock-in involved with our offering*.
 
 But the real win is when you realize you have limitless control over which personnel have editorial rights to each resource in **your own** Subversion repository, and that you never need to perform the cost-benefit-analysis on your editorial changes (or *even your editor previews* with certain cloud-based products) that our competition expects of you, as you work on your own site in your own fashion.  Even your [dynamic content](reference#h2-dynamic-content) is built according to your needs and schedule, not ours.
 
 Go at your own pace, use as many employees/previews/edits/commits/branches as you like, and only pay for what you *actually use* on our infrastructure. See our [CMS Pricing](pricing) for the current deals.
-
 </div>
 <div class="col-lg-7">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/96m8G9jCiyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -50,7 +50,9 @@ If you are tired of the per-seat licensing and per-CPU-cycle choices weighing yo
 Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
 
 Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`500 MB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique, patent-pending dependency management</span> functionality, it almost never needs to resort to them:
+
 <span class="text-success"><em>It only builds what you need built.</em></span>&trade;
+
 This technology was first invented in late 2011 by members of the Apache Infrastructure Team.  The phrase "[JAM Stack](https://jamstack.wtf)" was coined years later, by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
 
 The system we created for The ASF has been running on autopilot for the past 6 years.  The only issues we had with it from a stability standpoint revolved around ZFS usage on FreeBSD 9.1, which was a work in progress back then.  The fact is that this CMS/IDE is just the CI / CD coordination hub for power users on CDN services (or similar), and those CDN's are where the action is for SLA performance on the JAM Stack.  If *our CMS system* goes down, your ability to modify your live site is impacted, but the last-mile delivery to your actual site's consumers is unimpacted thereby.  If The ASF's history with this system is a guide, the likelihood of an unplanned downtime event is relatively remote, especially when compared to the version control system which underpins it.
