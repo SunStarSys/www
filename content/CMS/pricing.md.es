@@ -3,7 +3,7 @@ Title: CMS Precios
 ## Detalles de precios
 <div class="row">
 <div class="col-lg-4">
-	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1100px">
 		<div class="card-header">Plan profesional</div>
 		<div class="card-body">
 			$ 10 / mes / sitio público administrado; ~ 50% de descuento en todos los modelos de precios de la competencia.
@@ -29,7 +29,7 @@ Title: CMS Precios
 	</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1100px">
 		<div class="card-header">Plan de negocios</div>
 		<div class="card-body">
 			$ 50 / mes / sitio público administrado, ~ 50% de descuento en todos los modelos de precios de la competencia.
@@ -55,7 +55,7 @@ Title: CMS Precios
 	</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1100px">
 		<div class="card-header">Plan empresarial</div>
 		<div class="card-body">
 			$ 500 / mes, ~ 67% de descuento en todos los modelos de precios de la competencia.
