@@ -3,11 +3,11 @@ Title: CMS Precios
 ## Detalles de precios
 <div class="row">
 <div class="col-lg-4">
-	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
 		<div class="card-header">Plan profesional</div>
 		<div class="card-body">
 			$ 10 / mes / sitio público administrado; ~ 50% de descuento en todos los modelos de precios de la competencia.
-			<ul style="min-height:400px">
+			<ul style="min-height:500px">
 				<li>Recursos mensuales incluidos (por sitio web):
 					<ol>
 						<li>50 MB espacio de almacenamiento del sistema de archivos<sup>1</sup></li>
@@ -29,11 +29,11 @@ Title: CMS Precios
 	</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
 		<div class="card-header">Plan de negocios</div>
 		<div class="card-body">
 			$ 50 / mes / sitio público administrado, ~ 50% de descuento en todos los modelos de precios de la competencia.
-			<ul style="min-height:400px">
+			<ul style="min-height:500px">
 				<li>Recursos mensuales incluidos (por sitio web):
 					<ol>
 						<li>500 MB espacio de almacenamiento del sistema de archivos<sup>1</sup></li>
@@ -55,11 +55,11 @@ Title: CMS Precios
 	</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
 		<div class="card-header">Plan empresarial</div>
 		<div class="card-body">
 			$ 500 / mes, ~ 67% de descuento en todos los modelos de precios de la competencia.
-			<ul style="min-height:400px">
+			<ul style="min-height:500px">
 				<li>Recursos mensuales incluidos:
 					<ol>
 						<li>1 GB espacio de almacenamiento del sistema de archivos en su propio repositorio<sup>2</sup></li>
