@@ -45,8 +45,8 @@ if ($r->method eq "POST") {
     );
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
-   $r->subprocess_env(LANG=>"en_US.UTF-8");
-   my ($sendmail) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/t -oi -odq -f/, "$1\@$DOMAIN"]);
+
+   my ($sendmail) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/-t -oi -odq -f/, "$1\@$DOMAIN"]);
    $|++, select $_ for select $sendmail;
    print $sendmail <<EOT;
 To: $to
