@@ -13,7 +13,7 @@ my $date       = gmtime;
 
 my $pool       = APR::Pool->new;
 my $apreq     = APR::Request::CGI->handle($pool);
-my $body      = $apreq->body;
+my $body;
 
 sub render {
 	my $template = shift;
@@ -24,8 +24,9 @@ sub render {
     exit 0;
 }
 
-if ($ENV{REQUEST_METHOD} eq "POST") {
-    my ($name, $email, $subject, $content, $site, $hosting, $lang) = @$body{qw/name email subject content site hosting lang/};
+if ($ENV{HTTP_METHOD} eq "POST") {
+    $body = $apreq->body;
+    my ($name, $email, $subject, $content, $site, $hosting, $lang) = @{$body}{qw/name email subject content site hosting lang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
     s/\n//g for $name, $email, $subject, $hosting, $site, $lang;
 
@@ -40,8 +41,9 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
 
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
+	length $1 or die "BAD EMAIL: $email";
     %ENV = ();
-    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq/; #, "$1\@$DOMAIN";
+	open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
    	print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
