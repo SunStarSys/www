@@ -12,7 +12,8 @@ my $to          = q/sales@sunstarsys.com/;
 my $date       = gmtime;
 
 my $pool       = APR::Pool->new;
-my $body       = APR::Request::CGI->handle($pool)->body;
+my $apreq     = APR::Request::CGI->handle($pool);
+my $body      = $apreq->body;
 
 sub render {
 	my $template = shift;
