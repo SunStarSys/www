@@ -2,7 +2,7 @@ Title: Contacta con nosotros
 Keywords: South Florida, System Administration
 
 <div class="float-lg-right">
-{% include "inquiry_get.html" %}
+{% include "enquiry_get.html" %}
 </div>
 
 ![SunStar Systems](images/sunstarlogowhole.png)
