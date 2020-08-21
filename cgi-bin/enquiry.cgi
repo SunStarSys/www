@@ -40,7 +40,7 @@ if ($ENV{REQUEST_METHOD} eq "POST") {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
     %ENV = ();
-    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/; #, "$1\@$DOMAIN";
+    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq/; #, "$1\@$DOMAIN";
    	print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
