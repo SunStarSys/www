@@ -9,21 +9,23 @@
 
 {% filter markdown %}
 
-## SunStar Systems CMS
+<h2>SunStar Systems CMS</h2>
 
 <div class="row">
 
-<div class="col-lg-6">
+<div class="col-lg-4">
 
 <span class="text-success"><em>The Original Markdown JAM Stack.</em></span>&trade;
 
 The <span class="text-white">SunStar Systems CMS</span> is an
 
-- online,
-- flexible,
-- cost-effective,
-- convenient, and
-- peak performance
+<ol>
+	<li>online,</li>
+	<li>flexible,</li>
+	<li>cost-effective,</li>
+	<li>convenient, and</li>
+	<li>peak performance</li>
+</ol>
 
 Content Management System and Integrated Development Environment (IDE) for developing and maintaining static website content, potentially with some basic [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) features.
 
@@ -31,9 +33,12 @@ Content Management System and Integrated Development Environment (IDE) for devel
 
 What differentiates this product from our competitors is the [CMS Technology](technology), and how it allows us to maintain very low operating costs while providing a superior service.  We pass the cost savings on to our **customers**, instead of our C-Suite executives. [Give us a call](/contact), **especially** if you are
 
-- an IT government sector decision-maker with FedRAMP compliance requirements,
-- a technology company leader with a mountain of online product documentation and support sites (potentially offering binary downloads) to curate,
-- or really any business-person dissatisfied with the cost structure of anything else out there, including free offerings bogging down your staff's time and energy.
+<ol>
+
+	<li>an IT government sector decision-maker with FedRAMP compliance requirements,</li>
+ 	<li>a technology company leader with a mountain of online product documentation and support sites (potentially offering binary downloads) to curate</li>
+<li>or really any business-person dissatisfied with the cost structure of anything else out there, including free offerings bogging down your staff's time and energy.</li>
+</ol>
 
 <span class="text-white">It's time for a sea change in how you manage and deliver your site to your target audience.</span>
 
@@ -44,7 +49,7 @@ But the real win is when you realize you have limitless control over which perso
 Go at your own pace, use as many employees/previews/edits/commits/branches as you like, and only pay for what you *actually use* on our infrastructure. See our [CMS Pricing](pricing) for the current deals.
 
 </div>
-<div class="col-lg-6">
+<div class="col-lg-8">
 	<iframe width="560" height="315" src="https://www.youtube.com/embed/96m8G9jCiyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <h3>Here's Why, Full Stack Developer / Content Author / DevOps Guru...</h3>
@@ -64,7 +69,7 @@ The system we created for The ASF has been running on autopilot for the past 6 y
 	</div>
 </div>
 
-#### Feature Comparison Grid
+### Feature Comparison Grid
 
 <br />
 
