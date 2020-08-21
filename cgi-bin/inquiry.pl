@@ -43,7 +43,7 @@ if ($r->method eq "POST") {
 	$srs_sender =~ /(.*)/;
 
    	my ($sendmail_in, $sendmail_out, $sendmail_err) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/-t -oi -odq -f/, "$1\@$DOMAIN"]);
-   	print $sendmail <<EOT;
+   	print $sendmail_in <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
 Reply-To: $cn <$email>
@@ -58,7 +58,7 @@ HOSTING: $hosting
 LANGUAGE: $lang
 EOT
 
-   	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
+   	close $sendmail_in or die "sendmail failed: " . ($! || $? >> 8) . "\n";
 	my $content = join "", <$sendmail_out>, <$sendmail_err>;
     return render "inquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n<pre>$content</pre>",
