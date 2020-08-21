@@ -24,7 +24,7 @@ sub render {
     exit 0;
 }
 
-if ($ENV{HTTP_METHOD} eq "POST") {
+if ($ENV{REQUEST_METHOD} eq "POST") {
     $body = $apreq->body;
     my ($name, $email, $subject, $content, $site, $hosting, $lang) = @{$body}{qw/name email subject content site hosting lang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
