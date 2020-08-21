@@ -42,8 +42,7 @@ if ($r->method eq "POST") {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
 
-   	my ($sendmail) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/-t -oi -odq -f/, "$1\@$DOMAIN"]);
-	sleep 3;
+   	my ($sendmail_in, $sendmail_out, $sendmail_err) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/-t -oi -odq -f/, "$1\@$DOMAIN"]);
    	print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
@@ -59,11 +58,10 @@ HOSTING: $hosting
 LANGUAGE: $lang
 EOT
 
-	sleep 2;
    	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
-
+	my $content = join "", <$sendmail_out>, <$sendmail_error>;
     return render "inquiry_post.html",
-        content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
+        content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n<pre>$content</pre>",
         headers => { title => "CMS Sales Enquiry" };
 }
 
