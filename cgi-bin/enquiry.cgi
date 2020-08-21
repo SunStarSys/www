@@ -60,6 +60,7 @@ LANGUAGE: $lang
 EOT
 
    	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
+    print "Content-Type: text/plain\n\nFOOBAR\n" and exit $?;
     render "enquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
         headers => { title => "CMS Sales Enquiry" };
