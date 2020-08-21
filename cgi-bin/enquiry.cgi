@@ -1,7 +1,6 @@
 #!/usr/local/bin/perl -T -I/x1/cms/build/lib
-use Apache2::RequestUtil;
-use Apache2::SubProcess;
-use APR::Request::Apache2;
+use APR::Pool;
+use APR::Request::CGI;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 
@@ -11,21 +10,18 @@ use warnings;
 my $DOMAIN = q/sunstarsys.com/;
 my $to          = q/sales@sunstarsys.com/;
 my $date       = gmtime;
+my $body       = APR::Request::CGI->handle(APR::Pool->new)->body ;
 
 sub render {
- 	my $r            = Apache2::RequestUtil->request;
-	my $body       = APR::Request::Apache2->handle($r)->body || {};
 	my $template = shift;
     my %args      = (%$body, @_);
     local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
-    $r->content_type("text/html; charset='utf-8'");
-    $r->print(Template($template)->render(\%args));
+    print "Content-Type: text/html; charset='utf-8'\n\n";
+    print Template($template)->render(\%args);
+    exit 0;
 }
 
-my $r = Apache2::RequestUtil->request;
-my $body  = APR::Request::Apache2->handle($r)->body || {};
-
-if ($r->method eq "POST") {
+if ($body) {
     my ($name, $email, $subject, $content, $site, $hosting, $lang) = @$body{qw/name email subject content site hosting lang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
     s/\n//g for $name, $email, $subject, $hosting, $site, $lang;
@@ -42,8 +38,8 @@ if ($r->method eq "POST") {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 	$srs_sender =~ /(.*)/;
 
-   	my ($sendmail_in, $sendmail_out, $sendmail_err) = $r->spawn_proc_prog("/usr/sbin/sendmail", [qw/-t -oi -odq -f/, "$1\@$DOMAIN"]);
-   	print $sendmail_in <<EOT;
+   	open my $sendmail, "|-", /usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
+   	print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
 Reply-To: $cn <$email>
@@ -58,11 +54,10 @@ HOSTING: $hosting
 LANGUAGE: $lang
 EOT
 
-   	close $sendmail_in or die "sendmail failed: " . ($! || $? >> 8) . "\n";
-	$content = join "", <$sendmail_out>, <$sendmail_err>;
-    return render "inquiry_post.html",
-        content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n<pre>$content</pre>",
+   	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
+    return render "enquiry_post.html",
+        content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
         headers => { title => "CMS Sales Enquiry" };
 }
 
-render "inquiry_get.html";
+render "enquiry_get.html";
