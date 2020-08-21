@@ -62,7 +62,9 @@ WEBSITE: $site
 HOSTING: $hosting
 LANGUAGE: $lang
 EOT
-    close $sendmail or die "Sendmail failed: " . ($! || $? >> 8) . "\n";
+
+	sleep 5;
+   	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
 
     return render "inquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
