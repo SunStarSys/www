@@ -3167,7 +3167,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success {
-  color: #77B300;
+  color: #2f4f4f;
   border-color: #77B300;
 }
 
@@ -3183,7 +3183,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-success.disabled, .btn-outline-success:disabled {
-  color: #77B300;
+  color: #2f4f4f;
   background-color: transparent;
 }
 
