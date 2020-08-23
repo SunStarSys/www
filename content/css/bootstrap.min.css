@@ -160,9 +160,12 @@ sup {
 }
 
 a {
-  color: #4d5461;
+  color: #268bd2;
   text-decoration: none;
   background-color: transparent;
+}
+jumbotron.a {
+  color: #4d5461;
 }
 
 a:hover {
