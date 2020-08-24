@@ -29,32 +29,33 @@ Title: CMS Preisgestaltung
 			</div>
 		</div>
 	</div>
-<div class="col-lg-4">
-<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1100px">
-		<div class="card-header">Geschäftsplan</div>
-		<div class="card-body">
+	<div class="col-lg-4">
+		<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1100px">
+			<div class="card-header">Geschäftsplan</div>
+			<div class="card-body">
 			50 USD / Monat / verwaltete öffentliche Website; ~ 50% Rabatt auf alle Preismodelle der Wettbewerber!
-			<ul style="min-height:500px">
-				<li>Enthaltene monatliche Ressourcen (pro Website):
-					<ol>
-						<li>250 MB Speicherplatz im Dateisystem<sup>1</sup></li>
-						<li>1 TB Bandbreite</li>
-						<li>Unbegrenzte Builds und IDE-Nutzung für drei Sitzplatz</li>
-						<li>E-Mail-basierter Kundensupport</li>
-					</ol>
-				</li>
-			</ul><ul style="min-height:200px">
-				<li>Zusätzliche monatliche Ressourcenraten (pro Website):
-					<ol>
-						<li>10 USD / 20 MB Speicherplatz im Dateisystem<sup>1</sup></li>
-						<li>20 USD / 100 GB Bandbreite</li>
-						<li>25 USD / Sitzplatz</li>
-					</ol>
-				</li>
-			</ul>
+				<ul style="min-height:500px">
+					<li>Enthaltene monatliche Ressourcen (pro Website):
+						<ol>
+							<li>250 MB Speicherplatz im Dateisystem<sup>1</sup></li>
+							<li>1 TB Bandbreite</li>
+							<li>Unbegrenzte Builds und IDE-Nutzung für drei Sitzplatz</li>
+							<li>E-Mail-basierter Kundensupport</li>
+						</ol>
+					</li>
+				</ul>
+				<ul style="min-height:200px">
+					<li>Zusätzliche monatliche Ressourcenraten (pro Website):
+						<ol>
+							<li>10 USD / 20 MB Speicherplatz im Dateisystem<sup>1</sup></li>
+							<li>20 USD / 100 GB Bandbreite</li>
+							<li>25 USD / Sitzplatz</li>
+						</ol>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-</div>
 <div class="col-lg-4">
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1100px">
 		<div class="card-header">Enterprise Plan</div>
