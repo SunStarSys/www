@@ -10,8 +10,8 @@
 	<input name="site" type="url" class="form-control" required />
 
 	<label for="hosting">Subversion {% ifequal lang ".en" %}Hosting Plan{% endifequal %}{% ifequal lang ".es" %}Plan de Alojamiento{% endifequal %}{% ifequal lang ".de" %}Hosting-Plan{% endifequal %}</label>
-	<input type="radio" name="hosting" value="self" checked /> &nbsp; {% ifequal lang ".en" %}Public Self Hosting{% endifequal %}{% ifequal lang ".es" %}Autohospedaje Público{% endifequal %}{% ifequal lang ".de" %}Öffentliches Self Hosting{% endifequal %}
-	<input type="radio" name="hosting" value="public" /> &nbsp; SunStar Systems {% ifequal lang ".en" %}Public Repository{% endifequal %}{% ifequal lang ".es" %}Repositorio Público{% endifequal %}{% ifequal lang ".de" %}Öffentliches Repository{% endifequal %}
+	<input type="radio" name="hosting" value="self" /> &nbsp; {% ifequal lang ".en" %}Public Self Hosting{% endifequal %}{% ifequal lang ".es" %}Autohospedaje Público{% endifequal %}{% ifequal lang ".de" %}Öffentliches Self Hosting{% endifequal %}
+	<input type="radio" name="hosting" value="public" checked /> &nbsp; SunStar Systems {% ifequal lang ".en" %}Public Repository{% endifequal %}{% ifequal lang ".es" %}Repositorio Público{% endifequal %}{% ifequal lang ".de" %}Öffentliches Repository{% endifequal %}
 	<input type="radio" name="hosting" value="private" /> &nbsp; SunStar Systems {%ifequal lang ".en" %}Private Repository{% endifequal %}{% ifequal lang ".es" %}Repositorio Privado{% endifequal %}{% ifequal lang ".de" %}Privater Bereich{% endifequal %}
 	<input type="radio" name="hosting" value="private" /> &nbsp; SunStar Systems {%ifequal lang ".en" %}Enterprise Repository{% endifequal %}{% ifequal lang ".es" %}Repositorio empresarial{% endifequal %}{% ifequal lang ".de" %}Enterprise Repository{% endifequal %}
 
