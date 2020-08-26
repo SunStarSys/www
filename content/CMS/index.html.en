@@ -65,7 +65,7 @@ The system we created for The ASF has been running on autopilot for the past 6 y
 
 | Feature          |  SunStar Systems | Netlify+Gatsby | GitHub+Hugo |
 |:------------|:-------------:|:------------:|:----------:|
-| CMS IDE	     | <span class="text-success">Y</span>  |    Y    |  <span class="text-warning">?</span>  |
+| CMS IDE	     | <span class="text-success">Y</span>  |    Y    |  <span class="text-info">?</span>  |
 | CI / CD          | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
 | FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
 | Browser-Only Workflow (Mobile Friendly) | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span>  |
@@ -79,9 +79,9 @@ The system we created for The ASF has been running on autopilot for the past 6 y
 | WebSite Hosting | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
 | SSI / CGI / mod_perl registry Support | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
 | Fine-Grained ACL on Source Repo | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| +500 MB/s Full Site Builds | <span class="text-success">Y</span> | <span class="text-warning">?</span> | <span class="text-danger">N</span> |
+| +500 MB/s Full Site Builds | <span class="text-success">Y</span> | <span class="text-info">?</span> | <span class="text-danger">N</span> |
 | 8-64 Way Concurrent Builds | <span class="text-success">Y</span> | Enterprise Only ($$) | <span class="text-danger">N</span> |
-| TCO &lt; $5000/yr for Enterprise | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-warning">?</span> |
+| TCO &lt; $5000/yr for Enterprise | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-info">?</span> |
 | 99.99% SLA for Enterprise | Coming in Q4 | Y | <span class="text-danger">N</span> |
 | Serverless Integration | Coming Soon! | Y | <span class="text-danger">N</span> |
 | Choice of Programming Language | Coming Soon! | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
