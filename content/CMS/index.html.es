@@ -61,7 +61,7 @@ Go at your own pace, use as many employees/previews/edits/commits/branches as yo
 | WebSite Hosting | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
 | SSI / CGI Support | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
 | Fine-Grained ACL on Source Repo | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| +100 MB/s Full Site Builds | <span class="text-success">Y</span> | <span class="text-warning">?</span> | <span class="text-danger">N</span> |
+| +500 MB/s Full Site Builds | <span class="text-success">Y</span> | <span class="text-warning">?</span> | <span class="text-danger">N</span> |
 | 8-64 Way Concurrent Builds | <span class="text-success">Y</span> | Enterprise Only ($$) | <span class="text-danger">N</span> |
 | TCO &lt; $2500/yr for 10 GB disk | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-warning">?</span> |
 | CDN Integration | Coming Soon! | Y | <span class="text-danger">N</span> |
@@ -76,7 +76,7 @@ If you are tired of the per-seat licensing and per-CPU-cycle choices weighing yo
 
 Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
 
-Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`100 MB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique dependency management</span> functionality, it almost never needs to resort to them:
+Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`500 MB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique dependency management</span> functionality, it almost never needs to resort to them:
 
 <span class="text-success"><em>It only builds what you need built.</em></span>&trade;
 
