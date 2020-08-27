@@ -37,7 +37,7 @@ Title: CMS Precios
 				<li>Recursos mensuales incluidos (por sitio web):
 					<ol>
 						<li>500 MB espacio de almacenamiento del sistema de archivos<sup>1</sup></li>
-						<li>1 TB banda ancha</li>
+						<li>500 GB banda ancha</li>
 						<li>Compilaciones ilimitadas y uso de IDE para tres puestos</li>
 						<li>Atención al cliente por correo electrónico</li>
 					</ol>
