@@ -20,7 +20,7 @@ Limits headless automation of sudo usage, for good reason.  However, we have [to
 
 The basic premise of zero-trust architecture is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback device interface `lo0`, and is only meaningful in the context of a port forwarded SSH connection *to it* (and not the reverse.)
 
-This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture.  Rest assured &mdash; beyond breaking the antispoofing `lo0` protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
+This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture (balancing Hobbsian transparency with the miltary's "loose lips sink ships" is more art than science).  Rest assured &mdash; beyond breaking the antispoofing `lo0` protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
 
 **Even if the master OCI control account is compromised, the integrity and confidentiality of all customer assets remains inviolate**.  All a black-hat can do is make a mess with customer website availability (in particular, they cannot access the Subversion service data records), that we can reconstruct from scratch in 24-48 hours once the bad apple's OCI access has been terminated.
 
