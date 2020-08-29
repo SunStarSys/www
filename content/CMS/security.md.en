@@ -2,9 +2,9 @@ Title: CMS Security
 
 ## "Security through obscurity is not much security at all."
 
-Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) in 1851, who easily picked the Crystal Palace locks during a London exhibition that year.  We fully agree, which is why our straightforward blueprints for our Oracle Cloud Infrastructure (OCI) automation engine are [available on github](https://github.com/joesuf4/home/blob/solaris/.zshrc).
+Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) in 1851, who easily picked the Crystal Palace locks during a London exhibition that year.  We fully agree, which is why our blueprints for our Oracle Cloud Infrastructure (OCI) automation engine are [available on github](https://github.com/joesuf4/home/blob/solaris/.zshrc).
 
-## Passwordless RBAC model, peppered with [orthrus](https://github.com/joesuf4/orthrus/) OTP sudo challenges.
+## Passwordless RBAC model, peppered with [orthrus](https://svn.apache.org/repos/asf/labs/orthrus/trunk) OTP sudo challenges.
 
 Limits headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/joesuf4/pty) to eliminate the toil of  responding to prompts of various kinds.
 
@@ -14,10 +14,10 @@ Limits headless automation of sudo usage, for good reason.  However, we have [to
 
 ## Zero-Trust aspects.
 
-Basic premise is to not design your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful priviledged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback device interface `lo0`, and is only meaningful in the context of a port forwarded SSH connection *to it* (and not the reverse.)
+Basic premise of zero-trust architecture is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback device interface `lo0`, and is only meaningful in the context of a port forwarded SSH connection *to it* (and not the reverse.)
 
 This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture.  Rest assured &mdash; beyond breaking the antispoofing `lo0` protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
 
-**Even if the master OCI control account is compromised, the integrity and confidentiality of all customer assets remains inviolate**.  All a black-hat can do is make a giant mess with customer site availability that we can reconstruct from scratch in 24-48 hours, once the bad apple's OCI access has been terminated.
+**Even if the master OCI control account is compromised, the integrity and confidentiality of all customer assets remains inviolate**.  All a black-hat can do is make a mess with customer website availability (in particular, they cannot access the Subversion service data records), that we can reconstruct from scratch in 24-48 hours once the bad apple's OCI access has been terminated.
 
 
