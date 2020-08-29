@@ -14,7 +14,7 @@ Limits headless automation of sudo usage, for good reason.  However, we have [to
 
 ## Zero-Trust Aspects
 
-Basic premise is to not design your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful priviledged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback interface `lo0`, and is only meaningful in the context of a forwarded SSH connection *to it* (and not the reverse.)
+Basic premise is to not design your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful priviledged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback interface `lo0`, and is only meaningful in the context of a port forwarded SSH connection *to it* (and not the reverse.)
 
 This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture.  Rest assured &mdash; beyond breaking the antispoofing `lo0` protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
 
