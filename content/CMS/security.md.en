@@ -4,9 +4,9 @@ Title: CMS Security
 
 Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) in 1851, who easily picked the Crystal Palace locks during a London exhibition that year.  We fully agree, which is why our straightforward Oracle Cloud Infrastructure (OCI) automation engine is [available on github](https://github.com/joesuf4/home/blob/solaris/.zshrc).
 
-## Passwordless RBAC model, peppered with with [orthrus](https://github.com/joesuf4/orthrus/) OTP challenges.
+## Passwordless RBAC model, peppered with [orthrus](https://github.com/joesuf4/orthrus/) OTP sudo challenges.
 
-Limited use of sudo.
+Limits automated use of sudo, for good reason.
 
 ## Sandboxed Execution for Builds and CGI Scripts.
 
