@@ -12,7 +12,7 @@ Limits headless automation of sudo usage, for good reason.  However, we have [to
 
 "Shared-nothing" zone builds, defaulting to zero network availability.  Only Enterprise customers have internet access during their builds, because they are using their own *unique* Solaris zones that can be tailored exactly to their build requirements.
 
-## Zero-Trust Aspects
+## Zero-Trust aspects.
 
 Basic premise is to not design your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful priviledged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback interface `lo0`, and is only meaningful in the context of a port forwarded SSH connection *to it* (and not the reverse.)
 
