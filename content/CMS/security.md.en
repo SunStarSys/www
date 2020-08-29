@@ -10,7 +10,7 @@ Limits headless automation of sudo usage, for good reason.  However, we have [to
 
 ## Sandboxed execution for builds and CGI scripts.
 
-"Shared-nothing" zone builds, defaulting to zero network availability.
+"Shared-nothing" zone builds, defaulting to zero network availability.  Only Enterprise customers have internet access during their builds, because they are using their own *unique* Solaris zones that can be tailored exactly to their build requirements.
 
 ## Zero-Trust Aspects
 
