@@ -8,6 +8,6 @@ Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wiki
 
 Limits headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/joesuf4/pty) to eliminate the toil of  responding to prompts of various kinds.
 
-## Sandboxed Execution for Builds and CGI Scripts.
+## Sandboxed execution for builds and CGI scripts.
 
 "Shared-nothing" zone builds, defaulting to zero network availability.
