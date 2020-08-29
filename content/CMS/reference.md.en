@@ -25,7 +25,7 @@ If that's too much bother for you, this website is self-hosted on the CMS, and t
 
 ## Onboarding Process
 
-For most customers, the CMS service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple for organizations already running their own svnpubsub-enabled Subversion service:
+For early adopters, the CMS service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple for organizations already running their own svnpubsub-enabled Subversion service:
 
 1. Provide us with the URL of your site's sources in Subversion.
 
