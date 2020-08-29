@@ -1,7 +1,7 @@
 Title: CMS Reference
 
 <div class="float-lg-right">
-	<img src="/images/sunstarstaronly.png"></img>
+	<img src="../images/sunstarstaronly.png"></img>
 </div>
 
 ## Recommended Bookmarklet
@@ -19,6 +19,9 @@ To use the bookmarklet simply browse to your live production site (NOT in the CM
 ## Live Demo
 
 For a demonstration of the CMS's IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
+
+If that's too much bother for you, this website is self-hosted on the CMS, and those hot-pink pencil icons at the upper right alongside the breadcrumbs will give you a live demostration of how the system works (sans commit/build access, which is locked down to staff only).
+
 
 ## Onboarding Process
 
