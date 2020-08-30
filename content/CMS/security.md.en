@@ -14,7 +14,7 @@ Limits headless automation of sudo usage, for good reason.  However, we have [to
 
 ## Zero Trust aspects.
 
-Basic premise of [zero trust architecture](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207-draft.pdf) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback device interface `lo0`, and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
+Basic premise of [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various OCI POP LANs is only exposed to the bare-metal machine's loopback device interface `lo0`, and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
 
 This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture.  Rest assured &mdash; beyond breaking the antispoofing `lo0` protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
 
