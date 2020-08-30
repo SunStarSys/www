@@ -8,7 +8,7 @@ Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wiki
 
 No shared secrets other than pubic ssh keys, and no need for direct access to the root role account for routine automation tasks.
 
-## [Orthrus](https://svn.apache.org/viewvc/labs/orthrus/) OTP sudo challenges.
+## [Orthrus](https://svn.apache.org/viewvc/labs/orthrus/) [OTP](https://en.wikipedia.org/wiki/One-time_password) sudo challenges.
 
 Limits headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/joesuf4/pty) to eliminate the toil of  responding to prompts of various kinds.
 
