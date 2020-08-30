@@ -18,6 +18,6 @@ Basic premise of [zero trust architecture](https://csrc.nist.gov/publications/de
 
 This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture.  Rest assured &mdash; beyond breaking the antispoofing `lo0` protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
 
-Even if the master OCI control account is compromised, the **integrity** and **confidentiality** of all customer assets remains inviolate.  All a black-hat can do is make a mess with customer website **availability** (in particular, they cannot access the Subversion service data records), that we can reconstruct from scratch in 24-48 hours once the bad apple's OCI access has been terminated.
+Even if the master OCI control account is compromised, the **confidentiality** and **integrity** of all customer assets remains inviolate.  All a black-hat can do is make a mess with customer website **availability** (in particular, they cannot access the Subversion service data records), that we can reconstruct from scratch in 24-48 hours once the bad apple's OCI access has been terminated.
 
 
