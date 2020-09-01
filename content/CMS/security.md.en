@@ -6,7 +6,7 @@ Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wiki
 
 ## Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://svn.apache.org/repos/asf/labs/orthrus?p=750000) [OTP](https://en.wikipedia.org/wiki/One-time_password) sudo challenges.
 
-This *limits* headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/joesuf4/pty) to eliminate the toil of  responding to prompts of various kinds.
+This *limits* headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
 
 ## Sandboxed execution for builds and CGI scripts.
 
