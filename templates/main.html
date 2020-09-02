@@ -26,27 +26,27 @@
         </div>
         <div class="navbar-collapse collapse" id="navbarResponsive">
           <ul class="navbar-nav">
-            <li class="nav-item{% ifequal path "/index.html.en" %}
+            <li class="nav-item{% ifequal path "/index.html{{ lang }}" %}
                    active
                    {% endifequal %}"><a class="nav-link text" href="/">{% ifequal lang ".en" %}Home{% endifequal %}{% ifequal lang ".es" %}Hogar{% endifequal %}{% ifequal lang ".de" %}Zuhause{% endifequal %}{% ifequal lang ".fr" %}Accueil{% endifequal %}</a></li>
-            <li class="nav-item{% ifequal path "/about.html.en" %}
+            <li class="nav-item{% ifequal path "/about.html{{ lang }}" %}
                    active
-                   {% endifequal %}"><a class="nav-link text" href="/about">About</a></li>
-            <li class="nav-item{% ifequal path "/contact.html.en" %}
+                   {% endifequal %}"><a class="nav-link text" href="/about">{% ifequal lang ".en" %}About{% endifequal %}{%ifequal lang ".es" %}Acerca de{% endifequal %}{% ifequal lang ".de" %}Über{% endifequal %}{% ifequal lang ".fr" %}À propos{% endifequal %}</a></li>
+            <li class="nav-item{% ifequal path "/contact.html{{ lang }}" %}
 				  active
                    {% endifequal %}"><a class="nav-link" href="/contact">Contact</a></li>
  			<li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-				<li class="dropdown-item{% ifequal path "/CMS/index.html.en" %}
+				<li class="dropdown-item{% ifequal path "/CMS/index.html{{ lang }}" %}
 				  active
                    {% endifequal %}"><a class="nav-link text-white" href="/CMS/">CMS</a></li>
-				<li class="dropdown-item{% ifequal path "/StageMaster/index.html.en" %}
+				<li class="dropdown-item{% ifequal path "/StageMaster/index.html{{ lang }}" %}
 				  active
                    {% endifequal %}"><a class="nav-link text-white" href="/StageMaster/">StageMaster (coming soon)</a></li>
               </ul>
 			</li>
-            <li class="nav-item{% ifequal path "/open-source.html.en" %}
+            <li class="nav-item{% ifequal path "/open-source.html{{ lang }}" %}
                    active
                    {% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
             <li class="nav-item dropdown">
@@ -65,7 +65,7 @@
                 <li class="dropdown-item"><a class="nav-link text-white" href="/essays">Essays</a></li>
               </ul>
             </li>
-            <li class="nav-item{% ifequal path "/powered-by.html.en" %}
+            <li class="nav-item{% ifequal path "/powered-by.html{{ lang }}" %}
                      active
                      {% endifequal %}"><a class="nav-link" href="/powered-by">Powered by...</a>
             </li>
@@ -75,7 +75,6 @@
 	</div>
     <div class="container theme-showcase">
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
       {% block content %}
       <div class="page-header"><div style="text-align:right; padding-top:
       10px">{{ breadcrumbs|safe
@@ -83,8 +82,6 @@
         <h1>{{ headers.title }}</h1></div>
       <div class="jumbotron">{{ content|markdown }}</div>
       {% endblock %}
-<!-- Bootstrap core JavaScript ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.bundle.min.js"></script>
 	</div>
