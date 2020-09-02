@@ -29,16 +29,16 @@
             <li class="nav-item{% ifequal path "/index.html"|append:lang %}
                    active
                    {% endifequal %}"><a class="nav-link text" href="/">{% ifequal lang ".en" %}Home{% endifequal %}{% ifequal lang ".es" %}Hogar{% endifequal %}{% ifequal lang ".de" %}Zuhause{% endifequal %}{% ifequal lang ".fr" %}Accueil{% endifequal %}</a></li>
-            <li class="nav-item{% ifequal path "/about.html"|append:{{ lang }} %}
+            <li class="nav-item{% ifequal path "/about.html"|append:lang %}
                    active
                    {% endifequal %}"><a class="nav-link text" href="/about">{% ifequal lang ".en" %}About{% endifequal %}{%ifequal lang ".es" %}Acerca de{% endifequal %}{% ifequal lang ".de" %}Über{% endifequal %}{% ifequal lang ".fr" %}À propos{% endifequal %}</a></li>
-            <li class="nav-item{% ifequal path "/contact.html{{ lang }}" %}
+            <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
 				  active
                    {% endifequal %}"><a class="nav-link" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
  			<li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-				<li class="dropdown-item{% ifequal path "/CMS/index.html{{ lang }}" %}
+				<li class="dropdown-item{% ifequal path "/CMS/index.html"|append:lang %}
 				  active
                    {% endifequal %}"><a class="nav-link text-white" href="/CMS/">CMS</a></li>
 				<li class="dropdown-item{% ifequal path "/StageMaster/index.html{{ lang }}" %}
@@ -46,7 +46,7 @@
                    {% endifequal %}"><a class="nav-link text-white" href="/StageMaster/">StageMaster (coming soon)</a></li>
               </ul>
 			</li>
-            <li class="nav-item{% ifequal path "/open-source.html{{ lang }}" %}
+            <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
                    active
                    {% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
             <li class="nav-item dropdown">
@@ -65,7 +65,7 @@
                 <li class="dropdown-item"><a class="nav-link text-white" href="/essays">Essays</a></li>
               </ul>
             </li>
-            <li class="nav-item{% ifequal path "/powered-by.html{{ lang }}" %}
+            <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
                      active
                      {% endifequal %}"><a class="nav-link" href="/powered-by">Powered by...</a>
             </li>
