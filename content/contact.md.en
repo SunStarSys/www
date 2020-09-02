@@ -1,8 +1,9 @@
 Title: Contact Us
 Keywords: South Florida, System Administration
 
-<div class="row">
-<div class="col-lg-6">
+<div class="float-lg-right">
+{% include "enquiry_get.html" %}
+</div>
 
 ![SunStar Systems](images/sunstarlogowhole.png)
 
@@ -23,10 +24,7 @@ Keywords: South Florida, System Administration
 
 ### Twitter:
 
-<a class="twitter-timeline" href="https://twitter.com/sunstarsys?ref_src=twsrc%5Etfw">Tweets by sunstarsys</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-</div>
 <div class="col-lg-6">
-{% include "enquiry_get.html" %}
-</div>
+	<a class="twitter-timeline" href="https://twitter.com/sunstarsys?ref_src=twsrc%5Etfw">Tweets by sunstarsys</a>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
