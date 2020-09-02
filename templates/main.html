@@ -34,7 +34,7 @@
                    {% endifequal %}"><a class="nav-link text" href="/about">{% ifequal lang ".en" %}About{% endifequal %}{%ifequal lang ".es" %}Acerca de{% endifequal %}{% ifequal lang ".de" %}Über{% endifequal %}{% ifequal lang ".fr" %}À propos{% endifequal %}</a></li>
             <li class="nav-item{% ifequal path "/contact.html{{ lang }}" %}
 				  active
-                   {% endifequal %}"><a class="nav-link" href="/contact">Contact</a></li>
+                   {% endifequal %}"><a class="nav-link" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
  			<li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
