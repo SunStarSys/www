@@ -26,10 +26,10 @@
         </div>
         <div class="navbar-collapse collapse" id="navbarResponsive">
           <ul class="navbar-nav">
-            <li class="nav-item{% ifequal path "/index.html"|append:{{ lang }}" %}
+            <li class="nav-item{% ifequal path "/index.html"|append:lang %}
                    active
                    {% endifequal %}"><a class="nav-link text" href="/">{% ifequal lang ".en" %}Home{% endifequal %}{% ifequal lang ".es" %}Hogar{% endifequal %}{% ifequal lang ".de" %}Zuhause{% endifequal %}{% ifequal lang ".fr" %}Accueil{% endifequal %}</a></li>
-            <li class="nav-item{% ifequal path "/about.html{{ lang }}" %}
+            <li class="nav-item{% ifequal path "/about.html"|append:{{ lang }} %}
                    active
                    {% endifequal %}"><a class="nav-link text" href="/about">{% ifequal lang ".en" %}About{% endifequal %}{%ifequal lang ".es" %}Acerca de{% endifequal %}{% ifequal lang ".de" %}Über{% endifequal %}{% ifequal lang ".fr" %}À propos{% endifequal %}</a></li>
             <li class="nav-item{% ifequal path "/contact.html{{ lang }}" %}
