@@ -36,7 +36,7 @@ walk_content_tree {
                 grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm}"),
                                             glob("content$_/*/index.html.$lang"))
             ];
-            push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html.$lang$!,
+            push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
                 glob("content$_/*") if m!/files\b!;
         }
     }
@@ -44,7 +44,7 @@ walk_content_tree {
 
 my @essays_glob = glob("content/essays/files/*/*");
 for my $lang (qw/en es de fr/) {
-    push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\b!,
+    push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
         @essays_glob;
 }
 
