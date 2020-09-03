@@ -8,7 +8,7 @@ my $conf = Load join "", <DATA>;
 
 our @patterns = (
     [qr!/(index|sitemap)\.html!, sitemap => {
-        quick_deps => 1,
+        quick_deps    => 1,
         nest          => 1,
         conf          => $conf,
     }],
