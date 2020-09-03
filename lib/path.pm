@@ -43,7 +43,7 @@ walk_content_tree {
 };
 
 my @essays_glob = glob("content/essays/files/*/*");
-for my $lang (qw/en es de/) {
+for my $lang (qw/en es de fr/) {
     push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\b!,
         @essays_glob;
 }
