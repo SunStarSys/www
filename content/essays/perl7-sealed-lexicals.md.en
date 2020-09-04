@@ -132,7 +132,7 @@ Sample code:
 	}
 ```
 
-## Production-Quality Perl 5 Prototype: sealed.pm v1.0.3
+## Production-Quality Perl 5 Prototype (modulo B::Generate not being ithread-safe): sealed.pm v1.0.3
 
 See <https://github.com/SunStarSys/cms/blob/master/lib/sealed.pm>.
 
