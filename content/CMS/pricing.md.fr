@@ -1,0 +1,123 @@
+Title: Tarification du CMS
+
+## Pricing Details
+
+<div class="row">
+<div class="col-lg-4">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
+		<div class="card-header">Professional Plan</div>
+		<div class="card-body">
+			$10 / month / managed public site; ~50% off all competitor pricing models!
+			<ul style="min-height:600px">
+				<li>Included Monthly Resources (per website):
+					<ol>
+						<li>Public Subversion hosting</li>
+						<li>50 MB storage space<sup>1</sup></li>
+						<li>250 GB data transfer</li>
+						<li>Unlimited builds and IDE usage for one seat</li>
+						<li>Email-based Customer Support</li>
+					</ol>
+				</li>
+			</ul><ul style="min-height:200px">
+				<li>Additional Monthly Resource Rates (per website):
+					<ol>
+						<li>$10 / 10 MB storage space<sup>1</sup></li>
+						<li>$10 / 40 GB data transfer</li>
+						<li>$10 / seat</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
+		<div class="card-header">Business Plan</div>
+		<div class="card-body">
+			$50 / month / managed public site, ~50% off all competitor pricing models!
+			<ul style="min-height:600px">
+				<li>Included Monthly Resources (per website):
+					<ol>
+						<li>Public or private Subversion hosting</li>
+						<li>250 MB storage space<sup>1</sup></li>
+						<li>500 GB data transfer</li>
+						<li>Unlimited builds and IDE usage for three seats</li>
+						<li>Email-based Customer Support</li>
+					</ol>
+				</li>
+			</ul><ul style="min-height:200px">
+				<li>Additional Monthly Resource Rates (per website):
+					<ol>
+						<li>$10 / 20 MB storage space<sup>1</sup></li>
+						<li>$20 / 100 GB data transfer</li>
+						<li>$25 / seat</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
+		<div class="card-header">Enterprise Plan</div>
+		<div class="card-body">
+			$500 / month, ~67% off all competitor pricing models!
+			<ul style="min-height:600px">
+				<li>Included Monthly Resources:
+					<ol>
+						<li>1 GB storage space in your own repository<sup>2</sup></li>
+						<li>2 TB data transfer</li>
+						<li>Unlimited websites, builds and seats</li>
+						<li>Full control over Subversion authorization configuration</li>
+						<li>Private, networked build containers</li>
+						<li>99.99% Comprehensive SLA<sup>3</sup></li>
+						<li>Global POP<sup>4</sup> with geographically distributed last mile delivery network in Q4</li>
+						<li>Premium Support SLA</li>
+					</ol>
+				</li>
+			</ul><ul style="min-height:200px">
+				<li>Additional Monthly Resource Rates:
+					<ol>
+						<li>$100 / 200 MB storage space<sup>2</sup></li>
+						<li>$15 / 100 GB data transfer</li>
+						<li>$100 / ithread mod_perl registry hosting</li>
+					    <li>WebSockets and/or private container hosting available</li>
+					</ol>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+- Annual up-front pricing discounts available (up to 20% off monthly billing costs).
+
+- Volume discounts available.
+
+- Enterprise Kerberos-based VPN plans coming soon.
+
+- Serverless Technology Integration coming soon.
+
+- Consulting and website build-technology porting services available.
+
+##### Footnotes
+
+1.  Storage Utilization calculated based on size of four working copy checkouts of each site: two source trees and two resulting build trees.
+
+2. Storage Utilization calculated based on total size of SunStar Systems-hosted Subversion repository for Enterprise customers, not individual checkouts, which is  a *comparatively smaller number*.
+
+3. SLA covers website assets *and* CMS online IDE *and* build system availability, but excludes Subversion version control system, which we expect to remain competitive with GitHub's general availability metrics.
+
+4. Current Points of Presence (POP):
+	- Fort Lauderdale, FL
+	- Washington, DC
+	- Phoenix, AZ
+	- Frankfurt, DE
+	- Sydney, AU
+	- São Paolo, BZ
+
+------------
+
+<div class="col-lg-12">
+{% include "enquiry_get.html" %}
+</div>
