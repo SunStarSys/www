@@ -1,0 +1,21 @@
+Title: Accueil
+
+<div class="float-lg-right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+		<div class="card-header">News</div>
+		<div class="card-body">
+			<h4 class="card-title">SunStar Systems CMS Product Availability!</h4>
+			<p class="card-text">Starting <span class='text-danger'>September 1, 2020</span>, our totally revamped and modernized version of the Apache CMS is available to JAM Stack developers as a <span class="text-success">$10 / month</span> soup-to-nuts, full zero-ops solution. Check out the <a href="/CMS/">CMS</a>!</p>
+		</div>
+	</div>
+	<br />
+</div>
+
+![SunStar Systems](images/sunstarlogowhole.png)
+
+## Pages d’intérêt
+
+- [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; ma version de htop pour Solaris 11.4, avec support pour ZFS/Zone/truss/pfiles+pmap.
+- [Sealed Lexicals for Perl 7](/essays/perl7-sealed-lexicals) &mdash; Ajouter :sealed a une declaration de fonction et profiter de vitesse additionnelle fournie par des recherches de fonctions durant al compilation pour tout ses lexicaux typés 
+- [The DevOps Movement](/essays/devops) &mdash; Enfin remplis les détails manquants de cet article.
+- [Exponential Growth and COVID-19](/essays/power) &mdash; Article opportun a propos de la pandémie de 2020.
