@@ -5625,7 +5625,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 .jumbotron {
   padding: 2rem 1rem;
   margin-bottom: 2rem;
-  background-color: #9a9;
+  background-color: #aba;
   color: black;
   border-radius: 0.3rem;
 }
@@ -10821,7 +10821,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar.bg-light {
-  background-color: #9a9 !important;
+  background-color: #aba !important;
   border: 1px solid #282828;
 }
 
