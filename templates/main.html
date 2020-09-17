@@ -76,9 +76,8 @@
     <div class="container theme-showcase">
      	{% block content %}
       	<div class="page-header">
-			<div style="text-align:right; padding-top:
-      10px">{{ breadcrumbs|safe
-      }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';update=1')">
+			<div class="breadcrumbs">
+				{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';update=1')">
 				<img src="/images/edit.png" /></a>
 			</div>
         	<h1>{{ headers.title }}</h1>
