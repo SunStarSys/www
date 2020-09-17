@@ -5,10 +5,9 @@ div.jumbotron img {
 }
 div.right img {
 	width: 200px;
-	z-index: 2;
-	margin: 20px 0 20px 20px;
+	z-index: auto;
 }
-div.right { z-index: 1; margin-left: auto; text-align: right; width: 240px; position: absolute; float:right}
+div.right { z-index: 0; margin: 20px auto 20px 20px; text-align: right; width: 200px; position: relative}
 
 .katex-html { display: none }
 body { padding-top: 90px }
