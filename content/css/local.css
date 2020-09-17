@@ -6,6 +6,8 @@ div.right img {
 	width: 200px;
 }
 
+z-index:global;
+
 div.essay { margin-top:20px; float:right; z-index: 0}
 div.right { margin: 20px 0 20px 20px; float:right; z-index: 1}
 
@@ -65,6 +67,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 	display: block;
 	margin-top: -80px;
 	padding-top: 80px;
+	z-index: 0;
 }
 
 div.breadcrumbs {
