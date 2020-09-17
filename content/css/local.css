@@ -7,7 +7,7 @@ div.right img {
 }
 
 div.essay { margin-top:20px }
-div.right { margin: 20px 0 20px 20px; float:right}
+div.right { margin: 20px 0 20px 20px; float: right}
 
 .katex-html { display: none }
 body { padding-top: 90px }
@@ -70,9 +70,9 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 
 div.breadcrumbs {
 	z-index: 1000;
-    margin-top: 80px;
+    top: 80px;
 	padding-top: 10px;
 	text-align: right;
-    position:relative;
+    position:absolute;
 	right:0;
 }
