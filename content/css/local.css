@@ -5,10 +5,10 @@ div.jumbotron img {
 }
 div.float-lg-right img {
 	width: 200px;
-	z-index: 1;
-	margin: 20px 0 20px 0;
+	z-index: auto;
+	margin: 20px 0 20px 20px;
 }
-div.float-lg-right { z-index: 0 }
+div.float-lg-right { z-index: auto }
 
 .katex-html { display: none }
 body { padding-top: 90px }
@@ -68,8 +68,10 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 	padding-top: 80px;
 }
 
-div.breadcrumbs {
-	z-index: -1;
+div.local_breadcrumbs {
+	z-index: 100;
     margin: 10px 0px 10px auto;
 	text-align: right;
 }
+
+div.page-header { z-index: 10 }
