@@ -58,3 +58,5 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 	margin-top: -80px;
 	padding-top: 80px;
 }
+
+.breadcrumbs { z-index: 100 }
