@@ -73,6 +73,5 @@ div.breadcrumbs {
     top: 80px;
 	padding-top: 10px;
 	text-align: right;
-    position:absolute;
-	right:0;
+    float:right;
 }
