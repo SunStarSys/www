@@ -6,8 +6,8 @@ div.right img {
 	width: 200px;
 }
 
-div.essay { margin-top:20px; float:right;}
-div.right { margin: 20px 0 20px 20px; float:right}
+div.essay { margin-top:20px; float:right; z-index:inherit}
+div.right { margin: 20px 0 20px 20px; float:right; z-index:inherit}
 
 .katex-html { display: none }
 body { padding-top: 90px }
