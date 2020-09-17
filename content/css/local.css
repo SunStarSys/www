@@ -69,8 +69,10 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 
 div.breadcrumbs {
 	z-index: 101;
-    margin: 10px 0px 10px auto;
+    margin: -80px 0px 10px auto;
+	padding-top: 80px;
 	text-align: right;
+    float: right;
 }
 
 div.page-header { z-index: 100; margin-bottom: 10px }
