@@ -7,7 +7,7 @@ div.right img {
 	width: 200px;
 	z-index: auto;
 }
-div.right { z-index: 0; margin: 20px auto 20px 20px; text-align: right; width: 200px; position: relative}
+div.right { z-index: 0; margin: 20px 0 20px auto; text-align: right; width: 200px; position: relative}
 
 .katex-html { display: none }
 body { padding-top: 90px }
