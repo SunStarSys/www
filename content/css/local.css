@@ -1,15 +1,14 @@
 /* local overrides */
 div.jumbotron img {
 	width: 200px;
-	z-index: 0;
 }
 div.right img {
 	width: 200px;
-	z-index: 0;
 }
 
-div.essay { margin-top:20px; z-index: 0; float:right;}
-div.right { z-index: 0; margin: 20px 0 20px 20px; float:right}
+div.essay { margin-top:20px; float:right;}
+div.right { margin: 20px 0 20px 20px; float:right}
+div.jumbotron { float:right; }
 
 .katex-html { display: none }
 body { padding-top: 90px }
