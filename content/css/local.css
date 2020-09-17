@@ -59,4 +59,9 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 	padding-top: 80px;
 }
 
-.breadcrumbs { z-index: 100 }
+div.breadcrumbs {
+	z-index: 100;
+	margin-top: 10px;
+	text-align: right;
+	float: right;
+}
