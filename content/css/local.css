@@ -5,10 +5,10 @@ div.jumbotron img {
 }
 div.float-lg-right img {
 	width: 200px;
-	z-index: auto;
+	z-index: 1;
 	margin: 20px 0 20px 20px;
 }
-div.float-lg-right { z-index: auto }
+div.float-lg-right { z-index: 0; margin-top: 20px }
 
 .katex-html { display: none }
 body { padding-top: 90px }
