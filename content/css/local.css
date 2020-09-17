@@ -6,10 +6,8 @@ div.right img {
 	width: 200px;
 }
 
-z-index:global;
-
-div.essay { margin-top:20px; float:right; z-index: 0}
-div.right { margin: 20px 0 20px 20px; float:right; z-index: 1}
+div.essay { margin-top:20px }
+div.right { margin: 20px 0 20px 20px; float:right}
 
 .katex-html { display: none }
 body { padding-top: 90px }
@@ -75,5 +73,6 @@ div.breadcrumbs {
     margin-top: 80px;
 	padding-top: 10px;
 	text-align: right;
-    float: right;
+    position:relative;
+	right:0;
 }
