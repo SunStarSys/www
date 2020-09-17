@@ -8,7 +8,7 @@ div.right img {
 	z-index: 2;
 	margin: 20px 0 20px 20px;
 }
-div.right { z-index: 1; margin-left: auto; text-align: right; width: 240px }
+div.right { z-index: 1; margin-left: auto; text-align: right; width: 240px; position: absolute; }
 
 .katex-html { display: none }
 body { padding-top: 90px }
