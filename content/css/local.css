@@ -1,9 +1,11 @@
 /* local overrides */
 div.jumbotron img { width: 200px }
-div.float-lg-right img {
+div.right img {
 	width: 200px;
 	margin: 20px 0 20px 0;
 }
+div.right { position: relative; text-align: right; width: 240px; margin-left: auto;}
+
 .katex-html { display: none }
 body { padding-top: 90px }
 .navbar img {height: 38px;}
