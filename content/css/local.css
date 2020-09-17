@@ -70,7 +70,6 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 
 div.breadcrumbs_mine {
 	z-index: 100;
-	margin-top: 10px;
-	text-align: right;
+	margin: 10px 0 10px auto;
 	float: right;
 }
