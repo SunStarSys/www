@@ -1,15 +1,9 @@
 /* local overrides */
-div.jumbotron img {
+div.jumbotron img { width: 200px }
+div.float-lg-right img {
 	width: 200px;
-	z-index: 0;
+	margin: 20px 0 20px 0;
 }
-div.right img {
-	width: 200px;
-	z-index: 2;
-	margin: 20px 0 20px 20px;
-}
-div.right { z-index: 1; margin-left: auto; text-align: right; width: 240px }
-
 .katex-html { display: none }
 body { padding-top: 90px }
 .navbar img {height: 38px;}
@@ -70,8 +64,7 @@ h1, h2, h3, h4, h5, h6, h7, h8, a.reference-link {
 
 div.breadcrumbs {
 	z-index: 100;
-    margin: 10px 0px 10px auto;
+	margin: 10px 0 10px auto;
 	text-align: right;
+	float: right;
 }
-
-div.page-header { z-index: 10 }
