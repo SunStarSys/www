@@ -7,7 +7,7 @@ div.right img {
 	width: 200px;
 	z-index: 0;
 }
- 
+
 div.essay { margin-top:20px; z-index: 0; float:right;}
 div.right { z-index: 0; margin: 20px 0 20px 20px; float:right}
 
@@ -18,7 +18,7 @@ body { padding-top: 90px }
 input.form-control, textarea.form-control {
     width: 25em;
 	max-width: 100%;
- bn
+}
 
 input:invalid {
 	border-color: #CC0000;
