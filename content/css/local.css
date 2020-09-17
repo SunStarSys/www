@@ -3,12 +3,12 @@ div.jumbotron img {
 	width: 200px;
 	z-index: 0;
 }
-div.float-lg-right img {
+div.right img {
 	width: 200px;
-	z-index: 1;
+	z-index: 2;
 	margin: 20px 0 20px 20px;
 }
-div.float-lg-right { z-index: 0; margin-top: 20px }
+div.right { z-index: 1; margin-left: auto; text-align: right }
 
 .katex-html { display: none }
 body { padding-top: 90px }
