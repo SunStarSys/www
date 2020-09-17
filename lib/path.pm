@@ -1,7 +1,5 @@
 package path;
 use SunStarSys::Util qw/walk_content_tree Load/;
-
-use utf8;
 use strict;
 use warnings;
 
