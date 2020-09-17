@@ -9,7 +9,7 @@ div.right img {
 }
 
 div.essay { margin-top:20px }
-div.right { z-index: 0; margin: 20px 0 20px 20px; text-align: right; right:0; float:right}
+div.right { z-index: 0; margin: 20px 0 20px 20px; text-align: right; right:0; float:right; position:absolute}
 
 .katex-html { display: none }
 body { padding-top: 90px }
