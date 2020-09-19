@@ -104,7 +104,7 @@ Title: CMS Plans
 
 1.  Storage Utilization calculated based on size of four working copy checkouts of each site: two source trees and two resulting build trees.
 
-2. Storage Utilization calculated based on total size of SunStar Systems-hosted Subversion repository for Enterprise customers, not individual checkouts, which is  a *comparatively smaller number* (~50% the size of a single checkout).
+2. Storage Utilization calculated based on total size of SunStar Systems-hosted Subversion repository for Enterprise customers, not individual checkouts, which is  a *comparatively smaller number* (about the size of a single source-tree checkout).
 
 3. SLA covers website assets *and* CMS online IDE *and* build system availability, but excludes Subversion version control system, which we expect to remain competitive with GitHub's general availability metrics.
 
