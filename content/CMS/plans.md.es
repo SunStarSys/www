@@ -73,7 +73,7 @@ Title: CMS Precios
 			</ul><ul style="min-height:200px">
 				<li>Tasas de recursos mensuales adicionales:
 					<ol>
-						<li>$100 / 200 MB espacio de almacenamiento del sistema de archivos<sup>2</sup></li>
+						<li>$100 / 100 MB espacio de almacenamiento del sistema de archivos<sup>2</sup></li>
 						<li>$15 / 100 GB banda ancha</li>
 						<li>$100 / ithread mod_perl registry hospedaje</li>
 					</ol>
