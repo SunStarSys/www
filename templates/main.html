@@ -15,7 +15,6 @@
     <link href="/favicon.ico" rel="shortcut icon">
 </head>
  <body>
-    <!-- Fixed navbar -->
     <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
       <div class="container">
         <div class="navbar-header">
@@ -46,7 +45,7 @@
                    {% endifequal %}"><a class="nav-link text-white" href="/CMS/plans.html.{{ lang }}">{% ifequal lang ".en" %}CMS Plans{% endifequal %}{% ifequal lang ".es" %}Planes CMS{% endifequal %}{% ifequal lang ".de" %}CMS-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans CMS{% endifequal %}</a></li>
               </ul>
 			</li>
-            <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
+{#            <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
                    active
                    {% endifequal %}"><a class="nav-link" href="/open-source">{% ifequal lang ".en" %}Open Source{% endifequal %}{% ifequal lang ".es" %}Fuente abierta{% endifequal %}{% ifequal lang ".de" %}Open Source{% endifequal %}{% ifequal lang ".fr" %}Open source{% endifequal %}</a></li>
             <li class="nav-item dropdown">
@@ -75,7 +74,7 @@
 		</div>
       </div>
 	</div>
-    <div class="container theme-showcase">
+ #}   <div class="container theme-showcase">
      	{% block content %}
 		<div class="breadcrumbs">
 			{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
