@@ -39,10 +39,10 @@
               <ul class="dropdown-menu" role="menu">
 				<li class="dropdown-item{% ifequal path "/CMS/index.html"|append:lang %}
 				  active
-                   {% endifequal %}"><a class="nav-link text-white" href="/CMS/">CMS</a></li>
+                   {% endifequal %}"><a class="nav-link text-white" href="/CMS/index.html{{ lang }}">CMS</a></li>
 				<li class="dropdown-item{% ifequal path "/CMS/plans.html"|append:lang %}
 				  active
-                   {% endifequal %}"><a class="nav-link text-white" href="/CMS/plans.html.{{ lang }}">{% ifequal lang ".en" %}CMS Plans{% endifequal %}{% ifequal lang ".es" %}Planes CMS{% endifequal %}{% ifequal lang ".de" %}CMS-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans CMS{% endifequal %}</a></li>
+                   {% endifequal %}"><a class="nav-link text-white" href="/CMS/plans.html{{ lang }}">{% ifequal lang ".en" %}CMS Plans{% endifequal %}{% ifequal lang ".es" %}Planes CMS{% endifequal %}{% ifequal lang ".de" %}CMS-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans CMS{% endifequal %}</a></li>
               </ul>
 			</li>
             <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
