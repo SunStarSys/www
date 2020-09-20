@@ -36,48 +36,51 @@
 				  active
                    {% endifequal %}"><a class="nav-link" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
  			<li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">[% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}{% endifequal %}{% ifequal lang ".de" %}{% endifequal %}{% ifequal lang ".fr" %}{% endifequal %}... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
 				<li class="dropdown-item{% ifequal path "/CMS/index.html"|append:lang %}
 				  active
                    {% endifequal %}"><a class="nav-link text-white" href="/CMS/">CMS</a></li>
-				<li class="dropdown-item{% ifequal path "/StageMaster/index.html{{ lang }}" %}
+				<li class="dropdown-item{% ifequal path "/CMS/plans.html"|append:lang %}
 				  active
-                   {% endifequal %}"><a class="nav-link text-white" href="/CMS/plans">CMS Plans</a></li>
+                   {% endifequal %}"><a class="nav-link text-white" href="/CMS/plans.html.{{ lang }}">{% ifequal lang ".en" %}CMS Plans{% endifequal %}{% ifequal lang ".es" %}Planes CMS{% endifequal %}{% ifequal lang ".de" %}CMS-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans CMS{% endifequal %}</a></li>
               </ul>
 			</li>
             <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
                    active
-                   {% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
+                   {% endifequal %}"><a class="nav-link" href="/open-source">{% ifequal lang ".en" %}Open Source{% endifequal %}{% ifequal lang ".es" %}Fuente abierta{% endifequal %}{% ifequal lang ".de" %}Open Source{% endifequal %}{% ifequal lang ".fr" %}Open source{% endifequal %}</a></li>
             <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">More... <span class="caret"></span></a>
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{% ifequal lang ".en" %}More{% endifequal %}{% ifequal lang ".es" %}Más{% endifequal %}{% ifequal lang ".de" %}Mehr{% endifequal %}{% ifequal lang ".fr" %}Plus{% endifequal %}... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-				<li class="dropdown-item"><a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Site Source</a></li>
+				<li class="dropdown-item">
+					<a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">{% ifequal lang ".en" %}Site Source{% endifequal %}{% ifequal lang ".es" %}Fuente del sitio{% endifequal %}{% ifequal lang ".de" %}Site-Quelle{% endifequal %}{% ifequal lang ".fr" %}Source du site{% endifequal %}</a>
+				  </li>
                 <li class="dropdown-item divider"></li>
-                <li class="dropdown-header text-white">Site Maps</li>
-				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.en">English</a></li>
-				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.es">Spanish</a></li>
-				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.de">German</a></li>
-				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.fr">French</a></li>
+                <li class="dropdown-header text-white">{% ifequal lang ".en" %}Site Maps{% endifequal %}{% ifequal lang ".es" %}Mapas del sitio{% endifequal %}{% ifequal lang ".de" %}Site Maps{% endifequal %}{% ifequal lang ".fr" %}Cartes du site{% endifequal %}</li>
+				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.en">{% ifequal lang ".en" %}English{% endifequal %}{% ifequal lang ".es" %}Inglés{% endifequal %}{% ifequal lang ".de" %}Englisch{% endifequal %}{% ifequal lang ".fr" %}Anglais{% endifequal %}</a></li>
+				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.es">{% ifequal lang ".en" %}Spanish{% endifequal %}{% ifequal lang ".es" %}Español{% endifequal %}{% ifequal lang ".de" %}Spanisch{% endifequal %}{% ifequal lang ".fr" %}Espagnol{% endifequal %}</a></li>
+				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.de">{% ifequal lang ".en" %}German{% endifequal %}{% ifequal lang ".es" %}Alemán{% endifequal %}{% ifequal lang ".de" %}Deutsche{% endifequal %}{% ifequal lang ".fr" %}Allemand{% endifequal %}</a></li>
+				<li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.fr">{% ifequal lang ".en" %}French{% endifequal %}{% ifequal lang ".es" %}Francés{% endifequal %}{% ifequal lang ".de" %}Französisch{% endifequal %}{% ifequal lang ".fr" %}Français{% endifequal %}</a></li>
                  <li class="dropdown-item divider"></li>
-                <li class="dropdown-header text-white">Engagements</li>
-                <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Clients</a></li>
-                <li class="dropdown-item"><a class="nav-link text-white" href="/essays">Essays</a></li>
+                <li class="dropdown-header text-white">{% ifequal lang ".en" %}Engagements{% endifequal %}{% ifequal lang ".es" %}Compromisos{% endifequal %}{% ifequal lang ".de" %}Engagements{% endifequal %}{% ifequal lang ".fr" %}Engagements{% endifequal %}</li>
+                <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}Clients{% endifequal %}{% ifequal lang ".es" %}Clientes{% endifequal %}{% ifequal lang ".de" %}Kunden{% endifequal %}{% ifequal lang ".fr" %}Clients{% endifequal %}</a></li>
+                <li class="dropdown-item"><a class="nav-link text-white" href="/essays">{% ifequal lang ".en" %}Essays{% endifequal %}{% ifequal lang ".es" %}Ensayos{% endifequal %}{% ifequal lang ".de" %}Aufsätze{% endifequal %}{% ifequal lang ".fr" %}Essais{% endifequal %}</a></li>
               </ul>
             </li>
             <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
                      active
-                     {% endifequal %}"><a class="nav-link" href="/powered-by">Powered by...</a>
+                     {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
             </li>
           </ul>
-        </div><!--/.nav-collapse -->
+		</div>
       </div>
 	</div>
     <div class="container theme-showcase">
      	{% block content %}
 		<div class="breadcrumbs">
-			{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';update=1')">
-			<img src="/images/edit.png" /></a>
+			{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
+				<img src="/images/edit.png" />
+			</a>
 		</div>
         <h1>{{ headers.title }}</h1>
       	<div class="jumbotron">{{ content|markdown }}</div>
