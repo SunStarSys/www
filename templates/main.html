@@ -34,7 +34,7 @@
             <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
 				  active
                    {% endifequal %}"><a class="nav-link" href="/contact">{% ifequal lang ".en" %}Contact{% endifequal %}{% ifequal lang ".es" %}Contacto{% endifequal %}{% ifequal lang ".de" %}Kontakt{% endifequal %}{% ifequal lang ".fr" %}Contact{% endifequal %}</a></li>
- 			<li class="nav-item dropdown">
+{# 			<li class="nav-item dropdown">
               <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">[% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}Productos{% endifequal %}{% ifequal lang ".de" %}Produkte{% endifequal %}{% ifequal lang ".fr" %}Des produits{% endifequal %}... <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
 				<li class="dropdown-item{% ifequal path "/CMS/index.html"|append:lang %}
@@ -45,7 +45,7 @@
                    {% endifequal %}"><a class="nav-link text-white" href="/CMS/plans.html.{{ lang }}">{% ifequal lang ".en" %}CMS Plans{% endifequal %}{% ifequal lang ".es" %}Planes CMS{% endifequal %}{% ifequal lang ".de" %}CMS-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans CMS{% endifequal %}</a></li>
               </ul>
 			</li>
-{#            <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
+            <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
                    active
                    {% endifequal %}"><a class="nav-link" href="/open-source">{% ifequal lang ".en" %}Open Source{% endifequal %}{% ifequal lang ".es" %}Fuente abierta{% endifequal %}{% ifequal lang ".de" %}Open Source{% endifequal %}{% ifequal lang ".fr" %}Open source{% endifequal %}</a></li>
             <li class="nav-item dropdown">
