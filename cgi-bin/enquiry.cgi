@@ -13,10 +13,10 @@ my $date       = gmtime;
 
 my $pool       = APR::Pool->new;
 my $apreq     = APR::Request::CGI->handle($pool);
-my $body;
 
 sub render {
-	my $template = shift;
+    my $template = shift;
+    my $body      = $apreq->body // {};
     my %args      = (%$body, @_);
     local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
     print "Content-Type: text/html; charset='utf-8'\n\n";
@@ -25,7 +25,7 @@ sub render {
 }
 
 if ($ENV{REQUEST_METHOD} eq "POST") {
-    $body = $apreq->body;
+    my $body = $apreq->body;
     my ($name, $email, $subject, $content, $site, $hosting, $lang) = @{$body}{qw/name email subject content site hosting lang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
     s/\n//g for $name, $email, $subject, $hosting, $site, $lang;
