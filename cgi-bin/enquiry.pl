@@ -63,7 +63,6 @@ EOT
 
    	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
     render "enquiry_post.html", $r,
-        lang      => ".en",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
         headers => { title => "CMS Sales Enquiry" };
 }
