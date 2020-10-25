@@ -43,6 +43,16 @@ But don't just take our word for it, see for yourselves what's typically involve
 
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure. See our [CMS Plans](plans) for the current deals.
 
+Once you've experienced our CMS/IDE/JAM Stack infrastructure, you will never understand why this type of SaaS infrastructure wasn't done *our* way from the very beginning by earlier entrants to this market.  Other CMS's oversimplify their UI to make it *accessible to non-webstack developers*.  We give you **all** the rope you can handle, with a version-control-backed IDE that supports raw web formats with syntax highlighting and code completion:
+
+- markdown (with integrated real-time HTML previews)
+- html (with django template syntax extensions and embedded javascript/css)
+- css
+- javascript/json
+- image rendering and file uploads in any format you prefer (.ico, .png, .gif, .jpeg, etc)
+- raw directory/file creation, modification, and removal
+- variety of supported server programming languages: javascript, python3, perl7
+
 </div>
 <div class="col-lg-7">
 	<div class="embed-responsive embed-responsive-16by9">
