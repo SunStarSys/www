@@ -18,7 +18,7 @@ my $r = Apache2::RequestUtil->request;
 sub render {
     my $template = shift;
     my $r = shift;
-    my $body      = APR::Request::Apache2->handle($r)->body // {};
+    my $body      = APR::Request::Apache2->handle($r)->param // {};
     my %args      = (%$body, @_);
     local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
     $r->content_type("text/html; charset='utf-8'");
