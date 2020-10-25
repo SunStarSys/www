@@ -28,9 +28,9 @@ sub render {
 
 if ($r->method eq "POST") {
     my $body = APR::Request::Apache2->handle($r)->body;
-    my ($name, $email, $subject, $content, $site, $hosting, $lang) = @{$body}{qw/name email subject content site hosting lang/};
-    s/\r//g for $name, $email, $subject, $content, $site, $hosting, $lang;
-    s/\n//g for $name, $email, $subject, $hosting, $site, $lang;
+    my ($name, $email, $subject, $content, $site, $hosting, $plang) = @{$body}{qw/name email subject content site hosting plang/};
+    s/\r//g for $name, $email, $subject, $content, $site, $hosting, $plang;
+    s/\n//g for $name, $email, $subject, $hosting, $site, $plang;
 
     my ($cn, $srs_sender) = ($name, $email);
 
@@ -58,7 +58,7 @@ $content
 
 WEBSITE: $site
 HOSTING: $hosting
-LANGUAGE: $lang
+LANGUAGE: $plang
 EOT
 
    	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
