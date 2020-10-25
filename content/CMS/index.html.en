@@ -43,17 +43,8 @@ But don't just take our word for it, see for yourselves what's typically involve
 
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure. See our [CMS Plans](plans) for the current deals.
 
-Once you've experienced our CMS/IDE/JAM Stack infrastructure, you will never understand why this type of SaaS infrastructure wasn't done *our* way from the very beginning by earlier entrants to this market.  Other CMS's oversimplify their UI to make it *accessible to non-webstack developers*.  We give you **all** the rope you can handle, with a version-control-backed IDE that supports raw web formats with syntax highlighting and code completion:
-
-- markdown (with integrated real-time HTML previews)
-- html (with django template syntax extensions and embedded javascript/css)
-- css
-- javascript/json
-- image rendering and file uploads in any format you prefer (.ico, .png, .gif, .jpeg, etc)
-- raw directory/file creation, modification, and removal
-- variety of supported server programming languages: javascript, python3, perl7
-
 </div>
+
 <div class="col-lg-7">
 	<div class="embed-responsive embed-responsive-16by9">
 	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/96m8G9jCiyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -71,6 +62,18 @@ Multi-gigabyte source trees are simply no match for it &mdash; full site build d
 This technology was first invented in late 2011 by members of the Apache Infrastructure Team. The phrase "[JAM Stack](https://jamstack.wtf)" was coined years later, by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
 
 The system we created for The ASF has been running on autopilot for the past 6 years.  The only issues we had with it from a stability standpoint revolved around ZFS usage on FreeBSD 9.1, which was a work in progress back then.  The fact is that this CMS/IDE is just the CI / CD coordination hub for power users on CDN services (or similar), and those CDN's are where the action is for SLA performance on the JAM Stack.  If *our CMS system* goes down, your ability to modify your live site will be impacted, but the last-mile delivery to your actual site's consumers is unimpacted thereby.  If The ASF's history with this system is a guide, the likelihood of an unplanned downtime event is relatively remote, especially when compared to the version control system which underpins it.
+
+Once you've experienced our CMS/IDE/JAM Stack infrastructure, you will never understand why this type of SaaS infrastructure wasn't done *our* way from the very beginning by earlier entrants to this market.  Other CMS's oversimplify their UI to make it *accessible to non-webstack developers*.  We give you **all** the rope you can handle, with a version-control-backed IDE that supports raw web formats with syntax highlighting and code completion:
+
+<ul>
+	<li>markdown (with integrated real-time HTML previews)</li>
+	<li>html (with django template syntax extensions and embedded javascript/css)</li>
+	<li>css</li>
+	<li>javascript,json</li>
+	<li>image rendering and file uploads in any format you prefer (.ico, .png, .gif, .jpeg, etc)</li>
+	<li>raw directory/file creation, modification, and removal</li>
+	<li>variety of supported server programming languages: javascript, python3, perl7</li>
+</ul>
 
 <span class="text-white">Want to give it a quick spin to see how fast and easy it is?</span>
 
