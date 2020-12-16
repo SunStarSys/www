@@ -33,7 +33,7 @@ walk_content_tree {
         }
         if (s!/index\.html\.$lang$!!) {
             $dependencies{"$_/index.html.$lang"} = [
-                grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm}"),
+                grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
                                             glob("content$_/*/index.html.$lang"))
             ];
             push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
