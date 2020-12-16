@@ -28,7 +28,7 @@ our %dependencies;
 
 walk_content_tree {
     for my $lang (qw/en es de fr/) {
-        if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files|slides/!) {
+        if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
             push @{$dependencies{"/sitemap.html.$lang"}}, $_;
         }
         if (s!/index\.html\.$lang$!!) {
