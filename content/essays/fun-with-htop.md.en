@@ -2,13 +2,19 @@ Title: Fun with htop
 
 ## Advanced htop Features on Popular Unix Platforms
 
-- customize display `C`
-- search `/` or filter `\` lightweight process (LWP, aka pthread) list
-- per-LWP commands
-	- system trace `s`
-	- list of open file descriptors `l`
-	- environment variables `e`
-	- send a signal with kill `k`
+- Deltas from `top`
+	- sophisticated interactive behaviors
+	- thematic, **semantic** color schemes
+	- operates at the POSIX thread level, not just full processes
+
+- Features
+	- customize display `C`
+	- search `/` or filter `\` lightweight process (LWP, aka pthread) list
+	- per-LWP commands
+		- system trace `s`
+		- list of open file descriptors `l`
+		- environment variables `e`
+		- send a signal with kill `k`
 
 ### Linux
 
@@ -17,7 +23,7 @@ OOTB fully operational feature-set.
 ### OSX Port
 
 - Enable DTrace (requires boot into Recovery Mode)
-- copy `dtruss-htop` to `~/bin` and execute to create `strace` symlink
+- copy [dtruss-htop](https://github.com/joesuf4/home/master/blob/bin/dtruss-htop) to `~/bin` and execute to create `strace` symlink
 
 ### Solaris 11 / FreeBSD Ports
 
