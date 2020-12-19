@@ -4,7 +4,7 @@ Title: Fun with htop
 
 - customize top-matter
 - search or filter lightweight process (LWP, aka pthread) list
-- per-LWP-item commands
+- per-LWP commands
 	- system trace
 	- list of open file descriptors
 	- environment variables
