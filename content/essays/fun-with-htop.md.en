@@ -3,11 +3,11 @@ Title: Fun with htop
 ## Advanced htop Features on Popular Unix Platforms
 
 - customize top-matter
-- search or filter lightweight process (LWP, aka pthread) list
+- search '/' or filter '\' lightweight process (LWP, aka pthread) list
 - per-LWP commands
-	- system trace
-	- list of open file descriptors
-	- environment variables
+	- system trace 's'
+	- list of open file descriptors 'l'
+	- environment variables 'e'
 
 ### Linux
 
