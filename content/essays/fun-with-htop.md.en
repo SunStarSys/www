@@ -25,7 +25,7 @@ OOTB fully operational feature-set.
 - Enable DTrace (requires [boot into Recovery Mode to disable SIP](https://apple.stackexchange.com/questions/208762/now-that-el-capitan-is-rootless-is-there-any-way-to-get-dtrace-working))
 - copy [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) to `~/bin` and execute to create `strace` symlink
 
-### Solaris 11 / FreeBSD Ports
+### [Solaris 11](https://github.com/joesuf4/htop) / FreeBSD Ports
 
 - ZFS statistics
 - Solaris LWP Accounting Deltas
