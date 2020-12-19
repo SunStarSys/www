@@ -8,15 +8,18 @@ Title: Fun with htop
 	- system trace `s`
 	- list of open file descriptors `l`
 	- environment variables `e`
+	- send a signal with kill `k`
 
 ### Linux
 
-Linux
+OOTB fully operational feature-set.
 
-### OSX
+### OSX Port
 
-OSX
+- Enable DTrace (requires boot into Recovery Mode)
+- copy `dtruss-htop` to `~/bin` and execute to create `strace` symlink
 
-### Solaris 11
+### Solaris 11 / FreeBSD Ports
 
-Solaris
+- ZFS statistics
+- Solaris LWP Accounting Deltas
