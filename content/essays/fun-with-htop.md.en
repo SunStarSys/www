@@ -23,7 +23,7 @@ OOTB fully operational feature-set.
 ### OSX Port
 
 - Enable DTrace (requires boot into Recovery Mode)
-- copy [dtruss-htop](https://github.com/joesuf4/home/master/blob/bin/dtruss-htop) to `~/bin` and execute to create `strace` symlink
+- copy [dtruss-htop](https://github.com/joesuf4/home/blob/master/bin/dtruss-htop) to `~/bin` and execute to create `strace` symlink
 
 ### Solaris 11 / FreeBSD Ports
 
