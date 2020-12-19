@@ -2,9 +2,12 @@ Title: Fun with htop
 
 # Advanced htop Features on Popular Unix Platforms
 
-- system trace
-- list of open file descriptors
-- environment variables
+- customize top-matter
+- search or filter lightweight process (LWP, aka pthread) list
+- per-LWP-item commands
+	- system trace
+	- list of open file descriptors
+	- environment variables
 
 ## htop on Linux
 
