@@ -12,7 +12,8 @@ Title: Fun with htop
 - Features
 
 	- customize display `C`
-	- search `/` or filter `\` lightweight process (LWP, aka pthread) list
+	- search `/` or filter `\` lightweight process (LWP, aka pthread) by name
+	- filter `u` LWP by user name
 	- per-LWP commands
 		- system trace `s`
 		- list of open file descriptors `l`
