@@ -42,6 +42,7 @@ OOTB fully operational feature-set.
 ### [Solaris 11](https://github.com/joesuf4/htop/tree/solaris-stable) / FreeBSD Ports
 
 - ZFS ARC statistics
+- Zone Name / ID columns
 - Solaris LWP Accounting Deltas
 	- bi-level PID + LWPID
 	- does not provide full command arguments, just command name
