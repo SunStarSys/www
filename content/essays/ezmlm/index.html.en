@@ -11,7 +11,7 @@ pull_header.pm.  If you have an `svn` client handy, the simplest way
 to fetch this tree "in-situ" is via:
 
 ```shell
-	% svn co https://vcs.sunstarsys.com/repos/svn/public/site/trunk/content/essays/ezmlm
+	% svn co https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/content/essays/ezmlm
 ```
 
 {% endfilter %}
