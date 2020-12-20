@@ -20,14 +20,14 @@ Title: Fun with htop
 - Features
 
 	- customize display `C`
-	- search `/` or filter `\` lightweight process (LWP, aka pthread) by name
-	- filter `u` LWP by user name
+	- search `/` or filter `\` lightweight processes (LWP, aka pthreads) by name
+	- filter LWP by user name `u`
 	- toggle `t` tree view
 	- per-LWP commands
-		- system trace `s`
-		- list of open file descriptors `l`
-		- environment variables `e`
-		- send a signal with kill `k`
+		- `s` system trace
+		- `l` list of open file descriptors
+		- `e` environment variables
+		- `k` send a signal with kill
 
 ### Linux
 
