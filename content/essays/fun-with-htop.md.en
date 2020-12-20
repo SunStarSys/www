@@ -35,3 +35,5 @@ OOTB fully operational feature-set.
 
 - ZFS ARC statistics
 - Solaris LWP Accounting Deltas
+	- bi-level PID + LWPID
+	- does not provide full command arguments, just command name
