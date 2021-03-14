@@ -45,8 +45,10 @@ if ($r->method eq "POST") {
 	$srs_sender =~ /(.*)/;
 	length $1 or die "BAD EMAIL: $email";
     %ENV = ();
-	open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
-   	print $sendmail <<EOT;
+
+	if ($subject =~ /^cms/i) {
+		open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
+   		print $sendmail <<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
 Reply-To: $cn <$email>
@@ -61,8 +63,9 @@ HOSTING: $hosting
 LANGUAGE: $plang
 EOT
 
-   	close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
-    render "enquiry_post.html", $r,
+   		close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
+	}
+	render "enquiry_post.html", $r,
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
         headers => { title => "CMS Sales Enquiry" };
 }
