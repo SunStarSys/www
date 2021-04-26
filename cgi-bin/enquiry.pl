@@ -40,13 +40,12 @@ if ($r->method eq "POST") {
             $_ = "=?utf-8?Q?$_?=";
         }
     }
-
-    s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
-	$srs_sender =~ /(.*)/;
-	length $1 or die "BAD EMAIL: $email";
-    %ENV = ();
-
 	if ($subject =~ /^cms/i) {
+    	s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
+		$srs_sender =~ /(.*)/;
+		length $1 or die "BAD EMAIL: $email";
+    	%ENV = ();
+
 		open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
    		print $sendmail <<EOT;
 To: $to
