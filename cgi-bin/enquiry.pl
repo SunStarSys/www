@@ -40,6 +40,7 @@ if ($r->method eq "POST") {
             $_ = "=?utf-8?Q?$_?=";
         }
     }
+
 	if ($subject =~ /^cms/i) {
     	s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
 		$srs_sender =~ /(.*)/;
@@ -64,6 +65,7 @@ EOT
 
    		close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
 	}
+
 	render "enquiry_post.html", $r,
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
         headers => { title => "CMS Sales Enquiry" };
