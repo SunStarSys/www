@@ -132,7 +132,7 @@ Sample code:
 
 ## Production-Quality Perl 5 Prototype: sealed.pm v1.0.7
 
-Untested on non-ithreaded perl builds.
+Requires ithreaded perl builds.  Patches welcome for other types of perl builds!
 
 See <https://github.com/SunStarSys/cms/blob/master/lib/sealed.pm>.
 
