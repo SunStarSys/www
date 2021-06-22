@@ -108,12 +108,12 @@ sealed: compiling main->bar lookup.
 }
 Foo=HASH(0x415fb0)
 CODE(0x4b73c0)
-            Rate  class method   anon sealed   func
-class  2028398/s     --    -4%   -30%   -34%   -36%
-method 2118644/s     4%     --   -27%   -31%   -33%
-anon   2906977/s    43%    37%     --    -5%    -8%
-sealed 3058104/s    51%    44%     5%     --    -3%
-func   3154574/s    56%    49%     9%     3%     --
+             Rate  class method   anon sealed   func
+class  15873016/s     --    -6%   -32%   -33%   -35%
+method 16949153/s     7%     --   -27%   -29%   -31%
+anon   23255814/s    47%    37%     --    -2%    -5%
+sealed 23809524/s    50%    40%     2%     --    -2%
+func   24390244/s    54%    44%     5%     2%     -
 ```
 
 ## Proposed Perl 7 solution: `:sealed`  subroutines for typed lexicals
