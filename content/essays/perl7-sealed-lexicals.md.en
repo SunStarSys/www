@@ -134,7 +134,7 @@ Sample code:
 
 See <https://github.com/SunStarSys/cms/blob/master/lib/sealed.pm>.
 
-This will allow Perl 5 to do the sample code's `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers, not OO-module authors.
+This will allow Perl 5 to do the sample code's `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers. Not OO-module authors.
 
 This idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Read this](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) for the CPython effort from about a decade ago.
 
