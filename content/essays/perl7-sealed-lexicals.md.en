@@ -132,7 +132,7 @@ Sample code:
 
 ## Production-Quality Perl  v5.22+ Prototype: sealed.pm v3.0.3
 
-Requires a functional `B::Generate` install.  Compile instructions for perl 5.30+ are available in the pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm and not segfault ad nauseum at scale.  Tested on Solaris 11.4 on amd64.
+Requires a functional `B::Generate` install.  Compile instructions for perl 5.30+ are available in the pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault ad nauseum at scale.  Tested on Solaris 11.4 on amd64.
 
 See <https://github.com/SunStarSys/cms/blob/master/lib/sealed.pm>. Look for `bench.pl` in the parent directory.
 
