@@ -1,8 +1,10 @@
 Title: Information Security Primer
 
-## Q: What is the primary goal of InfoSec?
+[TOC]
 
-## A: To ensure all changes at context boundaries are well-regulated.
+#### What is the primary goal of InfoSec?
+
+To ensure all changes at context boundaries are well-regulated.
 
 For example, every system call on a UNIX platform satisfies this condition, in terms of the UNIX user/group process+filesystem security model. The literal definition of a context switch, as typified by system calls, involves API-usage sanity checking on the kernel's side of the call.
 
@@ -14,9 +16,9 @@ Securely scheduling CPUs to perform kernel-level work on behalf of some "authori
 
 In case it's not clear at this point, DevOps/SRE teams triaging SaaS security (CAI) incidents on Linux should familiarize themselves with htop's strace interface via the 's' key! Better still to master strace as a stand-alone. (FYI: I have static compiles of these binaries on github that can be delivered to K8S containers or nodes, including via SSH/SSM delivery, at https://lnkd.in/eA8NDi3m).
 
-## Q: How does this relate to Zero-Trust initiatives, as a practical matter?
+#### How does this relate to Zero-Trust initiatives, as a practical matter?
 
-## A: Zero-Trust Architectures have no network-specific context boundaries.
+Zero-Trust Architectures have no network-specific context boundaries.
 
 While there may be VPN/Firewall contexts in reality, none of those details are relevant to InfoSec within a Zero-Trust framework. In other words, such network topology security initiatives may augment Zero-Trust initiatives, but they are never relied on within a Zero Trust initiative at the base server-host security level on up through the application level.
 
