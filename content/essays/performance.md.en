@@ -50,9 +50,9 @@ Take the second #performance #benchmark off that page, and scale it up as before
     wc -l 0.00s user 0.00s system 0% cpu 0.381 total
 ```
 
-A tuned pffxg.sh is still faster, despite all the work put into microoptimizing ripgrep for this C-file lookup.
+A tuned `pffxg.sh` is still faster, despite all the work put into microoptimizing ripgrep for this C-file lookup.
 
-.25M LOC between ripgrep and ugrep. 632 LOC for pffxg.sh. Silly.
+.25M LOC between `ripgrep` and `ugrep`. 632 LOC for `pffxg.sh`. Silly.
 
 Because it's such a small shell program, pffxg.sh can give you powerful hooks into its internals with almost zero effort. Even the grep command itself is customizable: any command you need to run on a select corpus of files, that can accept a list of filenames appended to the end of its arguments, is fair game. Here's an "total line count in MiLOC" exercise on the linux kernel git repo:
 
@@ -98,6 +98,6 @@ and the ripgrep version:
 
 Real Speed comes from balance and flexibility, and functional programming techniques, not rigid fixation on imperative techniques in static, compiled programming languages that are a bear to work with from the balance and flexibility perspectives. Such overhyped, imperative languages are great targets for very specific problem domains, but are terrible for system-wide application performance.
 
-pffxg.sh is not a product, and this is not a sales pitch for it. It's an **example** to illustrate my point in a very dramatic way. If you are familiar with the long history of filtered-recursive-grep solutions on GitHub, they all are premised on the notion that the problem with Andy Lester's original Perl implementation "ack", was that it was written in Perl. The only real problem from a performance standpoint was that the Perl was written by Andy, who didn't seem to have any knack for systems performance concepts, like farming out the `find` parallelization work to a purpose-built C binary, but instead aiming for lazy portability and trying to capture the whole code as a single-threaded Pure Perl oddity.
+`pffxg.sh` is not a product, and this is not a sales pitch for it. It's an **example** to illustrate my point in a very dramatic way. If you are familiar with the long history of filtered-recursive-grep solutions on GitHub, they all are premised on the notion that the problem with Andy Lester's original Perl implementation "ack", was that it was written in Perl. The only real problem from a performance standpoint was that the Perl was written by Andy, who didn't seem to have any knack for systems performance concepts, like farming out the `find` parallelization work to a purpose-built C binary, but instead aiming for lazy portability and trying to capture the whole code as a single-threaded Pure Perl oddity.
 
 May a thousand flowers bloom, no matter silly they seem to me!
