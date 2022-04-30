@@ -52,7 +52,7 @@ Take the second #performance #benchmark off that page, and scale it up as before
 
 A tuned `pffxg.sh` is still faster, despite all the work put into microoptimizing ripgrep for this `C`-file lookup.
 
-The way I used this script with [AOSP](https://source.android.com) was to schedule a `repo` sync and a subsequent `pffxg.sh` **`lzop` compressed-cache seed-to-`tmpfs`** run every morning before work (via `crontab`), with `PFFXG_CACHE=...` set in my `~/.pffxg.conf` file. Thus any `pffxg.sh` invocations I ran throughout the workday would use the compressed cache in `tmpfs`, no matter what the state of the kernel's filesystem cache was at the time.
+The way I used this script with [AOSP](https://source.android.com) was to schedule a `repo` sync and a subsequent `pffxg.sh` **`lzop`-compressed-cache seed-to-`tmpfs`** run every morning before work (via `crontab`), with `PFFXG_CACHE=...` set in my `~/.pffxg.conf` file. Thus any `pffxg.sh` invocations I ran throughout the workday would use the compressed cache in `tmpfs`, no matter what the state of the kernel's filesystem cache was at the time.
 
 .25M LOC between `ripgrep` and [ugrep](https://github.com/Genivia/ugrep). 632 LOC for `pffxg.sh`. Silly.
 
