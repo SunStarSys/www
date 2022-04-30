@@ -12,7 +12,7 @@ Even a dependency-free bash script is a workable solution for many basic tasks. 
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
-That script is an order of magnitude faster than the usual suspects on GitHub, which were all written in static, compiled programming languages. But by identifying the exact bottleneck in bash (looping with high volume `fork+exec` calls in the middle), and using `xargs` instead, you get a script that looks a lot like this one, with the core algorithm implemented in 10 lines of `shell`.
+That script is an order of magnitude faster than the usual suspects on GitHub, which were all written in static, compiled programming languages. But by identifying the exact bottleneck in `bash` (looping with high volume `fork+exec` calls in the middle), and using `xargs` instead, you get a script that looks a lot like this one, with the core algorithm implemented in 10 lines of `shell`.
 
 It's also using the Open Source Community of **SME**'s in a smart way, instead of the way the other "filtered recursive grep" implementations on GitHub did. Instead of internally adopting and maintaining my own (threaded) implementation of `find`, `xargs`, and `grep`, I just reuse the pre-installed executables other **SME**'s have been perfecting over decades **as-is**. I don't need to master their implementations, just reuse their `CLI`s. I don't even want to master them, that's **their** bailiwick. Performance deltas only matter when they are several seconds or more, given the application's expected (human) use cases.
 
