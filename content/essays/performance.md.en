@@ -12,13 +12,13 @@ Even a dependency-free bash script is a workable solution for many basic tasks. 
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
-That script is an order of magnitude faster than the usual suspects on GitHub, which were all written in static, compiled programming languages. But by identifying the exact bottleneck in bash (looping with a high volume fork/exec call in the middle), and using xargs instead, you get a script that looks a lot like this one, with the core algorithm implemented in 10 lines of shell.
+That script is an order of magnitude faster than the usual suspects on GitHub, which were all written in static, compiled programming languages. But by identifying the exact bottleneck in bash (looping with high volume `fork+exec` calls in the middle), and using `xargs` instead, you get a script that looks a lot like this one, with the core algorithm implemented in 10 lines of `shell`.
 
 It's also using the Open Source Community of Subject Matter Experts in a smart way, instead of the way the other "filtered recursive grep" implementations on GitHub did. Instead of internally adopting and maintaining my own (threaded) implementation of `find`, `xargs`, and `grep`, I just reuse the pre-installed executables other SME's have been perfecting over decades **as-is**. I don't need to master their implementations, just reuse their CLIs. I don't even want to master them, that's **their** bailiwick. Performance deltas only matter when they are several seconds or more, given the application's expected (human) use cases.
 
-To see the opposite tack, where everything is done in-house, fully microoptimized, and still can't beat this script with the default search options, and no caching system available, here is a fine example: https://github.com/BurntSushi/ripgrep
+To see the opposite tack, where everything is done in-house, fully microoptimized, and still can't beat this script with the default search options, and no caching system available, here is a fine example <https://github.com/BurntSushi/ripgrep>
 
-Just to pull the first #performance #benchmark off that page, and scale it up from a toy sample tree size (linux kernel sources), to a heterogeneous tree that's 23GB: (best runs after 3 iterations; LANG=en_US.UTF-8)
+Just to pull the first #performance #benchmark off that page, and scale it up from a toy sample tree size (linux kernel sources), to a heterogeneous tree that's `23GB`: (best runs after 3 iterations; `LANG=en_US.UTF-8`)
 
 ```shell
     % du -sh .
@@ -33,11 +33,11 @@ Just to pull the first #performance #benchmark off that page, and scale it up fr
     wc -l 0.00s user 0.00s system 0% cpu 4.501 total
 ```
 
-It's quite silly to microoptimize something that's deeply tied to the state of the kernel's filesystem cache for your search. The variation in performance timings is dominated by the access speed to the corpus of files' contents, and it is an order of magnitude more relevant than any other factor to the end results. Being on NVRAM helps, but nothing in this space beats RAM itself.
+It's quite silly to microoptimize something that's deeply tied to the state of the kernel's filesystem cache for your search. The variation in performance timings is dominated by the access speed to the corpus of files' contents, and it is an order of magnitude more relevant than any other factor to the end results. Being on an `NVME` helps, but nothing in this space beats `RAM` itself.
 
 That's why having an in-memory, compressed cache for a large corpus of files, will stabilize the performance timings. It is surprising that no one else thought this was important enough to support.
 
-Take the second #performance #benchmark off that page, and scale it up as before (same 23GB tree):
+Take the second #performance #benchmark off that page, and scale it up as before (same `23GB` tree):
 
 ```shell
 	% time rg -tc -uuuiwn '[A-Z]+_SUSPEND' | wc -l
@@ -69,7 +69,7 @@ Because it's such a small shell program, `pffxg.sh` can give you powerful hooks 
     awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 11% cpu 0.192 total
 ```
 
-ripgrep version:
+`ripgrep` version:
 
 ```shell
 	% time rg -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
@@ -87,7 +87,7 @@ Here it is restricted to `C`-files (same linux tree):
     awk '$2 == "total" {a+=$1} END {print a/1024**2}' 0.02s user 0.00s system 9% cpu 0.177 total
 ```
 
-and the ripgrep version:
+and the `ripgrep` version:
 
 ```shell
 	% time rg -tc -c \$ | awk -F : '{a+=$2} END {print a/1024**2}'
@@ -100,4 +100,4 @@ Real **Application Performance** comes from balance, flexibility, and functional
 
 `pffxg.sh` is not a product, and this is not a sales pitch for it. It's an **example** to illustrate my point in a very dramatic way. If you are familiar with the long history of filtered-recursive-grep solutions on GitHub, they all are premised on the notion that the problem with Andy Lester's original `Perl` implementation [ack](https://beyondgrep.com/), was that it was written in `Perl`. The only real problem from a performance standpoint was that the `Perl` was written by Andy, who didn't seem to have any knack for systems performance concepts (like farming out the `find` parallelization work to a purpose-built `C` binary), but instead aimed for lazy portability by trying to capture the whole code as a single-threaded Pure `Perl` oddity.
 
-May a thousand flowers bloom, no matter silly they seem to me!
+May a thousand flowers bloom, no matter silly they seem!
