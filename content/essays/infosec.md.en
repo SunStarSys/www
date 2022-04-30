@@ -14,7 +14,7 @@ The UNIX security model alone never made provisions for networked client/server 
 
 Securely scheduling CPUs to perform kernel-level work on behalf of some "authorized user/group/role context" untethered to the underlying process's UNIX user/group context has always been outside of the UNIX model. Many infosec initiatives fail to recognize this regulatory responsibility belongs to applications alone; don't let yours be one!
 
-In case it's not clear at this point, DevOps/SRE teams triaging SaaS security (**CAI**) incidents on Linux should familiarize themselves with [htop](fun-with-htop)'s strace interface via the `s` key! Better still to master strace as a stand-alone. (FYI: I have static compiles of these binaries on github that can be delivered to K8S containers or nodes, including via SSH/SSM delivery, at <https://github.com/joesuf4/home/tree/wsl/bin>).
+In case it's not clear at this point, DevOps/SRE teams triaging SaaS security (**CAI**) incidents on Linux should familiarize themselves with [htop](fun-with-htop)'s `strace` interface via the `s` key! Better still to master `strace` as a stand-alone. (FYI: I have static compiles of these binaries on github that can be delivered to K8s containers or nodes, including via SSH/SSM delivery, at <https://github.com/joesuf4/home/tree/wsl/bin>).
 
 #### How does this relate to Zero-Trust initiatives, as a practical matter?
 
