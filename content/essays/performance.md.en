@@ -6,7 +6,7 @@ It's actually the opposite. You start with the architectural constraints of the 
 
 You can iterate on this playbook, but I've never needed to go beyond 3 iterations in my professional career.
 
-So go ahead and use an elegant programming language like `Python3` or `Javascript`/`Typescript`, and let the SME's out there in the open source world give you powerful `C`/`C++` native bindings for your special purpose needs. Nothing you do for business logic needs more speed than **any** dynamic programming language can give you OOTB.
+So go ahead and use an elegant programming language like `Python3` or `Javascript`/`Typescript`, and let the SME's out there in the open source world give you powerful `C`/`C++` native bindings for your special purpose needs. Nothing you do for business logic needs more speed than **any** dynamic programming language can give you out-of-the-box.
 
 Even a dependency-free bash script is a workable solution for many basic tasks. Here's one I wrote for Augmented Reality firm [Magic Leap](https://magicleap.com) years ago, to replace a clumsy [OpenGrok](https://oracle.github.io/opengrok/) service with something that leverages multiprocessor parallelization with `xargs -P`, and supports [PCRE](https://www.pcre.org/) search with simple `Emacs`/`Vim` bindings.
 
@@ -54,7 +54,7 @@ A tuned `pffxg.sh` is still faster, despite all the work put into microoptimizin
 
 .25M LOC between `ripgrep` and [ugrep](https://github.com/Genivia/ugrep). 632 LOC for `pffxg.sh`. Silly.
 
-Because it's such a small shell program, `pffxg.sh` can give you powerful hooks into its internals with almost zero effort. Even the grep command itself is customizable: any command you need to run on a select corpus of files, that can accept a list of filenames appended to the end of its arguments, is fair game. Here's an "total line count in MiLOC" exercise on the linux kernel git repo:
+Because it's such a small shell program, `pffxg.sh` can give you powerful hooks into its internals with almost zero effort. Even the grep command itself is customizable: any command you need to run on a select corpus of files, that can accept a list of filenames appended to the end of its arguments, is fair game. Here's an "total line count in `MiLOC`" exercise on the linux kernel git repo:
 
 ```shell
 	% time find * -type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
@@ -78,7 +78,7 @@ ripgrep version:
     awk -F : '{a+=$2} END {print a/1024**2}' 0.58s user 0.45s system 66% cpu 1.564 total
 ```
 
-Here it is restricted to C-files (same linux tree):
+Here it is restricted to `C`-files (same linux tree):
 
 ```shell
 	% time pffxg.sh --workers 8 --cc --cmd wc -- -l | awk '$2 == "total" {a+=$1} END {print a/1024**2}'
