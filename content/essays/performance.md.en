@@ -2,7 +2,7 @@ Title: Application Performance
 
 Many developers fall in to the trap of thinking performance optimization is about making each line of code as as efficient as possible, or choosing to write their entire app in the fastest programming language they can find.
 
-It's actually the opposite. You start with the architectural constraints of the application, and use them to drill down to the observed "slowest" part of the program. That part's **implementation** guides all the other performance choices you need to make. Anything that's not as slow as that part, need not be optimized further. Instead, focus on the human expression and the simplicity and clarity of the implementation, to non-expert readers over the SSDLC of the software, for the rest of your program's code.
+It's actually the opposite. You start with the architectural constraints of the application, and use them to drill down to the observed "slowest" part of the program. That part's **implementation** guides all the other performance choices you need to make. Anything that's not as slow as that part, need not be optimized further. Instead, focus on the human expression and the simplicity and clarity of the implementation, to non-expert readers over the `SSDLC` of the software, for the rest of your program's code.
 
 You can iterate on this playbook, but I've never needed to go beyond 3 iterations in my professional career.
 
