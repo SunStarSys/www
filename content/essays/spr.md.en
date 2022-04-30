@@ -2,7 +2,7 @@ Title: Information Security, Performance, and Reliability Architecture
 
 "Nonfunctional" software engineering revolves around three key issues: security, performance, and reliability (**SPR**); whereas "functional" software engineering involves the normal feature-based software development lifecycle. A proper [NIST-800-160](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1.pdf) based SSDLC balances functional and nonfunctional software lifecycle aspects into a coherent whole, for the CTO on down.
 
-Some firms have derived incredible value by splitting functional from nonfunctional software development into two independent hierarchies in the engineering part of the organizational chart. You can find SPR architects like myself to lead such an **SPR** team, with a flexible combination of evolving, subordinate roles:
+Some firms have derived incredible value by splitting functional from nonfunctional software development into two independent hierarchies in the engineering part of the organizational chart. You can find **SPR** architects like myself to lead such an **SPR** team, with a flexible combination of evolving, subordinate roles:
 
 1. **Critical System Engineering** (focused on creating & monitoring observability metrics, dynamic tracing tooling and compatible runtime construction, and full spectrum profiling analysis towards the development of high-impact performance/security solutions),
 
@@ -12,10 +12,10 @@ Some firms have derived incredible value by splitting functional from nonfunctio
 
 4. **Data Quality Engineering** (focused on delivering automated reporting/processing/visualization infrastructure for the Triage and QA activity).
 
-Building a dedicated SPR Team involves some organizational challenges. At the management level, there must be buy-in that the performance/security experts in **SPR** have some reasonable expectations that their recommendations, and successfully tested, submitted software patches, will be incorporated in a timely way into the production codebase. To engender the requisite effective working relationships between functional and nonfunctional engineering teams, performance engineers should be partially embedded into functional product development teams as peers, with peer-based review/commit privileges on the codebases.
+Building a dedicated **SPR** Team involves some organizational challenges. At the management level, there must be buy-in that the performance/security experts in **SPR** have some reasonable expectations that their recommendations, and successfully tested, submitted software patches, will be incorporated in a timely way into the production codebase. To engender the requisite effective working relationships between functional and nonfunctional engineering teams, performance engineers should be partially embedded into functional product development teams as peers, with peer-based review/commit privileges on the codebases.
 
 By having a dedicated **SPR** team, management can free product engineers (doing functional development) from having to build/manage/test mockups of your production environments that are suitable for performance/scaling/security/durability/reliability work. Many teams simply don't have the cycles to spend on this, despite the importance of right-sizing their cloud assets and dependent software runtimes to accommodate rapid growth.
 
 There is also considerable job specialization in terms of observability tooling and kernel-based tracing techniques, that good system engineers undergo to keep on top of their field. It is hard to hire for these auxiliary skills when seeking quality talent for traditional agile-based product/full stack engineers and/or data scientists.
 
-Robust, secure, scalable, cost-effective, well-performing software is within the reach of any small/mid-sized engineering team with the right investments in SPR. Reach out if you are interested in learning how!
+Robust, secure, scalable, cost-effective, well-performing software is within the reach of any small/mid-sized engineering team with the right investments in **SPR**. Reach out if you are interested in learning how!
