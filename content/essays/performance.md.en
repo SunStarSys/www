@@ -8,7 +8,7 @@ You can iterate on this playbook, but I've never needed to go beyond 3 iteration
 
 So go ahead and use an elegant programming language like `Python3` or `Javascript`/`Typescript`, and let the SME's out there in the open source world give you powerful `C`/`C++` native bindings for your special purpose needs. Nothing you do for business logic needs more speed than **any** dynamic programming language can give you OOTB.
 
-Even a dependency-free bash script is a workable solution for many basic tasks. Here's one I wrote for Augmented Reality firm [Magic Leap](https://magicleap.com) years ago to replace a clumsy OpenGrok service with something that leverages multiprocessor parallelization with `xargs -P` and supports PCRE search.
+Even a dependency-free bash script is a workable solution for many basic tasks. Here's one I wrote for Augmented Reality firm [Magic Leap](https://magicleap.com) years ago, to replace a clumsy [OpenGrok](https://oracle.github.io/opengrok/) service with something that leverages multiprocessor parallelization with `xargs -P`, and supports PCRE search.
 
 https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh
 
