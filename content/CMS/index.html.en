@@ -98,16 +98,16 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 | Easy 3rd Party Contributor Workflow | <span class="text-success">&check;</span> | &check; | &check; |
 | Unlimited Previews/Branch Builds | <span class="text-success">&check;</span> | Enterprise Only ($$) | &check; |
 | Unlimited Builds |  <span class="text-success">Y</span> | Enterprise Only ($$) | Y (for public repos)  |
-| Unlimited Seats | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | Y (for public repos) |
-| WebSite Hosting | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
-| SSI / CGI / mod_perl registry Support | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| Fine-Grained ACL on Source Repo | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| +500 MB/s Full Site Builds | <span class="text-success">Y</span> | <span class="text-info">?</span> | <span class="text-danger">N</span> |
-| 8-64 Way Concurrent Builds | <span class="text-success">Y</span> | Enterprise Only ($$) | <span class="text-danger">N</span> |
-| TCO &lt; $5000/yr for Enterprise | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-info">?</span> |
-| 99.99% SLA for Enterprise | Y | Y | <span class="text-danger">N</span> |
-| Serverless Integration | OCI Support Coming Soon! | Y | <span class="text-danger">N</span> |
-| Choice of Programming Language | Coming Soon! | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
+| Unlimited Seats | <span class="text-success">Enterprise Only</span> | | &check; (for public repos) |
+| WebSite Hosting | <span class="text-success">&check;</span> | &check; | |
+| SSI / CGI / mod_perl registry Support | <span class="text-success">&check;</span> | | |
+| Fine-Grained ACL on Source Repo | <span class="text-success">&check;</span> | | |
+| +500 MB/s Full Site Builds | <span class="text-success">&check;</span> | | |
+| 8-64 Way Concurrent Builds | <span class="text-success">&check;</span> | Enterprise Only ($$) | |
+| TCO &lt; $5000/yr for Enterprise | <span class="text-success">&check;</span> | | |
+| Comprehensive 99.99% SLA for Enterprise | <span class="text-success">&check;</span> | | |
+| Serverless Integration | OCI Support Coming Soon! | &check; | |
+| Choice of Programming Language | Coming Soon! | | |
 
 <br />
 
