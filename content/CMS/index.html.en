@@ -88,15 +88,15 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 
 | Feature          |  SunStar Systems | Netlify+Gatsby | GitHub+Hugo |
 |:------------|:-------------:|:------------:|:----------:|
-| CMS IDE	     | <span class="text-success">Y</span>  |    Y    |  <span class="text-info">?</span>  |
-| CI / CD          | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
-| FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| In-Browser Workflow (Mobile Friendly) | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| Incremental Builds | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
-| Unlimited Branch Builds | <span class="text-success">Y</span> | Y | Y (for public repos) |
-| Scheduled Builds of Dynamic Content Only | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| Easy 3rd Party Contributor Workflow | <span class="text-success">Y</span> | Y | Y |
-| Unlimited Previews/Branch Builds | <span class="text-success">Y</span> | Enterprise Only ($$) | Y |
+| CMS IDE	     | <span class="text-success">&check;</span>  | &check; | <span class="text-info">?</span> |
+| CI / CD          | <span class="text-success">&check;</span> | &check; | |
+| FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">&check;</span> | | |
+| In-Browser Workflow (Mobile Friendly) | <span class="text-success">&check;</span> | | |
+| Incremental Builds | <span class="text-success">&check;</span> | &check; | |
+| Unlimited Branch Builds | <span class="text-success">&check;</span> | &check; | &check; (for public repos) |
+| Scheduled Builds of Dynamic Content Only | <span class="text-success">&check;</span> | | |
+| Easy 3rd Party Contributor Workflow | <span class="text-success">&check;</span> | &check; | &check; |
+| Unlimited Previews/Branch Builds | <span class="text-success">&check;</span> | Enterprise Only ($$) | &check; |
 | Unlimited Builds |  <span class="text-success">Y</span> | Enterprise Only ($$) | Y (for public repos)  |
 | Unlimited Seats | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | Y (for public repos) |
 | WebSite Hosting | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
