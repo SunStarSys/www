@@ -4,7 +4,7 @@ Title: Information Security Primer
 
 #### What is the primary goal of InfoSec?
 
-To ensure all changes at context boundaries are well-regulated.
+*To ensure all changes at context boundaries are well-regulated.*
 
 For example, every **system call** on a UNIX platform satisfies this condition, in terms of the UNIX user/group process+filesystem security model. The literal definition of a **context switch**, as typified by **system calls**, involves API-usage sanity checking on the kernel's side of the call.
 
