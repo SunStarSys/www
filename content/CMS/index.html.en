@@ -59,18 +59,6 @@ Multi-gigabyte source trees are simply no match for it &mdash; full site build d
 
 This technology was first invented in late 2011 by members of the Apache Infrastructure Team. The phrase "[JAM Stack](https://jamstack.wtf)" was coined years later, by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
 
-Once you've experienced our CMS/IDE/JAM Stack infrastructure, you will never understand why this type of SaaS infrastructure wasn't done *our* way from the very beginning by earlier entrants to this market.  Other CMS's oversimplify their UI to make it *accessible to non-webstack developers*.  Instead, we give you **all the rope you can handle**, with support for any javascript/css framework you prefer, integrated with a version-control-backed IDE that supports raw web formats with (CodeMirror based) syntax highlighting and code completion:
-
-<ul>
-	<li>markdown (with integrated real-time HTML previews)</li>
-	<li>html (with django template extensions and embedded javascript/css syntax)</li>
-	<li>css</li>
-	<li>javascript, json</li>
-	<li>image rendering and file uploads in any format you prefer (.ico, .png, .gif, .jpeg, etc)</li>
-	<li>raw directory/file creation, modification, and removal</li>
-	<li>variety of supported server programming languages: javascript, python3, perl7</li>
-</ul>
-
 <span class="text-white">Want to give it a quick spin to see how fast and easy it is?</span>
 
 This website is self-hosted; all those hot-pink pencil squares [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
