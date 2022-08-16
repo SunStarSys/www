@@ -25,8 +25,8 @@ our @patterns = (
 );
 
 our %dependencies;
-if (our $use_dependency_cache and -f "../.deps") {
-	open my $deps, "<", "../.deps" or die "Can't open ../.deps for reading: $!";
+if (our $use_dependency_cache and -f ".deps") {
+	open my $deps, "<", ".deps" or die "Can't open .deps for reading: $!";
 	*dependencies = Load join "", <$deps>;
 }
 else {
@@ -51,7 +51,7 @@ else {
     	push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
         	@essays_glob;
 	}
-	open my $deps, ">", "../.deps" or die "Can't open '../.deps' for writing: $!";
+	open my $deps, ">", ".deps" or die "Can't open '.deps' for writing: $!";
 	print $deps Dump \%dependencies;
 }
 1;
