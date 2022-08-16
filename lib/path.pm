@@ -52,7 +52,7 @@ else {
         	@essays_glob;
 	}
 	open my $deps, ">", "../.deps" or die "Can't open '../.deps' for writing: $!";
-	print $deps, Dump \%dependencies;
+	print $deps Dump \%dependencies;
 }
 1;
 
