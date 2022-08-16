@@ -25,29 +25,35 @@ our @patterns = (
 );
 
 our %dependencies;
-
-walk_content_tree {
-    for my $lang (qw/en es de fr/) {
-        if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
-            push @{$dependencies{"/sitemap.html.$lang"}}, $_;
-        }
-        if (s!/index\.html\.$lang$!!) {
-            $dependencies{"$_/index.html.$lang"} = [
-                grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
-                                            glob("content$_/*/index.html.$lang"))
-            ];
-            push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-                glob("content$_/*") if m!/files\b!;
-        }
-    }
-};
-
-my @essays_glob = glob("content/essays/files/*/*");
-for my $lang (qw/en es de fr/) {
-    push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-        @essays_glob;
+if (our $use_dependency_cache and -f "../.deps") {
+	open my $deps, "<", "../.deps" or die "Can't open ../.deps for reading: $!";
+	*dependencies = Load join "", <$deps>;
 }
+else {
+	walk_content_tree {
+    	for my $lang (qw/en es de fr/) {
+        	if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
+            	push @{$dependencies{"/sitemap.html.$lang"}}, $_;
+        	}
+        	if (s!/index\.html\.$lang$!!) {
+            	$dependencies{"$_/index.html.$lang"} = [
+                	grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
+                                            	glob("content$_/*/index.html.$lang"))
+            	];
+            	push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
+                	glob("content$_/*") if m!/files\b!;
+        	}
+    	}
+	};
 
+	my @essays_glob = glob("content/essays/files/*/*");
+	for my $lang (qw/en es de fr/) {
+    	push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
+        	@essays_glob;
+	}
+	open my $deps, ">", "../.deps" or die "Can't open '../.deps' for writing: $!";
+	print $deps, Dump \%dependencies;
+}
 1;
 
 __DATA__
