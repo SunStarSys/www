@@ -82,17 +82,17 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 | Scheduled Builds of Dynamic Content Only | <span class="text-success">&check;</span> | | |
 	| Easy 3rd Party Contributor Workflow | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> |
 	| Unlimited Previews/Branch Builds | <span class="text-success">&check;</span> | <span class="text-warning">Enterprise Only ($$)</span> | <span class="text-warning">&check;</span> |
-| Unlimited Builds |  <span class="text-success">&check;</span> | Enterprise Only ($$) | &check; (for public repos)  |
-| Unlimited Seats | <span class="text-success">Enterprise Only</span> | | &check; (for public repos) |
-| WebSite Hosting | <span class="text-success">&check;</span> | &check; | |
+	| Unlimited Builds |  <span class="text-success">&check;</span> | <span class="text-warning">Enterprise Only ($$)</span> | <span class="text-warning">&check; (for public repos)</span> |
+	| Unlimited Seats | <span class="text-success">Enterprise Only</span> | | <span class="text-warning">&check; (for public repos)</span> |
+	| WebSite Hosting | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | |
 | SSI / CGI / mod_perl registry Support | <span class="text-success">&check;</span> | | |
 | Fine-Grained ACL on Source Repo | <span class="text-success">&check;</span> | | |
 | +500 MB/s Full Site Builds | <span class="text-success">&check;</span> | | |
-| 8-64 Way Concurrent Builds | <span class="text-success">&check;</span> | Enterprise Only ($$) | |
+| 8-64 Way Concurrent Builds | <span class="text-success">&check;</span> | <span class="text-warning">Enterprise Only ($$)</span> | |
 | TCO &lt; $5000/yr for Enterprise | <span class="text-success">&check;</span> | | |
 | Comprehensive 99.99% SLA for Enterprise | <span class="text-success">&check;</span> | | |
-| Serverless Integration | Coming Soon via OCI! | &check; | |
-| Choice of Build Programming Language | Coming Soon! | | &check; |
+	| Serverless Integration | Coming Soon via OCI! | <span class="text-warning">&check;</span> | |
+| Choice of Build Programming Language | Coming Soon! | | <span classs="text-warning"></span>&check;</span> |
 
 <br />
 
