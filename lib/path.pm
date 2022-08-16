@@ -1,6 +1,5 @@
 package path;
 use SunStarSys::Util qw/walk_content_tree Load Dump/;
-use File::Path qw/mkpath/;
 use strict;
 use warnings;
 
