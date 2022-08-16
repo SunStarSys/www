@@ -25,7 +25,7 @@ our @patterns = (
 );
 
 our %dependencies;
-if (our $use_dependency_cache and -f "/tmp/www.sunstarsys.com/$branch/deps") {
+if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
 	open my $deps, "<", "$ENV{TARGET_BASE}/.deps" or die "Can't open .deps for reading: $!";
 	*dependencies = Load join "", <$deps>;
 }
