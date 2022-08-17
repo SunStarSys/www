@@ -37,13 +37,14 @@ What differentiates this product from our competitors is the [CMS Technology](te
 	<li>a <span class="text-white">principled High Availability architect</span> tired of dealing with single-points-of-failure inherent in SQL-based LAMP stacks,</li>
 <li>or really any business-person dissatisfied with the cost structure of any CMS thingy out there, including free offerings bogging down your staff's time and energy.</li>
 </ul>
-<span class="text-white">It's time for a sea change in how you manage and deliver your site to your target audience.</span>
 
 *There is no vendor lock-in involved with our offering*. But don't just take our word for it, see for yourself what's typically involved in terms of build system customization by visiting
 
 [our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).
 
 Less than 100 LOC to provide the build logic for this website, and it includes sophisticated dependency management for auto-generation of a multilingual [SiteMap](/sitemap) and all directory indexes (like [this portion](#Details) of this particular page).
+
+<span class="text-white">It's time for a sea change in how you manage and deliver your site to your target audience.</span>
 
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure.
 
