@@ -75,9 +75,9 @@ a.reference-link {
 }
 
 h1, h2, h3, h4, h5, h6, h7, h8 {
-	display: inline-block;
 	margin-top: -90px;
 	padding-top: 90px;
+	z-index: -1;
 }
 
 div.breadcrumbs {
