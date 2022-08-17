@@ -33,7 +33,7 @@ Just to pull the first #performance #benchmark off that page, and scale it up fr
     wc -l 0.00s user 0.00s system 0% cpu 4.501 total
 ```
 
-It's quite silly to microoptimize something that's deeply tied to the state of the kernel's filesystem cache for your search. The variation in performance timings is dominated by the access speed to the corpus of files' contents, and it is an order of magnitude more relevant than any other factor to the end results. Being on an `NVME` helps, but nothing in this space beats `RAM` itself.
+It's quite silly to microoptimize something that's deeply tied to the state of the kernel's filesystem cache for your search. The variation in performance timings is dominated by the access speed to the corpus of files' contents, and it is an order of magnitude more relevant than any other factor to the end results. Being on an `NVMe` helps, but nothing in this space beats `RAM` itself.
 
 That's why having an in-memory, compressed cache for a large corpus of files, will stabilize the performance timings. It is surprising that no one else thought this was important enough to support.
 
