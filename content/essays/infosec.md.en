@@ -23,3 +23,5 @@ In case it's not clear at this point, DevOps/SRE teams triaging SaaS security (*
 While there may be VPN/Firewall contexts in reality, none of those details are relevant to InfoSec within a Zero-Trust framework. In other words, such network topology security initiatives may augment Zero-Trust initiatives, but they are never relied on within a Zero Trust initiative at the base server-host security level on up through the application level.
 
 MIT Kerberos and Active Directory are Zero-Trust compliant, for example.
+
+$Date: $
