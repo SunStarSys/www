@@ -23,7 +23,7 @@ The <span class="text-white">SunStar Systems CMS</span> is an
 	<li>cost effective,</li>
 	<li>peak performance,</li>
 </ul>
-	<span class="text-white">Content Management System (CMS)</span> and <span class="text-white">Integrated Development Environment (IDE)</span> for creating and managing static website content, potentially with some basic [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) features.
+<span class="text-white">Content Management System (CMS)</span> and <span class="text-white">Integrated Development Environment (IDE)</span> for creating and managing static website content, potentially with some basic [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) features.
 
 For pricing information, see our [CMS Plans](plans).
 
@@ -43,12 +43,6 @@ What differentiates this product from our competitors is the [CMS Technology](te
 [our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).
 
 Less than 100 LOC to provide the build logic for this website, and it includes sophisticated dependency management for auto-generation of a multilingual [SiteMap](/sitemap) and all directory indexes (like [this portion](#Details) of this particular page).
-
-<span class="text-white">It's time for a sea change in how you manage and deliver your site to your target audience.</span>
-
-Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure.
-
-See our [CMS Plans](plans) for the current deals.
 
 </div>
 
@@ -76,6 +70,12 @@ This technology was first invented in late 2011 by members of the Apache Infrast
 This website is self-hosted; all those hot-pink pencil squares [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
 
 Our global Point of Presence (POP) network ensures low-latency connections to both the CMS and the end-delivery websites we host.  We are currently on four continents and have a bicoastal presence within the US.  And we're expanding rapidly- next up East Asia!
+
+<span class="text-white">It's time for a sea change in how you manage and deliver your site to your target audience.</span>
+
+Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure.
+
+See our [CMS Plans](plans) for the current deals.
 
 </div>
 </div>
