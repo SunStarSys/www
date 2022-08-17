@@ -5,7 +5,7 @@ Title: Home
 		<div class="card-header">News</div>
 		<div class="card-body">
 			<h4 class="card-title">SunStar Systems pty v2.0.4 released!</h4>
-			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your pty installation to <a href="https://github.com/SunStarSys/pty/releases/tag/v2.0.4">v2.0.4</a>, which includes native support for <span class='text-danger'>python 3.10.y</span>.</p>
+			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-danger">pty</span> installation to <a href="https://github.com/SunStarSys/pty/releases/tag/v2.0.4">v2.0.4</a>, which includes native support for <span class='text-danger'>python 3.10.y</span>.</p>
 		</div>
 	</div>
 	<br />
