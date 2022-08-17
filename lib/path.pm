@@ -29,11 +29,11 @@ if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
     *dependencies = Load join "", <$deps>;
 }
 else {
-	walk_content_tree {
+    walk_content_tree {
         for my $lang (qw/en es de fr/) {
             if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
                 push @{$dependencies{"/sitemap.html.$lang"}}, $_;
-        }
+            }
             if (s!/index\.html\.$lang$!!) {
                 $dependencies{"$_/index.html.$lang"} = [
                     grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
