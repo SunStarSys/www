@@ -56,7 +56,7 @@ The way I used this script with [AOSP](https://source.android.com) was to schedu
 
 .25M LOC between `ripgrep` and [ugrep](https://github.com/Genivia/ugrep). 632 LOC for `pffxg.sh`. Silly.
 
-Because it's such a small shell program, `pffxg.sh` can give you powerful hooks into its internals with almost zero effort. Even the `grep` command itself is customizable: any command you need to run on a select corpus of files, that can accept a list of filenames appended to the end of its arguments, is fair game. Here's an "total line count in `MiLOC`" exercise on the linux kernel git repo:
+Because it's such a small shell program, `pffxg.sh` can give you powerful hooks into its internals with almost zero effort. Even the `grep` command itself is customizable: any command you need to run on a select corpus of files, that can accept a list of filenames appended to the end of its arguments, is fair game. Here's a "total line count in `MiLOC`" exercise on the linux kernel git repo:
 
 ```shell
 	% time find * -type f | xargs wc -l | awk '{ $2 == "total" {a+=$1} END {print a/1024**2}'
