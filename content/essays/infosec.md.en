@@ -20,7 +20,7 @@ In case it's not clear at this point, DevOps/SRE teams triaging SaaS security (*
 
 [Zero-Trust Architectures](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf) have no network-specific infosec context boundaries.
 
-While there may be VPN/Firewall contexts in reality, none of those details are relevant to InfoSec within a Zero-Trust framework. In other words, such network topology security initiatives may augment Zero-Trust initiatives, but they are never relied on within a Zero Trust initiative at the base server-host security level on up through the application level.
+While there may be VPN/Firewall contexts in reality, none of those details are relevant to InfoSec within a Zero-Trust framework. In other words, such network topology security initiatives may augment Zero-Trust initiatives, but they are never relied on within a Zero-Trust initiative at the base server-host security level on up through the application level.
 
 MIT Kerberos and Active Directory are Zero-Trust compliant, for example.
 
