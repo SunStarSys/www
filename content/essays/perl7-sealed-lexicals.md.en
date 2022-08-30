@@ -165,7 +165,8 @@ progress: 100% done
 finished in 11.75s, 8513.46 req/s, 10.99MB/s
 requests: 100000 total, 100000 started, 100000 done, 100000 succeeded, 0 failed, 0 errored, 0 timeout
 status codes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
-traffic: 129.04MB (135312265) total, 560.64KB (574092) headers (space savings 95.51%), 126.74MB (132900000) data                     min         max         mean         sd        +/- sd
+traffic: 129.04MB (135312265) total, 560.64KB (574092) headers (space savings 95.51%), 126.74MB (132900000)
+data                     min         max         mean         sd        +/- sd
 time for request:     5.07ms      11.50s       5.81s       3.29s    57.75%
 time for connect:      483us    246.65ms     64.60ms     62.91ms    66.00%
 time to 1st byte:    31.51ms       7.93s       3.59s       2.26s    52.00%
