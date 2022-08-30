@@ -134,7 +134,43 @@ Sample code:
 
 Requires a patched `B::Generate` [Generate.xs](https://github.com/SunStarSys/cms/blob/master/Generate.xs) file.  Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault ad nauseum at scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
 
-For fun, try this [patch](https://github.com/SunStarSys/cms/blob/master/RegistryCooker.pm.patch) to `ModPerl::RegistryCooker`.  It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts.
+For fun, try this [patch](https://github.com/SunStarSys/cms/blob/master/RegistryCooker.pm.patch) to `ModPerl::RegistryCooker`.  It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts...
+
+```shell
+
+~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl
+starting benchmark...                                          spawning thread #0: 100 total client(s). 10000 total requests
+spawning thread #1: 100 total client(s). 10000 total requests  
+spawning thread #2: 100 total client(s). 10000 total requests  
+spawning thread #3: 100 total client(s). 10000 total requests
+spawning thread #4: 100 total client(s). 10000 total requests
+spawning thread #5: 100 total client(s). 10000 total requests
+spawning thread #6: 100 total client(s). 10000 total requests
+spawning thread #7: 100 total client(s). 10000 total requests
+spawning thread #8: 100 total client(s). 10000 total requests
+spawning thread #9: 100 total client(s). 10000 total requests
+Application protocol: h2c
+progress: 10% done
+progress: 20% done
+progress: 30% done
+progress: 40% done
+progress: 50% done
+progress: 60% done
+progress: 70% done
+progress: 80% done
+progress: 90% done
+progress: 100% done
+
+finished in 11.75s, 8513.46 req/s, 10.99MB/s
+requests: 100000 total, 100000 started, 100000 done, 100000 succeeded, 0 failed, 0 errored, 0 timeout
+status codes: 100000 2xx, 0 3xx, 0 4xx, 0 5xx
+traffic: 129.04MB (135312265) total, 560.64KB (574092) headers (space savings 95.51%), 126.74MB (132900000) data                     min         max         mean         sd        +/- sd
+time for request:     5.07ms      11.50s       5.81s       3.29s    57.75%
+time for connect:      483us    246.65ms     64.60ms     62.91ms    66.00%
+time to 1st byte:    31.51ms       7.93s       3.59s       2.26s    52.00%
+req/s           :       8.54      403.79       21.32       31.01    93.50%
+
+```
 
 See <https://github.com/SunStarSys/cms/blob/master/lib/sealed.pm>. Look for `bench.pl` in the parent directory.
 
