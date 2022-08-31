@@ -5,29 +5,34 @@ use Apache2::RequestIO;
 use APR::Request::Apache2;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
-
 use strict;
 use warnings;
+use sealed 'debug';
+
+my Apache2::RequestRec $r = shift;
 
 my $DOMAIN = q/sunstarsys.com/;
-my $to          = q/sales@sunstarsys.com/;
-my $date       = gmtime;
+my $to     = q/sales@sunstarsys.com/;
+my $date   = gmtime;
 
-my $r = Apache2::RequestUtil->request;
-
-sub render {
+sub render :Sealed {
     my $template = shift;
-    my $r = shift;
-    my $body      = APR::Request::Apache2->handle($r)->param // {};
-    my %args      = (%$body, @_);
-    local our @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
+    my Apache2::RequestRec $r = shift;
+    my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
+    my APR::Request $apreq = $apreq_class->handle($r);
+    my $params = $apreq->param // {};
+    my %args = (%$params, @_);
+    local our @TEMPLATE_DIRS = qw(/home/joesuf4/src/trunk/templates);
     $r->content_type("text/html; charset='utf-8'");
-    $r->print(Template($template)->render(\%args));
+    my Dotiac::DTL::Template $dtl = Template($template);
+    $r->print($dtl->render(\%args));
     exit 0;
 }
 
 if ($r->method eq "POST") {
-    my $body = APR::Request::Apache2->handle($r)->body;
+    my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
+    my APR::Request $apreq = $apreq_class->handle($r);
+    my $body = $apreq->body;
     my ($name, $email, $subject, $content, $site, $hosting, $plang) = @{$body}{qw/name email subject content site hosting plang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $plang;
     s/\n//g for $name, $email, $subject, $hosting, $site, $plang;
