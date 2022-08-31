@@ -132,7 +132,7 @@ Sample code:
 
 ## Production-Quality Perl  v5.22+ Prototype: sealed.pm v4.0.0
 
-Requires a patched `B::Generate` [Generate.xs](https://github.com/SunStarSys/cms/blob/master/Generate.xs) file.  Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault ad nauseum at scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
+Requires a [patched](https://github.com/rurban/b-generate/pull/2) `B::Generate` [Generate.xs](https://github.com/SunStarSys/cms/blob/master/Generate.xs) file.  Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault ad nauseum at scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
 
 For fun, try this [patch](https://github.com/SunStarSys/cms/blob/master/RegistryCooker.pm.patch) to `ModPerl::RegistryCooker`.  It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts...
 
