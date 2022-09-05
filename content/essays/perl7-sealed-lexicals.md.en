@@ -174,7 +174,7 @@ req/s           :       7.71      248.17       19.60       28.07    92.70%
 
 ```
 
-See <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Look for `bench.pl` in the parent directory.
+See <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Look for `t/bench.pl` in the parent directory.
 
 This will allow Perl 5 to do the sample code's `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers. Not inheritable OO-module authors.
 
