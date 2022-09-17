@@ -2,6 +2,7 @@ package view;
 use base 'SunStarSys::View';
 
 # template set from first capture in regex in @path::patterns
+
 sub set_template_from_capture {
     my %args = @_;
     $args{template} = "$1.html";
