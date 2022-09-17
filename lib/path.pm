@@ -2,6 +2,7 @@ package path;
 use SunStarSys::Util qw/walk_content_tree Load Dump/;
 use strict;
 use warnings;
+use File::Path 'mkpath';
 
 my $conf = Load join "", <DATA>;
 
@@ -51,6 +52,7 @@ else {
         push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
             @essays_glob;
     }
+    mkpath $ENV{TARGET_BASE};
     open my $deps, ">", "$ENV{TARGET_BASE}/.deps" or die "Can't open '.deps' for writing: $!";
     print $deps Dump \%dependencies;
 }
