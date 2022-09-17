@@ -26,3 +26,7 @@ Do you have an open source strategy for your product line?  How modular is your 
 - [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; Distributed commit hooks for subversion.
 
 - [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; Fresh Solaris 11.4 port including segfault-free ZFS/Zone support.
+
+- [sealed](https://github.com/SunStarSys/sealed) &mdash; Compile-time method lookups for typed lexicals.
+
+- [Algorithm::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash; Fast implementation of the Longest Common Subsequence Algorithm
