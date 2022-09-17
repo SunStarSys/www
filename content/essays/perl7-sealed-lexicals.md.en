@@ -18,49 +18,46 @@ What Doug was looking for was a way to tell Perl 5 to perform the method lookup 
 ## Benchmark script
 
 ```perl
+#!/usr/bin/env -S perl -Ilib
+use Test::More tests => 1;
+use POSIX 'dup2';
+dup2 fileno(STDERR), fileno(STDOUT);
 use strict;
 use Benchmark ':all';
 our ($x, $z);
-
 $x = bless {}, "Foo";
 $z = Foo->can("foo");
-
 sub method {$x->foo}
 sub class  {Foo->foo}
 sub anon   {$z->($x)}
-
 BEGIN {
   package Foo;
-  use sealed 'deparse';
   use base 'sealed';
+  use sealed 'deparse';
   sub foo  { shift }
   sub bar  { shift . "->::Foo::bar" }
 }
-
 sub func   {Foo::foo($x)}
-
 BEGIN{@::ISA=('Foo')}
 
 my main $y = $x;
-
 sub sealed :Sealed {
     $y->foo();
 }
-
 sub also_sealed :Sealed {
     my main $a = shift;
     if ($a) {
         my Benchmark $bench;
-        my $inner;
+        my $inner = $a;
         return sub :Sealed {
             my Foo $b = $a;
-            $b->foo($bench->cmpthese, $inner);
+            $inner->foo($b->foo($inner->bar, $inner, $bench->cmpthese));
             $a->foo;
         };
     }
+    sub render :Sealed { my main $b = $a; local our @Q=1; $b->foo }
     $a->bar();
 }
-
 my %tests = (
     func => \&func,
     method => \&method,
@@ -69,14 +66,14 @@ my %tests = (
     anon => \&anon,
 );
 
-print sealed(), "\n", also_sealed($y), "\n";
-
-cmpthese 10_000_000, \%tests;
+cmpthese 20_000_000, \%tests;
+ok(1);
 ```
 
 ## Benchmark results
 
 ```perl
+1..1
 sealed: compiling main->foo lookup.
 {
     use strict;
@@ -88,32 +85,39 @@ sealed: compiling main->foo lookup.
 {
     use strict;
     my Foo $b = $a;
-    $b->($bench->, $inner);
+    $inner->foo($b->($inner->bar, $inner, $bench->));
     $a->;
+}
+sealed: compiling main->foo lookup.
+{
+    use strict;
+    my main $b = $a;
+    (local our(@Q)) = 1;
+    $b->;
 }
 sealed: compiling main->bar lookup.
 {
     use strict;
     my main $a = shift();
     if ($a) {
-        my($bench, $inner);
+        my Benchmark $bench;
+        my $inner = $a;
         return sub {
             my Foo $b = $a;
-            $b->($bench->, $inner);
+            $inner->foo($b->($inner->bar, $inner, $bench->));
             $a->;
         }
         ;
     }
     $a->;
 }
-Foo=HASH(0x415fb0)
-CODE(0x4b73c0)
-             Rate  class method   anon sealed   func
-class  15873016/s     --    -6%   -32%   -33%   -35%
-method 16949153/s     7%     --   -27%   -29%   -31%
-anon   23255814/s    47%    37%     --    -2%    -5%
-sealed 23809524/s    50%    40%     2%     --    -2%
-func   24390244/s    54%    44%     5%     2%     -
+             Rate  class method   anon   func sealed
+class  16393443/s     --   -10%   -32%   -35%   -36%
+method 18181818/s    11%     --   -25%   -28%   -29%
+anon   24096386/s    47%    33%     --    -5%    -6%
+func   25316456/s    54%    39%     5%     --    -1%
+sealed 25641026/s    56%    41%     6%     1%     --
+ok 1
 ```
 
 ## Proposed Perl 7 solution: `:sealed`  subroutines for typed lexicals
