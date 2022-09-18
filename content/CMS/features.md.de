@@ -9,7 +9,7 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 ## Blazing Fast
 
 - 50ms or less RTT latency for most of the western world's population, with plans to expand coverage in East Asia by Q1 2021.
-- 500 MB / s sustained builds for multi-gigabyte source trees
+- 1 GB / s sustained builds for multi-gigabyte source trees
 - NVMe or faster build infrastructure
 - Solaris 11.4 for ZFS stability, backed by Full Oracle Customer Support
 - node.js for markdown rendering with CPU clustering
