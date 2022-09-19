@@ -141,7 +141,6 @@ Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should 
 For fun, try this [patch](https://github.com/SunStarSys/sealed/blob/master/RegistryCooker.pm.patch) to `ModPerl::RegistryCooker`.  It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts, something like [this one](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
-
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
 starting benchmark...
 spawning thread #0: 100 total client(s). 10000 total requests
