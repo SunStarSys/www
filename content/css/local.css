@@ -87,6 +87,6 @@ div.breadcrumbs {
 	text-align: right;
     float:right;
 }
-h3 + pre {
+h* + pre {
 	background: transparent url(/images/matrix) no-repeat top right
 }
