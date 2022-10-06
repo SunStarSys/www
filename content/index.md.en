@@ -1,0 +1,60 @@
+Title: Home
+
+<div class="float-lg-right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+		<div class="card-header">News</div>
+		<div class="card-body">
+			<h4 class="card-title">SunStar Systems CMS [Static Site Generator](https://github.com/SunStarSys/cms) v1.0.0 released.
+			</h4>
+			<h4 class="card-title">
+			<a href="https://github.com/SunStarSys/sealed">sealed.pm v4.1.8</a> released to CPAN!
+			</h4>
+			<h4>[Algorithm::LCS::XS v2.0.2](https://github.com/SunStarSys/Algorithm-LCS-XS/) released to CPAN!
+			</h4>
+			<h4 class="card-title">SunStar Systems [orthrus v1.0.0](https://github.com/SunStarSys/orthrus/releases/tag/v1.0.0) released!</h4>
+			<h4 class="card-title">SunStar Systems pty v2.1.1 released!</h4>
+			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="https://github.com/SunStarSys/pty/releases/tag/v2.1.1">v2.1.1</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
+		</div>
+	</div>
+	<br />
+</div>
+
+![SunStar Systems](images/sunstarlogowhole.png)
+
+&nbsp;
+<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+## Follow Us on GitHub
+&nbsp;
+- @SunStarSys
+- @joesuf4
+
+&nbsp;
+## Featured Essays
+&nbsp;
+- [Application Performance](/essays/performance) &mdash; a working example: from an observable bottleneck to an effective resolution.
+
+- [Information Security](/essays/infosec) &mdash; abstraction of the basic concepts leads to wide real-world applicability and clarity.
+
+- [Sealed Lexicals for Perl 7](/essays/perl7-sealed-lexicals) &mdash; add <span class="text-info">:sealed</span> to a function definition and enjoy the extra speed of compile-time method lookups for all of its typed lexicals.
+
+- [The DevOps Movement](/essays/devops) &mdash; filled in the missing details on this article.
+
+
+<style type="text/css">
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.jumbotron {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+
