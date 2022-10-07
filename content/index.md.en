@@ -26,7 +26,6 @@ Title: Home
 ## Follow Us on GitHub
 &nbsp;
 - @SunStarSys
-
 - @joesuf4
 
 &nbsp;
@@ -50,7 +49,7 @@ Title: Home
   100% { opacity: 1; }
 }
 
-.jumbotron {
+.theme-showcase {
 	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-timing-function: ease-in-out;
