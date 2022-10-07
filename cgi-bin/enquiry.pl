@@ -3,6 +3,7 @@ use Apache2::RequestRec;
 use Apache2::RequestUtil;
 use Apache2::RequestIO;
 use APR::Request::Apache2;
+use APR::Request::Param;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use strict;
@@ -16,8 +17,8 @@ my $to     = q/sales@sunstarsys.com/;
 my $date   = gmtime;
 
 sub render :Sealed {
-    my $template = shift;
     my Apache2::RequestRec $r = shift;
+    my $template = shift;
     my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
     my $params = $apreq->param // {};
@@ -32,7 +33,7 @@ sub render :Sealed {
 if ($r->method eq "POST") {
     my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
-    my $body = $apreq->body;
+    my APR::Request::Param::Table $body = $apreq->body;
     my ($name, $email, $subject, $content, $site, $hosting, $plang) = @{$body}{qw/name email subject content site hosting plang/};
     s/\r//g for $name, $email, $subject, $content, $site, $hosting, $plang;
     s/\n//g for $name, $email, $subject, $hosting, $site, $plang;
@@ -71,9 +72,9 @@ EOT
    		close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
 	}
 
-	render "enquiry_post.html", $r,
+	render $r, "enquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
         headers => { title => "CMS Sales Enquiry" };
 }
 
-render "enquiry_get.html", $r;
+render $r, "enquiry_get.html";
