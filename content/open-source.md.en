@@ -9,11 +9,11 @@ Do you have an open source strategy for your product line?  How modular is your 
 
 #### List of Projects we've been involved with, in whole or in part:
 
-- [mod_perl](http://perl.apache.org/) &mdash; Embedded perl interpreter inside httpd.
+- [mod_perl](https://perl.apache.org/) &mdash; Embedded perl interpreter inside httpd.
 
-- [libapreq](http://httpd.apache.org/apreq/) &mdash; Safe/Fast HTML form-data and cookie parsing library.
+- [libapreq](https://httpd.apache.org/apreq/) &mdash; Safe/Fast HTML form-data and cookie parsing library.
 
-- [Apache CMS](http://www.apache.org/dev/cms) &mdash; CMS serving over 100 Apache projects.
+- [SunStarSys CMS](https://github.com/SunStarSys/cms) &mdash; CMS serving over 100 Apache projects.
 
 - [orthrus](https://github.com/SunStarSys/orthrus) &mdash; [OTP](https://en.wikipedia.org/wiki/One-time_password) security application; AL-2.0 *portable* drop in replacement for OPIE.
 
@@ -23,7 +23,7 @@ Do you have an open source strategy for your product line?  How modular is your 
 
 - [pffxg](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash; Parallelized, filtered recursive grep functionality similar to The Silver Searcher, but 4x faster.
 
-- [svnpubsub](http://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; Distributed commit hooks for subversion.
+- [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; Distributed commit hooks for subversion.
 
 - [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; Fresh Solaris 11.4 port including segfault-free ZFS/Zone support.
 
