@@ -146,4 +146,21 @@ We currently provide a basic <span class="text-white">Django</span> based templa
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE Search</a> <small>(those links in <span style="color:#e83e8c">hot pink</span> will drop you directly into an editor screen, with the cursor placed exactly according to the matching text)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
+
+<style type="text/css">
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 {% endblock %}
