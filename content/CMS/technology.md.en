@@ -39,7 +39,7 @@ We're a NoSQL shop for our entire website infrastructure, and if you are saddled
 
 ## Why not Git?
 
-- The [`git svn`](#) bridge already exists if you prefer to work with git yourself, instead of using the online IDE for the CMS.  You have options!
+- The [`git svn`](#) bridge already exists if you prefer to work with git yourself, instead of using the online IDE for the CMS.  You have options! You may find you get even more mileage out of GitHub actions by pushing your changes to GitHub (and linting them in a GitHub action, or pre-commit hook, or both, say) before [`git svn dcommit`](#)-ing them to our Subversion repos for live publication.
 
 - Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  They're more aligned with [devops / trunk based development](/essays/devops) than with [`gitflow`](#).  Moreover, gigantic sites are going to need SSI, and maybe a little CGI, for their use: at the very least to avoid massive, unreviewable site churn from equally massive commit mailer [`diff`](#) output on the resulting build tree deltas.
 
