@@ -40,7 +40,7 @@ if ($r->method eq "POST") {
 
     my ($cn, $srs_sender) = ($name, $email);
 
-    for ($cn, $subject) {\
+    for ($cn, $subject) {
         if (s/([^^A-Za-z0-9\-_.,!~*' ])/sprintf "=%02X", ord $1/ge) {
             tr/ /_/;
             $_ = "=?utf-8?Q?$_?=";
