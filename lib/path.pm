@@ -61,7 +61,7 @@ else {
 
 __DATA__
 title: "SunStar Systems"
-keywords: "perl,mod_perl,mod_apreq2,c,xs,httpd,apache,puppet,qmail,ezmlm,git,subversion,mysql,postgresql,linux,freebsd,solaris,devops"
+keywords: "mod_perl,c,xs,nodejs,python,httpd,apache,subversion,solaris"
 releases:
   cms:
     url: https://github.com/SunStarSys/cms
