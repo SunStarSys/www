@@ -75,6 +75,6 @@ releases:
   orthrus:
     url: https://github.com/SunStarSys/orthrus
     tag: v1.0.0
-  Algorithm-LCS-XS:
+  Algorithm_LCS_XS:
     url: https://github.com/SunStarSys/Algorithm-LCS-XS
     tag: v2.0.2
