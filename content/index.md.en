@@ -13,7 +13,7 @@ Title: Home
 			</h4>
 			<h4 class="card-title">SunStar Systems [orthrus {{conf.releases.orthrus.tag}}]({{conf.releases.orthrus.url}}) released!</h4>
 			<h4 class="card-title">SunStar Systems pty {{ conf.releases.pty.tag}} released!</h4>
-			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="{{conf.releases.pty.url}}/releases/tag/{{ conf.releases.pty.tag}}">v2.1.1</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
+			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="{{conf.releases.pty.url}}/releases/tag/{{ conf.releases.pty.tag}}">{{ conf.releases.pty.tag }}</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
 		</div>
 	</div>
 	<br />
