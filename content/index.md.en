@@ -4,16 +4,16 @@ Title: Home
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">News</div>
 		<div class="card-body">
-			<h4 class="card-title">SunStar Systems CMS [Static Site Generator](https://github.com/SunStarSys/cms) v1.0.0 released.
+			<h4 class="card-title">SunStar Systems CMS [Static Site Generator]({{conf.releases.cms.url}}) {{conf.releases.cms.tag}} released.
 			</h4>
 			<h4 class="card-title">
-			<a href="https://github.com/SunStarSys/sealed">sealed.pm v4.1.9</a> released to CPAN!
+			<a href="{{conf.releases.sealed.url}}">sealed.pm {{conf.releases.sealed.tag}}</a> released to CPAN!
 			</h4>
-			<h4>[Algorithm::LCS::XS {{ conf.releases."Algorithm-LCS-XS".tag }}]({{ conf.releases."Algorithm-LCS-XS".url }}) released to CPAN!
+			<h4>[Algorithm::LCS::XS {{ conf.releases.Algorithm_LCS_XS.tag }}]({{ conf.releases.Algorithm_LCS_XS.url }}) released to CPAN!
 			</h4>
 			<h4 class="card-title">SunStar Systems [orthrus {{conf.releases.orthrus.tag}}]({{conf.releases.orthrus.url}}) released!</h4>
-			<h4 class="card-title">SunStar Systems pty v2.1.1 released!</h4>
-			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="https://github.com/SunStarSys/pty/releases/tag/v2.1.1">v2.1.1</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
+			<h4 class="card-title">SunStar Systems pty {{ conf.releases.pty.tag}} released!</h4>
+			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="{{conf.releases.pty.url}}"/releases/tag/{{ conf.releases.pty.tag}}">v2.1.1</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
 		</div>
 	</div>
 	<br />
