@@ -17,9 +17,9 @@ our @patterns = (
     preprocess => 1,
     conf       => $conf,
   }],
-  [qr/\.md(?:text)?/,  single_narrative => {
+  [qr/\.md(?:text)?/,  snippet => {
+    view       => "single_narrative",
     template   => "main.html",
-    preprocess => 1,
     conf       => $conf,
   }],
 );
@@ -61,7 +61,7 @@ else {
 
 __DATA__
 title: "SunStar Systems"
-keywords: "mod_perl,c,xs,nodejs,python,httpd,apache,subversion,solaris"
+keywords: "mod_perl,c,xs,nodejs,python,httpd,apache,subversion,zfs,solaris"
 releases:
   cms:
     url: https://github.com/SunStarSys/cms
