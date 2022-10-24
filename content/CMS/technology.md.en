@@ -116,3 +116,5 @@ joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
 
 
 [snippet:lang=perl:repo=SunStarSys/cms:path=.gitignore:lines=1,4]
+
+[.gitignore]({{ snippetA.pretty_uri}})
