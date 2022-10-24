@@ -62,3 +62,19 @@ else {
 __DATA__
 title: "SunStar Systems"
 keywords: "perl,mod_perl,mod_apreq2,c,xs,httpd,apache,puppet,qmail,ezmlm,git,subversion,mysql,postgresql,linux,freebsd,solaris,devops"
+releases:
+  cms:
+    url: https://github.com/SunStarSys/cms
+    tag: v1.0.0
+  pty:
+    url: https://github.com/SunStarSys/pty
+    tag: v2.1.1
+  sealed:
+    url: https://github.com/SunStarSys/sealed
+    tag: v4.1.9
+  orthrus:
+    url: https://github.com/SunStarSys/orthrus
+	tag: v1.0.0
+  Algorithm-LCS-XS:
+    url: https://github.com/SunStarSys/Algorithm-LCS-XS
+	tag: v2.0.2
