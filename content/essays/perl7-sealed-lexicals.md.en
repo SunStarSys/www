@@ -131,7 +131,6 @@ req/s           :       7.71      248.17       19.60       28.07    92.70%
 ```
 
 ```apache
-# blob
 <VirtualHost foo>
 	PerlModule Foo::Bar::QUUX
 	Options +ExecCGI
