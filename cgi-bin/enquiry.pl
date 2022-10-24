@@ -8,6 +8,7 @@ use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use strict;
 use warnings;
+use base 'sealed';
 use sealed 'debug';
 
 my Apache2::RequestRec $r = shift;
@@ -40,7 +41,7 @@ if ($r->method eq "POST") {
 
     my ($cn, $srs_sender) = ($name, $email);
 
-    for ($cn, $subject) {\
+    for ($cn, $subject) {
         if (s/([^^A-Za-z0-9\-_.,!~*' ])/sprintf "=%02X", ord $1/ge) {
             tr/ /_/;
             $_ = "=?utf-8?Q?$_?=";
