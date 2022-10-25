@@ -18,10 +18,7 @@ What Doug was looking for was a way to tell Perl 5 to perform the method lookup 
 ## [Benchmark script]({{snippetA.pretty_uri}})
 
 [snippet:repo=SunStarSys/sealed:path=t/bench.pl:lines=1,50:lang=perl]
-<script>
-var element = document.getElementById("snippetA")
-var ed = new CodeMirror(element, {theme: "solarized", readOnly:true})
-</script>
+<script>var element = document.getElementById("snippetA");var ed = new CodeMirror(element, {theme: "solarized", readOnly:true});</script>
 ## Benchmark results
 
 ```perl
