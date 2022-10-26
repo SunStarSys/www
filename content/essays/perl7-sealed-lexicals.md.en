@@ -5,10 +5,6 @@ Keywords: perl,dylan,static,method,lookup,compile,sealed
   <img src="../images/sunstarstaronly.png">
 </div>
 
-<script>
-    alert("HOLA");
-</script>
-
 ## The Problem
 
 Perl 5's OO runtime method lookup has 50% more performance overhead than a direct, named subroutine invocation.
