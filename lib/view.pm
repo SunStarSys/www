@@ -2,7 +2,7 @@ package view;
 use base 'SunStarSys::View';
 
 # the point of this __PACKAGE__ is to provide/implement view methods to fill into  @path::patterns.
-# some view methods expect a view argument because they only operate as "proxies" that just modify the \%args
+# some view methods expect a "view" argument because they only operate as "proxies" that just modify the \%args
 # of the next_view.
 
 
