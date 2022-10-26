@@ -6,6 +6,13 @@ use File::Path 'mkpath';
 
 my $conf = Load join "", <DATA>;
 
+# the only job of this __PACKAGE__ is to fill out the @path::patterns and %path::dependendies data structures.
+# entries in @patterns are three-element arrays:
+# [ $pattern, $method_name (from view.pm), \%args (to pass to method) ].
+# entries in %dependencies have keys that represent source file names,
+# with each corresponding value as an array of source files that the key's subsequent built artifact depends on
+# we only unravel the %dependencies at incremental build time, not in full site builds.
+
 our @patterns = (
   [qr!/(index|sitemap)\.html!, sitemap => {
     quick_deps    => 1,
@@ -23,9 +30,10 @@ our @patterns = (
   }],
 );
 
-our %dependencies;
+our %dependencies; # entries computed below at build-time, or drawn from the .deps cache file
 
 if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
+  # use the cached .deps file if the incremental build system deems it appropriate
   open my $deps, "<", "$ENV{TARGET_BASE}/.deps" or die "Can't open .deps for reading: $!";
   *dependencies = Load join "", <$deps>;
 }
