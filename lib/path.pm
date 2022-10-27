@@ -12,7 +12,7 @@ my $conf = Load join "", <DATA>;
 # [
 #   $pattern,     # first pattern to match the source file's "/content/"-rooted path wins
 #   $method_name, # provided/implemented in view.pm
-#   \%args,       # to be merged with "path" and "lang" args, and passed (by list value) to view's $method_name
+#   \%args,       # to be merged with "path" and "lang" args, and passed (by list value) to view's $method_name)
 # ]
 #
 # entries in %dependencies have keys that represent source file names,
@@ -78,7 +78,7 @@ keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs
 releases:
   cms:
     url: https://github.com/SunStarSys/cms
-    tag: v1.0.0
+    tag: v1.0.1
   pty:
     url: https://github.com/SunStarSys/pty
     tag: v2.1.1
