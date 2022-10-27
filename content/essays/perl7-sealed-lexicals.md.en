@@ -1,7 +1,9 @@
 Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed
 
-<div class="right"><img src="../images/sunstarstaronly.png"></img></div>
+<div class="right">
+  <img src="../images/sunstarstaronly.png">
+</div>
 
 ## The Problem
 
@@ -9,66 +11,15 @@ Perl 5's OO runtime method lookup has 50% more performance overhead than a direc
 
 ## The initial solution: Doug MacEachern's method lookup optimizations
 
-Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his forté. One of his many contributions to [p5p](https://lists.perl.org/list/perl5-porters.html) was to cut the performance penalty of OO method lookup overhead in half, by using a method + `@::ISA` heirarchy cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
+Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his forté. One of his many contributions to [p5p](https://lists.perl.org/list/perl5-porters.html) was to cut the performance penalty of OO method lookup overhead in half, by using a method + <code>&#64;ISA</code> heirarchy cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
 
 This isn't a trifling issue with calls to `C struct` get-set accessor methods &mdash; the common situation with many mod_perl APIs.  Perl's runtime method-call lookup penalty on httpd's `struct request_rec *`, that mod_perl exposes via the `Apache2::RequestRec` module, is on the same order of magnitude of the full execution of the call.  For mod_perl backed sites making millions of XS method calls a second, this is an awful waste of precious CPU cycles.
 
 What Doug was looking for was a way to tell Perl 5 to perform the method lookup at compile time, the way it does with named subroutine calls.  Every time Doug tried, he hit roadblocks of either a social or technical nature.  Perhaps it's time to make another pass at this idea with the advent of Perl 7.
 
-## Benchmark script
+## [Benchmark script]({{snippetA.pretty_uri}})
 
-```perl
-#!/usr/bin/env -S perl -Ilib
-use Test::More tests => 1;
-use POSIX 'dup2';
-dup2 fileno(STDERR), fileno(STDOUT);
-use strict;
-use Benchmark ':all';
-our ($x, $z);
-$x = bless {}, "Foo";
-$z = Foo->can("foo");
-sub method {$x->foo}
-sub class  {Foo->foo}
-sub anon   {$z->($x)}
-BEGIN {
-  package Foo;
-  use base 'sealed';
-  use sealed 'deparse';
-  sub foo  { shift }
-  sub bar  { shift . "->::Foo::bar" }
-}
-sub func   {Foo::foo($x)}
-BEGIN{@::ISA=('Foo')}
-
-my main $y = $x;
-sub sealed :Sealed {
-    $y->foo();
-}
-sub also_sealed :Sealed {
-    my main $a = shift;
-    if ($a) {
-        my Benchmark $bench;
-        my $inner = $a;
-        return sub :Sealed {
-            my Foo $b = $a;
-            $inner->foo($b->foo($inner->bar, $inner, $bench->cmpthese));
-            $a->foo;
-        };
-    }
-    sub render :Sealed { my main $b = $a; local our @Q=1; $b->foo }
-    $a->bar();
-}
-my %tests = (
-    func => \&func,
-    method => \&method,
-    sealed => \&sealed,
-    class => \&class,
-    anon => \&anon,
-);
-
-cmpthese 20_000_000, \%tests;
-ok(1);
-```
+[snippet:repo=SunStarSys/sealed:path=t/bench.pl:lines=1,50:lang=perl]
 
 ## Benchmark results
 
@@ -138,7 +89,11 @@ Sample code:
 
 Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault ad nauseum at scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
 
-For fun, try this [patch](https://github.com/SunStarSys/sealed/blob/master/RegistryCooker.pm.patch) to `ModPerl::RegistryCooker`.  It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts, something like [this one](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
+For fun, try this [monkey patch]({{snippetB.pretty_uri}}) to `ModPerl::RegistryCooker`:
+
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=83,86]
+
+It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts, something like [this one](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
 ```shell
 ~/src/cms% h2load -n 100000 -c 1000 -m 100 -t 10 http://localhost/perl-script/enquiry.pl\?lang=.es
