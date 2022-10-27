@@ -12,7 +12,7 @@ my $conf = Load join "", <DATA>;
 # [
 #   $pattern,     # first pattern to match the source file's "/content/"-rooted path wins
 #   $method_name, # provided/implemented in view.pm
-#   \%args,       # to be merged with "path" and "lang" args, and passed (by list value) to view's $method_name)
+#   \%args,       # to be merged with "path" and "lang" args, and passed (by list value) to view's $method_name
 # ]
 #
 # entries in %dependencies have keys that represent source file names,
