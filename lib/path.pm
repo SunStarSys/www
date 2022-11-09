@@ -73,6 +73,7 @@ else {
           $src = "$dir/$src", $src = s(/[.]/)(/)g;
           1 while $src =~ s(/[^./][^/]+/[.]{2}/)(/);
           push @{$dependencies{$path}}, $src;
+        }
       }
     }
 
