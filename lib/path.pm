@@ -58,7 +58,7 @@ else {
 
     if (/\.md[^\/]*$/) {
       read_text_file "content$_", \my %d, 0;
-      push @{$dependencies{$_}}, grep s/^content//, map glob("content$_"), ref $d{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies} if exists $d{headers}{dependencies};
+      push @{$dependencies{$_}}, grep s/^content//, map glob("content$_"), ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies} if exists $d{headers}{dependencies};
     }
 
     for my $lang (qw/en es de fr/) {
