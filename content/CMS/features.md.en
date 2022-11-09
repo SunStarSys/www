@@ -1,5 +1,6 @@
 Title: CMS Features
 Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,http
+Dependencies: *.md.en
 
 <div class="row">
 	<div class="col-lg-3">
@@ -82,3 +83,12 @@ Keywords: jamstack,markdown,cms,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,htt
 - New editor treats newlines within markdown text blocks as hard breaks.
 - GFM uses a different delimiter for code blocks.
 - [`extpaths.txt`](#) is no longer supported: select individuals from each project will be granted write access to the production website tree in our subversion repos for uploading externally produced material (javadocs, software release artifacts, etc.)
+
+------------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title}}]({{d.0}})
+{% endfor %}
+
