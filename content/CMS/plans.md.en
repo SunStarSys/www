@@ -1,6 +1,6 @@
 Title: CMS Plans
 Keywords: Jamstack
-dependencies: /content/CMS/*.md.en
+dependencies: /CMS/*.md.en
 
 ## Plan Details
 
@@ -131,6 +131,7 @@ dependencies: /content/CMS/*.md.en
 	- São Paolo, BZ
 
 ------------
+## Index
 <ul>
 {% for d in deps %}
 <li>[{{d.1.headers.title}}]({{d.0}})</li>
