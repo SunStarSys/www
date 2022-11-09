@@ -61,7 +61,10 @@ else {
       my $path = $_;
       my $dir = dirname($path);
       read_text_file "content$_", \my %d, 0;
-      push @{$dependencies{$path}}, grep $_ ne $path, grep s/^content//, map glob("content$_"),map index($_, "/") == 0  ? $_ : "$dir/$_", ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies} if exists $d{headers}{dependencies};
+      push @{$dependencies{$path}}, grep $_ ne $path, grep s/^content//,
+        map glob("content$_"), map index($_, "/") == 0  ? $_ : "$dir/$_",
+        ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies}
+        if exists $d{headers}{dependencies};
     }
 
     for my $lang (qw/en es de fr/) {
