@@ -43,6 +43,7 @@ if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
   open my $deps, "<", "$ENV{TARGET_BASE}/.deps" or die "Can't open .deps for reading: $!";
   *dependencies = Load join "", <$deps>;
 }
+
 else {
   walk_content_tree {
 
@@ -76,7 +77,7 @@ else {
 
   # incorporate hard-coded deps in the __DATA__ section of this file
   while  (my ($k, $v) = each %{$conf->{dependencies}}) {
-    push @{$dependencies{$k}}, ref $v ? @$v : $v;
+    push @{$dependencies{$k}}, grep s/^content//, map glob("content$_"), ref $v ? @$v : $v;
   }
 
   mkpath $ENV{TARGET_BASE};
