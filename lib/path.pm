@@ -18,6 +18,11 @@ my $conf = Load join "", <DATA>;
 # entries in %dependencies have keys that represent source file names,
 # with each corresponding value as an array of source files that the key's subsequent built artifact depends on
 # we only unravel the %dependencies at incremental build time, not in full site builds.
+#
+# there are three entry points into the %dependencies hash:
+# 1. via walk_content_tree() logic
+# 2. via a "dependencies" header entry in an md.* file (in walk_content_tree)
+# 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
 
 our @patterns = (
   [qr!/(index|sitemap)\.html!, sitemap => {
