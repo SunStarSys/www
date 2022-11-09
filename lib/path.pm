@@ -1,5 +1,5 @@
 package path;
-use SunStarSys::Util qw/walk_content_tree Load Dump/;
+use SunStarSys::Util qw/read_text_file walk_content_tree Load Dump/;
 use strict;
 use warnings;
 use File::Path 'mkpath';
@@ -45,10 +45,18 @@ if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
 }
 else {
   walk_content_tree {
+
+    if (/\.md[^\/]$/) {
+      read_text_file "content$_", \(my %d), 0;
+      push @{$dependencies{$_}}, grep s/^content//, map glob "content$_", ref $d{dependencies} ? @{$d{dependencies}} : split /,?\s+/, $d{dependencies} if exists $d{dependencies};
+    }
+
     for my $lang (qw/en es de fr/) {
+
       if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
         push @{$dependencies{"/sitemap.html.$lang"}}, $_;
       }
+
       if (s!/index\.html\.$lang$!!) {
         $dependencies{"$_/index.html.$lang"} = [
           grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
@@ -65,6 +73,8 @@ else {
     push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
       @essays_glob;
   }
+
+  # incorporate hard-coded deps in the __DATA__ section of this file
   while  (my ($k, $v) = each %{$conf->{dependencies}}) {
     push @{$dependencies{$k}}, ref $v ? @$v : $v;
   }
