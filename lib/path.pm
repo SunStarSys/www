@@ -3,6 +3,7 @@ use SunStarSys::Util qw/read_text_file walk_content_tree Load Dump/;
 use strict;
 use warnings;
 use File::Path 'mkpath';
+use File::Basename;
 
 my $conf = Load join "", <DATA>;
 
@@ -57,8 +58,9 @@ else {
   walk_content_tree {
 
     if (/\.md[^\/]*$/) {
+      my $path = dirname($_);
       read_text_file "content$_", \my %d, 0;
-      push @{$dependencies{$_}}, grep s/^content//, map glob("content$_"), ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies} if exists $d{headers}{dependencies};
+      push @{$dependencies{$_}}, grep s/^content//, map glob("content$_"), map /^\./ ? "$path/$_" : $_, ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies} if exists $d{headers}{dependencies};
     }
 
     for my $lang (qw/en es de fr/) {
