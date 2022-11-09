@@ -68,8 +68,8 @@ else {
         if exists $d{headers}{dependencies};
 
       while ($d{content} =~ /\{\{\s*include\s+"([^"]+)"\s*\}\}/g) {
+        my $src = $1;
         if (index($src, "./") == 0 or index($src, "../") == 0) {
-          my $src = $1;
           $src = "$dir/$src", $src = s(/[.]/)(/)g;
           1 while $src =~ s(/[^./][^/]+/[.]{2}/)(/);
           push @{$dependencies{$path}}, $src;
