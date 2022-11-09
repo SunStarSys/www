@@ -77,7 +77,7 @@ else {
 
   # incorporate hard-coded deps in the __DATA__ section of this file
   while  (my ($k, $v) = each %{$conf->{dependencies}}) {
-    push @{$dependencies{$k}}, grep s/^content//, map glob("content$_"), ref $v ? @$v : $v;
+    push @{$dependencies{$k}}, grep s/^content//, map glob("content$_"), ref $v ? @$v : split /,?\s+/, $v;
   }
 
   mkpath $ENV{TARGET_BASE};
