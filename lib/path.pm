@@ -41,15 +41,19 @@ our @patterns = (
   }],
 );
 
-our %dependencies; # entries computed below at build-time, or drawn from the .deps cache file
+our %dependencies;
+# entries computed below at build-time, or drawn from the .deps cache file
 
 if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
   # use the cached .deps file if the incremental build system deems it appropriate
+
   open my $deps, "<", "$ENV{TARGET_BASE}/.deps" or die "Can't open .deps for reading: $!";
   *dependencies = Load join "", <$deps>;
 }
 
 else {
+  # generate .deps and save it
+
   walk_content_tree {
 
     if (/\.md[^\/]*$/) {
