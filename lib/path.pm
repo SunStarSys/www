@@ -65,6 +65,10 @@ else {
     push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
       @essays_glob;
   }
+  while  (my ($k, $v) = each %{$conf->{dependencies}}) {
+    push @{$dependencies{$k}}, ref $v ? @$v : $v;
+  }
+
   mkpath $ENV{TARGET_BASE};
   open my $deps, ">", "$ENV{TARGET_BASE}/.deps" or die "Can't open '.deps' for writing: $!";
   print $deps Dump \%dependencies;
@@ -91,3 +95,5 @@ releases:
   Algorithm_LCS_XS:
     url: https://github.com/SunStarSys/Algorithm-LCS-XS
     tag: v2.0.2
+# hard-coded deps
+dependencies: {}
