@@ -2,7 +2,7 @@ Title: CMS Plans
 Keywords: Jamstack
 dependencies: /content/CMS/*.md.en
 
-> ## Plan Details
+## Plan Details
 
 <div class="row">
 <div class="col-lg-4">
@@ -131,7 +131,12 @@ dependencies: /content/CMS/*.md.en
 	- São Paolo, BZ
 
 ------------
-
+<ul>
+{% foreach d in deps %}
+<li>[{{d.1.headers.title}}]({{d.0}})</li>
+{% endforeach %}
+</ul>
+------------
 <div class="col-lg-12">
 {% include "enquiry_get.html" %}
 </div>
