@@ -58,9 +58,10 @@ else {
   walk_content_tree {
 
     if (/\.md[^\/]*$/) {
-      my $path = dirname($_);
+      my $path = $_;
+      my $dir = dirname($file);
       read_text_file "content$_", \my %d, 0;
-      push @{$dependencies{$_}}, grep s/^content//, map glob("content$_"), map /^\./ ? "$path/$_" : $_, ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies} if exists $d{headers}{dependencies};
+      push @{$dependencies{$path}}, grep $_ ne $path, grep s/^content//, map glob("content$_"), map /^\./ ? "$path/$_" : $_, ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies} if exists $d{headers}{dependencies};
     }
 
     for my $lang (qw/en es de fr/) {
