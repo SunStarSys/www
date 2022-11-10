@@ -1,4 +1,5 @@
 Title: CMS Technology
+Dependencies: *.md.en
 
 ## Solaris 11.4
 
@@ -114,7 +115,10 @@ joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
 
 -  Just worked out that way, given my 20 year history with the LAMP Stack and constructive contributions to the extended Apache HTTPd webserver community.  Doable, but again a massive undertaking with lots of hard engineering problems to solve along the way.
 
+--------
 
-[snippet:lang=perl:repo=SunStarSys/cms:path=.gitignore:lines=1,4]
+## Index
 
-[.gitignore]({{snippetA.pretty_uri}})
+{% for d in deps %}
+- [{{d.1.headers.title}}]({{d.0}})
+{% endfor %}
