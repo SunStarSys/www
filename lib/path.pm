@@ -46,53 +46,40 @@ our @patterns = (
 
 our %dependencies;
 # entries computed below at build-time, or drawn from the .deps cache file
+walk_content_tree {
 
-if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
-  # use the cached .deps file if the incremental build system deems it appropriate
+  seed_deps if /\.md[^\/]*$/;
 
-  open my $deps, "<", "$ENV{TARGET_BASE}/.deps" or die "Can't open .deps for reading: $!";
-  *dependencies = Load join "", <$deps>;
-}
-
-else {
-  # generate .deps and save it
-
-  walk_content_tree {
-
-    seed_deps if /\.md[^\/]*$/;
-
-    for my $lang (qw/en es de fr/) {
-
-      if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
-        push @{$dependencies{"/sitemap.html.$lang"}}, $_;
-      }
-
-      if (s!/index\.html\.$lang$!!) {
-        $dependencies{"$_/index.html.$lang"} = [
-          grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
-                              glob("content$_/*/index.html.$lang"))
-          ];
-        push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-          glob("content$_/*") if m!/files\b!;
-      }
-    }
-  };
-
-  my @essays_glob = glob("content/essays/files/*/*");
   for my $lang (qw/en es de fr/) {
-    push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-      @essays_glob;
-  }
 
-  # incorporate hard-coded deps in the __DATA__ section of this file
-  while  (my ($k, $v) = each %{$conf->{dependencies}}) {
-    push @{$dependencies{$k}}, grep $k ne $_, grep s/^content//, map glob("content$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
-  }
+    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
+      push @{$dependencies{"/sitemap.html.$lang"}}, $_;
+    }
 
-  mkpath $ENV{TARGET_BASE};
-  open my $deps, ">", "$ENV{TARGET_BASE}/.deps" or die "Can't open '.deps' for writing: $!";
-  print $deps Dump \%dependencies;
+    if (s!/index\.html\.$lang$!!) {
+      $dependencies{"$_/index.html.$lang"} = [
+        grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
+                            glob("content$_/*/index.html.$lang"))
+        ];
+      push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
+        glob("content$_/*") if m!/files\b!;
+    }
+  }
 }
+  and do {
+
+    my @essays_glob = glob("content/essays/files/*/*");
+    for my $lang (qw/en es de fr/) {
+      push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
+        @essays_glob;
+    }
+
+    # incorporate hard-coded deps in the __DATA__ section of this file
+    while  (my ($k, $v) = each %{$conf->{dependencies}}) {
+      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content//, map glob("content$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
+    }
+
+  };
 
 1;
 
