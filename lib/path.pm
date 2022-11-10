@@ -35,7 +35,7 @@ our @patterns = (
     quick_deps => 1,
     view       => [qw/snippet single_narrative/],
     conf       => $conf,
-    alert      => "## Testing\n123"
+#    alert      => "## Testing\n123"
   }],
   [qr/\.md(?:text)?/, snippet => {
     quick_deps => 1,
@@ -114,7 +114,6 @@ else {
 }
 
 1;
-
 
 __DATA__
 title: "SunStar Systems"
