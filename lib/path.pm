@@ -69,7 +69,7 @@ else {
         ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies}
         if exists $d{headers}{dependencies};
 
-      while ($d{content} =~ /\{\{\s*include\s+"([^"]+)"\s*\}\}/g) {
+      while ($d{content} =~ /\{%\s*include\s+"([^"]+)"\s*-?%\}/g) {
         my $src = $1;
         if (index($src, "./") == 0 or index($src, "../") == 0) {
           $src = "$dir/$src", $src = s(/[.]/)(/)g;
