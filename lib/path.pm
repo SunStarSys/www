@@ -32,6 +32,7 @@ our @patterns = (
     conf          => $conf,
   }],
   [qr!^/(essay|client)s/.*\.md(?:text)?!, set_template_from_capture => {
+    quick_deps => 1,
     view       => [qw/snippet single_narrative/],
     conf       => $conf,
   }],
