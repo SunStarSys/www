@@ -77,6 +77,15 @@
     </div>
   </div>
 
+  {% block alert %}
+  {% if alert %}
+  <div class="alert alert-dismissabible alert-infot">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    {{ alert|markdown }}
+  </div>
+  {% endif %}
+  {% endblock %}
+
   <div class="container theme-showcase">
        {% block content %}
     <div class="breadcrumbs">
