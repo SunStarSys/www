@@ -1,4 +1,5 @@
 Title: Application Performance
+Dependencies: *.md.en
 
 Many developers fall in to the trap of thinking performance optimization is about making each line of code as as efficient as possible, or choosing to write their entire app in the fastest programming language they can find.
 
@@ -105,3 +106,11 @@ Real **Application Performance** comes from balance, flexibility, and functional
 May a thousand flowers bloom, no matter silly they seem!
 
 *$Date$*
+
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{ d.1.headers.title }}]({{ d.0 }})
+{% endfor %}
