@@ -27,12 +27,12 @@ my $conf = Load join "", <DATA>;
 
 our @patterns = (
   [qr!/(index|sitemap)\.html!, sitemap => {
-    quick_deps    => 3,
+    quick_deps    => 1,
     nest          => 1,
     conf          => $conf,
   }],
   [qr!^/(essay|client)s/.*\.md(?:text)?!, set_template_from_capture => {
-    quick_deps => 3,
+    quick_deps => 1,
     view       => [qw/snippet single_narrative/],
     conf       => $conf,
 #    alert      => "## Testing\n123"
