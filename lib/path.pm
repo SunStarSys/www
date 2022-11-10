@@ -1,5 +1,5 @@
 package path;
-use SunStarSys::Util qw/read_text_file walk_content_tree Load Dump/;
+use SunStarSys::Util qw/read_text_file walk_content_tree seed_deps Load Dump/;
 use strict;
 use warnings;
 use File::Path 'mkpath';
@@ -60,25 +60,7 @@ else {
 
   walk_content_tree {
 
-    if (/\.md[^\/]*$/) {
-      my $path = $_;
-      my $dir = dirname($path);
-      read_text_file "content$_", \my %d;
-
-      push @{$dependencies{$path}}, grep $_ ne $path, grep s/^content//,
-        map glob("content$_"), map index($_, "/") == 0  ? $_ : "$dir/$_",
-        ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /[;,]?\s+/, $d{headers}{dependencies}
-        if exists $d{headers}{dependencies};
-
-      while ($d{content} =~ /\{%\s*include\s+"([^"]+)"\s*-?%\}/g) {
-        my $src = $1;
-        if (index($src, "./") == 0 or index($src, "../") == 0) {
-          $src = "$dir/$src", $src = s(/[.]/)(/)g;
-          1 while $src =~ s(/[^./][^/]+/[.]{2}/)(/);
-          push @{$dependencies{$path}}, $src;
-        }
-      }
-    }
+    seed_deps if /\.md[^\/]*$/;
 
     for my $lang (qw/en es de fr/) {
 
