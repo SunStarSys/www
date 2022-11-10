@@ -67,7 +67,7 @@ else {
 
       push @{$dependencies{$path}}, grep $_ ne $path, grep s/^content//,
         map glob("content$_"), map index($_, "/") == 0  ? $_ : "$dir/$_",
-        ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /,?\s+/, $d{headers}{dependencies}
+        ref $d{headers}{dependencies} ? @{$d{headers}{dependencies}} : split /[;,]?\s+/, $d{headers}{dependencies}
         if exists $d{headers}{dependencies};
 
       while ($d{content} =~ /\{%\s*include\s+"([^"]+)"\s*-?%\}/g) {
@@ -105,7 +105,7 @@ else {
 
   # incorporate hard-coded deps in the __DATA__ section of this file
   while  (my ($k, $v) = each %{$conf->{dependencies}}) {
-    push @{$dependencies{$k}}, grep $k ne $_, grep s/^content//, map glob("content$_"), ref $v ? @$v : split /,?\s+/, $v;
+    push @{$dependencies{$k}}, grep $k ne $_, grep s/^content//, map glob("content$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
   }
 
   mkpath $ENV{TARGET_BASE};
