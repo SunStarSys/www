@@ -15,7 +15,8 @@ my $conf = Load join "", <DATA>;
 # ]
 #
 # entries in %dependencies have keys that represent source file names,
-# with each corresponding value as an arrayref of source files that the key's subsequent built artifact depends on
+# with each corresponding value as an arrayref of source files that
+# the key's subsequent built artifact depends on.
 # we only unravel the %dependencies at incremental build time, not in full site builds.
 #
 # there are three entry points into the %dependencies hash:
@@ -24,22 +25,26 @@ my $conf = Load join "", <DATA>;
 # 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
 
 our @patterns = (
+
   [qr!/(index|sitemap)\.html!, sitemap => {
     quick_deps => 1,
     nest       => 1,
     conf       => $conf,
   }],
+
   [qr!^/(essay|client)s/.*\.md(?:text)?!, set_template_from_capture => {
     quick_deps => 1,
     view       => [qw/snippet single_narrative/],
     conf       => $conf,
   }],
+
   [qr/\.md(?:text)?/, snippet => {
     quick_deps => 1,
     view       => "single_narrative",
     template   => "main.html",
     conf       => $conf,
   }],
+
 );
 
 our %dependencies;
