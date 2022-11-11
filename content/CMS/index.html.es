@@ -37,9 +37,9 @@ Lo que diferencia a este producto de nuestros competidores es la [Tecnología CM
 <li>o realmente cualquier persona de negocios insatisfecha con la estructura de costos de cualquier cosa de CMS, incluidas las ofertas gratuitas que reducen el tiempo y la energía de su personal.</li>
 </ul>
 
-*No hay bloqueo de proveedor involucrado con nuestra oferta*. Pero no confíe
-solo en nuestra palabra, vea por sí mismo lo que normalmente implica en
-términos de personalización del sistema de compilación visitando [nuestro árbol de librerías de origen viewvc](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).
+*No hay bloqueo de proveedor involucrado con nuestra oferta*. Pero no confíe solo en nuestra palabra, vea por sí mismo lo que normalmente implica en términos de personalización del sistema de compilación visitando
+
+[nuestro árbol de librerías de origen viewvc](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).
 
 Menos de <span class="text-info">100 LOC</span> para proporcionar la lógica de creación de este sitio web, e incluye una gestión de dependencias sofisticada y memorizada para la generación automática de un [SiteMap](/sitemap) multilingüe y todos los índices de directorio (como [esta parte](#Detalles) de esta página en particular). Incluso colocamos el [Generador de sitios estáticos para la compilación en GitHub](https://github.com/SunStarSys/cms) bajo la Licencia Apache 2.0.
 
