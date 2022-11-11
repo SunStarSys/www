@@ -131,13 +131,13 @@ Actualmente proporcionamos un sistema de plantilla básico basado en <span class
 <h2>Algunas capturas de pantalla representativas:</h2>
 <br />
 <h3>Vista IDE con Farsi (UTF-8).</h3>
-<centro><img src="../images/ide-fa.png" style="ancho:800px"></centro>
+<center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
 <h3>Vista del editor IDE.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
 <br/>
 <h3>Vista del editor IDE (español).</h3>
-<centro><img src="../images/ide-es.png" style="ancho:800px"></centro>
+<center><img src="../images/ide-es.png" style="width:800px"></center>
 <br/>
 <h3>Construcción completa del sitio IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
