@@ -81,7 +81,7 @@ Consulte nuestros [Planes CMS](plans) para conocer las ofertas actuales.
 <br />
 
 | Característica | Sistemas SunStar | Netlify+Gatsby | GitHub+Hugo |
-|:-----------|:-------------:|:------------:|:--- -------:|
+|:-----------|:-------------:|:------------:|:-----------:|
 | IDE CMS | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-info">?</span> |
 | CI/CD | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | |
 | Infraestructura FedRAMP + TLS compatible con FIPS | <span class="text-success">&check;</span> | | |
