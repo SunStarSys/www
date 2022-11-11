@@ -51,7 +51,7 @@ Menos de <span class="text-info">100 LOC</span> para proporcionar la lógica de 
 	</div>
 	<div style="height:20px">&nbsp;</div>
 
-        <h3>He aquí por qué, desarrollador de pila completa/bloguero público/gurú de DevOps...</h3>¿Quieres un sitio web que sea **seguro por defecto**? ¿Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, pero le brinda todo su poder cuando realmente lo necesita? Publicación instantánea cuando lo desee; construcciones de sucursales por etapas y sin problemas y promociones granulares personalizables para su sitio de producción, según se adapte al flujo de trabajo preferido de su equipo.
+<h3>He aquí por qué, desarrollador de pila completa/bloguero público/gurú de DevOps...</h3>¿Quieres un sitio web que sea **seguro por defecto**? ¿Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, pero le brinda todo su poder cuando realmente lo necesita? Publicación instantánea cuando lo desee; construcciones de sucursales por etapas y sin problemas y promociones granulares personalizables para su sitio de producción, según se adapte al flujo de trabajo preferido de su equipo.
 
 Si está cansado de las opciones de licencias por puesto y ciclo de CPU que lo agobian cada vez que necesita corregir un error tipográfico, [comuníquese con nosotros](/contact). Si usted es un domador de leones equipado con expresiones regulares durante décadas de contenido HTML heredado acumulado, o simplemente alguien insatisfecho con las otras opciones en el mercado y cómo funcionan a escala, tenemos algo realmente especial para ofrecerle.
 
@@ -152,7 +152,7 @@ Actualmente proporcionamos un sistema de plantilla básico basado en <span class
 <h3>Construcción típica del sitio IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Búsqueda IDE</a> < pequeño>(esos enlaces en <span style="color:#e83e8c">rosa intenso</span> lo llevarán directamente a una pantalla de edición, con el cursor colocado exactamente de acuerdo con el texto coincidente)</pequeño>.</ h3>
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Búsqueda IDE</a> <small>(esos enlaces en <span style="color:#e83e8c">rosa intenso</span> lo llevarán directamente a una pantalla de edición, con el cursor colocado exactamente de acuerdo con el texto coincidente)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
 
