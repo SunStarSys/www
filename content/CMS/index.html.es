@@ -23,7 +23,7 @@ El &nbsp; <span class="text-white">SunStar Systems CMS</span> &nbsp; es un
 <li>rentable,</li>
 <li>rendimiento máximo,</li>
 </ul>
-<span class="text-white">Sistema de administración de contenido (CMS)</span> y <span class="text-white">Entorno de desarrollo integrado (IDE)</span> para **crear, administrar y entregar contenido estático del sitio web**, potencialmente con algunos [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) u otro servidor -características complementarias de contenido dinámico incorporadas
+<span class="text-white">Sistema de administración de contenido (CMS)</span> y <span class="text-white">Entorno de desarrollo integrado (IDE)</span> para **crear, administrar y entregar contenido estático del sitio web**, potencialmente con algunos [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) u otro servidor -características complementarias de contenido dinámico incorporadas.
 
 Para obtener información sobre precios, consulte nuestros [Planes CMS](plans).
 
