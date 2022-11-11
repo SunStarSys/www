@@ -57,23 +57,21 @@ Si vous en avez assez des licences par poste et des choix par cycle de processeu
 
 Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel, c'est à vous de décider. L'IDE en ligne est conçu et prêt pour votre **flux de travail uniquement sur navigateur**, à tout moment. En un clin d'œil, même l'interface mobile (navigateur) le fera, *instantanément*.
 
-Les arborescences sources de plusieurs gigaoctets ne sont tout simplement pas à
-la hauteur &mdash; les durées de construction complètes du site sont mesurées
-en *secondes*, et non en heures et minutes. Le système prend facilement en charge plus de [`1 Go/s`](fonctionnalités) lors du traitement de vos sources pour les versions complètes du site, mais compte tenu de sa fonctionnalité unique de <span class="text-white">gestion des dépendances en instance de brevet</span> , il n'a presque jamais besoin d'y recourir :
+Les arborescences sources de plusieurs gigaoctets ne sont tout simplement pas à la hauteur &mdash; les durées de construction complètes du site sont mesurées en *secondes*, et non en heures et minutes. Le système prend facilement en charge plus de [`1 Go/s`](features) lors du traitement de vos sources pour les versions complètes du site, mais compte tenu de sa fonctionnalité unique de <span class="text-white">gestion des dépendances en instance de brevet</span> , il n'a presque jamais besoin d'y recourir :
 
 <span class="text-success"><em>Nous ne construisons que ce dont vous avez besoin.</em></span>&trade;
 
 Cette technologie a été inventée pour la première fois fin 2011 par des membres de l'équipe Apache Infrastructure. L'expression "[JAM Stack](https://jamstack.wtf)" a été inventée des années plus tard, par un groupe ignorant notre art antérieur dans cet espace. Mais le [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) est limpide, et cette nouvelle offre de SunStar Systems en témoigne héritage original et ses véritables origines open source.
 
 <h4>Vous voulez faire un tour rapide pour voir à quel point c'est rapide et facile ?</h4>
-Ce site Web est auto-hébergé; tous ces carrés de crayon rose vif [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https:// www.sunstarsys.com/index) en haut à droite sont en direct. N'hésitez pas à fouiller et à expérimenter avec tout ce que vous voyez ! La seule chose que vous ne pouvez pas faire est de valider et de regarder vos modifications se créer et se déployer ; cela est limité à notre personnel pour des raisons évidentes.
+Ce site Web est auto-hébergé; tous ces carrés de crayon rose vif [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) en haut à droite sont en direct. N'hésitez pas à fouiller et à expérimenter avec tout ce que vous voyez ! La seule chose que vous ne pouvez pas faire est de valider et de regarder vos modifications se créer et se déployer ; cela est limité à notre personnel pour des raisons évidentes.
 
 Notre réseau mondial de points de présence (POP) garantit des connexions à faible latence au CMS et aux sites Web de livraison finale que nous hébergeons. Nous sommes actuellement présents sur quatre continents et avons une présence bi-côtière aux États-Unis. Et nous nous développons rapidement - ensuite l'Asie de l'Est !
 
 <h3>Il est temps de changer radicalement la façon dont vous gérez et diffusez votre site auprès de votre public cible.</h3>
 Allez à votre rythme, utilisez autant d'employés/aperçus/modifications/commits/branches que vous le souhaitez, et ne payez que pour ce que vous *utilisez réellement* sur notre infrastructure.
 
-Consultez nos [Plans CMS] (plans) pour les offres en cours.
+Consultez nos [Plans CMS](plans) pour les offres en cours.
 
 </div>
 </div>
@@ -109,24 +107,17 @@ Consultez nos [Plans CMS] (plans) pour les offres en cours.
 
 ### Informations consommateurs sur les offres SLA liées au JAM Stack que vous pourriez rencontrer ailleurs...
 
-Les consommateurs informés doivent toujours **demander** quels composants de la
-pile JAM sont couverts par le SLA, ou obtenir une assurance écrite que votre
-SLA fournit une couverture globale pour l'ensemble de la pile, *y compris les
-parties infra de construction et CMS/IDE*. Vous pourriez être surpris par les
-réponses : même GitHub subit de temps à autre de graves pannes de plusieurs
-heures, sur lesquelles de nombreux concurrents basent l'ensemble de leurs
-offres. De tels services avec des SLA nominaux de **99,99 %**, soit moins d'une
-heure par an au total temps d'arrêt, il est clair que vous avez des explications à donner, si vous avez l'impression que votre pile de services complets est sous SLA. * Ce n'est pas le cas *, nous sommes juste francs avec vous à ce sujet.
+Les consommateurs informés doivent toujours **demander** quels composants de la pile JAM sont couverts par le SLA, ou obtenir une assurance écrite que votre SLA fournit une couverture globale pour l'ensemble de la pile, *y compris les parties infra de construction et CMS/IDE*. Vous pourriez être surpris par les réponses : même GitHub subit de temps à autre de graves pannes de plusieurs heures, sur lesquelles de nombreux concurrents basent l'ensemble de leurs offres. De tels services avec des SLA nominaux de **99,99 %**, soit moins d'une heure par an au total temps d'arrêt, il est clair que vous avez des explications à donner, si vous avez l'impression que votre pile de services complets est sous SLA. * Ce n'est pas le cas *, nous sommes juste francs avec vous à ce sujet.
 
-Ce que nous proposons à la place est un effort pour maintenir notre service Subversion en ligne **24x7x365**, avec un accent principal sur les heures d'ouverture des États-Unis continentaux, et avec un objectif compétitif d'avoir notre [SLI](https://en.wikipedia .org/wiki/Service_level_indicator) se lisent favorablement par rapport au reste du marché (y compris GitHub lui-même, dont les SLA tournent autour des objectifs de temps de réponse, et non de la durée réelle des incidents d'indisponibilité). Les SLA sont un ingrédient important, de sorte que les clients Enterprise bénéficieront de notre service complet **99,99%**, qui couvre **tout** sauf le service Subversion lui-même. Personne n'offre de contrats SLA de disponibilité globale pour son infrastructure de service de contrôle de version ; et vous devriez vous méfier de faire affaire avec quelqu'un qui le fait sur le marché d'aujourd'hui.
+Ce que nous proposons à la place est un effort pour maintenir notre service Subversion en ligne **24x7x365**, avec un accent principal sur les heures d'ouverture des États-Unis continentaux, et avec un objectif compétitif d'avoir notre [SLI](https://en.wikipedia.org/wiki/Service_level_indicator) se lisent favorablement par rapport au reste du marché (y compris GitHub lui-même, dont les SLA tournent autour des objectifs de temps de réponse, et non de la durée réelle des incidents d'indisponibilité). Les SLA sont un ingrédient important, de sorte que les clients Enterprise bénéficieront de notre service complet **99,99%**, qui couvre **tout** sauf le service Subversion lui-même. Personne n'offre de contrats SLA de disponibilité globale pour son infrastructure de service de contrôle de version ; et vous devriez vous méfier de faire affaire avec quelqu'un qui le fait sur le marché d'aujourd'hui.
 
 ### Un coup d'œil sous le capot...
 
-Le CMS fait tout cela en s'interfaçant avec notre service Subversion compatible [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub/). Le CMS construit automatiquement chaque modification validée à l'aide d'une vitesse fulgurante [`node.js`](https://nodejs.org/) + [`Perl 7`](https://www.perl.com/article/announcing- perl-7/) système de construction basé sur le [principe d'Hollywood](https://deviq.com/hollywood-principle/) : il demande aux modules Perl fournis par le client de faire tout ce dont le client a besoin. (Ne vous inquiétez pas, il existe des modèles de mise en page de base disponibles qui feront tout le gros du travail pour vous.) Il fait également un effort supplémentaire et distribue instantanément les ensembles de modifications pour la construction, **atomiquement**, à notre Edge CDN serveurs Web de notre réseau POP.
+Le CMS fait tout cela en s'interfaçant avec notre service Subversion compatible [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub/). Le CMS construit automatiquement chaque modification validée à l'aide d'une vitesse fulgurante [`node.js`](https://nodejs.org/) + [`Perl 7`](https://www.perl.com/article/announcing-perl-7/) système de construction basé sur le [principe d'Hollywood](https://deviq.com/hollywood-principle/) : il demande aux modules Perl fournis par le client de faire tout ce dont le client a besoin. (Ne vous inquiétez pas, il existe des modèles de mise en page de base disponibles qui feront tout le gros du travail pour vous.) Il fait également un effort supplémentaire et distribue instantanément les ensembles de modifications pour la construction, **atomiquement**, à notre Edge CDN serveurs Web de notre réseau POP.
 
 [La conformité REST](https://www.codecademy.com/articles/what-is-rest) a ses avantages pour les utilisateurs de CMS. Ils apprécieront le fait que le bouton <span class="text-white">Retour</span> de leur navigateur n'interrompt pas le service ; en fait, il s'agit d'un composant essentiel de la fonctionnalité <span class="text-white">Rollback</span>. Dans une situation de rupture de site d'urgence, le retour à la page de résultats de la mauvaise soumission de <span class="text-white">Commit</span> leur fournira la possibilité d'inverser la fusion <span class="text-white">qui </span> modification appliquée erronée &mdash; en un clic &mdash; et reconstruire le site dans un bon état connu.
 
-Nous fournissons actuellement un système de modèles de base basé sur <span class="text-white">Django</span> dérivé d'un [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/ index.pl) du CPAN. La prise en charge d'un système de construction Python 3 sera bientôt disponible. Le [système de construction CMS] sous licence Apache 2.0 (https://github.com/SunStarSys/cms), ainsi qu'une vaste collection de modules de prise en charge à tirer parti de cet arbre, sont disponibles sur GitHub.
+Nous fournissons actuellement un système de modèles de base basé sur <span class="text-white">Django</span> dérivé d'un [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/index.pl) du CPAN. La prise en charge d'un système de construction Python 3 sera bientôt disponible. Le [système de construction CMS](https://github.com/SunStarSys/cms) sous licence Apache 2.0 , ainsi qu'une vaste collection de modules de prise en charge à tirer parti de cet arbre, sont disponibles sur GitHub.
 
 
 ### Détails
@@ -153,7 +144,7 @@ Nous fournissons actuellement un système de modèles de base basé sur <span cl
 <h3>Construction de site typique IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> < small>(ces liens en <span style="color:#e83e8c">rose vif</span> vous déposeront directement dans un écran d'éditeur, avec le curseur placé exactement en fonction du texte correspondant)</small>.</ h3>
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> <small>(ces liens en <span style="color:#e83e8c">rose vif</span> vous déposeront directement dans un écran d'éditeur, avec le curseur placé exactement en fonction du texte correspondant)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
 
