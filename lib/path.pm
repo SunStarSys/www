@@ -1,5 +1,5 @@
 package path;
-use SunStarSys::Util qw/read_text_file walk_content_tree seed_deps Load Dump/;
+use SunStarSys::Util qw/walk_content_tree seed_deps Load/;
 use strict;
 use warnings;
 use File::Basename;
