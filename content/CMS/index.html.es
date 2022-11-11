@@ -23,12 +23,12 @@ El &nbsp; <span class="text-white">SunStar Systems CMS</span> &nbsp; es un
 <li>rentable,</li>
 <li>rendimiento máximo,</li>
 </ul>
-<span class="text-white">Sistema de administración de contenido (CMS)</span> y <span class="text-white">Entorno de desarrollo integrado (IDE)</span> para **crear, administrar y entregar contenido estático del sitio web**, potencialmente con algunos [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) u otro servidor -características complementarias de contenido dinámico incorporadas.
+<span class="text-white">Sistema de administración de contenido (CMS)</span> y <span class="text-white">Entorno de desarrollo integrado (IDE)</span> para **crear, administrar y entregar contenido estático del sitio web**, potencialmente con algunos [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) u otro servidor -características complementarias de contenido dinámico incorporadas
 
 Para obtener información sobre precios, consulte nuestros [Planes CMS](plans).
 
 <h3>Aquí está el discurso, responsable de la toma de decisiones ejecutivas...</h3>
-Lo que diferencia a este producto de nuestros competidores es la [Tecnología CMS](tecnología), y cómo nos permite mantener costos operativos muy bajos al mismo tiempo que proporciona controles editoriales superiores y funciones innovadoras. Pasamos los ahorros de costos a nuestros **clientes**, con solo recargos marginales por recursos adicionales del proveedor de la nube. [Llámanos](/contacto), **especialmente** si eres
+Lo que diferencia a este producto de nuestros competidores es la [Tecnología CMS](tecnología), y cómo nos permite mantener costos operativos muy bajos al mismo tiempo que proporciona controles editoriales superiores y funciones innovadoras. Pasamos los ahorros de costos a nuestros **clientes**, con solo recargos marginales por recursos adicionales del proveedor de la nube. [Llámanos](/contact), **especialmente** si eres
 <ul>
 <li>un <span class="text-white">tomador de decisiones del sector de defensa/gobierno de TI</span> con FedRAMP/[NIST 800-207](https://www.nist.gov/publications/zero -trust-architecture) necesidades de cumplimiento, o requisitos de control de acceso detallados en el repositorio de control de versiones de su sitio,</li>
 <li>un <span class="text-white">ejecutivo de marketing</span> que desea una plataforma empresarial innovadora para administrar los activos de su sitio web corporativo,</li>
@@ -57,15 +57,14 @@ Si está cansado de las opciones de licencias por puesto y ciclo de CPU que lo a
 
 Nunca tener que lidiar directamente con un sistema de control de versiones, o incluso con un generador de sitios estáticos, en su propia computadora personal depende de usted. El IDE en línea está diseñado y listo para su **flujo de trabajo solo del navegador** siempre que lo esté. En un abrir y cerrar de ojos, incluso la interfaz móvil (navegador) lo hará, *al instante*.
 
-Los árboles fuente de varios gigabytes simplemente no son rival para él &mdash;
-la duración completa de la creación del sitio se mide en *segundos*, no en horas y minutos. El sistema admite fácilmente más de [`1 GB/s`](características) mientras procesa sus fuentes para compilaciones completas del sitio, pero dada su <span class="text-white">administración de dependencias única y pendiente de patente</span> funcionalidad , casi nunca necesita recurrir a ellos:
+Los árboles fuente de varios gigabytes simplemente no son rival para él &mdash; la duración completa de la creación del sitio se mide en *segundos*, no en horas y minutos. El sistema admite fácilmente más de [`1 GB/s`](características) mientras procesa sus fuentes para compilaciones completas del sitio, pero dada su <span class="text-white">administración de dependencias única y pendiente de patente</span> funcionalidad , casi nunca necesita recurrir a ellos:
 
 <span class="text-success"><em>Solo construimos lo que usted necesita construir.</em></span>&trade;
 
 Esta tecnología fue inventada por primera vez a fines de 2011 por miembros del equipo de infraestructura de Apache. La frase "[JAM Stack](https://jamstack.wtf)" fue acuñada años más tarde por un grupo que desconocía nuestro estado de la técnica en este espacio. Pero el [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) es muy claro, y esta nueva oferta de SunStar Systems es testimonio de ello. legado original y sus verdaderos orígenes de código abierto.
 
 <h4>¿Quieres darle una vuelta rápida para ver lo rápido y fácil que es?</h4>
-Este sitio web es autohospedado; todos esos cuadrados de lápiz de color rosa intenso [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https:// www.sunstarsys.com/index) en la parte superior derecha están en vivo. ¡Siéntete libre de hurgar y experimentar con cualquier cosa que veas! Lo único que no puede hacer es comprometerse y ver cómo se crean e implementan los cambios; eso está restringido a nuestro personal por razones obvias.
+Este sitio web es autohospedado; todos esos cuadrados de lápiz de color rosa intenso [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) en la parte superior derecha están en vivo. ¡Siéntete libre de hurgar y experimentar con cualquier cosa que veas! Lo único que no puede hacer es comprometerse y ver cómo se crean e implementan los cambios; eso está restringido a nuestro personal por razones obvias.
 
 Nuestra red global de punto de presencia (POP) garantiza conexiones de baja latencia tanto al CMS como a los sitios web de entrega final que alojamos. Actualmente estamos en cuatro continentes y tenemos presencia en las dos costas de los EE. UU. Y nos estamos expandiendo rápidamente, ¡el próximo en el Este de Asia!
 
@@ -108,14 +107,7 @@ Consulte nuestros [Planes CMS](planes) para conocer las ofertas actuales.
 
 ### Información al consumidor sobre ofertas de SLA relacionadas con JAM Stack que puede encontrar en otros lugares...
 
-Los consumidores informados siempre deben **preguntar** qué componentes de JAM
-Stack están cubiertos por SLA u obtener una garantía por escrito de que su SLA
-brinda una cobertura general para toda la pila, *incluidas las partes de
-infraestructura de compilación y CMS/IDE*. Es posible que se sorprenda con las
-respuestas: incluso GitHub tiene serias interrupciones de varias horas de vez
-en cuando, en las que muchos competidores basan todas sus ofertas. Dichos
-servicios con SLA nominales del **99,99 %**, que es menos de una hora al año de
-total tiempo de inactividad, claramente tiene algunas explicaciones que hacer, si tiene la impresión de que su paquete de servicio completo está bajo SLA. *No lo es*, solo estamos siendo sinceros contigo al respecto.
+Los consumidores informados siempre deben **preguntar** qué componentes de JAM Stack están cubiertos por SLA u obtener una garantía por escrito de que su SLA brinda una cobertura general para toda la pila, *incluidas las partes de infraestructura de compilación y CMS/IDE*. Es posible que se sorprenda con las respuestas: incluso GitHub tiene serias interrupciones de varias horas de vez en cuando, en las que muchos competidores basan todas sus ofertas. Dichos servicios con SLA nominales del **99,99 %**, que es menos de una hora al año de total tiempo de inactividad, claramente tiene algunas explicaciones que hacer, si tiene la impresión de que su paquete de servicio completo está bajo SLA. *No lo es*, solo estamos siendo sinceros contigo al respecto.
 
 Lo que ofrecemos en cambio es un mejor esfuerzo para mantener nuestro servicio Subversion en línea **24x7x365**, con un enfoque principal en el horario comercial de EE. UU. Continental y con un objetivo competitivo de tener nuestro [SLI] (https://en.wikipedia .org/wiki/Service_level_indicator) se lee favorablemente en comparación con el resto del mercado (incluido el propio GitHub, cuyos SLA giran en torno a los objetivos de tiempo de respuesta, no a la duración real de los incidentes de tiempo de inactividad). Los SLA son un ingrediente importante, por lo que los clientes empresariales disfrutarán de nuestro completo **99,99 %**, que cubre **todo** menos el propio servicio de Subversion. Nadie ofrece contratos SLA de disponibilidad general para su infraestructura de servicio de control de versiones; y debe tener cuidado al hacer negocios con alguien que lo hace en el mercado actual.
 
