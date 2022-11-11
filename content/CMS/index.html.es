@@ -41,7 +41,7 @@ Lo que diferencia a este producto de nuestros competidores es la [Tecnología CM
 solo en nuestra palabra, vea por sí mismo lo que normalmente implica en
 términos de personalización del sistema de compilación visitando [nuestro árbol de librerías de origen viewvc](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).
 
-Menos de <span class="text-info">100 LOC</span> para proporcionar la lógica de creación de este sitio web, e incluye una gestión de dependencias sofisticada y memorizada para la generación automática de un [SiteMap](/sitemap) multilingüe y todos los índices de directorio (como [esta parte] (#Detalles) de esta página en particular). Incluso colocamos el [Generador de sitios estáticos para la compilación en GitHub] (https://github.com/SunStarSys/cms) bajo la Licencia Apache 2.0.
+Menos de <span class="text-info">100 LOC</span> para proporcionar la lógica de creación de este sitio web, e incluye una gestión de dependencias sofisticada y memorizada para la generación automática de un [SiteMap](/sitemap) multilingüe y todos los índices de directorio (como [esta parte](#Detalles) de esta página en particular). Incluso colocamos el [Generador de sitios estáticos para la compilación en GitHub](https://github.com/SunStarSys/cms) bajo la Licencia Apache 2.0.
 
 </div>
 
@@ -57,7 +57,7 @@ Si está cansado de las opciones de licencias por puesto y ciclo de CPU que lo a
 
 Nunca tener que lidiar directamente con un sistema de control de versiones, o incluso con un generador de sitios estáticos, en su propia computadora personal depende de usted. El IDE en línea está diseñado y listo para su **flujo de trabajo solo del navegador** siempre que lo esté. En un abrir y cerrar de ojos, incluso la interfaz móvil (navegador) lo hará, *al instante*.
 
-Los árboles fuente de varios gigabytes simplemente no son rival para él &mdash; la duración completa de la creación del sitio se mide en *segundos*, no en horas y minutos. El sistema admite fácilmente más de [`1 GB/s`](características) mientras procesa sus fuentes para compilaciones completas del sitio, pero dada su <span class="text-white">administración de dependencias única y pendiente de patente</span> funcionalidad , casi nunca necesita recurrir a ellos:
+Los árboles fuente de varios gigabytes simplemente no son rival para él &mdash; la duración completa de la creación del sitio se mide en *segundos*, no en horas y minutos. El sistema admite fácilmente más de [`1 GB/s`](technology) mientras procesa sus fuentes para compilaciones completas del sitio, pero dada su <span class="text-white">administración de dependencias única y pendiente de patente</span> funcionalidad , casi nunca necesita recurrir a ellos:
 
 <span class="text-success"><em>Solo construimos lo que usted necesita construir.</em></span>&trade;
 
@@ -71,7 +71,7 @@ Nuestra red global de punto de presencia (POP) garantiza conexiones de baja late
 <h3>Es hora de un cambio radical en la forma en que administra y entrega su sitio a su público objetivo.</h3>
 Vaya a su propio ritmo, use tantos empleados / vistas previas / ediciones / confirmaciones / sucursales como desee, y solo pague por lo que *realmente usa* en nuestra infraestructura.
 
-Consulte nuestros [Planes CMS](planes) para conocer las ofertas actuales.
+Consulte nuestros [Planes CMS](plans) para conocer las ofertas actuales.
 
 </div>
 </div>
