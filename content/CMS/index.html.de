@@ -57,9 +57,7 @@ Wenn Sie die Lizenzierung pro Arbeitsplatz und die Auswahlmöglichkeiten pro CPU
 
 Es liegt an Ihnen, sich nie direkt mit einem Versionskontrollsystem oder sogar einem statischen Site-Generator auf Ihrem eigenen PC befassen zu müssen. Die Online-IDE ist für Ihren **Nur-Browser-Workflow** konzipiert und bereit, wann immer Sie möchten. Zur Not erledigt sogar die mobile (Browser-)Oberfläche dies *sofort*.
 
-Quellbäume mit mehreren Gigabyte sind einfach nicht gewachsen &ndash; Die Dauer
-der vollständigen Site-Erstellung wird in *Sekunden* gemessen, nicht in Stunden
-und Protokoll. Das System hält problemlos über [`1 GB/s`](Features) aus, während es Ihre Quellen für vollständige Site-Builds verarbeitet, aber angesichts seiner <span class="text-white">einzigartigen, zum Patent angemeldeten Abhängigkeitsverwaltungsfunktion</span> , es muss fast nie auf sie zurückgreifen:
+Quellbäume mit mehreren Gigabyte sind einfach nicht gewachsen &ndash; Die Dauer der vollständigen Site-Erstellung wird in *Sekunden* gemessen, nicht in Stunden und Protokoll. Das System hält problemlos über [`1 GB/s`](Features) aus, während es Ihre Quellen für vollständige Site-Builds verarbeitet, aber angesichts seiner <span class="text-white">einzigartigen, zum Patent angemeldeten Abhängigkeitsverwaltungsfunktion</span> , es muss fast nie auf sie zurückgreifen:
 
 <span class="text-success"><em>Wir bauen nur, was Sie bauen müssen.</em></span>&trade;
 
@@ -109,14 +107,7 @@ Aktuelle Angebote finden Sie in unseren [CMS-Plänen](Pläne).
 
 ### Verbraucherinformationen zu SLA-Angeboten im Zusammenhang mit dem JAM-Stack, auf die Sie möglicherweise an anderer Stelle stoßen ...
 
-Informierte Verbraucher sollten immer **fragen**, welche Komponenten des
-JAM-Stacks vom SLA abgedeckt sind, oder sich schriftlich versichern lassen,
-dass Ihr SLA den gesamten Stack umfassend abdeckt, *einschließlich der
-Build-Infra- und CMS-/IDE-Anteile*. Die Antworten werden Sie vielleicht
-überraschen: Selbst GitHub hat von Zeit zu Zeit ernsthafte mehrstündige
-Ausfälle, auf denen viele Wettbewerber ihr gesamtes Angebot aufbauen. Solche
-Dienste mit nominalen SLAs von **99,99 %**, die insgesamt weniger als eine
-Stunde pro Jahr ausmachen Ausfallzeiten, haben Sie eindeutig etwas zu erklären, wenn Sie den Eindruck haben, dass Ihr Full-Service-Stack unter SLA steht. *Ist es nicht*, wir sagen es dir nur offen.
+Informierte Verbraucher sollten immer **fragen**, welche Komponenten des JAM-Stacks vom SLA abgedeckt sind, oder sich schriftlich versichern lassen, dass Ihr SLA den gesamten Stack umfassend abdeckt, *einschließlich der Build-Infra- und CMS-/IDE-Anteile*. Die Antworten werden Sie vielleicht überraschen: Selbst GitHub hat von Zeit zu Zeit ernsthafte mehrstündige Ausfälle, auf denen viele Wettbewerber ihr gesamtes Angebot aufbauen. Solche Dienste mit nominalen SLAs von **99,99 %**, die insgesamt weniger als eine Stunde pro Jahr ausmachen Ausfallzeiten, haben Sie eindeutig etwas zu erklären, wenn Sie den Eindruck haben, dass Ihr Full-Service-Stack unter SLA steht. *Ist es nicht*, wir sagen es dir nur offen.
 
 Was wir stattdessen anbieten, ist unser Bestes, unseren Subversion-Service **24x7x365** online zu halten, mit primärem Fokus auf die Geschäftszeiten von Continental in den USA und mit dem wettbewerbsfähigen Ziel, unseren [SLI](https://en.wikipedia .org/wiki/Service_level_indicator) lesen sich im Vergleich zum Rest des Marktes positiv (einschließlich GitHub selbst, dessen SLAs sich um Reaktionszeitziele drehen, nicht um die tatsächliche Dauer von Ausfallzeiten). SLAs sind ein wichtiger Bestandteil, daher kommen Unternehmenskunden in den Genuss unseres umfassenden **99,99%**, das **alles** außer dem Subversion-Service selbst abdeckt. Niemand bietet pauschale Verfügbarkeits-SLA-Verträge für seine Versionskontrolldienstinfrastruktur an; und Sie sollten vorsichtig sein, Geschäfte mit jemandem zu machen, der auf dem heutigen Markt tätig ist.
 
