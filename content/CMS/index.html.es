@@ -28,7 +28,7 @@ El &nbsp; <span class="text-white">SunStar Systems CMS</span> &nbsp; es un
 Para obtener información sobre precios, consulte nuestros [Planes CMS](plans).
 
 <h3>Aquí está el discurso, responsable de la toma de decisiones ejecutivas...</h3>
-Lo que diferencia a este producto de nuestros competidores es la [Tecnología CMS](tecnología), y cómo nos permite mantener costos operativos muy bajos al mismo tiempo que proporciona controles editoriales superiores y funciones innovadoras. Pasamos los ahorros de costos a nuestros **clientes**, con solo recargos marginales por recursos adicionales del proveedor de la nube. [Llámanos](/contact), **especialmente** si eres
+Lo que diferencia a este producto de nuestros competidores es la [Tecnología CMS](technology), y cómo nos permite mantener costos operativos muy bajos al mismo tiempo que proporciona controles editoriales superiores y funciones innovadoras. Pasamos los ahorros de costos a nuestros **clientes**, con solo recargos marginales por recursos adicionales del proveedor de la nube. [Llámanos](/contact), **especialmente** si eres
 <ul>
 <li>un <span class="text-white">tomador de decisiones del sector de defensa/gobierno de TI</span> con FedRAMP/[NIST 800-207](https://www.nist.gov/publications/zero -trust-architecture) necesidades de cumplimiento, o requisitos de control de acceso detallados en el repositorio de control de versiones de su sitio,</li>
 <li>un <span class="text-white">ejecutivo de marketing</span> que desea una plataforma empresarial innovadora para administrar los activos de su sitio web corporativo,</li>
@@ -57,7 +57,7 @@ Si está cansado de las opciones de licencias por puesto y ciclo de CPU que lo a
 
 Nunca tener que lidiar directamente con un sistema de control de versiones, o incluso con un generador de sitios estáticos, en su propia computadora personal depende de usted. El IDE en línea está diseñado y listo para su **flujo de trabajo solo del navegador** siempre que lo esté. En un abrir y cerrar de ojos, incluso la interfaz móvil (navegador) lo hará, *al instante*.
 
-Los árboles fuente de varios gigabytes simplemente no son rival para él &mdash; la duración completa de la creación del sitio se mide en *segundos*, no en horas y minutos. El sistema admite fácilmente más de [`1 GB/s`](technology) mientras procesa sus fuentes para compilaciones completas del sitio, pero dada su <span class="text-white">administración de dependencias única y pendiente de patente</span> funcionalidad , casi nunca necesita recurrir a ellos:
+Los árboles fuente de varios gigabytes simplemente no son rival para él &mdash; la duración completa de la creación del sitio se mide en *segundos*, no en horas y minutos. El sistema admite fácilmente más de [`1 GB/s`](features) mientras procesa sus fuentes para compilaciones completas del sitio, pero dada su <span class="text-white">administración de dependencias única y pendiente de patente</span> funcionalidad , casi nunca necesita recurrir a ellos:
 
 <span class="text-success"><em>Solo construimos lo que usted necesita construir.</em></span>&trade;
 
