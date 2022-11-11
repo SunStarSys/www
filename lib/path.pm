@@ -2,7 +2,6 @@ package path;
 use SunStarSys::Util qw/walk_content_tree seed_deps Load/;
 use strict;
 use warnings;
-use File::Basename;
 
 my $conf = Load join "", <DATA>;
 
