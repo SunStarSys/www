@@ -16,130 +16,161 @@
 <div class="col-lg-5">
 <span class="text-success"><em>The Original Markdown JAM Stack.</em></span>&trade;
 
-The <span class="text-white">SunStar Systems CMS</span> is an
+Le&nbsp; <span class="text-white">CMS des systèmes SunStar</span> &nbsp ; est un
 <ul>
-	<li>online,</li>
-	<li>flexible,</li>
-	<li>cost-effective,</li>
-	<li>peak performance</li>
+<li>en ligne,</li>
+<li>compatible avec les mobiles</li>
+<li>rentable,</li>
+<li>performances de pointe,</li>
 </ul>
-Content Management System and Integrated Development Environment (IDE) for developing and maintaining static website content, potentially with some basic [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) features.
+<span class="text-white">Système de gestion de contenu (CMS)</span> et <span class="text-white">Environnement de développement intégré (IDE)</span> pour **créer, gérer et diffuser contenu de site Web statique **, potentiellement avec certains [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) de base ou un autre serveur -côté, fonctionnalités de contenu dynamique supplémentaires intégrées.
 
-<h3>Here's the Pitch, IT / Marketing Decision Maker...</h3>
-What differentiates this product from our competitors is the [CMS Technology](technology), and how it allows us to maintain very low operating costs while providing a superior service.  We pass the cost savings on to our **customers**, instead of our C-Suite executives. [Give us a call](/contact), **especially** if you are
-<ul>
-	<li>an IT government sector decision-maker with FedRAMP compliance requirements,</li>
- 	<li>a technology company leader with a mountain of online product documentation and support sites (potentially offering binary downloads) to curate,</li>
-	<li>a principled High Availability architect tired of dealing with single-points-of-failure inherent in SQL-based LAMP stacks,</li>
-<li>or really any business-person dissatisfied with the cost structure of anything else out there, including free offerings bogging down your staff's time and energy.</li>
+Pour plus d'informations sur les tarifs, consultez nos [forfaits CMS](forfaits).
+
+<h3>Voici le pitch, décideur exécutif...</h3>
+Ce qui différencie ce produit de nos concurrents est la [technologie CMS] (technologie), et comment elle nous permet de maintenir des coûts d'exploitation très bas tout en offrant des contrôles éditoriaux supérieurs et des fonctionnalités révolutionnaires. Nous répercutons les économies de coûts sur nos **clients**, avec seulement des frais supplémentaires marginaux pour les ressources supplémentaires du fournisseur de cloud. [Appelez-nous](/contact), **surtout** si vous êtes<ul>
+<li>un <span class="text-white">décideur du gouvernement informatique/du secteur de la défense</span> avec FedRAMP/[NIST 800-207](https://www.nist.gov/publications/zero -trust-architecture) besoins de conformité ou exigences de contrôle d'accès précises sur le référentiel de contrôle de version de votre site,</li>
+<li>un <span class="text-white">responsable marketing</span> souhaitant une plate-forme d'entreprise innovante pour gérer les ressources de votre site Web d'entreprise,</li>
+<li>un <span class="text-white">leader d'une entreprise technologique/d'une agence de sites Web</span> avec une montagne de documentation produit en ligne ou de sites clients (offrant potentiellement des téléchargements binaires) à organiser,</li>
+<li>un <span class="text-white">architecte haute disponibilité motivé</span> fatigué de gérer les points de défaillance uniques inhérents aux piles LAMP basées sur SQL,</li>
+<li>ou vraiment tout homme d'affaires insatisfait de la structure des coûts de n'importe quel CMS, y compris des offres gratuites qui accaparent le temps et l'énergie de votre personnel.</li>
 </ul>
-<span class="text-white">It's time for a sea change in how you manage and deliver your site to your target audience.</span>
 
-The switching costs are trivial in most circumstances: our default file layout and processing logic matches up well with any other static site generator (Jekyll, Pelican, Hugo, etc.).  Our extensive experience migrating sites both on to, and off of, the forerunner of this system at The Apache Software Foundation (The ASF) lets us say with conviction: *there is no vendor lock-in involved with our offering*.
+* Il n'y a pas de verrouillage du fournisseur impliqué dans notre offre *. Mais ne vous contentez pas de nous croire sur parole, voyez par vous-même ce qui est généralement impliqué en termes de personnalisation du système de construction en visitant
 
-But don't just take our word for it, see for yourselves what's typically involved in terms of build system customization by visiting [our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).  Less than 100 LOC to provide the build logic for this website, and it includes sophisticated dependency management for auto-generation of a multilingual [SiteMap](/sitemap) and all directory indexes (like [this portion](#Details) of this particular page).
+[notre arborescence de bibliothèques sources viewvc](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).
 
-*The real win* is when you realize you have limitless control over which personnel have editorial rights to each resource in **your own** Subversion repository, and that you never need to perform the cost-benefit-analysis on your editorial changes (or *even your editor previews* with certain cloud-based products) that our competition expects of you, as you work on your own site in your own fashion.  Even your [dynamic content](reference#Dynamic Content) is built according to your needs and schedule, not ours.
-
-Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure. See our [CMS Plans](plans) for the current deals.
+Moins de <span class="text-info">100 LOC</span> pour fournir la logique de construction de ce site Web, et il inclut une gestion des dépendances sophistiquée et mémorisée pour la génération automatique d'un [SiteMap](/sitemap) multilingue et tous les index de répertoires (comme [cette partie](#Détails) de cette page particulière). Nous avons même mis le [Générateur de site statique pour la construction sur GitHub](https://github.com/SunStarSys/cms) sous-jacent sous la licence Apache 2.0.
 
 </div>
+
 <div class="col-lg-7">
 	<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/96m8G9jCiyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/96m8G9jCiyA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
+	<div style="height:20px">&nbsp;</div>
 
-<h3>Here's Why, Full Stack Developer / Content Author / DevOps Guru...</h3>
-If you are tired of the per-seat licensing and per-CPU-cycle choices weighing you down whenever you need to fix a typo, [join us](/contact). If you are a regex-equipped lion tamer for decades of accumulated legacy HTML content, or just someone dissatisfied with the other options on the market and how they function at scale, we have something really special to offer you.
+<h3>Voici pourquoi, développeur Full Stack / blogueur public / gourou DevOps...</h3>
+Vous voulez un site Web **sécurisé par défaut** ? Facile à mettre à jour et à gérer, tout en masquant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ? Publication instantanée quand vous le souhaitez ; des créations de succursales fluides et échelonnées et des promotions granulaires personnalisables sur votre site de production en fonction du flux de travail préféré de votre équipe.
 
-Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
+Si vous en avez assez des licences par poste et des choix par cycle de processeur qui vous pèsent chaque fois que vous avez besoin de corriger une faute de frappe, [contactez-nous](/contact). Si vous êtes un dompteur de lions équipé de regex depuis des décennies de contenu HTML hérité accumulé, ou si vous êtes simplement insatisfait des autres options sur le marché et de leur fonctionnement à grande échelle, nous avons quelque chose de vraiment spécial à vous offrir.
 
-Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`500 MB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique, patent-pending dependency management</span> functionality, it almost never needs to resort to them:
+Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel, c'est à vous de décider. L'IDE en ligne est conçu et prêt pour votre **flux de travail uniquement sur navigateur**, à tout moment. En un clin d'œil, même l'interface mobile (navigateur) le fera, *instantanément*.
 
-<span class="text-success"><em>It only builds what you need built.</em></span>&trade;
+Les arborescences sources de plusieurs gigaoctets ne sont tout simplement pas à
+la hauteur &mdash; les durées de construction complètes du site sont mesurées
+en *secondes*, et non en heures et minutes. Le système prend facilement en charge plus de [`1 Go/s`](fonctionnalités) lors du traitement de vos sources pour les versions complètes du site, mais compte tenu de sa fonctionnalité unique de <span class="text-white">gestion des dépendances en instance de brevet</span> , il n'a presque jamais besoin d'y recourir :
 
-This technology was first invented in late 2011 by members of the Apache Infrastructure Team. The phrase "[JAM Stack](https://jamstack.wtf)" was coined years later, by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
+<span class="text-success"><em>Nous ne construisons que ce dont vous avez besoin.</em></span>&trade;
 
-The system we created for The ASF has been running on autopilot for the past 6 years.  The only issues we had with it from a stability standpoint revolved around ZFS usage on FreeBSD 9.1, which was a work in progress back then.  The fact is that this CMS/IDE is just the CI / CD coordination hub for power users on CDN services (or similar), and those CDN's are where the action is for SLA performance on the JAM Stack.  If *our CMS system* goes down, your ability to modify your live site will be impacted, but the last-mile delivery to your actual site's consumers is unimpacted thereby.  If The ASF's history with this system is a guide, the likelihood of an unplanned downtime event is relatively remote, especially when compared to the version control system which underpins it.
+Cette technologie a été inventée pour la première fois fin 2011 par des membres de l'équipe Apache Infrastructure. L'expression "[JAM Stack](https://jamstack.wtf)" a été inventée des années plus tard, par un groupe ignorant notre art antérieur dans cet espace. Mais le [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) est limpide, et cette nouvelle offre de SunStar Systems en témoigne héritage original et ses véritables origines open source.
 
-<span class="text-white">Want to give it a quick spin to see how fast and easy it is?</span>
+<h4>Vous voulez faire un tour rapide pour voir à quel point c'est rapide et facile ?</h4>
+Ce site Web est auto-hébergé; tous ces carrés de crayon rose vif [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https:// www.sunstarsys.com/index) en haut à droite sont en direct. N'hésitez pas à fouiller et à expérimenter avec tout ce que vous voyez ! La seule chose que vous ne pouvez pas faire est de valider et de regarder vos modifications se créer et se déployer ; cela est limité à notre personnel pour des raisons évidentes.
 
-This website is self-hosted; all those hot-pink pencil squares [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
+Notre réseau mondial de points de présence (POP) garantit des connexions à faible latence au CMS et aux sites Web de livraison finale que nous hébergeons. Nous sommes actuellement présents sur quatre continents et avons une présence bi-côtière aux États-Unis. Et nous nous développons rapidement - ensuite l'Asie de l'Est !
 
-Our global Point of Presence (POP) network ensures low-latency connections to both the CMS and the end-delivery websites we host.  We are currently on four continents and have a bicoastal presence within the US.  And we're expanding rapidly- next up East Asia!
+<h3>Il est temps de changer radicalement la façon dont vous gérez et diffusez votre site auprès de votre public cible.</h3>
+Allez à votre rythme, utilisez autant d'employés/aperçus/modifications/commits/branches que vous le souhaitez, et ne payez que pour ce que vous *utilisez réellement* sur notre infrastructure.
+
+Consultez nos [Plans CMS] (plans) pour les offres en cours.
 
 </div>
 </div>
 
-### Feature Comparison Grid
+### Grille de comparaison des fonctionnalités
 
 <br />
 
-| Feature          |  SunStar Systems | Netlify+Gatsby | GitHub+Hugo |
-|:------------|:-------------:|:------------:|:----------:|
-| CMS IDE	     | <span class="text-success">Y</span>  |    Y    |  <span class="text-info">?</span>  |
-| CI / CD          | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
-| FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| Browser-Only Workflow (Mobile Friendly) | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span>  |
-| Incremental Builds | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
-| Unlimited Branch Builds | <span class="text-success">Y</span> | Y | Y (for public repos) |
-| Scheduled Builds of Dynamic Content Only | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| Easy 3rd Party Contributor Workflow | <span class="text-success">Y</span> | Y | Y |
-| No Per-Preview Billing | <span class="text-success">Y</span> | Enterprise Only ($$) | Y |
-| No Per-Build Billing |  <span class="text-success">Y</span> | Enterprise Only ($$) | Y (for public repos)  |
-| No Per-Seat Billing | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | Y (for public repos) |
-| WebSite Hosting | <span class="text-success">Y</span> | Y | <span class="text-danger">N</span> |
-| SSI / CGI / mod_perl registry Support | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| Fine-Grained ACL on Source Repo | <span class="text-success">Enterprise Only</span> | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
-| +500 MB/s Full Site Builds | <span class="text-success">Y</span> | <span class="text-info">?</span> | <span class="text-danger">N</span> |
-| 8-64 Way Concurrent Builds | <span class="text-success">Y</span> | Enterprise Only ($$) | <span class="text-danger">N</span> |
-| TCO &lt; $5000/yr for Enterprise | <span class="text-success">Y</span> | <span class="text-danger">N</span> | <span class="text-info">?</span> |
-| 99.99% SLA for Enterprise | Coming in Q4 | Y | <span class="text-danger">N</span> |
-| Serverless Integration | Coming Soon! | Y | <span class="text-danger">N</span> |
-| Choice of Programming Language | Coming Soon! | <span class="text-danger">N</span> | <span class="text-danger">N</span> |
+| Caractéristique | Systèmes SunStar | Netlify+Gatsby | GitHub+Hugo |
+|:------------|:------------- :|:------------ :|:--- ------- :|
+| EDI CMS | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-info"> ?</span> |
+| CI / CD | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | |
+| Infrastructure FedRAMP + TLS conforme FIPS | <span class="text-success">&check;</span> | | |
+| Flux de travail dans le navigateur (compatible avec les mobiles) | <span class="text-success">&check;</span> | | |
+| Constructions incrémentielles | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | |
+| Créations de succursales illimitées | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check; (pour les dépôts publics)</span> |
+| Versions planifiées de contenu dynamique uniquement | <span class="text-success">&check;</span> | | |
+| Flux de travail facile pour les contributeurs tiers | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> |
+| Aperçus illimités | <span class="text-success">&check;</span> | <span class="text-warning">Entreprise uniquement ($$)</span> | <span class="text-warning">&check;</span> |
+| Constructions illimitées | <span class="text-success">&check;</span> | <span class="text-warning">Entreprise uniquement ($$)</span> | <span class="text-warning">&check; (pour les dépôts publics)</span> |
+| Sièges illimités | <span class="text-success">Entreprise uniquement</span> | | <span class="text-warning">&check; (pour les dépôts publics)</span> |
+| Hébergement de site Web | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | |
+| Prise en charge du registre SSI / CGI / mod_perl | <span class="text-success">&check;</span> | | |
+| ACL à grain fin sur le référentiel source | <span class="text-success">&check;</span> | | |
+| +1 Go/s de versions complètes du site | <span class="text-success">&check;</span> | | |
+| Constructions simultanées 8-64 voies | <span class="text-success">&check;</span> | <span class="text-warning">Entreprise uniquement ($$)</span> | |
+| TCO &lt; 5 000 $/an pour l'entreprise | <span class="text-success">&check;</span> | | |
+| SLA complet à 99,99 % pour les entreprises | <span class="text-success">&check;</span> | | |
+| Intégration sans serveur | Bientôt disponible via OCI ! | <span class="text-warning">&check;</span> | |
+| Choix du langage de programmation de construction | À venir! | | <span class="text-warning">&check;</span> |
 
 <br />
 
-### Consumer Information on SLA offers related to the JAM Stack that you may come across elsewhere...
+### Informations consommateurs sur les offres SLA liées au JAM Stack que vous pourriez rencontrer ailleurs...
 
-Informed consumers should always **ask** which components of the JAM Stack are covered by SLA, or get written assurance that your SLA provides blanket coverage for the entire stack, *including the VCS, build infra, and CMS / IDE portions*.  You might be surprised by the answers: even GitHub has serious multi-hour outages from time to time, on which many competitors base their entire offerings.  Such services with nominal **99.99%** SLA's, which is less than an hour a year of total downtime, clearly have some explaining to do, if you are under the impression your full service stack is under SLA.  *It's not*, we're just being up front with you about it.
+Les consommateurs informés doivent toujours **demander** quels composants de la
+pile JAM sont couverts par le SLA, ou obtenir une assurance écrite que votre
+SLA fournit une couverture globale pour l'ensemble de la pile, *y compris les
+parties infra de construction et CMS/IDE*. Vous pourriez être surpris par les
+réponses : même GitHub subit de temps à autre de graves pannes de plusieurs
+heures, sur lesquelles de nombreux concurrents basent l'ensemble de leurs
+offres. De tels services avec des SLA nominaux de **99,99 %**, soit moins d'une
+heure par an au total temps d'arrêt, il est clair que vous avez des explications à donner, si vous avez l'impression que votre pile de services complets est sous SLA. * Ce n'est pas le cas *, nous sommes juste francs avec vous à ce sujet.
 
-What we're offering instead, for 2020, is a best effort to keep our Subversion service online **24x7x365**, with primary focus on Continental US business hours, and with a competitive target of having our [SLI](https://en.wikipedia.org/wiki/Service_level_indicator)'s read favorably when compared to the rest of the market (including GitHub itself, whose SLA's revolve around response time targets, not the actual duration of downtime incidents).  SLA's are an important ingredient, so Enterprise customers will enjoy our comprehensive **99.99%**, which covers **everything** but the Subversion service itself.  Nobody offers blanket availability SLA contracts for their version control service infrastructure; and you should be wary of doing business with someone who does in today's marketplace.
+Ce que nous proposons à la place est un effort pour maintenir notre service Subversion en ligne **24x7x365**, avec un accent principal sur les heures d'ouverture des États-Unis continentaux, et avec un objectif compétitif d'avoir notre [SLI](https://en.wikipedia .org/wiki/Service_level_indicator) se lisent favorablement par rapport au reste du marché (y compris GitHub lui-même, dont les SLA tournent autour des objectifs de temps de réponse, et non de la durée réelle des incidents d'indisponibilité). Les SLA sont un ingrédient important, de sorte que les clients Enterprise bénéficieront de notre service complet **99,99%**, qui couvre **tout** sauf le service Subversion lui-même. Personne n'offre de contrats SLA de disponibilité globale pour son infrastructure de service de contrôle de version ; et vous devriez vous méfier de faire affaire avec quelqu'un qui le fait sur le marché d'aujourd'hui.
 
-### More on the Product...
+### Un coup d'œil sous le capot...
 
-It does all this by either interfacing with an [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub/)-enabled, customer hosted Subversion service, or by using one of ours.  It automatically builds each committed change using a lightning fast [`node.js`](https://nodejs.org/) + [`Perl 7`](https://www.perl.com/article/announcing-perl-7/) build system based on the [Hollywood Principle](https://deviq.com/hollywood-principle/): it calls out to customer-supplied Perl modules to do whatever the customer needs done (don't worry, there are basic layout templates available that will do all the heavy lifting for you).  It also goes the extra mile and instantly distributes the change-sets for the build, atomically, to your live website servers / CDN providers.
+Le CMS fait tout cela en s'interfaçant avec notre service Subversion compatible [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub/). Le CMS construit automatiquement chaque modification validée à l'aide d'une vitesse fulgurante [`node.js`](https://nodejs.org/) + [`Perl 7`](https://www.perl.com/article/announcing- perl-7/) système de construction basé sur le [principe d'Hollywood](https://deviq.com/hollywood-principle/) : il demande aux modules Perl fournis par le client de faire tout ce dont le client a besoin. (Ne vous inquiétez pas, il existe des modèles de mise en page de base disponibles qui feront tout le gros du travail pour vous.) Il fait également un effort supplémentaire et distribue instantanément les ensembles de modifications pour la construction, **atomiquement**, à notre Edge CDN serveurs Web de notre réseau POP.
 
-[REST compliance](https://www.codecademy.com/articles/what-is-rest) has its benefits to CMS users.  They'll like the fact that their browser's <span class="text-white">Back</span> button doesn't break the service; in fact it's an essential component of the <span class="text-white">Rollback</span> functionality. In an emergency site breakage situation, going back to the bad <span class="text-white">Commit</span> submission's result page will provide them with the ability to reverse merge <span class="text-white">that</span> errant applied change &mdash; at the click of a button &mdash; and rebuild the site back to a known good state.
+[La conformité REST](https://www.codecademy.com/articles/what-is-rest) a ses avantages pour les utilisateurs de CMS. Ils apprécieront le fait que le bouton <span class="text-white">Retour</span> de leur navigateur n'interrompt pas le service ; en fait, il s'agit d'un composant essentiel de la fonctionnalité <span class="text-white">Rollback</span>. Dans une situation de rupture de site d'urgence, le retour à la page de résultats de la mauvaise soumission de <span class="text-white">Commit</span> leur fournira la possibilité d'inverser la fusion <span class="text-white">qui </span> modification appliquée erronée &mdash; en un clic &mdash; et reconstruire le site dans un bon état connu.
 
-We currently provide a basic <span class="text-white">Django</span> based template system derived from a customized [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/index.pl) module from CPAN.  Support for a Python 3 build system is coming in 2020 Q4 (other languages will follow in 2021). The Apache 2.0 Licensed [CMS build system](https://github.com/SunStarSys/cms), together with a large collection of supporting modules to take advantage of within that tree, is available on GitHub.
+Nous fournissons actuellement un système de modèles de base basé sur <span class="text-white">Django</span> dérivé d'un [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/ index.pl) du CPAN. La prise en charge d'un système de construction Python 3 sera bientôt disponible. Le [système de construction CMS] sous licence Apache 2.0 (https://github.com/SunStarSys/cms), ainsi qu'une vaste collection de modules de prise en charge à tirer parti de cet arbre, sont disponibles sur GitHub.
 
 
-### Details
+### Détails
 
 {% endfilter %}
 
 {{ content|markdown }}
 <hr />
 <br />
-<h2>A Few Representative Screen Shots:</h2>
+<h2>Quelques captures d'écran :</h2>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.openoffice.org/">IDE View</a> with Farsi (UTF-8).</h3>
+<h3>Affichage IDE avec Farsi (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
-<h3>IDE Editor View.</h3>
+<h3>Vue de l'éditeur IDE.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
 <br/>
-<h3>IDE Editor View (Spanish).</h3>
+<h3>Vue de l'éditeur IDE (espagnol).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
 <br/>
-<h3>IDE Full Site Build.</h3>
+<h3>Construction complète du site IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
 <br />
-<h3>IDE Typical Site Build.</h3>
+<h3>Construction de site typique IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.openoffice.org/;action=search;regex=mailto:">IDE Search</a> <small>(those links in <span style="color:#e83e8c">hot pink</span> will drop you directly into an editor screen, with the cursor placed exactly according to the matching text)</small>.</h3>
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> < small>(ces liens en <span style="color:#e83e8c">rose vif</span> vous déposeront directement dans un écran d'éditeur, avec le curseur placé exactement en fonction du texte correspondant)</small>.</ h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
+
+<style type="text/css">
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
 {% endblock %}
