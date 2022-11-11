@@ -19,8 +19,8 @@ my $conf = Load join "", <DATA>;
 # we only unravel the %dependencies at incremental build time, not in full site builds.
 #
 # there are three entry points into the %dependencies hash:
-# 1. via walk_content_tree() logic
-# 2. via a "dependencies" header entry in an md.* file (in walk_content_tree)
+# 1. via walk_content_tree() code-block logic
+# 2. via a "dependencies" header entry in an md.* file (in seed_deps())
 # 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
 
 our @patterns = (
