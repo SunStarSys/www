@@ -26,5 +26,5 @@ Without such things we'd need to mandate at least PGP-signing of each contributo
 
 ## Index
 {% for d in deps -%}
-- [{{d.1.headers.title}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor -%}
