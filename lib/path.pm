@@ -37,13 +37,11 @@ our @patterns = (
   }],
 
   [qr!^/(essay|client)s/.*\.md(?:text)?!, memoize => {
-    quick_deps => 3,
     view       => [qw/set_template_from_capture snippet single_narrative/],
     conf       => $conf,
   }],
 
   [qr/\.md(?:text)?/, memoize => {
-    quick_deps => 3,
     view       => [qw/snippet single_narrative/],
     template   => "main.html",
     conf       => $conf,
