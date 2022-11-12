@@ -27,19 +27,19 @@ my $conf = Load join "", <DATA>;
 our @patterns = (
 
   [qr!/(index|sitemap)\.html!, sitemap => {
-    quick_deps => 1,
+    quick_deps => 3,
     nest       => 1,
     conf       => $conf,
   }],
 
   [qr!^/(essay|client)s/.*\.md(?:text)?!, set_template_from_capture => {
-    quick_deps => 1,
+    quick_deps => 3,
     view       => [qw/snippet single_narrative/],
     conf       => $conf,
   }],
 
   [qr/\.md(?:text)?/, snippet => {
-    quick_deps => 1,
+    quick_deps => 3,
     view       => "single_narrative",
     template   => "main.html",
     conf       => $conf,
