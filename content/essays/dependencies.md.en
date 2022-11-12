@@ -1,7 +1,15 @@
 Title: What is Content Dependency Management All About?
 Dependencies: *.md.en
 
-
 [TOC]
 
 ## Dependency Management for Website Content
+
+
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title}}]({{d.0}})
+{% endfor %}
