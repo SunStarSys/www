@@ -26,7 +26,8 @@ my $conf = Load join "", <DATA>;
 
 our @patterns = (
 
-  [qr!/(index|sitemap)\.html!, sitemap => {
+  [qr!/(index|sitemap)\.html!, memoize => {
+    view       => sitemap,
     quick_deps => 3,
     nest       => 1,
     conf       => $conf,
