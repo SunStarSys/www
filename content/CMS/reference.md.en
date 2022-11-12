@@ -90,5 +90,5 @@ TBD
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
