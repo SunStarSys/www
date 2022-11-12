@@ -27,21 +27,21 @@ my $conf = Load join "", <DATA>;
 our @patterns = (
 
   [qr!/(index|sitemap)\.html!, memoize => {
-    view       => sitemap,
+    view       => "sitemap",
     quick_deps => 3,
     nest       => 1,
     conf       => $conf,
   }],
 
-  [qr!^/(essay|client)s/.*\.md(?:text)?!, set_template_from_capture => {
+  [qr!^/(essay|client)s/.*\.md(?:text)?!, memoize => {
     quick_deps => 3,
-    view       => [qw/memoize snippet single_narrative/],
+    view       => [qw/set_template_from_capture snippet single_narrative/],
     conf       => $conf,
   }],
 
-  [qr/\.md(?:text)?/, snippet => {
+  [qr/\.md(?:text)?/, memoize => {
     quick_deps => 3,
-    view       => [qw/memoize single_narrative/],
+    view       => [qw/snippet single_narrative/],
     template   => "main.html",
     conf       => $conf,
   }],
