@@ -7,7 +7,7 @@ my $conf = Load join "", <DATA>;
 
 # the only job of this __PACKAGE__ is to fill out the @path::patterns and %path::dependendies data structures.
 #
-# entries in @patterns are three-element arrays:
+# entries in @patterns are three-element arrayrefs:
 # [
 #   $pattern,     # first pattern to match the source file's "/content/"-rooted path wins
 #   $method_name, # provided/implemented in view.pm
@@ -21,7 +21,7 @@ my $conf = Load join "", <DATA>;
 #
 # there are three entry points into the %dependencies hash:
 # 1. via walk_content_tree() code-block logic
-# 2. via a "dependencies" header entry in an md.* file (in seed_deps())
+# 2. via a "dependencies" header entry in an md.* file (through seed_deps())
 # 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
 
 our @patterns = (
