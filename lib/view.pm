@@ -7,7 +7,6 @@ use warnings;
 # some view methods expect a "view" argument because they only operate as "proxies" that just modify the %args
 # of the next_view.
 
-
 # template set from first capture in regex in @path::patterns
 
 sub set_template_from_capture {
