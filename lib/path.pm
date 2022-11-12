@@ -33,14 +33,14 @@ our @patterns = (
   }],
 
   [qr!^/(essay|client)s/.*\.md(?:text)?!, set_template_from_capture => {
-    quick_deps => 3,
-    view       => [qw/memoize snippet single_narrative/],
+    quick_deps => 1,
+    view       => [qw/snippet single_narrative/],
     conf       => $conf,
   }],
 
   [qr/\.md(?:text)?/, snippet => {
-    quick_deps => 3,
-    view       => [qw/memoize single_narrative/],
+    quick_deps => 1,
+    view       => "single_narrative",
     template   => "main.html",
     conf       => $conf,
   }],
