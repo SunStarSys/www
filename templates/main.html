@@ -7,7 +7,7 @@
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{{ headers.keywords }},{{ conf.keywords }}">
 
-    <title>{% block title %}{{ conf.title }} - {{ headers.title }}{% endblock %}</title>
+    <title>{% block title %}{{ conf.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/css/code.css" rel="stylesheet" media="screen">
@@ -93,7 +93,7 @@
         <img src="/images/edit.png" />
       </a>
     </div>
-    <h1>{{ headers.title }}</h1>
+    <h1>{{ headers.title|safe }}</h1>
     <div class="jumbotron">{{ content|markdown }}</div>
           {% endblock %}
     <script src="/js/jquery.min.js"></script>
