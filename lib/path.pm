@@ -31,7 +31,6 @@ our @patterns = (
 
   [qr!/(index|sitemap)\.html!, memoize => {
     view       => "sitemap",
-    quick_deps => 1,
     nest       => 1,
     conf       => $conf,
   }],
