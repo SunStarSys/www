@@ -8,7 +8,7 @@ Dependencies: *.md.en
 
 ## The Problem
 
-Perl 5's OO runtime method lookup has 50% more performance overhead than a direct, named subroutine invocation.
+<!-- #teaser -->Perl 5's OO runtime method lookup has 50% more performance overhead than a direct, named subroutine invocation.<!-- #teaser -->
 
 ## The initial solution: Doug MacEachern's method lookup optimizations
 
