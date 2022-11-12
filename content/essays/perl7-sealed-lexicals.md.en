@@ -1,6 +1,7 @@
 Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed
 Dependencies: *.md.en
+
 <div class="right">
   <img src="../images/sunstarstaronly.png">
 </div>
@@ -145,5 +146,5 @@ This Perlish idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
