@@ -39,7 +39,7 @@ our @patterns = (
   }],
 
   [qr/\.md(?:text)?/, snippet => {
-    quick_deps => 1,
+    quick_deps => 3,
     view       => "single_narrative",
     template   => "main.html",
     conf       => $conf,
