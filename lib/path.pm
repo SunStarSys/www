@@ -24,9 +24,10 @@ my $conf = Load join "", <DATA>;
 # 2. via a "dependencies" header entry in an md.* file (through seed_deps())
 # 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
 #
-# the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
 our @patterns = (
+
+# the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, memoize => {
     view       => "sitemap",
