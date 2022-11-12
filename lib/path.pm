@@ -44,6 +44,8 @@ our @patterns = (
     view       => [qw/snippet single_narrative/],
     template   => "main.html",
     conf       => $conf,
+	archive_root => "/archives",
+	category_root => "/essays/categories",
   }],
 
 );
