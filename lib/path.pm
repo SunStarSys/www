@@ -26,7 +26,6 @@ my $conf = Load join "", <DATA>;
 #
 
 our @patterns = (
-
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, memoize => {
