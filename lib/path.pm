@@ -38,6 +38,8 @@ our @patterns = (
   [qr!^/(essay|client)s/.*\.md(?:text)?!, memoize => {
     view       => [qw/set_template_from_capture snippet single_narrative/],
     conf       => $conf,
+    category_root => "/essays/categories",
+    archive_root => "/archives"
   }],
 
   [qr/\.md(?:text)?/, memoize => {
