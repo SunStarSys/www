@@ -49,6 +49,6 @@ Inevitably the flattening will happen. If it’s not because of human social wis
 *$Date$*
 
 ## Index
-<!--#if expr="-f '.index.html{{lang}}'" -->
+<!--#if expr="-F '.index.html{{lang}}'" -->
   <!--#include virtual=".index.html{{lang}}" -->
 <!-- #endif -->
