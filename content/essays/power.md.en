@@ -50,7 +50,7 @@ Inevitably the flattening will happen. If it’s not because of human social wis
 
 ## Index
 
-<!-- #if expr="%{REQUEST_URI} =~ m#^(?:{{ archive_root }}|{{ category_root }})#" -->
+<!-- #if expr="%{REQUEST_URI} =~ m#^({{ archive_root }}|{{ category_root }})#" -->
   <!--#include virtual="${REQUEST_URI}/../.index.html{{lang}}" -->
 <!-- #endif -->
 
