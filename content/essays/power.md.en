@@ -48,7 +48,12 @@ Inevitably the flattening will happen. If it’s not because of human social wis
 
 *$Date$*
 
-## Index
-<!--#if expr="-F '.index.html{{lang}}'" -->
-  <!--#include virtual=".index.html{{lang}}" -->
-<!-- #endif -->
+{% if deps %}
+--------
+
+# Index
+{% for d in deps %}
+- [{{d.1.headers.title}}]({{d.0}}) &mdash; {{d.1.content|teaser}} ...<small><em>{{d.1.content|vcs_time}}</em></small>
+{% endfor %}
+{% endif %}
+
