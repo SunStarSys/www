@@ -68,6 +68,6 @@ The philosophy of inclusion of manifold stakeholders into the creation, and **ev
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title}}]({{d.0}}) &mdash; {{content|teaser}} ... <small><em>{{content|vcs_date}}</em></small>
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{content|teaser}} ... <small><em>{{content|vcs_date}}</em></small>
 {% endfor %}
 {% endif %}
