@@ -1,4 +1,9 @@
 {% filter markdown %}
+{% if category_root %}
+{% for c in headers.categories %}
+<button type="button" class="btn btn-info"><a href="{{category_root}}/{{c}}">{{c}}</a></button>
+{% endfor %}
+{% endif %}
 
 --------
 
@@ -7,5 +12,4 @@
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|teaser}} ... <small><em>{{d.1.content|vcs_date}}</em></small>
 {% endfor %}
-{% endif %}
 {% endfilter %}
