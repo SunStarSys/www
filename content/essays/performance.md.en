@@ -106,11 +106,3 @@ Real **Application Performance** comes from balance, flexibility, and functional
 May a thousand flowers bloom, no matter silly they seem!
 
 *$Date$*
-
---------
-
-## Index
-
-{% for d in deps %}
-- [{{ d.1.headers.title }}]({{ d.0 }}) &mdash; {{d.1.content|teaser}} ... <small><em>{{d.1.content|vcs_date}}</em></small>
-{% endfor %}
