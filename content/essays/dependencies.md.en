@@ -21,13 +21,3 @@ Categories: CMS, Architecture
 1. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering May 2022
 
 *$Date$*
-
-{% if deps %}
---------
-
-## Index
-
-{% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|teaser}} ... <small><em>{{d.1.content|vcs_date}}</em></small>
-{% endfor %}
-{% endif %}
