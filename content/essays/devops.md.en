@@ -61,13 +61,3 @@ At the management level, a global change management perspective between both dev
 The philosophy of inclusion of manifold stakeholders into the creation, and **evolution**, of a tangible work product has implications well beyond just *dev* and *ops* teams sharing control and responsibility for a server engineering effort. This lesson keeps being repeated throughout the modern corporate world, as new domains for creative human expression take form in the business sector, as well as in reinventing old ways of doing business together.
 
 *$Date$*
-
-{% if deps %}
---------
-
-## Index
-
-{% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{content|teaser}} ... <small><em>{{content|vcs_date}}</em></small>
-{% endfor %}
-{% endif %}
