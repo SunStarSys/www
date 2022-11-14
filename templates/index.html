@@ -1,7 +1,7 @@
 {% filter markdown %}
 
-{% if headers.archive %}
-<span class="badge bg-warning" style="color:#000">Archived</span>
+{% if archive_path %}
+<span class="badge bg-warning"><a style="color:#000" href="{{archive_path}}">Archived</a></span>
 {% endif %}
 
 {% if category_root %}
