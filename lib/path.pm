@@ -97,7 +97,7 @@ keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs
 releases:
   cms:
     url: https://github.com/SunStarSys/cms
-    tag: v2.1.0
+    tag: v2.1.1
   pty:
     url: https://github.com/SunStarSys/pty
     tag: v2.1.1
