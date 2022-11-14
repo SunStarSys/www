@@ -48,12 +48,3 @@ Inevitably the flattening will happen. If it’s not because of human social wis
 2. The jury is still out on this.  Depending on which strains are in the wild, combined with the severity of the illness a patient contracts, reinfection may be possible, at least some of the time.
 
 *$Date$*
-
-{% if deps %}
---------
-
-# Index
-{% for d in deps %}
-- [{{d.1.headers.title}}]({{d.0}}) &mdash; {{d.1.content|teaser}} ... <small><em>{{d.1.content|vcs_date}}</em></small>
-{% endfor %}
-{% endif %}
