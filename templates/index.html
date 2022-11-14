@@ -1,7 +1,7 @@
 {% filter markdown %}
 {% if category_root %}
 {% for c in headers.categories %}
-<button type="button" class="btn btn-info"><a href="{{category_root}}/{{c}}">{{c}}</a></button>
+<button type="button" class="btn btn-info"><a style="color:#fff" href="{{category_root}}/{{c}}">{{c}}</a></button>
 {% endfor %}
 {% endif %}
 
