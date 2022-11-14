@@ -1,5 +1,8 @@
+{% for c in headers.categories %}
+<button>{{c}}</button>
+{% endfor %}
+
 {% filter markdown %}
-{% if deps %}
 --------
 
 ## Index
