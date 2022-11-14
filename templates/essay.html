@@ -4,7 +4,7 @@
      <h1>{{ headers.title|safe }}</h1>
    <div class="essay col-lg-12">{{ content|markdown }}
 {% filter markdown %}
-{% if deps %}
+
 --------
 
 ## Index
@@ -12,7 +12,6 @@
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|teaser}} ... <small><em>{{d.1.content|vcs_date}}</em></small>
 {% endfor %}
-{% endif %}
 {% endfilter %}
 </div>
 {% endblock %}
