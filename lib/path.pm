@@ -66,11 +66,11 @@ walk_content_tree {
 
     if (s!/index\.html\.$lang$!!) {
       $dependencies{"$_/index.html.$lang"} = [
-        grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
-                            glob("content$_/*/index.html.$lang"))
+        grep s/^content//, (glob("'content$_'/*.{md.$lang,pl,pm,pptx}"),
+                            glob("'content$_'/*/index.html.$lang"))
         ];
       push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-        glob("content$_/*") if m!/files\b!;
+        glob("'content$_'/*") if m!/files\b!;
     }
   }
 }
@@ -84,7 +84,7 @@ walk_content_tree {
 
     # incorporate hard-coded deps in the __DATA__ section of this file
     while  (my ($k, $v) = each %{$conf->{dependencies}}) {
-      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content//, map glob("content$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
+      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content//, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
 
   };
@@ -112,4 +112,3 @@ releases:
     tag: v2.0.2
 # hard-coded deps
 dependencies: {}
-
