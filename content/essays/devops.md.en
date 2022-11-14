@@ -62,6 +62,7 @@ The philosophy of inclusion of manifold stakeholders into the creation, and **ev
 
 *$Date$*
 
+{% if deps %}
 --------
 
 ## Index
@@ -69,4 +70,4 @@ The philosophy of inclusion of manifold stakeholders into the creation, and **ev
 {% for d in deps %}
 - [{{d.1.headers.title}}]({{d.0}}) &mdash; {{content|teaser}} ... <small><em>{{content|vcs_date}}</em></small>
 {% endfor %}
-
+{% endif %}
