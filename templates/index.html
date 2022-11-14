@@ -1,12 +1,12 @@
 {% filter markdown %}
 
 {% if archive_path %}
-<span class="badge bg-warning"><a style="color:#000" href="{{archive_path}}">Archived</a></span>
+  <span class="badge bg-warning"><a style="color:#000" href="{{archive_path}}">Archived</a></span>
 {% endif %}
 
 {% if category_root %}
 {% for c in headers.categories %}
-<button type="button" class="btn btn-success"><a style="color:#fff" href="{{category_root}}/{{c}}">{{c}}</a></button>
+  <button type="button" class="btn btn-success"><a style="color:#fff" href="{{category_root}}/{{c}}">{{c}}</a></button>
 {% endfor %}
 {% endif %}
 
