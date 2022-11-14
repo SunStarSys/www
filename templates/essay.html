@@ -5,9 +5,7 @@
 <div class="essay col-lg-12">{{ content|markdown }}</div>
 {% endblock %}
 {% block footer %}
-{% filter markdown %}
-<div>
+<div class="container">
 {% include "index.html" %}
 </div>
-{% endfilter %}
 {% endblock %}
