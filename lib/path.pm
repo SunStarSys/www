@@ -42,7 +42,7 @@ our @patterns = (
     category_root => "/categories",
   }],
 
-  [qr!^/(categories|archives)/.*\.md(?:text}?!, memoize => {
+  [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
     view      => [qw/set_template_from_capture snippet single_narrative/],
     conf      => $conf,
   }],
