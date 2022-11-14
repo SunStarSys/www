@@ -1,7 +1,12 @@
 {% filter markdown %}
+
+{% if headers.archive %}
+<span class="badge bg-warn">Archived</span>
+{% endif %}
+
 {% if category_root %}
 {% for c in headers.categories %}
-<button type="button" class="btn btn-info"><a style="color:#fff" href="{{category_root}}/{{c}}">{{c}}</a></button>
+<button type="button" class="btn btn-success"><a style="color:#fff" href="{{category_root}}/{{c}}">{{c}}</a></button>
 {% endfor %}
 {% endif %}
 
