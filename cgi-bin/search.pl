@@ -53,7 +53,7 @@ my $parser = sub :Sealed {
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
-        $m = qq(<span class="text-success">) . escape_html(join " ", grep {defined} @words[0 .. 4]) . q(</span>);
+        $m = qq(<span class="text-danger">) . escape_html(join " ", grep {defined} @words[0 .. 4]) . q(</span>);
         $pre . $last . $m
       }ge;
       push @{$$paths{$file}}, $match;
