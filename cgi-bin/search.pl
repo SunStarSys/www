@@ -21,7 +21,7 @@ my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
 my APR::Request $apreq = $apreq_class->handle($r);
 
-my $parser = sub :Sealed {
+sub parser :Sealed {
   my @text;
   my (undef, $dirname, undef, $paths) = (@_, {});
   my HTML::Parser $p = "HTML::Parser";
@@ -87,7 +87,7 @@ my $lang     = $apreq->args("lang") || ".en";
 my $pffxg = run_shell_command "cd $dirname && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
 return 400 if $?;
 
-$parser->($pffxg, $dirname, undef, \ my %matches);
+parser $pffxg, $dirname, undef, \ my %matches;
 
 my @matches;
 while (my ($k, $v) = each %matches) {
@@ -107,7 +107,7 @@ my %title = (
 
 local @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
 $r->print(Template("search.html")->render({
-  headers => { title => $title{$lang} },
+  title => $title{$lang},
   matches => \@matches,
   lang => $lang,
   regex => $re
