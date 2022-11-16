@@ -87,7 +87,35 @@ sub run_shell_command {
     return wantarray ? @rv : join "", @rv;
 }
 
-my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content";
+sub breadcrumbs {
+    my @path = split m!/!, shift, -1;
+    my $tail = pop @path;
+    shift @path;
+    my @rv;
+
+    my $ad; # attachment dir
+    ++$ad and $relpath =~  s!\.\./$!! if length $tail and $path[-1] =~ /\.page$/;
+    push @path, $tail if length $tail;
+    my $action = shift;
+    my $regex  = @_ ? encode(shift) : "";
+    my $lang = @_ ? shift : "en";
+    for (@path[0..$#path-1]) {
+        $relpath =~  s!\.?\./$!!;
+        $relpath ||= ++$ad == 3 ? "$_/" : './';
+        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">).html_escape("\u$_:") . q(</a>);
+    }
+    push @rv, $path[-1];
+    return join "&nbsp;&raquo;&nbsp;", @rv;
+}
+
+my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . $r->path_info;
+
+for ($dirname) {
+  s/'/'\\''/g;
+  "'$_'" =~ /^(.*)$/ms and $_ = $1
+    or die "Can't detaint '$_'\n";
+}
+
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
 my $pffxg = run_shell_command "cd $dirname && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
@@ -120,7 +148,8 @@ $r->print(Template("search.html")->render({
   title => $title{$lang},
   matches => \@matches,
   lang => $lang,
-  regex => $re
+  regex => $re,
+  breadcrumbs => breadcrumbs($r->path_info, $re, $lang);
 }));
 
 return 0;
