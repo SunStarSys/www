@@ -43,7 +43,7 @@ my $parser = sub :Sealed {
         $p->parse($pre), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         unshift @words , "" until @words > 5;
-        $pre = escape_html join " ", @words[-5 .. -1];
+        $pre = escape_html join " ", grep length, @words[-5 .. -1];
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
