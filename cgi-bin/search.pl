@@ -81,7 +81,7 @@ sub run_shell_command {
 my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content";
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
-my $pffxg = run_shell_command "cd $dirname && pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
+my $pffxg = run_shell_command "cd $dirname && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
 return 400 if $?;
 
 $parser->($pffxg, $dirname, undef, \ my %matches);
