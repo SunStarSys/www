@@ -16,6 +16,7 @@ use APR::Request qw/encode/;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use SunStarSys::Util qw/read_text_file/;
+use File::Basename;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -90,24 +91,21 @@ sub run_shell_command {
 sub breadcrumbs {
     my @path = split m!/!, shift, -1;
     my $tail = pop @path;
-    shift @path;
     my @rv;
     my $relpath = "../" x @path;
-    my $ad; # attachment dir
-    ++$ad and $relpath =~  s!\.\./$!! if length $tail and $path[-1] =~ /\.page$/;
     push @path, $tail if length $tail;
     my $action = shift;
     my $regex  = @_ ? encode(shift) : "";
     my $lang = @_ ? shift : "en";
     for (@path) {
-        $relpath =~  s!\.?\./$!!;
-        $relpath ||= ++$ad == 3 ? "$_/" : './';
-        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">).html_escape("\u$_:") . q(</a>);
+        $relpath =~ s!\.?\./$!!;
+        $relpath ||= './';
+        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">) . escape_html("\u$_:") . q(</a>);
     }
     return join "&nbsp;&raquo;&nbsp;", @rv;
 }
 
-my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . $r->path_info;
+my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . dirname($r->path_info);
 
 =pod
 
