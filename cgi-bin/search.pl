@@ -149,7 +149,7 @@ $r->print(Template("search.html")->render({
   matches => \@matches,
   lang => $lang,
   regex => $re,
-  breadcrumbs => breadcrumbs($r->path_info, $re, $lang);
+  breadcrumbs => breadcrumbs($r->path_info, $re, $lang),
 }));
 
 return 0;
