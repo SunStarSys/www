@@ -85,7 +85,7 @@ $parser->($pffxg, $dirname, undef, \ my %matches);
 
 my @matches;
 while (my ($k, $v) = each %matches) {
-  s/\.md(?:text)?/html/ for my $link = "/$k";
+  s/\.md(?:text)?/.html/ for my $link = "/$k";
   read_text_file "$dirname/$k", \ my %data;
   push @matches, [$data{mtime}, qq(<a href="$link">$data{headers}{title}</a>), $v];
 }
