@@ -107,19 +107,16 @@ sub breadcrumbs {
 
 my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . dirname($r->path_info);
 
-=pod
-
-for ($dirname) {
+for (my $d = $dirname) {
   s/'/'\\''/g;
   "'$_'" =~ /^(.*)$/ms and $_ = $1
     or die "Can't detaint '$_'\n";
 }
 
-=cut
 
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
-my $pffxg = run_shell_command "cd $dirname && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
