@@ -96,6 +96,7 @@ sub breadcrumbs {
     push @path, $tail if length $tail;
     my $regex  = @_ ? encode(shift) : "";
     my $lang = @_ ? shift : "en";
+    pop @path;
     for (@path) {
         $relpath =~ s!\.?\./$!!;
         $relpath ||= './';
