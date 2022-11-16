@@ -102,10 +102,10 @@ local @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templa
 $r->print(Template("search.html")->render({
   headers => {
     title => {
-      ".en" => "Markdown Search Results",
-      ".es" => "resultados de markdown búsqued para",
-      ".de" => "Markdown Suchergebnisse für",
-      ".fr" => "Résultats de Markdown recherche pour",
+      ".en" => "Markdown Search Results for ",
+      ".es" => "resultados de markdown búsqued para ",
+      ".de" => "Markdown Suchergebnisse für ",
+      ".fr" => "Résultats de Markdown recherche pour ",
 
     }, matches => \@matches, lang => $lang, regex => $re}));
 
