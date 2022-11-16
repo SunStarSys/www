@@ -92,7 +92,7 @@ sub breadcrumbs {
     my $tail = pop @path;
     shift @path;
     my @rv;
-    my @relpath = "../" x @path;
+    my $relpath = "../" x @path;
     my $ad; # attachment dir
     ++$ad and $relpath =~  s!\.\./$!! if length $tail and $path[-1] =~ /\.page$/;
     push @path, $tail if length $tail;
