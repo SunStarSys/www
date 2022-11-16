@@ -110,11 +110,15 @@ sub breadcrumbs {
 
 my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . $r->path_info;
 
+=pod
+
 for ($dirname) {
   s/'/'\\''/g;
   "'$_'" =~ /^(.*)$/ms and $_ = $1
     or die "Can't detaint '$_'\n";
 }
+
+=cut
 
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
