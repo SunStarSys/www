@@ -40,12 +40,12 @@ my $parser = sub :Sealed {
         my ($pre, $m) = ($1, $2 // "");
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         my @words;
-        $p->parse($pre), $p->flush;
+        $p->parse($pre), $p->eof;
         push @words, split "\s+", shift @text while @text;
         unshift @words , "" until @words > 5;
         $pre = escape_html join " ", @words[-5 .. -1];
         @words = ();
-        $p->parse($m), $p->flush;
+        $p->parse($m), $p->eof;
         push @words, split "\s+", shift @text while @text;
         $m = qq(<span class="text-success">) . escape_html(join " ", @words[0 .. 4]) . q(</span>);
         $p . $m . " ..."
