@@ -77,7 +77,7 @@
       </div>
       <div class="row right" id='search'>
         <form action="/cgi-bin/search.pl{{ path }}" class="form-inline right" method="GET">
-          <input type="hidden" name="lang" value="{{ lang }}" />
+          <input type="hidden" name="lang" value="{{ lang|dirname }}/" />
           <input class="form-control" type="text" name="regex"
                placeholder="PCRE
  {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
