@@ -1,0 +1,14 @@
+{% extends "main.html" %}
+{% block title %}Search Results{% endblock %}
+{% block content %}
+<div class="container">
+  <dl>
+    {% for m in matches %}
+    <dt>{{ m.1|safe }}</dt>
+    {% for hit in m.2 %}
+    <dd>{{ hit|safe }}</dd>
+    {% endfor %}
+    {% endfor %}
+  </dl>
+</div>
+{% endblock %}
