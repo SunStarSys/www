@@ -94,7 +94,7 @@ div.breadcrumbs {
 
 #search button { height: 38px }
 
-#search input { max-width: 13em }
+#search input { max-width: 13em; background-color: #8f99fb }
 @media only screen and (max-width: 1000px) {
     #search { min-width: 200px }
 }
