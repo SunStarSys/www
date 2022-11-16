@@ -99,6 +99,14 @@ while (my ($k, $v) = each %matches) {
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
 
 local @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
-$r->print(Template("search.html")->render({headers => {title => "Markdown Search Results"}, matches => \@matches, lang => $lang, regex => $re}));
+$r->print(Template("search.html")->render({
+  headers => {
+    title => {
+      ".en" => "Markdown Search Results",
+      ".es" => "resultados de markdown búsqued para",
+      ".de" => "Markdown Suchergebnisse für",
+      ".fr" => "Résultats de Markdown recherche pour",
+
+    }, matches => \@matches, lang => $lang, regex => $re}));
 
 return 0;
