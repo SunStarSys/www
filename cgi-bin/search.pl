@@ -38,6 +38,10 @@ my $parser = sub :Sealed {
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
       $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
         my ($pre, $m) = ($1, $2 // "");
+        $pre =~ s/(\s+)$//;
+        my $last = $1;
+        $pre =~ s/^(\s+)//;
+        my $first = $1;
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         my @words;
         $p->parse($pre), $p->eof;
@@ -48,7 +52,7 @@ my $parser = sub :Sealed {
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         $m = qq(<span class="text-success">) . escape_html(join " ", grep defined, @words[0 .. 4]) . q(</span>);
-        "$pre " . $m
+        $first . $pre . $last . $m
       }ge;
       push @{$$paths{$file}}, $match;
     }
