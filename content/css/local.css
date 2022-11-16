@@ -11,6 +11,10 @@ div.essay {
 	width:100%;
 	float:right;
 }
+div.right {
+	margin: 20px 0 0 20px;
+}
+
 body { padding-top: 90px }
 .navbar img {height: 38px;}
 
@@ -96,3 +100,6 @@ div.breadcrumbs {
     padding: 0 0 0 auto;
     margin:  0 0 0 auto;
 }
+
+header div, div.brand-light, header div form
+{ background-color: #8f99fb }
