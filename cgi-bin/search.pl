@@ -87,7 +87,7 @@ my @matches;
 while (my ($k, $v) = each %matches) {
   s/\.md(?:text)/html/ for my $link = "/$k";
   read_text_file "$dirname/$k", \ my %data;
-  push @matches, [$data{mtime}, qq(<a href="$link">$data{headers}{title}></a>), $v];
+  push @matches, [$data{mtime}, qq(<a href="$link">$data{headers}{title}</a>), $v];
 }
 
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
