@@ -4,8 +4,8 @@
 <div class="container">
   <dl>
     {% for m in matches %}
-    <dt>{{ m.1|safe }}</dt>
-    {% for hit in m.2 %}
+    <dt>{{ m.0|safe }}</dt>
+    {% for hit in m.1 %}
     <dd>{{ hit|safe }}</dd>
     {% endfor %}
     {% endfor %}
