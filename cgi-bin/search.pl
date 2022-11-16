@@ -102,7 +102,7 @@ sub breadcrumbs {
         $relpath ||= './';
         push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">) . (escape_html("\u$_") || "Home") . q(</a>);
       }
-    return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail");
+    return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
 my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . $r->path_info;
