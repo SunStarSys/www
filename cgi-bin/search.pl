@@ -106,7 +106,10 @@ $r->print(Template("search.html")->render({
       ".es" => "resultados de markdown búsqued para ",
       ".de" => "Markdown Suchergebnisse für ",
       ".fr" => "Résultats de Markdown recherche pour ",
-
-    }, matches => \@matches, lang => $lang, regex => $re}));
+    }->{$lang},
+    matches => \@matches,
+    lang => $lang,
+    regex => $re
+}));
 
 return 0;
