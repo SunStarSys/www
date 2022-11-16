@@ -12,8 +12,8 @@ div.essay {
 	float:right;
 }
 div.right {
-    margin: 20px 0 0 0;;
-    float: right;
+	margin: 20px 0 20px 20px;
+	float: right;
 }
 
 body { padding-top: 90px }
@@ -92,6 +92,8 @@ div.breadcrumbs {
     display: inline-block;
     min-width: 350px;
 }
+
+#search button { height: 38px }
 
 .right {
     float:        right;
