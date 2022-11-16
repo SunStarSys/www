@@ -100,7 +100,7 @@ sub breadcrumbs {
     for (@path) {
         $relpath =~ s!\.?\./$!!;
         $relpath ||= './';
-        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">) . escape_html("\u$_:") . q(</a>);
+        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">) . (escape_html("\u$_") || "Home") . q(</a>);
     }
     return join "&nbsp;&raquo;&nbsp;", @rv;
 }
@@ -113,7 +113,6 @@ for ($d) {
   "'$_'" =~ /^(.*)$/ms and $_ = $1
     or die "Can't detaint '$_'\n";
 }
-
 
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
