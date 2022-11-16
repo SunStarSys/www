@@ -46,14 +46,14 @@ my $parser = sub :Sealed {
         push @words, split /\s+/, shift @text while @text;
         if ($m) {
           unshift @words , "" until @words > 5;
-          $pre = escape_html join " ", grep {length} @words[-5 .. -1];
+          $pre = join " ", grep {length} @words[-5 .. -1];
         } else {
-          $pre = escape_html join " ", grep {defined} @words[0 .. 4], "..." if length $pre;
+          $pre = join " ", grep {defined} @words[0 .. 4], "..." if length $pre;
         }
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
-        $m = qq(<span class="text-danger">) . escape_html(join " ", grep {defined} @words[0 .. 4]) . q(</span>);
+        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
         $pre . $last . $m
       }ge;
       push @{$$paths{$file}}, $match;
