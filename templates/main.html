@@ -74,19 +74,19 @@
             {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
           </li>
         </ul>
-        <div class="row right" id='search'>
-          <form action="/cgi-bin/search.pl" class="form-inline right" method="GET">
-            <input type="hidden" name="lang" value="{{ lang }}" />
-            <input class="form-control" type="text" name="regex"
+      </div>
+      <div class="row right" id='search'>
+        <form action="/cgi-bin/search.pl" class="form-inline right" method="GET">
+          <input type="hidden" name="lang" value="{{ lang }}" />
+          <input class="form-control" type="text" name="regex"
                placeholder="PCRE
  {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	      {% ifequal lang ".en" %}Search{% endifequal -%}
 	      {% ifequal lang ".es" %}Buscar{% endifequal -%}
 	      {% ifequal lang ".de" %}Suche{% endifequal -%}
 	      {% ifequal lang ".fr" %}Rechercher{% endifequal -%}
-            </button>
-          </form>
-        </div>
+          </button>
+        </form>
       </div>
     </div>
   </div>
