@@ -37,15 +37,15 @@ my $parser = sub :Sealed {
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
       $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
-        my ($pre, $m, $tail) = ($1, $2 // "", $3 // "");
+        my ($pre, $m) = ($1, $2 // "");
         my ($first, $last) = ("") x 2;
         $last = $1 if $pre =~ /(\s+)$/;
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         my @words;
         $p->parse($pre), $p->eof;
         push @words, split /\s+/, shift @text while @text;
-        unshift @words , "" until @words > 5;
         if ($m) {
+          unshift @words , "" until @words > 5;
           $pre = escape_html join " ", grep {length} @words[-5 .. -1];
         } else {
           $pre = escape_html join " ", grep {defined} @words[0 .. 4], "..." if length $pre;
@@ -54,7 +54,7 @@ my $parser = sub :Sealed {
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         $m = qq(<span class="text-success">) . escape_html(join " ", grep {defined} @words[0 .. 4]) . q(</span>);
-        $pre . $last . $m . escape_html $tail
+        $pre . $last . $m
       }ge;
       push @{$$paths{$file}}, $match;
     }
