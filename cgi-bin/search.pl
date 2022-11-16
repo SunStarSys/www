@@ -94,7 +94,6 @@ sub breadcrumbs {
     my @rv;
     my $relpath = "../" x @path;
     push @path, $tail if length $tail;
-    my $action = shift;
     my $regex  = @_ ? encode(shift) : "";
     my $lang = @_ ? shift : "en";
     for (@path) {
