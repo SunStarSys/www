@@ -40,7 +40,7 @@ my $parser = sub :Sealed {
         my ($pre, $m) = ($1, $2 // "");
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         my @words;
-        $p->parse($pre), $p->flush, push @words, split "\s+", shift @text while @text;
+        $p->parse($pre), $p->flush, push @words, split "\s+", shift @text while q@text;
         $pre = escape_html join " ", @words[-5 .. $#words];
         @words = ();
         $p->parse($m), $p->flush, push @words, split "\s+", shift @text while @text;
@@ -55,7 +55,7 @@ my $parser = sub :Sealed {
 sub run_shell_command {
     my ($cmd, $args, @filenames) = @_;
     $args = [ @$args ];
-    local %ENV = (
+    %ENV = (
         PATH => "/usr/local/bin:/usr/bin",
         HOME => "/x1/home/httpd",
         LANG => "en_US.UTF-8",
