@@ -38,10 +38,9 @@ my $parser = sub :Sealed {
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
       $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
         my ($pre, $m) = ($1, $2 // "");
-        $pre =~ s/(\s+)$//;
-        my $last = $1;
-        $pre =~ s/^(\s+)//;
-        my $first = $1;
+        my ($first, $last) = ("") x 2;
+        $last = $1 if $pre =~ s/(\s+)$//;
+        $first = $1 if $pre =~ s/^(\s+)//;
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         my @words;
         $p->parse($pre), $p->eof;
