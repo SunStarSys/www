@@ -12,8 +12,8 @@ div.essay {
 	float:right;
 }
 div.right {
-	margin: 20px 0 20px 20px;
-	float: right;
+    margin: 20px 0 0 0;;
+    float: right;
 }
 
 body { padding-top: 90px }
