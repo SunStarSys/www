@@ -1,6 +1,6 @@
 {% extends "main.html" %}
 {% block content %}
-<h1>{{ headers.title|safe }} for <span class="text-danger">/</span>{{regex}}<span class="text-danger">/</span></h1>
+<h1>{{ headers.title|safe }} for <span class="text-danger">/</span>{{regex}}<span class="text-danger">/gi</span></h1>
 <div class="container">
   <dl>
     {% for m in matches %}
