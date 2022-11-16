@@ -96,13 +96,13 @@ sub breadcrumbs {
     push @path, $tail if length $tail;
     my $regex  = @_ ? encode(shift) : "";
     my $lang = @_ ? shift : "en";
-    pop @path;
+    $tail = pop @path;
     for (@path) {
         $relpath =~ s!\.?\./$!!;
         $relpath ||= './';
         push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">) . (escape_html("\u$_") || "Home") . q(</a>);
-    }
-    return join "&nbsp;&raquo;&nbsp;", @rv;
+      }
+    return join "&nbsp;&raquo;&nbsp;", @rv, escape_html($tail);
 }
 
 my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . dirname($r->path_info);
