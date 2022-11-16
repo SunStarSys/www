@@ -36,7 +36,7 @@ my $parser = sub :Sealed {
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
-      $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
+      $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km][\w\s-]*|$)}{
         my ($pre, $m) = ($1, $2 // "");
         my ($first, $last) = ("") x 2;
         $last = $1 if $pre =~ /(\s+)$/;
@@ -46,7 +46,11 @@ my $parser = sub :Sealed {
         $p->parse($pre), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         unshift @words , "" until @words > 5;
-        $pre = escape_html join " ", grep length, @words[-5 .. -1];
+        if ($m) {
+          $pre = escape_html join " ", grep length, @words[-5 .. -1];
+        } else {
+          $pre = escape_html join " ", grep defined, @words[0 .. 4], "...";
+        }
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
