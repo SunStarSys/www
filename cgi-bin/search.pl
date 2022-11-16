@@ -99,12 +99,11 @@ sub breadcrumbs {
     my $action = shift;
     my $regex  = @_ ? encode(shift) : "";
     my $lang = @_ ? shift : "en";
-    for (@path[0..$#path-1]) {
+    for (@path) {
         $relpath =~  s!\.?\./$!!;
         $relpath ||= ++$ad == 3 ? "$_/" : './';
         push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">).html_escape("\u$_:") . q(</a>);
     }
-    push @rv, $path[-1];
     return join "&nbsp;&raquo;&nbsp;", @rv;
 }
 
