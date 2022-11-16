@@ -1,7 +1,8 @@
 {% extends "main.html" %}
 {% block title %}Search Results{% endblock %}
 {% block content %}
-<div class="container">
+<h1>{{ headers.title|safe }}</h1>
+<div class="jumbotron">
   <dl>
     {% for m in matches %}
     <dt>{{ m.0|safe }}</dt>
