@@ -48,7 +48,7 @@ my $parser = sub :Sealed {
         if ($m) {
           $pre = escape_html join " ", grep {length} @words[-5 .. -1];
         } else {
-          $pre = escape_html join " ", grep {defined} @words[0 .. 4], "..." if @words;
+          $pre = escape_html join " ", grep {defined} @words[0 .. 4], "..." if length $pre;
         }
         @words = ();
         $p->parse($m), $p->eof;
