@@ -107,7 +107,8 @@ sub breadcrumbs {
 
 my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . dirname($r->path_info);
 
-for (my $d = $dirname) {
+my $d = $dirname;
+for ($d) {
   s/'/'\\''/g;
   "'$_'" =~ /^(.*)$/ms and $_ = $1
     or die "Can't detaint '$_'\n";
