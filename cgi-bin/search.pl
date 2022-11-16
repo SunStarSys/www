@@ -45,7 +45,12 @@ sub parser :Sealed {
         $p->parse($pre), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         if ($m) {
-          unshift @words , "" until @words > 5;
+          if (@words < 5) {
+            unshift @words , "" until @words > 5;
+          }
+          else {
+            @words = ("...", @words[-4 .. -1]);
+          }
           $pre = join " ", grep {length} @words[-5 .. -1];
         } else {
           $pre = join " ", grep {defined} @words[0 .. 4], "..." if length $pre;
