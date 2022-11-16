@@ -1,6 +1,5 @@
 {% extends "main.html" %}
 {% block title %}{{headers.title|safe}} q/{{regex}}/gi{% endblock %}
-
 {% block content %}
 <h1>{{ headers.title|safe }}<span class="text-danger">/</span>{{regex}}<span class="text-danger">/gi</span></h1>
 <div class="container">
