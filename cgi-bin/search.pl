@@ -89,7 +89,7 @@ while (my ($k, $v) = each %matches) {
 
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
 
-
+local @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
 $r->print(Template("search.html")->render({matches => \@matches, lang => $lang}));
 
 return 0;
