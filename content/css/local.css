@@ -87,3 +87,15 @@ div.breadcrumbs {
 	text-align: right;
     float:right;
 }
+
+#search {
+    display: inline-block;
+    min-width: 350px;
+}
+
+.right {
+    float:        right;
+    text-align:   right;
+    padding: 0 0 0 auto;
+    margin:  0 0 0 auto;
+}
