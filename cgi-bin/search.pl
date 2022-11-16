@@ -53,7 +53,8 @@ sub parser :Sealed {
           }
           $pre = join " ", grep {length} @words[-5 .. -1];
         } else {
-          $pre = join " ", grep {defined} @words[0 .. 4], "..." if length $pre;
+          my $extra = @words > 5 ? "..." : undef;
+          $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
         }
         @words = ();
         $p->parse($m), $p->eof;
