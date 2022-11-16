@@ -41,7 +41,7 @@ my $parser = sub :Sealed {
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         my @words;
         $p->parse($pre), $p->flush, push @words, split "\s+", shift @text while @text;
-        $pre = escape_html join " ", map ref ? $_->text : (), @words[-5 .. $#words];
+        $pre = escape_html join " ", map ref ? $_->text : (), @words[-5 .. -1];
         @words = ();
         $p->parse($m), $p->flush, push @words, split "\s+", shift @text while @text;
         $m = qq(<span class="text-success">) . escape_html(join " ", map ref ? $_->text : (), @words[0 .. 4]) . q(</span>);
