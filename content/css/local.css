@@ -89,6 +89,7 @@ div.breadcrumbs {
 }
 
 #search {
+    float: right;
     display: inline-block;
     min-width: 350px;
 }
