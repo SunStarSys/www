@@ -91,7 +91,11 @@ my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content";
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
 my $pffxg = run_shell_command "cd $dirname && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
-return 400 if $?;
+
+if ($?) {
+  $? == 124 and sleep 60;
+  return 400;
+}
 
 parser $pffxg, $dirname, undef, \ my %matches;
 
