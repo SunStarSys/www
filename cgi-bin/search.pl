@@ -106,8 +106,8 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-my $markdown = encode $apreq->args("markdown");
-my $lang     = encode $apreq->args("lang") || ".en";
+my $markdown = encode($apreq->args("markdown") || "");
+my $lang     = encode($apreq->args("lang") || ".en");
 my $re       = $apreq->args("regex") || return 400;
 my $host = $r->headers_in->{host};
 
