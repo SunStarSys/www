@@ -106,7 +106,7 @@ sub breadcrumbs {
 }
 
 my $host = $r->headers_in->{host};
-my $dirname  = (</x1/cms/wcbuild/*/$host/trunk/content>)[0] . $r->path_info;
+my $dirname  = "/x1/httpd/websites/$host/content" . $r->path_info;
 
 my $d = $dirname;
 for ($d) {
@@ -117,7 +117,7 @@ for ($d) {
 
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
-my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --markdown -- -P -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html -- -P -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
