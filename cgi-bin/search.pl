@@ -100,13 +100,13 @@ sub breadcrumbs {
     for (@path) {
         $relpath =~ s!\.?\./$!!;
         $relpath ||= './';
-        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang">) . (escape_html("\u$_") || "Home") . q(</a>);
+        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang;markdown=$markdown">) . (escape_html("\u$_") || "Home") . q(</a>);
       }
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-my $markdown = $apreq->args("markdown");
-my $lang     = $apreq->args("lang") || ".en";
+my $markdown = encode $apreq->args("markdown");
+my $lang     = encode $apreq->args("lang") || ".en";
 my $re       = $apreq->args("regex") || return 400;
 my $host = $r->headers_in->{host};
 
