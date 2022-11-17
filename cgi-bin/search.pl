@@ -144,11 +144,11 @@ my %title = (
 
 local @TEMPLATE_DIRS = </x1/cms/wcbuild/*/$host/trunk/templates>;
 $r->print(Template("search.html")->render({
-  path => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
-  title => $title{$lang},
-  matches => \@matches,
-  lang => $lang,
-  regex => $re,
+  path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
+  title       => $title{$lang},
+  matches     => \@matches,
+  lang        => $lang,
+  regex       => $re,
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang),
 }));
 
