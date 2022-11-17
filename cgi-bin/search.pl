@@ -106,7 +106,7 @@ sub breadcrumbs {
 }
 
 my $host = $r->headers_in->{host};
-my $dirname  = "/x1/cms/wcbuild/public/$host/trunk/content" . $r->path_info;
+my $dirname  = (</x1/cms/wcbuild/*/$host/trunk/content>)[0] . $r->path_info;
 
 my $d = $dirname;
 for ($d) {
