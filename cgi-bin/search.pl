@@ -105,7 +105,8 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-my $dirname  = "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/content" . $r->path_info;
+my $host = $r->headers_in->{host};
+my $dirname  = "/x1/cms/wcbuild/public/$host/trunk/content" . $r->path_info;
 
 my $d = $dirname;
 for ($d) {
