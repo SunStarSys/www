@@ -117,7 +117,7 @@ for ($d) {
 
 my $re       = $apreq->args("regex") || return 400;
 my $lang     = $apreq->args("lang") || ".en";
-my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html -- -P -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html -- -wP -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
