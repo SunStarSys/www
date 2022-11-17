@@ -40,7 +40,7 @@ sub parser :Sealed {
       $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
         my ($pre, $m) = ($1, $2 // "");
         my ($first, $last) = ("") x 2;
-        $last = $1 if $pre =~ /(\s+)$/;
+        $last = escape_html($1) if $pre =~ /([\s<\/]+)$/;
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         my @words;
         $p->parse($pre), $p->eof;
