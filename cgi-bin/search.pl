@@ -139,7 +139,7 @@ while (my ($k, $v) = each %matches) {
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
-  ".en" => "earch Results for ",
+  ".en" => "Search Results for ",
   ".es" => "resultados de búsqued para ",
   ".de" => "Suchergebnisse für ",
   ".fr" => "Résultats de recherche pour ",
