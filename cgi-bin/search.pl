@@ -116,8 +116,10 @@ for ($d) {
 }
 
 my $re       = $apreq->args("regex") || return 400;
-$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, '\Q') >= 0;
-my $wflag = ($re =~ s/(?:"|\\[Q])([^"\\]+)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
+$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, '\\') >= 0;
+my $wflag = ($re =~ s/(?:"|\\[Q])([^"\\]+)(?:"|\\[E])/\\\\Q$1\\\\E/g) ? "" : "-w";
+
+$re =~ s/\\/\\\\/g;
 
 my $lang     = $apreq->args("lang") || ".en";
 my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html --/, $wflag || (), qw/-P -e/], $re;
@@ -155,7 +157,7 @@ $r->print(Template("search.html")->render({
   title       => $title{$lang},
   matches     => \@matches,
   lang        => $lang,
-  regex       => $re,
+  regex       => $apreq->args("regex"),
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang),
 }));
 
