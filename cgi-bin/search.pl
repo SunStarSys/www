@@ -119,6 +119,8 @@ my $re       = $apreq->args("regex") || return 400;
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, '\\') >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"\\]+)(?:"|\\[E])/\\\\Q$1\\\\E/g) ? "" : "-w";
 
+my $send_re = $re;
+
 $re =~ s/\\/\\\\/g;
 
 my $lang     = $apreq->args("lang") || ".en";
@@ -157,7 +159,7 @@ $r->print(Template("search.html")->render({
   title       => $title{$lang},
   matches     => \@matches,
   lang        => $lang,
-  regex       => $apreq->args("regex"),
+  regex       => $send_re,
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang),
 }));
 
