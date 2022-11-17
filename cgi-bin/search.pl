@@ -127,11 +127,13 @@ if ($?) {
 parser $pffxg, $dirname, undef, \ my %matches;
 
 my @matches;
+my %title_cache;
 while (my ($k, $v) = each %matches) {
   my $link = $r->path_info . $k;
   read_text_file "$dirname/$k", \ my %data;
   my ($title) = $data{content} =~ m/<h1>(.*?)<\/h1>/;
-  push @matches, [$data{mtime}, qq(<a href="$link">$title</a>), $v];
+  push @matches, [$data{mtime}, qq(<a href="$link">$title</a>), $v]
+    unless $title_cache{$title}++;
 }
 
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
