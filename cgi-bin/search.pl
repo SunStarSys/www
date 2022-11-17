@@ -106,7 +106,7 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-my $markdown = encode($apreq->args("markdown") || "");
+my $markdown  = $apreq->args("markdown") && "Markdown";
 my $lang     = encode($apreq->args("lang") || ".en");
 my $re       = $apreq->args("regex") || return 400;
 my $host = $r->headers_in->{host};
@@ -155,10 +155,10 @@ while (my ($k, $v) = each %matches) {
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
-  ".en" => "Search Results for Words Matching ",
-  ".eqs" => "resultados de búsqued para palabras a juego ",
-  ".de" => "Suchergebnisse für passende Wörter ",
-  ".fr" => "Résultats de recherche pour correspondance mots ",
+  ".en" => "Search Results for \$markdown Words Matching ",
+  ".eqs" => "resultados de búsqued para \l$markdown palabras a juego ",
+  ".de" => "Suchergebnisse für passende $markdown Wörter ",
+  ".fr" => "Résultats de recherche pour correspondance \l$markdown mots ",
 );
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
