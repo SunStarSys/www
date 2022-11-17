@@ -73,7 +73,7 @@ sub run_shell_command {
     $args = [ @$args ];
     local %ENV = (
         PATH => "/usr/local/bin:/usr/bin",
-        HOME => "/x1/home/httpd",
+        HOME => "/x1/home/joe",
         LANG => "en_US.UTF-8",
     );
     no warnings 'uninitialized';
