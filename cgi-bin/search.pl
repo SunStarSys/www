@@ -127,7 +127,7 @@ parser $pffxg, $dirname, undef, \ my %matches;
 
 my @matches;
 while (my ($k, $v) = each %matches) {
-  s/\.md(?:text)?/.html/ for my $link = $r->path_info . $k;
+  s/\.md(?:text)?/.html/ for my $link = encode $r->path_info . $k;
   read_text_file "$dirname/$k", \ my %data, 0;
   push @matches, [$data{mtime}, qq(<a href="$link">$data{headers}{title}</a>), $v];
 }
