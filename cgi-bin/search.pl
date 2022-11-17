@@ -17,6 +17,7 @@ use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use SunStarSys::Util qw/read_text_file/;
 use File::Basename;
+use List::Util qw/sum/;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -37,7 +38,7 @@ sub parser :Sealed {
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
-      $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
+      my $count = $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
         my ($pre, $m) = ($1, $2 // "");
         my ($first, $last) = ("") x 2;
         $last = escape_html($1) if $pre =~ /([\s<\/]+)$/;
@@ -63,7 +64,7 @@ sub parser :Sealed {
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
         $pre . $last . $m
       }ge;
-      push @{$$paths{$file}}, $match;
+      push @{$$paths{$file}}, {count => $count, match => $match};
     }
   }
 };
@@ -148,11 +149,12 @@ while (my ($k, $v) = each %matches) {
   $link =~ s/\.md(?:text)?/.html/ if $markdown;
   read_text_file "$dirname/$k", \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{content} =~ m/<h1>(.*?)<\/h1>/;
-  push @matches, [$data{mtime}, qq(<a href="$link">$title</a>), $v]
+  my $total = sum map $_->{count}, @$v;
+  push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
     unless $title_cache{$title}++;
 }
 
-@matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
+@matches = grep {shift(@$_),shift(@$_)} sort {$b->[1] <=> $a->[1]} || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
   ".en" => "Search Results for $markdown Words Matching ",
