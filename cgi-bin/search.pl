@@ -124,6 +124,7 @@ my $send_re = $re;
 $re =~ s/\\/\\\\/g;
 
 my $lang     = $apreq->args("lang") || ".en";
+
 my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html --/, $wflag || (), qw/-P -e/], $re;
 
 if ($?) {
