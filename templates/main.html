@@ -78,7 +78,6 @@
       <div class="row right" id='search'>
         <form action="/cgi-bin/search.pl{{ path|dirname }}/" class="form-inline right" method="GET">
           <input type="hidden" name="lang" value="{{ lang }}" />
-          <input type="hidden" name="markdown" value="{{ markdown }}" />
           <input class="form-control" type="text" name="regex"
                placeholder="PCRE
  {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
@@ -87,6 +86,8 @@
 	    {% ifequal lang ".de" %}Suche{% endifequal -%}
 	    {% ifequal lang ".fr" %}Rechercher{% endifequal -%}
           </button>
+          <input class="form-check-input" type="checkbox" name="markdown"
+          id="markdown-search" value="{{ markdown }}" /><label for="markdown-search"><small>Markdown</small></label>
         </form>
       </div>
     </div>
