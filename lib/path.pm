@@ -44,7 +44,7 @@ our @patterns = (
   }],
 
   [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
-    view      => [qw/set_template_from_capture snippet single_narrative/],
+    view      => [qw/set_template_from_capture ssi snippet single_narrative/],
     conf      => $conf,
   }],
 
