@@ -155,7 +155,7 @@ while (my ($k, $v) = each %matches) {
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
-  ".en" => "Search Results for \$markdown Words Matching ",
+  ".en" => "Search Results for $markdown Words Matching ",
   ".eqs" => "resultados de búsqued para \l$markdown palabras a juego ",
   ".de" => "Suchergebnisse für passende $markdown Wörter ",
   ".fr" => "Résultats de recherche pour correspondance \l$markdown mots ",
