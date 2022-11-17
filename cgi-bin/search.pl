@@ -116,7 +116,7 @@ for ($d) {
 }
 
 my $re       = $apreq->args("regex") || return 400;
-$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, '\\') >= 0;
+$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, '\') >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 
 my $send_re = $re;
