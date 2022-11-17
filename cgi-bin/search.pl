@@ -144,7 +144,7 @@ my %title = (
 
 local @TEMPLATE_DIRS = qw(/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates);
 $r->print(Template("search.html")->render({
-  path => substr($r->path_info, 0, -2),
+  path => $r->path_info . "search",
   title => $title{$lang},
   matches => \@matches,
   lang => $lang,
