@@ -40,6 +40,7 @@ our @patterns = (
     conf       => $conf,
     archive_root => "/archives",
     category_root => "/categories",
+    markdown    => 1, # search markdown instead of built html
   }],
 
   [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
