@@ -117,9 +117,10 @@ for ($d) {
 
 my $re       = $apreq->args("regex") || return 400;
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0;
-$re =~ tr/"//d;
+my $wflag = $re =~ s/"(\[^"]+)"/\\Q$1\\E/g ? "" : "-w";
+
 my $lang     = $apreq->args("lang") || ".en";
-my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html -- -wP -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html -- $wflag -P -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
