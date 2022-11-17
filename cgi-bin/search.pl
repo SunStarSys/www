@@ -105,8 +105,19 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
+my $markdown = $apreq->args("markdown");
+my $lang     = $apreq->args("lang") || ".en";
+my $re       = $apreq->args("regex") || return 400;
 my $host = $r->headers_in->{host};
-my $dirname  = "/x1/httpd/websites/$host/content" . $r->path_info;
+
+my $dirname;
+
+if ($markdown)_{
+  $dirname = (</x1/cms/wcbuild/*/$host/trunk/content>)[0] . $r->path_info;
+}
+else {
+  $dirname = "/x1/httpd/websites/$host/content" . $r->path_info;
+}
 
 my $d = $dirname;
 for ($d) {
@@ -115,13 +126,11 @@ for ($d) {
     or die "Can't detaint '$_'\n";
 }
 
-my $lang     = $apreq->args("lang") || ".en";
-my $re       = $apreq->args("regex") || return 400;
-$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
+ $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 
 
-my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html --/, $wflag || (), qw/-P -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html --markdown --/, $wflag || (), qw/-P -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
@@ -135,7 +144,8 @@ my %title_cache;
 
 while (my ($k, $v) = each %matches) {
   my $link = $r->path_info . $k;
-  read_text_file "$dirname/$k", \ my %data;
+  $link =~ s/\.md(?:text)?/.html/ if $markdown;
+  read_text_file "$dirname/$k", \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{content} =~ m/<h1>(.*?)<\/h1>/;
   push @matches, [$data{mtime}, qq(<a href="$link">$title</a>), $v]
     unless $title_cache{$title}++;
@@ -145,7 +155,7 @@ while (my ($k, $v) = each %matches) {
 
 my %title = (
   ".en" => "Search Results for Words Matching ",
-  ".es" => "resultados de búsqued para palabras a juego ",
+  ".eqs" => "resultados de búsqued para palabras a juego ",
   ".de" => "Suchergebnisse für passende Wörter ",
   ".fr" => "Résultats de recherche pour correspondance mots ",
 );
@@ -154,6 +164,7 @@ local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
 $r->print(Template("search.html")->render({
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
   title       => $title{$lang},
+  type        => $type,
   matches     => \@matches,
   lang        => $lang,
   regex       => $re,
