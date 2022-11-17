@@ -137,10 +137,10 @@ while (my ($k, $v) = each %matches) {
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
-  ".en" => "Markdown Search Results for ",
-  ".es" => "resultados de markdown búsqued para ",
-  ".de" => "Markdown Suchergebnisse für ",
-  ".fr" => "Résultats de Markdown recherche pour ",
+  ".en" => "earch Results for ",
+  ".es" => "resultados de búsqued para ",
+  ".de" => "Suchergebnisse für ",
+  ".fr" => "Résultats de recherche pour ",
 );
 
 local @TEMPLATE_DIRS = </x1/cms/wcbuild/*/$host/trunk/templates>;
