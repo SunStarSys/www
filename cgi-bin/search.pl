@@ -164,7 +164,7 @@ local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
 $r->print(Template("search.html")->render({
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
   title       => $title{$lang},
-  type        => $type,
+  markdown    => $markdown,
   matches     => \@matches,
   lang        => $lang,
   regex       => $re,
