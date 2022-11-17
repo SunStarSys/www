@@ -116,7 +116,7 @@ for ($d) {
 }
 
 my $re       = $apreq->args("regex") || return 400;
-$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0;
+$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, '\Q') >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"\\]+)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 
 my $lang     = $apreq->args("lang") || ".en";
@@ -149,7 +149,7 @@ my %title = (
   ".fr" => "Résultats de recherche pour correspondance mots ",
 );
 
-local @TEMPLATE_DIRS = </x1/cms/wcbuild/*/$host/trunk/templates>;
+local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
 $r->print(Template("search.html")->render({
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
   title       => $title{$lang},
