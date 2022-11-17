@@ -154,7 +154,7 @@ while (my ($k, $v) = each %matches) {
     unless $title_cache{$title}++;
 }
 
-@matches = grep {shift(@$_),shift(@$_)} sort {$b->[1] <=> $a->[1]} || $b->[0] <=> $a->[0]} @matches;
+@matches = grep {shift(@$_),shift(@$_)} sort {$b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
   ".en" => "Search Results for $markdown Words Matching ",
