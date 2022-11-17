@@ -112,7 +112,7 @@ my $host = $r->headers_in->{host};
 
 my $dirname;
 
-if ($markdown)_{
+if ($markdown) {
   $dirname = (</x1/cms/wcbuild/*/$host/trunk/content>)[0] . $r->path_info;
 }
 else {
