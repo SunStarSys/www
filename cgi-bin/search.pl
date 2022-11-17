@@ -128,6 +128,7 @@ parser $pffxg, $dirname, undef, \ my %matches;
 
 my @matches;
 my %title_cache;
+
 while (my ($k, $v) = each %matches) {
   my $link = $r->path_info . $k;
   read_text_file "$dirname/$k", \ my %data;
