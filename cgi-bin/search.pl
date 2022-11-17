@@ -140,10 +140,10 @@ while (my ($k, $v) = each %matches) {
 @matches = grep shift @$_, sort {@{$b->[-1]} <=> @{$a->[-1]} || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
-  ".en" => "Search Results for ",
-  ".es" => "resultados de búsqued para ",
-  ".de" => "Suchergebnisse für ",
-  ".fr" => "Résultats de recherche pour ",
+  ".en" => "Search Results for Words Matching",
+  ".es" => "resultados de búsqued para palabras a juego",
+  ".de" => "Suchergebnisse für passende Wörter",
+  ".fr" => "Résultats de recherche pour correspondance mots",
 );
 
 local @TEMPLATE_DIRS = </x1/cms/wcbuild/*/$host/trunk/templates>;
