@@ -1,0 +1,7 @@
+---
+categories: CMS, Architecture, ZFS
+dependencies: '*.md.en'
+title: Information Architecture
+
+---
+{% ssi `/essays/ia.md.en` %}
