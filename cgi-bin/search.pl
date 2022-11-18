@@ -161,7 +161,7 @@ while (my ($k, $v) = each %matches) {
 
 my %title = (
   ".en" => "Search Results for $markdown ",
-  ".eqs" => "resultados de búsqued para \l$markdown ",
+  ".es" => "resultados de búsqued para \l$markdown ",
   ".de" => "Suchergebnisse für $markdown ",
   ".fr" => "Résultats de recherche pour \l$markdown ",
 );
