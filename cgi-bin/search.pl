@@ -112,9 +112,9 @@ sub breadcrumbs {
 
 my $markdown  = $apreq->args("markdown") ? "Markdown" : "";
 my $lang     = encode($apreq->args("lang") || ".en");
-my $re       = utf8::decode($apreq->args("regex")) || return 400;
+my $re       = $apreq->args("regex") || return 400;
 my $host = $r->headers_in->{host};
-
+utf8::decode($re);
 my $dirname;
 
 if ($markdown) {
