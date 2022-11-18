@@ -151,8 +151,8 @@ while (my ($k, $v) = each %matches) {
   my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
 
   my $total = sum map $_->{count}, @$v;
-  push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]];
-#   unless $title_cache{$title}++;
+  push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
+    unless $title_cache{$title}++;
 }
 
 @matches = grep {shift(@$_),shift(@$_)} sort {$b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
