@@ -23,7 +23,6 @@ my $conf = Load join "", <DATA>;
 # 1. via walk_content_tree() code-block logic
 # 2. via a "dependencies" header entry in an md.* file (through seed_deps())
 # 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
-#
 
 our @patterns = (
 
@@ -96,7 +95,6 @@ walk_content_tree {
   };
 
 1;
-
 
 __DATA__
 title: "SunStar Systems"
