@@ -81,9 +81,10 @@ sub run_shell_command {
     );
     no warnings 'uninitialized';
     for (@filenames, @$args) {
-        s/'/'\\''/g;
-        "'$_'" =~ /^(.*)$/ms and $_ = $1
-            or die "Can't detaint '$_'\n";
+      s/[^[:print:]]+//g;
+      s/'/'\\''/g;
+      "'$_'" =~ /^(.*)$/ms and $_ = $1
+        or die "Can't detaint '$_'\n";
     }
     unshift @filenames, "--" if grep /^-/, @filenames;
     my @rv = qx($cmd @$args @filenames 2>&1);
