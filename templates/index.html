@@ -5,7 +5,7 @@
 {% endif %}
 
 {% for c in headers.categories %}
-  <button type="button" class="btn btn-success"><a style="color:#fff" href="{{category_root|default_if_none:"../"}}/{{c}}">{{c}}</a></button>
+  <button type="button" class="btn btn-success"><a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}">{{c}}</a></button>
 {% endfor %}
 {% if deps.0 %}
 --------
