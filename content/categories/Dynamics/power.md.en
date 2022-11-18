@@ -1,8 +1,0 @@
----
-categories: Health Care, Math, Dynamics
-dependencies: '*.md.en'
-keywords: exponential, power, covid-19, epidemic, pandemic
-title: Exponential Growth and COVID-19
-
----
-{% ssi `/essays/power.md.en` %}
