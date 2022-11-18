@@ -76,7 +76,7 @@
         </ul>
       </div>
       <div class="row right" id='search'>
-        <form action="/cgi-bin/search.pl{{ path }}/" class="form-inline right" method="GET">
+        <form action="/cgi-bin/search.pl{{ path|dirname }}/" class="form-inline right" method="GET">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
                placeholder="PCRE
