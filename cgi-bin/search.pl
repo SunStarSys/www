@@ -148,7 +148,7 @@ while (my ($k, $v) = each %matches) {
   my $link = $r->path_info . $k;
   $link =~ s/\.md(?:text)?/.html/ if $markdown;
   read_text_file "$dirname/$k", \ my %data, $markdown ? 0 : undef;
-  my ($title) = $data{content} =~ m/<h1>(.*?)<\/h1>/;
+  my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
   my $total = sum map $_->{count}, @$v;
   push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
     unless $title_cache{$title}++;
