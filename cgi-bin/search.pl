@@ -134,7 +134,7 @@ for ($d) {
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 
 
-my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html --markdown --/, $wflag || (), qw/-P -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html --markdown --/, qw/-P -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
@@ -160,10 +160,10 @@ while (my ($k, $v) = each %matches) {
 @matches = grep {shift(@$_),shift(@$_)} sort {$b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
 
 my %title = (
-  ".en" => "Search Results for $markdown Words Matching ",
-  ".eqs" => "resultados de búsqued para \l$markdown palabras a juego ",
-  ".de" => "Suchergebnisse für passende $markdown Wörter ",
-  ".fr" => "Résultats de recherche pour correspondance \l$markdown mots ",
+  ".en" => "Search Results for $markdown ",
+  ".eqs" => "resultados de búsqued para \l$markdown ",
+  ".de" => "Suchergebnisse für $markdown ",
+  ".fr" => "Résultats de recherche pour \l$markdown ",
 );
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
