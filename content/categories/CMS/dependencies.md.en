@@ -1,0 +1,7 @@
+---
+categories: CMS, Architecture
+dependencies: '*.md.en'
+title: What Is <em>Smart Content Dependency Management&trade;</em> All About?
+
+---
+{% ssi `/essays/dependencies.md.en` %}
