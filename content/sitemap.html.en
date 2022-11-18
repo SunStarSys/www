@@ -1,2 +1,2 @@
-{% include "main.html" %}
+{% extends "main.html" %}
 
