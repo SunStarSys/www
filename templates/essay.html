@@ -3,7 +3,9 @@
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
      <h1>{{ headers.title|safe }}</h1>
      <div class="essay col-lg-12">
-       <p style="color:#aaa"><small><em>{{ content|ssi|vcs_date }}</em></small></p>
+       <p style="color:#aaa">
+         <small><em>{{ content|ssi|vcs_date }}</em></small>
+       </p>
        {{ content|markdown }}
      </div>
 {% endblock %}
