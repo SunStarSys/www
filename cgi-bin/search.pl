@@ -38,8 +38,10 @@ sub parser :Sealed {
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
-      my $count = $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
+      my $count = 0;
+      $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
         my ($pre, $m) = ($1, $2 // "");
+        ++$count if $m;
         my ($first, $last) = ("") x 2;
         $last = escape_html($1) if $pre =~ /([\s<\/]+)$/;
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
