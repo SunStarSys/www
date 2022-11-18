@@ -15,6 +15,6 @@
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|teaser}} ... <small><em>{{d.1.content|vcs_date}}</em></small>
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|ssi|teaser}} ... <small><em>{{d.1.content|ssi|vcs_date}}</em></small>
 {% endfor %}
 {% endfilter %}
