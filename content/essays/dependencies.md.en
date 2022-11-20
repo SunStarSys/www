@@ -10,7 +10,9 @@ Categories: CMS, Architecture
 
 ## Weaving Your Website's Information Topology Together
 
-A *Topology* is a specification of *open* subsets of a space that indicate the spatial relationships between elements of the space.
+Mathematically, a *Topology* is a complete specification of the *open* subsets of a space, that indicate the spatial relationships between elements of the space.  For graphs, it is the same as specifying the connections between vertices in the graph.
+
+The latter specification is what we will utilize...
 
 ### More Than Just Hyperlinks!
 
