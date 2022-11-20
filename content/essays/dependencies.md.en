@@ -14,6 +14,8 @@ Mathematically, a *Topology* `$$\tau$$` is a complete specification of the *open
 
 The latter specification is what we will utilize when discussing the *information topology* associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `Y` is `$$\real^n$$` for some sufficiently large `$$n$$`, and the edges of `$$X$$` are non-intesecting Jordan curves connecting a file `$$x \in X$$` to its set of dependent files `$$x' \in X$$`).
 
+Having a clear understanding of your website's full *information topology* will ensure you can maximize the performance of our incrememtal build technology at scale.
+
 ### More Than Just Hyperlinks!
 
 ### Cyclic Dependency Graphs Are the Norm
