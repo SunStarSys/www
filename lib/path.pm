@@ -1,5 +1,5 @@
 package path;
-use SunStarSys::Util qw/walk_content_tree seed_deps Load/;
+use SunStarSys::Util qw/walk_content_tree seed_deps archived Load/;
 use strict;
 use warnings;
 
@@ -67,15 +67,15 @@ walk_content_tree {
   for my $lang (qw/en es de fr/) {
 
     if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
-      push @{$dependencies{"/sitemap.html.$lang"}}, $_;
+      push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
     }
 
     if (s!/index\.html\.$lang$!!) {
       $dependencies{"$_/index.html.$lang"} = [
-        grep s/^content//, (glob("'content$_'/*.{md.$lang,pl,pm,pptx}"),
+        grep s/^content// && !archived, (glob("'content$_'/*.{md.$lang,pl,pm,pptx}"),
                             glob("'content$_'/*/index.html.$lang"))
         ];
-      push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
+      push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,
         glob("'content$_'/*") if m!/files\b!;
     }
   }
@@ -90,7 +90,7 @@ walk_content_tree {
 
     # incorporate hard-coded deps in the __DATA__ section of this file
     while  (my ($k, $v) = each %{$conf->{dependencies}}) {
-      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content//, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
+      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
 
   };
