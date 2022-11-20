@@ -57,6 +57,7 @@ our @patterns = (
 );
 
 our %dependencies;
+
 # entries computed below at build-time, or drawn from the .deps cache file
 
 walk_content_tree {
