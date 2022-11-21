@@ -1,0 +1,6 @@
+---
+dependencies: '*.md.en'
+title: Information Security Primer
+
+---
+{% ssi `/essays/infosec.md.en` %}
