@@ -18,6 +18,12 @@ Having a clear understanding of your website's full *information topology* will 
 
 It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependendies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in the `SunStarSys::View` package are intended to operate. The `walk_content_tree`, `archived`, and `seed_deps` utility functions in `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
 
+Here's our live
+
+[`lib/path.pm`](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/path.pm)
+
+to mull over for ideas.
+
 ### Cyclic Dependency Graphs Are the Norm
 
 Here's a link to a two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **this site**:
@@ -49,7 +55,7 @@ In fact, the *link topology* of your website is an entirely separate matter from
 
 ##### ssi filter
 
-- recursively evaluates ssi tags in the value to be filtered
+- recursively evaluates `ssi` tags in the value to be filtered
 - useful for avoiding using a large value (3+) of `quick_deps` in a `@{path::patterns}` entry's argument hashref, which can impact performance
 
 #### Why not SymLinks?
