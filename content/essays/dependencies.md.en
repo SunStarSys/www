@@ -55,6 +55,14 @@ Quite complex, even for a small website like this one! Lots of intesections when
 
 #### Build Tools for Permalinks: Document Curation, Category Generation, and Archived Pages
 
+##### Categories
+
+- strictly additive (i.e., removing a category from a source page's headers will not remove it from that category on the live site),
+- generated on demand
+- deleting all categories in a single commit is a great way to resync them with
+  the exact specifications in the source page's headers, without destroying preserved category content on the live site
+
+##### Archived Pages
 
 - we aggresssively archive stale essays to keep build times for new essays low
 - content in `/(essays|clients)/` are always permalinks, even after archiving
