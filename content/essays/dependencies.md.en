@@ -62,8 +62,7 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 ##### Categories
 
-- content constructed using Template `ssi` tags pointing back to the permalink
-  location, while removing the `Archive` header from the constructed source page
+- content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Archive` header from the constructed source page
 - strictly additive (i.e., removing a category from a source page's headers will not remove it from that category on the live site),
 - generated on demand
 - deleting all categories in a single commit is a great way to resync them with
