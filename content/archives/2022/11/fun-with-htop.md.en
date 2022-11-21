@@ -1,0 +1,6 @@
+---
+dependencies: '*.md.en'
+title: Fun with htop
+
+---
+{% ssi `/essays/fun-with-htop.md.en` %}
