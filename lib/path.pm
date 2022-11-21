@@ -62,6 +62,8 @@ our %dependencies;
 
 walk_content_tree {
 
+  return if m#/images/#;
+
   seed_deps if /\.md[^\/]*$/;
 
   for my $lang (qw/en es de fr/) {
