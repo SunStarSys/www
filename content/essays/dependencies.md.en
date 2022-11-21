@@ -32,6 +32,9 @@ Quite complex, even for a small website like this one! Lots of intesections when
 
 #### Traditional Server-Side Includes
 
+- great for pruning your website's *information topology* down to manageable size
+- bad for recontexualizing entire webpages into a different location in your document root's heirarchy
+
 #### Template APIs
 
 ##### ssi tag
