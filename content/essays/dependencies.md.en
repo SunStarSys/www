@@ -55,6 +55,11 @@ Quite complex, even for a small website like this one! Lots of intesections when
 
 #### Build Tools for Permalinks: Document Curation, Category Generation, and Archived Pages
 
+
+- we aggresssively archive stale essays to keep build times for new essays low
+- content in `/(essays|clients)/` are always permalinks, even after archiving
+- archiving effectively removes the permalink location from the *information topology*
+
 ## Teasers
 
 HTML comments embedded in the Markdown prose form boundaries of the teaser content. We use &lt;!-- #teaser --&gt; for this purpose.
