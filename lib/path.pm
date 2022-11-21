@@ -25,6 +25,7 @@ my $conf = Load join "", <DATA>;
 # 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
 
 our @patterns = (
+
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, memoize => {
