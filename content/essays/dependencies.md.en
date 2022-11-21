@@ -70,7 +70,7 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 ##### Archived Pages
 
-We aggresssively archive stale essays to keep build times for new essays low
+We aggresssively archive stale essays to keep build times for new essays low. The information topology relative to the `/archives/` directory is reasonably self-contained as-per the following rules:
 
 - content constructed using Template `ssi` tags pointing back to the permalink location, while removing `Categories` and `Archive` headers
 - content in `/(essays|clients)/` are always permalinks, even after archiving
