@@ -58,7 +58,7 @@ Quite complex, even for a small website like this one! Lots of intesections when
 
 - we aggresssively archive stale essays to keep build times for new essays low
 - content in `/(essays|clients)/` are always permalinks, even after archiving
-- archiving effectively removes the permalink location from the *information topology*
+- archiving effectively removes the permalink location from the *information topology*, while not removing the permalink itself from the website
 
 ## Teasers
 
