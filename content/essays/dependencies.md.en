@@ -72,7 +72,7 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 We aggresssively archive stale essays to keep build times for new essays low. The information topology relative to the `/archives/` directory is reasonably self-contained as-per the following rules:
 
-- content constructed using Template `ssi` tags pointing back to the permalink location, while removing `Categories` and `Archive` headers from the constructed source page
+- content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` and `Archive` headers from the constructed source page
 - content in `/(essays|clients)/` are always permalinks, even after archiving
 - archiving effectively removes the permalink location from the *information topology*, while not removing the permalink itself from the website
 
