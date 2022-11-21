@@ -62,6 +62,7 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 ##### Categories
 
+- content constructed using Template `ssi` tags pointing back to the permalink location, while removing `Archive` header
 - strictly additive (i.e., removing a category from a source page's headers will not remove it from that category on the live site),
 - generated on demand
 - deleting all categories in a single commit is a great way to resync them with
@@ -69,7 +70,9 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 ##### Archived Pages
 
-- we aggresssively archive stale essays to keep build times for new essays low
+We aggresssively archive stale essays to keep build times for new essays low
+
+- content constructed using Template `ssi` tags pointing back to the permalink location, while removing `Categories` and `Archive` headers
 - content in `/(essays|clients)/` are always permalinks, even after archiving
 - archiving effectively removes the permalink location from the *information topology*, while not removing the permalink itself from the website
 
