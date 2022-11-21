@@ -34,7 +34,13 @@ Quite complex, even for a small website like this one! Lots of intesections when
 
 ##### ssi tag
 
+- paths rooted at `content` source directory
+- rewrites relative urls to absolute urls in the target path's included content
+
 ##### ssi filter
+
+- recursively evaluates ssi tags in the value to be filtered
+- useful for avoiding using a large value (3+) of `quick_deps` in a `@path:patterns` entry's argument hashref
 
 #### Why not SymLinks?
 
