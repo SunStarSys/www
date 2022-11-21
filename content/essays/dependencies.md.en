@@ -49,6 +49,10 @@ Quite complex, even for a small website like this one! Lots of intesections when
 
 #### Why not SymLinks?
 
+- barebones filesystem abstraction that is hard to securely support in a vhost context
+- same downsides with traditional ssi includes on full webpages
+- CMS system does not support them
+
 #### Build Tools for Permalinks: Document Curation, Category Generation, and Archived Pages
 
 ## Teasers
