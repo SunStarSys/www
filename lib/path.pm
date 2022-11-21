@@ -101,7 +101,7 @@ walk_content_tree {
 
 __DATA__
 title: "SunStar Systems"
-keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs,solaris"
+keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs,solaris,http/2"
 releases:
   cms:
     url: https://github.com/SunStarSys/cms
