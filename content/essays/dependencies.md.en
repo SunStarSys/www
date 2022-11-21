@@ -8,13 +8,13 @@ Categories: CMS, Architecture
 
 *Smart Content Dependency Management&trade;* is <!-- #teaser -->about the circle of ideas related to providing support for *incremental builds*, while staying true to the **Highlander** principle<!-- #teaser --> &mdash; that permalinks should be the single source of truth, no matter how their content is curated throughout the source tree.
 
-## Weaving Your Website's Information Topology Together
+## Weaving Your Website's Content Topology Together
 
 Mathematically, a *Topology* `$$\tau$$` is a complete specification of the *open* subsets of a space `$$X$$`, the purpose of which is to indicate the spatial relationships between *points* of the space `$$X$$`.  When `$$X$$` is a graph, a *topology* `$$\tau$$` for `$$X$$` amounts to specifying the edges connecting the vertices of the graph together (here vertices are viewed as the *points* of `$$X$$`, and the connecting edges represent the neighborhoods of those points as *basis open sets* for the topoology).  A *directed graph topology* is essentially the same thing, but incorporates a reference to a topological embedding of `$$(X,\tau)$$` into a larger topological space `$$(Y,\sigma)$$` , where the embedding's edge connections are represented by directional, non-intersecting (Jordan) curves.
 
-The latter specification is what we will utilize when discussing the *information topology* `$$\tau$$` associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `$$(Y,\sigma)$$` is `$$\mathbb{R}^n$$` with its metric topology for `$$n \in \{2,3\}$$`, and the edges of `$$X$$` are non-intersecting, directed Jordan curves connecting a file `$$x \in X$$` to its set of files upon which `$$x$$` depends: `$$\{x' \in X | x \rightarrow x' \}$$`).
+The latter specification is what we will utilize when discussing the *content topology* `$$\tau$$` associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `$$(Y,\sigma)$$` is `$$\mathbb{R}^n$$` with its metric topology for `$$n \in \{2,3\}$$`, and the edges of `$$X$$` are non-intersecting, directed Jordan curves connecting a file `$$x \in X$$` to its set of files upon which `$$x$$` depends: `$$\{x' \in X | x \rightarrow x' \}$$`).
 
-Having a clear understanding of your website's full *information topology* will ensure you can maximize the performance of our incremental build technology at scale. We take the information you provide in `%path::dependencies` and construct a reverse map of dependent files, and use *that* to determine the full corpus of files to build for any given `svn commit` you make to our system.
+Having a clear understanding of your website's full *content topology* will ensure you can maximize the performance of our incremental build technology at scale. We take the information you provide in `%path::dependencies` and construct a reverse map of dependent files, and use *that* to determine the full corpus of files to build for any given `svn commit` you make to our system.
 
 It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependendies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in the `SunStarSys::View` package are intended to operate. The `walk_content_tree`, `archived`, and `seed_deps` utility functions in `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
 
@@ -30,25 +30,25 @@ Here's a link to a two-dimensional directed graph representation of a recent sna
 
 [English Language Dependencies](../images/deps.svg.gz.en)
 
-Quite complex, even for a small website like this one! Lots of intesections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in `/essays/` towards the center-right of the graph, which is what a good blogging site's information topology should look like.
+Quite complex, even for a small website like this one! Lots of intesections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in `/essays/` towards the center-right of the graph, which is what a good blogging site's content topology should look like.
 
 Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependencies.
 
 ### Isn't this just about Hyperlinks?
 
-In fact, the *link topology* of your website is an entirely separate matter from the source tree's *information topology*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *information topology*.
+In fact, the *link topology* of your website is an entirely separate matter from the source tree's *content topology*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *content topology*.
 
 Here's a current graph of the English *link topology* for this site (using GraphViz's `circo`):
 
 [English Language Links](../images/links.svg.gz.en)
 
-It's qualitatively and quantitatively different from the *information topology* graph depicted above.
+It's qualitatively and quantitatively different from the *content topology* graph depicted above.
 
 ### How SSI Technology Can Help
 
 #### Traditional Server-Side Includes
 
-- great for pruning your website's *information topology* down to manageable size
+- great for pruning your website's *content topology* down to manageable size
 - great for decreasing boilerplate churn in large commit messages
 - bad for recontexualizing entire webpages into a different location in your document root's heirarchy
 
@@ -85,11 +85,11 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 ##### Archived Pages
 
-We aggresssively archive stale essays to keep build times for new essays low. The information topology relative to the `/archives/` directory is reasonably self-contained as-per the following rules:
+We aggresssively archive stale essays to keep build times for new essays low. The *content topology* relative to the `/archives/` directory is reasonably self-contained as-per the following rules:
 
 - content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` and `Archive` headers from the constructed source page
 - content in `/(essays|clients)/` are always permalinks, even after archiving
-- archiving effectively removes the permalink location from the *information topology*, while not removing the permalink itself from the website
+- archiving effectively removes the permalink location from the *content topology*, while not removing the permalink itself from the website
 
 ##### Teasers
 
