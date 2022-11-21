@@ -1,0 +1,7 @@
+---
+categories: Performance
+dependencies: '*.md.en'
+title: Application Performance
+
+---
+{% ssi `/essays/performance.md.en` %}
