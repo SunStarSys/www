@@ -101,6 +101,8 @@ Processing teasers is done with the `teaser` Template filter. It is useful to co
 
 There are interesting data structures and relations to yet be uncovered when dealing with a website's *content topology*, which is a much newer area of interest than the research literature delving into the data structures surrounding a website's *link topology*.
 
+Conventional incremental builds for pure software development is still a hot topic. The research covered in <sup>1</sup> and <sup>2</sup> was published in October 2022, about a month before this essay is expected to be complete.
+
 ## Footnotes
 
 1. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering, May 2022
