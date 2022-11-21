@@ -77,6 +77,8 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 HTML comments embedded in the Markdown prose form boundaries of the teaser content. We use &lt;!-- #teaser --&gt; for this purpose.
 
+Processing teasers is done with the `teaser` Template filter. It is useful to combine this with the `ssi` filter for indexing a Category with more than one category page within it.
+
 ## Footnotes
 
 1. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering May 2022
