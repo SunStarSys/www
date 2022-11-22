@@ -43,6 +43,13 @@ Dependencies: *.md.en
 	- TLS 1.3
     - Custom [`SVN::Client`](#) module w/ ithread support for per-request pools
 
+## Multilingual
+
+- English
+- Spanish
+- German
+- French
+
 ## Better support for Mailing Diffs and Creating Clones
 
 - DMARC-protected
@@ -91,4 +98,3 @@ Dependencies: *.md.en
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
-
