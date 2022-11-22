@@ -48,11 +48,17 @@ our @patterns = (
     conf      => $conf,
   }],
 
-  [qr/\.md(?:text)?/, memoize => {
+  [qr/^\/index\.md(?:text)?\.\w+$/, memoize => {
     view       => [qw/snippet single_narrative/],
     template   => "main.html",
     conf       => $conf,
     deps_root  => "/categories",
+  }],
+
+  [qr/\.md(?:text)?/, memoize => {
+    view       => [qw/snippet single_narrative/],
+    template   => "main.html",
+    conf       => $conf,
   }],
 
 );
