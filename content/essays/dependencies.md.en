@@ -14,9 +14,7 @@ Mathematically, a *Topology* `$$\tau$$` is a complete specification of the *open
 
 The latter specification is what we will utilize when discussing the *content topology* `$$\tau$$` associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `$$(Y,\sigma)$$` is `$$\mathbb{R}^n$$` with its metric topology for `$$n \in \{2,3\}$$`, and the edges of `$$X$$` are non-intersecting, directed Jordan curves connecting a file `$$x \in X$$` to its set of files upon which `$$x$$` depends: `$$\{x' \in X | x \rightarrow x' \}$$`).
 
-Having <!-- #teaser --> a clear understanding of your website's full *content
-topology* will ensure you can maximize the performance of our incremental build
-technology at scale <!-- #teaser -->. We take the information you provide in `%path::dependencies` and construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
+Having <!-- #teaser --> a clear understanding of your website's *content topology* will ensure you can maximize the performance of our build technology at scale <!-- #teaser -->. We take the information you provide in `%path::dependencies` and construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
 
 It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependendies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in the `SunStarSys::View` package are meant to operate. The `walk_content_tree`, `archived`, and `seed_deps` utility functions importable from `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
 
