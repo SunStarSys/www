@@ -30,11 +30,11 @@ Where do entries in `%path::dependencies` originate? If they are not born from a
 
 ### Cyclic Dependency Graphs Are the Norm
 
-Here's a link to a two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **this site** (using GraphViz's `dot`):
+Here's a link to a two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** (using GraphViz's `dot`):
 
 [English Language Dependencies](../images/deps.svg.gz.en)
 
-Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in this site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's content topology should look like.
+Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's content topology should look like.
 
 Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependencies.
 
@@ -42,7 +42,7 @@ Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependenci
 
 In fact, the *link topology* of your website is an entirely separate matter from the source tree's *content topology*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *content topology*.
 
-Here's a current graph of the English *link topology* for **this site** (using GraphViz's `twopi`):
+Here's a current graph of the English *link topology* for **our site** (using GraphViz's `twopi`):
 
 [English Language Links](../images/links.svg.gz.en)
 
@@ -83,14 +83,14 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 ##### Categories
 
-- content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Archive` header from the constructed source page
-- strictly additive (i.e., removing a category from a source page's headers will not remove it from that category on the live site),
+- new content is constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Archive` header from the constructed source page
+- categories are strictly additive (i.e., removing a category from a source page's headers will not remove it from that category on the live site),
 - generated on demand
-- deleting all categories in a single commit is a great way to sync them with the exact specifications in all source pages' headers, without destroying preserved category content on the live site
+- deleting all categories in a single commit is a great way to sync them with the exact specifications in all source pages' headers, without destroying the preserved category content on the live site
 
 ##### Archived Pages
 
-We aggresssively archive stale essays to keep build times for new essays low. The *content topology* relative to the `/archives/` directory (for this site) is reasonably self-contained as-per the following rules:
+On our site, we aggresssively archive stale essays to keep build times for new essays low, while not destroying permalinks to archived documents. The *content topology* relative to the `/archives/` directory (for our site) is reasonably self-contained as-per the following rules:
 
 - content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` and `Archive` headers from the constructed source page
 - content in `/(essays|clients)/` are always permalinks, even after archiving
