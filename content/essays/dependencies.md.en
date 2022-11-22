@@ -26,7 +26,7 @@ Here's our live
 
 [`lib/path.pm`](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/path.pm)
 
-to mull over for ideas on how you want *your website* to work.
+to mull over for ideas on how you want *your website* to work. Yes there is some reasonable complexity around how `%path::dependencies` is constructed in that file, but instead of just viewing this as optimization work, instead look at it as providing the basic ingredients necessary for construcing major aspects of the *link topology* in an automated, dynamically generated fashion.
 
 Where do entries in `%path::dependencies` originate? If they are not born from an invocation of `walk_content_tree`, (which basically dives into your markdown source files' headers and content), then they are just hard-coded into `lib/path.pm` at load-time.
 
