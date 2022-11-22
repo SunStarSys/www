@@ -36,7 +36,7 @@ Where do entries in `%path::dependencies` originate? If they are not born from a
 
 ### Cyclic Dependency Graphs Are the Norm
 
-Here's a scrollable two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** (using GraphViz's `dot`):
+Here's a scrollable two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** ([using GraphViz's `dot`](https://github.com/SunStarSys/cms/blob/masster/deps2dotcfg.pl)):
 
 <div style="width:100%;height:1000px;overflow:auto;margin-bottom:10px;padding-top:0">
 ![English Language Dependencies](../images/deps.svg.gz.en)
@@ -50,7 +50,7 @@ Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependenci
 
 In fact, the *link topology* of your website is an entirely separate matter from the source tree's *dependency graph*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *dependency graph*.
 
-Here's current birds-eye graph of the English *link topology* for **our site** (using GraphViz's `twopi`):
+Here's current birds-eye graph of the English *link topology* for **our site** ([using GraphViz's `twopi`](https://github.com/SunStarSys/cms/blob/master/links2dotcfg.pl)):
 
 <div id="links" style="width:100%;height:1000px;overflow:auto;margin-bottom:10px;padding-top:0">
 ![English Language Links](../images/links.svg.gz.en)
