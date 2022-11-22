@@ -43,6 +43,14 @@ Title: Home
 
 - [The DevOps Movement](/essays/devops) &mdash; filled in the missing details on this article.
 
+&nbsp;
+## Category Index
+&nbsp;
+
+{% for d in deps %}
+- [{{d.1.headers.title}}]({{d.0}})
+{% endfor %}
+
 <style type="text/css">
 /*-------------------------------------------
 	Animations
@@ -59,4 +67,3 @@ Title: Home
 	-webkit-animation-iteration-count: 1;
 }
 </style>
-
