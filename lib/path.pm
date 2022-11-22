@@ -52,7 +52,6 @@ our @patterns = (
     view       => [qw/snippet single_narrative/],
     template   => "main.html",
     conf       => $conf,
-    deps_root  => "/categories",
   }],
 
   [qr/\.md(?:text)?/, memoize => {
