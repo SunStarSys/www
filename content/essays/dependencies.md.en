@@ -38,9 +38,9 @@ Where do entries in `%path::dependencies` originate? If they are not born from a
 
 Here's a scrollable two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** (using GraphViz's `dot`):
 
-<div style="width:100%;height:800px;overflow:auto;margin-bottom:10px">
+<p style="width:100%;height:1000px;overflow:auto;margin-bottom:10px">
 ![English Language Dependencies](../images/deps.svg.gz.en)
-</div>
+</p>
 
 Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's dependency graph should look like.
 
@@ -52,9 +52,9 @@ In fact, the *link topology* of your website is an entirely separate matter from
 
 Here's current birds-eye graph of the English *link topology* for **our site** (using GraphViz's `twopi`):
 
-<div id="links" style="width:100%;height:800px;overflow:auto;margin-bottom:10px">
+<p id="links" style="width:100%;height:1000px;overflow:auto;margin-bottom:10px">
 ![English Language Links](../images/links.svg.gz.en)
-</div>
+</p>
 
 The *link topology* graph is qualitatively and quantitatively **very different** from the (dramatically simpler) *dependency graph* graph depicted above.
 
