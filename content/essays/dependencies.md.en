@@ -14,13 +14,13 @@ This only ever matters when you need to weigh the expense of performing full sit
 
 By default, our build system will build only the files you changed, without concern for the intra-file dependencies (unless you specify them in `%path::dependencies` &mdash; more on that below). If the file you changed is in the `templates/` or `lib/` directory, as well as whenever you delete content, a full site build will trigger instead.
 
-## Weaving Your Website's *Dependency Topology* Together
+## Weaving Your Website's *Dependency Graph* Together
 
 Mathematically, a *Topology* `$$\tau$$` is a complete specification of the *open* subsets of a space `$$X$$`, the purpose of which is to indicate the proximity relationships between *points* `$$x$$` of the space `$$X$$`.  When `$$X$$` is a graph, a *topology* `$$\tau$$` for `$$X$$` amounts to specifying the edges connecting the vertices of the graph together (here vertices are viewed as the *points* of `$$X$$`, and the connecting edges determine the neighborhoods of those points as *basis open sets* for the topoology).  A *directed graph topology* is essentially the same thing, but incorporates a reference to a topological embedding of `$$(X,\tau)$$` into a larger topological space `$$(Y,\sigma)$$` , where the embedding's edge connections are represented by directional, non-intersecting (Jordan) curves.
 
-The latter concept is what we will utilize when discussing the *dependency topology* `$$\tau$$` associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `$$(Y,\sigma)$$` is `$$\mathbb{R}^n$$` with its metric topology for `$$n \in \{2,3\}$$`, and the edges of `$$X$$` are non-intersecting, directed Jordan curves connecting a file `$$x \in X$$` to its set of files upon which `$$x$$` depends: `$$\{x' \in X | x \rightarrow x' \}$$`).
+The latter concept is what we will utilize when discussing the *dependency graph* `$$\tau$$` associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `$$(Y,\sigma)$$` is `$$\mathbb{R}^n$$` with its metric topology for `$$n \in \{2,3\}$$`, and the edges of `$$X$$` are non-intersecting, directed Jordan curves connecting a file `$$x \in X$$` to its set of files upon which `$$x$$` depends: `$$\{x' \in X | x \rightarrow x' \}$$`).
 
-Having <!-- #teaser -->a clear understanding of your website's *dependency topology* will ensure you can maximize the performance of our build technology at scale <!-- #teaser -->. We take the information you provide to `%path::dependencies` during the build's load of your website's `lib/path.pm` file, construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
+Having <!-- #teaser -->a clear understanding of your website's *dependency graph* will ensure you can maximize the performance of our build technology at scale <!-- #teaser -->. We take the information you provide to `%path::dependencies` during the build's load of your website's `lib/path.pm` file, construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
 
 It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependencies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in our `SunStarSys::View` `Perl` package are meant to operate. The `walk_content_tree`, `archived`, and `seed_deps` utility functions importable from `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
 
@@ -38,25 +38,25 @@ Here's a link to a two-dimensional directed graph representation of a recent sna
 
 [English Language Dependencies](../images/deps.svg.gz.en)
 
-Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's dependency topology should look like.
+Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's dependency graph should look like.
 
 Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependencies.
 
 ### Isn't this just about Hyperlinks?
 
-In fact, the *link topology* of your website is an entirely separate matter from the source tree's *dependency topology*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *dependency topology*.
+In fact, the *link topology* of your website is an entirely separate matter from the source tree's *dependency graph*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *dependency graph*.
 
 Here's a current graph of the English *link topology* for **our site** (using GraphViz's `twopi`):
 
 [English Language Links](../images/links.svg.gz.en)
 
-The *link topology* graph is qualitatively and quantitatively **very different** from the (dramatically simpler) *dependency topology* graph depicted above.
+The *link topology* graph is qualitatively and quantitatively **very different** from the (dramatically simpler) *dependency graph* graph depicted above.
 
 ### How SSI Technology Can Help
 
 #### Traditional Server-Side Includes (SSI)
 
-- **great** for pruning your website's *dependency topology* down to manageable size without sacrificiing page delivery latency
+- **great** for pruning your website's *dependency graph* down to manageable size without sacrificiing page delivery latency
 - **great** for decreasing boilerplate churn in large commit messages for better peer review and oversight of your built changesets
 - **lousy** for recontexualizing entire webpages into a different location in your document root's heirarchy
 
@@ -94,11 +94,11 @@ The CMS build system has integrated support for what we call *Document Curation*
 
 ##### Archived Pages
 
-On our site, we aggresssively archive stale essays to keep build times for new essays low, while not destroying permalinks to archived documents. The *dependency topology* relative to the `/archives/` directory (for our site) is reasonably self-contained as-per the following rules:
+On our site, we aggresssively archive stale essays to keep build times for new essays low, while not destroying permalinks to archived documents. The *dependency graph* relative to the `/archives/` directory (for our site) is reasonably self-contained as-per the following rules:
 
 - content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` and `Archive` headers from the constructed source page
 - content in `/(essays|clients)/` are always permalinks, even after archiving
-- archiving effectively removes the permalink location from the *dependency topology*, while not removing the permalink itself from the website
+- archiving effectively removes the permalink location from the *dependency graph*, while not removing the permalink itself from the website
 
 ##### Teasers
 
@@ -108,7 +108,7 @@ Processing teasers is done with the `teaser` Template filter. It is useful to co
 
 ## Conclusions
 
-There are interesting data structures and relations to yet be uncovered when dealing with a website's *dependency topology* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*<sup>1,2</sup>.
+There are interesting data structures and relations to yet be uncovered when dealing with a website's *dependency graph* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*<sup>1,2</sup>.
 
 Conventional incremental builds for pure software development projects are still a hot topic. The research covered in <sup>3,4</sup> was published in October 2022, about a month before this essay is expected to be complete.
 
