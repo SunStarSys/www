@@ -129,5 +129,5 @@ The good news is that we have you covered as our customer. We will keep you appr
 *$Date$*
 
 <style type="text/css">
-div.container p img { height: 1000px; overflow:scroll; }
+div.container p img { max-height: 1000px; width: 100%; overflow:scroll; }
 </style>
