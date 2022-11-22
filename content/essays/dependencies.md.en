@@ -150,8 +150,8 @@ The good news is that we have you covered as our customer. We will keep you appr
   height:1000px;
 }
 
-@media screen only and (min-width: 1000px) {
-    #links { height: 250px }
+@media only screen and (max-width: 1000px) {
+    #links { height: 300px }
 }
 
 #links img { width:100% }
