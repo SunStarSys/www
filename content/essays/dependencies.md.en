@@ -26,6 +26,8 @@ Here's our live
 
 to mull over for ideas on how you want *your website* to work.
 
+Where do entries in `%path::dependencies` originate? If they are not born from an invocation of `walk_content_tree`, (which basically dives into your markdown source files' headers and content), then they are just hard-coded into `lib/path.pm` at load-time.
+
 ### Cyclic Dependency Graphs Are the Norm
 
 Here's a link to a two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **this site** (using GraphViz's `dot`):
