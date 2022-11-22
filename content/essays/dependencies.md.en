@@ -73,7 +73,7 @@ The *link topology* graph is qualitatively and quantitatively **very different**
 
 - barebones filesystem abstraction that is hard to securely support in a `VirtualHost` context
 - same downsides with traditional `ssi` on full webpages
-- CMS system does not support them
+- our CMS system does not support them
 
 #### Build Tools for Permalinks: Document Curation, Category Generation, and Archived Pages
 
