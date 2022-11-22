@@ -48,7 +48,7 @@ Title: Home
 &nbsp;
 
 {% for d in deps %}
-- [{{d.1.headers.title}}]({{d.0}})
+- [{{d.0|dirname|basename}}]({{d.0}})
 {% endfor %}
 
 <style type="text/css">
