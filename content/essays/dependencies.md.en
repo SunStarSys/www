@@ -62,7 +62,7 @@ The *link topology* graph is qualitatively and quantitatively **very different**
 
 #### Traditional Server-Side Includes (SSI)
 
-- **great** for pruning your website's *dependency graph* down to manageable size without sacrificiing page delivery latency
+- **great** for pruning your website's *dependency graph* down to manageable size without sacrificing page delivery latency
 - **great** for decreasing boilerplate churn in large commit messages for better peer review and oversight of your built changesets
 - **lousy** for recontexualizing entire webpages into a different location in your document root's heirarchy
 
