@@ -42,7 +42,13 @@ Our site presently consists of `240 source files` in `content/`.  Here's a `78 v
 ![English Language Dependencies](../images/deps.svg.gz.en)
 </div>
 
-Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's dependency graph should look like. Also note the internal, essentially isolated interconnectedness of the elements in `/categories/*` and `/archives/2022/11`,
+Quite complex, even for a small website like this one! Many intersections when
+taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the
+core set of dense, cyclic dependencies in the non-archived files in our site's
+`/essays/` directory, towards the center-right of the graph, which is what a
+good blogging site's dependency graph should look like.
+
+Also note the internal, essentially isolated interconnectedness of the elements in `/categories/*/*` and `/archives/2022/11/*`. The only external dependencies involve non-archived content in `/essays/*`. This is by design &mdash; the archived essays should only change *adiabatically*, perhaps solely for adjustments to their `Category` headers. None of those changes materially affect the pre-existing content, so we don't track it in `%path::dependencies`.
 
 Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependencies.
 
