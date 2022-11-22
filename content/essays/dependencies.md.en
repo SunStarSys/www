@@ -36,7 +36,7 @@ Where do entries in `%path::dependencies` originate? If they are not born from a
 
 ### Cyclic Dependency Graphs Are the Norm
 
-Here's a scrollable two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** ([using GraphViz's `dot`](https://github.com/SunStarSys/cms/blob/masster/deps2dotcfg.pl)):
+Here's a scrollable two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** ([using GraphViz's `dot`](https://github.com/SunStarSys/cms/blob/master/deps2dotcfg.pl)):
 
 <div style="width:100%;height:1000px;overflow:auto;margin-bottom:10px;padding-top:0">
 ![English Language Dependencies](../images/deps.svg.gz.en)
