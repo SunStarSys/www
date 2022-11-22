@@ -96,8 +96,6 @@ walk_content_tree {
     for my $lang (qw/en es de fr/) {
       push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
         @essays_glob;
-
-      $dependencies{"/index.md.$lang"} = [@{$dependencies{"/categories/index.html.$lang"} || []}];
     }
 
     # incorporate hard-coded deps in the __DATA__ section of this file
