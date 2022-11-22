@@ -52,7 +52,7 @@ In fact, the *link topology* of your website is an entirely separate matter from
 
 Here's current birds-eye graph of the English *link topology* for **our site** ([using GraphViz's `twopi`](https://github.com/SunStarSys/cms/blob/master/links2dotcfg.pl)):
 
-<div id="links" style="width:100%;overflow:auto;margin-bottom:10px;padding-top:0">
+<div id="links">
 ![English Language Links](../images/links.svg.gz.en)
 </div>
 
