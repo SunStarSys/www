@@ -6,7 +6,7 @@ Categories: CMS, Architecture
 
 ## Abstract
 
-*Smart Content Dependency Management&trade;* is about the circle of ideas related to providing support and facilitation for *incremental builds*, while staying true to the **Highlander** (aka Data Normalization) principle &mdash; that permalinks should be the single source of truth, no matter how their content is curated throughout the source tree.
+*Smart Content Dependency Management&trade;* is about the circle of ideas related to providing support and facilitation for *incremental builds*, while staying true to the **Data Normalization Principle** &mdash; that *permalinks* should be the single source of truth, no matter how their content is curated throughout the source tree and resulting build artifacts.
 
 ## Weaving Your Website's *Content Topology* Together
 
@@ -14,15 +14,15 @@ Mathematically, a *Topology* `$$\tau$$` is a complete specification of the *open
 
 The latter specification is what we will utilize when discussing the *content topology* `$$\tau$$` associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `$$(Y,\sigma)$$` is `$$\mathbb{R}^n$$` with its metric topology for `$$n \in \{2,3\}$$`, and the edges of `$$X$$` are non-intersecting, directed Jordan curves connecting a file `$$x \in X$$` to its set of files upon which `$$x$$` depends: `$$\{x' \in X | x \rightarrow x' \}$$`).
 
-Having <!-- #teaser --> a clear understanding of your website's *content topology* will ensure you can maximize the performance of our build technology at scale <!-- #teaser -->. We take the information you provide in `%path::dependencies` and construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
+Having <!-- #teaser -->a clear understanding of your website's *content topology* will ensure you can maximize the performance of our build technology at scale <!-- #teaser -->. We take the information you provide to `%path::dependencies` during the build's load of your website's `lib/path.pm` file, construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
 
-It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependendies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in the `SunStarSys::View` package are meant to operate. The `walk_content_tree`, `archived`, and `seed_deps` utility functions importable from `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
+It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependendies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in our `SunStarSys::View` `Perl` package are meant to operate. The `walk_content_tree`, `archived`, and `seed_deps` utility functions importable from `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
 
 Here's our live
 
 [`lib/path.pm`](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/path.pm)
 
-to mull over for ideas.
+to mull over for ideas on how you want *your website* to work.
 
 ### Cyclic Dependency Graphs Are the Norm
 
@@ -42,15 +42,15 @@ Here's a current graph of the English *link topology* for **this site** (using G
 
 [English Language Links](../images/links.svg.gz.en)
 
-It's qualitatively and quantitatively **very different** from the dramatically simpler *content topology* graph depicted above.
+The *link topology* graph is qualitatively and quantitatively **very different** from the (dramatically simpler) *content topology* graph depicted above.
 
 ### How SSI Technology Can Help
 
 #### Traditional Server-Side Includes (SSI)
 
-- great for pruning your website's *content topology* down to manageable size
-- great for decreasing boilerplate churn in large commit messages
-- bad for recontexualizing entire webpages into a different location in your document root's heirarchy
+- **great** for pruning your website's *content topology* down to manageable size without sacrificiing page delivery latency
+- **great** for decreasing boilerplate churn in large commit messages for better peer review and oversight of your built changesets
+- **lousy** for recontexualizing entire webpages into a different location in your document root's heirarchy
 
 #### Template APIs
 
@@ -95,7 +95,7 @@ We aggresssively archive stale essays to keep build times for new essays low. Th
 
 HTML comments embedded in the Markdown prose form boundaries of the teaser content. We use &lt;!-- #teaser --&gt; for this purpose.
 
-Processing teasers is done with the `teaser` Template filter. It is useful to combine this with the `ssi` filter for indexing a Category with more than one category page within it.
+Processing teasers is done with the `teaser` Template filter. It is useful to combine this with the `ssi` filter for indexing a Category file with more than one category page within it.
 
 ## Conclusions
 
