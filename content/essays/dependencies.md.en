@@ -101,17 +101,19 @@ Processing teasers is done with the `teaser` Template filter. It is useful to co
 
 ## Conclusions
 
-There are interesting data structures and relations to yet be uncovered when dealing with a website's *content topology* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*<sup>1</sup>.
+There are interesting data structures and relations to yet be uncovered when dealing with a website's *content topology* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*<sup>1,2</sup>.
 
-Conventional incremental builds for pure software development projects are still a hot topic. The research covered in <sup>2</sup> and <sup>3</sup> was published in October 2022, about a month before this essay is expected to be complete.
+Conventional incremental builds for pure software development projects are still a hot topic. The research covered in <sup>3,4</sup> was published in October 2022, about a month before this essay is expected to be complete.
 
 ## Footnotes
 
 1. [Identification of clusters in the Web graph based on link topology](https://ieeexplore.ieee.org/abstract/document/1214919) Seventh International Database Engineering and Applications Symposium, 2003. Proceedings.
 
-2. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering, May 2022
+2. [Inferring Web Communities from Link Topology](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Proceedings of the ninth ACM conference on Hypertext and hypermedia: links, objects, time and space---structure in hypermedia systems: links, objects, time and space---structure in hypermedia systems. 1998.
 
-3. [Towards incremental build of software configurations](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22: Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results, May 2022
+3. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering, May 2022
+
+4. [Towards incremental build of software configurations](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22: Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results, May 2022
 
 
 *$Date$*
