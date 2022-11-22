@@ -1,5 +1,5 @@
 package path;
-use SunStarSys::Util qw/walk_content_tree seed_deps archived Load/;
+use SunStarSys::Util qw/walk_content_tree seed_file_deps archived Load/;
 use strict;
 use warnings;
 
