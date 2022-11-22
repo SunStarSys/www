@@ -42,7 +42,7 @@ Here's an 183 node, scrollable, two-dimensional directed graph representation of
 ![English Language Dependencies](../images/deps.svg.gz.en)
 </div>
 
-Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's dependency graph should look like.
+Quite complex, even for a small website like this one! Many intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the center-right of the graph, which is what a good blogging site's dependency graph should look like. Also note the internal, essentially isolated interconnectedness of the elements in `/categories/*` and `/archives/2022/11`,
 
 Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependencies.
 
