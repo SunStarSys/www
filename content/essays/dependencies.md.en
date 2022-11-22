@@ -52,7 +52,7 @@ In fact, the *link topology* of your website is an entirely separate matter from
 
 Here's a current graph of the English *link topology* for **our site** (using GraphViz's `twopi`):
 
-<div style="width:100%;height:1000px;overflow:auto;padding-bottom:10px">
+<div id="links" style="width:100%;height:1000px;overflow:auto;padding-bottom:10px">
 ![English Language Links](../images/links.svg.gz.en)
 </div>
 
@@ -131,3 +131,7 @@ The good news is that we have you covered as our customer. We will keep you appr
 4. [Towards incremental build of software configurations](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22: Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results, May 2022
 
 *$Date$*
+
+<style type="text/css">
+#links img { width:100% }
+</style>
