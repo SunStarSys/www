@@ -53,6 +53,7 @@ Dependencies: /categories/*/index.html.en
 {% endfor %}
 
 <style type="text/css">
+li button a {color:#fff }
 /*-------------------------------------------
 	Animations
 -------------------------------------------*/
