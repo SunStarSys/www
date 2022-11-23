@@ -14,7 +14,7 @@ This article presents the <https://sunstarsys.com/> website as a case study for 
 
 This only ever matters when you need to weigh the expense of performing full site builds every time you need to tweak the content on a webpage. If your website has less than 10K source files in it, **relax**, and read the following with an eye towards your future needs. You chose to use our platform, that's designed to scale with you, not against you.
 
-For example, the Apache <https://www.OpenOffice.Org> website was able to build its 40K+ files using the original Apache version of this build system, with fully interated support for incremental builds &mdash; without any configured dependencies whatsoever &mdash; by making clever usage of traditional SSI technology alone.
+For example, the Apache <https://www.OpenOffice.Org> website was able to build its 40K+ files using the original Apache version of this build system, with fully integrated support for incremental builds &mdash; without any configured dependencies whatsoever &mdash; by making clever usage of traditional SSI technology alone.
 
 By default, our build system will build only the files you changed, without concern for the intra-file dependencies (unless you specify them in `%path::dependencies` &mdash; more on that below). If the file you changed is in the `templates/` or `lib/` directory, as well as whenever you delete content, a full site build will trigger instead.
 
