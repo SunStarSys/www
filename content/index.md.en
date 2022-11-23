@@ -48,7 +48,7 @@ Dependencies: /categories/*/index.html.en
 ## Category Index
 &nbsp;
 
-{% for d in deps %}<button type="button" class="btn btn-success">[{{d.0|dirname|basename}}]({{d.0}})</button>{% endfor %}
+{% for d in deps %}<button type="button" class="btn btn-success">[{{d.0|dirname|basename}}]({{d.0}})</button> {% endfor %}
 
 <style type="text/css">
 button.btn a {
