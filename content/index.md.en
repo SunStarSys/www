@@ -49,7 +49,7 @@ Dependencies: /categories/*/index.html.en
 &nbsp;
 
 {% for d in deps %}
-- <button type="button" class="btn btn-success">[{{d.0|dirname|basename}}]({{d.0}})</button>
+<button type="button" class="btn btn-success">[{{d.0|dirname|basename}}]({{d.0}})</button>&nbsp;
 {% endfor %}
 
 <style type="text/css">
