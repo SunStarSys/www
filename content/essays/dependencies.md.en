@@ -89,9 +89,9 @@ The *link topology* graph is qualitatively and quantitatively **very different**
 - same downsides with traditional `ssi` on full webpages
 - our CMS system does not support them
 
-#### Build Tools for Permalinks: Document Curation, Category Generation, and Archived Pages
+#### Build Tools for Permalinks
 
-##### Curation
+##### Document Curation
 
 The CMS build system has integrated support for what we call *Document Curation*, which is the process of recontextualizing and reorganizing your content based on how you set the `Categories` and `Archive` headers in your Markdown source files. These features are disabled by default, but can be activated by setting a `category_root` (for Category support) or an `archive_root` (for Archiving support) in the associated hashref argument to the desired `@{path::patterns}` entry.
 
