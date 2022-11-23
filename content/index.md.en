@@ -45,9 +45,11 @@ Dependencies: /categories/*/index.html.en
 
 - [The DevOps Movement](/essays/devops) &mdash; filled in the missing details on this article.
 </div>
+
 &nbsp;
 ## Category Index
 &nbsp;
+
 <div style="text-align:justify;max-width:600px">
 {% for d in deps %}<button type="button" class="btn btn-success">[{{d.0|dirname|basename}}]({{d.0}})</button> {% endfor %}
 </div>
