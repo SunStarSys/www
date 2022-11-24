@@ -74,8 +74,9 @@ The *link topology* graph is qualitatively and quantitatively **very different**
 
 ##### ssi tag
 
-Syntax: &#123;% `ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
+Syntax:
 
+&#123;% `ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
 
 - paths rooted at `content` source directory
 - skips the header portion of the source file to be `ssi` included
