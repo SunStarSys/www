@@ -74,6 +74,10 @@ The *link topology* graph is qualitatively and quantitatively **very different**
 
 ##### ssi tag
 
+```html
+&#123;% &#96;/content_rooted/path/to/file&#96; %&#125;
+```
+
 - paths rooted at `content` source directory
 - skips the header portion of the source file to be `ssi` included
 - rewrites relative urls to absolute urls in the target path's included content
