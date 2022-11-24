@@ -120,7 +120,7 @@ Processing teasers is done with the `teaser` Template filter. It is useful to co
 
 There are interesting data structures and relations to yet be uncovered when dealing with a website's *dependency graph* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*<sup>1,2</sup>.
 
-Conventional incremental builds for pure software development projects are still a hot topic. The research covered in <sup>3,4</sup> was published in October 2022, about a month before this essay is expected to be complete.
+Conventional incremental builds for pure software development projects are still a hot topic. The research covered in <sup>3,4</sup> was published in October 2022, about a month before this essay is expected to be complete. The *pluto*<sup>5</sup> build system has features quite similar to ours (the build itself can dynamically regenerate and rebuild dependencies).
 
 The good news is that we have you covered as our customer. We will keep you apprised of the best practices and the state of the art in this space, so you will benefit from our lessons learned over the past decade and into tomorrow.
 
