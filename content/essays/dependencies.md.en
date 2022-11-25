@@ -93,7 +93,7 @@ Syntax:
 
 #### Why not SymLinks?
 
-- barebones filesystem abstraction that is hard to securely support in a `VirtualHost` context
+- barebones filesystem abstraction that is hard to securely support in a `<VirtualHost>` context
 - same downsides with traditional `ssi` on full webpages
 - our [CMS](/CMS/) system does not support them
 
