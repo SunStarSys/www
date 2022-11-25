@@ -64,7 +64,7 @@ The *link topology* graph is qualitatively and quantitatively **very different**
 
 ### How SSI Technology Can Help
 
-#### Traditional Server-Side Includes (SSI)
+#### Traditional [Server-Side Includes](https://httpd.apache.org/docs/2.4/howto/ssi.html) (SSI)
 
 - **great** for pruning your website's *dependency graph* down to manageable size without sacrificing page delivery latency
 - **great** for decreasing boilerplate churn in large commit messages for better peer review and oversight of your built changesets
