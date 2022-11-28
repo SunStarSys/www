@@ -91,6 +91,7 @@ See our [CMS Plans](plans) for the current deals.
 | Scheduled Builds of Dynamic Content Only | <span class="text-success">&check;</span> | | | |
 | Multilingual | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | Federated | <span class="text-success">&check;</span> | | | <span class="text-warning">[NO](https://jira.atlassian.com/browse/CONFSERVER-26528)</span> |
+| White Label Support | <span class="text-success">&check;</span> | | <span class="text-warning">&check;</span> | |
 | Easy 3rd Party Contributor Workflow | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> | |
 | Unlimited Previews | <span class="text-success">&check;</span> | <span class="text-warning">Enterprise Only ($$)</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span>  |
 | Unlimited Builds |  <span class="text-success">&check;</span> | <span class="text-warning">Enterprise Only ($$)</span> | <span class="text-warning">&check; (for public repos)</span> | |
