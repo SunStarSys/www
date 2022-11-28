@@ -13,7 +13,7 @@
 <h2>SunStar Systems CMS</h2>
 <div class="row">
 <div class="col-lg-5">
-<span class="text-success"><img style="width:60px" src="../images/orion.svg"><em>The Original Jamstack Wiki.</em></span>&trade;
+<span class="text-success"><img style="width:60px" src="../images/orion.svg"><sup>1</sup><em>The Original Jamstack Wiki.</em></span>&trade;
 
 The &nbsp; <span class="text-white">SunStar Systems CMS</span> &nbsp; is a
 <ul>
@@ -123,6 +123,9 @@ The CMS does all this by interfacing with our [svnpubsub](https://svn.apache.org
 
 We currently provide a basic <span class="text-white">Django</span> based template system derived from a customized [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/index.pl) module from CPAN.  Support for a Python 3 build system is coming soon. The Apache 2.0 Licensed [CMS build system](https://github.com/SunStarSys/cms), together with a large collection of supporting modules to take advantage of within that tree, is available on GitHub.
 
+### Footnotes
+
+1. Image By Sanu N - Own work, CC BY-SA 4.0, <https://commons.wikimedia.org/w/index.php?curid=74939598>
 
 ### Details
 
