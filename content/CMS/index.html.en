@@ -10,7 +10,7 @@
 
 <div class="jumbotron">
 {% filter markdown %}
-<h2>SunStar Systems Orion</h2>
+<h2>SunStar System's Orion</h2>
 <div class="row">
 <div class="col-lg-5">
 <span class="text-success"><img style="width:100px;background-color:#000" src="../images/orion.png"> &nbsp; Orion<sup>1</sup><em> &mdash; The Original Jamstack Wiki.</em></span>&trade;
@@ -22,7 +22,7 @@
 	<li>collaborative,</li>
 	<li>peak performance,</li>
 </ul>
-<span class="text-white">Content Management System (CMS)</span> and <span class="text-white">Enterprise Wiki</span> for **creating, managing, and delivering static website content**, potentially with some basic [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) or other server-side, supplementary dynamic content features baked in.
+<span class="text-white">Enterprise Wiki</span> for **creating, managing, and delivering static website content**, potentially with some basic [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) or other server-side, supplementary dynamic content features baked in.
 
 For pricing information, see our [CMS Plans](plans).
 
