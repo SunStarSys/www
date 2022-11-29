@@ -13,20 +13,20 @@ Please be sure to install the bookmarklet on your browser toolbar by opening a "
 	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
 ```
 
-Without this bookmarklet installed you will not be able to browse the live site and instantly edit pages in the CMS by clicking on the bookmarklet.
+Without this bookmarklet installed you will not be able to browse the live site and instantly edit pages in Orion &trade; by clicking on the bookmarklet.
 
-To use the bookmarklet simply browse to your live production site (NOT in the CMS!), locate a page you'd like to edit, and click on the bookmarklet. You'll be taken to a page within this CMS that allows you to edit the content.
+To use the bookmarklet simply browse to your live production site (NOT in Orion &trade;!), locate a page you'd like to edit, and click on the bookmarklet. You'll be taken to a page within this CMS that allows you to edit the content.
 
 ## Live Demo
 
-For a demonstration of the CMS's IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
+For a demonstration of Orion &trade;'s IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
 
-If that's too much bother for you, this website is self-hosted on the CMS, and those hot-pink pencil icons [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) at the upper right alongside the breadcrumbs will give you a live demonstration of how the system works (sans commit/build access, which is locked down to staff only).
+If that's too much bother for you, this website is self-hosted on Orion &trade;, and those hot-pink pencil icons [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) at the upper right alongside the breadcrumbs will give you a live demonstration of how the system works (sans commit/build access, which is locked down to staff only).
 
 
 ## Onboarding Process
 
-For early adopters, the CMS service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple for organizations already running their own svnpubsub-enabled Subversion service:
+For early adopters, Orion &trade; service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple for organizations already running their own svnpubsub-enabled Subversion service:
 
 1. Provide us with the URL of your site's sources in Subversion.
 
