@@ -5,7 +5,7 @@ Dependencies: /categories/*/index.html.en
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">News</div>
 		<div class="card-body">
-			<h4 class="card-title">SunStar Systems' Orion &trade; [Static Site Generator]({{conf.releases.cms.url}}) {{conf.releases.cms.tag}} released.
+			<h4 class="card-title">SunStar Systems' Orion&trade; [Static Site Generator]({{conf.releases.cms.url}}) {{conf.releases.cms.tag}} released.
 			</h4>
 			<h4 class="card-title">
 			<a href="{{conf.releases.sealed.url}}">sealed.pm {{conf.releases.sealed.tag}}</a> released to CPAN!
