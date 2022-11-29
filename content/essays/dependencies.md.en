@@ -38,7 +38,7 @@ Where do entries in `%path::dependencies` originate? If they are not born from a
 
 ### Cyclic Dependency Graphs Are the Norm
 
-Our site presently consists of `240 source files` in `content/`.  Here's a `78 vertices x 364 edges`, scrollable, two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** ([using GraphViz's `dot`](https://github.com/SunStarSys/cms/blob/master/deps2dotcfg.pl)):
+Our site presently consists of `240 source files` in `content/`.  Here's a `78 vertices x 364 edges`, scrollable, two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** ([using GraphViz's `dot`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
 
 <div id="deps">
 ![English Language Dependencies](../images/deps.svg.gz.en)
@@ -48,13 +48,13 @@ Quite complex, even for a small website like this one! Many edge intersections w
 
 Also note the internal, essentially isolated interconnectedness of the elements in `/categories/*/*` and `/archives/2022/11/*`. The only external dependencies involve non-archived content in `/essays/*`. This is by design &mdash; the archived essays should only change *adiabatically*, perhaps solely for adjustments to their `Category` headers. None of those changes materially affect the pre-existing content, so we don't track it in `%path::dependencies`.
 
-Of course, our [CMS](/CMS/) has never had trouble dealing with cyclic dependencies.
+Of course, our [CMS](/orion/) has never had trouble dealing with cyclic dependencies.
 
 ### Isn't this just about Hyperlinks?
 
 In fact, the *link topology* of your website is an entirely separate matter from the source tree's *dependency graph*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *dependency graph*.
 
-Here's a `240+ vertices x 3859 edges`, current birds-eye graph of the English *link topology* graph for **our site** ([using GraphViz's `twopi`](https://github.com/SunStarSys/cms/blob/master/links2dotcfg.pl)):
+Here's a `240+ vertices x 3859 edges`, current birds-eye graph of the English *link topology* graph for **our site** ([using GraphViz's `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
 
 <div id="links">
 ![English Language Links](../images/links.svg.gz.en)
@@ -95,7 +95,7 @@ Syntax:
 
 - barebones filesystem abstraction that is hard to securely support in a `<VirtualHost>` context
 - same downsides with traditional `ssi` on full webpages
-- our [CMS](/CMS/) system does not support them
+- our [CMS](/orion/) system does not support them
 
 #### Build Tools for Permalinks
 
