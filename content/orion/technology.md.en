@@ -1,4 +1,4 @@
-Title: CMS Technology
+Title: Orion Technology
 Dependencies: *.md.en
 
 ## Solaris 11.4
@@ -44,7 +44,7 @@ We're a NoSQL shop for our entire website infrastructure, and if you are saddled
 
 - Website source trees aren't quite like software source trees, in terms of how you alter and manage them.  They're more aligned with [devops / trunk based development](/essays/devops) than with [`gitflow`](#).  Moreover, gigantic sites are going to need SSI, and maybe a little CGI, for their use: at the very least to avoid massive, unreviewable site churn from equally massive commit mailer [`diff`](#) output on the resulting build tree deltas.
 
-- To wit: trying to get a fully-functional SSI implementation out of some local "webserver" that you use to preview your changes in some other build system, is just a little silly if you stop and think about it.  With our CMS, you just create a branch in svn and off you go: editing, committing, building, browsing, and **iterating**, instantly, on a per-branch, ephemeral Apache-served website that's integrated into Orion &trade; IDE's bidirectional link (and bookmarklet redirect) infrastructure.  <span class="text-success">Without ever leaving your browser</span>.
+- To wit: trying to get a fully-functional SSI implementation out of some local "webserver" that you use to preview your changes in some other build system, is just a little silly if you stop and think about it.  With our Orion, you just create a branch in svn and off you go: editing, committing, building, browsing, and **iterating**, instantly, on a per-branch, ephemeral Apache-served website that's integrated into Orion &trade; IDE's bidirectional link (and bookmarklet redirect) infrastructure.  <span class="text-success">Without ever leaving your browser</span>.
 
 - When it's time to migrate those changes to the trunk-based production site, you can elect to promote as much, or as little, of the branch as you see fit, right back to trunk.  If trunk has moved forward since your branch alterations were ultimately ready for prime time, just click the <span class="text-white">Sync</span> button to sync-merge trunk with your branch.  After double-checking the build results of your post-sync-merge commit to your branch's website, go ahead and click on the <span class="text-white">Promote</span> link, follow that up with a <span class="text-white">Commit</span> on the same page with a reasonable commit log message, and voilà, you now are broadcasting on trunk's production build.
 
@@ -60,10 +60,10 @@ We're a NoSQL shop for our entire website infrastructure, and if you are saddled
 
 - [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)-addled [`mod_ruby`](#) was largely abandoned by the Ruby community for various quality control reasons.  Porting the custom 5K LOC Perl 5 sources of Orion &trade; to a different programming environment would result in roughly a <span class="text-warning">10-100 fold ballooning</span> of the implementation's line count, and consequently a major performance degradation in any other dynamic programming language.
 
-To be sure, here is a snapshot, dated July 19, 2020, of the SunStar Systems portion of the production source tree for the entire CMS (IDE+build).  There is little else involved beyond our [`Dotiac::DTL`](#) fork.  All of the build-related code has already been open-sourced on GitHub.  What remains private are the C-based customizations to third party source trees, which are unique differentiators for our product.
+To be sure, here is a snapshot, dated July 19, 2020, of the SunStar Systems portion of the production source tree for the entire Orion (IDE+build).  There is little else involved beyond our [`Dotiac::DTL`](#) fork.  All of the build-related code has already been open-sourced on GitHub.  What remains private are the C-based customizations to third party source trees, which are unique differentiators for our product.
 
 ```
-joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
+joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
      1 build/lib/SunStarSys/ASF.pm
    128 build/lib/SunStarSys/SVNUtil.pm
    270 build/lib/SunStarSys/Util.pm
@@ -75,30 +75,30 @@ joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
    106 build/lib/SunStarSys/Value/Snippet.pm
     85 build/lib/SunStarSys/Value/Twitter.pm
    378 build/lib/SunStarSys/View.pm
-  1260 webgui/lib/SunStarSys/CMS.pm
-   112 webgui/lib/SunStarSys/orion/Cookie.pm
-   183 webgui/lib/SunStarSys/orion/Filter.pm
-    90 webgui/lib/SunStarSys/orion/MapToStorage.pm
-    59 webgui/lib/SunStarSys/orion/WC.pm
-   194 webgui/lib/SunStarSys/orion/WC/Add.pm
-    97 webgui/lib/SunStarSys/orion/WC/Browse.pm
-   133 webgui/lib/SunStarSys/orion/WC/Commit.pm
-    79 webgui/lib/SunStarSys/orion/WC/Copy.pm
-    66 webgui/lib/SunStarSys/orion/WC/Delete.pm
-    47 webgui/lib/SunStarSys/orion/WC/Diff.pm
-   182 webgui/lib/SunStarSys/orion/WC/Edit.pm
-   116 webgui/lib/SunStarSys/orion/WC/Mail.pm
-    70 webgui/lib/SunStarSys/orion/WC/Merge.pm
-    67 webgui/lib/SunStarSys/orion/WC/Move.pm
-    52 webgui/lib/SunStarSys/orion/WC/Production.pm
-    47 webgui/lib/SunStarSys/orion/WC/Promote.pm
-    60 webgui/lib/SunStarSys/orion/WC/Resolve.pm
-    64 webgui/lib/SunStarSys/orion/WC/Revert.pm
-    82 webgui/lib/SunStarSys/orion/WC/Rollback.pm
-   123 webgui/lib/SunStarSys/orion/WC/Search.pm
-    78 webgui/lib/SunStarSys/orion/WC/Staged.pm
-    24 webgui/lib/SunStarSys/orion/WC/Static.pm
-    49 webgui/lib/SunStarSys/orion/WC/Update.pm
+  1260 webgui/lib/SunStarSys/Orion.pm
+   112 webgui/lib/SunStarSys/Orion/Cookie.pm
+   183 webgui/lib/SunStarSys/Orion/Filter.pm
+    90 webgui/lib/SunStarSys/Orion/MapToStorage.pm
+    59 webgui/lib/SunStarSys/Orion/WC.pm
+   194 webgui/lib/SunStarSys/Orion/WC/Add.pm
+    97 webgui/lib/SunStarSys/Orion/WC/Browse.pm
+   133 webgui/lib/SunStarSys/Orion/WC/Commit.pm
+    79 webgui/lib/SunStarSys/Orion/WC/Copy.pm
+    66 webgui/lib/SunStarSys/Orion/WC/Delete.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Diff.pm
+   182 webgui/lib/SunStarSys/Orion/WC/Edit.pm
+   116 webgui/lib/SunStarSys/Orion/WC/Mail.pm
+    70 webgui/lib/SunStarSys/Orion/WC/Merge.pm
+    67 webgui/lib/SunStarSys/Orion/WC/Move.pm
+    52 webgui/lib/SunStarSys/Orion/WC/Production.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Promote.pm
+    60 webgui/lib/SunStarSys/Orion/WC/Resolve.pm
+    64 webgui/lib/SunStarSys/Orion/WC/Revert.pm
+    82 webgui/lib/SunStarSys/Orion/WC/Rollback.pm
+   123 webgui/lib/SunStarSys/Orion/WC/Search.pm
+    78 webgui/lib/SunStarSys/Orion/WC/Staged.pm
+    24 webgui/lib/SunStarSys/Orion/WC/Static.pm
+    49 webgui/lib/SunStarSys/Orion/WC/Update.pm
    220 webgui/lib/SunStarSys/SVN/Client.pm
   4848 total
 ```
@@ -107,7 +107,7 @@ joe@zeus:/x1/cms% wc -l */lib/SunStarSys/**/*.pm
 
 - Trying to embed [`GoLang`](#) into httpd, with native version-control bindings, would be a fun challenge; just not for me personally.  Good language with interesting tradeoffs when it comes to dynamic linking, but a definite maybe for future investigation.
 
-- As far as the Perl 5 build system is concerned, stay tuned!  *No reason it can't* be ported to any other programming language, as the build system is completely isolated from Orion &trade;'s online IDE (outside of the markdown renderer daemon based on [`node.js`](#), which is a stand-alone system itself) for a million security/architectural design reasons.  If you need a teaser as to the possibilities, peek at the [`build_external.pl`](#) script over in the @SunStarSys cms repo: The ASF used it for all sorts of things that didn't have any pressing need for a dependency management system.
+- As far as the Perl 5 build system is concerned, stay tuned!  *No reason it can't* be ported to any other programming language, as the build system is completely isolated from Orion &trade;'s online IDE (outside of the markdown renderer daemon based on [`node.js`](#), which is a stand-alone system itself) for a million security/architectural design reasons.  If you need a teaser as to the possibilities, peek at the [`build_external.pl`](#) script over in the @SunStarSys Orion repo: The ASF used it for all sorts of things that didn't have any pressing need for a dependency management system.
 
 - Yes, Perl's popularity trajectory ironically tracks that of COBOL, or  even Common Lisp, despite Unix's dominance in the server marketplace; but some things age better than others. The solid (and uniquely Perl) [`ithread`](#) engineering out of [`p5p`](#), in preparation for the advent of Perl 7, is welcome news to mod_perl developers still clinging to Doug MacEachern's original vision.  If you find yourself knee-deep in 100+ LOC Perl sources to get what you need out of our current Perl-only build system, let's chat &mdash;  maybe we can collaborate on something less complex for you to use to build your site.  Less is more with Perl.
 

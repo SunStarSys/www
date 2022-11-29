@@ -1,4 +1,4 @@
-Title: CMS Privacy Policy
+Title: Orion Privacy Policy
 
 <div class="float-lg-right">
 	<img src="../images/sunstarstaronly.png"></img>

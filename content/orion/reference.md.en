@@ -1,4 +1,4 @@
-Title: CMS Reference
+Title: Orion Reference
 Dependencies: *.md.en
 
 <div class="float-lg-right">
@@ -15,7 +15,7 @@ Please be sure to install the bookmarklet on your browser toolbar by opening a "
 
 Without this bookmarklet installed you will not be able to browse the live site and instantly edit pages in Orion &trade; by clicking on the bookmarklet.
 
-To use the bookmarklet simply browse to your live production site (NOT in Orion &trade;!), locate a page you'd like to edit, and click on the bookmarklet. You'll be taken to a page within this CMS that allows you to edit the content.
+To use the bookmarklet simply browse to your live production site (NOT in Orion &trade;!), locate a page you'd like to edit, and click on the bookmarklet. You'll be taken to a page within this Orion that allows you to edit the content.
 
 ## Live Demo
 
@@ -48,7 +48,7 @@ For early adopters, Orion &trade; service sits between your Subversion repositor
 - branches/
 	.. each branch follows trunk layout above ...
 
-See <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/> for a live example.
+See <https://vcs.sunstarsys.com/repos/svn/public/Orion-sites/www.sunstarsys.com/> for a live example.
 
 ## Dynamic Content
 

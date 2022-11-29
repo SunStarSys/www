@@ -1,4 +1,4 @@
-Title: CMS Plans
+Title: Orion Plans
 Keywords: Jamstack
 Dependencies: *.md.en
 
@@ -120,7 +120,7 @@ Dependencies: *.md.en
 
 2. Storage Utilization calculated based on total size of SunStar Systems-hosted Subversion repository for Enterprise customers, not individual checkouts, which is  a *comparatively smaller number* (about the size of a single source-tree checkout).
 
-3. SLA covers website assets *and* CMS online IDE *and* build system availability, but excludes Subversion version control system, which we expect to remain competitive with GitHub's general availability metrics.
+3. SLA covers website assets *and* Orion online IDE *and* build system availability, but excludes Subversion version control system, which we expect to remain competitive with GitHub's general availability metrics.
 
 4. Enterprise Customer Points of Presence (POP):
 	- Fort Lauderdale, FL
