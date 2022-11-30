@@ -7,6 +7,7 @@ use Text::Balanced ();
 use Apache2::RequestRec;
 use Apache2::RequestUtil;
 use Apache2::RequestIO;
+use Apache2::SubRequest;
 use HTML::Escape qw/escape_html/;
 use HTML::Parser;
 use APR::Request::Apache2;
@@ -16,6 +17,7 @@ use APR::Request qw/encode/;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use SunStarSys::Util qw/read_text_file/;
+use SunStarSys::SVNUtil;
 use File::Basename;
 use List::Util qw/sum/;
 
@@ -152,6 +154,12 @@ my %title_cache;
 while (my ($k, $v) = each %matches) {
   my $link = $r->path_info . $k;
   $link =~ s/\.md(?:text)?/.html/ if $markdown;
+  $markdown ? eval { $r->lookup_file("$dirname/$k") }
+    : eval {
+      local $ENV{SOURCE_BASE} = $dirname;
+      SunStarSys::Util->svn_can_read("$dirname/$k")
+    };
+  next if $@;
   read_text_file "$dirname/$k", \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
   my $total = sum map $_->{count}, @$v;
