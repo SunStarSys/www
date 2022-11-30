@@ -163,7 +163,7 @@ while (my ($k, $v) = each %matches) {
   }
   else {
     my $subr = $r->lookup_file("$dirname/$k");
-    $subr->status and next;
+    index($subr->status, "4") == 0 and next;
   }
   read_text_file "$dirname/$k", \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
