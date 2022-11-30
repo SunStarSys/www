@@ -25,7 +25,6 @@ my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
 my APR::Request $apreq = $apreq_class->handle($r);
 
-
 local our $USERNAME = $r->user;
 local our $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
 
@@ -161,15 +160,15 @@ while (my ($k, $v) = each %matches) {
   if ($markdown) {
     eval {
       local $ENV{SOURCE_BASE} = $dirname;
-      SunStarSys::SVNUtil->svn_can_read("$dirname/$k");
+      SunStarSys::SVNUtil->svn_can_read("$dirname$k");
     };
     next if $@;
   }
   else {
-    my $subr = $r->lookup_file("$dirname/$k");
+    my $subr = $r->lookup_file("$dirname$k");
     index($subr->status, "4") == 0 and next;
   }
-  read_text_file "$dirname/$k", \ my %data, $markdown ? 0 : undef;
+  read_text_file "$dirname$k", \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
   my $total = sum map $_->{count}, @$v;
   push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
