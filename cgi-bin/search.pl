@@ -1,4 +1,5 @@
 #!/usr/local/bin/perl -T
+use lib '/x1/cms/webgui/lib';
 use utf8;
 use strict;
 use warnings;
