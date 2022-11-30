@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -T -I/x1/cms/build/lib -I/x1/cms/webgui/lib
+#!/usr/local/bin/perl -T
 use utf8;
 use strict;
 use warnings;
