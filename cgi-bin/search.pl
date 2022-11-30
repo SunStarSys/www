@@ -1,5 +1,4 @@
 #!/usr/local/bin/perl -T
-use lib '/x1/cms/webgui/lib';
 use utf8;
 use strict;
 use warnings;
@@ -167,7 +166,7 @@ while (my ($k, $v) = each %matches) {
       my $url;
       $svn->info("$dirname$k", sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      $svn->info($url, sub {}, "HEAD");
+      #$svn->info($url, sub {}, "HEAD");
     };
     next if $@;
   }
