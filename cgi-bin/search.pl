@@ -17,7 +17,7 @@ use APR::Request qw/encode/;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use SunStarSys::Util qw/read_text_file/;
-use SunStarSys::SVNUtil qw/*USERNAME *PASSWORD/;
+use SunStarSys::SVNUtil;
 use File::Basename;
 use List::Util qw/sum/;
 
@@ -26,8 +26,8 @@ my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
 my APR::Request $apreq = $apreq_class->handle($r);
 
 
-#local our $USERNAME = $r->user;
-#local our $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
+local our $USERNAME = $r->user;
+local our $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
 
 sub parser :Sealed {
   my @text;
