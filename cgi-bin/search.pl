@@ -27,7 +27,7 @@ my APR::Request $apreq = $apreq_class->handle($r);
 
 
 local our $USERNAME = $r->user;
-local our $PASSWORD = ($r->get_basic_auth_pw)[1];
+local our $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
 
 sub parser :Sealed {
   my @text;
