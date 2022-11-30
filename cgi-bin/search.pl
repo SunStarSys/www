@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -T -I/x1/cms/build/lib
+#!/usr/local/bin/perl -T -I/x1/cms/build/lib -I/x1/cms/webgui/lib
 use utf8;
 use strict;
 use warnings;
@@ -17,7 +17,7 @@ use APR::Request qw/encode/;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use SunStarSys::Util qw/read_text_file/;
-use SunStarSys::SVNUtil;
+use SunStarSys::SVN::Client;
 use File::Basename;
 use List::Util qw/sum/;
 
@@ -26,7 +26,11 @@ my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
 my APR::Request $apreq = $apreq_class->handle($r);
 
 local our $USERNAME = $r->user;
-local our $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
+local our $PASSWORD;
+$PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
+$r->pnotes("svnuser", $USERNAME);
+$r->pnotes("svnpassword", $PASSWORD);
+my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 
 sub parser :Sealed {
   my @text;
@@ -159,8 +163,10 @@ while (my ($k, $v) = each %matches) {
   $link =~ s/\.md(?:text)?/.html/ if $markdown;
   if ($markdown) {
     eval {
-      local $ENV{SOURCE_BASE} = $dirname;
-      SunStarSys::SVNUtil->svn_can_read("$dirname$k");
+      my $url;
+      $svn->info("$dirname$k", sub {$url = $_[1]->URL});
+      s/:4433//, s/-internal// for $url;
+      $svn->info($url, sub {}, "HEAD");
     };
     next if $@;
   }
