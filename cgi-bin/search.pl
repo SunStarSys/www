@@ -155,8 +155,7 @@ if ($?) {
 
 parser $pffxg, $dirname, undef, \ my %matches;
 
-my @matches;
-my %title_cache;
+my (@matches, @keywords, %title_cache, %keyword_cache);
 
 while (my ($k, $v) = each %matches) {
   my $link = $r->path_info . $k;
@@ -179,9 +178,13 @@ while (my ($k, $v) = each %matches) {
   my $total = sum map $_->{count}, @$v;
   push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
     unless $title_cache{$title}++;
+  push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split /[;,]\s*/, $data{headers}{keywords} // $data{content} =~ m/>#(\w+)</g]};
 }
 
 @matches = grep {shift(@$_),shift(@$_)} sort {$b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
+
+@keywords = sort {$a cmp $b} @keywords;
+
 
 my %title = (
   ".en" => "Search Results for $markdown ",
@@ -199,6 +202,7 @@ $r->print(Template("search.html")->render({
   lang        => $lang,
   regex       => $re,
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang, $markdown),
+  keywords    => \@keywords,
 }));
 
 return 0;
