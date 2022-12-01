@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SunStar Systems">
     <meta name="author" content="Joe Schaefer">
-    <meta name="keywords" content="{{ headers.keywords }},{{ conf.keywords }}">
+    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ conf.keywords }}">
 
     <title>{% block title %}{{ conf.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 
