@@ -63,7 +63,7 @@ div.jumbotron button.btn {
 }
 
 div.jumbotron ul {
-    width: 600px;
+    max-width: 600px;
 }
 
 /*-------------------------------------------
