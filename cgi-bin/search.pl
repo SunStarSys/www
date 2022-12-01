@@ -166,8 +166,8 @@ while (my ($k, $v) = each %matches) {
       my $url;
       $svn->info("$dirname$k", sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      $svn->info($url, sub {}, "HEAD");
-    };
+      $svn->info($url, sub {shift}, "HEAD");
+   };
     next if $@;
   }
   else {
