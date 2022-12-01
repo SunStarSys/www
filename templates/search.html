@@ -2,7 +2,12 @@
 {% block title %}{{title|safe}} q/{{regex}}/gi{% endblock %}
 {% block content %}
 <h1>{{title|safe}}<span class="text-danger">/</span>{{regex}}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
-
+<h2>
+  {% for k in keywords %}<span class="badge bg-danger" style="color:#000">
+  <a style="color:#fff" href="./?regex=%23{{k}};lang={{lang}}">#{{k}}</a>
+  </span>&nbsp;
+  {% endfor %}
+</h2>
 <div class="container">
   <dl>
     {% for m in matches %}
