@@ -62,6 +62,7 @@ This is because `ssi` support revolves around `permalink` management, which is a
 
 ##### Custom Controls on `seed_file_deps` usage in `lib/path.pm`
 
+##### Overriding fetch_deps in `lib/view.pm`
 
 #### Built Website ACL's synchronized with Subversion ACL's nightly
 
