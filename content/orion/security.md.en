@@ -60,7 +60,7 @@ This is because `ssi` support revolves around `permalink` management, which is a
 
 #### Dependency Injection Controls
 
-##### `lib/path.pm` Subversion ACLs
+##### `lib/{path,view}.pm` Subversion ACLs
 
 ##### Custom Controls on `seed_file_deps` usage in `lib/path.pm`
 
