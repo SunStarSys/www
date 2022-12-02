@@ -64,7 +64,7 @@ This is because `ssi` support revolves around `permalink` management, which is a
 
 ##### Overriding fetch_deps in `lib/view.pm`
 
-#### Built Website ACL's synchronized with Subversion ACL's nightly
+#### Built Website ACL's synchronized with Subversion ACL's instantly upon commit
 
 #### Search Engine Builtin Controls
 
