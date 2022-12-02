@@ -37,9 +37,12 @@ Even if the master OCI control account is compromised, the **confidentiality** a
 
 ##### Commit access is directly controlled with Subversion ACLs
 
-Nothing can be built without a corresponding authorized Subversion commit.
+Nothing can be built and subsequently viewed over the network without a corresponding authorized Subversion commit. The main issue here is in controlling what information is available to a wiki page author's committed and built edits.
 
-Protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification.
+If you allow Template preprocessing in the markdown source pages, you need to be aware of how template arguments make the contents of other files in the tree availaible as variables to the source of the edited page. Often times, if configured to do so, the edited page can declare its own dependency files in the headers of the page, which is something to think as you weigh feature-sets against securitt-control in your Wiki's Information Architecture.  While we can offer guidance and support to match your needs, it's really up to you to decide how to balance the scales for your organization's enterprise wiki.
+
+As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification.  In other words, the system will support branch experimentation without any additional controls on your part  to ensure protected assets remain protected throughout each branch's natural lifecycle.
+
 
 #### Build System ACL's
 
