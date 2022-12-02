@@ -33,13 +33,33 @@ Even if the master OCI control account is compromised, the **confidentiality** a
 
 #### Online Editor
 
-##### Subversion ACLs govern working copy r/w access
+##### Subversion ACLs govern server-side working copy read access
+
+##### Write access is directly controlled with Subversion ACLs
+
+Nothing can be built without a corresponding authorizedd Subversion commit.
 
 #### Build System ACL's
 
-##### Template Traversal Controls on `include`, `ssi` amd `extends` tags
+##### Template Traversal Controls
 
-#### Build Website ACL's synchronized with Subversion read ACLs
+##### `include` and `extends`
+
+All files are in a subfolder of the `/templates/` folder, and must be referenced as relative paths from that folder.
+
+##### `ssi`
+
+All files are in a subfolder of the `/content/` folder, and must be referenced as absolute paths rooted at that folder.
+If the target path is not world-readable according to Subversion ACL settings, the `ssi` operation will fail.
+
+#### Dependency Injection Controls
+
+##### `lib/path.pm` Subversion ACLs
+
+##### Custom Controls on `seed_file_deps` usage
+
+
+#### Built Website ACL's synchronized with Subversion ACL's nightly
 
 
 
