@@ -37,9 +37,9 @@ Even if the master OCI control account is compromised, the **confidentiality** a
 
 ##### Commit access is directly controlled with Subversion ACLs
 
-Nothing can be built without a corresponding authorizedd Subversion commit.
+Nothing can be built without a corresponding authorized Subversion commit.
 
-Protected resources cannot be copied into a branch by unauthorized personnel, without placing any additional controls on branch build access.
+Protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification.
 
 #### Build System ACL's
 
