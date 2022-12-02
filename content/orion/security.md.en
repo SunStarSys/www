@@ -52,6 +52,8 @@ All files are in a subfolder of the `/templates/` folder, and must be referenced
 All files are in a subfolder of the `/content/` folder, and must be referenced as absolute paths rooted at that folder.
 If the target path is not world-readable according to Subversion ACL settings, the `ssi` operation will fail.
 
+This is because `ssi` support revolves around `permalink` management, which is a non-existent concept for non-public URLs.
+
 #### Dependency Injection Controls
 
 ##### `lib/path.pm` Subversion ACLs
