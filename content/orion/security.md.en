@@ -39,6 +39,8 @@ Even if the master OCI control account is compromised, the **confidentiality** a
 
 Nothing can be built without a corresponding authorizedd Subversion commit.
 
+Protected resources cannot be copied into a branch by unauthorized personnel, without placing any additional controls on branch build access.
+
 #### Build System ACL's
 
 The build system is all-seeing and all-knowing, but we can ensure that your built, protected assets are only visible to the teams you manage and control in the Subversion ACLs. By default, the build system will reveal the list of files it built through the browser IDE upon a commit, but even that list of file names and paths can be controlled if you prefer.
@@ -66,7 +68,9 @@ This is because `ssi` support revolves around `permalink` management, which is a
 
 #### Built Website ACL's synchronized with Subversion ACL's instantly upon commit
 
-#### Search Engine Builtin Controls
+Automatic protection for ephemeral branch builds.
+
+#### PCRE Search Engine Builtin Controls
 
 ##### Source Code search
 
