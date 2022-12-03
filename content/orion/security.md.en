@@ -13,13 +13,13 @@ Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wiki
 
 No fixed passwords stored on servers, not even in crypt form. This *limits* headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
 
-### Sandboxed execution for builds and CGI scripts.
+### Sandboxed execution for builds and CGI scripts
 
 We deploy "shared-nothing" zone builds, defaulting to zero network availability. This means the only things a customer build can access or modify are their own assets, not those any other customer, or any other system paths on the zone itself (besides `/tmp`).  Furthermore, only Enterprise customers have internet access during their builds, because they are using their own *unique* Solaris zones that can be tailored exactly to their build requirements.
 
 Ditto for CGI scripts, which are fully locked down in terms of write access to anything other than `/tmp`.
 
-### Zero Trust aspects.
+### Zero Trust aspects
 
 The basic premise of [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various Point of Presence (POP) LANs is only exposed to the bare-metal machine's loopback device interface `lo0`, and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
 
