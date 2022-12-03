@@ -41,7 +41,7 @@ Nothing can be built and subsequently viewed over the network without a correspo
 
 If you allow Template preprocessing in the markdown source pages, you need to be aware of how template arguments make the contents of other files in the tree availaible as variables to the source of the edited page. Often times, if configured to do so, the edited page can declare its own dependency files in the headers of the page, which is something to think as you weigh feature-sets against securitt-control in your Wiki's Information Architecture.  While we can offer guidance and support to match your needs, it's really up to you to decide how to balance the scales for your organization's enterprise wiki.
 
-See the below section on [Depenency Injection Controls](#Dependency Injection Controls) for more details.
+See the below section on [Depenency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details.
 
 As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification.  In other words, the system will support branch experimentation without any additional controls on your part  to ensure protected assets remain protected throughout each branch's natural lifecycle.
 
@@ -63,7 +63,7 @@ If the target path is not world-readable according to Subversion ACL settings, t
 
 This is because `ssi` support revolves around `permalink` management, which is a non-existent concept for non-public URLs.
 
-#### Dependency Injection Controls
+#### Dependency/ACL Injection Controls
 
 ##### `lib/{path,view}.pm` Subversion ACLs
 
