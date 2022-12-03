@@ -8,7 +8,7 @@
 {% for k in headers.keywords %}
 <span class="badge bg-danger" style="color:#000">
   <a style="color:#fff"
-     href="/cgi-bin/search.pl{{path|dirname}}/?regex=%23{{k}};lang={{lang}}">#{{k}}</a>
+     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}}">#{{k}}</a>
 </span>&nbsp;
 {% endfor %}
 <p>&nbsp;</p>
