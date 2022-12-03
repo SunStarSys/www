@@ -29,6 +29,8 @@ Even if the master OCI control account is compromised, the **confidentiality** a
 
 ## Application Security
 
+Orion's security model is centrally managed by the settings contained in @{path::acl} as constucted in lib/path.pm.  Ofshoot server configuration files are dynamically generated on every committed change.
+
 ### Wiki Issues
 
 #### Online Editor
