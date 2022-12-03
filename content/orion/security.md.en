@@ -54,11 +54,11 @@ The build system is all-seeing and all-knowing, but we can ensure that your buil
 
 ##### Template Traversal Controls
 
-###### [`include`](#) and [`extends`](#)
+###### [`include`](.) and [`extends`](.)
 
 All target files are in a subfolder of the [`/templates/`](#) folder, and must be referenced as relative paths from that folder.
 
-###### [`ssi`](#)
+###### [`ssi`](.)
 
 All target files are in a subfolder of the [`/content/`](#) folder, and must be referenced as absolute paths rooted at that folder.
 If the target path is not world-readable according to Subversion ACL settings, the [`ssi`](#) operation will fail.
@@ -67,15 +67,15 @@ This is because [`ssi`](#) support revolves around [`permalink`](#) management, 
 
 #### Dependency/ACL Injection Controls
 
-##### [`lib/{path,view}.pm`](#) Subversion ACLs
+##### [`lib/{path,view}.pm`](.) Subversion ACLs
 
-##### Dynamically Generated Rules via [`@path::acl`](#)
+##### Dynamically Generated Rules via [`@path::acl`](.)
 
-##### Custom Controls on [`seed_file_deps`](#) and  seed_file_acl usage in [`lib/path.pm`](#)
+##### Custom Controls on [`seed_file_deps`](.) and  seed_file_acl usage in [`lib/path.pm`](.)
 
-##### Overriding fetch_deps in [`lib/view.pm`](#)
+##### Overriding fetch_deps in [`lib/view.pm`](.)
 
-#### Built Website and Subversion ACL's synchronized with [`@path::acl`](#) instantly upon commit
+#### Built Website and Subversion ACL's synchronized with [`@path::acl`](.) instantly upon commit
 
 Automatic protection for ephemeral branch builds.
 
