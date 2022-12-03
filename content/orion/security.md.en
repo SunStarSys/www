@@ -50,7 +50,7 @@ As a side note, protected resources cannot be copied into a branch by unauthoriz
 
 #### Build System ACL's
 
-The build system is all-seeing and all-knowing, but we can ensure that your built, protected assets are only visible to the teams you manage and control in the Subversion ACLs. By default, the build system will reveal the list of files it built through the browser IDE upon a commit, but even that list of file names and paths can be controlled if you prefer.
+The build system is all-seeing and all-knowing, but we can ensure that your built, protected assets are only visible to the teams you manage and control in the Subversion ACLs. By default, the build system will reveal the list of file names it built through the browser IDE upon a commit, but even that list of file names and paths can be controlled if you prefer.
 
 ##### Template Traversal Controls
 
