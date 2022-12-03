@@ -146,7 +146,7 @@ for ($d) {
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 
 
-my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --html --markdown --/, qw/-P -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache --unzip --html --markdown --/, qw/-P -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
