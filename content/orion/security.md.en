@@ -67,13 +67,13 @@ This is because `ssi` support revolves around `permalink` management, which is a
 
 ##### `lib/{path,view}.pm` Subversion ACLs
 
-##### Dynamically Generated Rules via `%path::acl`
+##### Dynamically Generated Rules via `@{path::acl}`
 
-##### Custom Controls on `seed_file_deps` usage in `lib/path.pm`
+##### Custom Controls on `seed_file_deps` and  seed_file_acl usage in `lib/path.pm`
 
 ##### Overriding fetch_deps in `lib/view.pm`
 
-#### Built Website ACL's synchronized with Subversion ACL's instantly upon commit
+#### Built Website and Subversion ACL's synchronized with @{path::acl} instantly upon commit
 
 Automatic protection for ephemeral branch builds.
 
