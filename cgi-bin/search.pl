@@ -20,6 +20,7 @@ use SunStarSys::Util qw/read_text_file/;
 use SunStarSys::SVN::Client;
 use File::Basename;
 use List::Util qw/sum/;
+use IO::Uncompress::Gunzip qw/gunzip/;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -172,6 +173,8 @@ while (my ($k, $v) = each %matches) {
     my $subr = $r->lookup_file("$dirname$k");
     index($subr->status, "4") == 0 and next;
   }
+  my $filename = "$dirname$k";
+  gunzip $filename, \$filename if $filename =~m#\.gz[^/]*$#;
   read_text_file "$dirname$k", \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
   my $total = sum map $_->{count}, @$v;
