@@ -29,13 +29,13 @@ our @patterns = (
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, memoize => {
-    view       => "sitemap",
+    view       => [qw/compress sitemap/],
     nest       => 1,
     conf       => $conf,
   }],
 
   [qr!^/(essay|client)s/.*\.md(?:text)?!, memoize => {
-    view          => [qw/set_template_from_capture snippet single_narrative/],
+    view          => [qw/set_template_from_capture snippet compress single_narrative/],
     conf          => $conf,
     archive_root  => "/archives",
     category_root => "/categories",
@@ -44,12 +44,12 @@ our @patterns = (
   }],
 
   [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
-    view      => [qw/set_template_from_capture ssi normalize_links snippet single_narrative/],
+    view      => [qw/set_template_from_capture ssi normalize_links snippet compress single_narrative/],
     conf      => $conf,
   }],
 
   [qr/\.md(?:text)?/, memoize => {
-    view       => [qw/snippet single_narrative/],
+    view       => [qw/snippet compress single_narrative/],
     template   => "main.html",
     conf       => $conf,
   }],
