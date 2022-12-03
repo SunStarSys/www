@@ -175,7 +175,7 @@ while (my ($k, $v) = each %matches) {
   }
   my $filename = "$dirname$k";
   gunzip $filename, \$filename and $filename = \$filename if $filename =~m#\.gz[^/]*$#;
-  read_text_file "$dirname$k", \ my %data, $markdown ? 0 : undef;
+  read_text_file $filename, \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
   my $total = sum map $_->{count}, @$v;
   push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
