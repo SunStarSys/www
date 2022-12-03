@@ -175,7 +175,7 @@ while (my ($k, $v) = each %matches) {
   }
   my $filename = "$dirname$k";
   my $uncompressed;
-  gunzip $filename, \$uncompressed and utf8::decode $uncompressed and $filename = \$uncompressed if $filename =~m#\.gz[^/]*$#;
+  gunzip $filename, \$uncompressed and $filename = \$uncompressed if $filename =~m#\.gz[^/]*$#;
   read_text_file $filename, \ my %data, $markdown ? 0 : undef;
   my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
   my $total = sum map $_->{count}, @$v;
