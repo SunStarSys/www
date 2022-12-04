@@ -1,0 +1,8 @@
+---
+categories: Orion, Architecture
+dependencies: '*.md.en'
+keywords: architecture,incremental,builds,dependency,topology
+title: What Is <em>Smart Content Dependency Management&trade;</em> All About?
+
+---
+{% ssi `/essays/dependencies.md.en` %}
