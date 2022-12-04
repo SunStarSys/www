@@ -61,7 +61,7 @@ our @patterns = (
 );
 
 #snippet
-our %dependencies;
+our (%dependencies, @acl);
 
 # entries computed below at build-time, or drawn from the .deps cache file
 our $use_cache = 0;
@@ -70,7 +70,7 @@ walk_content_tree {
 
   return if m#/images/#;
 
-  seed_file_deps if /\.md[^\/]*$/;
+  seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
 
   for my $lang (qw/en es de fr/) {
 
