@@ -54,9 +54,11 @@ The build system is all-seeing and all-knowing, but we can ensure that your buil
 
 ##### Template Traversal Controls
 
-See [sanitize_relative_path]({{snippetA.pretty_uri}})
+See [sanitize_relative_path]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc]
+
+This code enforces the rules which follow belonw in this section.
 
 ###### include and extends tags
 
