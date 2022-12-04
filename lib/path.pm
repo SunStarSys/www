@@ -66,7 +66,6 @@ our @patterns = (
 our (%dependencies, @acl);
 
 # entries computed below at build-time, or drawn from the .deps cache file
-our $use_cache = 0;
 
 walk_content_tree {
 
