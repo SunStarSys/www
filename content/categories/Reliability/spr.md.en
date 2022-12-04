@@ -1,7 +1,0 @@
----
-categories: IT, Security, Performance, Reliability
-dependencies: '*.md.en'
-title: Information Security, Application Performance and Reliability
-
----
-{% ssi `/essays/spr.md.en` %}
