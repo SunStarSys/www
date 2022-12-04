@@ -5,7 +5,7 @@ use warnings;
 
 my $conf = Load join "", <DATA>;
 
-# the only job of this __PACKAGE__ is to fill out the @path::patterns and %path::dependendies data structures.
+# the only job of this __PACKAGE__ is to fill out the @patterns, @acl, and %dependencies data structures.
 #
 # entries in @patterns are three-element arrayrefs:
 # [
