@@ -29,7 +29,6 @@ our @patterns = (
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, memoize => {
-    quick_deps => 4,
     view       => [qw/compress sitemap/],
     nest       => 1,
     conf       => $conf,
@@ -102,7 +101,6 @@ walk_content_tree {
 #snippet
 
 1;
-
 
 __DATA__
 title: "SunStar Systems"
