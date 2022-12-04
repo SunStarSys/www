@@ -56,7 +56,7 @@ The build system is all-seeing and all-knowing, but we can ensure that your buil
 
 ###### include and extends tags
 
-All target files are in a subfolder of the [`/templates/`](#) folder, and must be referenced as absolute paths from that folder.
+All target files are in a subfolder of the [`/templates/`](#) folder, and must be referenced as absolute paths rooted at that folder.
 
 ###### ssi tag
 
