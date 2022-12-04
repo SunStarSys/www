@@ -113,7 +113,7 @@ keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs
 releases:
   orion:
     url: https://github.com/SunStarSys/orion
-    tag: v3.0.1
+    tag: v3.1.0
   pty:
     url: https://github.com/SunStarSys/pty
     tag: v2.1.1
