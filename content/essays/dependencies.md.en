@@ -2,6 +2,7 @@ Title: What Is <em>Smart Content Dependency Management&trade;</em> All About?
 Dependencies: *.md.en
 Categories: Orion, Architecture
 Keywords: architecture,incremental,builds,dependency,topology
+
 [TOC]
 
 ## Abstract
@@ -41,7 +42,7 @@ Where do entries in `%path::dependencies` originate? If they are not born from a
 Our site presently consists of `240 source files` in `content/`.  Here's a `78 vertices x 364 edges`, scrollable, two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** ([using GraphViz's `dot`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
 
 <div id="deps">
-![English Language Dependencies](../images/deps.svg.gz.en)
+![English Language Dependencies](../images/deps.svg.en)
 </div>
 
 Quite complex, even for a small website like this one! Many edge intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the lower-center-left of the graph, which is what a good blogging site's dependency graph should look like. These dependencies are drawn in `red curves` in the image.
@@ -57,7 +58,7 @@ In fact, the *link topology* of your website is an entirely separate matter from
 Here's a `240+ vertices x 3859 edges`, current birds-eye graph of the English *link topology* graph for **our site** ([using GraphViz's `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
 
 <div id="links">
-![English Language Links](../images/links.svg.gz.en)
+![English Language Links](../images/links.svg.en)
 </div>
 
 Can you spot the `red edges` as specified in the *dependency graph*? The *link topology* graph is qualitatively and quantitatively **very different** from the (dramatically smaller and less interconnected) *dependency graph* depicted above.
