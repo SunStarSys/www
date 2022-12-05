@@ -136,3 +136,4 @@ acl:
   - path: content
     rules:
       "joe": "rw"
+      "@staff": "r"
