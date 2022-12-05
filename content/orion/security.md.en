@@ -75,6 +75,8 @@ This is because [`ssi`](#) support revolves around [`permalink`](#) management, 
 
 #### Dependency/ACL Injection Controls
 
+hi.
+
 ##### lib/{path,view}.pm Subversion ACLs
 
 ##### Dynamically Generated Rules via @{path::acl}
