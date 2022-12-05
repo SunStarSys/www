@@ -100,4 +100,3 @@ Automatic protection for ephemeral branch builds.
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
-
