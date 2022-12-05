@@ -135,5 +135,5 @@ acl:
   - path: content
     rules:
       "@staff": "rw"
-	  "@svnadmin": "rw"
+      "@svnadmin": "rw"
       "*": "r"
