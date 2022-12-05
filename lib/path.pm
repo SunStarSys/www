@@ -134,6 +134,6 @@ releases:
 dependencies: {}
 acl:
   - path: content
-    rules:
-      "joe": "rw"
-      "@staff": "r"
+    rules:1
+      "@staff": "rw"
+      "*": "r"
