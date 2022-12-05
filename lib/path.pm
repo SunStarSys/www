@@ -133,6 +133,6 @@ releases:
 # hard-coded deps
 dependencies: {}
 acl:
-  - path: content/orion
+  - path: content
     rules:
       "*": ""
