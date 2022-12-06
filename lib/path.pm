@@ -134,7 +134,12 @@ dependencies: {}
 acl:
   - path: content
     rules:
-      "@staff": "rw"
-      "@svnadmin": "rw"
-      "*": "r"
+      "@staff": rw
+      "@svnadmin": rw
+      "*": r
+  - path: content/orion
+    rules:
+      "@staff": rw
+      "@svnadmin": rw
+      "*":
 
