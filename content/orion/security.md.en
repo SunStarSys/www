@@ -1,6 +1,6 @@
 Title: Orion Security
 Dependencies: *.md.en
-ACL: *=, @staff=rw
+ACL: *=, @staff=rw, joe=rw
 
 [TOC]
 
