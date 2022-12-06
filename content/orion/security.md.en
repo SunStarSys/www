@@ -1,6 +1,6 @@
 Title: Orion Security
 Dependencies: *.md.en
-ACL: joe=rw, @staff=rw, *=r
+ACL: joe=rw, @staff=rw, *=
 
 [TOC]
 
@@ -104,3 +104,4 @@ Automatic protection for ephemeral branch builds.
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
+
