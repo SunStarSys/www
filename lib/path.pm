@@ -141,5 +141,5 @@ acl:
     rules:
       "@staff": rw
       "@svnadmin": rw
-      "*":
+      "*": r
 
