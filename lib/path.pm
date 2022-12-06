@@ -142,4 +142,3 @@ acl:
       "@staff": rw
       "@svnadmin": rw
       "*": r
-
