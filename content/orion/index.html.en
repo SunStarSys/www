@@ -83,7 +83,7 @@ See our [Orion Plans](plans) for the current deals.
 
 | Feature          |  Orion | Netlify+Gatsby | GitHub+Hugo | Confluence Cloud
 |:------------|:-------------:|:------------:|:----------:|:-------------:|
-| SSO: Active Directory / OpenID Integration | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
+| SSO: Kerberos / Active Directory / OpenID Integration | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">&check;</span> | | | |
 | In-Browser Workflow (Mobile Friendly) | <span class="text-success">&check;</span> | | | |
 | DAV support | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
