@@ -1,6 +1,9 @@
 Title: Information Security, Application Performance and Reliability
+Dependencies: *.md.en
+Categories: IT, Security, Performance, Reliability
+Archive: yes
 
-"Nonfunctional" software engineering revolves around three key issues: security, performance, and reliability (**SPR**); whereas "functional" software engineering involves the normal feature-based software development lifecycle. A proper [NIST-800-160](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1.pdf) based SSDLC balances functional and nonfunctional software lifecycle aspects into a coherent whole, for the CTO on down.
+<!-- #teaser -->"Nonfunctional" software engineering revolves around three key issues: security, performance, and reliability (**SPR**)<!-- #teaser -->; whereas "functional" software engineering involves the normal feature-based software development lifecycle. A proper [NIST-800-160](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1.pdf) based SSDLC balances functional and nonfunctional software lifecycle aspects into a coherent whole, for the CTO on down.
 
 Some firms have derived incredible value by splitting functional from nonfunctional software development into two independent hierarchies in the engineering part of the organizational chart. You can find **SPR** architects like myself to lead such an **SPR** team, with a flexible combination of evolving, subordinate roles:
 
@@ -19,3 +22,5 @@ By having a dedicated **SPR** team, management can free product engineers (doing
 There is also considerable job specialization in terms of observability tooling and kernel-based tracing techniques, that good system engineers undergo to keep on top of their field. It is hard to hire for these auxiliary skills when seeking quality talent for traditional agile-based product/full stack engineers and/or data scientists.
 
 Robust, secure, scalable, cost-effective, well-performing software is within the reach of any small/mid-sized engineering team with the right investments in **SPR**. [Reach out](/contact) if you are interested in learning how!
+
+*$Date$*

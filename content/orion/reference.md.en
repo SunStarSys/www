@@ -1,0 +1,94 @@
+Title: Orion Reference
+Dependencies: *.md.en
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png"></img>
+</div>
+
+## Recommended Bookmarklet
+
+Please be sure to install the bookmarklet on your browser toolbar by opening a "New Bookmark" dialog screen from your browser's menu and typing the following into the Location/URL field:
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+Without this bookmarklet installed you will not be able to browse the live site and instantly edit pages in Orion &trade; by clicking on the bookmarklet.
+
+To use the bookmarklet simply browse to your live production site (NOT in Orion &trade;!), locate a page you'd like to edit, and click on the bookmarklet. You'll be taken to a page within this Orion that allows you to edit the content.
+
+## Live Demo
+
+For a demonstration of Orion &trade;'s IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
+
+If that's too much bother for you, this website is self-hosted on Orion &trade;, and those hot-pink pencil icons [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) at the upper right alongside the breadcrumbs will give you a live demonstration of how the system works (sans commit/build access, which is locked down to staff only).
+
+
+## Onboarding Process
+
+For early adopters, Orion &trade; service sits between your Subversion repository's website source tree and your live production webservers that deliver site content to your end users.  Onboarding is dead-simple for organizations already running their own svnpubsub-enabled Subversion service:
+
+1. Provide us with the URL of your site's sources in Subversion.
+
+2. Provide us with the (role, or mailing list) email address for discussing site development and maintenance issues, and ensure that address is [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-compliant in terms of moderation facilities.
+
+3. Subscribe your production webservers' `svnwcsub` daemon to our public `svnpubsub` service.  These stand-alone software components are a part of each new Subversion source release, and are reasonably mature and well supported by the Subversion Development Team.  If you just can't wait for the python3 port to finish, we can let you use our (threaded) ports instead.
+
+4. Let us know if you'd like content diffs of the builds sent out, and to which email address you want them delivered.
+
+## Source Directory Layout
+
+- trunk/
+	- cgi-bin/
+	- content/
+	- templates/
+	- lib/
+		- path.pm
+		- view.pm
+- branches/
+	.. each branch follows trunk layout above ...
+
+See <https://vcs.sunstarsys.com/repos/svn/public/Orion-sites/www.sunstarsys.com/> for a live example.
+
+## Dynamic Content
+
+### Example script to regenerate a source page with changing content, even when the sources do not.
+
+The basic idea is that some of your high-profile source pages build with "dynamic" content (build incorporates ever-changing snippets from other online sites, like Jira waterfalls or current mailing list threads).
+
+A good example of this is "Latest News" section of [The ASF Home Page](https://www.apache.org/), and here's the behind-the-scenes way it works, with a little shell+svn+cron magic as exemplified here (take the dynamic build's source file as `$file` below):
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+Incorporate this into a little shell script that will use your cached svn credentials on your own PC, and have cron execute it for you on a fixed schedule (based on your frontend webserver / CDN HTTP cache's TTL).  No need for server-side tooling on our end; you have full control of your own password security, scheduling, and dynamic page targets.  If you are using your own svnpubsub-enabled Subversion service, none of that transaction directly involves any of our hardware. Your commit will trigger our svnwcsub client, always listening to your svnpubsub server, to build and deploy those changes on demand &mdash; pronto.
+
+## Exceptions
+
+TBD
+
+## Search
+
+TBD
+
+## Quick Commit
+
+TBD
+
+## Add Resource
+
+TBD
+
+
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}})
+{% endfor %}

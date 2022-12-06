@@ -1,4 +1,7 @@
 Title: Fun with htop
+Dependencies: *.md.en
+Categories: Tools
+Archive: yes
 
 <div style="float:right" class="col-lg-5">
 	<div class="embed-responsive embed-responsive-16by9">
@@ -7,7 +10,7 @@ Title: Fun with htop
 </div>
 
 
-## Advanced htop Features on Popular Unix Platforms
+## <!-- #teaser -->Advanced htop Features on Popular Unix Platforms<!-- #teaser -->
 
 
 - Deltas from `top`
@@ -46,3 +49,5 @@ OOTB fully operational feature-set.
 - Solaris LWP Accounting Deltas
 	- bi-level PID + LWPID
 	- does not provide full command arguments, just command name
+
+*$Date$*

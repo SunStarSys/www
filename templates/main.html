@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SunStar Systems">
     <meta name="author" content="Joe Schaefer">
-    <meta name="keywords" content="{{ headers.keywords }},{{ conf.keywords }}">
+    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ conf.keywords }}">
 
-    <title>{% block title %}{{ conf.title }} - {{ headers.title }}{% endblock %}</title>
+    <title>{% block title %}{{ conf.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/css/code.css" rel="stylesheet" media="screen">
     <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/css/katex.min.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
+    {% block header %}{% endblock %}
+    {% block analytics %}
+    {% include "analytics.html" %}
+    {% endblock %}
 </head>
 
 <body>
+<header>
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
@@ -39,12 +44,12 @@
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{% ifequal lang ".en" %}Products{% endifequal %}{% ifequal lang ".es" %}Productos{% endifequal %}{% ifequal lang ".de" %}Produkte{% endifequal %}{% ifequal lang ".fr" %}Des produits{% endifequal %}... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-item{% ifequal path "/CMS/index.html"|append:lang %}
+              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/CMS/index.html{{ lang }}">CMS</a></li>
-              <li class="dropdown-item{% ifequal path "/CMS/plans.html"|append:lang %}
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Enterprise Wiki</a></li>
+              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/CMS/plans.html{{ lang }}">{% ifequal lang ".en" %}CMS Plans{% endifequal %}{% ifequal lang ".es" %}Planes CMS{% endifequal %}{% ifequal lang ".de" %}CMS-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans CMS{% endifequal %}</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/plans.html{{ lang }}">{% ifequal lang ".en" %}Orion Plans{% endifequal %}{% ifequal lang ".es" %}Planes Orion{% endifequal %}{% ifequal lang ".de" %}Orion-Pläne{% endifequal %}{% ifequal lang ".fr" %}Plans Orion{% endifequal %}</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -66,6 +71,10 @@
               <li class="dropdown-header text-white">{% ifequal lang ".en" %}Engagements{% endifequal %}{% ifequal lang ".es" %}Compromisos{% endifequal %}{% ifequal lang ".de" %}Engagements{% endifequal %}{% ifequal lang ".fr" %}Engagements{% endifequal %}</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}Clients{% endifequal %}{% ifequal lang ".es" %}Clientes{% endifequal %}{% ifequal lang ".de" %}Kunden{% endifequal %}{% ifequal lang ".fr" %}Clients{% endifequal %}</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/essays">{% ifequal lang ".en" %}Essays{% endifequal %}{% ifequal lang ".es" %}Ensayos{% endifequal %}{% ifequal lang ".de" %}Aufsätze{% endifequal %}{% ifequal lang ".fr" %}Essais{% endifequal %}</a></li>
+              <li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-white">{% ifequal lang ".en" %}Taxonomies{% endifequal %}{% ifequal lang ".es" %}Taxonomías{% endifequal %}{% ifequal lang ".de" %}Taxonomien{% endifequal %}{% ifequal lang ".fr" %}Taxonomies{% endifequal %}</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">{% ifequal lang ".en" %}Categories{% endifequal %}{% ifequal lang ".es" %}Categorías{% endifequal %}{% ifequal lang ".de" %}Kategorien{% endifequal %}{% ifequal lang ".fr" %}Catégories{% endifequal %}</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">{% ifequal lang ".en" %}Archives{% endifequal %}{% ifequal lang ".es" %}Archivo{% endifequal %}{% ifequal lang ".de" %}Archiv{% endifequal %}{% ifequal lang ".fr" %}Les archives{% endifequal %}</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
@@ -74,23 +83,47 @@
           </li>
         </ul>
       </div>
+      <div class="row right" id='search'>
+        <form action="/dynamic/search{{ path|dirname }}/" class="form-inline right" method="GET">
+          <input type="hidden" name="lang" value="{{ lang }}" />
+          <input class="form-control" type="text" name="regex"
+               placeholder="PCRE
+ {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
+	    {% ifequal lang ".en" %}Search{% endifequal -%}
+	    {% ifequal lang ".es" %}Buscar{% endifequal -%}
+	    {% ifequal lang ".de" %}Suche{% endifequal -%}
+	    {% ifequal lang ".fr" %}Rechercher{% endifequal -%}
+          </button>&nbsp;
+          <input class="form-control form-check-input" type="checkbox" name="markdown"
+          id="markdown-search" value="1" {% if markdown %}checked{% endif %}/><label for="markdown-search"><small>Markdown</small></label>
+        </form>
+      </div>
     </div>
   </div>
+</header>
 
-  <div class="container theme-showcase">
-       {% block content %}
-    <div class="breadcrumbs">
+{% block alert %}
+  {% if alert %}
+  <div class="alert alert-dismissible alert-info container">
+    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    {{ alert|markdown }}
+  </div>
+  {% endif %}
+{% endblock %}
+
+<div class="container theme-showcase">
+{% block content %}
+  <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
         <img src="/images/edit.png" />
       </a>
-    </div>
-    <h1>{{ headers.title }}</h1>
-    <div class="jumbotron">{{ content|markdown }}</div>
-          {% endblock %}
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.bundle.min.js"></script>
+  </div>
+  <h1>{{ headers.title|safe }}</h1>
+  <div class="jumbotron">{{ content|markdown }}</div>
+{% endblock %}
+  <footer>{% block footer %}{% endblock footer %}</footer>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/bootstrap.bundle.min.js"></script>
 </div>
-
 </body>
-
 </html>

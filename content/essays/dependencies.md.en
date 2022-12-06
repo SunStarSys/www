@@ -1,0 +1,173 @@
+Title: What Is <em>Smart Content Dependency Management&trade;</em> All About?
+Dependencies: *.md.en
+Categories: Orion, Architecture
+Keywords: architecture,incremental,builds,dependency,topology
+
+[TOC]
+
+## Abstract
+
+*Smart Content Dependency Management&trade;* is about the circle of ideas related to providing support and facilitation for *incremental builds*, while staying true to the **Content Normalization Principle** &mdash; that [*permalinks*](https://en.wikipedia.org/wiki/Permalink) should be the single source of truth, no matter how their content is curated throughout the source tree and resulting build artifacts.
+
+This article presents the <https://sunstarsys.com/> website as a case study for demonstration of best practices and analysis of the associated graph topologies.
+
+## Caveats
+
+This only ever matters when you need to weigh the expense of performing full site builds every time you need to tweak the content on a webpage. If your website has less than 10K source files in it, **relax**, and read the following with an eye towards your future needs. You chose to use our platform, that's designed to scale with you, not against you.
+
+For example, the Apache <https://www.OpenOffice.Org> website was able to build its 40K+ files using the original Apache version of this build system, with fully integrated support for incremental builds &mdash; without any configured dependencies whatsoever &mdash; by making clever usage of traditional SSI technology alone.
+
+By default, our build system will build only the files you changed, without concern for the intra-file dependencies (unless you specify them in `%path::dependencies` &mdash; more on that below). If the file you changed is in the `templates/` or `lib/` directory, as well as whenever you delete files from `content/`, a full site build will trigger instead.
+
+## Weaving Your Website's *Dependency Graph* Together
+
+Mathematically, a *Topology* `$$\tau$$` is a complete specification of the *open* subsets of a space `$$X$$`, the purpose of which is to indicate the proximity relationships between *points* `$$x$$` of the space `$$X$$`.  When `$$X$$` is a graph, a *topology* `$$\tau$$` for `$$X$$` amounts to specifying the edges connecting the vertices of the graph together (here vertices are viewed as the *points* of `$$X$$`, and the connecting edges determine the neighborhoods of those points as *basis open sets* for the topology).  A *directed graph topology* is essentially the same thing, but incorporates a reference to a topological embedding of `$$(X,\tau)$$` into a larger topological space `$$(Y,\sigma)$$` , where the embedding's edge connections are represented by directional, non-intersecting (Jordan) curves.
+
+The latter concept is what we will utilize when discussing the *dependency graph's* topology `$$\tau$$` associated to the space `$$X$$` of source files beneath your site's `content/` subdirectory (here `$$(Y,\sigma)$$` is `$$\mathbb{R}^n$$` with its metric topology for `$$n \in \{2,3\}$$`, and the edges of `$$X$$` are non-intersecting, directed Jordan curves connecting a file `$$x \in X$$` to its set of files upon which `$$x$$` depends: `$$\{x' \in X | x \rightarrow x' \}$$`).
+
+Having <!-- #teaser -->a clear understanding of your website's *dependency graph* will ensure you can maximize the performance of our build technology at scale<!-- #teaser -->. We take the information you provide to `%path::dependencies` during the build's load of your website's `lib/path.pm` file, construct a reverse map of dependent files, and use *that reverse map* to determine the full corpus of files to build for any given `svn commit` you make to our system.
+
+It's important to note that the dependency relationships between source files can and should be fully captured by the `%path::dependencies` hash during the build-system's startup load of `lib/path.pm` from your source tree, which is how the built-in views contained in our `SunStarSys::View` Perl package are meant to operate. The `walk_content_tree`, `archived`, and `seed_file_deps` utility functions importable from `SunStarSys::Util` are useful aids in constructing the `%path::dependencies` hash, with built-in support for managing a dependency cache to accelerate incremental builds at scale.
+
+Here's that portion of our live [`lib/path.pm`]({{snippetA.pretty_uri}}):
+
+[snippet:lang=perl:repo=SunStarSys/www:branch=trunk:path=lib/path.pm:token=#snippet]
+
+Please do mull that code over for ideas on how you want *your website* to work. Yes there is some reasonable complexity (involving both Perl's regular expressions and Perl's UNIX C-shell `glob` interfaces, in a very precise way) around how `%path::dependencies` is constructed in that file, but instead of just viewing this as optimization work, instead look at it as providing the basic ingredients necessary for construcing major aspects of the *link topology* in an automated, dynamically generated fashion.
+
+Where do entries in `%path::dependencies` originate? If they are not born from an invocation of `walk_content_tree { seed_file_deps ... }`, (which basically dives into your markdown source files' headers and content), then they are just hard-coded into `lib/path.pm` at load-time.
+
+### Cyclic Dependency Graphs Are the Norm
+
+Our site presently consists of `240 source files` in `content/`.  Here's a `78 vertices x 364 edges`, scrollable, two-dimensional directed graph representation of a recent snapshot of the English language page dependencies on **our site** ([using GraphViz's `dot`](https://github.com/SunStarSys/orion/blob/master/deps2dotcfg.pl)):
+
+<div id="deps">
+![English Language Dependencies](../images/deps.svg.en)
+</div>
+
+Quite complex, even for a small website like this one! Many edge intersections when taking `$$n=2$$` (avoidable in dimension `$$n=3$$`). Of particular note is the core set of dense, cyclic dependencies in the non-archived files in our site's `/essays/` directory, towards the lower-center-left of the graph, which is what a good blogging site's dependency graph should look like. These dependencies are drawn in `red curves` in the image.
+
+Also note the internal, essentially isolated interconnectedness of the elements in `/categories/*/*` and `/archives/2022/11/*`. The only external dependencies involve non-archived content in `/essays/*`. This is by design &mdash; the archived essays should only change *adiabatically*, perhaps solely for adjustments to their `Category` headers. None of those changes materially affect the pre-existing content, so we don't track it in `%path::dependencies`.
+
+Of course, our [Orion Enterprise Wiki](/orion/) has never had trouble dealing with cyclic dependencies.
+
+### Isn't this just about Hyperlinks?
+
+In fact, the *link topology* of your website is an entirely separate matter from the source tree's *dependency graph*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *dependency graph*.
+
+Here's a `240+ vertices x 3859 edges`, current birds-eye graph of the English *link topology* graph for **our site** ([using GraphViz's `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
+
+<div id="links">
+![English Language Links](../images/links.svg.en)
+</div>
+
+Can you spot the `red edges` as specified in the *dependency graph*? The *link topology* graph is qualitatively and quantitatively **very different** from the (dramatically smaller and less interconnected) *dependency graph* depicted above.
+
+### How SSI Technology Can Help
+
+#### Traditional [Server-Side Includes](https://httpd.apache.org/docs/2.4/howto/ssi.html) (SSI)
+
+- **great** for pruning your website's *dependency graph* down to manageable size without sacrificing page delivery latency
+- **great** for decreasing boilerplate churn in large commit messages for better peer review and oversight of your built changesets
+- **lousy** for recontexualizing entire webpages into a different location in your document root's heirarchy
+
+#### Template APIs
+
+##### ssi tag
+
+Syntax:
+
+&#123;% `ssi` &#96;/content_rooted/path/to/source_file&#96; %&#125;
+
+- paths rooted at `content` source directory
+- skips the header portion of the source file to be `ssi` included
+- rewrites relative urls to absolute urls in the target path's included content
+
+##### ssi filter
+
+Syntax:
+
+&#123;&#123; content|`ssi` &#125;&#125;
+
+- recursively evaluates `ssi` tags in the value to be filtered
+- useful for avoiding using a large value (3+) of `quick_deps` in a `@{path::patterns}` entry's argument hashref, which can impact performance
+
+#### Why not SymLinks?
+
+- barebones filesystem abstraction that is hard to securely support in a `<VirtualHost>` context
+- same downsides with traditional `ssi` on full webpages
+- our [Orion Enterprise Wiki](/orion/) system does not support them
+
+#### Build Tools for Permalinks
+
+##### Document Curation
+
+Orion &trade; build system has integrated support for what we call *Document Curation*, which is the process of recontextualizing and reorganizing your content based on how you set the `Categories` and `Archive` headers in your Markdown source files. These features are disabled by default, but can be activated by setting a `category_root` (for Category support) or an `archive_root` (for Archiving support) in the associated hashref argument to the desired `@{path::patterns}` entry.
+
+##### Categories
+
+- new content is constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Archive` header from the constructed source page
+- categories are strictly additive (i.e., removing a category from a source page's headers will not remove it from that category on the live site),
+- generated on demand
+- deleting all categories in a single commit is a great way to sync them with the exact specifications in all source pages' headers, without destroying the preserved category content on the live site
+
+##### Archived Pages
+
+On our site, we aggresssively archive stale essays to keep build times for new essays low, while not destroying permalinks to archived documents. The *dependency graph* relative to the `/archives/` directory (for our site) is reasonably self-contained as-per the following rules:
+
+- content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` and `Archive` headers from the constructed source page
+- content in `/(essays|clients)/` are always permalinks, even after archiving
+- archiving effectively removes the permalink location from the *dependency graph*, while not removing the permalink itself from the website
+
+##### Teasers
+
+HTML comments embedded in the Markdown prose form boundaries of the teaser content. We use &lt;!-- #teaser --&gt; for this purpose.
+
+Processing teasers is done with the `teaser` Template filter. It is useful to combine this with the `ssi` filter for indexing a Category file with more than one category page within it.
+
+## Conclusions
+
+There are interesting data structures and relations to yet be uncovered when dealing with a website's *dependency graph* from a build performance perspective, which is a much newer area of interest than the research literature delving into the data structures and associated isssues surrounding *link topology*<sup>1,2</sup>.
+
+Conventional incremental builds for pure software development projects are still a hot topic. The research covered in <sup>3,4</sup> was published in October 2022, about a month before this essay is expected to be complete. The *pluto*<sup>5</sup> build system has features quite similar to ours (the build itself can dynamically regenerate and rebuild dependencies).
+
+The good news is that we have you covered as our customer. We will keep you apprised of the best practices and the state of the art in this space, so you will benefit from our lessons learned over the past decade and into tomorrow.
+
+## Footnotes
+
+1. [Identification of clusters in the Web graph based on link topology](https://ieeexplore.ieee.org/abstract/document/1214919) Seventh International Database Engineering and Applications Symposium, 2003. Proceedings.
+
+2. [Inferring Web Communities from Link Topology](https://dl.acm.org/doi/pdf/10.1145/276627.276652) Proceedings of the ninth ACM conference on Hypertext and hypermedia: links, objects, time and space &mdash; structure in hypermedia systems: links, objects, time and space &mdash; structure in hypermedia systems. 1998.
+
+3. [On the benefits and limits of incremental build software configurations: an exploratory study](https://dl.acm.org/doi/abs/10.1145/3510003.3510190) ICSE '22: Proceedings of the 44th International Conference on Software Engineering, May 2022
+
+4. [Towards incremental build of software configurations](https://dl.acm.org/doi/10.1145/3510455.3512792) ICSE-NIER '22: Proceedings of the ACM/IEEE 44th International Conference on Software Engineering: New Ideas and Emerging Results, May 2022
+
+5. [A sound and optimal incremental build system with dynamic dependencies](https://dl.acm.org/doi/10.1145/2814270.2814316) OOPSLA 2015: Proceedings of the 2015 ACM SIGPLAN International Conference on Object-Oriented Programming, Systems, Languages, and Applications October 2015
+
+*$Date$*
+
+<style type="text/css">
+
+#deps {
+  width:100%;
+  overflow:auto;
+  margin-bottom:10px;
+  padding-top:0;
+  height:1000px;
+}
+
+#links {
+  width:100%;
+  overflow:auto;
+  margin-bottom:10px;
+  padding-top:0;
+  height:1000px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #links { height: 300px }
+}
+
+#links img { width:100% }
+</style>

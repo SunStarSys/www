@@ -1,14 +1,13 @@
 package path;
-use SunStarSys::Util qw/walk_content_tree Load Dump/;
+use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived Load/;
 use strict;
 use warnings;
-use File::Path 'mkpath';
 
 my $conf = Load join "", <DATA>;
 
-# the only job of this __PACKAGE__ is to fill out the @path::patterns and %path::dependendies data structures.
+# the only job of this __PACKAGE__ is to fill out the @patterns, @acl, and %dependencies data structures.
 #
-# entries in @patterns are three-element arrays:
+# entries in @patterns are three-element arrayrefs:
 # [
 #   $pattern,     # first pattern to match the source file's "/content/"-rooted path wins
 #   $method_name, # provided/implemented in view.pm
@@ -16,69 +15,108 @@ my $conf = Load join "", <DATA>;
 # ]
 #
 # entries in %dependencies have keys that represent source file names,
-# with each corresponding value as an array of source files that the key's subsequent built artifact depends on
+# with each corresponding value as an arrayref of source files that
+# the key's subsequent built artifact depends on.
 # we only unravel the %dependencies at incremental build time, not in full site builds.
+#
+# there are three entry points into the %dependencies hash:
+# 1. via walk_content_tree() code-block logic
+# 2. via a "dependencies" header entry in an md.* file (through seed_deps())
+# 3. via the "dependencies" YAML hash at the bottom of the __DATA__ block below
 
 our @patterns = (
-  [qr!/(index|sitemap)\.html!, sitemap => {
-    quick_deps    => 1,
-    nest          => 1,
-    conf          => $conf,
-  }],
-  [qr!^/(essay|client)s/.*\.md(?:text)?!, set_template_from_capture => {
-    view       => [qw/snippet single_narrative/],
+
+# the "memoize" view corrects most of the speed problems with quick_deps == 3:
+
+  [qr!/(index|sitemap)\.html!, memoize => {
+    compress   => 1,
+    view       => [qw/sitemap/],
+    nest       => 1,
     conf       => $conf,
   }],
-  [qr/\.md(?:text)?/, snippet => {
-    view       => "single_narrative",
+
+  [qr!^/(essay|client)s/.*\.md(?:text)?!, memoize => {
+    view          => [qw/set_template_from_capture snippet single_narrative/],
+    compress      => 1,
+    conf          => $conf,
+    archive_root  => "/archives",
+    category_root => "/categories",
+    markdown      => 1, # search markdown instead of built html
+    permalink     => 1,
+  }],
+
+  [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
+    view      => [qw/set_template_from_capture ssi normalize_links snippet single_narrative/],
+    compress  => 1,
+    conf      => $conf,
+  }],
+
+  [qr/\.md(?:text)?/, memoize => {
+    view       => [qw/snippet single_narrative/],
+    compress   => 1,
     template   => "main.html",
     conf       => $conf,
   }],
+
 );
 
-our %dependencies; # entries computed below at build-time, or drawn from the .deps cache file
+# compress copies of text files that don't match a configured regex in @patterns
+our $compress = 1;
 
-if (our $use_dependency_cache and -f "$ENV{TARGET_BASE}/.deps") {
-  # use the cached .deps file if the incremental build system deems it appropriate
-  open my $deps, "<", "$ENV{TARGET_BASE}/.deps" or die "Can't open .deps for reading: $!";
-  *dependencies = Load join "", <$deps>;
-}
-else {
-  walk_content_tree {
-    for my $lang (qw/en es de fr/) {
-      if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
-        push @{$dependencies{"/sitemap.html.$lang"}}, $_;
-      }
-      if (s!/index\.html\.$lang$!!) {
-        $dependencies{"$_/index.html.$lang"} = [
-          grep s/^content//, (glob("content$_/*.{md.$lang,pl,pm,pptx}"),
-                              glob("content$_/*/index.html.$lang"))
-          ];
-        push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-          glob("content$_/*") if m!/files\b!;
-      }
-    }
-  };
+#snippet
+our (%dependencies, @acl);
 
-  my @essays_glob = glob("content/essays/files/*/*");
+# entries computed below at build-time, or drawn from the .deps cache file
+
+walk_content_tree {
+
+  return if m#/images/#;
+
+  seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
+
   for my $lang (qw/en es de fr/) {
-    push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-      @essays_glob;
+
+    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
+      push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
+    }
+
+    if (s!/index\.html\.$lang$!!) {
+      $dependencies{"$_/index.html.$lang"} = [
+        grep s/^content// && !archived, (glob("'content$_'/*.{md.$lang,pl,pm,pptx}"),
+                            glob("'content$_'/*/index.html.$lang"))
+        ];
+      push @{$dependencies{"$_/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang!,
+        glob("'content$_'/*") if m!/files\b!;
+    }
   }
-  mkpath $ENV{TARGET_BASE};
-  open my $deps, ">", "$ENV{TARGET_BASE}/.deps" or die "Can't open '.deps' for writing: $!";
-  print $deps Dump \%dependencies;
 }
+  and do {
+
+    my @essays_glob = glob("content/essays/files/*/*");
+
+    for my $lang (qw/en es de fr/) {
+      push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
+        @essays_glob;
+    }
+
+    # incorporate hard-coded deps in the __DATA__ section of this file
+    while  (my ($k, $v) = each %{$conf->{dependencies}}) {
+      push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
+    }
+    push @acl, @{$conf->{acl}};
+
+  };
+#snippet
 
 1;
 
 __DATA__
 title: "SunStar Systems"
-keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs,solaris"
+keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs,solaris,http/2"
 releases:
-  cms:
-    url: https://github.com/SunStarSys/cms
-    tag: v1.0.1
+  orion:
+    url: https://github.com/SunStarSys/orion
+    tag: v3.1.0
   pty:
     url: https://github.com/SunStarSys/pty
     tag: v2.1.1
@@ -91,3 +129,17 @@ releases:
   Algorithm_LCS_XS:
     url: https://github.com/SunStarSys/Algorithm-LCS-XS
     tag: v2.0.2
+# hard-coded deps
+dependencies: {}
+acl:
+  - path: content
+    rules:
+      "@staff": rw
+      "@svnadmin": rw
+      "*": r
+  - path: content/orion
+    rules:
+      "@staff": rw
+      "@svnadmin": rw
+      "*": r
+

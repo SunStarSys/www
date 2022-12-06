@@ -1,0 +1,29 @@
+{% if permalink %}
+<span class="badge bg-info" style="color:#000">Permalink</span>&nbsp;
+{% endif %}
+{% if archive_path %}
+<span class="badge bg-warning">
+  <a style="color:#000" href="{{archive_path}}">Archived</a></span>&nbsp;
+{% endif %}
+{% for k in headers.keywords %}
+<span class="badge bg-danger" style="color:#000">
+  <a style="color:#fff"
+     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}}">#{{k}}</a>
+</span>&nbsp;
+{% endfor %}
+<p>&nbsp;</p>
+{% filter markdown %}
+{% for c in headers.categories %}
+  <button type="button" class="btn btn-success"><a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}">{{c}}</a></button>
+{% endfor %}
+
+{% if deps.0 %}
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|ssi|teaser}} ... <small><em>{{d.1.content|ssi|vcs_date}}</em></small>
+{% endfor %}
+{% endif %}
+{% endfilter %}

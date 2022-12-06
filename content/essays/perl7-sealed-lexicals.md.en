@@ -1,5 +1,7 @@
 Title: Perl 7 Feature Request: sealed subs for typed lexicals
-Keywords: perl,dylan,static,method,lookup,compile,sealed
+Keywords: perl,dylan,static,method,lookup,compile,sealed,apache
+Dependencies: *.md.en
+Categories: Perl, Orion, Performance, Apache
 
 <div class="right">
   <img src="../images/sunstarstaronly.png">
@@ -7,7 +9,7 @@ Keywords: perl,dylan,static,method,lookup,compile,sealed
 
 ## The Problem
 
-Perl 5's OO runtime method lookup has 50% more performance overhead than a direct, named subroutine invocation.
+<!-- #teaser -->Perl 5's OO runtime method lookup has 50% more performance overhead than a direct, named subroutine invocation<!-- #teaser -->.
 
 ## The initial solution: Doug MacEachern's method lookup optimizations
 

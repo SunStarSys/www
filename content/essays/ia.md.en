@@ -1,25 +1,26 @@
 Title: Information Architecture
+Dependencies: *.md.en
+Categories: Orion, Architecture, ZFS
+Keywords: information,topology,hypermedia,rest,architecture
 
 [TOC]
 
 ### Introduction
 
-To me, Information Architecture **organizes** the entire gamut of technologies relevant to the design,
-presentation, relationships, and architectural constraints that cover every URL you serve over
-http(s), both publicly and privately.  This essay is a high-level survey of my expertise in these
-areas; it is far from comprehensive given the vast field it intends to cover.
+To me, Information Architecture **organizes** <!-- #teaser -->the entire gamut of technologies relevant to the design, presentation, relationships, and architectural constraints that cover every URL you serve<!-- #teaser --> over HTTP, both publicly and privately.  This essay is a high-level survey of my expertise in these areas; it is far from comprehensive given the vast field it intends to cover.
 
 ### Usability, Discovery, and Link Topology: the Big Picture
 
-### Contrasting Heirarchies with Search
+### Contrasting Heirarchies with Tagged Search
 
 ### REST, HATEOAS, and Content Negotiation
 
 ### Beautiful URLs &mdash; Both Permanent and Transient
 
-### SunStar Systems CMS for ZFS-backed Platforms
+### Access Controls on Content, from a Single Source of Truth Perspective
+
+### SunStar Systems' Orion&trade; for ZFS-backed Platforms
 
 ### StageMaster: Experimentation with Pure Client-Side State Engine
 
-
-$Date$
+*$Date$*

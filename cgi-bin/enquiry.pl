@@ -9,7 +9,6 @@ use Dotiac::DTL::Addon::markup;
 use strict;
 use warnings;
 use base 'sealed';
-use sealed 'debug';
 
 my Apache2::RequestRec $r = shift;
 

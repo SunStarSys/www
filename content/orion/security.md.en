@@ -1,0 +1,106 @@
+Title: Orion Security
+Dependencies: *.md.en
+ACL: joe=rw, @staff=rw, @foo=rw
+
+[TOC]
+
+## "Security through obscurity is not much security at all."
+
+Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) in 1851, who easily picked the Crystal Palace locks during a London exhibition that year.  We fully agree, which is why our blueprints for our Oracle Cloud Infrastructure (OCI) automation engine are [available on GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
+
+## Infrastructure Security
+
+### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://github.com/SunStarSys/orthrus) [OTP-SHA1](https://en.wikipedia.org/wiki/One-time_password) sudo challenges
+
+No fixed passwords stored on servers, not even in crypt form. This *limits* headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
+
+### Sandboxed execution for builds and CGI scripts
+
+We deploy "shared-nothing" zone builds, defaulting to zero network availability. This means the only things a customer build can access or modify are their own assets, not those any other customer, or any other system paths on the zone itself (besides [`/tmp`](#)).  Furthermore, only Enterprise customers have internet access during their builds, because they are using their own *unique* Solaris zones that can be tailored exactly to their build requirements.
+
+Ditto for CGI scripts, which are fully locked down in terms of write access to anything other than [`/tmp`](#).
+
+### Zero Trust aspects
+
+The basic premise of [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various Point of Presence (POP) LANs is only exposed to the bare-metal machine's loopback device interface [`lo0`](#), and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
+
+This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture (balancing Hobbsian transparency with the military mantra "loose lips sink ships" is more art than science).  Rest assured &mdash; beyond breaking the antispoofing [`lo0`](#) protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
+
+Even if the master OCI control account is compromised, the **confidentiality** and **integrity** of all customer assets remains inviolate.  All a black-hat can do is make a mess with customer website **availability**. In particular, they cannot access the Subversion service data records.  We can reconstruct the entire OCI infrastructure from scratch in 48-72 hours once the bad apple's OCI access has been terminated.
+
+## Application Security
+
+Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in lib/path.pm.  Ofshoot server configuration files are dynamically generated on every committed change.
+
+### Wiki Issues
+
+Several! fun stuff
+
+#### Online Editor
+
+more. and... more!!!
+
+##### Subversion ACLs govern server-side working copy read access
+
+##### Commit access is directly controlled with Subversion ACLs
+
+Nothing can be built and subsequently viewed over the network without a corresponding authorized Subversion commit. The main issue here is in controlling what information is available to a wiki page author's committed and built edits.
+
+If you allow Template preprocessing in the markdown source pages, you need to be aware of how template arguments make the contents of other files in the tree availaible as variables to the source of the edited page. Often times, if configured to do so, the edited page can declare its own dependency files in the headers of the page, which is something to think as you weigh feature-sets against securitt-control in your Wiki's Information Architecture.  While we can offer guidance and support to match your needs, it's really up to you to decide how to balance the scales for your organization's enterprise wiki.
+
+See the below section on [Depenency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details.
+
+As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification.  In other words, the system will support branch experimentation without any additional controls on your part  to ensure protected assets remain protected throughout each branch's natural lifecycle.
+
+#### Build System ACL's
+
+The build system is all-seeing and all-knowing, but we can ensure that your built, protected assets are only visible to the teams you manage and control in the Subversion ACLs. By default, the build system will reveal the list of file names it built through the browser IDE upon a commit, but even that list of file names and paths can be controlled if you prefer.
+
+##### Template Traversal Controls
+
+See [sanitize_relative_path]({{snippetA.pretty_uri}}):
+
+[snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc]
+
+This code enforces the rules which follow belonw in this section.
+
+###### include and extends tags
+
+All target files are in a subfolder of the [`/templates/`](#) folder, and must be referenced as absolute paths rooted at that folder.
+
+###### ssi tag
+
+All target files are in a subfolder of the [`/content/`](#) folder, and must be referenced as absolute paths rooted at that folder.
+If the target path is not world-readable according to Subversion ACL settings, the [`ssi`](#) operation will fail.
+
+This is because [`ssi`](#) support revolves around [`permalink`](#) management, which is a non-existent concept for non-public URLs.
+
+#### Dependency/ACL Injection Controls
+
+hi.
+
+##### lib/{path,view}.pm Subversion ACLs
+
+##### Dynamically Generated Rules via @{path::acl}
+
+##### Custom Controls on seed_file_deps() and  seed_file_acl() usage in lib/path.pm
+
+##### Overriding fetch_deps in lib/view.pm
+
+#### Built Website and Subversion ACL's synchronized with @{path::acl} instantly upon commit
+
+Automatic protection for ephemeral branch builds.
+
+#### PCRE Search Engine Builtin Controls
+
+##### Source Code search
+
+##### Live Website Search
+
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}})
+{% endfor %}
