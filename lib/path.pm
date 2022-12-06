@@ -139,6 +139,7 @@ acl:
       "*": r
   - path: content/orion
     rules:
+      "@staff": rw
       "@svnadmin": rw
       "*": r
 
