@@ -48,17 +48,19 @@ Nothing can be built and subsequently viewed over the network without a correspo
 
 If you allow Template preprocessing in the markdown source pages, you need to be aware of how template arguments make the contents of other files in the tree availaible as variables to the source of the edited page. Often times, if configured to do so, the edited page can declare its own dependency files in the headers of the page, which is something to think as you weigh feature-sets against securitt-control in your Wiki's Information Architecture.  While we can offer guidance and support to match your needs, it's really up to you to decide how to balance the scales for your organization's enterprise wiki.
 
-See the below section on [Depenency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details.
+See the below section on [Dependency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details, and checkout this live example of how easy ACL's can be centrally configured in [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
-As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification.  In other words, the system will support branch experimentation without any additional controls on your part  to ensure protected assets remain protected throughout each branch's natural lifecycle.
+[snippet:repo=SunStarSys/www:path=lib/path.pm:branch=trunk:token=#acl]
 
-#### Build System ACL's
+As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification. In other words, the system will support branch experimentation without any additional controls on your part to ensure protected assets remain protected throughout each branch's natural lifecycle.
+
+#### Build System ACL's?
 
 The build system is all-seeing and all-knowing, but we can ensure that your built, protected assets are only visible to the teams you manage and control in the Subversion ACLs. By default, the build system will reveal the list of file names it built through the browser IDE upon a commit, but even that list of file names and paths can be controlled if you prefer.
 
 ##### Template Traversal Controls
 
-See [sanitize_relative_path]({{snippetA.pretty_uri}}):
+See [sanitize_relative_path]({{snippetB.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc]
 
