@@ -131,6 +131,7 @@ releases:
     tag: v2.0.2
 # hard-coded deps
 dependencies: {}
+#acl
 acl:
   - path: content
     rules:
@@ -142,4 +143,4 @@ acl:
       "@staff": rw
       "@svnadmin": rw
       "*": r
-
+#acl
