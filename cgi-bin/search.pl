@@ -167,7 +167,7 @@ while (my ($k, $v) = each %matches) {
       s/:4433//, s/-internal// for $url;
       $svn->info($url, sub {shift}, "HEAD");
    };
-    next if $@;
+    warn "$@" and next if $@;
   }
   else {
     my $subr = $r->lookup_file("$dirname$k");
