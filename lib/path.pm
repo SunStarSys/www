@@ -143,4 +143,8 @@ acl:
       "@staff": rw
       "@svnadmin": rw
       "*": r
+  - path: cgi-bin/search.pl
+    rules:
+      "@staff": rw
+      "@svnadmin": rw
 #acl
