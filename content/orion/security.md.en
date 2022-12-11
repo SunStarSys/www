@@ -52,6 +52,10 @@ See the below section on [Dependency/ACL Injection Controls](#Dependency/ACL Inj
 
 [snippet:repo=SunStarSys/www:path=lib/path.pm:branch=trunk:token=#acl:lang=yaml]
 
+Content Authors can configure page restrictions in the page's [headers]({{snippetB.pretty_uri}}):
+
+[snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
+
 As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification. In other words, the system will support branch experimentation without any additional controls on your part to ensure protected assets remain protected throughout each branch's natural lifecycle.
 
 #### Build System ACL's?
@@ -60,7 +64,7 @@ The build system is all-seeing and all-knowing, but we can ensure that your buil
 
 ##### Template Traversal Controls
 
-See [sanitize_relative_path]({{snippetB.pretty_uri}}):
+See [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
 
