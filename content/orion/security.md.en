@@ -62,7 +62,7 @@ The build system is all-seeing and all-knowing, but we can ensure that your buil
 
 See [sanitize_relative_path]({{snippetB.pretty_uri}}):
 
-[snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc]
+[snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
 
 This code enforces the rules which follow belonw in this section.
 
