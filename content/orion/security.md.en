@@ -50,7 +50,7 @@ If you allow Template preprocessing in the markdown source pages, you need to be
 
 See the below section on [Dependency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details, and checkout this live example of how easy ACL's can be centrally configured in [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
-[snippet:repo=SunStarSys/www:path=lib/path.pm:branch=trunk:token=#acl]
+[snippet:repo=SunStarSys/www:path=lib/path.pm:branch=trunk:token=#acl:lang=yaml]
 
 As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification. In other words, the system will support branch experimentation without any additional controls on your part to ensure protected assets remain protected throughout each branch's natural lifecycle.
 
