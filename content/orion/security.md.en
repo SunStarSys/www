@@ -103,7 +103,7 @@ This is because [`ssi`](#) support revolves around [`permalink`](#) management, 
 
 #### Dependency/ACL Injection Controls
 
-hi. there
+Controlled by [`lib/path.pm`](#) imports.
 
 ##### lib/{path,view}.pm Subversion ACLs
 
