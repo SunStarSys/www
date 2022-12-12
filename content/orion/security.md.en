@@ -62,6 +62,8 @@ The online editor supports a JSON UI by simply setting your user-agent's Accept 
 
 ##### Subversion ACLs govern server-side working copy read access
 
+Each working-copy resource available through the UI is cross-checked against your Subversion ACLs prior to presenting them to the user.  In this way we ensure read-access to unauthorized resourcces is prevented for the assets under version control (aka **everything**).
+
 ##### Commit access is directly controlled with Subversion ACLs
 
 Nothing can be built and subsequently viewed over the network without a corresponding authorized Subversion commit. The main issue here is in controlling what information is available to a wiki page author's committed and built edits.
