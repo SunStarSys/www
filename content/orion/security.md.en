@@ -81,7 +81,7 @@ Content Authors can configure page restrictions in the page's [headers]({{snippe
 
 As a side note, protected resources cannot be copied into a branch by unauthorized personnel, even without placing any additional ACL controls on branch creation and modification. In other words, the system will support branch experimentation without any additional controls on your part to ensure protected assets remain protected throughout each branch's natural lifecycle.
 
-#### Build System ACL's?
+#### Build System ACLs?
 
 The build system is all-seeing and all-knowing, but we can ensure that your built, protected assets are only visible to the teams you manage and control in the Subversion ACLs. By default, the build system will reveal the list of file names it built through the browser IDE upon a commit, but even that list of file names and paths can be controlled if you prefer.
 
