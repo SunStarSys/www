@@ -17,7 +17,7 @@ Dependencies: *.md.en
 
 - Now w/ Perl v5.34.0, mod_perl v2.0 w/ ithreads and httpd v2.4.43 w/ event mpm.
 
-## Subversion v1.14.0-dev
+## Subversion v1.14.x
 
 - custom ithread-safe [`SVN::Client`](#) bindings w/ per-request memory pools.
 
