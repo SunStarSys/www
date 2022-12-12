@@ -113,8 +113,6 @@ Controlled by [`lib/path.pm`](#) imports.
 
 ##### Custom Controls on seed_file_deps() and  seed_file_acl() usage in lib/path.pm
 
-##### Overriding fetch_deps in lib/view.pm
-
 #### Built Website and Subversion ACL's synchronized with @{path::acl} instantly upon commit
 
 Automatic protection for ephemeral branch builds.
