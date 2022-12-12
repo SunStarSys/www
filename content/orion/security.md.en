@@ -109,15 +109,27 @@ Controlled by [`lib/path.pm`](#) imports.
 
 ##### lib/{path,view}.pm Subversion ACLs
 
+It's wise to control write access to these resources, by limiting them to people both competent in the codebase and authorized to implement security controls for the entire set of assets under version control (aka *everything**).
+
+It is also a good idea to include the [`@svnadmin`](#) group amongst those with read-write access, but it's not strictly necessary even if you need us to manually reset your Subversion ACLs.
+
 ##### Dynamically Generated Rules via @{path::acl}
+
+The build system takes note of your [`lib/path.pm`](#) imports of either (or both) of seed_file_deps() and seed_file_acl(), and carry that choice forward in its internal processing of Subversion commit changes that give rise to an incremental build.
 
 ##### Custom Controls on seed_file_deps() and  seed_file_acl() usage in lib/path.pm
 
+Beyond the import of these symbols to [`lib//path.pm`](#), there is also a choice in how, and to which files you wish to apply them to, during a walk_content_tree () code block execution.  After all, it's not just a config file, but a codebase, with all the Turing complete features of [`Perl`](#) we've come to know and appreciate!
+
 #### Built Website and Subversion ACL's synchronized with @{path::acl} instantly upon commit
 
-Automatic protection for ephemeral branch builds.
+Automatic protection for ephemeral branch builds. Zero additional configuration required.
 
 #### PCRE Search Engine Builtin Controls
+
+Same situation as the general-purpose UI: it cross-checks against SVN in the IDE.
+
+On the live site, it will do the same when you enable markdown (source tree) searches. Otherwise, it will run httpd subrequests to your live site to test whether the user is authorized to access that live file (assuming you have password-protected your search engine so it has user data to work with).
 
 ##### Source Code search
 
