@@ -44,11 +44,21 @@ Orion's security model is centrally managed by the settings contained in [`@path
 
 ### Wiki Issues
 
+Wiki security involves several factors:
 
+1. UI/API Security
+
+2. Middleware/Backend Security
+
+3. Template Traversal Protections
+
+We delve into these issuas as they relate to Orion below.
 
 #### Online Editor
 
-more. and... more!!!!
+The online editor supports a JSON UI by simply setting your user-agent's Accept header to prefer the [`application/json`](#) MIME-type, so the security controls are the same for both the UI and API.
+
+**There is no administrative UI/API** outside of direct Subversion access.
 
 ##### Subversion ACLs govern server-side working copy read access
 
