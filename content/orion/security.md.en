@@ -24,7 +24,7 @@ Ditto for CGI scripts, which are fully locked down in terms of write access to a
 
 - TLS 1.3 for HTTPS connections
 
-- SSH ecdsa for cross-host `lo` reverse-port-forwarding
+- SSH ecdsa for cross-host [`lo`](#) reverse-port-forwarding
 
 - IPSEC for cross-regional VPN
 
