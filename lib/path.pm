@@ -143,6 +143,10 @@ acl:
       "@staff": rw
       "@svnadmin": rw
       "*": r
+  - path: lib
+    rules:
+      "@svnadmin": rw
+      "*": r
   - path: cgi-bin/search.pl
     rules:
       "@staff": rw
