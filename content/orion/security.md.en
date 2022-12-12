@@ -20,6 +20,16 @@ We deploy "shared-nothing" zone builds, defaulting to zero network availability.
 
 Ditto for CGI scripts, which are fully locked down in terms of write access to anything other than [`/tmp`](#).
 
+### End to end encryption
+
+- TLS 1.3 for HTTPS connections
+
+- SSH ecdsa for cross-host `lo` reverse-port-forwarding
+
+- IPSEC for cross-regional VPN
+
+- AES-256 for ZFS encryption
+
 ### Zero Trust aspects
 
 The basic premise of [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various Point of Presence (POP) LANs is only exposed to the bare-metal machine's loopback device interface [`lo0`](#), and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
@@ -34,7 +44,7 @@ Orion's security model is centrally managed by the settings contained in [`@path
 
 ### Wiki Issues
 
-Several! fun stuff
+
 
 #### Online Editor
 
