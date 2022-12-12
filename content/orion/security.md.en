@@ -26,7 +26,7 @@ Ditto for CGI scripts, which are fully locked down in terms of write access to a
 
 - SSH ecdsa for cross-host [`lo`](#) reverse-port-forwarding
 
-- IPSEC for cross-regional VPN
+- IPSEC/IKEv2 AES-256 for cross-regional VPN
 
 - AES-256 for ZFS encryption
 
