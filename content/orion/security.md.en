@@ -22,7 +22,7 @@ Ditto for CGI scripts, which are fully locked down in terms of write access to a
 
 ### End to end encryption
 
-- TLS 1.3 (+FS) AES(256) for HTTPS connections
+- TLS 1.3 (+FS) AES(256) SHA(256) for HTTPS connections
 
 - SSH ecdsa keys for cross-host [`lo`](#) reverse-port-forwarding
 
