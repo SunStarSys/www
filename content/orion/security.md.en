@@ -131,10 +131,6 @@ Same situation as the general-purpose UI: it cross-checks against SVN in the IDE
 
 On the live site, it will do the same when you enable markdown (source tree) searches. Otherwise, it will run httpd subrequests to your live site to test whether the user is authorized to access that live file (assuming you have password-protected your search engine so it has user data to work with).
 
-##### Source Code search
-
-##### Live Website Search
-
 --------
 
 ## Index
