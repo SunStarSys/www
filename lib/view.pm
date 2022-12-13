@@ -1,4 +1,5 @@
 package view;
+
 use base 'SunStarSys::View';
 use strict;
 use warnings;
