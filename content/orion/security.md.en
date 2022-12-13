@@ -116,7 +116,7 @@ It's wise to control write access to these resources, by limiting them to people
 
 It is also a good idea to include the [`@svnadmin`](#) group amongst those with read-write access, but it's not strictly necessary even if you need us to manually reset your Subversion ACLs.
 
-##### Dynamically Generated Rules via @{path::acl}
+##### Dynamically Generated Rules via &#64;path::acl
 
 The build system takes note of your [`lib/path.pm`](#) imports of either (or both) of seed_file_deps() and seed_file_acl(), and carry that choice forward in its internal processing of Subversion commit changes that give rise to an incremental build.
 
