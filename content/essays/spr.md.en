@@ -3,7 +3,7 @@ Dependencies: *.md.en
 Categories: IT, Security, Performance, Reliability
 Archive: yes
 
-<!-- #teaser -->"Nonfunctional" software engineering revolves around three key issues: security, performance, and reliability (**SPR**)<!-- #teaser -->; whereas "functional" software engineering involves the normal feature-based software development lifecycle. A proper [NIST-800-160](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1.pdf) based SSDLC balances functional and nonfunctional software lifecycle aspects into a coherent whole, for the CTO on down.
+{# lede #}"Nonfunctional" software engineering revolves around three key issues: security, performance, and reliability (**SPR**){# lede #}; whereas "functional" software engineering involves the normal feature-based software development lifecycle. A proper [NIST-800-160](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-160v1.pdf) based SSDLC balances functional and nonfunctional software lifecycle aspects into a coherent whole, for the CTO on down.
 
 Some firms have derived incredible value by splitting functional from nonfunctional software development into two independent hierarchies in the engineering part of the organizational chart. You can find **SPR** architects like myself to lead such an **SPR** team, with a flexible combination of evolving, subordinate roles:
 
