@@ -11,7 +11,7 @@ Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wiki
 
 ## Infrastructure Security
 
-### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://github.com/SunStarSys/orthrus) [OTP-SHA1](https://en.wikipedia.org/wiki/One-time_password) sudo challenges
+### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo challenges
 
 No fixed passwords stored on servers, not even in crypt form. This *limits* headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
 
