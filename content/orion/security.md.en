@@ -41,7 +41,7 @@ Even if the master OCI control account is compromised, the **confidentiality** a
 
 ## Application Security
 
-Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in lib/path.pm.  Ofshoot server configuration files are dynamically generated on every committed change.
+Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in [`lib/path.pm`](#).  Offshoot server configuration files are dynamically generated on every committed change.
 
 ### Wiki Issues
 
@@ -124,7 +124,7 @@ The build system takes note of your [`lib/path.pm`](#) imports of either (or bot
 
 Beyond the import of these symbols to [`lib//path.pm`](#), there is also a choice in how, and to which files you wish to apply them to, during a walk_content_tree () code block execution.  After all, it's not just a config file, but a codebase, with all the Turing complete features of [`Perl`](#) we've come to know and appreciate!
 
-#### Built Website and Subversion ACL's synchronized with @{path::acl} instantly upon commit
+#### Built Website and Subversion ACL's synchronized with &#64;path::acl instantly upon commit
 
 Automatic protection for ephemeral branch builds. Zero additional configuration required.
 
