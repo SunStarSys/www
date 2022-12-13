@@ -119,11 +119,11 @@ On our site, we aggresssively archive stale essays to keep build times for new e
 - content in `/(essays|clients)/` are always permalinks, even after archiving
 - archiving effectively removes the permalink location from the *dependency graph*, while not removing the permalink itself from the website
 
-##### Teasers
+##### Lede
 
-HTML comments embedded in the Markdown prose form boundaries of the teaser content. We use &lt;!-- #teaser --&gt; for this purpose.
+HTML comments embedded in the Markdown prose form boundaries of the lede content. We use **&#123;# lede #&#125;** for this purpose.
 
-Processing teasers is done with the `teaser` Template filter. It is useful to combine this with the `ssi` filter for indexing a Category file with more than one category page within it.
+Processing ledes is done with the `lede` Template filter. It is useful to combine this with the `ssi` filter for indexing a Category file with more than one category page within it.
 
 ## Conclusions
 
