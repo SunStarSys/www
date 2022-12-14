@@ -81,3 +81,10 @@ div.jumbotron ul {
 	-webkit-animation-iteration-count: 1;
 }
 </style>
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
