@@ -54,6 +54,14 @@ Looking for a simpler, safer, faster, **federated** Enterprise Wiki?  Check out 
 {% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success">[{{d.0|dirname|basename}}]({{d.0}})</button> {% endfor %}
 </div>
 
+```mermaid
+  graph TD;
+      A-->B;
+      A-->C;
+      B-->D;
+      C-->D;
+```
+
 <style type="text/css">
 button.btn a {
     color:#fff;
@@ -81,10 +89,3 @@ div.jumbotron ul {
 	-webkit-animation-iteration-count: 1;
 }
 </style>
-```mermaid
-  graph TD;
-      A-->B;
-      A-->C;
-      B-->D;
-      C-->D;
-```
