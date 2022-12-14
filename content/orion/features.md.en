@@ -67,7 +67,21 @@ Dependencies: *.md.en
 
 - YAML headers in source (markdown) files now fully supported.
 
-- Coming as soon as [jsdom](https://github.com/jsdom/jsdom) finishes their SVG implementation: Flowcharts!
+- Native mermaid.js support
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts<br/>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
 
 - Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for mathematical expressions): $$E = mc^2$$
 
