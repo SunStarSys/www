@@ -13,6 +13,7 @@
     <link href="/css/code.css" rel="stylesheet" media="screen">
     <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/css/katex.min.css" rel="stylesheet" media="screen">
+    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
     {% block header %}{% endblock %}
     {% block analytics %}
@@ -128,7 +129,9 @@
   <script src="/js/underscore.min.js"></script>
   <script src="/js/flowchart.min.js"></script>
   <script src="/js/jquery.flowchart.min.js"></script>
+  <script src="/js/mermaid.min.js"></script>
   <script type="text/javascript">
+    mermaid.initialize({startOnLoad: true});
     $(".flowchart").flowChart();
   </script>
 </div>
