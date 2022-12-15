@@ -70,6 +70,15 @@ Dependencies: *.md.en
 - Native @mermaid-js v9.2.2 with mindmap support:
 
 ```mermaid
+graph TD
+    A[Christmas] -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+
+```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
