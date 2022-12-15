@@ -83,6 +83,15 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 ```
 ```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+```mermaid
 pie title Commits to orion on GitHub
 	"Sunday" : 4
 	"Monday" : 5
