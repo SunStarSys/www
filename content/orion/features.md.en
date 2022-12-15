@@ -83,7 +83,8 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 ```
 ```mermaid
-pie title Commits to mxgraph2 on GitHub
+%%{init:{"theme":"light"}}%%
+pie title Commits to orion on GitHub
 	"Sunday" : 4
 	"Monday" : 5
 	"Tuesday" : 7
