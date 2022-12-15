@@ -83,7 +83,6 @@ sequenceDiagram
     Bob-->>John: Jolly good!
 ```
 ```mermaid
-%%{init:{"theme":"dark"}}%%
 pie title Commits to orion on GitHub
 	"Sunday" : 4
 	"Monday" : 5
