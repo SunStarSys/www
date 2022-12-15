@@ -67,7 +67,7 @@ Dependencies: *.md.en
 
 - YAML headers in source (markdown) files now fully supported.
 
-- Native mermaid.js support:
+- Native @mermaid-js support:
 
 ```mermaid
 sequenceDiagram
