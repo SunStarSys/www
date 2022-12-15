@@ -247,11 +247,11 @@ end
 
 subgraph publisher1System[ ]
     A5[[Publisher 1 System]]
-    B5[Gives details about books publshed by them]
+    B5[Gives details about books published by them]
 end
 subgraph publisher2System[ ]
     A6[[Publisher 2 System]]
-    B6[Gives details about books publshed by them]
+    B6[Gives details about books published by them]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
