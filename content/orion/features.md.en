@@ -89,7 +89,19 @@ pie title Commits to orion on GitHub
 	"Tuesday" : 7
   "Wednesday" : 3
 ```
-
+```mermaid
+gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+```
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
