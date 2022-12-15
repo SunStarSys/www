@@ -92,7 +92,7 @@ pie title Commits to orion on GitHub
 ```
 
 ```mermaid
-%%{init:{"theme":"base"}}%%
+%%{init:{"theme":"default"}}%%
 graph TB
     sq[Square shape] --> ci((Circle shape))
 
