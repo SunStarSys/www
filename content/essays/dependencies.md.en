@@ -53,7 +53,7 @@ Of course, our [Orion Enterprise Wiki](/orion/) has never had trouble dealing wi
 
 ### Isn't this just about Hyperlinks?
 
-In fact, the *link topology* of your website is an entirely separate matter from the source tree's *dependency graph*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *dependency graph*.
+**No!** In fact, the *link topology* of your website is an entirely separate matter from the source tree's *dependency graph*.  A search engine will naturally ferret out the *link topology*, but has no insight into the *dependency graph*.
 
 Here's a `240+ vertices x 3859 edges`, current birds-eye graph of the English *link topology* graph for **our site** ([using GraphViz's `twopi`](https://github.com/SunStarSys/orion/blob/master/links2dotcfg.pl)):
 
