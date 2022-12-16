@@ -61,9 +61,6 @@ our @patterns = (
 
 );
 
-# compress copies of text files that don't match a configured regex in @patterns
-our $compress = 1;
-
 #snippet
 our (%dependencies, @acl);
 
