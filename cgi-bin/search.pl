@@ -148,10 +148,14 @@ my @unzip = $markdown ? () : "--unzip";
 
 my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
+warn "GOT HERE";
+
 if ($?) {
   $? == 124 and sleep 60;
   return 400;
 }
+
+warn "GOT HERE";
 
 parser $pffxg, $dirname, undef, \ my %matches;
 
@@ -185,8 +189,6 @@ while (my ($k, $v) = each %matches) {
     unless $title_cache{$title}++;
   push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split(/[;,]\s*/, $data{headers}{keywords} // ""), $data{content} =~ m/>#(\w+)</g]};
 }
-
-warn "GOT HERE";
 
 @matches = grep {shift(@$_),shift(@$_)} sort {no warnings 'uninitialized'; $b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
 
