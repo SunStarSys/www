@@ -120,7 +120,7 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-my $markdown  = $apreq->args("markdown") ? "Markdown" : "";
+my $markdown  = $apreq->args("markdown_search") ? "Markdown" : "";
 my $lang     = encode($apreq->args("lang") || ".en");
 my $re       = $apreq->args("regex") || return 400;
 my $host = $r->headers_in->{host};
@@ -204,7 +204,7 @@ $r->content_type("text/html; charset='utf-8'");
 $r->print(Template("search.html")->render({
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
   title       => $title{$lang},
-  markdown    => !!$markdown,
+  markdown_search => !!$markdown,
   matches     => \@matches,
   lang        => $lang,
   regex       => $re,

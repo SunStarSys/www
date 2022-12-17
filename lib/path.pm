@@ -42,7 +42,7 @@ our @patterns = (
     conf          => $conf,
     archive_root  => "/archives",
     category_root => "/categories",
-    markdown      => 1, # search markdown instead of built html
+    markdown_search => 1, # search markdown instead of built html
     permalink     => 1,
   }],
 
