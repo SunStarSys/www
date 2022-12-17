@@ -186,6 +186,8 @@ while (my ($k, $v) = each %matches) {
   push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split(/[;,]\s*/, $data{headers}{keywords} // ""), $data{content} =~ m/>#(\w+)</g]};
 }
 
+warn "GOT HERE";
+
 @matches = grep {shift(@$_),shift(@$_)} sort {no warnings 'uninitialized'; $b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
 
 @keywords = sort {$a cmp $b} @keywords;
@@ -200,7 +202,6 @@ my %title = (
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
 $r->content_type("text/html; charset='utf-8'");
-warn "GOT HERE";
 $r->print(Template("search.html")->render({
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
   title       => $title{$lang},
