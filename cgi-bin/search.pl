@@ -148,14 +148,12 @@ my @unzip = $markdown ? () : "--unzip";
 
 my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
-warn "GOT HERE";
+warn $pffxg;
 
 if ($?) {
   $? == 124 and sleep 60;
   return 400;
 }
-
-warn "GOT HERE";
 
 parser $pffxg, $dirname, undef, \ my %matches;
 
