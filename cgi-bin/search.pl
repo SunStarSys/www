@@ -97,7 +97,6 @@ sub run_shell_command {
         or die "Can't detaint '$_'\n";
     }
     my @rv = qx($cmd @$args @filenames 2>&1);
-    warn "@filenames";
     utf8::decode($_) for @rv;
     return wantarray ? @rv : join "", @rv;
 }
@@ -201,6 +200,7 @@ my %title = (
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
 $r->content_type("text/html; charset='utf-8'");
+warn "GOT HERE";
 $r->print(Template("search.html")->render({
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
   title       => $title{$lang},
