@@ -96,9 +96,8 @@ sub run_shell_command {
       "'$_'" =~ /^(.*)$/ms and $_ = $1
         or die "Can't detaint '$_'\n";
     }
-    warn "@filenames";
-    unshift @filenames, "--" if grep /^-/, @filenames;
     my @rv = qx($cmd @$args @filenames 2>&1);
+    warn "@filenames";
     utf8::decode($_) for @rv;
     return wantarray ? @rv : join "", @rv;
 }
