@@ -149,8 +149,8 @@ my @unzip = $markdown ? () : "--unzip";
 my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
 if ($?) {
-  $? == 124 and sleep 60;
-  return 400;
+  ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
+  die $pffxg;
 }
 
 parser $pffxg, $dirname, undef, \ my %matches;
