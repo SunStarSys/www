@@ -164,9 +164,9 @@ while (my ($k, $v) = each %matches) {
   if ($markdown) {
     eval {
       my $url;
-      $svn->info("$dirname$k", sub {$url = $_[1]->URL});
+      #$svn->info("$dirname$k", sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      $svn->info($url, sub {shift}, "HEAD");
+      #$svn->info($url, sub {shift}, "HEAD");
    };
     warn "$@" and next if $@;
   }
