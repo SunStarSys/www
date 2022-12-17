@@ -108,7 +108,6 @@ walk_content_tree {
 
 1;
 
-
 __DATA__
 title: "SunStar Systems"
 keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs,solaris,http/2"
@@ -139,16 +138,22 @@ acl:
       "*": r
   - path: content/orion
     rules:
+      "@marketing": rw
       "@staff": rw
       "@svnadmin": rw
       "*": r
   - path: lib
     rules:
       "@svnadmin": rw
-      "*": r
+      "@devops": rw
+  - path: templates
+    rules:
+      "@svnadmin": rw
+      "@frontend": rw
   - path: cgi-bin/search.pl
     rules:
       "@staff": rw
       "@svnadmin": rw
+      "@devops": rw
       "*": r
 #acl
