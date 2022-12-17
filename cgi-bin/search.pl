@@ -96,6 +96,7 @@ sub run_shell_command {
       "'$_'" =~ /^(.*)$/ms and $_ = $1
         or die "Can't detaint '$_'\n";
     }
+    warn "@filenames";
     unshift @filenames, "--" if grep /^-/, @filenames;
     my @rv = qx($cmd @$args @filenames 2>&1);
     utf8::decode($_) for @rv;
@@ -115,15 +116,15 @@ sub breadcrumbs {
     for (@path) {
         $relpath =~ s!\.?\./$!!;
         $relpath ||= './';
-        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang;markdown=$markdown">) . (escape_html("\u$_") || "Home") . q(</a>);
+        push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang;markdown_search=$markdown">) . (escape_html("\u$_") || "Home") . q(</a>);
       }
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-my $markdown  = $apreq->args("markdown_search") ? "Markdown" : "";
+my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 my $lang     = encode($apreq->args("lang") || ".en");
 my $re       = $apreq->args("regex") || return 400;
-my $host = $r->headers_in->{host};
+my $host     = $r->headers_in->{host};
 
 utf8::decode($re);
 
@@ -143,7 +144,7 @@ for ($d) {
     or die "Can't detaint '$_'\n";
 }
 
- $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
+$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
 
