@@ -145,9 +145,9 @@ for ($d) {
 
  $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
-my $unzip = $markdown ? "" : "--unzip";
+my @unzip = $markdown ? () : "--unzip";
 
-my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache/, qw/--args 100 --html --markdown -- -P -e/], $re;
+my $pffxg = run_shell_command "cd $d && timeout 5 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
 if ($?) {
   $? == 124 and sleep 60;
@@ -164,9 +164,9 @@ while (my ($k, $v) = each %matches) {
   if ($markdown) {
     eval {
       my $url;
-      #$svn->info("$dirname$k", sub {$url = $_[1]->URL});
+      $svn->info("$dirname$k", sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      #$svn->info($url, sub {shift}, "HEAD");
+      $svn->info($url, sub {shift}, "HEAD");
    };
     warn "$@" and next if $@;
   }
