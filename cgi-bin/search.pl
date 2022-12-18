@@ -13,6 +13,7 @@ use HTML::Parser;
 use APR::Request::Apache2;
 use APR::Request::Param;
 use APR::Request qw/encode/;
+use Cpanel::JSON::XS;
 
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
@@ -79,7 +80,27 @@ sub parser :Sealed {
       push @{$$paths{$file}}, {count => $count, match => $match};
     }
   }
-};
+}
+
+sub client_wants_json :Sealed {
+    my Apache2::RequestRec $r     = shift;
+    my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
+    my APR::Request $apreq = $apreq_class->handle($r);
+
+    return 1 if $apreq->args("as_json");
+
+    no warnings 'uninitialized';
+    my %accept;
+    for (split /,\s*/, $r->headers_in->get("Accept")) {
+        /([^;]+)(?:;\s*q=([\d.]+))?/ or next;
+        $accept{$1} = $2 // 1;
+    }
+    for (sort {$accept{$b} <=> $accept{$a} || $a cmp $b} keys %accept) {
+        return 1 if $_ eq "application/json" or $_ eq "application/*";
+        return 0 if $_ eq "text/html"        or $_ eq "text/*";
+    }
+    return 0;
+}
 
 sub run_shell_command {
     my ($cmd, $args, @filenames) = @_;
@@ -198,9 +219,7 @@ my %title = (
   ".fr" => "Résultats de recherche pour \l$markdown ",
 );
 
-local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
-$r->content_type("text/html; charset='utf-8'");
-$r->print(Template("search.html")->render({
+my $args = {
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
   title       => $title{$lang},
   markdown_search => !!$markdown,
@@ -209,6 +228,16 @@ $r->print(Template("search.html")->render({
   regex       => $re,
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang, $markdown),
   keywords    => \@keywords,
-}));
+};
 
+
+if (client_wants_json $r) {
+  $r->content_type("application/json; charset='utf-8'");
+  $r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args));
+  return 0;
+}
+
+local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
+$r->content_type("text/html; charset='utf-8'");
+$r->print(Template("search.html")->render($args);
 return 0;
