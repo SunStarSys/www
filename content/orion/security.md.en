@@ -39,6 +39,14 @@ This infra is fully automated once a region is brought online, but that's all we
 
 Even if the master OCI control account is compromised, the **confidentiality** and **integrity** of all customer assets remains inviolate.  All a black-hat can do is make a mess with customer website **availability**. In particular, they cannot access the Subversion service data records.  We can reconstruct the entire OCI infrastructure from scratch in 48-72 hours once the bad apple's OCI access has been terminated.
 
+### Logging, Monitoring, and Auditing
+
+We encourage Enterprise customers to create a Splunk account, and we will deliver near-real-time weblogs to your account from every global POP you require.  Error logs for your server-side CGI scripting are also made available to Splunk.
+
+We monitor service availability from all our OCI POPs world-wide, and trigger HA (Availability Domain), or regional, failover events if a server outage lasts for more than 30 seconds.
+
+ACL Auditing can be performed by simply building a website's Subversion HEAD using the Apache Licensed [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) script and examining the resulting build to the www/.acl file
+in your checkout directory, at any time you wish.  Normally the build process will take less than 10-15 seconds on modern hardware.
 ## Orion Application Security
 
 Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in [`lib/path.pm`](#).  Offshoot server configuration files are dynamically generated on every committed change.
