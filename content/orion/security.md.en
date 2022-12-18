@@ -56,7 +56,7 @@ Orion's security model is centrally managed by the settings contained in [`@path
 
 ### Tainted Data Protections
 
-All of our Perl runtimes have mandatory taint checks enabled with the -T flag.
+All of our Perl runtimes have mandatory taint checks enabled with the -T flag; a powerful, uniquely Perl guard against Remote Code Exploits.
 
 ### Wiki Issues
 
