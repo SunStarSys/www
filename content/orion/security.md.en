@@ -46,6 +46,9 @@ We encourage Enterprise customers to create a Splunk account, and we will delive
 We monitor service availability from all our OCI POPs world-wide, and trigger HA (Availability Domain), or regional, failover events if a server outage lasts for more than 30 seconds.
 
 ACL Auditing can be performed by simply building a website's Subversion HEAD using the Apache Licensed [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) script and examining the resulting build to the [`www/.acl`](#) file in your checkout directory, at any time you wish.  Normally the build process will take less than 10-15 seconds on modern hardware.
+
+Subversion Server-Side Commit Hooks are also customizable to your oversight concerns. From a simple commit mailer to secured access to our svnpubsub daemon, there are any number of custom configurations available.
+
 ## Orion Application Security
 
 Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in [`lib/path.pm`](#).  Offshoot server configuration files are dynamically generated on every committed change.
