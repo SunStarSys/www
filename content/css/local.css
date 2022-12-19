@@ -15,6 +15,20 @@ div.jumbotron div.right {
 	margin: 20px 0 20px 20px;
 }
 
+div.flowchart {
+	text-align: center;
+}
+div.sequence-diagram {
+	text-align: center;
+}
+div.graphviz {
+	text-align: center;
+}
+
+div.mermaid {
+	text-align: center;
+}
+
 body { padding-top: 90px }
 div.navbar img {height: 38px;}
 
