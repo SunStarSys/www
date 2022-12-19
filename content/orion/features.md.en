@@ -302,8 +302,11 @@ class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagram.md" "booksSystem"
 ```
 
+- Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for mathematical expressions):
 
-- Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for mathematical expressions): $$E = mc^2$$
+```math
+E = mc^{2}
+```
 
 - Electric! Editor will autocomplete and autoindent; has full screen mode.
 
