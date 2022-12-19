@@ -90,7 +90,10 @@ Andrew->>China: I am good thanks!
 - Native d3-graphviz.js support:
 
 ```graphviz
-digraph { a -> b }
+digraph {
+a -> b;
+a -> c [color=red]
+}
 ```
 
 - Native @mermaid-js v9.2.2 with mindmap support:
