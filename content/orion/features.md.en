@@ -317,6 +317,10 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 - Perl Compatible Regular Expression (PCRE) based.
 - Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 
+## Unlimited page attachments w/ arbitrary mime-types
+
+## Secure, threaded per-page comments (coming soon)
+
 ## Deltas from <span class='text-info'>Apache CMS</span> Features
 
 - Dropped [`mdx_elementid.py`](#) features (new implementation is javascript, not python, and GFM based, so only [TOC] from the py-markdown module carries across).  A problem tailor-made for the above Search and Replace Feature of the IDE.
