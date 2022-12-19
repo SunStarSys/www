@@ -3,7 +3,7 @@ Dependencies: *.md.en
 ACL: joe=rw, @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl
 
-[TOC]
+###### [TOC]
 
 ## "Security through obscurity is not much security at all."
 
@@ -53,6 +53,9 @@ Subversion Server-Side Commit Hooks are also customizable to your oversight conc
 
 Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in [`lib/path.pm`](#).  Offshoot server configuration files are dynamically generated on every committed change.
 
+### OpenIDC SSO Security
+
+Session Cookies are HttpOnly and Secure flagged, so Javascript session stealing attempts are effectively neutralized by the Orion online Editor.
 
 ### Tainted Data Protections
 
