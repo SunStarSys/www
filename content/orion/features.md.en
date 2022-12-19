@@ -1,6 +1,7 @@
 Title: Orion Features
 Keywords: jamstack,markdown,Orion,ide,node.js,oracle,solaris,dtrace,zfs,cloud,cdn,http/2
 Dependencies: *.md.en
+
 <div class="row">
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
@@ -65,6 +66,32 @@ Dependencies: *.md.en
 - **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 
 - YAML headers in source (markdown) files now fully supported.
+
+- Native Flowchart and Sequence Diagram Support
+
+```flow
+st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+```seq
+Andrew->China: Says Hello
+Note right of China: China thinks\nabout it
+China-->Andrew: How are you?
+Andrew->>China: I am good thanks!
+```
+
+- Native d3-graphviz.js support:
+
+```graphviz
+digraph { a -> b }
+```
 
 - Native @mermaid-js v9.2.2 with mindmap support:
 
