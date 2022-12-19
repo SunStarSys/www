@@ -138,6 +138,11 @@
     mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
     mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
     $(".flowchart").flowChart();
+    $(".sequence-diagram").sequenceDiagram();
+    for (const e of $("body").find(".graphviz").toArray()) {
+        d3.select(e).graphviz().renderDot($(e).text());
+        e.innerHTML = ""
+    }
   </script>
 </div>
 </body>
