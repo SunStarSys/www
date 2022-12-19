@@ -15,6 +15,10 @@ div.jumbotron div.right {
 	margin: 20px 0 20px 20px;
 }
 
+p.editormd-tex {
+	text-align: center;
+}
+
 div.flowchart {
 	text-align: center;
 }
