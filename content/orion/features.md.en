@@ -61,7 +61,7 @@ Dependencies: *.md.en
 - Bootstrap (Solarized) styling.
 - Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
 
-## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md
+## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md and Django Templating
 
 - **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 
