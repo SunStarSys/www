@@ -70,10 +70,10 @@ Dependencies: *.md.en
 - Native Flowchart and Sequence Diagram Support
 
 ```flow
-st=>start: 用户登陆
-op=>operation: 登陆操作
-cond=>condition: 登陆成功 Yes or No?
-e=>end: 进入后台
+st=>start: börja
+op=>operation: operation
+cond=>condition: villkor Yes or No?
+e=>end: slut
 
 st->op->cond
 cond(yes)->e
@@ -81,10 +81,10 @@ cond(no)->op
 ```
 ----
 ```seq
-Andrew->China: Says Hello
-Note right of China: China thinks\nabout it
-China-->Andrew: How are you?
-Andrew->>China: I am good thanks!
+Andrew->Jenni: Says Hello
+Note right of Jenni: Jenni thinks\nabout it
+Jenni-->Andrew: How are you?
+Andrew->>Jenni: I am good thanks!
 ```
 ----
 
