@@ -79,13 +79,14 @@ st->op->cond
 cond(yes)->e
 cond(no)->op
 ```
-
+----
 ```seq
 Andrew->China: Says Hello
 Note right of China: China thinks\nabout it
 China-->Andrew: How are you?
 Andrew->>China: I am good thanks!
 ```
+----
 
 - Native d3-graphviz.js support:
 
@@ -323,7 +324,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
       \pdv{(\rho u_i)}{t}+\pdv{(\rho u_i u_j)}{x_j} = -\pdv{p}{x_i}+\pdv{\tau_{ij}}{x_j}+\rho f_i \\
       \pdv{(\rho e)}{t}+(\rho e+p)\pdv{u_i}{x_i} = \pdv{(\tau_{ij} u_j)}{x_i}+\rho f_i u_i+\pdv{(\dot{q}_i)}{x_i}+r \\
 ```
-	- Classical Notation
+    - Classical Notation
 ```math
 \pdv{\rho}{t}+\vec{\nabla}\cdot(\rho\vec{u}) = 0 \\
       \pdv{(\rho \vec{u})}{t}+\vec{\nabla}\cdot\rho\vec{u}\otimes\vec{u} = -\vec{\nabla p}+\vec{\nabla}\cdot\bar{\bar{\tau}}+\rho\vec{f} \\
