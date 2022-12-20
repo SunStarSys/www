@@ -314,7 +314,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ```math
 \vec{\nabla}\cdot(\rho\vec{u}) = 0 \\
       \pdv{(\rho \vec{u})}{t}+\vec{\nabla}\cdot\rho\vec{u}\otimes\vec{u} = -\vec{\nabla p}+\vec{\nabla}\cdot\bar{\bar{\tau}}+\rho\vec{f} \\
-      \pdv{(\rho e)}{t}+\vec{\nabla}\cdot(\rho e+p)\vec{u} = \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
+      \pdv{(\rho e)}{t}+\vec{\nabla}\cdot(\rho e+p)\vec{u} = \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\cdot\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
 ```
 
 - Electric!
