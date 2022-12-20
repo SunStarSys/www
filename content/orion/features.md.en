@@ -100,7 +100,9 @@ a -> c [color=red]
 
 ```mermaid
 graph TD
-    A[Christmas<img src="../images/tree.svg">] -->|Get money| B(Go shopping)
+    A[Christmas<img src="../images/tree.svg.gz" /
+[========]
+>] -->|Get money| B(Go shopping)
     B --> C{Let me think}
     C -->|One| D[Laptop]
     C -->|Two| E[iPhone]
