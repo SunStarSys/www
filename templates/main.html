@@ -132,7 +132,7 @@
   <script src="/js/sequence-diagram.min.js"></script>
   <script src="/js/d3.min.js"></script>
   <script src="/js/wasm/index.min.js"></script>
-  <script src="/js/d3-graphviz.js" type="javascript/worker"></script>
+  <script src="/js/d3-graphviz.js"></script>
   <script src="/js/mermaid.min.js"></script>
   <script src="/js/mermaid-mindmap.min.js"></script>
   <script type="text/javascript">
@@ -140,8 +140,8 @@
     mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
     $(".flowchart").flowChart();
     $(".sequence-diagram").sequenceDiagram();
-    for (const e of $("html").find(".graphviz").toArray()) {
-        d3.select(e).graphviz().renderDot($(e).text());
+    for (const e of $("body").find(".graphviz").toArray()) {
+        d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
         e.innerHTML = ""
     }
   </script>
