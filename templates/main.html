@@ -6,7 +6,11 @@
     <meta name="description" content="SunStar Systems">
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ conf.keywords }}">
-
+	{% ifequals path|dirname "/orion" %}
+	<meta property="og:image" content="/images/orion.png">
+	{% else %}
+	<meta property="og:image" content="/images/sunstarstaronly.png">
+	{% endif %}
     <title>{% block title %}{{ conf.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
