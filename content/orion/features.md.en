@@ -304,11 +304,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for math and physics expressions like the Navier-Stokes Equations below):
 
+	- Einstein Notation
 ```math
-      \vec{\nabla}\cdot(\rho\vec{u}) = 0 \\
+\pdv{\rho}{t}+\pdv{(\rho*u_i)}{x_i} = 0 \\
+      \pdv{(\rho*u_i)}{t}+\pdv{(\rho*u_i*u_j)}{x_j} = -\pdv{p}{x_i}+\pdv{\tau_{ij}}{x_j}+\rho f_i \\
+      \pdv{(\rho*e)}{t}+(\rho*e+p)\pdv{u_i}{x_i} = \pdv{(\tau_{ij}*u_j)}{x_i}+\rho f_i u_i+\pdv{(\dot{q}_i)}{x_i}+r \\
+```
+	- Classical Notation
+```math
+\vec{\nabla}\cdot(\rho\vec{u}) = 0 \\
       \pdv{(\rho \vec{u})}{t}+\vec{\nabla}\cdot\rho\vec{u}\otimes\vec{u} = -\vec{\nabla p}+\vec{\nabla}\cdot\bar{\bar{\tau}}+\rho\vec{f} \\
       \pdv{(\rho*e)}{t}+\vec{\nabla}\cdot(\rho*e+p)\vec{u} = \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
-
 ```
 
 - Electric! Editor will autocomplete and autoindent; has full screen mode.
