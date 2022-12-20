@@ -100,15 +100,14 @@ a -> c [color=red]
 
 ```mermaid
 graph TD
-    A[Christmas<img src="../images/tree.svg.gz" /
-[========]
->] -->|Get money| B(Go shopping)
+    A[Christmas]
+ -->|Get money| B(Go shopping)
     B --> C{Let me think}
     C -->|One| D[Laptop]
     C -->|Two| E[iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
-
+----
 ```mermaid
 sequenceDiagram
     participant Alice
@@ -122,6 +121,7 @@ sequenceDiagram
     John->>Bob: How about you?
     Bob-->>John: Jolly good!
 ```
+----
 ```mermaid
 erDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : has
@@ -133,6 +133,7 @@ erDiagram
     PRODUCT-CATEGORY ||--|{ PRODUCT : contains
     PRODUCT ||--o{ ORDER-ITEM : "ordered in"
 ```
+----
 ```mermaid
 stateDiagram-v2
     [*] --> Still
@@ -142,6 +143,7 @@ stateDiagram-v2
     Moving --> Crash
     Crash --> [*]
 ```
+----
 ```mermaid
 gantt
     title A Gantt Diagram
@@ -153,6 +155,7 @@ gantt
     Task in sec      :2014-01-12  , 12d
     another task      : 24d
 ```
+----
 ```mermaid
 pie title Commits to orion on GitHub
 	"Sunday" : 4
@@ -160,6 +163,7 @@ pie title Commits to orion on GitHub
 	"Tuesday" : 7
   "Wednesday" : 3
 ```
+----
 ```mermaid
 classDiagram
     Animal <|-- Duck
@@ -183,6 +187,7 @@ classDiagram
       +run()
     }
 ```
+----
 ```mermaid
 gitGraph
     commit
@@ -196,6 +201,7 @@ gitGraph
     commit
     commit
 ```
+----
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
@@ -220,6 +226,7 @@ graph TB
      class sq,e green
      class di orange
 ```
+----
 ```mermaid
 mindmap
   root((mindmap))
@@ -239,6 +246,7 @@ mindmap
       Pen and paper
       Mermaid
 ```
+----
 ```mermaid
 journey
     title My working day
@@ -250,6 +258,7 @@ journey
       Go downstairs: 5: Me
       Sit down: 3: Me
 ```
+----
 ```mermaid
 flowchart TB
 classDef borderless stroke-width:0px
