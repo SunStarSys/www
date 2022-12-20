@@ -10,7 +10,7 @@
 	<meta property="og:image" content="/images/orion.png">
 	{% else %}
 	<meta property="og:image" content="/images/sunstarstaronly.png">
-	{% endif %}
+	{% endifequals %}
     <title>{% block title %}{{ conf.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
