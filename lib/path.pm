@@ -53,7 +53,7 @@ our @patterns = (
   }],
 
   [qr/\.md(?:text)?/, memoize => {
-    view       => [qw/snippet single_narrative/],
+    view       => [qw/snippet asymptote single_narrative/],
     compress   => 1,
     template   => "main.html",
     conf       => $conf,
