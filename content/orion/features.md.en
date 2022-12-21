@@ -86,7 +86,9 @@ Note right of Jenni: Jenni thinks\nabout it
 Jenni-->Andrew: How are you?
 Andrew->>Jenni: I am good thanks!
 ```
+&nbsp;
 ----
+&nbsp;
 
 - Native d3-graphviz.js support:
 
@@ -96,7 +98,9 @@ a -> b;
 a -> c [color=red];
 }
 ```
+&nbsp;
 ----
+&nbsp;
 
 - Native @mermaid-js v9.2.2 with mindmap support:
 
