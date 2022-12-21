@@ -365,7 +365,6 @@ import palette;
 currentlight=White;
 
 size(0,8cm);
-
 currentprojection=perspective(1,1,1,up=-Y);
 
 int e=1;
@@ -381,7 +380,9 @@ for (int i=pens.length-2; i >= 0 ; --i)
   pens.push(pens[i]);
 
 path sec=scale(0.25)*texpath("$\pi$")[0];
+
 coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
 draw(tube(p,colorsec),render(merge=true));
 ```
 
