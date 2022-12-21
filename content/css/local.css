@@ -37,6 +37,7 @@ div.graphviz {
 iframe.asymptote {
 	text-align: center;
 	width: 80%;
+	height: 800px;
 }
 
 div.mermaid {
