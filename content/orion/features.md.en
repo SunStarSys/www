@@ -366,8 +366,8 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 import tube;
 import graph3;
 import palette;
-
 currentlight=White;
+
 size(0,8cm);
 currentprojection=perspective(1,1,1,up=-Y);
 
