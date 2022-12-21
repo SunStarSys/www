@@ -128,7 +128,7 @@ releases:
     url: https://github.com/SunStarSys/Algorithm-LCS-XS
     tag: v2.0.2
 
-# hard-coded-deps??
+# hard-coded-deps?
 dependencies: {}
 
 #acl
