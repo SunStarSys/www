@@ -357,6 +357,11 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ## Mathematical Vector Graphics with @vectorgraphics/asymptote (coming soon)
 
+```asymptote
+import three;
+draw(unitsphere);
+```
+
 ## Deltas from <span class='text-info'>Apache CMS</span> Features
 
 - Dropped [`mdx_elementid.py`](#) features (new implementation is javascript, not python, and GFM based, so only [TOC] from the py-markdown module carries across).  A problem tailor-made for the above Search and Replace Feature of the IDE.
