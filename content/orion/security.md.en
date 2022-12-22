@@ -44,13 +44,13 @@ end
 class vpn-de-central,A3 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[Sao Paolo, Brazil]]
+    A5[[ São Paolo, Brazil]]
     B5[Edge Servers]
 end
 class vpn-bz-west,A3 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[Sidney, Australia]]
+    A6[[Sydney, Australia]]
     B6[Edge Servers]
 end
 class vpn-au-west,A3 darkBlue
