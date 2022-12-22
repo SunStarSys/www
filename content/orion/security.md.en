@@ -44,7 +44,7 @@ end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[ São Paolo, Brazil]]
+    A5[[São Paolo, Brazil]]
     B5[Edge Servers]
 end
 class vpn-bz-west,A5 darkBlue
@@ -54,7 +54,6 @@ subgraph vpn-au-west[ ]
     B6[Edge Servers]
 end
 class vpn-au-west,A6
-[========]
  darkBlue
 
 class A1,A2,A3,A4,A5,A6 borderless
