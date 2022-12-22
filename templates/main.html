@@ -149,14 +149,6 @@
         d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
         e.innerHTML = ""
     }
-    for (const f of $("body").find(".asymptote").toArray()) {
-        var cssLink = document.createElement("link");
-        cssLink.href = "/css/local.css";
-        cssLink.rel  = "stylesheet";
-        cssLink.type = "text/css";
-        f.contentDocument.head.appendChild(cssLink);
-    }
-
   </script>
 </div>
 </body>
