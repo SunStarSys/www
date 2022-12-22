@@ -28,13 +28,21 @@ Dependencies: *.md.en
 ## Blazing Fast System Infrastructure
 
 - 50ms or less RTT latency for most of the western world's population, with plans to expand coverage in East Asia
+
 - 2 times faster HTTP/2 multiplexed page delivery times (out of the box, for *all* customers) than the competition
+
 - 1 GB / s sustained builds for multi-gigabyte source trees
+
 - NVMe or faster build storage infrastructure
+
 - Solaris 11.4 for ZFS stability, backed by Full Oracle Customer Support
+
 - node.js for markdown rendering with CPU clustering
+
 - 8-64 way concurrent builds
+
 - Quick Commit now the default setting for most circumstances
+
 - Apache httpd 2.4 based IDE:
 
 	- HTTP/2
@@ -51,35 +59,35 @@ Dependencies: *.md.en
 
 ## Multilingual
 
-	- English
+- English
 
-	- Spanish
+- Spanish
 
-	- German
+- German
 
-	- French
+- French
 
 ## Better support for Mailing Diffs and Creating Clones
 
-	- DMARC-protected
+- DMARC-protected
 
-	- Uses SRS and Reply-To for ezmlm-compatibility
+- Uses SRS and Reply-To for ezmlm-compatibility
 
-	- All users are Authenticated via Google's OpenID-Connect Service
+- All users are Authenticated via Google's OpenID-Connect Service
 
 ## The curious-looking duckling is now an elegant swan
 
-	- Bootstrap (Solarized) styling.
+- Bootstrap (Solarized) styling.
 
-	- Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
+- Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
 
 ## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md and Django Templating
 
-	- **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
+- **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 
-	- YAML headers in source (markdown) files now fully supported.
+- YAML headers in source (markdown) files now fully supported.
 
-	- Native Flowchart and Sequence Diagram Support
+- Native Flowchart and Sequence Diagram Support
 
 ```flow
 st=>start: börja
@@ -102,7 +110,7 @@ Andrew->>Jenni: I am good thanks!
 ----
 &nbsp;
 
-	- Native d3-graphviz.js support:
+- Native d3-graphviz.js support:
 
 ```graphviz
 digraph {
@@ -114,7 +122,7 @@ a -> c [color=red];
 ----
 &nbsp;
 
-	- Native @mermaid-js/mermaid v9.2.2 with mindmap support:
+- Native @mermaid-js/mermaid v9.2.2 with mindmap support:
 
 ```mermaid
 graph TD
@@ -358,19 +366,19 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - Electric!
 
-    Editor will autocomplete and autoindent; has full screen mode, as well as support for several other content authoring modes available to its CodeMirror 5 syntax highlighter.
+	Editor will autocomplete and autoindent; has full screen mode, as well as support for several other content authoring modes available to its CodeMirror 5 syntax highlighter.
 
 ## Full support for branch builds
 
-	- No more staging/publishing: replaced with per-resource branch <span class="text-white">Promotion</span>.
+- No more staging/publishing: replaced with per-resource branch <span class="text-white">Promotion</span>.
 
-	- <span class="text-white">Rollback</span> and <span class="text-white">Sync</span> Merge fully supported.
+- <span class="text-white">Rollback</span> and <span class="text-white">Sync</span> Merge fully supported.
 
 ## Live source tree search engine
 
-	- Perl Compatible Regular Expression (PCRE) based.
+- Perl Compatible Regular Expression (PCRE) based.
 
-	- Global search and replace functionality as well (unique given PCRE support); supports regex captures.
+- Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 
 ## Unlimited page attachments w/ arbitrary mime-types
 
