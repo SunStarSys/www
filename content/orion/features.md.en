@@ -382,6 +382,7 @@ path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
 
 pen[] pens=Gradient(6,red,blue,purple);
 pens.push(yellow);
+
 for (int i=pens.length-2; i >= 0 ; --i)
   pens.push(pens[i]);
 
