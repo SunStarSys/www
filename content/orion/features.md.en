@@ -392,18 +392,8 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 import tube;
 import graph3;
 import palette;
-real yellowPart = 0.2;
-pen backgroundpen = yellowPart * yellow + (1-yellowPart) * white;
+
 size(0, 8cm);
-
-frame finish () {
-  currentlight.background = backgroundpen;
-  frame toreturn = bbox(backgroundpen, Fill);
-  currentpicture = new picture;
-  return toreturn;
-}
-
-
 currentlight=White;
 currentlight.background=Yellow;
 
@@ -426,7 +416,6 @@ path sec=scale(0.25)*texpath("$\pi$")[0];
 coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
 
 draw(tube(p,colorsec),render(merge=true));
-shipout(finish());
 ```
 
 &nbsp;
