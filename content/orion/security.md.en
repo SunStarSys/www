@@ -132,7 +132,7 @@ Controlled by [`lib/path.pm`](#) imports.
 
 It's wise to control write access to these resources, by limiting them to people both competent in the codebase and authorized to implement security controls for the entire set of assets under version control (aka *everything*).
 
-It is also a good idea to include the [`@svnadmin`](#) group amongst those with read-write access, but it's not strictly necessary even if you2022-12-17 23:04:11 Saturday need us to manually reset your Subversion ACLs.
+It is also a good idea to include the [`@svnadmin`](#) group amongst those with read-write access, but it's not strictly necessary even if you need us to manually reset your Subversion ACLs.
 
 ##### Dynamically Generated Rules via &#64;path::acl
 
