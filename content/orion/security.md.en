@@ -11,6 +11,60 @@ Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wiki
 
 ## Orion Infrastructure Security
 
+```mermaid
+flowchart TB
+classDef borderless stroke-width:0px
+classDef darkBlue fill:#00008B, color:#fff
+classDef brightBlue fill:#6082B6, color:#fff
+classDef gray fill:#62524F, color:#fff
+classDef gray2 fill:#4F625B, color:#fff
+
+subgraph vcs[ ]
+    A1[[Fort Lauderdale, FL]]
+    B1[Version Control Services]
+end
+class vcs,A1 gray
+
+subgraph vpn-us-east[ ]
+    A2[[Reston, VA]]
+    B2[Edge Servers]
+end
+class vpn-us-east,A2 darkBlue
+
+subgraph vpn-us-west[ ]
+    A3[[Phoenix, AZ]]
+    B3[Edge Servers]
+end
+class vpn-us-west,A3 darkBlue
+
+subgraph vpn-de-central[ ]
+    A4[[Frankfurt, Germany]]
+    B4[Edge Servers]
+end
+class vpn-de-central,A3 darkBlue
+
+subgraph vpn-bz-west[ ]
+    A5[[Sao Paolo, Brazil]]
+    B5[Edge Servers]
+end
+class vpn-bz-west,A3 darkBlue
+
+subgraph vpn-au-west[ ]
+    A6[[Sidney, Australia]]
+    B6[Edge Servers]
+end
+class vpn-au-west,A3 darkBlue
+
+class A1,A2,A3,A4,A5,A6 borderless
+
+vcs--vpn-->vpn-us-east
+vcs--vpn-->vpn-us-west
+vcs--vpn-->vpn-de-central
+vcs--vpn-->vpn-bz-west
+vcs--vpn-->vpn-au-west
+
+```
+
 ### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo challenges
 
 No fixed passwords stored on servers, not even in crypt form. This *limits* headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
