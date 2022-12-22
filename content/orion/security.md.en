@@ -21,40 +21,39 @@ classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
     A1[[Fort Lauderdale, FL]]
-    B1[Version Control Services]
+    B1[Air-Gapped Version Control Server]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
     A2[[Reston, VA]]
-    B2[Edge Servers]
+    B2[OCI Edge Servers]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
     A3[[Phoenix, AZ]]
-    B3[Edge Servers]
+    B3[OCI Edge Servers]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
     A4[[Frankfurt, Germany]]
-    B4[Edge Servers]
+    B4[OCI Edge Servers]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
     A5[[São Paolo, Brazil]]
-    B5[Edge Servers]
+    B5[OCI Edge Servers]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
     A6[[Sydney, Australia]]
-    B6[Edge Servers]
+    B6[OCI Edge Servers]
 end
-class vpn-au-west,A6
- darkBlue
+class vpn-au-west,A6 darkBlue
 
 class A1,A2,A3,A4,A5,A6 borderless
 
