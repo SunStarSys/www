@@ -101,6 +101,7 @@ walk_content_tree {
     while  (my ($k, $v) = each %{$conf->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
+
     push @acl, @{$conf->{acl}};
 
   };
