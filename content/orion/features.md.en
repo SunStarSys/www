@@ -392,24 +392,20 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 import tube;
 import graph3;
 import palette;
-
-real yellowPart = 0.2;
-real unit = 8cm;
-real truecm = cm / unit;
-unitsize(unit);
 pen backgroundpen = yellowPart * yellow + (1-yellowPart) * white;
+size(0, 8cm);
+
 frame finish () {
   currentlight.background = backgroundpen;
   frame toreturn = bbox(backgroundpen, Fill);
   currentpicture = new picture;
-  unitsize(unit);
   return toreturn;
 }
 
 
 currentlight=White;
 currentlight.background=Yellow;
-size(0,8cm);
+
 currentprojection=perspective(1,1,1,up=-Y);
 
 int e=1;
