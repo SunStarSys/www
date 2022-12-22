@@ -36,38 +36,50 @@ Dependencies: *.md.en
 - 8-64 way concurrent builds
 - Quick Commit now the default setting for most circumstances
 - Apache httpd 2.4 based IDE:
+
 	- HTTP/2
+
 	- event mpm
+
 	- mod_perl w/ ithreads
+
 	- mod_apreq2
+
 	- TLS 1.3
-    - Custom [`SVN::Client`](#) module w/ ithread support for per-request pools
+
+	- Custom [`SVN::Client`](#) module w/ ithread support for per-request pools
 
 ## Multilingual
 
-- English
-- Spanish
-- German
-- French
+	- English
+
+	- Spanish
+
+	- German
+
+	- French
 
 ## Better support for Mailing Diffs and Creating Clones
 
-- DMARC-protected
-- Uses SRS and Reply-To for ezmlm-compatibility
-- All users are Authenticated via Google's OpenID-Connect Service
+	- DMARC-protected
+
+	- Uses SRS and Reply-To for ezmlm-compatibility
+
+	- All users are Authenticated via Google's OpenID-Connect Service
 
 ## The curious-looking duckling is now an elegant swan
 
-- Bootstrap (Solarized) styling.
-- Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
+	- Bootstrap (Solarized) styling.
+
+	- Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
 
 ## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md and Django Templating
 
-- **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
+	- **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 
-- YAML headers in source (markdown) files now fully supported.
+	- YAML headers in source (markdown) files now fully supported.
 
-- Native Flowchart and Sequence Diagram Support
+	- Native Flowchart and Sequence Diagram Support
 
 ```flow
 st=>start: börja
@@ -90,7 +102,7 @@ Andrew->>Jenni: I am good thanks!
 ----
 &nbsp;
 
-- Native d3-graphviz.js support:
+	- Native d3-graphviz.js support:
 
 ```graphviz
 digraph {
@@ -102,7 +114,7 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- Native @mermaid-js/mermaid v9.2.2 with mindmap support:
+	- Native @mermaid-js/mermaid v9.2.2 with mindmap support:
 
 ```mermaid
 graph TD
@@ -350,13 +362,15 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ## Full support for branch builds
 
-- No more staging/publishing: replaced with per-resource branch <span class="text-white">Promotion</span>.
-- <span class="text-white">Rollback</span> and <span class="text-white">Sync</span> Merge fully supported.
+	- No more staging/publishing: replaced with per-resource branch <span class="text-white">Promotion</span>.
+
+	- <span class="text-white">Rollback</span> and <span class="text-white">Sync</span> Merge fully supported.
 
 ## Live source tree search engine
 
-- Perl Compatible Regular Expression (PCRE) based.
-- Global search and replace functionality as well (unique given PCRE support); supports regex captures.
+	- Perl Compatible Regular Expression (PCRE) based.
+
+	- Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 
 ## Unlimited page attachments w/ arbitrary mime-types
 
@@ -401,9 +415,13 @@ draw(tube(p,colorsec),render(merge=true));
 ## Deltas from <span class='text-info'>Apache CMS</span> Features
 
 - Dropped [`mdx_elementid.py`](#) features (new implementation is javascript, not python, and GFM based, so only [TOC] from the py-markdown module carries across).  A problem tailor-made for the above Search and Replace Feature of the IDE.
+
 - Only the Perl-based build system is available.
+
 - New editor treats newlines within markdown text blocks as hard breaks.
+
 - GFM uses a different delimiter for code blocks.
+
 - [`extpaths.txt`](#) is no longer supported: select individuals from each project will be granted write access to the production website tree in our subversion repos for uploading externally produced material (javadocs, software release artifacts, etc.)
 
 ----
