@@ -392,7 +392,6 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 import tube;
 import graph3;
 import palette;
-import amsmath;
 
 real yellowPart = 0.2;
 real unit = 8cm;
