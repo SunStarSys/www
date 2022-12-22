@@ -2,9 +2,10 @@ import tube;
 import graph3;
 import palette;
 
+size(0, 8cm);
 currentlight=White;
 currentlight.background=Yellow;
-size(0,8cm);
+
 currentprojection=perspective(1,1,1,up=-Y);
 
 int e=1;
