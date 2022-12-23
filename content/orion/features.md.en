@@ -398,7 +398,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen backgroundPen =  redPortion / 3 + greenPortion / 3 + bluePortion / 3;
+pen backgroundPen =  redPortion * red + greenPortion * green + bluePortion * blue;
 currentlight.background = backgroundPen;
 currentprojection=perspective(1,1,1,up=-Y);
 
