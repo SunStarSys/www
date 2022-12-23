@@ -33,7 +33,13 @@
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="navbar-brand"><img src="/images/sunstarlinear.png" /></div>
+        <div class="navbar-brand">
+	{% ifequal path|dirname "/orion" %}
+	  <img src="/images/sunstar-orion-symbol-linear.png">
+	{% else %}
+          <img src="/images/sunstarlinear.png" />
+        {% endifequal %}
+        </div>
       </div>
       <div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav">
