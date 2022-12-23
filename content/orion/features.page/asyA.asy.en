@@ -4,8 +4,11 @@ import palette;
 
 size(0, 8cm);
 currentlight=White;
-currentlight.background=Yellow;
-
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen backgroundPen =  redPortion * red + greenPortion * green + bluePortion * blue;
+currentlight.background = backgroundPen;
 currentprojection=perspective(1,1,1,up=-Y);
 
 int e=1;
