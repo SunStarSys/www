@@ -59,9 +59,9 @@ class A1,A2,A3,A4,A5,A6 borderless
 
 vcs--vpn-->vpn-us-east--ssh-->B2
 vcs--vpn-->vpn-us-west-->ssh-->B3
-vcs--vpn-->vpn-de-central--ssh-->B3
-vcs--vpn-->vpn-bz-west--ssh-->B4
-vcs--vpn-->vpn-au-west--ssh-->B5
+vcs--vpn-->vpn-de-central--ssh-->B4
+vcs--vpn-->vpn-bz-west--ssh-->B5
+vcs--vpn-->vpn-au-west--ssh-->B6
 ```
 &nbsp;
 
