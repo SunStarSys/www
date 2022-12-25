@@ -1,0 +1,36 @@
+#acl
+- path: content
+  rules:
+    "@staff": rw
+    "@svnadmin": rw
+    "*": r
+
+- path: content/orion
+  rules:
+    "@marketing": rw
+    "@staff": rw
+    "@svnadmin": rw
+    "*": r
+
+- path: lib
+  rules:
+    "@svnadmin": rw
+    "@devops": rw
+
+- path: lib/acl.yaml
+  rules:
+    "@svnadmin": rw
+    "@security": rw
+
+- path: templates
+  rules:
+    "@svnadmin": rw
+    "@frontend": rw
+
+- path: cgi-bin/search.pl
+  rules:
+    "@staff": rw
+    "@svnadmin": rw
+    "@devops": rw
+    "*": r
+#acl
