@@ -101,9 +101,8 @@ walk_content_tree {
     while  (my ($k, $v) = each %{$conf->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
-
-    push @acl, @{$conf->{acl}};
-
+    open my $fh, "<:encoding(UTF-8)", "lib/acl.yaml" or die "Can't open acl.yaml: $!";
+    push @acl, @{Load join "", <$fh>};
   };
 #snippet
 
@@ -131,32 +130,3 @@ releases:
 
 # hard-coded-deps?
 dependencies: {}
-
-#acl
-acl:
-  - path: content
-    rules:
-      "@staff": rw
-      "@svnadmin": rw
-      "*": r
-  - path: content/orion
-    rules:
-      "@marketing": rw
-      "@staff": rw
-      "@svnadmin": rw
-      "*": r
-  - path: lib
-    rules:
-      "@svnadmin": rw
-      "@devops": rw
-  - path: templates
-    rules:
-      "@svnadmin": rw
-      "@frontend": rw
-  - path: cgi-bin/search.pl
-    rules:
-      "@staff": rw
-      "@svnadmin": rw
-      "@devops": rw
-      "*": r
-#acl
