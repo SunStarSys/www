@@ -57,11 +57,11 @@ class vpn-au-west,A6 darkBlue
 
 class A1,A2,A3,A4,A5,A6 borderless
 
-vcs==vpn==>A2==ssh==>B2
-vcs==vpn==>A3==ssh==>B3
-vcs==vpn==>A4==ssh==>B4
-vcs==vpn==>A5==ssh==>B5
-vcs==vpn==>A6==ssh==>B6
+vcs==vpn==>A2==ssh/vpn==>B2
+vcs==vpn==>A3==ssh/vpn==>B3
+vcs==vpn==>A4==ssh/vpn==>B4
+vcs==vpn==>A5==ssh/vpn==>B5
+vcs==vpn==>A6==ssh/vpn==>B6
 ```
 &nbsp;
 
