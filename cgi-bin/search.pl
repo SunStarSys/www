@@ -204,7 +204,7 @@ while (my ($k, $v) = each %matches) {
   my $total = sum map $_->{count}, @$v;
   push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
     unless $title_cache{$title}++;
-  push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // "", $data{content} =~ m/\bKeywords\b.*?"([\w.@,-]+)"/i]};
+  push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // "", $data{content} =~ m/\bKeywords\b.*?"([\w .@,-]+)"/i]};
 }
 
 @matches = grep {shift(@$_),shift(@$_)} sort {no warnings 'uninitialized'; $b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
