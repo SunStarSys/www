@@ -166,7 +166,7 @@ for ($d) {
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
-$re =~ s/\#(\[w.@-]+)/^Keywords: .*\\b$1\\b/g if $markdown;
+$re =~ s/#(\[w.@-]+)/^Keywords: .*\\b$1\\b/g if $markdown;
 
 my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
@@ -240,5 +240,5 @@ if (client_wants_json $r) {
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
 $r->content_type("text/html; charset='utf-8'");
-$r->print(Template("search.html")->render($args);
+$r->print(Template("search.html")->render($args));
 return 0;
