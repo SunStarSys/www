@@ -166,6 +166,7 @@ for ($d) {
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
+$re =~ s/\#(\[w.@-]+)/\^Keywords: .*\\b$1\\b/g if $markdown;
 
 my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
