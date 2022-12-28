@@ -211,7 +211,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
-        next if $seen{$dt}++;
+        # next if $seen{$dt}++;
         if ($$_{members}) {
           $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
           $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=red];\n";
