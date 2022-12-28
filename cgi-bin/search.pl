@@ -207,24 +207,27 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
     if ($re =~ /^friends=$/i) {
       $graphviz="";
-
+      my $comment = html_escape $comment;
       for (@friends) {
         no warnings 'uninitialized';
-        $graphviz .= "\"$svnuser:$comment\" -> \"$$_{displayText}\"";
+        my $dt = html_escape $$_{displayText};
+        $graphviz .= "\"$svnuser:$comment\" -&gt; \"$dt\"";
         if ($$_{members}) {
           $graphviz .= " [color:red];\n";
           for my $m (@{$$_{members}}) {
-            $graphviz .= "\"$$_{displayText}\" -> \"$$m{displayText}\";\n";
+            my $mdt = html_escape $$m{displayText};
+            $graphviz .= "\"$dt\" -&gt; \"$$mdt\";\n";
           }
         }
         elsif ($$_{groups}) {
           $graphviz .= ";\n";
           for my $g (@{$$_{groups}}) {
-            $graphviz .= "\"$$_{displayText}\" -> \"$$g{displayText}\" [color:red];\n";
+            my $gdt = html_escape $$g{displayText};
+            $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color:red];\n";
           }
         }
       }
-      $graphviz = "<div class=\"graphviz\">" . ("digraph {\n$graphviz\n};") . "</div>";
+      $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
     }
   }
   if ($re !~ /friends=|watch=|notify=/i) {
