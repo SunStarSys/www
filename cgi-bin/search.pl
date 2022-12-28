@@ -209,7 +209,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     my @rv;
     for (map [split /=/], split /\b[;,]+\b/, $re) {
       my ($key, $value) = @$_;
-      if ($key =~ /^\@/ or not $value) {
+      if ($key =~ /^\@/ or not $value or $value =~ /^[rw]+$/) {
         push @rv, grep $_->{text} eq "$key=", map {$_, ($key !~ /^@/ && /^@/) ? @{$$_{members}}:()} @friends;
       }
       else {
