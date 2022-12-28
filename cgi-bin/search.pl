@@ -192,7 +192,7 @@ if ($repos and $re =~ /(^friends$|^\@[@\w,.= -]+$)/i) {
     @friends = map {my $c = /^@/ ? "" : " (" . (split /:/, $pw{$_})[2] . ")"; {text => "$_=", displayText => "$_$c"}} sort keys %group, @friends;
 
     for (grep $_->{text} =~ /^@/, @friends) {
-      push @{$_->{members}}, split /,/, $group{substr($_->{text}, 0, -1)};
+      push @{$_->{members}}, map {my $c = " (" . (split/:/, $pw{$_})[2] . ")"; {text => "$_=", displayText=> "$_$c"}} split /,/, $group{substr($_->{text}, 0, -1)};
     }
   }
   if ($re !~ /friends/i) {
