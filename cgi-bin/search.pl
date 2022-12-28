@@ -23,6 +23,7 @@ use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use DB_File;
 use POSIX qw/:fcntl_h/;
+use File::Find;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -173,7 +174,7 @@ $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
 my (@friends, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
-if ($repos and $re =~ /^([@\w.-]+=[@\w.-]*)$/i) {
+if ($repos and $re =~ /^([@\w.-]+=[@\w.- ]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
@@ -204,7 +205,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w.-]*)$/i) {
 
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
   }
-  if ($re !~ /friends=/i) {
+  if ($re !~ /friends=|watch=|notify=/i) {
     my @rv;
     for (map [split /=/], split /\b[;,]+\b/, $re) {
       my ($key, $value) = @$_;
@@ -220,6 +221,22 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w.-]*)$/i) {
       }
     }
     @friends = @rv;
+  }
+  elsif ($re =~ /watch=|notify=/i) {
+    my $watchers = $svn->propget("orion:watchers", $d, "WORKING", 1);
+    %$_ = map {$_=>1} split /,/ for values %$watchers;
+    my $url;
+    $svn->info($d, sub {$url = $_[1]->URL});
+    s/:4433//, s/-internal// for $url;
+    while (my ($k, $v) = each %$watchers) {
+      $k =~ s/^\Q$d\///;
+      if (exists $$v{$svnuser}) {
+        eval {$svn->info("$url$k", sub {shift}, "HEAD")};
+        warn "$@" and next if $@;
+        push @watch, $k;
+      }
+    }
+    $re = "";
   }
   else {
     $re = "";
@@ -286,7 +303,7 @@ my $args = {
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang, $markdown),
   keywords    => \@keywords,
   friends     => \@friends,
-  watch       => \@watch,
+  watch       => [sort @watch],
 };
 
 if (client_wants_json $r) {
