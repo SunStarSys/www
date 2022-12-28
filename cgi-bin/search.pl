@@ -206,11 +206,12 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
     if ($re =~ /^friends=$/i) {
-      $graphviz="node [name=\"$svnuser\",fontcolor=blue];\n";
+      $graphviz="";
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
         next if $dt eq $svnuser;
+        $graphviz .= "\"$dt\" [fontcolor=blue,URL=./?regex=$_->{text};lang=$lang;markdown_search=1];\n";
         $graphviz .= "\"$svnuser\" -&gt; \"$dt\"";
         if ($$_{members}) {
           $graphviz .= " [color=red];\n";
