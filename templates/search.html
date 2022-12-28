@@ -20,7 +20,7 @@
   <dl>
     {% for f in friends %}
     {% if f.members %}
-    <dt><a href="./regex=group={{f|cut"="}};lang={{lang}};markdown_search={{markdown_search}}">{{f.text}}</dt>
+    <dt><a href="./regex=group={{f.text|cut"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</dt>
     {% for m in f.members %}
     <dd><a href="./?regex=user={{m.text|cut"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</dd>
     {% endfor %}
