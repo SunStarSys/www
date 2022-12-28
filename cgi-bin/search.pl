@@ -173,7 +173,7 @@ $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
 my (@friends, @matches, @keywords, %title_cache, %keyword_cache);
 
-if ($repos and $re =~ /(^friends$|^\@[@\w,.= -]+$)/i) {
+if ($repos and $re =~ /^(friends|([\w.-]\s*=\s*[\w.-][;, ]*)+)|\@?[@\w.-]+=$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
@@ -196,12 +196,13 @@ if ($repos and $re =~ /(^friends$|^\@[@\w,.= -]+$)/i) {
     }
   }
   if ($re !~ /friends/i) {
-    my ($key, $value) = split /\s*=\s*/, $re;
-    $key =~ s/^\@//;
-    if (not $value) {
+    my ($key, $value) = map {split /\s*=\s*/} split /\b[;, ]+\b/, $re;
+    if ($key =~ /^\@/ and not $value) {
       @friends = grep $_->{text} eq "$key=", @friends;
     }
     else {
+      $value = '@'.$value if $key eq "group";
+      $value = "<$value>" if $key eq "email";
       @friends = grep index(lc $_->{displayText}, lc $value) >= 0, @friends;
     }
   }
