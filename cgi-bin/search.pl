@@ -207,24 +207,27 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
     if ($re =~ /^friends=$/i) {
       $graphviz="node [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\"];\n";
-
       for (@friends) {
+        my %seen;
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
-        next if $dt eq $svnuser;
-        $graphviz .= "node [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
+        next if $seen{$dt}++;
         $graphviz .= "\"$svnuser\" -&gt; \"$dt\"";
         if ($$_{members}) {
           $graphviz .= " [color=red];\n";
+          $graphviz .= "node [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = substr $m->{text}, 0 , -1;
+            $graphviz .= "node [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
             $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
           }
         }
         elsif ($$_{groups}) {
           $graphviz .= ";\n";
+          $graphviz .= "node [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
           for my $g (@{$$_{groups}}) {
             my $gdt = substr $g->{text}, 0, -1;
+            $graphviz .= "node [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$gdt}++;
             $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color=red];\n";
           }
         }
