@@ -214,7 +214,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         next if $dt eq $svnuser;
         if ($$_{members}) {
           $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$dt}++;
-          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=red];\n";
+          #$graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=red];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = substr $m->{text}, 0 , -1;
             $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
