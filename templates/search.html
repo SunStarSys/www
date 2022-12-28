@@ -20,19 +20,24 @@
   {% for f in friends %}
   {% if f.members %}
   <div class="card text-white border-success mb-3">
-    <div class="card-header"><a href="./?regex=group={{f.text|cut:"="|cut:"@"}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></div>
+    <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></div>
     <div class="card-body">
       <ul>
         {% for m in f.members %}
-        <li class="card-text"><a href="./?regex=user={{m.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</a></li>
-      {% endfor %}
+        <li class="card-text"><a href="./?regex={{m.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</a></li>
+        {% endfor %}
       </ul>
     </div>
   </div>
   {% else %}
   <div class="card text-white border-success mb-3">
+    <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></div>
     <div class="card-body">
-    <h4 class="card-title"><a href="./?regex=user={{f.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></h4>
+      <ul>
+        {% for g in f.groups %}
+        <li class="card-text"><a href="./?regex={{g.text}};lang={{lang}};markdown_search={{markdown_search}}">{{g.displayText}}</a></li>
+        {% endfor %}
+      </ul>
     </div>
   </div>
   {% endif %}
