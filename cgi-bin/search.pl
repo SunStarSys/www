@@ -216,7 +216,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           $graphviz .= " [color:red];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = escape_html $m->{displayText};
-            $graphviz .= "\"$dt\" -&gt; \"$$mdt\";\n";
+            $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
           }
         }
         elsif ($$_{groups}) {
