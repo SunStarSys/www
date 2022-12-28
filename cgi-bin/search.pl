@@ -196,15 +196,19 @@ if ($repos and $re =~ /^(friends|([\w.-]\s*=\s*[\w.-]+[;, ]*)+)|\@?[@\w.-]+=$/i)
     }
   }
   if ($re !~ /friends/i) {
-    my ($key, $value) = map {split /\s*=\s*/} split /\b[;, ]+\b/, $re;
-    if ($key =~ /^\@/ and not $value) {
-      @friends = grep $_->{text} eq "$key=", @friends;
+    my @rv;
+    for (map [split /=/], split /\b[;,]+\b/, $re) {
+      my ($key, $value) = @$_;
+      if ($key =~ /^\@/ or not $value) {
+        push @rv, grep $_->{text} eq "$key=", @friends;
+      }
+      else {
+        $value = '@'.$value if $key eq "group";
+        $value = "<$value>" if $key eq "email";
+        push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, @friends;
+      }
     }
-    else {
-      $value = '@'.$value if $key eq "group";
-      $value = "<$value>" if $key eq "email";
-      @friends = grep index(lc $_->{displayText}, lc $value) >= 0, @friends;
-    }
+    @friends = @rv;
   }
 }
 else {
