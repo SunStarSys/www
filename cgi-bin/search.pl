@@ -223,7 +223,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     @friends = @rv;
   }
   elsif ($re =~ /watch=|notify=/i) {
-    my $watchers = $svn->propget("orion:watchers", $d, "WORKING", 1);
+    my $watchers = $svn->propget3("orion:watchers", $d, "WORKING", "WORKING", $SVN::Depth::infinity, undef, $svn->context);
     %$_ = map {$_=>1} split /,/ for values %$watchers;
     my $url;
     $svn->info($d, sub {$url = $_[1]->URL});
