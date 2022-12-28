@@ -17,16 +17,21 @@
     {% endfor %}
     {% endfor %}
   </dl>
-  <dl>
-    {% for f in friends %}
-    {% if f.members %}
-    <dt><a href="./?regex=group={{f.text|cut:"="|cut:"@"}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></dt>
-    {% for m in f.members %}
-    <dd><a href="./?regex=user={{m.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</a></dd>
-    {% endfor %}
-    {% else %}
-    <dt><a href="./?regex=user={{f.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></dt>
-    {% endif %}
-    {% endfor %}
+  {% for f in friends %}
+  {% if f.members %}
+  <div class="card text-white bg-success mb-3">
+    <div class="card-header"><a href="./?regex=group={{f.text|cut:"="|cut:"@"}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></div>
+    <div class="card-body">
+      {% for m in f.members %}
+      <p class="card-text"><a href="./?regex=user={{m.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</a></p>
+      {% endfor %}
+    </div>
+  </div>
+  {% else %}
+  <div class="card text-white bg-info mb-3">
+    <h4 class="card-title"><a href="./?regex=user={{f.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></h4>
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>
 {% endblock %}
