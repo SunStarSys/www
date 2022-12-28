@@ -210,7 +210,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $comment = escape_html $comment;
       for (@friends) {
         no warnings 'uninitialized';
-        my $dt = html_escape $_->{displayText};
+        my $dt = escape_html $_->{displayText};
         $graphviz .= "\"$svnuser:$comment\" -&gt; \"$dt\"";
         if ($$_{members}) {
           $graphviz .= " [color:red];\n";
