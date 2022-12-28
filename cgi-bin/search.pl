@@ -171,7 +171,7 @@ my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
-my (@friends, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w.-]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
@@ -195,6 +195,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w.-]*)$/i) {
     for (grep $_->{text} !~ /^@/, @friends) {
       push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/,
         (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+      push @{$_->{groups}}, map {{text => "$_=", displayText=>$_}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
     }
 
     for (grep $_->{text} =~ /^@/, @friends) {
@@ -285,6 +286,7 @@ my $args = {
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang, $markdown),
   keywords    => \@keywords,
   friends     => \@friends,
+  watch       => \@watch,
 };
 
 if (client_wants_json $r) {
