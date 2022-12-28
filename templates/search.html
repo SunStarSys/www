@@ -20,12 +20,12 @@
   <dl>
     {% for f in friends %}
     {% if f.members %}
-    <dt><a href="./?regex=group={{f.text|cut:"="|cut:"@"}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</dt>
+    <dt><a href="./?regex=group={{f.text|cut:"="|cut:"@"}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></dt>
     {% for m in f.members %}
-    <dd><a href="./?regex=user={{m.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</dd>
+    <dd><a href="./?regex=user={{m.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</a></dd>
     {% endfor %}
     {% else %}
-    <dt><a href="./?regex=user={{f.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</dt>
+    <dt><a href="./?regex=user={{f.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></dt>
     {% endif %}
     {% endfor %}
 </div>
