@@ -229,13 +229,10 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
             $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$gdt}++;
             $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color=red];\n";
             for my $m (@{$$g{members}}) {
-            my $mdt = substr $m->{text}, 0 , -1;
-            $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
-            $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
-          }
-
-
-              }
+              my $mdt = substr $m->{text}, 0 , -1;
+              $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
+              $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
+            }
           }
         }
       }
