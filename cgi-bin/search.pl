@@ -172,7 +172,7 @@ my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
-my (@friends, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
@@ -204,6 +204,28 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
 
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
+
+    if ($re =~ /^friends=$/i) {
+      $graphviz="digraph {\n";
+
+      for (@friends) {
+        no warnings 'uninitialized';
+        $graphviz .= "\"$svnuser:$comment\" -> \"$$_{displayText}\"";
+        if ($$_{members}) {
+          $graphviz .= " [color:red];\n";
+          for my $m (@{$$_{members}}) {
+            $graphviz .= "\"$$_{displayText}\" -> \"$$m{displayText}\";\n";
+          }
+        }
+        elsif ($$_{groups}) {
+          $graphviz .= ";\n";
+          for my $g (@{$$_{groups}}) {
+            $graphviz .= "\"$$_{displayText}\" -> \"$$g{displayText}\" [color:red];\n";
+          }
+        }
+      }
+      $graphviz = "<div class=\"graphviz\">" . escape_html("$graphviz};") . "</div>";
+    }
   }
   if ($re !~ /friends=|watch=|notify=/i) {
     my @rv;
@@ -302,6 +324,7 @@ my $args = {
   keywords    => \@keywords,
   friends     => \@friends,
   watch       => [sort {$a->{name} cmp $b->{name}} @watch],
+  graphviz    => $graphviz,
 };
 
 if (client_wants_json $r) {
