@@ -206,27 +206,27 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
     if ($re =~ /^friends=$/i) {
-      $graphviz="node [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\"];\n";
+      $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\"];\n";
       my %seen = ($svnuser => 1);
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
         next if $seen{$dt}++;
         if ($$_{members}) {
-          $graphviz .= "node [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
-          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=red];";
+          $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
+          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=red];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = substr $m->{text}, 0 , -1;
-            $graphviz .= "node [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
+            $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
             $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
           }
         }
         elsif ($$_{groups}) {
-          $graphviz .= "node [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
+          $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
           $graphviz .= "\"$svnuser\" -&gt; \"$dt\";";
           for my $g (@{$$_{groups}}) {
             my $gdt = substr $g->{text}, 0, -1;
-            $graphviz .= "node [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$gdt}++;
+            $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$gdt}++;
             $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color=red];\n";
           }
         }
