@@ -212,7 +212,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my $dt = substr $_->{text}, 0, -1;
         $graphviz .= "\"$svnuser:$comment\" -&gt; \"$dt\"";
         if ($$_{members}) {
-          $graphviz .= " [color:red];\n";
+          $graphviz .= " [color=red];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = substr $m->{text}, 0 , -1;
             $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
@@ -222,7 +222,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           $graphviz .= ";\n";
           for my $g (@{$$_{groups}}) {
             my $gdt = substr $g->{text}, 0, -1;
-            $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color:red];\n";
+            $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color=red];\n";
           }
         }
       }
