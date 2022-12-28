@@ -208,6 +208,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     if ($re =~ /^friends=$/i) {
       $graphviz="";
       my $comment = escape_html $comment;
+      $comment =~ s/\&/\\&/g;
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = escape_html $_->{displayText};
