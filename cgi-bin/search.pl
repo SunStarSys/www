@@ -229,6 +229,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
     s/:4433//, s/-internal// for $url;
     while (my ($k, $v) = each %$watchers) {
+      warn join ":", keys %$v;
       $k =~ s/^\Q$dirname//;
       if (exists $$v{$svnuser}) {
         eval {$svn->info("$url/$k", sub {shift}, "HEAD")};
