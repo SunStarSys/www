@@ -239,6 +239,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     @friends = ();
+    warn scalar @watch;
   }
 }
 if ($re !~ /friends=|notify=|watch=/i) {
