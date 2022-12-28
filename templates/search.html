@@ -29,7 +29,9 @@
   </div>
   {% else %}
   <div class="card text-white bg-info mb-3">
+    <div class="card-body">
     <h4 class="card-title"><a href="./?regex=user={{f.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></h4>
+    </div>
   </div>
   {% endif %}
   {% endfor %}
