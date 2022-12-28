@@ -42,5 +42,16 @@
   </div>
   {% endif %}
   {% endfor %}
+  {% if w.0 %}
+  <ul>
+  {% for w in watch %}
+  <li>
+    {% ifequal w.type "directory" %}
+    <a href="./{{w.name}}?regex={{regex}};lang={{lang}};markdown_search={{markdown_search}}">{{ w.name }}</a>
+    {% else %}
+    <a href="./{{w.name|dirname}}?regex={{regex}};lang={{lang}};markdown_search={{markdown_search}}">{{ w.name }}</a>
+    {% endif %}
+  </li>
+  {% endfor %}
 </div>
 {% endblock %}

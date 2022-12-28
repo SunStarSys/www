@@ -189,7 +189,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     my (undef, $groups, $comment) = split /:/, $pw{$svnuser};
 
     for (map '@'.$_, sort split /,/, $groups) {
-      push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2]; {text => "$_=", displayText => "$_:$c"}} grep !$seen{$_}++, split /,/, $group{$_};
+      push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText => "$_:$c"}} grep !$seen{$_}++, split /,/, $group{$_};
       $seen{$_}++;
     }
 
@@ -200,7 +200,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
 
     for (grep $_->{text} =~ /^@/, @friends) {
-      push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2]; {text => "$_=", displayText=> "$_:$c"}} split /,/, $group{substr($_->{text}, 0, -1)};
+      push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText=> "$_:$c"}} split /,/, $group{substr($_->{text}, 0, -1)};
     }
 
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
@@ -233,7 +233,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (exists $$v{$svnuser}) {
         eval {$svn->info("$url/$k", sub {shift}, "HEAD")};
         warn "$@" and next if $@;
-        push @watch, $k;
+
+        push @watch, -f "$dirname$k" ? { name=>$k, type=>"file"} : { name=>"$k/", type=>"directory"};
       }
     }
     @friends = ();
@@ -300,7 +301,7 @@ my $args = {
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang, $markdown),
   keywords    => \@keywords,
   friends     => \@friends,
-  watch       => [sort @watch],
+  watch       => [sort {$a->{name} cmp $b->{name}} @watch],
 };
 
 if (client_wants_json $r) {
