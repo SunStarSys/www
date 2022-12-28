@@ -224,7 +224,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
         }
       }
-      $graphviz = "<div class=\"graphviz\">" . escape_html("digraph {\n$graphviz\n};") . "</div>";
+      $graphviz = "<div class=\"graphviz\">" . ("digraph {\n$graphviz\n};") . "</div>";
     }
   }
   if ($re !~ /friends=|watch=|notify=/i) {
