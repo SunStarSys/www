@@ -212,10 +212,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
         next if $seen{$dt}++;
-        $graphviz .= "\"$svnuser\" -&gt; \"$dt\"";
         if ($$_{members}) {
-          $graphviz .= " [color=red];\n";
           $graphviz .= "node [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
+          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=red];";
           for my $m (@{$$_{members}}) {
             my $mdt = substr $m->{text}, 0 , -1;
             $graphviz .= "node [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
@@ -223,8 +222,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
         }
         elsif ($$_{groups}) {
-          $graphviz .= ";\n";
           $graphviz .= "node [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n";
+          $graphviz .= "\"$svnuser\" -&gt; \"$dt\";";
           for my $g (@{$$_{groups}}) {
             my $gdt = substr $g->{text}, 0, -1;
             $graphviz .= "node [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$gdt}++;
