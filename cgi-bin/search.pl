@@ -210,19 +210,19 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $comment = html_escape $comment;
       for (@friends) {
         no warnings 'uninitialized';
-        my $dt = html_escape $$_{displayText};
+        my $dt = html_escape $_->{displayText};
         $graphviz .= "\"$svnuser:$comment\" -&gt; \"$dt\"";
         if ($$_{members}) {
           $graphviz .= " [color:red];\n";
           for my $m (@{$$_{members}}) {
-            my $mdt = html_escape $$m{displayText};
+            my $mdt = html_escape $m->{displayText};
             $graphviz .= "\"$dt\" -&gt; \"$$mdt\";\n";
           }
         }
         elsif ($$_{groups}) {
           $graphviz .= ";\n";
           for my $g (@{$$_{groups}}) {
-            my $gdt = html_escape $$g{displayText};
+            my $gdt = html_escape $g->{displayText};
             $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color:red];\n";
           }
         }
