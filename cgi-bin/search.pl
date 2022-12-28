@@ -231,7 +231,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     while (my ($k, $v) = each %$watchers) {
       $k =~ s/^\Q$dirname//;
       if (exists $$v{$svnuser}) {
-        eval {$svn->info("$url$k", sub {shift}, "HEAD")};
+        eval {$svn->info("$url/$k", sub {shift}, "HEAD")};
         warn "$@" and next if $@;
         push @watch, $k;
       }
