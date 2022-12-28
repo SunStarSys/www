@@ -236,6 +236,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         push @watch, $k;
       }
     }
+    @friends = ();
     $re = "";
   }
   else {
