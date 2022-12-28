@@ -186,26 +186,34 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w.-]*)$/i) {
     }
     my %seen;
     my (undef, $groups, $comment) = split /:/, $pw{$svnuser};
-    for (map '@'.$_, sort split/,/, $groups) {
-      push @friends, grep !$seen{$_}++, split /,/, $group{$_};
+
+    for (map '@'.$_, sort split /,/, $groups) {
+      push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2]; {text => "$_=", displayText => "$_:$c"}} grep !$seen{$_}++, split /,/, $group{$_};
+      $seen{$_}++;
     }
-    @friends = map {my $c = /^@/ ? "" : " (" . (split /:/, $pw{$_})[2] . ")"; {text => "$_=", displayText => "$_$c"}} sort keys %group, @friends;
+
+    for (grep $_->{text} !~ /^@/, @friends) {
+      push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/,
+        (split /:/, $pw{substr $_->text, 0, -1})[1];
+    }
 
     for (grep $_->{text} =~ /^@/, @friends) {
-      push @{$_->{members}}, map {my $c = " (" . (split/:/, $pw{$_})[2] . ")"; {text => "$_=", displayText=> "$_$c"}} split /,/, $group{substr($_->{text}, 0, -1)};
+      push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2]; {text => "$_=", displayText=> "$_:$c"}} split /,/, $group{substr($_->{text}, 0, -1)};
     }
+
+    @friends = sort {$a->{text} cmp $b->{text}} @friends;
   }
   if ($re !~ /friends=/i) {
     my @rv;
     for (map [split /=/], split /\b[;,]+\b/, $re) {
       my ($key, $value) = @$_;
       if ($key =~ /^\@/ or not $value) {
-        push @rv, grep $_->{text} eq "$key=", @friends;
+        push @rv, grep $_->{text} eq "$key=", map {$_, ($key !~ /^@/ && /^@/) ? @{$$_{members}}:()} @friends;
       }
       else {
         $value = '@'.$value if $key eq "group";
         $value = "<$value>" if $key eq "email";
-        push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, @friends;
+        push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, map {$_, ($key ne "group" && /^@/) ? @{$$_{members}}:()} @friends;
         $re = "\Q$value\E";
         $re .= '=' if grep $key eq $_, qw/user group/;
       }
