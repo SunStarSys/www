@@ -21,6 +21,8 @@ use SunStarSys::SVN::Client;
 use File::Basename;
 use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
+use DB_File;
+use POSIX qw/:fcntl_h/;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -147,9 +149,11 @@ my $host     = $r->headers_in->{host};
 utf8::decode($re);
 
 my $dirname;
+my $repos;
 
 if ($markdown) {
   $dirname = (</x1/cms/wcbuild/*/$host/trunk/content>)[0] . $r->path_info;
+  ($repos) = $dirname =~ m#/x1/cms/wcbuild/([^/]+)/#;
 }
 else {
   $dirname = "/x1/httpd/websites/$host/content" . $r->path_info;
@@ -162,55 +166,90 @@ for ($d) {
     or die "Can't detaint '$_'\n";
 }
 
-$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0;
+$re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0 or index($re, '@') >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
-my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
+my (@friends, @matches, @keywords, %title_cache, %keyword_cache);
 
-if ($?) {
-  ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
-  die $pffxg;
-}
+if ($repos and $re =~ /(^friends$|^\@[@\w,.= -]+$)/i) {
+  tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
+  my $svnuser = $r->pnotes("svnuser");
+  if (exists $pw{$svnuser}) {
+    open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$self->{repos}/group-svn.conf";
+    local $_;
+    my %group;
+    while (<$fh>) {
+      /(^[\w.@-]+)\s+=\s+(.*)$/ or next;
+      $group{'@'.$1} = $2;
+    }
+    my %seen;
+    my (undef, $groups, $comment) = split /:/, $pw{$svnuser};
+    for (map '@'.$_, sort split/,/, $groups) {
+      push @friends, grep !$seen{$_}++, split /,/, $group{$_};
+    }
+    @friends = map {my $c = /^@/ ? "" : " (" . (split /:/, $pw{$_})[2] . ")"; {text => "$_=", displayText => "$_$c"}} sort keys %group, @friends;
 
-parser $pffxg, $dirname, undef, \ my %matches;
-
-my (@matches, @keywords, %title_cache, %keyword_cache);
-
-while (my ($k, $v) = each %matches) {
-  my $link = $r->path_info . $k;
-  $link =~ s/\.md(?:text)?/.html/ if $markdown;
-  if ($markdown) {
-    eval {
-      my $url;
-      $svn->info("$dirname$k", sub {$url = $_[1]->URL});
-      s/:4433//, s/-internal// for $url;
-      $svn->info($url, sub {shift}, "HEAD");
-   };
-    warn "$@" and next if $@;
+    for (grep $_->{text} =~ /^@/, @friends) {
+      push @{$_->{members}}, split /,/, $group{substr($_->{text}, 0, -1)};
+    }
   }
-  else {
-    my $subr = $r->lookup_file("$dirname$k");
-    index($subr->status, "4") == 0 and next;
+  if ($re !~ /friends/i) {
+    my ($key, $value) = split /\s*=\s*/, $re;
+    $key =~ s/^\@//;
+    if (not $value) {
+      @friends = grep $_->{text} eq "$key=", @friends;
+    }
+    else {
+      @friends = grep index(lc $_->{displayText}, lc $value) >= 0, @friends;
+    }
   }
-  my $filename = "$dirname$k";
-  my $uncompressed;
-  utf8::encode my $f = $filename;
-  gunzip $f, \$uncompressed and $filename = \$uncompressed if $filename =~m#\.gz[^/]*$#;
-  read_text_file $filename, \ my %data, $markdown ? 0 : undef;
-  my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
-  next unless $title;
-  my $total = sum map $_->{count}, @$v;
-  push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
-    unless $title_cache{$title}++;
-  push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0]]};
 }
+else {
+  my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
-@matches = grep {shift(@$_),shift(@$_)} sort {no warnings 'uninitialized'; $b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
+  if ($?) {
+    ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
+    die $pffxg;
+  }
 
-@keywords = sort {$a cmp $b} @keywords;
+  parser $pffxg, $dirname, undef, \ my %matches;
 
+
+  while (my ($k, $v) = each %matches) {
+    my $link = $r->path_info . $k;
+    $link =~ s/\.md(?:text)?/.html/ if $markdown;
+    if ($markdown) {
+      eval {
+        my $url;
+        $svn->info("$dirname$k", sub {$url = $_[1]->URL});
+        s/:4433//, s/-internal// for $url;
+        $svn->info($url, sub {shift}, "HEAD");
+      };
+      warn "$@" and next if $@;
+    }
+    else {
+      my $subr = $r->lookup_file("$dirname$k");
+      index($subr->status, "4") == 0 and next;
+    }
+    my $filename = "$dirname$k";
+    my $uncompressed;
+    utf8::encode my $f = $filename;
+    gunzip $f, \$uncompressed and $filename = \$uncompressed if $filename =~m#\.gz[^/]*$#;
+    read_text_file $filename, \ my %data, $markdown ? 0 : undef;
+    my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
+    next unless $title;
+    my $total = sum map $_->{count}, @$v;
+    push @matches, [$data{mtime}, $total, qq(<a href="$link">$title</a>), [map $_->{match}, @$v]]
+      unless $title_cache{$title}++;
+    push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0]]};
+  }
+
+  @matches = grep {shift(@$_),shift(@$_)} sort {no warnings 'uninitialized'; $b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
+
+  @keywords = sort {$a cmp $b} @keywords;
+}
 
 my %title = (
   ".en" => "Search Results for $markdown ",
@@ -228,6 +267,7 @@ my $args = {
   regex       => $re,
   breadcrumbs => breadcrumbs($r->path_info, $re, $lang, $markdown),
   keywords    => \@keywords,
+  friends     => \@friends,
 };
 
 if (client_wants_json $r) {
