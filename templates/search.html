@@ -19,7 +19,7 @@
   </dl>
   {% for f in friends %}
   {% if f.members %}
-  <div class="card text-white bg-success mb-3">
+  <div class="card text-white border-success mb-3">
     <div class="card-header"><a href="./?regex=group={{f.text|cut:"="|cut:"@"}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></div>
     <div class="card-body">
       {% for m in f.members %}
@@ -28,7 +28,7 @@
     </div>
   </div>
   {% else %}
-  <div class="card text-white bg-info mb-3">
+  <div class="card text-white border-success mb-3">
     <div class="card-body">
     <h4 class="card-title"><a href="./?regex=user={{f.text|cut:"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</a></h4>
     </div>
