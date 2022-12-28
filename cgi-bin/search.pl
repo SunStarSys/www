@@ -174,7 +174,7 @@ $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
 my (@friends, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
-if ($repos and $re =~ /^([@\w.-]+=[@\w.- ]*)$/i) {
+if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
