@@ -17,5 +17,16 @@
     {% endfor %}
     {% endfor %}
   </dl>
+  <dl>
+    {% for f in friends %}
+    {% if f.members %}
+    <dt><a href="./regex=group={{f|cut"="}};lang={{lang}};markdown_search={{markdown_search}}">{{f.text}}</dt>
+    {% for m in f.members %}
+    <dd><a href="./?regex=user={{m.text|cut"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText }}</dd>
+    {% endfor %}
+    {% else %}
+    <dt><a href="./?regex=user={{f.text|cut"="}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText }}</dt>
+    {% endif %}
+    {% endfor %}
 </div>
 {% endblock %}
