@@ -207,7 +207,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
     if ($re =~ /^friends=$/i) {
       $graphviz="";
-      my $comment = html_escape $comment;
+      my $comment = escape_html $comment;
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = html_escape $_->{displayText};
@@ -215,14 +215,14 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         if ($$_{members}) {
           $graphviz .= " [color:red];\n";
           for my $m (@{$$_{members}}) {
-            my $mdt = html_escape $m->{displayText};
+            my $mdt = escape_html $m->{displayText};
             $graphviz .= "\"$dt\" -&gt; \"$$mdt\";\n";
           }
         }
         elsif ($$_{groups}) {
           $graphviz .= ";\n";
           for my $g (@{$$_{groups}}) {
-            my $gdt = html_escape $g->{displayText};
+            my $gdt = escape_html $g->{displayText};
             $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color:red];\n";
           }
         }
