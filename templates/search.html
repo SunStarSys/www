@@ -50,7 +50,7 @@
     <a href="./{{w.name}}?regex={{regex}};lang={{lang}};markdown_search={{markdown_search}}">{{ w.name }}</a>
     {% else %}
     <a href="./{{w.name|dirname}}?regex={{regex}};lang={{lang}};markdown_search={{markdown_search}}">{{ w.name }}</a>
-    {% endif %}
+    {% endifequal %}
   </li>
   {% endfor %}
 </div>
