@@ -177,7 +177,7 @@ if ($repos and $re =~ /(^friends$|^\@[@\w,.= -]+$)/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
-    open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$self->{repos}/group-svn.conf";
+    open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
     local $_;
     my %group;
     while (<$fh>) {
@@ -215,7 +215,6 @@ else {
   }
 
   parser $pffxg, $dirname, undef, \ my %matches;
-
 
   while (my ($k, $v) = each %matches) {
     my $link = $r->path_info . $k;
