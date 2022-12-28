@@ -237,13 +237,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     @friends = ();
-    $re = "";
-  }
-  else {
-    $re = "";
   }
 }
-if ($re) {
+if ($re !~ /friends=|notify=|watch=/i) {
   my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
   if ($?) {
