@@ -210,7 +210,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
-        $graphviz .= "\"$svnuser\" -&gt; \"$dt\"" unless $svnuser eq $dt;
+        next if $dt eq $svnuser;
+        $graphviz .= "\"$svnuser\" -&gt; \"$dt\"";
         if ($$_{members}) {
           $graphviz .= " [color=red];\n";
           for my $m (@{$$_{members}}) {
