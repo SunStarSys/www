@@ -206,7 +206,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
     if ($re =~ /^friends=$/i) {
-      $graphviz="\"$svnuser\" [fillcolor=yellow;];\n";
+      $graphviz="node [name=\"$svnuser\",fillcolor=yellow];\n";
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
