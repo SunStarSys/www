@@ -207,8 +207,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
     if ($re =~ /^friends=$/i) {
       $graphviz="node [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\"];\n";
+      my %seen = ($svnuser => 1);
       for (@friends) {
-        my %seen;
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
         next if $seen{$dt}++;
