@@ -203,11 +203,11 @@ if ($repos and $re =~ /^(friends|([\w.-]+=[\w.-]+[;, ]?)+)|\@?[@\w.-]+=$/i) {
         push @rv, grep $_->{text} eq "$key=", @friends;
       }
       else {
-        $value = '@'.$value.'=' if $key eq "group";
+        $value = '@'.$value if $key eq "group";
         $value = "<$value>" if $key eq "email";
-        $value .= '=' if $key eq "user";
         push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, @friends;
         $re = "\Q$value\E";
+        $re .= '=' if grep $key eq $_, qw/user group/;
       }
     }
     @friends = @rv;
