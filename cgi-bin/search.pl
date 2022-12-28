@@ -206,7 +206,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
     if ($re =~ /^friends=$/i) {
-      $graphviz="digraph {\n";
+      $graphviz="";
 
       for (@friends) {
         no warnings 'uninitialized';
@@ -224,7 +224,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
         }
       }
-      $graphviz = "<div class=\"graphviz\">" . escape_html("$graphviz};") . "</div>";
+      $graphviz = "<div class=\"graphviz\">" . escape_html("digraph {\n$graphviz\n};") . "</div>";
     }
   }
   if ($re !~ /friends=|watch=|notify=/i) {
