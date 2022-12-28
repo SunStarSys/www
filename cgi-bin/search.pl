@@ -228,7 +228,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     my $url;
     $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
     s/:4433//, s/-internal// for $url;
-    chop my $prefix = $dirname;
+    chop(my $prefix = $dirname);
     while (my ($k, $v) = each %$watchers) {
       $k =~ s/^\Q$prefix//;
       if (exists $$v{$svnuser}) {
