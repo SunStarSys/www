@@ -196,7 +196,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     for (grep $_->{text} !~ /^@/, @friends) {
       push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/,
         (split /:/, $pw{substr $_->{text}, 0, -1})[1];
-      push @{$_->{groups}}, map {{text => "$_=", displayText=>$_}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+      push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>\@gm}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
     }
 
     for (grep $_->{text} =~ /^@/, @friends) {
@@ -214,7 +214,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         next if $dt eq $svnuser;
         if ($$_{members}) {
           $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$dt}++;
-          #$graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=red];\n";
+          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=green];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = substr $m->{text}, 0 , -1;
             $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
@@ -223,11 +223,19 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
         elsif ($$_{groups}) {
           $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$dt}++;
-          $graphviz .= "\"$svnuser\" -&gt; \"$dt\";";
+          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=green];\n";
           for my $g (@{$$_{groups}}) {
             my $gdt = substr $g->{text}, 0, -1;
             $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$gdt}++;
             $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color=red];\n";
+            for my $m (@{$$g{members}}) {
+            my $mdt = substr $m->{text}, 0 , -1;
+            $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
+            $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
+          }
+
+
+              }
           }
         }
       }
