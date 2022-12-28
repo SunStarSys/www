@@ -198,6 +198,7 @@ if ($repos and $re =~ /^(friends|([\w.-]+=[\w.-]+[;, ]?)+)|\@?[@\w.-]+=$/i) {
   if ($re !~ /friends/i) {
     my @rv;
     for (map [split /=/], split /\b[;,]+\b/, $re) {
+      $re = "";
       my ($key, $value) = @$_;
       if ($key =~ /^\@/ or not $value) {
         push @rv, grep $_->{text} eq "$key=", @friends;
@@ -206,12 +207,13 @@ if ($repos and $re =~ /^(friends|([\w.-]+=[\w.-]+[;, ]?)+)|\@?[@\w.-]+=$/i) {
         $value = '@'.$value if $key eq "group";
         $value = "<$value>" if $key eq "email";
         push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, @friends;
+        $re = "\Q$value\E";
       }
     }
     @friends = @rv;
   }
 }
-else {
+if ($re) {
   my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
   if ($?) {
