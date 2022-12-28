@@ -211,11 +211,13 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = escape_html $_->{displayText};
+        $dt =~ s/&/\\&/g;
         $graphviz .= "\"$svnuser:$comment\" -&gt; \"$dt\"";
         if ($$_{members}) {
           $graphviz .= " [color:red];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = escape_html $m->{displayText};
+            $mdt =~ s/&/\\&/g;
             $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
           }
         }
@@ -223,6 +225,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           $graphviz .= ";\n";
           for my $g (@{$$_{groups}}) {
             my $gdt = escape_html $g->{displayText};
+            $gdt =~ s/&/\\&/g;
             $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color:red];\n";
           }
         }
