@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="SunStar Systems">
     <meta name="author" content="Joe Schaefer">
-    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ conf.keywords }}">
+    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
 	{% ifequal path|dirname "/orion" %}
 	<meta property="og:image" content="/images/sunstar-orion-symbol-linear.png">
 	{% else %}
 	<meta property="og:image" content="/images/sunstarstaronly.png">
 	{% endifequal %}
-    <title>{% block title %}{{ conf.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
+    <title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/css/code.css" rel="stylesheet" media="screen">
