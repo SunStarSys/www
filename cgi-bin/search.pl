@@ -252,6 +252,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, map {$_, ($key ne "group" && /^@/) ? @{$$_{members}}:()} @friends;
         $re = "\Q$value\E";
         $re .= '=' if grep $key eq $_, qw/user group/;
+        $re .= '|\Q\$Author: $value \$\E' if $key eq "user";
       }
     }
     @friends = @rv;
