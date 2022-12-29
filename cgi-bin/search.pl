@@ -221,7 +221,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
         }
         elsif ($$_{groups}) {
-          $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\$$m{displayName}\"];\n" unless $seen{$dt}++;
+          $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayName}\"];\n" unless $seen{$dt}++;
           $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
           for my $g (@{$$_{groups}}) {
             my $gdt = substr $g->{text}, 0, -1;
