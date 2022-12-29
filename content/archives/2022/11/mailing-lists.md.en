@@ -1,7 +1,0 @@
----
-dependencies: '*.md.en'
-keywords: ezmlm-idx,BATV,DMARC,SRS
-title: Mailing Lists
-
----
-{% ssi `/essays/mailing-lists.md.en` %}
