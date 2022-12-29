@@ -341,6 +341,7 @@ my $args = {
   friends     => \@friends,
   watch       => [sort {$a->{name} cmp $b->{name}} @watch],
   graphviz    => $graphviz,
+  r           => $r,
 };
 
 if (client_wants_json $r) {
