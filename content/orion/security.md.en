@@ -160,7 +160,7 @@ If you allow Template preprocessing in the markdown source pages, you need to be
 
 See the below section on [Dependency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details, and checkout this live example of how easy ACL's can be centrally configured in [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 
-[snippet:repo=SunStarSys/www:path=lib/acl.yaml:branch=trunk:token=#acl:lang=yaml]
+[snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
 Content Authors can configure page restrictions in the page's [headers]({{snippetB.pretty_uri}}):
 
