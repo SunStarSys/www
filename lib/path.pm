@@ -4,7 +4,9 @@ use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived 
 use strict;
 use warnings;
 
-my $conf = Load join "", <DATA>;
+open my $fh, "lib/facts.yml" or die "Can't locate facts.yml data: $!";
+my $facts = Load join "", <$fh>;
+close $fh;
 
 # the only job of this __PACKAGE__ is to fill out the @patterns, @acl, and %dependencies data structures.
 #
@@ -33,30 +35,30 @@ our @patterns = (
     compress   => 1,
     view       => [qw/sitemap/],
     nest       => 1,
-    conf       => $conf,
+    facts      => $facts,
   }],
 
   [qr!^/(essay|client)s/.*\.md(?:text)?!, memoize => {
-    view          => [qw/set_template_from_capture snippet single_narrative/],
-    compress      => 1,
-    conf          => $conf,
-    archive_root  => "/archives",
-    category_root => "/categories",
+    view            => [qw/set_template_from_capture snippet single_narrative/],
+    compress        => 1,
+    facts           => $facts,
+    archive_root    => "/archives",
+    category_root   => "/categories",
     markdown_search => 1, # search markdown instead of built html
-    permalink     => 1,
+    permalink       => 1,
   }],
 
   [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
-    view      => [qw/set_template_from_capture ssi normalize_links snippet single_narrative/],
-    compress  => 1,
-    conf      => $conf,
+    view       => [qw/set_template_from_capture ssi normalize_links snippet single_narrative/],
+    compress   => 1,
+    facts      => $facts,
   }],
 
   [qr/\.md(?:text)?/, memoize => {
     view       => [qw/snippet asymptote single_narrative/],
     compress   => 1,
     template   => "main.html",
-    conf       => $conf,
+    facts      => $facts,
   }],
 
 );
@@ -101,7 +103,7 @@ walk_content_tree {
     while  (my ($k, $v) = each %{$conf->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
-    open my $fh, "<:encoding(UTF-8)", "lib/acl.yaml" or die "Can't open acl.yaml: $!";
+    open my $fh, "<:encoding(UTF-8)", "lib/acl.yml" or die "Can't open acl.yml: $!";
     push @acl, @{Load join "", <$fh>};
   };
 #snippet
