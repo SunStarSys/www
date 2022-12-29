@@ -189,17 +189,17 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     my (undef, $groups, $comment) = split /:/, $pw{$svnuser};
 
     for (map '@'.$_, sort split /,/, $groups) {
-      push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText => "$_:$c"}} grep !$seen{$_}++, split /,/, $group{$_};
+      push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText => "$_: $c"}} grep !$seen{$_}++, split /,/, $group{$_};
       $seen{$_}++;
     }
 
     for (grep $_->{text} !~ /^@/, @friends) {
       push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/, (split /:/, $pw{substr $_->{text}, 0, -1})[1];
-      push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>[map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_:$c"}} @gm]}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+      push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>[map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_: $c"}} @gm]}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
     }
 
     for (grep $_->{text} =~ /^@/, @friends) {
-      push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText=> "$_:$c"}} split /,/, $group{substr($_->{text}, 0, -1)};
+      push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText=> "$_: $c"}} split /,/, $group{substr($_->{text}, 0, -1)};
     }
 
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
