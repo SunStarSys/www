@@ -4,7 +4,7 @@
      <h1>{{ headers.title|safe }}</h1>
      <div class="essay col-lg-12">
        <p style="color:#aaa">
-         <small><em>Last updated by <b>{{ content|ssi|vcs_author:lang:markdown_search }}</b> on <b>{{ content|ssi|vcs_date }}</b></em></small>
+         <small><em>Last updated by <b>{{ content|ssi|vcs_author:lang:1 }}</b> on <b>{{ content|ssi|vcs_date }}</b></em></small>
        </p>
        {{ content|markdown }}
      </div>
