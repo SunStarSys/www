@@ -194,9 +194,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
 
     for (grep $_->{text} !~ /^@/, @friends) {
-      push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/,
-        (split /:/, $pw{substr $_->{text}, 0, -1})[1];
-      push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>\@gm}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+      push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/, (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+      push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>[map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_:$c"}} @gm]}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
     }
 
     for (grep $_->{text} =~ /^@/, @friends) {
