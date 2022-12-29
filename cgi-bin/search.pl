@@ -235,7 +235,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
         }
       }
-#      $graphviz = escape_html $graphviz;
+      $graphviz = escape_html $graphviz;
       $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
     }
   }
