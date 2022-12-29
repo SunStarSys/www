@@ -99,7 +99,7 @@ walk_content_tree {
     }
 
     # incorporate hard-coded deps in the __DATA__ section of this file
-    while  (my ($k, $v) = each %{$conf->{dependencies}}) {
+    while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
     open my $fh, "<:encoding(UTF-8)", "lib/acl.yml" or die "Can't open acl.yml: $!";
