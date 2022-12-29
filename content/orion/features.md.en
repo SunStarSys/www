@@ -375,7 +375,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Perl Compatible Regular Expression (PCRE) based.
 - [x] Global search and replace functionality as well (unique given PCRE support); supports regex captures.
-
+- [ ] PDF search coming soon.
 ## Unlimited page attachments w/ arbitrary mime-types
 
 ## Secure, threaded per-page comments (coming soon)
@@ -442,3 +442,5 @@ draw(tube(p,colorsec),render(merge=true));
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
+
+<!-- $Date$ $Author$ -->
