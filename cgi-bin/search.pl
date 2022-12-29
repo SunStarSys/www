@@ -242,9 +242,10 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   if ($re !~ /friends=|watch=|notify=/i) {
     my @rv;
     for (map [split /=/], split /\b[;,]+\b/, $re) {
+      my %seen;
       my ($key, $value) = @$_;
       if ($key =~ /^\@/ or not $value or $value =~ /^[rw]+$/) {
-        push @rv, grep $_->{text} eq "$key=", map {$_, ($key !~ /^@/ && /^@/) ? @{$$_{members}} : ()} map {$_, $$_{groups} ? @{$$_{groups}} : ()} @friends;
+        push @rv, grep !$seen{$$_{text}}++ && $_->{text} eq "$key=", map {$_, ($key !~ /^@/ && /^@/) ? @{$$_{members}} : ()} map {$_, $$_{groups} ? @{$$_{groups}} : ()} @friends;
         $re .= "|\Q\$Author: $key \$\E" if $key !~ /^@/;
       }
       else {
