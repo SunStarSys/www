@@ -92,10 +92,13 @@ walk_content_tree {
   and do {
 
     my @essays_glob = glob("content/essays/files/*/*");
+    my @categories_glob = glob("content/categories/*/*");
 
     for my $lang (qw/en es de fr/) {
       push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
         @essays_glob;
+      push @{$dependencies{"/categories/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
+        @categories_glob if -f "content/categories/index.html.$lang";
     }
 
     # incorporate hard-coded deps in the __DATA__ section of this file
@@ -108,26 +111,3 @@ walk_content_tree {
 #snippet
 
 1;
-
-__DATA__
-title: "SunStar Systems"
-keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs,solaris,http/2,wiki,orion,confluence"
-releases:
-  orion:
-    url: https://github.com/SunStarSys/orion
-    tag: v3.1.0
-  pty:
-    url: https://github.com/SunStarSys/pty
-    tag: v2.1.1
-  sealed:
-    url: https://github.com/SunStarSys/sealed
-    tag: v4.1.9
-  orthrus:
-    url: https://github.com/SunStarSys/orthrus
-    tag: v1.0.0
-  Algorithm_LCS_XS:
-    url: https://github.com/SunStarSys/Algorithm-LCS-XS
-    tag: v2.0.2
-
-# hard-coded-deps???
-dependencies: {}
