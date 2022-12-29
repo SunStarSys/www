@@ -48,13 +48,8 @@
   {% endfor %}
   {% if watch.0 %}
   {% for w in watch %}
-  {% ifequal w.type "directory" %}
   <div class="card text-white border-warning mb-3">
-    <div class="card-header"><a href="./{{w.name}}?regex={{regex}};lang={{lang}};markdown_search={{markdown_search}}">{{ w.name }}</a></div>
-  {% else %}
-  <div class="card text-white border-warning mb-3">
-    <div class="card-header"><a href="./{{w.name|dirname}}?regex={{regex}};lang={{lang}};markdown_search={{markdown_search}}">{{ w.name }}</a></div>
-  {% endifequal %}
+    <div class="card-header"><a href="{{r.path_info}}./{{w.name}}">{{ w.name }}</a></div>
     <div class="card-body">
       <ul>
         {% for u in w.watchers %}
