@@ -22,31 +22,18 @@ p.editormd-tex {
 
 .katex {
 	font-family: KaTeX_Main;
-	width: 100%;
+	max-width: 100%;
 }
 
-div.flowchart {
+div.flowchart, div.sequence-diagram, div.graphviz, div.mermaid {
 	text-align: center;
-}
-div.sequence-diagram {
-	text-align: center;
-}
-div.graphviz {
-	text-align: center;
+	max-width: 100%;
 }
 
 iframe.asymptote {
 	text-align: center;
 	width: 100%;
 	height: 800px;
-}
-
-#Asymptote {
-    background-color: #8f99fb;
-}
-
-div.mermaid {
-	text-align: center;
 }
 
 body { padding-top: 90px }
