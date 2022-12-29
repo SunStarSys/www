@@ -1,10 +1,9 @@
 package path;
-
 use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived Load/;
 use strict;
 use warnings;
 
-open my $fh, "lib/facts.yml" or die "Can't locate facts.yml data: $!";
+open my $fh, "<:encoding(UTF-8)", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
 my $facts = Load join "", <$fh>;
 close $fh;
 
