@@ -268,7 +268,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (exists $$v{$svnuser}) {
         eval {$svn->info("$url$k", sub {shift}, "HEAD")};
         warn "$@" and next if $@;
-        push @watch, -f "$prefix$k" ? {name=>$k, type=>"file"} : {name=>".$k/", type=>"directory", watchers => [map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v]};
+        push @watch, -f "$prefix$k" ? {name=>$k, type=>"file"} : {name=>".$k/", type=>"directory"};
+        $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
       }
     }
     @friends = ();
