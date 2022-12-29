@@ -158,7 +158,7 @@ Nothing can be built and subsequently viewed over the network without a correspo
 
 If you allow Template preprocessing in the markdown source pages, you need to be aware of how template arguments make the contents of other files in the tree availaible as variables to the source of the edited page. Often times, if configured to do so, the edited page can declare its own dependency files in the headers of the page, which is something to think as you weigh feature-sets against security-controls in your Wiki's Information Architecture.  While we can offer guidance and support to match your needs, it's really up to you to decide how to balance the scales for your organization's enterprise wiki.
 
-See the below section on [Dependency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details, and checkout this live example of how easy ACL's can be centrally configured in [`lib/path.pm`]({{snippetA.pretty_uri}}):
+See the below section on [Dependency/ACL Injection Controls](#Dependency/ACL Injection Controls) for more details, and checkout this live example of how easy ACL's can be centrally configured in [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=lib/acl.yaml:branch=trunk:token=#acl:lang=yaml]
 
@@ -234,3 +234,5 @@ Remarkably brief and time-tested dependencies; the major components of which are
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
+
+<!-- $Date$ $Author$ -->
