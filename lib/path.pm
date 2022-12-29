@@ -105,6 +105,7 @@ walk_content_tree {
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
+
     open my $fh, "<:encoding(UTF-8)", "lib/acl.yml" or die "Can't open acl.yml: $!";
     push @acl, @{Load join "", <$fh>};
   };
