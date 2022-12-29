@@ -131,6 +131,11 @@ Orion's security model is centrally managed by the settings contained in [`@path
 
 Session Cookies are HttpOnly and Secure flagged, so Javascript session stealing attempts are effectively neutralized by the Orion online Editor.
 
+
+### Bcrypt for Subversion passwords
+
+Adjustable number of rounds (currently defaults to 5).
+
 ### Tainted Data Protections
 
 All of our Perl runtimes have mandatory taint checks enabled with the -T flag; a powerful, uniquely Perl guard against Remote Code Exploits.
