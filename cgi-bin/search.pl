@@ -205,36 +205,37 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
     if ($re =~ /^friends=$/i) {
-      $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\"];\n";
+      $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\",tooltip=\"$comment\"];\n";
       my %seen = ($svnuser => 1);
       for (@friends) {
         no warnings 'uninitialized';
         my $dt = substr $_->{text}, 0, -1;
         next if $dt eq $svnuser;
         if ($$_{members}) {
-          $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$dt}++;
-          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=green];\n";
+          $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayName}\"];\n" unless $seen{$dt}++;
+          $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
           for my $m (@{$$_{members}}) {
             my $mdt = substr $m->{text}, 0 , -1;
-            $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
-            $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
+            $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayName}\"];\n" unless $seen{$mdt}++;
+            $graphviz .= "\"$dt\" -> \"$mdt\";\n";
           }
         }
         elsif ($$_{groups}) {
-          $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$dt}++;
-          $graphviz .= "\"$svnuser\" -&gt; \"$dt\" [color=green];\n";
+          $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\$$m{displayName}\"];\n" unless $seen{$dt}++;
+          $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
           for my $g (@{$$_{groups}}) {
             my $gdt = substr $g->{text}, 0, -1;
-            $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$gdt}++;
-            $graphviz .= "\"$dt\" -&gt; \"$gdt\" [color=red];\n";
+            $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$$g{displayName}\"];\n" unless $seen{$gdt}++;
+            $graphviz .= "\"$dt\" ->; \"$gdt\" [color=red];\n";
             for my $m (@{$$g{members}}) {
               my $mdt = substr $m->{text}, 0 , -1;
-              $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\"];\n" unless $seen{$mdt}++;
-              $graphviz .= "\"$dt\" -&gt; \"$mdt\";\n";
+              $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayName]\"];\n" unless $seen{$mdt}++;
+              $graphviz .= "\"$dt\" -> \"$mdt\";\n";
             }
           }
         }
       }
+      $graphviz = escape_html $graphviz;
       $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
     }
   }
