@@ -109,15 +109,20 @@ Subversion Server-Side Commit Hooks are also customizable to your oversight conc
 
 ## Orion Application Security
 
+
 ```graphviz
 digraph {
 "@path::acl" -> "authz-svn.conf" [label="svn"];
 "@path::acl" -> "/**/.htaccess" [label="httpd"];
 };
 ```
+
 &nbsp;
+
 ----
+
 &nbsp;
+
 Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in [`lib/path.pm`](#).  Offshoot server configuration files are dynamically generated on every committed change.
 
 ### OpenIDC SSO Security
