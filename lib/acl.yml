@@ -1,4 +1,4 @@
----
+#acl
 - path: content
   rules:
     "@staff": rw
@@ -33,4 +33,4 @@
     "@svnadmin": rw
     "@devops": rw
     "*":
----
+#acl
