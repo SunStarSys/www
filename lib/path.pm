@@ -101,7 +101,6 @@ walk_content_tree {
         @categories_glob if -f "content/categories/index.html.$lang";
     }
 
-    # incorporate hard-coded deps in the __DATA__ section of this file
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
