@@ -71,7 +71,11 @@
   <label for="subject">{% ifequal lang ".en" %}Subject{% endifequal %}{% ifequal lang ".es" %}Sujeto{% endifequal %}{% ifequal lang ".de" %}Gegenstand{% endifequal %}{% ifequal lang ".fr" %}Matière{% endifequal %}</label>
   <input name="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
-  <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
+  <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal
+  %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal
+  %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal
+  %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal
+    %}</label>
   <textarea name="content" class="form-control" rows=10></textarea>
 
   <input type="hidden" name="lang" value="{{ lang }}" />
