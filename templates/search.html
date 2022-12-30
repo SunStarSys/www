@@ -11,7 +11,7 @@
   <canvas id="myChart" style="width:100%;height=800px"></canvas>
   <script async type="text/javascript">
     var ctx = document.getElementById("myChart").getContext("2d");
-    const data = {{ duration | safe }};
+    const data = {{ duration|safe }};
     const values = data.map(x => x[1]);
     const labels = data.map(x => x[0]);
     var myChart = new Chart(ctx, {
