@@ -181,7 +181,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
       my ($revision) = $re =~ /(\d+)$/;
-      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-logs/$revision.log") {
+      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
       }
       else {
