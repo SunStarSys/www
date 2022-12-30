@@ -102,7 +102,10 @@
                       display: true,
                       text: total.toFixed(0) + " build minutes this month",
                   }
-              }
+              },
+              onClick: (e, elts, chart) => {
+                  alert(elts);
+              },
           },
       });
 </script>
