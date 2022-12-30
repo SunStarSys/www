@@ -105,7 +105,8 @@
               },
               onClick: (e, elts, chart) => {
                   if (elts) {
-                      alert(elts.keys().join(":"));
+                      for (k of elts.keys())
+                          alert(k);
                   }
               },
           },
