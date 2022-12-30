@@ -77,7 +77,7 @@
       total += +values[i];
   total /= 60;
 
-  const labels = data.map(x => "r" + x[0]);
+  const labels = data.map(x => "r" + x[0] + ":" + x[2]);
   var myChart = new Chart(
       ctx,
       {
