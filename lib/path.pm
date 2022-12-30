@@ -1,5 +1,4 @@
 package path;
-
 use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived Load/;
 use strict;
 use warnings;
@@ -53,8 +52,6 @@ our @patterns = (
     compress   => 1,
     facts      => $facts,
   }],
-
-  [qr/editor\.md\/.*\.md$/, passthru => {} ],
 
   [qr/\.md(?:text)?/, memoize => {
     view       => [qw/snippet asymptote single_narrative/],
