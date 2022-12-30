@@ -173,16 +173,22 @@ my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
-my (@friends, @dlog, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $blog, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
-    if ($re =~ /^build=$/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
-      open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-duration-log" or die "can't open build-duration-log: $!";
-      @dlog = map {chomp; [split /:/]} <$fh>;
-      close $fh;
+    if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
+      my ($revision) = $re =~ /(\d+)$/;
+      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-logs/$revision.log") {
+        read $fh, $blog, -s $fh;
+      }
+      else {
+        open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-duration-log" or die "can't open build-duration-log: $!";
+          @dlog = map {chomp; [split /:/]} <$fh>;
+        close $fh;
+      }
     }
     else {
       open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
@@ -350,6 +356,7 @@ my $args = {
   watch       => [sort {$a->{name} cmp $b->{name}} @watch],
   graphviz    => $graphviz,
   duration    => @dlog ? Cpanel::JSON::XS->new->utf8->encode(\@dlog) : undef,
+  blog        => $blog,
   r           => $r,
 };
 
