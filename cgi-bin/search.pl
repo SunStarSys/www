@@ -230,7 +230,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
             for my $m (@{$$_{members}}) {
               my $mdt = substr $m->{text}, 0 , -1;
               $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayText}\"];\n" unless $seen{$mdt}++;
-              $graphviz .= "\"$dt\" -> \"$mdt\";\n";
+              $graphviz .= "\"$dt\" -> \"$mdt\" [color=red];\n";
             }
           }
           elsif ($$_{groups}) {
@@ -239,7 +239,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
             for my $g (@{$$_{groups}}) {
               my $gdt = substr $g->{text}, 0, -1;
               $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$$g{displayText}\"];\n" unless $seen{$gdt}++;
-              $graphviz .= "\"$dt\" -> \"$gdt\" [color=red];\n";
+              $graphviz .= "\"$dt\" -> \"$gdt\" [color=black];\n";
               for my $m (@{$$g{members}}) {
                 my $mdt = substr $m->{text}, 0 , -1;
                 $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayText}\"];\n" unless $seen{$mdt}++;
