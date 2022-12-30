@@ -77,12 +77,14 @@
       ctx,
       {
           type: "bar",
-          labels: labels,
-          datasets: [{
-              label: "Build Duration (s)",
-              data: values,
-              backgroundColor: "rbga(255,99,132,1)",
-          }]
+          data: {
+              labels: labels,
+              datasets: [{
+                  label: "Build Duration (s)",
+                  data: values,
+                  backgroundColor: "rbga(255,99,132,1)",
+              }]
+          }
       },
       options: {
           scales: {
