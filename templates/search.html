@@ -7,6 +7,11 @@
   <a style="color:#fff" href="./?regex=%23{{k}};lang={{lang}};markdown_search={{markdown_search}}">#{{k}}</a>
   </span>&nbsp;
   {% endfor %}
+  {% if duration %}
+  <script>
+    var data = {{ duration | safe }}
+  {% endif %}
+
 </div>
 <div class="container">
   {{ graphviz|safe }}

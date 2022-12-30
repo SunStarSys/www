@@ -173,113 +173,120 @@ my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? () : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
-my (@friends, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
-    open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
-    local $_;
-    my %group;
-    while (<$fh>) {
-      /(^[\w.@-]+)\s+=\s+(.*)$/ or next;
-      $group{'@'.$1} = $2;
+    if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
+      open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build_duration_log" or die "can't open build_duration_log: $!";
+      @dlog = map {chomp; [split /:/]} <$fh>;
+      close $fh;
     }
-    my %seen;
-    my (undef, $groups, $comment) = split /:/, $pw{$svnuser};
+    else {
+      open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
+      local $_;
+      my %group;
+      while (<$fh>) {
+        /(^[\w.@-]+)\s+=\s+(.*)$/ or next;
+        $group{'@'.$1} = $2;
+      }
+      my %seen;
+      my (undef, $groups, $comment) = split /:/, $pw{$svnuser};
 
-    for (map '@'.$_, sort split /,/, $groups) {
-      push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText => "$_: $c"}} grep !$seen{$_}++, split /,/, $group{$_};
-      $seen{$_}++;
-    }
+      for (map '@'.$_, sort split /,/, $groups) {
+        push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText => "$_: $c"}} grep !$seen{$_}++, split /,/, $group{$_};
+        $seen{$_}++;
+      }
 
-    for (grep $_->{text} !~ /^@/, @friends) {
-      push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/, (split /:/, $pw{substr $_->{text}, 0, -1})[1];
-      push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>[map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_: $c"}} @gm]}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
-    }
+      for (grep $_->{text} !~ /^@/, @friends) {
+        push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/, (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+        push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>[map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_: $c"}} @gm]}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+      }
 
-    for (grep $_->{text} =~ /^@/, @friends) {
-      push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText=> "$_: $c"}} split /,/, $group{substr($_->{text}, 0, -1)};
-    }
+      for (grep $_->{text} =~ /^@/, @friends) {
+        push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2] // ""; {text => "$_=", displayText=> "$_: $c"}} split /,/, $group{substr($_->{text}, 0, -1)};
+      }
 
-    @friends = sort {$a->{text} cmp $b->{text}} @friends;
+      @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
-    if ($re =~ /^friends=$/i) {
-      $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\",tooltip=\"$comment\"];\n";
-      my %seen = ($svnuser => 1);
-      for (@friends) {
-        no warnings 'uninitialized';
-        my $dt = substr $_->{text}, 0, -1;
-        next if $dt eq $svnuser;
-        if ($$_{members}) {
-          $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
-          $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
-          for my $m (@{$$_{members}}) {
-            my $mdt = substr $m->{text}, 0 , -1;
-            $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayText}\"];\n" unless $seen{$mdt}++;
-            $graphviz .= "\"$dt\" -> \"$mdt\";\n";
-          }
-        }
-        elsif ($$_{groups}) {
-          $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
-          $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
-          for my $g (@{$$_{groups}}) {
-            my $gdt = substr $g->{text}, 0, -1;
-            $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$$g{displayText}\"];\n" unless $seen{$gdt}++;
-            $graphviz .= "\"$dt\" -> \"$gdt\" [color=red];\n";
-            for my $m (@{$$g{members}}) {
+      if ($re =~ /^friends=$/i) {
+        $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\",tooltip=\"$comment\"];\n";
+        my %seen = ($svnuser => 1);
+        for (@friends) {
+          no warnings 'uninitialized';
+          my $dt = substr $_->{text}, 0, -1;
+          next if $dt eq $svnuser;
+          if ($$_{members}) {
+            $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
+            $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
+            for my $m (@{$$_{members}}) {
               my $mdt = substr $m->{text}, 0 , -1;
               $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayText}\"];\n" unless $seen{$mdt}++;
               $graphviz .= "\"$dt\" -> \"$mdt\";\n";
             }
           }
+          elsif ($$_{groups}) {
+            $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
+            $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
+            for my $g (@{$$_{groups}}) {
+              my $gdt = substr $g->{text}, 0, -1;
+              $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$$g{displayText}\"];\n" unless $seen{$gdt}++;
+              $graphviz .= "\"$dt\" -> \"$gdt\" [color=red];\n";
+              for my $m (@{$$g{members}}) {
+                my $mdt = substr $m->{text}, 0 , -1;
+                $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayText}\"];\n" unless $seen{$mdt}++;
+                $graphviz .= "\"$dt\" -> \"$mdt\";\n";
+              }
+            }
+          }
+        }
+        $graphviz = escape_html $graphviz;
+        $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
+      }
+    }
+    if ($re !~ /friends=|watch=|notify=|build=/i) {
+      my @rv;
+      for (map [split /=/], split /\b[;,]+\b/, $re) {
+        my %seen;
+        my ($key, $value) = @$_;
+        if ($key =~ /^\@/ or not $value or $value =~ /^[rw]+$/) {
+          push @rv, grep !$seen{$$_{text}}++ && $_->{text} eq "$key=", map {$_, ($key !~ /^@/ && /^@/) ? @{$$_{members}} : ()} map {$_, $$_{groups} ? @{$$_{groups}} : ()} @friends;
+          $re .= "|\Q\$Author: $key \$\E" if $key !~ /^@/;
+        }
+        else {
+          $value = '@'.$value if $key eq "group";
+          $value = "<$value>" if $key eq "email";
+          push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, map {$_, ($key ne "group" && /^@/) ? @{$$_{members}}:()} @friends;
+          $re = "\Q$value\E";
+          $re .= '=' if grep $key eq $_, qw/user group/;
+          $re .= "|\Q\$Author: $value \$\E" if $key eq "user";
         }
       }
-      $graphviz = escape_html $graphviz;
-      $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
+      @friends = @rv;
     }
-  }
-  if ($re !~ /friends=|watch=|notify=|build=/i) {
-    my @rv;
-    for (map [split /=/], split /\b[;,]+\b/, $re) {
-      my %seen;
-      my ($key, $value) = @$_;
-      if ($key =~ /^\@/ or not $value or $value =~ /^[rw]+$/) {
-        push @rv, grep !$seen{$$_{text}}++ && $_->{text} eq "$key=", map {$_, ($key !~ /^@/ && /^@/) ? @{$$_{members}} : ()} map {$_, $$_{groups} ? @{$$_{groups}} : ()} @friends;
-        $re .= "|\Q\$Author: $key \$\E" if $key !~ /^@/;
+    elsif ($re =~ /watch=|notify=/i) {
+      my $watchers = $svn->propget("orion:watchers", substr($dirname, 0, -1), "WORKING", 1);
+      $_ = {map {$_=>1} split /,/} for values %$watchers;
+      my $url;
+      $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
+      s/:4433//, s/-internal// for $url;
+      chop(my $prefix = $dirname);
+      while (my ($k, $v) = each %$watchers) {
+        $k =~ s/^\Q$prefix//;
+        if (exists $$v{$svnuser}) {
+          eval {$svn->info("$url$k", sub {shift}, "HEAD")};
+          warn "$@" and next if $@;
+          push @watch, -f "$prefix$k" ? {name=>$k, type=>"file"} : {name=>".$k/", type=>"directory"};
+          $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
+        }
       }
-      else {
-        $value = '@'.$value if $key eq "group";
-        $value = "<$value>" if $key eq "email";
-        push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, map {$_, ($key ne "group" && /^@/) ? @{$$_{members}}:()} @friends;
-        $re = "\Q$value\E";
-        $re .= '=' if grep $key eq $_, qw/user group/;
-        $re .= "|\Q\$Author: $value \$\E" if $key eq "user";
-      }
+      @friends = ();
     }
-    @friends = @rv;
-  }
-  elsif ($re =~ /watch=|notify=/i) {
-    my $watchers = $svn->propget("orion:watchers", substr($dirname, 0, -1), "WORKING", 1);
-    $_ = {map {$_=>1} split /,/} for values %$watchers;
-    my $url;
-    $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
-    s/:4433//, s/-internal// for $url;
-    chop(my $prefix = $dirname);
-    while (my ($k, $v) = each %$watchers) {
-      $k =~ s/^\Q$prefix//;
-      if (exists $$v{$svnuser}) {
-        eval {$svn->info("$url$k", sub {shift}, "HEAD")};
-        warn "$@" and next if $@;
-        push @watch, -f "$prefix$k" ? {name=>$k, type=>"file"} : {name=>".$k/", type=>"directory"};
-        $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
-      }
-    }
-    @friends = ();
   }
 }
-if ($re !~ /friends=|notify=|watch=/i) {
+if ($re !~ /friends=|notify=|watch=|build=/i) {
   my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache/, @unzip, qw/--args 100 --html --markdown -- -P -e/], $re;
 
   if ($?) {
@@ -342,7 +349,7 @@ my $args = {
   friends     => \@friends,
   watch       => [sort {$a->{name} cmp $b->{name}} @watch],
   graphviz    => $graphviz,
-  js          => $js,
+  duration    => @dlog ? Cpanel::JSON::XS->new->utf8->encode(\@dlog) : undef,
   r           => $r,
 };
 
