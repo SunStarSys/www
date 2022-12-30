@@ -54,7 +54,7 @@ our @patterns = (
     facts      => $facts,
   }],
 
-  [qr/\.md(?:text)?/, memoize => {
+  [qr/\.md(?:text)?[^\/]*$/, memoize => {
     view       => [qw/snippet asymptote single_narrative/],
     compress   => 1,
     template   => "main.html",
