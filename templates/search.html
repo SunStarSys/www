@@ -107,7 +107,7 @@
                   if (elts) {
                       const idx = elts[0].index;
                       const revision = labels[idx].split(/:/)[0];
-                      document.location = "./?regex=build=" + revision + ";lang=.en;markdown_search=1";
+                      document.location = "./?regex=build=" + revision + ";lang={{lang}};markdown_search={{markdown_search}}";
                   }
               },
           },
