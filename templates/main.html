@@ -23,6 +23,7 @@
     {% block analytics %}
     {% include "analytics.html" %}
     {% endblock %}
+    <script src="/js/jquery.min.js"></script>
 </head>
 
 <body>
@@ -135,7 +136,6 @@
   <div class="jumbotron">{{ content|markdown }}</div>
 {% endblock %}
   <footer>{% block footer %}{% endblock footer %}</footer>
-  <script src="/js/jquery.min.js"></script>
   <script src="/js/bootstrap.bundle.min.js"></script>
   <script src="/js/raphael.min.js"></script>
   <script src="/js/underscore.min.js"></script>
@@ -159,48 +159,6 @@
     }
   </script>
   {% block javascript %}
-<script src="/editor.md/editormd.js"></script>
-<script type="text/javascript">
-  var editor_content;
-
-  $(function() {
-        editor_content = editormd("editor-content", {
-	    name: "content",
-	    mode: "gfm",
-            height: "800px",
-            path : "/editor.md/lib/",
-	    theme : "dark",
-	    previewTheme : "dark",
-	    editorTheme : "pastel-on-dark",
- 	    tocm : true,                  // Using [TOCM]
-            tex : true,                   // 开启科学公式TeX语言支持，默认关闭
-	    flowChart : true,             // 开启流程图支持，默认关闭
-            sequenceDiagram: true,
-            mermaid: true,
-            graphviz: true,
-	    htmlDecode : true,
-	    taskList: true,
-	    codeFold: true,
-	    searchReplace: true,
-	    onfullscreen     : function() {
-		this.editor.css({
-		    "border-radius": 0,
-		    "z-index": 120,
-		    "margin-top": 60,
-		});
-	    },
-	    onfullscreenExit : function() {
-		this.editor.css({
-		    zIndex : 10,
-		    border : "none",
-		    "border-radius" : 5,
-		    "margin-top": 0,
-		});
-		this.resize();
-	    }
-	}, editormd);
-  });
-</script>
   {% endblock %}
 </div>
 </body>
