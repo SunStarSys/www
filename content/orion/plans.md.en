@@ -19,7 +19,7 @@ Dependencies: *.md.en
 						<li>100 MB storage space<sup>1</sup></li>
 						<li>500 GB data transfer</li>
 						<li>Unlimited IDE usage for one seat</li>
-			<li>1K Build Minutes</li>
+			<li>200 Build Minutes</li>
 			<li>Email-based Customer Support</li>
 					</ol>
 				</li>
@@ -50,7 +50,7 @@ Dependencies: *.md.en
 						<li>250 MB storage space<sup>1</sup></li>
 						<li>1 TB data transfer</li>
 						<li>Unlimited IDE usage for three seats</li>
-				<li>5K Build Minutes</li>
+				<li>1K Build Minutes</li>
 				<li>99.9% Comprehensive SLA<sup>3</sup></li>
 						<li>Email-based Customer Support</li>
 					</ol>
@@ -81,7 +81,7 @@ Dependencies: *.md.en
 						<li>500 MB storage space in your own Subversion repository<sup>2</sup></li>
 						<li>3 TB data transfer</li>
 						<li>Unlimited websites and (self-managed) seats</li>
-						<li>20K Build Minutes</li>
+						<li>5K Build Minutes</li>
 						<li>Full control over Subversion authorization configuration</li>
 						<li>Private, networked build containers</li>
 						<li>99.99% Comprehensive SLA<sup>3</sup></li>
@@ -96,7 +96,7 @@ Dependencies: *.md.en
 						<li>$15 / 100 GB data transfer</li>
 						<li>$100 / ithread mod_perl registry hosting</li>
 						<li>$100 / OCI region for custom POPs</li>
-				<li>$100 / 10K Build Minutes</li>
+				<li>$100 / 5K Build Minutes</li>
 				<li>WebSockets and/or private container hosting available</li>
 					</ol>
 				</li>
@@ -141,6 +141,16 @@ Dependencies: *.md.en
 	- Sydney, AU
 
 	- São Paolo, BZ
+
+# Build Minutes and Plan Levels: a Rough Guide
+
+*A reasonable high-end estimate for the average build duration per commit is 10 seconds.*
+
+- Professionals with less than 20 commits a day should be fine with the 200 build minutes included in plan.
+
+- Businesses with less than 100 commits a day should be fine with the 1K build minutes included in plan.
+
+- Enterprises with less than 500 commits a day should be fine with the 5K build minutes included in plan.
 
 ------------
 
