@@ -149,7 +149,7 @@
   <script src="/js/mermaid-mindmap.min.js"></script>
   <script type="module" src="/js/chart.js"></script>
   <script src="/js/chart.umd.js"></script>
-  <script type="text/javascript">
+  <script async="" type="text/javascript">
     mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
     mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
     $(".flowchart").flowChart();
@@ -162,5 +162,4 @@
   {% block javascript %}{% endblock %}
 </div>
 </body>
-
 </html>
