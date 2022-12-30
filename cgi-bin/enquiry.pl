@@ -34,9 +34,10 @@ if ($r->method eq "POST") {
     my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
     my APR::Request::Param::Table $body = $apreq->body;
-    my ($name, $email, $subject, $content, $site, $hosting, $plan) = @{$body}{qw/name email subject content site hosting plan/};
-    s/\r//g for $name, $email, $subject, $content, $site, $hosting, $plan;
-    s/\n//g for $name, $email, $subject, $hosting, $site, $plan;
+    my ($name, $email, $subject, $content, $site, $confluence, $plan) = @{$body}{qw/name email subject content site confluence plan/};
+    $confluence = $confluence ? "yes" : "no";
+    s/\r//g for $name, $email, $subject, $content, $site, $confluence, $plan;
+    s/\n//g for $name, $email, $subject, $confluence, $site, $plan;
 
     my ($cn, $srs_sender) = ($name, $email);
 
@@ -65,7 +66,7 @@ Content-Type: text/plain; charset="utf-8"
 $content
 
 WEBSITE: $site
-HOSTING: $hosting
+CONFLUENCE: $confluence
 Plan: $plan
 EOT
 
