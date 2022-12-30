@@ -74,8 +74,7 @@
   const values = data.map(x => x[1]);
   var total = 0;
   for (const v of values)
-      total += v;
-  total = total / 60;
+      total += v / 60;
   const labels = data.map(x => x[0]);
   var myChart = new Chart(
       ctx,
