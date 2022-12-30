@@ -74,7 +74,7 @@
   const values = data.map(x => x[1]);
   var total = 0;
   for (var i=0; i < values.length; ++i)
-      total += values[i].parseInt();
+      total += +values[i];
   total /= 60;
 
   const labels = data.map(x => x[0]);
@@ -85,7 +85,7 @@
           data: {
               labels: labels,
               datasets: [{
-                  label: "Build Duration (s).  Total minutes this month = " + total.toFixed(2),
+                  label: "Build Duration (s).  Total minutes this month = " + total.toFixed(0),
                   data: values,
                   backgroundColor: "#8f99fb",
 
