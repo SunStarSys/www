@@ -218,14 +218,14 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
       if ($re =~ /^friends=$/i) {
-        $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=black,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\",tooltip=\"$comment\"];\n";
+        $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=green,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\",tooltip=\"$comment\"];\n";
         my %seen = ($svnuser => 1);
         for (@friends) {
           no warnings 'uninitialized';
           my $dt = substr $_->{text}, 0, -1;
           next if $dt eq $svnuser;
           if ($$_{members}) {
-            $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=green,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
+            $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=red,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
             $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
             for my $m (@{$$_{members}}) {
               my $mdt = substr $m->{text}, 0 , -1;
