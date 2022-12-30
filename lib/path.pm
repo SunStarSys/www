@@ -76,7 +76,7 @@ walk_content_tree {
 
   for my $lang (qw/en es de fr/) {
 
-    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/essays/lib/!) {
+    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
     }
 
