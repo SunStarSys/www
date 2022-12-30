@@ -274,7 +274,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
     elsif ($re =~ /watch=|notify=/i) {
       my $watchers = $svn->propget("orion:watchers", substr($dirname, 0, -1), "WORKING", 1);
-      $_ = {map {$_=>1} split /,/} for values %$watchers;
+      $_ = {map {$_=>1} split /[, ]/} for values %$watchers;
       my $url;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
