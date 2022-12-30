@@ -54,6 +54,8 @@ our @patterns = (
     facts      => $facts,
   }],
 
+  [qr/editor\.md\/.*\.md$/, passthru => {} ],
+
   [qr/\.md(?:text)?/, memoize => {
     view       => [qw/snippet asymptote single_narrative/],
     compress   => 1,
