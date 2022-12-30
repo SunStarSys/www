@@ -100,7 +100,8 @@
               plugins: {
                   title: {
                       display: true,
-                      text: total.toFixed(0) + " build minutes this month",
+                      text: total.toFixed(0) + " build minutes this month
+          (averaage build durationn is " + (total * 60 / values.length) + " s)",
                   }
               },
               onClick: (e, elts, chart) => {
