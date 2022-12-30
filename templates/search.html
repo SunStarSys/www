@@ -104,7 +104,9 @@
                   }
               },
               onClick: (e, elts, chart) => {
-                  alert(elts);
+                  if (typeof elts === "Object") {
+                      alert(elts.keys());
+                  }
               },
           },
       });
