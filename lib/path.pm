@@ -1,4 +1,5 @@
 package path;
+
 use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived Load/;
 use strict;
 use warnings;
@@ -75,7 +76,7 @@ walk_content_tree {
 
   for my $lang (qw/en es de fr/) {
 
-    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/lib/!) {
+    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/|/essays/lib/!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
     }
 
