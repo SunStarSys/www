@@ -76,6 +76,8 @@
   for (var i=0; i < values.length; ++i)
       if (Number.isInteger(values[i]))
           total += values[i];
+      else
+          alert(values[i]);
   total /= 60;
 
   const labels = data.map(x => x[0]);
