@@ -94,8 +94,10 @@
           options: {
               indexAxis: "y",
               plugins: {
-                  display: true,
-                  text: total.toFixed(0) + " build minutes this month",
+                  title: {
+                      display: true,
+                      text: total.toFixed(0) + " build minutes this month",
+                  }
               }
           },
       });
