@@ -105,7 +105,8 @@
               },
               onClick: (e, elts, chart) => {
                   if (elts) {
-                      alert(Object.getOwnPropertyNames(elts[0]));
+                      const e = elts[0];
+                      alert(e.element.keys());
                   }
               },
           },
