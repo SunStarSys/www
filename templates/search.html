@@ -85,8 +85,7 @@
           data: {
               labels: labels,
               datasets: [{
-                  label: "Build Duration (s).  Total minutes this month = " +
-                      total.toFixed(0) + ".",
+                  label: "Build Duration (s)",
                   data: values,
                   backgroundColor: "#8f99fb",
 
@@ -94,6 +93,10 @@
           },
           options: {
               indexAxis: "y",
+              plugins: {
+                  display: true,
+                  text: total.toFixed(0) + " build minutes this month",
+              }
           },
       });
 </script>
