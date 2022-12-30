@@ -74,10 +74,7 @@
   const values = data.map(x => x[1]);
   var total = 0;
   for (var i=0; i < values.length; ++i)
-      if (Number.isInteger(values[i]))
-          total += values[i];
-      else
-          alert(values[i]);
+      total += values[i].parseInt();
   total /= 60;
 
   const labels = data.map(x => x[0]);
