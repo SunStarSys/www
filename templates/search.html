@@ -72,7 +72,7 @@
   var ctx = document.getElementById("myChart").getContext("2d");
   const data = {{duration|safe}};
   const values = data.map(x => x[1]);
-  const total = 0;
+  var total = 0;
   for (const v of values)
       total += v;
   total = int(total / 60);
