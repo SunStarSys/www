@@ -48,7 +48,7 @@ if ($r->method eq "POST") {
         }
     }
 
-    if ($subject =~ /^cms/i) {
+    if ($subject =~ /^orion/i) {
         s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
         $srs_sender =~ /(.*)/;
         length $1 or die "BAD EMAIL: $email";
@@ -75,7 +75,7 @@ EOT
 
     render $r, "enquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
-        headers => { title => "CMS Sales Enquiry" };
+        headers => { title => "Orion Sales Enquiry" };
 }
 
 render $r, "enquiry_get.html";
