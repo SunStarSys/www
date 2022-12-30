@@ -78,7 +78,6 @@
   var total = 0;
   for (var i=0; i < values.length; ++i)
       total += +values[i];
-  total /= 60;
 
   const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
   x[4]);
@@ -100,8 +99,7 @@
               plugins: {
                   title: {
                       display: true,
-                      text: total.toFixed(0) + " build minutes this month
-          (averaage build durationn is " + (total * 60 / values.length) + " s)",
+                      text: (total / 60).toFixed(0) + " build minutes this month (average build duration is " + (total / values.length).toFixed(0) + " s)",
                   }
               },
               onClick: (e, elts, chart) => {
