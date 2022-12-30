@@ -74,7 +74,8 @@
   const values = data.map(x => x[1]);
   var total = 0;
   for (i=0; i < values.length; ++i)
-      total += values[i];
+      if (values[i])
+          total += values[i];
   total = total / 60;
   const labels = data.map(x => x[0]);
   var myChart = new Chart(
@@ -84,7 +85,7 @@
           data: {
               labels: labels,
               datasets: [{
-                  label: "Build Duration (s).  Total minutes this month = " + total           ,
+                  label: "Build Duration (s).  Total minutes this month = " + total.toFixed(2),
                   data: values,
                   backgroundColor: "#8f99fb",
 
