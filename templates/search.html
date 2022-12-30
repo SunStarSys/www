@@ -73,10 +73,11 @@
   const data = {{duration|safe}};
   const values = data.map(x => x[1]);
   var total = 0;
-  for (i=0; i < values.length; ++i)
+  for (var i=0; i < values.length; ++i)
       if (values[i])
           total += values[i];
-  total = total / 60;
+  alert(total);
+  total /= 60;
   const labels = data.map(x => x[0]);
   var myChart = new Chart(
       ctx,
