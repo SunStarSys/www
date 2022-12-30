@@ -146,6 +146,7 @@ my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 my $lang     = encode($apreq->args("lang") || ".en");
 my $re       = $apreq->args("regex") || return 400;
 my $host     = $r->headers_in->{host};
+my $js;
 
 utf8::decode($re);
 
@@ -239,7 +240,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
     }
   }
-  if ($re !~ /friends=|watch=|notify=/i) {
+  if ($re !~ /friends=|watch=|notify=|build=/i) {
     my @rv;
     for (map [split /=/], split /\b[;,]+\b/, $re) {
       my %seen;
@@ -341,6 +342,7 @@ my $args = {
   friends     => \@friends,
   watch       => [sort {$a->{name} cmp $b->{name}} @watch],
   graphviz    => $graphviz,
+  js          => $js,
   r           => $r,
 };
 
