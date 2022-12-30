@@ -180,7 +180,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
-      open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build_duration_log" or die "can't open build_duration_log: $!";
+      open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-duration-log" or die "can't open build-duration-log: $!";
       @dlog = map {chomp; [split /:/]} <$fh>;
       close $fh;
     }
