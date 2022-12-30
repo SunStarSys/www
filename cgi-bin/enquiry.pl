@@ -34,9 +34,9 @@ if ($r->method eq "POST") {
     my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
     my APR::Request::Param::Table $body = $apreq->body;
-    my ($name, $email, $subject, $content, $site, $hosting, $plang) = @{$body}{qw/name email subject content site hosting plang/};
-    s/\r//g for $name, $email, $subject, $content, $site, $hosting, $plang;
-    s/\n//g for $name, $email, $subject, $hosting, $site, $plang;
+    my ($name, $email, $subject, $content, $site, $hosting, $plan) = @{$body}{qw/name email subject content site hosting plan/};
+    s/\r//g for $name, $email, $subject, $content, $site, $hosting, $plan;
+    s/\n//g for $name, $email, $subject, $hosting, $site, $plan;
 
     my ($cn, $srs_sender) = ($name, $email);
 
@@ -66,7 +66,7 @@ $content
 
 WEBSITE: $site
 HOSTING: $hosting
-LANGUAGE: $plang
+Plan: $plan
 EOT
 
         close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
