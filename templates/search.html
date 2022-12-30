@@ -107,7 +107,7 @@
                   if (elts) {
                       const idx = elts[0].index;
                       const revision = labels[idx].split(/:/)[0];
-                      document.location("/dynamic/search/build="+revision);
+                      document.location = "/dynamic/search/build="+revision;
                   }
               },
           },
