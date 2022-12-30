@@ -14,11 +14,15 @@
 	<input type="radio" name="hosting" value="private" /> &nbsp; SunStar Systems Business {%ifequal lang ".en" %}Private Repository{% endifequal %}{% ifequal lang ".es" %}Repositorio Privado{% endifequal %}{% ifequal lang ".de" %}Privater Bereich{% endifequal %}{% ifequal lang ".fr" %}Dépôt privé{% endifequal %}
 	<input type="radio" name="hosting" value="private" /> &nbsp; SunStar Systems {%ifequal lang ".en" %}Enterprise Repository{% endifequal %}{% ifequal lang ".es" %}Repositorio empresarial{% endifequal %}{% ifequal lang ".de" %}Enterprise Repository{% endifequal %}{% ifequal lang ".fr" %}Référentiel d'entreprise{% endifequal %}
 
-	<label for="plang">{% ifequal lang ".en" %}Preferred Build System Programming Language{% endifequal %}{% ifequal lang ".es" %}Lenguaje de programación del sistema de compilación preferido{% endifequal %}{% ifequal lang ".de" %}Bevorzugte Programmiersprache für Build-Systeme{% endifequal %}{% ifequal lang ".fr" %}Langage de programmation Preferred Build System{% endifequal %}</label>
-	<input type="radio" name="plang" value="perl" checked /> &nbsp; Perl 7
-	<input type="radio" name="plang" value="python" /> &nbsp; Python 3
-	<input type="radio" name="plang" value="typescript" /> &nbsp; TypeScript
-	<input type="radio" name="plang" value="golang" /> &nbsp; GoLang
+	<label for="plan">{% ifequal lang ".en" %}Preferred Orion Plan{%
+	endifequal %}{% ifequal lang ".es" %}Preferred Orion Plan{% endifequal
+	  %}{% ifequal lang ".de" %}Preferred Orion Plan{% endifequal %}{%
+	ifequal lang ".fr" %}Preferred Orion Plan{% endifequal %}</label>
+	<input type="radio" name="plan" value="Professional" checked /> &nbsp;
+	Professional Plan
+	<input type="radio" name="plan" value="Business" /> &nbsp; Business Plan
+	<input type="radio" name="plan" value="Enterprise" /> &nbsp; Enterprise Plan
+	<input type="radio" name="plan" value="Server" /> &nbsp; Orion Server Install
 
 	<label for="subject">{% ifequal lang ".en" %}Subject{% endifequal %}{% ifequal lang ".es" %}Sujeto{% endifequal %}{% ifequal lang ".de" %}Gegenstand{% endifequal %}{% ifequal lang ".fr" %}Matière{% endifequal %}</label>
 	<input name="subject" class="form-control" value="Orion " pattern="Orion.*" required />
