@@ -120,30 +120,6 @@ div.breadcrumbs {
     #search { display: none; }
 }
 
-div#editor-content > * {
-    float:left;
-    display: inline-block;
-    background-color: white;
-    padding-top: 2px;
-}
-div#editor-content {
-    background-color: white;
-    width: 500px;
-    height: 400px;
-}
-
-div#editor-content div :is(h1,h2,h3,h4,h5,h6,h7,h8) {
-    color: green;
-}
-
-ul.editormd-menu {
-    width: 500px;
-    display: inline-block;
-    list-style-type: unset;
-    top: 0px;
-    left: 0px;
-}
-
 .right {
     float:        right;
     text-align:   right;
