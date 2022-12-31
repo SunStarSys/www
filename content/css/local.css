@@ -121,7 +121,7 @@ div.breadcrumbs {
 }
 
 div#editor-content > * {
-    /*float:left;*/
+    float:left;
 	display: inline-block;
 	background-color: white;
 }
