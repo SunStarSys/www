@@ -49,15 +49,16 @@
   $(function() {
         editor_content = editormd("editor-content", {
             toolbar: true,
-            toolbarIcons: "mini",
+            toolbarIcons: {% ifequal path|dirname "/orion" %}"small"{% else
+                %}"mini"{% endifequal %}
             toolbarAutoFixed: false,
 	    height: "400px",
 	    name: "content",
             mode: "gfm",
             path : "/editor.md/lib/",
-	    theme : "dark",
-	    previewTheme : "dark",
-	    editorTheme : "pastel-on-dark",
+	    theme : "solarized",
+	    previewTheme : "solarized",
+	    editorTheme : "solarized",
  	    tocm : false,                  // Using [TOCM]
             tex : true,                   // 开启科学公式TeX语言支持，默认关闭
 	    flowChart : true,             // 开启流程图支持，默认关闭
@@ -68,6 +69,23 @@
 	    taskList: true,
 	    codeFold: true,
 	    searchReplace: true,
+	    onfullscreen     : function() {
+		this.editor.css({
+		    "border-radius": 0,
+		    "z-index": 120,
+		    "margin-top": 60,
+		});
+	    },
+	    onfullscreenExit : function() {
+		this.editor.css({
+		    zIndex : 10,
+		    border : "none",
+		    "border-radius" : 5,
+		    "margin-top": 0,
+		});
+		this.resize();
+	    }
+
 	}, editormd);
   });
 
