@@ -62,22 +62,6 @@
 	    taskList: true,
 	    codeFold: true,
 	    searchReplace: true,
-	    onfullscreen     : function() {
-		this.editor.css({
-		    "border-radius": 0,
-		    "z-index": 120,
-		    "margin-top": 60,
-		});
-	    },
-	    onfullscreenExit : function() {
-		this.editor.css({
-		    zIndex : 10,
-		    border : "none",
-		    "border-radius" : 5,
-		    "margin-top": 0,
-		});
-		this.resize();
-	    }
 	}, editormd);
   });
 </script>
