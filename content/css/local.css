@@ -120,6 +120,11 @@ div.breadcrumbs {
     #search { display: none; }
 }
 
+div.editormd {
+    width: 100%;
+    height: 400px;
+}
+
 .right {
     float:        right;
     text-align:   right;
