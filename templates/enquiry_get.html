@@ -1,3 +1,5 @@
+<script src="/editor.md/editormd.js"></script>
+
 <h3>Orion {% ifequal lang ".en" %}Sales Enquiries{% endifequal %}{% ifequal
   lang ".es" %}Consultas de ventas{% endifequal %}{% ifequal lang ".de"
   %}Verkaufsanfragen{% endifequal %}{% ifequal lang ".fr" %}Demandes de
@@ -33,8 +35,6 @@
   <input type="hidden" name="lang" value="{{ lang }}" />
   <button name="submit" class="btn btn-outline-success" value=1 >{% ifequal lang ".en" %}Submit{% endifequal %}{% ifequal lang ".es" %}Enviar{% endifequal %}{% ifequal lang ".de" %}Einreichen{% endifequal %}{% ifequal lang ".fr" %}Soumettre{% endifequal %}</button>
 </form>
-
-<script src="/editor.md/editormd.js"></script>
 
 <script type="text/javascript">
   var editor_content;
