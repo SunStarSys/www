@@ -23,14 +23,16 @@
 	<li>peak performance,</li>
 	<li>federated</li>
 </ul>
-<span class="text-white">Enterprise Wiki</span> for **creating, managing, and delivering static website content**, potentially with some basic [CGI](https://en.wikipedia.org/wiki/Common_Gateway_Interface) / [SSI](https://en.wikipedia.org/wiki/Server_Side_Includes) or other server-side, supplementary dynamic content features baked in.
+<span class="text-white">Enterprise Wiki</span> for **creating, managing, and delivering static website content**, potentially with some basic <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a> / <a href="https://en.wikipedia.org/wiki/Server_Side_Includes">SSI</a>or other server-side, supplementary dynamic content features baked in.
 
 For pricing information, see our [Orion Plans](plans).
 
 <h3>Here's the Pitch, Executive Decision Maker...</h3>
+
 What differentiates this product from our competitors is the [Orion Technology](technology), and how it allows us to maintain very low operating costs while providing a superior editorial controls and groundbreaking features.  We pass the cost savings on to our **customers**, with only marginal upcharges for additional cloud provider resources. [Give us a call](/contact), **especially** if you are
+
 <ul>
-	<li>an <span class="text-white">IT government/defense sector decision-maker</span> with either FedRAMP/[NIST 800-207](https://www.nist.gov/publications/zero-trust-architecture) compliance needs, or fine-grained Access Control requirements on your site's version control repository,</li>
+	<li>an <span class="text-white">IT government/defense sector decision-maker</span> with either FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a>compliance needs, or fine-grained Access Control requirements on your site's version control repository,</li>
 	<li>a <span class="text-white">marketing executive</span> wanting an innovative, enterprise platform for managing your corporate website assets,</li>
 	<li>a <span class="text-white">technology company/website agency leader</span> with a very insecure commercial wiki, a mountain of online product documentation or client sites (potentially offering binary downloads) to curate,</li>
 	<li>a <span class="text-white">principled High Availability architect</span> tired of dealing with single-points-of-failure inherent in SQL-based LAMP stacks,</li>
@@ -65,11 +67,13 @@ Multi-gigabyte source trees are simply no match for it &mdash; full site build d
 This technology was first invented in late 2011 by members of the Apache Infrastructure Team. The phrase "[JAM Stack](https://jamstack.wtf)" was coined years later, by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
 
 <h4>Want to give it a quick spin to see how fast and easy it is?</h4>
+
 This website is self-hosted; all those hot-pink pencil squares [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
 
 Our global Point of Presence (POP) network ensures low-latency connections to both Orion &trade; and the end-delivery websites we host.  We are currently on four continents and have a bicoastal presence within the US.  And we're expanding rapidly- next up East Asia!
 
 <h3>It's time for a sea change in how you manage and deliver your site to your target audience.</h3>
+
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure.
 
 See our [Orion Plans](plans) for the current deals.
