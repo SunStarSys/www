@@ -28,7 +28,9 @@
   <input name="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
   <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
-  <textarea name="content" class="form-control" rows=10></textarea>
+  <div id="editor-content">
+    <textarea class="form-control"></textarea>
+  </div>
 
   <input type="hidden" name="lang" value="{{ lang }}" />
   <button name="submit" class="btn btn-outline-success" value=1 >{% ifequal lang ".en" %}Submit{% endifequal %}{% ifequal lang ".es" %}Enviar{% endifequal %}{% ifequal lang ".de" %}Einreichen{% endifequal %}{% ifequal lang ".fr" %}Soumettre{% endifequal %}</button>
