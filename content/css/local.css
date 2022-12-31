@@ -120,6 +120,9 @@ div.breadcrumbs {
     #search { display: none; }
 }
 
+div#editor-content {
+    float: left;
+}
 div.markdown-body {
     float: right;
     height: 400px;
