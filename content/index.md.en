@@ -56,9 +56,7 @@ Looking for a simpler, safer, faster, **federated** Enterprise Wiki?  Check out 
 &nbsp;
 
 <div style="text-align:justify;max-width:600px">
-{% for d in deps|dictsort:0 %}
-  <button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button>
-{% endfor %}
+{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button> {% endfor %}
 </div>
 
 <style type="text/css">
