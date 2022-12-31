@@ -33,7 +33,7 @@
   <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
 
   <div id="editor-content" class="editormd editormd-vertical editormd-theme-solarized">
-    <textarea name="content"></textarea>
+    <textarea style="display:none"></textarea>
   </div>
 </form>
 
@@ -66,3 +66,4 @@
 	}, editormd);
   });
 </script>
+<script src="/editor.md/languages/{{ lang }}.js"></script>
