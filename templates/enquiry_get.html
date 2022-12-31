@@ -29,7 +29,7 @@
 
   <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
   <div id="editor-content" class="editormd editormd-vertical editormd-theme-solarized">
-    <textarea class="form-control"></textarea>
+    <textarea class="form-control" style="display:none"></textarea>
   </div>
   <br><br>
   <input type="hidden" name="lang" value="{{ lang }}" />
@@ -43,7 +43,7 @@
 
   $(function() {
         editor_content = editormd("editor-content", {
-            toolbar: false,
+            toolbar: true,
 	    name: "content",
 	    mode: "gfm",
             width: "800px",
