@@ -131,7 +131,7 @@ div#editor-content {
 	width: 500px;
 	height: 400px;
 }
-div#editor-content h* {
+div#editor-content div h3 {
     color: green;
 }
 
