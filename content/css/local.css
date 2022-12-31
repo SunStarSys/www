@@ -121,12 +121,12 @@ div.breadcrumbs {
 }
 
 div#editor-content {
-    float: left;
+    width: 40%;
 }
 div.markdown-body {
     float: right;
     height: 400px;
-    width:50%;
+    width:40%;
     background-color: white;
 }
 
