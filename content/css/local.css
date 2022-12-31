@@ -123,8 +123,13 @@ div.breadcrumbs {
 div#editor-content > * {
     float:left;
 	display: inline-block;
+	background-color: white;
 }
-
+div#editor-content {
+    background-color: white;
+	width: 500px;
+	height: 400px;
+}
 .right {
     float:        right;
     text-align:   right;
