@@ -131,7 +131,7 @@ div#editor-content {
 	width: 500px;
 	height: 400px;
 }
-div#editor-content div h3 {
+div#editor-content div :is(h1,h2,h3,h4,h5,h6,h7,h8) {
     color: green;
 }
 
