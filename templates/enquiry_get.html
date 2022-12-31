@@ -27,13 +27,13 @@
   <label for="subject">{% ifequal lang ".en" %}Subject{% endifequal %}{% ifequal lang ".es" %}Sujeto{% endifequal %}{% ifequal lang ".de" %}Gegenstand{% endifequal %}{% ifequal lang ".fr" %}Matière{% endifequal %}</label>
   <input name="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
-  <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
-  <div id="editor-content" class="editormd editormd-vertical editormd-theme-solarized">
-    <textarea></textarea>
-  </div>
-  <br><br>
   <input type="hidden" name="lang" value="{{ lang }}" />
   <button name="submit" class="btn btn-outline-success" value=1 >{% ifequal lang ".en" %}Submit{% endifequal %}{% ifequal lang ".es" %}Enviar{% endifequal %}{% ifequal lang ".de" %}Einreichen{% endifequal %}{% ifequal lang ".fr" %}Soumettre{% endifequal %}</button>
+
+  <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
+  <div id="editor-content" class="editormd editormd-vertical editormd-theme-solarized">
+    <textarea name="content"></textarea>
+  </div>
 </form>
 
 <script src="/editor.md/editormd.js"></script>
