@@ -36,6 +36,7 @@ if ($r->method eq "POST") {
     my APR::Request::Param::Table $body = $apreq->body;
     my ($name, $email, $subject, $content, $site, $confluence, $plan) = @{$body}{qw/name email subject content site confluence plan/};
     $confluence = $confluence ? "yes" : "no";
+	defined $content or return;
     s/\r//g for $name, $email, $subject, $content, $site, $confluence, $plan;
     s/\n//g for $name, $email, $subject, $confluence, $site, $plan;
 
