@@ -341,9 +341,9 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for math and physics expressions like the Navier-Stokes' Equations below):
+- [x] Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for math and physics expressions like the Navier-Stokes' Equations below):
 
-	- Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
+- Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
 ```math
 \begin{aligned}
 \pdv{\rho}{t}+\pdv{(\rho u_i)}{x_i} &= 0 \\
@@ -351,7 +351,9 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
       \pdv{(\rho e)}{t}+(\rho e+p)\pdv{u_i}{x_i} &= \pdv{(\tau_{ij} u_j)}{x_i}+\rho f_i u_i+\pdv{(\dot{q}_i)}{x_i}+r \\
 \end{aligned}
 ```
-    - Classical Notation
+
+- Classical Notation
+
 ```math
 \begin{aligned}
 \pdv{\rho}{t}+\vec{\nabla}\cdot(\rho\vec{u}) &= 0 \\
@@ -362,7 +364,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- Electric!
+- [x] Electric!
 
 	Editor will autocomplete and autoindent; has full screen mode, as well as support for several other content authoring modes available to its CodeMirror 5 syntax highlighter.
 
@@ -426,11 +428,9 @@ draw(tube(p,colorsec),render(merge=true));
 
 ## Deltas from <span class='text-info'>Apache CMS</span> Features
 
-- Dropped [`mdx_elementid.py`](#) features (new implementation is javascript, not python, and GFM based, so only [TOC] from the py-markdown module carries across).  A problem tailor-made for the above Search and Replace Feature of the IDE.
-
 - Only the Perl-based build system is available.
 
-- New editor treats newlines within markdown text blocks as hard breaks.
+- New Markdown editor is `marked/gfm` based, so the parser is more modern.  Latest release supports slug specification a'la the original python-based parser.
 
 - GFM uses a different delimiter for code blocks.
 
