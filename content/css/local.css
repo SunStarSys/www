@@ -120,6 +120,10 @@ div.breadcrumbs {
     #search { display: none; }
 }
 
+div#editor-content div :is(h1,h2,h3,h4,h5,h6,h7,h8) {
+    color: green;
+}
+
 .right {
     float:        right;
     text-align:   right;
