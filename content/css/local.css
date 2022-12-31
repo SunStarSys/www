@@ -121,6 +121,7 @@ div.breadcrumbs {
 }
 
 div#editor-content {
+    position: fixed;
     background-color: white;
 }
 
