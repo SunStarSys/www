@@ -5,20 +5,26 @@ Dependencies: /categories/*/index.html.en
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">News</div>
 		<div class="card-body">
-		<h4 class="card-title">SunStar Systems' Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} released.
-			</h4>
-			<h4 class="card-title">
-			<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> released to CPAN!
-			</h4>
-			<h4>
+<h4 class="card-title">SunStar Systems' Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} released.
+</h4>
+
+<h4 class="card-title">
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> released to CPAN!
+</h4>
+
+<h4>
 
 [Algorithm::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) released to CPAN!
 
 </h4>
-			<h4 class="card-title">SunStar Systems <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a>) released!</h4>
-			<h4 class="card-title">SunStar Systems pty {{facts.releases.pty.tag}} released!</h4>
-			<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
-		</div>
+
+<h4 class="card-title">SunStar Systems <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> released!</h4>
+
+<h4 class="card-title">SunStar Systems pty {{facts.releases.pty.tag}} released!</h4>
+
+<p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
+
+</div>
 	</div>
 	<br />
 </div>
