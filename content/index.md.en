@@ -5,12 +5,16 @@ Dependencies: /categories/*/index.html.en
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">News</div>
 		<div class="card-body">
-			<h4 class="card-title">SunStar Systems' Orion&trade; [Static Site Generator]({{facts.releases.orion.url}}) {{facts.releases.orion.tag}} released.
+			<h4 class="card-title">SunStar Systems' Orion&trade; 
+
+[Static Site Generator]({{facts.releases.orion.url}}) {{facts.releases.orion.tag}} released.
 			</h4>
 			<h4 class="card-title">
 			<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> released to CPAN!
 			</h4>
-			<h4>[Algorithm::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) released to CPAN!
+			<h4>
+			
+[Algorithm::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) released to CPAN!
 			</h4>
 			<h4 class="card-title">SunStar Systems [orthrus {{facts.releases.orthrus.tag}}]({{facts.releases.orthrus.url}}) released!</h4>
 			<h4 class="card-title">SunStar Systems pty {{facts.releases.pty.tag}} released!</h4>
@@ -52,7 +56,11 @@ Looking for a simpler, safer, faster, **federated** Enterprise Wiki?  Check out 
 &nbsp;
 
 <div style="text-align:justify;max-width:600px">
-{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success">[{{d.0|dirname|basename}}]({{d.0}})</button> {% endfor %}
+{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success">
+
+[{{d.0|dirname|basename}}]({{d.0}})
+
+</button> {% endfor %}
 </div>
 
 <style type="text/css">
@@ -82,3 +90,5 @@ div.jumbotron ul {
 	-webkit-animation-iteration-count: 1;
 }
 </style>
+
+<!-- $Date$ $Author$ -->
