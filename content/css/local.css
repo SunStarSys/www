@@ -125,6 +125,9 @@ div#editor-content > * {
 	display: inline-block;
 	background-color: white;
 }
+div#editor-content > ul {
+    display: inline;
+}
 div#editor-content {
     background-color: white;
 	width: 500px;
