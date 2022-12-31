@@ -120,9 +120,8 @@ div.breadcrumbs {
     #search { display: none; }
 }
 
-div.editormd {
-    min-width: 400px;
-    height: 200px;
+div#editor-content {
+    background-color: white;
 }
 
 .right {
