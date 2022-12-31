@@ -121,7 +121,8 @@ div.breadcrumbs {
 }
 
 div#editor-content > * {
-    display: inline-block;
+    float:left;
+	display: inline-block;
 }
 
 .right {
