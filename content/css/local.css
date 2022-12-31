@@ -120,8 +120,8 @@ div.breadcrumbs {
     #search { display: none; }
 }
 
-div#editor-content {
-    position: relative;
+div.markdown-body {
+    float: right;
     background-color: white;
 }
 
