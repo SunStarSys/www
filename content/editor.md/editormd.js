@@ -605,7 +605,7 @@
 		    _this.loadedDisplay();
                 }
 	    };
-	    _this.editormd.loadCSS(loadPath + "codemirror/codemirror.min");
+	    _this.editormd.loadCSS(loadPath + "codemirror/codemirror");
 
 	    if (settings.searchReplace && !settings.readOnly)
 	    {
@@ -618,7 +618,7 @@
 		_this.editormd.loadCSS(loadPath + "codemirror/addon/fold/foldgutter");
 	    }
 
-	    _this.editormd.loadScript(loadPath + "codemirror/codemirror.min", function() {
+	    _this.editormd.loadScript(loadPath + "codemirror/codemirror", function() {
 		_this.editormd.$CodeMirror = CodeMirror;
 
 		editormd.loadScript(loadPath + "codemirror/modes.min", function() {
@@ -2149,13 +2149,12 @@
                 pedantic    : false,
                 sanitize    : (settings.htmlDecode) ? false : true,  // 关闭忽略HTML标签，即开启识别HTML标签，默认为false
                 smartLists  : true,
-                smartypants : true,
-                xhtml       : true
+                smartypants : true
             };
 
             marked.setOptions(markedOptions);
 
-            var newMarkdownDoc = marked(cmValue, markedOptions);
+            var newMarkdownDoc = marked.parse(cmValue, markedOptions);
 
             //console.info("cmValue", cmValue, newMarkdownDoc);
 
@@ -4149,7 +4148,7 @@
 
 	markdownDoc = new String(markdownDoc);
 
-        var markdownParsed = marked(markdownDoc, markedOptions);
+        var markdownParsed = marked.parse(markdownDoc, markedOptions);
 
         markdownParsed = editormd.filterHTMLTags(markdownParsed, settings.htmlDecode);
 
