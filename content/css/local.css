@@ -120,7 +120,7 @@ div.breadcrumbs {
     #search { display: none; }
 }
 
-div#editor-content, div.markdown-body {
+div#editor-content > * {
     display: inline-block;
 }
 
