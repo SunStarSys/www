@@ -121,8 +121,7 @@ div.breadcrumbs {
 }
 
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
-    color: green;
-    margin-top: 0px;
+/*    color: green; */
     padding-top: 0px;
 }
 
