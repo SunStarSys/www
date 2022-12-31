@@ -2,9 +2,7 @@ Title: Contact Us
 Keywords: South Florida, System Administration, DevOps, DevSecOps, SRE, GitOps
 
 <div class="float-lg-right">
-{% filter safe %}
 {% include "enquiry_get.html" %}
-{% endfilter %}
 </div>
 
 ![SunStar Systems](images/sunstarlogowhole.png)
@@ -36,5 +34,3 @@ Fort Lauderdale, FL 33312
 <div class="col-lg-6" style="height:800px">
 &nbsp;
 </div>
-
-<!-- $Date$ $Author$ -->
