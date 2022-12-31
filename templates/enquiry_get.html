@@ -31,7 +31,7 @@
   <div id="editor-content" class="editormd editormd-vertical editormd-theme-solarized">
     <textarea class="form-control"></textarea>
   </div>
-
+  <br><br>
   <input type="hidden" name="lang" value="{{ lang }}" />
   <button name="submit" class="btn btn-outline-success" value=1 >{% ifequal lang ".en" %}Submit{% endifequal %}{% ifequal lang ".es" %}Enviar{% endifequal %}{% ifequal lang ".de" %}Einreichen{% endifequal %}{% ifequal lang ".fr" %}Soumettre{% endifequal %}</button>
 </form>
@@ -46,7 +46,8 @@
             toolbar: false,
 	    name: "content",
 	    mode: "gfm",
-            height: "200px",
+            width: "600px",
+            height: "400px",
             path : "/editor.md/lib/",
 	    theme : "solarized",
 	    previewTheme : "solarized",
