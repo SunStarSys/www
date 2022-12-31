@@ -131,8 +131,17 @@ div#editor-content {
 	width: 500px;
 	height: 400px;
 }
+
 div#editor-content div :is(h1,h2,h3,h4,h5,h6,h7,h8) {
     color: green;
+}
+
+ul.editormd-menu {
+    width: 500px;
+    display: inline-block;
+    list-style-type: none;
+    top: 0px;
+    left: 0px;
 }
 
 .right {
