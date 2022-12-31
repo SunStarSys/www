@@ -2,8 +2,9 @@
   lang ".es" %}Consultas de ventas{% endifequal %}{% ifequal lang ".de"
   %}Verkaufsanfragen{% endifequal %}{% ifequal lang ".fr" %}Demandes de
   ventes{% endifequal %}</h3>
-
+<br>
 <form method="POST" action="/dynamic/enquiry" class="form">
+
   <label for="name">{% ifequal lang ".en" %}Your Name{% endifequal %}{% ifequal lang ".es" %}Tu nombre{% endifequal %}{% ifequal lang ".de" %}Dein Name{% endifequal %}{% ifequal lang ".fr" %}Votre Nom{% endifequal %}</label>
   <input name="name" class="form-control" required />
 
@@ -30,7 +31,7 @@
   <input type="hidden" name="lang" value="{{ lang }}" />
   <button name="submit" class="btn btn-outline-success" value=1 >{% ifequal lang ".en" %}Submit{% endifequal %}{% ifequal lang ".es" %}Enviar{% endifequal %}{% ifequal lang ".de" %}Einreichen{% endifequal %}{% ifequal lang ".fr" %}Soumettre{% endifequal %}</button>
 
-  <br>
+  <br><br>
 
   <label for="content">{% ifequal lang ".en" %}Message for Sales{% endifequal %}{% ifequal lang ".es" %}Mensaje para el departamento de ventas{% endifequal %}{% ifequal lang ".de" %}Nachricht für die Verkaufsabteilung{% endifequal %}{% ifequal lang ".fr" %}Message pour le service commercial{% endifequal %}</label>
 
