@@ -124,12 +124,17 @@ div#editor-content > * {
     float:left;
 	display: inline-block;
 	background-color: white;
+	padding-top: 2px;
 }
 div#editor-content {
     background-color: white;
 	width: 500px;
 	height: 400px;
 }
+div#editor-content h* {
+    color: green;
+}
+
 .right {
     float:        right;
     text-align:   right;
