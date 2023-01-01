@@ -1,4 +1,6 @@
 #!/usr/local/bin/perl -T
+# Copyright 2023 SunStar Systems, Inc.  All rights reserved.
+
 use utf8;
 use strict;
 use warnings;
