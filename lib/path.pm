@@ -70,7 +70,7 @@ our (%dependencies, @acl);
 
 walk_content_tree {
 
-  return if m#/images/#;
+  $File::Find::prune = 1, return if m#/(images|css|editor\.md|js|fontawesome)/#;
 
   seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
 
