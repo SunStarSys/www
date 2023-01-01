@@ -70,7 +70,7 @@ our (%dependencies, @acl);
 
 walk_content_tree {
 
-  $File::Find::prune = 1, return if m#^/(images|css|editor\.md|js|fontawesome)\b#;
+  $File::Find::prune = 1 and return if m#^/(images|css|editor\.md|js|fontawesome)\b#;
 
   return if -d;
 
