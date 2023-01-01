@@ -47,44 +47,44 @@
   var editor_content;
 
   $(function() {
-        editor_content = editormd("editor-content", {
-            toolbarIcons: {% ifequal path|dirname "/orion" %}"simple",{% else %}"mini",{% endifequal %}
-	    height: "400px",
-	    name: "content",
-            mode: "gfm",
-            path : "/editor.md/lib/",
-	    theme : "solarized",
-	    previewTheme : "solarized",
-	    editorTheme : "solarized",
- 	    tocm : false,                  // Using [TOCM]
-            tex : true,                   // 开启科学公式TeX语言支持，默认关闭
-	    flowChart : true,             // 开启流程图支持，默认关闭
-            sequenceDiagram: true,
-            mermaid: true,
-            graphviz: true,
-	    htmlDecode : true,
-	    taskList: true,
-	    codeFold: true,
-	    searchReplace: true,
-	    onfullscreen     : function() {
-		this.editor.css({
-		    "border-radius": 0,
-		    "z-index": 120,
-		    "margin-top": 60,
-		});
-	    },
-	    onfullscreenExit : function() {
-		this.editor.css({
-		    zIndex : 10,
-		    border : "none",
-		    "border-radius" : 5,
-		    "margin-top": 0,
-		});
-		this.resize();
-	    }
+      editor_content = editormd("editor-content", {
+          toolbarIcons: {% ifequal path|dirname "/orion" %}"simple",{% else %}"mini",{% endifequal %}
+	  height: "400px",
+	  name: "content",
+          mode: "gfm",
+          path : "/editor.md/lib/",
+	  theme : "solarized",
+	  previewTheme : "solarized",
+	  editorTheme : "solarized",
+ 	  tocm : false,                  // Using [TOCM]
+          tex : true,                   // 开启科学公式TeX语言支持，默认关闭
+	  flowChart : true,             // 开启流程图支持，默认关闭
+          sequenceDiagram: true,
+          mermaid: true,
+          graphviz: true,
+	  htmlDecode : true,
+	  taskList: true,
+	  codeFold: true,
+	  searchReplace: true,
+	  onfullscreen     : function() {
+	      this.editor.css({
+		  "border-radius": 0,
+		  "z-index": 120,
+		  "margin-top": 60,
+	      });
+	  },
+	  onfullscreenExit : function() {
+	      this.editor.css({
+		  zIndex : 10,
+		  border : "none",
+		  "border-radius" : 5,
+		  "margin-top": 0,
+	      });
+	      this.resize();
+	  }
 
-	}, editormd);
-      setTimeout(() => {scrollTo(0,0)}, 200);
+      }, editormd);
+      setTimeout(() => {scrollTo(0,0)}, 1000);
   });
 
 </script>
