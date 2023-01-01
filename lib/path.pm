@@ -70,7 +70,9 @@ our (%dependencies, @acl);
 
 walk_content_tree {
 
-  $File::Find::prune = 1, return if m#/(images|css|editor\.md|js|fontawesome)/#;
+  $File::Find::prune = 1, return if m#^/(images|css|editor\.md|js|fontawesome)\b#;
+
+  return if -d;
 
   seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
 
