@@ -433,7 +433,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 - Only the Perl-based build system is available.
 
-- New Markdown editor is `marked/gfm` based, so the parser is more modern.  Latest release supports slug specification a'la the original python-based parser.
+- New Markdown editor is [`marked/gfm`](#) based, so the parser is more modern.  Latest release supports slug specification a'la the original python-based parser.
 
 - GFM uses a different delimiter for code blocks.
 
