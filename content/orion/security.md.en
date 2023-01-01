@@ -129,8 +129,7 @@ Orion's security model is centrally managed by the settings contained in [`@path
 
 ### OpenIDC SSO Security
 
-Session Cookies are HttpOnly and Secure flagged, so Javascript session stealing attempts are effectively neutralized by the Orion online Editor.
-
+Session Cookies are HttpOnly and Secure flagged, so Javascript session stealing attempts are effectively neutralized by the Orion Online Editor.
 
 ### Bcrypt for Subversion passwords
 
@@ -138,7 +137,7 @@ Adjustable number of rounds (currently defaults to 5).
 
 ### Tainted Data Protections
 
-All of our Perl runtimes have mandatory taint checks enabled with the -T flag; a powerful, uniquely Perl guard against Remote Code Exploits.
+All of our Perl runtimes have mandatory taint checks enabled with the -T flag; a powerful, uniquely Perl guard against Remote Shell Exploits.
 
 ### Wiki Issues
 
@@ -219,7 +218,7 @@ The build system takes note of your [`lib/path.pm`](#) imports of either (or bot
 
 ##### Custom Controls on seed_file_deps() and  seed_file_acl() usage in lib/path.pm
 
-Beyond the import of these symbols to [`lib//path.pm`](#), there is also a choice in how, and to which files you wish to apply them to, during a walk_content_tree () code block execution.  After all, it's not just a config file, but a codebase, with all the Turing complete features of [`Perl`](#) we've come to know and appreciate!
+Beyond the import of these symbols to [`lib/path.pm`](#), there is also a choice in how, and to which files you wish to apply them to, during a walk_content_tree () code block execution.  After all, it's not just a config file, but a codebase, with all the Turing complete features of [`Perl`](#) we've come to know and appreciate!
 
 #### Built Website and Subversion ACL's synchronized with &#64;path::acl instantly upon commit
 
