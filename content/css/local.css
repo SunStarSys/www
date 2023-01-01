@@ -64,7 +64,7 @@ div.jumbotron input:valid {
 	background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
 }
 
-table { min-width: 800px; margin: 2 auto 2 auto; text-align: center; }
+table { min-width: 800px; margin: 2 auto 2 auto; width: 100%; }
 
 table tr th {
 	background-color: #258fc1;
