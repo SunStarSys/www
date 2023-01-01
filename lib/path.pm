@@ -72,7 +72,7 @@ walk_content_tree {
 
   $File::Find::prune = 1 and return if m#^/(images|css|editor\.md|js|fontawesome)\b#;
 
-  return if -d;
+  return if -d "content/$_";
 
   seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
 
