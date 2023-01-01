@@ -93,27 +93,27 @@ See our [Orion Plans](plans) for the current deals.
 
 <br />
 
-| Feature          |  Orion | Netlify+Gatsby | GitHub+Hugo | Confluence Cloud
-|:------------|:-------------:|:------------:|:----------:|:-------------:|
+| Feature     |  Orion        | Netlify+Gatsby | GitHub+Hugo | Confluence |
+|:------------|:-------------:|:--------------:|:-----------:|:----------:|
 | SSO: Kerberos / Active Directory / OpenID Integration | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">&check;</span> | | | |
-| In-Browser Workflow (Mobile Friendly) | <span class="text-success">&check;</span> | | | |
+| In-Browser Workflow (Mobile Friendly) | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | DAV support | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | Incremental Builds | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | | |
 | Unlimited Branch Builds | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check; (for public repos)</span> | |
 | Scheduled Builds of Dynamic Content Only | <span class="text-success">&check;</span> | | | |
 | 3rd Party Analytics Support | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> | |
 | Multilingual | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
-| Federated | <span class="text-success">&check;</span> | | | <span class="text-warning">[NO](https://jira.atlassian.com/browse/CONFSERVER-26528)</span> |
+| Federated | <span class="text-success">&check;</span> | | | [NO](https://jira.atlassian.com/browse/CONFSERVER-26528) |
 | White Label Support | <span class="text-success">&check;</span> | | <span class="text-warning">&check;</span> | |
 | Installable Inside Corporate VPN | <span class="text-success">&check;</span> | | <span class="text-warning">&check;</span> | |
 | Easy 3rd Party Contributor Workflow | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> | |
 | Git CLI Interface | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> | |
 | Unlimited Previews | <span class="text-success">&check;</span> | <span class="text-warning">Enterprise Only ($$)</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span>  |
 | Unlimited Seats | <span class="text-success">Enterprise Only</span> | | <span class="text-warning">&check; (for public repos)</span> | |
-| WebSite Hosting | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | | |
+| WebSite Hosting | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | | <span class="text-warning">&check;</span> |
 | SSI / CGI / mod_perl registry Support | <span class="text-success">&check;</span> | | | |
-| Fine-Grained ACL on Source Repo | <span class="text-success">&check;</span> | | | |
+| Fine-Grained ACL on Source Repo | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | +1 GB/s Full Site Builds | <span class="text-success">&check;</span> | | | |
 | 8-64 Way Concurrent Builds | <span class="text-success">&check;</span> | <span class="text-warning">Enterprise Only ($$)</span> | | |
 | TCO &lt; $5000/yr for Enterprise | <span class="text-success">&check;</span> | | | |
