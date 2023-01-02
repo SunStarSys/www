@@ -1,5 +1,8 @@
 /*
  * Editor.md
+ * @Copyright 2023 SunStar Systems, Inc. - all rights reserved.
+ *
+ * Derived work of ...
  *
  * @file        editormd.js
  * @version     v1.5.0
