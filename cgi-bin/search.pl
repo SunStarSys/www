@@ -295,7 +295,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   }
 }
 if ($re !~ /friends=|notify=|watch=|build=/i) {
-  my $pffxg = run_shell_command "cd $d && timeout 10 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html --markdown/, @unzip, qw/-- -P -e/], $re;
+  my $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html --markdown/, @unzip, qw/-- -P -e/], $re;
 
   if ($?) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
