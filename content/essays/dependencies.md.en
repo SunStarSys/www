@@ -18,7 +18,7 @@ This only ever matters when you need to weigh the expense of performing full sit
 
 For example, the Apache <https://www.OpenOffice.Org> website was able to build its 40K+ files using the original Apache version of this build system, with fully integrated support for incremental builds &mdash; without any configured dependencies whatsoever &mdash; by making clever usage of traditional SSI technology alone.
 
-By default, our build system will build only the files you changed, without concern for the intra-file dependencies (unless you specify them in `%path::dependencies` &mdash; more on that below). If the file you changed is in the `templates/` or `lib/` directory, as well as whenever you delete files from `content/`, a full site build will trigger instead.
+By default, our build system will build only the files you changed, without concern for the intra-file dependencies (unless you specify them in `%path::dependencies` &mdash; more on that below). If the file you changed is in the `templates/` or `lib/` directory, a full site build will trigger instead.
 
 ## Weaving Your Website's *Dependency Graph* Together
 
