@@ -172,7 +172,7 @@ for ($d) {
 
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0 or index($re, '=') >= 0;
 my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
-my @unzip = $markdown ? () : "--unzip";
+my @unzip = $markdown ? "--markdown" : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
 my (@friends, @dlog, $blog, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
@@ -295,7 +295,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   }
 }
 if ($re !~ /friends=|notify=|watch=|build=/i) {
-  my $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html --markdown/, @unzip, qw/-- -P -e/], $re;
+  my $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
 
   if ($?) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
