@@ -1,6 +1,6 @@
 Title: Perl 7 Feature Request: sealed subs for typed lexicals
 Keywords: perl,dylan,static,method,lookup,compile,sealed,apache,mod_perl
-Dependencies: *.md.en
+Depen+dencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
 
 <div class="right">
@@ -73,7 +73,7 @@ sealed 25641026/s    56%    41%     6%     1%     --
 ok 1
 ```
 
-## Proposed Perl 7 solution: `:sealed`  subroutines for typed lexicals
+## Proposed Perl 7 solution: `:sealed` subroutines for typed lexicals
 
 Sample code:
 
