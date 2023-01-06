@@ -130,11 +130,9 @@ What we're offering instead is a best effort to keep our Subversion service onli
 
 ### A Peek Under the Hood...
 
-Orion &trade; does all this by interfacing with our [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub/)-enabled Subversion service.  Orion &trade; automatically builds each committed change using a blazing fast [`node.js`](https://nodejs.org/) + [`Perl 7`](https://www.perl.com/article/announcing-perl-7/) build system based on the [Hollywood Principle](https://deviq.com/hollywood-principle/): it calls out to customer-supplied Perl modules to do whatever the customer needs done. (Don't worry, there are basic layout templates available that will do all the heavy lifting for you.)  It also goes the extra mile and instantly distributes the change-sets for the build, **atomically**, to our edge CDN webservers in our POP network.
-
 [REST compliance](https://www.codecademy.com/articles/what-is-rest) has its benefits to Orion users.  They'll like the fact that their browser's <span class="text-white">Back</span> button doesn't break the service; in fact it's an essential component of the <span class="text-white">Rollback</span> functionality. In an emergency site breakage situation, going back to the bad <span class="text-white">Commit</span> submission's result page will provide them with the ability to reverse merge <span class="text-white">that</span> errant applied change &mdash; at the click of a button &mdash; and rebuild the site back to a known good state.
 
-We currently provide a basic <span class="text-white">Django</span> based template system derived from a customized [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/index.pl) module from CPAN.  Support for a Python 3 build system is coming soon. The Apache 2.0 Licensed [Orion build system](https://github.com/SunStarSys/orion), together with a large collection of supporting modules to take advantage of within that tree, is available on GitHub.
+We currently provide a basic <span class="text-white">Django</span> based template system derived from a customized [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/index.pl) module from CPAN. The Apache 2.0 Licensed [Orion build system](https://github.com/SunStarSys/orion), together with a large collection of supporting modules to take advantage of within that tree, is available on GitHub.
 
 ### Details
 
