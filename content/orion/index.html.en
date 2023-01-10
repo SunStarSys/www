@@ -48,7 +48,7 @@ What differentiates this product from our competitors is the [Orion Technology](
 
 *There is no vendor lock-in involved with our offering*. But don't just take our word for it, see for yourself what's typically involved in terms of build system customization by visiting
 
-[our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/).
+[our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its [GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
 
 Less than <span class="text-info">100 LOC</span> to provide the build logic for this website, and it includes sophisticated, memoized dependency management for auto-generation of a multilingual [SiteMap](/sitemap) and all directory indexes (like [this portion](#Details) of this particular page).  We even put the underlying [Static Site Generator for the build on GitHub](https://github.com/SunStarSys/Orion) under the Apache License 2.0.
 
