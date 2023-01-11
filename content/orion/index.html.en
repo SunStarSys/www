@@ -14,7 +14,7 @@
 <p>
 	&nbsp;
 </p>
-	<div class="row">
+<div class="row">
 <div class="col-lg-5">
 <p>
 	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>The Enterprise Jamstack Wiki.</em></span>&trade;
@@ -28,9 +28,8 @@
 	<li><p>peak performance,</p></li>
 	<li><p>federated</p></li>
 	</ul>
-
 </p>
-	<span class="text-white">Enterprise Wiki</span> for <b>creating, managing, and delivering static website content</b>, potentially with some basic <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a> / <a href="https://en.wikipedia.org/wiki/Server_Side_Includes">SSI</a> or other server-side, supplementary dynamic content features baked in.
+	<span class="text-white">Enterprise Wiki</span>&nbsp; for <b>creating, managing, and delivering static website content</b>, potentially with some basic <a href="https://en.wikipedia.org/wiki/Common_Gateway_Interface">CGI</a> / <a href="https://en.wikipedia.org/wiki/Server_Side_Includes">SSI</a> or other server-side, supplementary dynamic content features baked in.
 
 For pricing information, see our [Orion Plans](plans).
 
@@ -160,7 +159,7 @@ We currently provide a basic <span class="text-white">Django</span> based templa
 <br />
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE Search</a> <small>(those links in <span style="color:#e83e8c">hot pink</span> will drop you directly into an editor screen, with the cursor placed exactly according to the matching text)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
-</div>
+
 
 <style type="text/css">
 /*-------------------------------------------
