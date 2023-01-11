@@ -49,6 +49,7 @@
   $(function() {
       editor_content = editormd("editor-content", {
           toolbarIcons: {% ifequal path|dirname "/orion" %}"simple",{% else %}"mini",{% endifequal %}
+          watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
 	  height: "400px",
 	  name: "content",
           mode: "gfm",
