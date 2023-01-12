@@ -94,12 +94,12 @@ ACL: *=r
 ```flow
 st=>start: börja
 op=>operation: operation
-cond=>condition: villkor Yes or No?
-e=>end: sluted
+cond=>condition: villkor Ja eller Nej?
+e=>end: slutet
 
 st->op->cond
-cond(yes)->e
-cond(no)->op
+cond(ja)->e
+cond(ned)->op
 ```
 ----
 ```seq
