@@ -95,7 +95,7 @@ ACL: *=r
 st=>start: börja
 op=>operation: operation
 cond=>condition: villkor Yes or No?
-e=>end: slut
+e=>end: sluted
 
 st->op->cond
 cond(yes)->e
