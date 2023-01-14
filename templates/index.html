@@ -23,12 +23,12 @@
 {% if comments.0 %}
 <hr>
 <h2>Comments</h2>
-<dl>
 {% for c in comments %}
-	<dt id="{{c.key}}">{{c.headers.title}} by {{c.content|ssi|vcs_author:lang}} on <small><em>{{c.content|ssi|vcs_date}}</em></small></dt>
-<dd>{{c.content|markdown}}</dd>
+<div id="{{c.key}}" class="card bdr-success">
+<h4 class="card-title">{{c.headers.title}} by {{c.content|ssi|vcs_author:lang}} on <em>{{c.content|ssi|vcs_date}}</em></h4>
+<p class="card-text">{{c.content|markdown}}</p>
+</div>
 {% endfor %}
-</dl>
 {% endif %}
 
 {% filter markdown %}
