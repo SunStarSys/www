@@ -20,7 +20,7 @@
 
 <dl>
 {% for c in comments %}
-	<dt id="{{c.key}}">{{c.title}} by {{c.content|vcs_author}} on {{c.content|vcs_date}}</dt>
+	<dt id="{{c.key}}">{{c.title}} by {{c.content|vcs_author:lang}} on {{c.content|vcs_date}}</dt>
 	<dd>{{c.content|markdown}}</dd>
 {% endfor %}
 </dl>
