@@ -13,6 +13,20 @@
 {% endfor %}
 <p>&nbsp;</p>
 
+{% if comments.0 %}
+{% filter markdown %}
+
+## Comments
+
+{% endfilter %}
+
+{% for c in comments %}
+<div class="comment">
+	{{c}}
+</div>
+{% endfor %}
+{% endif %}
+
 {% for c in headers.categories %}
 <button type="button" class="btn btn-success">
   <a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}">{{c}}</a></button>
