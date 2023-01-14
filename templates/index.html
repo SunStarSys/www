@@ -15,7 +15,6 @@
 
 {% if comments.0 %}
 <h2>Comments</h2>
-
 <dl>
 {% for c in comments %}
 <dt id="{{c.key}}">{{c.title}} by {{c.content|vcs_author:lang}} on {{c.content|vcs_date}}</dt>
