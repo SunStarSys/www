@@ -18,9 +18,12 @@
 
 ## Comments
 
+<dl>
 {% for c in comments %}
-- {{c.content}}
+	<dt id="{{c.key}}">{{c.title}} by {{c.content|vcs_author}} on {{c.content|vcs_date}}</dt>
+	<dd>{{c.content|markdown}}</dd>
 {% endfor %}
+</dl>
 {% endfilter %}
 {% endif %}
 
