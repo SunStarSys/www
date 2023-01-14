@@ -18,13 +18,10 @@
 
 ## Comments
 
-{% endfilter %}
-
 {% for c in comments %}
-<div class="comment">
-	{{c}}
-</div>
+- {{c.content}}
 {% endfor %}
+{% endfilter %}
 {% endif %}
 
 {% for c in headers.categories %}
