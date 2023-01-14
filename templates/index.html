@@ -28,7 +28,7 @@
 </div>
 <div class="card-body">
 {% for c in comments %}
-<h4 class="card-title">{{c.headers.title}} by {{c.content|ssi|vcs_author:lang}} on <em>{{c.content|ssi|vcs_date}}</em></h4>
+<h4 class="card-title" id="{{c.key}}">{{c.headers.title}} by {{c.content|ssi|vcs_author:lang}} on <em>{{c.content|ssi|vcs_date}}</em></h4>
 <p class="card-text">{{c.content|markdown}}</p>
 <hr>
 <p>&nbsp;</p>
