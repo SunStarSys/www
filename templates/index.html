@@ -13,21 +13,23 @@
 {% endfor %}
 <p>&nbsp;</p>
 
-{% if comments.0 %}
-<h2>Comments</h2>
-<dl>
-{% for c in comments %}
-<dt id="{{c.key}}">{{c.headers.title}} by {{c.content|vcs_author:lang}} on {{c.content|vcs_date}}</dt>
-<dd>{{c.content|markdown}}</dd>
-{% endfor %}
-</dl>
-{% endif %}
-
 {% for c in headers.categories %}
 <button type="button" class="btn btn-success">
   <a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}">{{c}}</a></button>
 &nbsp;
 {% endfor %}
+
+
+{% if comments.0 %}
+<hr>
+<h2>Comments</h2>
+<dl>
+{% for c in comments %}
+<dt id="{{c.key}}">{{c.headers.title}} by {{c.content|ssi|vcs_author:lang}} on {{c.content|ssi|vcs_date}}</dt>
+<dd>{{c.content|markdown}}</dd>
+{% endfor %}
+</dl>
+{% endif %}
 
 {% filter markdown %}
 {% if deps.0 %}
