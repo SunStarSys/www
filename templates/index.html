@@ -22,13 +22,18 @@
 
 {% if comments.0 %}
 <hr>
-<h2>Comments</h2>
+<div class="card border-warning">
+<div class="card-title">
+	Comments
+</div>
+<div class="card-body">
 {% for c in comments %}
-<div id="{{c.key}}" class="card bdr-success">
 <h4 class="card-title">{{c.headers.title}} by {{c.content|ssi|vcs_author:lang}} on <em>{{c.content|ssi|vcs_date}}</em></h4>
 <p class="card-text">{{c.content|markdown}}</p>
-</div>
+<p>&nbsp;</p>
 {% endfor %}
+</div>
+</div>
 {% endif %}
 
 {% filter markdown %}
