@@ -152,7 +152,9 @@
   <script src="/js/mermaid.min.js"></script>
   <script src="/js/mermaid-mindmap.min.js"></script>
   <script src="/js/chart.umd.js"></script>
-  <script src="/editor.md/editormd.js"></script>
+  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+  <script src="/editor.md/lib/codemirror/addons.min.js"></script>
+  <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script async="" type="text/javascript">
     mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
     mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
@@ -162,7 +164,7 @@
         d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
         e.innerHTML = ""
     }
-    setTimeout(()=>{CodeMirror.colorize()}, 1000);
+    CodeMirror.colorize();
   </script>
   {% block javascript %}
   {% endblock %}
