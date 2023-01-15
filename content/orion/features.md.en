@@ -89,7 +89,7 @@ ACL: *=r
 
 - [x] **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 - [x] YAML headers in source (markdown) files now fully supported.
-- [x] Native Flowchart and Sequence Diagram Support
+- [x] Native Flowchart and Sequence Diagram Support :fa-glass:
 
 ```flow
 st=>start: börja
