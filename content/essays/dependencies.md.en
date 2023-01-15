@@ -10,7 +10,7 @@ ACL: *=
 
 *Smart Content Dependency Management&trade;* is about the circle of ideas related to providing support and facilitation for *incremental builds*, while staying true to the **Content Normalization Principle** &mdash; that [*permalinks*](https://en.wikipedia.org/wiki/Permalink) should be the single source of truth, no matter how their content is curated throughout the source tree and resulting build artifacts.
 
-This article presents the <https://sunstarsys.com/> website as a case study for demonstration of best practices and analysis of the associated graph topologies.
+This article presents the <https://sunstarsys.com/> website as a case study for <a href="#commentAB" class="border border-warning text-muted" title="{{commentAB.headers.title}}">demonstration</a> of best practices and analysis of the associated graph topologies.
 
 ## Caveats
 
