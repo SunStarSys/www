@@ -32,6 +32,11 @@ It's important to note that the dependency relationships between source files ca
 
 Here's that portion of our live [`lib/path.pm`]({{snippetA.pretty_uri}}):
 
+```perl
+sub foo {
+	my $x = shift;
+}
+```
 [snippet:lang=perl:repo=SunStarSys/www:branch=trunk:path=lib/path.pm:token=#snippet]
 
 Please do mull that code over for ideas on how you want *your website* to work. Yes there is some reasonable complexity (involving both Perl's regular expressions and Perl's UNIX C-shell `glob` interfaces, in a very precise way) around how `%path::dependencies` is constructed in that file, but instead of just viewing this as optimization work, instead look at it as providing the basic ingredients necessary for construcing major aspects of the *link topology* in an automated, dynamically generated fashion.
