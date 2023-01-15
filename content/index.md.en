@@ -40,8 +40,8 @@ Mention where on the form <a href="/orion/plans">here</a> and you'll be able to 
 <p class="card-text">With the current release of Ubuntu 22.04, please upgrade your <span class="text-info">pty</span> installation to <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
 
 </div>
-	</div>
-	<br />
+</div>
+<br>
 </div>
 
 ![SunStar Systems](images/sunstarlogowhole)
