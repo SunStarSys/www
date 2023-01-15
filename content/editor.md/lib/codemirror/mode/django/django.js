@@ -58,9 +58,9 @@
   });
 
   CodeMirror.defineMode("django", function(config) {
-    var htmlBase = CodeMirror.getMode(config, "text/html");
+    var gfmBase = CodeMirror.getMode(config, "text/html");
     var djangoInner = CodeMirror.getMode(config, "django:inner");
-    return CodeMirror.overlayMode(htmlBase, djangoInner);
+    return CodeMirror.overlayMode(gfmBase, djangoInner);
   });
 
   CodeMirror.defineMIME("text/x-django", "django");

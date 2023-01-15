@@ -1,13 +1,14 @@
 /*
  * Editor.md
- * @Copyright 2023 SunStar Systems, Inc. - all rights reserved.
+ * @Copyright 2023 SunStar Systems, Inc.
+ * All rights reserved.
  *
- * Derived work of ...
+ * Proprietary Derived Work of ...
  *
  * @file        editormd.js
  * @version     v1.5.0
  * @description Open source online markdown editor.
- * @license     MIT License
+ * @license     MIT
  * @author      Pandao
  * {@link       https://github.com/pandao/editor.md}
  * @updateTime  2015-06-09
@@ -75,7 +76,7 @@
             "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
             "h1", "h2", "h3", "h4", "h5", "h6", "|",
             "list-ul", "list-ol", "hr", "|",
-            "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime", "emoji", "html-entities", "pagebreak", "|",
+            "link", "reference-link", "image", "comment", "code", "preformatted-text", "code-block", "table", "datetime", "emoji", "html-entities", "pagebreak", "|",
             "goto-line", "watch", "preview", "fullscreen", "clear", "search", "|",
             "help", "info"
         ],
@@ -214,6 +215,7 @@
             link             : "fa-link",
             "reference-link" : "fa-anchor",
             image            : "fa-picture-o",
+            comment          : "fa-quote-right",
             code             : "fa-code",
             "preformatted-text" : "fa-file-code-o",
             "code-block"     : "fa-file-code-o",
@@ -478,8 +480,8 @@
             {
                 if (typeof CodeMirror !== "undefined") {
                     this.editormd.$CodeMirror = CodeMirror(w);
-		    CodeMirrorModes(editormd.$CodeMirror, document);
 		    CodeMirrorAddOns(editormd.$CodeMirror, document);
+		    CodeMirrorModes(editormd.$CodeMirror, document);
                 }
 		else {
 		    abort();
@@ -625,14 +627,13 @@
 		_this.editormd.$CodeMirror = CodeMirror;
 
 		editormd.loadScript(loadPath + "codemirror/modes.min", function() {
-
                     editormd.loadScript(loadPath + "codemirror/addon/hint/show-hint", function () {
 		        editormd.loadScript(loadPath + "codemirror/addons.min", function() {
 
 			    _this.setCodeMirror();
 			    _this.setToolbar();
 
-			    if (settings.mode !== "gfm" && settings.mode !== "markdown")
+			    if (settings.mode.indexOf("gfm") == -1 && settings.mode !== "markdown")
 			    {
 			        _this.loadedDisplay();
 
@@ -1589,8 +1590,11 @@
 
             if (settings.previewCodeHighlight)
             {
-                previewContainer.find("pre").addClass("prettyprint linenums");
-		this.editormd.$prettify();
+                /* previewContainer.find("pre").addClass("prettyprint linenums");
+		   this.editormd.$prettify();
+                */
+                if (CodeMirror.colorize)
+                    CodeMirror.colorize();
             }
 
             return this;
@@ -2112,7 +2116,7 @@
             var cmValue          = cm.getValue();
             var previewContainer = this.previewContainer;
 
-            if (settings.mode !== "gfm" && settings.mode !== "markdown")
+            if (settings.mode.indexOf("gfm") == -1 && settings.mode !== "markdown")
             {
                 this.markdownTextarea.val(cmValue);
 		if (settings.saveHTMLToTextarea)
@@ -2499,7 +2503,7 @@
         watch : function(callback) {
             var settings        = this.settings;
 
-            if ($.inArray(settings.mode, ["gfm", "markdown"]) < 0)
+            if ($.inArray(settings.mode, ["gfm", "gfm+django","markdown"]) < 0)
             {
                 return this;
             }
@@ -2624,7 +2628,7 @@
             var codeMirror       = this.codeMirror;
             var previewContainer = this.previewContainer;
 
-            if ($.inArray(settings.mode, ["gfm", "markdown"]) < 0) {
+            if ($.inArray(settings.mode, ["gfm", "gfm+django", "markdown"]) < 0) {
                 return this;
             }
 
@@ -3235,6 +3239,10 @@
             this.executePlugin("referenceLinkDialog", "reference-link-dialog/reference-link-dialog");
         },
 
+        comment : function() {
+            this.executePlugin("commentDialog", "link-dialog/comment-dialog");
+        },
+
         pagebreak : function() {
             if (!this.settings.pageBreak)
             {
@@ -3499,7 +3507,7 @@
         atLink        : /@([@\w.\/=-]+)/g,
         email         : /(\w+)@(\w+)\.(\w+)\.?(\w+)?/g,
         emailLink     : /(mailto:)?([\w.-]+)@([\w-]+)(?:\.([\w-]+))*/g,
-        emoji         : /:([\w\+-]+):/g,
+        emoji         : /(?<![:]):([\w\+-]+):(?![:])/g,
         emojiDatetime : /(\d{2}:\d{2}:\d{2})/g,
         twemoji       : /:(tw-([\w]+)-?(\w+)?):/g,
         fontAwesome   : /:(fa-([\w]+)(-(\w+)){0,}):/g,

@@ -20,7 +20,7 @@
     <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
     <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet" media="screen">
     <link href="/fontawesome/css/regular.min.css" rel="stylesheet" media="screen">
-	<link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
     <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
     {% block header %}{% endblock %}
@@ -152,6 +152,7 @@
   <script src="/js/mermaid.min.js"></script>
   <script src="/js/mermaid-mindmap.min.js"></script>
   <script src="/js/chart.umd.js"></script>
+  <script src="/editor.md/editormd.js"></script>
   <script async="" type="text/javascript">
     mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
     mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
@@ -161,6 +162,7 @@
         d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
         e.innerHTML = ""
     }
+    CodeMirror.colorize($("body".find("code").toArray()));
   </script>
   {% block javascript %}
   {% endblock %}
