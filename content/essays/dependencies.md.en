@@ -95,7 +95,7 @@ Syntax:
 &#123;&#123; content|ssi &#125;&#125;
 
 - recursively evaluates `ssi` tags in the value to be filtered
-- useful for avoiding using a large value (3+) of `quick_deps` in a `@{path::patterns}` entry's argument hashref, which can impact performance
+- useful for avoiding using a large value (3+) of `quick_deps` in a `@path::patterns` entry's argument hashref, which can impact performance
 
 #### Why not SymLinks?
 
@@ -107,7 +107,7 @@ Syntax:
 
 ##### Document Curation
 
-Orion's build system has integrated support for what we call *Document Curation*, which is the process of recontextualizing and reorganizing your content based on how you set the `Categories` and `Archive` headers in your Markdown source files. These features are disabled by default, but can be activated by setting a `category_root` (for Category support) or an `archive_root` (for Archiving support) in the associated hashref argument to the desired `@{path::patterns}` entry.
+Orion's build system has integrated support for what we call *Document Curation*, which is the process of recontextualizing and reorganizing your content based on how you set the `Categories` and `Archive` headers in your Markdown source files. These features are disabled by default, but can be activated by setting a `category_root` (for Category support) or an `archive_root` (for Archiving support) in the associated hashref argument to the desired `@path::patterns` entry.
 
 ##### Categories
 
