@@ -92,7 +92,7 @@ Syntax:
 
 Syntax:
 
-&#123;&#123; content|`ssi` &#125;&#125;
+&#123;&#123; content|ssi &#125;&#125;
 
 - recursively evaluates `ssi` tags in the value to be filtered
 - useful for avoiding using a large value (3+) of `quick_deps` in a `@{path::patterns}` entry's argument hashref, which can impact performance
