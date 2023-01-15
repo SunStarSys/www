@@ -162,7 +162,7 @@
         d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
         e.innerHTML = ""
     }
-    CodeMirror.colorize($("body".find("code").toArray()));
+    setTimeout(()=>{CodeMirror.colorize()}, 1000);
   </script>
   {% block javascript %}
   {% endblock %}
