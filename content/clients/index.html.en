@@ -1,13 +1,16 @@
 {% extends "main.html" %}
 {% block content %}
-<div class="page-header"><div style="text-align:right; padding-top: 10px">{{ breadcrumbs|safe }}  <a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
-  <h1>{{ headers.title }}</h1></div>
+<div class="page-header">
+	<div style="text-align:right; padding-top: 10px; display:inline-block">{{ breadcrumbs|safe }}
+		<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png"></a>
+	</div>
+    <h1>{{ headers.title }}</h1>
+</div>
 <div class="jumbotron">
-{% filter markdown %}
-### Companies we've successfully contracted with in the past.
-{% endfilter %}
-{{ content|markdown }}
-
+   {% filter markdown %}
+   ### Companies we've successfully contracted with in the past.
+   {% endfilter %}
+   {{ content|markdown }}
 </div>
 
 {% endblock %}
