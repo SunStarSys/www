@@ -9,5 +9,4 @@
 {{ content|markdown }}
 
 </div>
-
 {% endblock %}
