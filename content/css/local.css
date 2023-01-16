@@ -36,7 +36,9 @@ iframe.asymptote {
 	height: 800px;
 }
 
-body { padding-top: 90px }
+html { scroll-padding-top: 90px }
+body { padding-top: 90px; }
+
 div.navbar img {height: 38px;}
 
 div.jumbotron input.form-control, textarea.form-control {
