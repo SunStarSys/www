@@ -78,13 +78,13 @@ ok 1
 Sample code:
 
 ```perl
-	use v7.0;
-	use Apache2::RequestRec;
+use v7.0;
+use Apache2::RequestRec;
 
-	sub handler :sealed {
-		my Apache2::RequestRec $r = shift;
-		$r->content_type("text/html"); #compile time method lookup
-	}
+sub handler :sealed {
+  my Apache2::RequestRec $r = shift;
+  $r->content_type("text/html"); #compile time method lookup
+}
 ```
 
 ## Production-Quality Perl  v5.22+ Prototype: sealed.pm {{facts.releases.sealed.tag}} (on CPAN)
