@@ -7,11 +7,6 @@ Categories: Perl, Orion, Performance, Apache
   <img src="../images/sunstarstaronly.png">
 </div>
 
-```apache
-<VirtualHost *:443>
-
-</VirtualHost>
-```
 ## The Problem
 
 {# lede #}Perl 5's OO runtime method lookup has 50% more performance overhead than a direct, named subroutine invocation{# lede #}.
