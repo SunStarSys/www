@@ -91,9 +91,7 @@ a.reference-link {
 	margin-top: -90px;
 	padding-top: 90px;
 	z-index: 1000;
-        border-top: 0px;
-        border-left: 0px;
-        border-right: 0px;
+        border: 0 0 1px 0 !important;
 }
 
 h1 {
