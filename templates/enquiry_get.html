@@ -45,10 +45,10 @@
 
 <script type="text/javascript">
   var editor_content;
-
+  var icon_class ={% ifequal path|dirname "/orion" %}"simple"{% else %}"mini"{% endifequal %};
   $(function() {
       editor_content = editormd("editor-content", {
-          toolbarIcons: {% ifequal path|dirname "/orion" %}"simple",{% else %}"mini",{% endifequal %}
+          toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
 	  height: "400px",
 	  name: "content",
@@ -69,6 +69,8 @@
 	  codeFold: true,
 	  searchReplace: true,
 	  onfullscreen     : function() {
+              this.settings.toolbarIcons = "full";
+              this.setToolbar();
 	      this.editor.css({
 		  "border-radius": 0,
 		  "z-index": 120,
@@ -76,6 +78,8 @@
 	      });
 	  },
 	  onfullscreenExit : function() {
+              this.settings.toolbarIcons = icon_class;
+              this.setToolbar();
 	      this.editor.css({
 		  zIndex : 10,
 		  border : "none",
