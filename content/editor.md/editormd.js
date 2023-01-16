@@ -626,9 +626,9 @@
 	    _this.editormd.loadScript(loadPath + "codemirror/codemirror.min", function() {
 		_this.editormd.$CodeMirror = CodeMirror;
 
-		editormd.loadScript(loadPath + "codemirror/modes.min", function() {
+		editormd.loadScript(loadPath + "codemirror/addons.min", function() {
                     editormd.loadScript(loadPath + "codemirror/addon/hint/show-hint", function () {
-		        editormd.loadScript(loadPath + "codemirror/addons.min", function() {
+		        editormd.loadScript(loadPath + "codemirror/modes.min", function() {
 
 			    _this.setCodeMirror();
 			    _this.setToolbar();
