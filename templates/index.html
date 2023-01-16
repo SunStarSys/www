@@ -43,12 +43,12 @@
 </div>
 
 <script type="text/javascript">
-  var html = "<ul>";
+  var html = "";
   var current_level = 0;
   var last_level = 0;
   for (const e of $("article").toArray()) {
       var id = e.getAttribute("id");
-      current_level = (id.length - 17) / 2;
+      current_level = (id.length - 15) / 2;
       if (current_level == last_level)
           html += "</li><li>" + e.outerHTML;
       else if (current_level > last_level)
@@ -57,7 +57,7 @@
           html += (new Array(last_level - current_level + 1)).join("</li></ul>") + "<li>" + e.outerHTML;
       last_level = current_level;
   }
-  html += (new Array(last_level + 1)).join("</li></ul>") + "</ul>";
+  html += (new Array(last_level + 1)).join("</li></ul>");
   $("#comments").html(html);
 </script>
 
