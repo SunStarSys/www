@@ -93,7 +93,7 @@ Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should 
 
 For fun, try this [monkey patch]({{snippetB.pretty_uri}}) to `ModPerl::RegistryCooker`:
 
-[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=83,86]
+[snippet:repo=SunStarSys/sealed:path=lib/ModPerl/RegistryCookerSealed.pm:lang=apache:lines=83,88]
 
 It enables the effects of `sub handler :Sealed {<script goes here>}` on all of your `ModPerl::Registry` scripts, something like [this one](https://github.com/SunStarSys/sealed/blob/master/enquiry.pl).
 
