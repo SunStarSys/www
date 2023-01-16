@@ -54,9 +54,9 @@
       else if (current_level > last_level)
           html += "<ul><li>" + e.outerHTML;
       else
-          html += (new Array(last_level - current_level)).join("</li></ul>") + "<li>" + e.outerHTML;
+          html += (new Array(last_level - current_level + 2)).join("</li></ul>") + "<li>" + e.outerHTML;
   }
-  html += (new Array(current_level)).join("</li></ul>");
+  html += (new Array(current_level + 2)).join("</li></ul>");
   $("#comments").html(html);
 </script>
 {% endif %}
