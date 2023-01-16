@@ -77,7 +77,7 @@
                                 return false;
                             }*/
 
-                            var str = `<a href="` + url + `" class="border border-warning text-muted" title="{{` + url.substr(1) + `.headers.title}}">` + title + "</a>";
+                            var str = `<a href="` + url + `" class="border border-warning text-muted reference-link" id="{{"` + url + `|cut:"#"}}-link" title="{{` + url.substr(1) + `.headers.title}}">` + title + "</a>";
 
                             cm.replaceSelection(str);
 
