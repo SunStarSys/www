@@ -115,4 +115,3 @@ walk_content_tree {
 #snippet
 
 1;
-
