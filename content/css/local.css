@@ -92,6 +92,7 @@ a.reference-link {
         padding-top: 90px;
         border: 0px solid !important;
         border-bottom: 1px solid !important;
+        border-color: inherit !important;
 }
 
 h1 {
