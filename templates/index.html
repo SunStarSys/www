@@ -52,9 +52,9 @@
       if (current_level == last_level)
           html += "<li>" + e.outerHTML + "</li>";
       else if (current_level > last_level)
-          html += "<ul><li>" + e.outerHTML + "</li>";
+          html += "<li><ul><li>" + e.outerHTML + "</li>";
       else
-          html += (new Array(last_level - current_level + 2)).join("</ul>") + "<li>" + e.outerHTML + "</li>";
+          html += (new Array(last_level - current_level + 1)).join("</ul>") + "<li>" + e.outerHTML + "</li>";
   }
   html += "</ul>";
   $("#comments").html(html);
