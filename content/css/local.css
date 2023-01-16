@@ -89,9 +89,8 @@ h8 {font-size: 10px}
 
 a.reference-link {
 	margin-top: -90px;
-        padding-top: 90px;
 	z-index: 1000;
-        border: 0 0 1px 0;
+/*        border: 0 0 1 0; */
 }
 
 h1 {
