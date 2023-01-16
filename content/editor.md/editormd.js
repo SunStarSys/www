@@ -480,8 +480,8 @@
             {
                 if (typeof CodeMirror !== "undefined") {
                     this.editormd.$CodeMirror = CodeMirror(w);
-		    CodeMirrorAddOns(editormd.$CodeMirror, document);
-		    CodeMirrorModes(editormd.$CodeMirror, document);
+                    CodeMirrorAddOns(this.editormd.$CodeMirror, document);
+                    CodeMirrorModes(this.editormd.$CodeMirror, document);
                 }
 		else {
 		    abort();
@@ -640,26 +640,24 @@
 			        return false;
 			    }
 
-                        });
-			editormd.loadScript(loadPath + "marked.min", function() {
+			    editormd.loadScript(loadPath + "marked.min", function() {
 
-			    editormd.$marked = marked;
+			        editormd.$marked = marked;
 
-			    if (settings.previewCodeHighlight)
-			    {
-				editormd.loadScript(loadPath + "prettify.min", function() {
-				    editormd.$prettify = prettyPrint;
+			        if (settings.previewCodeHighlight)
+			        {
+				    editormd.loadScript(loadPath + "prettify.min", function() {
+				        editormd.$prettify = prettyPrint;
+				        loadFlowChartOrSequenceDiagram();
+				    });
+			        }
+			        else
+			        {
 				    loadFlowChartOrSequenceDiagram();
-				});
-			    }
-			    else
-			    {
-				loadFlowChartOrSequenceDiagram();
-			    }
-			});
-
+			        }
+			    });
+                        });
 		    });
-
 		});
 	    });
 
@@ -1593,8 +1591,8 @@
                 /* previewContainer.find("pre").addClass("prettyprint linenums");
 		   this.editormd.$prettify();
                 */
-                if (CodeMirror.colorize)
-                    CodeMirror.colorize();
+                if (this.editormd.$CodeMirror.colorize)
+                    this.editormd.$CodeMirror.colorize();
             }
 
             return this;
@@ -2121,10 +2119,9 @@
                 this.markdownTextarea.val(cmValue);
 		if (settings.saveHTMLToTextarea)
 		{
-		    $("#editor").append(`<pre id="htmlPre" class="prettyprint linenums"></pre>`);
-		    $("#htmlPre").text(cmValue);
+		    $("#editor").append(`<pre id="htmlPre"><code data-lang="` + settings.mode + `">` + cmValue.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\`/g, "&#39;") + `</code></pre>`);
 		    this.htmlTextarea = $("#htmlPre");
-		    this.editormd.$prettify();
+		    if (this.editormd.$CodeMirror.colorize) this.editormd.$CodeMirror.colorize();
 		}
                 return this;
             }
