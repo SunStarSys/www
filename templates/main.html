@@ -129,10 +129,10 @@
     {{ alert|markdown }}
   </div>
   {% endif %}
-{% endblock %}
+  {% endblock %}
 
 <div class="container theme-showcase">
-{% block content %}
+  {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
         <img src="/images/edit.png" alt="Edit Icon" />
@@ -140,7 +140,7 @@
   </div>
   <h1>{{ headers.title|safe }}</h1>
   <div class="jumbotron">{{ content|markdown }}</div>
-{% endblock %}
+  {% endblock %}
 
   <footer>{% block footer %}{% endblock footer %}</footer>
 
@@ -169,8 +169,9 @@
         e.innerHTML = ""
     }
     CodeMirror.colorize();
-	$("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+    $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
   </script>
+
   {% block javascript %}{% endblock %}
 </div>
 </body>
