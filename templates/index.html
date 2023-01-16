@@ -48,7 +48,7 @@
   for (const e of $("article").toArray()) {
       last_level = current_level;
       var id = e.getAttribute("id");
-      current_level = (id.length - 17) / 2;
+      current_level = (id.length - 15) / 2;
       if (current_level == last_level)
           html += "</li><li>" + e.outerHTML;
       else if (current_level > last_level)
