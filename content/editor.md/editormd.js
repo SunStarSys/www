@@ -1588,11 +1588,10 @@
 
             if (settings.previewCodeHighlight)
             {
-                /* previewContainer.find("pre").addClass("prettyprint linenums");
-		   this.editormd.$prettify();
-                */
+                //previewContainer.find("pre").addClass("prettyprint linenums");
                 if (this.editormd.$CodeMirror.colorize)
                     this.editormd.$CodeMirror.colorize();
+		//this.editormd.$prettify();
             }
 
             return this;
@@ -2122,6 +2121,7 @@
 		    $("#editor").append(`<pre id="htmlPre"><code data-lang="` + settings.mode + `">` + cmValue.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/\`/g, "&#39;") + `</code></pre>`);
 		    this.htmlTextarea = $("#htmlPre");
 		    if (this.editormd.$CodeMirror.colorize) this.editormd.$CodeMirror.colorize();
+		    //this.editormd.$prettify();
 		}
                 return this;
             }
