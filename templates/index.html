@@ -30,17 +30,34 @@
 <div class="card-header">
 <h3 class="card-title">Comments</h3>
 </div>
-<div class="card-body">
+<div id="comments" class="card-body">
 {% for c in comments %}
-<article>
+<article id="article-{{c.key}}">
 <header><h4 class="card-title" id="{{c.key}}"><a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a> by {{c.content|ssi|vcs_author:lang}} on <em><time>{{c.content|ssi|vcs_date}}</time></em></h4></header>
 <p class="card-text">{{c.content|markdown}}</p>
-</article>
 <hr>
 <p>&nbsp;</p>
+</article>
 {% endfor %}
 </div>
 </div>
+<script type="text/javascript">
+  var html = "<ul>";
+  var current_level = 0;
+  var last_level = 0;
+  for (const e of $("article").toArray()) {
+      last_level = current_level;
+      var id = e.getAttribute("id");
+      current_level = (id.length - 17) / 2;
+      if (current_level == last_level)
+          html += "<li>" + e.outerHTML + "</li>";
+      else if (current_level > last_level)
+          html += "<ul><li>" + e.outerHTML + "</li>";
+      else
+          html += (new Array(last_level - current_level)).join "</ul>";
+  }
+  $("#comments").html(html);
+</script>
 {% endif %}
 
 {% filter markdown %}
