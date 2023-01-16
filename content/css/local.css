@@ -135,3 +135,11 @@ div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
 
 header div, div.brand-light, header div form input
 { background-color: #8f99fb }
+
+pre {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+	
+	
+}
