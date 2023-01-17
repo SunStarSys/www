@@ -17,7 +17,7 @@ Doug was the creator of the mod_perl project back in the mid-90s, so obviously w
 
 This isn't a trifling issue with calls to `C struct` get-set accessor methods &mdash; the common situation with many mod_perl APIs.  Perl's runtime method-call lookup penalty on httpd's `struct request_rec *`, that mod_perl exposes via the `Apache2::RequestRec` module, is on the same order of magnitude of the full execution of the call.  For mod_perl backed sites making millions of XS method calls a second, this is an awful waste of precious CPU cycles.
 
-What Doug was looking for was a way to tell Perl 5 to <a href="#commentAAABAA" class="border border-warning text-muted reference-link" id="commentAAABAA-link" title="{{commentAAABAA.headers.title}}">perform the method lookup at compile time</a>, the way it does with named subroutine calls.  Every time Doug tried, he hit <a href="#commentAB" class="border border-warning text-muted reference-link" id="commentAB-link" title="{{commentAB.headers.title}}">roadblocks of either a social or technical nature</a>.  Perhaps it's time to make another pass at this idea with the advent of Perl 7.
+What Doug was looking for was a way to <a href="#commentAAABAA" class="border border-warning text-muted reference-link" id="commentAAABAA-link" title="{{commentAAABAA.headers.title}}">tell Perl 5 to perform the method lookup at compile time</a>, the way it does with named subroutine calls.  Every time Doug tried, he hit <a href="#commentAB" class="border border-warning text-muted reference-link" id="commentAB-link" title="{{commentAB.headers.title}}">roadblocks of either a social or technical nature</a>.  Perhaps it's time to make another pass at this idea with the advent of Perl 7.
 
 ## [Benchmark script]({{snippetA.pretty_uri}})
 
