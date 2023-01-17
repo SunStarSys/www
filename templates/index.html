@@ -26,7 +26,7 @@
 
 <hr>
 <div class="card border-warning">
-  <form action="https://cms.sunstarsys.com/redirect" method="GET">
+  <form action="https://cms.sunstarsys.com/redirect" id="form" method="GET">
     <input type="hidden" id="action" name="action" value="comment">
     <input type="hidden" name="lang" value="{{lang|cut:"."}}">
 
@@ -53,9 +53,9 @@
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
               Reply
             </button>
-            <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
+            <button type="button" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}"
-              onclick='$("#action).val("edit");false'>
+              onclick='$("#action).val("edit");$("#form").each((e)=>{e.submit()})'>
               Close
             </button>
           </h4>
