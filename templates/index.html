@@ -29,6 +29,7 @@
   <form action="https://cms.sunstarsys.com/redirect" method="GET">
     <input type="hidden" name="action" value="comment">
     <input type="hidden" name="lang" value="{{lang|cut:"."}}">
+
     <div class="card-header">
       <h3 class="card-title">Comments &nbsp;
         <button type="submit" name="uri"
@@ -38,6 +39,7 @@
         </button>
       </h3>
     </div>
+
     <div id="comments" class="card-body">
       {% for c in comments %}
       <article id="article-{{c.key}}" {% if c.headers.closed %}class="text-muted"{% endif %}>
@@ -59,6 +61,7 @@
       </article>
       {% endfor %}
     </div>
+
   </form>
 </div>
 
