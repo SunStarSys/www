@@ -31,11 +31,6 @@
     <input type="hidden" name="action" value="comment">
     <div class="card-header">
       <h3 class="card-title">Comments &nbsp;
-        <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">
-          Add
-        </button>
       </h3>
     </div>
     <div id="comments" class="card-body">
@@ -43,11 +38,17 @@
       <article id="article-{{c.key}}">
         <header>
           <h4 class="card-title" id="{{c.key}}">
+            <button type="submit" name="uri"
+                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}"
+                class="btn btn-sm btn-outline-warning">
+              Add
+            </button>
+            &nbsp;
             <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             by {{c.content|ssi|vcs_author:lang}}
             on <em><time>{{c.content|ssi|vcs_date}}</time></em> &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
-                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
+                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}AA.md{{lang}}">
               Reply
             </button>
           </h4>
