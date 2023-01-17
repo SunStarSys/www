@@ -55,7 +55,7 @@
             </button>
             <button type="button" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}"
-              onclick='$("#action).val("edit");$("#form").each((e)=>{e.submit()})'>
+              onclick='$("#action").val("edit");$("#form").submit()'>
               Close
             </button>
           </h4>
