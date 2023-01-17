@@ -35,10 +35,10 @@
 <article id="article-{{c.key}}">
   <header>
     <h4 class="card-title" id="{{c.key}}">
-      <button type="button" class="btn button-outline-warning">Reply</button>
       <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
       by {{c.content|ssi|vcs_author:lang}}
       on <em><time>{{c.content|ssi|vcs_date}}</time></em>
+      <button type="button" class="btn btn-outline-warning">Reply</button>
     </h4>
   </header>
   <p class="card-text">{{c.content|markdown}}</p>
