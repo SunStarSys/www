@@ -118,7 +118,7 @@ Orion's build system has integrated support for what we call *Document Curation*
 
 ##### Archived Pages
 
-On our site, we aggresssively archive stale essays to keep build times for new essays low, while not destroying permalinks to archived documents. The *dependency graph* relative to the `/archives/` directory (for our site) is reasonably self-contained as-per the following rules:
+On our site, we aggresssively archive stale essays to keep build times for new essays low,<a href="#commentABAA" class="border border-warning text-muted reference-link" id="commentABAA-link" title="{{commentABAA.headers.title}}"> while not destroying permalinks</a> to archived documents. The *dependency graph* relative to the `/archives/` directory (for our site) is reasonably self-contained as-per the following rules:
 
 - content constructed using Template `ssi` tags pointing back to the permalink location, while removing the `Categories` and `Archive` headers from the constructed source page
 - content in `/(essays|clients)/` are always permalinks, even after archiving
