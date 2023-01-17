@@ -40,7 +40,7 @@
     </div>
     <div id="comments" class="card-body">
       {% for c in comments %}
-      <article id="article-{{c.key}}">
+      <article id="article-{{c.key}}" {% if c.headers.closed %}class="text-muted"{% endif %}>
         <header>
           <h4 class="card-title" id="{{c.key}}">
             &nbsp;
