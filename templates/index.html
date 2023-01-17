@@ -28,15 +28,22 @@
 <hr>
 <div class="card border-warning">
 <div class="card-header">
-<h3 class="card-title">Comments</h3>
+<h3 class="card-title">Comments <button type="button" class="btn btn-outline-warning">Add</button></h3>
 </div>
 <div id="comments" class="card-body">
 {% for c in comments %}
 <article id="article-{{c.key}}">
-<header><h4 class="card-title" id="{{c.key}}"><a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a> by {{c.content|ssi|vcs_author:lang}} on <em><time>{{c.content|ssi|vcs_date}}</time></em></h4></header>
-<p class="card-text">{{c.content|markdown}}</p>
-<hr>
-<p>&nbsp;</p>
+  <header>
+    <h4 class="card-title" id="{{c.key}}">
+      <button type="button" class="btn button-outline-warning">Reply</button>
+      <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
+      by {{c.content|ssi|vcs_author:lang}}
+      on <em><time>{{c.content|ssi|vcs_date}}</time></em>
+    </h4>
+  </header>
+  <p class="card-text">{{c.content|markdown}}</p>
+  <hr>
+  <p>&nbsp;</p>
 </article>
 {% endfor %}
 </div>
