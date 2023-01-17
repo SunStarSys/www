@@ -24,7 +24,6 @@
 &nbsp;
 {% endfor %}
 
-{% if comments.0 %}
 <hr>
 <div class="card border-warning">
   <form action="https://cms.sunstarsys.com/redirect" method="GET">
@@ -32,6 +31,11 @@
     <input type="hidden" name="lang" value="{{lang|cut:"."}}">
     <div class="card-header">
       <h3 class="card-title">Comments &nbsp;
+        <button type="submit" name="uri"
+                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/commentAA.md{{lang}}"
+                class="btn btn-sm btn-outline-warning">
+              New
+        </button>
       </h3>
     </div>
     <div id="comments" class="card-body">
@@ -39,11 +43,6 @@
       <article id="article-{{c.key}}">
         <header>
           <h4 class="card-title" id="{{c.key}}">
-            <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">
-              Add
-            </button>
             &nbsp;
             <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             by {{c.content|ssi|vcs_author:lang}}
