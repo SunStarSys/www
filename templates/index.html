@@ -32,7 +32,7 @@
     <div class="card-header">
       <h3 class="card-title">Comments &nbsp;
         <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path.basename:0}}.page/comment.md{{lang}}"
+                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
                 class="btn btn-sm btn-outline-warning">
           Add
         </button>
@@ -47,7 +47,7 @@
             by {{c.content|ssi|vcs_author:lang}}
             on <em><time>{{c.content|ssi|vcs_date}}</time></em> &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
-                    value="https://{{website}}{{path|dirname}}/{{path.basename:0}}.page/{{c.key}}.md{{lang}}">
+                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
               Reply
             </button>
           </h4>
