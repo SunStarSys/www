@@ -53,9 +53,9 @@
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
               Reply
             </button>
-            <button type="button" class="btn btn-sm btn-outline-warning" name="uri"
+            <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}"
-              onclick='$("#action").val("edit");$("#form").submit()'>
+              onclick='$("#action").val("edit");false'>
               Close
             </button>
           </h4>
