@@ -42,9 +42,11 @@
 
     <div id="comments" class="card-body">
       {% for c in comments %}
+      {% if c.closed %}
+      {% else %}
       {% if c.headers.closed %}
       {% else %}
-      <article id="article-{{c.key}}" {% if c.closed %}class="text-muted"{% endif %}>
+      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
         <header>
           <h4 class="card-title" id="{{c.key}}">
             &nbsp;
@@ -69,6 +71,7 @@
         <p>&nbsp;</p>
       </article>
       {% endif %}
+      {% endif %}
       {% endfor %}
     </div>
 
@@ -76,23 +79,26 @@
 </div>
 
 <script type="text/javascript">
-  var html = "";
-  var current_level = 0;
-  var last_level = 0;
-  for (const e of $("article").toArray()) {
-      var id = e.getAttribute("id");
-      current_level = (id.length - 15) / 2;
-      if (current_level == last_level)
-          html += "</li><li>" + e.outerHTML;
-      else if (current_level > last_level)
-          html += "<ul><li>" + e.outerHTML;
-      else
-          html += (new Array(last_level - current_level + 1)).join("</li></ul>") + "<li>" + e.outerHTML;
-      last_level = current_level;
+  function thread_commments() {
+      var html = "";
+      var current_level = 0;
+      var last_level = 0;
+      for (const e of $("article").toArray()) {
+          var id = e.getAttribute("id");
+          current_level = (id.length - 15) / 2;
+          if (current_level == last_level)
+              html += "</li><li>" + e.outerHTML;
+          else if (current_level > last_level)
+              html += "<ul><li>" + e.outerHTML;
+          else
+              html += (new Array(last_level - current_level + 1)).join("</li></ul>") + "<li>" + e.outerHTML;
+          last_level = current_level;
+      }
+      html += (new Array(last_level + 1)).join("</li></ul>");
+      $("#comments").html(html);
   }
-  html += (new Array(last_level + 1)).join("</li></ul>");
-  $("#comments").html(html);
-</script>
+  thread_comments();
+  </script>
 
 {% filter markdown %}
 {% if deps.0 %}
