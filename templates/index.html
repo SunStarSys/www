@@ -52,7 +52,10 @@
             &nbsp;
             <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             by {{c.content|ssi|vcs_author:lang}}
-            on <em><time>{{c.content|ssi|vcs_date}}</time></em> &nbsp;
+            on <em><time>{{c.content|ssi|vcs_date}}</time></em>
+            {% if c.muted %}
+            {% else %}
+            &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
               Reply
@@ -64,6 +67,7 @@
               Close
             </button>
 -->
+            {% endif %}
           </h4>
         </header>
         <p class="card-text">{{c.content|markdown}}</p>
