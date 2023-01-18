@@ -42,7 +42,7 @@
 
     <div id="comments" class="card-body">
       {% for c in comments %}
-      <article id="article-{{c.key}}" {% if c.headers.closed %}class="text-muted"{% endif %}>
+      <article id="article-{{c.key}}" {% if c.closed %}class="text-muted"{% endif %}>
         <header>
           <h4 class="card-title" id="{{c.key}}">
             &nbsp;
@@ -53,11 +53,13 @@
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
               Reply
             </button>
+<!--
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}"
               onclick='$("#action").val("edit");false'>
               Close
             </button>
+-->
           </h4>
         </header>
         <p class="card-text">{{c.content|markdown}}</p>
