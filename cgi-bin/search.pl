@@ -329,7 +329,7 @@ if ($re !~ /friends=|notify=|watch=|build=/i) {
     next unless $title;
     my $status = uc($data{headers}{status} // "draft");
     my $total = sum map $_->{count}, @$v;
-    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status=\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a>), [map $_->{match}, @$v]]
+    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status=\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a>), [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0]]};
   }
