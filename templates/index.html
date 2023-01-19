@@ -105,11 +105,11 @@
   }
 
   function clear_invalid_href() {
-      $("a").each((e) => {
+      for (const e of $("a").toArray()) {
           var hr = e.getAttribute("href");
           if (hr.indexOf("#") == 0 && !$($hr))
               e.setAttribute("href", null);
-      });
+      }
   }
 
   thread_comments();
