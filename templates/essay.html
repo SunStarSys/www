@@ -1,10 +1,10 @@
 {% extends "main.html" %}
 {% block content %}
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
-     <h1>{{ headers.title|safe }}</h1>
+     <h1><span class="text-warning">{{ headers.status|default("DRAFT") }}</span>: {{ headers.title|safe }}</h1>
      <div class="essay col-lg-12">
        <p style="color:#aaa">
-         <small><em>Last updated by <b>{{ content|ssi|vcs_author:lang }}</b> on <b>{{ content|ssi|vcs_date }}</b></em></small>
+         <small><em>. Last updated by <b>{{ content|ssi|vcs_author:lang }}</b> on <b>{{ content|ssi|vcs_date }}</b></em></small>
        </p>
        {{ content|markdown }}
      </div>
