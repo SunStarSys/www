@@ -108,7 +108,7 @@
       $("a").each((e) => {
           var hr = e.getAttribute("href");
           if (hr.indexOf("#") == 0 && !$($hr))
-              e.setAttribute("href", "");
+              e.setAttribute("href", null);
       });
   }
 
