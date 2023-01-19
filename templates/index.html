@@ -46,7 +46,8 @@
       {% else %}
       {% if c.headers.closed %}
       {% else %}
-      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
+      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% else
+      %}{% if c.important %}class="text-important"{% endif %}{% endif %}>
         <header>
           <h6 class="card-title" id="{{c.key}}">
             &nbsp;
