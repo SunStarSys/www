@@ -47,6 +47,7 @@
       {% if c.headers.closed %}
       {% else %}
       <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
+        <small>
         <header>
           <h4 class="card-title" id="{{c.key}}">
             &nbsp;
@@ -73,6 +74,7 @@
         <p class="card-text">{{c.content|markdown}}</p>
         <hr>
         <p>&nbsp;</p>
+        </small>
       </article>
       {% endif %}
       {% endif %}
