@@ -107,7 +107,7 @@
   function clear_invalid_href() {
       for (const e of $("article").find("a").toArray()) {
           const hr = e.getAttribute("href");
-          if (hr && hr.length > 1 && hr.indexOf("#") == 0 && $(hr).length)
+          if (hr && hr.length > 1 && hr.indexOf("#") == 0 && $(hr).length == 0)
               $(e).removeAttr("href");
       }
   }
