@@ -49,7 +49,7 @@
       <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
         <small>
         <header>
-          <h4 class="card-title" id="{{c.key}}">
+          <h6 class="card-title" id="{{c.key}}">
             &nbsp;
             <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             by {{c.content|ssi|vcs_author:lang}}
@@ -69,7 +69,7 @@
             </button>
 -->
             {% endif %}
-          </h4>
+          </h6>
         </header>
         <p class="card-text">{{c.content|markdown}}</p>
         <hr>
