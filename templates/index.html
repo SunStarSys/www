@@ -90,7 +90,7 @@
       var current_level = 0;
       var last_level = 0;
       for (const e of $("article").toArray()) {
-          var id = e.getAttribute("id");
+          const id = e.getAttribute("id");
           current_level = (id.length - 15) / 2;
           if (current_level == last_level)
               html += "</li><li>" + e.outerHTML;
@@ -106,11 +106,8 @@
 
   function clear_invalid_href() {
       for (const e of $("article").find("a").toArray()) {
-          var hr = $(e).attr("href");
-          if (!hr)
-              continue;
-          hr = hr.text();
-          if (hr.length > 1 && hr.indexOf("#") == 0 && $(hr).length)
+          const hr = e.getAttribute("href");
+          if (hr && hr.length > 1 && hr.indexOf("#") == 0 && $(hr).length)
               $(e).removeAttr("href");
       }
   }
