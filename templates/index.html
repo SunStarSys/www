@@ -107,7 +107,9 @@
   function clear_invalid_href() {
       $("article").find("a").each((e) => {
           var hr;
-          hr = $(e).attr("href") || return;
+          hr = $(e).attr("href");
+          if (!hr)
+              return;
           hr = hr.text();
           if (hr && hr.length > 1 && hr.indexOf("#") == 0 && $(hr).length)
               $(e).attr("href", null);
