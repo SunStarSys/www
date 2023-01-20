@@ -175,7 +175,7 @@ my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? "--markdown" : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
-my (@friends, @dlog, $blog, $diff, $author, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $blog, $diff, $author, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
@@ -377,6 +377,7 @@ my $args = {
   blog        => $blog,
   diff        => $diff,
   author      => $author,
+  log         => $log,
   r           => $r,
 };
 
