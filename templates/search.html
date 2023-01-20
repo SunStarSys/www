@@ -14,16 +14,6 @@
 <div class="container">
   {{ graphviz|safe }}
   <p>&nbsp;</p>
-  {% if matches.0 %}
-  <dl>
-    {% for m in matches %}
-    <dt>{{ m.0|safe }}</dt>
-    {% for hit in m.1 %}
-    <dd>{{ hit|safe }}</dd>
-    {% endfor %}
-    {% endfor %}
-  </dl>
-  {% endif %}
   {% for f in friends %}
   {% if f.members %}
   <div class="card text-white border-success mb-3">
@@ -65,6 +55,16 @@
   {% endif %}
   {% if blog %}
   <pre class="text-primary">{{ blog }}</pre>
+  {% endif %}
+  {% if matches.0 %}
+  <dl>
+    {% for m in matches %}
+    <dt>{{ m.0|safe }}</dt>
+    {% for hit in m.1 %}
+    <dd>{{ hit|safe }}</dd>
+    {% endfor %}
+    {% endfor %}
+  </dl>
   {% endif %}
 </div>
 {% endblock %}
