@@ -194,8 +194,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
     elsif ($re =~ /^diff=/i) {
       my ($revision) = $re =~ /(\d+)$/;
-      $diff = $svn->diff($dirname, 1, $revision)
-        if $revision;
+      $diff = $svn->diff($dirname, 1, $revision) if $revision;
     }
     else {
       open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
