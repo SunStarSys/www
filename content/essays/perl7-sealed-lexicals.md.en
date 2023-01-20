@@ -4,7 +4,7 @@ Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
 Muted: commentAAAA
 Important: commentAB
-Status: verified=11297
+Status: draft
 Closed: commentAAABAA
 
 <div class="right">
@@ -142,6 +142,7 @@ See <https://github.com/SunStarSys/sealed/blob/master/lib/sealed.pm>. Look for `
 
 This will allow Perl 5 to do the sample code's `content_type` method-lookup at compile time, without causing any back-compat issues or aggrieved CPAN coders, since this feature would target application developers. Not inheritable OO-module authors.
 
-This Perlish idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Read this](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) for the CPython effort from about a decade ago.
+This Perlish idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Read this](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) for the CPython effort from over a decade ago.
 
 <!-- $Date$ $Author$ $Revision$ -->
+00 $ -->
