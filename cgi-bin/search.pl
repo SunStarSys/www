@@ -328,7 +328,7 @@ if ($re !~ /friends=|notify=|watch=|build=/i) {
     my $uncompressed;
     utf8::encode my $f = $filename;
     gunzip $f, \$uncompressed and $filename = \$uncompressed if $filename =~m#\.gz[^/]*$#;
-    read_text_file $filename, \ my %data, $markdown ? 0 : undef;
+    read_text_file $filename, \ my %data;
     my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
     next unless $title;
     my $status = uc($data{headers}{status} // "draft");
