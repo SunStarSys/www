@@ -8,7 +8,7 @@
 {% endif %}
 
 {% for k in headers.keywords %}
-<span class="badge bg-danger" style="color:#000">
+<span class="badge bg-danger text-white">
   <a style="color:#fff"
      href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}}">#{{k}}</a>
 </span>&nbsp;
@@ -44,18 +44,18 @@
       {% for c in comments %}
       {% if c.closed %}
       {% else %}
-      {% if c.headers.closed %}
-      {% else %}
-      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% else
-      %}{% if c.important %}class="text-danger"{% endif %}{% endif %}>
+      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
         <header>
           <h6 class="card-title" id="{{c.key}}">
-            &nbsp;
             <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             by {{c.content|ssi|vcs_author:lang}}
             on <em><time>{{c.content|ssi|vcs_date}}</time></em>
             {% if c.muted %}
             {% else %}
+            {% if c.important %}
+            &nbsp;
+            <span class="badge border-danger">Important!</span>
+            {% endif %}
             &nbsp;
             <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
                     value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
@@ -70,7 +70,6 @@
           <p>&nbsp;</p>
         </small>
       </article>
-      {% endif %}
       {% endif %}
       {% endfor %}
     </div>
