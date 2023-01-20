@@ -24,58 +24,72 @@
 &nbsp;
 {% endfor %}
 
+{% if attachments %}
 <hr>
-<div class="card border-warning">
-  <form action="https://cms.sunstarsys.com/redirect" id="form" method="GET">
-    <input type="hidden" id="action" name="action" value="comment">
-    <input type="hidden" name="lang" value="{{lang|cut:"."}}">
-
-    <div class="card-header">
-      <h3 class="card-title">Comments &nbsp;
-        <button type="submit" name="uri"
-                value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
-                class="btn btn-sm btn-outline-warning">
-              New
-        </button>
-      </h3>
-    </div>
-
-    <div id="comments" class="card-body">
-      {% for c in comments %}
-      {% if c.closed %}
-      {% else %}
-      <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
-        <header>
-          <h6 class="card-title" id="{{c.key}}">
-            <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
-            by {{c.content|ssi|vcs_author:lang}}
-            on <em><time>{{c.content|ssi|vcs_date}}</time></em>
-            {% if c.muted %}
-            {% else %}
-            {% if c.important %}
-            &nbsp;
-            <span class="badge bg-danger text-white">Important!</span>
-            {% endif %}
-            &nbsp;
-            <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
-                    value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
-              Reply
-            </button>
-            {% endif %}
-          </h6>
-        </header>
-        <small>
-          <p class="card-text">{{c.content|markdown}}</p>
-          <hr>
-          <p>&nbsp;</p>
-        </small>
-      </article>
-      {% endif %}
+<div class="card border-dark">
+  <div class="card-header">
+    <h3 class="card-title">Attachments
+    [<a href="https://cms.sunstarsys.com/redirect?uri={{path|dirname}}/{{path|basename:0}}.page/;action=add">Add</a>]</h3>
+  </div>
+  <div class="card-body">
+    <ul>
+      {% for a in attachments %}
+      <li><a href="{{a}}">{{a|basename:0}}</a></li>
       {% endfor %}
-    </div>
-
-  </form>
+    </ul>
+  </div>
 </div>
+
+<hr>
+<form action="https://cms.sunstarsys.com/redirect" id="form" method="GET">
+  <input type="hidden" id="action" name="action" value="comment">
+  <input type="hidden" name="lang" value="{{lang|cut:"."}}">
+
+  <div class="card-header">
+    <h3 class="card-title">Comments &nbsp;
+      <button type="submit" name="uri"
+              value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/comment.md{{lang}}"
+              class="btn btn-sm btn-outline-warning">
+        New
+      </button>
+    </h3>
+  </div>
+
+  <div id="comments" class="card-body">
+    {% for c in comments %}
+    {% if c.closed %}
+    {% else %}
+    <article id="article-{{c.key}}" {% if c.muted %}class="text-muted"{% endif %}>
+      <header>
+        <h6 class="card-title" id="{{c.key}}">
+          <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
+          by {{c.content|ssi|vcs_author:lang}}
+          on <em><time>{{c.content|ssi|vcs_date}}</time></em>
+          {% if c.muted %}
+          {% else %}
+          {% if c.important %}
+          &nbsp;
+          <span class="badge bg-danger text-white">Important!</span>
+          {% endif %}
+          &nbsp;
+          <button type="submit" class="btn btn-sm btn-outline-warning" name="uri"
+                  value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/{{c.key}}.md{{lang}}">
+            Reply
+          </button>
+          {% endif %}
+        </h6>
+      </header>
+      <small>
+        <p class="card-text">{{c.content|markdown}}</p>
+        <hr>
+        <p>&nbsp;</p>
+      </small>
+    </article>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+</form>
 
 <script type="text/javascript">
   function thread_comments() {
