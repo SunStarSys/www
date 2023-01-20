@@ -381,6 +381,7 @@ my $args = {
   author      => "\$Author: $author \$",
   log         => $log,
   r           => $r,
+  website     => $host,
 };
 
 if (client_wants_json $r) {
