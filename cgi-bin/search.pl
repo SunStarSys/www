@@ -195,8 +195,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     elsif ($re =~ /^diff=/i) {
       my ($revision) = $re =~ /(\d+)$/;
       $diff = $svn->diff($dirname, 1, $revision) if $revision;
-      if (my ($path) = $diff =~ /^Index: (.+)$/m) {
-        $path = "$dirname$path";
+      if ($diff =~ /^Index: (.+)$/m) {
+        my $path = "$dirname$1";
         warn $path;
         $svn->info($path, sub {$author = $_[1]->last_changed_author});
         ($log) = grep utf8::decode($_), values %{$svn->propget("svn:log", $path, $revision, 0)};
