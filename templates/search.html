@@ -55,8 +55,14 @@
   {% if watch.0 %}
   {% for w in watch %}
   <div class="card text-white border-warning mb-3">
-    <div class="card-header"><a href="{{r.path_info}}./{{w.name}}">{{ w.name
-    }}</a> <div class="right"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{r.path_info}};action=unwatch"><i class="fa fa-eye-slash fa-emoji" title="eye-slash"></i></a></div></div>
+    <div class="card-header">
+      <a href="{{r.path_info}}{{w.name|basename:0}}.html{{lang}}">{{w.name}}</a>
+      <div class="right">
+        <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{r.path_info}}{{w.name}};action=unwatch">
+          <i class="fa fa-eye-slash fa-emoji" title="eye-slash"></i>
+        </a>
+      </div>
+    </div>
     <div class="card-body">
       <ul>
         {% for u in w.watchers %}
