@@ -11,6 +11,12 @@
   <canvas id="myChart" width="100%" height="800px"></canvas>
   {% endif %}
   {% if diff %}
+  <div class="card text-white border-success mb-3">
+    <div class="card-header">Author: {{["$Author: ", author, " $"]|join:""|vcs_author}}</div>
+    <div class="card-body">
+      <pre>{{ log|safe }}</pre>
+    </div>
+  </div>
 {% filter markdown %}
 ```diff
 {{ diff|safe }}
