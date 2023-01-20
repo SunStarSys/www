@@ -13,7 +13,7 @@
   {% if diff %}
   {% filter markdown %}
 ```diff
-{{ diff|strip_prefix:r.path_info }}
+{{ diff|strip_prefix:r.path_info|safe }}
 ```
   {% endfilter %}
   {% endif %}
