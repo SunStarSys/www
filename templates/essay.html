@@ -6,7 +6,7 @@
        <p style="color:#aaa">
          <small>
            <em>
-             [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:" 0-9=;,"}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:" 0-9=;,"}}</span></a>]:
+             [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"^a-z"}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"^A-Z"}}</span></a>]:
              Last updated by <b>{{ content|ssi|vcs_author:lang }}</b>
              on <b>{{ content|ssi|vcs_date }}</b>
            </em>
