@@ -333,7 +333,7 @@ if ($re !~ /friends=|notify=|watch=|build=/i) {
     next unless $title;
     my $status = uc($data{headers}{status} // "draft");
     my ($revision) = $data{content} =~ /\$Revision: (\d+) \$/;
-    if ($revision) {
+    if ($markdown and $revision) {
       $revision = qq(&nbsp; <a href="./?regex=diff=$revision;lang=$lang;markdown_search=1"><span class="text-success">r$revision</span></a>);
     }
     else {
