@@ -3,9 +3,9 @@
 {% block content %}
 <h1>{{title|safe}}<span class="text-danger">/</span>{{regex}}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
-  {% for k in keywords %}<span class="badge bg-danger" style="color:#000">
-  <a style="color:#fff" href="./?regex=%23{{k}};lang={{lang}};markdown_search={{markdown_search}}">#{{k}}</a>
-  </span>&nbsp;
+  {% for k in keywords %}
+  <a href="./?regex=%23{{k}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
+  &nbsp;
   {% endfor %}
   {% if duration %}
   <canvas id="myChart" width="100%" height="800px"></canvas>
