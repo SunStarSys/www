@@ -12,7 +12,7 @@
   {% endif %}
   {% if diff %}
   <div class="card text-white border-success mb-3">
-    <div class="card-header">Author: {{author|vcs_author}}</div>
+    <div class="card-header">Author: {{author|vcs_author:lang}}</div>
     <div class="card-body">
       <pre>{{ log|safe }}</pre>
     </div>
