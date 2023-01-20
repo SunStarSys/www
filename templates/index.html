@@ -25,31 +25,6 @@
 {% endfor %}
 
 <hr>
-<div class="card border-dark">
-  <div class="card-header">
-    <h3 class="card-title">Attachments &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Manage</a></button></h3>
-  </div>
-  <div class="card-body">
-    <ul>
-      {% for a in attachments %}
-      <li><a href="{{a}}">{{a|basename:0}}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="card-header">
-    <h3 class="card-title">Links &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button></h3>
-  </div>
-  <div class="card-body">
-    {{ links|markdown }}
-  </div>
-</div>
-
-
-
-
-<hr>
 <div class="card border-warning">
   <form action="https://cms.sunstarsys.com/redirect" id="form" method="GET">
     <input type="hidden" id="action" name="action" value="comment">
@@ -100,6 +75,29 @@
     </div>
   </form>
 </div>
+
+<hr>
+<div class="card border-dark">
+  <div class="card-header">
+    <h3 class="card-title">Attachments &nbsp;
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Manage</a></button></h3>
+  </div>
+  <div class="card-body">
+    <ul>
+      {% for a in attachments %}
+      <li><a href="{{a}}">{{a|basename:0}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="card-header">
+    <h3 class="card-title">Links &nbsp;
+    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button></h3>
+  </div>
+  <div class="card-body">
+    {{ links|markdown }}
+  </div>
+</div>
+
 <script type="text/javascript">
   function thread_comments() {
       var html = "";
