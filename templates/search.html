@@ -59,7 +59,7 @@
     <div class="card-body">
       <ul>
         {% for u in w.watchers %}
-        <li class="card-text"><a href="./?regex={{u.text}};lang={{lang}};markdown_search={{markdown_search}}">{{u.displayText}}</a></li>
+        <li class="card-text"><a href="./?regex={{u.text}};lang={{lang}};markdown_search={{markdown_search}}">{{u.displayText|safe}}</a></li>
         {% endfor %}
       </ul>
     </div>
