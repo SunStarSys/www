@@ -378,7 +378,7 @@ my $args = {
   duration    => @dlog ? Cpanel::JSON::XS->new->utf8->encode(\@dlog) : undef,
   blog        => $blog,
   diff        => $diff,
-  author      => $author,
+  author      => "\$Author: $author \$",
   log         => $log,
   r           => $r,
 };
