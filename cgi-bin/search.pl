@@ -328,6 +328,7 @@ if ($re !~ /friends=|notify=|watch=|build=/i) {
     my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
     next unless $title;
     my $status = uc($data{headers}{status} // "draft");
+    $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a>), [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
