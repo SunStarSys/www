@@ -110,8 +110,8 @@
   clear_invalid_href();
   </script>
 
-{% filter markdown %}
 {% if deps.0 %}
+{% filter markdown %}
 --------
 
 ## Index
@@ -119,5 +119,5 @@
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede}} ... <small><em>{{d.1.content|ssi|vcs_date}}</em></small>
 {% endfor %}
-{% endif %}
 {% endfilter %}
+{% endif %}
