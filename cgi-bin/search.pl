@@ -198,7 +198,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if ($diff =~ /^Index: (.+)$/m) {
         my $path = "$dirname$1";
         $svn->info($path, sub {$author = $_[1]->last_changed_author});
-        ($log) = values %{$svn->propget("svn:log", $path, $revision, 1)};
+        ($log) = keys %{$svn->propget("svn:log", $path, $revision, 0)};
       }
     }
     else {
