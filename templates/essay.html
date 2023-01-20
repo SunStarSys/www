@@ -3,7 +3,7 @@
    <div class="breadcrumbs">{{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')"><img src="/images/edit.png" /></a></div>
      <h1>{{ headers.title|safe }}</h1>
      <div class="essay col-lg-12">
-       <p style="color:#aaa">
+       <div style="color:#aaa">
          <small>
            [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"^a-z"}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"^A-Z"}}</span></a>] &nbsp;
            <em>
@@ -12,7 +12,7 @@
            </em>
          </small>
          <div class="right"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch">Watch</a></div>
-       </p>
+       </div>
        {{ content|markdown }}
      </div>
 {% endblock %}
