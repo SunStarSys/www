@@ -10,6 +10,13 @@
   {% if duration %}
   <canvas id="myChart" width="100%" height="800px"></canvas>
   {% endif %}
+  {% if diff %}
+  {% filter markdown %}
+```diff
+{{ diff|strip_prefix:r.path_info }}
+```
+  {% endfilter %}
+  {% endif %}
 </div>
 <div class="container">
   {{ graphviz|safe }}
