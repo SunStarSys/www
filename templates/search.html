@@ -22,9 +22,31 @@
 ```diff
 {{ diff|safe }}
 ```
-{% endfilter %}
-  {% endif %}
+  {% endfilter %}
 </div>
+{% else %}
+{% if log %}
+<div class="card text-white border-success mb-3">
+  <div class="card-header">Latest {{revision}} changes</div>
+  <div class="card-body">
+    <dl>
+      {% for e in log %}
+      <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">e.0</a></dt>
+      <dd>
+        {% for k in e.1.keys %}
+        <a href="
+        <pre>
+          {{ e.1[k].text_modified|strip_prefix:r.path_info }}
+          {{ e.1[k].props_modified|strip_prefix:r.path_info }}
+        </pre>
+        {% endfor %}
+      </dd>
+      {% endfor %}
+    </dl>
+  </div>
+</div>
+{% endif %}
+{% endif %}
 <div class="container">
   {{ graphviz|safe }}
   <p>&nbsp;</p>
