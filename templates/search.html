@@ -33,12 +33,19 @@
       {% for e in log %}
       <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a></dt>
       <dd>
-        {% for k in e.1.keys %}
-        <a href="
-        <pre>
-          {{ e.1[k].text_modified|strip_prefix:r.path_info }}
-          {{ e.1[k].props_modified|strip_prefix:r.path_info }}
-        </pre>
+        {% for k, v in e.1 %}
+        {% ifequal k|parse_filename:2 ".md" %}
+        <a href="{{r.path_info|append:k|dirname}}/{{k.parse_filename:0}}.html{{k.parse_filename:3}">{{k}}</a>
+        {% else %}
+        <a href="{{r.path_info|append:k}}">{{k}}</a>
+        {% endifequal %}
+<pre>
+Text Deltas:
+{{ v.text_modified }}
+
+Props Deltas:
+{{ v.props_modified }}
+</pre>
         {% endfor %}
       </dd>
       {% endfor %}
