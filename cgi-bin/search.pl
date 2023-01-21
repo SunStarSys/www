@@ -24,7 +24,7 @@ use File::Basename;
 use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use DB_File;
-use POSIX qw/:fcntl_h/;
+use POSIX qw/:fcntl_h strftime/;
 use File::Find;
 
 my Apache2::RequestRec $r = shift;
@@ -175,7 +175,7 @@ my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
 my @unzip = $markdown ? "--markdown" : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
-my (@friends, @dlog, $blog, $diff, $author, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $blog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
@@ -197,8 +197,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $diff = $svn->diff($dirname, 1, $revision) if $revision;
       if ($diff =~ /^Index: (.+)$/m) {
         my $path = "$dirname$1";
-        $svn->info($path, sub {$author = $_[1]->last_changed_author});
+        $svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date / 1000000});
         ($log) = grep utf8::decode($_), $svn->revprop_get("svn:log", $path, $revision);
+        $date = strftime "%Y-%m-%d %H:%M:S %z (%a, %e %b %Y)", $date;
       }
     }
     else {
@@ -378,7 +379,7 @@ my $args = {
   duration    => @dlog ? Cpanel::JSON::XS->new->utf8->encode(\@dlog) : undef,
   blog        => $blog,
   diff        => $diff,
-  author      => "\$Author: $author \$",
+  meta      => "\$Author: $author \$ \$Date: $date \$",
   log         => $log,
   r           => $r,
   website     => $host,
