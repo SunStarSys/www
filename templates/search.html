@@ -34,7 +34,12 @@
       <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a></dt>
         {% for k, v in e.1 %}
       <dd>
-        <code>{{v.action}}</code>&nbsp;<a href="https://vcs.sunstarsys.com/repos/svn/{{repos}}{{k}}">{{k}}</a>
+        <code>{{v.action}}</code>&nbsp;
+        {% ifequal k.parse_filename:2 ".md" %}
+        < href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:3}">{{k}}</a>
+        {% else %}
+        <a href="/{{k|strip_prefix}}">{{k}}</a>
+        {% endif %}
       </dd>
         {% endfor %}
       {% endfor %}
