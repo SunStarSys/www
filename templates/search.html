@@ -15,7 +15,7 @@
     <div class="card-header">{{meta|vcs_author:lang}} <small><em>on
     {{meta|vcs_date}} at {{meta|vcs_time}}</em></small></div>
     <div class="card-body">
-      <pre>{{ log|safe }}</pre>
+      <pre>{{ log }}</pre>
     </div>
   </div>
 {% filter markdown %}
@@ -44,11 +44,18 @@
       </dd>
         {% endifequal %}
         {% endfor %}
-        <pre>{{e.2|safe}}</pre>
+        <pre>{{e.2}}</pre>
       {% endfor %}
     </dl>
   </div>
 </div>
+{% endif %}
+{% if acl %}
+{% filter marldown %}
+```yaml
+{{acl}}
+```
+{% endfilter %}
 {% endif %}
 {% endif %}
 <div class="container">
