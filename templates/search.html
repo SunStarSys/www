@@ -32,7 +32,7 @@
     <dl>
       {% for e in log %}
       <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:lang}} on {{e.3|vcs_date}} at {{e.3||vcs_time}}</dt>
+        {{e.3|vcs_author:lang}} on {{e.3|vcs_date}} at {{e.3|vcs_time}}</dt>
         {% for k, v in e.1 %}
       <dd>
         <code>{{v.action}}</code>&nbsp;
@@ -40,9 +40,9 @@
         <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
         {% else %}
         <a href="/{{k|strip_prefix}}">{{k}}</a>
-        <pre>{{ e.2|safe }}</pre>
       </dd>
         {% endfor %}
+        <pre>{{e.2|safe}}</pre>
       {% endfor %}
     </dl>
   </div>
