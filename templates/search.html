@@ -37,7 +37,7 @@
         {% ifequal k|parse_filename:2 ".md" %}
         <a href="{{k|strip_prefix:r.path_info|dirname}}/{{k.parse_filename:1}}.html{{k.parse_filename:3}}">{{k}}</a>
         {% else %}
-        HOLA<a href="{{k|strip_prefix:r.path_info}}">{{k}}</a>
+        <a href="{{k|strip_prefix:r.path_info}}">{{k}}</a>
         {% endifequal %}
 <pre>
 Text Deltas:
