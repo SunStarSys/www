@@ -31,7 +31,7 @@
   <div class="card-body">
     <dl>
       {% for e in log %}
-      <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">e.0</a></dt>
+      <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a></dt>
       <dd>
         {% for k in e.1.keys %}
         <a href="
