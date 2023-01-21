@@ -50,10 +50,10 @@
   </div>
 </div>
 {% endif %}
-{% if acl %}
-{% filter marldown %}
+{% if yaml %}
+{% filter markdown %}
 ```yaml
-{{acl}}
+{{yaml}}
 ```
 {% endfilter %}
 {% endif %}
