@@ -197,15 +197,19 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $diff = $svn->diff($dirname, 1, $revision) if $revision;
       while ($diff =~ /^Index: (.+)$/mg) {
         my $path = "$dirname$1";
-        eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date / 1000000})};
+        eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date})};
         ($log) = grep utf8::decode($_), $svn->revprop_get("svn:log", $path, $revision) unless $@;
-        $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date unless $@;
+        $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000 unless $@;
         last unless $@;
       }
     }
     elsif ($re =~ /^log=/i) {
       my ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision);
+      for (@$log) {
+        my $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$_[4] / 1000000;
+        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
+      }
     }
     else {
       open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
