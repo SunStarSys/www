@@ -33,9 +33,9 @@
       {% for e in log %}
       <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a></dt>
       <dd>
-        {% for k,v in e.1 %}
+        {% for k, v in e.1 %}
         {% ifequal k|parse_filename:2 ".md" %}
-        <a href="{{r.path_info|append:k|dirname}}/{{k.parse_filename:0}}.html{{k.parse_filename:3}">{{k}}</a>
+        <a href="{{r.path_info|append:k|dirname}}/{{k.parse_filename:0}}.html{{k.parse_filename:3}}">{{k}}</a>
         {% else %}
         <a href="{{r.path_info|append:k}}">{{k}}</a>
         {% endifequal %}
