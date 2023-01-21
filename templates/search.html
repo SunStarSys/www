@@ -15,7 +15,7 @@
     <div class="card-header">{{meta|vcs_author:lang}} <small><em>on
     {{meta|vcs_date}} at {{meta|vcs_time}}</em></small></div>
     <div class="card-body">
-      <pre>{{ log }}</pre>
+      <pre>{{ log|safe }}</pre>
     </div>
   </div>
 {% filter markdown %}
@@ -53,7 +53,7 @@
 {% if yaml %}
 {% filter markdown %}
 ```yaml
-{{yaml}}
+{{yaml|safe}}
 ```
 {% endfilter %}
 {% endif %}
