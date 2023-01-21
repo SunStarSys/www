@@ -56,7 +56,8 @@
   {% for w in watch %}
   <div class="card text-white border-warning mb-3">
     <div class="card-header">
-      <a href="{{r.path_info|append:w.name|dirname}}/{{w.name|basename:0}}.html{{lang}}">{{w.name}}</a>
+      <a href="{% ifequal r.path_info "/" %}{{w.name|dirname}}{% else
+      %}{{r.path_info|append:w.name|dirname}}{% endifequal %}/{{w.name|basename:0}}.html{{lang}}">{{w.name}}</a>
       <div class="right">
         <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{r.path_info}}{{w.name}};action=unwatch">
           <i class="fa fa-eye-slash fa-emoji" title="eye-slash"></i>
