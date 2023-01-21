@@ -12,7 +12,8 @@
   {% endif %}
   {% if diff %}
   <div class="card text-white border-success mb-3">
-    <div class="card-header">{{meta|vcs_author:lang}} <small><em>on {{meta|vcs_date}}</em></small></div>
+    <div class="card-header">{{meta|vcs_author:lang}} <small><em>on
+    {{meta|vcs_date}} at {{meta|vcs_time}}</em></small></div>
     <div class="card-body">
       <pre>{{ log|safe }}</pre>
     </div>
