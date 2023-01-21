@@ -192,8 +192,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         close $fh;
       }
     }
-    elsif ($re =~ /^acl=/i and $pw{svnuser} =~ /\bsvnadmin\b/) {
-      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.acl") {
+    elsif ($pw{svnuser} =~ /\bsvnadmin\b/ and $re =~ /^(acl|deps)=/i) {
+      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.$1") {
         read $fh, $acl, -s $fh;
     }
     elsif ($re =~ /^diff=/i) {
@@ -277,7 +277,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
       }
     }
-    if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=/i) {
+    if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=/i) {
       my @rv;
       for (map [split /=/], split /\b[;,]+\b/, $re) {
         my %seen;
