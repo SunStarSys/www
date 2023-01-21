@@ -387,6 +387,7 @@ my $args = {
   meta      => "\$Author: $author \$ \$Date: $date \$",
   log         => $log,
   r           => $r,
+  repos       => $repos,
   website     => $host,
 };
 
