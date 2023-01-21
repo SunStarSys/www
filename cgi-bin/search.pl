@@ -268,7 +268,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
       }
     }
-    if ($re !~ /friends=|watch=|notify=|build=|diff=/i) {
+    if ($re !~ /friends=|watch=|notify=|build=|diff=|log=/i) {
       my @rv;
       for (map [split /=/], split /\b[;,]+\b/, $re) {
         my %seen;
