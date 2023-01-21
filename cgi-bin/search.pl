@@ -197,6 +197,11 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         read $fh, $yaml, -s $fh;
       }
     }
+    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^svnauthz=/i) {
+      if (open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/authz-svn.conf") {
+        read $fh, $blog, -s $fh;
+      }
+    }
     elsif ($re =~ /^diff=/i) {
       my ($revision) = $re =~ /(\d+)$/;
       $diff = $svn->diff($dirname, 1, $revision) if $revision;
@@ -278,7 +283,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
       }
     }
-    if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=/i) {
+    if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
       my @rv;
       for (map [split /=/], split /\b[;,]+\b/, $re) {
         my %seen;
@@ -318,7 +323,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
   }
 }
-if ($re !~ /friends=|notify=|watch=|build=/i) {
+if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
   my $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
 
   if ($?) {
