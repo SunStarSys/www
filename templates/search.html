@@ -35,9 +35,9 @@
       <dd>
         {% for k, v in e.1 %}
         {% ifequal k|parse_filename:2 ".md" %}
-        <a href="/{{k|strip_prefix:r.path_info|parse_filename:"0,1"}}.html{{k|parse_filename:3}}">{{k}}</a>
+        <a href="{{r.path_info}}{{k|strip_prefix:r.path_info|parse_filename:"0,1"}}.html{{k|parse_filename:3}}">{{k}}</a>
         {% else %}
-        <a href="/{{k|strip_prefix:r.path_info}}">{{k}}</a>
+        <a href="{{r.path_info}}{{k|strip_prefix:r.path_info}}">{{k}}</a>
         {% endifequal %}
 <pre>
 Text Deltas:
