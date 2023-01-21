@@ -202,6 +202,10 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date;
       }
     }
+    elsif ($re =~ /^log=/i) {
+      my ($revision) = $re =~ /(\d+)$/;
+      $log = $svn->log($dirname, "HEAD", $revision);
+    }
     else {
       open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
       local $_;
