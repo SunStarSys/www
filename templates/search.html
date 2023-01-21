@@ -41,7 +41,7 @@
         {% else %}
         <a href="/{{k|strip_prefix}}">{{k}}</a>
       </dd>
-        {% endif %}
+        {% endifequal %}
         {% endfor %}
         <pre>{{e.2|safe}}</pre>
       {% endfor %}
