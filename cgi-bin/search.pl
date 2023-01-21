@@ -195,11 +195,12 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     elsif ($re =~ /^diff=/i) {
       my ($revision) = $re =~ /(\d+)$/;
       $diff = $svn->diff($dirname, 1, $revision) if $revision;
-      if ($diff =~ /^Index: (.+)$/m) {
+      while ($diff =~ /^Index: (.+)$/mg) {
         my $path = "$dirname$1";
         eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date / 1000000})};
         ($log) = grep utf8::decode($_), $svn->revprop_get("svn:log", $path, $revision) unless $@;
         $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date unless $@;
+        last unless $@;
       }
     }
     elsif ($re =~ /^log=/i) {
