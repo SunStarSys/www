@@ -192,7 +192,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         close $fh;
       }
     }
-    elsif ($pw{svnuser} =~ /\bsvnadmin\b/ and $re =~ /^(acl|deps)=/i) {
+    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^(acl|deps)=/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.$1") {
         read $fh, $yaml, -s $fh;
       }
