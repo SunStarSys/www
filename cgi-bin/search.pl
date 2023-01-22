@@ -3,6 +3,7 @@
 
 use utf8;
 use strict;
+use locale;
 use warnings;
 use base 'sealed';
 use Text::Balanced ();
@@ -24,8 +25,15 @@ use File::Basename;
 use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use DB_File;
-use POSIX qw/:fcntl_h strftime/;
+use POSIX qw/:fcntl_h strftime :locale_h/;
 use File::Find;
+
+local our %LANG = (
+  ".de" => "de_DE",
+  ".en" => "en_US",
+  ".es" => "es_ES",
+  ".fr" => "fr_FR",
+);
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -208,8 +216,11 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       while ($diff =~ /^Index: (.+)$/mg) {
         my $path = "$dirname$1";
         eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date})};
-        ($log) = grep utf8::decode($_), eval{$svn->revprop_get("svn:log", $path, $revision)} unless $@;
-        $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000 unless $@;
+        next if $@;
+        ($log) = grep utf8::decode($_), eval{$svn->revprop_get("svn:log", $path, $revision)};
+        my $loc = setlocale(LC_TIME, "$LANG{$lang}.UTF-8");
+        $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000 ;
+        setlocale(LC_TIME, $loc);
         last unless $@;
       }
     }
@@ -217,7 +228,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision);
       for (@$log) {
+        my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$_[4] / 1000000;
+        setlocale LC_TIME, $loc;
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
     }
