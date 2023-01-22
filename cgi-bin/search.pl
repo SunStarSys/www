@@ -219,7 +219,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         next if $@;
         ($log) = grep utf8::decode($_), eval{$svn->revprop_get("svn:log", $path, $revision)};
         my $loc = setlocale LC_CTYPE, "$LANG{$lang}.UTF-8";
-        $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000 ;
+        $date = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000 ;
+
         setlocale LC_CTYPE, "$LANG{.en}.UTF-8";
         last unless $@;
       }
@@ -229,7 +230,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $log = $svn->log($dirname, "HEAD", $revision);
       for (@$log) {
         my $loc = setlocale LC_CTYPE, "$LANG{$lang}.UTF-8";
-        my $date = strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$_[4] / 1000000;
+        my $date = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$_[4] / 1000000;
         setlocale LC_CTYPE, "$LANG{.en}.UTF-8";
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
