@@ -1,3 +1,5 @@
+Status: draft
+
 {% extends "main.html" %}
 {% block content %}
 <div class="breadcrumbs">
@@ -121,18 +123,6 @@ See our [Orion Plans](plans) for the current deals.
 | Searchable Document Status | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span>| | |
 
 <br />
-
-### Consumer Information on SLA offers related to the Jamstack that you may come across elsewhere...
-
-Informed consumers should always **ask** which components of the Jamstack are covered by SLA, or get written assurance that your SLA provides blanket coverage for the entire stack, *including the build infra and Orion / IDE portions*.  You might be surprised by the answers: even GitHub has serious multi-hour outages from time to time, on which many competitors base their entire offerings.  Such services with nominal **99.99%** SLA's, which is less than an hour a year of total downtime, clearly have some explaining to do, if you are under the impression your full service stack is under SLA.  *It's not*, we're just being up front with you about it.
-
-What we're offering instead is a best effort to keep our Subversion service online **24x7x365**, with primary focus on Continental US business hours, and with a competitive target of having our [SLI](https://en.wikipedia.org/wiki/Service_level_indicator)'s read favorably when compared to the rest of the market (including GitHub itself, whose SLA's revolve around response time targets, not the actual duration of downtime incidents).  SLA's are an important ingredient, so Enterprise customers will enjoy our comprehensive **99.99%**, which covers **everything** but the Subversion service itself.  Nobody offers blanket availability SLA contracts for their version control service infrastructure; and you should be wary of doing business with someone who does in today's marketplace.
-
-### A Peek Under the Hood...
-
-[REST compliance](https://www.codecademy.com/articles/what-is-rest) has its benefits to Orion users.  They'll like the fact that their browser's <span class="text-white">Back</span> button doesn't break the service; in fact it's an essential component of the <span class="text-white">Rollback</span> functionality. In an emergency site breakage situation, going back to the bad <span class="text-white">Commit</span> submission's result page will provide them with the ability to reverse merge <span class="text-white">that</span> errant applied change &mdash; at the click of a button &mdash; and rebuild the site back to a known good state.
-
-We currently provide a basic <span class="text-white">Django</span> based template system derived from a customized [`Dotiac::DTL`](http://dotiac.sourceforge.net/cgi-bin/index.pl) module from CPAN. The Apache 2.0 Licensed [Orion build system](https://github.com/SunStarSys/orion), together with a large collection of supporting modules to take advantage of within that tree, is available on GitHub.
 
 ### Details
 
