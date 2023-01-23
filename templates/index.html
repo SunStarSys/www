@@ -108,10 +108,12 @@
           current_level = (id.length - 15) / 2;
           if (current_level == last_level)
               html += "</li><li>" + e.outerHTML;
-          else if (current_level > last_level)
+          else if (current_level == last_level + 1)
               html += "<ul><li>" + e.outerHTML;
-          else
+          else if (current_level < last_level)
               html += (new Array(last_level - current_level + 1)).join("</li></ul>") + "<li>" + e.outerHTML;
+          else
+              continue;
           last_level = current_level;
       }
       html += (new Array(last_level + 1)).join("</li></ul>");
