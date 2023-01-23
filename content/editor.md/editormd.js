@@ -192,8 +192,9 @@
             }
         },
         toolbarCustomIcons   : {               // using html tag create toolbar icon, unused default <a> tag.
-            lowercase        : "<a href=\"javascript:;\" title=\"Lowercase\" unselectable=\"on\"><i class=\"fa\" name=\"lowercase\" style=\"font-size:24px;margin-top: -10px;\">a</i></a>",
-            "ucwords"        : "<a href=\"javascript:;\" title=\"ucwords\" unselectable=\"on\"><i class=\"fa\" name=\"ucwords\" style=\"font-size:20px;margin-top: -3px;\">Aa</i></a>"
+            lowercase        : "<a href=\"javascript:;\" title=\"Lowercase\" unselectable=\"on\"><i name=\"lowercase\" style=\"font-size:24px;margin-top: -7px;\">a</i></a>",
+            "ucwords"        : "<a href=\"javascript:;\" title=\"ucwords\" unselectable=\"on\"><i name=\"ucwords\" style=\"font-size:20px;\">Aa</i></a>",
+            "uppercase"      : "<a href=\"javascript:;\" title=\"Uppercaase\" unselectable=\"on\"><i name=\"uppercase\" style=\"font-size:20px;\">A</i></a>",
         },
         toolbarIconsClass    : {
             undo             : "fa-undo",
@@ -202,7 +203,6 @@
             del              : "fa-strikethrough",
             italic           : "fa-italic",
             quote            : "fa-quote-left",
-            uppercase        : "fa-font",
             h1               : editormd.classPrefix + "bold",
             h2               : editormd.classPrefix + "bold",
             h3               : editormd.classPrefix + "bold",
@@ -626,9 +626,9 @@
 	    _this.editormd.loadScript(loadPath + "codemirror/codemirror.min", function() {
 		_this.editormd.$CodeMirror = CodeMirror;
 
-		editormd.loadScript(loadPath + "codemirror/addons.min", function() {
+		editormd.loadScript(loadPath + "codemirror/modes.min", function() {
                     editormd.loadScript(loadPath + "codemirror/addon/hint/show-hint", function () {
-		        editormd.loadScript(loadPath + "codemirror/modes.min", function() {
+		        editormd.loadScript(loadPath + "codemirror/addons.min", function() {
 
 			    _this.setCodeMirror();
 			    _this.setToolbar();
