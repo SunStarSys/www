@@ -46,7 +46,7 @@ div.jumbotron input.form-control, textarea.form-control {
 	max-width: 100%;
 }
 
-div.container { overflow:auto }
+div { overflow:auto }
 
 div.jumbotron input:invalid {
 	border-color: #CC0000;
