@@ -111,14 +111,33 @@
   <pre class="text-primary">{{ blog }}</pre>
   {% endif %}
   {% if matches.0 %}
+  <form method="POST" class="form-inline">
+    <div class="right">
+      <input type="hidden" name="hash" value="{{hash}}"/>
+      <input class="form-control" type="text" name="filter"
+             placeholder="PCRE
+    {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es"
+    %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive
+    Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{%
+    endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit"
+    name="submit" value="1" class="btn btn-outline-success"><i class="fa
+    fa-filter fa-emoji" title="Filter"></i>
+	    {% ifequal lang ".en" %}Filter{% endifequal -%}
+	    {% ifequal lang ".es" %}Filter{% endifequal -%}
+	    {% ifequal lang ".de" %}Filter{% endifequal -%}
+	    {% ifequal lang ".fr" %}Filter{% endifequal -%}
+      </button>
+    </div>
   <dl>
     {% for m in matches %}
     <dt>{{ m.0|safe }}</dt>
-    {% for hit in m.1 %}
+    {% for hit in m.2 %}
     <dd>{{ hit|safe }}</dd>
+    <input type="hidden" name="files" value="{{m.1}}" />
     {% endfor %}
     {% endfor %}
   </dl>
+  </form>
   {% endif %}
 </div>
 {% endblock %}

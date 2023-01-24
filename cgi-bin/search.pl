@@ -26,7 +26,7 @@ use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use DB_File;
 use POSIX qw/:fcntl_h strftime :locale_h/;
-use File::Find;
+use Digest::SHA1;
 
 local our %LANG = (
   ".de" => "de_DE",
@@ -155,6 +155,8 @@ sub breadcrumbs {
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 my $lang     = encode($apreq->args("lang") || ".en");
 my $re       = $apreq->args("regex") || return 400;
+my $filter   = $apreq->param("filter") // "";
+my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my $js;
 
@@ -338,7 +340,18 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   }
 }
 if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
-  my $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
+  my $sha1 = Digest::SHA1->new;
+  $sha1->add(join ":", "placeholder", $apreq->body("files"));
+  my $pffxg;
+
+  if ($sha1->hexdigest ne $hash) {
+    $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
+  }
+  else {
+    my $grep = $unzip[1] == "--markdown" ? "grep" : "xzgrep";
+    my @files = map $grep eq "grep" ? $_ : "$_.gz", $apreq->body("files");
+    $pffxg = run_shell_command "cd $d && timeout 30 $grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $re, @files;
+  }
 
   if ($?) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
@@ -380,7 +393,7 @@ if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a> $revision), [map $_->{match}, @$v]]
+    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a> $revision), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0]]};
   }
@@ -418,6 +431,7 @@ my $args = {
   r           => $r,
   repos       => $repos,
   website     => $host,
+  hash        => Digest::SHA1->new->add(join ":", "placeholder", map $$_[1], @matches)->hexdigest,
 };
 
 if (client_wants_json $r) {
