@@ -112,7 +112,8 @@
   {% if blog %}
   <pre class="text-primary">{{ blog }}</pre>
   {% endif %}
-  {% if !specials %}
+  {% if specials %}
+  {% else %}
   <form method="POST" class="form-inline row">
     <div style="width:100%">
       <div class="right" id="filter">
