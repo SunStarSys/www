@@ -1,7 +1,9 @@
 {% extends "main.html" %}
-{% block title %}{{title|safe}} q/{{regex}}/gi{% endblock %}
+{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
+%}{{regex}}{% endif %}/gi{% endblock %}
 {% block content %}
-<h1>{{title|safe}}<span class="text-danger">/</span>{{regex}}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+<h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
+  else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in keywords %}
   <a href="./?regex=%23{{k}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
@@ -110,7 +112,6 @@
   {% if blog %}
   <pre class="text-primary">{{ blog }}</pre>
   {% endif %}
-  {% if matches.0 %}
   <form method="POST" class="form-inline">
     <div class="right" id="filter">
       <input type="hidden" name="hash" value="{{hash}}"/>
@@ -120,7 +121,7 @@
     %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive
     Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{%
     endifequal %}" value="{{ filter }}" />&nbsp;<button type="submit"
-    name="submit" value="1" class="btn btn-outline-success"><i class="fa
+    name="submit" value="1" class="btn btn-outline-danger"><i class="fa
     fa-filter fa-emoji" title="Filter"></i>
 	    {% ifequal lang ".en" %}Filter{% endifequal -%}
 	    {% ifequal lang ".es" %}Filter{% endifequal -%}
@@ -128,6 +129,7 @@
 	    {% ifequal lang ".fr" %}Filter{% endifequal -%}
       </button>
     </div>
+  {% if matches.0 %}
     <div style="float:left;display:inline-block">
       <dl>
         {% for m in matches %}
@@ -139,8 +141,8 @@
         {% endfor %}
       </dl>
     </div>
-  </form>
   {% endif %}
+  </form>
 </div>
 {% endblock %}
 
