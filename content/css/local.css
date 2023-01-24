@@ -102,11 +102,11 @@ div.breadcrumbs {
     min-width: 350px;
 }
 
-#search button { height: 38px }
+#search button, #filter button { height: 38px }
 
-#search input { max-width: 13em; background-color: #8f99fb }
+#search input, #filter input { max-width: 13em; background-color: #8f99fb }
 @media only screen and (max-width: 1000px) {
-    #search { display: none; }
+    #search, #filter { display: none; }
 }
 
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {

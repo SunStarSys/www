@@ -432,6 +432,7 @@ my $args = {
   repos       => $repos,
   website     => $host,
   hash        => Digest::SHA1->new->add(join ":", "placeholder", map $$_[1], @matches)->hexdigest,
+  filter      => $filter,
 };
 
 if (client_wants_json $r) {
