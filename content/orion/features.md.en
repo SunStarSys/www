@@ -91,7 +91,7 @@ Dependencies: *.md.en
 - [x] Native Flowchart and Sequence Diagram Support :fa-glass:
 
 ```flow
-st=>start: börja
+st=>start: b&ouml;rja
 op=>operation: operation
 cond=>condition: villkor Ja eller Nej?
 e=>end: slutet
@@ -244,9 +244,9 @@ graph TB
     e --> od3>Really long text with linebreak<br>in an Odd shape]
 
     %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*Ø²)
 
-    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+    cyr[Cyrillic]-->cyr2((Circle shape ÐÐ°ÑÐ°Ð»Ð¾));
 
      classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
