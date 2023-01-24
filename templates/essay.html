@@ -33,7 +33,8 @@
 {% block javascript %}
 <script async="" type="text/javascript">
   const response = await
-  fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1;as_json=1")
+  fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1;as_json=1",
+        {credentials: 'same-origin'});
   const json = await response.json();
   const is_watching = json.watch.map(e => e.name).filter(e =>
       e.match(/\Q{{path|basename}}\E/)).length;
