@@ -93,7 +93,7 @@
   <div class="card text-white border-warning mb-3">
     <div class="card-header">
       {% ifequal w.name|parse_filename:2 ".md" %}
-      <a href="{{r.path_info|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"2.."}}">{{w.name}}</a>
+      <a href="{{r.path_info|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
       {% else %}
       <a href="{{r.path_info|append:w.name}}">{{w.name}}</a>
       {% endifequal %}
