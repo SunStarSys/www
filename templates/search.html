@@ -112,14 +112,14 @@
   {% endif %}
   {% if matches.0 %}
   <form method="POST" class="form-inline">
-    <div class="right">
+    <div class="right" id="filter">
       <input type="hidden" name="hash" value="{{hash}}"/>
       <input class="form-control" type="text" name="filter"
              placeholder="PCRE
     {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es"
     %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive
     Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{%
-    endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit"
+    endifequal %}" value="{{ filter }}" />&nbsp;<button type="submit"
     name="submit" value="1" class="btn btn-outline-success"><i class="fa
     fa-filter fa-emoji" title="Filter"></i>
 	    {% ifequal lang ".en" %}Filter{% endifequal -%}
