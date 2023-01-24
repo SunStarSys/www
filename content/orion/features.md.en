@@ -1,6 +1,7 @@
 Title: Orion Features
 Keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
 Dependencies: *.md.en
+Status: draft
 
 <div class="row">
 	<div class="col-lg-3">
@@ -91,7 +92,7 @@ Dependencies: *.md.en
 - [x] Native Flowchart and Sequence Diagram Support :fa-glass:
 
 ```flow
-st=>start: b&ouml;rja
+st=>start: börja
 op=>operation: operation
 cond=>condition: villkor Ja eller Nej?
 e=>end: slutet
@@ -246,7 +247,7 @@ graph TB
     %% Comments after double percent signs
     e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*Ø²)
 
-    cyr[Cyrillic]-->cyr2((Circle shape ÐÐ°ÑÐ°Ð»Ð¾));
+    cyr[Cyrillic]-->cyr2((Circle shape Начало));
 
      classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -468,3 +469,5 @@ draw(tube(p,colorsec),render(merge=true));
 	-webkit-animation-iteration-count: 1;
 }
 </style>
+
+<!-- $Date$ $Author$ $Revision$ -->
