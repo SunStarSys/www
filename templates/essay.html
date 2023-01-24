@@ -11,10 +11,10 @@
              on <b>{{ content|ssi|vcs_date }}</b>
            </em>
          </small>
-         <div class="right"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch">
+         <div class="right"><a id="watch" href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path}};action=watch">
              <i class="fa fa-eye fa-emoji" title="watch"></i>
            </a>&nbsp;
-           <a href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1">
+           <a id="unwatch" href="/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1">
             <i class="fa fa-eye-slash fa-emoji" title="unwatch"></i>
            </a>
          </div>
@@ -28,4 +28,18 @@
 <div class="container">
 {% include "index.html" %}
 </div>
+{% endblock %}
+
+{% block javascript %}
+<script async="" type="text/javascript">
+  const response = await
+  fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1;as_json=1")
+  const json = await response.json();
+  const is_watching = json.watch.map(e => e.name).filter(e =>
+      e.match(/\Q{{path|basename}}\E/)).length;
+  if (is_watching)
+      $("#watch").css("display", "none");
+  else
+      $("#unwatch").css("display", "none");
+</script>
 {% endblock %}
