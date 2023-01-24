@@ -128,15 +128,17 @@
 	    {% ifequal lang ".fr" %}Filter{% endifequal -%}
       </button>
     </div>
-  <dl>
-    {% for m in matches %}
-    <dt>{{ m.0|safe }}</dt>
-    {% for hit in m.2 %}
-    <dd>{{ hit|safe }}</dd>
-    <input type="hidden" name="files" value="{{m.1}}" />
-    {% endfor %}
-    {% endfor %}
-  </dl>
+    <div style="float:left;display:inline-block">
+      <dl>
+        {% for m in matches %}
+        <dt>{{ m.0|safe }}</dt>
+        {% for hit in m.2 %}
+        <dd>{{ hit|safe }}</dd>
+        <input type="hidden" name="files" value="{{m.1}}" />
+        {% endfor %}
+        {% endfor %}
+      </dl>
+    </div>
   </form>
   {% endif %}
 </div>
