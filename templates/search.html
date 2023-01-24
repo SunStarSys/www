@@ -92,7 +92,11 @@
   {% for w in watch %}
   <div class="card text-white border-warning mb-3">
     <div class="card-header">
-      <a href="{{r.path_info|append:w.name|dirname}}/{{w.name|basename:0}}.html{{lang}}">{{w.name}}</a>
+      {% ifequal w.name|parse_filename:2 ".md" %}
+      <a href="{{r.path_info|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"2.."}}">{{w.name}}</a>
+      {% else %}
+      <a href="{{r.path_info|append:w.name}}">{{w.name}}</a>
+      {% endifequal %}
       <div class="right">
         <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{r.path_info|append:w.name}};action=unwatch">
           <i class="fa fa-eye-slash fa-emoji" title="unwatch"></i>
