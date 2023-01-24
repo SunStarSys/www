@@ -46,6 +46,8 @@ $r->pnotes("svnuser", $USERNAME);
 $r->pnotes("svnpassword", $PASSWORD);
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 
+my $specials_re = qr/friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i;
+
 sub parser :Sealed {
   my @text;
   my (undef, $dirname, undef, $paths) = (@_, {});
@@ -180,8 +182,10 @@ for ($d) {
     or die "Can't detaint '$_'\n";
 }
 
+# convenience preprocessing for the PCRE fearful
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0 or index($re, '=') >= 0;
-my $wflag = ($re =~ s/(?:"|\\[Q])([^"]+?)(?:"|\\[E])/\\Q$1\\E/g) ? "" : "-w";
+$filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0;
+
 my @unzip = $markdown ? "--markdown" : "--unzip";
 $re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
 
@@ -299,7 +303,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
       }
     }
-    if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
+    if ($re !~ $specials_re) {
       my @rv;
       for (map [split /=/], split /\b[;,]+\b/, $re) {
         my %seen;
@@ -339,7 +343,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
   }
 }
-if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
+if ($re !~ $specials_re) {
   my $sha1 = Digest::SHA1->new;
   $sha1->add(join ":", "placeholder", $apreq->body("files"));
   my $pffxg;
@@ -434,6 +438,7 @@ my $args = {
   website     => $host,
   hash        => Digest::SHA1->new->add(join ":", "placeholder", map $$_[1], @matches)->hexdigest,
   filter      => $filter,
+  specials    => $re =~ $specials_re,
 };
 
 if (client_wants_json $r) {
