@@ -348,7 +348,7 @@ if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
     $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
   }
   else {
-    my $grep = $unzip[1] == "--markdown" ? "grep" : "xzgrep";
+    my $grep = $unzip[0] eq "--markdown" ? "grep" : "xzgrep";
     my @files = map $grep eq "grep" ? $_ : "$_.gz", $apreq->body("files");
     $pffxg = run_shell_command "cd $d && timeout 30 $grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, @files;
   }
