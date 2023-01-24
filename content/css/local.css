@@ -97,7 +97,7 @@ div.breadcrumbs {
     float:right;
 }
 
-#search {
+#search, #filter {
     display: inline-block;
     min-width: 350px;
 }
