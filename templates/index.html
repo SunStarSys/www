@@ -10,7 +10,7 @@
 {% for k in headers.keywords %}
 <span class="badge bg-danger text-white">
   <a style="color:#fff"
-     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}}">#{{k}}</a>
+     href="/dynamic/search{{path|dirname}}/?regex=%23{{k}};lang={{lang}};markdown_search=1">#{{k}}</a>
 </span>&nbsp;
 {% endfor %}
 
