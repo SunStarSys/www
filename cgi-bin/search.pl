@@ -162,7 +162,7 @@ my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my $js;
 
-utf8::decode($re);
+utf8::decode($_) for $re, $filter;
 
 my $dirname;
 my $repos;
@@ -187,7 +187,7 @@ $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($r
 $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0;
 
 my @unzip = $markdown ? "--markdown" : "--unzip";
-$re =~ s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g;
+s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g for $re, $filter;
 
 my (@friends, @dlog, $yaml, $blog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
