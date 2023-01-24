@@ -102,7 +102,7 @@ div.breadcrumbs {
     min-width: 350px;
 }
 
-#search button, #filter button { height: 37px }
+#search button, #filter button { height: 36px }
 
 #search input, #filter input { max-width: 13em; background-color: #8f99fb }
 @media only screen and (max-width: 1000px) {
