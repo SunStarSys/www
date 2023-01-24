@@ -345,6 +345,7 @@ if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
   my $pffxg;
 
   if ($sha1->hexdigest ne $hash) {
+    undef $filter;
     $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
   }
   else {
