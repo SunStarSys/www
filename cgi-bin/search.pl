@@ -353,9 +353,9 @@ if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
     $pffxg = run_shell_command "cd $d && timeout 30 $grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, @files;
   }
 
-  if ($?) {
+  if ($? > 1) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
-    die $pffxg unless $? == 1;
+    die $pffxg;
   }
 
   parser $pffxg, $dirname, undef, \ my %matches;
