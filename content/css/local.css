@@ -102,6 +102,8 @@ div.breadcrumbs {
     min-width: 350px;
 }
 
+#watch, #unwatch { display: none }
+
 #search button, #filter button { height: 37px }
 
 #search input, #filter input { max-width: 13em; background-color: #8f99fb }
