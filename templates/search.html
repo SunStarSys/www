@@ -135,9 +135,9 @@
         <dl>
           {% for m in matches %}
           <dt>{{ m.0|safe }}</dt>
+          <input type="hidden" name="files" value="{{m.1}}" />
           {% for hit in m.2 %}
           <dd>{{ hit|safe }}</dd>
-          <input type="hidden" name="files" value="{{m.1}}" />
           {% endfor %}
           {% endfor %}
         </dl>
