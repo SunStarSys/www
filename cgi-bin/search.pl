@@ -130,7 +130,7 @@ sub run_shell_command {
         or die "Can't detaint '$_'\n";
     }
     my @rv = qx($cmd @$args @filenames 2>&1);
-    utf8::decode($_) for @rv;
+    utf8::decode($_) for grep length, @rv;
     return wantarray ? @rv : join "", @rv;
 }
 
@@ -353,9 +353,9 @@ if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
     $pffxg = run_shell_command "cd $d && timeout 30 $grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, @files;
   }
 
-  if ($? > 1) {
+  if ($? > 0 && $? < 256) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
-    die "$?:$pffxg";
+    die "status=$?:$pffxg";
   }
 
   parser $pffxg, $dirname, undef, \ my %matches;
