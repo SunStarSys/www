@@ -31,7 +31,7 @@
 {% endblock %}
 
 {% block javascript %}
-<script async="" type="text/javascript">
+<script async="" type="module">
   const response = await fetch("/dynamic/search{{path|dirname}}/?regex=watch=;lang={{lang}};markdown_search=1;as_json=1",
         {credentials: 'same-origin'});
   const json = response.json();
