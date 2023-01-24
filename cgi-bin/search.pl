@@ -415,7 +415,7 @@ my %title = (
   ".fr" => "Résultats de recherche pour \l$markdown ",
 );
 
-no warnings 'unititialized';
+no warnings 'uninitialized';
 
 my $args = {
   path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
