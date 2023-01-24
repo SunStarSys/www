@@ -37,7 +37,7 @@
         {credentials: 'same-origin'});
   const json = response.json();
   const is_watching = json.watch.map(e => e.name).filter(e =>
-      e.match(/\Q{{path|basename}}\E/)).length;
+      e.match(/\Q{{path|parse_filename:"1.."}}\E/)).length;
   if (is_watching)
       $("#watch").css("display", "none");
   else
