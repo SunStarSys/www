@@ -355,7 +355,7 @@ if ($re !~ /friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i) {
 
   if ($?) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
-    die $pffxg;
+    die $pffxg unless $? == 1;
   }
 
   parser $pffxg, $dirname, undef, \ my %matches;
