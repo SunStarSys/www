@@ -113,7 +113,7 @@
   <pre class="text-primary">{{ blog }}</pre>
   {% endif %}
   <form method="POST" class="form-inline row">
-    <div class="row">
+    <div style="width:100%">
       <div class="right" id="filter">
         <input type="hidden" name="hash" value="{{hash}}"/>
         <input class="form-control" type="text" name="filter"
@@ -131,7 +131,7 @@
         </button>
       </div>
       {% if matches.0 %}
-      <div class="container">
+      <div>
         <dl>
           {% for m in matches %}
           <dt>{{ m.0|safe }}</dt>
