@@ -38,9 +38,9 @@
       const json = await response.json();
       const is_watching = json.watch.map(e => e.name).filter(e => e.match(/(?:\/{{path|parse_filename:"1.."}}|\\.\/)$/)).length;
       if (is_watching)
-          $("#watch").css("display", "none");
+          $("#unwatch").css("display", "screen");
       else
-          $("#unwatch").css("display", "none");
+          $("#watch").css("display", "screen");
   }
   catch (e) {
 
