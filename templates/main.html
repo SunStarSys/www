@@ -180,7 +180,10 @@
   onClick="document.cookie='analytics=1; path=/; max-age=8640000';
   $('#analytics').css('display', 'none');true">I Consent.</button>
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_decline=1; path=/; max-age=8640000';$('#analytics').css('display', 'none');true">I Decline.</button>
+  onClick="document.cookie='gdpr_decline=1; path=/;
+  max-age=8640000';$('#analytics').css('display', 'none');true">I
+  Decline.</button> &nsbp; <small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 100 days.</small>
 </div>`;
             h1.insertAdjacentHTML('beforeend', html);
         }
