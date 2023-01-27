@@ -174,15 +174,17 @@
         for (const h1 of document.getElementsByTagName("h1")) {
             var html = `<div id="analytics" class="alert alert-dismissible alert-warning">
   <h4 class="alert-heading">This Site Uses Cookies.</h4>
-  <button type="button" class="btn btn-close text-white" data-bs-dismiss="alert"
+  <button type="button" class="btn btn-outline-success text-white" data-bs-dismiss="alert"
   onClick="document.cookie='analytics=1; path=/; max-age=86400000';
-  $('#analytics').css('display', 'none');true">I Consent</button>
+  $('#analytics').css('display', 'none');true">I Consent.</button>
+  <button type="button" class="btn btn-outline-danger text-white" data-bs-dismiss="alert"
+  $('#analytics').css('display', 'none');true">I Decline.</button>
 </div>`;
             h1.insertAdjacentHTML('beforeend', html);
         }
     }
     else {
-        document.cookie = 'analytics=1; path=/; max-age=0';
+        document.cookie = 'analytics=1; path=/; max-age=86400000';
     }
   </script>
 
