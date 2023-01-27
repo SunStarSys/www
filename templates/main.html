@@ -173,15 +173,15 @@
     if (document.cookie.indexOf("analytics") == -1 &&
     document.cookie.indexOf("gdpr_decline") == -1) {
         for (const h1 of document.getElementsByTagName("h1")) {
-            var html = `<div id="analytics" class="alert alert-dismissible btn-outline-information">
+            var html = `<div id="analytics" class="alert alert-dismissible alert-dark">
   <h4 class="alert-heading text-dark">This Site Uses Cookies for Analytics.</h4>
 <small class="text-dark">Please choose your preference:</small> &nbsp;
   <button type="button" class="btn btn-outline-success text-dark" data-bs-dismiss="alert"
   onClick="document.cookie='analytics=1; path=/; max-age=8640000';
   $('#analytics').css('display', 'none');true">I Consent.</button>
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_decline=1; path=/;
-  max-age=8640000';$('#analytics').css('display', 'none');true">I
+  onClick="document.cookie='gdpr_decline=1; path=/; max-age=8640000';
+  $('#analytics').css('display', 'none');true">I
   Decline.</button><br><small class="text-dark">Should you elect to
   <span class="text-danger">Decline</span>, we will not ask again for the next 100 days.</small>
 </div>`;
