@@ -181,6 +181,9 @@
             h1.insertAdjacentHTML('beforeend', html);
         }
     }
+    else {
+        document.cookie = ='analytics=1; path=/; max-age=0';
+    }
   </script>
 
   {% block javascript %}{% endblock %}
