@@ -152,6 +152,9 @@
 {% endblock %}
 
 {% block javascript %}
+<script type="text/javascript">
+  document.cookie = "can_search=1; max-age=" + (86400 * 30);
+</script>
 {% if duration %}
 <script async="" type="text/javascript">
   var ctx = document.getElementById("myChart").getContext("2d");
@@ -193,7 +196,6 @@
               },
           },
       });
-  document.cookie = "can_search=1; max-age=" + (86400 * 30);
 </script>
 {% endif %}
 {% endblock %}
