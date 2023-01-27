@@ -173,7 +173,7 @@
     if (document.cookie.indexOf("analytics") == -1 &&
     document.cookie.indexOf("gdpr_decline") == -1) {
         for (const h1 of document.getElementsByTagName("h1")) {
-            var html = `<div id="analytics" class="card alert-border-warning">
+            var html = `<div id="analytics" class="alert alert-dismissible alert-border-warning">
   <h4 class="alert-heading text-dark">This Site Uses Cookies for Analytics.</h4>
 <small class="text-dark">Please choose your preference:</small> &nbsp;
   <button type="button" class="btn btn-outline-success text-dark" data-bs-dismiss="alert"
