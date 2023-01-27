@@ -196,8 +196,9 @@
         }
     }
     else if (document.cookie.indexOf("gdpr_decline") == -1) {
-        document.cookie = 'analytics=1; path=/; max-age=8640000';
+        document.cookie = 'analytics=1; path=/; max-age=0';//8640000';
     }
+    alert(document.cookie);
   </script>
 
   {% block javascript %}{% endblock %}
