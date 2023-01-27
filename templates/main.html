@@ -171,7 +171,7 @@
     CodeMirror.colorize();
     $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
     if (document.cookie.indexOf("analytics") == -1) {
-        var h1 = document.getElementByName("h1");
+        var h1 = document.getElementByTagName("h1");
         var html = `<div class="alert alert-dismissible alert-warning">
   <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
   <h4 class="alert-heading">Warning!</h4>
