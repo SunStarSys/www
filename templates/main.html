@@ -170,7 +170,7 @@
     }
     CodeMirror.colorize();
     $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
-    if (document.cookie.indexOf("analytics") == -1 &&
+    if (document.cookie.indexOf("gdpr_analytics") == -1 &&
     document.cookie.indexOf("gdpr_decline") == -1) {
         for (const h1 of document.getElementsByTagName("h1")) {
             var html = `<br>&nbsp;<br><div id="analytics" class="card border-warning">
@@ -181,7 +181,7 @@
 <p class="card-text">
 <small class="text-dark">Please choose your preference:</small> &nbsp;
   <button type="button" class="btn btn-outline-success text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='analytics=1; path=/; max-age=8640000';
+  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
   $('#analytics').css('display', 'none');true">I Consent.</button>
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=8640000';
@@ -196,7 +196,7 @@
         }
     }
     else if (document.cookie.indexOf("gdpr_decline") == -1) {
-        document.cookie = 'analytics=1; path=/; max-age=0';//8640000';
+        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
     alert(document.cookie);
   </script>
