@@ -175,8 +175,8 @@
             var html = `<div id="analytics" class="alert alert-dismissible alert-warning">
   <h4 class="alert-heading">Cookie Usage</h4>
   <button type="button" class="btn btn-close" data-bs-dismiss="alert"
-  onClick="document.cookie='analytics=1; path=/;
-  max-age=86400000';$('#analytics').css('display', 'none');true">Consent</button>
+  onClick="document.cookie='analytics=1; path=/; max-age=86400000';
+  $('#analytics').css('display', 'none');true">Consent</button>
 </div>`;
             h1.insertAdjacentHTML('beforeend', html);
         }
