@@ -185,7 +185,7 @@
             h1.insertAdjacentHTML('beforeend', html);
         }
     }
-    else //if (document.cookie.indexOf("gdpr_decline") == -1) {
+    else {//if (document.cookie.indexOf("gdpr_decline") == -1) {
         document.cookie = 'analytics=1; path=/; max-age=0';
         document.cookie = 'gdpr_decline=1; path=/; max-age=0';
     }
