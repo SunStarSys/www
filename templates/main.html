@@ -174,9 +174,9 @@
         for (const h1 of document.getElementsByTagName("h1")) {
             var html = `<div id="analytics" class="alert alert-dismissible alert-warning">
   <h4 class="alert-heading">Cookie Usage</h4>
-  <button type="button" class="btn btn-outline" data-bs-dismiss="alert"
+  <button type="button" class="btn btn-close" data-bs-dismiss="alert"
   onClick="document.cookie='analytics=1; path=/;
-  max-age=86400000';$('#analytics').css('display', 'none');">Consent</button>
+  max-age=86400000';$('#analytics').css('display', 'none');true">Consent</button>
 </div>`;
             h1.insertAdjacentHTML('beforeend', html);
         }
