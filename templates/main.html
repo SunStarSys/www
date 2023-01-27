@@ -178,6 +178,7 @@
   <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
 </div>
 <div class="card-body">
+<p class="card-text">
 <small class="text-dark">Please choose your preference:</small> &nbsp;
   <button type="button" class="btn btn-outline-success text-dark" data-bs-dismiss="alert"
   onClick="document.cookie='analytics=1; path=/; max-age=8640000';
@@ -186,7 +187,9 @@
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=8640000';
   $('#analytics').css('display', 'none');true">I
   Decline.</button><br><small class="text-dark">Should you elect to
-  <span class="text-danger">Decline</span>, we will not ask again for the next 100 days.</small>
+  <span class="text-danger">Decline</span>, we will not ask again for the next
+  100 days.</small>
+</p>
 </div>
 </div>`;
             h1.insertAdjacentHTML('beforeend', html);
