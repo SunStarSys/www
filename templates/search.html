@@ -153,7 +153,8 @@
 
 {% block javascript %}
 <script type="text/javascript">
-  document.cookie = "can_search=1; max-age=" + (86400 * 30);
+  document.cookie = "can_search=1; path=/; max-age=" + (86400 * 30);
+  alert(document.cookie);
 </script>
 {% if duration %}
 <script async="" type="text/javascript">
