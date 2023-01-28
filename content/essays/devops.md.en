@@ -18,9 +18,12 @@ Encouraging incremental changes with automated testing, promotion, and release p
 
 In essence, the multiverse of long-term `git` branches creates the psychological fiction that the combined merging of all of that local development work (and testing!) will lead to a whole that is at least as great as the sum of its parts.  Experience is the better judge, which indicates that extensive-new-feature-sets should be engineered *incrementally*, *in-situ*, on the existing production/release branch source code.  Basically, you engineer your development strategies within the limitations of the physics of the biological world, which says:
 
+<div>
+
         Surgery on a patient must result in good outcomes (at all times) for
         that patient, not just for siblings or future generations.
 
+</div>
 ### CI / CD Pipelines
 
 Trunk Based Development is the basis for all of the consequent automated change control pipelines that have grown up over the last two decades.
