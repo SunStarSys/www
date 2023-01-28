@@ -49,7 +49,7 @@ div.jumbotron input.form-control, textarea.form-control {
 div.editormd-preview-theme-dark {overflow-y: visible}
 div.navbar div { overflow: visible }
 
-div { overflow-x: auto; }
+div { overflow-x: auto; overflow-y: visible}
 
 div.jumbotron input:invalid {
 	border-color: #CC0000;
