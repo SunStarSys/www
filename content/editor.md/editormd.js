@@ -18,34 +18,34 @@
     "use strict";
 
 	// CommonJS/Node.js
-	if (typeof require === "function" && typeof exports === "object" && typeof module === "object")
+    if (typeof require === "function" && typeof exports === "object" && typeof module === "object")
     {
         module.exports = factory;
     }
-	else if (typeof define === "function")  // AMD/CMD/Sea.js
-	{
+    else if (typeof define === "function")  // AMD/CMD/Sea.js
+    {
         if (define.amd) // for Require.js
         {
-            /* Require.js define replace */
+            1;/* Require.js define replace */
         }
         else
         {
-		    define(["jquery"], factory);  // for Sea.js
+	    define(["jquery"], factory);  // for Sea.js
         }
-	}
-	else
-	{
+    }
+    else
+    {
         window.editormd = factory();
-	}
+    }
 
 }(function(w) {
     /* Require.js assignment replace */
     "use strict";
+
     var $ = w ? jQuery(w, 1) : jQuery;
     w = w || window;
     var document = w.document;
-
-    if (typeof (jQuery_flowchart) != "undefined") {
+    if (typeof (jQuery_flowchart) !== "undefined") {
 	// AWAITING jsdom SVGMatrix implementation
 	jQuery_flowchart($, flowchart(w, Raphael(w)));
     }
@@ -75,16 +75,16 @@
             "undo", "redo", "|",
             "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
             "h1", "h2", "h3", "h4", "h5", "h6", "|",
-            "list-ul", "list-ol", "hr", "|",
-            "link", "reference-link", "image", "comment", "code", "preformatted-text", "code-block", "table", "datetime", "emoji", "html-entities", "pagebreak", "|",
-            "goto-line", "watch", "preview", "fullscreen", "clear", "search", "|",
+            "list_ul", "list_ol", "hr", "|",
+            "link", "reference_link", "image", "comment", "code", "preformatted_text", "code_block", "table", "datetime", "emoji", "html_entities", "pagebreak", "|",
+            "goto_line", "watch", "preview", "fullscreen", "clear", "search", "|",
             "help", "info"
         ],
         simple : [
             "undo", "redo", "|",
             "bold", "del", "italic", "quote", "uppercase", "lowercase", "|",
             "h1", "h2", "h3", "h4", "h5", "h6", "|",
-            "list-ul", "list-ol", "hr", "|",
+            "list_ul", "list_ol", "hr", "|",
             "watch", "preview", "fullscreen", "|",
             "help", "info"
         ],
@@ -123,12 +123,12 @@
         tabSize              : 4,
 		indentUnit           : 4,
         lineNumbers          : true,
-		lineWrapping         : true,
-		autoCloseBrackets    : true,
-		showTrailingSpace    : true,
-		matchBrackets        : true,
-		indentWithTabs       : true,
-		styleSelectedText    : true,
+	lineWrapping         : true,
+	autoCloseBrackets    : true,
+	showTrailingSpace    : true,
+	matchBrackets        : true,
+	indentWithTabs       : true,
+	styleSelectedText    : true,
         matchWordHighlight   : true,           // options: true, false, "onselected"
         styleActiveLine      : true,           // Highlight the current line
         dialogLockScreen     : true,
@@ -209,22 +209,22 @@
             h4               : editormd.classPrefix + "bold",
             h5               : editormd.classPrefix + "bold",
             h6               : editormd.classPrefix + "bold",
-            "list-ul"        : "fa-list-ul",
-            "list-ol"        : "fa-list-ol",
+            "list_ul"        : "fa-list-ul",
+            "list_ol"        : "fa-list-ol",
             hr               : "fa-minus",
             link             : "fa-link",
-            "reference-link" : "fa-anchor",
+            "reference_link" : "fa-anchor",
             image            : "fa-picture-o",
             comment          : "fa-quote-right",
             code             : "fa-code",
-            "preformatted-text" : "fa-file-code-o",
-            "code-block"     : "fa-file-code-o",
+            "preformatted_text" : "fa-file-code-o",
+            "code_block"     : "fa-file-code-o",
             table            : "fa-table",
             datetime         : "fa-clock-o",
             emoji            : "fa-smile-o",
-            "html-entities"  : "fa-copyright",
+            "html_entities"  : "fa-copyright",
             pagebreak        : "fa-newspaper-o",
-            "goto-line"      : "fa-terminal", // fa-crosshairs
+            "goto_line"      : "fa-terminal", // fa-crosshairs
             watch            : "fa-eye-slash",
             unwatch          : "fa-eye",
             preview          : "fa-desktop",
@@ -256,21 +256,21 @@
                 h4               : "标题4",
                 h5               : "标题5",
                 h6               : "标题6",
-                "list-ul"        : "无序列表",
-                "list-ol"        : "有序列表",
+                "list_ul"        : "无序列表",
+                "list_ol"        : "有序列表",
                 hr               : "横线",
                 link             : "链接",
-                "reference-link" : "引用链接",
+                "reference_link" : "引用链接",
                 image            : "添加图片",
                 code             : "行内代码",
-                "preformatted-text" : "预格式文本 / 代码块（缩进风格）",
-                "code-block"     : "代码块（多语言风格）",
+                "preformatted_text" : "预格式文本 / 代码块（缩进风格）",
+                "code_block"     : "代码块（多语言风格）",
                 table            : "添加表格",
                 datetime         : "日期时间",
                 emoji            : "Emoji表情",
-                "html-entities"  : "HTML实体字符",
+                "html_entities"  : "HTML实体字符",
                 pagebreak        : "插入分页符",
-                "goto-line"      : "跳转到行",
+                "goto_line"      : "跳转到行",
                 watch            : "关闭实时预览",
                 unwatch          : "开启实时预览",
                 preview          : "全窗口预览HTML（按 Shift + ESC还原）",
@@ -527,11 +527,11 @@
             var _this        = this;
             var settings     = this.settings;
             var loadPath     = settings.path;
+
 	    if (!settings.autoLoadModules) {
 		return;
 	    }
             var loadFlowChartOrSequenceDiagram = function() {
-
                 if (_this.editormd.isIE8)
                 {
                     _this.loadedDisplay();
@@ -749,8 +749,8 @@
             var settings         = this.settings;
             var editor           = this.editor;
 
-            function acl_complete(cm, options) {
-                return new Promise(function(accept) {
+            async function acl_complete(cm, options) {
+               /* return new Promise(function(accept) {
                     setTimeout(function() {
                         var cursor = cm.getCursor(), line=cm.getLine(cursor.line);
 
@@ -795,7 +795,7 @@
                         }
                         return accept({list: ["\t"], from: CodeMirror.Pos(cursor.line,start), to: CodeMirror.Pos(cursor.line,end)});
                     }, 100);
-                });
+                });*/
             }
             if (settings.editorTheme !== "default")
             {
@@ -3158,7 +3158,7 @@
             }
         },
 
-        "list-ul" : function() {
+        list_ul : function() {
             var cm        = this.cm;
             var cursor    = cm.getCursor();
             var selection = cm.getSelection();
@@ -3180,7 +3180,7 @@
             }
         },
 
-        "list-ol" : function() {
+        list_ol : function() {
             var cm        = this.cm;
             var cursor    = cm.getCursor();
             var selection = cm.getSelection();
@@ -3232,7 +3232,7 @@
             this.executePlugin("linkDialog", "link-dialog/link-dialog");
         },
 
-        "reference-link" : function() {
+        reference_link : function() {
             this.executePlugin("referenceLinkDialog", "reference-link-dialog/reference-link-dialog");
         },
 
@@ -3269,11 +3269,11 @@
             }
         },
 
-        "code-block" : function() {
+        code_block : function() {
             this.executePlugin("codeBlockDialog", "code-block-dialog/code-block-dialog");
         },
 
-        "preformatted-text" : function() {
+        preformatted_text : function() {
             this.executePlugin("preformattedTextDialog", "preformatted-text-dialog/preformatted-text-dialog");
         },
 
@@ -3295,11 +3295,11 @@
             this.executePlugin("emojiDialog", "emoji-dialog/emoji-dialog");
         },
 
-        "html-entities" : function() {
+        html_entities : function() {
             this.executePlugin("htmlEntitiesDialog", "html-entities-dialog/html-entities-dialog");
         },
 
-        "goto-line" : function() {
+        goto_line : function() {
             this.executePlugin("gotoLineDialog", "goto-line-dialog/goto-line-dialog");
         },
 
@@ -3359,7 +3359,7 @@
                 cm.setCursor(cursor.line, cursor.ch + 1);
             }
         },
-        "Ctrl-Alt-G"   : "goto-line",
+        "Ctrl-Alt-G"   : "goto_line",
         "Ctrl-H"       : "hr",
         "Ctrl-I"       : "italic",
         "Ctrl-K"       : "code",
@@ -3501,7 +3501,7 @@
     };
 
     editormd.regexs = {
-        atLink        : /@([@\w.\/=-]+)/g,
+        atLink        : /@([@\w.\/=-]+(?!\S*::))/g,
         email         : /(\w+)@(\w+)\.(\w+)\.?(\w+)?/g,
         emailLink     : /(mailto:)?([\w.-]+)@([\w-]+)(?:\.([\w-]+))*/g,
         emoji         : /[^:]:([\w\+-]+):[^:]/g,
