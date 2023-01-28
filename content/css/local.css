@@ -47,7 +47,7 @@ div.jumbotron input.form-control, textarea.form-control {
 }
 
 div.editormd-preview-theme-dark {overflow-y: visible}
-div.navbar { overflow: visible }
+div.navbar, div.navbar div { overflow: visible }
 
 div { overflow-x: auto; overflow-y: visible}
 
