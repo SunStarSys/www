@@ -36,7 +36,7 @@ local our %LANG = (
   ".fr" => "fr_FR",
 );
 
-local our $LANG_RE = eval "qr/(" . join("|", map "\\Q$_\\E\\b", keys %LANG) . ")/";
+local our $LANG_RE = eval "qr/" . join("|", map "\\Q$_\\E\\b", keys %LANG) . "/";
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -184,7 +184,7 @@ sub get_client_lang :Sealed {
   my Apache2::RequestRec $r = shift;
   my $repos = shift;
   my APR::Request::Apache2 $apreq = APR::Request::Apache2->handle($r);
-  my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ $LANG_RE;
+  my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)/;
   my $lang = $apreq->args("lang") // $cdata;
   $lang =~ s/[_-].*$//;
   return encode($lang);
