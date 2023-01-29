@@ -324,8 +324,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @friends = @rv;
     }
     elsif ($re =~ /watch=|notify=/i) {
-      sleep 3;
-      my $watchers = $svn->propget("orion:watchers", substr($dirname, 0, -1), "WORKING", 1);
+      my $watchers = $svn->propget("orion:watchers", substr($dirname, 0, -1), "HEAD", 1);
       $_ = {map {$_=>1} split /[, ]/} for values %$watchers;
       my $url;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
