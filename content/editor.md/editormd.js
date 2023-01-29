@@ -750,7 +750,7 @@
             var editor           = this.editor;
 
             async function acl_complete(cm, options) {
-               /* return new Promise(function(accept) {
+               return new Promise(function(accept) {
                     setTimeout(function() {
                         var cursor = cm.getCursor(), line=cm.getLine(cursor.line);
 
@@ -795,7 +795,7 @@
                         }
                         return accept({list: ["\t"], from: CodeMirror.Pos(cursor.line,start), to: CodeMirror.Pos(cursor.line,end)});
                     }, 100);
-                });*/
+                });
             }
             if (settings.editorTheme !== "default")
             {
