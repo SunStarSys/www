@@ -3,6 +3,7 @@ Keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,anti-spam,sendmail,postfix,exim
 Dependencies: *.md.en
 Categories: Perl, Apache, IT, Mail, Tools
 Status: archived
+ACL: joe
 
 As I wrote about [elsewhere](/clients/apache), one of the best open source tools available to a mail administrator's arsenal of anti-spam tools is [qpsmtpd](http://en.wikipedia.org/wiki/Qpsmtpd), which is merely a frontend inbound mail server which needs a fully-functional mail server like `qmail`, `sendmail`, `exim`, or `postfix` for outbound delivery.  What `qpsmtpd` does is very similar to what `httpd` did for webservers: it introduces customizable hooks into each phase of the `SMTP` session.
 
@@ -11,7 +12,5 @@ As I wrote about [elsewhere](/clients/apache), one of the best open source tools
 Why is such a simple tool so powerful in the admin's arsenal?  Because it introduces mandatory delays for each mail connection, which as it turns out hits most spammers where they can measure it, in terms of tying up their mail delivery agent from dealing with the rest of their queue.  It is important to realize that spammers are running a business, many of whom have no direct interest in the contents of what they deliver. They get paid for managing a sophisticated, and typically illegal, (zombie) network of sending agents, and will provide delivery services for any client with the cash to cover its use plus profits.  Many of them make annual incomes well above mine or yours :-).
 
 There are more sophisticated approaches to be sure, like only delaying messages from "untrusted" senders, but you can go a lot farther than that if your server has that kind of knowledge available to it.  But in terms of bang for the buck, running `earlytalker` with a substantial delay of up to 30 seconds will drive spammers off your servers for good.  Promise.
-
-@joe=
 
 <!-- $Date$ $Author$ $Revision$ -->
