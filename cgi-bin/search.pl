@@ -40,7 +40,6 @@ local our %LANG = (
 
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
-our $lang;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -129,7 +128,7 @@ sub run_shell_command {
     local %ENV = (
         PATH => "/usr/local/bin:/usr/bin",
         HOME => "/x1/home/joe",
-        LANG => $LANG{$lang},
+        LANG => $LANG{our $lang},
     );
     no warnings 'uninitialized';
     for (@filenames, @$args) {
