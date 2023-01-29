@@ -193,7 +193,7 @@ sub get_client_lang :Sealed {
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 my $lang     = encode(get_client_lang $r);
-my $re       = $apreq->args("regex") || ($r->status(Apache2::Const::HTTP_BAD_REQUEST) and return -1;
+my $re       = $apreq->args("regex") || ($r->status(Apache2::Const::HTTP_BAD_REQUEST) and return -1);
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
