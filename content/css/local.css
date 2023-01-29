@@ -52,6 +52,10 @@ div.navbar, div.navbar div { overflow: visible }
 
 div { overflow-x: auto; overflow-y: visible}
 
+div.CodeMirror-gutter-wrapper div { overflow:visible }
+
+div.CodeMirror-cursors div {overflow:visible }
+
 div.jumbotron input:invalid {
 	border-color: #CC0000;
 	padding-right: calc(1.5em + 0.75rem);
