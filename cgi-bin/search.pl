@@ -160,8 +160,8 @@ sub breadcrumbs {
 }
 
 sub negotiate_file :Sealed {
-    my Apache2::RequestRec $r = shift;
-    my ($file1, $file2) = @_;
+  my Apache2::RequestRec $r = shift;
+  my ($file1, $file2) = @_;
     # The reason we take an intermediate subreq here is to
     # avoid any funky lookup optimizations which would trigger
     # the subrequest's uri to be filled in with a reasonable guess,
@@ -173,27 +173,26 @@ sub negotiate_file :Sealed {
     # avoid by doing a lookup of "/", which will resolve to
     # the docroot, not the base dir of the working copies.
 
-    my Apache2::SubRequest $s = $r->lookup_uri("/");
-    my $subr = $s->lookup_file($file1);
-    return $subr->filename
-        if $subr->status == Apache2::Const::HTTP_OK or not $file2;
-    return $s->lookup_file($file2)->filename;
+  my Apache2::SubRequest $s = $r->lookup_uri("/");
+  my $subr = $s->lookup_file($file1);
+  return $subr->filename
+    if $subr->status == Apache2::Const::HTTP_OK or not $file2;
+  return $s->lookup_file($file2)->filename;
 }
 
 sub get_client_lang :Sealed {
-    my Apache2::RequestRec $r = shift;
-    my $repos = shift;
-    my APR::Request::Apache2 $apreq = APR::Request::Apache2->handle($r);
-    my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ $LANG_RE;
-    my $lang = $apreq->args("lang") // $cdata;
-    $lang =~ s/[_-].*$//;
-    return $lang;
+  my Apache2::RequestRec $r = shift;
+  my $repos = shift;
+  my APR::Request::Apache2 $apreq = APR::Request::Apache2->handle($r);
+  my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ $LANG_RE;
+  my $lang = $apreq->args("lang") // $cdata;
+  $lang =~ s/[_-].*$//;
+  return encode($lang);
 }
 
-
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
-my $lang     = encode(get_client_lang $r);
-my $re       = $apreq->args("regex") || ($r->status(Apache2::Const::HTTP_BAD_REQUEST) and return -1);
+my $lang     = get_client_lang $r;
+my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
@@ -477,7 +476,7 @@ my $args = {
   website     => $host,
   hash        => Digest::SHA1->new->add(join ":", "placeholder", map $$_[1], @matches)->hexdigest,
   filter      => $filter,
-  specials    => $re =~ $specials_re,
+  specials    => scalar $re =~ $specials_re,
 };
 
 if (client_wants_json $r) {
