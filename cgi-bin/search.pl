@@ -36,7 +36,8 @@ local our %LANG = (
   ".fr" => "fr_FR",
 );
 
-local our $LANG_RE = eval "qr/" . join("|", map "\\Q$_\\E\\b", keys %LANG) . "/";
+local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
+die $@ if $@;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
