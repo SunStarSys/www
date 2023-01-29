@@ -7,7 +7,7 @@ use locale;
 use warnings;
 use base 'sealed';
 use Text::Balanced ();
-use Apache2::Const 'HTTP_OK OK BAD_REQUEST';
+use Apache2::Const qw/HTTP_OK OK BAD_REQUEST/;
 use Apache2::RequestRec;
 use Apache2::RequestUtil;
 use Apache2::RequestIO;
