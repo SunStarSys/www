@@ -44,7 +44,7 @@
 <script type="module" src="/editor.md/editormd.js"></script>
 
 <script type="text/javascript">
-  var editor_content;
+  var editor_content = 1;
   var icon_class ={% ifequal path|dirname "/orion" %}"simple"{% else %}"mini"{% endifequal %};
   $(function() {
       editor_content = editormd("editor-content", {
