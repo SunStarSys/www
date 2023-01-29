@@ -160,17 +160,17 @@
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script type="text/javascript">
-    mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
-    mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-    $(".flowchart").flowChart();
-    $(".sequence-diagram").sequenceDiagram();
-    for (const e of $("body").find(".graphviz").toArray()) {
-        d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
-        e.innerHTML = ""
-    }
     if (typeof editormd === undefined) {
         CodeMirror.colorize();
         $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+        mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
+        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
+        $(".flowchart").flowChart();
+        $(".sequence-diagram").sequenceDiagram();
+        for (const e of $("body").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
+            e.innerHTML = ""
+        }
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
