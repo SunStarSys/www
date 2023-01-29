@@ -38,6 +38,7 @@ local our %LANG = (
 
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
+our $lang;
 
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
@@ -126,7 +127,7 @@ sub run_shell_command {
     local %ENV = (
         PATH => "/usr/local/bin:/usr/bin",
         HOME => "/x1/home/joe",
-        LANG => "en_US.UTF-8",
+        LANG => $LANG{$lang},
     );
     no warnings 'uninitialized';
     for (@filenames, @$args) {
@@ -136,7 +137,7 @@ sub run_shell_command {
         or die "Can't detaint '$_'\n";
     }
     my @rv = qx($cmd @$args @filenames 2>&1);
-    utf8::decode($_) for grep length, @rv;
+    utf8::decode($_) for @rv;
     return wantarray ? @rv : join "", @rv;
 }
 
@@ -190,7 +191,7 @@ sub get_client_lang :Sealed {
 }
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
-my $lang     = get_client_lang $r;
+local our $lang  = get_client_lang $r;
 my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
@@ -397,6 +398,7 @@ if ($re !~ $specials_re) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
     die "status=$?:$pffxg";
   }
+
   my $loc = setlocale LC_CTYPE, "$LANG{$lang}.UTF-8";
   parser $pffxg, $dirname, undef, \ my %matches;
 
