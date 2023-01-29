@@ -50,7 +50,7 @@ div.editormd-preview-theme-dark {overflow-x: visible}
 
 div.navbar, div.navbar div { overflow: visible }
 
-/*div { overflow-x: auto; overflow-y: visible}*/
+div.container { overflow-x: auto; overflow-y: visible}
 
 
 div.jumbotron input:invalid {
