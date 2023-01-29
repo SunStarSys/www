@@ -7,6 +7,7 @@ use locale;
 use warnings;
 use base 'sealed';
 use Text::Balanced ();
+use Apache2::Const 'HTTP_OK OK BAD_REQUEST';
 use Apache2::RequestRec;
 use Apache2::RequestUtil;
 use Apache2::RequestIO;
@@ -192,7 +193,7 @@ sub get_client_lang :Sealed {
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 my $lang     = encode(get_client_lang $r);
-my $re       = $apreq->args("regex") || return 400;
+my $re       = $apreq->args("regex") || return Apache2::Const::BAD_REQUEST;
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
@@ -483,7 +484,7 @@ if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
   $r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args));
-  return 0;
+  return Apache2::Const::OK;
 }
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
@@ -493,4 +494,4 @@ $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
 $r->print($rv);
-return 0;
+return Apache2::Const::OK;
