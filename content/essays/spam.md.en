@@ -12,4 +12,6 @@ Why is such a simple tool so powerful in the admin's arsenal?  Because it introd
 
 There are more sophisticated approaches to be sure, like only delaying messages from "untrusted" senders, but you can go a lot farther than that if your server has that kind of knowledge available to it.  But in terms of bang for the buck, running `earlytalker` with a substantial delay of up to 30 seconds will drive spammers off your servers for good.  Promise.
 
-*$Date$*
+@joe=
+
+<!-- $Date$ $Author$ $Revision$ -->
