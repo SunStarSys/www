@@ -175,10 +175,10 @@ sub negotiate_file :Sealed {
     # the docroot, not the base dir of the working copies.
 
   my Apache2::SubRequest $s = $r->lookup_uri("/");
-  my $subr = $s->lookup_file($file1);
+  my $subr = $s->lookup_uri($file1);
   return $subr->filename
     if $subr->status == Apache2::Const::HTTP_OK or not $file2;
-  return $s->lookup_file($file2)->filename;
+  return $s->lookup_uri($file2)->filename;
 }
 
 sub get_client_lang :Sealed {
