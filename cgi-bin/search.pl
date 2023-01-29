@@ -140,15 +140,13 @@ sub run_shell_command {
     return wantarray ? @rv : join "", @rv;
 }
 
-
-
 sub breadcrumbs {
     my @path = split m!/!, shift, -1;
     my $tail = pop @path;
     my @rv;
     my $relpath = "../" x @path;
     push @path, $tail if length $tail;
-    my $regex  = @_ ? encode(shift) : "";
+    my $regex  = map encode($_),grep utf8::encode($_), @_ ? shift : "";
     my $lang = @_ ? shift : "en";
     my $markdown = shift;
     $tail = pop @path;
@@ -399,7 +397,7 @@ if ($re !~ $specials_re) {
     ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
     die "status=$?:$pffxg";
   }
-
+  my $loc = setlocale LC_CTYPE, "$LANG{$lang}.UTF-8";
   parser $pffxg, $dirname, undef, \ my %matches;
 
   while (my ($k, $v) = each %matches) {
