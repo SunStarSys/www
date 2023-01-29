@@ -63,8 +63,9 @@
 
 			if (helpContent.html() === "")
 			{
-				$.get(path + "help.html", function(text) {
-					helpContent.html(text);
+				$.get(path + "help.md", function(text) {
+					var md = exports.$marked.parse(text);
+					helpContent.html(md);
 
                     helpContent.find("a").attr("target", "_blank");
 				});
