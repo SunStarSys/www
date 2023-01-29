@@ -160,8 +160,7 @@
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script type="text/javascript">
-    alert(typeof editormd);
-    if (typeof editormd === undefined) {
+    if (typeof(editormd) === undefined) {
         CodeMirror.colorize();
         $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
