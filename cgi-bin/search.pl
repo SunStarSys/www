@@ -333,8 +333,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*\Q$prefix//;
         if (exists $$v{$svnuser}) {
-#          eval {$svn->info("$url$k", sub {shift}, "HEAD")};
-#          warn "$@" and next if $@;
+          eval {$svn->info("$url$k", sub {shift}, "HEAD")};
+          warn "$@" and next if $@;
           push @watch, -f "$prefix$k" ? {name=>$k, type=>"file"} : {name=>".$k/", type=>"directory"};
           $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
         }
