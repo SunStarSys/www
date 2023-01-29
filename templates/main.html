@@ -161,6 +161,7 @@
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script type="text/javascript">
     if (typeof(editormd) === undefined) {
+        alert("HOLA");
         mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
         mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
         $(".flowchart").flowChart();
