@@ -451,7 +451,7 @@ if (client_wants_json $r) {
 }
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
-local @ENV{qw/REPOS WEBSITE/} = ($repos, $website);
+local @ENV{qw/REPOS WEBSITE/} = ($repos, $host);
 
 $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
