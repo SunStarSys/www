@@ -35,6 +35,8 @@ local our %LANG = (
   ".fr" => "fr_FR",
 );
 
+local our $LANG_RE = eval "qr/(" . join("|", map "\\Q$_\\E\\b", keys %LANG) . ")/";
+
 my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
 my APR::Request $apreq = $apreq_class->handle($r);
@@ -136,6 +138,8 @@ sub run_shell_command {
     return wantarray ? @rv : join "", @rv;
 }
 
+
+
 sub breadcrumbs {
     my @path = split m!/!, shift, -1;
     my $tail = pop @path;
@@ -154,8 +158,40 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
+sub negotiate_file :Sealed {
+    my Apache2::RequestRec $r = shift;
+    my ($file1, $file2) = @_;
+    # The reason we take an intermediate subreq here is to
+    # avoid any funky lookup optimizations which would trigger
+    # the subrequest's uri to be filled in with a reasonable guess,
+    # which would trigger the SunStarSys::Orion::MapToStorage handler to
+    # perform the lookup instead of the default maptostorage handler.
+    # We want that lookup to fail so mod_negotiation can kick in.
+    # The funky lookup optimizations only happen when the subrequest
+    # is an immediate directory entry of the parent request, which we can
+    # avoid by doing a lookup of "/", which will resolve to
+    # the docroot, not the base dir of the working copies.
+
+    my Apache2::SubRequest $s = $r->lookup_uri("/");
+    my $subr = $s->lookup_file($file1);
+    return $subr->filename
+        if $subr->status == Apache2::Const::HTTP_OK or not $file2;
+    return $s->lookup_file($file2)->filename;
+}
+
+sub get_client_lang :Sealed {
+    my Apache2::RequestRec $r = shift;
+    my $repos = shift;
+    my APR::Request::Apache2 $apreq = APR::Request::Apache2->handle($r);
+    my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ $LANG_RE;
+    my $lang = $apreq->args("lang") // $cdata;
+    $lang =~ s/[_-].*$//;
+    return $lang;
+}
+
+
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
-my $lang     = encode($apreq->args("lang") || ".en");
+my $lang     = encode(get_client_lang $r);
 my $re       = $apreq->args("regex") || return 400;
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
