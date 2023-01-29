@@ -451,8 +451,6 @@ draw(tube(p,colorsec),render(merge=true));
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
 
-<!-- $Date$ $Author$ -->
-
 <style type="text/css">
 /*-------------------------------------------
 	Animations
