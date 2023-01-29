@@ -50,11 +50,8 @@ div.editormd-preview-theme-dark {overflow-x: visible}
 
 div.navbar, div.navbar div { overflow: visible }
 
-div { overflow-x: auto; overflow-y: visible}
+/*div { overflow-x: auto; overflow-y: visible}*/
 
-div.CodeMirror-gutter-wrapper div { overflow:visible }
-
-div.CodeMirror-cursors div {overflow:visible }
 
 div.jumbotron input:invalid {
 	border-color: #CC0000;
