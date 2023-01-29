@@ -29,6 +29,8 @@ use DB_File;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 
+BEGIN {$ENV{LANG} = 'en_US.UTF-8'}
+
 local our %LANG = (
   ".de" => "de_DE",
   ".en" => "en_US",
