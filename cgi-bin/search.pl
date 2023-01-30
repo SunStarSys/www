@@ -483,7 +483,7 @@ my $args = {
   specials    => scalar $re =~ $specials_re,
 };
 
-$r->handler("modperl");
+$r->path_info("");
 
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
