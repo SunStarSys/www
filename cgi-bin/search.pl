@@ -20,7 +20,7 @@ use APR::Request qw/encode/;
 use Cpanel::JSON::XS;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
-use SunStarSys::Util qw/read_text_file/;
+use SunStarSys::Util qw/read_text_file parse_filename/;
 use SunStarSys::SVN::Client;
 use File::Basename;
 use List::Util qw/sum/;
@@ -257,7 +257,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($revision) = $re =~ /(\d+)$/;
       $diff = $svn->diff($dirname, 1, $revision) if $revision;
       while ($diff =~ /^Index: (.+)$/mg) {
-        my $path = "$dirname$1";
+        my $path = (parse_filename($dirname))[1].$1;
         eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date})};
         next if $@;
         ($log) = grep utf8::decode($_), eval{$svn->revprop_get("svn:log", $path, $revision)};
