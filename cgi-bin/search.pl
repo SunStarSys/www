@@ -212,6 +212,8 @@ else {
   $dirname = "/x1/httpd/websites/$host/content" . $r->path_info;
 }
 
+my $path_info = (parse_filename($r->path_info))[1];
+
 my $d = (parse_filename($dirname))[1];
 for ($d) {
   s/'/'\\''/g;
@@ -404,7 +406,7 @@ if ($re !~ $specials_re) {
   parser $pffxg, $dirname, undef, \ my %matches;
 
   while (my ($k, $v) = each %matches) {
-    my $link = $r->path_info . $k;
+    my $link = $path_info . $k;
     $link =~ s/\.md(?:text)?/.html/ if $markdown;
     if ($markdown) {
       eval {
@@ -456,13 +458,13 @@ my %title = (
 no warnings 'uninitialized';
 
 my $args = {
-  path        => $r->path_info ne "/" ? $r->path_info . "placeholder" : "",
+  path        => $r->path_info,
   title       => $title{$lang},
   markdown_search => !!$markdown,
   matches     => \@matches,
   lang        => $lang,
   regex       => $re,
-  breadcrumbs => breadcrumbs($r->path_info, $re, $lang, $markdown),
+  breadcrumbs => breadcrumbs($path_info, $re, $lang, $markdown),
   keywords    => \@keywords,
   friends     => \@friends,
   watch       => [sort {$a->{name} cmp $b->{name}} @watch],
@@ -481,6 +483,7 @@ my $args = {
   specials    => scalar $re =~ $specials_re,
 };
 
+$r = $r->main unless $r->is_initial_req;
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
@@ -490,7 +493,6 @@ if (client_wants_json $r) {
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
 local @ENV{qw/REPOS WEBSITE/} = ($repos, $host);
-
 $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
