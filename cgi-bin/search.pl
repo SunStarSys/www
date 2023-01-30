@@ -483,11 +483,12 @@ my $args = {
   specials    => scalar $re =~ $specials_re,
 };
 
+$| = 1;
+
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
   $r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args));
-  $r->rflush;
   return Apache2::Const::OK;
 }
 
@@ -497,5 +498,4 @@ $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
 $r->print($rv);
-$r->rflush;
 return Apache2::Const::OK;
