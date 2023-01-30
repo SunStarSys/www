@@ -50,7 +50,7 @@ $r->pnotes("svnuser", $USERNAME);
 $r->pnotes("svnpassword", $PASSWORD);
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 
-my $specials_re = qr/friends=|watch=|notify=|build=|diff=|log=|acl=|deps=|svnauthz=/i;
+my $specials_re = qr/^(?:friends=|watch=|like=|diff=|log=|build=|acl=|deps=|svnauthz=)/i;
 
 sub parser :Sealed {
   my @text;
