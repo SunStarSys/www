@@ -35,7 +35,7 @@
   <div class="card-body">
     <dl>
       {% for e in log %}
-      <dt><a href="./?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
+      <dt><a href="/dynamic/search{{path}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
         {{e.3|vcs_author:lang}} <small><em>on {{e.3|vcs_date}} at {{e.3|vcs_time}}</em></small></dt>
         {% for k, v in e.1 %}
       <dd>
