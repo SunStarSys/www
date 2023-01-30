@@ -483,9 +483,9 @@ my $args = {
   specials    => scalar $re =~ $specials_re,
 };
 
-$r = $r->main unless $r->is_initial_req;
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
+  $r->send_http_header;
   delete $$args{r};
   $r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args));
   return Apache2::Const::OK;
@@ -496,5 +496,6 @@ local @ENV{qw/REPOS WEBSITE/} = ($repos, $host);
 $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
+$r->send_http_header;
 $r->print($rv);
 return Apache2::Const::OK;
