@@ -24,7 +24,7 @@ boolean (0 or 1)
 
 ##### special modes
 
-##### all accounts
+###### all accounts
 
 - [`friends=`](#)
 - [`watch=`](#)
@@ -32,7 +32,7 @@ boolean (0 or 1)
 - [`diff=r$revision`](#)
 - [`log=$count`](#)
 
-##### svnadmin group
+###### svnadmin group
 
 - [`build=`](#)
 - [`acl=`](#)
