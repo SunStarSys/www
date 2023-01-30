@@ -380,7 +380,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 }
 if ($re !~ $specials_re) {
   my $sha1 = Digest::SHA1->new;
-  $sha1->add(join ":", "placeholder", $apreq->body("files"));
+  $sha1->add(join ":", $r->dir_config("CookieSecret"), $apreq->body("files"));
   my $pffxg;
 
   if ($sha1->hexdigest ne $hash) {
@@ -474,7 +474,7 @@ my $args = {
   r           => $r,
   repos       => $repos,
   website     => $host,
-  hash        => Digest::SHA1->new->add(join ":", "placeholder", map $$_[1], @matches)->hexdigest,
+  hash        => Digest::SHA1->new->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches)->hexdigest,
   filter      => $filter,
   specials    => scalar $re =~ $specials_re,
 };
