@@ -5,7 +5,7 @@
      <div class="essay col-lg-12 container">
        <div style="color:#aaa">
          <small>
-           [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"^a-z"}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"^A-Z"}}</span></a>] &nbsp;
+           [<a href="/dynamic/search{{path|dirname}}/?regex=^Status:\s{{headers.status|default_if_none:"draft"|lower|cut:"^a-z"}};lang={{lang}};markdown_search=1"><span class="text-warning">{{headers.status|default_if_none:"draft"|upper|cut:"^A-Z"}}</span></a>]
            <em>
              Last updated by <b>{{ content|ssi|vcs_author:lang }}</b>
              on <b>{{ content|ssi|vcs_date }}</b>
