@@ -483,6 +483,8 @@ my $args = {
   specials    => scalar $re =~ $specials_re,
 };
 
+$r->handler("modperl");
+
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
@@ -497,4 +499,3 @@ my $rv = Template("search.html")->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
 $r->print($rv);
 return Apache2::Const::OK;
-END{1}
