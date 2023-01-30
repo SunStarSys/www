@@ -31,6 +31,8 @@ boolean (0 or 1)
 - [`like=`](#)
 - [`diff=r$revision`](#)
 - [`log=$count`](#)
+- [`@$group=`](#)
+- [`$user=`](#)
 
 ###### svnadmin group
 
@@ -39,6 +41,12 @@ boolean (0 or 1)
 - [`deps=`](#)
 - [`svnauthz=`](#)
 
+##### compatibility modes
+
+- quoted string
+- keyword list
+
+##### PCRE mode
 ## Orion Editor (cms.sunstarsys.com)
 
 ### Generic Actions
@@ -50,6 +58,8 @@ boolean (0 or 1)
 ### Working Copy Actions
 
 #### edit
+
+##### Friends Completion
 
 #### update
 
