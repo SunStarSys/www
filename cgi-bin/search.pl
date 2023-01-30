@@ -29,6 +29,8 @@ use DB_File;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 
+local $@;
+
 local our %LANG = (
   ".de" => "de_DE",
   ".en" => "en_US",
@@ -204,7 +206,7 @@ my $repos;
 
 if ($markdown) {
   $dirname = (</x1/cms/wcbuild/*/$host/trunk/content>)[0] . $r->path_info;
-  ($repos) = $dirname =~ m#/x1/cms/wcbuild/([^/]+)/#;
+  ($repos) = $dirname =~ m#^/x1/cms/wcbuild/([^/]+)/#;
 }
 else {
   $dirname = "/x1/httpd/websites/$host/content" . $r->path_info;
