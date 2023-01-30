@@ -1,0 +1,97 @@
+Title: Orion API
+Keywords: REST,API
+Status: draft
+
+[TOC]
+
+## Dynamic Search (/dynamic/search/...)
+
+### Query String Arguments
+
+#### lang
+
+- `.en`
+- `.es`
+- `.fr`
+- `.de`
+
+
+#### markdown_search
+
+boolean (0 or 1)
+
+#### regex
+
+##### special modes
+
+##### all accounts
+
+- `friends=`
+- `watch=`
+- `like=`
+- `diff=r$revision`
+- `log=$count`
+
+##### svnadmin group
+
+- `build=`
+- `acl=`
+- `deps=`
+- `svnauthz=`
+
+## Orion Editor (cms.sunstarsys.com)
+
+### redirect
+
+
+### WC Actions
+
+#### edit
+
+#### update
+
+#### revert
+
+#### copy
+
+#### move
+
+#### delete
+
+#### add
+
+#### commit
+
+#### diff
+
+#### merge
+
+#### production
+
+#### promote
+
+#### resolve
+
+#### rollback
+
+#### search
+
+#### static
+
+#### account
+
+#### comment
+
+#### watch
+
+#### unwatch
+
+#### like
+
+#### unlike
+
+
+
+
+
+<!-- $Date$ $Author$ $Revision$ -->
