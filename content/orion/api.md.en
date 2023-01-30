@@ -10,10 +10,10 @@ Status: draft
 
 #### lang
 
-- `.en`
-- `.es`
-- `.fr`
-- `.de`
+- [`.en`](#)
+- [`.es`](#)
+- [`.fr`](#)
+- [`.de`](#)
 
 
 #### markdown_search
@@ -26,25 +26,26 @@ boolean (0 or 1)
 
 ##### all accounts
 
-- `friends=`
-- `watch=`
-- `like=`
-- `diff=r$revision`
-- `log=$count`
+- [`friends=`](#)
+- [`watch=`](#)
+- [`like=`](#)
+- [`diff=r$revision`](#)
+- [`log=$count`](#)
 
 ##### svnadmin group
 
-- `build=`
-- `acl=`
-- `deps=`
-- `svnauthz=`
+- [`build=`](#)
+- [`acl=`](#)
+- [`deps=`](#)
+- [`svnauthz=`](#)
 
 ## Orion Editor (cms.sunstarsys.com)
 
-### redirect
+### Generic Actions
 
+#### redirect
 
-### WC Actions
+### Working Copy Actions
 
 #### edit
 
