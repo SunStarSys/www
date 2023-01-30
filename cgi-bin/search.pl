@@ -496,4 +496,5 @@ $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
 $r->print($rv);
-END{ return Apache2::Const::OK;}
+return Apache2::Const::OK;
+END{1}
