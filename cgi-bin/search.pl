@@ -212,7 +212,7 @@ else {
   $dirname = "/x1/httpd/websites/$host/content" . $r->path_info;
 }
 
-my $d = $dirname;
+my $d = (parse_filename($dirname))[1];
 for ($d) {
   s/'/'\\''/g;
   "'$_'" =~ /^(.*)$/ms and $_ = $1
