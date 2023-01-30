@@ -126,7 +126,7 @@ sub run_shell_command {
     local %ENV = (
         PATH => "/usr/local/bin:/usr/bin",
         HOME => "/x1/home/joe",
-        LANG => $LANG{our $lang},
+        LANG => "$LANG{our $lang}.UTF-8",
     );
     no warnings 'uninitialized';
     for (@filenames, @$args) {
