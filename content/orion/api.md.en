@@ -119,14 +119,101 @@ boolean (0 or 1)
 
 ## SunStarSys::View
 
+### single_narrative
+
+### news_page
+
+### sitemap
+
+### asymptote
+
+### fetch_deps
+
+### breadcrumbs
+
+### memoize
+
+### compress
+
+### next_view
+
+### ssi
+
+### offline
+
+### snippet
+
+### reconstruct
+
+### trim_local_links
+
+### normalize_links
+
 ----
 
 ## SunStarSys::Util
+
+### read_text_file
+
+### copy_if_newer
+
+### get_lock
+
+### shuffle
+
+### sort_tables
+
+### fixup_code
+
+### unload_package
+
+### purge_from_inc
+
+### touch
+
+### normalize_svn_path
+
+### sanitize_relative_path
+
+### parse_filename
+
+### walk_content_tree
+
+### archived
+
+### seed_file_deps
+
+### seed_file_acl
+
+### Load
+
+### Dump
 
 ----
 
 ## Django 1.0 Filter Extensions (Dotiac::DTL::Filter)
 
+### append
+
+### lede
+
+### ssi
+
+### dirname
+
+### parse_filename
+
+### basename
+
+### vcs_date
+
+### vcs_time
+
+### vcs_author
+
+### vcs_revision
+
+### strip_prefix
 
 ----
 
