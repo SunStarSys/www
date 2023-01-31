@@ -143,103 +143,105 @@ boolean (0 or 1)
 
 ----
 
-## SunStarSys::View
+## Build System
 
-### single_narrative
+### SunStarSys::View
 
-### news_page
+#### single_narrative
 
-### sitemap
+#### news_page
 
-### asymptote
+#### sitemap
 
-### fetch_deps
+#### asymptote
 
-### breadcrumbs
+#### fetch_deps
 
-### memoize
+#### breadcrumbs
 
-### compress
+#### memoize
 
-### next_view
+#### compress
 
-### ssi
+#### next_view
 
-### offline
+#### ssi
 
-### snippet
+#### offline
 
-### reconstruct
+#### snippet
 
-### trim_local_links
+#### reconstruct
 
-### normalize_links
+#### trim_local_links
 
-----
-
-## SunStarSys::Util
-
-### read_text_file
-
-### copy_if_newer
-
-### get_lock
-
-### shuffle
-
-### sort_tables
-
-### fixup_code
-
-### unload_package
-
-### purge_from_inc
-
-### touch
-
-### normalize_svn_path
-
-### sanitize_relative_path
-
-### parse_filename
-
-### walk_content_tree
-
-#### archived
-
-#### seed_file_deps
-
-#### seed_file_acl
-
-### Load
-
-### Dump
+#### normalize_links
 
 ----
 
-## Django 1.0 Filter Extensions (Dotiac::DTL::Filter)
+### SunStarSys::Util
 
-### append
+#### read_text_file
 
-### lede
+#### copy_if_newer
 
-### ssi
+#### get_lock
 
-### dirname
+#### shuffle
 
-### parse_filename
+#### sort_tables
 
-### basename
+#### fixup_code
 
-### vcs_date
+#### unload_package
 
-### vcs_time
+#### purge_from_inc
 
-### vcs_author
+#### touch
 
-### vcs_revision
+#### normalize_svn_path
 
-### strip_prefix
+#### sanitize_relative_path
+
+#### parse_filename
+
+#### walk_content_tree
+
+##### archived
+
+##### seed_file_deps
+
+##### seed_file_acl
+
+#### Load
+
+#### Dump
+
+----
+
+### Django 1.0 Filter Extensions (Dotiac::DTL::Filter)
+
+#### append
+
+#### lede
+
+#### ssi
+
+#### dirname
+
+#### parse_filename
+
+#### basename
+
+#### vcs_date
+
+#### vcs_time
+
+#### vcs_author
+
+#### vcs_revision
+
+#### strip_prefix
 
 ----
 
@@ -248,7 +250,5 @@ boolean (0 or 1)
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
-
-
 
 <!-- $Date$ $Author$ $Revision$ -->
