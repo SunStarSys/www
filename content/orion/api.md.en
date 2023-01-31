@@ -63,57 +63,82 @@ boolean (0 or 1)
 
 ### Working Copy Actions
 
-#### edit
+#### Generic Response Fields
 
-##### Friends Completion
+- [`repos`](#)
+- [`website`](#)
+- [`action`](#)
+- [`lang`](#)
+- [`breadcrumbs`](#)
+- [`mode`](#)
+- [`is_dir`](#)
+- [`is_root_dir`](#)
+- [`dir`](#)
+- [`ext`](#)
+- [`attachments_dir`](#)
+- [`is_attachment`](#)
+- [`status`](#)
+- [`branch`](#)
+- [`picture`](#)
+- [`content`](#)
+- [`http_statyus`](#)
+- [`nav_options`](#)
+- [`actions_lang`](#)
+- [`watching`](#)
 
-#### update
+#### List of API Actions
 
-#### revert
+##### edit
 
-#### copy
+###### Friends Completion
 
-#### move
+##### update
 
-#### delete
+##### revert
 
-#### add
+##### copy
 
-##### Friends Completion
+##### move
 
-#### commit
+##### delete
 
-#### diff
+##### add
 
-#### merge
+###### Friends Completion
 
-#### production
+##### commit
 
-#### promote
+##### diff
 
-#### resolve
+##### merge
 
-#### rollback
+##### production
 
-#### search
+##### promote
 
-#### static
+##### resolve
 
-#### account
+##### rollback
 
-##### Credentials Changes
+##### search
 
-#### comment
+##### static
 
-##### Friends Completion
+##### account
 
-#### watch
+###### Credentials Changes
 
-#### unwatch
+##### comment
 
-#### like
+###### Friends Completion
 
-#### unlike
+##### watch
+
+##### unwatch
+
+##### like
+
+##### unlike
 
 ----
 
