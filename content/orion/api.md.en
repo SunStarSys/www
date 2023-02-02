@@ -277,11 +277,20 @@ Returns the traditional UNIX [`basename`](#) of the path in the filtered input s
 
 #### vcs_date
 
+Takes a [`lang`](#) argument to provide a locale-specific representation of the day, month, and year of the most recent change presented by the [`$Date`](#) Subversion keyword in the filtered input string (which is typically the full [`content`](#) of the current resource).
+
 #### vcs_time
+
+Represents the numerical hour, minute, seconds, and timezone offset of the most recent change presented by the [`$Date`](#) Subversion keyword in the filtered input string.
+
 
 #### vcs_author
 
+Presents a [`safe`](#) HTML representation of the user who updated the content most recently, as recorded by the Subversion keyword [`$Author`](#) keyword in the filtered input string.  Takes an optional [`lang`](#) argument for a locale-specific representation.
+
 #### vcs_revision
+
+Presents the numerical revision number of the most recent change to the content, as recorded by the [`$Revision`](#) keyword in the filtered input string.
 
 #### strip_prefix
 
