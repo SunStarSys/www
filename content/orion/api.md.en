@@ -253,7 +253,11 @@ boolean (0 or 1)
 
 #### append
 
+Takes a single argument and appends its value to the filtered input.  Argn can be a varname or a quoted string; will be smart about `/` characters being joined together on the [`append`](#).
+
 #### lede
+
+Extracts the text between the `&#123;# lede #&#125;` blocks in the input string.
 
 #### ssi
 
