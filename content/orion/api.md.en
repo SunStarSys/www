@@ -52,6 +52,31 @@ boolean (0 or 1)
 
 ##### PCRE mode
 
+### Generic JSON Return Value Fields
+
+- [`path`](#)
+- [`title`](#)
+- [`markdown_search`](#)
+- [`matches`](#)
+- [`lang`](#)
+- [`regex`](#)
+- [`breadcrumbs`](#)
+- [`keywords`](#)
+- [`friends`](#)
+- [`watch`](#)
+- [`graphviz`](#)
+- [`duration`](#)
+- [`blog`](#)
+- [`diff`](#)
+- [`meta`](#)
+- [`log`](#)
+- [`yaml`](#)
+- [`repos`](#)
+- [`website`](#)
+- [`hash`](#)
+- [`filter`](#)
+- [`specials`](#)
+
 ----
 
 ## Orion Editor (cms.sunstarsys.com)
