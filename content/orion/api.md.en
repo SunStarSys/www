@@ -52,7 +52,7 @@ boolean (0 or 1)
 
 ##### PCRE mode
 
-### Generic JSON Return Value Fields
+### Generic JSON Response Fields
 
 - [`path`](#)
 - [`title`](#)
@@ -89,7 +89,7 @@ boolean (0 or 1)
 
 ### Working Copy Actions
 
-#### Generic Response Fields
+#### Generic JSON Response Fields
 
 - [`repos`](#)
 - [`website`](#)
