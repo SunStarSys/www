@@ -257,9 +257,11 @@ Takes a single argument and appends its value to the filtered input.  Argn can b
 
 #### lede
 
-Extracts the text between the `&#123;# lede #&#125;` blocks in the input string.
+Extracts the text between the &#123;# [`lede`](#) #&#125; blocks in the filtered input string.
 
 #### ssi
+
+Recursively evaluates all Django [`ssi`](#) tags in the filtered input string.
 
 #### dirname
 
