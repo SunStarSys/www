@@ -265,7 +265,12 @@ Recursively evaluates all Django [`ssi`](#) tags in the filtered input string.
 
 #### dirname
 
+Returns the traditional UNIX [`dirname`](#) of the path in the filtered input string.
+
 #### parse_filename
+
+Interface for [`SunStarSys::Util::parse_filename`](#).  Key difference is that the first two return values of that subroutine are swapped, and the path extensions are all broken out (with [`.`](#) prefixed) into individual arguments, allowing this filter to take an argument string representing a list of indexes into the resulting array.
+As a special case, an argument ending in [`..`](#) will join *all* parsed extensions to the end of the resulting string.
 
 #### basename
 
