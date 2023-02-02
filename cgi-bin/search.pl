@@ -148,7 +148,7 @@ sub breadcrumbs {
     my @rv;
     my $relpath = "../" x @path;
     push @path, $tail if length $tail;
-    my ($regex)  = map encode($_),grep {utf8::encode(my $x=$_)} @_ ? shift : "";
+    my ($regex)  = map encode($_),grep {utf8::encode(my $x=$_)||1} @_ ? shift : "";
     my $lang = @_ ? shift : "en";
     my $markdown = shift;
     $tail = pop @path;
