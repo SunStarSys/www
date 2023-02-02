@@ -49,7 +49,7 @@
           <h6 class="card-title" id="{{c.key}}">
             <a href="#{{c.key}}-link" class="reference-link">{{c.headers.title}}</a>
             by {{c.content|ssi|vcs_author:lang}}
-            on <em><time>{{c.content|ssi|vcs_date}}</time></em>
+            on <em><time>{{c.content|ssi|vcs_date:lang}}</time></em>
             {% if c.muted %}
             {% else %}
             {% if c.important %}
