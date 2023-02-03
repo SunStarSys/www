@@ -294,6 +294,8 @@ Presents the numerical revision number of the most recent change to the content,
 
 #### strip_prefix
 
+Strips the (path) prefix, passed as an argument to this filter, from the filtered input string (path). The prefix defaults to the regex [`\S+/content/`](#) otherwise.
+
 ----
 
 ## Index
