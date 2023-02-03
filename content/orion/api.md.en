@@ -253,7 +253,7 @@ boolean (0 or 1)
 
 #### append
 
-Takes a single argument and appends its value to the filtered input.  Argn can be a varname or a quoted string; will be smart about `/` characters being joined together on the [`append`](#).
+Takes a single argument and appends its value to the filtered input.  The argument can be a varname or a quoted string; this filter will be smart about `/` characters being joined together on the [`append`](#).
 
 #### lede
 
