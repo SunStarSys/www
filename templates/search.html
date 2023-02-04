@@ -30,8 +30,7 @@
 ```
 {% endfilter %}
 </div>
-{% endif %}
-{% endif %}
+{% else %}
 {% if log %}
 <div class="card text-white border-success mb-3">
   <div class="card-header">Latest {{revision}} changes</div>
@@ -56,6 +55,8 @@
     </dl>
   </div>
 </div>
+{% endif %}
+{% endif %}
 {% endif %}
 {% if yaml %}
 {% filter markdown %}
