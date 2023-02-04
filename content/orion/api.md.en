@@ -250,9 +250,13 @@ Mandatory Arguments:
 
 #### compress(%args)
 
+Deprecated.
+
 #### next_view(%args)
 
 #### ssi(%args)
+
+Recursively evaluates [ssi](#) tags.
 
 #### offline(%args)
 
