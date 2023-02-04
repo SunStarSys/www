@@ -305,15 +305,15 @@ Removes [`@paths`](#) from [`@INC`](#).
 
 #### touch(@\_)
 
-Touches all files in [`@\_`](#). If no args are passed, uses [`$\_`](#).
+Touches all files in [`@_`](#). If no args are passed, uses [`$_`](#).
 
 #### normalize_svn_path(@\_)
 
-Normalizes all paths in [`@\_`](#) for safe use as raw arguments to [`SVN::Client`](#) commands.
+Normalizes all paths in [`@_`](#) for safe use as raw arguments to [`SVN::Client`](#) commands.
 
 #### sanitize_relative_path(@\_)
 
-Secures paths in [`@\_`](#) for use as pure relative paths in [`Dotiac::DTL`] (Django Template) path-specific commands.
+Secures paths in [`@_`](#) for use as pure relative paths in [`Dotiac::DTL`] (Django Template) path-specific commands.
 
 #### parse_filename($path)
 
@@ -321,12 +321,12 @@ Wrapper around [`File::Basename::fileparse`](#). Without arguments, uses [`$_`](
 
 #### walk_content_tree($code)
 
-Conditionally walks the [`./content`](#) tree of the build system checkout, first normalizing [`$\_`](#) as the formal subpath and then invoking [`$code`](#), on each item in the  the treewalk.
+Conditionally walks the [`./content`](#) tree of the build system checkout, first normalizing [`$_`](#) as the formal subpath and then invoking [`$code`](#), on each item in the  the treewalk.
 
 
 ##### archived($path)
 
-Flags each [`Status: archive`](#) [`$path`](#). Uses [`$\_`](#) if no args are passed.
+Flags each [`Status: archive`](#) [`$path`](#). Uses [`$_`](#) if no args are passed.
 
 ##### seed_file_deps($path)
 
