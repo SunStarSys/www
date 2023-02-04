@@ -89,7 +89,23 @@ boolean (0 or 1)
 
 #### redirect
 
+Ingress Endpoint for Orion's CMS interface.
+
+Mandatory Query String Arguments:
+
+- [`uri`](#)
+
+Optional Query String Arguments:
+
+- [`action`](#)
+- [`lang`](#)
+- [`repos`](#)
+- [`new`](#)
+- [`regex`](#)
+
 #### login
+
+Validates and Caches Subversion Credentials for the current repository.  Only responds to the POST method.
 
 ### Working Copy Actions
 
@@ -199,7 +215,22 @@ Optional Argmuents:
 
 #### asymptote
 
+Builds and Caches [`asymptote`](#) code blocks.
+
+Mandatory Arguments:
+
+- [`view`](#)
+- [`lang`](#)
+- [`path`](#)
+
+
 #### fetch_deps
+
+Mandatory Arguments:
+
+- [`path`](#)
+- [`data`](#) - stores resulting anon-array of deps
+- [`quick`](#) - defaults to 2
 
 #### breadcrumbs
 
