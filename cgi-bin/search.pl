@@ -433,16 +433,16 @@ if ($re !~ $specials_re) {
     my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
     next unless $title;
     my $status = uc($data{headers}{status} // "draft");
-    my ($revision) = $data{content} =~ /\$Revision: (\d+) \$/;
-    if ($revision and $markdown) {
-      $revision = qq(&nbsp; <a href="./?regex=diff=$revision;lang=$lang;markdown_search=1"><span class="text-success">r$revision</span></a>);
+    my ($rev) = $data{content} =~ /\$Revision: (\d+) \$/;
+    if ($rev and $markdown) {
+      $rev = qq(&nbsp; <a href="./?regex=diff=$rev;lang=$lang;markdown_search=1"><span class="text-success">r$rev</span></a>);
     }
     else {
-      $revision = "";
+      $rev= "";
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a> $revision), $k, [map $_->{match}, @$v]]
+    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a> $rev), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
   }
