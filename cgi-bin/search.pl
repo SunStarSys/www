@@ -52,7 +52,7 @@ $r->pnotes("svnuser", $USERNAME);
 $r->pnotes("svnpassword", $PASSWORD);
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 
-my $specials_re = qr/^(?:friends=|watch=|like=|diff=|log=|build=|acl=|deps=|svnauthz=)/i;
+my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|build=|acl=|deps=|svnauthz=)/i;
 
 sub parser :Sealed {
   my @text;
@@ -490,7 +490,7 @@ my $args = {
   website     => $host,
   hash        => Digest::SHA1->new->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches)->hexdigest,
   filter      => $filter,
-  specials    => scalar $re =~ $specials_re,
+  specials    => $re =~ $specials_re && $1,
 };
 
 if (client_wants_json $r) {
