@@ -191,7 +191,7 @@ Validates and Caches Subversion Credentials for the current repository.  Only re
 
 ## Build System
 
-### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm)
+### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm)
 
 #### single_narrative
 
@@ -254,7 +254,7 @@ Mandatory Arguments:
 
 ----
 
-### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm)
+### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm)
 
 #### read_text_file
 
@@ -294,7 +294,7 @@ Mandatory Arguments:
 
 ----
 
-### Django 1.0 Filter Extensions ([`Dotiac::DTL::Filter`](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+### Django 1.0 Filter Extensions ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
 #### append
 
