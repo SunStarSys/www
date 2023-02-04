@@ -261,8 +261,11 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     elsif ($re =~ /^diff=/i) {
+      no locale;
       ($revision) = $re =~ /(\d+)$/;
-      $diff = $svn->diff($dirname, 1, $revision) if $revision;
+      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+        read $fh, $blog, -s $fh;
+        $diff = $svn->diff($dirname, 1, $revision);
       while ($diff =~ /^Index: (.+)$/mg) {
         my $path = (parse_filename($dirname))[1].$1;
         eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date})};
