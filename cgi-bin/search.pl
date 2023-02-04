@@ -192,7 +192,7 @@ sub get_client_lang :Sealed {
 }
 
 
-setlocale LC_CTYPE, "$LANG{'.en'}.UTF-8";
+setlocale LC_ALL, "$LANG{'.en'}.UTF-8";
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 local our $lang  = get_client_lang $r;
@@ -238,8 +238,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
+      no locale;
       ($revision) = $re =~ /(\d+)$/;
-      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
       }
@@ -270,7 +271,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000;
 
-        setlocale LC_CTYPE, "$LANG{'.en'}.UTF-8";
+        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         last;
       }
     }
@@ -280,7 +281,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
-        setlocale LC_CTYPE, "$LANG{'.en'}.UTF-8";
+        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
     }
@@ -406,7 +407,7 @@ if ($re !~ $specials_re) {
     die "status=$?:$pffxg";
   }
 
-  my $loc = setlocale LC_CTYPE, "$LANG{$lang}.UTF-8";
+  my $loc = setlocale LC_ALL, "$LANG{$lang}.UTF-8";
   parser $pffxg, $dirname, undef, \ my %matches;
 
   while (my ($k, $v) = each %matches) {
