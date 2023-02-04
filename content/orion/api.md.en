@@ -268,15 +268,28 @@ Mandatory Arguments:
 
 ### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm)
 
-#### read_text_file
+#### read_text_file($file, $out, $content_lines)
 
-#### copy_if_newer
+Parses headers+content of UTF-8 encoded file [`$file`](#) and stores results in [`$out`](#). [`$content_lines`](#) is the (optional) maximum number of content lines to read.
+Returns actual number of lines read (including headers).
 
-#### get_lock
+[`$file`](#) may be a reference to a raw string, representing the full contents of a file.  The results in [`$out`](#) will still be UTF-8 encoded.
 
-#### shuffle
+#### copy_if_newer($src, $dest)
 
-#### sort_tables
+Copies [`$src`](#) to [`$dest`](#) if the former's modification timestamp is newer than the latter's. On copy, additionally gzip-compresses the [`$dest`](#) file if it's a text file, and adds ".gz" extension to the name.
+
+#### get_lock($lockfile)
+
+Takes an exclusive (f)lock (for the current UNIX process) on [`$lockfile`](#).
+
+#### shuffle(\@deck)
+
+In-place random (Fisher-Yates) shuffle of [`@deck`](#)..
+
+#### sort_tables($content)
+
+Sorts Markdown Tables in $content according to each table's  column spec.  Exactly one column may be sorted per table, optionally numerically [`n`](#), in either descending [`v`](#) or ascending [`^`](#) order.
 
 #### fixup_code
 
