@@ -193,7 +193,7 @@ Validates and Caches Subversion Credentials for the current repository.  Only re
 
 ### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm)
 
-#### single_narrative
+#### single_narrative(%args)
 
 Mandatory Arguments:
 
@@ -209,11 +209,24 @@ Optional Argmuents:
 - [`archive_root`](#)
 - [`category_root`](#)
 
-#### news_page
+#### news_page(%args)
 
-#### sitemap
+#### sitemap(%args)
 
-#### asymptote
+Locale-specific, sorted index of dependencies.
+
+Mandatory Arguments:
+
+- [`path`](#)
+- [`lang`](#)
+
+Optional Arguments:
+
+- [`quick_deps`](#)
+- [`nested`](#)
+- [`preprocess`](#)
+
+#### asymptote(%args)
 
 Builds and Caches [`asymptote`](#) code blocks.
 
@@ -223,8 +236,7 @@ Mandatory Arguments:
 - [`lang`](#)
 - [`path`](#)
 
-
-#### fetch_deps
+#### fetch_deps($path, $data, $quick)
 
 Mandatory Arguments:
 
@@ -232,25 +244,25 @@ Mandatory Arguments:
 - [`data`](#) - stores resulting anon-array of deps
 - [`quick`](#) - defaults to 2
 
-#### breadcrumbs
+#### breadcrumbs($path)
 
-#### memoize
+#### memoize(%args)
 
-#### compress
+#### compress(%args)
 
-#### next_view
+#### next_view(%args)
 
-#### ssi
+#### ssi(%args)
 
-#### offline
+#### offline(%args)
 
-#### snippet
+#### snippet(%args)
 
-#### reconstruct
+#### reconstruct(%args)
 
-#### trim_local_links
+#### trim_local_links(%args)
 
-#### normalize_links
+#### normalize_links(%args)
 
 ----
 
