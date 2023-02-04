@@ -283,7 +283,7 @@ Copies [`$src`](#) to [`$dest`](#) if the former's modification timestamp is new
 
 Takes an exclusive (f)lock (for the current UNIX process) on [`$lockfile`](#).
 
-#### shuffle(\@deck)
+#### shuffle(\\@deck)
 
 In-place random (Fisher-Yates) shuffle of [`@deck`](#)..
 
@@ -291,31 +291,58 @@ In-place random (Fisher-Yates) shuffle of [`@deck`](#)..
 
 Sorts Markdown Tables in $content according to each table's  column spec.  Exactly one column may be sorted per table, optionally numerically [`n`](#), in either descending [`v`](#) or ascending [`^`](#) order.
 
-#### fixup_code
+#### fixup_code($prefix, $type, @\_)
 
-#### unload_package
+Strips $prefix from every arg in @\_. The function of the $type argument is implementation specific, but is mainly used to seed the editor.md "mode" for processing this content in @\_.
 
-#### purge_from_inc
+#### unload_package($pkg)
 
-#### touch
+Aggressively unloads Perl package [`$pkg`](#) from the Symbol Table (STASH).
 
-#### normalize_svn_path
+#### purge_from_inc(@paths)
 
-#### sanitize_relative_path
+Removes [`@paths`](#) from [`@INC`](#).
 
-#### parse_filename
+#### touch(@\_)
 
-#### walk_content_tree
+Touches all files in [`@\_`](#). If no args are passed, uses [`$\_`](#).
 
-##### archived
+#### normalize_svn_path(@\_)
 
-##### seed_file_deps
+Normalizes all paths in [`@\_`](#) for safe use as raw arguments to [`SVN::Client`](#) commands.
 
-##### seed_file_acl
+#### sanitize_relative_path(@\_)
+
+Secures paths in [`@\_`](#) for use as pure relative paths in [`Dotiac::DTL`] (Django Template) path-specific commands.
+
+#### parse_filename($path)
+
+Wrapper around [`File::Basename::fileparse`](#). Without arguments, uses [`$_`](#) as the filename to parse.
+
+#### walk_content_tree($code)
+
+Conditionally walks the [`./content`](#) tree of the build system checkout, first normalizing [`$\_`](#) as the formal subpath and then invoking [`$code`](#), on each item in the  the treewalk.
+
+
+##### archived($path)
+
+Flags each [`Status: archive`](#) [`$path`](#). Uses [`$\_`](#) if no args are passed.
+
+##### seed_file_deps($path)
+
+Updates [`%path::dependencies`](#) for this [`$path`](#), based on its [`Dependencies`](#) header glob(s). Defaults to using [`$_`](#) as the path if no args are passed.
+
+##### seed_file_acl($path)
+
+Updates [`@path::acl`](#) for this [`$path`](#), based on its [`ACL`](#) header spec. Defaults to using [`$_`](#) as the path if no args are passed.
 
 #### Load
 
+Same as [`YAML::XS::Load`](#).
+
 #### Dump
+
+Same as [`YAML::XS::Dump`](#).
 
 ----
 
