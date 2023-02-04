@@ -231,14 +231,14 @@ $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0
 my @unzip = $markdown ? "--markdown" : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g for $re, $filter;
 
-my (@friends, @dlog, $yaml, $blog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $revision, $yaml, $blog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
-      my ($revision) = $re =~ /(\d+)$/;
+      ($revision) = $re =~ /(\d+)$/;
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
@@ -260,7 +260,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     elsif ($re =~ /^diff=/i) {
-      my ($revision) = $re =~ /(\d+)$/;
+      ($revision) = $re =~ /(\d+)$/;
       $diff = $svn->diff($dirname, 1, $revision) if $revision;
       while ($diff =~ /^Index: (.+)$/mg) {
         my $path = (parse_filename($dirname))[1].$1;
@@ -275,7 +275,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     elsif ($re =~ /^log=/i) {
-      my ($revision) = $re =~ /(\d+)$/;
+      ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision);
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
@@ -480,6 +480,7 @@ my $args = {
   log         => $log,
   yaml        => $yaml,
   r           => $r,
+  revision    => $revision,
   repos       => $repos,
   website     => $host,
   hash        => Digest::SHA1->new->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches)->hexdigest,

@@ -121,9 +121,13 @@
   <pre class="text-primary">{{ blog }}</pre>
   {% if diff %}
   {% filter markdown %}
+
+
+## [Diff](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown}})
+
 ```diff
 {{ diff|safe }}
-  ```
+```
   {% endfilter %}
   {% endif %}
   {% endif %}
