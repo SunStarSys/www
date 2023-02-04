@@ -13,9 +13,7 @@
   <script src="/js/chart.umd.js"></script>
   <canvas id="myChart" width="100%" height="800px"></canvas>
   {% endif %}
-  {% if blog %}
-  {% else %}
-  {% if diff %}
+  {% ifequal specials "diff=" %}
   <div class="card text-white border-success mb-3">
     <div class="card-header">{{meta|vcs_author:lang}} <small><em>on
     {{meta|vcs_date}} at {{meta|vcs_time}}</em></small></div>
@@ -29,9 +27,10 @@
 {{ diff|safe }}
 ```
 {% endfilter %}
+<pre class="text-primary">{{ blog }}</pre>
 </div>
 {% else %}
-{% if log %}
+{% ifequal specials "log=" %}
 <div class="card text-white border-success mb-3">
   <div class="card-header">Latest {{revision}} changes</div>
   <div class="card-body">
@@ -55,9 +54,8 @@
     </dl>
   </div>
 </div>
-{% endif %}
-{% endif %}
-{% endif %}
+{% endifequal %}
+{% endifequal %}
 {% if yaml %}
 {% filter markdown %}
 ```yaml
@@ -118,7 +116,7 @@
   </div>
   {% endfor %}
   {% endif %}
-  {% if blog %}
+  {% ifequal specials "build=" %}
   <pre class="text-primary">{{ blog }}</pre>
   {% if diff %}
   {% filter markdown %}
@@ -131,7 +129,7 @@
 ```
   {% endfilter %}
   {% endif %}
-  {% endif %}
+  {% endifequal %}
   {% if specials %}
   {% else %}
   <form method="POST" class="form-inline row">
