@@ -191,7 +191,7 @@ Validates and Caches Subversion Credentials for the current repository.  Only re
 
 ## Build System
 
-### SunStarSys::View
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm)
 
 #### single_narrative
 
@@ -254,7 +254,7 @@ Mandatory Arguments:
 
 ----
 
-### SunStarSys::Util
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm)
 
 #### read_text_file
 
