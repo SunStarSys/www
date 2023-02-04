@@ -266,16 +266,17 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
-      while ($diff =~ /^Index: (.+)$/mg) {
-        my $path = (parse_filename($dirname))[1].$1;
-        eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date})};
-        next if $@;
-        ($log) = grep utf8::decode($_), eval{$svn->revprop_get("svn:log", $path, $revision)};
-        my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000;
+        while ($diff =~ /^Index: (.+)$/mg) {
+          my $path = (parse_filename($dirname))[1].$1;
+          eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date})};
+          next if $@;
+          ($log) = grep utf8::decode($_), eval{$svn->revprop_get("svn:log", $path, $revision)};
+          my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
+          ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000;
 
-        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
-        last;
+          setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+          last;
+        }
       }
     }
     elsif ($re =~ /^log=/i) {
