@@ -239,7 +239,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
       my ($revision) = $re =~ /(\d+)$/;
-      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$1.log") {
+      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/www.sunstarsys.com/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
       }
