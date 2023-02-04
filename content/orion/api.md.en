@@ -179,6 +179,20 @@ boolean (0 or 1)
 
 #### single_narrative
 
+Mandatory Arguments:
+
+- [`template`](#)
+- [`path`](#)
+- [`lang`](#)
+
+Optional Argmuents:
+
+- [`deps`](#)
+- [`quick_deps`](#)
+- [`preprocess`](#)
+- [`archive_root`](#)
+- [`category_root`](#)
+
 #### news_page
 
 #### sitemap
