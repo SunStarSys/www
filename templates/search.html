@@ -31,7 +31,7 @@
 {% endfilter %}
 </div>
 {% endif %}
-{% else %}
+{% endif %}
 {% if log %}
 <div class="card text-white border-success mb-3">
   <div class="card-header">Latest {{revision}} changes</div>
@@ -120,11 +120,13 @@
   {% endif %}
   {% if blog %}
   <pre class="text-primary">{{ blog }}</pre>
-{% filter markdown %}
+  {% if diff %}
+  {% filter markdown %}
 ```diff
 {{ diff|safe }}
-```
-{% endfilter %}
+  ```
+  {% endfilter %}
+  {% endif %}
   {% endif %}
   {% if specials %}
   {% else %}
