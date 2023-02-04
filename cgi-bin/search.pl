@@ -192,7 +192,7 @@ sub get_client_lang :Sealed {
 }
 
 
-setlocale LC_ALL, "$LANG{'.en'}.UTF-8";
+setlocale LC_CTYPE, "$LANG{'.en'}.UTF-8";
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 local our $lang  = get_client_lang $r;
