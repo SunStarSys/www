@@ -191,6 +191,9 @@ sub get_client_lang :Sealed {
   return encode($lang);
 }
 
+
+setlocale LC_CTYPE, "$LANG{'.en'}.UTF-8";
+
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 local our $lang  = get_client_lang $r;
 my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
