@@ -246,7 +246,11 @@ Mandatory Arguments:
 
 #### breadcrumbs($path)
 
+Returns HTML breadcrumbs list for [$path](#).
+
 #### memoize(%args)
+
+Caches the build; mainly used with fetch_deps and quick_deps > 2.
 
 #### compress(%args)
 
@@ -254,19 +258,31 @@ Deprecated.
 
 #### next_view(%args)
 
+Utility for processing $args{view}.
+
 #### ssi(%args)
 
 Recursively evaluates [ssi](#) tags.
 
 #### offline(%args)
 
+Runs the next_view in offline mode.
+
 #### snippet(%args)
+
+Processes snippet lines.
 
 #### reconstruct(%args)
 
+Reprocesses Template directives in built content from next_view.
+
 #### trim_local_links(%args)
 
+Trims file extensions from local links.
+
 #### normalize_links(%args)
+
+Normalizes local links (./ and ../).
 
 ----
 
