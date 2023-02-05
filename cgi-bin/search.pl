@@ -240,7 +240,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
       no locale;
       ($revision) = $re =~ /(\d+)$/;
-      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+      if (defined $revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
       }
@@ -263,7 +263,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     elsif ($re =~ /^diff=/i) {
       no locale;
       ($revision) = $re =~ /(\d+)$/;
-      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+      if (defined $revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
         while ($diff =~ /^Index: (.+)$/mg) {
