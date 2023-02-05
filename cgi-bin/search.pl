@@ -239,8 +239,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
       no locale;
+      no warnings 'uninitialized';
       ($revision) = $re =~ /(\d+)$/;
-      if (defined $revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
       }
@@ -262,8 +263,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
     elsif ($re =~ /^diff=/i) {
       no locale;
+      no warnings 'uninitialized';
       ($revision) = $re =~ /(\d+)$/;
-      if (defined $revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
         while ($diff =~ /^Index: (.+)$/mg) {
