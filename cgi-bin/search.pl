@@ -198,7 +198,7 @@ local our $lang  = get_client_lang $r;
 my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
-my ($host)     = map /^([\w.-]+)$/, $r->headers_in->{host};
+my $host     = $r->headers_in->{host};
 my $js;
 
 utf8::decode($_) for $re, $filter;
