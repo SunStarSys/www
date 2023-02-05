@@ -289,7 +289,7 @@ Takes an exclusive (f)lock (for the current UNIX process) on [`$lockfile`](#).
 
 #### shuffle(\\@deck)
 
-In-place random (Fisher-Yates) shuffle of [`@deck`](#)..
+In-place random (Fisher-Yates) shuffle of [`@deck`](#).
 
 #### sort_tables($content)
 
