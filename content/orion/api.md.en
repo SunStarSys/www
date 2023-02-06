@@ -335,7 +335,7 @@ Normalizes all paths in [`@_`](#) for safe use as raw arguments to [`SVN::Client
 
 #### sanitize_relative_path(@\_)
 
-Secures paths in [`@_`](#) for use as pure relative paths in [`Dotiac::DTL`] (Django Template) path-specific commands.
+Secures paths in [`@_`](#) for use as pure relative paths in [`Dotiac::DTL`](#) (Django Template) path-specific commands.
 
 #### parse_filename($path)
 
