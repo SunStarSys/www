@@ -16,7 +16,7 @@
   {% ifequal specials "diff=" %}
   <div class="card text-white border-success mb-3">
     <div class="card-header">{{meta|vcs_author:lang}} <small><em>on
-    {{meta|vcs_date}} at {{meta|vcs_time}}</em></small></div>
+    {{meta|vcs_date:lang}} at {{meta|vcs_time:lang}}</em></small></div>
     <div class="card-body">
       <h3 class="card-title"><a href="/dynamic/search{{path}}?regex=log=;lang={{lang}};markdown_search={{markdown_search}}">Log</a></h3>
       <pre>{{ log|safe }}</pre>
@@ -37,7 +37,7 @@
     <dl>
       {% for e in log %}
       <dt><a href="/dynamic/search{{path}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:lang}} <small><em>on {{e.3|vcs_date}} at {{e.3|vcs_time}}</em></small></dt>
+        {{e.3|vcs_author:lang}} <small><em>on {{e.3|vcs_date:lang}} at {{e.3|vcs_time:lang}}</em></small></dt>
         {% for k, v in e.1 %}
       <dd>
         <code>{{v.action}}</code>&nbsp;
