@@ -265,6 +265,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       no warnings 'uninitialized';
       ($revision) = $re =~ /(\d+)$/;
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+        use locale;
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
         while ($diff =~ /^Index: (.+)$/mg) {
