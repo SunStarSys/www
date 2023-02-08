@@ -1,6 +1,7 @@
 Title: Home
 Dependencies: /categories/*/index.html.en
-Keywords: wiki,knowledgeStatus: draft
+Keywords: wiki,knowledge
+Status: draft
 
 <div class="float-lg-right">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
@@ -107,7 +108,5 @@ div.jumbotron ul {
 	-webkit-animation-iteration-count: 1;
 }
 </style>
-
-<!-- $Date$ $Author$ -->
 
 <!-- $Date$ $Author$ $Revision$ -->
