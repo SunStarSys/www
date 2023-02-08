@@ -1,4 +1,3 @@
-
 title: "SunStar Systems"
 keywords: "mod_perl,c,xs,nodejs,editor.md,python,httpd,apache,git,subversion,zfs,solaris,http/2,wiki,orion,confluence"
 releases:
@@ -10,7 +9,7 @@ releases:
     tag: v2.1.1
   sealed:
     url: https://github.com/SunStarSys/sealed
-    tag: v4.3.1
+    tag: v4.3.2
   orthrus:
     url: https://github.com/SunStarSys/orthrus
     tag: v1.0.0
