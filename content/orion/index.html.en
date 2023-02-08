@@ -96,7 +96,7 @@ See our [Orion Plans](plans) for the current deals.
 | Feature     |  Orion        | Slab | Notify | Confluence |
 |:------------|:-------------:|:----:|:------:|:----------:|
 | SSO: Kerberos / Active Directory / OpenID Integration | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">SCIM only</span> | <span class="text-warning">&check;</span> |
-| FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">&check;</span> | | | |
+| FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">Server Install</span> | | | |
 | In-Browser Workflow (Mobile Friendly) | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> |
 | DAV support | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | Incremental Builds | <span class="text-success">&check;</span> | | | |
