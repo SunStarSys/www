@@ -117,10 +117,11 @@
   {% endfor %}
   {% endif %}
   {% ifequal specials "build=" %}
+  {% if blog %}
   <pre class="text-primary">{{ blog }}</pre>
+  {% endif %}
   {% if diff %}
   {% filter markdown %}
-
 
 ## [Diff](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}})
 
