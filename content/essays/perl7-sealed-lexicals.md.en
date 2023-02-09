@@ -91,9 +91,9 @@ sub handler :sealed {
 }
 ```
 
-## Production-Quality Perl  v5.22+ Prototype: sealed.pm {{facts.releases.sealed.tag}} (on CPAN)
+## Production-Quality, Robust Perl v5.22+ Prototype: sealed.pm {{facts.releases.sealed.tag}} (on CPAN)
 
-Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault ad nauseum at scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
+Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault at **any** scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
 
 For fun, try this [monkey patch]({{snippetB.pretty_uri}}) to `ModPerl::RegistryCooker`:
 
