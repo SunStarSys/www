@@ -99,12 +99,12 @@ Mandatory Query String Arguments:
 
 Optional Query String Arguments:
 
-- [`update`](#)
-- [`action`](#)
-- [`lang`](#)
-- [`repos`](#)
-- [`new`](#)
-- [`regex`](#)
+- [`update`](#) - set to 0 to disable the working copy update
+- [`action`](#) - choice of redirect action
+- [`lang`](#) - preferred lang for UI
+- [`repos`](#) - target Subversion repository name
+- [`new`](#) - create a fresh working copy
+- [`regex`](#) - PCRE for action=search
 
 #### login
 
