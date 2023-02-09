@@ -95,7 +95,7 @@ Ingress Endpoint for Orion's CMS interface.
 
 Mandatory Query String Arguments:
 
-- [`uri`](#)
+- [`uri`](#) - original document.location.href
 
 Optional Query String Arguments:
 
