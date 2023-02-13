@@ -3,7 +3,7 @@
 
 use utf8;
 use strict;
-use locale;
+use locale ':time';
 use warnings;
 use base 'sealed';
 use Text::Balanced ();
@@ -191,8 +191,6 @@ sub get_client_lang :Sealed {
   return encode($lang);
 }
 
-setlocale LC_ALL, "$LANG{'.en'}.UTF-8";
-
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 local our $lang  = get_client_lang $r;
 my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
@@ -238,7 +236,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
-      no locale;
       no warnings 'uninitialized';
       ($revision) = $re =~ /(\d+)$/;
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
@@ -262,11 +259,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     elsif ($re =~ /^diff=/i) {
-      no locale;
       no warnings 'uninitialized';
       ($revision) = $re =~ /(\d+)$/;
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
-        use locale;
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
         while ($diff =~ /^Index: (.+)$/mg) {
@@ -414,7 +409,6 @@ if ($re !~ $specials_re) {
     die "status=$?:$pffxg";
   }
 
-  my $loc = setlocale LC_ALL, "$LANG{$lang}.UTF-8";
   parser $pffxg, $dirname, undef, \ my %matches;
 
   while (my ($k, $v) = each %matches) {
