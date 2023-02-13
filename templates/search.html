@@ -48,7 +48,17 @@
     <dl>
       {% for e in log %}
       <dt><a href="/dynamic/search{{path}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:lang}} <small><em>on {{e.3|vcs_date:lang}} at {{e.3|vcs_time:lang}}</em></small></dt>
+        {{e.3|vcs_author:lang}} <small><em>
+          {% ifequal lang ".en" %}on{% endifequal %}
+          {% ifequal lang ".de" %}am{% endifequal %}
+          {% ifequal lang ".es" %}el{% endifequal %}
+          {% ifequal lang ".fr" %}le{% endifequal %}
+          {{e.3|vcs_date:lang}}
+          {% ifequal lang ".en" %}at{% endifequal %}
+          {% ifequal lang ".de" %}um{% endifequal %}
+          {% ifequal lang ".es" %}a las{% endifequal %}
+          {% ifequal lang ".fr" %}à{% endifequal %}
+          {{e.3|vcs_time:lang}}</em></small></dt>
         {% for k, v in e.1 %}
       <dd>
         <code>{{v.action}}</code>&nbsp;
