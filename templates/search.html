@@ -17,15 +17,15 @@
   <div class="card text-white border-success mb-3">
     <div class="card-header">{{meta|vcs_author:lang}}
       <small><em>
-          {% ifequal lang "en" %}on{% endifequal %}
-          {% ifequal lang "de" %}am{% endifequal %}
-          {% ifequal lang "es" %}el{% endifequal %}
-          {% ifequal lang "fr" %}le{% endifequal %}
+          {% ifequal lang ".en" %}on{% endifequal %}
+          {% ifequal lang ".de" %}am{% endifequal %}
+          {% ifequal lang ".es" %}el{% endifequal %}
+          {% ifequal lang ".fr" %}le{% endifequal %}
           {{ meta|vcs_date:lang }}
-          {% ifequal lang "en" %}at{% endifequal %}
-          {% ifequal lang "de" %}um{% endifequal %}
-          {% ifequal lang "es" %}a las{% endifequal %}
-          {% ifequal lang "fr" %}à{% endifequal %}
+          {% ifequal lang ".en" %}at{% endifequal %}
+          {% ifequal lang ".de" %}um{% endifequal %}
+          {% ifequal lang ".es" %}a las{% endifequal %}
+          {% ifequal lang ".fr" %}à{% endifequal %}
           {{meta|vcs_time:lang}}
           </em></small></div>
     <div class="card-body">
