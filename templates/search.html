@@ -43,7 +43,12 @@
 {% else %}
 {% ifequal specials "log=" %}
 <div class="card text-white border-success mb-3">
-  <div class="card-header">Latest {{revision}} changes</div>
+  <div class="card-header">
+    {% ifequal lang ".en" %}Latest changes{% endifequal %}
+    {% ifequal lang ".de" %}Letzte Änderungen{% endifequal %}
+    {% ifequal lang ".es" %}Últimos cambios{% endifequal %}
+    {% ifequal lang ".fr" %}Dernières modifications{% endifequal %}
+  </div>
   <div class="card-body">
     <dl>
       {% for e in log %}
