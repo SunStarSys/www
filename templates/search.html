@@ -167,10 +167,10 @@
              placeholder="PCRE {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ filter }}" />&nbsp;<button type="submit"
     name="submit" value="1" class="btn btn-outline-danger"><i class="fa
     fa-filter fa-emoji" title="Filter"></i>
-	    {% ifequal lang ".en" %}Filter{% endifequal -%}
-	    {% ifequal lang ".es" %}Filter{% endifequal -%}
-	    {% ifequal lang ".de" %}Filter{% endifequal -%}
-	    {% ifequal lang ".fr" %}Filter{% endifequal -%}
+	    {% ifequal lang ".en" %}Filter{% endifequal %}
+	    {% ifequal lang ".es" %}Filtrar{% endifequal %}
+	    {% ifequal lang ".de" %}Filter{% endifequal %}
+	    {% ifequal lang ".fr" %}Filtre{% endifequal %}
         </button>
       </div>
       {% if matches.0 %}
