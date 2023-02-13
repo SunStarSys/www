@@ -369,7 +369,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
       @friends = @rv;
     }
-    elsif ($re =~ /watch=|notify=/i) {
+    elsif ($re =~ /watch=/i) {
       my $url;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
@@ -392,6 +392,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 if ($re !~ $specials_re) {
   my $sha1 = Digest::SHA1->new;
   $sha1->add(join ":", $r->dir_config("CookieSecret"), $apreq->body("files"));
+  $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
   my $pffxg;
 
   if ($sha1->hexdigest ne $hash) {
@@ -462,6 +463,9 @@ my %title = (
 );
 
 no warnings 'uninitialized';
+$hash =  Digest::SHA1->new;
+$hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
+$hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
 
 my $args = {
   path        => $r->path_info,
@@ -485,7 +489,7 @@ my $args = {
   revision    => $revision,
   repos       => $repos,
   website     => $host,
-  hash        => Digest::SHA1->new->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches)->hexdigest,
+  hash        => $hash->hexdigest,
   filter      => $filter,
   specials    => $re =~ $specials_re && $1,
 };
