@@ -15,8 +15,19 @@
   {% endif %}
   {% ifequal specials "diff=" %}
   <div class="card text-white border-success mb-3">
-    <div class="card-header">{{meta|vcs_author:lang}} <small><em>on
-    {{meta|vcs_date:lang}} at {{meta|vcs_time:lang}}</em></small></div>
+    <div class="card-header">{{meta|vcs_author:lang}}
+      <small><em>
+          {% ifequal lang "en" %}on{% endifequal %}
+          {% ifequal lang "de" %}am{% endifequal %}
+          {% ifequal lang "es" %}el{% endifequal %}
+          {% ifequal lang "fr" %}le{% endifequal %}
+          {{ meta|vcs_date:lang }}
+          {% ifequal lang "en" %}at{% endifequal %}
+          {% ifequal lang "de" %}um{% endifequal %}
+          {% ifequal lang "es" %}a las{% endifequal %}
+          {% ifequal lang "fr" %}à{% endifequal %}
+          {{meta|vcs_time:lang}}
+          </em></small></div>
     <div class="card-body">
       <h3 class="card-title"><a href="/dynamic/search{{path}}?regex=log=;lang={{lang}};markdown_search={{markdown_search}}">Log</a></h3>
       <pre>{{ log|safe }}</pre>
