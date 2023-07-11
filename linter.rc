@@ -65,7 +65,7 @@ EOF
     XARGS_MAX_FILES=1
     PCRE_PAT='\.p[ml]$'
     export STTY_NAME=0
-    LINTER+=' -T -I. -Iblib/lib -Ilib -Ilib/perl5 -c 3<&0'
+    LINTER+=' -I. -Iblib/lib -Ilib -Ilib/perl5 -c 3<&0'
     ;;
 
   perlcritic)
@@ -88,7 +88,7 @@ EOF
     ;;
 
   eslint)
-    PCRE_PAT='(\.ts|(?<!\.min)\.js)$'
+    PCRE_PAT='(\.tsx?|(?<!\.min)\.[cm]?jsx?)$'
     CONFIG_SRC="$(
       cat <<'EOF'
 {
@@ -97,7 +97,10 @@ EOF
   "plugins": [
     '@typescript-eslint',
   ],
-  "extends": "standard-with-typescript",
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended",
+  ],
   "env": {
     "es2021": true,
     "node": true,
@@ -110,8 +113,8 @@ EOF
         "no-multi-spaces": 0,
         "quotes": 0,
         "camelcase": 0,
-        "n/no-deprecated-api": 1,
-        "n/no-path-concat": 1,
+        "node/no-deprecated-api": 1,
+        "node/no-path-concat": 1,
         "no-control-regex": 1,
         "key-spacing": 0,
       }
@@ -120,7 +123,7 @@ EOF
 }
 EOF
     )"
-    LINTER+=' $([ -f .eslintrc.json ] || [ -f .eslintrc.ya?ml ] || echo "-c" "$CONFIG_TMP_FILE")'
+    LINTER+=' $([ -f .eslintrc.json ] || [ -f .eslintrc.y?ml ] || echo "-c" "$CONFIG_TMP_FILE")'
     ;;
 
   hadolint)
@@ -163,7 +166,7 @@ EOF
 
   csharp)
     PCRE_PAT='\.cs$'
-    LINTER='bash -c ". ~/.asdf/plugins/dotnet-core/set-dotnet-home.bash; dotnet format --include \"\$@\"" --'
+    LINTER='bash -c ". ~/.asdf/plugins/dotnet-core/set-dotnet-home.bash; dotnet format --no-restore --include \"\$@\"" --'
     ;;
 
   golangci-lint)
@@ -173,7 +176,7 @@ EOF
 
   jinjalint)
     LINT_TEMPLATES=yes
-    PCRE_PAT='/templates/'
+    PCRE_PAT='/templates/|\.ya?ml$'
     LINTER+=' --parse-only'
     ;;
 esac
