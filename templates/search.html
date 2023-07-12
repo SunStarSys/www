@@ -33,13 +33,13 @@
       <pre>{{ log|safe }}</pre>
     </div>
   </div>
-
+  <div>
 {% filter markdown %}
 ```diff
 {{ diff|safe }}
 ```
 {% endfilter %}
-
+  </div>
 <pre class="text-primary">{{ blog }}</pre>
 </div>
 {% else %}
