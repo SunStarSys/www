@@ -34,9 +34,11 @@
     </div>
   </div>
 
+{% filter markdown %}
 ```diff
 {{ diff|safe }}
 ```
+{% endfilter %}
 
 <pre class="text-primary">{{ blog }}</pre>
 </div>
