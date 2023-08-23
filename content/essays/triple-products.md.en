@@ -13,7 +13,7 @@ Given an orthonormal basis of eigenfunctions $$\set{e^i}$$ and eigenvalues $$\se
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx,
 
 ```
-it is a necessary and sufficient condition that any other iosospectral Riemannian Manifold which has an orthonormal basis of eigenfunctions, with an identical $$M^{i,j,k}$$ for it, is isometric to $$M,g$$.
+it is a necessary and sufficient condition that any other iosospectral Riemannian Manifold which has an orthonormal basis of eigenfunction which possesses an identical $$M^{i,j,k}$$ for it, is isometric to $$M,g$$.
 
 ### Corollary
 
