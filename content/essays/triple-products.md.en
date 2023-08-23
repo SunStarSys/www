@@ -85,6 +85,26 @@ Now we apply Gelfand's Functor to represent this isometry by a homeomorphism bet
 
 As this now diffeomorphism must preserve the Laplacian on smooth functions, it also must preserve the principal symbols of these same elliptic operators.  The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
+This completes the proof of the Theorem.
+
+### Proof of Corollary
+
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed lattice of eigenvalues for an $$n$$ dimensional flat torus. Then we can directly compute
+
+```math
+
+M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
+
+```
+
+The condition $$\lambda_i + \lambda_j - \lambda_k = 0$$ represents a linear system of equations on $$\Complex^n$$ with $$rank = min(3,n)$$, so is only uniquely solvable when $$n <= 3$$.
+
+Fix $$n <= 3$$ and take another indexed lattice $$\set{\gamma_i} \subset \Reals^n$$ of eigenvalues for an isospectral flat tori to the one defined by  $$\set{\lambda_i}$$.
+
+
+
+
+
 ## References
 
 1.  A. Schiemann, A. Schiemann, Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
