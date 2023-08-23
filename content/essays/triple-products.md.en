@@ -33,7 +33,7 @@ With $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i >= 0$$ no
 ```math
 \begin{aligned}
 
-\hat{f}(i) :&= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
+\hat{f}(i) &:= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
 
 \implies \\
 
