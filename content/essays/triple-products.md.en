@@ -7,13 +7,13 @@ Title: Triple Products of Eigenfunctions and Spectral Geometry
 
 ### Theorem
 
-Given an orthonormal basis of eigenfunctions $$\set{e^i}$$ for the Laplacian $$\\Delta_M$$ associated with a closed Riemannian Manifold $$M,g$$, by defining
+Given an orthonormal basis of eigenfunctions $$\set{e^i}$$ for the Laplacian $$\\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian Manifold $$M,g$$, by defining
 ```math
 
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx,
 
 ```
-it is a *necessary and sufficient condition* that any other **iosospectral** Riemannian Manifold which has an orthonormal basis of eigenfunction that possesses an invariant $$M^{i,j,k}$$ for it, is **isometric** to $$M,g$$.
+it is a *necessary and sufficient condition* that any other **iosospectral** Riemannian Manifold which has an orthonormal basis of eigenfunction that possesses an invariant $$M^{i,j,k}$$ for it to be **isometric** to $$M,g$$.
 
 ### Corollary
 
