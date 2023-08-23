@@ -6,7 +6,7 @@ Dependencies: *.md.en
 
 ## Abstract
 
-Using elementary techniques from Geometric Analyis, PDE, and commutative $$C^*$$ algebras, {# lede #}we discover a novel global geometric invariant{# lede #}, namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to precisely characterize which isospectral closed Riemannian Manifolds are in fact isometric.
+Using elementary techniques from Geometric Analyis, PDE, and Abelian $$C^*$$ algebras, {# lede #}we discover a novel global geometric invariant{# lede #}, namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to precisely characterize which isospectral closed Riemannian Manifolds are in fact isometric.
 
 We then use this result to reprove *isospectral flat tori are isometric for dimensions less than 4*, first proven by Schiemann<sup>1</sup> in 1993.
 
@@ -78,7 +78,7 @@ we are done with the necessity argument.
 
 For sufficiency, we consider the bijective eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, this map preserves pointwise products for smooth functions by the premise that $$M^{i,j,k}$$ is invariant under this map.
 
-This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of commutative $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
+This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
 Now we apply Gelfand's Functor<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since the Laplacian-specific Sobolev Spaces are preserved by this isometry, smoothness is an immediate consequence.
 
