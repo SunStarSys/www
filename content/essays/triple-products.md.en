@@ -43,7 +43,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging<sup>2</sup> **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty$$ is
+since $$f$$ is uniquely representable as its rapidly converging<sup>2</sup> **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ is
 
 ```math
 \begin{aligned}
