@@ -75,7 +75,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dx \\
 
 we are done with the necessity argument.
 
-For sufficiency, we consider the bijective eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, this map preserves pointwise products for smooth functions by the premise that $$M^{i,j,k}$$ is invariant under this map.
+For sufficiency, we consider the bijective eigenfunction basis map from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, this map preserves pointwise products for smooth functions by the premise that $$M^{i,j,k}$$ is invariant under this map.
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
