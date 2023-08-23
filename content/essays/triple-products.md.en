@@ -7,7 +7,7 @@ Title: Triple Products of Eigenfunctions and Spectral Geometry
 
 ### Theorem
 
-Given an orthonormal basis of eigenfunctions $$\set{e^i}$$ and eigenvalues $$\set{\lambda_i\}$$ for the Laplacian associated with a closed Riemannian Manifold $$M,g$$, by defining
+Given an orthonormal basis of eigenfunctions $$\set{e^i}$$ for the Laplacian $$\\Delta_M$$ associated with a closed Riemannian Manifold $$M,g$$, by defining
 ```math
 
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx,
