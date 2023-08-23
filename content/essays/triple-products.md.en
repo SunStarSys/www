@@ -59,7 +59,6 @@ f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x)
 
 The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Fourier Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of $$C(M)$$ by the Stone-Weierstrass theorem.
 
-
 ## Proofs
 
 ### Proof of Theorem
