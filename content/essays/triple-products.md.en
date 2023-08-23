@@ -1,0 +1,31 @@
+Status: draft
+Title: Triple Products of Eigenfunctions and Spectral Geometry
+
+
+[TOC]
+
+## Results
+
+## Theorem
+
+Given an orthonormal basis of eigenfunctions $$\set{e^i}$$ and eigenvalues $$\set{\lambda_i\}$$ for the Laplacian associated with a closed Riemannian Manifold $$M,g$$, by defining
+```math
+
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx,
+
+```
+it is a necessary and sufficient condition that any other iosospectral Riemannian Manifold which has an orthonormal basis of eigenfunctions, with an identical $$M^{i,j,k}$$ for it, is isometric to $$M,g$$.
+
+## Corollary
+
+For $$n<=3$$, isospectral flat tori are isometric.
+
+
+## Introduction
+
+## Conclusions
+
+## References
+
+
+<!-- $Date$ $Author$ $Revision$ -->
