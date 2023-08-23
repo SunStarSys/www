@@ -14,10 +14,10 @@ We then use this result to reprove *isospectral flat tori are isometric for dime
 
 ### Theorem
 
-Given an orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the Laplacian $$\\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian Manifold $$M,g$$, by defining
+Given an orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the Laplacian $$\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian Manifold $$M,g$$, define
 ```math
 
-M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx,
+M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
 To be isometric to $$M,g$$, it is a *necessary and sufficient condition* for another **iosospectral** Riemannian Manifold to have an orthonormal basis of eigenfunctions that possesses an equivalent $$M^{i,j,k}$$ for that basis.
