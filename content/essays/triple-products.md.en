@@ -28,10 +28,67 @@ For $$\dim{M}<=3$$, isospectral flat tori are isometric.
 
 ## Introduction
 
-## Conclusions
+With $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i >= 0$$ note that the **Fourier coefficients**
+
+```math
+\begin{aligned}
+
+\hat{f}(i) :&= \int_M f(x)\bar{e^i}(x)\sqrt{g(x)}dx \\
+
+\implies \\
+
+f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
+
+\end{aligned}
+
+```
+
+since $$f$$ is uniquely representable as its rapidly converging<sup>2</sup> **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty$$ is
+
+```math
+\begin{aligned}
+
+\hat{(f_1 f_2)}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}\\
+
+\implies \\
+
+f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x)
+
+\end{aligned}
+```
+
+The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Fourier Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of $$C(M)$$ by the Stone-Weierstrass theorem.
+
+
+## Proofs
+
+### Proof of Theorem
+
+For necessity, let $$F:N,h\rightarrow M,g$$ be an isometry between Riemannian manifolds, and let the target orthonormal basis of eigenfunctions on $$L^2(N,h)$$ be the pull-back via $$F$$ of the orthonormal basis $$\set{e^i}$$ on $$M,g$$ above. Since
+
+```math
+\begin{aligned}
+M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dx \\
+          &= \int_N e^i(F) e^j(F)\bar{e^k}(F)\sqrt{h}dx 
+
+\end{aligned}
+
+```
+
+we are done with the necessity argument.
+
+For sufficiency, we consider the bijective eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, this map preserves pointwise products for smooth functions by the premise that $$M^{i,j,k}$$ is invariant under this map.
+
+This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of commutative of $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
+
+Now we apply Gelfand's Functor to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since the Laplacian-specific Sobolev Spaces are preserved by this isometry, smoothness is an immediate consequence.
+
+As this now diffeomorphism must preserve the Laplacian on smooth functions, it also must preserve the principal symbols of these same elliptic operators.  The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 ## References
 
 1.  A. Schiemann, A. Schiemann, Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
+
+2. Michael Taylor, PDE books
 
 <!-- $Date$ $Author$ $Revision$ -->
