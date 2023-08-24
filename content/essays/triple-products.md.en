@@ -57,6 +57,23 @@ f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x)
 \end{aligned}
 ```
 
+moreover if $$A\subset M$$ is open, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$ is open
+
+```math
+\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \lbrace^{1 \space on \space A,}_{0 \space otherwise.}
+```
+
+and by uniqueness, we have the following identity $$\forall k>=0$$, $$support \space f \space is \space open \implies$$
+
+```math
+\hat{f}(k) = \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k} \iff f=f^2 \space on \space M \space.
+```
+
+This implies $$F$$ carries characteristic functions of open sets to characteristic functions. We need to establish that the target characteristic functions have open sets as support.
+
+...
+
+
 The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Fourier Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
 
 ## Proofs
@@ -75,7 +92,46 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dx \\
 
 we are done with the necessity argument.
 
-For sufficiency, we consider the linear bijective eigenfunction basis map from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, this map preserves pointwise products for smooth functions by the premise that $$M^{i,j,k}$$ is invariant under this map.
+For sufficiency, we now consider the linear bijective eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, $$F$$ preserves pointwise products for smooth functions (and characteristic functions of open sets off their boundary sets) by the premise that $$M^{i,j,k}$$ is invariant under this map.
+
+#### Lemma
+
+$$F: C^\infty(M)\rightarrow C^\infty(N)$$ preserves the uniform norm.
+
+##### Proof of Lemma
+
+Let $$\set{a_i}$$ be a smooth partition of unity on $$M$$.
+
+```math
+\begin{aligned}
+1 &= \sum_i a_i(x) \\
+       &= \sum_{i,j} \hat{a_i}(j)e^j(x) \\
+	   &= \sum_j e^j(x)\sum_i \hat{a_i}(j)
+\end{aligned}
+```
+
+Thus
+
+```math
+\sum_i\hat{a_i}(j) = \lbrace^{1 \space if \space j=0,}_{0 \space otherwise.}
+```
+and
+```math
+\begin{aligned}
+
+\hat{f}(k) &= \sum_{i,j,l}\hat{a_l}(i)\hat{f}(j)M^{i,j,k} \\
+           &= (\hat{f}(k) + \sum_{i,l}\hat{a_l}(i)\sum_{j!=k}\hat{f}(j)M^{i,j,k})
+\end{aligned}
+```
+so $$\forall k >= 0 $$:
+
+```math
+
+\sum_{l}\sum_{i}\hat{a_l}(i)\sum_{j!=k}\hat{f}(j)M^{i,j,k} = 0
+
+```
+
+
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
@@ -100,7 +156,6 @@ The condition $$\lambda_i + \lambda_j - \lambda_k = 0$$ represents a linear syst
 Fix $$n <= 3$$ and take another indexed lattice $$\set{\gamma_i} \subset \Reals^n$$ of eigenvalues for an isospectral flat tori to the one defined by  $$\set{\lambda_i}$$.
 
 **Note:** The long range goal here is to *construct* the corresponding bases with the $$M^{i,j,k}$$ invariance.
-
 
 ## References
 
