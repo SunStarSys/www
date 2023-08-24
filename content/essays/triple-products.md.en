@@ -1,4 +1,3 @@
-1. Status: draft
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
 Status: draft
@@ -61,7 +60,8 @@ f_1 = f^p_2 >=0 \implies \\
 
 \end{aligned}
 ```
-so any polynomial $$p \in \Complex[z]$$ commutes with $$F$$ on smooth functions.
+
+so any multivariate polynomial $$p \in \Complex[z_1,..,z_l]$$ commutes with $$F$$ on smooth functions.
 Moreover if $$A\subset M$$, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$,
 
 ```math
