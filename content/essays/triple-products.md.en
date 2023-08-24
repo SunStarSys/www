@@ -132,7 +132,9 @@ so $$\forall k >= 0 $$:
 \sum_{l}\sum_{i}\hat{a_l}(i)\sum_{j!=k}\hat{f}(j)M^{i,j,k} = 0
 
 ```
- By the dominated convergence theorem, $$ \sum_j\hat{a^p_j}(k)\rightarrow \int_{\cup_j\set{a_j=1}}e^k(x)\sqrt{g}dx \space as \space p\rightarrow\infty$$, which is arbiitrarily close to $$\delta_k$$ by choice of $$\set{a_j}$$.
+ By the dominated convergence theorem, $$ \sum_j\hat{a^p_j}(k)\rightarrow \int_{\cup_j\set{a_j=1}}e^k(x)\sqrt{g}dx \space as \space p\rightarrow\infty$$, which is arbiitrarily close to $$\delta_k$$ by choice of $$\set{a_j}$$. This means the lemma is proven for each $$a_i$$.
+
+For the general case, simply divide $$|f|$$ by its uniform norm, and the lemma is proven.
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
