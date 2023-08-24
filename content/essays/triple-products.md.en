@@ -132,7 +132,7 @@ so $$\forall k >= 0 $$:
 \sum_{l}\sum_{i}\hat{a_l}(i)\sum_{j!=k}\hat{f}(j)M^{i,j,k} = 0
 
 ```
- By the dominated convergence theorem, $$ \hat{a^p_j}(k)\rightarrow \int_{\set{a_j=1}}e^k(x)\sqrt{g}dx $$
+ By the dominated convergence theorem, $$ \hat{a^p_j}(k)\rightarrow \int_{\set{a_j=1}}e^k(x)\sqrt{g}dx \space as \space p\rightarrow\infty$$
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
