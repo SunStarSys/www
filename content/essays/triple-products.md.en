@@ -132,9 +132,7 @@ This completes the proof of the Theorem.
 Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, $$rank = n$$ lattice of eigenvalues for an $$n$$ dimensional flat torus. Then we can directly compute
 
 ```math
-
 M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
-
 ```
 
 The condition $$\lambda_i + \lambda_j - \lambda_k = 0$$ represents a linear system of equations on $$\Complex^n$$ with $$rank = min(3,n)$$, so is only uniquely solvable when $$n <= 3$$.
