@@ -113,7 +113,7 @@ Let $$\set{a_i}$$ be a smooth partition of unity on $$M$$.
 \end{aligned}
 ```
 
-Thus $$\sum_i\hat{a_i}(j) = \delta_j \space (Kroneker)$$.
+Thus $$\sum_i\hat{a_i}(j) = \delta_j$$ (Kroneker).
 
 By the dominated convergence theorem, $$ \sum_j\hat{a^p_j}(k)\rightarrow \int_{\cup_j\set{a_j=1}}e^k(x)\sqrt{g}dx \space as \space p\rightarrow\infty$$, which is arbiitrarily close to $$\delta_k$$ by choice of $$\set{a_j}$$. This means the lemma is proven for each $$a_i$$.
 
