@@ -1,6 +1,7 @@
-Status: draft
+1. Status: draft
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
+Status: draft
 
 [TOC]
 
@@ -54,27 +55,26 @@ since $$f$$ is uniquely representable as its rapidly converging<sup>2</sup> **Fo
 
 f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
-f_1 = f^2_2 >=0 \implies \\
+f_1 = f^p_2 >=0 \implies \\
 
-\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i,j,k}\hat{f_2}(i)\hat{f_2}(j)M^{i,j,k}e^k(x)
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{p-1,p,k}e^k(x)
 
 \end{aligned}
 ```
 
-moreover if $$A\subset M$$ is open, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$ is open
+moreover if $$A\subset M$$, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$,
 
 ```math
-\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \lbrace^{1 \space on \space \space the \space interior \space of \space A}_{0 \space on \space the \space interior \space of \space A^c.}
+\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \lbrace^{1 \space on \space the \space interior \space of \space A,}_{0 \space on \space the \space interior \space of \space A^c.}
 ```
 
-and by uniqueness, we have the following identity $$\forall k>=0$$, $$support \space f \space is \space open \implies$$
+and by uniqueness, we have the following identity $$\forall k>=0$$,
 
 ```math
 \hat{f}(k) = \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k} \iff f=f^2 \space on \space M \space.
 ```
 
 This implies $$F$$ carries characteristic functions to characteristic functions.
-
 
 The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Fourier Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
 
