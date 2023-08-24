@@ -48,11 +48,15 @@ since $$f$$ is uniquely representable as its rapidly converging<sup>2</sup> **Fo
 ```math
 \begin{aligned}
 
-\hat{(f_1 f_2)}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}\\
+\hat{(f_1 f_2)}(k) &= \sum_{i,j}^\infty\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k} \\
 
 \implies \\
 
-f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x)
+f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
+
+f_1 = f^2_2 >=0 \implies \\
+
+\sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i,j,k}\hat{f_2}(i)\hat{f_2}(j)M^{i,j,k}e^k(x)
 
 \end{aligned}
 ```
@@ -71,7 +75,6 @@ and by uniqueness, we have the following identity $$\forall k>=0$$, $$support \s
 
 This implies $$F$$ carries characteristic functions of open sets to characteristic functions. We need to establish that the target characteristic functions have open sets as support.
 
-...
 
 
 The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Fourier Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
