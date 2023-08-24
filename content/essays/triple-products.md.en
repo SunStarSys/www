@@ -136,7 +136,7 @@ so $$\forall k >= 0 $$:
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
-Now we apply Gelfand's Functor<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since the Laplacian-specific Sobolev Spaces are preserved by this isometry, smoothness is an immediate consequence.
+Now we apply Gelfand's Functor<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since its bijective on smooth functions, it too must be smooth.
 
 As this now diffeomorphism must preserve the Laplacian on smooth functions, it also must preserve the principal symbols of these same elliptic operators. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
