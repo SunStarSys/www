@@ -62,6 +62,7 @@ f_1 = f^p_2 >=0 \implies \\
 ```
 
 so any multivariate polynomial $$p \in \Complex[z_1,..,z_l]$$ commutes with $$F$$ on smooth functions.
+
 Moreover if $$A\subset M$$, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$,
 
 ```math
@@ -71,7 +72,7 @@ Moreover if $$A\subset M$$, then the results above hold pointwise for the *chara
 and by uniqueness, we have the following identity $$\forall k>=0$$,
 
 ```math
-\hat{f}(k) = \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k} \iff f=f^2 \space on \space M \space.
+\hat{f}(k) = \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k} \iff f=f^2 \space a.e \space on \space M.
 ```
 
 This implies $$F$$ carries characteristic functions to characteristic functions.
@@ -112,27 +113,9 @@ Let $$\set{a_i}$$ be a smooth partition of unity on $$M$$.
 \end{aligned}
 ```
 
-Thus
+Thus $$\sum_i\hat{a_i}(j) = \delta_j$$.
 
-```math
-\sum_i\hat{a_i}(j) = \lbrace^{1 \space if \space j=0,}_{0 \space otherwise.}
-```
-and
-```math
-\begin{aligned}
-
-\hat{f}(k) &= \sum_{i,j,l}\hat{a_l}(i)\hat{f}(j)M^{i,j,k} \\
-           &= (\hat{f}(k) + \sum_{i,l}\hat{a_l}(i)\sum_{j!=k}\hat{f}(j)M^{i,j,k})
-\end{aligned}
-```
-so $$\forall k >= 0 $$:
-
-```math
-
-\sum_{l}\sum_{i}\hat{a_l}(i)\sum_{j!=k}\hat{f}(j)M^{i,j,k} = 0
-
-```
- By the dominated convergence theorem, $$ \sum_j\hat{a^p_j}(k)\rightarrow \int_{\cup_j\set{a_j=1}}e^k(x)\sqrt{g}dx \space as \space p\rightarrow\infty$$, which is arbiitrarily close to $$\delta_k$$ by choice of $$\set{a_j}$$. This means the lemma is proven for each $$a_i$$.
+By the dominated convergence theorem, $$ \sum_j\hat{a^p_j}(k)\rightarrow \int_{\cup_j\set{a_j=1}}e^k(x)\sqrt{g}dx \space as \space p\rightarrow\infty$$, which is arbiitrarily close to $$\delta_k$$ by choice of $$\set{a_j}$$. This means the lemma is proven for each $$a_i$$.
 
 For the general case, simply divide $$|f|$$ by its uniform norm, and the lemma is proven.
 
