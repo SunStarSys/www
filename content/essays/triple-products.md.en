@@ -44,7 +44,6 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 ```
 
 since $$f$$ is uniquely representable as its rapidly converging<sup>2</sup> **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
-
 ```math
 \begin{aligned}
 
@@ -60,7 +59,6 @@ f_1 = f^p_2,\space p \space \in \bold{N} \implies \\
 
 \end{aligned}
 ```
-
 so any multivariate polynomial $$p \in \Complex[z_1,..,z_l]$$ **commutes** with any $$\Delta$$-eigenfunction orthonormal basis map that preserves $$M^{i,j,k}$$.
 
 Moreover if $$A\subset M$$ is Borel-measurable, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$,
