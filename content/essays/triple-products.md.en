@@ -135,7 +135,7 @@ Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, $$rank = n$$ lattice of 
 M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
 ```
 
-The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is a system of linear equations of $$rank=\min{3,n}$$, so is uniquely solvable precisely when $$n<=3$$.
+The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is a system of linear equations of $$rank=\min(3,n)$$, so is uniquely solvable precisely when $$n<=3$$.
 
 It's enough to answer this question: given $$A_1,A_2 \in GL(3,\Reals)$$, can we find an a orthonormal basis map for each them that solves $$(*)$$ for both?  Sure can!
 
