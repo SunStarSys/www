@@ -135,9 +135,17 @@ Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, $$rank = n$$ lattice of 
 M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
 ```
 
-The condition (A) $$\lambda_i + \lambda_j - \lambda_k = 0$$ represents a linear system of equations on $$\Complex^n$$ with $$rank = min(3,n)$$, so is only uniquely solvable when $$n <= 3$$.
+The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is equivalent to solving $$Ax + Ay - Az = 0$$ over $$A\in GL(n,\Reals)$$ and $$x,y,z \in \bold{Z}^3$$.
 
-This implies any 3-dimensional rank-3 lattice of eigenvalues can be uniquely mapped linearly to any other such lattice, with that map preserving the condition ($$A^2 = I$$) on each eigenspace of the Laplacian. This proves the Corollary.
+Given $$GL(3,\Reals)$$ matrices $$A_1,A_2:\bold{Z}^3\rightarrow\Reals^3$$, can we find an a $$G \in O^3(\Reals^3)\space s.t.\space A_1=GA_2$$?
+
+Let $$S_i\in GL(3,\Complex), i\in\set{1,2}$$ be the solution to $$(*)$$ (resp. $$A_1, A_2$$). Then
+
+```math
+\begin{aligned}
+S_i
+\end{aligned}
+```
 
 ## References
 
