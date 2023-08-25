@@ -135,17 +135,15 @@ Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, $$rank = n$$ lattice of 
 M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
 ```
 
-The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is equivalent to solving $$Ax + Ay - Az = 0$$ over $$A\in GL(n,\Reals)$$ and $$x,y,z \in \bold{Z}^3$$.
+The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is equivalent to the linear system of $$n$$ equations in $$3n$$ integer variables: $$x+y-z=0 \space(rank=n); x,y,z\in \bold{Z}^n$$
 
-Given $$GL(3,\Reals)$$ matrices $$A_1,A_2:\bold{Z}^3\rightarrow\Reals^3$$, can we find an a $$G \in O^3(\Reals^3)\space s.t.\space A_1=GA_2$$?
-
-Let $$S_i\in GL(3,\Complex), i\in\set{1,2}$$ be the solution to $$(*)$$ (resp. $$A_1, A_2$$). Then
-
+It's enough to answer this question: given $$A_1,A_2 \in GL(3,\Reals)$$, when can we find an a $$G \in O(3,\Reals)\space s.t.\space A_1=GA_2$$? Consider $$G= A_1A_2^{-1}$$.  We need to prove
 ```math
-\begin{aligned}
-S_i
-\end{aligned}
+A_1 \space is \space isospectral \space to \space A_2\implies G \in O(3,\Reals)
 ```
+The condition $$(*)$$ represents a $$3$$-dimensional hyperplane in $$\Reals^9$$. If the G action on $$\Reals^3$$ leaves the hyperplane invariant, we need to show $$G \in O(3,\Reals)$$.
+
+
 
 ## References
 
