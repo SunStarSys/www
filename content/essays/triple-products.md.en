@@ -135,13 +135,11 @@ Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, $$rank = n$$ lattice of 
 M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
 ```
 
-The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is equivalent to the linear system of $$n$$ equations in $$3n$$ integer variables: $$x+y-z=0 \space(rank=n); x,y,z\in \bold{Z}^n$$
+The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is a system of linear equations of $$rank=\min{3,n}$$, so is uniquely solvable precisely when $$n<=3$$.
 
-It's enough to answer this question: given $$A_1,A_2 \in GL(3,\Reals)$$, when can we find an a $$G \in O(3,\Reals)\space s.t.\space A_1=GA_2$$? Consider $$G= A_1A_2^{-1}$$.  We need to prove
-```math
-A_1 \space is \space isospectral \space to \space A_2\implies G \in O(3,\Reals)
-```
-The condition $$(*)$$ represents a $$3$$-dimensional hyperplane in $$\Reals^9$$. If the G action on $$\Reals^3$$ leaves the hyperplane invariant, we need to show $$G \in O(3,\Reals)$$.
+It's enough to answer this question: given $$A_1,A_2 \in GL(3,\Reals)$$, can we find an a orthonormal basis map for each them that solves $$(*)$$ for both?  Sure can!
+
+Define $$h_i \in GL(3,\Reals),\space i\in\set{1,2}$$ as the solution matrix to condition $$(*)$$, and consider the eigenvalue index for $$A_2$$ defined by $$\set{h^{-1}_2h_1 \lambda_i}$$.
 
 
 
