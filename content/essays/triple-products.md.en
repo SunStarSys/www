@@ -139,7 +139,7 @@ The condition $$\lambda_i + \lambda_j - \lambda_k = 0 \space (*)$$ is a system o
 
 It's enough to answer this question: given $$A_1,A_2 \in GL(3,\Reals)$$, can we find an a orthonormal basis map for $$A_i\bold{Z}^3$$ that solves $$(*)$$ for each?  Sure can!
 
-Define $$h_i \in GL(3,\Reals),\space i\in\set{1,2}$$ as the solution matrix to condition $$(*)$$, and consider the eigenvalue index for $$A_2$$ defined by $$\set{h^{-1}_2h_1 \lambda_i}$$.
+Define $$h_i \in GL(3,\Reals),\space i\in\set{1,2}$$ as the solution matrix to condition $$(*)$$ corresponding to $$A_i$$, and consider the eigenvalue index for $$A_2$$ defined by $$\set{h^{-1}_2h_1 \lambda_i}$$.
 
 Isospectrality implies each $$\Delta$$-eigenspace is mapped bijectively by the indexes, which implies $$h^{-1}_2h\in O(3,\Reals)$$, completing the proof of the Corollary.
 
