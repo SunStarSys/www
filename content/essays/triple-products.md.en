@@ -18,7 +18,7 @@ Given an orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for th
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
-To be isometric to $$M,g$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian Manifold to have an orthonormal basis of eigenfunctions that preserves the Laplacian, and possesses an equivalent $$M^{i,j,k}$$ for that basis.
+To be isometric to $$M,g$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian Manifold to have an orthonormal basis of eigenfunctions that preserves the eigenvalues, and possesses an equivalent $$M^{i,j,k}$$ for that basis.
 
 ## Introduction
 
@@ -73,9 +73,7 @@ The point of these computations is to underline the fact that $$M^{i,j,k}$$ char
 
 For the absolute convergence of these above sums involving $$M^{i,j,k}$$, see Wyman<sup>5</sup>.
 
-## Proofs
-
-### Proof of Theorem
+## Proof of Theorem
 
 For necessity, let $$F:N,h\rightarrow M,g$$ be an isometry between Riemannian Manifolds, and let the target orthonormal basis of eigenfunctions on $$L^2(N,h)$$ be the pull-back via $$F$$ of the orthonormal basis $$\set{e^i}$$ on $$M,g$$ above. Since
 
@@ -91,11 +89,11 @@ we are done with the necessity argument.
 
 For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, $$F$$ preserves pointwise products for smooth functions (and preserves characteristic functions) by the premise that $$M^{i,j,k}$$ is invariant under this map.
 
-#### Lemma
+### Lemma
 
 $$F: C^\infty(M)\rightarrow C^\infty(N)$$ preserves the uniform norm.
 
-##### Proof of Lemma
+### Proof of Lemma
 
 Let $$\set{a_i}$$ be a smooth partition of unity on $$M$$.
 
