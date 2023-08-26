@@ -131,6 +131,8 @@ M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_
 
 As this condition is linear on $$A\bold{Z}^n$$, any invertible linear map between two such lattices will preserve it.
 
+In order to apply the Theorem, we need that linear map to be $$O(n,\Reals)$$, which is exactly equivalent to earlier results on isometry classes of isospectral flat tori.
+
 ## References
 
 1. A. Schiemann, Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
