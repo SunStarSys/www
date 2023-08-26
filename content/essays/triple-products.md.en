@@ -67,7 +67,7 @@ and by uniqueness, we have the following identity $$\forall k>=0$$,
 \hat{f}(k) = \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k} \iff f=f^2 \space a.e.
 ```
 
-This implies any such basis map as above carries characteristic functions to characteristic functions.
+This implies any such basis map as above carries characteristic functions to characteristic functions in a measure-preserving fashion.
 
 The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Fourier Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
 
@@ -129,7 +129,7 @@ M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_
 
 As this condition is linear on $$A\bold{Z}^n$$, any invertible linear map between two such lattices will preserve it.
 
-In order to apply the Theorem, we need that linear map to be $$O(n,\Reals)$$, which is exactly equivalent to earlier results on isometry classes of isospectral flat tori.
+In order to apply the Theorem, we need that linear map to be $$O(n,\Reals)$$, which is exactly equivalent to earlier results<sup>1,4</sup> on isometry classes of isospectral flat tori.
 
 ## References
 
