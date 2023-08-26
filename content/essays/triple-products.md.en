@@ -18,7 +18,10 @@ Given an orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for th
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
-To be isometric to $$M,g$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian Manifold to have an orthonormal basis of eigenfunctions that preserves the eigenvalues, and possesses an equivalent $$M^{i,j,k}$$ for that basis.
+To be isometric to $$M,g$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian Manifold to have an orthonormal basis of eigenfunctions that
+
+- preserves the eigenvalues,
+- and possesses an equivalent $$M^{i,j,k}$$ for that basis.
 
 ## Introduction
 
