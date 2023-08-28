@@ -131,6 +131,10 @@ As this condition is linear on $$A\bold{Z}^n$$, any invertible linear map betwee
 
 In order to apply the Theorem, we need that linear map to be $$O(n,\Reals)$$, which is exactly equivalent to earlier results<sup>1,4</sup> on isometry classes of isospectral flat tori.
 
+## Corollary
+
+If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds cannot be isometric unless the M{i,j,k} all agree in absolute value.
+
 ## References
 
 1. A. Schiemann, Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
