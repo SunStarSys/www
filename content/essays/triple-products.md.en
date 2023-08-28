@@ -111,8 +111,7 @@ Thus $$\sum_i\hat{a_i}(j) = \delta_j$$ (Kroneker).
 
 By the dominated convergence theorem, $$ \sum_j\hat{a^p_j}(k)\rightarrow \int_{\cup_j\set{a_j=1}}e^k(x)\sqrt{g}dx \space as \space p\rightarrow\infty$$, a characteristic function of nontrivial measure on each disjoint subset. This means the Lemma is proven for each $$a_i$$.
 
-Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\set{|f|/||f||_\infty, 1 - |f|/||f||_\infty}$$, where $$ |f| == || f||_\infty$$ has nonempty interior, 
-[========]
+Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\set{|f|/||f||_\infty, 1 - |f|/||f||_\infty}$$, where $$ |f| = || f||_\infty$$ has nonempty interior,
 and the Lemma is proven.
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
