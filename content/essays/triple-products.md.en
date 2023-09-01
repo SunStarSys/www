@@ -28,6 +28,8 @@ What we offer in this article is a new perspective on a familiar tool: indexed F
 
 The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra<sup>6</sup> associated with a Chiral Conformal Field Theory<sup>7</sup>. Here $$V$$ is the Hilbert Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ comes equipped with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more complex than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit.
 
+These results were first demonstrated during a similarly titled talk by the author at **MSRI** in 1997, but they appear here in published form for the first time.
+
 With $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i >= 0$$ note that the **Fourier coefficients**
 
 ```math
