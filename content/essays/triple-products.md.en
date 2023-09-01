@@ -42,7 +42,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging<sup>2,7</sup> **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging ($$\Delta_M-specific Sobolev Embeddings<sup>2,7</sup> imply the rate of convergence is faster than any inverse polynomial in the eigenvalues) **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
@@ -77,7 +77,7 @@ and by uniqueness, we have the following identity
 
 This implies any such basis map as above carries characteristic functions (as members of $$L^1(M,g)\subset L^2(M,g)$$) to characteristic functions in a measure-preserving fashion.
 
-The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Fourier Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
+The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Harmonic Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
 
 For the absolute convergence of these above sums involving $$M^{i,j,k}$$, see Wyman<sup>5</sup>.
 
