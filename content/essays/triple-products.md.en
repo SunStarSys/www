@@ -22,7 +22,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 ## Introduction
 
-For a given Riemannian manifold $$(M,g)$$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naively one might hope that this class is always a singleton, but the academic literature is rich with constructions of specific counterexample pairings, beginning with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>.
+For a given Riemannian manifold $$(M,g)$$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naively one might hope that this class is empty, but the academic literature is rich with decades-old constructions of specific counterexample pairings, beginning with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier expansions of pairwise products of eigenfunctions as a discrete "topological invariant" that complements the discrete "analytic invariant" &mdash; the non-decreasing spectrum of the Laplace-Beltrami operator on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
