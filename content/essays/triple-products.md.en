@@ -63,10 +63,13 @@ Moreover if $$A\subset M$$ is Borel-measurable, then the results above hold poin
 \sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \lbrace^{1 \space on \space the \space interior \space of \space A,}_{0 \space on \space the \space interior \space of \space A^c.}
 ```
 
-and by uniqueness, we have the following identity $$\forall k>=0$$,
+and by uniqueness, we have the following identity
 
 ```math
-\hat{f}(k) = \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k} \iff f=f^2 \space a.e.
+\begin{aligned}
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k>=0\\
+\iff f&=f^2 \space a.e.
+\end{aligned}
 ```
 
 This implies any such basis map as above carries characteristic functions (as members of $$L^1(M,g)\subset L^2(M,g)$$) to characteristic functions in a measure-preserving fashion.
