@@ -121,13 +121,13 @@ p&\rightarrow\infty \implies\\
 \end{aligned}
 ```
 
-which is a characteristic function of positive measure on each disjoint subset. This means the Lemma is proven for each $$a_i$$, since the characteristic function of a set with positive measure is preserved (and hence has uniform norm 1).
+which is a characteristic function of positive measure on each disjoint subset $$\set{a_j = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,F(a_j^p), p\in\bold{N}$$).
 
-Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\set{|f|/||f||_\infty, 1 - |f|/||f||_\infty}$$, where $$ \set{x\in M|\space|f(x)| = ||f||_\infty}$$ has positive measure, and the Lemma is proven in full.
+Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/||f||_\infty, 1 - |f|/||f||_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = ||f||_\infty}$$ has positive measure, and the Lemma is proven in full.
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
-Now we apply Gelfand's Functor<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since it's bijective on smooth functions, it too must be smooth.
+Now we apply Gelfand's Representation Theorem for $$C^*$$ algebras<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since it's bijective on smooth functions, it too must be smooth.
 
 Since this now diffeomorphism preserves eigenvalues on eigenfunctions, it must preserve the Laplacian on smooth functions.Hence it also must preserve the principal symbols of these same elliptic operators. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
