@@ -25,7 +25,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 For a given Riemannian manifold $$(M,g)$$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naively one might hope that this class is always a singleton, but the academic literature is rich with constructions of specific counterexample pairings, beginning with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>.
 
 
-The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the $$Y$$ operator in Vertex Operator Algebras<sup>6</sup> associated to Conformal Field Theory<sup>7</sup>.
+The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the map $$Y:V\otimes V\rightarrow V((h))$$ multiplication operator in the definition of a Vertex Operator Algebra<sup>6</sup> associated with a Chiral Conformal Field Theory<sup>7</sup>. Here $$V$$ is the Hilbert Space of States, and is equipped with a traditional Fourier series orthonormal basis representing the Hilbert space of states, entirely similar to the case studied herein.
 
 With $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i >= 0$$ note that the **Fourier coefficients**
 
