@@ -42,7 +42,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging ($$\Delta_M-specific Sobolev Embeddings<sup>2,7</sup> imply the rate of convergence is faster than any inverse polynomial in the eigenvalues) **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging ($$\Delta_M$$-specific Sobolev Embeddings<sup>2,7</sup> imply the rate of convergence is faster than any inverse polynomial in the eigenvalues) **Fourier Series**. Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
