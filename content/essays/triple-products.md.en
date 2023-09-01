@@ -6,21 +6,24 @@ Status: in review
 
 ## Abstract
 
-Using elementary techniques from Geometric Analysis, PDE, and Abelian $$C^*$$ algebras, {# lede #}we uncover a novel global geometric invariant{# lede #}, namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to precisely characterize which isospectral closed Riemannian Manifolds are in fact isometric.
+Using elementary techniques from Geometric Analysis, PDE, and Abelian $$C^*$$ algebras, {# lede #}we uncover a novel global geometric invariant{# lede #}, namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to precisely characterize which isospectral closed Riemannian manifolds are in fact isometric.
 
 ## Results
 
 ### Theorem
 
-Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the Laplacian $$\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian Manifold $$M,g$$, define
+Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the (non-negative) Laplacian $$\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian manifold $$(M,g)$$, define
 ```math
 
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
-To be isometric to $$M,g$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian Manifold to have an orthonormal basis of eigenfunctions that both preserves the eigenvalues, and possesses an equivalent $$M^{i,j,k}$$ for that basis.
+To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$.
 
 ## Introduction
+
+For a given Riemannian manifold $$(M,g)$$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naively one might hope that this class is always a singleton, but the academic literature is rich with constructions of specific counterexample pairings, beginning with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup.>.
+
 
 The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the $$Y$$ operator in Vertex Operator Algebras<sup>6</sup> associated to Conformal Field Theory<sup>7</sup>.
 
@@ -165,10 +168,12 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 
 7. https://www.physique.usherbrooke.ca/pages/sites/default/files/senechal/errata.pdf
 
-8. Reed and Simon- Methods of Modern Mathematical Physics (four volume set)
+8. Reed and Simon, Methods of Modern Mathematical Physics (four volume set)
 
 9. https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
 
 10. https://arxiv.org/pdf/1108.5755.pdf
+
+11.  J. Milnor, Eigenvalues of the Laplace operator on certain manifolds, Proc. Nat. Acad. Sci. U.S.A. 51 (1964), 542
 
 <!-- $Date$ $Author$ $Revision$ -->
