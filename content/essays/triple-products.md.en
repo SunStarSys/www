@@ -81,8 +81,8 @@ For necessity, let $$F:N,h\rightarrow M,g$$ be an isometry between Riemannian Ma
 
 ```math
 \begin{aligned}
-M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dx \\
-          &= \int_N e^i(F) e^j(F)\bar{e^k}(F)\sqrt{h}dx
+M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
+          &= \int_N e^i(F(x)) e^j(F(x))\bar{e^k}(F(x))\sqrt{h}dx
 
 \end{aligned}
 ```
