@@ -22,7 +22,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 ## Introduction
 
-For a closed Riemannian manifold $$(M,g)$$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>, and continuing towards the generic dimensional characterization of the flat tori case in Schiemann's 1993 doctoral thesis<sup>1</sup>, replete with a computer aided search.
+For a closed Riemannian manifold $$(M,g)$$, characterizing its class of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>, and continuing towards the generic dimensional characterization of the flat tori case in Schiemann's 1993 doctoral thesis<sup>1</sup>, replete with a computer aided search. Along the way are offshoots into constructing isospectral, non-isometric hyperbolic Riemann surfaces by T. Sunada<sup>12</sup>.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "topological invariant" to complement the discrete "analytic invariant" &mdash; the non-decreasing spectrum of the Laplace-Beltrami operator on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
@@ -178,5 +178,7 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 10. https://arxiv.org/pdf/1108.5755.pdf
 
 11. J. Milnor, Eigenvalues of the Laplace operator on certain manifolds, Proc. Nat. Acad. Sci. U.S.A. 51 (1964), 542
+
+12. https://www.jstor.org/stable/1971195
 
 <!-- $Date$ $Author$ $Revision$ -->
