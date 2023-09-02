@@ -61,7 +61,7 @@ f_1 = f^p_2,\space p \space \in \bold{N} \implies \\
 
 \end{aligned}
 ```
-and so, *critically*, any multivariate polynomial $$p \in \Complex[z_1,..,z_l]$$ **commutes** with any spectrum-preserving $$\Delta$$-eigenfunction orthonormal basis map that preserves $$M^{i,j,k}$$.
+and so, *critically*, any multivariate polynomial $$p \in \Complex[z_1,..,z_l]$$ (on smooth functions) **commutes** with any spectrum-preserving $$\Delta$$-eigenfunction orthonormal basis map that preserves $$M^{i,j,k}$$.
 
 Moreover if $$A\subset M$$ is Borel-measurable, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$,
 
