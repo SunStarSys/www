@@ -146,7 +146,7 @@ This completes the proof of the Theorem.
 Let $$\set{\lambda_i} \subset \Reals^n$$ be an orthonormal basis of eigenvalues for an $$n$$ dimensional flat torus corresponding to $$A\in GL(n,\Reals)$$. Then we can directly compute
 
 ```math
-M^{i,j,k} = \lbrace^{1,\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
+M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
 ```
 
 As this condition is linear on $$A\bold{Z}^n$$, any invertible linear map between two such lattices will preserve it.
