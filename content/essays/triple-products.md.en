@@ -88,8 +88,10 @@ The point of these computations is to underline the fact that $$M^{i,j,k}$$ char
 
 For the rapid convergence of these above sums involving $$M^{i,j,k}$$, note that products of eigenvalues are smooth, so these Fourier coefficients decay faster than inverse polynomials in the eigenvalues. For more details see Wyman<sup>5</sup>.
 
-Note: without loss of generality, we may always assume $$M^{0,0,0} = 1/\sqrt{vol(M)}$$.
-
+Note: without loss of generality, we may always assume
+```math
+e^0 = M^{0,0,0} = 1/\sqrt{vol(M)}.
+```
 ## Proof of Theorem
 
 For necessity, let $$F:N,h\rightarrow M,g$$ be an isometry between Riemannian Manifolds, and let the target orthonormal basis of eigenfunctions on $$L^2(N,h)$$ be the pull-back via $$F$$ of the orthonormal basis $$\set{e^i}$$ on $$M,g$$ above. Since
