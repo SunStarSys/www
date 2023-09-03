@@ -90,7 +90,11 @@ For the rapid convergence of these above sums involving $$M^{i,j,k}$$, note that
 
 Note: without loss of generality, we may always assume
 ```math
-e^0 = M^{0,0,0} = 1/\sqrt{vol(M)}.
+\begin{aligned}
+e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
+\implies \\
+M^{0,j,k} &= M^{j,0,k} = \delta_j(k)/\sqrt{vol(M)}
+\end{aligned}
 ```
 ## Proof of Theorem
 
