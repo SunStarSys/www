@@ -93,9 +93,13 @@ Note: without loss of generality, we may always assume
 \begin{aligned}
 e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
 \implies \\
-M^{0,j,k} &= M^{j,0,k} = \delta_j(k)/\sqrt{vol(M)}
+M^{0,j,k} &= M^{j,0,k} = \delta(j-k)/\sqrt{vol(M)}
 \end{aligned}
 ```
+
+where $$\delta(i)$$ is the Kroneker delta function.
+
+
 ## Proof of Theorem
 
 For necessity, let $$F:N,h\rightarrow M,g$$ be an isometry between Riemannian Manifolds, and let the target orthonormal basis of eigenfunctions on $$L^2(N,h)$$ be the pull-back via $$F$$ of the orthonormal basis $$\set{e^i}$$ on $$M,g$$ above. Since
@@ -128,7 +132,7 @@ Let $$\set{a_i}$$ be a smooth partition of unity on $$M$$.
 \end{aligned}
 ```
 
-Thus $$\sum_i\hat{a_i}(j) = \delta_j$$ (Kroneker).
+Thus $$\sum_i\hat{a_i}(j) = \delta(j)$$ (Kroneker).
 
 By the dominated convergence theorem,
 
