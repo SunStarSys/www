@@ -108,7 +108,7 @@ where $$\delta(i)$$ is the Kroneker delta function.
 
 ## Proof of Theorem
 
-For necessity, let $$F:N,h\rightarrow M,g$$ be an isometry between Riemannian Manifolds, and let the target orthonormal basis of eigenfunctions on $$L^2(N,h)$$ be the pull-back via $$F$$ of the orthonormal basis $$\set{e^i}$$ on $$M,g$$ above. Since
+For necessity, let $$F:N,h\rightarrow M,g$$ be an isometry between Riemannian manifolds, and let the target orthonormal basis of eigenfunctions on $$L^2(N,h)$$ be the pull-back via $$F$$ of the orthonormal basis $$\set{e^i}$$ on $$M,g$$ above. Since
 
 ```math
 \begin{aligned}
