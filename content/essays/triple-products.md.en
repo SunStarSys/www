@@ -104,11 +104,11 @@ Note: without loss of generality, we may always assume
 \begin{aligned}
 e^0 &= M^{0,0,0} = 1/\sqrt{vol(M)} \\
 \implies \\
-M^{0,j,k} &= M^{j,0,k} = \delta(j-k)/\sqrt{vol(M)}
+M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-where $$\delta(i)$$ is the Kroneker delta function.
+where $$\delta_i$$ is the Kroneker delta function.
 
 
 ## Proof of Theorem
@@ -143,7 +143,7 @@ Let $$\set{a_i}$$ be a smooth partition of unity on $$M$$.
 \end{aligned}
 ```
 
-Thus $$\sum_i\hat{a_i}(j) = \delta(j)\sqrt{vol(M)}$$ (Kroneker delta).
+Thus $$\sum_i\hat{a_i}(j) = \delta_j\sqrt{vol(M)}$$ (Kroneker delta).
 
 By the dominated convergence theorem,
 
