@@ -32,7 +32,7 @@ Along the way were insightful offshoots into more sophisticated, non-Euclidean s
 
 For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric<sup>14</sup>.
 
-Work continues in many related areas<sup>10</sup>, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty<sup>16</sup>, finite<sup>1</sup>, compact<sup>15</sup>), for different moduli spaces of Riemannian metrics.
+Work continues in many related areas<sup>10</sup>, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty<sup>16</sup>, finite<sup>1</sup>, discrete<sup>17</sup>, compact<sup>15</sup>), for different moduli spaces of Riemannian metrics.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" &mdash; the non-decreasing spectrum of the Laplace-Beltrami operator (herein referred to as the **Laplacian**) on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
@@ -214,5 +214,7 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 15.  Gengqiang Zhou. Compactness of isospectral compact manifolds with bounded curvatures. Pacific J. Math. 181:1, 187–200, 1997
 
 16. Shukichi Tanno. A characterization of the canonical spheres by the spectrum. Math. Z. 175:3, 267–274, 1980
+
+17. Victor Guillemin and David Kazhdan. Some inverse spectral results for negatively curved nmanifolds, in Geometry of the Laplace operator. Proc. Sympos. Pure Math., 36, 153–180, 1980.
 
 <!-- $Date$ $Author$ $Revision$ -->
