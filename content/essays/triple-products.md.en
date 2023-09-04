@@ -147,7 +147,7 @@ p&\rightarrow\infty \implies\\
 \end{aligned}
 ```
 
-which is a characteristic function of positive measure on each disjoint subset $$\set{a_j = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,F(a_j^p)=F(a_j)^p, p\in\bold{N}$$).
+which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,F(a_j^p)=F(a_j)^p, p\in\bold{N}$$).
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/||f||_\infty, 1 - |f|/||f||_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = ||f||_\infty}$$ has positive measure, and the Lemma is proven in full.
 
