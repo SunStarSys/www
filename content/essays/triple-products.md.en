@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=13893
+Status: draft
 
 [TOC]
 
@@ -92,7 +92,7 @@ This implies any such basis map as above carries characteristic functions (as me
 
 The point of these computations is to underline the fact that $$M^{i,j,k}$$ characterizes the Harmonic Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
 
-For the rapid convergence of these above sums involving $$M^{i,j,k}$$, note that products of eigenvalues are smooth, so these Fourier coefficients decay faster than inverse polynomials in the eigenvalues. For more details, see Emmett Wyman's work with these coefficients with regard to the triangle inequality on the eigenvalues<sup>5</sup>.
+For the rapid convergence of these above sums involving $$M^{i,j,k}$$, note that products of eigenfunctions are smooth, so these Fourier coefficients decay faster than inverse polynomials in the eigenvalues. For more details, see Emmett Wyman's work with these coefficients with regard to the triangle inequality on the eigenvalues<sup>5</sup>.
 
 Note: without loss of generality, we may always assume
 ```math
@@ -204,3 +204,4 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 12. https://www.jstor.org/stable/1971195
 
 <!-- $Date$ $Author$ $Revision$ -->
+96 $ -->
