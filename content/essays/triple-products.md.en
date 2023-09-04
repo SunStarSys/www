@@ -118,7 +118,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 we are done with the necessity argument.
 
-For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Introduction, $$F$$ preserves pointwise products for smooth functions (and preserves characteristic functions) by the premise that $$M^{i,j,k}$$ is invariant under this map.
+For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Preliminaries above, $$F$$ preserves pointwise products for smooth functions (and preserves characteristic functions) by the premise that $$M^{i,j,k}$$ is invariant under this map.
 
 ### Lemma
 
