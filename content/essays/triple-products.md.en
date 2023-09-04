@@ -136,7 +136,7 @@ Let $$\set{a_i}$$ be a smooth partition of unity on $$M$$.
 \end{aligned}
 ```
 
-Thus $$\sum_i\hat{a_i}(j) = \sqrt{vol(M)}\delta(j)$$ (Kroneker).
+Thus $$\sum_i\hat{a_i}(j) = \delta(j)\sqrt{vol(M)}$$ (Kroneker delta).
 
 By the dominated convergence theorem,
 
