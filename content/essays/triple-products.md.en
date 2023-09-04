@@ -26,7 +26,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 ## Introduction
 
-For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>, and continuing towards the generic dimensional characterization of the flat tori case in Alexander Schiemann's 1993 doctoral thesis<sup>1</sup> &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.
+For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>, and continuing<sup>13</sup> towards the generic dimensional characterization of the flat tori case in Alexander Schiemann's 1993 doctoral thesis<sup>1</sup> &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.
 
 Along the way were insightful offshoots into more sophisticated symmetric spaces, constructing isospectral, non-isometric "duets", such as the covering space work on hyperbolic duets in dimensions 2 and 3 by Toshikazu Sunada<sup>12</sup> in 1985. Work continues in many different areas<sup>10</sup>, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (finite, discrete, compact, etc.), for different moduli spaces of Riemannian metrics.
 
@@ -202,6 +202,8 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 11. J. Milnor, Eigenvalues of the Laplace operator on certain manifolds, Proc. Nat. Acad. Sci. U.S.A. 51 (1964), 542
 
 12. https://www.jstor.org/stable/1971195
+
+13. J. H. Conway and N. J. A. Sloane, Four-dimensional lattices with the same theta series, Internat. Math. Res. Notices 4 (1992), 93–96, DOI 10.1155/S1073792892000102. MR1159450
 
 <!-- $Date$ $Author$ $Revision$ -->
 96 $ -->
