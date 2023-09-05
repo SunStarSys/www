@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14147
+Status: verified=14150
 Categories: Math
 
 [TOC]
@@ -108,7 +108,7 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-where $$\delta_i$$ is the Kronecker delta. Since the volume is a spectral invariant, this information is already available from isospectrality considerations.
+where $$\delta_i$$ is the Kronecker delta. Since $$vol(M)$$ is a spectral invariant, this information is already available from isospectrality considerations.
 
 
 ## Proof of Theorem
