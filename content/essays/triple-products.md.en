@@ -1,8 +1,7 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14178
+Status: draft
 Categories: Math
-
 
 [TOC]
 
@@ -38,7 +37,7 @@ Work continues in many related areas<sup>10</sup>, such as determining topologic
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" &mdash; the non-negative spectrum of the *Laplace-Beltrami operator* (herein referred to as the **Laplacian**) on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
-While *symmetry* plays an important role in computationally tractable cases<sup>9</sup>, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the multiplicity of the eigenvalues being 1 *uniformly*. In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the Theorem above.
+While *symmetry* plays an important role in computationally tractable cases<sup>9,20</sup>, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the multiplicity of the eigenvalues being 1 *uniformly*. In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the Theorem above.
 
 The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra<sup>6</sup> associated with a Chiral Conformal Field Theory<sup>7</sup>. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -223,4 +222,7 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 
 19. Henry P. McKean Jr. and Isadore M. Singer. Curvature and the eigenvalues of the Laplacian. J. Differential Geometry 1:1, 43–69, 1967
 
+20. https://arxiv.org/pdf/1810.01024.pdf
+
 <!-- $Date$ $Author$ $Revision$ -->
+81 $ -->
