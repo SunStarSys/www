@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14096
+Status: verified=14098
 Categories: Math
 
 [TOC]
@@ -174,7 +174,7 @@ Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lap
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
 ```
 
-As this condition is linear on the lattice $$A\bold{Z}^n$$, any volume-preserving invertible linear map between two such lattices will keep it invariant.
+As this condition is linear on the lattice $$A\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep it invariant.
 
 However, in order to apply the Theorem, we need that linear map to be $$O(n,\Reals)$$, up to the reparametrization action of $$GL(n, \bold{Z})$$ on the lattice, so as to preserve the lengths of the eigenvalues in the lattice (for isospectrality of the associated Laplacian), which is exactly equivalent to earlier results<sup>1,4</sup> on isometry classes of isospectral flat tori.
 
