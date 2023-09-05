@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14077
+Status: verified=14080
 Categories: Math
 
 [TOC]
@@ -168,7 +168,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of eigenvalues for an $$n$$ dimensional flat torus corresponding to $$A\in GL(n,\Reals)$$. Then we can directly compute
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Laplacian-commuting translation operator eigenvalues for an $$n$$ dimensional flat torus corresponding to $$A\in GL(n,\Reals)$$. Then we can directly compute
 
 ```math
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
