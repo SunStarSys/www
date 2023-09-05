@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14107
+Status: verified=14110
 Categories: Math
 
 [TOC]
@@ -23,7 +23,7 @@ Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions 
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
-To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$ under both bases.
+To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$ under each basis.
 
 ## Introduction
 
