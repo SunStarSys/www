@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14166
+Status: verified=14169
 Categories: Math
 
 [TOC]
@@ -29,7 +29,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>, and continuing<sup>13</sup> towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis<sup>1</sup> &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [4].
 
-Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing isospectral, non-isometric "duets" involving nontrivial curvature tensors and their (spectrum-determined) Euler characteristics (in dimension 2). A prime example of this effort was Toshikazu Sunada's 1985<sup>12</sup> invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
+Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2). A prime example of this effort was Toshikazu Sunada's 1985<sup>12</sup> invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
 For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric<sup>14</sup>.
 
