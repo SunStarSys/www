@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14204
+Status: draft
 Categories: Math
 
 [TOC]
@@ -160,7 +160,7 @@ Without loss of generality, we may apply the special case result shown for  the 
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
 
-Now we apply Gelfand's Representation Theorem for Abelian $$C^*$$ algebras<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since it's bijective on smooth functions, it too must be smooth.
+Now we apply Gelfand-Naimark Representation Theorem<sup>3</sup> for Abelian $$C^*$$ algebras<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since it's bijective on smooth functions, it too must be smooth.
 
 As this now diffeomorphism preserves eigenvalues and eigenfunctions, it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators<sup>2</sup>. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
@@ -227,3 +227,4 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 21. Peter Sarnak, Integrals of Products of Eigenfunctions, IMRN. No. 6, (1994), 251-260.
 
 <!-- $Date$ $Author$ $Revision$ -->
+07 $ -->
