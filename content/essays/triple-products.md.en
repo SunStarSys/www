@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14157
+Status: verified=14160
 Categories: Math
 
 [TOC]
@@ -108,7 +108,7 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 \end{aligned}
 ```
 
-where $$\delta_i$$ is the Kronecker delta. Since $$vol(M)$$ is a spectral invariant, this information is already available from isospectrality considerations.
+where $$\delta_i$$ is the Kronecker delta. Since $$vol(M)$$ is a spectral invariant<sup>18</sup>, this information is already available from isospectrality considerations.
 
 
 ## Proof of Theorem
@@ -217,5 +217,7 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 16. Shukichi Tanno. A characterization of the canonical spheres by the spectrum. Math. Z. 175:3, 267–274, 1980
 
 17. Victor Guillemin and David Kazhdan. Some inverse spectral results for negatively curved nmanifolds, in Geometry of the Laplace operator. Proc. Sympos. Pure Math., 36, 153–180, 1980.
+
+18. Weyl, Hermann (1911). "Über die asymptotische Verteilung der Eigenwerte". Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen: 110–117.
 
 <!-- $Date$ $Author$ $Revision$ -->
