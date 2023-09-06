@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14304
+Status: verified=14307
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -28,11 +28,11 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori<sup>11</sup>, and continuing<sup>13</sup> towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis<sup>1</sup> &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [4].
 
-Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2<sup>19</sup>.) A prime example of this effort was Toshikazu Sunada's 1985<sup>12</sup> invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
+Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 [MS67](#MS6). A prime example of this effort was Toshikazu Sunada's 1985<sup>12</sup> invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
 For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric<sup>14</sup>.
 
-Work continues in many related areas<sup>10</sup>, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty<sup>16</sup>, finite<sup>1</sup>, "rigid"<sup>17</sup>, compact<sup>15</sup>) as a subset of different moduli spaces of Riemannian metrics.
+Work continues in many related areas<sup>10</sup>, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty<sup>16</sup>, finite [AS93](#AS93), "rigid" [GZ97](#GZ97), compact<sup>15</sup>) as a subset of different moduli spaces of Riemannian metrics.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" &mdash; the non-negative spectrum of the *Laplace-Beltrami operator* (herein referred to as the **Laplacian**) on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
