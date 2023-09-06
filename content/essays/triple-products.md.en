@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14298
+Status: verified=14301
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -14,9 +14,7 @@ Joe Schaefer
 
 Using elementary techniques from Geometric Analysis, PDE, and Abelian $$C^*$$ algebras, {# lede #}we uncover a novel, yet familiar, global geometric invariant{# lede #} &mdash; namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to precisely characterize which isospectral closed Riemannian manifolds are in fact isometric.
 
-## Results
-
-### Theorem
+## Theorem
 
 Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the (non-negative) Laplace-Beltrami operator $$\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian manifold $$(M,g)$$, define
 ```math
@@ -42,7 +40,7 @@ While *symmetry* plays an important role in computationally tractable cases<sup>
 
 The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra<sup>6</sup> associated with a Chiral Conformal Field Theory<sup>7</sup>. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
-These results were first demonstrated during a similarly titled talk by the author at **MSRI** in 1997, but they appear here in published form for the first time. The original research was funded in part by a James Simons Research Award in 1995-1996 and an Alfred P. Sloan Dissertation Fellowship in 1996-1997.
+These results were first demonstrated during a similarly titled talk by the author at **MSRI** in 1997, but they appear here in published form for the first time.
 
 ## Preliminaries
 
@@ -182,6 +180,12 @@ However, in order to apply the Theorem, we need that linear map to be $$O(n,\Rea
 ## Conjecture
 
 If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preserving orthormal bases as described in the hypothesis of the Theorem, the manifolds are isometric if and only if the $$\set{M^{i,j,k}}$$ for one basis agrees, up to absolute value in the individual terms, with the other basis.
+
+## Acknowledgements
+
+The original research was funded in part by a gracious James Simons Research Award in 1995-1996 and the generous support of an Alfred P. Sloan Dissertation Fellowship in 1996-1997.
+
+The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid Hezari, Harish Seshadri, and Leon Takhtajan for their technical assistance and review in the preparation of this manuscript for publication.
 
 ## References
 
