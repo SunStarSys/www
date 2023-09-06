@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14352
+Status: verified=14355
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -26,10 +26,15 @@ Work continues in many related areas [[DH12]](#DH12), such as determining topolo
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" &mdash; the non-negative spectrum of the *Laplace-Beltrami operator* (herein referred to as the **Laplacian**) on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
+<br>
 
 <div class="card border-dark">
-<div class="card-header"><h3 class="card-title">Theorem</h3></div>
-<div class="card-body">
+  <div class="card-header">
+
+### Theorem
+
+  </div>
+  <div class="card-body">
 
 Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the (non-negative) Laplace-Beltrami operator $$\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian manifold $$(M,g)$$, define
 ```math
@@ -39,8 +44,9 @@ M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 ```
 To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplace-Beltrami operator) that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$ under each basis.
 
+  </div>
 </div>
-</div>
+
 <br>
 
 While *symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the Theorem above.
