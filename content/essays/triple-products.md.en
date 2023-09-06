@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14360
+Status: verified=14363
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -36,13 +36,13 @@ What we offer in this article is a new perspective on a familiar tool: indexed F
   </div>
   <div class="card-body">
 
-Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the (non-negative) Laplace-Beltrami operator $$\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian manifold $$(M,g)$$, define
+Given a (non-decreasing on the eigenvalues) orthonormal basis of eigenfunctions $$\set{e^i}_{i=0}^{\infty}$$ for the (non-negative) Laplacian $$\Delta_M$$ on $$L^2(M,g)$$ associated with a closed Riemannian manifold $$(M,g)$$, define
 ```math
 
 M^{i,j,k} := \int_M e^i e^j \bar{e^k} \sqrt{g} dx
 
 ```
-To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplace-Beltrami operator) that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$ under each basis.
+To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for another **iosospectral** closed Riemannian manifold to have an orthonormal basis of eigenfunctions (for its Laplacian) that both preserves the associated eigenvalues and possesses an invariant $$\set{M^{i,j,k}}$$ under each basis.
 
   </div>
 </div>
