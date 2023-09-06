@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14346
+Status: verified=14349
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -16,13 +16,13 @@ Using elementary techniques from Geometric Analysis, PDE, and Abelian $$C^*$$ al
 
 ## Introduction
 
-For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem [[HH]](#HH) in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing [[CS92]](#CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [[NRR22]](#NRR22).
+For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem [[DH12]](#DH12) in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing [[CS92]](#CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [[NRR22]](#NRR22).
 
 Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 [[MS67]](#MS67). A prime example of this effort was Toshikazu Sunada's 1985 [[TS85]](#TS85) invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
 For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric [[CG93]](#CG93).
 
-Work continues in many related areas [[HH]](#HH), such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty [[ST80]](#ST80), finite [[AS93]](#AS93), rigid [[GK80]](#GK80), compact [[GZ97]](#GZ97)) as a subset of different moduli spaces of Riemannian metrics.
+Work continues in many related areas [[DH12]](#DH12), such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty [[ST80]](#ST80), finite [[AS93]](#AS93), rigid [[GK80]](#GK80), compact [[GZ97]](#GZ97)) as a subset of different moduli spaces of Riemannian metrics.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" &mdash; the non-negative spectrum of the *Laplace-Beltrami operator* (herein referred to as the **Laplacian**) on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
@@ -214,11 +214,11 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 9. <a id="TF17">[TF17]</a> https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
 
-10. https://arxiv.org/pdf/1108.5755.pdf
+10. <a id="DH12">[DH12]</a> https://arxiv.org/pdf/1108.5755.pdf
 
 11. <a id="JM64">[JM64] J. Milnor</a>, Eigenvalues of the Laplace operator on certain manifolds, Proc. Nat. Acad. Sci. U.S.A. 51 (1964), 542
 
-12. https://www.jstor.org/stable/1971195
+12. <a id="TS85">[TS85]</a> https://www.jstor.org/stable/1971195
 
 13. <a id="CS92">[CS92] J. H. Conway and N. J. A. Sloane</a>, Four-dimensional lattices with the same theta series, Internat. Math. Res. Notices 4 (1992), 93–96, DOI 10.1155/S1073792892000102. MR1159450
 
