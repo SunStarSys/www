@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14316
+Status: verified=14319
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -26,13 +26,13 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 ## Introduction
 
-For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem<sup>10</sup> in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing<sup>13</sup> towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [4].
+For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem [[HH]](#HH) in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing [[CS92]](#CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [4].
 
-Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 [[MS67]](#MS6). A prime example of this effort was Toshikazu Sunada's 1985<sup>12</sup> invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
+Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 [[MS67]](#MS6). A prime example of this effort was Toshikazu Sunada's 1985 [[TS85]](#TS85) invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
-For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric<sup>14</sup>.
+For inhomogeneous Riemannian metrics, Carolyn Gordon discovered duets that are not even locally isometric [[CG93]](#CG93).
 
-Work continues in many related areas<sup>10</sup>, such as determining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty<sup>16</sup>, finite [[AS93]](#AS93), "rigid" [[GK80]](#GK80), compact [[GZ97]](#GZ97)) as a subset of different moduli spaces of Riemannian metrics.
+Work continues in many related areas [HH]](#HH) etermining topological characteristics of the class of isospectral, non-isometric manifolds in general (empty [[ST80]](#ST80), finite [[AS93]](#AS93), rigid [[GK80]](#GK80), compact [[GZ97]](#GZ97)) as a subset of different moduli spaces of Riemannian metrics.
 
 What we offer in this article is a new perspective on a familiar tool: indexed Fourier coefficients of pairwise products of eigenfunctions as a discrete "algebraic/topological invariant" to complement the existing, discrete "analytic invariant" &mdash; the non-negative spectrum of the *Laplace-Beltrami operator* (herein referred to as the **Laplacian**) on $$L^2(M,g)$$.  Combined, we observe the pair provides a "discrete global geometric representation" of the isometry classes of isospectral, closed Riemannian manifolds.
 
@@ -59,7 +59,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings<sup>2,7</sup> imply the terms in the sum decay *uniformly in $$x$$*<sup>22</sup> faster than any inverse polynomial in the eigenvalues.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS72]](#RS72) imply the terms in the sum decay *uniformly in $$x$$* [[LH68]](#LH68) faster than any inverse polynomial in the eigenvalues.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
@@ -159,9 +159,9 @@ Without loss of generality, we may apply the special case result shown for  the 
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$F$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
 
-Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras<sup>3</sup> to represent this isomorphism by a homeomorphism between $$M$$ and $$N$$. Since it is bijective on smooth functions, it too must be smooth.
+Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC90]](#JC90) to represent this isomorphism by a homeomorphism between $$M$$ and $$N$$. Since it is bijective on smooth functions, it too must be smooth.
 
-As this now diffeomorphism preserves eigenvalues and eigenfunctions, it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators<sup>2</sup>. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
+As this now diffeomorphism preserves eigenvalues and eigenfunctions, it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT11]](#MT11). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 This completes the proof of the Theorem.
 
