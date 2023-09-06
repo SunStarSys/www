@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14253
+Status: verified=14256
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -61,7 +61,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings<sup>2,7</sup> imply the terms<sup>22</sup> in the sum decay *uniformly in $$x$$* faster than any inverse polynomial in the eigenvalues) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings<sup>2,7</sup> imply the terms in the sum decay *uniformly in $$x$$*<sup>22</sup> faster than any inverse polynomial in the eigenvalues) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
