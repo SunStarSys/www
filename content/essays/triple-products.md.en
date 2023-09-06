@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14272
+Status: draft
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -159,9 +159,9 @@ which is a characteristic function of positive measure on each disjoint subset $
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/||f||_\infty, 1 - |f|/||f||_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = ||f||_\infty}$$ has positive measure, and the Lemma is proven in full.
 
-This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isometry of $$C(M)$$ and $$C(N)$$ in the same category.
+This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established an isometry of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
 
-Now we apply the Gelfand-Naimark Representation Theorem for Abelian $$C^*$$ algebras<sup>3</sup> to represent this isometry by a homeomorphism between $$M$$ and $$N$$. Since it is bijective on smooth functions, it too must be smooth.
+Now we apply the Gelfand-Naimark Representation Theorem for Abelian $$C^*$$ algebras<sup>3</sup> to represent this isomorphism by a homeomorphism between $$M$$ and $$N$$. Since it is bijective on smooth functions, it too must be smooth.
 
 As this now diffeomorphism preserves eigenvalues and eigenfunctions, it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators<sup>2</sup>. The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
@@ -230,3 +230,4 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 22.  L. Hörmander, The spectral function of an elliptic operator, Acta Math. 121 (1968), 193–218
 
 <!-- $Date$ $Author$ $Revision$ -->
+73 $ -->
