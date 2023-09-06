@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14358
+Status: verified=14360
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -51,7 +51,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 While *symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the Theorem above.
 
-The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra<sup>6</sup> associated with a Chiral Conformal Field Theory<sup>7</sup>. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
+The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra [[FBZ04]](#FBZ04) associated with a Chiral Conformal Field Theory. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
 These results were first demonstrated during a similarly titled talk by the author at **MSRI** in 1997, but they appear here in published form for the first time.
 
@@ -202,48 +202,46 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 ## References
 
+1. <a id="JC90">[JC90] Conway, J. B.</a> (1990). A Course in Functional Analysis. Graduate Texts in Mathematics. Vol. 96. Springer Verlag. ISBN 0-387-97245-5.
+
+1. <a id="CS92">[CS92] J. H. Conway and N. J. A. Sloane</a>, Four-dimensional lattices with the same theta series, Internat. Math. Res. Notices 4 (1992), 93–96, DOI 10.1155/S1073792892000102. MR1159450
+
+1. <a id="DH12">[DH12]</a> https://arxiv.org/pdf/1108.5755.pdf
+
+1. <a id="FBZ04">[FBZ04] E. Frenkel and D. Ben-Zvi</a>, 2004. Vertex Algebras and Algebraic Curves
+
+1. <a id="TF17">[TF17]</a> https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
+
+1. <a id="CG93">[CG93] Carolyn Gordon</a>, Isospectral Riemannian manifolds which are not locally isometric, J. Diff. Geom. 37 (1993), 639-650.
+
+1. <a id="GK80">[GK80] Victor Guillemin and David Kazhdan</a>. Some inverse spectral results for negatively curved nmanifolds, in Geometry of the Laplace operator. Proc. Sympos. Pure Math., 36, 153–180, 1980.
+
+1.  <a id="LH68">[LH68] L. Hörmander</a>, The spectral function of an elliptic operator, Acta Math. 121 (1968), 193–218
+
+1. <a id="LS18">[LS18]</a>  https://arxiv.org/pdf/1810.01024.pdf
+
+1. <a id="MS67">[MS67] Henry P. McKean Jr. and Isadore M. Singer</a>. Curvature and the eigenvalues of the Laplacian. J. Differential Geometry 1:1, 43–69, 1967
+
+1. <a id="JM64">[JM64] J. Milnor</a>, Eigenvalues of the Laplace operator on certain manifolds, Proc. Nat. Acad. Sci. U.S.A. 51 (1964), 542
+
+1. <a id="NRR22">[NRR22]</a> https://www.ams.org/journals/bull/2023-60-01/S0273-0979-2022-01770-3/S0273-0979-2022-01770-3.pdf
+
+1. <a id="RS72">[RS72] Reed and Simon</a>, (1972) Methods of Modern Mathematical Physics (four volume set)
+
+1. <a id="PS94">[PS94] Peter Sarnak</a>, Integrals of Products of Eigenfunctions, IMRN. No. 6, (1994), 251-260.
+
 1. <a id="AS94">[AS94] A. Schiemann</a>, Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
 
-2. <a id="MT11">[MT11] Michael Taylor</a>, (2011). Partial Differential Equations (three volume set)
+1. <a id="TS85">[TS85]</a> https://www.jstor.org/stable/1971195
 
-3. <a id="JC90">[JC90] Conway, J. B.</a> (1990). A Course in Functional Analysis. Graduate Texts in Mathematics. Vol. 96. Springer Verlag. ISBN 0-387-97245-5.
+1. <a id="ST80">[ST80] Shukichi Tanno</a>. A characterization of the canonical spheres by the spectrum. Math. Z. 175:3, 267–274, 1980
 
-4. <a id="NRR22">[NRR22]</a> https://www.ams.org/journals/bull/2023-60-01/S0273-0979-2022-01770-3/S0273-0979-2022-01770-3.pdf
+1. <a id="MT11">[MT11] Michael Taylor</a>, (2011). Partial Differential Equations (three volume set)
 
-5. <a id="EW22">[EW22]</a>  https://www.sciencedirect.com/science/article/abs/pii/S0022123622000246
+1. <a id="HW11">[HW11] Weyl, Hermann</a> (1911). "Über die asymptotische Verteilung der Eigenwerte". Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen: 110–117.
 
-6. https://www.kurims.kyoto-u.ac.jp/~kyodo/kokyuroku/contents/pdf/0904-2.pdf
+1. <a id="EW22">[EW22]</a>  https://www.sciencedirect.com/science/article/abs/pii/S0022123622000246
 
-7. http://andreghenriques.com/Teaching/CFT-2018.pdf
-
-8. <a id="RS72">[RS72] Reed and Simon</a>, (1972) Methods of Modern Mathematical Physics (four volume set)
-
-9. <a id="TF17">[TF17]</a> https://www.tobias-franke.eu/log/2017/04/19/triple-products.html
-
-10. <a id="DH12">[DH12]</a> https://arxiv.org/pdf/1108.5755.pdf
-
-11. <a id="JM64">[JM64] J. Milnor</a>, Eigenvalues of the Laplace operator on certain manifolds, Proc. Nat. Acad. Sci. U.S.A. 51 (1964), 542
-
-12. <a id="TS85">[TS85]</a> https://www.jstor.org/stable/1971195
-
-13. <a id="CS92">[CS92] J. H. Conway and N. J. A. Sloane</a>, Four-dimensional lattices with the same theta series, Internat. Math. Res. Notices 4 (1992), 93–96, DOI 10.1155/S1073792892000102. MR1159450
-
-14. <a id="CG93">[CG93] Carolyn Gordon</a>, Isospectral Riemannian manifolds which are not locally isometric, J. Diff. Geom. 37 (1993), 639-650.
-
-15. <a id="GZ97">[GZ97] Gengqiang Zhou</a>. Compactness of isospectral compact manifolds with bounded curvatures. Pacific J. Math. 181:1, 187–200, 1997
-
-16. <a id="ST80">[ST80] Shukichi Tanno</a>. A characterization of the canonical spheres by the spectrum. Math. Z. 175:3, 267–274, 1980
-
-17. <a id="GK80">[GK80] Victor Guillemin and David Kazhdan</a>. Some inverse spectral results for negatively curved nmanifolds, in Geometry of the Laplace operator. Proc. Sympos. Pure Math., 36, 153–180, 1980.
-
-18. <a id="HW11">[HW11] Weyl, Hermann</a> (1911). "Über die asymptotische Verteilung der Eigenwerte". Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen: 110–117.
-
-19. <a id="MS67">[MS67] Henry P. McKean Jr. and Isadore M. Singer</a>. Curvature and the eigenvalues of the Laplacian. J. Differential Geometry 1:1, 43–69, 1967
-
-20. <a id="LS18">[LS18]</a>  https://arxiv.org/pdf/1810.01024.pdf
-
-21. <a id="PS94">[PS94] Peter Sarnak</a>, Integrals of Products of Eigenfunctions, IMRN. No. 6, (1994), 251-260.
-
-22.  <a id="LH68">[LH68] L. Hörmander</a>, The spectral function of an elliptic operator, Acta Math. 121 (1968), 193–218
+1. <a id="GZ97">[GZ97] Gengqiang Zhou</a>. Compactness of isospectral compact manifolds with bounded curvatures. Pacific J. Math. 181:1, 187–200, 1997
 
 <!-- $Date$ $Author$ $Revision$ -->
