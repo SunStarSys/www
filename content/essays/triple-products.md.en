@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14241
+Status: verified=14244
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -61,7 +61,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings<sup>2,7</sup> imply the coefficients decay faster than any inverse polynomial in the eigenvalues.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings<sup>2,7</sup> imply the terms in the sum <sup>22</sup> decay faster than any inverse polynomial in the eigenvalues.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
@@ -226,5 +226,7 @@ If every eigenvalue has multiplicity $$1$$,  given a pair of eigenvalue preservi
 20. https://arxiv.org/pdf/1810.01024.pdf
 
 21. Peter Sarnak, Integrals of Products of Eigenfunctions, IMRN. No. 6, (1994), 251-260.
+
+22.  L. Hörmander, The spectral function of an elliptic operator, Acta Math. 121 (1968), 193–218
 
 <!-- $Date$ $Author$ $Revision$ -->
