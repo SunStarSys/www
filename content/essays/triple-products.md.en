@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14331
+Status: draft
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -26,7 +26,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 ## Introduction
 
-For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem [[DH12]](#DH12) in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing [[CS92]](#CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [[NRR23](#NRR23).
+For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem [[DH12]](#DH12) in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing [[CS92]](#CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [[NRR23]](#NRR23).
 
 Along the way were insightful offshoots into more sophisticated, non-Euclidean symmetric covering spaces with research into constructing such isospectral, non-isometric "duets" involving nontrivial curvature tensors (and their spectrum-determined Euler characteristics in dimension 2 [[MS67]](#MS67). A prime example of this effort was Toshikazu Sunada's 1985 [[TS85]](#TS85) invention of a general-purpose covering space framework, which he then deployed in the same work to construct hyperbolic duets in dimensions 2 and 3.
 
@@ -189,7 +189,7 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 ## References
 
-1. <a id="AS94">[AS94] A. Schiemann</a>, Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
+1. <a id="AS93">[AS93] A. Schiemann</a>, Ternäre positiv definite quadratische Formen mit gleichen Darstellungszahlen(German), Bonner Mathematische Schriften [Bonn Mathematical Publications], vol. 268, Universität Bonn, Mathematisches Institut, Bonn, 1994. Dissertation, Universität Bonn, Bonn, 1993. MR1294141
 
 2. <a id="MT11">[MT11] Michael Taylor</a>, (2011). Partial Differential Equations (three volume set)
 
@@ -234,3 +234,4 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 22.  <a id="LH68">[LH68] L. Hörmander</a>, The spectral function of an elliptic operator, Acta Math. 121 (1968), 193–218
 
 <!-- $Date$ $Author$ $Revision$ -->
+34 $ -->
