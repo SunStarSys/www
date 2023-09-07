@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14372
+Status: verified=14375
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -16,6 +16,8 @@ Joe Schaefer
 Using elementary techniques from Geometric Analysis, PDE, and Abelian $$C^*$$ algebras, {# lede #}we uncover a novel, yet familiar, global geometric invariant{# lede #} &mdash; namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to usprecisely characterize which isospectral closed Riemannian manifolds are in fact isometric.
 
 ## Introduction
+
+
 
 For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem [[DH12]](#DH12) in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing [[CS92]](#CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [[NRR22]](#NRR22).
 
@@ -73,7 +75,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS72]](#RS72) imply the terms in the sum decay *uniformly in $$x$$* [[LH68]](#LH68) faster than any inverse polynomial in the eigenvalues.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS72]](#RS72), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(j^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\bold{N}$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
@@ -110,7 +112,7 @@ This implies any such basis map as above carries characteristic functions (as me
 
 The point of these computations is to emphasize the fact that $$M^{i,j,k}$$ **characterizes** the Harmonic Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
 
-For the rapid convergence of these above sums involving $$M^{i,j,k}$$, note that products of eigenfunctions are smooth, so these Fourier coefficients decay faster than inverse polynomials in the eigenvalues. For more details, see Emmett Wyman's work in 2022 with these coefficients as it relates to the triangle inequality on the eigenvalues [[EW22]](#EW22).
+For the rapid convergence of these above sums involving $$M^{i,j,k}$$, note that products of eigenfunctions are smooth, so these Fourier coefficients decay as above (in each index). For more details, see Emmett Wyman's work in 2022 with these coefficients as it relates to the triangle inequality on the eigenvalues [[EW22]](#EW22).
 
 Note: without loss of generality, we may always assume
 ```math
