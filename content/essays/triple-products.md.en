@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14378
+Status: verified=14381
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -14,12 +14,9 @@ Joe Schaefer
 
 
 Using elementary techniques from Geometric Analysis, PDE, and Abelian $$C^*$$ algebras, {# lede #}we uncover a novel, yet familiar, global geometric invariant{# lede #} &mdash; namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to 
-[========]
 precisely characterize which isospectral closed Riemannian manifolds are in fact isometric.
 
 ## Introduction
-
-
 
 For a closed Riemannian manifold $$(M,g)$$, characterizing its **class** of non-isometric, isospectral manifolds is a type of Inverse Problem [[DH12]](#DH12) in Spectral Geometry. Naïvely one might speculate that this class would always be *empty*. However, the academic literature is rather rich with decades-old constructions of specific pairings of counterexamples, beginning in 1964 with John Milnor's 16-dimensional pair of non-isometric, isospectral flat tori [[JM64]](#JM64), and continuing [[CS92]](#CS92) towards the generic dimensional characterization of flat tori in Alexander Schiemann's 1993 doctoral thesis [[AS93]](#AS93) &mdash; replete with a computer aided search for the critical $$\dim = 3$$ case.  A modern survey of the full flat tori history appears in [[NRR22]](#NRR22).
 
