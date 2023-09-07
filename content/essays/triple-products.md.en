@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14420
+Status: verified=14423
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -192,7 +192,7 @@ As this condition is linear on the lattice $$A^*\bold{Z}^n = \set{\lambda_i}$$, 
 
 However, in order to apply the Theorem, it is both necessary and sufficient for that linear map to be $$O(n,\Reals)$$, so as to preserve the lengths of the eigenvalues in the indexed lattices (for isospectrality of the associated Euclidean Laplacians on the two tori.)
 
-This is exactly equivalent to earlier usage of lattice congruence [[NRR22]](#NRR22) to delineate isometry classes of isospectral flat tori.
+This is exactly equivalent to earlier usage of lattice congruence [[NRR22]](#NRR22) to delineate isometry classes of isospectral flat tori, since the matrix transpose of this linear map *is* the Riemannian isometry between the tori.
 
 ## Conjecture
 
