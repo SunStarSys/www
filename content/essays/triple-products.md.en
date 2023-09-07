@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14426
+Status: verified=14429
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -182,17 +182,19 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Laplacian-commuting Euclidean translation operator eigenvalues for an $$n$$ dimensional flat torus corresponding to $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. Then we can directly compute
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Laplacian-commuting Euclidean translation operator eigenvalues for an $$n$$ dimensional flat torus corresponding to $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$.  These mutually commuting unitary symmetries exhaust the Hilbert space of states on the torus, and simultaneously diagonalize the Laplacian when normalized as the orthonormal basis directly corresponding to $$\set{\lambda_i}$$.
+
+Then we can directly compute
 
 ```math
-M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;}_{0,\space otherwise.}
+M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space (*)}_{0,\space otherwise.}
 ```
 
-As this condition is linear on the lattice $$A^*\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep it invariant.
+As this condition $$(*)$$ is linear on the lattice $$A^*\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep it invariant.
 
-However, in order to apply the Theorem, it is both necessary and sufficient for that linear map to be $$O(n,\Reals)$$, so as to preserve the lengths of the eigenvalues in the indexed lattices (for isospectrality of the associated Euclidean Laplacians on the two tori.)
+However, in order to apply the Theorem, it is both necessary and sufficient for this linear map to be $$O(n,\Reals)$$, so as to preserve the lengths of the eigenvalues in the indexed lattices (for preservation of the spectrum of the associated Euclidean Laplacians on the two tori under the correponding basis map.)
 
-This is exactly equivalent to earlier usage of lattice congruence [[NRR22]](#NRR22) to delineate isometry classes of isospectral flat tori, since the matrix transpose of this linear map *is* the contravariant Riemannian isometry between the tori.
+This is exactly equivalent to earlier usage of *lattice congruence* [[NRR22]](#NRR22) to delineate isometry classes of isospectral flat tori, since the matrix transpose of this linear map *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the proof of our Theorem above.
 
 ## Conjecture
 
