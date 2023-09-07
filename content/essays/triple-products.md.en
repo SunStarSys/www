@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14408
+Status: verified=14411
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics
 
@@ -190,7 +190,9 @@ M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - 
 
 As this condition is linear on the lattice $$A^*\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep it invariant.
 
-However, in order to apply the Theorem, we need that linear map to be $$O(n,\Reals)$$, so as to preserve the lengths of the eigenvalues in the lattice (for isospectrality of the associated Euclidean Laplacian on the torus; moreover by Theorem-compatible construction we must preserve the rule $$i<j \implies |\lambda_i| <= |\lambda_j|$$, which neutralizes the right action of the lattice reparametrization group $$GL(n, \bold{Z})$$). This is exactly equivalent to earlier  notions of lattice congruence [[NRR22]](#NRR22) as isometry classes of isospectral flat tori.
+However, in order to apply the Theorem, we need that linear map to be $$O(n,\Reals)$$, so as to preserve the lengths of the eigenvalues in the lattice for isospectrality of the associated Euclidean Laplacian on the torus.
+
+This is exactly equivalent to earlier notions of lattice congruence [[NRR22]](#NRR22) as isometry classes of isospectral flat tori.
 
 ## Conjecture
 
