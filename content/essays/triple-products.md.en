@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14577
+Status: verified=14580
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -11,7 +11,6 @@ Keywords: spectral theory, geometry, inverse problems, mathematical physics, har
 Joe Schaefer
 
 ## Abstract
-
 
 Using elementary techniques from Geometric Analysis, PDE, and Abelian $$C^*$$ algebras, {# lede #}we uncover a novel, yet familiar, global geometric invariant{# lede #} &mdash; namely **the indexed set of integrals of triple products of eigenfunctions of the Laplace-Beltrami operator**, to precisely characterize which isospectral closed Riemannian manifolds are in fact isometric.
 
@@ -175,7 +174,6 @@ This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $
 
 Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC90]](#JC90) to represent this isomorphism by a homeomorphism between $$M$$ and $$N$$. Since it is bijective on smooth functions, it too must be smooth.
 
-
 As this now diffeomorphism preserves eigenvalues and eigenfunctions, it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT11]](#MT11). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 This completes the proof of the Theorem.
@@ -186,7 +184,7 @@ Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie
 
 Moreover, this basis simultaneously diagonalizes the torus's Euclidean Laplacian *because the Laplacian is the negative of the image of the quadratic Casimir element for the universal enveloping algebra of $$\space\Reals^n$$ under this (adjoint linear differential operator) representation*. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Euclidean length-squared of each character's weight in the lattice.
 
-We presently understand this to be our Theorem-applicable Fourier basis of eigenfunctions of this torus's Laplacian directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies |\lambda_i| <= |\lambda_j|$$. Now we can compute
+We presently view the above basis to be our Theorem-applicable Fourier basis of eigenfunctions of this torus's Laplacian directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies |\lambda_i| <= |\lambda_j|$$. Now we can compute
 
 ```math
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
