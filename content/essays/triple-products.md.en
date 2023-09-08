@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14459
+Status: verified=14462
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -182,7 +182,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of the set of all Euclidean translation operators' corresponding (technically purely imaginary) eigenvalues for an $$n$$ dimensional flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. These mutually commuting unitary symmetries' orthonormal basis of eigenfunctions exhaust the $$L^2$$ Hilbert space of states on this flat torus, while simultaneously diagonalizing the Laplacian &mdash; according to the length-squared of each such unitary symmetry's associated lattice element &mdash; when presently understood to be the Fourier basis of eigenfunctions of the torus's Laplacian directly corresponding to $$\set{\lambda_i}$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of the set of all Euclidean translation operators' corresponding eigenvalues (rescaled by $$1/2\pi\sqrt{-1}$$) for an $$n$$ dimensional flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. These mutually commuting unitary symmetries' orthonormal basis of eigenfunctions exhaust the $$L^2$$ Hilbert space of states on this flat torus, while simultaneously diagonalizing the Laplacian &mdash;  as the length-squared of each such unitary symmetry's associated lattice element &mdash; when presently understood to be the Fourier basis of eigenfunctions of the torus's Laplacian directly corresponding to $$\set{\lambda_i}$$.
 
 Then we can directly compute
 
