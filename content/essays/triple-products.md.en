@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14486
+Status: verified=14489
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -194,7 +194,7 @@ As this condition $$(a)$$ is linear on the lattice $$A^{-1\space *}\bold{Z}^n = 
 
 However, in order to apply our Theorem, it is both necessary and sufficient for such a linear map to be $$O(n,\Reals)$$, in order to preserve the spectrum of the associated Euclidean Laplacians on the tori under the Hilbert space eigenfunction basis map corresponding to this $$n$$-dimensional matrix (as applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
-This highly abstract state of affairs is exactly equivalent to the traditional development of *lattice congruence* [[NRR22]](#NRR22) to delineate isometry classes of flat tori. In fact, the "inverse transpose" of such a linear map in $$O(n,\Reals)$$ as described above *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the proof of our Theorem.
+This highly abstract state of affairs is exactly equivalent to the traditional development of *lattice congruence* [[NRR22]](#NRR22) to delineate isometry classes of flat tori. In fact, the transpose of such a linear map in $$O(n,\Reals)$$ as described above *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the proof of our Theorem.
 
 ## Conjecture
 
