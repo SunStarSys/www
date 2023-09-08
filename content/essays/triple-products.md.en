@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14525
+Status: verified=14528
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -181,6 +181,8 @@ As this now diffeomorphism preserves eigenvalues and eigenfunctions, it must pre
 This completes the proof of the Theorem.
 
 ## Example
+
+
 
 
 Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the adjoint representation of $$\Reals^n$$ (as translation invariant differential 1-forms on itself) over a flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are tied to integrable 1-forms over the torus, which integrate to multiplicative characters that form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$. Also, this basis simultaneously diagonalizes the torus's Euclidean Laplacian (the quadratic Casimir element for the universal enveloping algebra of $$\Reals^n$$) in constant proportion to the length-squared of each character's weight in the lattice.
