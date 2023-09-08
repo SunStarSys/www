@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14477
+Status: verified=14480
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -182,9 +182,9 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the Hilbert Space unitary representation of $$\Reals^n$$ as commutative translation operators for an $$n$$ dimensional flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. These weighted symmetries' orthonormal basis of eigenfunctions exhaust $$L^2(\Reals^n/A\bold{Z}^n)$$ while simultaneously diagonalizing the Laplacian &mdash;  in constant proportion to the length-squared of each such unitary symmetry's associated weight in the lattice. We presently understand this to be the traditional Fourier basis of eigenfunctions of the torus's Laplacian directly corresponding to $$\set{\lambda_i}$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the representation of $$\Reals^n$$ as (closed, unbounded, self-adjoint) infinitesimal generators of unitary translation operators on $$L^2$$ of a flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are tied to integrable generators, which provide multiplicative characters to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$. Also, this basis simultaneously diagonalizes the Laplacian in constant proportion to the length-squared of each character's weight in the lattice.
 
-Now we can compute
+We presently understand this to be the traditional Fourier basis of eigenfunctions of this torus's Laplacian directly corresponding to $$\set{\lambda_i}$$. Now we can compute
 
 ```math
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0\space\space (a);}_{0,\space otherwise.}
