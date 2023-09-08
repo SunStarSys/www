@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14589
+Status: verified=14592
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -172,7 +172,7 @@ Without loss of generality, we may apply the special case result shown for  the 
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$F$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
 
-Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC90]](#JC90) to represent this isomorphism by a homeomorphism between $$M$$ and $$N$$. Since it is bijective on smooth functions, it too must be smooth.
+Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC90]](#JC90) to represent this isomorphism by a homeomorphism between $$N$$ and $$M$$. Since it is bijective on smooth functions, it too must be smooth.
 
 As this now diffeomorphism preserves eigenvalues and eigenfunctions, it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT11]](#MT11). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
