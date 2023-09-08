@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14535
+Status: verified=14538
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -182,7 +182,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the adjoint representation of $$\Reals^n$$ (as translation invariant differential 1-forms on itself) over a flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are tied to integrable 1-forms over the torus. Upon integration to the linear functionals $$x \leftarrow <\lambda_i,x>$$, they can then be exponentiated to multiplicative characters to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$. Moreover, this basis simultaneously diagonalizes the torus's Euclidean Laplacian (the quadratic Casimir element for the universal enveloping algebra of $$\Reals^n$$) in constant proportion to the length-squared of each character's weight in the lattice.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the adjoint representation of $$\Reals^n$$ (as translation invariant differential 1-forms on itself) over a flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are tied to integrable 1-forms over the torus. Upon integration to the linear functionals $$\lambda_i(x)$$, they can then be exponentiated to multiplicative characters to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$. Moreover, this basis simultaneously diagonalizes the torus's Euclidean Laplacian (the quadratic Casimir element for the universal enveloping algebra of $$\Reals^n$$) in constant proportion to the length-squared of each character's weight in the lattice.
 
 We presently understand this to be our Theorem-applicable Fourier basis of eigenfunctions of this torus's Laplacian directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies |\lambda_i| <= |\lambda_j|$$. Now we can compute
 
