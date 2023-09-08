@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14507
+Status: verified=14510
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -183,7 +183,7 @@ This completes the proof of the Theorem.
 ## Example
 
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the adjoint representation of $$\Reals^n$$ (as translation invariant vector fields on itself) over a flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are tied to integrable vector fields over the torus, which provide multiplicative characters that form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$. Also, this basis simultaneously diagonalizes the torus's Euclidean Laplacian (aka the Casimir element for the center of the universal enveloping algebra of $$\Reals^n$$) in constant proportion to the length-squared of each character's weight in the lattice.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the adjoint representation of $$\Reals^n$$ (as translation invariant vector fields on itself) over a flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are tied to integrable vector fields over the torus, which provide multiplicative characters that form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$. Also, this basis simultaneously diagonalizes the torus's Euclidean Laplacian (a Casimir element for the center of the universal enveloping algebra of $$\Reals^n$$) in constant proportion to the length-squared of each character's weight in the lattice.
 
 We presently understand this to be the traditional Fourier basis of eigenfunctions of this torus's Laplacian directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies |\lambda_i| <= |\lambda_j|$$. Now we can compute
 
