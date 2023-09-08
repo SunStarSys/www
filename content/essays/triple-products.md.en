@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14580
+Status: verified=14583
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -194,7 +194,7 @@ As this condition $$(a)$$ is linear on the lattice $$A^{-1\space *}\bold{Z}^n = 
 
 However, in order to apply our Theorem, it is both necessary and sufficient for such a linear map to be $$O(n,\Reals)$$, in order to preserve the spectrum of the associated Euclidean Laplacians on the tori under the Hilbert space eigenfunction basis map corresponding to this $$n$$-dimensional matrix (as applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
-This highly abstract state of affairs is exactly equivalent to the traditional development of *lattice congruence* [[NRR22]](#NRR22) to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map in $$O(n,\Reals)$$ as described above *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the proof of our Theorem.
+This Lie Algebra representation-theoretical account [[AK86]](#AK86) is exactly equivalent to the traditional development of *lattice congruence* [[NRR22]](#NRR22) to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map in $$O(n,\Reals)$$ as described above *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the proof of our Theorem.
 
 ## Conjecture
 
@@ -223,6 +223,8 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 1. <a id="GK80">[GK80] Victor Guillemin and David Kazhdan</a>. Some inverse spectral results for negatively curved nmanifolds, in Geometry of the Laplace operator. Proc. Sympos. Pure Math., 36, 153–180, 1980.
 
 1.  <a id="LH68">[LH68] L. Hörmander</a>, The spectral function of an elliptic operator, Acta Math. 121 (1968), 193–218
+
+1. <a id="AK86">[AK86] Anthony Knapp</a>. Representation Theory of Semisimple Lie Groups: An Overview Based On Examples, 1986.
 
 1. <a id="LS18">[LS18]</a>  https://arxiv.org/pdf/1810.01024.pdf
 
