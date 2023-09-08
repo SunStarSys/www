@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14574
+Status: verified=14577
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis
 
@@ -184,7 +184,7 @@ This completes the proof of the Theorem.
 
 Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the adjoint representation of $$\Reals^n$$ (as translation invariant differential 1-forms on itself) over a flat torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are tied to integrable 1-forms over the torus. Upon integration to the linear functionals $$\lambda_i(x)$$, they can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that combine to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$.
 
-Moreover, this basis simultaneously diagonalizes the torus's Euclidean Laplacian *because the Laplacian is the negative of the image of the quadratic Casimir element for the universal enveloping algebra of $$\space\Reals^n$$ under this representation*. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Euclidean length-squared of each character's weight in the lattice.
+Moreover, this basis simultaneously diagonalizes the torus's Euclidean Laplacian *because the Laplacian is the negative of the image of the quadratic Casimir element for the universal enveloping algebra of $$\space\Reals^n$$ under this (adjoint linear differential operator) representation*. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Euclidean length-squared of each character's weight in the lattice.
 
 We presently understand this to be our Theorem-applicable Fourier basis of eigenfunctions of this torus's Laplacian directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies |\lambda_i| <= |\lambda_j|$$. Now we can compute
 
