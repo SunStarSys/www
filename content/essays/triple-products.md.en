@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14634
+Status: verified=14637
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -180,7 +180,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\Reals^n$$ as translation invariant vector fields on itself, when viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are thus tied to integrable 1-forms over the torus; upon integration to the linear functionals $$\lambda_i(x), x\in\Reals^n$$, they can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are thus tied to integrable 1-forms over the torus; upon integration to the linear functionals $$\lambda_i(x), x\in\Reals^n$$, they can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a quadratic Casimir element under this (linear differential operator) representation. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-induced length-squared of each character's weight in the lattice.
 
