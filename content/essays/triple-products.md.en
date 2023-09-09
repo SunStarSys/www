@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14646
+Status: verified=14649
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -190,7 +190,7 @@ We presently view the above basis to be our Theorem-applicable Fourier basis of 
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
 ```
 
-As this condition $$(a)$$ is linear on the lattice $$(A^{-1})^t\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep it invariant.
+As this condition $$(a)$$ is linear on the lattice $$(A^{-1})^t\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep $$\set{M^{i,j,k}}$$ invariant.
 
 However, in order to apply our Theorem, it is essential that such a linear map be $$O(n,\Reals)$$, because it must preserve the spectrum of the common-Casimir-element-induced-representations of the Laplacians on the tori under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
