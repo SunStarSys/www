@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14628
+Status: verified=14631
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -184,7 +184,7 @@ Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a quadratic Casimir element under this (linear differential operator) representation. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-induced length-squared of each character's weight in the lattice.
 
-We presently view the above basis to be our Theorem-applicable Fourier basis of eigenfunctions of this Euclidean torus's Laplacian directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies |\lambda_i| <= |\lambda_j|$$. Now we can compute
+We presently view the above basis to be our Theorem-applicable Fourier basis of eigenfunctions of this Euclidean torus's Laplacian directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| <= ||\lambda_j||$$. Now we can compute
 
 ```math
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
