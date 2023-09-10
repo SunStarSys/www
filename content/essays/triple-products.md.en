@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14724
+Status: draft
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -188,7 +188,7 @@ We presently view the above basis
 ```math
 \set{e^{2\pi\sqrt{-1}\lambda_i(x)}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative) Euclidean Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| <= ||\lambda_j||$$ (with the Euclidean norm). Now we can compute
+to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative) Euclidean Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| <= ||\lambda_j||$$ (with the Euclidean norm on the weights). Now we can compute
 
 ```math
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
@@ -257,3 +257,4 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 1. <a id="GZ97">[GZ97] Gengqiang Zhou</a>. Compactness of isospectral compact manifolds with bounded curvatures. Pacific J. Math. 181:1, 187–200, 1997
 
 <!-- $Date$ $Author$ $Revision$ -->
+27 $ -->
