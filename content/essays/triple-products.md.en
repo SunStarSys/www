@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14696
+Status: verified=14699
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -188,7 +188,7 @@ We presently view the above basis
 ```math
 \set{e^{2\pi\sqrt{-1}\lambda_i(x)}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (Euclidean) Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| <= ||\lambda_j||$$. Now we can compute
+to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative Euclidean) Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| <= ||\lambda_j||$$. Now we can compute
 
 ```math
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
@@ -196,7 +196,7 @@ M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - 
 
 As this condition $$(a)$$ is linear on the lattice of weights $$(A^{-1})^t\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep $$\set{M^{i,j,k}}$$ invariant.
 
-However, in order to apply our Theorem, it is essential that such a linear map be $$O(n,\Reals)$$, because it must preserve the eigenvalues of the Euclidean-Casimir-element-induced-representations (a.k.a. these Laplacians on the flat tori) under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
+However, in order to apply our Theorem, it is essential that such a linear map be $$O(n,\Reals)$$, because it must preserve the eigenvalues of these negative-Euclidean-Casimir-element-induced-representations (a.k.a. these Laplacians on the flat tori) under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
 This representation-theoretical account [[AK86]](#AK86) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map in $$O(n,\Reals)$$ as described in the prior paragraph *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the proof of our Theorem.
 
