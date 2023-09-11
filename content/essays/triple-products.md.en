@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14754
+Status: verified=14751
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -49,7 +49,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 <br>
 
-*Symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our compact Lie Group [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the [Theorem](#Theorem) above.
+*Symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the [Theorem](#Theorem) above.
 
 The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra [[FBZ04]](#FBZ04) associated with a Chiral Conformal Field Theory. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -57,7 +57,7 @@ These results were first demonstrated during a similarly titled talk by the auth
 
 ## Preliminaries
 
-Now with $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i \geq 0$$ note that the **Fourier coefficients**	
+Now with $$M,g,e^i,M^{i,j,k}$$ as above, for $$f \in C^\infty(M)$$ and $$i >= 0$$ note that the **Fourier coefficients**
 
 ```math
 \begin{aligned}
@@ -100,7 +100,7 @@ and by uniqueness, we have the following identity
 
 ```math
 \begin{aligned}
-\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k \geq 0\\
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k>=0\\
 \iff f&=f^2 \space a.e.
 \end{aligned}
 ```
@@ -180,21 +180,21 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of a of an n-dimensional Lie Algebra $$g$$'s weights for a representation of left-invariant vector fields on a Lie Group $$G$$. The weight spaces are thus tied to integrable lifts of left-invariant 1-forms over $$G$$; upon integration to the linear functionals $$\lambda_i(x), x\in\Reals^n$$, they can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(G) with the Haar measure$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. The weight spaces are thus tied to integrable lifts of constant 1-forms over the torus; upon integration to the linear functionals $$\lambda_i(x), x\in\Reals^n$$, they can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$.
 
-Moreover, this basis simultaneously diagonalizes the Laplacian on $$G$$ **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator in the flat tori case) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-induced (dual space) length-squared of each character's weight in the lattice.
+Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-induced (dual space) length-squared of each character's weight in the lattice.
 
 We presently view the above basis
 ```math
 \set{e^{2\pi\sqrt{-1}\lambda_i(x)}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative) Euclidean Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i \lt j \implies ||\lambda_i|| \leq ||\lambda_j||$$ (with the Euclidean norm on the weights). Now we can compute
+to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative) Euclidean Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| <= ||\lambda_j||$$ (with the Euclidean norm on the weights). Now we can compute
 
 ```math
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
 ```
 
-As this condition $$(a)$$ is linear on the lattice of weights, any volume-preserving invertible linear map between two such lattices will keep $$\set{M^{i,j,k}}$$ invariant.
+As this condition $$(a)$$ is linear on the lattice of weights $$(A^{-1})^t\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep $$\set{M^{i,j,k}}$$ invariant.
 
 However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map be $$O(n,\Reals)$$ on the weights, because it must preserve the eigenvalues of these Laplacians under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
