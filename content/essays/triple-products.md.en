@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14742
+Status: verified=14745
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -49,7 +49,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 <br>
 
-*Symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the Theorem above.
+*Symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the [Theorem](#Theorem) above.
 
 The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra [[FBZ04]](#FBZ04) associated with a Chiral Conformal Field Theory. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
