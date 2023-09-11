@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14739
+Status: verified=14742
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -49,7 +49,7 @@ To be isometric to $$(M,g)$$, it is a *necessary and sufficient condition* for a
 
 <br>
 
-*Symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori Example below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the Theorem above.
+*Symmetry* plays an important role in computationally tractable cases [[TF97]](#TF97) [[LS18]](#LS18) [[PS94]](#PS94), which is aptly illustrated in our flat tori [Example](#Example) below. However, the strength of our approach is perhaps best made apparent in the case of manifolds with the fewest number of Riemannian symmetries, which is the generic case often coinciding with the eigenvalues being *unique* (i.e., without nontrivial multiplicity). In this circumstance we offer an unproven conjecture: if the $$M^{i,j,k}$$ for real-valued eigenfunction bases agree up to changes of sign, there must be a change of basis map that exactly aligns them (via changes of sign) and thus proves they are isometric by application of the Theorem above.
 
 The motivation for the study of $$M^{i,j,k}$$ is loosely derived from the study of the role of the **linear multiplication operator** $$Y:V\otimes V\rightarrow V((z))$$ in the definition of a Vertex Operator Algebra [[FBZ04]](#FBZ04) associated with a Chiral Conformal Field Theory. Here $$V$$ is the Vector Space of States and $$V((z))$$ is the space of formal Laurent series in $$z$$ with coefficients in $$V$$.  Since $$V$$ often comes equipped as a Hilbert Space with a traditional Fourier series orthonormal basis, indexing $$Y$$ using the Fourier basis elements of $$V$$ is only slightly more involved than the $$M^{i,j,k}$$ case studied here, but quite similar in spirit. However a detailed comparison is out of scope for this article.
 
@@ -137,7 +137,7 @@ M^{i,j,k} &= \int_M e^i e^j \bar{e^k}\sqrt{g}dy \\
 
 we are done with the necessity argument.
 
-For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the Preliminaries above, $$F$$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $$L^2(M,g)$$) by the premise that $$M^{i,j,k}$$ is invariant under this map.
+For sufficiency, we now consider the linear, bijective orthonormal eigenfunction basis map $$F$$ from $$C^\infty(M)$$ to $$C^\infty(N)$$ and note that from the calculations in the [Preliminaries](#Preliminaries) above, $$F$$ preserves pointwise products for smooth functions (and preserves characteristic functions when extended to $$L^2(M,g)$$) by the premise that $$M^{i,j,k}$$ is invariant under this map.
 
 ### Lemma
 
@@ -196,9 +196,9 @@ M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - 
 
 As this condition $$(a)$$ is linear on the lattice of weights $$(A^{-1})^t\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep $$\set{M^{i,j,k}}$$ invariant.
 
-However, in order to apply our Theorem, it is essential that such a linear map be $$O(n,\Reals)$$ on the weights, because it must preserve the eigenvalues of these Laplacians under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
+However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map be $$O(n,\Reals)$$ on the weights, because it must preserve the eigenvalues of these Laplacians under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
-This representation-theoretical account [[AK86]](#AK86) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map in $$O(n,\Reals)$$ as described in the prior paragraph *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the proof of our Theorem.
+This representation-theoretical account [[AK86]](#AK86) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map in $$O(n,\Reals)$$ as described in the prior paragraph *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the [Proof](#Proof) of our [Theorem](#Theorem).
 
 ## Conjecture
 
