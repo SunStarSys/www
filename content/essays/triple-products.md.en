@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14767
+Status: verified=14770
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -72,7 +72,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS72]](#RS72), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(i^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\bold{N}$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS72]](#RS72), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(i^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
@@ -82,7 +82,7 @@ since $$f$$ is uniquely representable as its rapidly converging **Fourier Series
 
 f_1f_2(x) &= \sum_{i,j,k}\hat{f_1}(i)\hat{f_2}(j)M^{i,j,k}e^k(x) \\
 
-f_1 = f^p_2,\space p \space \in \bold{N} \implies \\
+f_1 = f^p_2,\space p \space \in \N \implies \\
 
 \sum_{k}\hat{f_1}(k)e^k(x) &= \sum_{i_1,...,i_p, k}\hat{f_2}(i_1)...\hat{f_2}(i_p)M^{i_1,i_2,i_3}M^{i_2,i_3,i_4}...M^{i_{p-1},i_p,k}e^k(x)
 
@@ -166,7 +166,7 @@ p&\rightarrow\infty \implies\\
 \end{aligned}
 ```
 
-which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,F(a_j^p)=F(a_j)^p, p\in\bold{N}$$).
+which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,F(a_j^p)=F(a_j)^p, p\in\N$$).
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/||f||_\infty, 1 - |f|/||f||_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = ||f||_\infty}$$ has positive measure, and the Lemma is proven in full.
 
@@ -180,7 +180,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be the rank $$n$$ lattice of weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\bold{Z}^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus, that integrate to linear functionals $$\lambda_i(x), x\in\Reals^n$$ which can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\bold{Z}^n)$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be the rank $$n$$ lattice of weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus, that integrate to linear functionals $$\lambda_i(x), x\in\Reals^n$$ which can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n)$$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-induced length-squared of each character's weight in the lattice.
 
@@ -197,7 +197,7 @@ Now we can compute
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
 ```
 
-As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\bold{Z}^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep $$\set{M^{i,j,k}}$$ invariant.
+As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, any volume-preserving invertible linear map between two such lattices will keep $$\set{M^{i,j,k}}$$ invariant.
 
 However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map be $$O(n,\Reals)$$ on the analytically integrable elements, because it must preserve the eigenvalues of these Laplacians under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
