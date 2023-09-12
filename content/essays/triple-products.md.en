@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14773
+Status: verified=14776
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -100,7 +100,7 @@ and by uniqueness, we have the following identity
 
 ```math
 \begin{aligned}
-\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k>=0\\
+\hat{f}(k) &= \sum_{i,j}\hat{f}(i)\hat{f}(j)M^{i,j,k}\space\space \forall k\geq 0\\
 \iff f&=f^2 \space a.e.
 \end{aligned}
 ```
@@ -189,7 +189,7 @@ We presently view the above basis
 ```math
 \set{e^{2\pi\sqrt{-1}\lambda_i(x)}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative) Euclidean Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| <= ||\lambda_j||$$ (with the Euclidean norm on the weights).
+to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative) Euclidean Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| \leq \lambda_j||$$ (with the Euclidean norm on the weights).
 
 Now we can compute
 
