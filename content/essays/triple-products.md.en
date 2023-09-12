@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14788
+Status: verified=14789
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -180,7 +180,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be the rank $$n$$ lattice of weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus, that integrate to linear functionals $$\lambda_i(x), x\in\Reals^n$$ which can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n)$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be the rank $$n$$ lattice of weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus, that integrate to linear functionals $$\lambda_i(x), x\in\Reals^n$$ which can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n)$$ with Lebesgue measure.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-induced length-squared of each character's weight in the lattice.
 
