@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14810
+Status: verified=14813
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -199,7 +199,7 @@ M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - 
 
 As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map induced from a volume-preserving invertible linear map between two such lattices will keep the "algebraic/topological" $$\set{M^{i,j,k}}$$ invariant.
 
-However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map be $$O(n,\Reals)$$ on the weights, because the induced $$L^2$$ basis map must also preserve the "analytic" invariant &mdash;  the $$4\pi$$ Euclidean-length-squared of each weight, aka eigenvalues, of these Casimir-induced Laplacians under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
+However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map be $$O(n,\Reals)$$ on the weights, because the induced $$L^2$$ basis map must also preserve the "analytic" invariant &mdash;  the $$4\pi^2$ times Euclidean-length-squared of each weight, aka eigenvalues, of these Casimir-induced Laplacians under the eigenfunction basis map corresponding to this $$n$$-dimensional matrix (once applied to $$\set{\lambda_i} \subset \Reals^n$$.)
 
 This representation-theoretical account [[AK86]](#AK86) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map in $$O(n,\Reals)$$ as described in the prior paragraph *is* the contravariant Riemannian isometry between the tori as provided by the Gelfand-Naimark Representation Theorem employed during the [Proof](#Proof%20of%20Theorem) of our [Theorem](#Theorem).
 
