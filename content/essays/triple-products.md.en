@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14801
+Status: verified=14804
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -189,7 +189,7 @@ We presently view the above basis
 ```math
 \set{e^{2\pi\sqrt{-1}\lambda_i(x)}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-to be our Theorem-applicable Fourier basis of eigenfunctions of this quotient representation of the (negative) Euclidean Casimir element directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| \leq \lambda_j||$$ (with the Euclidean norm on the weights).
+to be our Theorem-applicable Fourier basis of eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $$\set{\lambda_i}$$, where $$i < j \implies ||\lambda_i|| \leq \lambda_j||$$ (with the Euclidean norm on the weights).
 
 Now we can compute
 
