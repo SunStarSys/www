@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14837
+Status: verified=14840
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -197,7 +197,7 @@ Now we can compute
 M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
 ```
 
-As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map &mdash; which is *induced* from a volume-preserving invertible linear map between two such weight lattices &mdash; will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
+As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
 
 However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map $$B\in O(n,\Reals)$$ on the weight lattice, because the induced $$L^2$$ eigenfunction basis map
 
