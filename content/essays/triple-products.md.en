@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14864
+Status: verified=14867
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -88,7 +88,7 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 
 \end{aligned}
 ```
-and so, *critically*, any multivariate polynomial $$\weierp \in \Complex[z_1,..,z_l]$$ (on smooth functions) **commutes** with any spectrum-preserving $$\Delta$$-eigenfunction orthonormal basis map that preserves $$M^{i,j,k}$$.
+and so, *critically*, any multivariate polynomial $$\weierp \in \Complex[z_1,..,z_l]$$ (on smooth functions) **commutes** with any spectrum-preserving $$\Delta$$-eigenfunction orthonormal basis map that preserves $$\set{M^{i,j,k}}$$.
 
 Moreover if $$A\subset M$$ is Borel-measurable, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$,
 
@@ -107,7 +107,7 @@ and by uniqueness, we have the following identity
 
 This implies any such basis map as above carries characteristic functions (as members of $$L^2(M,g)\subset L^1(M,g)$$) to characteristic functions in a measure-preserving fashion.
 
-The point of these computations is to emphasize the fact that $$M^{i,j,k}$$ **characterizes** the Harmonic Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
+The point of these computations is to emphasize the fact that $$\set{M^{i,j,k}}$$ **characterizes** the Harmonic Analysis of the pointwise multiplication operator on $$C^\infty(M)$$, which is a dense subalgebra of the Abelian $$C^*$$ algebra $$C(M)$$, by the Stone-Weierstrass theorem.
 
 For the rapid convergence of these above sums involving $$M^{i,j,k}$$, note that products of eigenfunctions are smooth, so these Fourier coefficients decay as above (in each index). For more details, see Emmett Wyman's work in 2022 with these coefficients as it relates to the triangle inequality on the eigenvalues [[EW22]](#EW22).
 
@@ -166,7 +166,7 @@ p&\rightarrow\infty \implies\\
 \end{aligned}
 ```
 
-which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,F(a_j^p)=F(a_j)^p, p\in\N$$).
+which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$).
 
 Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/||f||_\infty, 1 - |f|/||f||_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = ||f||_\infty}$$ has positive measure, and the Lemma is proven in full.
 
@@ -180,14 +180,14 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\lambda_i(x), x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\langle x, \lambda_i\rangle,\space x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-determined-length-squared of each character's weight in the lattice.
 
 We presently view the above basis
 
 ```math
-\set{e^{2\pi\sqrt{-1}\lambda_i(x)}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x, \lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
 to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $$\set{\lambda_i}$$. By our Theorem's hypotheses, we must have $$i < j \implies ||\lambda_i|| \leq \lambda_j||$$ (with the Euclidean norm on the weights).
 
@@ -202,7 +202,7 @@ As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\Z^n = \se
 However, in order to apply our [Theorem](#Theorem), it is essential that such a linear map $$B$$ be $$B\in O(n,\Reals)$$ on the weight lattice, because the induced $$L^2$$ eigenfunction basis map
 
 ```math
-\set{e^{2\pi\sqrt{-1}(B\lambda_i)(x)}/\sqrt{|\det A|}}_{i=0}^\infty
+\set{e^{2\pi\sqrt{-1}\langle x, B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 
 ```
 
