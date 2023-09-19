@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14876
+Status: verified=14879
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -72,7 +72,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS72]](#RS72), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(i^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS75]](#RS75), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(i^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
@@ -172,7 +172,7 @@ Without loss of generality, we may apply the special case result shown for  the 
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$F$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
 
-Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC90]](#JC90) to represent this isomorphism by a homeomorphism between $$N$$ and $$M$$. Since it is bijective on smooth functions, it too must be smooth.
+Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC19]](#JC19) to represent this isomorphism by a homeomorphism between $$N$$ and $$M$$. Since it is bijective on smooth functions, it too must be smooth.
 
 As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $$F$$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT11]](#MT11). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
@@ -194,7 +194,7 @@ to be our Theorem-applicable Fourier basis of orthonormal (multiplicative charac
 Now we can compute
 
 ```math
-M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0;\space\space (a)}_{0,\space otherwise.}
+M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0; \space\space\space\space\space\space (a)}_{0,\space otherwise.}
 ```
 
 As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such indexed, rank $$n$$ weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
@@ -222,7 +222,7 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 ## References
 
-1. <a id="JC90">[JC90] Conway, John B.</a> A course in functional analysis. Vol. 96. Springer, 2019.
+1. <a id="JC19">[JC19] Conway, John B.</a> A course in functional analysis. Vol. 96. Springer, 2019.
 
 1. <a id="CS92">[CS92] Conway, John H. and N. J. A. Sloane</a>, "Four-dimensional lattices with the same theta series", Internat. Math. Res. Notices 4, (1992): 93–96, DOI 10.1155/S1073792892000102. MR1159450
 
@@ -248,7 +248,7 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 1. <a id="NRR22">[NRR22] Nilsson, Erik, Julie Rowlett, and Felix Rydell</a>. "The isospectral problem for flat tori from three perspectives." Bulletin of the American Mathematical Society 60.1 (2023): 39-83.
 
-1. <a id="RS72">[RS72] Reed, Michael, and Barry Simon</a>. II: Fourier analysis, self-adjointness. Vol. 2. Elsevier, 1975.
+1. <a id="RS75">[RS75] Reed, Michael, and Barry Simon</a>. II: Fourier analysis, self-adjointness. Vol. 2. Elsevier, 1975.
 
 1. <a id="PS94">[PS94] Sarnak, Peter</a>. "Integrals of Products of Eigenfunctions", IMRN. No. 6, (1994): 251-260.
 
