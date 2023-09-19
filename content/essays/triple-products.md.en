@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14903
+Status:  verified
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -93,7 +93,8 @@ and so, *critically*, any multivariate polynomial $$\weierp \in \Complex[z_1,..,
 Moreover if $$A\subset M$$ is Borel-measurable, then the results above hold pointwise for the *characteristic function of $$A$$* everywhere except along the boundary of $$A$$: if $$f = f^2$$ and $$A:=\set{x\in M|f(x)=1}$$,
 
 ```math
-\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \lbrace^{1 \space on \space the \space interior \space of \space A,}_{0 \space on \space the \space interior \space of \space A^c.}
+\sum_{i}\hat{f}(i)e^i(x) = \sum_{i,j,k}\hat{f}(i)\hat{f}(j)M^{i,j,k}e^k(x) = \begin{cases}1 &\text{on the interior of }A,\\
+0 & \text{on the interior of } A^\complement.\end{cases}
 ```
 
 and by uniqueness, we have the following identity
@@ -180,7 +181,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as the Lie Algebra's associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\langle x, \lambda_i\rangle,\space x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
+Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\frak{g}=\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as $$\frak{g}'s$$ associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\langle x, \lambda_i\rangle,\space x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-determined-length-squared of each character's weight in the lattice.
 
