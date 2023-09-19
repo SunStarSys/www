@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14912
+Status: verified=14915
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -191,7 +191,7 @@ We presently view the above basis
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x, \lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $$\set{\lambda_i}$$. By our Theorem's hypotheses, we must have $$i < j \implies ||\lambda_i|| \leq \lambda_j||$$ (with the Euclidean norm on the weights).
+to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $$\set{\lambda_i}$$. By our Theorem's hypotheses, we must have $$i < j \implies \|\ambda_i\| \leq \|\lambda_j\|$$ (with the Euclidean norm on the weights).
 
 Now we can compute
 
@@ -211,7 +211,7 @@ However, in order to apply our [Theorem](#Theorem), it is essential that such a 
 
 ```
 
-must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2||\lambda_i||^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
+must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2\|\lambda_i\|^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
 
 This representation-theoretical account [[AK01]](#AK01) is exactly equivalent to the prior development of *lattice congruence* [[NRR22]](#NRR22) traditonally used to delineate isometry classes of flat tori. In fact, the matrix transpose of such a linear map $$B\in O(n,\Reals)$$, as described in the prior paragraph, *is* the contravariant Riemannian isometry between the tori, as provided by application of the Gelfand-Naimark Representation Theorem during the [Proof](#Proof%20of%20Theorem) of our [Theorem](#Theorem).
 
