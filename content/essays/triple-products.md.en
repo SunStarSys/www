@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14918
+Status: verified=14920
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -197,7 +197,7 @@ Now we can compute
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0\\
+1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0 \space\space\space (a)\\
 0 & \text{otherwise}
 \end{cases}
 ```
@@ -208,7 +208,6 @@ However, in order to apply our [Theorem](#Theorem), it is essential that such a 
 
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x, B\lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
-
 ```
 
 must also preserve the "analytic" invariants &mdash; the Casimir-element induced figure $$4\pi^2\|\lambda_i\|^2$$ for each indexed weight, i.e. the individual eigenvalues of the flat-tori's Laplacian.
