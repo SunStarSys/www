@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status:  verified
+Status: verified=14912
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -196,7 +196,10 @@ to be our Theorem-applicable Fourier basis of orthonormal (multiplicative charac
 Now we can compute
 
 ```math
-M^{i,j,k} = \lbrace^{1/\sqrt{|\det A|},\space if \space \lambda_i + \lambda_j - \lambda_k = 0; \space\space\space\space\space\space (a)}_{0,\space otherwise.}
+M^{i,j,k} = \begin{cases}
+1/\sqrt{|\det A|} & \tag{a} \lambda_i + \lambda_j - \lambda_k = 0\\
+0 & \text{otherwise}
+\end{cases}
 ```
 
 As this condition $$(a)$$ is linear on the weight lattice $$(A^{-1})^t\Z^n = \set{\lambda_i}$$, only an $$L^2$$ orthonormal eigenfunction basis map **which is induced from a volume-preserving invertible linear map between two such indexed, rank $$n$$ weight lattices** will keep the "algebraic/topological" indexed data set $$\set{M^{i,j,k}}$$ invariant.
