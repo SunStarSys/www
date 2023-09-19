@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14917
+Status: verified=14918
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -170,7 +170,7 @@ p&\rightarrow\infty \implies\\
 
 which is a characteristic function of positive measure on each disjoint subset $$\set{x\in M | a_j(x) = 1}$$. This means the Lemma is proven for each $$a_j$$, since the limiting characteristic function of a set with positive measure is preserved (and hence has uniform norm 1, as do all $$a_j^p,\space F(a_j^p)=F(a_j)^p,\space p\in\N$$).
 
-Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/||f||_\infty, 1 - |f|/||f||_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = ||f||_\infty}$$ has positive measure, and the Lemma is proven in full.
+Without loss of generality, we may apply the special case result shown for  the smooth partition of unity $$\lbrace|f|/\lVert f \rVert_\infty, 1 - |f|/\lVert f\rVert_\infty\rbrace$$, where $$ \set{x\in M|\space|f(x)| = \lVert f \rVert_\infty}$$ has positive measure, and the Lemma is proven in full.
 
 This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $$F$$ as an isomorphism of Abelian $$C^*$$ algebras, and thus can be extended to an isomorphism of $$C(M)$$ and $$C(N)$$ in the same category.
 
@@ -182,7 +182,7 @@ This completes the proof of the Theorem.
 
 ## Example
 
-Let $$\set{\lambda_i} \subset \Reals^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\frak{g}=\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as $$\frak{g}'s$$ associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\langle x, \lambda_i\rangle,\space x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
+Let $$\set{\lambda_i} \subset \R^n$$ be an indexed, rank $$n$$ lattice of Lie Algebra weights for the quotient space representation of $$\frak{g}=\Reals^n$$ as translation invariant (i.e., constant) vector fields on itself, when $$\R^n$$ is also viewed as $$\frak{g}'s$$ associated Lie Group over a torus defined by $$\Reals^n/A\Z^n, A \in GL(n,\Reals)$$. These weights define integrable lifts of 1-forms over the torus that integrate to linear functionals $$\langle x, \lambda_i\rangle,\space x\in\Reals^n$$ as its Lie Group (covering the torus). These linear functionals can then be uniformly rescaled (by $$2\pi \sqrt{-1}$$) and exponentiated to form multiplicative characters that descend to form an orthonormal basis of $$L^2(\Reals^n/A\Z^n,dx)$$, with Lebesgue (Haar) measure $$dx$$.
 
 Moreover, this basis simultaneously diagonalizes the flat torus's Laplacian **because** the Laplacian is the image of a symmetric, negative-definite quadratic Casimir element under this (constant coefficient linear differential operator) quotient space representation of the universal enveloping algebra. Hence, its eigenvalues are in constant proportion (of $$4\pi^2$$) to the Casimir-element-determined-length-squared of each character's weight in the lattice.
 
@@ -191,13 +191,13 @@ We presently view the above basis
 ```math
 \set{e^{2\pi\sqrt{-1}\langle x, \lambda_i\rangle}/\sqrt{|\det A|}}_{i=0}^\infty
 ```
-to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $$\set{\lambda_i}$$. By our Theorem's hypotheses, we must have $$i < j \implies \|\lambda_i\| \leq \|\lambda_j\|$$ (with the Euclidean norm on the weights).
+to be our Theorem-applicable Fourier basis of orthonormal (multiplicative character) eigenfunctions (of this quotient representation of the (negative) Euclidean Casimir element) directly corresponding to $$\set{\lambda_i}$$. By our Theorem's hypotheses, we must have $$i < j \implies \lVert \lambda_i\rVert \leq \lVert\lambda_j\rVert$$ (with the Euclidean norm on the weights).
 
 Now we can compute
 
 ```math
 M^{i,j,k} = \begin{cases}
-1/\sqrt{|\det A|} & \tag{a} \lambda_i + \lambda_j - \lambda_k = 0\\
+1/\sqrt{|\det A|} & \lambda_i + \lambda_j - \lambda_k = 0\\
 0 & \text{otherwise}
 \end{cases}
 ```
