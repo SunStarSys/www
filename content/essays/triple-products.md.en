@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14894
+Status: verified=14897
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -72,7 +72,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 
 ```
 
-since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT11]](#MT11) [[RS75]](#RS75), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(i^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(i^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
 ```math
 \begin{aligned}
 
@@ -174,7 +174,7 @@ This means that on a dense set of $$C(M)$$ (and $$C(N)$$), we have established $
 
 Now we apply the Gelfand-Naimark Representation Theorem (in contravariant functor form) for Abelian $$C^*$$ algebras [[JC19]](#JC19) to represent this isomorphism by a homeomorphism between $$N$$ and $$M$$. Since it is bijective on smooth functions, it too must be smooth.
 
-As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $$F$$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT11]](#MT11). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
+As this now diffeomorphism preserves eigenvalues and eigenfunctions (by hypothesis on $$F$$), it must preserve the Laplacian on smooth functions. Hence it also must preserve the principal symbols of these same elliptic operators [[MT13]](#MT13). The principal symbols of the Laplacian are simply another means of expressing the Riemannian metric on the manifolds in question.
 
 This completes the proof of the Theorem.
 
@@ -258,7 +258,7 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 
 1. <a id="ST80">[ST80] Tanno, Shukichi</a>. "A characterization of the canonical spheres by the spectrum." Math. Z. 175:3, (1980): 267–274.
 
-1. <a id="MT11">[MT11] Taylor, Michael</a>. Partial differential equations II: Qualitative studies of linear equations. Vol. 116. Springer Science & Business Media, 2013.
+1. <a id="MT13">[MT13] Taylor, Michael</a>. Partial differential equations II: Qualitative studies of linear equations. Vol. 116. Springer Science & Business Media, 2013.
 
 1. <a id="HW11">[HW11] Weyl, Hermann</a> "Über die asymptotische Verteilung der Eigenwerte." Nachrichten der Königlichen Gesellschaft der Wissenschaften zu Göttingen: (1911): 110–117.
 
