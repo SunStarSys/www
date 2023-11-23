@@ -8,8 +8,11 @@ div.right img {
 
 div.essay {
 	margin-top:20px;
-	line-height: 20px;
 	width:100%;
+}
+
+div.essay p {
+	line-height: 20px;
 }
 
 div.jumbotron div.right {
