@@ -6,24 +6,19 @@ Status: draft
 	<img src="../images/sunstarstaronly.png"></img>
 </div>
 
+## Live Demo
+
+For a demonstration of Orion &trade;'s IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
+
+If that's too much bother for you, this website is self-hosted on Orion &trade;, and those hot-pink pencil icons [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) at the upper right alongside the breadcrumbs will give you a live demonstration of how the system works (sans commit/build access, which is locked down to staff only).
 
 ## Recommended Bookmarklet
 
 Please be sure to install the bookmarklet on your browser toolbar by opening a "New Bookmark" dialog screen from your browser's menu and typing the following into the Location/URL field:
 
-<br>
-
-<br>
-
-<br>
-
 ```javascript
 	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
 ```
-
-<br>
-
-<br>
 
 Without this bookmarklet installed you will not be able to browse the live site and instantly edit pages in Orion &trade; by clicking on the bookmarklet.
 
@@ -33,13 +28,6 @@ To use the bookmarklet simply browse to your live production site (NOT in Orion 
 ## IoC Build API
 
 [snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
-
-## Live Demo
-
-For a demonstration of Orion &trade;'s IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
-
-If that's too much bother for you, this website is self-hosted on Orion &trade;, and those hot-pink pencil icons [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) at the upper right alongside the breadcrumbs will give you a live demonstration of how the system works (sans commit/build access, which is locked down to staff only).
-
 
 ## Onboarding Process
 
