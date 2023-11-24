@@ -7,15 +7,23 @@ Status: draft
 </div>
 
 
-## General Usage
-
 ## Recommended Bookmarklet
 
 Please be sure to install the bookmarklet on your browser toolbar by opening a "New Bookmark" dialog screen from your browser's menu and typing the following into the Location/URL field:
 
+<br>
+
+<br>
+
+<br>
+
 ```javascript
 	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
 ```
+
+<br>
+
+<br>
 
 Without this bookmarklet installed you will not be able to browse the live site and instantly edit pages in Orion &trade; by clicking on the bookmarklet.
 
