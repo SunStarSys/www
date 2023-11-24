@@ -1,5 +1,7 @@
 Title: Orion Technology
 Dependencies: *.md.en
+Keywords: Markdown, Asymptote, Mermaid
+Status: draft
 
 ## Solaris 11.4
 
@@ -124,3 +126,5 @@ joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}})
 {% endfor %}
+
+<!-- $Date$ $Author$ $Revision$ -->
