@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=15021
+Status: verified=15065
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -80,6 +80,7 @@ f(x)        &= \sum_{i=0}^{\infty}\hat{f}(i)e^i(x)
 ```
 
 since $$f$$ is uniquely representable as its rapidly converging **Fourier Series** ($$\Delta_M$$-specific Sobolev Embeddings [[MT13]](#MT13) [[RS75]](#RS75), together with Weyl's Asymptotic Law [[HW11]](#HW11), imply the terms in the sum are $$o(i^{-n})$$ *uniformly in $$x$$* [[LH68]](#LH68), $$\forall n\in\N$$.) Then we see that for $$f_1, f_2 \in C^\infty(M)$$, the Fourier coefficients of the pointwise product $$f_1 f_2 \in C^\infty(M)$$ are
+
 ```math
 \begin{aligned}
 
@@ -95,6 +96,7 @@ f_1 = f^p_2,\space p \space \in \N \implies \\
 
 \end{aligned}
 ```
+
 and so, *critically*, any multivariate polynomial $$\weierp \in \Complex[z_1,...,z_l]$$ (on smooth functions) **commutes** with any spectrum-preserving $$\Delta$$-eigenfunction orthonormal basis map $$F$$ that preserves $$\set{M^{i,j,k}}$$:
 
 ```math
@@ -138,7 +140,6 @@ M^{0,j,k} &= M^{j,0,k} = \delta_{j-k}\space/\sqrt{vol(M)}
 ```
 
 where $$\delta_i$$ is the Kronecker delta. Since $$vol(M)$$ is a spectral invariant [[HW11]](#HW11), this information is already available from isospectrality considerations.
-
 
 ## Proof of Theorem
 
