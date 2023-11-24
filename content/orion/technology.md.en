@@ -66,7 +66,7 @@ We're a NoSQL shop for our entire website infrastructure, and if you are saddled
 
 To be sure, here is a snapshot, dated July 19, 2020, of the SunStar Systems portion of the production source tree for the entire Orion (IDE+build).  There is little else involved beyond our [`Dotiac::DTL`](#) fork.  All of the build-related code has already been open-sourced on GitHub.  What remains private are the C-based customizations to third party source trees, which are unique differentiators for our product.
 
-```
+```text
 joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
      1 build/lib/SunStarSys/ASF.pm
    128 build/lib/SunStarSys/SVNUtil.pm
