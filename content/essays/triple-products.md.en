@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=14989
+Status: verified=15011
 Categories: Math
 Keywords: spectral theory, geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -99,9 +99,9 @@ and so, *critically*, any multivariate polynomial $$\weierp \in \Complex[z_1,...
 
 ```math
 \begin{CD}
-  C^\infty(M) \oplus\dots\oplus C^\infty(M) @>\weierp >> C^\infty(M)\\
+  C^\infty(M,\space\Complex^l) @>\weierp >> C^\infty(M)\\
    @VF\oplus\dots\oplus FVV @VVFV\\
- C^\infty(N)\oplus\dots\oplus C^\infty(N) @>>\weierp > C^\infty(N)
+  C^\infty(N,\space\Complex^l) @>>\weierp > C^\infty(N)
 \end{CD}
 ```
 
