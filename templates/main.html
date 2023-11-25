@@ -14,7 +14,7 @@
 	{% endifequal %}
     <title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 	{% if permalink %}
-	<link rel="bookmark" href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html.{{lang}}">
+	<link rel="bookmark" href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}">
 	{% endif %}
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/css/code.css" rel="stylesheet" media="screen">
