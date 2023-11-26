@@ -3423,7 +3423,7 @@
     editormd.regexs = {
         atLink        : /@(\w+)/g,
         email         : /(\w+)@(\w+)\.(\w+)\.?(\w+)?/g,
-        emailLink     : /(mailto:)?([\w\.\_]+)@(\w+)\.(\w+)\.?(\w+)?/g,
+        emailLink     : /(MAILTO:)?([\w\.\_]+)@(\w+)\.(\w+)\.?(\w+)?/g,
         emoji         : /:([\w\+-]+):/g,
         emojiDatetime : /(\d{2}:\d{2}:\d{2})/g,
         twemoji       : /:(tw-([\w]+)-?(\w+)?):/g,
@@ -3567,7 +3567,7 @@
                 if (settings.emailLink)
                 {
                     text = text.replace(emailLinkReg, function($1, $2, $3, $4, $5) {
-                        return (!$2 && $.inArray($5, "jpg|jpeg|png|gif|webp|ico|icon|pdf".split("|")) < 0) ? "<a href=\"mailto:" + $1 + "\">"+$1+"</a>" : $1;
+                        return (!$2 && $.inArray($5, "jpg|jpeg|png|gif|webp|ico|icon|pdf".split("|")) < 0) ? "<a href=\"MAILTO:" + $1 + "\">"+$1+"</a>" : $1;
                     });
                 }
 

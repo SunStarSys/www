@@ -9,7 +9,7 @@ Keywords: South Florida, System Administration
 
 ### Email:
 
-- [Joe Schaefer, Ph.D.](mailto://joe@sunstarsys.com) &mdash; Presidente y dueño
+- [Joe Schaefer, Ph.D.](MAILTO://joe@sunstarsys.com) &mdash; Presidente y dueño
 
 ### Direccion postal:
 
