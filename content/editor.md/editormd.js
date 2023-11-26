@@ -3503,7 +3503,7 @@
     editormd.regexs = {
         atLink        : /@([@\w.\/=-]+(?!\S*::))/g,
         email         : /(\w+)@(\w+)\.(\w+)\.?(\w+)?/g,
-        emailLink     : /(MAILTO:)?([\w.-]+)@([\w-]+)(?:\.([\w-]+))*/g,
+        emailLink     : /(mailto:)?([\w.-]+)@([\w-]+)(?:\.([\w-]+))*/g,
         emoji         : /[^:]:([\w\+-]+):[^:]/g,
         emojiDatetime : /(\d\d:\d\d:\d\d)/g,
         twemoji       : /:(tw-([\w]+)-?(\w+)?):/g,
@@ -3646,14 +3646,14 @@
                                     var idx = e.displayText.indexOf(":");
                                     var end = e.displayText.length;
                                     if (idx >= 0 && end >= 0)
-                                        return "<a class=\"at-link\" href=\"MAILTO://" + escape(e.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + e.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>";
+                                        return "<a class=\"at-link\" href=\"mailto://" + escape(e.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + e.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>";
                                     if (/^@/.test($b)) {
                                         var friends = [];
                                         for (const u of e.members) {
                                             idx = u.displayText.indexOf(":");
                                             end = u.displayText.length;
                                             if (idx >= 0 && end >= 0)
-                                                friends.push("<a class=\"at-link\" href=\"MAILTO://" + escape(u.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + u.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>");
+                                                friends.push("<a class=\"at-link\" href=\"mailto://" + escape(u.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + u.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>");
                                         }
                                         return friends.join(", ");
                                     }
@@ -3667,7 +3667,7 @@
                                                     var idx = h.displayText.indexOf(":");
                                                     var end = h.displayText.length;
                                                     if (idx >= 0 && end >= 0)
-                                                        friends.push("<a class=\"at-link\" href=\"MAILTO://" + escape(h.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + h.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>");
+                                                        friends.push("<a class=\"at-link\" href=\"mailto://" + escape(h.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + h.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>");
                                                 }
                                                 return friends.join(", ");
                                             }
@@ -3677,7 +3677,7 @@
                                                     var idx = h.displayText.indexOf(":");
                                                     var end = h.displayText.length;
                                                     if (idx >= 0 && end >= 0)
-                                                        return "<a class=\"at-link\" href=\"MAILTO://" + escape(h.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + h.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>";
+                                                        return "<a class=\"at-link\" href=\"mailto://" + escape(h.displayText.slice(idx+1, end)).replace("@", "&#64;") + "\">" + h.displayText.slice(idx+1, end).replace("@", "&#64;").replace("<", "&lt;").replace(">", "&gt;") + "</a>";
                                                 }
                                             }
                                     }
@@ -3691,7 +3691,7 @@
                 if (settings.emailLink)
                 {
                     text = text.replace(emailLinkReg, function($1, $2, $3, $4, $5) {
-                        return (!$2 && $.inArray($5, "jpg|jpeg|png|gif|webp|ico|icon|pdf".split("|")) < 0) ? "<a href=\"MAILTO:" + $1 + "\">"+$1+"</a>" : $1;
+                        return (!$2 && $.inArray($5, "jpg|jpeg|png|gif|webp|ico|icon|pdf".split("|")) < 0) ? "<a href=\"mailto:" + $1 + "\">"+$1+"</a>" : $1;
                     });
                 }
 
