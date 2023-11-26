@@ -1,7 +1,10 @@
 ---
 dependencies: '*.md.en'
-status: archived
+status: draft
 title: Application Performance
 
 ---
+
 {% ssi `/essays/performance.md.en` %}
+
+<!-- $Date$ $Author$ $Revision$ -->
