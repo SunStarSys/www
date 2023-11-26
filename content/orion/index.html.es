@@ -145,7 +145,7 @@ Actualmente proporcionamos un sistema de plantilla básico basado en <span class
 <h3>Construcción típica del sitio IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=MAILTO:">Búsqueda IDE</a> <small>(esos enlaces en <span style="color:#e83e8c">rosa intenso</span> lo llevarán directamente a una pantalla de edición, con el cursor colocado exactamente de acuerdo con el texto coincidente)</small>.</h3>
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Búsqueda IDE</a> <small>(esos enlaces en <span style="color:#e83e8c">rosa intenso</span> lo llevarán directamente a una pantalla de edición, con el cursor colocado exactamente de acuerdo con el texto coincidente)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
 
