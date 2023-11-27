@@ -1,5 +1,6 @@
 Title: Powered by ...
 Keywords: subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logo
+Status: draft
 
 ## Site Technologies
 
@@ -9,10 +10,12 @@ Keywords: subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logo
 
 - SvnWcSub (SvnPubSub client) for triggering live site builds.
 
-- [SunStar Systems CMS](/orion/) for the build and online editing technologies.
+- [SunStar Systems Orion](/orion/) for the build and online editing technologies.
 
 - [Twitter Bootstrap](https://github.com/twbs/bootstrap) for the site's look and feel.
 
 - [pffxg.sh](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) for the PCRE search engine.
 
 - Logo design by graphics artist (and all-around Renaissance man) Joel Suraci.
+
+<!-- $Date$ $Author$ $Revision$ -->
