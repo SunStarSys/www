@@ -81,11 +81,21 @@ Status: published
 
 ## The curious-looking duckling is now an elegant swan
 
+<br>
+
+<div class="col-lg-3">
+	<div class="embed-responsive embed-responsive-16by9">
+	<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/JNWybe63G3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+<br>
+
 - Bootstrap (Solarized) styling.
 
 - Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
 
-## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md :editormd-logo-1x: and Django Templating
+## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md &nbsp; :editormd-logo-1x: &nbsp; and Django Templating
 
 - [x] **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 - [x] YAML headers in source (markdown) files now fully supported.
