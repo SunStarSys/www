@@ -381,6 +381,19 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ## Live source tree search engine
 
+<div class="row">
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/dftUs2Oqy-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/TvgKXkoVsAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
 - [x] Perl Compatible Regular Expression (PCRE) based.
 - [x] Global search and replace functionality as well (unique given PCRE support); supports regex captures.
 - [ ] PDF search coming soon.
