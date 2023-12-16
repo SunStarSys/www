@@ -98,7 +98,7 @@ See our [Orion Plans](plans) for the current deals.
 | SSO: Kerberos / Active Directory / OpenID Integration | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">SCIM only</span> | <span class="text-warning">&check;</span> |
 | FedRAMP Infrastructure + FIPS compliant TLS | <span class="text-success">Server Install</span> | | | |
 | In-Browser Workflow (Mobile Friendly) | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> |
-| DAV support | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
+| DAV Support | <span class="text-success">&check;</span> | | | <span class="text-warning">&check;</span> |
 | Incremental Builds | <span class="text-success">&check;</span> | | | |
 | Unlimited Branch Builds | <span class="text-success">&check;</span> | | | |
 | Scheduled Builds of Dynamic Content Only | <span class="text-success">&check;</span> | | | |
@@ -108,13 +108,13 @@ See our [Orion Plans](plans) for the current deals.
 | White Label Support | <span class="text-success">&check;</span> | | | |
 | Installable Inside Corporate VPN | <span class="text-success">&check;</span> | | | |
 | Easy 3rd Party "Pull-Request" Contributor Workflow | <span class="text-success">&check;</span> | | | |
-| GitHub Integration w/ IDE support | <span class="text-success">&check;</span> | | | |
+| GitHub Integration w/ IDE &amp; Actions Support | <span class="text-success">&check;</span> | | | |
 | Unlimited Previews | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span>  |
 | Unlimited Seats | <span class="text-success">Enterprise Only</span> | | | |
 | Unlimited Version-Controlled History | <span class="text-success">&check;</span> | | | |
 | Integrated Link Change Tracking | <span class="text-success">&check;</span> | | | |
 | WebSite Hosting | <span class="text-success">&check;</span> | | | |
-| @vectorgraphics/asymptote integration | <span class="text-success">&check;</span> | | | |
+| @vectorgraphics/asymptote Integration | <span class="text-success">&check;</span> | | | |
 | SSI / CGI / mod_perl / mod_wasm support | <span class="text-success">&check;</span> | | | |
 | Fine-Grained ACL on Source Repo | <span class="text-success">&check;</span> | <span class="text-warning">&check;</span>| <span class="text-warning">&check;</span> | <span class="text-warning">&check;</span> |
 | +1 GB/s Full Site Builds | <span class="text-success">&check;</span> | | | |
