@@ -422,6 +422,8 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ## Interactive Mathematical Vector Graphics with @vectorgraphics/asymptote
 
 ```asy
+// trefoil knot
+
 import tube;
 import graph3;
 import palette;
