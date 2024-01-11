@@ -41,7 +41,7 @@
 </form>
 
 <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
-
+{% block javascript %}
 <script type="text/javascript">
 var IN_GLOBAL_SCOPE=true;
 </script>
@@ -98,7 +98,7 @@ var IN_GLOBAL_SCOPE=true;
 
 </script>
 <script type="module" src="/editor.md/languages/{{ lang|cut:"." }}.js"></script>
-
+{% endblock %}
 <style type="text/css">
 /*-------------------------------------------
 	Animations
