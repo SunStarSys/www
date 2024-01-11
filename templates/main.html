@@ -7,7 +7,8 @@
     <meta name="description" content="SunStar Systems">
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
-	{% ifequal path|dirname "/orion" %}
+    <meta name="theme-color" content="black">
+        {% ifequal path|dirname "/orion" %}
 	<meta property="og:image" content="/images/sunstar-orion-symbol-linear.png">
 	{% else %}
 	<meta property="og:image" content="/images/sunstarstaronly.png">
