@@ -1,6 +1,6 @@
 Title: Triple Products of Eigenfunctions and Spectral Geometry
 Dependencies: *.md.en
-Status: verified=15311
+Status: draft
 Categories: Math
 Keywords: spectral theory, riemannian geometry, inverse problems, mathematical physics, harmonic analysis, representation theory
 
@@ -182,7 +182,7 @@ By the dominated convergence theorem,
 ```math
 \begin{aligned}
 p&\rightarrow\infty \implies\\
-\sum_j\hat{a^p_j}(k)&\rightarrow \int_{\cup_j\set{a_j=1}}e^k(x)\sqrt{g}dx
+\sum_j\hat{a^p_j}(k)&\rightarrow \int_{\dot{\cup}_j\set{a_j=1}}e^k(x)\sqrt{g}dx
 \end{aligned}
 ```
 
@@ -289,3 +289,4 @@ The author would also like to thank Tanya Christiansen, Carolyn Gordon, Hamid He
 1. <a id="GZ97">[GZ97] Zhou, Gengqiang</a>. "Compactness of isospectral compact manifolds with bounded curvatures." Pacific J. Math. 181:1, (1997): 187–200.
 
 <!-- $Date$ $Author$ $Revision$ -->
+45 $ -->
