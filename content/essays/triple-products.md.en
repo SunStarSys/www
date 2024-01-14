@@ -182,7 +182,7 @@ By the dominated convergence theorem,
 ```math
 \begin{aligned}
 p&\rightarrow\infty \implies\\
-\sum_j\hat{a^p_j}(k)&\rightarrow \int_{\dot{\cup}_j\set{a_j=1}}e^k(x)\sqrt{g}dx
+\sum_j\hat{a^p_j}(k)&\rightarrow \int_{\dot{\bigcup}_j\set{a_j=1}}e^k(x)\sqrt{g}dx
 \end{aligned}
 ```
 
