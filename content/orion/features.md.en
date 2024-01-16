@@ -357,7 +357,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [ ] optional draw.io diagramming extension coming soon
 
-- [x] Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for math and physics expressions like the Navier-Stokes' Equations below):
+- [x] Don Knuth's [$$\LaTeX$$](https://en.wikipedia.org/wiki/TeX) support (for math and physics expressions like the Navier-Stokes' Equations below):
 
 - Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
 ```math
