@@ -1,6 +1,7 @@
 ---
-Title: "SunStar Systems' Orion"
-Status: draft
+title: "SunStar Systems' Orion"
+status: draft
+dependencies: "*.md.en"
 ---
 
 <div class="row">
@@ -89,6 +90,10 @@ See our [Orion Plans](plans) for the current deals.
 <br />
 
 ### Details
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}})
+{% endfor %}
 
 
 <hr />
