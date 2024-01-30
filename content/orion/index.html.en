@@ -93,7 +93,6 @@ See our [Orion Plans](plans) for the current deals.
 
 <br />
 
-
 | Feature     |   Orion       | Slab | Notion | Confluence |
 |:------------|:-------------:|:----:|:------:|:----------:|
 {% for row in grid.content.body -%}
