@@ -85,7 +85,8 @@ See our [Orion Plans](plans) for the current deals.
 
 | Feature     |   Orion       | Slab | Notion | Confluence |
 |:------------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content.body %} | {{ row.Feature }} | <span class="text-success">{{ row.Orion }}</span> | <span class="text-warning">{{ row.Slab }}</span> |<span class="text-warning">{{ row.Notion }}</span> |<span class="text-warning">{{ row.Confluence }}</span> | {% endfor %}
+{% for row in grid.content.body %} | {{ row.Feature }} | <span class="text-success">{{ row.Orion }}</span> | <span class="text-warning">{{ row.Slab }}</span> |<span class="text-warning">{{ row.Notion }}</span> |<span class="text-warning">{{ row.Confluence }}</span> |
+{% endfor %}
 
 <br />
 
