@@ -1,19 +1,8 @@
-{% extends "main.html" %}
-{% block content %}
-<div class="breadcrumbs">
-	{{ breadcrumbs|safe }}
-	<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href)+';action=edit')">
-		<img src="/images/edit.png" />
-	</a>
-</div>
-<h1>{{ headers.title }}</h1>
+---
+Title: "SunStar Systems' Orion"
+Status: draft
+---
 
-<div class="jumbotron">
-{% filter markdown %}
-<h2>SunStar Systems' Orion&trade;</h2>
-<p>
-	&nbsp;
-</p>
 <div class="row">
 <div class="col-lg-5">
 <p>
@@ -101,9 +90,7 @@ See our [Orion Plans](plans) for the current deals.
 
 ### Details
 
-{% endfilter %}
 
-{{ content|markdown }}
 <hr />
 <br />
 <h2>A Few Representative Screen Shots:</h2>
@@ -143,4 +130,5 @@ See our [Orion Plans](plans) for the current deals.
 	-webkit-animation-iteration-count: 1;
 }
 </style>
-{% endblock %}
+
+<!-- $Date$ $Author$ $Revision$ -->
