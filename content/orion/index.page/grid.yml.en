@@ -1,8 +1,6 @@
 title: Table Data for Feature Comparison Grid
 status: draft
 
----
-#table
 - headers:
   - Feature
   - Orion
@@ -78,4 +76,3 @@ status: draft
   - Feature: "Searchable Document Status"
     Orion: "&check;"
     Slab: "&check;"
----
