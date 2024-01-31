@@ -201,7 +201,7 @@
 {% if duration %}
 <script async="" type="text/javascript">
   var ctx = document.getElementById("myChart").getContext("2d");
-  const data = {{duration|json}};
+  const data = {{duration|json|safe}};
   const values = data.map(x => x[1]);
   var total = 0;
   for (var i=0; i < values.length; ++i)
