@@ -20,6 +20,7 @@ use APR::Request qw/encode/;
 use Cpanel::JSON::XS;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
+use Dotiac::DTL::Addon::json;
 use SunStarSys::Util qw/read_text_file parse_filename/;
 use SunStarSys::SVN::Client;
 use File::Basename;
