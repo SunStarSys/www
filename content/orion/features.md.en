@@ -478,7 +478,7 @@ draw(tube(p,colorsec),render(merge=true));
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
 <style type="text/css">
