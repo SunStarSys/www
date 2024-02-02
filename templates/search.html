@@ -5,7 +5,7 @@
 <h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
   else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
-  {% for k in specials_re|stripre:"[^\w=]+"|split:"\\|" %}
+  {% for k in specials_re|admit:"[\\w=\\|]"|split:"\\|" %}
   <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
   &nbsp;
   {% endfor %}
