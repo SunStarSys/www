@@ -164,6 +164,11 @@
   {% endif %}
   {% endifequal %}
   {% if specials %}
+  { ifequal specials "svnauthz=" %}
+  {% if blog %}
+  <pre class="text-primary">{{ blog }}</pre>
+  {% endif %}
+  {% endifequal %}
   {% else %}
   <form method="POST" class="form-inline row">
     <div style="width:100%">
