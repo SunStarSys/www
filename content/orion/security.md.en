@@ -6,7 +6,7 @@ Status: published
 
 [TOC]
 
-## "Security through obscurity is not much security at all."
+## {# lede #}"Security through obscurity is not much security at all."{# lede #}
 
 Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) in 1851, who easily picked the Crystal Palace locks during a London exhibition that year.  We fully agree, which is why our blueprints for our Oracle Cloud Infrastructure (OCI) automation engine are [available on GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
@@ -244,7 +244,7 @@ Remarkably brief and time-tested dependencies; the major components of which are
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
 <!-- $Date$ $Author$ $Revision$ -->
