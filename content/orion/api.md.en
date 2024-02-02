@@ -3,7 +3,7 @@ Keywords: REST,API
 Status: draft
 Dependencies: *.md.en
 
-This document covers the **Search, Online Editor, and Build System** APIs.
+{# lede #}This document covers the **Search, Online Editor, and Build System** APIs{# lede #}.
 
 [TOC]
 
@@ -421,7 +421,7 @@ Strips the (path) prefix, passed as an argument to this filter, from the filtere
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
 <!-- $Date$ $Author$ $Revision$ -->
