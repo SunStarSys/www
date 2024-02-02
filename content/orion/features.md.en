@@ -95,7 +95,7 @@ Status: published
 
 - Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
 
-## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md &nbsp; :editormd-logo-1x: &nbsp; and Django Templating
+## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md :editormd-logo-1x: and Django Templating
 
 - [x] **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 - [x] YAML headers in source (markdown) files now fully supported.
