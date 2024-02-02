@@ -124,7 +124,7 @@ joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
 <!-- $Date$ $Author$ $Revision$ -->
