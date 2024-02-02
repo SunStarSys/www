@@ -493,6 +493,7 @@ my $args = {
   hash        => $hash->hexdigest,
   filter      => $filter,
   specials    => $re =~ $specials_re && $1,
+  specials_re => $specials_re,
 };
 
 if (client_wants_json $r) {
