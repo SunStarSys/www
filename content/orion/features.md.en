@@ -3,7 +3,7 @@ Keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,
 Dependencies: *.md.en
 Status: published
 
-<div class="row">
+2024-02-02 16:38:20 Friday<div class="row">
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
 		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/xr67QX6aMqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -97,7 +97,7 @@ Status: published
 
 ## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md :editormd-logo-1x: and Django Templating
 
-- [x] **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
+- [x] **WYSIWYG:** {# lede #}Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script{# lede #} ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 - [x] YAML headers in source (markdown) files now fully supported.
 - [x] Native Flowchart and Sequence Diagram Support :fa-glass:
 
