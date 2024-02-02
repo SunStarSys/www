@@ -205,7 +205,7 @@ $500 / month, ~67% off all competitor pricing models!
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
 ------------
