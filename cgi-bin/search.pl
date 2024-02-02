@@ -29,6 +29,7 @@ use IO::Uncompress::Gunzip qw/gunzip/;
 use DB_File;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
+no warnings 'uninitialized';
 
 local $@;
 
