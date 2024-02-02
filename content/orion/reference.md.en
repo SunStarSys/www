@@ -10,7 +10,7 @@ Status: draft
 
 For a demonstration of Orion &trade;'s IDE, visit <https://www.openoffice.org/> for a massive site, or <https://thrift.apache.org/> for an intricate one, and click on the above bookmarklet to view a live prototype in action.
 
-If that's too much bother for you, this website is self-hosted on Orion &trade;, and those hot-pink pencil icons [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) at the upper right alongside the breadcrumbs will give you a live demonstration of how the system works (sans commit/build access, which is locked down to staff only).
+If that's too much bother for you, this website is self-hosted on Orion &trade;, and {# lede #}those hot-pink pencil icons [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) at the upper right alongside the breadcrumbs will give you a live demonstration{# lede #} of how the system works (sans commit/build access, which is locked down to staff only).
 
 ## Recommended Bookmarklet
 
@@ -101,7 +101,7 @@ TBD
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
 <!-- $Date$ $Author$ $Revision$ -->
