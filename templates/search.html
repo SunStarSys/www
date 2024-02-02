@@ -164,7 +164,7 @@
   {% endif %}
   {% endifequal %}
   {% if specials %}
-  { ifequal specials "svnauthz=" %}
+  {% ifequal specials "svnauthz=" %}
   {% if blog %}
   <pre class="text-primary">{{ blog }}</pre>
   {% endif %}
