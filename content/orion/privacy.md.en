@@ -1,5 +1,6 @@
 Title: Orion Privacy Policy
 Dependencies: *.md.en
+Status: draft
 
 <div class="float-lg-right">
 	<img src="../images/sunstarstaronly.png"></img>
@@ -13,12 +14,14 @@ Dependencies: *.md.en
 
 - The only User Identity components we log are your Google OpenID account's email address, and the user account you use to connect to whatever Subversion system underpins Orion &trade; for the site to which you are making Commits.  The logging system tracks these alongside the basic Apache [`httpd`](#) access response logset, which includes connecting IP address, Request protocol with URL details, and client's advertised [`Referer`](#) and  [`User-Agent`](#) headers.
 
-- It's a GDPR-compliant opt-in system.  On the first visit to Orion &trade; IDE, you will be directed to a Google Page asking you to authorize the <span class="text-white">SunStar Systems OIDC</span> app to use your provided Google account details (mainly profile information &mdash; email address, picture, etc; but **not** your login credentials).  If you don't wish for Google to share this information with us, or don't like this privacy policy document (linked from that page), then don't authorize Google to supply your user profile details, and you will be denied access until you change your mind.
+- {# lede #}It's a GDPR-compliant opt-in system.  On the first visit to the Orion &trade; CMS/IDE, you will be directed to a Google Page asking you to authorize{# lede #} the <span class="text-white">SunStar Systems OIDC</span> app to use your provided Google account details (mainly profile information &mdash; email address, picture, etc; but **not** your login credentials).  If you don't wish for Google to share this information with us, or don't like this privacy policy document (linked from that page), then don't authorize Google to supply your user profile details, and you will be denied access until you change your mind.
 
 --------
 
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
+
+<!-- $Date$ $Author$ $Revision$ -->
