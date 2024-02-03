@@ -391,6 +391,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
   }
 }
+
 if ($re !~ $specials_re) {
   my $sha1 = Digest::SHA1->new;
   $sha1->add(join ":", $r->dir_config("CookieSecret"), $apreq->body("files"));
