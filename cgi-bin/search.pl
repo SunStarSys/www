@@ -281,7 +281,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
     elsif ($re =~ /^log=/i) {
       ($revision) = $re =~ /(\d+)$/;
-      $log = $svn->log($dirname, "HEAD", $revision);
+      $log = $svn->log($dirname, $revision);
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
