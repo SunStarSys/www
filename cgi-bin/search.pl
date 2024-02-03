@@ -464,7 +464,6 @@ my %title = (
   ".fr" => "Résultats de recherche pour \l$markdown ",
 );
 
-no warnings 'uninitialized';
 $hash =  Digest::SHA1->new;
 $hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
 $hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
