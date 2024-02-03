@@ -286,7 +286,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
-        splice @$_, 3, $#$_, "\$Author: joe $$_[3] \$ \$Date: 2024-02-02 12:00:53 -0500 (Fri, 02 Feb 2024) $date \$";
+        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
     }
     else {
@@ -358,7 +358,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my ($key, $value) = @$_;
         if ($key =~ /^\@/ or not $value or $value =~ /^[rw]+$/) {
           push @rv, grep !$seen{$$_{text}}++ && $_->{text} eq "$key=", map {$_, ($key !~ /^@/ && /^@/) ? @{$$_{members}} : ()} map {$_, $$_{groups} ? @{$$_{groups}} : ()} @friends;
-          $re .= "|\Q\$Author: joe $key \$\E" if $key !~ /^@/;
+          $re .= "|\Q\$Author: $key \$\E" if $key !~ /^@/;
         }
         else {
           $value = '@'.$value if $key eq "group";
@@ -366,7 +366,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           push @rv, grep index(lc $_->{displayText}, lc $value) >= 0, map {$_, ($key ne "group" && /^@/) ? @{$$_{members}}:()} @friends;
           $re = "\Q$value\E";
           $re .= '=' if grep $key eq $_, qw/user group/;
-          $re .= "|\Q\$Author: joe $value \$\E" if $key eq "user";
+          $re .= "|\Q\$Author: $value \$\E" if $key eq "user";
         }
       }
       @friends = @rv;
@@ -483,7 +483,7 @@ my $args = {
   duration    => (@dlog ? \@dlog : undef),
   blog        => $blog,
   diff        => $diff,
-  meta        => "\$Author: joe $author \$ \$Date: 2024-02-02 12:00:53 -0500 (Fri, 02 Feb 2024) $date \$",
+  meta        => "\$Author: $author \$ \$Date: $date \$",
   log         => $log,
   yaml        => $yaml,
   r           => $r,
