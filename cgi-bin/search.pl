@@ -503,7 +503,7 @@ if (client_wants_json $r) {
   return Apache2::Const::OK;
 }
 
-local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>;
+local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>, "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates";
 local @ENV{qw/REPOS WEBSITE/} = ($repos, $host);
 $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
