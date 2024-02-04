@@ -395,7 +395,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       undef @dir_seen{map $_->{name}, grep $$_{type} eq "directory", @watch};
       @watch=();
       ($revision) = $re =~ /(\d+)$/;
-      $log = $svn->log($dirname, "HEAD", $revision);
+      $log = $svn->log($dirname, "HEAD", $revision+1);
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       @$log = grep { scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]} } @$log;
       for (@$log) {
