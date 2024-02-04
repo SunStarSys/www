@@ -379,7 +379,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $_ = {map {$_=>1} split /[, ]+/} for values %$watchers;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       while (my ($k, $v) = each %$watchers) {
-        $k =~ s/^.*\Q$prefix//;
+        $k =~ s/^.*?\Q$prefix//;
         if (exists $$v{$svnuser}) {
           eval {$svn->info("$url$k", sub {shift}, "HEAD")};
           warn "$@" and next if $@;
@@ -395,7 +395,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @watch=();
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision);
-      @$log = grep { scalar grep $seen{$_}, keys %{$$_[1]} } @$log;
+      my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
+      @$log = grep { scalar grep {s/^.*?\Q$prefix// && $seen{$_}} keys %{$$_[1]} } @$log;
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
