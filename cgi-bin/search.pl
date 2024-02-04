@@ -54,7 +54,7 @@ $r->pnotes("svnuser", $USERNAME);
 $r->pnotes("svnpassword", $PASSWORD);
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 
-my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|build=|acl=|deps=|svnauthz=)/i;
+my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
 
 sub parser :Sealed {
   my @text;
@@ -282,6 +282,16 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     elsif ($re =~ /^log=/i) {
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, $revision);
+      for (@$log) {
+        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
+        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
+        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
+      }
+    }
+    elsif ($re =~ /^notify=/i) {
+      ($revision) = $re =~ /(\d+)$/;
+      $log = $svn->log($dirname, "HEAD", $revision);
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
