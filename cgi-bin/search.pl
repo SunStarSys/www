@@ -289,16 +289,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
     }
-    elsif ($re =~ /^notify=/i) {
-      ($revision) = $re =~ /(\d+)$/;
-      $log = $svn->log($dirname, "HEAD", $revision);
-      for (@$log) {
-        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
-        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
-        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
-      }
-    }
     else {
       open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
       local $_;
@@ -381,7 +371,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
       @friends = @rv;
     }
-    elsif ($re =~ /watch=/i) {
+    elsif ($re =~ /watch=|notify=/i) {
       my $url;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
@@ -398,6 +388,19 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
       }
       @friends = ();
+    }
+    if ($re =~ /^notify=/i) {
+      my %seen;
+      @seen{map $_->{name}, @watch} = (1) x @watch;
+      ($revision) = $re =~ /(\d+)$/;
+      $log = $svn->log($dirname, "HEAD", $revision);
+      @$log = grep { scalar grep $seen{$_}, keys %{$$_[1]} } @$log;
+      for (@$log) {
+        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
+        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
+        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
+      }
     }
   }
 }
