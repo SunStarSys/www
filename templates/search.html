@@ -94,6 +94,46 @@
   </div>
 </div>
 {% endifequal %}
+{% ifequal specials "notify=" %}
+<div class="card text-white border-success mb-3">
+  <div class="card-header">
+    {% ifequal lang ".en" %}Latest changes{% endifequal %}
+    {% ifequal lang ".de" %}Letzte Änderungen{% endifequal %}
+    {% ifequal lang ".es" %}Últimos cambios{% endifequal %}
+    {% ifequal lang ".fr" %}Dernières modifications{% endifequal %}
+  </div>
+  <div class="card-body">
+    <dl>
+      {% for e in log %}
+      <dt><a href="/dynamic/search{{path}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
+        {{e.3|vcs_author:lang}} <small><em>
+          {% ifequal lang ".en" %}on{% endifequal %}
+          {% ifequal lang ".de" %}am{% endifequal %}
+          {% ifequal lang ".es" %}el{% endifequal %}
+          {% ifequal lang ".fr" %}le{% endifequal %}
+          {{e.3|vcs_date:lang}}
+          {% ifequal lang ".en" %}at{% endifequal %}
+          {% ifequal lang ".de" %}um{% endifequal %}
+          {% ifequal lang ".es" %}a las{% endifequal %}
+          {% ifequal lang ".fr" %}à{% endifequal %}
+          {{e.3|vcs_time:lang}}</em></small></dt>
+        {% for k, v in e.1 %}
+      <dd>
+        <code>{{v.action}}</code>&nbsp;
+        {% ifequal k|parse_filename:2 ".md" %}
+        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+        {% else %}
+        <a href="/{{k|strip_prefix}}">{{k}}</a>
+        <br>
+      </dd>
+        {% endifequal %}
+        {% endfor %}
+        <pre>{{e.2}}</pre>
+      {% endfor %}
+    </dl>
+  </div>
+</div>
+{% endifequal %}
 {% endifequal %}
 {% if yaml %}
 {% filter markdown %}
