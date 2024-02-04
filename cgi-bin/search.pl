@@ -390,13 +390,15 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @friends = ();
     }
     if ($re =~ /^notify=/i) {
-      my %seen;
-      @seen{map $_->{name}, @watch} = (1) x @watch;
+      my (%file_seen, %dir_seen);
+      @file_seen{map $_->{name}, grep $_->{type} eq "file", @watch} = (1) x grep $_->{type} eq "file", @watch;
+      @dir_seen{map $_->{name}, grep $_->{type} eq "directory", @watch} = (1) x grep $_->{type} eq "directory", @watch;
+
       @watch=();
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision);
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
-      @$log = grep { scalar grep {s/^.*?\Q$prefix// && $seen{$_}} keys %{$$_[1]} } @$log;
+      @$log = grep { scalar grep {s/^.*?\Q$prefix//; my $k=$f; $file_seen{$f} || scalar grep index($k, $_) == 0, keys %dir_seen}} keys %{$$_[1]} } @$log;
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
