@@ -386,14 +386,14 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
       my $watchers = $svn->propget("orion:watchers", $url, "HEAD", 1);
-      $_ = {map {$_=>1} split /[, ]/} for values %$watchers;
+      $_ = {map {$_=>1} split /[, ]+/} for values %$watchers;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*\Q$prefix//;
         if (exists $$v{$svnuser}) {
           eval {$svn->info("$url$k", sub {shift}, "HEAD")};
           warn "$@" and next if $@;
-          push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : {name=>".$k/", type=>"directory"};
+          push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
           $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
         }
       }
