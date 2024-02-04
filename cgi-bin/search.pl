@@ -392,6 +392,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     if ($re =~ /^notify=/i) {
       my %seen;
       @seen{map $_->{name}, @watch} = (1) x @watch;
+      @watch=();
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision);
       @$log = grep { scalar grep $seen{$_}, keys %{$$_[1]} } @$log;
