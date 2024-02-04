@@ -385,7 +385,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $url;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $watchers = $svn->propget("orion:watchers", $url, "HEAD", 0);
+      my $watchers = $svn->propget("orion:watchers", $url, "HEAD", 1);
       $_ = {map {$_=>1} split /[, ]+/} for values %$watchers;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       while (my ($k, $v) = each %$watchers) {
