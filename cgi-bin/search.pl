@@ -261,7 +261,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     elsif ($re =~ /^diff=/i) {
-      no warnings 'uninitialized';
       ($revision) = $re =~ /(\d+)$/;
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
@@ -394,10 +393,13 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       undef @file_seen{map $_->{name}, grep $$_{type} eq "file", @watch};
       undef @dir_seen{map $_->{name}, grep $$_{type} eq "directory", @watch};
       @watch=();
+      my $tokens = join '|', ("\Q@$svnuser=\E", map "\Q@@$_=\E", split ',', (split /:/, $pw{$svnuser})[1]);
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision+1);
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
-      @$log = grep { scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]} } @$log;
+      @$log = grep { my $rv; $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $svn->diff($dirname, 1, $$_[0]);
+                     $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
+                   } @$log;
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
