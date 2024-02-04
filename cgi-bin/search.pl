@@ -397,7 +397,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision);
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
-      @$log = grep { scalar grep {s/^.*?\Q$prefix//; my $k=$f; exists $file_seen{$f} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]} } @$log;
+      @$log = grep { scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]} } @$log;
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
