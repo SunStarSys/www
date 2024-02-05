@@ -272,6 +272,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         $author = $$log[3];
         $log = $$log[2];
+        warn "$author:$date:$log";
       }
     }
     elsif ($re =~ /^log=/i) {
