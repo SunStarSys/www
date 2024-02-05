@@ -268,12 +268,11 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         while ($diff =~ /^Index: (.+)$/mg) {
           my $path = (parse_filename($dirname))[1].$1;
           ($log) = grep utf8::decode($_), eval{$svn->revprop_get("svn:log", $path, $revision)};
-          eval {$svn->info($path, sub {$author = $_[1]->last_changed_author; $date = $_[1]->last_changed_date})};
-          next if $@;
           my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-          ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $date / 1000000;
-
+          ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$log[4] / 1000000;
           setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+          $author = $$log[3];
+          undef $log;
           last;
         }
       }
