@@ -80,6 +80,7 @@ sub parser :Sealed {
         $last = escape_html($1) if $pre =~ /([\s<\/]+)$/;
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
         $p->parse($pre), $p->eof;
+        my @words;
         push @words, split /\s+/, shift @text while @text;
         if ($m) {
           if (@words < 5) {
