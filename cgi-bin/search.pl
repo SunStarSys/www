@@ -29,6 +29,7 @@ use IO::Uncompress::Gunzip qw/gunzip/;
 use DB_File;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
+use Time::timegm 'timegm';
 no warnings 'uninitialized';
 
 local $@;
@@ -265,23 +266,29 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
-        my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         $log = $svn->log($dirname, $revision)->[-1];
-        warn join ':', @$log;
-        $date = $$log[4];
+        my @d_fmt = split /\D/, $$log[4];
+        $d_fmt[0] -= 1900;
+        $d_fmt[1] -= 1;
+        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
+        ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", gmtime timegm reverse @d_fmt[0..5];
+        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         $author = $$log[3];
         $log = $$log[2];
       }
     }
     elsif ($re =~ /^log=/i) {
       ($revision) = $re =~ /(\d+)$/;
-      setlocale LC_TIME, "$LANG{$lang}.UTF-8";
       $log = $svn->log($dirname, $revision);
-      setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
-     for (@$log) {
-       my $date = $$_[4];
-       splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
-     }
+      for (@$log) {
+        my @d_fmt = split /\D/, $$_[4];
+        $d_fmt[0] -= 1900;
+        $d_fmt[1] -= 1;
+        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
+        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', gmtime timegm reverse @d_fmt[0..5];
+        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
+      }
     }
     else {
       open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
