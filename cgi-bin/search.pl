@@ -67,7 +67,7 @@ sub parser :Sealed {
       text => [\@text, '@{text}'],
     }
   );
-
+  my @words;
   for my $pffxg ($_[0]) {
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
       my ($file, $line, $match) = ($1, $2, $3);
@@ -94,10 +94,9 @@ sub parser :Sealed {
           my $extra = @words > 5 ? "..." : undef;
           $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
         }
-        @words = ();
         $p->parse($m), $p->eof;
-        push @words, split /\s+/, shift @text while @text;
-        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
+        push @words, [split /\s+/, shift @text while @text];
+        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @{$words[-1]}[0 .. 4]) . q(</span>);
         $pre . $last . $m
       }ge;
       push @{$$paths{$file}}, {count => $count, match => $match, words => \@words};
@@ -468,7 +467,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = encode(join ' ',grep utf8::encode($_), @{$$_{words}[0..5]);
+    my $words = encode(join ' ',grep utf8::encode($_), @{$$_{words}[0][0..5]);
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
