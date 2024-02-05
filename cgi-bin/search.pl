@@ -100,7 +100,7 @@ sub parser :Sealed {
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
         $pre . $last . $m
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match};
+      push @{$$paths{$file}}, {count => $count, match => $match, words => \@words};
     }
   }
 }
@@ -468,7 +468,8 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link">$title</a> $rev), $k, [map $_->{match}, @$v]]
+    my $words = encode(join ' ',grep utf8::encode($_), @{$$_{words}[0..5]);
+    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
   }
