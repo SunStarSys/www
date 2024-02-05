@@ -471,7 +471,7 @@ if ($re !~ $specials_re) {
     my $total = sum map $_->{count}, @$v;
     my $idx = 0;
     ++$idx unless $total == 0 || $v->[$idx]->{count};
-    my $words = encode join ' ', grep {utf8::encode($_)} @{$v->[$idx]->{words}->[0]};
+    my $words = encode join ' ', @{$v->[$idx]->{words}->[0]};
     warn scalar @{$v->[$idx]->{words}->[0]};
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
