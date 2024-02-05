@@ -99,6 +99,7 @@ sub parser :Sealed {
         push @words, split /\s+/, shift @text while @text;
         push @w, \@words if @words;
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
+        utf8::decode($_) for @words;
         $pre . $last . $m
       }ge;
       push @{$$paths{$file}}, {count => $count, match => $match, words => \@w};
@@ -472,7 +473,6 @@ if ($re !~ $specials_re) {
     my $idx = 0;
     ++$idx unless $total == 0 || $v->[$idx]->{count};
     my $words = encode join ' ', @{$v->[$idx]->{words}->[0]};
-    warn scalar @{$v->[$idx]->{words}->[0]};
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
