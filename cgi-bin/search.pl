@@ -265,24 +265,23 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
+        my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         $log = $svn->log($dirname, $revision)->[-1];
         warn join ':', @$log;
-        my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$log[4] / 1000000;
-        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+        $date = $$log[4];
         $author = $$log[3];
         $log = $$log[2];
       }
     }
     elsif ($re =~ /^log=/i) {
       ($revision) = $re =~ /(\d+)$/;
+      setlocale LC_TIME, "$LANG{$lang}.UTF-8";
       $log = $svn->log($dirname, $revision);
-      for (@$log) {
-        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime $$_[4] / 1000000;
-        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
-        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
-      }
+      setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+     for (@$log) {
+       my $date = $$_[4];
+       splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
+     }
     }
     else {
       open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
