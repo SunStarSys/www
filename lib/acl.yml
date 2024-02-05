@@ -27,10 +27,11 @@
     "@svnadmin": rw
     "@frontend": rw
 
+- path: cgi-bin
+  rules:
+    "@svnadmin": rw
+
 - path: cgi-bin/search.pl
   rules:
-    "@staff": rw
-    "@svnadmin": rw
-    "@devops": rw
     "*":
 #acl
