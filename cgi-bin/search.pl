@@ -68,6 +68,7 @@ sub parser :Sealed {
     }
   );
   for my $pffxg ($_[0]) {
+    my @w;
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
@@ -98,9 +99,10 @@ sub parser :Sealed {
         push @words, split /\s+/, shift @text while @text;
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
         utf8::decode($_) for @words;
+        push @w, \@words;
         $pre . $last . $m
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match};
+      push @{$$paths{$file}}, {count => $count, match => $match, words => \@w};
     }
   }
 }
