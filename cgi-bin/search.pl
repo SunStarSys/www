@@ -67,7 +67,7 @@ sub parser :Sealed {
       text => [\@text, '@{text}'],
     }
   );
-  my @words;
+  my @w;
   for my $pffxg ($_[0]) {
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
       my ($file, $line, $match) = ($1, $2, $3);
@@ -79,7 +79,6 @@ sub parser :Sealed {
         my ($first, $last) = ("") x 2;
         $last = escape_html($1) if $pre =~ /([\s<\/]+)$/;
         s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g, s!\{[\{%][^[\}%]+[\}%]\}!!g for $pre, $m;
-        my @words;
         $p->parse($pre), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         if ($m) {
@@ -95,11 +94,13 @@ sub parser :Sealed {
           $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
         }
         $p->parse($m), $p->eof;
-        push @words, [split /\s+/, shift @text while @text];
-        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @{$words[-1]}[0 .. 4]) . q(</span>);
+        @words = ();
+        push @words, split /\s+/, shift @text while @text;
+        push @w, \@words;
+        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @{$w[-1]}[0 .. 4]) . q(</span>);
         $pre . $last . $m
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match, words => \@words};
+      push @{$$paths{$file}}, {count => $count, match => $match, words => \@w};
     }
   }
 }
