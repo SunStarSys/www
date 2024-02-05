@@ -95,8 +95,6 @@ sub parser :Sealed {
           $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
         }
         $p->parse($m), $p->eof;
-        @words = ();
-        push @words, split /\s+/, shift @text while @text;
         push @w, \@words;
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @{$w[-1]}[0 .. 4]) . q(</span>);
         $pre . $last . $m
