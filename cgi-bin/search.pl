@@ -271,7 +271,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $d_fmt[0] -= 1900;
         $d_fmt[1] -= 1;
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", gmtime timegm reverse @d_fmt[0..5];
+        ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime timegm reverse @d_fmt[0..5];
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         $author = $$log[3];
         $log = $$log[2];
@@ -285,7 +285,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $d_fmt[0] -= 1900;
         $d_fmt[1] -= 1;
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', gmtime timegm reverse @d_fmt[0..5];
+        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime timegm reverse @d_fmt[0..5];
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
