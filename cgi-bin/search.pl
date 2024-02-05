@@ -271,8 +271,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$log[4] / 1000000;
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         $author = $$log[3];
-        $dlog = $$log[2];
-        undef $log;
+        $log = $$log[2];
       }
     }
     elsif ($re =~ /^log=/i) {
