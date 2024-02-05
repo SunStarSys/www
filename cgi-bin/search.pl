@@ -265,18 +265,17 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
-        my $path = (parse_filename($dirname))[1].$1;
         $log = $svn->log($dirname, $revision)->[0];
+        warn join ':', @$log;
         my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$log[4] / 1000000;
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         $author = $$log[3];
         $log = $$log[2];
-        warn "$author:$date:$log";
       }
     }
     elsif ($re =~ /^log=/i) {
-      ($revision) = $re =~ /(\d+)$/;
+      ($revision) = $re =~ /(\d+)$/;1
       $log = $svn->log($dirname, $revision);
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
