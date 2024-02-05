@@ -265,7 +265,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
         read $fh, $blog, -s $fh;
         $diff = $svn->diff($dirname, 1, $revision);
-        $log = $svn->log($dirname, $revision, $revision+1)->[0];
+        $log = $svn->log($dirname, $revision)->[-1];
         warn join ':', @$log;
         my $loc = setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime $$log[4] / 1000000;
