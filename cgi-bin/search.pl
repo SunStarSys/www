@@ -275,7 +275,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
     }
     elsif ($re =~ /^log=/i) {
-      ($revision) = $re =~ /(\d+)$/;1
+      ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, $revision);
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
