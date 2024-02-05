@@ -98,7 +98,7 @@ sub parser :Sealed {
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         push @w, \@words if @words;
-        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @{$w[-1]}[0 .. 4]) . q(</span>);
+        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
         $pre . $last . $m
       }ge;
       push @{$$paths{$file}}, {count => $count, match => $match, words => \@w};
