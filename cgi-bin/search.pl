@@ -473,7 +473,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map {my @rv; for my $idx (0..$#{$$_[0]}) { push @rv, [encode($$_[0][$idx]), encode($$_[1][$idx])] } map "$$_[0],$$_[1]", @rv} map [$_->{last}, $_->{words}], @$v;
+    my $words = join '&amp;text=', map {my @rv; for my $idx (0..$#{$$_[0]}) { push @rv, [encode($$_[0][$idx]), encode($$_[1][$idx])] } map "$$_[0]-,$$_[1]", @rv} map [$_->{last}, $_->{words}], @$v;
     $words =~ s/[+]+/%20/g;
     #$words =~ s/,%20,/,/g;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
