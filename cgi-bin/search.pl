@@ -470,7 +470,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join ',', map {encode join '', @$_} map @{$_->{words}}, @$v;
+    my $words = join ',', grep defined && length, map {encode join '', @$_} map @{$_->{words}}, @$v;
     #$words =~ s/[+]+/%20/g;
     #$words =~ s/,%20,/,/g;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
