@@ -476,7 +476,6 @@ if ($re !~ $specials_re) {
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
     $words =~ s/text=[^,]*,%20(?:&amp;|$)//g;
-    warn $words;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
