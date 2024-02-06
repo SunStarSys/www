@@ -98,17 +98,17 @@ sub parser :Sealed {
           $pre = join " ", @words[-5 .. -1];
         } else {
           my $extra = @words > 5 ? "..." : undef;
-          $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
+          $pre = join " ", @words[0 .. 4], $extra if length $pre;
         }
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         my $extra = @words > 5 ? "..." : undef;
-        $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4], $extra) . q(</span>);
+        $m = qq(<span class="text-danger">) . join(" ", grep defined, @words[0 .. 4], $extra) . q(</span>);
         utf8::encode($_) for @words;
         push @w, length($m) ? (join ' ', grep length, @words) : undef;
 
-        push @p, $pre;
+        push @p, $pre . $last;
         filtermd($p[-1], $w[-1]);
         utf8::encode $p[-1];
         $pre . $last . $m
