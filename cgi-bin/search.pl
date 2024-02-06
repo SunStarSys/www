@@ -95,7 +95,7 @@ sub parser :Sealed {
           else {
             @words = ("...", @words[-4 .. -1]);
           }
-          $pre = join " ", grep {length} @words[-5 .. -1];
+          $pre = join " ", @words[-5 .. -1];
         } else {
           my $extra = @words > 5 ? "..." : undef;
           $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
