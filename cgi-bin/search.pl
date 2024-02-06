@@ -60,7 +60,7 @@ my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps
 sub filtermd {
   for (@_) {
     s/[\`{}\[\]*]+//g;
-    s/\([^\)]+(?!\))$//;
+    s/\([^\)]*$//;
     s/^[^\(]*\)//;
     s/#+ //g;
     s/^\.{3} .*\$\$.*?\$\$|.*\$\$.*?\$\$ \.{3}$//g;
