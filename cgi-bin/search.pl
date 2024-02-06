@@ -106,7 +106,7 @@ sub parser :Sealed {
         $pre . $last . $m
 
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match, pre=> \@p, words => \@w};
+      push @{$$paths{$file}}, {count => $count, match => $match, pre => \@p, words => \@w};
     }
   }
 }
@@ -475,7 +475,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[0]}) { next unless  $$_[1][$idx] =~ /\S/; push @rv, map "$$_[0]-,$$_[1],-$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$//g; $_} encode($$_[0][$idx] !~ / \.{3}$/ ? $$_[0][$idx] : ""), encode($$_[1][$idx]), encode(($$_[0][$idx+1]  !~ /^\.{3} /) ? $$_[0][$idx+1] : "")]; } @rv } map [$_->{pre}, $_->{words}], @$v;
+    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_{words}}) { next unless  $$_{words}[$idx] =~ /\S/; push @rv, map "$$_[0]-,$$_[1],-$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$//g; $_} encode($$_{pre}$idx] !~ / \.{3}$/ ? $$_{pre}[$idx] : ""), encode($$_{words}[$idx]), encode(($$_{pre}[$idx+1]  !~ /^\.{3} /) ? $$_{pre}[$idx+1] : "")]; } @rv } @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
 
