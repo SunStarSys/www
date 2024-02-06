@@ -106,7 +106,7 @@ sub parser :Sealed {
         my $extra = @words > 5 ? "..." : undef;
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4], $extra) . q(</span>);
         utf8::encode($_) for @words;
-        push @w, length($m) ? (join ' ', grep /\S/, @words) : undef;
+        push @w, length($m) ? (join ' ', @words) : undef;
         push @p, $pre;
         filtermd($p[-1], $w[-1]);
         utf8::encode $p[-1];
