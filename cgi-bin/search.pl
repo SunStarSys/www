@@ -57,6 +57,12 @@ my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 
 my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
 
+sub filtermd {
+  for (@_) {
+    s/[\'{}()\[\]!]+//g;
+  }
+}
+
 sub parser :Sealed {
   my @text;
   my (undef, $dirname, undef, $paths) = (@_, {});
@@ -102,6 +108,7 @@ sub parser :Sealed {
         utf8::encode($_) for @words;
         push @w, length($m) ? (join ' ', grep /\S/, @words) : undef;
         push @p, $pre;
+        filtermd($p[-1], $w[-1]);
         utf8::encode $p[-1];
         $pre . $last . $m
 
