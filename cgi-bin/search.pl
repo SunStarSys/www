@@ -78,7 +78,7 @@ sub parser :Sealed {
   );
   for my $pffxg ($_[0]) {
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
-      my (@w, @p);
+      my (@w, @p, @e);
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
       my $count = 0;
@@ -109,15 +109,21 @@ sub parser :Sealed {
         my $extra = @words > 5 ? "..." : undef;
         $m = qq(<span class="text-danger">) . join(" ", grep defined, @words[0 .. 4], $extra) . q(</span>);
         utf8::encode($_) for @words;
-        push @w, length($m) ? (join ' ', grep length, @words) : undef;
-
+        push @w, length($m) ? (join ' ', grep length, @words[0..4]) : undef;
+        if (@words > 5) {
+          push @e, join ' ', reverse grep defined, (reverse @words)[0..3];
+          utf8::encode $e[-1];
+        }
+        else {
+          push @e, undef;
+        }
         push @p, $pre . $last;
         utf8::encode $p[-1];
-        filtermd($p[-1], $w[-1]);
+        filtermd($p[-1], $w[-1], $e[-1]);
         $pre . $last . $m
 
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match, pre => \@p, words => \@w};
+      push @{$$paths{$file}}, {count => $count, match => $match, pre => \@p, words => \@w, end => \@e};
     }
   }
 }
@@ -486,7 +492,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_{words}}) { next unless  $$_{words}[$idx] =~ /\S/; push @rv, map {length and $_.= '-,' for $$_[0]; length and $_=",-$_" for $$_[2]; "$$_[0]$$_[1]$$_[2]"} [map {s/-/%2D/g; s/^(?i:%2b|[.]){3}[+]|[+](?i:%2b|[.]){3}$//g; $_} encode($$_{pre}[$idx] !~ / \.{3}$/ ? $$_{pre}[$idx] =~ /^ *(.*)$/ && $1 : ""), encode($$_{words}[$idx]), encode($$_{pre}[$idx+1]  !~ /^\.{3} / ? $$_{pre}[$idx+1] =~ /^(.*?) *$/ && $1 : "")]; } @rv } @$v;
+    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_{words}}) { next unless  $$_{words}[$idx] =~ /\S/; push @rv, map {length and $_.= '-,' for $$_[0]; length and $_=",-$_" for $$_[2]; length $and $_=",$_" for $$_[3]; "$$_[0]$$_[1]$$_[3]$$_[2]"} [map {s/-/%2D/g; s/^(?i:%2b|[.]){3}[+]|[+](?i:%2b|[.]){3}$//g; $_} encode($$_{pre}[$idx] !~ / \.{3}$/ ? $$_{pre}[$idx] =~ /^ *(.*)$/ && $1 : ""), encode($$_{words}[$idx]), encode($$_{pre}[$idx+1]  !~ /^\.{3} / ? $$_{pre}[$idx+1] =~ /^(.*?) *$/ && $1 : ""), encode($$_{end}[$idx]//""); } @rv } @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
     my @w = "text=$words" =~ /text=[^&]+/g;
