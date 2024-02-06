@@ -95,7 +95,7 @@ sub parser :Sealed {
           $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
         }
         utf8::encode($_) for @words;
-        push @l, join ' ', grep defined && $_ ne "..." && length, @words;
+        push @l, join ' ', grep {defined && $_ ne "..." && length} @words;
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
