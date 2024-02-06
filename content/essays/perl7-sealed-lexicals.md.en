@@ -4,7 +4,7 @@ Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
 Muted: commentAAAA
 Important: commentAB
-Status: verified=12892
+Status: verified=12973
 Closed: commentAAABAA
 
 <div class="right">
@@ -17,7 +17,7 @@ Closed: commentAAABAA
 
 ## The initial solution: Doug MacEachern's method lookup optimizations
 
-Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his  forté. One of his many contributions to [p5p](https://lists.perl.org/list/perl5-porters.html) was to cut the performance penalty of OO method lookup overhead in half, by using a method + <code>&#64;ISA</code> heirarchy cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
+Doug was the creator of the mod_perl project back in the mid-90s, so obviously writing high performance Perl was his  forté. One of his many contributions to [p5p](https://lists.perl.org/list/perl5-porters.html) was to cut the performance penalty of OO method lookup overhead in half, by using a method + <code> &#64;ISA</code> heirarchy cache to make the runtime object method lookup for mod_perl objects like `Apache2::RequestRec` as streamlined as possible.  But it only gets us half-way there.
 
 This isn't a trifling issue with calls to `C struct` get-set accessor methods &mdash; the common situation with many mod_perl APIs.  Perl's runtime method-call lookup penalty on httpd's `struct request_rec *`, that mod_perl exposes via the `Apache2::RequestRec` module, is on the same order of magnitude of the full execution of the call.  For mod_perl backed sites making millions of XS method calls a second, this is an awful waste of precious CPU cycles.
 
