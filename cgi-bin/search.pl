@@ -478,7 +478,6 @@ if ($re !~ $specials_re) {
     my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[0]}) { next unless  $$_[1][$idx] =~ /\S/; push @rv, map "$$_[0]-,$$_[1],-$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$//g; $_} encode($$_[0][$idx] !~ / \.{3}$/ ? $$_[0][$idx] : ""), encode($$_[1][$idx]), encode(($$_[0][$idx+1]  !~ /^\.{3} /) ? $$_[0][$idx+1] : "")]; } @rv } map [$_->{pre}, $_->{words}], @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
-    $words =~ s/text=[^,]*,%20(?:&amp;|$)//g;
 
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map {my @w = $words =~ /(text=.*?)(?:&amp;|$)/g; my $i; s/(<span class="text-danger">.*?<\/span>)/qq(<a href="$link#:~:) . $w[$i++] . qq(">$1<\/a>)/ge; $_} map $_->{match}, @$v]]
       unless $title_cache{$title}++;
