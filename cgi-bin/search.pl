@@ -474,8 +474,8 @@ if ($re !~ $specials_re) {
     my $total = sum map $_->{count}, @$v;
     my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[1]}) { push @rv, map "'$$_[0]'-,'$$_[1]'", [map {s/-/%2D/g; $_} encode($$_[0][$idx]), encode($$_[1][$idx])]; } @rv } map [$_->{last}, $_->{words}], @$v;
     $words =~ s/[+]+/%20/g;
-    $words =~ s/",%20"(?:&amp;|$)/&amp;/g;
-    $words =~ s/text=[^,]*,"%20"(?:&amp;|$)//g;
+    $words =~ s/text='','%20'(?:&amp;|$)/&amp;/g;
+    $words =~ s/text=[^,]*,'%20'(?:&amp;|$)//g;
     warn $words;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
       unless $title_cache{$title}++;
