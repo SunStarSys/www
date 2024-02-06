@@ -466,7 +466,7 @@ if ($re !~ $specials_re) {
     $link =~ s/\.md(?:text)?/.html/ if $markdown;
     if ($markdown) {
       eval {
-        my $err = run_shell_command svnauthz => ["accessof", "--groups-file" => /"x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*'], "/x1/repos/svn-auth/$repos/authz-svn.conf";
+        my $err = run_shell_command svnauthz => ["accessof", "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*'], "/x1/repos/svn-auth/$repos/authz-svn.conf";
         die $err if %?;
       };
       warn "$@" and next if $@;
