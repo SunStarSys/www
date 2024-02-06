@@ -100,7 +100,7 @@ sub parser :Sealed {
         my $extra = @words > 5 ? "..." : undef;
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4], $extra) . q(</span>);
         utf8::encode($_) for @words;
-        push @w, length($m) ? (join ' ', @words) : undef; 
+        push @w, length($m) ? (join ' ', grep /\S/, @words) : undef;
         push @p, $pre;
         utf8::encode $p[-1];
         $pre . $last . $m
@@ -475,7 +475,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[0]}) { next unless  $$_[1][$idx] =~ /\S/; push @rv, map "$$_[0]-,$$_[1],-$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$//g; $_} encode($$_[0][$idx] !~ / \.{3}$/ ? $$_[0][$idx] : ""), encode($$_[1][$idx]), encode(($idx > 0 && $$_[0][$idx-1]  !~ /^\.{3} /) ? $$_[0][$idx-1] : "")]; } @rv } map [$_->{pre}, $_->{words}], @$v;
+    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[0]}) { next unless  $$_[1][$idx] =~ /\S/; push @rv, map "$$_[0]-,$$_[1],-$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$//g; $_} encode($$_[0][$idx] !~ / \.{3}$/ ? $$_[0][$idx] : ""), encode($$_[1][$idx]), encode(($$_[0][$idx+1]  !~ /^\.{3} /) ? $$_[0][$idx+1] : "")]; } @rv } map [$_->{pre}, $_->{words}], @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
     $words =~ s/text=[^,]*,%20(?:&amp;|$)//g;
