@@ -102,9 +102,12 @@ sub parser :Sealed {
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
         utf8::decode($_) for @words;
         push @w, join ' ', @words;
+        push @p, $pre;
+        utf8_decode $p[-1];
         $pre . $last . $m
+
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match, words => \@w, last => \@l};
+      push @{$$paths{$file}}, {count => $count, match => $match, pre=> \@p, words => \@w, last => \@l};
     }
   }
 }
@@ -473,7 +476,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[1]}) { push @rv, map "$$_[0]-,$$_[1]", [map {s/-/%2D/g; $_} encode($$_[0][$idx]), encode($$_[1][$idx])]; } @rv } map [$_->{last}, $_->{words}], @$v;
+    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[1]}) { push @rv, map ",$$_[0]-,$$_[1], $$_[2]", [map {s/-/%2D/g; $_} encode($$_[0][$idx]), encode($$_[1][$idx]), encode($$_2[][$idx]]; } @rv } map [$_->{pre}, $_->{words}, $_->{last}], @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
     $words =~ s/text=[^,]*,%20(?:&amp;|$)//g;
