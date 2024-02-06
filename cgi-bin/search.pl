@@ -475,11 +475,11 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_{words}}) { next unless  $$_{words}[$idx] =~ /\S/; push @rv, map "$$_[0]-,$$_[1],-$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$//g; $_} encode($$_{pre}$idx] !~ / \.{3}$/ ? $$_{pre}[$idx] : ""), encode($$_{words}[$idx]), encode(($$_{pre}[$idx+1]  !~ /^\.{3} /) ? $$_{pre}[$idx+1] : "")]; } @rv } @$v;
+    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_{words}}) { next unless  $$_{words}[$idx] =~ /\S/; push @rv, map "$$_[0]-,$$_[1],-$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$//g; $_} encode($$_{pre}$idx] !~ / \.{3}$/ ? $$_{pre}[$idx] : ""), encode($$_{words}[$idx]), encode($$_{pre}[$idx+1]  !~ /^\.{3} / ? $$_{pre}[$idx+1] : "")]; } @rv } @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
 
-    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map {my @w = $words =~ /(text=.*?)(?:&amp;|$)/g; my $i; s/(<span class="text-danger">.*?<\/span>)/qq(<a href="$link#:~:) . $w[$i++] . qq(">$1<\/a>)/ge; $_} map $_->{match}, @$v]]
+    push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map {my @w = $words =~ /text=.*?(?=&amp;|$)/g; my $i; s/(<span class="text-danger">.*?<\/span>)/qq(<a href="$link#:~:) . $w[$i++] . qq(">$1<\/a>)/ge; $_} map $_->{match}, @$v]]
       unless $title_cache{$title}++;
 
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
