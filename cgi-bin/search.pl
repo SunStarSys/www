@@ -82,9 +82,6 @@ sub parser :Sealed {
         my @words;
         $p->parse($pre), $p->eof;
         push @words, split /\s+/, shift @text while @text;
-        utf8::encode($_) for @words;
-        push @l, join ' ', @words;
-        utf8::decode($_) for @words;
         if ($m) {
           if (@words < 5) {
             unshift @words , "" until @words > 5;
@@ -97,6 +94,8 @@ sub parser :Sealed {
           my $extra = @words > 5 ? "..." : undef;
           $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
         }
+        utf8::encode($_) for @words;
+        push @l, join ' ', grep defined && $_ ne "..." && length, @words;
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
