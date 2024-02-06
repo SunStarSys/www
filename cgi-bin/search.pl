@@ -68,8 +68,8 @@ sub parser :Sealed {
     }
   );
   for my $pffxg ($_[0]) {
-    my (@w, @l);
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
+      my (@w, @l);
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
       my $count = 0;
