@@ -69,7 +69,7 @@ sub parser :Sealed {
   );
   for my $pffxg ($_[0]) {
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
-      my (@w, @p);
+      my (@w, @l, @p);
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
       my $count = 0;
@@ -95,6 +95,7 @@ sub parser :Sealed {
           $pre = join " ", grep {defined} @words[0 .. 4], $extra if length $pre;
         }
         utf8::encode($_) for @words;
+        push @l, join ' ', grep {s/\`//g; s/\[([^\]]+)\][\[(][^\[\(\]\)]+[\]\)]/$1/g; defined && $_ ne "..." && length} @words;
         @words = ();
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
@@ -106,7 +107,7 @@ sub parser :Sealed {
         $pre . $last . $m
 
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match, pre=> \@p, words => \@w};
+      push @{$$paths{$file}}, {count => $count, match => $match, pre=> \@p, words => \@w, last => \@l};
     }
   }
 }
@@ -475,7 +476,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[1]}) { push @rv, map ",$$_[0]-,$$_[1], -$$_[2]", [map {s/-/%2D/g; s/^\.{3} | \.{3}$/g; $_} encode($$_[0][$idx]), encode($$_[1][$idx]), encode($idx > 0 ? $_[0][$idx-1] : "")]; } @rv } map [$_->{pre}, $_->{words}], @$v;
+    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[1]}) { push @rv, map ",$$_[0]-,$$_[1], $$_[2]", [map {s/-/%2D/g; $_} encode($$_[0][$idx]), encode($$_[1][$idx]), encode($$_[2][$idx])]; } @rv } map [$_->{pre}, $_->{words}, $_->{last}], @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
     $words =~ s/text=[^,]*,%20(?:&amp;|$)//g;
