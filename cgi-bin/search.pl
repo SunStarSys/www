@@ -68,7 +68,7 @@ sub parser :Sealed {
     }
   );
   for my $pffxg ($_[0]) {
-    my @w;
+    my (@w, @l);
     while ($pffxg =~ m{^([^:]+):([^:]+):(.+)$}mg) {
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
@@ -98,11 +98,12 @@ sub parser :Sealed {
         $p->parse($m), $p->eof;
         push @words, split /\s+/, shift @text while @text;
         $m = qq(<span class="text-danger">) . join(" ", grep {defined} @words[0 .. 4]) . q(</span>);
-        utf8::decode($_) for @words;
-        push @w, \@words;
+        utf8::decode($_) for @words, $last;
+        push @w, join '', @words;
+        push @l, $last;
         $pre . $last . $m
       }ge;
-      push @{$$paths{$file}}, {count => $count, match => $match, words => \@w};
+      push @{$$paths{$file}}, {count => $count, match => $match, words => \@w, last => \@l};
     }
   }
 }
@@ -470,7 +471,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', grep defined && length, map {encode join '', @$_} map @{$_->{words}}, @$v;
+    my $words = join '&amp;text=', grep defined && length, map {join ',', encode($$_[0]), encode join '', $$_[1]} map [$_->{last}, $_->{words}], @$v;
     #$words =~ s/[+]+/%20/g;
     #$words =~ s/,%20,/,/g;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map $_->{match}, @$v]]
