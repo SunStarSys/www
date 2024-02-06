@@ -103,7 +103,7 @@ sub parser :Sealed {
         utf8::decode($_) for @words;
         push @w, join ' ', @words;
         push @p, $pre;
-        utf8_decode $p[-1];
+        utf8::decode $p[-1];
         $pre . $last . $m
 
       }ge;
