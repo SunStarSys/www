@@ -232,6 +232,7 @@ for ($d) {
 
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0 or index($re, '=') >= 0;
 $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0;
+$re =~ s/^"(.*)"$/\\Q$1\\E/;
 
 my @unzip = $markdown ? "--markdown" : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g for $re, $filter;
