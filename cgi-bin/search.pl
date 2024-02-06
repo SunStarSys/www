@@ -476,7 +476,7 @@ if ($re !~ $specials_re) {
     }
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
-    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[1]}) { push @rv, map ",$$_[0]-,$$_[1], $$_[2]", [map {s/-/%2D/g; $_} encode($$_[0][$idx]), encode($$_[1][$idx]), encode($$_2[][$idx]]; } @rv } map [$_->{pre}, $_->{words}, $_->{last}], @$v;
+    my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_[1]}) { push @rv, map ",$$_[0]-,$$_[1], $$_[2]", [map {s/-/%2D/g; $_} encode($$_[0][$idx]), encode($$_[1][$idx]), encode($$_[2][$idx]]; } @rv } map [$_->{pre}, $_->{words}, $_->{last}], @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
     $words =~ s/text=[^,]*,%20(?:&amp;|$)//g;
