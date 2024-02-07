@@ -463,11 +463,12 @@ if ($re !~ $specials_re) {
 
   while (my ($k, $v) = each %matches) {
     my $link = $path_info . $k;
+	my $path = "/cms-sites/$website/trunk/content$link";
     $link =~ s/\.md(?:text)?/.html/ if $markdown;
     if ($markdown) {
       eval {
-        my $err = run_shell_command svnauthz => ["accessof", "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*'], "/x1/repos/svn-auth/$repos/authz-svn.conf";
-        die $err if %?;
+        my $err = run_shell_command svnauthz => ["accessof", "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repos" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf", $path;
+        die $err if $?;
       };
       warn "$@" and next if $@;
     }
