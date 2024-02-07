@@ -492,7 +492,7 @@ if ($re !~ $specials_re) {
     $status =~ s/[^A-Z]//g;
     my $total = sum map $_->{count}, @$v;
     my $etex = encode("$$");
-    my $http = "\S+https?:" . encode("//") . "\S+";
+    my $http = '\S+https?:' . encode("//") . '\S+';
     my $words = join '&amp;text=', map { my @rv; for my $idx (0..$#{$$_{words}}) { next unless  $$_{words}[$idx] =~ /\S/; push @rv, map {my $end = $$_[3]; s/^.*%(?!3[A-F]|2[1-9A-F])..//, s/^.*(?:$etex)//, s/^.*$http//, length and $_.= '-,' for $$_[0]; length $end and s/^([^%]*)%.*$/$1/ for $$_[1]; s/^\++//g, s/^(.*?)%(?!3[A-F]|2[1-9A-F]).*$/$1/, s/(?:$etex).*$//, s/$http.*$//, length and $_ = ",-$_" for $$_[2]; length and $_ = ",$_" for $$_[3]; "$$_[0]$$_[1]$$_[3]$$_[2]"} [map {s/-/%2D/g; s/^(?i:%2b|[.]){3}[+]|[+](?i:%2b|[.]){3}$//g; $_} encode($$_{pre}[$idx] !~ / \.{3}$/ ? $$_{pre}[$idx] =~ /^ *(.*)$/ && $1 : ""), encode($$_{words}[$idx]), encode($$_{pre}[$idx+1] !~ /^\.{3} / ? $$_{pre}[$idx+1] =~ /^(.*?) *$/ && $1 : ""), encode($$_{end}[$idx]//"")]; } @rv } @$v;
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
