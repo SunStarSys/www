@@ -481,6 +481,7 @@ if ($re !~ $specials_re) {
     utf8::encode my $f = $filename;
     gunzip $f, \$uncompressed and $filename = \$uncompressed if $filename =~m#\.gz[^/]*$#;
     read_text_file $filename, \ my %data;
+    next if $data{content} =~ /{% ssi \`.*\` %}/;
     my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
     next unless $title;
     my $status = uc($data{headers}{status} // "draft");
