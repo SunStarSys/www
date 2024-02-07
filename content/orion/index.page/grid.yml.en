@@ -31,7 +31,7 @@ status: draft
   Confluence: "&check;"
 - Feature: "Multilingual"
   Orion: "&check;"
-- Feature: "searchable $$\\KaTeX$$ expressions"
+- Feature: 'searchable $$\KaTeX$$ expressions'
   Orion: "&check;"
   Confluence: "$$$"
 - Feature: "Federated"
