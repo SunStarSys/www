@@ -463,7 +463,7 @@ if ($re !~ $specials_re) {
 
   while (my ($k, $v) = each %matches) {
     my $link = $path_info . $k;
-	my $path = "/cms-sites/$website/trunk/content$link";
+	my $path = "/cms-sites/$host/trunk/content$link";
     $link =~ s/\.md(?:text)?/.html/ if $markdown;
     if ($markdown) {
       eval {
