@@ -252,7 +252,7 @@ $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($r
 $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0;
 $re =~ s/^"(.*)"$/\\Q$1\\E/;
 
-my @unzip = $markdown ? "--markdown" : "--unzip";
+my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g for $re, $filter;
 
 my (@friends, @dlog, $revision, $yaml, $blog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
