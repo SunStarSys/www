@@ -50,11 +50,11 @@ my APR::Request $apreq = $apreq_class->handle($r);
 
 local our $USERNAME = $r->user;
 local our $PASSWORD;
+local our $lang;
 $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
 $r->pnotes("svnuser", $USERNAME);
 $r->pnotes("svnpassword", $PASSWORD);
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
-
 my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
 
 sub filtermd {
@@ -80,6 +80,7 @@ sub parser :Sealed {
       my (@w, @p, @e);
       my ($file, $line, $match) = ($1, $2, $3);
       s!\x1b\[[\d;]*m!!g, s!\x1b\[[Km]!!g for $file, $line;
+      $file =~ m!\Q$lang\E[^/]*$! or next;
       my $count = 0;
       $match =~ s{(.*?)(?:\x1b\[01;31m(.+?)\x1b\[[Km]|$)}{
         my ($pre, $m) = ($1, $2 // "");
@@ -208,7 +209,6 @@ sub negotiate_file :Sealed {
 
 sub get_client_lang :Sealed {
   my Apache2::RequestRec $r = shift;
-  my $repos = shift;
   my APR::Request::Apache2 $apreq = APR::Request::Apache2->handle($r);
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
   my $lang = $apreq->args("lang") // $cdata;
