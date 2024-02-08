@@ -223,6 +223,7 @@ my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my $js;
+my $count;
 
 utf8::decode($_) for $re, $filter;
 
@@ -502,7 +503,8 @@ if ($re !~ $specials_re) {
 
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
   }
-
+  $count += $$_[1] for @matches;
+  
   @matches = grep {shift(@$_),shift(@$_)} sort {no warnings 'uninitialized'; $b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
 
   @keywords = sort {$a cmp $b} @keywords;
@@ -524,6 +526,7 @@ my $args = {
   title       => $title{$lang},
   markdown_search => !!$markdown,
   matches     => \@matches,
+  count         => $count,
   lang        => $lang,
   regex       => $re,
   breadcrumbs => breadcrumbs($path_info, $re, $lang, !!$markdown),
