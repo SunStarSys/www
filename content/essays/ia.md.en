@@ -40,9 +40,9 @@ Information Architecture **organizes** and **arranges** {# lede #}the entire gam
 
 ###### Styling is Semantically Controlled by Customer Installation of the `/content/css/boostrap.min.css` File
 
-###### `search.html` Template is Overridable by Customer Installation of the `/template/search.html` File
+###### `search.html` Template is Overridable by Customer Installation of the `/templates/search.html` File
 
-###### `main.html` Derived Template is Overridable by Customer Installation of the `/template/main.html` File
+###### `main.html` Derived Template is Overridable by Customer Installation of the `/templates/main.html` File
 
 ### REST, HATEOAS, and Content Negotiation
 
