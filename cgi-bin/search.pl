@@ -50,7 +50,8 @@ my APR::Request $apreq = $apreq_class->handle($r);
 
 local our $USERNAME = $r->user;
 local our $PASSWORD;
-local our $lang;
+local our $lang  = get_client_lang($r);
+
 $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
 $r->pnotes("svnuser", $USERNAME);
 $r->pnotes("svnpassword", $PASSWORD);
@@ -217,7 +218,6 @@ sub get_client_lang :Sealed {
 }
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
-local our $lang  = get_client_lang $r;
 my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
@@ -504,7 +504,7 @@ if ($re !~ $specials_re) {
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
   }
   $count += $$_[1] for @matches;
-  
+
   @matches = grep {shift(@$_),shift(@$_)} sort {no warnings 'uninitialized'; $b->[1] <=> $a->[1] || $b->[0] <=> $a->[0]} @matches;
 
   @keywords = sort {$a cmp $b} @keywords;
