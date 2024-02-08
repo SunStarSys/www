@@ -34,6 +34,16 @@ Information Architecture **organizes** and **arranges** {# lede #}the entire gam
 
 ###### Live, RealTime Results (aka No Stale Indexed Corpus)
 
+##### Customer Adoption Goals
+
+###### Deliverable as "application/json" Upon Request
+
+###### Styling is Semantically Controlled by Customer Installation of the `/content/css/boostrap.min.css` File
+
+###### `search.html` Template is Overridable by Customer Installation of the `/template/search.html` File
+
+###### `main.html` Derived Template is Overridable by Customer Installation of the `/template/main.html` File
+
 ### REST, HATEOAS, and Content Negotiation
 
 ### Beautiful URLs &mdash; Both Permanent and Transient
