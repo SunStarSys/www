@@ -14,6 +14,25 @@ Information Architecture **organizes** and **arranges** {# lede #}the entire gam
 
 ### Contrasting Heirarchies with Tagged Search
 
+#### Radically Rearchitecting Wiki Search
+
+##### Human Interface Goals
+
+###### Powerful Syntax
+
+###### Easy Scope Expansion
+
+###### Interactive Results Filtration Engine
+
+###### Automatic Performance Scaling to 100K document trees
+
+###### Comprehensible Result Ordering / Prioritization
+
+###### Per-User Security (ACL) Contextualized Results
+
+###### Hits Linked Directly to Target-Specific Document Locations
+
+
 ### REST, HATEOAS, and Content Negotiation
 
 ### Beautiful URLs &mdash; Both Permanent and Transient
