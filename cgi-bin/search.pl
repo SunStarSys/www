@@ -222,7 +222,7 @@ my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQ
 my $filter   = $apreq->param("filter") // "";
 my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
-my ($js, $count, $file_count);
+my ($js, $count);
 
 utf8::decode($_) for $re, $filter;
 
@@ -499,7 +499,6 @@ if ($re !~ $specials_re) {
     my @w = "text=$words" =~ /text=[^&]+/g;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map {s/(<span class="text-danger">[^<]+<\/span>)/qq(<a href="$link#:~:) . shift(@w) . qq(">$1<\/a>)/ge; $_} map $_->{match}, @$v]]
       unless $title_cache{$title}++;
-    $file_count++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
   }
   $count += $$_[1] for @matches;
@@ -526,7 +525,7 @@ my $args = {
   markdown_search => !!$markdown,
   matches     => \@matches,
   count       => $count,
-  file_count  => $file_count,
+  file_count  => scalar @matches,
   lang        => $lang,
   regex       => $re,
   breadcrumbs => breadcrumbs($path_info, $re, $lang, !!$markdown),
