@@ -28,6 +28,11 @@ Information Architecture **organizes** and **arranges** {# lede #}the entire gam
 
 #### The Value of Enabling Template Preprocessing on Content
 
+- Inline Data Processing Engines
+
+  - embedded, "safe" json literals in built files
+  - build-time markdown table generation
+
 ##### Slowly Evolving, Centralized Configuration of Wiki Facts
 
 - corporate service urls
