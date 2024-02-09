@@ -1,8 +1,7 @@
-#!/usr/local/bin/perl -T
+#!/usr/local/bin/perl -T -I /x1/cms/build/lib
 # Copyright 2023 SunStar Systems, Inc.  All rights reserved.
 
 use utf8;
-use lib "/x1/cms/build/lib";
 use strict;
 use locale ':time';
 use warnings;
