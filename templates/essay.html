@@ -39,8 +39,7 @@
                                    {credentials: 'same-origin'});
       try {
           const json = await response.json();
-          alert(json.watch.map(e=>e.name));
-          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/(?:\/\Q{{path|parse_filename:"1.."}}\E|)$/)).length;
+          const is_watching = json.watch.map(e => e.name).filter(e => e.match(/^(?:\/\Q{{path|parse_filename:"1.."}}\E|\/)$/)).length;
           if (is_watching)
               $("#unwatch").css("display", "inline");
           else
