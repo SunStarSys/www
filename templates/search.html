@@ -39,7 +39,7 @@
           {{meta|vcs_time:lang}}
           </em></small></div>
     <div class="card-body">
-      <h3 class="card-title"><a href="/dynamic/search{{path}}?regex=log={{
+      <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{
       revision }};lang={{lang}};markdown_search={{markdown_search}}">Log</a></h3>
       <pre>{{ log|safe }}</pre>
     </div>
@@ -65,7 +65,7 @@
   <div class="card-body">
     <dl>
       {% for e in log %}
-      <dt><a href="/dynamic/search{{path}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
+      <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
         {{e.3|vcs_author:lang}} <small><em>
           {% ifequal lang ".en" %}on{% endifequal %}
           {% ifequal lang ".de" %}am{% endifequal %}
@@ -105,7 +105,7 @@
   <div class="card-body">
     <dl>
       {% for e in log %}
-      <dt><a href="/dynamic/search{{path}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
+      <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
         {{e.3|vcs_author:lang}} <small><em>
           {% ifequal lang ".en" %}on{% endifequal %}
           {% ifequal lang ".de" %}am{% endifequal %}
@@ -175,12 +175,12 @@
   <div class="card text-white border-warning mb-3">
     <div class="card-header">
       {% ifequal w.name|parse_filename:2 ".md" %}
-      <a href="{{r.path_info|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
+      <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
       {% else %}
-      <a href="{{r.path_info|append:w.name}}">{{w.name}}</a>
+      <a href="{{path|dirname|append:"/"|append:w.name}}">{{w.name}}</a>
       {% endifequal %}
       <div class="right">
-        <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{r.path_info|append:w.name}};action=unwatch">
+        <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
           <i class="fa fa-eye-slash fa-emoji" title="unwatch"></i>
         </a>
       </div>
