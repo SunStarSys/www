@@ -58,7 +58,7 @@ If you are tired of the per-seat licensing and per-CPU-cycle choices weighing yo
 
 Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
 
-Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`1 GB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique, patent-pending dependency management</span> functionality, it almost never needs to resort to them:
+Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`500 MB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique, patent-pending dependency management</span> functionality, it almost never needs to resort to them:
 
 <span class="text-success"><em>We only build what you need built.</em></span>&trade;
 
