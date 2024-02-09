@@ -402,9 +402,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $watchers = $svn->propget("orion:watchers", $url, "HEAD", 1);
       $_ = {map {$_=>1} split /[, ]+/} for values %$watchers;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
-      my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
+      my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
         if (exists $$v{$svnuser}) {
           eval {
             my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
