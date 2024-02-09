@@ -402,10 +402,14 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $watchers = $svn->propget("orion:watchers", $url, "HEAD", 1);
       $_ = {map {$_=>1} split /[, ]+/} for values %$watchers;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
+      my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
         if (exists $$v{$svnuser}) {
-          eval {$svn->info("$url$k", sub {shift}, "HEAD")};
+          eval {
+            my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
+            die $err if $?;
+          };
           warn "$@" and next if $@;
           push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
           $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
