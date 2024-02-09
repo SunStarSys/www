@@ -42,6 +42,11 @@ See the section on HATEOAS for an overview.
 
 ###### Deliverable as "application/json" Upon Request
 
+Options:
+
+- pass "as_json=1" in the query string
+- set "Accept: application/json" in the request headers
+
 ###### Styling is Semantically Controlled by Customer Installation of the `/content/css/boostrap.min.css` File
 
 ###### `search.html` Template is Overridable by Customer Installation of the `/templates/search.html` File
