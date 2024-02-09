@@ -25,7 +25,7 @@
   {% endif %}
   {% ifequal specials "diff=" %}
   <div class="card text-white border-success mb-3">
-    <div class="card-header">{{meta|vcs_author:lang}}
+    <div class="card-header">{{meta|vcs_author:r.path_info}}
       <small><em>
           {% ifequal lang ".en" %}on{% endifequal %}
           {% ifequal lang ".de" %}am{% endifequal %}
@@ -66,7 +66,7 @@
     <dl>
       {% for e in log %}
       <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:lang}} <small><em>
+        {{e.3|vcs_author:r.path_info}} <small><em>
           {% ifequal lang ".en" %}on{% endifequal %}
           {% ifequal lang ".de" %}am{% endifequal %}
           {% ifequal lang ".es" %}el{% endifequal %}
@@ -106,7 +106,7 @@
     <dl>
       {% for e in log %}
       <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
-        {{e.3|vcs_author:lang}} <small><em>
+        {{e.3|vcs_author:r.path_info}} <small><em>
           {% ifequal lang ".en" %}on{% endifequal %}
           {% ifequal lang ".de" %}am{% endifequal %}
           {% ifequal lang ".es" %}el{% endifequal %}
