@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -T
+#!/usr/local/bin/perl -T -I/x1/cms/build/lib
 # Copyright 2023 SunStar Systems, Inc.  All rights reserved.
 
 use utf8;
@@ -404,7 +404,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
-      my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
+        my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
         if (exists $$v{$svnuser}) {
           eval {
             my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
