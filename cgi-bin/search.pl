@@ -520,7 +520,7 @@ $hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
 $hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
 
 my $args = {
-  path        => $r->path_info,
+  path        => $r->path_info . "index",
   title       => $title{$lang},
   markdown_search => !!$markdown,
   matches     => \@matches,
