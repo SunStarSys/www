@@ -81,6 +81,11 @@ Options:
 
 ## Access Controls on Content, from a Single Source of Truth Perspective
 
+- `walk_content_tree()` in `path.pm`
+  - acls
+  - dependencies
+- `acl.yml`
+
 ## SunStar Systems' Orion&trade; for ZFS-backed Platforms
 
 1. zfs clones
