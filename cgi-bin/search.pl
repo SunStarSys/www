@@ -225,7 +225,7 @@ my $host     = $r->headers_in->{host};
 my ($js, $count);
 
 utf8::decode($_) for $re, $filter;
-warn $host;
+
 my $dirname;
 my $repos;
 
