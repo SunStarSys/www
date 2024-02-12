@@ -348,33 +348,31 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           my $dt = substr $_->{text}, 0, -1;
           next if $dt eq $svnuser;
           my $displayText = $$_{displayText};
-          $displayText =~ s/^ <img [^>]+>//;
+          $displayText =~ s/: <img [^>]+>//;
           if ($$_{members}) {
             $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=red,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
             $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
             for my $m (@{$$_{members}}) {
               my $mdt = substr $m->{text}, 0 , -1;
               my $displayText = $$m{displayText};
-              $displayText =~ s/^ <img [^>]+>//;
+              $displayText =~ s/: <img [^>]+>//;
               $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$mdt}++;
               $graphviz .= "\"$dt\" -> \"$mdt\" [color=red];\n";
             }
           }
           elsif ($$_{groups}) {
-            my $displayText = $$_{displayText};
-            $displayText =~ s/^ <img [^>]+>//;
             $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
             $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
             for my $g (@{$$_{groups}}) {
               my $gdt = substr $g->{text}, 0, -1;
               my $displayText = $$g{displayText};
-              $displayText =~ s/^ <img [^>]+>//;
+              $displayText =~ s/: <img [^>]+>//;
               $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$gdt}++;
               $graphviz .= "\"$dt\" -> \"$gdt\" [color=black];\n";
               for my $m (@{$$g{members}}) {
                 my $mdt = substr $m->{text}, 0 , -1;
                 my $displayText = $$m{displayText};
-                $displayText =~ s/^ <img [^>]+>//;
+                $displayText =~ s/: <img [^>]+>//;
                 $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$mdt}++;
                 $graphviz .= "\"$dt\" -> \"$mdt\";\n";
               }
