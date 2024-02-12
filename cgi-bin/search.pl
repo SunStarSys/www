@@ -322,7 +322,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $group{'@'.$1} = $2;
       }
       my %seen;
-      my (undef, $groups, $comment) = split /:/, $pw{$svnuser};
+      my (undef, $groups, $comment, $data) = split /:/, $pw{$svnuser};
 
       for (map '@'.$_, sort split /,/, $groups) {
         push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text => "$_=", displayText => "$_: $c"}} grep !$seen{$_}++, split /,/, $group{$_};
@@ -347,25 +347,35 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           no warnings 'uninitialized';
           my $dt = substr $_->{text}, 0, -1;
           next if $dt eq $svnuser;
+          my $displayText = $$_{displayText};
+          $displayText =~ s/^ <img [^>]+>//;
           if ($$_{members}) {
-            $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=red,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
+            $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=red,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
             $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
             for my $m (@{$$_{members}}) {
               my $mdt = substr $m->{text}, 0 , -1;
-              $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayText}\"];\n" unless $seen{$mdt}++;
+              my $displayText = $$m{displayText};
+              $displayText =~ s/^ <img [^>]+>//;
+              $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$mdt}++;
               $graphviz .= "\"$dt\" -> \"$mdt\" [color=red];\n";
             }
           }
           elsif ($$_{groups}) {
-            $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$$_{displayText}\"];\n" unless $seen{$dt}++;
+            my $displayText = $$_{displayText};
+            $displayText =~ s/^ <img [^>]+>//;
+            $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
             $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
             for my $g (@{$$_{groups}}) {
               my $gdt = substr $g->{text}, 0, -1;
-              $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$$g{displayText}\"];\n" unless $seen{$gdt}++;
+              my $displayText = $$g{displayText};
+              $displayText =~ s/^ <img [^>]+>//;
+              $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$gdt}++;
               $graphviz .= "\"$dt\" -> \"$gdt\" [color=black];\n";
               for my $m (@{$$g{members}}) {
                 my $mdt = substr $m->{text}, 0 , -1;
-                $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$$m{displayText}\"];\n" unless $seen{$mdt}++;
+                my $displayText = $$m{displayText};
+                $displayText =~ s/^ <img [^>]+>//;
+                $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$mdt}++;
                 $graphviz .= "\"$dt\" -> \"$mdt\";\n";
               }
             }
