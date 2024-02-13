@@ -39,9 +39,17 @@
             }
             else
             {
+                var loc = document.location.href;
+                var value = "#";
+                const m = loc.match(/\/(comment[A-Z]+)/);
+                if (m)
+                    value += m[1];
+                else
+                    value += "comment";
+
                 var dialogHTML = "<div class=\"" + classPrefix + "form\">" +
                                         "<label>" + linkLang.url + "</label>" +
-                                        "<input type=\"text\" value=\"#comment\" data-url />" +
+                                        "<input type=\"text\" value=\"" + value + "\" data-url />" +
                                         "<br/>" +
                                         "<label>" + linkLang.urlTitle + "</label>" +
                                         "<input type=\"text\" value=\"" + selection + "\" data-title />" +
@@ -71,13 +79,13 @@
                                 return false;
                             }
 
-                            /*if (title === "")
+                            if (title === "")
                             {
                                 alert(linkLang.titleEmpty);
                                 return false;
-                            }*/
-
-                            var str = `<a href="` + url + `" class="border border-warning text-muted reference-link" id="{{"` + url + `|cut:"#"}}-link" title="{{` + url.substr(1) + `.headers.title}}">` + title + "</a>";
+                            }
+                            var id = url.replace(/^\#/, "") + "-link";
+                            var str = `<a href="` + url + `" class="border border-warning text-muted reference-link" id="` + id + `" title="{{` + url.substr(1) + `.headers.title}}">` + title + "</a>";
 
                             cm.replaceSelection(str);
 
