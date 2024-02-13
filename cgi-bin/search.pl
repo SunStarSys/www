@@ -443,7 +443,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $d_fmt[0] -= 1900;
         $d_fmt[1] -= 1;
 
-        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime timegm reverse $$@d_fmt[0..5];
+        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime timegm reverse @d_fmt[0..5];
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
