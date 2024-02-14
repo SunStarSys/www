@@ -261,7 +261,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
-    if ($re =~ /^build=/i and $pw{$svnuser} =~ /\bsvnadmin\b/) {
+    if ($re =~ /^build=/i) {
       no warnings 'uninitialized';
       ($revision) = $re =~ /(\d+)$/;
       if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
