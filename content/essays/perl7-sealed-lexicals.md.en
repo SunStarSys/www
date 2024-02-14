@@ -4,7 +4,7 @@ Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
 Muted: commentAAAA
 Important: commentAB
-Status: verified=12973
+Status: verified
 Closed: commentAAABAA
 
 <div class="right">
@@ -94,6 +94,12 @@ sub handler :sealed {
 ## Production-Quality, Robust Perl v5.22+ Prototype: sealed.pm {{facts.releases.sealed.tag}} (on CPAN)
 
 Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should you want to run mod_perl2 w/ ithreads and httpd-2.4 w/ event mpm, and not segfault at **any** scale.  Tested on `Solaris 11.4` and `Ubuntu 22.04` on amd64.
+
+There is only one snag: `:Sealed` subs aren't reentrant without patching line 2460 in `pad.c` in your `perl` build to read
+
+```c
+        else if ((uint64_t)(names[ix]) > 1024*1024 && PadnamePV(names[ix])) {
+```
 
 For fun, try this [monkey patch]({{snippetB.pretty_uri}}) to `ModPerl::RegistryCooker`:
 
