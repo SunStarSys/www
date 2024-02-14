@@ -201,9 +201,11 @@
 ## [Diff](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}})
 
   {% endfilter %}
+
 <pre class="text-primary"><code data-lang="diff">
 {{ diff }}
 </code></pre>
+
   {% endif %}
   {% endifequal %}
   {% if specials %}
@@ -294,4 +296,9 @@
       });
 </script>
 {% endif %}
+{% endblock %}
+{% block javascript %}
+<script type="text/javascript">
+  CodrMirror.colorize();
+</script>
 {% endblock %}
