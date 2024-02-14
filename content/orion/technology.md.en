@@ -15,11 +15,11 @@ Status: draft
 
 - Because Editor.md is **awesome**, we ported it to [`node.js`](#) &mdash; WYSIWYG, regardless of the viewer's context (editing in our online IDE, or browsing the resultant production site).
 
-## Perl 7 (coming soon)
+## Perl v5.38.2
 
-- {# lede #}Now w/ Perl v5.34.0, mod_perl v2.0 w/ ithreads and httpd v2.4.43 w/ event mpm.{# lede #}
+- {# lede #}Now w/ mod_perl v2.0.13 w/ ithreads and httpd v2.4.58 w/ event mpm.{# lede #}
 
-## Subversion v1.16.x
+## Subversion v1.14.4
 
 - custom ithread-safe [`SVN::Client`](#) bindings w/ per-request memory pools.
 
