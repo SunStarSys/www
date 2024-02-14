@@ -43,7 +43,7 @@
       revision }};lang={{lang}};markdown_search={{markdown_search}}">Log</a></h3>
       <pre>{{ log|safe }}</pre>
   </div>
-<pre class="text-primary"<code data-lang="diff">
+<pre class="text-primary"><code data-lang="diff">
 {{ diff }}
 </code></pre>
 
@@ -296,9 +296,4 @@
       });
 </script>
 {% endif %}
-{% endblock %}
-{% block javascript %}
-<script type="text/javascript">
-  CodeMirror.colorize();
-</script>
 {% endblock %}
