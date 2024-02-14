@@ -191,7 +191,7 @@
   {% endif %}
   {% ifequal specials "build=" %}
   {% if blog %}
-  <pre class="text-primary">{{ blog }}</pre>
+  <pre>{{ blog }}</pre>
   {% endif %}
   {% if diff %}
   {% filter markdown %}
@@ -200,7 +200,7 @@
 
   {% endfilter %}
 
-<pre class="text-primary"><code data-lang="diff">{{ diff }}</code></pre>
+<pre><code data-lang="diff">{{ diff }}</code></pre>
 
   {% endif %}
   {% endifequal %}
