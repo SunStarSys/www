@@ -4,7 +4,7 @@ Dependencies: *.md.en
 Categories: Perl, Orion, Performance, Apache
 Muted: commentAAAA
 Important: commentAB
-Status: verified
+Status: draft
 Closed: commentAAABAA
 
 <div class="right">
@@ -97,7 +97,7 @@ Compile instructions for perl 5.30+ are available in the `sealed.pm` pod should 
 
 There is only one snag: `:Sealed` subs aren't reentrant without patching line 2460 in `pad.c` in your `perl` build to read
 
-```c
+```clike
         else if ((uint64_t)(names[ix]) > 1024*1024 && PadnamePV(names[ix])) {
 ```
 
@@ -151,3 +151,4 @@ This will allow Perl 5 to do the sample code's `content_type` method-lookup at c
 This Perlish idea is gratuitously stolen from [Dylan](https://jim.studt.net/dirm/interim-5.html).  [Read this](https://www.complang.tuwien.ac.at/gergo/papers/load_attr.pdf) for the CPython effort from over a decade ago.
 
 <!-- $Date$ $Author$ $Revision$ -->
+->
