@@ -94,7 +94,7 @@
     <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button></h3>
   </div>
   <div class="card-body">
-    {{ links|markdown }}
+    {{ links.content|markdown }}
   </div>
 </div>
 
