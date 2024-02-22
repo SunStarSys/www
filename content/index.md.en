@@ -6,7 +6,11 @@ Status: draft
 <div class="float-lg-right">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">News</div>
-		<div class="card-body">
+
+        <div class="card-body">
+<h2 class="card-title"><a href="https://blogs.sunstarsys.com/">Free Blogs!</a></h2>
+
+<br>
 
 <h2 class="card-title">SunStar Systems' GitLab CI Linter Technology now available at <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a>.
 </h2>
