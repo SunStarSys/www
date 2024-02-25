@@ -67,8 +67,6 @@ katex.__defineMacro("\\pu", function(context) {
 katex.__defineMacro("\\tripledash", "{\\vphantom{-}\\raisebox{2.56mu}{$\\mkern2mu"
 + "\\tiny\\text{-}\\mkern1mu\\text{-}\\mkern1mu\\text{-}\\mkern2mu$}}");
 
-//import katex from "katex";
-
   //
   //  This is the main function for handing the \ce and \pu commands.
   //  It takes the argument to \ce or \pu and returns the corresponding TeX string.

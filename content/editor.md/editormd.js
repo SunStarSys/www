@@ -4389,7 +4389,8 @@
         css : "/editor.md/lib/katex.min",
         js  : "/editor.md/lib/katex.min",
         physics: "/editor.md/lib/katex-physics",
-        mhchem: "/editor.md/lib/mhchem"
+        mhchem: "/editor.md/lib/mhchem",
+        copy: "/editor.md/lib/copy-tex"
     };
 
     editormd.kaTeXLoaded = false;
@@ -4405,7 +4406,9 @@
         editormd.loadCSS(editormd.katexURL.css, function() {
             editormd.loadScript(editormd.katexURL.js, function() {
                 editormd.loadScript(editormd.katexURL.physics, function(){
-                    editormd.loadScript(editormd.katexURL.mhchem, callback || function () {
+                    editormd.loadScript(editormd.katexURL.mhchem, function () {
+                        editormd.loadScript(editormd.katexURL.copy, callback || function () {
+                        });
                     });
                 });
             });
