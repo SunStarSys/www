@@ -1610,9 +1610,8 @@
 
             this.previewContainer.find("." + editormd.classNames.tex).each(function(){
                 var tex  = $(this);
-                editormd.$katex.render(tex.text(), tex[0], {display: true, macros: macros_physics, throwOnError: false});
-
-                tex.find(".katex").css("font-size", "1.6em");
+                var mode = (tex.prop('nodeName') !== "SPAN");
+                editormd.$katex.render(tex.text(), tex[0], {displayMode: mode, trust: true, strict: false, macros: macros_physics, throwOnError: false});
             });
 
             return this;
@@ -3788,16 +3787,16 @@
         };
 
         markedRenderer.paragraph = function(text) {
-            var isTeXInline     = /\$\$(.*)\$\$/g.test(text);
-            var isTeXLine       = /^\$\$(.*)\$\$$/.test(text);
+            var isTeXInline     = /\$\$(.*?)\$\$/g.test(text);
+            var isTeXLine       = /^\$\$(.*?)\$\$$/.test(text);
             var isTeXAddClass   = (isTeXLine)     ? " class=\"" + editormd.classNames.tex + "\"" : "";
             var isToC           = (settings.tocm) ? /^(\[TOC\]|\[TOCM\])$/.test(text) : /^\[TOC\]$/.test(text);
             var isToCMenu       = /^\[TOCM\]$/.test(text);
 
             if (!isTeXLine && isTeXInline)
             {
-                text = text.replace(/(\$\$([^\$]*)\$\$)+/g, function($1, $2) {
-                    return "<span class=\"" + editormd.classNames.tex + "\">" + $2.replace(/\$/g, "") + "</span>";
+                text = text.replace(/\$\$(.*?)\$\$/g, function($1, $2) {
+                    return "<span class=\"" + editormd.classNames.tex + "\">" + $2 + "</span>";
                 });
             }
             else
@@ -4223,8 +4222,8 @@
             var katexHandle = function() {
                 div.find("." + editormd.classNames.tex).each(function(){
                     var tex  = $(this);
-                    katex.render(tex.text(), tex[0], {display:true, macros:macros_physics, throwOnError: false});
-                    tex.find(".katex").css("font-size", "1.6em");
+                    var mode = (tex.prop('nodeName') !== "SPAN");
+                    editormd.$katex.render(tex.text(), tex[0], {displayMode: mode, trust: true, strict: false, macros: macros_physics, throwOnError: false});
                 });
             };
 
@@ -4389,7 +4388,8 @@
     editormd.katexURL  = {
         css : "/editor.md/lib/katex.min",
         js  : "/editor.md/lib/katex.min",
-        physics: "/editor.md/lib/katex-physics"
+        physics: "/editor.md/lib/katex-physics",
+        mhchem: "/editor.md/lib/mhchem"
     };
 
     editormd.kaTeXLoaded = false;
@@ -4404,7 +4404,9 @@
     editormd.loadKaTeX = function (callback) {
         editormd.loadCSS(editormd.katexURL.css, function() {
             editormd.loadScript(editormd.katexURL.js, function() {
-                editormd.loadScript(editormd.katexURL.physics, callback || function(){
+                editormd.loadScript(editormd.katexURL.physics, function(){
+                    editormd.loadScript(editormd.katexURL.mhchem, callback || function () {
+                    });
                 });
             });
         });
