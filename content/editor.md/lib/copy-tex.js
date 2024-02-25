@@ -3,7 +3,7 @@
 // Set these to how you want inline and display math to be delimited.
 const defaultCopyDelimiters = {
     inline: ['$$', '$$'],    // alternative: ['\(', '\)']
-    display: ['```', '```'], // alternative: ['\[', '\]']
+    display: ["\n```math\n", "\n```\n"], // alternative: ['\[', '\]']
 };
 
 // Replace .katex elements with their TeX source (<annotation> element).
