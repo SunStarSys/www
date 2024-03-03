@@ -1,8 +1,0 @@
----
-dependencies: '*.md.en'
-keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,anti-spam,sendmail,postfix,exim
-status: draft
-title: On the Spam Problem...
-
----
-{% ssi `/essays/spam.md.en` %}

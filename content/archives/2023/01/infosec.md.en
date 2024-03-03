@@ -1,8 +1,0 @@
----
-dependencies: '*.md.en'
-keywords: infosec,zerotrust,taint,dynamic,data
-status: draft
-title: Information Security Primer
-
----
-{% ssi `/essays/infosec.md.en` %}
