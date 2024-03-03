@@ -1,8 +1,0 @@
----
-categories: IT
-dependencies: '*.md.en'
-keywords: devops
-title: The DevOps Movement
-
----
-{% ssi `/essays/devops.md.en` %}

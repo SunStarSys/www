@@ -1,8 +1,0 @@
----
-categories: Orion, Architecture, ZFS
-dependencies: '*.md.en'
-keywords: information,topology,hypermedia,rest
-title: Information Architecture
-
----
-{% ssi `/essays/ia.md.en` %}
