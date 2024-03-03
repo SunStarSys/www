@@ -1,8 +1,0 @@
----
-categories: Perl, Orion, Performance, Apache
-dependencies: '*.md.en'
-keywords: perl,dylan,static,method,lookup,compile,sealed,apache
-title: 'Perl 7 Feature Request: sealed subs for typed lexicals'
-
----
-{% ssi `/essays/perl7-sealed-lexicals.md.en` %}
