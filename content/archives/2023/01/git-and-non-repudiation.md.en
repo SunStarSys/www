@@ -1,8 +1,0 @@
----
-dependencies: '*.md.en'
-keywords: security,non repudiation,DVCS,version control,icla
-status: draft
-title: Git and Non Repudiation
-
----
-{% ssi `/essays/git-and-non-repudiation.md.en` %}

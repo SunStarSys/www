@@ -1,8 +1,0 @@
----
-dependencies: '*.md.en'
-keywords: devops
-status: archived
-title: The DevOps Movement
-
----
-{% ssi `/essays/devops.md.en` %}
