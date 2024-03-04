@@ -6,6 +6,7 @@ use strict;
 use locale ':time';
 use warnings;
 use base 'sealed';
+use sealed 'deparse';
 use Text::Balanced ();
 use Apache2::Const qw/HTTP_OK OK HTTP_BAD_REQUEST/;
 use Apache2::RequestRec;
