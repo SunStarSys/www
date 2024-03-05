@@ -568,10 +568,11 @@ my $args = {
 };
 
 if (client_wants_json $r) {
-  $r->content_type("application/json; charset='utf-8'");
+  my Apache2::RequestRec $main = $r;
+  $main->content_type("application/json; charset='utf-8'");
   delete $$args{r};
   local $@;
-  eval {print Cpanel::JSON::XS->new->utf8->pretty->encode($args)};
+  eval {$main->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args))};
   warn $@ if $@;
   return $@ ? 400 : Apache2::Const::OK;
 }
