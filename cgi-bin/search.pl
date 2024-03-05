@@ -569,7 +569,7 @@ my $args = {
 
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
-  delete $$args{r};
+  $$args{r} = {};
   $r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args));
   return Apache2::Const::OK;
 }
