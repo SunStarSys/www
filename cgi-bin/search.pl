@@ -131,7 +131,7 @@ sub parser :Sealed {
   }
 }
 
-sub client_wants_json {
+sub client_wants_json :Sealed {
     my Apache2::RequestRec $r     = shift;
     my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
@@ -571,7 +571,8 @@ if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
   local $@;
-  eval {$r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args))};
+  eval {print Cpanel::JSON::XS->new->utf8->pretty->encode($args)};
+  warn $@ if $@;
   return $@ ? 400 : Apache2::Const::OK;
 }
 
