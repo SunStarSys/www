@@ -574,9 +574,9 @@ if (client_wants_json $r) {
   local $@;
   my Cpanel::JSON::XS $jxs = "Cpanel::JSON::XS";
   $jxs = $jxs->new;
-  $jsx = $jsx->utf8;
-  $jsx = $jsx->pretty;
-  eval {$main->print($jsx->encode($args))};
+  $jxs = $jxs->utf8;
+  $jxs = $jxs->pretty;
+  eval {$main->print($jxs->encode($args))};
   warn $@ if $@;
   return $@ ? 400 : Apache2::Const::OK;
 }
