@@ -572,7 +572,11 @@ if (client_wants_json $r) {
   $main->content_type("application/json; charset='utf-8'");
   delete $$args{r};
   local $@;
-  eval {$main->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args))};
+  my Cpanel::JSON::XS $jxs = "Cpanel::JSON::XS";
+  $jxs = $jxs->new;
+  $jsx = $jsx->utf8;
+  $jsx = $jsx->pretty;
+  eval {$main->print($jsx->encode($args))};
   warn $@ if $@;
   return $@ ? 400 : Apache2::Const::OK;
 }
