@@ -488,8 +488,8 @@ if ($re !~ $specials_re) {
       warn "$@" and next if $@;
     }
     else {
-      my $subr = $r->lookup_file("$dirname$k");
-      index($subr->status, "4") == 0 and next;
+      my Apache2::SubRequest $subr = $r->lookup_uri("/");
+      index($subr->lookup_file("$dirname$k")->status, "4") == 0 and next;
     }
     my $filename = "$dirname$k";
     my $uncompressed;
