@@ -569,9 +569,10 @@ my $args = {
 
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
-  $$args{r} = {};
-  $r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args));
-  return Apache2::Const::OK;
+  delete $$args{r};
+  local $@;
+  eval {$r->print(Cpanel::JSON::XS->new->utf8->pretty->encode($args))};
+  return $@ ? 400 : Apache2::Const::OK;
 }
 
 local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>, "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates";
