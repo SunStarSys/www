@@ -131,7 +131,7 @@ sub parser :Sealed {
   }
 }
 
-sub client_wants_json :Sealed {
+sub client_wants_json {
     my Apache2::RequestRec $r     = shift;
     my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
