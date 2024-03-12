@@ -1,5 +1,4 @@
 Title: Home
-Dependencies: /categories/*/index.html.en
 Keywords: wiki,knowledge,blogs
 Status: draft
 
@@ -83,14 +82,6 @@ For a behind the scenes <span class="text-white">whitepaper</span> description o
 - [Sealed Lexicals for Perl 7](/essays/perl7-sealed-lexicals) &mdash; add <span class="text-info">:sealed</span> to a function definition and enjoy the extra speed of compile-time method lookups for all of its typed lexicals.
 
 - [The DevOps Movement](/essays/devops) &mdash; filled in the missing details on this article.
-
-&nbsp;
-## Category Index
-&nbsp;
-
-<div style="text-align:justify;max-width:600px">
-{% for d in deps|dictsort:0 %}<button type="button" class="btn btn-success"><a href="{{d.0}}">{{d.0|dirname|basename}}</a></button> {% endfor %}
-</div>
 
 <style type="text/css">
 h2 { font-size: 18px }
