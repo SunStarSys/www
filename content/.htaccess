@@ -1,2 +1,2 @@
 RedirectMatch permanent ^/CMS/(.*) /orion/$1
-RedirectMatch permanent ^/essays/(.*) https://blogs.sunstarsys.com/joe/$1
+RedirectMatch permanent ^/essays/(.*) https://www.iconoclasts.blog/joe/$1
