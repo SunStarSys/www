@@ -47,7 +47,7 @@ local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
 
 my Apache2::RequestRec $r = shift;
-my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
+my APR::Request::Apache2 $apreq_class;
 my APR::Request $apreq = $apreq_class->handle($r);
 
 local our $USERNAME = $r->user;
@@ -71,7 +71,7 @@ sub filtermd {
 sub parser :Sealed {
   my @text;
   my (undef, $dirname, undef, $paths) = (@_, {});
-  my HTML::Parser $p = "HTML::Parser";
+  my HTML::Parser $p;
   $p = $p->new(
     api_version => 3,
     handlers => {
@@ -133,7 +133,7 @@ sub parser :Sealed {
 
 sub client_wants_json :Sealed {
     my Apache2::RequestRec $r     = shift;
-    my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
+    my APR::Request::Apache2 $apreq_class;
     my APR::Request $apreq = $apreq_class->handle($r);
 
     return 1 if $apreq->args("as_json");
@@ -212,7 +212,8 @@ sub negotiate_file :Sealed {
 
 sub get_client_lang :Sealed {
   my Apache2::RequestRec $r = shift;
-  my APR::Request::Apache2 $apreq = APR::Request::Apache2->handle($r);
+  my APR::Request::Apache2 $apreq;
+  $apreq = $apreq->handle($r);
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
   my $lang = $apreq->args("lang") // $cdata;
   $lang =~ s/[_-].*$//;
