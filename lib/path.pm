@@ -42,8 +42,6 @@ our @patterns = (
     view            => [qw/set_template_from_capture snippet single_narrative/],
     compress        => 1,
     facts           => $facts,
-    archive_root    => "/archives",
-    category_root   => "/categories",
     markdown_search => 1, # search markdown instead of built html
     permalink       => 1,
   }],
@@ -94,16 +92,6 @@ walk_content_tree {
   }
 }
   and do {
-
-    my @essays_glob = glob("content/essays/files/*/*");
-    my @categories_glob = glob("content/categories/*/*");
-
-    for my $lang (qw/en es de fr/) {
-      push @{$dependencies{"/essays/files/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-        @essays_glob;
-      push @{$dependencies{"/categories/index.html.$lang"}}, grep -f && s/^content// && !m!/index\.html\.$lang$!,
-        @categories_glob if -f "content/categories/index.html.$lang";
-    }
 
     while  (my ($k, $v) = each %{$facts->{dependencies}}) {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
