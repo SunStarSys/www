@@ -425,8 +425,12 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ## Interactive Mathematical Vector Graphics with @vectorgraphics/asymptote
 
+- [x] Syntax Highlighter for Asymptote
+- [x] CMS will fast fail on unparseable Asymptote code blocks
+- [x] WebGL enabled, mulit-threaded HTML output
+
 ```asy
-// tubular trefoil knot  -*- asy -*-
+// tubular trefoil knot -*- asy -*-
 
 import tube;
 import graph3;
