@@ -364,7 +364,10 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- Navier-Stokes in Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
+- [x] Synchronous Generation of $$\LaTeX$$ Source Files from Markdown+$$\KaTeX$$ Files.
+
+- [x] Navier-Stokes in Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
+
 ```math
 \begin{aligned}
 \pdv{\rho}{t}+\pdv{(\rho u_i)}{x_i} &= 0 \\
@@ -373,7 +376,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- Navier-Stokes in Classical Notation
+- [x] Navier-Stokes in Classical Notation
 
 ```math
 \begin{aligned}
