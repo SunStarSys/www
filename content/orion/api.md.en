@@ -239,6 +239,20 @@ Mandatory Arguments:
 - [`lang`](#)
 - [`path`](#)
 
+#### skip(%args)
+
+Don't build these at all.  Instead, build the associated generated source files (e.g. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) to be built on a secondary build system run.
+
+#### yml2ext(%args)
+
+Convert YAML files.
+
+Optional Arguments:
+
+- [`ext`](#) defaults to `json`
+- [`filter`](#) defaults to `json_raw`
+-[`template`](#) overrides `filter` default expression
+
 #### fetch_deps($path, $data, $quick)
 
 Mandatory Arguments:
