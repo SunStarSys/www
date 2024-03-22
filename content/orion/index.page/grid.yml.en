@@ -77,5 +77,5 @@ status: draft
 - Feature: "Searchable Document Status"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Markdown <span class="editormd-tex">\rightarrow \LaTeX</span> Automation'
+- Feature: 'Markdown <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automation'
   Orion: "&check;"
