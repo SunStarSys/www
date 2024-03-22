@@ -395,6 +395,14 @@ Interface for [`SunStarSys::Util::parse_filename`](#).  Key difference is that t
 
 Returns the traditional UNIX [`basename`](#) of the path in the filtered input string. Passing an argument of [`0`](#) to this filter will cause it to strip all file extensions from the resulting string.
 
+#### tex2md
+
+Tranforms $$\LaTeX$$ sources into Markdown+$$\KaTeX$$ sources.
+
+#### md2tex
+
+The inverse transformation of `tex2md`.
+
 #### vcs_date
 
 Takes a [`lang`](#) argument to provide a locale-specific representation of the day, month, and year of the most recent change presented by the [`$Date`](#) Subversion keyword in the filtered input string (which is typically the full [`content`](#) of the current resource).
