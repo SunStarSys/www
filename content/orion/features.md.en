@@ -364,7 +364,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Synchronous Generation of $$\LaTeX$$ Source Files from Markdown+$$\KaTeX$$ Files.
+- [x] Synchronous, Bidirectional Generation of $$\LaTeX$$ Source Files from Markdown+$$\KaTeX$$ Files.
 
 - [x] Navier-Stokes in Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
@@ -390,7 +390,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Electric!
 
-	Editor will autocomplete and autoindent; has full screen mode, as well as support for several other content authoring modes available to its CodeMirror 5 syntax highlighter.
+Editor will autocomplete and autoindent; has full screen mode, as well as support for several other content authoring modes available to its CodeMirror 5 syntax highlighter.
 
 ## Full support for branch builds
 
