@@ -389,6 +389,10 @@ Same as [`YAML::XS::Dump`](#).
 
 Takes a single argument and appends its value to the filtered input.  The argument can be a varname or a quoted string; this filter will be smart about `/` characters being joined together on the [`append`](#).
 
+#### cuts
+
+Like `cut`, but the argument is taken as a *substring* to elide, instead of a list of characters.
+
 #### lede
 
 Extracts the text between the &#123;# [`lede`](#) #&#125; blocks in the filtered input string.
