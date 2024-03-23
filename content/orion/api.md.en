@@ -391,7 +391,7 @@ Takes a single argument and appends its value to the filtered input.  The argume
 
 #### cuts
 
-Like `cut`, but the argument is taken as a *substring* to elide, instead of a list of characters.
+Like [`cut`](#), but the argument is taken as a *substring* to elide, instead of a list of characters.
 
 #### lede
 
