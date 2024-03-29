@@ -1,5 +1,5 @@
 Title: Orion Security
-Dependencies: *.md.en
+Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz
 Status: published
