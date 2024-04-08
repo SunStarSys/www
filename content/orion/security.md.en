@@ -56,13 +56,27 @@ subgraph vpn-au-west[ ]
 end
 class vpn-au-west,A6 darkBlue
 
-class A1,A2,A3,A4,A5,A6 borderless
+subgraph vpn-ap-west[ ]
+    A7[[Hyderabad, India]]
+	B7[OCI Edge Servers]
+end
+class vpn-ap-west,A7 darkBlue
+
+subgraph vpn-ap-east[ ]
+    A8[[Seoul, South Korea]]
+    B8[OCI Edge Servers]
+end
+class vpn-ap-east,A8 darkBlue
+
+class A1,A2,A3,A4,A5,A6,A7,A8 borderless
 
 vcs==vpn==>A2==ssh/vpn==>B2
 vcs==vpn==>A3==ssh/vpn==>B3
 vcs==vpn==>A4==ssh/vpn==>B4
 vcs==vpn==>A5==ssh/vpn==>B5
 vcs==vpn==>A6==ssh/vpn==>B6
+vcs==vpn==>A7==ssh/vpn==>B7
+vcs==vpn==>A8==ssh/vpn==>B8
 ```
 &nbsp;
 
