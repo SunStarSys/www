@@ -17,7 +17,7 @@ my Apache2::RequestRec $r = shift;
 my $DOMAIN = q/sunstarsys.com/;
 my $to     = q/sales@sunstarsys.com/;
 my $date   = gmtime;
-my ($host) = map /^([\w.-]+)$/, $r->headers_in("Host");
+my ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
 
 sub render :Sealed {
     my Apache2::RequestRec $r = shift;
@@ -26,8 +26,8 @@ sub render :Sealed {
     my APR::Request $apreq = $apreq_class->handle($r);
     my $params = $apreq->param // {};
     my %args = (%$params, @_);
-    local @TEMPLATE_DIRS = map /(.*)/, </x1/cms/wcbuild/*/$host/trunk/templates>,
-	    "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates";
+    local @TEMPLATE_DIRS = map /^(.*)$/, </x1/cms/wcbuild/*/$host/trunk/templates>,
+      "/x1/cms/wcbuild/public/www.sunstarsys.com/trunk/templates";
     $r->content_type("text/html; charset='utf-8'");
     my Dotiac::DTL::Template $dtl = Template($template);
     $r->print($dtl->render(\%args));
