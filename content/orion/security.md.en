@@ -80,7 +80,7 @@ vcs==vpn==>A8==ssh/vpn==>B8
 ```
 &nbsp;
 
-FIPS 140-2 compliant triple-encryption for reverse-port-forwarded services (HTTPS/SSH/IPsec).  Belt, suspenders, and stirrups!
+FIPS 140-2 compliant w/MFA triple-encryption for reverse-port-forwarded services (HTTPS/SSH/IPsec).  Belt, suspenders, and stirrups!
 
 ----
 
@@ -88,7 +88,7 @@ FIPS 140-2 compliant triple-encryption for reverse-port-forwarded services (HTTP
 
 ### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo challenges
 
-No fixed passwords stored on servers, not even in crypt form. This *limits* headless automation of sudo usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
+No fixed passwords stored on servers. This *limits* headless automation of sudo / RBAC usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
 
 ### Sandboxed execution for builds and CGI scripts
 
