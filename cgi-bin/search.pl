@@ -568,7 +568,7 @@ my $args = {
   specials_re => grep s/^.*?(\w+=)/$1/, $specials_re
 };
 
-if (my $origin = $r->headers_in->get("Origin")) {}
+if (my $origin = $r->headers_in->get("Origin")) {
   $r->headers_out->set("Access-Control-Allow-Origin", $origin);
   $r->headers_out->set("Access-Control-Allow-Credentials", "true");
 }
