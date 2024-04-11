@@ -272,7 +272,7 @@ Currently PDF's only.
 
 ### Cross-Origin Resource Sharing
 
-- [x] All users with an account can consume UI/APIs from elsewhere using their login credentials
+- [x] All users with an account can consume UI/APIs from elsewhere using their login credentials.
 
 - [x] Business and Enterprise customers can treat Orion as a [Headless CMS](https://aws.amazon.com/what-is/headless-cms/) if they want to build their own UI from the JSON [Subversion Porcelain](api/editor) or [JSON Search](api/search) APIs.
 
