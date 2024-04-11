@@ -568,7 +568,10 @@ my $args = {
   specials_re => grep s/^.*?(\w+=)/$1/, $specials_re
 };
 
-$r->headers_out->set("Access-Control-Allow-Credentials", "true");
+if (my $origin = $r->headers_in->get("Origin")) {}
+  $r->headers_out->set("Access-Control-Allow-Origin", $origin);
+  $r->headers_out->set("Access-Control-Allow-Credentials", "true");
+}
 
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
