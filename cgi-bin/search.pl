@@ -568,6 +568,8 @@ my $args = {
   specials_re => grep s/^.*?(\w+=)/$1/, $specials_re
 };
 
+$r->headers_out->set("Access-Control-Allow-Credentials", "true");
+
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
