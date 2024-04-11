@@ -270,6 +270,12 @@ CSS must be delivered from our servers.
 
 Currently PDF's only.
 
+### Cross-Origin Resource Sharing
+
+- [x] All users can consume UI/APIs from elsewhere using their login credentials
+
+- [x] Customers can treat Orion as a [Headless CMS](https://aws.amazon.com/what-is/headless-cms/) if they want to build their own UI from the JSON [Subversion Porcelain](api/editor) or [JSON Search](api/search) APIs.
+
 ### Third-Party Dependencies
 
 Remarkably brief and time-tested dependencies; the major components of which are covered on the [Orion Technology](technology) page.
