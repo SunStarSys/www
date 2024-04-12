@@ -40,7 +40,7 @@ Status: draft
 
 <h2 class="card-title">SunStar Systems pty {{facts.releases.pty.tag}} released!</h2>
 
-<p class="card-text">Please upgrade your <span class="text-info">pty</span> installation to <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, which includes native support for <span class='text-info'>python 3.10.y</span>.</p>
+<p class="card-text">Please upgrade your <span class="text-info">pty</span> installation to <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, which includes native support for <span class='text-info'>python 3.10+</span>.</p>
 
 </div>
 </div>
