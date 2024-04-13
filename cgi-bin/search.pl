@@ -5,7 +5,6 @@ use utf8;
 use strict;
 use locale ':time';
 use warnings;
-use base 'sealed';
 
 use Text::Balanced ();
 use Apache2::Const qw/HTTP_OK OK HTTP_BAD_REQUEST/;
@@ -32,6 +31,7 @@ use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
 no warnings 'uninitialized';
+use sealed 'deparse';
 
 local $@;
 
