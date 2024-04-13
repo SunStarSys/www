@@ -47,7 +47,7 @@ local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
 
 my Apache2::RequestRec $r = shift;
-my APR::Request::Apache2 $apreq_class;
+my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
 my APR::Request $apreq = $apreq_class->handle($r);
 
 local our $USERNAME = $r->user;
@@ -57,7 +57,8 @@ local our $lang  = get_client_lang($r);
 $PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
 $r->pnotes("svnuser", $USERNAME);
 $r->pnotes("svnpassword", $PASSWORD);
-my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
+my SunStarSys::SVN::Client $svn ="SunStarSys::SVN::Client";
+$svn = $svn->new($r);
 my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
 
 sub filtermd {
@@ -133,7 +134,7 @@ sub parser :Sealed {
 
 sub client_wants_json :Sealed {
     my Apache2::RequestRec $r     = shift;
-    my APR::Request::Apache2 $apreq_class;
+    my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
 
     return 1 if $apreq->args("as_json");
@@ -212,7 +213,7 @@ sub negotiate_file :Sealed {
 
 sub get_client_lang :Sealed {
   my Apache2::RequestRec $r = shift;
-  my APR::Request::Apache2 $apreq_class;
+  my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
   my APR::Request $apreq = $apreq_class->handle($r);
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
   my $lang = $apreq->args("lang") // $cdata;
