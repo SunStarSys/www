@@ -5,6 +5,7 @@ use utf8;
 use strict;
 use locale ':time';
 use warnings;
+use base 'sealed';
 use sealed 'deparse';
 
 use Text::Balanced ();
