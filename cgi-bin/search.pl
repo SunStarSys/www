@@ -47,8 +47,8 @@ local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
 
 my Apache2::RequestRec $r = shift;
-my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
-my APR::Request $apreq = $apreq_class->handle($r);
+my APR::Request::Apache2 $apreq_class;
+my APR::Request $apreq = APR::Request::Apache2->handle($r);
 
 local our $USERNAME = $r->user;
 local our $PASSWORD;
