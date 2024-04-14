@@ -57,7 +57,6 @@ Takes a [`lang`](#) argument to provide a locale-specific representation of the 
 
 Represents the numerical hour, minute, seconds, and timezone offset of the most recent change presented by the [`$Date`](#) Subversion keyword in the filtered input string.
 
-
 #### vcs_author
 
 Presents a [`safe`](#) HTML representation of the user who updated the content most recently, as recorded by the Subversion keyword [`$Author`](#) keyword in the filtered input string.  Takes an optional [`lang`](#) argument for a locale-specific representation.
@@ -73,5 +72,9 @@ Strips the (path) prefix, passed as an argument to this filter, from the filtere
 #### shuffle
 
 Shuffle the array.
+
+#### img
+
+Grab the first HTML5/Markdown image from the filtered content.
 
 <!-- $Date$ $Author$ $Revision$ -->
