@@ -2,7 +2,7 @@
 categories: wiki,jamstack,blog,seguro,seguro
 dependencies: '*.md.es api/index.md.es'
 keywords: borrador
-status: ~
+status: draft
 title: SunStar Orión de sistemas
 ---
 
