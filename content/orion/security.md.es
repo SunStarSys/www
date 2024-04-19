@@ -187,11 +187,11 @@ Si permite el preprocesamiento de plantillas en las páginas de origen de rebaja
 
 Consulte la siguiente sección en [Dependency/ACL Injection Controls](#h4-dependency-acl-injection-controls) para obtener más detalles, y consulte este ejemplo en directo de cómo las ACL fáciles se pueden configurar centralmente en [`lib/acl.yml`]({snippetA.pretty_uri}}):
 
-[separador:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
+[snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
 Los autores de contenido pueden configurar restricciones de página en las [cabeceras]({{snippetB.pretty_uri}} de la página:
 
-[snippet:repo=SunStarSys/www:path=contenido/orión/seguridad.md.en:branch=trunk:lines=1,4:lang=yaml]
+[snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
 Como nota adicional, los recursos protegidos no pueden ser copiados en una sucursal por personal no autorizado, incluso sin colocar ningún control de ACL adicional en la creación y modificación de la sucursal. En otras palabras, el sistema apoyará la experimentación de sucursales sin ningún control adicional de su parte para garantizar que los activos protegidos permanezcan protegidos durante todo el ciclo de vida natural de cada sucursal.
 
