@@ -1,7 +1,6 @@
 ---
 categories: borrador
-keywords: ~
-status: ~
+status: draft
 title: Datos de tabla para cuadrícula de comparación de funciones
 ---
 
@@ -41,7 +40,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Confluence: "$$$"
 - Feature: "Federado"
   Orion: "&check;"
-  Confluence: [NO](https://jira.atlassian.com/browse/CONFSERVER-26528)"
+  Confluence: "[NO](https://jira.atlassian.com/browse/CONFSERVER-26528)"
 - Feature: "Soporte de etiqueta blanca"
   Orion: "&check;"
 - Feature: "Instalable dentro de VPN corporativa"
@@ -65,7 +64,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "Alojamiento de sitios web"
   Orion: "&check;"
-- Feature: [Gráficos vectoriales 3D](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integración"
+- Feature: "[Gráficos vectoriales 3D](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integración"
   Orion: "&check;"
 - Feature: "Soporte de SSI / CGI / mod_perl / mod_wasm"
   Orion: "&check;"
