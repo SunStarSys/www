@@ -67,7 +67,7 @@ title: Características de Orion
 
 	- TLS 1.3
 
-	- Módulo personalizado [`SVN::Client`](#) con soporte ithread para agrupaciones por solicitud
+	- Personalizado [`SVN::Client`](#)
 
 ## Multilingüe
 
@@ -101,7 +101,7 @@ title: Características de Orion
 
 - Estilo Bootstrap (Solarized).
 
-- Editor.md es increíble: mediante el uso de URL relativas [`src`](#), las imágenes enlazadas se representarán en el panel de vista previa del editor.
+- Editor.md es increíble: mediante el uso de relativo [`src`](#)
 
 ## Representación consistente de rebajas con sabor a GitHub (GFM) con Editor.md :editormd-logo-1x: y plantillas de Django
 
@@ -362,7 +362,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [ ] extensión de diagramación draw.io opcional próximamente
 
-- [x] Soporte de Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) para matemáticas, física y química:
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX)
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
@@ -370,7 +370,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Generación síncrona y bidireccional de archivos de origen $$\LaTeX$$ a/desde archivos de Markdown+$$\KaTeX$$.
 
-- [x] Navier-Stokes en Einstein Notation (también conocido como [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
+- [x] Navier-Stokes en Einstein Notation (también conocido como [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation)
 
 ```math
 \begin{aligned}
@@ -483,19 +483,18 @@ draw(tube(p,colorsec),render(merge=true));
 
 - Solo está disponible el sistema de compilación basado en Perl.
 
-- El nuevo editor de Markdown está basado en [`marked/gfm`](#), por lo que el analizador es más moderno.  La última versión admite la especificación de slug a'la el analizador original basado en python.
+- El nuevo editor de Markdown es [`marked/gfm`](#)
 
 - GFM utiliza un delimitador diferente para los bloques de código.
 
-- [`extpaths.txt`](#) ya no está soportado: a los individuos seleccionados de cada proyecto se les concederá acceso de escritura al árbol del sitio web de producción en nuestros repositorios de subversión para cargar material producido externamente (javadocs, artefactos de versión de software, etc.)
+- [`extpaths.txt`](#)
 
 ----
 
 ## Índice
 
-{% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
-{% endfor %}
+{% para d en deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}})
 
 <style type="text/css">
 /*-------------------------------------------

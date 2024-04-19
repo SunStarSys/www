@@ -49,7 +49,7 @@ title: Caractéristiques Orion
 
 - Solaris 11.4 pour la stabilité ZFS, soutenu par Full Oracle Customer Support
 
-- node.js pour le rendu de démarque avec la mise en cluster de CPU
+- node.js pour le rendu de démarque avec clustering de CPU
 
 - 8-64 versions simultanées
 
@@ -67,7 +67,7 @@ title: Caractéristiques Orion
 
 	- TLS 1,3
 
-	- Module [`SVN : :Client`](#) personnalisé avec prise en charge ithread pour les pools par demande
+	- Personnalisé [`SVN : :Client`](#)
 
 ## Multilingue
 
@@ -101,7 +101,7 @@ title: Caractéristiques Orion
 
 - Style Bootstrap (solarisé).
 
-- Editor.md est incroyable : en utilisant des URL [`src`](#) relatives, vos images liées seront affichées dans le volet d'aperçu de l'éditeur.
+- Editor.md est incroyable : en utilisant relatif [`src`](#)
 
 ## Affichage GitHub-Flavored Markdown (GFM) cohérent avec Editor.md :editormd-logo-1x : et Django Templating
 
@@ -360,17 +360,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ] l'extension facultative de création de diagrammes draw.io sera bientôt disponible
+- [ ] l'extension facultative de création de diagrammes draw.io arrive bientôt
 
-- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) support pour les mathématiques, la physique et la chimie :
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX)
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Génération synchrone et bidirectionnelle de fichiers source $$\LaTeX$$ vers/depuis Markdown+$$\KaTeX$$ Files.
+- [x] Génération synchrone et bidirectionnelle de fichiers source $$\LaTeX$$ vers/à partir de fichiers Markdown+$$\KaTeX$$.
 
-- [x] Navier-Stokes dans Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
+- [x] Navier-Stokes dans Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation)
 
 ```math
 \begin{aligned}
@@ -483,19 +483,18 @@ draw(tube(p,colorsec),render(merge=true));
 
 - Seul le système de construction basé sur Perl est disponible.
 
-- Le nouvel éditeur Markdown est basé sur [`marked/gfm`](#), de sorte que l'analyseur est plus moderne.  La dernière version prend en charge la spécification de slug a'la de l'analyseur basé sur python d'origine.
+- Le nouvel éditeur Markdown est [`marked/gfm`](#)
 
 - GFM utilise un délimiteur différent pour les blocs de code.
 
-- [`extpaths.txt`](#) n'est plus pris en charge : certains individus de chaque projet bénéficieront d'un accès en écriture à l'arborescence du site Web de production dans nos référentiels de subversion pour le téléchargement de matériel produit en externe (javadocs, artefacts de version logicielle, etc.)
+- [`extpaths.txt`](#)
 
 ----
 
 ## Index
 
-{% for d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
-{% endfor %}
+{% pour d dans les deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}})
 
 <style type="text/css">
 /*-------------------------------------------
