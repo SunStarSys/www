@@ -22,66 +22,67 @@ title: SunStar Orión de sistemas
 	<li><p>federado</p></li>
 	</ul>
 </p>
+	{# lede #}<span class="text-white">Enterprise Wiki</span>&nbsp; for <b>creating, managing, and delivering</b> static webpages using #Jamstack Technology for dynamic features therein{# lede #}.
 
-Para obtener información sobre los precios, consulte nuestros [Planes de Orión] (planes).
+For pricing information, see our [Orion Plans](plans).
 
-### Aquí está el lanzamiento, tomador de decisiones ejecutivo...
+### Here's the Pitch, Executive Decision Maker...
 
-Lo que diferencia a este producto de nuestros competidores es la [tecnología Orion] (tecnología), y cómo su **eficiencia** nos permite mantener costos operativos muy bajos al tiempo que proporciona controles editoriales superiores y características innovadoras.  Transferimos el ahorro de costos a nuestros **clientes**, con solo recargos marginales por recursos adicionales de proveedores en la nube. [Llámenos](/contacto), **especialmente** si lo está
+What differentiates this product from our competitors is the [Orion Technology](technology), and how its **efficiency** allows us to maintain very low operating costs while providing a superior editorial controls and groundbreaking features.  We pass the cost savings on to our **customers**, with only marginal upcharges for additional cloud provider resources. [Give us a call](/contact), **especially** if you are
 
 <ul>
-	<li><p>un <span class="text-white">líder universitario</span> que busca la forma de <b>eliminar el plagio</b> en el campus a través de una plataforma de intercambio de documentos, selección y publicación en línea controlada por versión de <a href="https://en.wikipedia.org/wiki/Open_access">Open Access</a>, o un sistema de gestión del conocimiento orientado al ámbito académico,</p></li>
-	<li><p>un <span class="text-white">responsable de la toma de decisiones del gobierno de TI/sector de defensa</span> con las necesidades de cumplimiento FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a>, o requisitos de control de acceso detallados en el repositorio de control de versiones de su sitio,</p></li>
-	<li><p>un <span class="text-white">ejecutivo de marketing</span> que desee una plataforma empresarial global e innovadora para gestionar los activos de su sitio web corporativo, utilizando Orion como un CMS "sin cabeza",</p></li>
-	<li><p>una <span class="text-white">empresa de tecnología/líder de agencia de sitios web</span> con una wiki comercial muy insegura, una montaña de documentación de productos en línea o sitios de clientes (que ofrecen potencialmente descargas binarias) para curar,</p></li>
-	<li><p>un <span class="text-white">arquitecto principal de alta disponibilidad</span> cansado de lidiar con los puntos de fallo únicos inherentes a las pilas LAMP basadas en SQL,</p></li>
-<li><p>o realmente cualquier persona de negocios insatisfecho con la estructura de costos de cualquier wiki por ahí, incluyendo ofertas gratuitas que atascan el tiempo y la energía de su personal.</p></li>
+	<li><p>a <span class="text-white">University Leader</span> looking for way to <b>eliminate plagiarism</b> on campus via an <a href="https://en.wikipedia.org/wiki/Open_access">Open Access</a> version-controlled-document sharing, curation and online publishing platform, or an academic-oriented Knowledge Management System,</p></li>
+	<li><p>an <span class="text-white">IT government/defense sector decision-maker</span> with either FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a> compliance needs, or fine-grained Access Control requirements on your site's version control repository,</p></li>
+	<li><p>a <span class="text-white">marketing executive</span> wanting an innovative, global enterprise platform for managing your corporate website assets, using Orion as a "headless" CMS,</p></li>
+	<li><p>a <span class="text-white">technology company/website agency leader</span> with a very insecure commercial wiki, a mountain of online product documentation or client sites (potentially offering binary downloads) to curate,</p></li>
+	<li><p>a <span class="text-white">principled High Availability architect</span> tired of dealing with single-points-of-failure inherent in SQL-based LAMP stacks,</p></li>
+<li><p>or really any business-person dissatisfied with the cost structure of any wiki thingy out there, including free offerings bogging down your staff's time and energy.</p></li>
 </ul>
 
-*No hay dependencia de proveedor involucrada en nuestra oferta*. Pero no solo tome nuestra palabra para ello, vea por sí mismo lo que generalmente está involucrado en términos de personalización del sistema de construcción visitando
+*There is no vendor lock-in involved with our offering*. But don't just take our word for it, see for yourself what's typically involved in terms of build system customization by visiting
 
-[nuestro árbol de biblioteca de origen viewvc](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), o su [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
+[our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
 
-Menos de <span class="text-info">100 LOC</span> para proporcionar la lógica de creación para este sitio web, e incluye una gestión de dependencias sofisticada y memorizada para la generación automática de un [SiteMap](/sitemap) multilingüe y todos los índices de directorio (como [esta parte](#Details) de esta página en particular).  Incluso ponemos el [Generador de sitio estático subyacente para la construcción en GitHub](https://github.com/SunStarSys/Orion) bajo la Licencia Apache 2.0.
+Less than <span class="text-info">100 LOC</span> to provide the build logic for this website, and it includes sophisticated, memoized dependency management for auto-generation of a multilingual [SiteMap](/sitemap) and all directory indexes (like [this portion](#Details) of this particular page).  We even put the underlying [Static Site Generator for the build on GitHub](https://github.com/SunStarSys/Orion) under the Apache License 2.0.
 
 </div>
 
 <div class="col-lg-7">
 	<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/ylFF7PDniZw" style="max-width:560;max-height:315"></iframe>
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>Aquí está el por qué, desarrollador de pila completa / Blogger público / DevOps Guru...</h3>
+<h3>Here's Why, Full Stack Developer / Public Blogger / DevOps Guru...</h3>
 
-¿Desea un sitio web que sea **seguro por defecto**?  Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, ¿pero le da todo su poder cuando realmente lo necesita?  Publicación instantánea cuando lo desee; creaciones de sucursales organizadas y fluidas y promociones granulares personalizables para su sitio de producción, ya que se adapta al flujo de trabajo preferido de su equipo.
+Want a website that's **secure-by-default**?  Easy to update and manage, while hiding the complexity of an underlying version control system, yet giving you its full power when you truly need it?  Instant publication when you want it; smooth, staged branch builds and customizable granular promotions to your production site as it suits your team's preferred workflow.
 
-Si está cansado de las opciones de licencia por asiento y por ciclo de CPU que lo pesan cada vez que necesita corregir un error tipográfico, [contáctenos] (/contact). Si usted es un manipulador de leones equipado con regex durante décadas de contenido HTML heredado acumulado, o simplemente alguien insatisfecho con las otras opciones en el mercado y cómo funcionan a escala, tenemos algo realmente especial que ofrecerle.
+If you are tired of the per-seat licensing and per-CPU-cycle choices weighing you down whenever you need to fix a typo, [reach out to us](/contact). If you are a regex-equipped lion tamer for decades of accumulated legacy HTML content, or just someone dissatisfied with the other options on the market and how they function at scale, we have something really special to offer you.
 
-Nunca tener que lidiar directamente con un sistema de control de versiones, o incluso un generador de sitio estático, en su propio ordenador personal depende de usted. El IDE en línea está diseñado y listo para su **flujo de trabajo de solo explorador** cuando lo esté.  En una pizca, incluso la interfaz móvil (navegador) lo hará, * instantáneamente*.
+Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
 
-Los árboles de origen de varios gigabytes simplemente no coinciden: las duraciones de creación del sitio completo se miden en * segundos*, no en horas y minutos.  El sistema soporta fácilmente más de [`500 MB/s`](características) mientras procesa los orígenes para creaciones de sitios completos, pero dada su funcionalidad de <span class="text-white">gestión de dependencias única y pendiente de patente</span>, casi nunca necesita recurrir a ellos:
+Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`500 MB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique, patent-pending dependency management</span> functionality, it almost never needs to resort to them:
 
-<span class="text-success"><em>Solo creamos lo que necesita crear.</em></span>TM
+<span class="text-success"><em>We only build what you need built.</em></span>&trade;
 
-Esta tecnología fue inventada por primera vez a finales de 2011 por miembros del equipo de infraestructura Apache. La frase "[JAM Stack](https://jamstack.wtf)" fue acuñada años más tarde, por un grupo que desconocía nuestro arte anterior en este espacio.  Pero el [registro público] (http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion) es muy claro, y esta nueva oferta de SunStar Systems es testimonio de ese legado original y sus verdaderos orígenes de código abierto.
+This technology was first invented in late 2011 by members of the Apache Infrastructure Team. The phrase "[JAM Stack](https://jamstack.wtf)" was coined years later, by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
 
-<h4>¿Quieres darle un giro rápido para ver lo rápido y fácil que es?</h4>
+<h4>Want to give it a quick spin to see how fast and easy it is?</h4>
 
-Este sitio web es auto-alojado; todos esos cuadrados de lápiz rosa caliente [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) en la parte superior derecha están en vivo.  ¡Siéntete libre de dar vueltas y experimentar con cualquier cosa que veas!  Lo único que no puede hacer es comprometerse y ver sus cambios construir y desplegar; eso está restringido a nuestro personal por razones obvias.
+This website is self-hosted; all those hot-pink pencil squares [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
 
-Nuestra red global de punto de presencia (POP) garantiza conexiones de baja latencia tanto a Orion TM como a los sitios web de entrega final que alojamos.  Actualmente estamos en cuatro continentes y tenemos una presencia bicoastal dentro de los Estados Unidos.  ¡Y nos estamos expandiendo rápidamente, al lado de Asia Oriental!
+Our global Point of Presence (POP) network ensures low-latency connections to both Orion &trade; and the end-delivery websites we host.  We are currently on four continents and have a bicoastal presence within the US.  And we're expanding rapidly- next up East Asia!
 
-<h3>Es hora de un cambio radical en la forma de administrar y entregar su sitio a su público objetivo.</h3>
+<h3>It's time for a sea change in how you manage and deliver your site to your target audience.</h3>
 
-Vaya a su propio ritmo, use tantos empleados / vistas previas / ediciones / confirmaciones / sucursales como desee, y solo pague por lo que *utiliza realmente * en nuestra infraestructura.
+Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure.
 
-Vea nuestros [Planes de Orión] (planes) para las ofertas actuales.
+See our [Orion Plans](plans) for the current deals.
 
 </div>
 </div>
 
-### Cuadrícula de comparación de características
+### Feature Comparison Grid
 
 <br />
 
