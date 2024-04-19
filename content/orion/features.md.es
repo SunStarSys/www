@@ -476,7 +476,6 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-
 ## Deltas de las funciones de <span class='text-info'>Apache CMS</span>
 
 - Solo está disponible el sistema de compilación basado en Perl.
