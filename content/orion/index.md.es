@@ -94,7 +94,7 @@ Vea nuestros [Planes de Orión] (planes) para las ofertas actuales.
 
 ### detalles
 
-{% para d en deps %}
+{% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 

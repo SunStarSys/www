@@ -290,7 +290,7 @@ Dependencias notablemente breves y probadas en el tiempo; cuyos componentes prin
 
 ## Índice
 
-{% para d en deps %}
+{% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 

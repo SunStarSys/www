@@ -211,7 +211,7 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 
 ## Índice
 
-{% para d en deps %}
+{% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
