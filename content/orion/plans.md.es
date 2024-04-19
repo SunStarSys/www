@@ -218,7 +218,7 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 ------------
 
 <div class="col-lg-12">
-  {% incluye "/enquiry_get.html" %}
+  {% include "/enquiry_get.html" %}
 </div>
 
 <style type="text/css">
