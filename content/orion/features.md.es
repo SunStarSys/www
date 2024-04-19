@@ -2,7 +2,7 @@
 categories: jamstack,markdown, sirena,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluencia,slab,notion
 dependencies: '*.md.es api/index.md.es'
 keywords: borrador
-status: ~
+status: draft
 title: Características de Orion
 ---
 
