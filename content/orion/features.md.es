@@ -1,65 +1,517 @@
-Title: Orion Features
-Keywords: jamstack,markdown,Orion,ide,node.js,node,oracle,dtrace,zfs,cloud,cdn,http
+---
+categories: jamstack,markdown, sirena,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluencia,slab,notion
+dependencies: '*.md.es api/index.md.es'
+keywords: borrador
+status: ~
+title: Características de Orion
+---
 
-<div class="float-lg-right" style="margin: 0 0 20 20">
-	<div class="embed-responsive embed-responsive-16by9">
-		<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xr67QX6aMqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div class="row">
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/xr67QX6aMqU"></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/uhKLwl3HgMI" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/aNwnmwIngrM" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/gf19vVF-G9E" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+		</div>
 	</div>
 </div>
-## Blazing Fast
+<p>
+&nbsp;
+</p>
 
-- 50ms or less RTT latency for most of the western world's population, with plans to expand coverage in East Asia by Q1 2021.
-- 500 MB / s sustained builds for multi-gigabyte source trees
-- NVMe or faster build infrastructure
-- Solaris 11.4 for ZFS stability, backed by Full Oracle Customer Support
-- node.js for markdown rendering with CPU clustering
-- 8-64 way concurrent builds
-- Quick Commit now the default setting for most circumstances
-- Apache httpd 2.4 based IDE:
+## Infraestructura de sistema rápida e intensa
+
+- 50 ms o menos de latencia de RTT para la mayor parte de la población mundial, con planes para ampliar la cobertura en África
+
+- 2 veces más rápido HTTP / 2 tiempos de entrega de páginas multiplexadas (listos para usar, para * todos * los clientes) que la competencia
+
+<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+- 500 MB/s de construcciones sostenidas para árboles de origen de varios gigabytes
+
+- NVMe o una infraestructura de almacenamiento de creación más rápida
+
+- Solaris 11.4 para la estabilidad de ZFS, respaldado por Full Oracle Customer Support
+
+- node.js para la representación de Markdown con clusters de CPU
+
+- 8-64 formas de construcciones simultáneas
+
+- Compromiso rápido ahora la configuración por defecto para la mayoría de las circunstancias
+
+- IDE basado en httpd 2.4 de Apache:
+
 	- HTTP/2
-	- event mpm
-	- mod_perl w/ ithreads
+
+	- evento mpm
+
+	- mod_perl con ithreads
+
 	- mod_apreq2
-	- TLS 1.2
-    - Custom [`SVN::Client`](#) module w/ ithread support for per-request pools
 
-## Better support for Mailing Diffs and Creating Clones
+	- TLS 1.3
 
-- DMARC-protected
-- Uses SRS and Reply-To for ezmlm-compatibility
-- All users are Authenticated via Google's OpenID-Connect Service
+	- Módulo personalizado [`SVN::Client`](#) con soporte ithread para agrupaciones por solicitud
 
-## The curious-looking duckling is now an elegant swan
+## Multilingüe
 
-- Bootstrap (Solarized) styling.
-- Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
+- Español
 
-## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md
+- Español
 
-- **WYSIWYG:** Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
+- Alemán
 
-- YAML headers in source (markdown) files now fully supported.
+- Francés
 
-- Coming as soon as [jsdom](https://github.com/jsdom/jsdom) finishes their SVG implementation: Flowcharts!
+## Mejor soporte para diferenciadores de correo y creación de clonaciones
 
-- Don Knuth's [TeX](https://en.wikipedia.org/wiki/TeX) support (for mathematical expressions): $$ E = mc^2 $$
+- Protegido por DMARC
 
-- Electric! Editor will autocomplete and autoindent; has full screen mode.
+- Utiliza SRS y Responder a para la compatibilidad ezmlm
 
-## Full support for branch builds
+- Todos los usuarios se autentican a través del servicio OpenID-Connect de Google
 
-- No more staging/publishing: replaced with per-resource branch <span class="text-white">Promotion</span>.
-- <span class="text-white">Rollback</span> and <span class="text-white">Sync</span> Merge fully supported.
+## El patito curioso es ahora un cisne elegante
 
-## Live source tree search engine
+<br>
 
-- Perl Compatible Regular Expression (PCRE) based.
-- Global search and replace functionality as well (unique given PCRE support); supports regex captures.
+<div class="col-lg-3">
+	<div class="embed-responsive embed-responsive-16by9">
+	<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/JNWybe63G3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
 
-## Deltas from <span class='text-info'>Apache CMS</span> Features
+<br>
 
-- Dropped [`mdx_elementid.py`](#) features (new implementation is javascript, not python, and GFM based, so only [TOC] from the py-markdown module carries across).  A problem tailor-made for the above Search and Replace Feature of the IDE.
-- Only the Perl-based build system is available.
-- New editor treats newlines within markdown text blocks as hard breaks.
-- GFM uses a different delimiter for code blocks.
-- [`extpaths.txt`](#) is no longer supported: select individuals from each project will be granted write access to the production website tree in our subversion repos for uploading externally produced material (javadocs, software release artifacts, etc.)
+- Estilo Bootstrap (Solarized).
+
+- Editor.md es increíble: mediante el uso de URL relativas [`src`](#), las imágenes enlazadas se representarán en el panel de vista previa del editor.
+
+## Representación consistente de rebajas con sabor a GitHub (GFM) con Editor.md :editormd-logo-1x: y plantillas de Django
+
+- [x] **WYSIWYG:** {# lede #}El mismo motor de representación de código javascript tanto en el explorador como en el script de compilación markdown.js (basado en node.js){# lede #} garantiza una consistencia estructural del 100% entre la ventana de vista previa de Markdown Editor.md y el sitio de producción.
+- [x] Cabeceras YAML en archivos de origen (markdown) ahora totalmente compatibles.
+- [x] Soporte nativo de diagrama de flujo y diagrama de secuencia :fa-glass:
+
+```flow
+st=>start: börja
+op=>operation: operation
+cond=>condition: villkor Ja eller Nej?
+e=>end: slutet
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+----
+```seq
+Andrew->Jenni: Says Hello
+Note right of Jenni: Jenni thinks\nabout it
+Jenni-->Andrew: How are you?
+Andrew->>Jenni: I am good thanks!
+```
+
+- [x] Native d3-graphviz.js support:
+
+```graphviz
+digraph {
+a -> b;
+a -> c [color=red];
+}
+```
+&nbsp;
+----
+&nbsp;
+
+- [x] Nativo @mermaid-js/mermaid v10.7.0 con soporte de mapas mentales:
+
+```mermaid
+graph TD
+    A[Christmas]
+ -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+----
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts<br/>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+----
+```mermaid
+erDiagram
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||--o{ INVOICE : "liable for"
+    DELIVERY-ADDRESS ||--o{ ORDER : receives
+    INVOICE ||--|{ ORDER : covers
+    ORDER ||--|{ ORDER-ITEM : includes
+    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+    PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+```
+----
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+----
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+```
+----
+```mermaid
+pie title Commits to orion on GitHub
+	"Sunday" : 4
+	"Monday" : 5
+	"Tuesday" : 7
+  "Wednesday" : 3
+```
+----
+```mermaid
+classDiagram
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+      +String beakColor
+      +swim()
+      +quack()
+    }
+    class Fish{
+      -int sizeInFeet
+      -canEat()
+    }
+    class Zebra{
+      +bool is_wild
+      +run()
+    }
+```
+----
+```mermaid
+gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+```
+----
+```mermaid
+%%{init:{"theme":"default"}}%%
+graph TB
+    sq[Square shape] --> ci((Circle shape))
+
+    subgraph A
+        od>Odd shape]-- Two line<br/>edge comment --> ro
+        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
+        di==>ro2(Rounded square shape)
+    end
+
+    %% Notice that no text in shape are added here instead that is appended further down
+    e --> od3>Really long text with linebreak<br>in an Odd shape]
+
+    %% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
+
+    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+
+     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+```
+----
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectivness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+----
+```mermaid
+journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 3: Me
+```
+----
+```mermaid
+flowchart TB
+classDef borderless stroke-width:0px
+classDef darkBlue fill:#00008B, color:#fff
+classDef brightBlue fill:#6082B6, color:#fff
+classDef gray fill:#62524F, color:#fff
+classDef gray2 fill:#4F625B, color:#fff
+
+subgraph publicUser[ ]
+    A1[[Public User<br/> Via REST API]]
+    B1[Backend Services/<br/>frontend services]
+end
+class publicUser,A1 gray
+
+subgraph authorizedUser[ ]
+    A2[[Authorized User<br/> Via REST API]]
+    B2[Backend Services/<br/>frontend services]
+end
+class authorizedUser,A2 darkBlue
+
+subgraph booksSystem[ ]
+    A3[[Books System]]
+    B3[Allows interacting with book records]
+end
+class booksSystem,A3 brightBlue
+
+
+publicUser--Reads records using-->booksSystem
+authorizedUser--Reads and writes records using-->booksSystem
+
+subgraph authorizationSystem[ ]
+    A4[[Authorization System]]
+    B4[Authorizes access to resources]
+end
+
+subgraph publisher1System[ ]
+    A5[[Publisher 1 System]]
+    B5[Gives details about books published by them]
+end
+subgraph publisher2System[ ]
+    A6[[Publisher 2 System]]
+    B6[Gives details about books published by them]
+end
+class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
+
+booksSystem--Accesses authorization details using-->authorizationSystem
+booksSystem--Accesses publisher details using-->publisher1System
+booksSystem--Accesses publisher details using-->publisher2System
+
+class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
+
+click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagram.md" "booksSystem"
+```
+
+&nbsp;
+----
+&nbsp;
+
+- [ ] extensión de diagramación draw.io opcional próximamente
+
+- [x] Soporte de Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) para matemáticas, física y química:
+
+```math
+\ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
+```
+
+- [x] Generación síncrona y bidireccional de archivos de origen $$\LaTeX$$ a/desde archivos de Markdown+$$\KaTeX$$.
+
+- [x] Navier-Stokes en Einstein Notation (también conocido como [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
+
+```math
+\begin{aligned}
+\pdv{\rho}{t}+\pdv{(\rho u_i)}{x_i} &= 0 \\
+      \pdv{(\rho u_i)}{t}+\pdv{(\rho u_i u_j)}{x_j} &= -\pdv{p}{x_i}+\pdv{\tau_{ij}}{x_j}+\rho f_i \\
+      \pdv{(\rho e)}{t}+\pdv{(\rho e+p)u_i}{x_i} &= \pdv{(\tau_{ij} u_j)}{x_i}+\rho f_i u_i+\pdv{(\dot{q}_i)}{x_i}+r \\
+\end{aligned}
+```
+
+- [x] Navier-Stokes en notación clásica
+
+```math
+\begin{aligned}
+\pdv{\rho}{t}+\vec{\nabla}\cdot(\rho\vec{u}) &= 0 \\
+      \pdv{(\rho \vec{u})}{t}+\vec{\nabla}\cdot\rho\vec{u}\otimes\vec{u} &= -\vec{\nabla p}+\vec{\nabla}\cdot\bar{\bar{\tau}}+\rho\vec{f} \\
+      \pdv{(\rho e)}{t}+\vec{\nabla}\cdot(\rho e+p)\vec{u} &= \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\cdot\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
+\end{aligned}
+```
+
+----
+
+- [x] ¡Eléctrico!
+
+    El editor se autocompletará y se autoindentará; tiene modo de pantalla completa, así como soporte para varios otros modos de creación de contenido disponibles para su resaltador de sintaxis CodeMirror 5.
+
+## Soporte completo para creaciones de sucursales
+
+- [x] No más ubicación temporal/publicación: sustituido por la rama por recurso <span class="text-white">Promoción</span>.
+- [x] <span class="text-white">Anulación</span> y <span class="text-white">Sincronización</span> de fusión totalmente compatibles.
+
+## Buscador de árbol fuente en vivo
+
+<br>
+
+<div class="row">
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/dftUs2Oqy-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/TvgKXkoVsAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+<br>
+
+- [x] Perl Compatible Regular Expression (PCRE) basado.
+- [x] Búsqueda global y funcionalidad de reemplazo también (único dado soporte PCRE); admite capturas de expresiones regulares.
+- [ ] Búsqueda en PDF próximamente.
+- [ ] Soporte de GraphQL/AI próximamente. ¡La seguridad parece divertida!
+
+## Archivos adjuntos de página ilimitados con tipos MIME arbitrarios
+
+## Comentarios seguros por página
+
+## Traducciones de lenguaje natural automatizadas de Markdown (próximamente)
+
+## Gráficos vectoriales matemáticos interactivos con @vectorgraphics/asymptote
+
+- [x] Resaltador de sintaxis para asíntota
+- [x] CMS fallará rápidamente en bloques de código asintótico no analizables
+- [x] WebGL activado, salida HTML multithread
+
+```asy
+// tubular trefoil knot -*- asy -*-
+
+import tube;
+import graph3;
+import palette;
+
+size(0, 8cm);
+currentlight=White;
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+real z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+pen[] pens=Gradient(6,red,blue,purple);
+pens.push(yellow);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));
+```
+
+&nbsp;
+
+----
+
+&nbsp;
+
+
+## Deltas de las funciones de <span class='text-info'>Apache CMS</span>
+
+- Solo está disponible el sistema de compilación basado en Perl.
+
+- El nuevo editor de Markdown está basado en [`marked/gfm`](#), por lo que el analizador es más moderno.  La última versión admite la especificación de slug a'la el analizador original basado en python.
+
+- GFM utiliza un delimitador diferente para los bloques de código.
+
+- [`extpaths.txt`](#) ya no está soportado: a los individuos seleccionados de cada proyecto se les concederá acceso de escritura al árbol del sitio web de producción en nuestros repositorios de subversión para cargar material producido externamente (javadocs, artefactos de versión de software, etc.)
+
+----
+
+## Índice
+
+{% para d en deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<style type="text/css">
+/*-------------------------------------------
+	Animaciones
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-nombre-animación-webkit: FADEY;
+	-webkit-animación-duración: 1s;
+	-webkit-animación-función de tiempo: facilidad de entrada;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date$ $Author$ $Revision$ -->
