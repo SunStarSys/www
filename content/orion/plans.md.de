@@ -1,110 +1,228 @@
-Title: Orion Preisgestaltung
+---
+categories: Jamstack, Wiki
+dependencies: '*.md.de api/index.md.de'
+keywords: veröffentlicht
+status: ~
+title: Orionspläne
+---
 
-## Preisdetails
+## Plandetails
 
 <div class="row">
-	<div class="col-lg-4">
-		<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
-			<div class="card-header">Professioneller Plan</div>
-			<div class="card-body">
-			10 USD / Monat / verwaltete öffentliche Website; ~ 50% Rabatt auf alle Preismodelle der Wettbewerber!
-				<ul style="min-height:600px">
-					<li>Enthaltene monatliche Ressourcen (pro Website):
-						<ol>
-							<li>50 MB Speicherplatz im Dateisystem<sup>1</sup></li>
-							<li>200 GB Bandbreite</li>
-							<li>Unbegrenzte Builds und IDE-Nutzung für einen Sitzplatz</li>
-							<li>E-Mail-basierter Kundensupport</li>
-						</ol>
-					</li>
-				</ul><ul style="min-height:200px">
-					<li>Zusätzliche monatliche Ressourcenraten (pro Website):
-						<ol>
-							<li>10 USD / 10 MB  Speicherplatz im Dateisystem<sup>1</sup></li>
-							<li>10 USD / 40 GB Bandbreite</li>
-							<li>10 USD / Sitzplatz</li>
-						</ol>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-4">
-		<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
-			<div class="card-header">Geschäftsplan</div>
-			<div class="card-body">
-			50 USD / Monat / verwaltete öffentliche Website; ~ 50% Rabatt auf alle Preismodelle der Wettbewerber!
-				<ul style="min-height:600px">
-					<li>Enthaltene monatliche Ressourcen (pro Website):
-						<ol>
-							<li>200 MB Speicherplatz im Dateisystem<sup>1</sup></li>
-							<li>500 GB Bandbreite</li>
-							<li>Unbegrenzte Builds und IDE-Nutzung für drei Sitzplatz</li>
-							<li>E-Mail-basierter Kundensupport</li>
-						</ol>
-					</li>
-				</ul>
-				<ul style="min-height:200px">
-					<li>Zusätzliche monatliche Ressourcenraten (pro Website):
-						<ol>
-							<li>10 USD / 20 MB Speicherplatz im Dateisystem<sup>1</sup></li>
-							<li>20 USD / 100 GB Bandbreite</li>
-							<li>25 USD / Sitzplatz</li>
-						</ol>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="col-lg-4">
-		<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
-			<div class="card-header">Enterprise Plan</div>
-			<div class="card-body">
-500 USD / Monat, ~ 67% Rabatt auf alle Preismodelle der Wettbewerber!
-				<ul style="min-height:600px">
-					<li>Enthaltene monatliche Ressourcen:
-						<ol>
-							<li>500 MB Dateisystemspeicherplatz in Ihrem eigenen Repository<sup>2</sup></li>
-							<li>2 TB Bandbreite</li>
-							<li>Unbegrenzte Websites, Builds und Plätze</li>
-							<li>Volle Kontrolle über die Konfiguration der Subversion-Autorisierung</li>
-							<li>99,99% Live Site SLA</li>
-							<li>Premium Support SLA</li>
-						</ol>
-					</li>
-				</ul>
-				<ul style="min-height:200px">
-					<li>Zusätzliche monatliche Ressourcenraten:
-						<ol>
-							<li>100 USD / 100 MB Speicherplatz im Dateisystem<sup>2</sup></li>
-							<li>15 USD / 100 GB Bandbreite</li>
-							<li>100 USD / ithread mod_perl registry Hosting</li>
-						</ol>
-					</li>
-				</ul>
-			</div>
+<div class="col-lg-4">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Person - Plan</div>
+		<div class="card-body">
+			Ideal für unabhängige Blogger
+			<hr />
+<p>
+
+$10 / Monat / verwaltete öffentliche Website
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+
+<li>Enthaltene monatliche Ressourcen (pro Website):
+<p>
+<ol>
+						<li>Öffentliches Subversion Hosting</li>
+						<li>100 MB Speicherplatz<sup>1</sup></li>
+						<li>500 GB Datenübertragung</li>
+						<li>Unbegrenzte IDE-Nutzung für 10 Plätze</li>
+			<li>100 Montageminuten</li>
+			<li>E-Mail-basierter Kundendienst</li>
+					</ol>
+					</p>
+</li>
+</ul>
+
+<ul style="min-height:200px">
+				<li>Zusätzliche monatliche Ressourcensätze (pro Website):
+<p>
+<ol>
+						<li>10 $/10 MB Speicherplatz<sup>1</sup></li>
+						<li>$10 / 40 GB Datenübertragung</li>
+						<li>$5 / Platz</li>
+						<li>$10 / 100 Build-Minuten</li>
+					</ol>
+					</p>
+</li>
+			</ul>
 		</div>
 	</div>
 </div>
+<div class="col-lg-4">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Geschäftsplan</div>
+		<div class="card-body">
+			Ideal für KMU
+			<hr />
+<p>
 
-------------
+$ 50 / Monat / verwaltete öffentliche Website, ~ 50% Rabatt auf alle Mitbewerberpreismodelle!
 
-- Jährliche Preisnachlässe im Voraus verfügbar (bis zu 20% Rabatt auf die monatlichen Abrechnungskosten).
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>Enthaltene monatliche Ressourcen (pro Website):
+<p>
+<ol>
+						<li>Öffentliches oder privates Subversion Hosting</li>
+						<li>500 MB Speicherplatz<sup>1</sup></li>
+						<li>1 TB Datenübertragung</li>
+						<li>Unbegrenzte IDE-Nutzung für 50 Plätze</li>
+						<li>Bis zu 5 ACL-Gruppen</li>
+				<li>500 Montageminuten</li>
+				<li>99,9% umfassendes SLA<sup>3</sup></li>
+						<li>E-Mail-basierter Kundendienst</li>
+</ol>
+</p>
+</li>
+</ul>
+<ul style="min-height:200px">
+				<li>Zusätzliche monatliche Ressourcensätze (pro Website):
+<p>
+					<ol>
+						<li>10 USD/20 MB Speicherplatz<sup>1</sup></li>
+						<li>20 $/100 GB Datenübertragung</li>
+						<li>$10 / Platz</li>
+						<li>$10 / 100 Build-Minuten</li>
+					</ol>
+					</p>
+					</li>
+				</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Unternehmensplan</div>
+		<div class="card-body">
+			Öffentlicher Sektor, NGO und anerkannte Marken
+			<hr />
+<p>
+
+500 $/Monat, ~67% Rabatt auf alle Mitbewerberpreismodelle!
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li> Enthaltene monatliche Ressourcen:
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<p>
+<ol>
+						<li>1 GB Speicherplatz in Ihrem eigenen Subversion-Repository<sup>2</sup></li>
+						<li>3 TB Datenübertragung</li>
+						<li>Unbegrenzte Websites und (selbstverwaltete) Sitze</li>
+						<li>2500 Montageminuten</li>
+						<li>Vollständige Kontrolle über die Subversion-Autorisierungskonfiguration</li>
+						<li>Private, vernetzte Build-Container</li>
+						<li>99,99% umfassendes SLA<sup>3</sup></li>
+						<li>Globales POP<sup>4</sup> mit geografisch verteiltem Liefernetzwerk für die letzte Meile unter Q4</li>
+						<li>Premium-Support-SLA</li>
+					</ol>
+					</p>
+</li>
+			</ul>
+			<ul style="min-height:200px">
+				<li>
+
+&nbsp;
+
+<p>
+<ol>
+						<li>100 USD/250 MB Speicherplatz<sup>2</sup></li>
+						<li>15 $ / 100 GB Datenübertragung</li>
+						<li>$100 / ithread mod_perl Registry Hosting</li>
+						<li>100 $/OCI-Region für benutzerdefinierte POPs</li>
+				<li>100 $/1K-Erstellungsminuten</li>
+				<li>WebSockets und/oder privates Container-Hosting verfügbar</li>
+					</ol>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+- Alle Pläne umfassen die intern automatisierte SSL/TLS-Zertifikatsverwaltung (über LetsEncrypt) und die integrierte PCRE-Suchmaschine (+Markdown).
+
+- {# lede #}Jährliche Vorabpreisrabatte verfügbar (bis zu 20% Rabatt auf monatliche Abrechnungskosten){# lede #}.
 
 - Mengenrabatte verfügbar.
 
-- Enterprise Kerberos-basierte VPN-Pläne folgen in Kürze.
+- Enterprise Kerberos-basierte Orion Server-Installationen sind jetzt verfügbar, für Kunden, die Alternativen zu obligatorischen Upgrades für das Confluence Data Center im Jahr 2024 suchen Q1.
 
-- Serverlose Technologieintegration in Kürze verfügbar.
+- Serverless Technology Integration in Kürze verfügbar.
 
-##### Fußnoten
+- Beratung und Website Build-Technologie Porting-Dienste zur Verfügung.
 
-1.  Die Speichernutzung wird basierend auf der Größe von drei Arbeitskopien-Checkouts für jeden Standort berechnet: zwei Quellbäume und ein resultierender Build-Baum.
+- Technologieparnerhips sind sehr willkommen für Agenturen und Wiederverkäufer von Drittanbietern.
 
-2. Die Speicherauslastung wird basierend auf der Gesamtgröße des von SunStar Systems gehosteten Subversion-Repositorys für Unternehmenskunden berechnet, nicht auf einzelne Kassen, was eine * vergleichsweise kleinere Zahl * ist.
+### Erstellen von Minuten und Planebenen: ein rauer Leitfaden
+
+* Eine angemessene High-End-Schätzung für die durchschnittliche Build-Dauer pro Commit beträgt 10 Sekunden.*
+
+- Profis mit weniger als 20 Commits pro Tag sollten mit den 100 Build-Minuten im Plan in Ordnung sein.
+
+- Unternehmen mit weniger als 100 Commits pro Tag sollten mit den 500 Build-Minuten im Plan in Ordnung sein.
+
+Unternehmen mit weniger als 500 Commits pro Tag sollten mit den im Plan enthaltenen 2500 Build-Minuten in Ordnung sein.
+
+------------
+
+#### Fußnoten
+
+1. Die Speicherauslastung wird basierend auf der Größe von vier Arbeitskopie-Checkouts jeder Site berechnet: zwei Quellbäume und zwei resultierende Build-Bäume.
+
+2. Die Speicherauslastung wird basierend auf der Gesamtgröße von SunStar vom System gehostetem Subversion-Repository für Enterprise-Kunden berechnet, nicht auf einzelnen Kassenausgängen. Dies ist eine *im Vergleich kleinere Zahl* (etwa die Größe eines einzelnen Quellbaumausgangs).
+
+3. SLA umfasst Website-Assets * und * Orion Online IDE * und * Build-Systemverfügbarkeit, schließt jedoch das Subversion-Versionskontrollsystem aus, von dem wir erwarten, dass es mit den allgemeinen Verfügbarkeitsmetriken von GitHub konkurrenzfähig bleibt.
+
+4. Unternehmenskunden-Präsenzpunkte (POP):
+
+	- Fort Lauderdale, FL
+
+	- Washington, DC
+
+	- Phoenix, AZ
+
+	- Frankfurt, DE
+
+	- Sydney, AU
+
+	- Sá£o Paolo, BZ
+
+    - Hyderabad, IN
+
+    - Seoul, SK
+
+------------
+
+## Index
+
+{% für d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
 
 ------------
 
 <div class="col-lg-12">
-{% include "enquiry_get.html" %}
+  {% enthalten "/enquiry_get.html" %}
 </div>
+
+<style type="text/css">
+h4 { font-size:14px }
+</style>
+
+<!-- $Date$ $Author$ $Revision$ -->

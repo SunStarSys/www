@@ -1,88 +1,153 @@
-Title: Tarification du Orion
+---
+categories: Jamstack, wiki
+dependencies: '*.md.fr api/index.md.fr'
+keywords: publié
+status: ~
+title: Plans Orion
+---
 
-## Pricing Details
+## Détails du plan
 
 <div class="row">
 <div class="col-lg-4">
-	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
-		<div class="card-header">Professional Plan</div>
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Plan professionnel</div>
 		<div class="card-body">
-			$10 / month / managed public site; ~50% off all competitor pricing models!
-			<ul style="min-height:600px">
-				<li>Included Monthly Resources (per website):
-					<ol>
-						<li>Public Subversion hosting</li>
-						<li>50 MB storage space<sup>1</sup></li>
-						<li>250 GB data transfer</li>
-						<li>Unlimited builds and IDE usage for one seat</li>
-						<li>Email-based Customer Support</li>
+			Idéal pour les blogueurs indépendants
+			<hr />
+<p>
+
+10 $ / mois / site public géré
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+
+<li>Ressources mensuelles incluses (par site Web) :
+<p>
+<ol>
+						<li>Hébergement Subversion Public</li>
+						<li>100 Mo d'espace de stockage<sup>1</sup></li>
+						<li>Transfert de données de 500 Go</li>
+						<li>Utilisation illimitée de l'IDE pour 10 places</li>
+			<li>100 minutes de build</li>
+			<li>Support client par e-mail</li>
 					</ol>
-				</li>
-			</ul><ul style="min-height:200px">
-				<li>Additional Monthly Resource Rates (per website):
-					<ol>
-						<li>$10 / 10 MB storage space<sup>1</sup></li>
-						<li>$10 / 40 GB data transfer</li>
-						<li>$10 / seat</li>
+					</p>
+</li>
+</ul>
+
+<ul style="min-height:200px">
+				<li>Taux de ressources mensuels supplémentaires (par site Web) :
+<p>
+<ol>
+						<li>10 $ / 10 Mo d'espace de stockage<sup>1</sup></li>
+						<li>Transfert de données de 10 $ / 40 Go</li>
+						<li>5 $ / siège</li>
+						<li>10 $ / 100 minutes de construction</li>
 					</ol>
-				</li>
+					</p>
+</li>
 			</ul>
 		</div>
 	</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
-		<div class="card-header">Business Plan</div>
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Plan commercial</div>
 		<div class="card-body">
-			$50 / month / managed public site, ~50% off all competitor pricing models!
-			<ul style="min-height:600px">
-				<li>Included Monthly Resources (per website):
+			Idéal pour les PME
+			<hr />
+<p>
+
+50 $ / mois / site public géré, ~50% de réduction sur tous les modèles de prix concurrents !
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>Ressources mensuelles incluses (par site Web) :
+<p>
+<ol>
+						<li>Hébergement Subversion public ou privé</li>
+						<li>500 Mo d'espace de stockage<sup>1</sup></li>
+						<li>Transfert de données de 1 To</li>
+						<li>Utilisation illimitée de l'IDE pour 50 places</li>
+						<li>Jusqu'à 5 groupes d'ACL</li>
+				<li>500 minutes de build</li>
+				<li>Contrat de niveau de service complet de 99,9 %<sup>3</sup></li>
+						<li>Support client par e-mail</li>
+</ol>
+</p>
+</li>
+</ul>
+<ul style="min-height:200px">
+				<li>Taux de ressources mensuels supplémentaires (par site Web) :
+<p>
 					<ol>
-						<li>Public or private Subversion hosting</li>
-						<li>250 MB storage space<sup>1</sup></li>
-						<li>500 GB data transfer</li>
-						<li>Unlimited builds and IDE usage for three seats</li>
-						<li>Email-based Customer Support</li>
+						<li>10 $ / 20 Mo d'espace de stockage<sup>1</sup></li>
+						<li>Transfert de données de 20 $ / 100 Go</li>
+						<li>10 $ / siège</li>
+						<li>10 $ / 100 minutes de construction</li>
 					</ol>
-				</li>
-			</ul><ul style="min-height:200px">
-				<li>Additional Monthly Resource Rates (per website):
-					<ol>
-						<li>$10 / 20 MB storage space<sup>1</sup></li>
-						<li>$20 / 100 GB data transfer</li>
-						<li>$25 / seat</li>
-					</ol>
-				</li>
-			</ul>
-		</div>
-	</div>
+					</p>
+					</li>
+				</ul>
+</div>
+</div>
 </div>
 <div class="col-lg-4">
- 	<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
-		<div class="card-header">Enterprise Plan</div>
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Plan d'entreprise</div>
 		<div class="card-body">
-			$500 / month, ~67% off all competitor pricing models!
-			<ul style="min-height:600px">
-				<li>Included Monthly Resources:
-					<ol>
-						<li>500 MB storage space in your own repository<sup>2</sup></li>
-						<li>2 TB data transfer</li>
-						<li>Unlimited websites, builds and seats</li>
-						<li>Full control over Subversion authorization configuration</li>
-						<li>Private, networked build containers</li>
-						<li>99.99% Comprehensive SLA<sup>3</sup></li>
-						<li>Global POP<sup>4</sup> with geographically distributed last mile delivery network in Q4</li>
-						<li>Premium Support SLA</li>
+			Secteur public, ONG et marques reconnues
+			<hr />
+<p>
+
+500 $ / mois, ~67% de réduction sur tous les modèles de prix concurrents !
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>Ressources mensuelles incluses :
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<p>
+<ol>
+						<li>Espace de stockage de 1 Go dans votre propre référentiel Subversion<sup>2</sup></li>
+						<li>Transfert de données de 3 To</li>
+						<li>Sites Web illimités et sièges (autogérés)</li>
+						<li>2500 minutes de build</li>
+						<li>Contrôle total de la configuration d'autorisation Subversion</li>
+						<li>Conteneurs de build privés et en réseau</li>
+						<li>Contrat de niveau de service complet de 99,99 %<sup>3</sup></li>
+						<li>POP global<sup>4</sup> avec réseau de livraison géographiquement réparti sur le dernier kilomètre dans Q4</li>
+						<li>SLA de support premium</li>
 					</ol>
-				</li>
-			</ul><ul style="min-height:200px">
-				<li>Additional Monthly Resource Rates:
-					<ol>
-						<li>$100 / 100 MB storage space<sup>2</sup></li>
-						<li>$15 / 100 GB data transfer</li>
-						<li>$100 / ithread mod_perl registry hosting</li>
-					    <li>WebSockets and/or private container hosting available</li>
+					</p>
+</li>
+			</ul>
+			<ul style="min-height:200px">
+				<li>
+
+&nbsp;
+
+<p>
+<ol>
+						<li>100 $ / 250 Mo d'espace de stockage<sup>2</sup></li>
+						<li>Transfert de données de 15 $ / 100 Go</li>
+						<li>100 $ / ithread mod_perl hébergement de registre</li>
+						<li>100 $ / région OCI pour les POP personnalisés</li>
+				<li>100 $ / 1K minutes de construction</li>
+				<li>WebSockets et/ou hébergement de conteneurs privés disponibles</li>
 					</ol>
+					</p>
 				</li>
 			</ul>
 		</div>
@@ -90,34 +155,74 @@ Title: Tarification du Orion
 </div>
 </div>
 
-- Annual up-front pricing discounts available (up to 20% off monthly billing costs).
+- Tous les plans incluent la gestion automatisée interne des certificats SSL/TLS (via LetsEncrypt) et le moteur de recherche PCRE (+Markdown) intégré.
 
-- Volume discounts available.
+- {# lede #}Remises annuelles à l'avance disponibles (jusqu'à 20 % de réduction sur les coûts de facturation mensuels){# lede #}.
 
-- Enterprise Kerberos-based VPN plans coming soon.
+- Réductions de volume disponibles.
 
-- Serverless Technology Integration coming soon.
+- Les installations de serveur Orion basées sur Enterprise Kerberos sont désormais disponibles, pour les clients qui recherchent des alternatives aux mises à niveau obligatoires de Confluence Data Center en 2024 Q1.
 
-- Consulting and website build-technology porting services available.
+- Intégration de la technologie Serverless bientôt disponible.
 
-##### Footnotes
+- Services de conseil et de portage de technologie de construction de site Web disponibles.
 
-1.  Storage Utilization calculated based on size of four working copy checkouts of each site: two source trees and two resulting build trees.
+- Les partenariats technologiques sont les bienvenus pour les agences et les revendeurs tiers.
 
-2. Storage Utilization calculated based on total size of SunStar Systems-hosted Subversion repository for Enterprise customers, not individual checkouts, which is  a *comparatively smaller number* (roughly the size of a single source-tree checkout).
+### Créer des minutes et des niveaux de planification : un guide approximatif
 
-3. SLA covers website assets *and* Orion online IDE *and* build system availability, but excludes Subversion version control system, which we expect to remain competitive with GitHub's general availability metrics.
+*Une estimation haut de gamme raisonnable pour la durée moyenne de construction par validation est de 10 secondes.*
 
-4. Current Points of Presence (POP):
-	- Fort Lauderdale, FL
+- Les professionnels ayant moins de 20 engagements par jour devraient être bien avec les 100 minutes de construction incluses dans le plan.
+
+- Les entreprises ayant moins de 100 engagements par jour devraient être bien avec les 500 minutes de construction incluses dans le plan.
+
+- Les entreprises avec moins de 500 engagements par jour devraient être bien avec les 2500 minutes de construction incluses dans le plan.
+
+------------
+
+#### Notes de bas de page
+
+1. Utilisation du stockage calculée en fonction de la taille de quatre extractions de copie de travail de chaque site : deux arbres source et deux arbres de construction résultants.
+
+2. Utilisation du stockage calculée en fonction de la taille totale du référentiel Subversion hébergé par des systèmes SunStar pour les clients Enterprise, et non des extractions individuelles, qui est un *nombre comparativement plus petit* (environ la taille d'une seule extraction de l'arborescence source).
+
+3. SLA couvre les ressources du site Web * et * l'IDE en ligne Orion * et * la disponibilité du système de construction, mais exclut le système de contrôle de version Subversion, que nous prévoyons rester compétitifs avec les mesures de disponibilité générale de GitHub.
+
+4. Points de présence client de l'entreprise (POP) :
+
+	- Fort Lauderdale, Floride
+
 	- Washington, DC
-	- Phoenix, AZ
-	- Frankfurt, DE
-	- Sydney, AU
-	- São Paolo, BZ
+
+	- Phoenix, Arizona
+
+	- Francfort, DE
+
+	- Sydney, Australie
+
+	- SÃ£o Paolo, BZ
+
+    - Hyderabad, IN
+
+    - Séoul, SK
+
+------------
+
+## Index
+
+{% pour d dans les deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
 
 ------------
 
 <div class="col-lg-12">
-{% include "enquiry_get.html" %}
+  {% incluent "/enquiry_get.html" %}
 </div>
+
+<style type="text/css">
+h4 { font-size:14px }
+</style>
+
+<!-- $Date$ $Author$ $Revision$ -->
