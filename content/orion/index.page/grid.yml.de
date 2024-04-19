@@ -1,0 +1,86 @@
+---
+categories: Entwurf
+keywords: ~
+status: ~
+title: Tabellendaten für Featurevergleichsraster
+---
+
+
+- Feature: "SSO: Kerberos / Aktives Verzeichnis / OpenID Integration"
+  Orion: "&amp;check";
+  Slab: "&amp;check";
+  Notify: "Nur SCIM"
+  Confluence: "&amp;check";
+- Feature: "FIPS 140-3-konforme Zero Trust-Infrastruktur"
+  Orion: "&amp;check";
+- Feature: "FedRAMP Infrastruktur"
+  Orion: "Serverinstallation"
+- Feature: "In-Browser Workflow (Mobile Friendly)"
+  Orion: "&amp;check";
+  Slab: "&amp;check";
+  Notify: "&amp;check";
+  Confluence: "&amp;check";
+- Feature: "DAV-Support"
+  Orion: "&amp;check";
+  Confluence: "&amp;check";
+- Feature: "Inkrementelle Builds"
+  Orion: "&amp;check";
+- Feature: "Unbegrenzte Verzweigungserweiterungen"
+  Orion: "&amp;check";
+- Feature: "Nur geplante Builds mit dynamischem Inhalt"
+  Orion: "&amp;check";
+- Feature: "3rd Party Analytics Support"
+  Orion: "&amp;check";
+- Feature: "Gerätebenachrichtigungen für Watchlist"
+  Orion: "&amp;check";
+  Confluence: "&amp;check";
+- Feature: "Mehrsprachig"
+  Orion: "&amp;check";
+- Feature: 'Vollständig durchsuchbare <span class="editormd-tex">\KaTeX</span>-Ausdrücke'
+  Orion: "&amp;check";
+  Confluence: "$$$"
+- Feature: "Föderiert"
+  Orion: "&amp;check";
+  Confluence: "[Nein](https://jira.atlassian.com/browse/CONFSERVER-26528)"
+- Feature: "White Label Support"
+  Orion: "&amp;check";
+- Feature: "Installable Inside Corporate VPN"
+  Orion: "Serverinstallation"
+- Feature: "Arbeitet offline"
+  Orion: "&amp;check";
+- Feature: 'Einfache 3rd Party "Pull-Request" Contributor Workflow'
+  Orion: "&amp;check";
+- Feature: "[GitHub Integration](https://youtu.be/FRc4qZkxVaI) mit IDE- und Aktionsunterstützung"
+  Orion: "&amp;check";
+- Feature: "Unbegrenzte Vorschau"
+  Orion: "&amp;check";
+  Slab: "&amp;check";
+  Notion: "&amp;check";
+  Confluence: "&amp;check";
+- Feature: "Unbegrenzte Plätze"
+  Orion: "Enterprise &amp; Server installieren"
+- Feature: "Unbegrenzte Versionskontrollhistorie"
+  Orion: "&amp;check";
+- Feature: "Integriertes URL Change Tracking"
+  Orion: "&amp;check";
+- Feature: "Website-Hosting"
+  Orion: "&amp;check";
+- Feature: "[3D-Vektorgrafiken](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integration"
+  Orion: "&amp;check";
+- Feature: "SSI / CGI / mod_perl / mod_wasm Unterstützung"
+  Orion: "&amp;check";
+- Feature: "Fein granulierte ACL auf Source Repo"
+  Orion: "&amp;check";
+- Feature: "500 MB/s vollständige Site-Builds"
+  Orion: "&amp;check";
+- Feature: "8-64-fache gleichzeitige Builds"
+  Orion: "&amp;check";
+- Feature: "Gesamtbetriebskosten < $6000/Jahr für Unternehmen"
+  Orion: "&amp;check";
+- Feature: "Umfassende 99,99% SLA"
+  Orion: "Enterprise &amp; Server installieren"
+- Feature: "Status für durchsuchbares Dokument"
+  Orion: "&amp;check";
+  Slab: "&amp;check";
+- Feature: 'Automatisierung <span class="editormd-tex">\linker Pfeil nach rechts \LaTeX</span>'
+  Orion: 
