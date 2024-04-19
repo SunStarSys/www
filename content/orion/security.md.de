@@ -187,11 +187,11 @@ Wenn Sie die Vorverarbeitung von Vorlagen auf den Markdown-Quellseiten zulassen,
 
 Weitere Informationen finden Sie im folgenden Abschnitt zu [Dependency/ACL Injection Controls](#h4-dependency-ACL-injection-controls) und in diesem Livebeispiel, wie einfach ACLs zentral in [`lib/ACL.yml`]({{snippetA.pretty_uri}}) konfiguriert werden können:
 
-[Snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
+[snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
 Autoren von Inhalten können Seiteneinschränkungen in den [Headern]({{snippetB.pretty_uri}}) der Seite konfigurieren:
 
-[Snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
+[snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
 Nebenbei bemerkt, können geschützte Ressourcen nicht von nicht autorisiertem Personal in eine Verzweigung kopiert werden, auch wenn keine zusätzlichen ACL-Steuerelemente bei der Erstellung und Änderung von Verzweigungen eingefügt werden. Mit anderen Worten, das System unterstützt Filialexperimente ohne zusätzliche Kontrollen Ihrerseits, um sicherzustellen, dass geschützte Assets während des gesamten natürlichen Lebenszyklus jeder Filiale geschützt bleiben.
 
@@ -203,7 +203,7 @@ Das Build-System ist allumfassend und allwissend, aber wir können sicherstellen
 
 Siehe [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
-[Snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
+[snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
 
 Dieser Code setzt die folgenden Regeln in diesem Abschnitt durch.
 

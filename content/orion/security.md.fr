@@ -191,7 +191,7 @@ Reportez-vous à la section ci-dessous sur [Contrôles d'injection de dépendanc
 
 Les auteurs de contenu peuvent configurer les restrictions de page dans les [en-têtes]({{snippetB.pretty_uri}} de la page :
 
-[snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4 :lang=yaml]
+[snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
 Notez que les ressources protégées ne peuvent pas être copiées dans une branche par un personnel non autorisé, même sans placer de contrôles ACL supplémentaires sur la création et la modification de la branche. En d'autres termes, le système prendra en charge l'expérimentation des succursales sans aucun contrôle supplémentaire de votre part pour s'assurer que les actifs protégés restent protégés tout au long du cycle de vie naturel de chaque succursale.
 
