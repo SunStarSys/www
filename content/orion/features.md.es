@@ -105,303 +105,82 @@ title: Características de Orion
 
 ## Representación consistente de rebajas con sabor a GitHub (GFM) con Editor.md :editormd-logo-1x: y plantillas de Django
 
-- [x] **WYSIWYG:** {# lede #}El mismo motor de representación de código javascript tanto en el explorador como en el script de compilación markdown.js (basado en node.js){# lede #} garantiza una consistencia estructural del 100% entre la ventana de vista previa de Markdown Editor.md y el sitio de producción.
-- [x] Cabeceras YAML en archivos de origen (markdown) ahora totalmente compatibles.
-- [x] Soporte nativo de diagrama de flujo y diagrama de secuencia :fa-glass:
+- [x] **WYSIWYG:** {# lede #}Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script{# lede #} ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
+- [x] YAML headers in source (markdown) files now fully supported.
+- [x] Native Flowchart and Sequence Diagram Support :fa-glass:
 
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
+<!-- # -->
 ----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
+<!-- # -->
+&nbsp;
+----
+&nbsp;
 
 - [x] Native d3-graphviz.js support:
 
-```graphviz
-digraph {
-a -> b;
-a -> c [color=red];
-}
-```
+<!-- # -->
 &nbsp;
 ----
 &nbsp;
 
-- [x] Nativo @mermaid-js/mermaid v10.7.0 con soporte de mapas mentales:
+- [x] Native @mermaid-js/mermaid v10.7.0 with mindmap support:
 
-```mermaid
-graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
-    C -->|Three| F[fa:fa-car Car]
-```
+<!-- # -->
 ----
-```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-```
+<!-- # -->
 ----
-```mermaid
-erDiagram
-    CUSTOMER }|..|{ DELIVERY-ADDRESS : has
-    CUSTOMER ||--o{ ORDER : places
-    CUSTOMER ||--o{ INVOICE : "liable for"
-    DELIVERY-ADDRESS ||--o{ ORDER : receives
-    INVOICE ||--|{ ORDER : covers
-    ORDER ||--|{ ORDER-ITEM : includes
-    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
-    PRODUCT ||--o{ ORDER-ITEM : "ordered in"
-```
+<!-- # -->
 ----
-```mermaid
-stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-```
+<!-- # -->
 ----
-```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat  YYYY-MM-DD
-    section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
-    section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
-```
+<!-- # -->
 ----
-```mermaid
-pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
-```
+<!-- # -->
 ----
-```mermaid
-classDiagram
-    Animal <|-- Duck
-    Animal <|-- Fish
-    Animal <|-- Zebra
-    Animal : +int age
-    Animal : +String gender
-    Animal: +isMammal()
-    Animal: +mate()
-    class Duck{
-      +String beakColor
-      +swim()
-      +quack()
-    }
-    class Fish{
-      -int sizeInFeet
-      -canEat()
-    }
-    class Zebra{
-      +bool is_wild
-      +run()
-    }
-```
+<!-- # -->
 ----
-```mermaid
-gitGraph
-    commit
-    commit
-    branch develop
-    checkout develop
-    commit
-    commit
-    checkout main
-    merge develop
-    commit
-    commit
-```
+<!-- # -->
 ----
-```mermaid
-%%{init:{"theme":"default"}}%%
-graph TB
-    sq[Square shape] --> ci((Circle shape))
-
-    subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
-    end
-
-    %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
-
-    %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
-
-    cyr[Cyrillic]-->cyr2((Circle shape Начало));
-
-     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
-     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
-     class sq,e green
-     class di orange
-```
+<!-- # -->
 ----
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
+<!-- # -->
 ----
-```mermaid
-journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
-```
+<!-- # -->
 ----
-```mermaid
-flowchart TB
-classDef borderless stroke-width:0px
-classDef darkBlue fill:#00008B, color:#fff
-classDef brightBlue fill:#6082B6, color:#fff
-classDef gray fill:#62524F, color:#fff
-classDef gray2 fill:#4F625B, color:#fff
-
-subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
-end
-class publicUser,A1 gray
-
-subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
-end
-class authorizedUser,A2 darkBlue
-
-subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
-end
-class booksSystem,A3 brightBlue
-
-
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
-
-subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
-end
-
-subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
-end
-subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
-end
-class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
-
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
-
-class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
-
-click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagram.md" "booksSystem"
-```
+<!-- # -->
 
 &nbsp;
 ----
 &nbsp;
 
-- [ ] extensión de diagramación draw.io opcional próximamente
+- [ ] optional draw.io diagramming extension coming soon
 
-- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX)
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) support for math, physics and chemistry:
 
-```math
-\ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
-```
+<!-- # -->
 
-- [x] Generación síncrona y bidireccional de archivos de origen $$\LaTeX$$ a/desde archivos de Markdown+$$\KaTeX$$.
+- [x] Synchronous, Bidirectional Generation of $$\LaTeX$$ Source Files to/from Markdown+$$\KaTeX$$ Files.
 
-- [x] Navier-Stokes en Einstein Notation (también conocido como [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation)
+- [x] Navier-Stokes in Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
-```math
-\begin{aligned}
-\pdv{\rho}{t}+\pdv{(\rho u_i)}{x_i} &= 0 \\
-      \pdv{(\rho u_i)}{t}+\pdv{(\rho u_i u_j)}{x_j} &= -\pdv{p}{x_i}+\pdv{\tau_{ij}}{x_j}+\rho f_i \\
-      \pdv{(\rho e)}{t}+\pdv{(\rho e+p)u_i}{x_i} &= \pdv{(\tau_{ij} u_j)}{x_i}+\rho f_i u_i+\pdv{(\dot{q}_i)}{x_i}+r \\
-\end{aligned}
-```
+<!-- # -->
 
-- [x] Navier-Stokes en notación clásica
+- [x] Navier-Stokes in Classical Notation
 
-```math
-\begin{aligned}
-\pdv{\rho}{t}+\vec{\nabla}\cdot(\rho\vec{u}) &= 0 \\
-      \pdv{(\rho \vec{u})}{t}+\vec{\nabla}\cdot\rho\vec{u}\otimes\vec{u} &= -\vec{\nabla p}+\vec{\nabla}\cdot\bar{\bar{\tau}}+\rho\vec{f} \\
-      \pdv{(\rho e)}{t}+\vec{\nabla}\cdot(\rho e+p)\vec{u} &= \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\cdot\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
-\end{aligned}
-```
+<!-- # -->
 
 ----
 
-- [x] ¡Eléctrico!
+- [x] Electric!
 
-    El editor se autocompletará y se autoindentará; tiene modo de pantalla completa, así como soporte para varios otros modos de creación de contenido disponibles para su resaltador de sintaxis CodeMirror 5.
+    Editor will autocomplete and autoindent; has full screen mode, as well as support for several other content authoring modes available to its CodeMirror 5 syntax highlighter.
 
-## Soporte completo para creaciones de sucursales
+## Full support for branch builds
 
-- [x] No más ubicación temporal/publicación: sustituido por la rama por recurso <span class="text-white">Promoción</span>.
-- [x] <span class="text-white">Anulación</span> y <span class="text-white">Sincronización</span> de fusión totalmente compatibles.
+- [x] No more staging/publishing: replaced with per-resource branch <span class="text-white">Promotion</span>.
+- [x] <span class="text-white">Rollback</span> and <span class="text-white">Sync</span> Merge fully supported.
 
-## Buscador de árbol fuente en vivo
+## Live source tree search engine
 
 <br>
 
@@ -420,57 +199,24 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 <br>
 
-- [x] Perl Compatible Regular Expression (PCRE) basado.
-- [x] Búsqueda global y funcionalidad de reemplazo también (único dado soporte PCRE); admite capturas de expresiones regulares.
-- [ ] Búsqueda en PDF próximamente.
-- [ ] Soporte de GraphQL/AI próximamente. ¡La seguridad parece divertida!
+- [x] Perl Compatible Regular Expression (PCRE) based.
+- [x] Global search and replace functionality as well (unique given PCRE support); supports regex captures.
+- [ ] PDF search coming soon.
+- [ ] GraphQL/AI support coming soon. Security looks fun!
 
-## Archivos adjuntos de página ilimitados con tipos MIME arbitrarios
+## Unlimited page attachments w/ arbitrary mime-types
 
-## Comentarios seguros por página
+## Secure, threaded per-page comments
 
-## Traducciones de lenguaje natural automatizadas de Markdown (próximamente)
+## Automated Natural Language Translations of Markdown (coming soon)
 
-## Gráficos vectoriales matemáticos interactivos con @vectorgraphics/asymptote
+## Interactive Mathematical Vector Graphics with @vectorgraphics/asymptote
 
-- [x] Resaltador de sintaxis para asíntota
-- [x] CMS fallará rápidamente en bloques de código asintótico no analizables
-- [x] WebGL activado, salida HTML multithread
+- [x] Syntax Highlighter for Asymptote
+- [x] CMS will fast fail on unparseable Asymptote code blocks
+- [x] WebGL enabled, mulit-threaded HTML output
 
-```asy
-// tubular trefoil knot -*- asy -*-
-
-import tube;
-import graph3;
-import palette;
-
-size(0, 8cm);
-currentlight=White;
-real redPortion = 143 / 256;
-real greenPortion = 153 / 256;
-real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
-currentlight.background = periwinklePen;
-currentprojection=perspective(1,1,1,up=-Y);
-
-int e=1;
-real x(real t) {return cos(t)+2*cos(2t);}
-real y(real t) {return sin(t)-2*sin(2t);}
-real z(real t) {return 2*e*sin(3t);}
-
-path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
-
-pen[] pens=Gradient(6,red,blue,purple);
-pens.push(yellow);
-for (int i=pens.length-2; i >= 0 ; --i)
-  pens.push(pens[i]);
-
-path sec=scale(0.25)*texpath("$\pi$")[0];
-
-coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
-
-draw(tube(p,colorsec),render(merge=true));
-```
+<!-- # -->
 
 &nbsp;
 
@@ -479,22 +225,23 @@ draw(tube(p,colorsec),render(merge=true));
 &nbsp;
 
 
-## Deltas de las funciones de <span class='text-info'>Apache CMS</span>
+## Deltas from <span class='text-info'>Apache CMS</span> Features
 
-- Solo está disponible el sistema de compilación basado en Perl.
+- Only the Perl-based build system is available.
 
-- El nuevo editor de Markdown es [`marked/gfm`](#)
+- New Markdown editor is [`marked/gfm`](#) based, so the parser is more modern.  Latest release supports slug specification a'la the original python-based parser.
 
-- GFM utiliza un delimitador diferente para los bloques de código.
+- GFM uses a different delimiter for code blocks.
 
-- [`extpaths.txt`](#)
+- [`extpaths.txt`](#) is no longer supported: select individuals from each project will be granted write access to the production website tree in our subversion repos for uploading externally produced material (javadocs, software release artifacts, etc.)
 
 ----
 
-## Índice
+## Index
 
-{% para d en deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
 
 <style type="text/css">
 /*-------------------------------------------
