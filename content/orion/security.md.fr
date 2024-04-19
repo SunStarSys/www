@@ -10,7 +10,7 @@ title: Orion Security
 
 ## {# lede #}"La sécurité par obscurité n'est pas beaucoup de sécurité du tout."{# lede #}
 
-Paraphasage populaire du serrurier américain [Alfred Charles Hobbs] (https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) en 1851, qui a facilement choisi les serrures du Crystal Palace lors d'une exposition londonienne cette année-là.  Nous sommes entièrement d'accord, c'est pourquoi nos modèles de base pour notre moteur d'automatisation Oracle Cloud Infrastructure (OCI) sont [disponibles sur GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
+Paraphasage populaire du serrurier américain [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) en 1851, qui a facilement choisi les serrures du Crystal Palace lors d'une exposition londonienne cette année-là.  Nous sommes entièrement d'accord, c'est pourquoi nos modèles de base pour notre moteur d'automatisation Oracle Cloud Infrastructure (OCI) sont [disponibles sur GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Sécurité de l'infrastructure Orion
 
@@ -110,7 +110,7 @@ Ditto pour les scripts CGI, qui sont entièrement verrouillés en termes d'accè
 
 ### Aspects de confiance zéro
 
-La prémisse de base de [architecture de confiance zéro] (https://csrc.nist.gov/publications/detail/sp/800-207/final) est d'éviter de concevoir la sécurité de votre réseau autour de la physiologie de la palourde : dure à l'extérieur, mais douce et lâche une fois que vous êtes dans.  Nous ne faisons donc pas cela ; chaque port réseau privilégié significatif à l'intérieur des différents LAN de point de présence (POP) n'est exposé qu'à l'interface de périphérique de loopback de la machine bare-metal [`lo0`](#), et n'est significatif que dans le contexte d'une connexion SSH (inverse) transmise par port *à elle*.
+La prémisse de base de [architecture de confiance zéro](https://csrc.nist.gov/publications/detail/sp/800-207/final) est d'éviter de concevoir la sécurité de votre réseau autour de la physiologie de la palourde : dure à l'extérieur, mais douce et lâche une fois que vous êtes dans.  Nous ne faisons donc pas cela ; chaque port réseau privilégié significatif à l'intérieur des différents LAN de point de présence (POP) n'est exposé qu'à l'interface de périphérique de loopback de la machine bare-metal [`lo0`](#), et n'est significatif que dans le contexte d'une connexion SSH (inverse) transmise par port *à elle*.
 
 Cet infra est entièrement automatisé une fois qu'une région est mise en ligne, mais c'est tout ce que nous pouvons partager publiquement au sujet de l'architecture (équilibrer la transparence Hobbsienne avec le mantra militaire "navires couleurs à lèvres lâches" est plus art que science).  Rassurez-vous - au-delà de la rupture de la protection antispoofing [`lo0`](#) dans le filtre de paquets BSD de Solaris 11 lui-même, il n'y a aucun moyen significatif d'accéder à ces services, même pour les comptes clients.
 
@@ -124,7 +124,7 @@ Nous encourageons les clients Enterprise à créer un compte Splunk, et nous fou
 
 Nous surveillons la disponibilité du service à partir de tous nos POP OCI à l'échelle mondiale et déclenchons des événements de basculement régional ou de haute disponibilité si une panne de serveur dure plus de 30 secondes.
 
-L'audit ACL peut être effectué en construisant simplement la tête de Subversion d'un site Web à l'aide du script sous licence Apache [Orion SSG] (https://github.com/SunStarSys/orion/blob/master/test.sh) et en examinant la construction résultante dans le fichier [`www/.acl`] (#) dans votre répertoire de paiement, à tout moment.  Normalement, le processus de construction prendra moins de 10 à 15 secondes sur le matériel moderne.
+L'audit ACL peut être effectué en construisant simplement la tête de Subversion d'un site Web à l'aide du script sous licence Apache [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) et en examinant la construction résultante dans le fichier [`www/.acl`](#) dans votre répertoire de paiement, à tout moment.  Normalement, le processus de construction prendra moins de 10 à 15 secondes sur le matériel moderne.
 
 Les crochets d'engagement côté serveur de Subversion sont également personnalisables en fonction de vos problèmes de surveillance. D'un simple logiciel de messagerie à l'accès sécurisé à notre démon svnpubsub, il existe un certain nombre de configurations personnalisées disponibles.
 
@@ -141,7 +141,7 @@ digraph {
 
 &nbsp;
 
-Le modèle de sécurité d'Orion est géré de manière centralisée par les paramètres contenus dans [`@path : :acl`](#) comme dans [`lib/path.pm`](#).  Les fichiers de configuration du serveur de déconnexion sont générés dynamiquement à chaque modification validée.
+Le modèle de sécurité d'Orion est géré de manière centralisée par les paramètres contenus dans [`@path::acl`](#) comme dans [`lib/path.pm`](#).  Les fichiers de configuration du serveur de déconnexion sont générés dynamiquement à chaque modification validée.
 
 ### OpenIDC Sécurité SSO
 
@@ -276,7 +276,7 @@ Actuellement en PDF.
 
 - [x] Tous les utilisateurs disposant d'un compte peuvent utiliser des interfaces utilisateur/API d'un autre emplacement à l'aide de leurs identifiants de connexion.
 
-- [x] Les clients d'affaires et d'entreprise peuvent traiter Orion comme un [CMS sans tête] (https://aws.amazon.com/what-is/headless-cms/) s'ils veulent créer leur propre interface utilisateur à partir des API [JSON Subversion Porcelain] (api/editor) ou [JSON Search] (api/search).
+- [x] Les clients d'affaires et d'entreprise peuvent traiter Orion comme un [CMS sans tête](https://aws.amazon.com/what-is/headless-cms/) s'ils veulent créer leur propre interface utilisateur à partir des API [JSON Subversion Porcelain](api/editor) ou [JSON Search](api/search).
 
 ### Dépendances tierces
 
