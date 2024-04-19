@@ -22,6 +22,7 @@ title: SunStar Orion der Systeme
 	<li><p>föderiert</p></li>
 	</ul>
 </p>
+	{# lede #}<span class="text-white">Enterprise Wiki</span>  zum <b>Erstellen, Verwalten und Bereitstellen</b> statischer Webseiten mit der #Jamstack-Technologie für dynamische Features darin{# lede #}
 
 Preisinformationen finden Sie in unseren [Orionsplänen](plans)
 
@@ -32,7 +33,7 @@ Was dieses Produkt von unseren Mitbewerbern unterscheidet, ist die [Orion Techno
 <ul>
   <li><p>ein <span class="text-white">Universitätsleiter</span>, der nach einer Möglichkeit sucht, <b>Plagiate</b> auf dem Campus über eine <a href="https://en.wikipedia.org/wiki/Open_access">Open Access</a>-versiongesteuerte Dokumentfreigabe-, Kurations- und Online-Publishing-Plattform oder ein akademisch orientiertes Wissensmanagementsystem zu beseitigen,</p></li>
 
-  <li><p>einen <span class="text-white">Entscheider der IT-Regierung/des Verteidigungssektors</span> mit entweder FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a>-Complianceanforderungen oder feingranulierten Zugriffskontrollanforderungen im Versionskontroll-Repository Ihrer Site,</p></li>
+  <li><p>einen <span class="text-white">Entscheider des IT-Regierungs-/Verteidigungssektors</span> mit entweder FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a>-Complianceanforderungen oder feingranulierten Zugriffskontrollanforderungen im Versionskontroll-Repository Ihrer Site,</p></li>
 
   <li><p>ein <span class="text-white">Marketingleiter</span>, der eine innovative, globale Unternehmensplattform zur Verwaltung Ihrer Unternehmenswebsite-Assets wünscht, indem er Orion als "headless" CMS verwendet,</p></li>
 
@@ -40,7 +41,7 @@ Was dieses Produkt von unseren Mitbewerbern unterscheidet, ist die [Orion Techno
 
   <li><p>einem <span class="text-white">prinzipiellen High Availability-Architekten</span>, der es satt hat, sich mit Single-Point-of-Failure-Stacks zu befassen, die SQL-basierten LAMP-Stacks unterliegen,</p></li>
 
-  <li><p>oder wirklich jeder Geschäftsmann unzufrieden mit der Kostenstruktur jedes Wikis, das es gibt, einschließlich kostenloser Angebote, die Zeit und Energie Ihrer Mitarbeiter beeinträchtigen.</p></li>
+  <li><p>oder wirklich jeder Geschäftsmann, der mit der Kostenstruktur eines beliebigen Wikis unzufrieden ist, einschließlich kostenloser Angebote, die Zeit und Energie Ihrer Mitarbeiter beeinträchtigen.</p></li>
 </ul>
 
 *Mit unserem Angebot ist keine Anbieterbindung verbunden*. Aber nehmen Sie nicht nur unser Wort dafür, sehen Sie selbst, was in der Regel in Bezug auf Build-System-Anpassung beteiligt ist, indem Sie
@@ -61,7 +62,7 @@ Weniger als <span class="text-info">100 LOC</span>, um die Build-Logik für dies
 
 Möchten Sie eine Website, die **Secure-by-Default** ist?  Einfach zu aktualisieren und zu verwalten und gleichzeitig die Komplexität eines zugrunde liegenden Versionskontrollsystems zu verbergen, aber Ihnen die volle Leistung zu bieten, wenn Sie es wirklich brauchen?  Sofortige Veröffentlichung, wann immer Sie möchten; reibungslose, zwischengespeicherte Filial-Builds und anpassbare granulare Promotions an Ihre Produktions-Site, je nach dem von Ihrem Team bevorzugten Workflow.
 
-Wenn Sie es satt haben, die Lizenzierung pro Sitzplatz und die Optionen pro CPU-Zyklus zu wählen, die Sie abwägen, wenn Sie einen Tippfehler beheben müssen, wenden Sie sich an uns.(/contact)
+Wenn Sie es satt haben, die Lizenzen pro Sitzplatz und die Optionen pro CPU-Zyklus zu nutzen, die Sie abwägen, wenn Sie einen Tippfehler beheben müssen, wenden Sie sich an uns.(/contact)
 
 Niemals direkt mit einem Versionskontrollsystem oder sogar einem statischen Website-Generator auf Ihrem eigenen PC umgehen zu müssen, liegt ganz bei Ihnen. Die Online-IDE ist für Ihren **nur browserbasierten Workflow** konzipiert und bereit, wann immer Sie sind.  Im Handumdrehen erledigt es sogar die mobile (Browser-)Oberfläche *sofort*.
 
@@ -99,8 +100,9 @@ Siehe unsere [Orionspläne](plans)
 
 ### Details
 
-{% für d in deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}
+{{d.1.content|lede}}
 
 <hr />
 <br />

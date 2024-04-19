@@ -22,6 +22,7 @@ title: SunStar Orion des systèmes
 	<li><p>fédéré</p></li>
 	</ul>
 </p>
+	{# lede #}<span class="text-white">Wiki d'entreprise</span> pour la <b>création, la gestion et la distribution</b> de pages Web statiques à l'aide de la technologie #Jamstack pour les fonctionnalités dynamiques qu'il contient{# lede #}
 
 Pour plus d'informations sur les prix, consultez nos [Plans Orion](plans)
 
@@ -99,8 +100,9 @@ Voir nos [Plans Orion](plans)
 
 ### détails
 
-{% pour d dans les deps %}
-- [{{d.1.headers.title|safe}}]({{d.0}})
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}
+{{d.1.content|lede}}
 
 <hr />
 <br />
