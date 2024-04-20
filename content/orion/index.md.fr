@@ -62,7 +62,7 @@ Moins de <span class="text-info">100 LOC</span> pour fournir la logique de const
 
 Vous voulez un site Web **sécurisé par défaut** ?  Facile à mettre à jour et à gérer, tout en masquant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ?  Publication instantanée lorsque vous le souhaitez ; création de succursales en phase fluide et promotions granulaires personnalisables sur votre site de production en fonction du flux de travail préféré de votre équipe.
 
-Si vous en avez assez des licences par siège et des choix par cycle de CPU qui vous alourdissent chaque fois que vous avez besoin de corriger une faute de frappe, [nous contacter](/contact)
+Si vous en avez assez des licences par siège et des choix par cycle CPU qui vous alourdissent chaque fois que vous avez besoin de corriger une faute de frappe, [nous contacter](/contact)
 
 Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous l'êtes.  En un clin d'œil, même l'interface mobile (navigateur) le fera, *instantanément*.
 
@@ -101,8 +101,8 @@ Voir nos [Plans Orion](plans)
 ### détails
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
 
 <hr />
 <br />

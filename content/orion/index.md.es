@@ -2,9 +2,10 @@
 categories: wiki,jamstack,blog,seguro,seguro
 dependencies: '*.md.es api/index.md.es'
 keywords: borrador
-status: draft
-title: SunStar Systems Orion
+status: ~
+title: SunStar Orión de sistemas
 ---
+
 
 <div class="row">
 <div class="col-lg-5">
@@ -59,7 +60,7 @@ Menos de <span class="text-info">100 LOC</span> para proporcionar la lógica de 
 
 <h3>Aquí está el por qué, desarrollador de pila completa / Blogger público / DevOps Guru...</h3>
 
-¿Desea un sitio web **seguro por defecto**?  Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, ¿pero le da todo su poder cuando realmente lo necesita?  Publicación instantánea cuando lo desee; creaciones de sucursales organizadas y fluidas y promociones granulares personalizables para su sitio de producción, ya que se adapta al flujo de trabajo preferido de su equipo.
+¿Desea un sitio web que sea **seguro por defecto**?  Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, ¿pero le da todo su poder cuando realmente lo necesita?  Publicación instantánea cuando lo desee; creaciones de sucursales organizadas y fluidas y promociones granulares personalizables para su sitio de producción, ya que se adapta al flujo de trabajo preferido de su equipo.
 
 Si está cansado de las opciones de licencia por asiento y por ciclo de CPU que lo pesan cada vez que necesita corregir un error tipográfico, [póngase en contacto con nosotros](/contact)
 
@@ -100,8 +101,8 @@ Ver nuestros [Planes de Orión](plans)
 ### detalles
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
 
 <hr />
 <br />
