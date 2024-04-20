@@ -171,7 +171,7 @@ $ 50 / Monat / verwaltete öffentliche Website, ~ 50% Rabatt auf alle Mitbewerbe
 
 ### Erstellen von Minuten und Planebenen: ein rauer Leitfaden
 
-* Eine angemessene High-End-Schätzung für die durchschnittliche Build-Dauer pro Commit beträgt 10 Sekunden.*
+- *Eine angemessene High-End-Schätzung für die durchschnittliche Build-Dauer pro Commit beträgt 10 Sekunden.*
 
 - Profis mit weniger als 20 Commits pro Tag sollten mit den 100 Build-Minuten im Plan in Ordnung sein.
 
@@ -187,7 +187,7 @@ Unternehmen mit weniger als 500 Commits pro Tag sollten mit den im Plan enthalte
 
 2. Die Speicherauslastung wird basierend auf der Gesamtgröße von SunStar vom System gehostetem Subversion-Repository für Enterprise-Kunden berechnet, nicht auf einzelnen Kassenausgängen. Dies ist eine *im Vergleich kleinere Zahl* (etwa die Größe eines einzelnen Quellbaumausgangs).
 
-3. SLA umfasst Website-Assets * und * Orion Online IDE * und * Build-Systemverfügbarkeit, schließt jedoch das Subversion-Versionskontrollsystem aus, von dem wir erwarten, dass es mit den allgemeinen Verfügbarkeitsmetriken von GitHub konkurrenzfähig bleibt.
+3. SLA umfasst Website-Assets *und* Orion Online IDE *und* Build-Systemverfügbarkeit, schließt jedoch das Subversion-Versionskontrollsystem aus, von dem wir erwarten, dass es mit den allgemeinen Verfügbarkeitsmetriken von GitHub konkurrenzfähig bleibt.
 
 4. Unternehmenskunden-Präsenzpunkte (POP):
 
