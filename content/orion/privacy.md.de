@@ -1,15 +1,31 @@
-Title: Orion Privacy Policy
+---
+categories: Entwurf
+dependencies: '*.md.de api/index.md.de'
+keywords: ~
+status: ~
+title: Orion Datenschutzerklärung
+---
 
 <div class="float-lg-right">
 	<img src="../images/sunstarstaronly.png"></img>
 </div>
 
-## Outline
+## Gliederung
 
-- NO SHARING/RESELLING OF CUSTOMER DATA.
+- KEINE WEITERGABE/WIEDERVERKAUF VON KUNDENDATEN.
 
-- Cookies only used for Security / Accountability Purposes.
+- Cookies nur für Sicherheits- / Verantwortungszwecke verwendet.
 
-- The only User Identity components we log are your Google OpenID account's email address, and the user account you use to connect to whatever Subversion system underpins Orion &trade; for the site to which you are making Commits.  The logging system tracks these alongside the basic Apache [`httpd`](#) access response logset, which includes connecting IP address, Request protocol with URL details, and client's advertised [`Referer`](#) and  [`User-Agent`](#) headers.
+- Die einzigen Benutzeridentitätskomponenten, die wir protokollieren, sind die E-Mail-Adresse Ihres Google OpenID-Accounts und der Benutzeraccount, mit dem Sie eine Verbindung zu dem Subversion-System herstellen, das Orion TM für die Website unterstützt, zu der Sie Commits erstellen.  Das Protokollierungssystem verfolgt diese neben dem grundlegenden Apache [`httpd`](#) Zugriffsantwort-Logset, das die Verbindung der IP-Adresse, das Anforderungsprotokoll mit URL-Details und das vom Client angebotene Logset umfasst ["Referer"](#) und [`User-Agent`](#)
 
-- It's a GDPR-compliant opt-in system.  On the first visit to Orion &trade; IDE, you will be directed to a Google Page asking you to authorize the <span class="text-white">SunStar Systems OIDC</span> app to use your provided Google account details (mainly profile information &mdash; email address, picture, etc; but **not** your login credentials).  If you don't wish for Google to share this information with us, or don't like this privacy policy document (linked from that page), then don't authorize Google to supply your user profile details, and you will be denied access until you change your mind.
+- {# lede #}Es handelt sich um ein DSGVO-konformes Opt-in-System.  Beim ersten Besuch des Orion TM CMS/IDE werden Sie zu einer Google-Seite geleitet, auf der Sie aufgefordert werden,{# lede #}
+
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}...
+{{d.1.content|lede}}
+
+<!-- $Date$ $Author$ $Revision$ -->
