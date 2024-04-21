@@ -171,7 +171,9 @@ sub run_shell_command {
 }
 
 sub breadcrumbs {
-    my @path = split m!/!, shift, -1;
+    my $src = shift;
+	utf8::decode $src;
+    my @path = split m!/!, $src, -1;
     my $tail = pop @path;
     my @rv;
     my $relpath = "../" x @path;
