@@ -437,8 +437,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @watch=();
       my $tokens = join '|', ("@"."\Q$svnuser=\E", map "@@"."\Q$_=\E", split ',', (split /:/, $pw{$svnuser})[1]);
       ($revision) = $re =~ /(\d+)$/;
-      $revision++ if defined $revision;
-      $log = $svn->log($dirname, "HEAD", $revision);
+      $log = $svn->log($dirname, "HEAD", $revision+1);
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       @$log = grep { my $rv; $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $svn->diff($dirname, 1, $$_[0]);
                      $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
@@ -460,6 +459,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           name => "last",
           value => $revision,
           expires => "365d",
+          secure => 1,
         );
         $r->err_headers_out->set("Set-Cookie" => $cookie->as_string);
       }
@@ -593,7 +593,7 @@ if (client_wants_json $r) {
   $jxs = $jxs->new;
   $jxs = $jxs->utf8;
   $jxs = $jxs->pretty;
-  $r->print($jxs->encode($args));
+  eval{ $r->print($jxs->encode($args)) };
   return Apache2::Const::OK;
 }
 
@@ -602,5 +602,5 @@ local @ENV{qw/REPOS WEBSITE/} = ($repos, $host);
 $r->content_type("text/html; charset='utf-8'");
 my $rv = Template("search.html")->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
-$r->print($rv);
+eval {$r->print($rv)};
 return Apache2::Const::OK;
