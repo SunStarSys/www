@@ -81,5 +81,5 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Estado de documento apto para búsqueda"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Automatización de <span class="editormd-tex">\leftrightarrow \LaTeX</span>'
+- Feature: 'Automatización de Markdown<span class="editormd-tex">\leftrightarrow \LaTeX</span>'
   Orion: 
