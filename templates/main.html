@@ -206,7 +206,7 @@
     }
   </script>
   <script async type="module">
-    if (location.href === "https://{{website}}/" && Notification.permission !== "denied") {
+    if (Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
