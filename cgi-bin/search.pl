@@ -453,7 +453,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my $cookie = APR::Request::Cookie->new(
           $r->pool,
           name => "last",
-          value => $revison,
+          value => $revision,
           expires => "365d",
           secure => 1,
           path => "/",
