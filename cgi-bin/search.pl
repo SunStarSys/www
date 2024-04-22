@@ -16,6 +16,7 @@ use HTML::Escape qw/escape_html/;
 use HTML::Parser;
 use APR::Request::Apache2;
 use APR::Request::Param;
+use APR::Request::Cookie;
 use APR::Request qw/encode/;
 use Cpanel::JSON::XS;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
