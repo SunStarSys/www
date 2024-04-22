@@ -437,7 +437,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @watch=();
       my $tokens = join '|', ("@"."\Q$svnuser=\E", map "@@"."\Q$_=\E", split ',', (split /:/, $pw{$svnuser})[1]);
       ($revision) = $re =~ /(\d+)$/;
-      $log = $svn->log($dirname, "HEAD", $revision+1, 10);
+      $log = $svn->log($dirname, "HEAD", $revision+1);
       if (@$log) {
         my $revision = $$log[0][0];
         my $cookie = APR::Request::Cookie->new(
@@ -453,7 +453,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       @$log = grep { my $rv; $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $svn->diff($dirname, 1, $$_[0]);
                      $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
-                   } grep $svnuser ne $$_[3], @$log;
+                   } grep {$svnuser ne $$_[3] or 1}, @$log;
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my @d_fmt = split /\D/, $$_[4];
