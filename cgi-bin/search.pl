@@ -439,7 +439,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       ($revision) = $re =~ /(\d+)$/;
       $revision++ if defined $revision;
 
-      $log = $svn->log($dirname, $revision);
+      $log = $svn->log($dirname, HEAD => $revision);
 
       if (@$log) {
         my $rev = $$log[0][0];
