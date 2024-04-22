@@ -438,6 +438,18 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $tokens = join '|', ("@"."\Q$svnuser=\E", map "@@"."\Q$_=\E", split ',', (split /:/, $pw{$svnuser})[1]);
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision+1);
+      if (@$log) {
+        my $revision = $$log[0][0];
+        my $cookie = APR::Request::Cookie->new(
+          $r->pool,
+          name => "last",
+          value => $revision,
+          expires => "365d",
+          secure => 1,
+          path => "/",
+        );
+        $r->err_headers_out->set("Set-Cookie" => $cookie->as_string);
+      }
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       @$log = grep { my $rv; $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $svn->diff($dirname, 1, $$_[0]);
                      $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
@@ -451,18 +463,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime timegm reverse @d_fmt[0..5];
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
-      }
-      if (@$log) {
-        my $revision = $$log[0][0];
-        my $cookie = APR::Request::Cookie->new(
-          $r->pool,
-          name => "last",
-          value => $revision,
-          expires => "365d",
-          secure => 1,
-          path => "/",
-        );
-        $r->err_headers_out->set("Set-Cookie" => $cookie->as_string);
       }
     }
   }
