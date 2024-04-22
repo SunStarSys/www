@@ -441,11 +441,12 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       ($revision) = $re =~ /(\d+)$/;
       $revision++ if defined $revision;
 
-      my $log = $$ncache{$dirname}{$revision} //= do {
+      my $log = $ncache{$dirname}{$revision} //= do {
         my $log = $svn->log($dirname, HEAD => $revision);
         push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
         $log;
       };
+      delete $ncache{$dirname}{$revision} unless defined $revision;
 
       if (@$log) {
         $revision = $$log[0][0];
