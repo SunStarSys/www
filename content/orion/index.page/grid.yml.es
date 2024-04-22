@@ -82,4 +82,4 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
   Slab: "&check;"
 - Feature: 'Automatización de Markdown<span class="editormd-tex">\leftrightarrow \LaTeX</span>'
-  Orion: 
+  Orion: "&check;"
