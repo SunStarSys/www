@@ -229,6 +229,8 @@ my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my ($js, $count);
 
+our %ncache;
+
 utf8::decode($_) for $re, $filter;
 
 my $dirname;
@@ -439,14 +441,18 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       ($revision) = $re =~ /(\d+)$/;
       $revision++ if defined $revision;
 
-      $log = $svn->log($dirname, HEAD => $revision);
+      my $log = $$ncache{$dirname}{$revision} //= do {
+        my $log = $svn->log($dirname, HEAD => $revision);
+        push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
+        $log;
+      };
 
       if (@$log) {
-        my $rev = $$log[0][0];
+        $revision = $$log[0][0];
         my $cookie = APR::Request::Cookie->new(
           $r->pool,
           name => "last",
-          value => $rev,
+          value => $revison,
           expires => "365d",
           secure => 1,
           path => "/",
@@ -455,9 +461,12 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       }
 
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
-      @$log = grep { my $rv; $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $svn->diff($dirname, 1, $$_[0]);
-                     $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
-                   } grep {$svnuser ne $$_[3] or 1} @$log;
+      @$log = grep {
+        my $rv;
+        $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $$_[-1];
+        $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
+      } @$log;
+
       for (@$log) {
         setlocale LC_TIME, "$LANG{$lang}.UTF-8";
         my @d_fmt = split /\D/, $$_[4];
