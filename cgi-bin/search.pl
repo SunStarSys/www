@@ -460,6 +460,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           value => $revision,
           expires => "365d",
           secure => 1,
+          path => "/",
         );
         $r->err_headers_out->set("Set-Cookie" => $cookie->as_string);
       }
