@@ -205,7 +205,45 @@
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
-
+  <script async type="module">
+    if (location.href === "https://{{website}}/" && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
+            Notification.requestPermission().then((result) => {
+              permission = result;
+            });
+        }
+        if (permission === "granted") {
+		   var revision;
+           var m = document.cookie.match(/last=([0-9]+)/);
+           if (m)
+			 revision = m[1];
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+				  }
+				  var n = new Notification(e[2],
+     			    {
+					  body: msg,
+					  tag: e[0],
+					  icon: "/images/favicon",
+					  image: "/images/iconoclast",
+				    }
+			  	  );
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			  }
+		   }
+           catch (e) {
+              alert(e);
+		   }
+        }
+	}
+  </script>
   {% block javascript %}{% endblock %}
 </div>
 </body>
