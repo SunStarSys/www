@@ -439,11 +439,11 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       ($revision) = $re =~ /(\d+)$/;
       $log = $svn->log($dirname, "HEAD", $revision+1);
       if (@$log) {
-        my $revision = $$log[0][0];
+        my $rev = $$log[0][0];
         my $cookie = APR::Request::Cookie->new(
           $r->pool,
           name => "last",
-          value => $revision,
+          value => $rev,
           expires => "365d",
           secure => 1,
           path => "/",
