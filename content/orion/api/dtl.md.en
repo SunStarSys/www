@@ -29,6 +29,10 @@ Extracts the text between the &#123;# [`lede`](#) #&#125; blocks in the filtered
 
 Recursively evaluates all Django [`ssi`](#) tags in the filtered input string.
 
+#### starts_with
+
+Tests for prefix match.
+
 #### dirname
 
 Returns the traditional UNIX [`dirname`](#) of the path in the filtered input string.
