@@ -437,7 +437,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @watch=();
       my $tokens = join '|', ("@"."\Q$svnuser=\E", map "@@"."\Q$_=\E", split ',', (split /:/, $pw{$svnuser})[1]);
       ($revision) = $re =~ /(\d+)$/;
-      $log = $svn->log($dirname, "HEAD", $revision+1);
+      $revision++ if defined $revision;
+      $log = $svn->log($dirname, $revision);
       if (@$log) {
         my $rev = $$log[0][0];
         my $cookie = APR::Request::Cookie->new(
