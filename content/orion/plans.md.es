@@ -1,12 +1,12 @@
 ---
-categories: Jamstack, wiki
+categories: ~
 dependencies: '*.md.es api/index.md.es'
-keywords: publicado
-status: ~
+keywords: Jamstack, wiki
+status: publicado
 title: Planes Orion
 ---
 
-No de detalles de plan
+## Detalles del plan
 
 <div class="row">
 <div class="col-lg-4">
@@ -47,7 +47,8 @@ $10/mes/sitio público gestionado
 						<li>Transferencia de datos de $10/40 GB</li>
 						<li>$5 / asiento</li>
 						<li>$10 / 100 minutos de construcción</li>
-					</ol>
+                        <li>$0.05 / página Traducciones de AI NLP</li>
+</ol>
 					</p>
 </li>
 			</ul>
@@ -92,7 +93,8 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 						<li>Transferencia de datos de 20 $/100 GB</li>
 						<li>$10 / asiento</li>
 						<li>$10 / 100 minutos de construcción</li>
-					</ol>
+                        <li>$0.04 / página Traducciones de AI NLP</li>
+                    </ol>
 					</p>
 					</li>
 				</ul>
@@ -114,7 +116,7 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>Recursos mensuales incluidos:
+				<li>Recursos mensuales incluidos:  &nbsp;
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
@@ -145,8 +147,9 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 						<li>$100 / ithread mod_perl alojamiento de registro</li>
 						<li>100 $/región OCI para POP personalizados</li>
 				<li>Minutos de construcción de $100/1K</li>
-				<li>WebSockets y/o alojamiento de contenedor privado disponible</li>
-					</ol>
+                <li>$0.03 / página Traducciones de AI NLP</li>
+                <li>WebSockets y/o alojamiento de contenedor privado disponible</li>
+                      </ol>
 					</p>
 				</li>
 			</ul>
@@ -157,7 +160,7 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 
 - Todos los planes incluyen la gestión de certificados SSL/TLS automatizada internamente (a través de LetsEncrypt) y el motor de búsqueda integrado PCRE (+Markdown).
 
-- {# lede #}Descuentos anuales por adelantado disponibles (hasta un 20% de descuento en los costes de facturación mensuales){# lede #}.
+- {# lede #}Descuentos anuales por adelantado disponibles (hasta un 20% de descuento en los costos mensuales de facturación){# lede #}
 
 - Descuentos por volumen disponibles.
 

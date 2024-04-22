@@ -1,8 +1,8 @@
 ---
-categories: Jamstack, wiki
+categories: ~
 dependencies: '*.md.fr api/index.md.fr'
-keywords: publié
-status: ~
+keywords: Jamstack, wiki
+status: publié
 title: Plans Orion
 ---
 
@@ -47,7 +47,8 @@ title: Plans Orion
 						<li>Transfert de données de 10 $ / 40 Go</li>
 						<li>5 $ / siège</li>
 						<li>10 $ / 100 minutes de construction</li>
-					</ol>
+                        <li>0,05 $ / page Traductions AI NLP</li>
+</ol>
 					</p>
 </li>
 			</ul>
@@ -92,7 +93,8 @@ title: Plans Orion
 						<li>Transfert de données de 20 $ / 100 Go</li>
 						<li>10 $ / siège</li>
 						<li>10 $ / 100 minutes de construction</li>
-					</ol>
+                        <li>0,04 $ / page Traductions AI NLP</li>
+                    </ol>
 					</p>
 					</li>
 				</ul>
@@ -114,7 +116,7 @@ title: Plans Orion
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>Ressources mensuelles incluses :
+				<li>Ressources mensuelles incluses :  &nbsp;
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
@@ -135,7 +137,7 @@ title: Plans Orion
 			</ul>
 			<ul style="min-height:200px">
 				<li>
-Taux de ressources mensuels supplémentaires (par site Web) :
+
 &nbsp;
 
 <p>
@@ -145,8 +147,9 @@ Taux de ressources mensuels supplémentaires (par site Web) :
 						<li>100 $ / ithread mod_perl hébergement de registre</li>
 						<li>100 $ / région OCI pour les POP personnalisés</li>
 				<li>100 $ / 1K minutes de construction</li>
-				<li>WebSockets et/ou hébergement de conteneurs privés disponibles</li>
-					</ol>
+                <li>0,03 $ / page Traductions AI NLP</li>
+                <li>WebSockets et/ou hébergement de conteneurs privés disponibles</li>
+                      </ol>
 					</p>
 				</li>
 			</ul>
@@ -157,7 +160,7 @@ Taux de ressources mensuels supplémentaires (par site Web) :
 
 - Tous les plans incluent la gestion automatisée interne des certificats SSL/TLS (via LetsEncrypt) et le moteur de recherche PCRE (+Markdown) intégré.
 
-- {# lede #}Remises annuelles à l'avance disponibles (jusqu'à 20 % de réduction sur les coûts de facturation mensuels){# lede #}.
+- {# lede #}Remises annuelles à l'avance disponibles (jusqu'à 20 % sur les coûts de facturation mensuels){# lede #}
 
 - Réductions de volume disponibles.
 
