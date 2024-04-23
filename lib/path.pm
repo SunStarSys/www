@@ -78,7 +78,7 @@ walk_content_tree {
 
   return if -d "content/$_";
 
-  seed_file_deps, seed_file_acl if /\.md[^\/]*$/;
+  seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)[^\/]*$/;
 
   for my $lang (qw/en es de fr/) {
 
