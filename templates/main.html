@@ -206,7 +206,7 @@
     }
   </script>
   <script async type="module">
-    if (Notification.permission !== "denied") {
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
