@@ -447,16 +447,17 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $log = $ncache{$dirname}{$revision} //= do {
         warn "CACHE MISS: {$dirname}{$revision}";
         my $log = $svn->log($dirname, HEAD => $revision);
-        push @$_, map /^(.*)$/ms, $svn->diff($dirname, 1, $$_[0]) for @$log;
+        push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
         /^(.*)$/ms and $_ = $1 for map ref($_) eq "HASH" ? values %$_ : $_, map @$_, @$log;
-        $log;
+        {log => $log, time => $r->request_time};
       };
 
-      if (defined $revision) {
-        $log = [map [@$_], @$log];
+      if (defined $revision and $r->request_time - $log->{time} < 1000) {
+        $log = [map [@$_], @{$log->{log}];
       }
       else {
         delete $ncache{$dirname}{$revision};
+        $log = $log->{log};
       }
 
       if (@$log) {
@@ -475,7 +476,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       @$log = grep {
         my $rv;
-        $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $$_[-1];
+        $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $$_[-2];
         $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
       } @$log;
 
