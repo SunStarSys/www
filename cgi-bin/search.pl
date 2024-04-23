@@ -419,7 +419,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $watchers = thaw($wcache{$svnuser-$url} //= do {
+      my $watchers = thaw($wcache{"$svnuser-$url"} //= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -438,7 +438,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze { hash => $w, time => $r->request_time }
       });
 
-      delete $wcache{$svnuser}{$url} unless $r->request_time - $watchers->{time} < 10000;
+      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 10000;
       $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
