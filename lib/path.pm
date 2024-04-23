@@ -38,6 +38,12 @@ our @patterns = (
     facts      => $facts,
   }],
 
+   # don't build markdown files within attachment dirs
+  [qr!\.page/[^/]+.md[^/]*$!, skip => {}],
+
+  # transform yml to json
+  [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
+
   [qr!/(api|clients)/.*\.md(?:text)?!, memoize => {
     view            => [qw/set_template_from_capture snippet single_narrative/],
     compress        => 1,
