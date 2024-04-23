@@ -453,7 +453,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       };
 
       if (defined $revision and $r->request_time - $log->{time} < 1000) {
-        $log = [map [@$_], @{$log->{log}];
+        $log = [map [@$_], @{$log->{log}}];
       }
       else {
         delete $ncache{$dirname}{$revision};
@@ -476,7 +476,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       @$log = grep {
         my $rv;
-        $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $$_[-2];
+        $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $$_[-1];
         $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
       } @$log;
 
