@@ -438,7 +438,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze { hash => $w, time => $r->request_time }
       });
 
-      # delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 10000;
+      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
       $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
