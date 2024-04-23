@@ -461,6 +461,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $log = $ncache{$svnuser}{$dirname}{$revision} //= do {
         my $limit;
         $limit = 10 unless defined $revision;
+        warn "LIMIT=$limit";
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
         push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
         @$log = grep $$_[3] ne $svnuser, @$log if IGNORE_SELFIES;
