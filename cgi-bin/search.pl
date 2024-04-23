@@ -412,24 +412,33 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
     elsif ($re =~ /watch=|notify=/i) {
       my $url;
+      my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $watchers = $wcache{$svnuser}{$url} //= do {my $w = $svn->propget("orion:watchers", $url, "HEAD", 1); $_ = {map {$_=>1} split /[, ]+/} for values %$w; { hash => $w, time => $r->request_time}};
-      delete $wcache{$svnuser}{$url} unless $r->request_time - $watchers->{time} < 10000;
-      my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
-      $watchers = $watchers->{hash};
-      while (my ($k, $v) = each %$watchers) {
-        $k =~ s/^.*?\Q$prefix//;
-        my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
-        if (exists $$v{$svnuser}) {
-          eval {
-            my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
-            die $err if $?;
-          };
-          warn "$@" and next if $@;
-          push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
-          $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
+      my $watchers = $wcache{$svnuser}{$url} //= do {
+        my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
+        $_ = {map {$_=>1} split /[, ]+/} for values %$w;
+        while (my ($k, $v) = each %$w) {
+          $k =~ s/^.*?\Q$prefix//;
+          my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
+          if (exists $$v{$svnuser}) {
+            eval {
+              my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
+              die $err if $?;
+            };
+            $@ or next;
+          }
+          delete $$w{$k};
         }
+        { hash => $w, time => $r->request_time }
+      };
+
+      delete $wcache{$svnuser}{$url} unless $r->request_time - $watchers->{time} < 10000;
+      $watchers = $watchers->{hash};
+
+      while (my ($k, $v) = each %$watchers) {
+        push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
+        $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v];
       }
       @friends = ();
     }
