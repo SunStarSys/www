@@ -444,7 +444,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       my $log = $ncache{$dirname}{$revision} //= do {
         my $log = $svn->log($dirname, HEAD => $revision);
-        push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
+        push @$_, map /^(.*)$/ms, $svn->diff($dirname, 1, $$_[0]) for @$log;
         $log;
       };
 
