@@ -445,6 +445,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname = $1;
 
       my $log = $ncache{$dirname}{$revision} //= do {
+        warn "CACHE MISS: {$dirname}{$revision}";
         my $log = $svn->log($dirname, HEAD => $revision);
         push @$_, map /^(.*)$/ms, $svn->diff($dirname, 1, $$_[0]) for @$log;
         /^(.*)$/ms and $_ = $1 for map ref($_) eq "HASH" ? values %$_ : $_, map @$_, @$log;
