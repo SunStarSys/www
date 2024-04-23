@@ -414,8 +414,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $url;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $watchers = $wcache{$url} //= do {my $w = $svn->propget("orion:watchers", $url, "HEAD", 1); $_ = {map {$_=>1} split /[, ]+/} for values %$w; { hash => $w, time => $r->request_time}};
-      delete $wcache{$url} unless $r->request_time - $watchers->{time} < 10000;
+      my $watchers = $wcache{$svnuser}{$url} //= do {my $w = $svn->propget("orion:watchers", $url, "HEAD", 1); $_ = {map {$_=>1} split /[, ]+/} for values %$w; { hash => $w, time => $r->request_time}};
+      delete $wcache{$svnuser}{$url} unless $r->request_time - $watchers->{time} < 10000;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $watchers = $watchers->{hash};
       while (my ($k, $v) = each %$watchers) {
@@ -445,7 +445,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
 
-      $log = $ncache{$dirname}{$revision} //= do {
+      $log = $ncache{$svnuser}{$dirname}{$revision} //= do {
         my $log = $svn->log($dirname, HEAD => $revision);
         push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
         {log => $log, time => $r->request_time}
@@ -455,7 +455,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $log = [map [@$_], @{$log->{log}}];
       }
       else {
-        delete $ncache{$dirname}{$revision};
+        delete $ncache{$svnuser}{$dirname}{$revision};
         $log = $log->{log};
       }
 
