@@ -535,8 +535,8 @@ if ($re !~ $specials_re) {
   while (my ($k, $v) = each %matches) {
     my $link = $path_info . $k;
 	my $path = "/cms-sites/$host/trunk/content$link";
-    $link =~ s/\.md(?:text)?/.html/ or $link =~ s/\.ya?ml\b/.json/ if $markdown;
     if ($markdown) {
+      $link =~ s/\.md(?:text)?/.html/ or $link =~ s/\.ya?ml\b/.json/;
       eval {
         my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
         die $err if $?;
@@ -571,6 +571,7 @@ if ($re !~ $specials_re) {
     $words =~ s/[+]+/%20/g;
     $words =~ s/%20(&amp;|$)/$1/g;
     my @w = "text=$words" =~ /text=[^&]+/g;
+    $k =~ s!\.page/[^/]*\.html/.html!;
     push @matches, [$data{mtime}, $total, qq([<a href="./?regex=^Status:\\s$status;lang=$lang;markdown_search=1"><span class="text-warning">$status</span></a>] <a href="$link#:~:text=$words">$title</a> $rev), $k, [map {s/(<span class="text-danger">[^<]+<\/span>)/qq(<a href="$link#:~:) . shift(@w) . qq(">$1<\/a>)/ge; $_} map $_->{match}, @$v]]
       unless $title_cache{$title}++;
     push @keywords, grep !$keyword_cache{$_}++,  @{ref $data{headers}{keywords} ? $data{headers}{keywords} : [split/[;,]\s*/, $data{headers}{keywords} // ($data{content} =~ m/name="keywords" content="([^"]+)"/i)[0] // ""]};
