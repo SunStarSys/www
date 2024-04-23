@@ -444,12 +444,14 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
 
-      $log = $ncache{$dirname}{$revision} //= do {
+      $ncache{$dirname}{$revision} //= do {
         warn "CACHE MISS: {$dirname}{$revision}";
         my $log = $svn->log($dirname, HEAD => $revision);
         push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
         {log => $log, time => $r->request_time}
       };
+
+      $log = $ncache{$dirname}{$revison};
 
       if (defined $revision and $r->request_time - $log->{time} < 1000) {
         $log = [map [@$_], @{$log->{log}}];
