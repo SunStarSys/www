@@ -33,7 +33,7 @@ use Digest::SHA1;
 use Time::timegm 'timegm';
 no warnings 'uninitialized';
 use sealed 'deparse';
-use constant IGNORE_SELFIES => 0;
+use constant IGNORE_SELFIES => 1;
 
 
 local $@;
