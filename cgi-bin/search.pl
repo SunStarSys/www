@@ -558,7 +558,7 @@ if ($re !~ $specials_re) {
     else {
       $rev= "";
     }
-    $status =~ s/[^A-Z]//g;
+    $status =~ s/[\d=]+//g;
     my $total = sum map $_->{count}, @$v;
     my $etex = encode("$$");
     my $http = '(?:\S+https?' . encode("://") . '[^+]+|[^+]+%2F[^+]*)';
