@@ -232,8 +232,8 @@ my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my ($js, $count);
 
-tie my %ncache, DB_File => "/x1/tmp/ncache", O_RDWR or die "Can't open $repos database: $!";
-tie my %wcache, DB_FILE => "/x1/tmp/wcache", O_RDWR or die "Can't open wcache-file: $!";
+tie my %ncache, DB_File => "/x1/tmp/ncache", O_RDWR or die "Can't open ncache DB: $!";
+tie my %wcache, DB_File => "/x1/tmp/wcache", O_RDWR or die "Can't open wcache DB: $!";
 
 utf8::decode($_) for $re, $filter;
 
