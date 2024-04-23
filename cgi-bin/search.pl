@@ -535,7 +535,7 @@ if ($re !~ $specials_re) {
   while (my ($k, $v) = each %matches) {
     my $link = $path_info . $k;
 	my $path = "/cms-sites/$host/trunk/content$link";
-    $link =~ s/\.md(?:text)?/.html/ if $markdown;
+    $link =~ s/\.md(?:text)?/.html/ or $link =~ s/\.ya?ml\b/.js/ if $markdown;
     if ($markdown) {
       eval {
         my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
