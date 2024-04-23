@@ -452,7 +452,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       };
 
       if (defined $revision) {
-        @$_ = map [@$_], @$log;
+        $log = [map [@$_], @$log];
       }
       else {
         delete $ncache{$dirname}{$revision};
