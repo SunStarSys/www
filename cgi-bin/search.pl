@@ -25,6 +25,7 @@ use Dotiac::DTL::Addon::json;
 use SunStarSys::Util qw/read_text_file parse_filename/;
 use SunStarSys::SVN::Client;
 use File::Basename;
+use FreezeThaw qw/freeze thaw/;
 use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use DB_File;
@@ -231,7 +232,8 @@ my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my ($js, $count);
 
-our (%wcache, %ncache);
+tie my %ncache, DB_File => "/x1/tmp/$website-ncache", O_RDWR or die "Can't open $repos database: $!";
+tie my %wcache, DB_FILE => "/x1/tmp/$website-wcache", O_RDWR or die "Can't open wcache-file: $!";
 
 utf8::decode($_) for $re, $filter;
 
@@ -417,7 +419,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $watchers = $wcache{$svnuser}{$url} //= do {
+      my $watchers = thaw($wcache{$svnuser-$url} //= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -433,8 +435,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
           delete $$w{$key};
         }
-        { hash => $w, time => $r->request_time }
-      };
+        freeze { hash => $w, time => $r->request_time }
+      });
 
       delete $wcache{$svnuser}{$url} unless $r->request_time - $watchers->{time} < 10000;
       $watchers = $watchers->{hash};
@@ -458,20 +460,20 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
 
-      $log = $ncache{$svnuser}{$dirname}{$revision} //= do {
+      $log = thaw($ncache{"$svnuser-$dirname-$revision"} //= do {
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
         push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
         @$log = grep $$_[3] ne $svnuser, @$log if IGNORE_SELFIES;
-        {log => $log, time => $r->request_time}
-      };
+        freeze {log => $log, time => $r->request_time}
+      });
 
       if (defined $revision and $r->request_time - $log->{time} < 1000) {
         $log = [map [@$_], @{$log->{log}}];
       }
       else {
-        delete $ncache{$svnuser}{$dirname}{$revision};
+        delete $ncache{"$svnuser-$dirname-$revision"};
         $log = $log->{log};
       }
 
