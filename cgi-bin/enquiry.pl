@@ -38,11 +38,11 @@ if ($r->method eq "POST") {
     my APR::Request::Apache2 $apreq_class = "APR::Request::Apache2";
     my APR::Request $apreq = $apreq_class->handle($r);
     my APR::Request::Param::Table $body = $apreq->body;
-    my ($name, $email, $subject, $content, $site, $confluence, $plan) = @{$body}{qw/name email subject content site confluence plan/};
+    my ($name, $email, $subject, $content, $site, $username, $confluence, $plan) = @{$body}{qw/name email subject content site username confluence plan/};
     $confluence = $confluence ? "yes" : "no";
 	defined $content or return;
-    s/\r//g for $name, $email, $subject, $content, $site, $confluence, $plan;
-    s/\n//g for $name, $email, $subject, $confluence, $site, $plan;
+    s/\r//g for $name, $email, $subject, $content, $site, $confluence, $plan, $username;
+    s/\n//g for $name, $email, $subject, $confluence, $site, $plan, $username;
 
     my ($cn, $srs_sender) = ($name, $email);
 
@@ -71,6 +71,7 @@ Content-Type: text/plain; charset="utf-8"
 $content
 
 WEBSITE: $site
+USERNAME: $username
 CONFLUENCE: $confluence
 Plan: $plan
 EOT
@@ -80,7 +81,7 @@ EOT
 
     render $r, "enquiry_post.html",
         content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
-        headers => { title => "Orion Sales Enquiry" };
+        headers => { title => "Sales Enquiry" };
 }
 
 render $r, "enquiry_get.html";
