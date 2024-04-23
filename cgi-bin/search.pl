@@ -459,6 +459,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $log = $ncache{$svnuser}{$dirname}{$revision} //= do {
         my $log = $svn->log($dirname, HEAD => $revision);
         push @$_, $svn->diff($dirname, 1, $$_[0]) for @$log;
+        @$log = grep $$_[3] ne $svnuser, @$log;
         {log => $log, time => $r->request_time}
       };
 
