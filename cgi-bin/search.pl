@@ -419,6 +419,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
+          my $key = $k;
           $k =~ s/^.*?\Q$prefix//;
           my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
           if (exists $$v{$svnuser}) {
@@ -428,7 +429,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
             };
             $@ or next;
           }
-          delete $$w{$k};
+          delete $$w{$key};
         }
         { hash => $w, time => $r->request_time }
       };
