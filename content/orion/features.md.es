@@ -505,7 +505,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 .theme-showcase {
 	-nombre-animación-webkit: FADEY;
-	-webkit-animación-duración: 1s;
+	-webkit-animación-duración: 2s;
 	-webkit-animación-función de tiempo: facilidad de entrada;
 	-webkit-animation-iteration-count: 1;
 }
