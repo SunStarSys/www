@@ -11,7 +11,7 @@
   <label for="email">{% ifequal lang ".en" %}Your Email Address{% endifequal %}{% ifequal lang ".es" %}Tu correo electrónico{% endifequal %}{% ifequal lang ".de" %}Deine Emailadresse{% endifequal %}{% ifequal lang ".fr" %}Votre adresse email{% endifequal %}</label>
   <input type="email" name="email" id="email" class="form-control" required />
 
-  <label for="username">{% ifequal lang ".en" %}Preferred User Name{% endifequal %}</label>
+  <label for="username">{% ifequal lang ".en" %}Preferred User Name{% endifequal %}{% ifequal lang ".es" %}Nombre de usuario preferido{% endifequal %}{% ifequal lang ".de" %}Bevorzugter Benutzername{% endifequal %}{% ifequal lang ".fr" %}Nom d'utilisateur préféré{% endifequal %}</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 
   <label for="site">{% ifequal lang ".en"%}Your Target Website{% endifequal %}{% ifequal lang ".es" %}Su sitio web objetivo{% endifequal %}{% ifequal lang ".de" %}Ihre Zielwebsite{% endifequal %}{% ifequal lang ".fr" %}Votre site Web cible{% endifequal %}</label>
