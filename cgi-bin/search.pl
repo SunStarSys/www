@@ -414,7 +414,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $url;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $watchers = do {my $w = $wcache{$url} //= $svn->propget("orion:watchers", $url, "HEAD", 1); {%$w}};
+      my $watchers = do {my $w = $wcache{$url} //= $svn->propget("orion:watchers", $url, "HEAD", 1); \ my %w = %$w;};
       $_ = {map {$_=>1} split /[, ]+/} for values %$watchers;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       while (my ($k, $v) = each %$watchers) {
