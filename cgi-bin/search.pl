@@ -442,6 +442,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       ($revision) = $re =~ /(\d+)$/;
       $revision++ if defined $revision;
 
+      $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
+      $dirname = $1;
+
       my $log = $ncache{$dirname}{$revision} //= do {
         my $log = $svn->log($dirname, HEAD => $revision);
         push @$_, map /^(.*)$/ms, $svn->diff($dirname, 1, $$_[0]) for @$log;
