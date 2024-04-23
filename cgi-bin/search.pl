@@ -33,7 +33,6 @@ use Digest::SHA1;
 use Time::timegm 'timegm';
 no warnings 'uninitialized';
 use sealed 'deparse';
-use Data::Dumper ();
 
 local $@;
 
@@ -448,15 +447,12 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my $log = $ncache{$dirname}{$revision} //= do {
         my $log = $svn->log($dirname, HEAD => $revision);
         push @$_, map /^(.*)$/ms, $svn->diff($dirname, 1, $$_[0]) for @$log;
+        /^(.*)$/ms and $_ = $1 for map ref($_) eq "HASH" ? values %$_ : $_, map @$_, @$log;
         $log;
       };
 
       if (defined $revision) {
-        my Data::Dumper $d;
-        $d = $d->new([$ncache{$dirname}{$revision}], ['$log']);
-        $d->Deepcopy(1);
-        $d->Purity(1);
-        eval $d->Dump;
+        @$_ = map [@$_], @$log;
       }
       else {
         delete $ncache{$dirname}{$revision};
