@@ -63,7 +63,7 @@ if ($r->method eq "POST") {
     %ENV = ();
 
     open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -f/, "$1\@$DOMAIN";
-    my $msg <<EOT;
+    my $msg =<<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
 Reply-To: $cn <$vars{email}>
