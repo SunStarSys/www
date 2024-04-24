@@ -76,7 +76,7 @@ $vars{content}
 ---
 
 EOT
-    while ((my $k, $v) = each %vars) {
+    while (my ($k, $v) = each %vars) {
       $msg .= "$k: $v\n"
     }
     print $senmail $msg;
