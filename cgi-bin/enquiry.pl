@@ -79,7 +79,7 @@ EOT
     while (my ($k, $v) = each %vars) {
       $msg .= "$k: $v\n"
     }
-    print $senmail $msg;
+    print $sendmail $msg;
     close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
   }
 
