@@ -55,6 +55,8 @@ my APR::Request $apreq = $apreq_class->handle($r);
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
 
+local our $lang = get_client_lang($r);
+
 sub filtermd {
   for (@_) {
     s/[\`*]+//g;
