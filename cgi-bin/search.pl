@@ -36,7 +36,6 @@ no warnings 'uninitialized';
 use sealed 'deparse';
 use constant IGNORE_SELFIES => 1;
 
-
 local $@;
 
 local our %LANG = (
@@ -53,13 +52,6 @@ my Apache2::RequestRec $r = shift;
 my APR::Request::Apache2 $apreq_class;
 my APR::Request $apreq = $apreq_class->handle($r);
 
-local our $USERNAME = $r->user;
-local our $PASSWORD;
-local our $lang  = get_client_lang($r);
-
-$PASSWORD = ($r->get_basic_auth_pw)[1] if $r->user;
-$r->pnotes("svnuser", $USERNAME);
-$r->pnotes("svnpassword", $PASSWORD);
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
 
