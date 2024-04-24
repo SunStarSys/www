@@ -20,7 +20,7 @@ my $date   = gmtime;
 my ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
 
 my $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
-my $validator = $r->dir_config->get("subject_validator") // "orion";
+my $validator = $r->dir_config->get("validator") // "orion";
 
 sub render :Sealed {
   my Apache2::RequestRec $r = shift;
@@ -57,7 +57,7 @@ if ($r->method eq "POST") {
     }
   }
 
-  if ($vars{subject} =~ /$validator/i and $jar->get("nonce")) {
+  if ($vars{subject} =~ /$validator/i and defined $jar->get("nonce")) {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
     $srs_sender =~ /^(.*)$/ and length $1 or die "BAD EMAIL: $vars{email}";
     %ENV = ();
