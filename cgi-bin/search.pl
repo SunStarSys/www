@@ -44,6 +44,8 @@ local our %LANG = (
   ".es" => "es_ES",
   ".fr" => "fr_FR",
   ".ru" => "ru_RU",
+  ".sv" => "sv_SV",
+  ".he" => "he_IL",
 );
 
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
@@ -588,6 +590,8 @@ my %title = (
   ".de" => "Suchergebnisse für $markdown ",
   ".fr" => "Résultats de recherche pour \l$markdown ",
   ".ru" => "Результаты поиска по $markdown ",
+  ".he" => "תוצאות חיפוש עבור $markdown ",
+  ".sv" => "Sökresultat för $markdown ",
   );
 
 $hash =  Digest::SHA1->new;
