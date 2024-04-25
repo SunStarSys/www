@@ -630,7 +630,7 @@ if (my $origin = $r->headers_in->get("Origin")) {
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
-  my Cpanel::JSON::XS $jxs = "Cpanel::JSON::XS";
+  my Cpanel::JSON::XS $jxs;
   $jxs = $jxs->new;
   $jxs = $jxs->utf8;
   $jxs = $jxs->pretty;
