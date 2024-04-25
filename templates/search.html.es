@@ -1,15 +1,15 @@
 {% extends "main.html" %}
-{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
+{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% más
 %}{{regex}}{% endif %}/gi{% endblock %}
 {% block headers %}
-<link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
-<link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
-<link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
-<link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">
+<link href="/fontawesome/css/all.min.css" media="screen" rel="stylesheet">
+<link href="/editor.md/css/editormd.min.css" media="screen" rel="stylesheet">
+<link href="/editor.md/lib/codemirror/codemirror.min.css" media="screen" rel="stylesheet">
+<link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" media="screen" rel="stylesheet">
 {% endblock %}
 {% block content %}
 <h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
-  else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+  más %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
   <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
@@ -21,18 +21,18 @@
   {% endfor %}
   {% if duration %}
   <script src="/editor.md/js/chart.umd.js"></script>
-  <canvas id="myChart" width="100%" height="800px"></canvas>
+  <canvas height="800px" id="myChart" width="100%"></canvas>
   {% endif %}
   {% ifequal specials "diff=" %}
   <div class="card text-white border-success mb-3">
     <div class="card-header">{{meta|vcs_author:r.path_info}}
       <small><em>
-          on {{ meta|vcs_date:lang }}
-          at {{meta|vcs_time:lang}}
+        activado {{ meta|vcs_date:lang }}
+          en {{meta|vcs_time:lang}}
           </em></small></div>
     <div class="card-body">
       <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{
-      revision }};lang={{lang}};markdown_search={{markdown_search}}">Log</a></h3>
+      revision }};lang={{lang}};markdown_search={{markdown_search}}">Registro</a></h3>
       <pre>{{ log|safe }}</pre>
   </div>
 <pre><code data-lang="diff">{{ diff }}</code></pre>
@@ -42,14 +42,14 @@
 {% else %}
 {% ifequal specials "log=" %}
 <div class="card text-white border-success mb-3">
-  <div class="card-header">Latest changes</div>
+  <div class="card-header">Últimos cambios</div>
   <div class="card-body">
     <dl>
       {% for e in log %}
       <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
         {{e.3|vcs_author:r.path_info}} <small><em>
-            on {{e.3|vcs_date:lang}}
-            at {{e.3|vcs_time:lang}}</em></small></dt>
+            activado {{e.3|vcs_date:lang}}
+            en {{e.3|vcs_time:lang}}</em></small></dt>
         {% for k, v in e.1 %}
       <dd>
         <code>{{v.action}}</code>&nbsp;
@@ -70,15 +70,15 @@
 {% ifequal specials "notify=" %}
 <div class="card text-white border-success mb-3">
   <div class="card-header">
-    Latest changes
+    Últimos cambios
   </div>
   <div class="card-body">
     <dl>
       {% for e in log %}
       <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
         {{e.3|vcs_author:r.path_info}} <small><em>
-            on {{e.3|vcs_date:lang}}
-            at {{e.3|vcs_time:lang}}</em></small></dt>
+            activado {{e.3|vcs_date:lang}}
+            en {{e.3|vcs_time:lang}}</em></small></dt>
         {% for k, v in e.1 %}
       <dd>
         <code>{{v.action}}</code>&nbsp;
@@ -145,7 +145,7 @@
       {% endifequal %}
       <div class="right">
         <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
-          <i class="fa fa-eye-slash fa-emoji" title="unwatch"></i>
+          <i class="fa fa-eye-slash fa-emoji" title="anular asociación"></i>
         </a>
       </div>
     </div>
@@ -166,7 +166,7 @@
   {% if diff %}
   {% filter markdown %}
 
-## [Diff](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}})
+## [Diferencia](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}}).
 
   {% endfilter %}
 
@@ -181,23 +181,21 @@
   {% endif %}
   {% endifequal %}
   {% else %}
-  <form method="POST" class="form-inline row">
+  <form class="form-inline row" method="POST">
     <div style="width:100%">
       <div class="right" id="filter">
-        <input type="hidden" name="hash" value="{{hash}}"/>
-        <input class="form-control" type="text" name="filter"
-             placeholder="PCRE Recursive Search" value="{{ filter }}" />&nbsp;<button type="submit"
-    name="submit" value="1" class="btn btn-outline-danger"><i class="fa
-    fa-filter fa-emoji" title="Filter"></i>
+        <input name="hash" type="hidden" value="{{hash}}" />
+        <input class="form-control" name="filter" placeholder="Búsqueda recursiva de PCRE" type="text" value="{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa
+    fa-filter fa-emoji" title="Filtro"></i>
         </button>
       </div>
       {% if matches.0 %}
-		<pre>Total Matches = {{ count }}, Total Documents = {{ file_count }}. Ordered by Match Count; subordered by Document Revision.</pre>
+		<pre>Total de coincidencias = {{ count }}, Total de documentos = {{ file_count }}. Ordenado por recuento de coincidencias; subordenado por revisión de documento.</pre>
       <div>
         <dl>
           {% for m in matches %}
           <dt>{{ m.0|safe }}</dt>
-          <input type="hidden" name="files" value="{{m.1}}" />
+          <input name="files" type="hidden" value="{{m.1}}" />
           {% for hit in m.2 %}
           <dd>{{ hit|safe }}</dd>
           {% endfor %}
