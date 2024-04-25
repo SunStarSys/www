@@ -1,5 +1,5 @@
 {% extends "main.html" %}
-{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% andere
+{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
 %}{{regex}}{% endif %}/gi{% endblock %}
 {% block headers %}
 <link href="/fontawesome/css/all.min.css" media="screen" rel="stylesheet">
@@ -9,7 +9,7 @@
 {% endblock %}
 {% block content %}
 <h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
-  sonst %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+  else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
   <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
@@ -145,7 +145,7 @@
       {% endifequal %}
       <div class="right">
         <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
-          <i class="fa fa-eye-slash fa-emoji" title="Unwissen"></i>
+          <i class="fa fa-eye-slash fa-emoji" title="Unkenntlich machen"></i>
         </a>
       </div>
     </div>

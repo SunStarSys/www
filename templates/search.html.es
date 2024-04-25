@@ -1,5 +1,5 @@
 {% extends "main.html" %}
-{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% más
+{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
 %}{{regex}}{% endif %}/gi{% endblock %}
 {% block headers %}
 <link href="/fontawesome/css/all.min.css" media="screen" rel="stylesheet">
@@ -9,7 +9,7 @@
 {% endblock %}
 {% block content %}
 <h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
-  más %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+  else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
   <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
@@ -190,7 +190,7 @@
         </button>
       </div>
       {% if matches.0 %}
-		<pre>Total de coincidencias = {{ count }}, Total de documentos = {{ file_count }}. Ordenado por recuento de coincidencias; subordenado por revisión de documento.</pre>
+		<pre>Coincidencias totales = {{ count }}, Total de documentos = {{ file_count }}. Ordenado por recuento de coincidencias; subordenado por revisión de documento.</pre>
       <div>
         <dl>
           {% for m in matches %}
