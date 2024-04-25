@@ -43,6 +43,7 @@ local our %LANG = (
   ".en" => "en_US",
   ".es" => "es_ES",
   ".fr" => "fr_FR",
+  ".ru" => "ru_RU",
 );
 
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
@@ -586,7 +587,8 @@ my %title = (
   ".es" => "resultados de búsqued para \l$markdown ",
   ".de" => "Suchergebnisse für $markdown ",
   ".fr" => "Résultats de recherche pour \l$markdown ",
-);
+  ".ru" => "Результаты поиска по $markdown ",
+  );
 
 $hash =  Digest::SHA1->new;
 $hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
