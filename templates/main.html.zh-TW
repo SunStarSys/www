@@ -81,7 +81,7 @@
 																{% endifequal %}"><a class="nav-link" href="/open-source">開源 </a>a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{% ifequal lang ".en" %}更多 >>{% endifequal %}{% ifequal lang ".es" %}繁體中文{% endifequal %}{% ifequal lang ".de" %}梅爾{% endifequal %}{% ifequal lang ".fr" %}加強{% endifequal %}... <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">詳細資訊。。<span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">網站來源 (Site Source) </a>

@@ -81,7 +81,7 @@
 																{% endifequal %}"><a class="nav-link" href="/open-source">Código abierto</a>a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{% ifequal lang ".en" %}Más{% endifequal %}{% ifequal lang ".es" %}MÃ¡s{% endifequal %}{% ifequal lang ".de" %}Mehr{% endifequal %}{% ifequal lang ".fr" %}Más{% endifequal %}... <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Más información. <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Origen de sitio</a>

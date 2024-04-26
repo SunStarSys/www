@@ -81,7 +81,7 @@
 																{% endifequal %}"><a class="nav-link" href="/open-source">Открытый исходный код</a>a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{% ifequal lang ".en" %}Больше{% endifequal %}{% ifequal lang ".es" %}Мас{% endifequal %}{% ifequal lang ".de" %}Мер{% endifequal %}{% ifequal lang ".fr" %}Плюс{% endifequal %}... <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Дополнительно.. <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Источник сайта</a>
@@ -110,7 +110,7 @@
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}На базе{% endifequal %}{% ifequal lang ".es" %}Energizado Пор{% endifequal %}{% ifequal lang ".de" %}Унтерсте1⁄4тцт фон{% endifequal %}{% ifequal lang ".fr" %}Алимента{% endifequal %}...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}На базе{% endifequal %}{% ifequal lang ".es" %}Энергизадо Пор{% endifequal %}{% ifequal lang ".de" %}Унтерсте1⁄4тцт фон{% endifequal %}{% ifequal lang ".fr" %}Алимент{% endifequal %}...</a>
           </li>
         </ul>
       </div>

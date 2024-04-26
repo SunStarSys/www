@@ -81,7 +81,7 @@
 																{% endifequal %}"><a class="nav-link" href="/open-source">קוד פתוח</a>a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{% ifequal lang ".en" %}עוד{% endifequal %}{% ifequal lang ".es" %}מיאז{% endifequal %}{% ifequal lang ".de" %}מהר{% endifequal %}{% ifequal lang ".fr" %}ועוד{% endifequal %}... <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">עוד.. <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">מקור אתר</a>
