@@ -2,7 +2,7 @@ Title: Contacta con nosotros
 Keywords: South Florida, System Administration
 
 <div class="float-lg-right">
-{% include "enquiry_get.html" %}
+{% include "enquiry_get.html"|append:lang %}
 </div>
 
 ![SunStar Systems](images/sunstarlogowhole.png)
@@ -22,3 +22,5 @@ Keywords: South Florida, System Administration
 - [+1 (954) 253-3732](tel://1.954.253.3732/)
 
 <div style="height: 650px">&nbsp;<br/></div>
+
+<!-- $Date$ $Author$ $Revision$ -->
