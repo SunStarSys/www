@@ -221,7 +221,7 @@ title: Plans Orion
 ------------
 
 <div class="col-lg-12">
-  {% include "/enquiry_get.html" %}
+  {% include "/enquiry_get.html"|append:lang %}
 </div>
 
 <style type="text/css">
