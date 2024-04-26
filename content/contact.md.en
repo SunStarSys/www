@@ -3,7 +3,7 @@ Keywords: South Florida, System Administration, DevOps, DevSecOps, SRE, GitOps
 Status: draft
 
 <div class="float-lg-right">
-{% include "enquiry_get.html" %}
+{% include "enquiry_get.html."|append:lang %}
 </div>
 
 ![SunStar Systems](images/sunstarlogowhole.png)
