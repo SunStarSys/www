@@ -1,0 +1,93 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.de '
+keywords: RUHE, API
+published: ~
+status: Entwurf
+title: Orion API - Suche
+---
+
+{# lede #}In diesem Dokument werden die **Search**-APIs behandelt{# lede #}
+
+[TOC]
+
+----
+
+## Dynamic Search (/dynamic/search/...).
+
+### Argumente für Abfragezeichenfolge
+
+#### Sprache
+
+- [`.de`](#)
+- [`.es`](#)
+- [`.fr`](#)
+- [`.de`](#).
+
+#### markdown_search
+
+Boolescher Wert (0 oder 1).
+
+#### regulärer Ausdruck
+
+##### spezielle Modi
+
+###### all accounts
+
+- [`Freunde=`](#)
+- [`watch=`](#)
+- [`Benachrichtigung=$revision`](#)
+- [`wie=`](#) (FE)
+- [`diff=$revision`](#)
+- [`log=$revision`](#)
+- [`@$group=`](#)
+- [`$Benutzer=`](#).
+
+###### svnadmin group
+
+- [`erstellen=`](#)
+- [`acl=`](#)
+- [`deps=`](#)
+- [`svnauthz=`](#).
+
+##### Kompatibilitätsmodi
+
+- Zeichenfolge in Anführungszeichen
+
+
+##### PCRE-Modus
+
+### Iteration filtern
+
+- [`Filter`](#).
+
+Zustandsbehafteter, iterierter PCRE-Filter für übereinstimmende Dateien.
+
+### Generische JSON-Antwortfelder
+
+- [`Pfad`](#)
+- [`Titel`](#)
+- [`markdown_search`](#)
+- [`Übereinstimmungen`](#)
+- [`lang`](#)
+- [`Regulärer Ausdruck`](#)
+- [`Navigationspfade`](#)
+- [`Schlüsselwörter`](#)
+- [`Freunde`](#)
+- [`Uhr`](#)
+- [`Graphviz`](#)
+- [`Dauer`](#)
+- [`Protokoll`](#)
+- [`Blog`](#)
+- [`Diff.`](#)
+- [`Meta`](#)
+- [`Protokoll`](#)
+- [`YAML`](#)
+- [`Repositorys`](#)
+- [`Website`](#)
+- [`Hash`](#)
+- [`Filter`](#)
+- [`Specials`](#).
+
+<!-- $Date: 2024-04-23 18:57:27 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23677 $ -->

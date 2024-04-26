@@ -1,0 +1,121 @@
+---
+archived: ~
+categories: ~
+keywords: wiki，知識，部落格
+published: ~
+status: 草稿
+title: 住家
+---
+
+<div class="float-lg-right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+		<div class="card-header">新聞</div>
+        <div class="card-body">
+<h2 class="card-title"><a href="https://www.iconoclasts.blog/">免費部落格！</a></h2>
+
+<br>
+
+<h2 class="card-title"><span class="badge bg-success">全新</span> SunStar Systems 的 GitLab CI Linter 技術{{facts.releases.linter.tag}} 現在可從 <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> 和 <a href="{{facts.releases.linter.url}}" 取得
+>GitHub</a>.</h2>
+
+<br>
+
+<h2 class="card-title">SunStar 系統 Orion&trade; <a href="{{facts.releases.orion.url}}">靜態網站產生器</a> {{facts.releases.orion.tag}} 已發行。
+</h2>
+
+<br>
+
+<h2 class="card-title">
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> 已發佈至 CPAN！
+</h2>
+
+<br>
+
+<h2>
+
+[演算法：：LCS：：XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}).
+
+</h2>
+
+<br>
+
+<h2 class="card-title">SunStar 系統 <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> 現已推出！</h2>
+
+<br>
+
+<h2 class="card-title">SunStar 系統 pty {{facts.releases.pty.tag}} 已發行！</h2>
+
+<p class="card-text">請將您的<span class="text-info">空的</span>安裝升級至 <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>，包含對 <span class='text-info'>python 3.10+</span> 的原生支援。</p>
+
+</div>
+</div>
+<br>
+</div>
+
+![SunStar 系統](images/sunstarlogowhole).
+
+想要找更好、更安全、更快、更快的 **Federated** Enterprise Wiki 嗎？
+
+結帳[奧里昂](/orion/features)<span class="text-success"><img alt="Orion 標誌" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Enterprise Jamstack Wiki。</em></span>&trade; &mdash; Orion 是唯一具備原生功能的 SCM 企業產品[美人魚點陣圖](/orion/features).
+
+如需我們待專利技術幕後<span class="text-white">白皮書</span>描述，請參閱我們的[智慧型內容相依性管理](/essays/dependencies)&trade;
+
+&nbsp;
+<img alt="GitHub 標記" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+## 關注我們 GitHub
+&nbsp;
+
+- @SunStarSys/orion
+
+- @joesuf4
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="影片"></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+&nbsp;
+## 精選文章
+&nbsp;
+
+- <span class="badge bg-success">新建</span> [特徵和光譜幾何的三重產品](/essays/triple-products).
+
+- [應用程式效能](/essays/performance) &mdash;
+
+- [資訊安全性](/essays/infosec) &mdash;
+
+- [Perl 7 的密封語彙](/essays/perl7-sealed-lexicals) &mdash;
+
+- [DevOps 移動](/essays/devops) &mdash;
+
+<style type="text/css">
+h2 { font-size: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+div.jumbotron ul {
+    max-width: 600px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2024-04-24 21:51:28 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23858 $ -->

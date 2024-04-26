@@ -1,0 +1,268 @@
+{% extends "main.html" %}
+{% block title %}{{title|safe}} /{% if filter %}{{filter}}{% else
+%}{{regex}}{% endif %}/gi{% endblock %}
+{% block headers %}
+<link href="/fontawesome/css/all.min.css" media="screen" rel="stylesheet">
+<link href="/editor.md/css/editormd.min.css" media="screen" rel="stylesheet">
+<link href="/editor.md/lib/codemirror/codemirror.min.css" media="screen" rel="stylesheet">
+<link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" media="screen" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
+  else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+<div class="container">
+  {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
+  <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
+  &nbsp;
+  {% endfor %}
+  {% for k in keywords %}
+  <a href="./?regex=%23{{k}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
+  &nbsp;
+  {% endfor %}
+  {% if duration %}
+  <script src="/editor.md/js/chart.umd.js"></script>
+  <canvas height="800px" id="myChart" width="100%"></canvas>
+  {% endif %}
+
+{% ifequal specials "diff=" %}
+  <div class="card text-white border-success mb-3">
+    <div class="card-header">{{meta|vcs_author:r.path_info}}
+      <small><em>
+          開啟{{ meta|vcs_date:lang }}
+          於{{meta|vcs_time:lang}}
+          </em></small></div>
+    <div class="card-body">
+      <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{
+      revision }};lang={{lang}};markdown_search={{markdown_search}}">日誌</a></h3>
+      <pre>{{ log|safe }}</pre>
+  </div>
+<pre><code data-lang="diff">{{ diff }}</code></pre>
+
+<pre class="text-primary">{{ blog }}</pre>
+</div>
+{% else %}
+{% ifequal specials "log=" %}
+<div class="card text-white border-success mb-3">
+  <div class="card-header">最新變更</div>
+  <div class="card-body">
+    <dl>
+      {% for e in log %}
+      <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
+        {{e.3|vcs_author:r.path_info}} <small><em>
+            開啟{{e.3|vcs_date:lang}}
+            於{{e.3|vcs_time:lang}}</em></small></dt>
+        {% for k, v in e.1 %}
+      <dd>
+        <code>{{v.action}}</code>&nbsp;
+        {% ifequal k|parse_filename:2 ".md" %}
+        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+        {% else %}
+        <a href="/{{k|strip_prefix}}">{{k}}</a>
+        <br>
+      </dd>
+        {% endifequal %}
+        {% endfor %}
+        <pre>{{e.2}}</pre>
+      {% endfor %}
+    </dl>
+  </div>
+</div>
+{% endifequal %}
+
+{% ifequal specials "notify=" %}
+<div class="card text-white border-success mb-3">
+  <div class="card-header">
+    最新變更
+  </div>
+  <div class="card-body">
+    <dl>
+      {% for e in log %}
+      <dt><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=diff={{e.0}};lang={{lang}};markdown_search=1">{{e.0}}</a>
+        {{e.3|vcs_author:r.path_info}} <small><em>
+            開啟{{e.3|vcs_date:lang}}
+            於{{e.3|vcs_time:lang}}</em></small></dt>
+        {% for k, v in e.1 %}
+      <dd>
+        <code>{{v.action}}</code>&nbsp;
+        {% ifequal k|parse_filename:2 ".md" %}
+        <a href="/{{k|strip_prefix|parse_filename:"0,1"}}.html{{k|parse_filename:"3.."}}">{{k}}</a>
+        {% else %}
+        <a href="/{{k|strip_prefix}}">{{k}}</a>
+        <br>
+      </dd>
+        {% endifequal %}
+        {% endfor %}
+        <pre>{{e.2}}</pre>
+      {% endfor %}
+    </dl>
+  </div>
+</div>
+{% endifequal %}
+{% endifequal %}
+
+{% if yaml %}
+{% filter markdown %}
+```yaml
+{{yaml|safe}}
+```
+{% endfilter %}
+{% endif %}
+<div class="container">
+  <div class="teaser">
+{{ graphviz|safe }}
+  </div>
+  <br>
+  {% for f in friends %}
+  {% if f.members %}
+  <div class="card text-white border-success mb-3">
+    <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText|safe }}</a></div>
+    <div class="card-body">
+      <ul>
+        {% for m in f.members|dictsort:"text" %}
+        <li class="card-text"><a href="./?regex={{m.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ m.displayText|safe }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+{% else %}
+  <div class="card text-white border-success mb-3">
+    <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText|safe }}</a></div>
+    <div class="card-body">
+      <ul>
+        {% for g in f.groups|dictsort:"text" %}
+        <li class="card-text"><a href="./?regex={{g.text}};lang={{lang}};markdown_search={{markdown_search}}">{{g.displayText|safe}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+
+{% if watch.0 %}
+  {% for w in watch %}
+  <div class="card text-white border-warning mb-3">
+    <div class="card-header">
+      {% ifequal w.name|parse_filename:2 ".md" %}
+      <a href="{{path|dirname|append:"/"|append:w.name|dirname}}/{{w.name|basename:0}}.html{{w.name|parse_filename:"3.."}}">{{w.name}}</a>
+      {% else %}
+      <a href="{{path|dirname|append:"/"|append:w.name}}">{{w.name}}</a>
+      {% endifequal %}
+      <div class="right">
+        <a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname|append:"/"|append:w.name}};action=unwatch">
+          <i class="fa fa-eye-slash fa-emoji" title="不觀測"></i>
+        </a>
+      </div>
+    </div>
+    <div class="card-body">
+      <ul>
+        {% for u in w.watchers %}
+        <li class="card-text"><a href="./?regex={{u.text}};lang={{lang}};markdown_search={{markdown_search}}">{{u.displayText|safe}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% ifequal specials "build=" %}
+  {% if blog %}
+  <pre>{{ blog }}</pre>
+  {% endif %}
+  {% if diff %}
+  {% filter markdown %}
+
+## [差異](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}}).
+
+{% endfilter %}
+
+<pre><code data-lang="diff">{{ diff }}</code></pre>
+
+{% endif %}
+  {% endifequal %}
+  {% if specials %}
+  {% ifequal specials "svnauthz=" %}
+  {% if blog %}
+  <pre class="text-primary">{{ blog }}</pre>
+  {% endif %}
+  {% endifequal %}
+  {% else %}
+  <form class="form-inline row" method="POST">
+    <div style="width:100%">
+      <div class="right" id="filter">
+        <input name="hash" type="hidden" value="{{hash}}" />
+        <input class="form-control" type="text" name="filter"
+             placeholder=「PCRE 遞迴搜尋」value=」{{ filter }}" />&nbsp;<button type="submit"
+    name="submit" value="1" class="btn btn-outline-danger"><i class="fa
+    fa-filter fa-emoji" title="篩選"></i>
+        </button>
+      </div>
+
+{% if matches.0 %}
+		<pre>相符項目總計 = {{ count }}，文件總計 = {{ file_count }}繁體中文依比對計數排序；依文件版次排序。</pre>
+      <div>
+        <dl>
+          {% for m in matches %}
+          <dt>{{ m.0|safe }}</dt>
+          <input name="files" type="hidden" value="{{m.1}}" />
+          {% for hit in m.2 %}
+          <dd>{{ hit|safe }}</dd>
+          {% endfor %}
+          {% endfor %}
+        </dl>
+      </div>
+      {% endif %}
+    </div>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript">
+  document.cookie = "can_search=1; path=/; max-age=" + (86400 * 30);
+</script>
+{% if duration %}
+<script async="" type="text/javascript">
+  var ctx = document.getElementById("myChart").getContext("2d");
+  const data = {{duration|json|safe}};
+  const values = data.map(x => x[1]);
+  var total = 0;
+  for (var i=0; i < values.length; ++i)
+      total += +values[i];
+
+const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
+  x[4]);
+  var myChart = new Chart(
+      ctx,
+      {
+          type: "bar",
+          data: {
+              labels: labels.reverse(),
+              datasets: [{
+                  label: "Build Duration (s)",
+                  data: values.reverse(),
+                  backgroundColor: "#8f99fb",
+
+}],
+          },
+          options: {
+              indexAxis: "y",
+              plugins: {
+                  title: {
+                      display: true,
+                      text: (total / 60).toFixed(0) + " build minutes this month (average build duration is " + (total / values.length).toFixed(0) + " s)",
+                  }
+              },
+              onClick: (e, elts, chart) => {
+                  if (elts) {
+                      const idx = elts[0].index;
+                      const revision = labels[idx].split(/:/)[0];
+                      document.location = "./?regex=build=" + revision + ";lang={{lang}};markdown_search={{markdown_search}}";
+                  }
+              },
+          },
+      });
+</script>
+{% endif %}
+{% endblock %}

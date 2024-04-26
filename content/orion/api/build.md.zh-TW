@@ -1,0 +1,205 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW '
+keywords: 休息，API
+published: ~
+status: 草稿
+title: Orion API - 建置
+---
+
+{# lede #}本文件涵蓋 ** 建構系統 ** API{# lede #}
+
+[TOC]
+
+----
+
+## 組建系統
+
+### [SunStarSys：：查看](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+
+#### single_narrative (%args).
+
+必要引數：
+
+- [`範本`](#)
+- [`路徑`](#)
+- [`仰光`](#).
+
+選擇性引數：
+
+- [`折舊`](#)
+- [`quick_deps`](#)
+- [`前處理`](#)
+- [`archive_root`](#)
+- [`category_root`](#).
+
+#### news_page (%args).
+
+#### sitemap(%args).
+
+特定語言環境，依存關係的排序索引。
+
+必要引數：
+
+- [`路徑`](#)
+- [`仰光`](#).
+
+選擇性引數：
+
+- [`quick_deps`](#)
+- [`巢狀`](#)
+- [`前處理`](#).
+
+#### asymptote(%args).
+
+組建和快取[`漸近線`](#).
+
+必要引數：
+
+- [`檢視`](#)
+- [`仰光`](#)
+- [`路徑`](#).
+
+#### 略過 (%args).
+
+完全不建置這些項目。請改為建立關聯的產生來源檔案 (例如：`.bib\$ 朗` $$\mapsto$$ `\$base.page/bibliography.yml\ 朗`
+
+#### yml2ext (%args).
+
+轉換 YAML 檔案。
+
+選擇性引數：
+
+- [`分機`](#) 預設為`json`
+- [`過濾器`](#) 預設為`json_raw`
+-[`範本`](#) 覆寫`過濾器`
+
+#### fetch_deps($path, $data, $quick).
+
+必要引數：
+
+- [`路徑`](#)
+- [`資料`](#) - 儲存導致遞減陣列
+- [`快速`](#).
+
+#### breadcrumbs($path).
+
+傳回以下項目的 HTML 導覽路徑清單[$path](#).
+
+#### memoize(%args).
+
+快取組建；主要與 fetch_deps 和 quick_deps > 2 搭配使用。
+
+#### compress(%args).
+
+已棄用。
+
+#### next_view (%args).
+
+處理 $args{view} 的公用程式。
+
+#### ssi (%args).
+
+遞迴評估[ssi](#).
+
+#### offline(%args).
+
+以離線模式執行 next_view。
+
+#### snippet(%args).
+
+處理片段明細行。
+
+#### reconstruct(%args).
+
+從 next_view 重新處理內建內容中的範本指令。
+
+#### trim_local_links (%args).
+
+刪減本機連結的檔案副檔名。
+
+#### normalize_links (%args).
+
+正規化區域連結 (./ 和 ../)。
+
+----
+
+### [SunStarSys：：公用程式](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+
+#### read_text_file ($file、$out、$content_lines).
+
+剖析 UTF-8 編碼檔案的檔頭 + 內容[`$file`](#) 並將結果儲存於[`$out`](#). [`$content_lines`](#) 是 (選擇性) 要讀取的內容行數目上限。
+
+
+[`$file`](#) 可能是原始字串的參照，代表檔案的完整內容。結果[`$out`](#).
+
+#### copy_if_newer ($src, $dest).
+
+份數[`繁體中文`](#) 終止[`$dest`](#) 如果之前的修改時間戳記比後者的修改時間還新。複製時，另外還會進行 gzip 壓縮[`$dest`](#).
+
+#### get_lock ($lockfile).
+
+開啟專用 (f) 鎖定 (用於目前的 UNIX 處理作業) [`$lock 檔案`](#).
+
+#### 打亂 (\\@deck).
+
+就地隨機 (漁業者) 打亂 (Fisher- Yates) [`@deck`](#).
+
+#### sort_tables ($content).
+
+根據每個表格的資料欄規格，排序 $content 中的減價表格。每個表格只能排序一個資料欄 (選擇性為數值) [`nn 公尺`](#)，任一遞減[`版本`](#) 或遞增[`^`](#).
+
+#### fixup_code ($prefix, $type, @\_).
+
+從 @\_ 中的每個引數去除 $prefix。$type 引數的功能是專門實施的，但主要用於植入 editor.md "mode" 以在 @\_ 中處理此內容。
+
+#### unload_package ($pkg).
+
+積極卸載 Perl 套件[`$pkg`](#).
+
+#### purge_from_inc(@paths).
+
+移除[`@paths`](#) 來自[`@INC`](#).
+
+#### Touch (@\_).
+
+觸碰所有檔案於[`@_`](#)繁體中文如果未傳送任何引數，則使用[`$_`](#).
+
+#### normalize_svn_path(@\_).
+
+將所有路徑標準化於[`@_`](#) 以安全作為原始引數使用[`SVN：：客戶`](#).
+
+#### sanitize_relative_path(@\_).
+
+保護路徑位置[`@_`](#) 用作純相對路徑於[`Dotiac:DTL`](#).
+
+#### parse_filename ($path).
+
+包裝器四周[`檔案：：基本名稱：：fileparse`](#)繁體中文沒有引數，使用[`$_`](#).
+
+#### walk_content_tree ($code).
+
+有條件地步行[`。/ 內容`](#) 組建系統結帳的樹狀結構，先標準化[`$_`](#) 作為正式的子路徑，然後呼叫[`$code`](#).
+
+##### archived($path).
+
+旗標間隔[`狀態：歸檔`](#) [`$path`](#)繁體中文使用[`$_`](#).
+
+##### seed_file_deps ($path).
+
+更新[`%path：：相依性`](#) 針對此[`$path`](#)，根據[`相依性`](#) 標頭 glob (s)。要使用的預設值[`$_`](#).
+
+##### seed_file_acl ($path).
+
+更新[`@path::acl`](#) 針對此[`$path`](#)，根據[`存取控制清單`](#) 標頭規格。要使用的預設值[`$_`](#).
+
+#### 負載
+
+相同於[`YAML：：XS：：負荷`](#).
+
+#### 傾印
+
+相同於[`YAML：：XS：：傾印`](#).
+
+<!-- $Date: 2024-04-14 02:05:29 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22295 $ -->

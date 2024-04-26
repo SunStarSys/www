@@ -1,21 +1,121 @@
-Title: Accueil
+---
+archived: ~
+categories: ~
+keywords: wiki,connaissance,blogs
+published: ~
+status: projet
+title: Accueil
+---
 
 <div class="float-lg-right">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
-		<div class="card-header">News</div>
-		<div class="card-body">
-			<h4 class="card-title">SunStar Systems CMS Product Availability!</h4>
-			<p class="card-text">Starting <span class='text-danger'>September 1, 2020</span>, our totally revamped and modernized version of the Apache CMS is available to JAM Stack developers as a <span class="text-success">$10 / month</span> soup-to-nuts, full zero-ops solution. Check out the <a href="/orion/">CMS</a>!</p>
-		</div>
-	</div>
-	<br />
+		<div class="card-header">Actualités</div>
+        <div class="card-body">
+<h2 class="card-title"><a href="https://www.iconoclasts.blog/">Blogs gratuits !</a></h2>
+
+<br>
+
+<h2 class="card-title"><span class="badge bg-success">Nouvelle</span> technologie Linter CI GitLab de SunStar Systems {{facts.releases.linter.tag}} désormais disponible sur <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> et <a href="< !-- ### -->"
+>GitHub</a>.</h2>
+
+<br>
+
+<h2 class="card-title">SunStar Orion des systèmes&trade; <a href="{{facts.releases.linter.url}}">Générateur de site statique</a> {{facts.releases.orion.url}} libéré.
+</h2>
+
+<br>
+
+<h2 class="card-title">
+<a href="{{facts.releases.orion.tag}}">sealed.pm {{facts.releases.sealed.url}}</a> publié sur CPAN !
+</h2>
+
+<br>
+
+<h2>
+
+[Algorithme : :LCS : :XS {{facts.releases.sealed.tag}}]({{facts.releases.Algorithm_LCS_XS.tag}}).
+
+</h2>
+
+<br>
+
+<h2 class="card-title">SunStar Systèmes <a href="{{facts.releases.Algorithm_LCS_XS.url}}">orthrus {{facts.releases.orthrus.url}}</a> est disponible.</h2>
+
+<br>
+
+<h2 class="card-title">SunStar Pty des systèmes {{facts.releases.orthrus.tag}} libéré !</h2>
+
+<p class="card-text">Mettez à niveau votre installation <span class="text-info">pty</span> vers <a href="{{facts.releases.pty.tag}}/releases/tag/{{facts.releases.pty.url}}">{{facts.releases.pty.tag}}</a>, qui inclut la prise en charge native de <span class='text-info'>python 3.10+</span>.</p>
+
+</div>
+</div>
+<br>
 </div>
 
-![SunStar Systems](images/sunstarlogowhole.png)
+![SunStar Systèmes](images/sunstarlogowhole).
 
-## Pages d’intérêt
+Vous recherchez un wiki d'entreprise meilleur, plus sûr, plus rapide et **fédéré** ?
 
-- [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; ma version de htop pour Solaris 11.4, avec support pour ZFS/Zone/truss/pfiles+pmap.
-- [Sealed Lexicals for Perl 7](/essays/perl7-sealed-lexicals) &mdash; Ajouter :sealed a une declaration de fonction et profiter de vitesse additionnelle fournie par des recherches de fonctions durant al compilation pour tout ses lexicaux typés 
-- [The DevOps Movement](/essays/devops) &mdash; Enfin remplis les détails manquants de cet article.
-- [Exponential Growth and COVID-19](/essays/power) &mdash; Article opportun a propos de la pandémie de 2020.
+Départ  [Orion](/orion/features)<span class="text-success"><img alt="Logo Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Le wiki Enterprise Jamstack.</em></span>&trade; &mdash; Orion est le seul produit d'entreprise basé sur SCM avec natif [sirène-mindmap](/orion/features).
+
+Pour une description en coulisses de notre technologie en attente de brevet dans le <span class="text-white">livre blanc</span>, consultez notre [Gestion intelligente des dépendances de contenu](/essays/dependencies)&trade;
+
+&nbsp;
+<img alt="GitHub Marquer" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+## Suivez-nous sur GitHub
+&nbsp;
+
+- @SunStarSys/orion
+
+- @joesuf4
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="vidéo"></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+&nbsp;
+## Essais en vedette
+&nbsp;
+
+- <span class="badge bg-success">Nouveau</span> [Triple produits d'Eigenfunctions et de géométrie spectrale](/essays/triple-products).
+
+- [Performances des applications](/essays/performance) &mdash;
+
+- [Sécurité des informations](/essays/infosec) &mdash;
+
+- [Lexiques scellés pour Perl 7](/essays/perl7-sealed-lexicals) &mdash;
+
+- [Le mouvement DevOps](/essays/devops) &mdash;
+
+<style type="text/css">
+h2 { font-size: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+div.jumbotron ul {
+    max-width: 600px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date$ $Author$ $Revision$ -->

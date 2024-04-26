@@ -1,0 +1,90 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: 草稿
+title: 功能比較方格的表格資料
+---
+
+
+- Feature: 「SSO: Kerberos / Active Directory / OpenID 整合」
+  Orion: "&check;"
+  Slab: "&check;"
+  Notify: 「僅限 SCIM」
+  Confluence: "&check;"
+- Feature: 「符合 FIPS 140-3 規範的零信任基礎架構」
+  Orion: "&check;"
+- Feature: 「FedRAMP 基礎架構」
+  Orion: 「伺服器安裝」
+- Feature: 「In-Browser 工作流程 (行動友善)」
+  Orion: "&check;"
+  Slab: "&check;"
+  Notify: "&check;"
+  Confluence: "&check;"
+- Feature: 「DAV 支援」
+  Orion: "&check;"
+  Confluence: "&check;"
+- Feature: 「增量建置」
+  Orion: "&check;"
+- Feature: 「無限制的分支建置版本」
+  Orion: "&check;"
+- Feature: 「僅限動態內容的排定組建」
+  Orion: "&check;"
+- Feature: 「第三方分析支援」
+  Orion: "&check;"
+- Feature: 「監看清單裝置通知」
+  Orion: "&check;"
+  Confluence: "&check;"
+- Feature: "Multilingual (i18n)"
+  Orion: "&check;"
+- Feature: 」完全可搜尋<span class="editormd-tex">\KaTeX</span> 表示式」
+  Orion: "&check;"
+  Confluence: "$$$"
+- Feature: 「同盟」
+  Orion: "&check;"
+  Confluence: "[編號](https://jira.atlassian.com/browse/CONFSERVER-26528)"
+- Feature: 「白標籤支援」
+  Orion: "&check;"
+- Feature: 「可安裝於企業內部 VPN」
+  Orion: 「伺服器安裝」
+- Feature: 「離線工作」
+  Orion: "&check;"
+- Feature: 簡單的第三方「提取要求」貢獻者工作流程
+  Orion: "&check;"
+- Feature: "[GitHub 整合](https://youtu.be/FRc4qZkxVaI) 含 IDE &amp; 動作支援」
+  Orion: "&check;"
+- Feature: 「無限次預覽」
+  Orion: "&check;"
+  Slab: "&check;"
+  Notion: "&check;"
+  Confluence: "&check;"
+- Feature: 「無限座位」
+  Orion: 」企業&amp; 伺服器安裝」
+- Feature: 「無限制版本控制歷史記錄」
+  Orion: "&check;"
+- Feature: 「整合 URL 變更追蹤」
+  Orion: "&check;"
+- Feature: 「網站託管」
+  Orion: "&check;"
+- Feature: "[3D 向量圖形](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) 整合」
+  Orion: "&check;"
+- Feature: 「SSI / CGI / mod_perl / mod_wasm 支援」
+  Orion: "&check;"
+- Feature: 「來源儲存區域的微點 ACL」
+  Orion: "&check;"
+- Feature: 「500 MB/ 秒完整網站建置版本」
+  Orion: "&check;"
+- Feature: 「8-64 向並行組建」
+  Orion: "&check;"
+- Feature: 「TCO」&lt; $6000/ 年企業版」
+  Orion: "&check;"
+- Feature: 「全面 99.99% 服務等級協定」
+  Orion: 」企業&amp; 伺服器安裝」
+- Feature: 「可搜尋文件狀態」
+  Orion: "&check;"
+  Slab: "&check;"
+- Feature: 「減價」<span class="editormd-tex">\leftrightarrow \LaTeX</span> 自動化
+  Orion: "&check;"
+- Feature: AI NLP 自動翻譯
+  Orion: "&check;"

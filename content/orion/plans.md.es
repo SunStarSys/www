@@ -1,7 +1,9 @@
 ---
+archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: Jamstack, wiki
+published: ~
 status: publicado
 title: Planes Orion
 ---
@@ -127,7 +129,7 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 						<li>Sitios web ilimitados y asientos (autogestionados)</li>
 						<li>2500 minutos de construcción</li>
 						<li>Control total de la configuración de autorización de Subversion</li>
-						<li>Contenedores de compilación privados y en red</li>
+						<li>Contenedores de creación privados y en red</li>
 						<li>SLA completo del 99,99%<sup>3</sup></li>
 						<li>POP global<sup>4</sup> con red de entrega de última milla distribuida geográficamente en Q4</li>
 						<li>SLA de soporte premium</li>
@@ -143,7 +145,7 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 <p>
 <ol>
 						<li>$100/250 MB de espacio de almacenamiento<sup>2</sup></li>
-						<li>Transferencia de datos de 15 $/100 GB</li>
+						<li>Transferencia de datos de $15/100 GB</li>
 						<li>$100 / ithread mod_perl alojamiento de registro</li>
 						<li>100 $/región OCI para POP personalizados</li>
 				<li>Minutos de construcción de $100/1K</li>
@@ -194,21 +196,21 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 
 4. Puntos de presencia (POP) de clientes empresariales:
 
-	- El Paso, FL
+Fort Lauderdale, FL
 
-	- Washington, DC
+- Washington, DC
 
-	- El Paso, TX
+- El Paso, TX
 
-	- Ciudad de México, DE
+- Ciudad de México, DE
 
-	Sydney, Australia
+Sydney, Australia
 
-	- SÃ£o Paolo, BZ
+- SÃ£o Paolo, BZ
 
-    - Consejos para Aprender Inglés, IN
+- Consejos para Aprender Inglés, IN
 
-    - Seúl, SK
+- Seúl, SK
 
 ------------
 
@@ -221,11 +223,11 @@ $50 / mes / sitio público gestionado, ~50% de descuento en todos los modelos de
 ------------
 
 <div class="col-lg-12">
-  {% include "/enquiry_get.html" %}
+  {% include "/enquiry_get.html"|append:lang %}
 </div>
 
 <style type="text/css">
-h4 { tamaño de fuente:14px }
+h4 { font-size:14px }
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

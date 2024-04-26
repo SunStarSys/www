@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.he api/index.md.he'
+keywords: ~
+published: ~
+status: טיוטה
+title: אסמכתת אוריון
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png">
+</div>
+
+מס' הדגמות חיות
+
+להדגמה של אוריון &trade;
+
+אם זה מטריד אותך יותר מדי, האתר הזה מארח את עצמו באוריון. &trade;, וגם {# lede #}סמלי העיפרון הוורודים החמים [<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) בפינה הימנית העליונה לצד פירורי הלחם יעניקו לכם הדגמה חיה{# lede #}
+
+מס' סימניות מומלצות
+
+הקפד להתקין את הסימנייה בסרגל הכלים של הדפדפן על-ידי פתיחת מסך דו-שיח "סימנייה חדשה" מתפריט הדפדפן והקלדת הסימניות הבאות בשדה מיקום/כתובת URL:
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+ללא התקנת סימניה זו לא תוכל לעיין באתר החי ולערוך דפים באופן מיידי באוריון &trade;
+
+כדי להשתמש בסימנייה פשוט דפדף לאתר ההפקה החי שלך (לא באוריון) &trade;
+
+## מדריך לתחילת עבודה
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4-KiEDFbzl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+## IoC בניית API
+
+[snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
+
+מס' תהליכי השתלבות עובד
+
+למאמצים מוקדמים, אוריון &trade;
+
+1. ספק לנו את כתובת ה-URL של מקורות האתר שלך ב-Subversion.
+
+2. ספק לנו את כתובת הדוא"ל (תפקיד או רשימת דיוור) לדיון בנושאי פיתוח ותחזוקה של האתר, וודא שהכתובת היא [הגשת דוחות סטנדרטיים](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+
+3. הירשם לשרתי הייצור שלך' `svnwcsub` daemon לציבור שלנו `עברית`
+
+4. ספר לנו אם אתה רוצה תוכן שונה של גרסאות שנשלחו, ולאילו כתובת דוא"ל אתה רוצה שהם יימסרו.
+
+## מתווה ספריית מקור
+
+- תא מטען/
+	- cgi-bin/
+	- תוכן/
+	- תבניות/
+	- lib/
+		- path.pm
+		- view.pm
+- סניפים/
+
+
+ראה <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/> לקבלת דוגמה חיה.
+
+מס' תוכן דינמי
+
+### תסריט לדוגמה כדי ליצור מחדש דף מקור עם תוכן משתנה, גם כאשר המקורות אינם.
+
+הרעיון הבסיסי הוא שחלק מדפי המקור בפרופיל הגבוה שלך בונים עם תוכן "דינמי" (בנייה משלבת גזירים המשתנים ללא הרף מאתרים מקוונים אחרים, כמו מפלי ג'ירה או הליכי משנה של רשימת דיוור נוכחית).
+
+דוגמה טובה לכך היא סעיף "חדשות אחרונות" של [ASF: דף הבית](https://www.apache.org/), והנה הדרך מאחורי הקלעים זה עובד, עם מעט shell+svn+cron קסם כפי שהודגם כאן (קח את קובץ המקור של הבנייה הדינמית כ `קובץ $`
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+שלב את זה לתוך מעט סקריפט מעטפת שישתמש בפרטי האימות של svn במטמון במחשב האישי שלך, ויש להם cron להפעיל אותו בשבילך על לוח זמנים קבוע (מבוסס על שרת האינטרנט הקדמי שלך / TTL של מטמון CDN HTTP).  אין צורך בכלי צד השרת בקצה שלנו; יש לך שליטה מלאה באבטחת הסיסמאות, בתזמון וביעדי העמודים הדינמיים שלך.  אם אתה משתמש בשירות Subversion משלך התומך ב- svnpubsub, אף עסקה זו אינה כרוכה ישירות באף אחת מהחומרה שלנו. ה-commit שלך יפעיל את לקוח svnwcsub שלנו, מאזין תמיד לשרת svnpubsub שלך, כדי לבנות ולפרוס שינויים אלה לפי דרישה &mdash;
+
+מס' החריגים
+
+טרם נקבע
+
+## חיפוש
+
+טרם נקבע
+
+מס' אישור לביצוע מהיר
+
+טרם נקבע
+
+מס' # הוספת משאב
+
+טרם נקבע
+
+--------
+
+## אינדקס
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

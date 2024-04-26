@@ -1,0 +1,205 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.fr '
+keywords: REPOS, API
+published: ~
+status: projet
+title: API Orion - Création
+---
+
+{# lede #}Ce document traite des API **système de création**{# lede #}
+
+[TOC]
+
+----
+
+## Système de compilation
+
+### [SunStarSys : :Afficher](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+
+#### single_narrative(%args).
+
+Arguments obligatoires :
+
+- [`modèle`](#)
+- [`chemin`](#)
+- [`langue`](#).
+
+Argmuents facultatifs :
+
+- [`opérations`](#)
+- [`quick_deps`](#)
+- [`prétraitement`](#)
+- [`archive_root`](#)
+- [`category_root`](#).
+
+#### news_page(%args).
+
+#### sitemap(%args).
+
+Index trié des dépendances propre aux paramètres régionaux.
+
+Arguments obligatoires :
+
+- [`chemin`](#)
+- [`langue`](#).
+
+Arguments facultatifs :
+
+- [`quick_deps`](#)
+- [`imbriqué`](#)
+- [`prétraitement`](#).
+
+#### asymptote(%args).
+
+Builds et caches [`asymptote`](#).
+
+Arguments obligatoires :
+
+- [`afficher`](#)
+- [`langue`](#)
+- [`chemin`](#).
+
+#### ignorer(%args).
+
+Ne les construisez pas du tout.  Créez plutôt les fichiers source générés associés (p. ex. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`
+
+#### yml2ext(%args).
+
+Convertir des fichiers YAML.
+
+Arguments facultatifs :
+
+- [`ext.`](#) valeur par défaut `json`
+- [`filtre`](#) valeur par défaut `json_raw`
+-[`modèle`](#) remplacements `filtre`
+
+#### fetch_deps($path, $data, $quick).
+
+Arguments obligatoires :
+
+- [`chemin`](#)
+- [`données`](#) - magasins résultant anon-array de points
+- [`rapide`](#).
+
+#### breadcrumbs($path).
+
+Renvoie la liste HTML des chemins de navigation pour [Chemin $](#).
+
+#### memoize(%args).
+
+Met en mémoire cache le build, principalement utilisé avec fetch_deps et quick_deps > 2.
+
+#### compress(%args).
+
+Obsolète.
+
+#### next_view(%args).
+
+Utilitaire de traitement de $args{view}.
+
+#### ssi(%args).
+
+Evaluations récursives [ssi](#).
+
+#### offline(%args).
+
+Exécute le fichier next_view en mode hors ligne.
+
+#### snippet(%args).
+
+Traite les lignes de fragment de code.
+
+#### reconstruct(%args).
+
+Traite à nouveau les directives de modèle dans le contenu créé à partir de next_view.
+
+#### trim_local_links(%args).
+
+Extensions de fichiers Trims depuis les liens locaux.
+
+#### normalize_links(%args).
+
+Normalise les liens locaux (./ et ../).
+
+----
+
+### [SunStarSys : :Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+
+#### read_text_file($file, $out, $content_lines).
+
+Analyse les en-têtes + le contenu du fichier encodé UTF-8 [`Fichier $`](#) et stocke les résultats dans [`Montant`](#). [`$content_lines`](#) est le nombre maximum (facultatif) de lignes de contenu à lire.
+
+
+[`Fichier $`](#) Il peut s'agir d'une référence à une chaîne brute, représentant le contenu complet d'un fichier.  Les résultats dans [`Montant`](#).
+
+#### copy_if_newer($src, $dest).
+
+Copies [`Source de $`](#) à [`$plus`](#) si l'horodatage de modification du premier est plus récent que celui du second. Sur copie, gzip-compresse en outre le [`$plus`](#).
+
+#### get_lock($lockfile).
+
+Active un (f)verrou exclusif (pour le processus UNIX actuel) sur [`Fichier de verrouillage`](#).
+
+#### réorganisation(\\@deck).
+
+Réorganisation aléatoire sur place (Pêche-Pêche) de [`@deck`](#).
+
+#### sort_tables($content).
+
+Trie les tables de démarque dans $content en fonction de la spécification de colonne de chaque table.  Une seule colonne peut être triée par table, éventuellement numériquement. [`n`](#), dans l'un ou l'autre ordre décroissant [`v`](#) ou croissant [`^`](#).
+
+#### fixup_code($prefix, $type, @\_).
+
+Supprime $prefix de chaque arg dans @\_. La fonction de l'argument $type est spécifique à l'implémentation, mais est principalement utilisée pour prédéfinir le "mode" editor.md pour le traitement de ce contenu dans @\_.
+
+#### unload_package($pkg).
+
+Décharge de manière agressive le package Perl [`$pkg`](#).
+
+#### purge_from_inc(@paths).
+
+Supprime [`@paths`](#) de [`@INC`](#).
+
+#### contact(@\_).
+
+Touche tous les fichiers dans [`@_`](#). Si aucun argument n'est transmis, utilise [`$_`](#).
+
+#### normalize_svn_path(@\_).
+
+Normalise tous les chemins dans [`@_`](#) pour une utilisation sûre en tant qu'arguments bruts [`SVN : :Client`](#).
+
+#### sanitize_relative_path(@\_).
+
+Sécurise les chemins dans [`@_`](#) à utiliser comme chemins relatifs purs dans [`Dotiac : :DTL`](#).
+
+#### parse_filename($path).
+
+Enrouleur autour [`Fichier : :Nom de base : :fileparse`](#). Sans arguments, utilise [`$_`](#).
+
+#### walk_content_tree($code).
+
+Promenade en condition [`./contenu`](#) arborescence de la validation du système de paramétrage, première normalisation [`$_`](#) comme sous-chemin formel, puis appelant [`Code $`](#).
+
+##### archived($path).
+
+Marque chaque [`Statut : archive`](#) [`Chemin $`](#). Utilisations [`$_`](#).
+
+##### seed_file_deps($path).
+
+Mises à jour [`%path : :dépendances`](#) pour ceci [`Chemin $`](#)basé sur son [`Dépendances`](#) glob(s) d'en-tête Utilise par défaut [`$_`](#).
+
+##### seed_file_acl($path).
+
+Mises à jour [`@path : :acl`](#) pour cela [`Chemin $`](#)basé sur son [`Liste de contrôle d'accès`](#) spécification d'en-tête. Utilise par défaut [`$_`](#).
+
+#### Chargement
+
+Identique à [`YAML : :XS : :Charger`](#).
+
+#### Vide
+
+Identique à [`YAML : :XS : :Dump`](#).
+
+<!-- $Date: 2024-04-14 02:05:29 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22295 $ -->

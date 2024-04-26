@@ -1,0 +1,134 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.he api/index.md.he'
+keywords: Markdown, אסימפטוטה, בתולת ים
+published: ~
+status: טיוטה
+title: אוריון טכנולוגיה
+---
+
+## סולאריס 11.4
+
+- DTrace &mdash;
+
+- ZFS &mdash;
+
+- אזורים &mdash;
+
+## node.js  v21.6.1
+
+- כי Editor.md הוא **מדהים**, העברנו אותו כדי [`node.js`](#) &mdash;
+
+# פרל v5.38.2
+
+- {# lede #}עכשיו w/ mod_perl v2.0.13 w/ ithreads ו- httpd v2.4.58 w/ event mpm.{# lede #}
+
+## גרסת משנה גרסה 1.14.4
+
+- מותאם אישית ithread-safe [`SVN::לקוח`](#).
+
+- כריכות python3 מקוריות (v3.8.3).
+
+- יציאות python3 משורשרות של svnpubsub ו- svnwcsub &mdash;
+
+- הושלם python3 [הצג](https://vcs.sunstarsys.com/viewvc/public/site).
+
+------------
+
+# כמה הערות על הכביש לא (עדיין?) נלקח...
+
+<br/>
+
+### SQL
+
+אנחנו חנות NoSQL לכל תשתית האתר שלנו, ואם אתם עצובים עם נקודת כשל אחת ענקית הידועה בשם RDBMS המניעה את נכסי האתר שלכם, אנא שקלו מחדש גישה מבוזרת יותר המבוססת על טכנולוגיית #Jamstack ו-Serverless. גם אם זה לא שלנו. אתם תודו לנו אחר כך!
+
+### למה לא גיט?
+
+- The [`גיט svn`](#) הגשר כבר קיים אם אתה מעדיף לעבוד עם git בעצמך, במקום להשתמש ב- IDE המקוון עבור אוריון &trade;. . יש לך אפשרויות! ייתכן שתגלה שאתה מקבל אפילו יותר קילומטראז' מתוך פעולות GitHub על-ידי דחיפת השינויים שלך אל GitHub (ומוך אותם בפעולה GitHub, או לפני ביצוע commit hook, או שניהם, נניח) לפני [`גיט svn dcommit`](#)-להביא אותם למאגר Subversion שלנו לפרסום חי. [כאן](https://github.com/SunStarSys/www).
+
+- עצי מקור אתר אינטרנט הם לא ממש כמו עצי מקור תוכנה, במונחים של איך אתה משנה ולנהל אותם.  הם מיושרים יותר [פיתוח devops / trunk based development](/essays/devops) מאשר עם [`gitflowName`](#). . יתר על כן, אתרים ענקיים יצטרכו SSI, ואולי קצת CGI, לשימושם: לכל הפחות כדי למנוע נטישת אתר מסיבית, בלתי ניתנת לביקורת מ דיוור מסיבי באותה מידה [`הפרש`](#).
+
+- כדי wit: מנסה לקבל יישום SSI מלא מתוך כמה "שרת אינטרנט" מקומי שבו אתה משתמש כדי להציג את השינויים שלך במערכת בנייה אחרת, הוא רק קצת טיפשי אם אתה מפסיק לחשוב על זה.  עם אוריון שלנו, אתה פשוט ליצור סניף ב svn ו off you go: עריכה, התחייבות, בנייה, גלישה, ו **iterating**, באופן מיידי, על לכל סניף, אתר אפאצ'י מוגש אפמרלי המשולב ב אוריון &trade;
+
+- כאשר הגיע הזמן להעביר שינויים אלה לאתר הייצור מבוסס תא המטען, אתה יכול לבחור לקדם כמה שיותר, או כמה שפחות, של הענף כפי שאתה רואה לנכון, ממש בחזרה תא המטען.  אם תא המטען עבר קדימה מאז ששינויי הענף שלך היו מוכנים בסופו של דבר לפריים טיים, פשוט לחץ על הלחצן <span class="text-white">סנכרן</span> כדי לסנכרן את תא המטען עם הענף שלך.  לאחר בדיקה כפולה של תוצאות הבנייה של ה-commit שלאחר המיזוג שלך לאתר האינטרנט של הענף שלך, עבור קדימה ולחץ על הקישור <span class="text-white">קדם</span>, עקוב אחר זה עם <span class="text-white">Commit</span> באותו הדף עם הודעת יומן commit סבירה, ו-voilÃ , אתה משדר כעת על בניית הייצור של תא המטען.
+
+- אם אתה צריך להפיץ ולהתמודד עם עצי בנייה וכתוצאה מכך באמצעות ניהול גרסאות, אתה לא תאהב גיט בקנה מידה גדול. במיוחד כאשר שילוב של ארטיפקטים בינאריים (למשל, גרסאות תוכנה) או (מורשה) תיעוד מוצר (לחשוב doxygen או javadocs), נבנה באמצעות מערכת זו או באמצעות בונה צד שלישי שבו אתה משתמש באופן מקומי כדי פשוט להעלות את תוצאות הבנייה האלה ישירות למאגרי היעד שלנו. עם הגישה שלנו, אתה יכול להימנע מצפיפות מיותרת ונפיחות בעץ המקור של האתר שלך, שלא כמו איך זה יעבוד עם git, באמצעות ענפים במאגר משותף הן המקור שלך ולבנות עצים.
+
+- Subversion תומכת ב- **fine-grained access control** ומאפשרת לך לבצע צ'ק אאוט חלקי/דחוס של [`ראש`](#).
+
+- עבור IDE, היינו צריכים לקרוא + לכתוב כריכות פרל עבור [`libgit2`](#) (אשר הוא **לא מסופק על ידי צוות הפיתוח בפועל git**, והוא מגובה במידה רבה על ידי תאגידים מגליתיים שאינם מספקים IDE מקוון עבור git כמוצר SaaS דומה; ולא, GitHubלא) כדי להתאים את שיטת ניהול הזיכרון התואמת ל-httpd של svn ואת בטיחות ה-POSIX (+ Perl ithreads) thread, בזמן ריצה מתמיד ובמאגרי נתונים מרובים של git בצד השרת של עצי אתר לקוח.  הבשלות של תשתית קוד פתוח זו אינה בנקאית עבור 2020 בהערכה שלנו, אבל אנחנו נשמור כרטיסיות על ההתפתחויות להתקדם.  מביט בך, [`גיט::רואו`](#).
+
+- אני עדיין לא יודע איך לעשות פורצלן גיט פוזיקס בטוח.  בטיחות הליכי משנה על פני repos נפרד, אבל בתוך זיכרון RAM של תהליך משותף, הוא תרחיש השימוש, לא בטיחות הליכי משנה בתוך repo נתון (שהוא בקשה משוגעת).
+
+למה לא פייתון או רובי או Javascript או ללכת?
+
+- [גיל](https://en.wikipedia.org/wiki/Global_interpreter_lock)-נוסף [`mod_python`](#) עדיין יש דרך ללכת לפני שהוא מגיע לבגרות של [`mod_perl`](#) ב mpm משורשר. יתר על כן, היישום הנוכחי של המוצר שלנו משולב היטב עם API המודול המלא של שרת Apache HTTPd, אשר רק [`mod_perl`](#).
+
+- [גיל](https://en.wikipedia.org/wiki/Global_interpreter_lock)-נוסף [`mod_ruby`](#) רובם ננטשו על ידי קהילת רובי מסיבות שונות של בקרת איכות.  הסבת מקורות 5K LOC Perl 5 בהתאמה אישית של אוריון &trade;
+
+כדי להיות בטוח, הנה צילום מצב, מתאריך 19 ביולי 2020, של SunStar חלק המערכות של עץ מקור הייצור עבור אוריון כולו (IDE+build).  יש עוד מעט מעורבות מעבר לנו [`דוטיאק::DTL`](#).
+
+```shell
+joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
+     1 build/lib/SunStarSys/ASF.pm
+   128 build/lib/SunStarSys/SVNUtil.pm
+   270 build/lib/SunStarSys/Util.pm
+    36 build/lib/SunStarSys/Value.pm
+    82 build/lib/SunStarSys/Value/Blogs.pm
+    61 build/lib/SunStarSys/Value/Jira.pm
+    77 build/lib/SunStarSys/Value/Mail.pm
+    70 build/lib/SunStarSys/Value/SVN.pm
+   106 build/lib/SunStarSys/Value/Snippet.pm
+    85 build/lib/SunStarSys/Value/Twitter.pm
+   378 build/lib/SunStarSys/View.pm
+  1260 webgui/lib/SunStarSys/Orion.pm
+   112 webgui/lib/SunStarSys/Orion/Cookie.pm
+   183 webgui/lib/SunStarSys/Orion/Filter.pm
+    90 webgui/lib/SunStarSys/Orion/MapToStorage.pm
+    59 webgui/lib/SunStarSys/Orion/WC.pm
+   194 webgui/lib/SunStarSys/Orion/WC/Add.pm
+    97 webgui/lib/SunStarSys/Orion/WC/Browse.pm
+   133 webgui/lib/SunStarSys/Orion/WC/Commit.pm
+    79 webgui/lib/SunStarSys/Orion/WC/Copy.pm
+    66 webgui/lib/SunStarSys/Orion/WC/Delete.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Diff.pm
+   182 webgui/lib/SunStarSys/Orion/WC/Edit.pm
+   116 webgui/lib/SunStarSys/Orion/WC/Mail.pm
+    70 webgui/lib/SunStarSys/Orion/WC/Merge.pm
+    67 webgui/lib/SunStarSys/Orion/WC/Move.pm
+    52 webgui/lib/SunStarSys/Orion/WC/Production.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Promote.pm
+    60 webgui/lib/SunStarSys/Orion/WC/Resolve.pm
+    64 webgui/lib/SunStarSys/Orion/WC/Revert.pm
+    82 webgui/lib/SunStarSys/Orion/WC/Rollback.pm
+   123 webgui/lib/SunStarSys/Orion/WC/Search.pm
+    78 webgui/lib/SunStarSys/Orion/WC/Staged.pm
+    24 webgui/lib/SunStarSys/Orion/WC/Static.pm
+    49 webgui/lib/SunStarSys/Orion/WC/Update.pm
+   220 webgui/lib/SunStarSys/SVN/Client.pm
+  4848 total
+```
+
+- [`mod_js`](#).
+
+מנסה להטביע [`GoLang`](#).
+
+- מבחינת מערכת הבנייה של פרל 5, הישארו מכוונים!  *אין סיבה שלא ניתן להעביר אותה לשפת תכנות אחרת, מכיוון שמערכת הבנייה מבודדת לחלוטין מאוריון. &trade;'s מקוון IDE (מחוץ ל-daemon של מציג markdown מבוסס על [`node.js`](#)מערכת עצמאית (באנגלית: Independent system) הינה מערכת עצמאית המונה מיליון סיבות של תכנון ארכיטקטוני ואבטחה.  אם אתה צריך טיזר לגבי האפשרויות, להציץ על [`build_external.pl`](#).
+
+- כן, מסלול הפופולריות של פרל עוקב באופן אירוני אחר זה של COBOL, או אפילו Common Lisp, למרות הדומיננטיות של יוניקס בשוק השרתים; אבל כמה דברים מזדקנים טוב יותר מאחרים. המוצק (והיחיד פרל) [`ithread עברית`](#) הנדסה מתוך [`p5p`](#), כהכנה להופעתו של פרל 7, הוא חדשות מבורכות למפתחי mod_perl שעדיין דבקים בחזונו המקורי של דאג מקאשרן.  אם אתה מוצא את עצמך עמוק בברך ב 100+ LOC פרל מקורות כדי לקבל את מה שאתה צריך מתוך מערכת הבנייה הנוכחית שלנו פרל בלבד, בואו לצ'אט &mdash;
+
+### למה לא עם משהו המבוסס על JVM?
+
+-  פשוט הסתדר ככה, בהתחשב בהיסטוריה שלי 20 שנה עם מחסנית LAMP ותרומות בונה לקהילת שרת האינטרנט Apache HTTPd המורחבת.  ניתן לעשות זאת, אבל שוב משימה מסיבית עם הרבה בעיות הנדסיות קשות לפתור לאורך הדרך.
+
+--------
+
+## אינדקס
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

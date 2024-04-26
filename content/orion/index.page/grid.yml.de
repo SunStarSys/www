@@ -1,7 +1,9 @@
 ---
-categories: Entwurf
+archived: ~
+categories: ~
 keywords: ~
-status: ~
+published: ~
+status: Entwurf
 title: Tabellendaten für Featurevergleichsraster
 ---
 
@@ -34,9 +36,9 @@ title: Tabellendaten für Featurevergleichsraster
 - Feature: "Gerätebenachrichtigungen für Watchlist"
   Orion: "&check;"
   Confluence: "&check;"
-- Feature: "Mehrsprachig"
+- Feature: "Multilingual (i18n)"
   Orion: "&check;"
-- Feature: 'Vollständig durchsuchbare <span class="editormd-tex">\KaTeX</span>-Ausdrücke'
+- Feature: 'Vollständig durchsuchbar <span class="editormd-tex">\KaTeX</span> Ausdrücke
   Orion: "&check;"
   Confluence: "$$$"
 - Feature: "Föderiert"
@@ -50,7 +52,7 @@ title: Tabellendaten für Featurevergleichsraster
   Orion: "&check;"
 - Feature: 'Einfache 3rd Party "Pull-Request" Contributor Workflow'
   Orion: "&check;"
-- Feature: "[GitHub Integration](https://youtu.be/FRc4qZkxVaI) mit IDE- und Aktionsunterstützung"
+- Feature: "[GitHub Integration](https://youtu.be/FRc4qZkxVaI) mit IDE &amp; Aktionsunterstützung"
   Orion: "&check;"
 - Feature: "Unbegrenzte Vorschau"
   Orion: "&check;"
@@ -58,14 +60,14 @@ title: Tabellendaten für Featurevergleichsraster
   Notion: "&check;"
   Confluence: "&check;"
 - Feature: "Unbegrenzte Plätze"
-  Orion: "Enterprise & Server installieren"
+  Orion: "Unternehmen &amp; Serverinstallation"
 - Feature: "Unbegrenzte Versionskontrollhistorie"
   Orion: "&check;"
 - Feature: "Integriertes URL Change Tracking"
   Orion: "&check;"
 - Feature: "Website-Hosting"
   Orion: "&check;"
-- Feature: "[3D-Vektorgrafiken](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integration"
+- Feature: "[3D Vektor Grafik](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integration"
   Orion: "&check;"
 - Feature: "SSI / CGI / mod_perl / mod_wasm Unterstützung"
   Orion: "&check;"
@@ -75,12 +77,14 @@ title: Tabellendaten für Featurevergleichsraster
   Orion: "&check;"
 - Feature: "8-64-fache gleichzeitige Builds"
   Orion: "&check;"
-- Feature: "Gesamtbetriebskosten < $6000/Jahr für Unternehmen"
+- Feature: "Gesamtbetriebskosten &lt; 6000 $/Jahr für Unternehmen"
   Orion: "&check;"
 - Feature: "Umfassende 99,99% SLA"
-  Orion: "Enterprise & Server installieren"
+  Orion: "Unternehmen &amp; Serverinstallation"
 - Feature: "Status für durchsuchbares Dokument"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Automatisierung Markdown<span class="editormd-tex">\leftrightarrow \LaTeX</span>'
+- Feature: 'Nachlass' <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisierung
+  Orion: "&check;"
+- Feature: KI-NLP - Automatische Übersetzung
   Orion: "&check;"

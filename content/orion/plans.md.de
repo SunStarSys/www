@@ -1,7 +1,9 @@
 ---
+archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: Jamstack, Wiki
+published: ~
 status: veröffentlicht
 title: Orionspläne
 ---
@@ -63,7 +65,7 @@ $10 / Monat / verwaltete öffentliche Website
 			<hr />
 <p>
 
-$ 50 / Monat / verwaltete öffentliche Website, ~ 50% Rabatt auf alle Mitbewerberpreismodelle!
+$50 / Monat / verwaltete öffentliche Website, ~50% Rabatt auf alle Mitbewerberpreismodelle!
 
 </p>
 
@@ -146,7 +148,7 @@ $ 50 / Monat / verwaltete öffentliche Website, ~ 50% Rabatt auf alle Mitbewerbe
 						<li>15 $ / 100 GB Datenübertragung</li>
 						<li>$100 / ithread mod_perl Registry Hosting</li>
 						<li>100 $/OCI-Region für benutzerdefinierte POPs</li>
-				<li>100 $/1K-Erstellungsminuten</li>
+				<li>100 $/1 K-Erstellung in Minuten</li>
                 <li>$0,03 / Seite AI NLP Übersetzungen</li>
                 <li>WebSockets und/oder privates Container-Hosting verfügbar</li>
                       </ol>
@@ -160,7 +162,7 @@ $ 50 / Monat / verwaltete öffentliche Website, ~ 50% Rabatt auf alle Mitbewerbe
 
 - Alle Pläne umfassen die intern automatisierte SSL/TLS-Zertifikatsverwaltung (über LetsEncrypt) und die integrierte PCRE-Suchmaschine (+Markdown).
 
-- {# lede #}Jährliche Vorabpreisrabatte verfügbar (bis zu 20% Rabatt auf monatliche Fakturierungskosten){# lede #}
+- {# lede #}Jährliche Vorabpreisrabatte verfügbar (bis zu 20% Rabatt auf monatliche Abrechnungskosten){# lede #}
 
 - Mengenrabatte verfügbar.
 
@@ -194,21 +196,21 @@ Unternehmen mit weniger als 500 Commits pro Tag sollten mit den im Plan enthalte
 
 4. Unternehmenskunden-Präsenzpunkte (POP):
 
-	- Fort Lauderdale, FL
+- Fort Lauderdale, FL
 
-	- Washington, DC
+- Washington, DC
 
-	- Phoenix, AZ
+- Phoenix, AZ
 
-	- Frankfurt, DE
+- Frankfurt, DE
 
-	- Sydney, AU
+- Sydney, AU
 
-	- Sá£o Paolo, BZ
+- SÃ£o Paolo, BZ
 
-    - Hyderabad, IN
+- Hyderabad, IN
 
-    - Seoul, SK
+- Seoul, SK
 
 ------------
 
@@ -221,7 +223,7 @@ Unternehmen mit weniger als 500 Commits pro Tag sollten mit den im Plan enthalte
 ------------
 
 <div class="col-lg-12">
-  {% include "/enquiry_get.html" %}
+  {% include "/enquiry_get.html"|append:lang %}
 </div>
 
 <style type="text/css">

@@ -1,6 +1,9 @@
 ---
-categories: borrador
-status: draft
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: borrador
 title: Datos de tabla para cuadrícula de comparación de funciones
 ---
 
@@ -33,9 +36,9 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Ver notificaciones de dispositivos de lista"
   Orion: "&check;"
   Confluence: "&check;"
-- Feature: "Multilingüe"
+- Feature: "Multilingual (i18n)"
   Orion: "&check;"
-- Feature: 'Expresiones <span class="editormd-tex">\KaTeX</span> totalmente aptas para búsqueda'
+- Feature: 'Búsqueda completa <span class="editormd-tex">\KaTeX</span> Expresiones
   Orion: "&check;"
   Confluence: "$$$"
 - Feature: "Federado"
@@ -49,7 +52,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: 'Fácil flujo de trabajo de colaborador de 3a parte con solicitud de extracción'
   Orion: "&check;"
-- Feature: "[GitHub Integration](https://youtu.be/FRc4qZkxVaI) con soporte de IDE y acciones"
+- Feature: "[Integración con GitHub](https://youtu.be/FRc4qZkxVaI) con IDE &amp; Soporte de acciones"
   Orion: "&check;"
 - Feature: "Vistas previas ilimitadas"
   Orion: "&check;"
@@ -57,7 +60,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Notion: "&check;"
   Confluence: "&check;"
 - Feature: "Asientos ilimitados"
-  Orion: "Instalación de Enterprise &amp; Server"
+  Orion: "Empresa &amp; Instalación del servidor"
 - Feature: "Historial ilimitado de control de versiones"
   Orion: "&check;"
 - Feature: "Seguimiento integrado de cambios de URL"
@@ -74,12 +77,14 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "Construcciones simultáneas de 8-64 vías"
   Orion: "&check;"
-- Feature: "TCO < $6000/año para Enterprise"
+- Feature: "TCO &lt; $6000/año para Enterprise"
   Orion: "&check;"
 - Feature: "SLA integral del 99,99%"
-  Orion: "Instalación de Enterprise &amp; Server"
+  Orion: "Empresa &amp; Instalación del servidor"
 - Feature: "Estado de documento apto para búsqueda"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Automatización de Markdown<span class="editormd-tex">\leftrightarrow \LaTeX</span>'
+- Feature: 'Rebaja <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatización
+  Orion: "&check;"
+- Feature: Traducción automática de NLP de IA
   Orion: "&check;"

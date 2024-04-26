@@ -1,0 +1,17 @@
+---
+archived: ~
+categories: ~
+keywords: Sites Web de la communauté
+published: ~
+status: ~
+title: Gestion des biens
+---
+
+Mon travail dans ce domaine s'étend sur 2000-2006 en tant que développeur de logiciels et webmaster qui
+a écrit un service de type CMS pour l'hébergement de sites Web communautaires offerts par la propriété locale
+Sociétés de gestion.  Il a interfacé avec le logiciel Tops pour fournir la comptabilité en ligne
+données pour les propriétaires, ainsi que divers forums pour que les membres de la communauté communiquent
+les uns avec les autres.  À son apogée, nous hébergeons plus de 100 sites.  La technologie était basée
+le `Linux`, `mod_perl`, `httpd`, et `msyql`- trucs typiques LAMP-pile.  Le seul roman
+La pièce était à stocker `SQL` instructions de la base de données elle-même, pour effectuer une analyse descendante séquentielle
+aux enregistrements individuels sans codage en dur `SQL`

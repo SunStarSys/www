@@ -1,0 +1,149 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.he api/index.md.he'
+keywords: wiki,jamstack,בלוג,מאובטח,בטוח
+published: ~
+status: טיוטה
+title: SunStar אוריון מערכות
+---
+
+
+<div class="row">
+<div class="col-lg-5">
+<p>
+	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki של Enterprise Jamstack.</em></span>&trade;
+</p>
+<span class="text-white">SunStar אוריון מערכות</span> &nbsp; הוא
+<p>
+	<ul>
+	<li><p>מאובטח,</p></li>
+	<li><p>נייד ידידותי,</p></li>
+	<li><p>שיתופי,</p></li>
+	<li><p>ביצועי שיא,</p></li>
+	<li><p>מאוחד</p></li>
+	</ul>
+</p>
+{# lede #}<span class="text-white">ויקי Enterprise</span>&nbsp; עבור <b>יצירה, ניהול ומסירה</b> דפי אינטרנט סטטיים באמצעות טכנולוגיית #Jamstack לתכונות דינמיות שבה{# lede #}
+
+לקבלת מידע על מחירים, ראה שלנו [תוכניות אוריון](plans).
+
+## הנה המגרש, מקבל החלטות מנהל ...
+
+מה שמבדיל את המוצר הזה מהמתחרים שלנו הוא [אוריון טכנולוגיה](technology), וכיצד **יעילות** שלה מאפשרת לנו לשמור על עלויות תפעול נמוכות מאוד תוך מתן בקרות עריכה מעולות ותכונות פורצות דרך.  אנו מעבירים את החיסכון בעלויות ל **לקוחות** שלנו, עם העלאות שוליות בלבד עבור משאבים נוספים של ספקי ענן. [התקשר אלינו](/contact).
+
+<ul>
+  <li><p><span class="text-white">מנהיג האוניברסיטה</span> מחפש דרך <b>להסיר פלגיאטיקה</b> בקמפוס דרך <a href="https://en.wikipedia.org/wiki/Open_access">גישה פתוחה</a> שיתוף מסמכים, אוצרות ופלטפורמת פרסום מקוונת, או מערכת ניהול ידע מונחית אקדמה,</p></li>
+
+<li><p><span class="text-white">מקבל החלטות במגזר הממשלתי/הגנה של IT</span> עם צורכי התאימות של FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a>, או דרישות בקרת גישה מפורטות במאגר בקרת הגרסאות של האתר שלך,</p></li>
+
+<li><p>א <span class="text-white">מנהל שיווק</span> מעוניין בפלטפורמה ארגונית חדשנית וגלובלית לניהול נכסי אתר האינטרנט של החברה שלך, באמצעות אוריון כ-CMS "חסר ראש",</p></li>
+
+<li><p><span class="text-white">חברת טכנולוגיה/מובילה בסוכנות אתרים</span> עם ויקי מסחרי מאוד לא מאובטח, הר של תיעוד מוצר מקוון או אתרי לקוח (בפוטנציאל מציע הורדות בינאריות) לאצור,</p></li>
+
+<li><p><span class="text-white">ארכיטקט מוכשר בעל זמינות גבוהה</span> עייף מהתמודדות עם נקודות כשל בודדות הטבועות בערימות LAMP מבוססות SQL,</p></li>
+
+<li><p>או באמת כל עסק-אדם לא מרוצה מבנה העלות של כל ויקי דבר שם בחוץ, כולל הצעות חינם bogging את הזמן של הצוות שלך ואת האנרגיה.</p></li>
+</ul>
+
+* אין נעילת ספק הקשורה להצעה שלנו*. אבל לא רק לקחת את המילה שלנו בשביל זה, לראות בעצמך מה מעורב בדרך כלל במונחים של בניית התאמה אישית של המערכת על ידי ביקור
+
+[עץ ספריית מקור viewvc שלנו](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), או שלה [<i class="fa fa-github fa-emoji" title="גיתוב"></i> מראה GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+פחות מ-<span class="text-info">100 LOC</span> כדי לספק את לוגיקת הבנייה עבור אתר זה, והיא כוללת ניהול תלות מתוחכם ומוזכר ליצירה אוטומטית של רב-לשוני [SiteMap](/sitemap) וכל האינדקסים של הספרייה (כמו [חלק זה](#Details) על הדף המסוים הזה).  אנחנו אפילו שמים את היסוד [מחולל אתרים סטטי לבנייה באתר GitHub](https://github.com/SunStarSys/Orion).
+
+</div>
+
+<div class="col-lg-7">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+<h3>הנה למה, מפתח מחסנית מלאה / בלוגר ציבורי / DevOps גורו...</h3>
+
+רוצים אתר שהוא **secure-by-default**?  קל לעדכון ולניהול, תוך הסתרת המורכבות של מערכת בקרת גרסאות בסיסית, ועם זאת מעניק לך את מלוא העוצמה שלו בעת הצורך?  פרסום מיידי כשאתה רוצה אותו; סניף חלק ומוגדר בונה ומבצעים גרעיניים הניתנים להתאמה אישית לאתר הייצור שלך, בהתאם לתהליך העבודה המועדף של הצוות שלך.
+
+אם אתה עייף מהרישוי לכל מושב ומהבחירות לכל מחזור של CPU ששוקלות אותך בכל פעם שאתה צריך לתקן שגיאת הקלדה, [פנה אלינו](/contact).
+
+אף פעם לא צריך להתמודד ישירות עם מערכת בקרת גרסאות, או אפילו גנרטור אתר סטטי, במחשב האישי שלך תלוי בך. ה-IDE המקוון מתוכנן ומוכן לתהליך העבודה **דפדפן בלבד** שלך בכל עת.  בקמצוץ, אפילו ממשק הנייד (דפדפן) יעשה את זה, *מייד*.
+
+עצי מקור מרובי ג'יגה-בתים פשוט אינם מתאימים לכך &mdash; משכי הבנייה המלאים של האתר נמדדים בשניות*, לא בשעות ובדקות.  המערכת מתקיימת בקלות [`500 מגהבייט לשנייה`](features).
+
+<span class="text-success"><em>אנחנו בונים רק את מה שצריך לבנות.</span></em>&trade;
+
+טכנולוגיה זו הומצאה לראשונה בסוף 2011 על ידי חברי צוות התשתיות של אפאצ'י. הביטוי "[מחסנית JAM](https://jamstack.wtf)"נטבע שנים מאוחר יותר, על ידי קבוצה שלא מודעת לאמנות הקודמת שלנו במרחב הזה.  אבל [רשומה ציבורית](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion).
+
+<h4>רוצה לתת לו ספין מהיר כדי לראות כמה מהר וקל זה?</h4>
+
+אתר זה מארח את עצמו; כל אלה ריבועים עיפרון ורוד חם [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index).
+
+רשת נקודת הנוכחות הגלובלית שלנו (POP) מבטיחה חיבורי השהיה נמוכה לאוריון &trade;
+
+<h3>הגיע הזמן לשינוי בים באופן שבו אתה מנהל ומספק את האתר שלך לקהל היעד שלך.</h3>
+
+עבור בקצב שלך, השתמש בכמה עובדים / תצוגות מקדימות / עריכות / התחייבויות / סניפים כמו שאתה רוצה, ולשלם רק על מה שאתה *למעשה להשתמש* על התשתית שלנו.
+
+קרא עוד [תוכניות אוריון](plans).
+
+</div>
+</div>
+
+מס' סריג השוואת מאפיינים
+
+<br />
+
+| תכונה     |   אוריון       | לוח | תפיסה | השפעה |
+|:^-----------|:-------------:|:----:|:------:|:----------:|
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
+{% endfor -%}
+
+<br />
+
+#### פרטים
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
+
+<hr />
+<br />
+<h2>כמה צילומי מסך מייצגים:</h2>
+<br />
+<h3>תצוגת IDE עם פרסית (UTF-8).</h3>
+<center><img src="../images/ide-fa.png" style="width:800px"></center>
+<br />
+<h3>תצוגת עורך IDE.</h3>
+<center><img src="../images/ide-editor.png" style="width:800px"></center>
+<br />
+<h3>תצוגת עורך של IDE (ספרדית).</h3>
+<center><img src="../images/ide-es.png" style="width:800px"></center>
+<br />
+<h3>IDE: בניית אתר מלא.</h3>
+<center><img src="../images/ide-build.png" style="width:800px"></center>
+<br />
+<h3>IDE: בניית אתר טיפוסית.</h3>
+<center><img src="../images/ide-file-build.png" style="width:800px"></center>
+<br />
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">חיפושIDE</a> <small>(קישורים אלה ב<span style="color:#e83e8c">ורוד חם</span> ישמיטו אותך ישירות לתוך מסך עורך, כאשר הסמן ממוקם בדיוק על פי הטקסט המתאים)</small>.</h3>
+<center><img src="../images/ide-search.png" style="width:800px"></center>
+</div>
+
+<style type="text/css">
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2024-04-22 23:14:27 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23423 $ -->

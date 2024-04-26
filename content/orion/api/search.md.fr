@@ -1,0 +1,93 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.fr '
+keywords: REPOS, API
+published: ~
+status: projet
+title: API Orion - Recherche
+---
+
+{# lede #}Ce document couvre les API **Rechercher**{# lede #}
+
+[TOC]
+
+----
+
+## Dynamic Search (/dynamic/search/...).
+
+### arguments de chaîne de requête
+
+#### langue
+
+- [`.en`](#)
+- [`.es`](#)
+- [`.fr`](#)
+- [`.de`](#).
+
+#### markdown_search
+
+booléen (0 ou 1).
+
+#### expression régulière
+
+##### modes spéciaux
+
+###### all accounts
+
+- [`amis=`](#)
+- [`watch=`](#)
+- [`notification=$révision`](#)
+- [`like=`](#) (En-cours)
+- [`diff=$révision`](#)
+- [`journal=$révision`](#)
+- [`@$group=`](#)
+- [`$user=`](#).
+
+###### svnadmin group
+
+- [`build=`](#)
+- [`acl=`](#)
+- [`deps=`](#)
+- [`svnauthz=`](#).
+
+##### modes de compatibilité
+
+- chaîne entre guillemets
+
+
+##### Mode PCRE
+
+### itération de filtre
+
+- [`filtre`](#).
+
+Filtre PCRE avec conservation de statut et itération sur les fichiers correspondants.
+
+### Champs de réponse JSON génériques
+
+- [`chemin`](#)
+- [`titre`](#)
+- [`markdown_search`](#)
+- [`correspond`](#)
+- [`langue`](#)
+- [`expression régulière`](#)
+- [`chemins de navigation`](#)
+- [`mots clés`](#)
+- [`amis`](#)
+- [`regarder`](#)
+- [`graphique`](#)
+- [`durée`](#)
+- [`journal`](#)
+- [`blog`](#)
+- [`diff.`](#)
+- [`méta`](#)
+- [`journal`](#)
+- [`yaml`](#)
+- [`référentiels`](#)
+- [`site web`](#)
+- [`hachage`](#)
+- [`filtre`](#)
+- [`Spéciaux`](#).
+
+<!-- $Date: 2024-04-23 18:57:27 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23677 $ -->

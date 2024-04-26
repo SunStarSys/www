@@ -1,30 +1,32 @@
 ---
-categories: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
+archived: ~
+categories: ~
 dependencies: '*.md.de api/index.md.de'
-keywords: Entwurf
-status: ~
+keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
+published: ~
+status: Entwurf
 title: Orion-Funktionen
 ---
 
 <div class="row">
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/xr67QX6aMqU"></iframe>
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/xr67QX6aMqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/uhKLwl3HgMI" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/uhKLwl3HgMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/aNwnmwIngrM" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/aNwnmwIngrM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/gf19vVF-G9E" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/gf19vVF-G9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
@@ -42,7 +44,6 @@ title: Orion-Funktionen
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 - 500 MB / s nachhaltige Builds für Multi-Gigabyte-Quellbäume
 
 - NVMe oder schnellere Speicherinfrastruktur erstellen
@@ -57,17 +58,17 @@ title: Orion-Funktionen
 
 - Apache httpd 2.4-basierte IDE:
 
-	- HTTP/2
+- HTTP/2
 
-	- Ereignis mpm
+- Ereignis mpm
 
-	- mod_perl mit ithreads
+- mod_perl mit ithreads
 
-	- mod_apreq2
+- mod_apreq2
 
-	- TLS 1,3
+- TLS 1,3
 
-	- Benutzerdefiniert [`SVN::Client`](#)
+- Benutzerdefiniert [`SVN::Client`](#).
 
 ## Mehrsprachig
 
@@ -101,11 +102,13 @@ title: Orion-Funktionen
 
 - Bootstrap (Solarized) Styling.
 
-- Editor.md ist erstaunlich: mit relativen [`src`](#)
+- Editor.md ist erstaunlich: mit relativen [`Quelle`](#).
 
 ## Konsistentes GitHub-Rendering mit aromatisiertem Markdown (GFM) mit Editor.md :editormd-logo-1x: und Django Templating
 
-- [x] **WYSIWYG:** {# lede #}Dieselbe Javascript-Code-Rendering-Engine in Ihrem Browser und im (node.js-basierten) markdown.js-Build-Skript{# lede #}
+- [x] **WYSIWYG:** {# lede #}Dieselbe Javascript-Code-Rendering-Engine in Ihrem Browser und im (node.js-basierten) markdown.js-Build-Skript{# lede #} gewährleistet eine 100-prozentige strukturelle Konsistenz zwischen dem Vorschaufenster Editor.md Markdown und der Produktions-Site.
+- [x] YAML-Header in Quelldateien (Markdown-Dateien) werden jetzt vollständig unterstützt.
+- [x]
 
 ```flow
 st=>start: börja
@@ -124,8 +127,11 @@ Note right of Jenni: Jenni thinks\nabout it
 Jenni-->Andrew: How are you?
 Andrew->>Jenni: I am good thanks!
 ```
+&nbsp;
+----
+&nbsp;
 
-- [x] Native d3-graphviz.js support:
+- [x]
 
 ```graphviz
 digraph {
@@ -137,7 +143,7 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x] Native @mermaid-js/mermaid v10.7.0 mit Mindmap-Unterstützung:
+- [x]
 
 ```mermaid
 graph TD
@@ -246,23 +252,23 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape))
+    sq[Square shape] --> ci((Circle shape)).
 
-    subgraph A
+subgraph A
         od>Odd shape]-- Two line<br/>edge comment --> ro
         di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
         di==>ro2(Rounded square shape)
     end
 
-    %% Notice that no text in shape are added here instead that is appended further down
+%% Notice that no text in shape are added here instead that is appended further down
     e --> od3>Really long text with linebreak<br>in an Odd shape]
 
-    %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
+%% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
 
-    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[Cyrillic]-->cyr2((Circle shape Начало));
 
-     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
      class sq,e green
      class di orange
@@ -326,7 +332,6 @@ subgraph booksSystem[ ]
 end
 class booksSystem,A3 brightBlue
 
-
 publicUser--Reads records using-->booksSystem
 authorizedUser--Reads and writes records using-->booksSystem
 
@@ -358,17 +363,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ] optionale draw.io Diagrammverlängerung in Kürze
+- [ ]
 
-- [x] Don Knuth's [$$\TeX$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX)
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Synchrone, bidirektionale Generierung von $$\LaTeX$$-Quelldateien zu/von Markdown+$$\KaTeX$$-Dateien.
+- [x] Synchrone, bidirektionale Generierung von $$\LaTeX$$ Quelldateien zu/von Preisabschrift+$$\KaTeX$$
 
-- [x] Navier-Stokes in Einstein Notation (aka [PAIN])(https://en.wikipedia.org/wiki/Abstract_index_notation)
+- [x] Navier-Stokes in Einstein Notation (aka [SCHMERZ](https://en.wikipedia.org/wiki/Abstract_index_notation).
 
 ```math
 \begin{aligned}
@@ -378,7 +383,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x] Navier-Stokes in klassischer Notation
+- [x]
 
 ```math
 \begin{aligned}
@@ -390,14 +395,14 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x] Elektrisch!
+- [x]
 
-    Der Editor wird automatisch vervollständigt und automatisch eingefügt. Er verfügt über den Vollbildmodus sowie Unterstützung für mehrere andere Modi zum Erstellen von Inhalten, die im CodeMirror 5-Syntaxmarker verfügbar sind.
+Der Editor wird automatisch vervollständigt und automatisch eingefügt. Er verfügt über den Vollbildmodus sowie Unterstützung für mehrere andere Modi zum Erstellen von Inhalten, die im CodeMirror 5-Syntaxmarker verfügbar sind.
 
 ## Vollständige Unterstützung für Filial-Builds
 
-- [x] Keine weitere Bereitstellung/Veröffentlichung: durch die Verzweigung <span class="text-white">Promotion</span> pro Ressource ersetzt.
-- [x] Zusammenführung von <span class="text-white">Rollback</span> und <span class="text-white">Sync</span> wird vollständig unterstützt.
+- [x] Keine weitere Bereitstellung/Veröffentlichung: durch <span class="text-white">Promotion</span> der Verzweigung pro Ressource ersetzt.
+- [x]
 
 ## Live-Quellbaumsuchmaschine
 
@@ -418,22 +423,22 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 <br>
 
-- [x] Perl-kompatibler regulärer Ausdruck (PCRE) basiert.
+- [x] Perl-kompatibler regulärer Ausdruck (PCRE).
 - [x] Globale Such- und Ersetzungsfunktionalität (eindeutige PCRE-Unterstützung); unterstützt reguläre Ausdruckserfassungen.
 - [ ] PDF-Suche in Kürze.
-- [ ] GraphQL/AI-Unterstützung in Kürze. Sicherheit macht Spaß!
+- [ ]
 
 ## Unbegrenzte Seitenanhänge mit beliebigen MIME-Typen
 
 ## Sichere, mit Threads versehene Kommentare pro Seite
 
-## Automatisierte Übersetzungen von Markdown in natürlicher Sprache (in Kürze)
+## Automatisierte Übersetzungen von Markdown in natürlicher Sprache (in Kürze).
 
 ## Interaktive mathematische Vektor-Grafiken mit @vectorgraphics/asymptote
 
 - [x] Syntaxhervorhebung für Asymptote
 - [x] CMS schlägt bei nicht analysierbaren Asymptote-Codeblöcken schnell fehl
-- [x] WebGL aktiviert, HTML-Ausgabe mit Multi-Thread
+- [x]
 
 ```asy
 // tubular trefoil knot -*- asy -*-
@@ -476,38 +481,37 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-
 ## Deltas aus <span class='text-info'>Apache CMS</span>-Funktionen
 
 - Nur das Perl-basierte Build-System ist verfügbar.
 
-- Neuer Markdown-Editor ist [`marked/gfm`](#)
+- Neuer Markdown-Editor ist [`markiert/gfm`](#).
 
 - GFM verwendet ein anderes Trennzeichen für Codeblöcke.
 
-- [`extpaths.txt`](#)
+- [`extpaths.txt`](#).
 
 ----
 
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}...
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
 
 <style type="text/css">
 /*-------------------------------------------
-	Animationen
+	Animations
 -------------------------------------------*/
 @-webkit-keyframes FADEY {
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
 
-.theme-schaufenster {
+.theme-showcase {
 	-webkit-animation-name: FADEY;
-	-Webkit-Animationsdauer: 1s;
-	-webkit-animation-timing-funktion: einfach in out;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
 </style>

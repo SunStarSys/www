@@ -1,0 +1,27 @@
+---
+archived: ~
+categories: ~
+keywords: 'qpsmtpd,Apache : :Qpsmtpd,earlytalker,Apache CMS'
+published: ~
+status: ~
+title: Fondation Apache Software
+---
+
+![L'ASF](http://www.apache.org/images/feather.png).
+
+[Fondation Apache Software](http://www.apache.org/).
+
+Lorsque j'ai commencé à travailler chez Apache en 2006, le problème le plus pressant était les services de courrier entrant surchargés.  L'organisation se noyait dans le spam, et à 1,5 million de connexions entrantes par jour, elle dépassait la livraison sortante de l'organisation et écrasait le logiciel.  Ma première tâche était de résoudre cette situation, donc ce que j'ai trouvé était une double approche : première mise à niveau `qpsmtpd` à `Apache : :Qpsmtpd`, la `mod_perl` variante expérimentale qui convertit `httpd`
+
+`Apache : :Qpsmtpd` J'avais besoin de quelques correctifs pour le rendre adapté au service d'entreprise, que j'ai fourni.  Cela a pris en charge les préoccupations immédiates autour de la charge écrasante sur le service, mais si les tendances de croissance se poursuivaient, cela signifierait des investissements continus dans plus de services.
+et de meilleurs matériels et logiciels, principalement pour répondre à toute la croissance de la connexion spam. Nous avons même tenté un effort avorté pour déployer `décélération`, qui sur les engins Apple n'était pas assez stable pour que nous puissions migrer en 2006.  `Accélération` (maintenant connu sous le nom de `Momentum` de [Systèmes de messages](http://www.messagesystems.com).
+
+Entrez dans la deuxième partie de mon approche : une tentative de dissuader les spammeurs de frapper les serveurs de courrier de l'ASF en premier lieu.  Cela impliquait l'application de patches `qpsmtpd`'s `débutant` plugin à exécuter dans le `Données` la phase, combinée à l'augmentation du délai à 20 secondes - une quantité élevée mais tolérable pour tous les agents de distribution de messages conformes à la RFC.  C'était un équilibre délicat, car les niveaux de spam sont passés à 2 millions, puis à 2,5 millions par jour, parce que `débutant` retarder l'augmentation des niveaux de concomitance 4 à 5 fois au-dessus des niveaux "normaux" et le spam a continué de croître. Nous poussons `httpd`'s `MaxClients` pendant cette période, même au point d'avoir à compiler `httpd`
+
+Normalement `débutant` fonctionne avant que la bannière ne soit livrée, ce qui n'est pas optimal lorsque votre plugin principal pour traiter les spammeurs tourne autour des listes noires dns.  En cours `débutant` le plus tard possible dans la `SMTP` session signifiait que d'autres plugins anti-spam à action plus rapide pouvaient abandonner la connexion dès que possible, avant que les retards ne commencent à se déclencher et à s'attacher `httpd` enfants.  Les spammeurs paient également ce prix de retard pour chaque message envoyé lorsque `débutant` s'exécute dans `Données`
+
+Sur 8 ans, l'impact écologique de mon `débutant`
+
+Au-delà des tâches courantes de chaque administrateur système, mon autre accomplissement principal à l'ASF a été la création de `CMS Apache`. Les raisons et la raison d'être étaient [documenté](http://www.apache.org/dev/cms), mais il est important de noter que ce logiciel a été rapidement développé sur une période de 3 mois avant d'être mis en production pour le site Web <http://www.apache.org/>.  Il a atteint une popularité au sein de l'ASF au-delà de mes attentes les plus folles : plus de 100 projets en dépendent actuellement pour leurs besoins de site Web.  Il s'adapte aux sites petits mais complexes comme [Apache Thrift](http://thrift.apache.org/), tout en s'adaptant aux besoins d'un site Web de 5 Go comme [OpenOffice.org](http://www.openoffice.org/).
+
+J'ai apprécié la majeure partie de mon temps au service des besoins de la communauté Apache, mais après 8 ans, c'était le moment d'un changement.  Je regarderai toujours avec tendresse les nombreux souvenirs et amis que j'ai fait là-bas, et je souhaite à Apache tout le meilleur pour aller de l'avant.

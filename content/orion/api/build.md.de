@@ -1,0 +1,205 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.de '
+keywords: RUHE, API
+published: ~
+status: Entwurf
+title: Orion API - Erstellen
+---
+
+{# lede #}In diesem Dokument werden die APIs für **Build System** behandelt{# lede #}
+
+[TOC]
+
+----
+
+## Build-System
+
+### [SunStarSys::Ansicht](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+
+#### single_narrative(%args).
+
+Erforderliche Argumente:
+
+- [`Vorlage`](#)
+- [`Pfad`](#)
+- [`lang`](#).
+
+Optionale Argumente:
+
+- [`Deps`](#)
+- [`quick_deps`](#)
+- [`Vorverarbeitung`](#)
+- [`archive_root`](#)
+- [`category_root`](#).
+
+#### news_page(%args).
+
+#### sitemap(%args).
+
+Gebietsschemaspezifischer, sortierter Index der Abhängigkeiten.
+
+Erforderliche Argumente:
+
+- [`Pfad`](#)
+- [`lang`](#).
+
+Optionale Argumente:
+
+- [`quick_deps`](#)
+- [`verschachtelt`](#)
+- [`Vorverarbeitung`](#).
+
+#### asymptote(%args).
+
+Builds und Caches [`asymptote`](#).
+
+Erforderliche Argumente:
+
+- [`anzeigen`](#)
+- [`lang`](#)
+- [`Pfad`](#).
+
+#### überspringen(%args).
+
+Bauen Sie diese überhaupt nicht.  Erstellen Sie stattdessen die zugehörigen generierten Quelldateien (z. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`
+
+#### yml2ext(%args).
+
+Konvertieren Sie YAML-Dateien.
+
+Optionale Argumente:
+
+- [`Erweiterung`](#) Standard ist `json`
+- [`Filter`](#) Standard ist `json_raw`
+-[`Vorlage`](#) Überschreibungen `Filter`
+
+#### fetch_deps($path, $data, $quick).
+
+Erforderliche Argumente:
+
+- [`Pfad`](#)
+- [`Daten`](#) - Läden, die ein Anonarray von Deps ergeben
+- [`schnell`](#).
+
+#### breadcrumbs($path).
+
+Gibt HTML-Breadcrumbs-Liste zurück für [Pfad](#).
+
+#### memoize(%args).
+
+Cacht den Build. Er wird hauptsächlich mit fetch_deps und quick_deps > 2 verwendet.
+
+#### compress(%args).
+
+Veraltet.
+
+#### next_view(%args).
+
+Dienstprogramm zur Verarbeitung von $args{view}.
+
+#### ssi(%args).
+
+Rekursive Auswertung [ssi](#).
+
+#### offline(%args).
+
+Führt next_view im Offlinemodus aus.
+
+#### snippet(%args).
+
+Verarbeitet Snippet-Positionen.
+
+#### reconstruct(%args).
+
+Verarbeitet Vorlagenanweisungen in erstelltem Inhalt aus next_view erneut.
+
+#### trim_local_links(%args).
+
+Entfernt Dateierweiterungen von lokalen Links.
+
+#### normalize_links(%args).
+
+Normalisiert lokale Links (./ und ../).
+
+----
+
+### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+
+#### read_text_file($file, $out, $content_lines).
+
+Parst Header+Inhalt der UTF-8-codierten Datei [`$Datei`](#) und speichert Ergebnisse in [`$out`](#). [`$content_lines`](#) ist die (optionale) maximale Anzahl der zu lesenden Inhaltszeilen.
+
+
+[`$Datei`](#) kann eine Referenz auf eine Raw-Zeichenfolge sein, die den vollständigen Inhalt einer Datei darstellt.  Die Ergebnisse in [`$out`](#).
+
+#### copy_if_newer($src, $dest).
+
+Kopien [`Quelle`](#) bis [`$dest`](#) wenn der Änderungszeitstempel des ersteren neuer ist als der des letzteren. Auf Kopie, zusätzlich gzip-komprimiert die [`$dest`](#).
+
+#### get_lock($lockfile).
+
+Nimmt eine exklusive (f) Sperre (für den aktuellen UNIX-Prozess) auf [`$Lock-Datei`](#).
+
+#### shuffle(\\@deck).
+
+Zufälliges (Fisher-Yates) Shuffle von [`@deck`](#).
+
+#### sort_tables($content).
+
+Sortiert Preisabschrifttabellen in $content entsprechend der Spaltenspezifikation der einzelnen Tabellen.  Genau eine Spalte kann pro Tabelle sortiert werden, optional numerisch [`n`](#), entweder absteigend [`v`](#) oder aufsteigend [`^`](#).
+
+#### fixup_code($prefix, $type, @\_).
+
+Entfernt $prefix aus jedem Argument in @\_. Die Funktion des $type-Arguments ist implementierungsspezifisch, wird jedoch hauptsächlich zum Vordefinieren des editor.md-"Modus" für die Verarbeitung dieses Inhalts in @\_ verwendet.
+
+#### unload_package($pkg).
+
+Entlädt das Perl-Package aggressiv [`Paket`](#).
+
+#### purge_from_inc(@paths).
+
+Entfernungen [`@paths`](#) von [`@INC`](#).
+
+#### Berührung(@\_).
+
+Berührt alle Dateien in [`@_`](#). Wenn keine Argumente übergeben werden, wird [`$_`](#).
+
+#### normalize_svn_path(@\_).
+
+Normalisiert alle Pfade in [`@_`](#) zur sicheren Verwendung als rohe Argumente für [`SVN::Client`](#).
+
+#### sanitize_relative_path(@\_).
+
+Sichert Pfade in [`@_`](#) zur Verwendung als reine relative Pfade in [`Dotiac::DTL`](#).
+
+#### parse_filename($path).
+
+Wrapper herum [`Datei::Basename::Dateiparse`](#). Ohne Argumente, Verwendungen [`$_`](#).
+
+#### walk_content_tree($code).
+
+Bedingt geht der [`./Inhalt`](#) Baum des Build-System-Checkouts, erste Normalisierung [`$_`](#) als formalen Unterpfad und dann aufrufen [`$code`](#).
+
+##### archived($path).
+
+Markiert jede [`Status: Archiv`](#) [`Pfad`](#). Verwendet [`$_`](#).
+
+##### seed_file_deps($path).
+
+Aktualisierungen [`%path::Abhängigkeiten`](#) für diesen [`Pfad`](#)basierend auf seiner [`Abhängigkeiten`](#) Header-Glob(s). Standardmäßig verwendet [`$_`](#).
+
+##### seed_file_acl($path).
+
+Aktualisierungen [`@path::acl`](#) für diesen [`Pfad`](#)basierend auf seiner [`ACL`](#) Headerspezifikation. Standardmäßig verwendet [`$_`](#).
+
+#### Laden
+
+Entspricht [`YAML::XS::Laden`](#).
+
+#### Speicherabzug
+
+Entspricht [`YAML::XS::Dump`](#).
+
+<!-- $Date: 2024-04-14 02:05:29 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22295 $ -->

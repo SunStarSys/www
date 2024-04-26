@@ -1,8 +1,10 @@
 ---
-categories: projet
+archived: ~
+categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: ~
-status: ~
+published: ~
+status: projet
 title: Politique de confidentialité d'Orion
 ---
 
@@ -16,16 +18,16 @@ title: Politique de confidentialité d'Orion
 
 - Cookies utilisés uniquement à des fins de sécurité / responsabilité.
 
-- Les seuls composants d'identité de l'utilisateur que nous enregistrons sont l'adresse e-mail de votre compte Google OpenID et le compte d'utilisateur que vous utilisez pour vous connecter à tout système Subversion sous-tendant Orion TM pour le site auquel vous effectuez des Commits.  Le système de journalisation les suit à côté de l'Apache de base [`httpd`](#) logset de réponse d'accès, qui comprend l'adresse IP de connexion, le protocole de demande avec les détails de l'URL et le client annoncé [`Referer`](#) et [`User-Agent`](#)
+- Les seuls composants d'identité de l'utilisateur que nous enregistrons sont l'adresse e-mail de votre compte Google OpenID et le compte utilisateur que vous utilisez pour vous connecter à tout système Subversion sous-jacent à Orion &trade; pour le site sur lequel vous effectuez des validations.  Le système de journalisation les suit aux côtés de l'Apache de base [`httpd`](#) Ensemble de journaux de réponse d'accès, qui inclut l'adresse IP de connexion, le protocole de demande avec les détails de l'URL et les informations annoncées par le client [`Référent`](#) et  [`Agent utilisateur`](#).
 
-- {# lede #}Il s'agit d'un système de consentement conforme au RGPD.  Lors de la première visite à l'Orion TM CMS/IDE, vous serez dirigé vers une page Google vous demandant d'autoriser{# lede #}
+- {# lede #}Il s'agit d'un système de consentement conforme au RGPD.  Première visite à l'Orion &trade; CMS/IDE, vous serez dirigé vers une page Google vous demandant d'autoriser{# lede #} l'application <span class="text-white">SunStar Systems OIDC</span> pour utiliser les détails de compte Google fournis (principalement les informations de profil) &mdash;
 
 --------
 
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}...
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
 
 <!-- $Date$ $Author$ $Revision$ -->

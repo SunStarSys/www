@@ -1,0 +1,89 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.fr'
+keywords: REPOS, API
+published: ~
+status: projet
+title: API Orion - Bibliothèque de modèles Django
+---
+
+{# lede #}Ce document couvre les API **Django Template Library (DTL)**{# lede #}
+
+[TOC]
+
+----
+
+## DTL (Bibliothèque de modèles Django 1.0).
+
+### Extensions de filtres Django 1.0 ([Dotiac : :DTL : :Filtre](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm).
+
+#### ajouter
+
+Prend un seul argument et ajoute sa valeur à l'entrée filtrée.  L'argument peut être un nom de variable ou une chaîne entre guillemets ; ce filtre sera intelligent à propos de `/` les personnages étant réunis sur [`ajouter`](#).
+
+#### segments
+
+J'aime [`couper`](#).
+
+#### lede
+
+Extrait le texte entre les &#123;# [`lede`](#) #&#125;
+
+#### ssi
+
+Evalue de manière récursive tous les Django [`ssi`](#).
+
+#### starts_with
+
+Tests de correspondance de préfixe.
+
+#### nom de répertoire
+
+Renvoie la commande UNIX traditionnelle [`nom de répertoire`](#).
+
+#### parse_filename
+
+Interface pour [`SunStarSys : :Util : :parse_filename`](#). La principale différence est que les deux premières valeurs de retour de ce sous-programme sont permutées et que les extensions de chemin sont toutes décomposées (avec [`.`](#) préfixé) en arguments individuels, ce qui permet à ce filtre de prendre une chaîne d'arguments représentant une liste d'index dans le tableau résultant. Dans un cas particulier, un argument se terminant par [`..`](#).
+
+#### nom de base
+
+Renvoie la commande UNIX traditionnelle [`nom de base`](#) du chemin dans la chaîne d'entrée filtrée. Passage d'un argument de [`0`](#).
+
+#### tex2md
+
+Transformations $$\LaTeX$$ sources dans Markdown+$$\KaTeX$$
+
+#### md2tex
+
+La transformation inverse de `tex2md`
+
+#### vcs_date
+
+Prend une [`langue`](#) argument permettant de fournir une représentation spécifique des paramètres régionaux du jour, du mois et de l'année de la modification la plus récente présentée par [`Date du $`](#) Mot-clé Subversion dans la chaîne d'entrée filtrée (qui est généralement le plein) [`contenu`](#).
+
+#### vcs_time
+
+Représente l'heure numérique, les minutes, les secondes et le décalage horaire de la modification la plus récente présentée par le [`Date du $`](#).
+
+#### vcs_author
+
+Présente un [`sécurité`](#) Représentation HTML de l'utilisateur qui a mis à jour le contenu le plus récemment, tel qu'enregistré par le mot-clé Subversion [`$Auteur`](#) mot-clé dans la chaîne d'entrée filtrée.  Prend une option [`langue`](#).
+
+#### vcs_revision
+
+Présente le numéro de révision numérique de la modification la plus récente du contenu, tel qu'enregistré par le [`$Révision`](#).
+
+#### strip_prefix
+
+Supprime le préfixe (chemin), transmis en tant qu'argument à ce filtre, de la chaîne d'entrée filtrée (chemin). Par défaut, le préfixe est l'expression régulière. [`\S+/content/`](#).
+
+#### réorganisation
+
+Réorganisez le tableau.
+
+#### im.
+
+Récupérez la première image HTML5/de démarque à partir du contenu filtré.
+
+<!-- $Date: 2024-04-22 15:48:18 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23266 $ -->

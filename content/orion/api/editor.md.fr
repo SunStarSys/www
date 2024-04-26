@@ -1,0 +1,122 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.fr '
+keywords: REPOS, API
+published: ~
+status: projet
+title: API Orion - Editeur en ligne
+---
+
+{# lede #}Ce document couvre les API et l'interface utilisateur de l' **éditeur en ligne**{# lede #}
+
+[TOC]
+
+----
+
+## Editeur Orion (cms.sunstarsys.com).
+
+### Actions génériques
+
+#### redirection
+
+Adresse entrante pour l'interface CMS d'Orion.
+
+Arguments de chaîne de requête obligatoires :
+
+- [`uri`](#).
+
+Arguments de chaîne de requête facultatifs :
+
+- [`mettre à jour`](#) - défini sur 0 pour désactiver la mise à jour de la copie de travail
+- [`action`](#) - choix de l'action de redirection
+- [`langue`](#) - langue préférée pour IU
+- [`référentiels`](#) - nom du référentiel Subversion cible
+- [`nouveau`](#) - créer une nouvelle copie de travail
+- [`expression régulière`](#).
+
+#### connexion
+
+Valide et met en cache les informations d'identification Subversion pour le référentiel en cours. Répond uniquement à la méthode POST.
+
+### Actions de copie de travail
+
+#### Champs de réponse JSON de copie de travail
+
+- [`référentiels`](#)
+- [`site web`](#)
+- [`action`](#)
+- [`langue`](#)
+- [`chemins de navigation`](#)
+- [`mode`](#)
+- [`is_dir`](#)
+- [`is_root_dir`](#)
+- [`répertoire`](#)
+- [`ext.`](#)
+- [`attachments_dir`](#)
+- [`is_attachment`](#)
+- [`statut`](#)
+- [`agence`](#)
+- [`image`](#)
+- [`en-têtes`](#)
+- [`contenu`](#)
+- [`http_status`](#)
+- [`nav_options`](#)
+- [`actions_lang`](#)
+- [`regarder`](#).
+
+#### Liste des actions d'API
+
+##### modification
+
+###### Friends Completion
+
+##### mise à jour
+
+##### annulation
+
+##### copie
+
+##### déplacement
+
+##### suppression
+
+##### ajout
+
+###### Friends Completion
+
+##### validation
+
+##### diff
+
+##### fusion
+
+##### production
+
+##### promotion
+
+##### résolution
+
+##### annulation
+
+##### recherche
+
+##### statique
+
+##### compte
+
+###### Credentials Changes
+
+##### commentaire
+
+###### Friends Completion
+
+##### montre
+
+##### annulation
+
+##### aiment
+
+##### différent
+
+<!-- $Date: 2024-04-14 02:02:48 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22286 $ -->

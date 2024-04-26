@@ -2,31 +2,31 @@
 <html lang="{{ lang|cut:"." }}">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="SunStar Systems">
-    <meta name="author" content="Joe Schaefer">
-    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
-    <meta name="theme-color" content="black">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="SunStar Systems" name="description">
+    <meta content="Joe Schaefer" name="author">
+    <meta content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}" name="keywords">
+    <meta content="black" name="theme-color">
         {% ifequal path|dirname "/orion" %}
-	<meta property="og:image" content="/images/sunstar-orion-symbol-linear.png">
+	<meta content="/images/sunstar-orion-symbol-linear.png" property="og:image">
 	{% else %}
-	<meta property="og:image" content="/images/sunstarstaronly.png">
+	<meta content="/images/sunstarstaronly.png" property="og:image">
 	{% endifequal %}
     <title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 	{% if permalink %}
-	<link rel="bookmark" href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}">
+	<link href="https://{{website}}{{path|dirname}}/{{path|basename:0}}.html{{lang}}" rel="bookmark">
 	{% endif %}
-    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/css/code.css" rel="stylesheet" media="screen">
-    <link href="/css/katex.min.css" rel="stylesheet" media="screen">
-    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
-    <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
-    <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
-    <link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
-    <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">
-    <link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
-    <link href="/css/local.css" rel="stylesheet" media="screen">
+    <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
+    <link href="/css/code.css" media="screen" rel="stylesheet">
+    <link href="/css/katex.min.css" media="screen" rel="stylesheet">
+    <link href="/css/mermaid.min.css" media="screen" rel="stylesheet">
+    <link href="/fontawesome/css/all.min.css" media="screen" rel="stylesheet">
+    <link href="/editor.md/css/editormd.min.css" media="screen" rel="stylesheet">
+    <link href="/editor.md/lib/codemirror/codemirror.min.css" media="screen" rel="stylesheet">
+    <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" media="screen" rel="stylesheet">
+    <link href="/editor.md/lib/codemirror/theme/solarized.css" media="screen" rel="stylesheet">
+    <link href="/css/local.css" media="screen" rel="stylesheet">
     <link href="/favicon.png" rel="icon">
     <script src="/editor.md/js/jquery.min.js"></script>
     {% block header %}{% endblock %}
@@ -40,86 +40,94 @@
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button aria-expanded="false" aria-label="繁體中文" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
-	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
+	  <img alt="SunStar Orion 符號線性" src="/images/sunstar-orion-symbol-linear.png">
           <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
-          <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
+          <img alt="SunStar 線性" src="/images/sunstarlinear.png" />
         {% endifequal %}
         </div>
       </div>
-      <div class="navbar-collapse collapse" id="navbarResponsive">
+
+<div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           <li class="nav-item{% ifequal path "/index.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link text" href="/">Home</a></li>
+            {% endifequal %}"><a class="nav-link text" href="/">住家</a></li>
           <li class="nav-item{% ifequal path "/about.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link text" href="/about">About</a></li>
+            {% endifequal %}"><a class="nav-link text" href="/about">關於</a></li>
           <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
              active
-             {% endifequal %}"><a class="nav-link" href="/contact">Contact</a></li>
+             {% endifequal %}"><a class="nav-link" href="/contact">聯絡人</a></li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">產品 ... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Enterprise Wiki</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; 企業 Wiki</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Orion Pricing Plans</a></li>
+                href="/orion/plans.html{{ lang }}」>Orion 定價方案</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
             active
-																{% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a>a></li>
-          <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{% ifequal lang ".en" %}More{% endifequal %}{% ifequal lang ".es" %}Más{% endifequal %}{% ifequal lang ".de" %}Mehr{% endifequal %}{% ifequal lang ".fr" %}Plus{% endifequal %}... <span class="caret"></span></a>
+																{% endifequal %}"><a class="nav-link" href="/open-source">開源 </a>a></li>
+
+<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{% ifequal lang ".en" %}更多 >>{% endifequal %}{% ifequal lang ".es" %}繁體中文{% endifequal %}{% ifequal lang ".de" %}梅爾{% endifequal %}{% ifequal lang ".fr" %}加強{% endifequal %}... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
-                <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Site Source</a>
+                <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">網站來源 (Site Source) </a>
               </li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Site Maps</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.en">English</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.es">Spanish</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.de">German</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.fr">French</a></li>
+              <li class="dropdown-header text-white">網站地圖</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.en">繁體中文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.es">西班牙文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.de">德文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.fr">法文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.ru">俄文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.zh-TW">中文 English</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.he">希伯來文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">瑞典文</a></li>
+
+<li class="dropdown-item divider"></li>
+              <li class="dropdown-header text-white">{% ifequal lang ".en" %}互動{% endifequal %}{% ifequal lang ".es" %}染色體{% endifequal %}{% ifequal lang ".de" %}互動{% endifequal %}{% ifequal lang ".fr" %}互動{% endifequal %}</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}客戶{% endifequal %}{% ifequal lang ".es" %}用戶端{% endifequal %}{% ifequal lang ".de" %}昆登{% endifequal %}{% ifequal lang ".fr" %}客戶{% endifequal %}</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">{% ifequal lang ".en" %}繁體中文{% endifequal %}{% ifequal lang ".es" %}Ensayos{% endifequal %}{% ifequal lang ".de" %}Aufs 筆記{% endifequal %}{% ifequal lang ".fr" %}Essais{% endifequal %}</a></li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}Engagements{% endifequal %}{% ifequal lang ".es" %}Compromisos{% endifequal %}{% ifequal lang ".de" %}Engagements{% endifequal %}{% ifequal lang ".fr" %}Engagements{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}Clients{% endifequal %}{% ifequal lang ".es" %}Clientes{% endifequal %}{% ifequal lang ".de" %}Kunden{% endifequal %}{% ifequal lang ".fr" %}Clients{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">{% ifequal lang ".en" %}Essays{% endifequal %}{% ifequal lang ".es" %}Ensayos{% endifequal %}{% ifequal lang ".de" %}Aufsätze{% endifequal %}{% ifequal lang ".fr" %}Essais{% endifequal %}</a></li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}Taxonomies{% endifequal %}{% ifequal lang ".es" %}Taxonomías{% endifequal %}{% ifequal lang ".de" %}Taxonomien{% endifequal %}{% ifequal lang ".fr" %}Taxonomies{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">{% ifequal lang ".en" %}Categories{% endifequal %}{% ifequal lang ".es" %}Categorías{% endifequal %}{% ifequal lang ".de" %}Kategorien{% endifequal %}{% ifequal lang ".fr" %}Catégories{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">{% ifequal lang ".en" %}Archives{% endifequal %}{% ifequal lang ".es" %}Archivo{% endifequal %}{% ifequal lang ".de" %}Archiv{% endifequal %}{% ifequal lang ".fr" %}Les archives{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">{% ifequal lang ".en" %}分類{% endifequal %}{% ifequal lang ".es" %}分類{% endifequal %}{% ifequal lang ".de" %}分類{% endifequal %}{% ifequal lang ".fr" %}分類{% endifequal %}</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">{% ifequal lang ".en" %}分類{% endifequal %}{% ifequal lang ".es" %}分類{% endifequal %}{% ifequal lang ".de" %}分類{% endifequal %}{% ifequal lang ".fr" %}CatFinancial © gories{% endifequal %}</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">{% ifequal lang ".en" %}檔案下載{% endifequal %}{% ifequal lang ".es" %}阿基沃{% endifequal %}{% ifequal lang ".de" %}阿契夫{% endifequal %}{% ifequal lang ".fr" %}女同志{% endifequal %}</a></li>
             </ul>
           </li>
-          <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
+
+<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Powered by{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}Unterstützt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}技術支持：{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}UnterstFinancial1⁄4tzt von{% endifequal %}{% ifequal lang ".fr" %}AlimentFinancial © par{% endifequal %}...</a>
           </li>
         </ul>
       </div>
       <div class="row right" id='search'>
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
             }}{% endifequal %}/" class="form-inline right" method="GET">
-          <input type="hidden" name="lang" value="{{ lang }}" />
+          <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               placeholder="PCRE
- {% ifequal lang ".en" %}Recursive Search{% endifequal %}{% ifequal lang ".es" %}Búsqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche Récursive{% endifequal %}" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
-	    {% ifequal lang ".en" %}Search{% endifequal -%}
-	    {% ifequal lang ".es" %}Buscar{% endifequal -%}
-	    {% ifequal lang ".de" %}Suche{% endifequal -%}
-	    {% ifequal lang ".fr" %}Rechercher{% endifequal -%}
+               預留位置 =」PCRE
+ {% ifequal lang ".en" %}遞迴搜尋{% endifequal %}{% ifequal lang ".es" %}BFinancialosqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche RFinancial © cursive{% endifequal %}「 值 =」{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+	    {% ifequal lang ".en" %}搜尋{% endifequal -%}
+	    {% ifequal lang ".es" %}巴斯卡{% endifequal -%}
+	    {% ifequal lang ".de" %}蘇切{% endifequal -%}
+	    {% ifequal lang ".fr" %}重新啟動器{% endifequal -%}
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>Markdown</small></label>
+          id="markdown-search" value="1" {% if markdown_search %}已勾選{% endif %}/><label for="markdown-search"><small>減價</small></label>
         </form>
       </div>
     </div>
@@ -139,16 +147,16 @@
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img src="/images/edit.png" alt="Edit Icon" />
+        <img alt="編輯圖示" src="/images/edit.png" />
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>
   <div class="jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-  <footer>{% block footer %}{% endblock footer %}</footer>
+<footer>{% block footer %}{% endblock footer %}</footer>
 
-  <script src="/editor.md/js/bootstrap.bundle.min.js"></script>
+<script src="/editor.md/js/bootstrap.bundle.min.js"></script>
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
@@ -163,7 +171,8 @@
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script defer src="/editor.md/lib/copy-tex.js"></script>
-  <script blocking="render" async type="text/javascript">
+
+<script blocking="render" async type="text/javascript">
     if (typeof(editormd) === "undefined") {
         mermaid.registerExternalDiagrams([window["mermaid-mindmap"]]);
         mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
@@ -205,7 +214,8 @@
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
-  <script async type="module">
+
+<script async type="module">
     if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
 		var permission = Notification.permission;
 		if (permission !== "granted") {

@@ -1,0 +1,233 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW api/index.md.zh-TW'
+keywords: Jamstack，維基
+published: ~
+status: 已發布
+title: Orion 計畫
+---
+
+## 計畫詳細資訊
+
+<div class="row">
+<div class="col-lg-4">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">專業計畫</div>
+		<div class="card-body">
+			適合獨立部落客
+			<hr />
+<p>
+
+$10 / 每月 / 管理公共網站
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+
+<li>包含每月資源 (每一網站)：
+<p>
+<ol>
+						<li>公共 Subversion 主機</li>
+						<li>100 MB 儲存空間 <sup>1</sup></li>
+						<li>500 GB 資料傳輸</li>
+						<li>10 個座位使用無限制的 IDE</li>
+			<li>100 分鐘建置</li>
+			<li>電子郵件型客戶支援</li>
+					</ol>
+					</p>
+</li>
+</ul>
+
+<ul style="min-height:200px">
+				<li>額外每月資源費率 (每一網站)：
+<p>
+<ol>
+						<li>$10 / 10 MB 儲存空間 <sup>1</sup></li>
+						<li>$10 / 40 GB 資料傳輸</li>
+						<li>$5 / 座位</li>
+						<li>$10 / 100 建置分鐘</li>
+                        <li>$0.05 / 頁 AI NLP 翻譯</li>
+</ol>
+					</p>
+</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">業務計畫</div>
+		<div class="card-body">
+			適合中小企業
+			<hr />
+<p>
+
+$50 / 每月 / 管理的公共網站，所有競爭對手定價模式均可獲得 50% 的折扣！
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>包含每月資源 (每一網站)：
+<p>
+<ol>
+						<li>公共或私人 Subversion 主機</li>
+						<li>500 MB 儲存空間 <sup>1</sup></li>
+						<li>1 TB 資料傳輸</li>
+						<li>50 個座位使用無限制的 IDE</li>
+						<li>最多 5 個 ACL 群組</li>
+				<li>500 建置分鐘數</li>
+				<li>99.9% 全面的 SLA<sup> 3</sup></li>
+						<li>電子郵件型客戶支援</li>
+</ol>
+</p>
+</li>
+</ul>
+<ul style="min-height:200px">
+				<li>額外每月資源費率 (每一網站)：
+<p>
+					<ol>
+						<li>$10 / 20 MB 的儲存空間 <sup>1</sup></li>
+						<li>$20 / 100 GB 資料傳輸</li>
+						<li>$10 / 座位</li>
+						<li>$10 / 100 建置分鐘</li>
+                        <li>$0.04 / 頁 AI NLP 翻譯</li>
+                    </ol>
+					</p>
+					</li>
+				</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">企業計畫</div>
+		<div class="card-body">
+			公部門、非政府組織及認可品牌
+			<hr />
+<p>
+
+$500 / 每月，所有競爭對手定價模式都享有 67% 折扣！
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>包含每月資源：&nbsp;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<p>
+<ol>
+						<li>您自己的 Subversion 儲存區域中有 1 GB 儲存空間 <sup>2</sup></li>
+						<li>3 TB 資料傳輸</li>
+						<li>無限網站和 (自我管理) 座位</li>
+						<li>2500 分鐘建置</li>
+						<li>完全控制 Subversion 授權組態</li>
+						<li>專用的網路建置容器</li>
+						<li>99.99% 全面的 SLA<sup> 3</sup></li>
+						<li>全球 POP<sup> 4</sup> 在 Q4 提供地理上分散式最後一英里傳遞網路</li>
+						<li>進階支援 SLA</li>
+					</ol>
+					</p>
+</li>
+			</ul>
+			<ul style="min-height:200px">
+				<li>
+
+&nbsp;
+
+<p>
+<ol>
+						<li>$100 / 250 MB 儲存空間 <sup>2</sup></li>
+						<li>$15 / 100 GB 資料傳輸</li>
+						<li>$100 / 個執行緒 mod_perl 登錄託管</li>
+						<li>$100 / 自訂 POP 的 OCI 區域</li>
+				<li>$100 / 100 分鐘</li>
+                <li>$0.03 / 頁 AI NLP 翻譯</li>
+                <li>WebSockets 和 (或) 可供代管的專用容器</li>
+                      </ol>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+- 所有方案包括內部自動化 SSL/TLS 憑證管理 (透過 LetsEncrypt) 和整合式 PCRE (+Markdown) 搜尋引擎。
+
+- {# lede #}提供年度預付價格折扣 (每月計費成本最多可折扣 20%){# lede #}
+
+- 可提供大量折扣。
+
+- 現已提供以企業 Kerberos 為基礎的 Orion Server 安裝，適用於在 2024 Q1 中尋求 Confluence Data Center 強制升級替代方案的客戶。
+
+- Serverless 技術整合即將推出。
+
+- 提供諮詢與網站建置技術移植服務。
+
+- 我們非常歡迎各機構和第三方經銷商使用技術夥伴。
+
+### 建立分鐘與計畫層級：粗略指南
+
+* 每個確認平均組建持續時間的合理高階預估為 10 秒。*
+
+- 每天不滿 20 次確認的專業人士，應在計劃中包含 100 分鐘的建置分鐘內完成。
+
+- 每天承諾少於 100 個的企業，應在計畫中包含 500 個組建分鐘。
+
+- 每天承諾不到 500 個的企業，應該在計畫中包含 2500 個組建分鐘。
+
+------------
+
+#### 註腳
+
+1. 依據每個站台的四個工作複本取出大小計算的儲存使用率：兩個來源樹狀結構和兩個產生的組建樹狀結構。
+
+2. 儲存使用率是根據企業客戶 SunStar 系統代管 Subversion 儲存區域的總大小計算而得，而不是個別結帳，這是 * 比較小的數字 * (關於單一來源樹狀結構結帳的大小)。
+
+3.SLA 涵蓋網站資產 * 和 * Orion 線上 IDE * 和 * 建置系統可用性，但不包括 Subversion 版本控制系統，我們預期會與 GitHub 的一般可用性度量保持競爭力。
+
+4. 企業客戶出席點 (POP)：
+
+- 勞德代爾堡，佛羅里達州
+
+- 華盛頓特區
+
+- 亞利桑那州鳳凰城
+
+- 法蘭克福，德國
+
+- 雪梨，澳洲
+
+- 聖保羅，BZ
+
+- 海得拉巴，IN
+
+- 首爾，SK
+
+------------
+
+## 索引
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
+
+------------
+
+<div class="col-lg-12">
+  {% include "/enquiry_get.html"|append:lang %}
+</div>
+
+<style type="text/css">
+h4 { font-size:14px }
+</style>
+
+<!-- $Date: 2024-04-26 21:38:18 +0000 (Fri, 26 Apr 2024) $ $Author: joe $ $Revision: 24317 $ -->

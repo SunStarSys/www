@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.de api/index.md.de'
+keywords: ~
+published: ~
+status: Entwurf
+title: Orionreferenz
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png">
+</div>
+
+## Live-Demo
+
+Zur Demonstration von Orion &trade;
+
+Wenn das zu viel für Sie ist, ist diese Website selbst gehostet auf Orion &trade;und {# lede #}Diese Hot-Pink-Bleistift-Icons [<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) oben rechts neben den Brotkrümeln wird Ihnen eine Live-Demonstration geben{# lede #}
+
+## Empfohlenes Lesezeichen
+
+Stellen Sie sicher, dass Sie das Bookmarklet in der Symbolleiste Ihres Browsers installieren, indem Sie einen Dialogbildschirm "Neues Lesezeichen" aus dem Menü Ihres Browsers öffnen und Folgendes in das Feld "Speicherort/URL" eingeben:
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+Wenn dieses Lesezeichen nicht installiert ist, können Sie die Live-Website nicht durchsuchen und Seiten in Orion sofort bearbeiten &trade;
+
+Um das Bookmarklet zu verwenden, navigieren Sie einfach zu Ihrer Live-Produktionswebsite (NICHT in Orion) &trade;
+
+## Erste Schritte
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4-KiEDFbzl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+## IoC Build-API
+
+[snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
+
+## Onboardingprozess
+
+Für Early Adopters, Orion &trade;
+
+1. Stellen Sie uns die URL der Quellen Ihrer Website in Subversion zur Verfügung.
+
+2. Geben Sie uns die E-Mail-Adresse (Rolle oder Mailingliste) für die Besprechung von Problemen bei der Siteentwicklung und -wartung und stellen Sie sicher, dass die Adresse [Standardprozesse](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+
+3. Abonnieren Sie Ihre Produktion Webserver' `svnwcsub` Dämon für unsere Öffentlichkeit `svnpubsub`
+
+4. Teilen Sie uns mit, ob Sie Inhaltsunterschiede der versendeten Builds wünschen und an welche E-Mail-Adresse Sie sie senden möchten.
+
+## Quellverzeichnislayout
+
+- Kofferraum/
+	- cgi-bin/
+	- Inhalt/
+	- Vorlagen/
+	- lib/
+		- path.pm
+		- view.pm
+- Zweige/
+
+
+Ein Live-Beispiel finden Sie unter <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/>.
+
+## Dynamischer Inhalt
+
+### Beispielskript zum erneuten Generieren einer Quellseite mit sich änderndem Inhalt, auch wenn die Quellen dies nicht tun.
+
+Die Grundidee ist, dass einige Ihrer hochkarätigen Quellseiten mit "dynamischen" Inhalten erstellt werden (Build enthält ständig wechselnde Snippets von anderen Online-Websites, wie Jira Wasserfälle oder aktuelle Mailinglisten-Threads).
+
+Ein gutes Beispiel dafür ist der Abschnitt "Neueste Nachrichten" von [ASF Homepage](https://www.apache.org/), und hier ist die Art und Weise, wie es hinter den Kulissen funktioniert, mit einer kleinen Shell + svn + cron Magie, wie sie hier veranschaulicht wird (nehmen Sie die Quelldatei des dynamischen Builds als `$Datei`
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+Integrieren Sie dies in ein kleines Shell-Skript, das Ihre gecachten svn-Zugangsdaten auf Ihrem eigenen PC verwendet und cron es für Sie nach einem festen Zeitplan ausführen lässt (basierend auf der TTL Ihres Frontend-Webservers / CDN-HTTP-Cache).  Sie benötigen keine serverseitigen Tools auf unserer Seite. Sie haben die volle Kontrolle über Ihre eigenen Passwortsicherheit, Planung und dynamischen Seitenziele.  Wenn Sie Ihren eigenen svnpubsub-fähigen Subversion-Service verwenden, ist keine dieser Transaktionen direkt mit unserer Hardware verbunden. Ihr Commit löst unseren svnwcsub-Client aus und hört immer auf Ihren svnpubsub-Server, um diese Änderungen bei Bedarf zu erstellen und bereitzustellen &mdash;
+
+## Ausnahmen
+
+TB
+
+## Suche
+
+TB
+
+## Schnelleingabe
+
+TB
+
+## Ressource hinzufügen
+
+TB
+
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

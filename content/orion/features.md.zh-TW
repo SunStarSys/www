@@ -1,0 +1,519 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW api/index.md.zh-TW'
+keywords: jamstack，markdown，mermaid，graphviz，editor.md，ide，node.js，oracle，cloud，cdn，http/2，confluence，slab，notion，討論
+published: ~
+status: 草稿
+title: Orion 功能
+---
+
+<div class="row">
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/xr67QX6aMqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/uhKLwl3HgMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/aNwnmwIngrM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/gf19vVF-G9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+<p>
+&nbsp;
+</p>
+
+## 驚人的快速系統基礎架構
+
+- 全球大部分人口的 RTT 延遲時間為 50 毫秒或更短，並計畫在非洲擴大涵蓋範圍
+
+- 比競爭對手快 2 倍的 HTTP/2 多工頁面傳遞時間 (立即可用，適用於 * 所有 * 客戶).
+
+<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+- 500 MB / 持續建置多 GB 來源樹狀結構
+
+- NVMe 或更快速的組建儲存基礎架構
+
+- Solaris 11.4，針對 ZFS 穩定性提供支援，由 Full Oracle Customer Support 提供支援
+
+- node.js 代表使用 CPU 叢集進行降價轉譯
+
+- 8-64 方式並行組建
+
+- 快速確認現在大部分情況的預設設定
+
+- Apache httpd 2.4 版 IDE：
+
+- HTTP/2
+
+- 事件 mpm
+
+- mod_perl (含執行緒).
+
+- mod_apreq2
+
+- TLS 1.3
+
+- 自訂[`SVN：：客戶`](#).
+
+## 多語言
+
+- 中文
+
+- 西班牙文
+
+- 德文
+
+- 法文
+
+## 更好地支援郵件差異與建立複製
+
+- DMARC 保護
+
+- 使用 SRS 與回覆 ezmlm-compatibility
+
+- 所有用戶均通過 Google 的 OpenID-Connect Service 驗證
+
+## 好奇的鴨子現在是優雅的天鵝
+
+<br>
+
+<div class="col-lg-3">
+	<div class="embed-responsive embed-responsive-16by9">
+	<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/JNWybe63G3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+<br>
+
+- Bootstrap (Solarized) 造型。
+
+- Editor.md 驚人：使用相對[`來源`](#).
+
+## 使用 Editor.md ：editormd-logo-1x：和 Django Templating 呈現一致的 GitHub-Flavor Markdown (GFM).
+
+- [x] ** 威斯威格：** {# lede #}您瀏覽器和 (node.js 型) markdown.js 組建命令檔中的 javascript 程式碼轉換引擎相同{# lede #} 確保 Editor.md Markdown 預覽視窗與生產網站之間有 100% 的結構一致性。
+- [x] 來源 (減價) 檔案中的 YAML 標頭現在已完全支援。
+- [x]
+
+```flow
+st=>start: börja
+op=>operation: operation
+cond=>condition: villkor Ja eller Nej?
+e=>end: slutet
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+----
+```seq
+Andrew->Jenni: Says Hello
+Note right of Jenni: Jenni thinks\nabout it
+Jenni-->Andrew: How are you?
+Andrew->>Jenni: I am good thanks!
+```
+&nbsp;
+----
+&nbsp;
+
+- [x]
+
+```graphviz
+digraph {
+a -> b;
+a -> c [color=red];
+}
+```
+&nbsp;
+----
+&nbsp;
+
+- [x]
+
+```mermaid
+graph TD
+    A[Christmas]
+ -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[Laptop]
+    C -->|Two| E[iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+----
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts<br/>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+----
+```mermaid
+erDiagram
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||--o{ INVOICE : "liable for"
+    DELIVERY-ADDRESS ||--o{ ORDER : receives
+    INVOICE ||--|{ ORDER : covers
+    ORDER ||--|{ ORDER-ITEM : includes
+    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+    PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+```
+----
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+----
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+```
+----
+```mermaid
+pie title Commits to orion on GitHub
+	"Sunday" : 4
+	"Monday" : 5
+	"Tuesday" : 7
+  "Wednesday" : 3
+```
+----
+```mermaid
+classDiagram
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+      +String beakColor
+      +swim()
+      +quack()
+    }
+    class Fish{
+      -int sizeInFeet
+      -canEat()
+    }
+    class Zebra{
+      +bool is_wild
+      +run()
+    }
+```
+----
+```mermaid
+gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+```
+----
+```mermaid
+%%{init:{"theme":"default"}}%%
+graph TB
+    sq[Square shape] --> ci((Circle shape)).
+
+subgraph A
+        od>Odd shape]-- Two line<br/>edge comment --> ro
+        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
+        di==>ro2(Rounded square shape)
+    end
+
+%% Notice that no text in shape are added here instead that is appended further down
+    e --> od3>Really long text with linebreak<br>in an Odd shape]
+
+%% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+
+cyr[Cyrillic]-->cyr2((Circle shape Начало));
+
+classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+```
+----
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectivness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+----
+```mermaid
+journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 3: Me
+```
+----
+```mermaid
+flowchart TB
+classDef borderless stroke-width:0px
+classDef darkBlue fill:#00008B, color:#fff
+classDef brightBlue fill:#6082B6, color:#fff
+classDef gray fill:#62524F, color:#fff
+classDef gray2 fill:#4F625B, color:#fff
+
+subgraph publicUser[ ]
+    A1[[Public User<br/> Via REST API]]
+    B1[Backend Services/<br/>frontend services]
+end
+class publicUser,A1 gray
+
+subgraph authorizedUser[ ]
+    A2[[Authorized User<br/> Via REST API]]
+    B2[Backend Services/<br/>frontend services]
+end
+class authorizedUser,A2 darkBlue
+
+subgraph booksSystem[ ]
+    A3[[Books System]]
+    B3[Allows interacting with book records]
+end
+class booksSystem,A3 brightBlue
+
+publicUser--Reads records using-->booksSystem
+authorizedUser--Reads and writes records using-->booksSystem
+
+subgraph authorizationSystem[ ]
+    A4[[Authorization System]]
+    B4[Authorizes access to resources]
+end
+
+subgraph publisher1System[ ]
+    A5[[Publisher 1 System]]
+    B5[Gives details about books published by them]
+end
+subgraph publisher2System[ ]
+    A6[[Publisher 2 System]]
+    B6[Gives details about books published by them]
+end
+class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
+
+booksSystem--Accesses authorization details using-->authorizationSystem
+booksSystem--Accesses publisher details using-->publisher1System
+booksSystem--Accesses publisher details using-->publisher2System
+
+class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
+
+click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagram.md" "booksSystem"
+```
+
+&nbsp;
+----
+&nbsp;
+
+- [ ]
+
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / 嘉恩學院[$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
+
+```math
+\ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
+```
+
+- [x] 同步、雙向產生$$\LaTeX$$ Markdown+ 的來源檔案$$\KaTeX$$
+
+- [x] Navier-Stokes in Einstein Notation (又稱 Einstein Notation) [支付方式](https://en.wikipedia.org/wiki/Abstract_index_notation).
+
+```math
+\begin{aligned}
+\pdv{\rho}{t}+\pdv{(\rho u_i)}{x_i} &= 0 \\
+      \pdv{(\rho u_i)}{t}+\pdv{(\rho u_i u_j)}{x_j} &= -\pdv{p}{x_i}+\pdv{\tau_{ij}}{x_j}+\rho f_i \\
+      \pdv{(\rho e)}{t}+\pdv{(\rho e+p)u_i}{x_i} &= \pdv{(\tau_{ij} u_j)}{x_i}+\rho f_i u_i+\pdv{(\dot{q}_i)}{x_i}+r \\
+\end{aligned}
+```
+
+- [x]
+
+```math
+\begin{aligned}
+\pdv{\rho}{t}+\vec{\nabla}\cdot(\rho\vec{u}) &= 0 \\
+      \pdv{(\rho \vec{u})}{t}+\vec{\nabla}\cdot\rho\vec{u}\otimes\vec{u} &= -\vec{\nabla p}+\vec{\nabla}\cdot\bar{\bar{\tau}}+\rho\vec{f} \\
+      \pdv{(\rho e)}{t}+\vec{\nabla}\cdot(\rho e+p)\vec{u} &= \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\cdot\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
+\end{aligned}
+```
+
+----
+
+- [x]
+
+編輯器將會自動完成並自動縮排；具有全螢幕模式，並支援其 CodeMirror 5 語法強調器提供的數種其他內容撰寫模式。
+
+## 分支組建的完整支援
+
+- [x] 不再進行暫存 / 發布：已由每個資源分支<span class="text-white">促銷</span>取代。
+- [x]
+
+## 即時來源樹狀結構搜尋引擎
+
+<br>
+
+<div class="row">
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/dftUs2Oqy-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/TvgKXkoVsAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+<br>
+
+- [x] 以 Perl 相容的正規表示式 (PCRE) 為基礎。
+- [x] 全域搜尋與取代功能 (唯一提供的 PCRE 支援)；支援正規表示式擷取。
+- [ ] PDF 搜尋即將推出。
+- [ ]
+
+## 任意 MIME 類型的無限制頁面附件
+
+## 每頁安全、執行緒的註解
+
+## 自動化 Markdown 自然語言翻譯 (即將推出).
+
+## 互動式數學向量圖形與 @vectorgraphics/asymptote
+
+- [x] Asymptote 的語法強調器
+- [x] 在無法剖析的 Asymptote 程式碼區塊中，CMS 將會快速失敗
+- [x]
+
+```asy
+// tubular trefoil knot -*- asy -*-
+
+import tube;
+import graph3;
+import palette;
+
+size(0, 8cm);
+currentlight=White;
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+real z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+pen[] pens=Gradient(6,red,blue,purple);
+pens.push(yellow);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));
+```
+
+&nbsp;
+
+----
+
+&nbsp;
+
+## <span class='text-info'>Apache CMS</span> 功能的差異
+
+- 只提供以 Perl 為基礎的組建系統。
+
+- 新的 Markdown 編輯器是[`已標示 /gfm`](#).
+
+- GFM 對程式碼區塊使用不同的分隔符號。
+
+- [`extpaths.txt`](#).
+
+----
+
+## 索引
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<style type="text/css">
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2024-04-23 20:21:02 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23733 $ -->

@@ -7,6 +7,7 @@
 <link href="/editor.md/lib/codemirror/codemirror.min.css" media="screen" rel="stylesheet">
 <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" media="screen" rel="stylesheet">
 {% endblock %}
+
 {% block content %}
 <h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
   else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
@@ -23,11 +24,12 @@
   <script src="/editor.md/js/chart.umd.js"></script>
   <canvas height="800px" id="myChart" width="100%"></canvas>
   {% endif %}
-  {% ifequal specials "diff=" %}
+
+{% ifequal specials "diff=" %}
   <div class="card text-white border-success mb-3">
     <div class="card-header">{{meta|vcs_author:r.path_info}}
       <small><em>
-        le {{ meta|vcs_date:lang }}
+          le {{ meta|vcs_date:lang }}
           à {{meta|vcs_time:lang}}
           </em></small></div>
     <div class="card-body">
@@ -67,6 +69,7 @@
   </div>
 </div>
 {% endifequal %}
+
 {% ifequal specials "notify=" %}
 <div class="card text-white border-success mb-3">
   <div class="card-header">
@@ -97,6 +100,7 @@
 </div>
 {% endifequal %}
 {% endifequal %}
+
 {% if yaml %}
 {% filter markdown %}
 ```yaml
@@ -121,7 +125,8 @@
       </ul>
     </div>
   </div>
-  {% else %}
+
+{% else %}
   <div class="card text-white border-success mb-3">
     <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText|safe }}</a></div>
     <div class="card-body">
@@ -134,7 +139,8 @@
   </div>
   {% endif %}
   {% endfor %}
-  {% if watch.0 %}
+
+{% if watch.0 %}
   {% for w in watch %}
   <div class="card text-white border-warning mb-3">
     <div class="card-header">
@@ -166,13 +172,13 @@
   {% if diff %}
   {% filter markdown %}
 
-## [Diff](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}}).
+## [Diff.](./?regex=diff={{revision}} ;lang={{lang}};markdown_search={{markdown_search}}).
 
-  {% endfilter %}
+{% endfilter %}
 
 <pre><code data-lang="diff">{{ diff }}</code></pre>
 
-  {% endif %}
+{% endif %}
   {% endifequal %}
   {% if specials %}
   {% ifequal specials "svnauthz=" %}
@@ -185,11 +191,14 @@
     <div style="width:100%">
       <div class="right" id="filter">
         <input name="hash" type="hidden" value="{{hash}}" />
-        <input class="form-control" name="filter" placeholder="Recherche récursive PCRE" type="text" value="{{ filter }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1"><i class="fa
+        <input class="form-control" type="text" name="filter"
+             placeholder="Recherche récursive PCRE" value="{{ filter }}" />&nbsp;<button type="soumettre"
+    name="submit" value="1" class="btn btn-outline-danger"><i class="fa
     fa-filter fa-emoji" title="Filtre"></i>
         </button>
       </div>
-      {% if matches.0 %}
+
+{% if matches.0 %}
 		<pre>Nombre total de correspondances = {{ count }}, Nombre total de documents = {{ file_count }}. Trié par nombre de correspondances ; trié par version de document.</pre>
       <div>
         <dl>
@@ -222,7 +231,7 @@
   for (var i=0; i < values.length; ++i)
       total += +values[i];
 
-  const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
+const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
   x[4]);
   var myChart = new Chart(
       ctx,
@@ -235,7 +244,7 @@
                   data: values.reverse(),
                   backgroundColor: "#8f99fb",
 
-              }],
+}],
           },
           options: {
               indexAxis: "y",

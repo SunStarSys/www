@@ -1,0 +1,90 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: черновик
+title: Данные таблицы для сетки сравнения характеристик
+---
+
+
+- Feature: «SSO: Kerberos / Активный каталог / Интеграция OpenID»
+  Orion: "&check;"
+  Slab: "&check;"
+  Notify: «Только SCIM»
+  Confluence: "&check;"
+- Feature: «Инфраструктура нулевого доверия, совместимая с FIPS 140-3»
+  Orion: "&check;"
+- Feature: «FedRAMP Инфраструктура»
+  Orion: «Установка сервера»
+- Feature: «Поток операций в браузере (дружественный для мобильных устройств)»
+  Orion: "&check;"
+  Slab: "&check;"
+  Notify: "&check;"
+  Confluence: "&check;"
+- Feature: «Поддержка DAV»
+  Orion: "&check;"
+  Confluence: "&check;"
+- Feature: «Инкрементальные сборки»
+  Orion: "&check;"
+- Feature: «Бесконечные сборки ветвей»
+  Orion: "&check;"
+- Feature: «Только запланированные сборки динамического контента»
+  Orion: "&check;"
+- Feature: «Поддержка аналитики 3-й стороны»
+  Orion: "&check;"
+- Feature: «Список уведомлений устройства»
+  Orion: "&check;"
+  Confluence: "&check;"
+- Feature: "Multilingual (i18n)"
+  Orion: "&check;"
+- Feature: 'Полный поиск <span class="editormd-tex">\KaTeX</span> Выражения
+  Orion: "&check;"
+  Confluence: "$$$"
+- Feature: «Федеративные»
+  Orion: "&check;"
+  Confluence: "[Нет](https://jira.atlassian.com/browse/CONFSERVER-26528)"
+- Feature: «Поддержка белой этикетки»
+  Orion: "&check;"
+- Feature: «Устанавливаемый внутри корпоративной VPN»
+  Orion: «Установка сервера»
+- Feature: «Работает в автономном режиме»
+  Orion: "&check;"
+- Feature: «Простой 3-й участник потока операций »Pull-Request»
+  Orion: "&check;"
+- Feature: "[GitHub Интеграция](https://youtu.be/FRc4qZkxVaI) w/ IDE &amp; Поддержка действий»
+  Orion: "&check;"
+- Feature: «Неограниченный просмотр»
+  Orion: "&check;"
+  Slab: "&check;"
+  Notion: "&check;"
+  Confluence: "&check;"
+- Feature: «Неограниченное количество мест»
+  Orion: »Предприятие &amp; Установка сервера»
+- Feature: «Неограниченная история контроля версий»
+  Orion: "&check;"
+- Feature: «Интегрированное отслеживание изменений URL»
+  Orion: "&check;"
+- Feature: «Веб-хостинг»
+  Orion: "&check;"
+- Feature: "[3D векторная графика](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Интеграция»
+  Orion: "&check;"
+- Feature: «Поддержка SSI / CGI / mod_perl / mod_wasm»
+  Orion: "&check;"
+- Feature: «Уточненный список контроля доступа в исходном репозитории»
+  Orion: "&check;"
+- Feature: «Полная сборка сайта 500 МБ/с»
+  Orion: "&check;"
+- Feature: «Параллельные сборки 8-64 способов»
+  Orion: "&check;"
+- Feature: TCO &lt; 6000 долларов в год для предприятия»
+  Orion: "&check;"
+- Feature: «Комплексное соглашение об уровне обслуживания 99,99%»
+  Orion: »Предприятие &amp; Установка сервера»
+- Feature: «Статус документа с возможностью поиска»
+  Orion: "&check;"
+  Slab: "&check;"
+- Feature: 'Сокращение <span class="editormd-tex">\leftrightarrow \LaTeX</span> Автоматизация
+  Orion: "&check;"
+- Feature: Автоматический перевод ИИ NLP
+  Orion: "&check;"

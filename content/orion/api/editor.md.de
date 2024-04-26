@@ -1,0 +1,122 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.de '
+keywords: RUHE, API
+published: ~
+status: Entwurf
+title: Orion API - Online-Editor
+---
+
+{# lede #}In diesem Dokument werden die APIs und die Benutzeroberfläche des **Online-Editors** behandelt{# lede #}
+
+[TOC]
+
+----
+
+## Orion-Editor (cms.sunstarsys.com).
+
+### Allgemeine Aktionen
+
+#### Umleitung
+
+Ingress-Endpunkt für die CMS-Schnittstelle von Orion.
+
+Erforderliche Argumente für Abfragezeichenfolge:
+
+- [`URI`](#).
+
+Optionale Abfragezeichenfolgenargumente:
+
+- [`aktualisieren`](#) - Auf 0 setzen, um die Aktualisierung der Arbeitskopie zu deaktivieren
+- [`Aktion`](#) - Auswahl der Umleitungsaktion
+- [`lang`](#) - bevorzugte Sprache für UI
+- [`Repositorys`](#) - Subversion-Ziel-Repository-Name
+- [`neu`](#) - Neue Arbeitskopie erstellen
+- [`Regulärer Ausdruck`](#).
+
+#### Anmeldung
+
+Validiert und cacht Subversion-Zugangsdaten für das aktuelle Repository. antwortet nur auf die POST-Methode.
+
+### Arbeitskopieaktionen
+
+#### Arbeitskopie - JSON-Antwortfelder
+
+- [`Repositorys`](#)
+- [`Website`](#)
+- [`Aktion`](#)
+- [`lang`](#)
+- [`Navigationspfade`](#)
+- [`Modus`](#)
+- [`is_dir`](#)
+- [`is_root_dir`](#)
+- [`Verzeichnis`](#)
+- [`Erweiterung`](#)
+- [`attachments_dir`](#)
+- [`is_attachment`](#)
+- [`Status`](#)
+- [`Verzweigung`](#)
+- [`Bild`](#)
+- [`Kopfzeilen`](#)
+- [`Inhalt`](#)
+- [`http_status`](#)
+- [`nav_options`](#)
+- [`actions_lang`](#)
+- [`beobachten`](#).
+
+#### Liste der API-Aktionen
+
+##### Bearbeiten
+
+###### Friends Completion
+
+##### Update
+
+##### Zurücksetzen
+
+##### Kopie
+
+##### Verschiebung
+
+##### löschen
+
+##### hinzufügen
+
+###### Friends Completion
+
+##### Commit
+
+##### Diff
+
+##### Zusammenführung
+
+##### Produktion
+
+##### Promotion
+
+##### Auflösung
+
+##### Rollback
+
+##### Suche
+
+##### statisch
+
+##### Konto
+
+###### Credentials Changes
+
+##### Kommentar
+
+###### Friends Completion
+
+##### Uhr
+
+##### Unüberprüfung
+
+##### Like
+
+##### im Gegensatz
+
+<!-- $Date: 2024-04-14 02:02:48 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22286 $ -->

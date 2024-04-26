@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.fr api/index.md.fr'
+keywords: ~
+published: ~
+status: projet
+title: Référence Orion
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png">
+</div>
+
+## Démo en direct
+
+Pour une démonstration d'Orion &trade;
+
+Si cela vous dérange trop, ce site est auto-hébergé sur Orion &trade;, et {# lede #}ces icônes de crayon rose vif [<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en haut à droite le long de la chapelle vous donnera une démonstration en direct{# lede #}
+
+## Signet recommandé
+
+Veillez à installer le signet dans la barre d'outils de votre navigateur en ouvrant un écran de dialogue "Nouveau signet" à partir du menu de votre navigateur et en tapant ce qui suit dans le champ Emplacement/URL :
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+Sans ce bookmarklet installé, vous ne pourrez pas naviguer sur le site en direct et éditer instantanément des pages dans Orion &trade;
+
+Pour utiliser le bookmarklet, il vous suffit de consulter votre site de production en direct (PAS à Orion) &trade;
+
+## Guide de mise en route
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4-KiEDFbzl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+## IoC Créer une API
+
+[snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
+
+## Processus d'intégration
+
+Pour les adopteurs précoces, Orion &trade;
+
+1. Donnez-nous l'URL des sources de votre site dans Subversion.
+
+2. Fournissez-nous l'adresse e-mail (rôle ou liste de diffusion) pour discuter des problèmes de développement et de maintenance du site et assurez-vous que l'adresse est [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+
+3. Abonnez vos webservers de production `svnwcsub` daemon à notre public `svnpubsub`
+
+4. Faites-nous savoir si vous souhaitez que les différences de contenu des versions soient envoyées et à quelle adresse e-mail vous souhaitez qu'elles soient envoyées.
+
+Présentation du répertoire source ##
+
+- coffre/
+	- cgi-bin/
+	- contenu/
+	- modèles/
+	- lib/
+		- path.pm
+		- view.pm
+- branches/
+
+
+Pour obtenir un exemple en direct, reportez-vous à la section <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/>.
+
+## Contenu dynamique
+
+### Exemple de script pour régénérer une page source avec modification de contenu, même si les sources ne le font pas.
+
+L'idée de base est que certaines de vos pages sources de haut niveau construisent avec du contenu "dynamique" (build intègre des extraits en constante évolution d'autres sites en ligne, comme les cascades de Jira ou les fils de liste de diffusion actuels).
+
+Un bon exemple en est la section "Dernières nouvelles" de [Page d'accueil ASF](https://www.apache.org/), et voici la façon dont cela fonctionne en coulisses, avec un peu de magie shell+svn+cron comme illustré ici (prenez le fichier source de la construction dynamique comme `Fichier $`
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+Incorporez-le dans un petit script shell qui utilisera vos informations d'identification svn mises en cache sur votre propre PC, et demandez à cron de l'exécuter pour vous selon un calendrier fixe (en fonction de la durée de vie de votre serveur Web frontal / cache HTTP CDN).  Pas besoin d'outils côté serveur de notre côté ; vous avez un contrôle total sur votre propre sécurité de mot de passe, la planification et les cibles de page dynamiques.  Si vous utilisez votre propre service Subversion activé par svnpubsub, aucune de ces transactions n'implique directement notre matériel. Votre commit déclenchera notre client svnwcsub, toujours à l'écoute de votre serveur svnpubsub, pour construire et déployer ces modifications à la demande &mdash;
+
+Nb d'exceptions
+
+A définir
+
+Recherche ##
+
+A définir
+
+## Validation rapide
+
+A définir
+
+## Ajouter une ressource
+
+A définir
+
+--------
+
+## Index
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

@@ -1,0 +1,121 @@
+---
+archived: ~
+categories: ~
+keywords: Wiki, Wissen, Blogs
+published: ~
+status: Entwurf
+title: Startseite
+---
+
+<div class="float-lg-right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+		<div class="card-header">Nachrichten</div>
+        <div class="card-body">
+<h2 class="card-title"><a href="https://www.iconoclasts.blog/">Kostenlose Blogs!</a></h2>
+
+<br>
+
+<h2 class="card-title"><span class="badge bg-success">Neu</span> SunStar GitLab CI Linter-Technologie von Systems {{facts.releases.linter.tag}} jetzt verfügbar unter <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> und <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
+
+<br>
+
+<h2 class="card-title">SunStar Systemorion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator </a> {{facts.releases.orion.tag}} freigegeben.
+</h2>
+
+<br>
+
+<h2 class="card-title">
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> für CPAN freigegeben!
+</h2>
+
+<br>
+
+<h2>
+
+[Algorithmus::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}).
+
+</h2>
+
+<br>
+
+<h2 class="card-title">SunStar System-<a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> freigegeben!</h2>
+
+<br>
+
+<h2 class="card-title">SunStar Systems pty {{facts.releases.pty.tag}} freigegeben!</h2>
+
+<p class="card-text">Aktualisieren Sie Ihre <span class="text-info">leere</span> Installation auf <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, die native Unterstützung für <span class='text-info'>python 3.10+</span> umfasst.</p>
+
+</div>
+</div>
+<br>
+</div>
+
+![SunStar Systeme](images/sunstarlogowhole).
+
+Auf der Suche nach einem besseren, sichereren, schnelleren, **föderierten** Enterprise Wiki?
+
+Auschecken  [Orion](/orion/features)<span class="text-success"><img alt="Orion-Logo" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Das Enterprise Jamstack Wiki.</em></span>&trade; &mdash; Orion ist das einzige SCM-basierte Unternehmensprodukt mit nativer [Meerjungfrau-Mindmap](/orion/features).
+
+Eine Beschreibung unserer zum Patent angemeldeten Technologie finden Sie im <span class="text-white">Whitepaper</span>. [Abhängigkeitsverwaltung für Smart Content](/essays/dependencies)&trade;
+
+&nbsp;
+<img alt="GitHub Markieren" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+## Folgen Sie uns auf GitHub
+&nbsp;
+
+- @SunStarSys/orion
+
+- @joesuf4
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="Video"></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+&nbsp;
+## Ausgewählte Essays
+&nbsp;
+
+- <span class="badge bg-success">Neu</span> [Dreifache Produkte der Eigenfunktionen und der Spektralgeometrie](/essays/triple-products).
+
+- [Anwendungsperformance](/essays/performance) &mdash;
+
+- [Informationssicherheit](/essays/infosec) &mdash;
+
+- [Versiegelte Lexika für Perl 7](/essays/perl7-sealed-lexicals) &mdash;
+
+- [Die Bewegung DevOps](/essays/devops) &mdash;
+
+<style type="text/css">
+h2 { font-size: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+div.jumbotron ul {
+    max-width: 600px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2024-04-24 21:51:28 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23858 $ -->

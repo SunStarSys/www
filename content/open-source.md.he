@@ -1,0 +1,40 @@
+---
+archived: ~
+categories: ~
+keywords: קוד פתוח,osi,רישוי מטמון,משתמש מוביל
+published: ~
+status: ~
+title: פרויקטי קוד פתוח
+---
+
+### השתתפות בקוד פתוח
+
+הליבה לאמונות שלנו היא הצעת הערך המולדת של תוכנת קוד פתוח.  שיתופי [משתמש מוביל](http://en.wikipedia.org/wiki/Lead_user) קהילות והרשתות שמסביבן היו חלק מעבודתנו מאז הקמת SunStar Systems, בעיקר בטכנולוגיות הנגזרות או מקורן ב [קרן התוכנה של אפאצ'י](http://www.apache.org/).
+
+האם יש לך אסטרטגיית קוד פתוח עבור קו המוצרים שלך?  עד כמה התוכנה שלך מודולרית, והאם זה הגיוני לתת למשתמשים גישה לנקודות הרחבה אלו?  מעולם לא שמעתי על [עקרון הוליווד](http://en.wikipedia.org/wiki/Hollywood_principle).
+
+### רשימת הפרויקטים שהיינו מעורבים בהם, באופן מלא או חלקי:
+
+- [mod_perl](https://perl.apache.org/) &mdash;
+
+- [בקשת שפה](https://httpd.apache.org/apreq/) &mdash;
+
+- [SunStarSys מערכת ניהול סיכוני אשראי](https://github.com/SunStarSys/cms) &mdash;
+
+- [אורתרוס](https://github.com/SunStarSys/orthrus) &mdash; [חד-פעמי](https://en.wikipedia.org/wiki/One-time_password).
+
+- [בשעה](https://github.com/joesuf4/at) &mdash; [טאפ](https://testanything.org).
+
+- [פטי](https://github.com/SunStarSys/pty) &mdash; כלים עבור תעודות מסוף אוטומטיות-מנחה תגובות.  ברוח של [TCL צפוי](https://en.wikipedia.org/wiki/Expect).
+
+- [פקס](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash;
+
+- [עברית](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash;
+
+- [ראש](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash;
+
+- [חתומה](https://github.com/SunStarSys/sealed) &mdash;
+
+- [אלגוריתם::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash;
+
+- [schaefj/לינטר](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; מכל עגינה ל- [linter.{rc,sh}](https://github.com/joesuf4/home/tree/wsl)

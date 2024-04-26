@@ -1,30 +1,32 @@
 ---
-categories: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
+archived: ~
+categories: ~
 dependencies: '*.md.fr api/index.md.fr'
-keywords: projet
-status: draft
+keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
+published: ~
+status: projet
 title: Caractéristiques Orion
 ---
 
 <div class="row">
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/xr67QX6aMqU"></iframe>
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/xr67QX6aMqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/uhKLwl3HgMI" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/uhKLwl3HgMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/aNwnmwIngrM" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/aNwnmwIngrM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 	<div class="col-lg-3">
 		<div class="embed-responsive embed-responsive-16by9">
-	 		<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" loading="lazy" src="https://www.youtube.com/embed/gf19vVF-G9E" style="margin-bottom:20px;max-width:560;max-height:315"></iframe>
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/gf19vVF-G9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
@@ -42,7 +44,6 @@ title: Caractéristiques Orion
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-
 - 500 Mo/s de constructions soutenues pour les arbres sources de plusieurs gigaoctets
 
 - Infrastructure de stockage de build NVMe ou plus rapide
@@ -57,17 +58,17 @@ title: Caractéristiques Orion
 
 - IDE basé sur Apache httpd 2.4 :
 
-	- HTTP/2
+- HTTP/2
 
-	- mpm d'événement
+- mpm d'événement
 
-	- mod_perl avec ithreads
+- mod_perl avec ithreads
 
-	- mod_apreq2
+- mod_apreq2
 
-	- TLS 1,3
+- TLS 1,3
 
-	- Personnalisé [`SVN : :Client`](#)
+- Personnalisé [`SVN : :Client`](#).
 
 ## Multilingue
 
@@ -101,11 +102,13 @@ title: Caractéristiques Orion
 
 - Style Bootstrap (solarisé).
 
-- Editor.md est incroyable : en utilisant relatif [`src`](#)
+- Editor.md est incroyable : en utilisant relatif [`source`](#).
 
 ## Affichage GitHub-Flavored Markdown (GFM) cohérent avec Editor.md :editormd-logo-1x : et Django Templating
 
-- [x] **WYSIWYG :** {# lede #}Même moteur de rendu de code javascript dans votre navigateur et dans le script de build markdown.js (basé sur node.js){# lede #}
+- [x] **WYSIWYG :** {# lede #}Même moteur de rendu de code javascript dans votre navigateur et dans le script de build markdown.js (basé sur node.js){# lede #} garantit une cohérence structurelle à 100 % entre la fenêtre d'aperçu de démarque Editor.md et le site de production.
+- [x] Les en-têtes YAML dans les fichiers source (réduction) sont désormais entièrement pris en charge.
+- [x]
 
 ```flow
 st=>start: börja
@@ -124,8 +127,11 @@ Note right of Jenni: Jenni thinks\nabout it
 Jenni-->Andrew: How are you?
 Andrew->>Jenni: I am good thanks!
 ```
+&nbsp;
+----
+&nbsp;
 
-- [x] Native d3-graphviz.js support:
+- [x]
 
 ```graphviz
 digraph {
@@ -137,7 +143,7 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x] Native @mermaid-js/mermaid v10.7.0 avec prise en charge de mindmap :
+- [x]
 
 ```mermaid
 graph TD
@@ -246,23 +252,23 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape))
+    sq[Square shape] --> ci((Circle shape)).
 
-    subgraph A
+subgraph A
         od>Odd shape]-- Two line<br/>edge comment --> ro
         di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
         di==>ro2(Rounded square shape)
     end
 
-    %% Notice that no text in shape are added here instead that is appended further down
+%% Notice that no text in shape are added here instead that is appended further down
     e --> od3>Really long text with linebreak<br>in an Odd shape]
 
-    %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز)
+%% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
 
-    cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[Cyrillic]-->cyr2((Circle shape Начало));
 
-     classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
      class sq,e green
      class di orange
@@ -326,7 +332,6 @@ subgraph booksSystem[ ]
 end
 class booksSystem,A3 brightBlue
 
-
 publicUser--Reads records using-->booksSystem
 authorizedUser--Reads and writes records using-->booksSystem
 
@@ -358,17 +363,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ] l'extension facultative de création de diagrammes draw.io sera bientôt disponible
+- [ ]
 
-- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX)
+- [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Académie Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Génération synchrone et bidirectionnelle de fichiers source $$\LaTeX$$ vers/à partir de fichiers Markdown+$$\KaTeX$$.
+- [x] Génération synchrone et bidirectionnelle de $$\LaTeX$$ Fichiers source vers/depuis Markdown+$$\KaTeX$$
 
-- [x] Navier-Stokes dans Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation)
+- [x] Navier-Stokes dans Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation).
 
 ```math
 \begin{aligned}
@@ -378,7 +383,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x] Navier-Stokes dans Notation classique
+- [x]
 
 ```math
 \begin{aligned}
@@ -390,14 +395,14 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x] Électrique !
+- [x]
 
-    L'éditeur complète automatiquement et insère automatiquement le contenu. Il dispose d'un mode plein écran et prend en charge plusieurs autres modes de création de contenu disponibles pour le surligneur de syntaxe CodeMirror 5.
+L'éditeur complète automatiquement et insère automatiquement le contenu. Il dispose d'un mode plein écran et prend en charge plusieurs autres modes de création de contenu disponibles pour le surligneur de syntaxe CodeMirror 5.
 
 ## Prise en charge complète des builds de branche
 
-- [x] Fin de la préparation/publication : remplacé par la branche par ressource <span class="text-white">Promotion</span>.
-- [x] <span class="text-white">Rollback</span> et <span class="text-white">Sync</span> Merge entièrement pris en charge.
+- [x] Fin de la préparation/publication : remplacé par la <span class="text-white">promotion</span> de branche par ressource.
+- [x]
 
 ## Moteur de recherche d'arborescence source en direct
 
@@ -418,22 +423,22 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 <br>
 
-- [x] Expression régulière compatible Perl (PCRE) basée.
-- [x] Fonctionnalité de recherche globale et de remplacement (prise en charge unique de PCRE) ; prend en charge les captures d'expression régulière.
-- [ ] Recherche PDF bientôt disponible.
-- [ ] Le support GraphQL/AI sera bientôt disponible. La sécurité semble amusante !
+- [x] Basé sur l'expression régulière compatible Perl.
+- [x] Fonctionnalité globale de recherche et de remplacement (prise en charge unique de PCRE) ; prend en charge les captures d'expression régulière.
+- [ ] Recherche PDF à venir.
+- [ ]
 
 ## Pièces jointes de page illimitées avec des types MIME arbitraires
 
 ## Commentaires sécurisés par page
 
-## Traductions automatiques en langage naturel de Markdown (bientôt disponibles)
+## Traductions automatiques en langage naturel de Markdown (bientôt disponibles).
 
 ## Graphiques vectoriels mathématiques interactifs avec @vectorgraphics/asymptote
 
 - [x] Surligneur de syntaxe pour Asymptote
-- [x] Le CMS va rapidement échouer sur les blocs de code Asymptote non analysables
-- [x] WebGL activé, sortie HTML multithread
+- [x] Le CMS échouera rapidement sur les blocs de code Asymptote non analysables
+- [x]
 
 ```asy
 // tubular trefoil knot -*- asy -*-
@@ -476,24 +481,23 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-
 ## Deltas des fonctionnalités <span class='text-info'>Apache CMS</span>
 
 - Seul le système de construction basé sur Perl est disponible.
 
-- Le nouvel éditeur Markdown est [`marked/gfm`](#)
+- Le nouvel éditeur Markdown est [`marqué/gfm`](#).
 
 - GFM utilise un délimiteur différent pour les blocs de code.
 
-- [`extpaths.txt`](#)
+- [`extpaths.txt`](#).
 
 ----
 
 ## Index
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}](<!-- ### -->) &mdash; {{d.0}}...
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
 
 <style type="text/css">
 /*-------------------------------------------
@@ -505,10 +509,10 @@ draw(tube(p,colorsec),render(merge=true));
 }
 
 .theme-showcase {
-	-webkit-animation-nom : FADEY ;
-	-webkit-animation-durée : 1s ;
-	-webkit-animation-timing-function : facilité de sortie ;
-	-webkit-animation-iteration-count : 1 ;
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
 }
 </style>
 

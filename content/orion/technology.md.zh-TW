@@ -1,0 +1,134 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW api/index.md.zh-TW'
+keywords: Markdown, Asymptote, Mermaid
+published: ~
+status: 草稿
+title: Orion 技術
+---
+
+## Solaris 11.4
+
+- DTrace &mdash;
+
+- ZFS &mdash;
+
+- 區域&mdash;
+
+## node.js 21.6.1 版
+
+- 由於 Editor.md 是 **awesome**，因此已將它移植到[`node.js`](#) &mdash;
+
+## 珀爾 v5.38.2
+
+- {# lede #}現在 w/ mod_perl v2.0.13 w/ ithreads 和 httpd v2.4.58 w/ event mpm 。{# lede #}
+
+## Subversion 版本 1.14.4
+
+- 自訂 ithread-safe [`SVN：：客戶`](#).
+
+- 原生 python3 組合 (v3.8.3)。
+
+- svnpubsub 和 svnwcsub 的執行緒 python3 連接埠&mdash;
+
+- 完成 python3 [檢視](https://vcs.sunstarsys.com/viewvc/public/site).
+
+------------
+
+## 道路上的一些註記 (尚未？) 已採用 ...
+
+<br/>
+
+### SQL
+
+我們是整個網站基礎架構的 NoSQL 商店，如果您遭遇巨大的單一故障點 (稱為 RDBMS) 驅動您網站的資產，請重新考慮以 #Jamstack 和 Serverless 技術為基礎的更分散式方法。即使這不是我們的。謝謝您！
+
+### 為何不使用 Git？
+
+- [`Git 伺服器`](#) 如果您希望自己使用 git，而非使用 Orion 線上 IDE，則橋接器已存在&trade;繁體中文您有選項！您可以在 GitHub 動作中找到更多里程，方法是將變更推送至 GitHub (並在 GitHub 動作或預先確認鉤點 (或二者，如) [`git svn dcommit`](#)- 將它們加入我們的 Subversion 儲存庫，以便即時發佈。[這裡](https://github.com/SunStarSys/www).
+
+- 網站來源樹狀結構不像軟體來源樹狀結構，就您如何更改及管理它們而言。它們比較一致[裝置 / 中繼器式開發](/essays/devops) 大於[`位元流`](#)繁體中文此外，大西洋網站將需要 SSI，也許有一些 CGI 供其使用：至少要避免大量、無法複查的網站流失，而有大量確認郵件程式[`差異`](#).
+
+- wit：嘗試從您用來預覽其他組建系統變更的本機 "webserver" 取得功能完整的 SSI 實行，如果您停止並考慮變更，只是稍微安靜。透過我們的 Orion，您只需在 svn 和 off 中建立分支：編輯、承諾、建置、瀏覽和 **iterating**，立即在整合到 Orion 的每個分支臨時 Apache 網站上&trade;
+
+- 將這些變更移轉至以主幹為基準的生產站台時，您可以選擇儘量提升分支的速度，或儘量減少分支的速度，從右至主幹。如果中繼器自分支變更最終已準備好供主要時間之後往前移動，只要按一下<span class="text-white">同步</span>按鈕即可與您的分支同步合併中繼器即可。將同步後合併確認的組建結果重複檢查至您分支的網站之後，請繼續進行並按一下<span class="text-white">升級</span>連結，然後在同一個頁面上使用<span class="text-white">確認</span>並附上合理的確認日誌訊息，以及 voil 該訊息，您現在就會在行李箱的生產環境建置廣播。
+
+- 如果您需要使用版本控制來分配和處理產生的組建樹狀結構，您將不會喜歡大規模的 git。尤其在整合二進位使用者自建物件 (例如軟體發行版本) 或 (舊版) 產品文件 (例如 doxygen 或 javadocs) 時，會使用此系統建置，或是使用您本機使用的第三方產生器，直接將這些組建結果上傳到我們的目標儲存區域。透過我們的方法，您可以使用來源和建立樹狀結構通用的儲存區域中的分支，避免網站來源樹狀結構中不必要的雜亂和浮動情況，而不像使用 git 的方式。
+
+- Subversion 支援 ** 微點存取控制 **，而且可讓您執行部分 / 稀疏取出[`標頭`](#).
+
+- 對於 IDE，我們需要讀取 + 寫入 Perl 連結[`libgit2`](#) (** 並非由實際 git 開發團隊提供 **，大致是由不提供 git 線上 IDE 作為可比較 SaaS 產品的大型企業提供支援；不提供 GitHub 為符合 svn 與 httpd 相容的記憶體管理制度與 POSIX (+ Perl ithreads) 執行緒安全性、持續執行時間，以及跨用戶端網站樹狀結構的多個伺服器端磁碟 Git 儲存庫。2020 年，開源基礎設施的成熟期無法在估計中作銀行用途，但我們會持續關注發展趨勢。查看您，[`Git::Raw`](#).
+
+- 我仍不知道如何製作一個正面、安全且安全的 git porcelain。在個別儲存區域中執行緒安全，但在通用處理作業的 RAM 內，是使用案例，而不是在指定儲存區域內執行緒安全 (這是一種堅果要求)。
+
+### 為何不使用 Python、Ruby、Javascript 或 Go？
+
+- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 已新增[`mod_python`](#) 在達到到期日之前，仍然有個方法[`mod_perl`](#) 在執行緒 mpm 中。此外，我們的產品目前實作與 Apache HTTPd 伺服器的完整模組 API 緊密整合，僅限[`mod_perl`](#).
+
+- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 已新增[`mod_ruby`](#) 由於各種質量控制原因，魯比社區大多被遺棄。移植自訂的 5K LOC Perl 5 來源 Orion &trade;
+
+為確定，以下是整個 Orion (IDE+build) 生產來源樹狀結構之 SunStar 系統部分的快照 (日期為 2020 年 7 月 19 日)。除了我們之外，還有其他一些參與[`Dotiac:DTL`](#).
+
+```shell
+joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
+     1 build/lib/SunStarSys/ASF.pm
+   128 build/lib/SunStarSys/SVNUtil.pm
+   270 build/lib/SunStarSys/Util.pm
+    36 build/lib/SunStarSys/Value.pm
+    82 build/lib/SunStarSys/Value/Blogs.pm
+    61 build/lib/SunStarSys/Value/Jira.pm
+    77 build/lib/SunStarSys/Value/Mail.pm
+    70 build/lib/SunStarSys/Value/SVN.pm
+   106 build/lib/SunStarSys/Value/Snippet.pm
+    85 build/lib/SunStarSys/Value/Twitter.pm
+   378 build/lib/SunStarSys/View.pm
+  1260 webgui/lib/SunStarSys/Orion.pm
+   112 webgui/lib/SunStarSys/Orion/Cookie.pm
+   183 webgui/lib/SunStarSys/Orion/Filter.pm
+    90 webgui/lib/SunStarSys/Orion/MapToStorage.pm
+    59 webgui/lib/SunStarSys/Orion/WC.pm
+   194 webgui/lib/SunStarSys/Orion/WC/Add.pm
+    97 webgui/lib/SunStarSys/Orion/WC/Browse.pm
+   133 webgui/lib/SunStarSys/Orion/WC/Commit.pm
+    79 webgui/lib/SunStarSys/Orion/WC/Copy.pm
+    66 webgui/lib/SunStarSys/Orion/WC/Delete.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Diff.pm
+   182 webgui/lib/SunStarSys/Orion/WC/Edit.pm
+   116 webgui/lib/SunStarSys/Orion/WC/Mail.pm
+    70 webgui/lib/SunStarSys/Orion/WC/Merge.pm
+    67 webgui/lib/SunStarSys/Orion/WC/Move.pm
+    52 webgui/lib/SunStarSys/Orion/WC/Production.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Promote.pm
+    60 webgui/lib/SunStarSys/Orion/WC/Resolve.pm
+    64 webgui/lib/SunStarSys/Orion/WC/Revert.pm
+    82 webgui/lib/SunStarSys/Orion/WC/Rollback.pm
+   123 webgui/lib/SunStarSys/Orion/WC/Search.pm
+    78 webgui/lib/SunStarSys/Orion/WC/Staged.pm
+    24 webgui/lib/SunStarSys/Orion/WC/Static.pm
+    49 webgui/lib/SunStarSys/Orion/WC/Update.pm
+   220 webgui/lib/SunStarSys/SVN/Client.pm
+  4848 total
+```
+
+- [`mod_js`](#).
+
+- 嘗試嵌入[`GoLang`](#).
+
+- 至於 Perl 5 建置系統，請隨時調整！  * 由於建置系統完全隔離於 Orion，因此無法將其移植到任何其他程式設計語言&trade;線上 IDE (位於 Markdown 轉換程式協助程式之外，依據[`node.js`](#)，這是獨立系統本身，基於數百萬個安全性 / 架構設計原因。如果您需要一位老師來了解他們的可能性，請查看[`build_external.pl`](#).
+
+- 是的，儘管 Unix 在伺服器市場上佔據優勢，但 Perl 的知名度軌跡以鐵方式追蹤 COBOL 或甚至是 Common Lisp 的軌跡；但有些東西比其他人的年齡更好。實體 (與獨特的 Perl) [`對數`](#) 工程輸出[`p5p`](#)為了準備迎接 Perl 7 的冒險，歡迎 mod_perl 開發人員加入 Doug MacEachern 的原始願景。如果您發現自己在超過 100 個 LOC Perl 來源中的膝蓋深度，從我們目前的僅限 Perl 建置系統取得您需要的內容，讓我們聊天&mdash;
+
+### 為什麼沒有基於 JVM 的東西？
+
+-   以這種方式工作，讓我擁有 20 年的 LAMP 堆疊歷史，並為擴展的 Apache HTTPd Web 伺服器社群帶來建設性貢獻。可做，但又有大量的工程問題，以便在過程中解決。
+
+--------
+
+## 索引
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

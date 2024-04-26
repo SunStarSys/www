@@ -1,16 +1,19 @@
 ---
-categories: seguridad,infosec,appsec,ipsec,devsecops,it,acl,svnauthz
+acl: '@staff=rw, *=r'
+archived: ~
+categories: ~
 dependencies: '*.md.es api/index.md.es'
-keywords: publicado
-status: '@staff=rw, *=r'
+keywords: seguridad,infosec,appsec,ipsec,devsecops,it,acl,svnauthz
+published: ~
+status: publicado
 title: Seguridad Orion
 ---
 
 [TOC]
 
-## {# lede #}"La seguridad a través de la oscuridad no es mucha seguridad en absoluto."{# lede #}
+## {# lede #}"La seguridad a través de la oscuridad no es mucha seguridad en absoluto".{# lede #}
 
-Parafase popular del cerrajero americano [Alfred Charles Hobbs] (https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) en 1851, que fácilmente escogió las cerraduras del Palacio de Cristal durante una exposición de Londres ese año.  Estamos totalmente de acuerdo, por lo que nuestros planes para nuestro motor de automatización de Oracle Cloud Infrastructure (OCI) están [disponibles en GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
+Popular paraphasing de cerrajero americano [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) en 1851, que escogió fácilmente las cerraduras del Crystal Palace durante una exposición de Londres ese año.  Estamos totalmente de acuerdo, por lo que nuestros planes para nuestro motor de automatización de Oracle Cloud Infrastructure (OCI) son [disponible en GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Seguridad de la infraestructura de Orion
 
@@ -88,21 +91,21 @@ Cifrado triple de FIPS 140-2 con MFA para servicios de reenvío por puerto inver
 
 &nbsp;
 
-### Modelo [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) sin contraseña, salpicado de desafíos sudo [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password)
+### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modelo, salpicada de [orrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password).
 
-No hay contraseñas fijas almacenadas en los servidores. Este *limita* la automatización sin cabeza del uso de sudo / RBAC, por una buena razón.  Sin embargo, tenemos [tooling](https://github.com/SunStarSys/pty) para eliminar el trabajo de responder a peticiones de datos de varios tipos.
+No hay contraseñas fijas almacenadas en los servidores. Este *limita* la automatización sin cabeza del uso de sudo / RBAC, por una buena razón.  Sin embargo, hemos [herramientas](https://github.com/SunStarSys/pty).
 
 ### Ejecución en sandbox para compilaciones y scripts CGI
 
-Implementamos compilaciones de zona "shared-nothing", con disponibilidad de red cero por defecto. Esto significa que las únicas cosas a las que un cliente puede acceder o modificar son sus propios activos, no los de cualquier otro cliente o cualquier otra ruta del sistema en la propia zona (además de [`/tmp`](#)).  Además, solo los clientes empresariales y empresariales tienen acceso a Internet durante sus compilaciones, ya que utilizan sus propias zonas *únicas* Solaris que se pueden adaptar exactamente a sus requisitos de creación.
+Implementamos compilaciones de zona "shared-nothing", con disponibilidad de red cero por defecto. Esto significa que las únicas cosas a las que un cliente puede acceder o modificar son sus propios activos, no los de cualquier otro cliente o cualquier otra ruta del sistema de la propia zona (además de [`/tmp`](#).
 
-Ditto para secuencias de comandos CGI, que están completamente bloqueadas en términos de acceso de escritura a cualquier cosa que no sea [`/tmp`](#).
+Ditto para secuencias de comandos CGI, que están completamente bloqueadas en términos de acceso de escritura a cualquier otra cosa que no sea [`/tmp`](#).
 
 ### Cifrado completo
 
 - TLS 1.3 (+FS) AES(256) SHA(256) para conexiones HTTPS FIPS 140-3
 
-- SSHv2 ED25519 Claves compatibles con FIPS 140-3/NIST para reenvío de puerto inverso entre hosts [`lo`](#)
+- SSHv2 ED25519 Claves compatibles con FIPS 140-3/NIST para hosts cruzados [`lo`](#).
 
 - IPsec/IKEv2/PFS AES(256) para VPN entre regiones
 
@@ -110,9 +113,9 @@ Ditto para secuencias de comandos CGI, que están completamente bloqueadas en t�
 
 ### Aspectos de confianza cero
 
-La premisa básica de [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) es evitar diseñar la seguridad de su red en torno a la fisiología de la almeja: dura en el exterior, pero suave y suelta una vez que esté adentro.  Por lo tanto, no lo hacemos; cada puerto de red privilegiado significativo dentro de las diversas LAN de punto de presencia (POP) solo está expuesto a la interfaz de dispositivo de bucle de retorno de la máquina bare-metal [`lo0`](#), y solo es significativo en el contexto de una conexión SSH reenviada (inversa) *a ella*.
+La premisa básica de [arquitectura de confianza cero](https://csrc.nist.gov/publications/detail/sp/800-207/final) es evitar diseñar su seguridad de red en torno a la fisiología de la almeja: duro en el exterior, pero suave y suelto una vez que está en.  Así que no lo hacemos; cada puerto de red privilegiado significativo dentro de las diversas LAN de punto de presencia (POP) solo está expuesto a la interfaz de dispositivo de bucle de retorno de la máquina de metal desnudo. [`lo0`](#).
 
-Esta infra está totalmente automatizada una vez que una región se pone en línea, pero eso es todo lo que podemos compartir públicamente sobre la arquitectura (equilibrar la transparencia Hobbsian con el mantra militar "barcos de hundimiento de labios sueltos" es más arte que ciencia).  Tenga la seguridad de que, además de romper el filtro de paquetes antispoofing [`lo0`](#) dentro del filtro de paquetes (BSD) de Solaris 11, no hay medios significativos para acceder a estos servicios, incluso para las cuentas de los clientes.
+Esta infra está totalmente automatizada una vez que una región se pone en línea, pero eso es todo lo que podemos compartir públicamente sobre la arquitectura (equilibrar la transparencia Hobbsian con el mantra militar "barcos de hundimiento de labios sueltos" es más arte que ciencia).  Restur &mdash; más allá de romper el antispoofing [`lo0`](#).
 
 Incluso si la cuenta de control maestra de OCI se ve comprometida, la **confidencialidad** y la **integridad** de todos los activos de cliente permanecen inviolables.  Todo lo que puede hacer un sombrero negro es hacer un lío con el sitio web del cliente **disponibilidad**. En particular, no pueden acceder a los registros de datos del servicio Subversion.  Podemos reconstruir toda la infraestructura de OCI desde cero en 48-72 horas una vez que se haya terminado el acceso de OCI de la manzana defectuosa.
 
@@ -120,11 +123,11 @@ Incluso si la cuenta de control maestra de OCI se ve comprometida, la **confiden
 
 ### Registro, supervisión y auditoría
 
-Animamos a los clientes de Enterprise a crear una cuenta Splunk, y entregaremos weblogs casi en tiempo real a su cuenta desde cada POP global que necesite.  Los registros de errores de las secuencias de comandos CGI del servidor también están disponibles para Splunk.
+Animamos a los clientes de Enterprise a crear una cuenta Splunk, y entregaremos weblogs casi en tiempo real a su cuenta desde cada POP global que necesite.  Los registros de errores de los scripts CGI del servidor también están disponibles para Splunk.
 
 Supervisamos la disponibilidad del servicio de todos nuestros POP de OCI en todo el mundo y disparamos eventos de failover de alta disponibilidad (dominio de disponibilidad) o regionales si una interrupción del servidor dura más de 30 segundos.
 
-La auditoría de ACL se puede realizar simplemente creando el encabezado de subversión de un sitio web utilizando el script [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) con licencia Apache y examinando la creación resultante en el archivo [`www/.acl`](#) de su directorio de confirmación de orden, en cualquier momento que desee.  Normalmente, el proceso de creación tardará menos de 10-15 segundos en el hardware moderno.
+La auditoría de ACL se puede realizar simplemente mediante la creación de un sitio web Subversion HEAD utilizando la licencia Apache. [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) y examinar la creación resultante en el [`www/.acl`](#).
 
 Los ganchos de confirmación del lado del servidor de Subversion también se pueden personalizar según sus preocupaciones de supervisión. Desde una simple aplicación de confirmación de correo hasta un acceso seguro a nuestro daemon svnpubsub, hay una serie de configuraciones personalizadas disponibles.
 
@@ -141,7 +144,7 @@ digraph {
 
 &nbsp;
 
-El modelo de seguridad de Orion es gestionado centralmente por los valores contenidos en [`@path::acl`](#) como constucted in [`lib/path.pm`](#).  Los archivos de configuración del servidor de sesión externa se generan dinámicamente en cada cambio confirmado.
+El modelo de seguridad de Orion se gestiona centralmente mediante la configuración contenida en [`@path::acl`](#) como constujo en [`lib/path.pm`](#).
 
 Seguridad de SSO de ### OpenIDC
 
@@ -171,7 +174,7 @@ Profundizamos en estos temas como se relacionan con Orión a continuación.
 
 #### Editor en línea
 
-El editor en línea soporta una interfaz de usuario JSON simplemente definiendo la cabecera Accept de su agente de usuario para que prefiera el tipo MIME [`application/json`](#), por lo que los controles de seguridad son los mismos para la interfaz de usuario y la API.
+El editor en línea soporta una interfaz de usuario JSON simplemente definiendo la cabecera Accept de su agente de usuario para que prefiera la [`aplicación/json`](#).
 
 **No hay ninguna interfaz de usuario/API administrativa** fuera del acceso directo a Subversion.
 
@@ -183,13 +186,17 @@ Cada recurso de copia de trabajo disponible a través de la interfaz de usuario 
 
 No se puede crear nada y visualizarlo posteriormente a través de la red sin una confirmación de Subversion autorizada correspondiente. El problema principal aquí es controlar qué información está disponible para las ediciones comprometidas y construidas de un autor de una página wiki.
 
-Si permite el preprocesamiento de plantillas en las páginas de origen de rebaja, debe tener en cuenta cómo los argumentos de plantilla hacen que el contenido de otros archivos del árbol esté disponible como variables para el origen de la página editada. A menudo, si se configura para hacerlo, la página editada puede declarar sus propios archivos de dependencia en los encabezados de la página, que es algo que debe pensar al sopesar los conjuntos de funciones contra los controles de seguridad en la arquitectura de información de su Wiki.  Si bien podemos ofrecer orientación y soporte para satisfacer sus necesidades, depende de usted decidir cómo equilibrar las escalas para el wiki empresarial de su organización.
+Si permite el preprocesamiento de plantillas en las páginas de origen de rebaja, debe tener en cuenta cómo los argumentos de plantilla hacen que el contenido de otros archivos del árbol esté disponible como variables para el origen de la página editada.
 
-Consulte la siguiente sección en [Dependency/ACL Injection Controls](#h4-dependency-acl-injection-controls) para obtener más detalles, y consulte este ejemplo en directo de cómo las ACL fáciles se pueden configurar centralmente en [`lib/acl.yml`]({snippetA.pretty_uri}}):
+A menudo, si se configura para hacerlo, la página editada puede declarar sus propios archivos de dependencia en los encabezados de la página, que es algo que debe pensar al sopesar los conjuntos de funciones contra los controles de seguridad en la arquitectura de información de su Wiki.
+
+Si bien podemos ofrecer orientación y apoyo para satisfacer sus necesidades, depende de usted decidir cómo equilibrar las escalas para el wiki empresarial de su organización.
+
+Consulte la siguiente sección sobre [Controles de inyección de dependencia/ACL](#h4-dependency-acl-injection-controls) para obtener más información y verifique este ejemplo en directo de la facilidad con la que las ACL se pueden configurar de forma centralizada en [`lib/acl.yml`]({{snippetA.pretty_uri}}).
 
 [snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
-Los autores de contenido pueden configurar restricciones de página en las [cabeceras]({{snippetB.pretty_uri}} de la página:
+Los autores de contenido pueden configurar restricciones de página en la página [cabeceras]({{snippetB.pretty_uri}}).
 
 [snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
@@ -197,11 +204,13 @@ Como nota adicional, los recursos protegidos no pueden ser copiados en una sucur
 
 #### ¿Crear ACL del sistema?
 
-El sistema de creación es omnipresente y omnisciente, pero podemos asegurarnos de que sus activos protegidos y creados solo sean visibles para los equipos que gestiona y controla en las ACL de Subversion. El sistema de creación mostrará la lista de nombres de archivos que ha creado mediante el IDE del explorador tras una confirmación, pero esa lista solo se basa en el acceso de lectura de un usuario a los recursos que dependen de las acciones de adición, actualización o supresión de contenido del usuario en la confirmación.
+El sistema de creación es omnipresente y omnisciente, pero podemos asegurarnos de que sus activos protegidos y creados solo sean visibles para los equipos que gestiona y controla en las ACL de Subversion.
+
+El sistema de creación mostrará la lista de nombres de archivos que ha creado mediante el IDE del explorador tras una confirmación, pero esa lista solo se basa en el acceso de lectura de un usuario a los recursos que dependen de las acciones de adición, actualización o supresión de contenido del usuario en la confirmación.
 
 Controles de recorrido de plantilla #####
 
-Consulte [sanitize_relative_path]({{snippetC.pretty_uri}}):
+Ver [sanitize_relative_path]({{snippetC.pretty_uri}}).
 
 [snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
 
@@ -209,34 +218,35 @@ Este código aplica las siguientes reglas en esta sección.
 
 ###### incluir y ampliar etiquetas
 
-Todos los archivos de destino están en una subcarpeta de la carpeta [`/templates/`](#) y se debe hacer referencia a ellos como rutas absolutas con raíz en esa carpeta.
+Todos los archivos de destino están en una subcarpeta de la [`/plantillas/`](#).
 
 ###### etiqueta ssi
 
-Todos los archivos de destino están en una subcarpeta de la carpeta [`/content/`](#) y se debe hacer referencia a ellos como rutas absolutas con raíz en esa carpeta.
-Si la ruta de destino no está configurada en [`@path::patterns`](#) con una configuración coincidente que permita archivar o categorizar la ruta de destino en cuestión, la operación [`ssi`](#) fallará.
+Todos los archivos de destino están en una subcarpeta de la [`/contenido/`](#).
 
-Esto se debe a que el soporte de [`ssi`](#) es un requisito previo para esos conjuntos de funciones, para conservar el taget de su sitio *permalinks*.
+Si la ruta de destino no está configurada en [`@path::patrones`](#) con una configuración coincidente que permite archivar o categorizar la ruta de destino en cuestión, la [`ssi`](#).
+
+Esto se debe a [`ssi`](#).
 
 #### Controles de inyección de dependencia/ACL
 
-Controlado por las importaciones [`lib/path.pm`](#).
+Controlado por [`lib/path.pm`](#).
 
 ##### lib/{path,view}.pm ACL de Subversión
 
 Es aconsejable controlar el acceso de escritura a estos recursos, limitándolos a personas competentes en la base de código y autorizadas para implementar controles de seguridad para todo el conjunto de activos bajo control de versiones (también conocido como *todo*).
 
-También es una buena idea incluir el grupo [`@svnadmin`](#) entre aquellos con acceso de lectura-escritura, pero no es estrictamente necesario incluso si necesita que restablezcamos manualmente sus ACL de Subversion.
+También es una buena idea incluir el [`@svnadmin`](#).
 
-##### reglas generadas dinámicamente a través de @path::acl
+##### reglas generadas dinámicamente mediante &#64;
 
-El sistema de compilación toma nota de las importaciones [`lib/path.pm`](#) de seed_file_deps() y seed_file_acl(, o de ambos), y lleva esa opción hacia adelante en su procesamiento interno de cambios de confirmación de Subversion que dan lugar a una compilación incremental.
+El sistema de creación toma nota de su [`lib/path.pm`](#).
 
 ##### controles personalizados sobre el uso de seed_file_deps() y  seed_file_acl() en lib/path.pm
 
-Más allá de la importación de estos símbolos a [`lib/path.pm`](#), también hay una opción en cómo, y a qué archivos desea aplicarlos, durante una ejecución de bloque de código walk_content_tree ().  Después de todo, no es solo un archivo de configuración, sino una base de código, con todas las características completas de Turing de [`Perl`](#) que hemos llegado a conocer y apreciar!
+Más allá de la importancia de estos símbolos para [`lib/path.pm`](#), también hay una opción en cómo y a qué archivos desea aplicarlos, durante una ejecución de bloque de código walk_content_tree ().  Después de todo, no es solo un archivo de configuración, sino una base de código, con todas las características completas de Turing. [`Perl`](#).
 
-#### Sitio web construido y ACL de Subversion sincronizados con @path::acl instantáneamente al confirmar
+#### Sitio web construido y ACL de Subversion sincronizadas con &#64;
 
 Protección automática para construcciones de ramas efímeras. No se requiere configuración adicional.
 
@@ -248,43 +258,43 @@ En el sitio activo, el motor de búsqueda hará exactamente lo mismo cuando habi
 
 ### Políticas de seguridad de contenido
 
-- [x] Restricciones de análisis
+- [x]
 
 Google y/o LinkedIn.
 
-- [x] Restricciones de datos
+- [x]
 
 Los datos deben ser entregados desde nuestros servidores.
 
-- [x] Restricciones de contenido
+- [x]
 
 El contenido debe ser entregado desde nuestros servidores.
 
-- [x] Restricciones de código
+- [x]
 
 El código Javascript debe ser entregado desde nuestros servidores.
 
-- [x] Restricciones de estilo
+- [x]
 
 CSS debe ser entregado desde nuestros servidores.
 
-- [x] Restricciones de plugin
+- [x]
 
 Actualmente solo PDF.
 
 ### Uso compartido de recursos de origen cruzado
 
-- [x] Todos los usuarios con una cuenta pueden consumir UI/API de otro lugar utilizando sus credenciales de inicio de sesión.
+- [x]
 
-- [x] Los clientes empresariales y empresariales pueden tratar a Orion como un [CMS sin cabecera](https://aws.amazon.com/what-is/headless-cms/) si desean crear su propia interfaz de usuario desde las API [JSON Subversion Porcelain](api/editor) o [JSON Search](api/search).
+- [x] Los clientes empresariales pueden tratar a Orion como un [CMS sin cabecera](https://aws.amazon.com/what-is/headless-cms/) si desean crear su propia interfaz de usuario desde [JSON Subversion Porcelana](api/editor) o [Búsqueda de JSON](api/search).
 
 ### Dependencias de terceros
 
-Dependencias notablemente breves y probadas en el tiempo; cuyos componentes principales se tratan en la página [Tecnología de Orión] (tecnología).
+Dependencias notablemente breves y probadas en el tiempo; los principales componentes de los cuales se tratan en [Tecnología Orion](technology).
 
 #### Lista de materiales de software (SBOM) disponible previa solicitud
 
-[Contáctenos](/contacto) para más detalles.
+[Contáctenos](/contact).
 
 --------
 

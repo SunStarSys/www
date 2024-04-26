@@ -1,0 +1,89 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.de'
+keywords: RUHE, API
+published: ~
+status: Entwurf
+title: Orion API - Django Vorlagenbibliothek
+---
+
+{# lede #}In diesem Dokument werden die APIs der **Django-Vorlagenbibliothek (DTL)** behandelt{# lede #}
+
+[TOC]
+
+----
+
+## DTL (Django 1.0 Vorlagenbibliothek).
+
+### Django 1.0 Filtererweiterungen ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm).
+
+#### anhängen
+
+Nimmt ein einzelnes Argument an und hängt seinen Wert an die gefilterte Eingabe an.  Das Argument kann ein Varname oder eine Zeichenfolge in Anführungszeichen sein. Dieser Filter wird `/` Zeichen, die zusammengefügt werden auf der [`Anhängen`](#).
+
+#### Schnitte
+
+Wie [`Ausschneiden`](#).
+
+#### lede
+
+Extrahiert den Text zwischen den &#123;# [`Lede`](#) #&#125;
+
+#### ssi
+
+Rekursiv bewertet alle Django [`ssi`](#).
+
+#### starts_with
+
+Tests für Präfixübereinstimmung.
+
+#### Verzeichnisname
+
+Gibt das herkömmliche UNIX zurück [`Verzeichnisname`](#).
+
+#### parse_filename
+
+Schnittstelle für [`SunStarSys::Util::parse_filename`](#). Der Hauptunterschied besteht darin, dass die ersten beiden Rückgabewerte dieser Unterroutine ausgetauscht werden und die Pfaderweiterungen alle (mit [`.`](#) vorangestellt) in einzelne Argumente, so dass dieser Filter eine Argumentzeichenfolge, die eine Liste von Indizes darstellt, in das resultierende Array aufnehmen kann. Als Sonderfall ein Argument, das auf [`..`](#).
+
+#### Basename
+
+Gibt das herkömmliche UNIX zurück [`Basisname`](#) des Pfads in der gefilterten Eingabezeichenfolge. Übergeben eines Arguments von [`0`](#).
+
+#### tex2md
+
+Transformationen $$\LaTeX$$ Quellen in Markdown+$$\KaTeX$$
+
+#### md2tex
+
+Die umgekehrte Transformation von `tex2md`
+
+#### vcs_date
+
+Nimmt ein [`lang`](#) Argument zur Bereitstellung einer gebietsschemaspezifischen Darstellung von Tag, Monat und Jahr der letzten Änderung, die von der [`$Datum`](#) Subversion-Schlüsselwort in der gefilterten Eingabezeichenfolge (in der Regel der vollständige [`Inhalt`](#).
+
+#### vcs_time
+
+Stellt den numerischen Versatz von Stunde, Minute, Sekunden und Zeitzone der letzten Änderung dar, die von der [`$Datum`](#).
+
+#### vcs_author
+
+Präsentiert eine [`sicher`](#) HTML-Darstellung des Benutzers, der den Inhalt zuletzt aktualisiert hat, wie vom Subversion-Schlüsselwort aufgezeichnet [`Autor`](#) Schlüsselwort in der gefilterten Eingabezeichenfolge.  Nimmt eine optionale [`lang`](#).
+
+#### vcs_revision
+
+Zeigt die numerische Revisionsnummer der letzten Änderung am Inhalt an, wie von der [`$Version`](#).
+
+#### strip_prefix
+
+Entfernt das (Pfad-)Präfix, das als Argument an diesen Filter übergeben wird, aus der gefilterten Eingabezeichenfolge (Pfad). Als Präfix wird standardmäßig der reguläre Ausdruck verwendet [`\S+/content/`](#).
+
+#### Mischen
+
+Ändern Sie das Array.
+
+#### img
+
+Rufen Sie das erste HTML5/Markdown-Bild aus dem gefilterten Inhalt auf.
+
+<!-- $Date: 2024-04-22 15:48:18 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23266 $ -->

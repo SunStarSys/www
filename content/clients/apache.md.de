@@ -1,0 +1,27 @@
+---
+archived: ~
+categories: ~
+keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,Apache CMS
+published: ~
+status: ~
+title: Die Apache Software Foundation
+---
+
+![Die ASF](http://www.apache.org/images/feather.png).
+
+[Die Apache Software Foundation](http://www.apache.org/).
+
+Als ich 2006 bei Apache anfing zu arbeiten, war das drängendste Problem die überlasteten Inbound Mail Services.  Die Organisation ertrinkte in Spam, und mit 1,5 Millionen eingehenden Verbindungen pro Tag übertraf sie die ausgehende Lieferung der Organisation und überwältigte die Software.  Meine erste Aufgabe war es, diese Situation zu lösen, also kam ich auf einen zweifachen Ansatz: erstes Upgrade `qpsmtpd` bis `Apache::Qpsmtpd`, die `mod_perl` experimentelle Variante, die konvertiert `HTTPD`
+
+`Apache::Qpsmtpd` Ich brauchte einige Patches, um es für den Enterprise Service, den ich zur Verfügung gestellt habe, geeignet zu machen.  Das kümmerte sich um die unmittelbaren Bedenken, die sich um die vernichtende Belastung des Dienstes drehten, aber wenn sich die Wachstumstrends fortsetzten, würde dies kontinuierliche Investitionen in mehr
+und besserer Hardware und Software, in erster Linie um das Wachstum der Spam-Verbindung zu bedienen. Wir haben sogar einen abrupten Versuch unternommen, `ecelerity`, die auf Apple-Ausrüstung nicht ganz stabil genug war, um 2006 zu migrieren.  `Ungleichheit` (jetzt bekannt als `Momentum` von [Nachrichtensysteme](http://www.messagesystems.com).
+
+Geben Sie den zweiten Teil meines Ansatzes ein: einen Versuch, Spammer davon abzuhalten, die Mailserver der ASF überhaupt zu treffen.  Dies betraf Patching `qpsmtpd`'s `Earlytalker` Plug-in zur Ausführung in `DATEN` Phase, kombiniert mit dem Hochreihen der Verzögerung auf 20 Sekunden - eine hohe, aber tolerierbare Menge für alle RFC-konformen Nachrichtenzustellungs-Agents.  Es war ein empfindliches Gleichgewicht, da die Spam-Werte auf 2 Millionen dann 2,5 Millionen pro Tag anstiegen, weil die `Earlytalker` Verzögerung erhöhte Nebenläufigkeitsniveaus 4-5 mal über "normal" Ebenen und der Spam weiter zu wachsen. Wir drängten `HTTPD`'s `MaxClients` Einstellungen während dieses Zeitraums, sogar bis zu dem Punkt, dass eine benutzerdefinierte Kompilierung erforderlich ist `HTTPD`
+
+Normalerweise `Earlytalker` läuft, bevor das Banner ausgeliefert wird, was suboptimal ist, wenn sich Ihr primäres Plugin für den Umgang mit Spammern um dns Blacklists dreht.  Wird ausgeführt `Earlytalker` möglichst spät in der `SMTP` Die Sitzung bedeutete, dass andere, schneller handelnde Anti-Spam-Plugins die Verbindung so schnell wie möglich trennen konnten, bevor die Verzögerungen begannen, einzugehen und sich zu binden `HTTPD` Kinder.  Auch Spammer zahlen diesen Verzögerungspreis für jede Nachricht, die gesendet wird, wenn `Earlytalker` läuft in der `DATEN`
+
+Über einen Zeitraum von 8 Jahren, die ökologischen Auswirkungen meiner `Earlytalker`
+
+Abgesehen von den Routinearbeiten, die jedem Systemadministrator gegenüberstehen, war meine andere Hauptleistung bei The ASF die Schaffung der `Apache-CMS`. Die Gründe und Gründe dafür waren [dokumentiert](http://www.apache.org/dev/cms), aber es ist wichtig zu beachten, dass diese Software schnell über einen Zeitraum von 3 Monaten entwickelt wurde, bevor sie für die <http://www.apache.org/>-Website in Produktion genommen wurde.  Es hat eine Popularität innerhalb der ASF erreicht, die über meine wildesten Erwartungen hinausgeht: Über 100 Projekte verlassen sich derzeit auf sie für ihre Website-Bedürfnisse.  Es skaliert auf kleine, aber komplizierte Websites wie [Apache Thrift](http://thrift.apache.org/), während die Skalierung auch auf die Anforderungen einer 5 GB-Website wie [OpenOffice.org](http://www.openoffice.org/).
+
+Ich genoss die meiste Zeit, um den Bedürfnissen der Apache-Gemeinschaft zu dienen, aber nach 8 Jahren war es Zeit für eine Veränderung.  Ich werde immer liebevoll auf die vielen Erinnerungen und Freunde schauen, die ich gemacht habe, während ich dort war, und wünsche Apache alles Gute.

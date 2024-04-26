@@ -1,7 +1,9 @@
 ---
-categories: projet
+archived: ~
+categories: ~
 keywords: ~
-status: ~
+published: ~
+status: projet
 title: Données de table pour la grille de comparaison des fonctionnalités
 ---
 
@@ -23,7 +25,7 @@ title: Données de table pour la grille de comparaison des fonctionnalités
 - Feature: "Support DAV"
   Orion: "&check;"
   Confluence: "&check;"
-- Feature: "Créations incrémentielles"
+- Feature: "Fabrication incrémentielle"
   Orion: "&check;"
 - Feature: "Bâtiments d'agence illimités"
   Orion: "&check;"
@@ -34,9 +36,9 @@ title: Données de table pour la grille de comparaison des fonctionnalités
 - Feature: "Regarder la liste des notifications d'appareil"
   Orion: "&check;"
   Confluence: "&check;"
-- Feature: "Multilingue"
+- Feature: "Multilingual (i18n)"
   Orion: "&check;"
-- Feature: 'Expressions <span class="editormd-tex">\KaTeX</span> entièrement recherchables'
+- Feature: 'Recherche complète possible <span class="editormd-tex">\KaTeX</span> Expressions'
   Orion: "&check;"
   Confluence: "$$$"
 - Feature: "Fédéré"
@@ -50,7 +52,7 @@ title: Données de table pour la grille de comparaison des fonctionnalités
   Orion: "&check;"
 - Feature: 'Flux de travail du contributeur "Pull-Request" pour la 3ème partie facile'
   Orion: "&check;"
-- Feature: "[GitHub Integration](https://youtu.be/FRc4qZkxVaI) avec support IDE et actions"
+- Feature: "[GitHub Intégration](https://youtu.be/FRc4qZkxVaI) avec IDE &amp; Assistance aux actions"
   Orion: "&check;"
 - Feature: "Aperçu illimité"
   Orion: "&check;"
@@ -58,7 +60,7 @@ title: Données de table pour la grille de comparaison des fonctionnalités
   Notion: "&check;"
   Confluence: "&check;"
 - Feature: "Places illimitées"
-  Orion: "Installation Enterprise &amp; Server"
+  Orion: " Entreprise &amp; Installation du serveur"
 - Feature: "Historique illimité du contrôle des versions"
   Orion: "&check;"
 - Feature: "Suivi intégré des modifications d'URL"
@@ -75,12 +77,14 @@ title: Données de table pour la grille de comparaison des fonctionnalités
   Orion: "&check;"
 - Feature: "Constructions simultanées sur 8-64 critères"
   Orion: "&check;"
-- Feature: "TCO < 6000 $/an pour l'entreprise"
+- Feature: "TCO" &lt; 6000 $/an pour l'entreprise"
   Orion: "&check;"
 - Feature: "Contrat de niveau de service complet à 99,99 %"
-  Orion: "Installation Enterprise &amp; Server"
+  Orion: " Entreprise &amp; Installation du serveur"
 - Feature: Statut du document pouvant faire l'objet d'une recherche
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Automatisation de la démarque <span class="editormd-tex">\leftrightarrow \LaTeX</span>'
+- Feature: 'Marque <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisation
+  Orion: "&check;"
+- Feature: Traduction automatique AI NLP
   Orion: "&check;"

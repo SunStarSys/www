@@ -1,0 +1,149 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW api/index.md.zh-TW'
+keywords: wiki，jamstack，blog，安全，安全
+published: ~
+status: 草稿
+title: SunStar 系統 Orion
+---
+
+
+<div class="row">
+<div class="col-lg-5">
+<p>
+	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Enterprise Jamstack Wiki。</em></span>&trade;
+</p>
+<span class="text-white">SunStar 系統 Orion</span> &nbsp; 是
+<p>
+	<ul>
+	<li><p>安全、</p></li>
+	<li><p>行動友善，</p></li>
+	<li><p>協作、</p></li>
+	<li><p>尖峰性能，</p></li>
+	<li><p>同盟</p></li>
+	</ul>
+</p>
+{# lede #}<span class="text-white">企業 Wiki</span>&nbsp; 用於<b>建立、管理及提供</b>靜態網頁，其中使用 #Jamstack 技術提供動態功能{# lede #}
+
+如需價格資訊，請參閱我們的[Orion 計畫](plans).
+
+### 這裡是執行決策者 ...
+
+此產品與競爭對手的差異在於[Orion 技術](technology)，以及其 ** 效率 ** 如何讓我們維持非常低的營運成本，同時提供卓越的編輯控制和開創性功能。我們將節省成本傳遞給 ** 客戶 **，並只收取額外雲端提供者資源的額外付費。[撥打電話給我們](/contact).
+
+<ul>
+  <li><p><span class="text-white">University Leader</span> 尋求透過<a href="https://en.wikipedia.org/wiki/Open_access">開放存取</a>版本控制的文件共用、策劃和線上發佈平台，或學術導向知識管理系統，在校園中<b>消除難題</b>，</p></li>
+
+<li><p>一個 <span class="text-white">IT 政府 / 國防部門決策者</span>，符合 FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture"> NIST 800-207</a> 規範需求，或對您網站的版本控制儲存庫提供微點存取控制需求，</p></li>
+
+<li><p><span class="text-white">行銷主管</span>需要創新的全球企業平台來管理您的公司網站資產，並使用 Orion 作為「無頭」CMS。</p></li>
+
+<li><p>一個<span class="text-white">技術公司 / 網站代理機構主管</span>，擁有相當不安全的商業 Wiki、大量的線上產品文件或客戶網站 (可能提供二進位下載)，方便您進行統整、</p></li>
+
+<li><p>一個<span class="text-white">主流的高可用性架構師</span>厭倦了處理 SQL 型 LAMP 堆疊中固有的單一失敗點，</p></li>
+
+<li><p>或者，任何企業人都不滿意任何 Wiki 的成本結構，包括員工時間和能源的免費方案。</p></li>
+</ul>
+
+* 我們的產品不涉及供應商鎖定 *。但不只是用我們的詞語，請造訪以瞭解建置系統自訂通常涉及什麼
+
+[我們的 viewvc 來源程式庫樹狀結構](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/)，或其[<i class="fa fa-github fa-emoji" title="吉蘇布"></i> GitHub 鏡像](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+提供此網站的建置邏輯少於 <span class="text-info">100 個 LOC</span> ，其中包括用於自動產生多語言之複雜且備忘的相依性管理[SiteMap](/sitemap) 與所有目錄索引 (類似) [此部份](#Details) 此特定頁面)。我們甚至放下基礎[GitHub 上組建的靜態網站產生器](https://github.com/SunStarSys/Orion).
+
+</div>
+
+<div class="col-lg-7">
+	<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+<h3>這就是為什麼，Full Stack Developer / Public Blogger / DevOps 大師 ...</h3>
+
+想要網站 ** 預設為安全設定 **？易於更新和管理，同時隱藏基礎版本控制系統的複雜性，還能讓您在真正需要時擁有完整的功能？您可以視需要即時發布；在生產網站上順暢、暫存的分支建置和可自訂的精細促銷，因為它符合您團隊偏好的工作流程。
+
+如果您厭倦了每個座位的授權，以及每一 CPU 週期的選擇，只要您需要修正打錯字的時候，就會將您減輕負擔。[聯繫我們](/contact).
+
+您不必直接處理版本控制系統，甚至是靜態網站產生器，都可以自行處理個人電腦。線上 IDE 隨時隨地都能提供 ** 僅限瀏覽器的工作流程 **。在手指中，即使是行動 (瀏覽器) 介面也能完成，* 立即 *。
+
+多 GB 來源樹狀結構不相符&mdash; 完整網站組建持續時間的測量單位為 * 秒 *，而非小時和分鐘。系統可輕鬆維持不變[`500 MB/ 秒`](features).
+
+<span class="text-success"><em>我們只為您打造了需要的版本。</span></em>&trade;
+
+此技術於 2011 年底由 Apache 基礎架構團隊的成員首次發明。片語 」[JAM 堆疊](https://jamstack.wtf)「在幾年後被一個團體不知悉我們在此空間之前的藝術品所整理出來。但是[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion).
+
+<h4>想讓它快速旋轉，看看它有多快又簡單？</h4>
+
+本網站為自行代管；所有熱粉紅色鉛筆小方塊[<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index).
+
+我們的全球網路連線點 (POP) 可確保與 Orion 的低延遲連線&trade;
+
+<h3>現在是您如何管理網站並將其傳遞給目標受眾的時候了。</h3>
+
+您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分支，而且只需在我們的基礎設施上支付 * 實際使用 * 的費用。
+
+查看我們的[Orion 計畫](plans).
+
+</div>
+</div>
+
+### 功能比較方格
+
+<br />
+
+| 特色     |   Orion        | Slab | Notion | Confluence |
+|:^-----------|:-------------:|:----:|:------:|:----------:|
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
+{% endfor -%}
+
+<br />
+
+### 詳細資料
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
+
+<hr />
+<br />
+<h2>少數代表螢幕截圖：</h2>
+<br />
+<h3>IDE 檢視 (含 Farsi) (UTF-8)。</h3>
+<center><img src="../images/ide-fa.png" style="width:800px"></center>
+<br />
+<h3>IDE 編輯器檢視。</h3>
+<center><img src="../images/ide-editor.png" style="width:800px"></center>
+<br />
+<h3>IDE 編輯器檢視 (西班牙文)。</h3>
+<center><img src="../images/ide-es.png" style="width:800px"></center>
+<br />
+<h3>IDE 完整網站建置版本。</h3>
+<center><img src="../images/ide-build.png" style="width:800px"></center>
+<br />
+<h3>IDE 一般網站組建。</h3>
+<center><img src="../images/ide-file-build.png" style="width:800px"></center>
+<br />
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE 搜尋</a> <small> (<span style="color:#e83e8c"> 熱粉紅色</span>中的連結會直接將您拖放至編輯器畫面，游標會完全根據相符文字放置) </small> 。</h3>
+<center><img src="../images/ide-search.png" style="width:800px"></center>
+</div>
+
+<style type="text/css">
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2024-04-22 23:14:27 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23423 $ -->

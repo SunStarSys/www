@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW api/index.md.zh-TW'
+keywords: ~
+published: ~
+status: 草稿
+title: Orion 參考
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png">
+</div>
+
+## 即時示範
+
+Orion 示範&trade;
+
+假如你太母親，這個網站會在 Orion 上自行代管。&trade;，和{# lede #}這些熱粉紅色鉛筆圖示[<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 右上方的來源路徑會提供您即時示範{# lede #}
+
+## 建議的書籤程式
+
+請務必在瀏覽器工具列上安裝書籤，方法是從瀏覽器功能表開啟「新書籤」對話方塊畫面，然後在 Location/URL 欄位中輸入以下內容：
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+若未安裝此書籤，您將無法瀏覽即時網站，並立即編輯 Orion 中的頁面&trade;
+
+若要使用書籤程式，只需瀏覽您的即時生產網站 (不在 Orion 中) &trade;
+
+## 入門指南
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4-KiEDFbzl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+## IoC 組建 API
+
+[snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
+
+## 到職處理
+
+對於早期採用者，Orion &trade;
+
+1. 為我們提供您在 Subversion 中網站來源的 URL。
+
+2. 請提供 (角色或郵寄清單) 電子郵件地址，以討論網站開發與維護問題，並確保地址為[SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+
+3. 訂閱您的生產環境 Web 伺服器`svnwcsub` 公眾守護程式`svnpubsub`
+
+4. 請讓我們知道您想要的內容與送出之組建的內容不同，以及要傳遞至哪一個電子郵件地址。
+
+## 來源目錄版面配置
+
+- 中繼線 /
+	- cgi-bin/
+	- 內容 /
+	- 範本 /
+	- 程式庫 /
+		- path.pm
+		- view.pm
+- 分支 /
+
+
+如需即時範例，請參閱<https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/>。
+
+## 動態內容
+
+### 使用變更內容重新產生來源頁面的範例指令碼，即使來源沒有變更。
+
+基本的想法是，您的部分高設定檔來源頁面以「動態」內容建立 (建置包含從其他線上網站 (例如 Jira 瀑布或目前郵寄清單執行緒) 改變的片段。
+
+這是「最新新聞」一節的好例子[ASF 首頁](https://www.apache.org/)，這裡是幕後運作的方式，這裡有一些 shell+svn+cron 魔法 (將動態編譯的源碼檔做為) `$file`
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+將此項目併入一些 shell 程序檔中，將會在您自己的 PC 上使用您快取的 svn 憑證，並讓 cron 以固定的排程執行 (根據您的前端 Web 伺服器 / CDN HTTP 快取的 TTL)。我們完全不需要使用伺服器端工具，您可以完全控制自己的密碼安全性、排程和動態頁面目標。如果您使用的是已啟用 svnpubsub 的 Subversion 服務，則該交易都不會直接與我們的任何硬體有關。您的確認將會觸發我們的 svnwcsub 從屬端，一律監聽您的 svnpubsub 伺服器，在需要時建立及部署這些變更&mdash;
+
+## 例外
+
+待定
+
+## 搜尋
+
+待定
+
+## 快速承諾
+
+待定
+
+## 新增資源
+
+待定
+
+--------
+
+## 索引
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

@@ -1,11 +1,13 @@
 ---
-categories: RESTO,API
+archived: ~
+categories: ~
 dependencies: '*.md.es '
-keywords: borrador
-status: ~
+keywords: RESTO,API
+published: ~
+status: borrador
 title: API de Orion
 ---
 
-{# lede #}Esta página indexa las **API de búsqueda, editor en línea, biblioteca de plantillas de Django y sistema de creación**{# lede #}.
+{# lede #}Esta página indexa las API **Buscar, Editor en línea, Biblioteca de plantillas de Django y Crear sistema**{# lede #}
 
 <!-- $Date$ $Author$ $Revision$ -->

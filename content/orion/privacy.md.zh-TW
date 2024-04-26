@@ -1,0 +1,33 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.zh-TW api/index.md.zh-TW'
+keywords: ~
+published: ~
+status: 草稿
+title: Orion 隱私權政策
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png"></img>
+</div>
+
+## 大綱
+
+- 客戶資料沒有共用 / 轉售。
+
+- 僅用於安全性 / 責任目的的 Cookie。
+
+- 我們記錄的唯一「使用者身份」元件是您的 Google OpenID 帳戶的電子郵件地址，以及您用來連接到任何 Subversion 系統的 Orion 使用者帳戶&trade; 用於您進行「確認」的網站。記錄系統會與基本 Apache 一起追蹤這些項目[`HTTPD`](#) 存取回應日誌集，包括連線 IP 位址、要求協定與 URL 詳細資訊，以及從屬端宣告[`推薦人`](#) 以及[`使用者代理程式`](#).
+
+- {# lede #}這是符合 GDPR 規範的選擇加入系統。第一次造訪 Orion 時&trade; CMS/IDE，您將被導引到 Google 頁面，要求您授權{# lede #} <span class="text-white">SunStar Systems OIDC</span> 應用程式會使用您提供的 Google 帳戶詳細資訊 (主要是設定檔資訊) &mdash;
+
+--------
+
+## 索引
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->
