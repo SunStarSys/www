@@ -38,7 +38,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Confluence: "&check;"
 - Feature: "Multilingual (i18n)"
   Orion: "&check;"
-- Feature: 'Búsqueda completa <span class="editormd-tex">\KaTeX</span> Expresiones
+- Feature: 'Búsqueda completa <span class="editormd-tex">\KaTeX</span> Expresiones'
   Orion: "&check;"
   Confluence: "$$$"
 - Feature: "Federado"
@@ -50,7 +50,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "Instalación de servidor"
 - Feature: "Funciona sin conexión"
   Orion: "&check;"
-- Feature: 'Fácil flujo de trabajo de colaborador de 3a parte con solicitud de extracción'
+- Feature: "Fácil flujo de trabajo de colaborador de 3a parte con solicitud de extracción"
   Orion: "&check;"
 - Feature: "[Integración con GitHub](https://youtu.be/FRc4qZkxVaI) con IDE &amp; Soporte de acciones"
   Orion: "&check;"
@@ -84,7 +84,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Estado de documento apto para búsqueda"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Rebaja <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatización
+- Feature: 'Rebaja <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatización'
   Orion: "&check;"
-- Feature: Traducción automática de NLP de IA
+- Feature: "Traducción automática de NLP de IA"
   Orion: "&check;"

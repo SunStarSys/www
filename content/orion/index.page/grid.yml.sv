@@ -60,7 +60,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Notion: "&check;"
   Confluence: "&check;"
 - Feature: "Obegränsade platser"
-  Orion: Företag &amp; Serverinstallation"
+  Orion: "Företag &amp; Serverinstallation"
 - Feature: "Obegränsad versionskontrollhistorik"
   Orion: "&check;"
 - Feature: "Integrerad spårning av URL-ändring"
@@ -77,14 +77,14 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Orion: "&check;"
 - Feature: "8-64-vägs samtidiga byggen"
   Orion: "&check;"
-- Feature: TCO &lt; $6000/år för Enterprise"
+- Feature: "TCO &lt; $6000/år för Enterprise"
   Orion: "&check;"
 - Feature: "Omfattande 99,99 % SLA"
-  Orion: Företag &amp; Serverinstallation"
+  Orion: "Företag &amp; Serverinstallation"
 - Feature: "Status på sökbart dokument"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering
+- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering'
   Orion: "&check;"
 - Feature: Automatisk översättning av AI NLP
   Orion: "&check;"
