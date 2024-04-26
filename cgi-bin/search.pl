@@ -46,6 +46,7 @@ local our %LANG = (
   ".ru" => "ru_RU",
   ".sv" => "sv_SV",
   ".he" => "he_IL",
+  ".zh-TW" => "zh_TW"
 );
 
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
