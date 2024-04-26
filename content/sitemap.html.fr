@@ -1,1 +1,1 @@
-{% include "main.html" %}
+{% include "main.html"|append:lang %}
