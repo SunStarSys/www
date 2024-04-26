@@ -219,6 +219,7 @@ sub get_client_lang :Sealed {
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
   my $lang = $apreq->args("lang") // $cdata;
   $lang =~ s/[_-].*$//;
+  $lang .= "-TW" if $lang eq "zh";
   return encode($lang);
 }
 
