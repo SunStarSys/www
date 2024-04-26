@@ -46,8 +46,6 @@ local our %LANG = (
   ".ru" => "ru_RU",
   ".sv" => "sv_SV",
   ".he" => "he_IL",
-  ".kr" => "kr_KR",
-  ".zh-TW" => "zh_TW",
 );
 
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
@@ -220,6 +218,7 @@ sub get_client_lang :Sealed {
   my APR::Request $apreq = $apreq_class->handle($r);
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
   my $lang = $apreq->args("lang") // $cdata;
+  $lang =~ s/[_-].*$//;
   return encode($lang);
 }
 
