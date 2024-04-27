@@ -221,7 +221,7 @@ sub get_client_lang :Sealed {
   my $lang = $apreq->args("lang") // $cdata;
   $lang =~ s/[_-].*$//;
   $lang .= "-TW" if $lang eq ".zh";
-  return $lang;
+  return encode($lang);
 }
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
@@ -514,7 +514,7 @@ if ($re !~ $specials_re) {
 
   if ($sha1->hexdigest ne $hash) {
     undef $filter;
-    $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, "*$lang", qw/-P -e/], $re;
+    $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
   }
   else {
     my $grep = $unzip[0] eq "--markdown --yaml" ? "grep" : "xzgrep";
