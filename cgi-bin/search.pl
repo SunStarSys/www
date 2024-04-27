@@ -421,7 +421,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       s/:4433//, s/-internal// for $url;
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
-        $_ = {map {$_=>1} split /[, ]+/} for values %$w;
+        $_ = {map {utf8::encode($_); $_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
           my $key = $k;
           $k =~ s/^.*?\Q$prefix//;
