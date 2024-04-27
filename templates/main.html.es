@@ -78,7 +78,7 @@
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
             active
-																{% endifequal %}"><a class="nav-link" href="/open-source">Código abierto</a>a></li>
+																{% endifequal %}"><a class="nav-link" href="/open-source">Código abierto</a></li>
 
 <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Más información. <span class="caret"></span></a>

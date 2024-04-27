@@ -69,7 +69,7 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; Корпоративные Wiki</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; Корпоративная вики-страница</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class=«nav-link текст-белый»
@@ -78,7 +78,7 @@
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
             active
-																{% endifequal %}"><a class="nav-link" href="/open-source">Открытый исходный код</a>a></li>
+																{% endifequal %}"><a class="nav-link" href="/open-source">Открытый исходный код</a></li>
 
 <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Дополнительно.. <span class="caret"></span></a>
@@ -110,7 +110,7 @@
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}На базе{% endifequal %}{% ifequal lang ".es" %}Энергизадо Пор{% endifequal %}{% ifequal lang ".de" %}Унтерсте1⁄4тцт фон{% endifequal %}{% ifequal lang ".fr" %}Алимент{% endifequal %}...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}На базе{% endifequal %}{% ifequal lang ".es" %}Энергизадо Пор{% endifequal %}{% ifequal lang ".de" %}Унтерсте1⁄4тцт фон{% endifequal %}{% ifequal lang ".fr" %}Алимента{% endifequal %}...</a>
           </li>
         </ul>
       </div>
@@ -124,7 +124,7 @@
 	    {% ifequal lang ".en" %}Поиск{% endifequal -%}
 	    {% ifequal lang ".es" %}Автобус{% endifequal -%}
 	    {% ifequal lang ".de" %}Суче{% endifequal -%}
-	    {% ifequal lang ".fr" %}Ресервер{% endifequal -%}
+	    {% ifequal lang ".fr" %}Рекер{% endifequal -%}
           </button>&nbsp;
           <input class=form-control form-check-input type=checkbox name=markdown_search
           id=markdown-search value=1 {% if markdown_search %}отмечено{% endif %}/><label for="markdown-search"><small>Снижение цен</small></label>
