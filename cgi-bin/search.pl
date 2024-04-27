@@ -469,13 +469,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze {log => $log, time => $r->request_time}
       });
 
-      if (defined $revision and $r->request_time - $log->{time} < 1000) {
-        $log = [map [@$_], @{$log->{log}}];
-      }
-      else {
-        delete $ncache{"$svnuser-$dirname-$revision"};
-        $log = $log->{log};
-      }
+      delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
+      $log = $log->{log};
 
       if (@$log) {
         $revision = $$log[0][0];
