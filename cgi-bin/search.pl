@@ -53,7 +53,7 @@ local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
 
 my Apache2::RequestRec $r = shift;
-my APR::Request::Apache2 $apreq_class;
+kmy APR::Request::Apache2 $apreq_class;
 my APR::Request $apreq = $apreq_class->handle($r);
 
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
@@ -263,7 +263,7 @@ $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0
 $re =~ s/^"(.*)"$/\\Q$1\\E/;
 
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
-s/#([\w.@-]+)/Keywords\\b.*\\K\\b$1\\b/g for $re, $filter;
+s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
 my (@friends, @dlog, $revision, $yaml, $blog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
@@ -536,7 +536,6 @@ if ($re !~ $specials_re) {
   while (my ($k, $v) = each %matches) {
     my $link = $path_info . $k;
 
-
     my $path = "/cms-sites/$host/trunk/content$link";
     if ($markdown) {
       s/\.md(?:text)?/.html/ and s!\.page/[^.]+!! or s/\.ya?ml\b/.json/ for $link;
@@ -594,7 +593,8 @@ my %title = (
   ".ru" => "Результаты поиска по $markdown ",
   ".he" => "תוצאות חיפוש עבור $markdown ",
   ".sv" => "Sökresultat för $markdown ",
-  );
+  ".zh-TW" => "$markdown 的搜尋結果",
+);
 
 $hash =  Digest::SHA1->new;
 $hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
