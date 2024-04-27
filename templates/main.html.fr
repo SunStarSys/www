@@ -98,19 +98,19 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">Suédois</a></li>
 
 <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}Engagements{% endifequal %}{% ifequal lang ".es" %}Compromisos{% endifequal %}{% ifequal lang ".de" %}Engagements{% endifequal %}{% ifequal lang ".fr" %}Engagements{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}Clients{% endifequal %}{% ifequal lang ".es" %}Clientes{% endifequal %}{% ifequal lang ".de" %}Kunden{% endifequal %}{% ifequal lang ".fr" %}Clients{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">{% ifequal lang ".en" %}Essais{% endifequal %}{% ifequal lang ".es" %}Ensayos{% endifequal %}{% ifequal lang ".de" %}AufsÃ¤tze{% endifequal %}{% ifequal lang ".fr" %}Essais{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">Engagements</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Clients</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Essais</a></li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}Taxonomies{% endifequal %}{% ifequal lang ".es" %}Taxonomie{% endifequal %}{% ifequal lang ".de" %}Taxonomère{% endifequal %}{% ifequal lang ".fr" %}Taxonomies{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">{% ifequal lang ".en" %}Catégories{% endifequal %}{% ifequal lang ".es" %}Catégories{% endifequal %}{% ifequal lang ".de" %}Catégorie{% endifequal %}{% ifequal lang ".fr" %}CatÃ©gories{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">{% ifequal lang ".en" %}Accueil{% endifequal %}{% ifequal lang ".es" %}Archivé{% endifequal %}{% ifequal lang ".de" %}Archivé{% endifequal %}{% ifequal lang ".fr" %}Les Archives{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">Taxonomies</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Catégories</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Accueil</a></li>
             </ul>
           </li>
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}Propulsé par{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}UnterstÃ1⁄4tzt von{% endifequal %}{% ifequal lang ".fr" %}Alimenté par{% endifequal %}...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">Propulsé par...</a>
           </li>
         </ul>
       </div>
@@ -120,11 +120,8 @@
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
                espace réservé="PCRE
- {% ifequal lang ".en" %}Recherche récursive{% endifequal %}{% ifequal lang ".es" %}BÃosqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche RÃ©cursive{% endifequal %}" valeur="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
-	    {% ifequal lang ".en" %}Rechercher{% endifequal -%}
-	    {% ifequal lang ".es" %}Buscar{% endifequal -%}
-	    {% ifequal lang ".de" %}Suche{% endifequal -%}
-	    {% ifequal lang ".fr" %}Rechercher{% endifequal -%}
+ Recherche récursive" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+	    Rechercher
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
           id="markdown-search" value="1" {% if markdown_search %}coché{% endif %}/><label for="markdown-search"><small>Démarque</small></label>

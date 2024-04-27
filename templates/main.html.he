@@ -98,19 +98,19 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">שוודית</a></li>
 
 <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}התקשרויות{% endifequal %}{% ifequal lang ".es" %}פרומיזוס{% endifequal %}{% ifequal lang ".de" %}התקשרויות{% endifequal %}{% ifequal lang ".fr" %}התקשרויות{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}לקוחות{% endifequal %}{% ifequal lang ".es" %}לקוחות{% endifequal %}{% ifequal lang ".de" %}קונדן{% endifequal %}{% ifequal lang ".fr" %}לקוחות{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">{% ifequal lang ".en" %}מסות{% endifequal %}{% ifequal lang ".es" %}אנסיאוס{% endifequal %}{% ifequal lang ".de" %}אופסאטזה{% endifequal %}{% ifequal lang ".fr" %}אסאי{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">התקשרויות</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">לקוחות</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">מסות</a></li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}טקסונומיות{% endifequal %}{% ifequal lang ".es" %}טקסונומיה{% endifequal %}{% ifequal lang ".de" %}טקסונומיה{% endifequal %}{% ifequal lang ".fr" %}טקסונומיות{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">{% ifequal lang ".en" %}קטגוריות{% endifequal %}{% ifequal lang ".es" %}קטגוריה{% endifequal %}{% ifequal lang ".de" %}קטגורית{% endifequal %}{% ifequal lang ".fr" %}קטגוריות{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">{% ifequal lang ".en" %}ארכיונים{% endifequal %}{% ifequal lang ".es" %}ארכיבו{% endifequal %}{% ifequal lang ".de" %}ארכיב{% endifequal %}{% ifequal lang ".fr" %}ארכיוני Les{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">טקסונומיות</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">קטגוריות</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">ארכיונים</a></li>
             </ul>
           </li>
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}מופעל באמצעות{% endifequal %}{% ifequal lang ".es" %}נקבוביות אנרגיות{% endifequal %}{% ifequal lang ".de" %}אונטרשטאט פון{% endifequal %}{% ifequal lang ".fr" %}אלימנטייה{% endifequal %}...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">מופעל באמצעות...</a>
           </li>
         </ul>
       </div>
@@ -120,11 +120,8 @@
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
                שומר מקום="PCRE
- {% ifequal lang ".en" %}חיפוש רקורסיבי{% endifequal %}{% ifequal lang ".es" %}בוסקדה רקורסיבה{% endifequal %}{% ifequal lang ".de" %}סוקה רקורסיבית{% endifequal %}{% ifequal lang ".fr" %}רקשה RÃ©cursive{% endifequal %}" ערך"{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
-	    {% ifequal lang ".en" %}חיפוש{% endifequal -%}
-	    {% ifequal lang ".es" %}מכונית אוטובוס{% endifequal -%}
-	    {% ifequal lang ".de" %}סושה{% endifequal -%}
-	    {% ifequal lang ".fr" %}רשצ'ר{% endifequal -%}
+ חיפוש רקורסיבי ערך="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+	    חיפוש
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
           מזהה="markdown-search" ערך="1" {% if markdown_search %}מסומן{% endif %}/><label for="markdown-search"><small>סימון למטה</small></label>

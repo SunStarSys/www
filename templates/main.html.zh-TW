@@ -98,19 +98,19 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">瑞典文</a></li>
 
 <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}互動{% endifequal %}{% ifequal lang ".es" %}染色體{% endifequal %}{% ifequal lang ".de" %}互動{% endifequal %}{% ifequal lang ".fr" %}互動{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}客戶{% endifequal %}{% ifequal lang ".es" %}用戶端{% endifequal %}{% ifequal lang ".de" %}昆登{% endifequal %}{% ifequal lang ".fr" %}客戶{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">{% ifequal lang ".en" %}繁體中文{% endifequal %}{% ifequal lang ".es" %}Ensayos{% endifequal %}{% ifequal lang ".de" %}Aufs 筆記{% endifequal %}{% ifequal lang ".fr" %}Essais{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">互動</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">客戶</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">繁體中文</a></li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}分類{% endifequal %}{% ifequal lang ".es" %}分類{% endifequal %}{% ifequal lang ".de" %}分類{% endifequal %}{% ifequal lang ".fr" %}分類{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">{% ifequal lang ".en" %}分類{% endifequal %}{% ifequal lang ".es" %}分類{% endifequal %}{% ifequal lang ".de" %}分類{% endifequal %}{% ifequal lang ".fr" %}CatFinancial © gories{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">{% ifequal lang ".en" %}檔案下載{% endifequal %}{% ifequal lang ".es" %}阿基沃{% endifequal %}{% ifequal lang ".de" %}阿契夫{% endifequal %}{% ifequal lang ".fr" %}女同志{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">分類</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">分類</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">檔案下載</a></li>
             </ul>
           </li>
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}技術支持：{% endifequal %}{% ifequal lang ".es" %}Energizado por{% endifequal %}{% ifequal lang ".de" %}UnterstFinancial1⁄4tzt von{% endifequal %}{% ifequal lang ".fr" %}AlimentFinancial © par{% endifequal %}...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">技術支持：</a>
           </li>
         </ul>
       </div>
@@ -120,11 +120,8 @@
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
                預留位置 =」PCRE
- {% ifequal lang ".en" %}遞迴搜尋{% endifequal %}{% ifequal lang ".es" %}BFinancialosqueda Recursiva{% endifequal %}{% ifequal lang ".de" %}Rekursive Suche{% endifequal %}{% ifequal lang ".fr" %}Recherche RFinancial © cursive{% endifequal %}「 值 =」{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
-	    {% ifequal lang ".en" %}搜尋{% endifequal -%}
-	    {% ifequal lang ".es" %}巴斯卡{% endifequal -%}
-	    {% ifequal lang ".de" %}蘇切{% endifequal -%}
-	    {% ifequal lang ".fr" %}重新啟動器{% endifequal -%}
+ 遞迴搜尋 " value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+	    搜尋
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
           id="markdown-search" value="1" {% if markdown_search %}已勾選{% endif %}/><label for="markdown-search"><small>減價</small></label>

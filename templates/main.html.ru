@@ -98,19 +98,19 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">шведский</a></li>
 
 <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}Взаимодействие{% endifequal %}{% ifequal lang ".es" %}Компромизовы{% endifequal %}{% ifequal lang ".de" %}Взаимодействие{% endifequal %}{% ifequal lang ".fr" %}Взаимодействие{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">{% ifequal lang ".en" %}Клиенты{% endifequal %}{% ifequal lang ".es" %}Клиенты{% endifequal %}{% ifequal lang ".de" %}Кунден{% endifequal %}{% ifequal lang ".fr" %}Клиенты{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">{% ifequal lang ".en" %}Эссе{% endifequal %}{% ifequal lang ".es" %}Энсайос{% endifequal %}{% ifequal lang ".de" %}Ауфсатце{% endifequal %}{% ifequal lang ".fr" %}Эссе{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">Взаимодействие</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Клиенты</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Эссе</a></li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">{% ifequal lang ".en" %}Таксономии{% endifequal %}{% ifequal lang ".es" %}Таксономия{% endifequal %}{% ifequal lang ".de" %}Таксоном{% endifequal %}{% ifequal lang ".fr" %}Таксономии{% endifequal %}</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">{% ifequal lang ".en" %}Категории{% endifequal %}{% ifequal lang ".es" %}Категории{% endifequal %}{% ifequal lang ".de" %}Категориен{% endifequal %}{% ifequal lang ".fr" %}Категори{% endifequal %}</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">{% ifequal lang ".en" %}Архивы{% endifequal %}{% ifequal lang ".es" %}Архиво{% endifequal %}{% ifequal lang ".de" %}Архив{% endifequal %}{% ifequal lang ".fr" %}Лесные архивы{% endifequal %}</a></li>
+              <li class="dropdown-header text-white">Таксономии</li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Категории</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Архивы</a></li>
             </ul>
           </li>
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">{% ifequal lang ".en" %}На базе{% endifequal %}{% ifequal lang ".es" %}Энергизадо Пор{% endifequal %}{% ifequal lang ".de" %}Унтерсте1⁄4тцт фон{% endifequal %}{% ifequal lang ".fr" %}Алимента{% endifequal %}...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">На базе...</a>
           </li>
         </ul>
       </div>
@@ -120,11 +120,8 @@
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class=form-control type=text name=regex
                placeholder=PCRE
- {% ifequal lang ".en" %}Рекурсивный поиск{% endifequal %}{% ifequal lang ".es" %}Бёскеда Рекурсива{% endifequal %}{% ifequal lang ".de" %}Рекурсивный Суче{% endifequal %}{% ifequal lang ".fr" %}Recherche Ré©курсивный{% endifequal %}«значение»{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
-	    {% ifequal lang ".en" %}Поиск{% endifequal -%}
-	    {% ifequal lang ".es" %}Автобус{% endifequal -%}
-	    {% ifequal lang ".de" %}Суче{% endifequal -%}
-	    {% ifequal lang ".fr" %}Рекер{% endifequal -%}
+ рекурсивный поиск value={{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+	    Поиск
           </button>&nbsp;
           <input class=form-control form-check-input type=checkbox name=markdown_search
           id=markdown-search value=1 {% if markdown_search %}отмечено{% endif %}/><label for="markdown-search"><small>Снижение цен</small></label>
