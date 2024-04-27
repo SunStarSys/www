@@ -53,8 +53,8 @@ local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
 
 my Apache2::RequestRec $r = shift;
-kmy APR::Request::Apache2 $apreq_class;
-my APR::Request $apreq = $apreq_class->handle($r);
+my APR::Request::Apache2 $apreq;
+$apreq = $apreq->handle($r);
 
 my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
 my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
@@ -134,8 +134,8 @@ sub parser :Sealed {
 
 sub client_wants_json :Sealed {
     my Apache2::RequestRec $r     = shift;
-    my APR::Request::Apache2 $apreq_class;
-    my APR::Request $apreq = $apreq_class->handle($r);
+    my APR::Request::Apache2 $apreq;
+    $apreq = $apreq->handle($r);
 
     return 1 if $apreq->args("as_json");
 
