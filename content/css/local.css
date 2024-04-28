@@ -136,7 +136,8 @@ header div, div.brand-light, header div form input
 { background-color: #8f99fb }
 
 pre {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 10px;
+    direction: ltr;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px;
 }
