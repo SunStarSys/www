@@ -87,7 +87,7 @@
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Site Source</a>
               </li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Site Maps</li>
+              <li class="dropdown-header text-white">i18n</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">English</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Spanish</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">German</a></li>
