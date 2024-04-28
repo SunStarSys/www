@@ -88,14 +88,14 @@
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">Site Maps</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.en">English</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.es">Spanish</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.de">German</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.fr">French</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.ru">Russian</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.zh-TW">Chinese</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.he">Hebrew</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">Swedish</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.en">English</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.es">Spanish</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.de">German</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.fr">French</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.ru">Russian</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.zh-TW">Chinese</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.he">Hebrew</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.sv">Swedish</a></li>
 
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">Engagements</li>

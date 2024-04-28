@@ -88,14 +88,14 @@
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">網站地圖</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.en">繁體中文</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.es">西班牙文</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.de">德文</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.fr">法文</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.ru">俄文</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.zh-TW">中文 English</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.he">希伯來文</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">瑞典文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.en">繁體中文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.es">西班牙文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.de">德文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.fr">法文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.ru">俄文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.zh-TW">中文 English</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.he">希伯來文</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.sv">瑞典文</a></li>
 
 <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">互動</li>

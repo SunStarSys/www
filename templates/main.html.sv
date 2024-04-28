@@ -88,14 +88,14 @@
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">Platskartor</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.en">Engelska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.es">Spanska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.de">tyska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.fr">Franska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.ru">ryska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.zh-TW">kinesiska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.he">hebreiska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/sitemap.html.sv">Svenska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.en">Engelska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.es">Spanska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.de">tyska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.fr">Franska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.ru">ryska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.zh-TW">kinesiska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.he">hebreiska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname}}/{{path|basename:0}}.html.sv">Svenska</a></li>
 
 <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">Engagemang</li>
