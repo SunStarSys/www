@@ -119,12 +119,11 @@
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               placeholder="PCRE
- Búsqueda recursiva" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+               placeholder="PCRE Búsqueda recursiva" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
 	    Buscar
           </button>&nbsp;
-          <input class="form-control form-check-input" type="casilla de control" name="markdown_search"
-          id="markdown-search" valor="1" {% if markdown_search %}marcado{% endif %}/><label for="markdown-search"><small>Rebaja</small></label>
+          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
+          id="markdown-search" value="1" {% if markdown_search %}active{% endif %}/><label for="markdown-search"><small>Rebaja</small></label>
         </form>
       </div>
     </div>

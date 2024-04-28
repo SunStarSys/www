@@ -87,7 +87,7 @@
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Source du site</a>
               </li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Plan du site</li>
+              <li class="dropdown-header text-white">i18n</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Anglais</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Espagnol</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Allemand</a></li>
@@ -124,7 +124,7 @@
 	    Rechercher
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}coché{% endif %}/><label for="markdown-search"><small>Démarque</small></label>
+          id="markdown-search" value="1" {% if markdown_search %}active{% endif %}/><label for="markdown-search"><small>Démarque</small></label>
         </form>
       </div>
     </div>
