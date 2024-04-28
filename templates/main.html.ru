@@ -73,7 +73,7 @@
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class=«nav-link текст-белый»
-                href="/orion/plans.html{{ lang }}»>Ценовые планы Orion</a></li>
+                href="/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -118,13 +118,13 @@
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input name="lang" type="hidden" value="{{ lang }}" />
-          <input class=form-control type=text name=regex
-               placeholder=PCRE
- рекурсивный поиск value={{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+          <input class="form-control" type="text" name="regex"
+               placeholder="PCRE
+ рекурсивный поиск" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
 	    Поиск
           </button>&nbsp;
-          <input class=form-control form-check-input type=checkbox name=markdown_search
-          id=markdown-search value=1 {% if markdown_search %}отмечено{% endif %}/><label for="markdown-search"><small>Снижение цен</small></label>
+          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
+          id=markdown-search value=1 {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>Снижение цен</small></label>
         </form>
       </div>
     </div>

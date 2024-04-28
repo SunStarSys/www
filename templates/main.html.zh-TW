@@ -73,12 +73,11 @@
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}」>Orion 定價方案</a></li>
+                href="/orion/plans.html{{ lang }}">Orion 定價方案</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
-            active
-																{% endifequal %}"><a class="nav-link" href="/open-source">開源</a></li>
+            active {% endifequal %}"><a class="nav-link" href="/open-source">開源</a></li>
 
 <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">詳細資訊。。<span class="caret"></span></a>
@@ -119,12 +118,12 @@
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               預留位置 =」PCRE
- 遞迴搜尋 " value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+               placeholder="PCRE
+ 遞迴搜尋" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
 	    搜尋
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}已勾選{% endif %}/><label for="markdown-search"><small>減價</small></label>
+          id="markdown-search" value="1" {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>減價</small></label>
         </form>
       </div>
     </div>
