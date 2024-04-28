@@ -33,7 +33,7 @@ Para obtener información sobre precios, consulte nuestra [Planes Orion](plans).
 Lo que diferencia a este producto de nuestros competidores es el [Tecnología Orion](technology)y cómo su **eficiencia** nos permite mantener costos operativos muy bajos al tiempo que proporciona controles editoriales superiores y funciones innovadoras.  Transferimos el ahorro de costos a nuestros **clientes**, con solo recargos marginales por recursos adicionales de proveedores de nube. [Llámenos](/contact).
 
 <ul>
-  <li><p>un <span class="text-white">líder universitario</span> que busca la forma de <b>eliminar el plagio</b> en el campus a través de una plataforma de intercambio de documentos, selección y publicación en línea controlada por versión de <a href="https://en.wikipedia.org/wiki/Open_access">Open Access</a>, o un sistema de gestión del conocimiento orientado al ámbito académico,</p></li>
+  <li><p>un <span class="text-white">líder de la universidad</span> que busca la forma de <b>eliminar el plagio</b> en el campus a través de una plataforma de intercambio de documentos, selección y publicación en línea con control de versiones de <a href="https://en.wikipedia.org/wiki/Open_access">Open Access</a>, o un sistema de gestión del conocimiento orientado al ámbito académico,</p></li>
 
 <li><p>un <span class="text-white">responsable de la toma de decisiones del gobierno de TI/sector de defensa</span> con las necesidades de cumplimiento FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a>, o requisitos de control de acceso detallados en el repositorio de control de versiones de su sitio,</p></li>
 
@@ -84,7 +84,7 @@ Nuestra red global de punto de presencia (POP) garantiza conexiones de baja late
 
 Vaya a su propio ritmo, use tantos empleados / vistas previas / ediciones / confirmaciones / sucursales como desee, y solo pague por lo que *utiliza realmente * en nuestra infraestructura.
 
-Ver nuestro [Planes Orion](plans).
+Ver nuestra [Planes Orion](plans).
 
 </div>
 </div>
@@ -110,7 +110,7 @@ Ver nuestro [Planes Orion](plans).
 <br />
 <h2>Algunas capturas de pantalla representativas:</h2>
 <br />
-<h3>Vista IDE con farsi (UTF-8)</h3>
+<h3>Vista IDE con alemán, francés, hebreo y ruso (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br />
 <h3>Vista del editor de IDE.</h3>

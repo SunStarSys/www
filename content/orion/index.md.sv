@@ -39,7 +39,7 @@ Det som skiljer denna produkt från våra konkurrenter är [Orion-teknik](techno
 
 <li><p>en <span class="text-white">marknadsföringsansvarig</span> som vill ha en innovativ, global företagsplattform för hantering av företagets webbplatsresurser med hjälp av Orion som ett headless CMS,</p></li>
 
-<li><p>ett <span class="text-white">teknikföretag/ledande inom webbyrå</span> med en mycket osäker kommersiell wiki, ett berg av produktdokumentation online eller klientwebbplatser (som potentiellt erbjuder binära nedladdningar) för att kurera,</p></li>
+<li><p>ett <span class="text-white">teknikföretag/ledande inom webbyrå</span> med en mycket osäker kommersiell wiki, ett berg av produktdokumentation online eller klientwebbplatser (som potentiellt erbjuder binära nedladdningar) för att hantera</p></li>
 
 <li><p>en <span class="text-white">principiell arkitekt för hög tillgänglighet</span> som är trött på att hantera enskilda felpunkter i SQL-baserade LAMP-stackar.</p></li>
 
@@ -64,7 +64,7 @@ Mindre än <span class="text-info">100 LOC</span> för att tillhandahålla byggl
 
 Vill du ha en webbplats som är **secure-by-default**?  Lätt att uppdatera och hantera, samtidigt som det döljer komplexiteten i ett underliggande versionskontrollsystem, men ger dig full kraft när du verkligen behöver det?  Omedelbar publicering när du vill; smidiga, mellanlagrade grenbyggen och anpassningsbara detaljerade kampanjer till din produktionswebbplats eftersom det passar ditt teams föredragna arbetsflöde.
 
-Om du är trött på per-sätet licensiering och per-CPU-cykel val väger dig ner när du behöver fixa ett stavfel, [kontakta oss](/contact).
+Om du är trött på per-sits licensiering och per-CPU-cykel val väger dig ner när du behöver fixa ett stavfel, [kontakta oss](/contact).
 
 Att aldrig behöva hantera ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. Online IDE är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa kommer även det mobila gränssnittet (webbläsaren) att få det gjort, * omedelbart*.
 
@@ -110,7 +110,7 @@ Se våra [Orionplaner](plans).
 <br />
 <h2>Några skärmdumpar:</h2>
 <br />
-<h3>IDE-vy med farsi (UTF-8).</h3>
+<h3>IDE-vy med tyska, franska, hebreiska och ryska (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br />
 <h3>IDE-redigerarvy.</h3>
@@ -146,4 +146,4 @@ Se våra [Orionplaner](plans).
 }
 </style>
 
-<!-- $Date: 2024-04-22 23:14:27 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23423 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

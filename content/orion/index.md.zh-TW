@@ -48,7 +48,7 @@ title: SunStar 系統 Orion
 
 * 我們的產品不涉及供應商鎖定 *。但不只是用我們的詞語，請造訪以瞭解建置系統自訂通常涉及什麼
 
-[我們的 viewvc 來源程式庫樹狀結構](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/)，或其[<i class="fa fa-github fa-emoji" title="吉蘇布"></i> GitHub 鏡像](https://github.com/SunStarSys/www/tree/trunk/lib).
+[我們的 viewvc 來源程式庫樹狀結構](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/)，或其[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](https://github.com/SunStarSys/www/tree/trunk/lib).
 
 提供此網站的建置邏輯少於 <span class="text-info">100 個 LOC</span> ，其中包括用於自動產生多語言之複雜且備忘的相依性管理[SiteMap](/sitemap) 與所有目錄索引 (類似) [此部份](#Details) 此特定頁面)。我們甚至放下基礎[GitHub 上組建的靜態網站產生器](https://github.com/SunStarSys/Orion).
 
@@ -72,9 +72,9 @@ title: SunStar 系統 Orion
 
 <span class="text-success"><em>我們只為您打造了需要的版本。</span></em>&trade;
 
-此技術於 2011 年底由 Apache 基礎架構團隊的成員首次發明。片語 」[JAM 堆疊](https://jamstack.wtf)「在幾年後被一個團體不知悉我們在此空間之前的藝術品所整理出來。但是[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion).
+此技術於 2011 年底由 Apache Infrastructure Team 的成員首次發明。片語 」[JAM 堆疊](https://jamstack.wtf)「在幾年後被一個團體不知悉我們在此空間之前的藝術品所整理出來。但是[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion).
 
-<h4>想讓它快速旋轉，看看它有多快又簡單？</h4>
+<h4>想要讓它快速旋轉，看看它有多快又簡單？</h4>
 
 本網站為自行代管；所有熱粉紅色鉛筆小方塊[<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index).
 
@@ -110,7 +110,7 @@ title: SunStar 系統 Orion
 <br />
 <h2>少數代表螢幕截圖：</h2>
 <br />
-<h3>IDE 檢視 (含 Farsi) (UTF-8)。</h3>
+<h3>IDE 檢視，包含德文、法文、希伯來文及俄文 (UTF-8)。</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br />
 <h3>IDE 編輯器檢視。</h3>
@@ -146,4 +146,4 @@ title: SunStar 系統 Orion
 }
 </style>
 
-<!-- $Date: 2024-04-22 23:14:27 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23423 $ -->
+<!-- $Date$ $Author$ $Revision$ -->
