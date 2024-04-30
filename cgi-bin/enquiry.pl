@@ -16,12 +16,25 @@ use sealed 'deparse';
 my Apache2::RequestRec $r = shift;
 
 my $DOMAIN = q/sunstarsys.com/;
-our $date   = gmtime;
-our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
+local our $date   = gmtime;
+local our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
 
-our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
-our $validator = $r->dir_config->get("validator") // "orion";
-our $lang = get_client_lang($r);
+local our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
+local our $validator = $r->dir_config->get("validator") // "orion";
+local our $lang = get_client_lang($r);
+
+local our %LANG = (
+  ".de" => "de_DE",
+  ".en" => "en_US",
+  ".es" => "es_ES",
+  ".fr" => "fr_FR",
+  ".ru" => "ru_RU",
+  ".sv" => "sv_SV",
+  ".he" => "he_IL",
+  ".zh-TW" => "zh_TW"
+);
+
+local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 
 sub get_client_lang :Sealed {
   my Apache2::RequestRec $r = shift;
