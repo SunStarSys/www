@@ -12,6 +12,7 @@ use strict;
 use warnings;
 use base 'sealed';
 use sealed 'deparse';
+use Apache2::Const -compile => qw/HTTP_OK OK HTTP_BAD_REQUEST/;
 
 my Apache2::RequestRec $r = shift;
 
@@ -36,6 +37,27 @@ local our %LANG = (
 
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 
+sub negotiate_file :Sealed {
+  my Apache2::RequestRec $r = shift;
+  my ($file1, $file2) = @_;
+    # The reason we take an intermediate subreq here is to
+    # avoid any funky lookup optimizations which would trigger
+    # the subrequest's uri to be filled in with a reasonable guess,
+    # which would trigger the SunStarSys::Orion::MapToStorage handler to
+    # perform the lookup instead of the default maptostorage handler.
+    # We want that lookup to fail so mod_negotiation can kick in.
+    # The funky lookup optimizations only happen when the subrequest
+    # is an immediate directory entry of the parent request, which we can
+    # avoid by doing a lookup of "/", which will resolve to
+    # the docroot, not the base dir of the working copies.
+
+  my Apache2::SubRequest $s = $r->lookup_uri("/");
+  my Apache2::SubRequest $subr = $s->lookup_uri($file1);
+  return $subr->filename
+    if $subr->status == Apache2::Const::HTTP_OK or not $file2;
+  return $s->lookup_uri($file2)->filename;
+}
+
 sub get_client_lang :Sealed {
   my Apache2::RequestRec $r = shift;
   my APR::Request::Apache2 $apreq;
@@ -59,7 +81,7 @@ sub render :Sealed {
   $r->content_type("text/html; charset='utf-8'");
   my Dotiac::DTL::Template $dtl = Template($template);
   $r->print($dtl->render(\%args));
-  exit 0;
+  return Apache2::Const::OK;
 }
 
 if ($r->method eq "POST") {
