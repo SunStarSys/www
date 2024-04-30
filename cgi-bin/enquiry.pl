@@ -21,6 +21,18 @@ our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
 
 our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
 our $validator = $r->dir_config->get("validator") // "orion";
+our $lang = get_client_lang($r);
+
+sub get_client_lang :Sealed {
+  my Apache2::RequestRec $r = shift;
+  my APR::Request::Apache2 $apreq;
+  $apreq = $apreq->handle($r);
+  my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
+  my $lang = $apreq->args("lang") // $cdata;
+  $lang =~ s/[_-].*$//;
+  $lang .= "-TW" if $lang eq ".zh";
+  return encode($lang);
+}
 
 sub render :Sealed {
   my Apache2::RequestRec $r = shift;
@@ -85,7 +97,8 @@ EOT
 
   render $r, "enquiry_post.html",
     content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
-    headers => { title => "Sales Enquiry" };
+    headers => { title => "Sales Enquiry" },
+	lang    => $lang;
 }
 
-render $r, "enquiry_get.html.en", nonce => rand;
+render $r, "enquiry_get.html.en", nonce => rand, lang => $lang;
