@@ -83,7 +83,7 @@ sub render :Sealed {
   $r->content_type("text/html; charset='utf-8'");
   my Dotiac::DTL::Template $dtl = Template($template);
   $r->print($dtl->render(\%args));
-  return Apache2::Const::OK;
+  exit Apache2::Const::OK;
 }
 
 if ($r->method eq "POST") {
