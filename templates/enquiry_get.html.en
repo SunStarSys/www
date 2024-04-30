@@ -1,4 +1,4 @@
-{% include "analytics.html" %}
+{% include "/analytics.html" %}
 <h3>Orion Sales Enquiries</h3>
 <br>
 <form method="POST" action="/dynamic/enquiry" class="form">
