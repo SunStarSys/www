@@ -88,4 +88,4 @@ EOT
     headers => { title => "Sales Enquiry" };
 }
 
-render $r, "enquiry_get.html", nonce => rand;
+render $r, "enquiry_get.html.en", nonce => rand;
