@@ -4,6 +4,7 @@ use Apache2::RequestRec;
 use Apache2::RequestUtil;
 use Apache2::RequestIO;
 use Apache2::SubRequest;
+use APR::Request qw/encode/;
 use APR::Request::Apache2;
 use APR::Request::Param;
 use APR::Request::Cookie;
