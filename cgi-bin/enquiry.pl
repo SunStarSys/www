@@ -111,7 +111,7 @@ EOT
   render $r, "enquiry_post.html",
     content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
     headers => { title => "Sales Enquiry" },
-	lang    => $lang;
+	lang => $lang;
 }
 
 render $r, "enquiry_get.html.en", nonce => rand, lang => $lang;
