@@ -87,7 +87,7 @@ if ($r->method eq "POST") {
     $srs_sender =~ /^(.*)$/ and length $1 or die "BAD EMAIL: $vars{email}";
     %ENV = ();
 
-    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -f/, "$1\@$DOMAIN";
+    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
     my $msg =<<EOT;
 To: $to
 From: $cn <$srs_sender\@$DOMAIN>
