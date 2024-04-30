@@ -16,11 +16,11 @@ use sealed 'deparse';
 my Apache2::RequestRec $r = shift;
 
 my $DOMAIN = q/sunstarsys.com/;
-my $date   = gmtime;
-my ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
+our $date   = gmtime;
+our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
 
-my $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
-my $validator = $r->dir_config->get("validator") // "orion";
+our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
+our $validator = $r->dir_config->get("validator") // "orion";
 
 sub render :Sealed {
   my Apache2::RequestRec $r = shift;
