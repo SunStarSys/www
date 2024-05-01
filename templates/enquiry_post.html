@@ -13,3 +13,12 @@ Nachricht erhalten
 {% endblock %}
 {% block header %}
 {% endblock %}
+{% block javascript %}
+<script>
+  window.addEventListener('load', function() {
+    if (window.location.href.includes('/dynamic/enquiry')) {
+    gtag('event', 'conversion', {'send_to': 'AW-619333051/LQN9COKR-KsZELuLqacC'});
+    }
+  });
+</script>
+{% endblock %}

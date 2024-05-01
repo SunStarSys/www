@@ -252,13 +252,6 @@
 	}
   </script>
   {% block javascript %}{% endblock %}
-<script>
-  window.addEventListener('load', function() {
-    if (window.location.href.includes('/dynamic/enquiry')) {
-    gtag('event', 'conversion', {'send_to': 'AW-619333051/LQN9COKR-KsZELuLqacC'});
-    }
-  });
-</script>
 </div>
 </body>
 </html>
