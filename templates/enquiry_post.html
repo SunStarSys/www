@@ -22,3 +22,13 @@ Nachricht erhalten
     gtag('config', 'AW-619333051');
   </script>
 {% endblock %}
+{% block footer %}
+<script>
+  window.addEventListener('load', function() {
+    if (window.location.href.includes('/dynamic/enquiry')) {
+    gtag('event', 'conversion', {'send_to': 'AW-619333051/LQN9COKR-KsZELuLqacC'});
+    }
+  });
+
+</script>
+{% endblock %}
