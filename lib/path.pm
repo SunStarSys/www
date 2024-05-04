@@ -45,7 +45,7 @@ our @patterns = (
   [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
 
   [qr!/(api|clients)/.*\.md(?:text)?!, memoize => {
-    view            => [qw/set_template_from_capture snippet langify_template  single_narrative/],
+    view            => [qw/set_template_from_capture snippet single_narrative/],
     compress        => 1,
     facts           => $facts,
     markdown_search => 1, # search markdown instead of built html
@@ -59,7 +59,7 @@ our @patterns = (
   }],
 
   [qr#^(?!/editor\.md/).*\.md(?:text)?[^/]*$#, memoize => {
-    view       => [qw/snippet asymptote langify_template  single_narrative/],
+    view       => [qw/snippet asymptote langify_template single_narrative/],
     compress   => 1,
     template   => "main.html",
     facts      => $facts,
