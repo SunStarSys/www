@@ -482,6 +482,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           secure => 1,
           path => "/",
         );
+
         my APR::Table $hdr_out = $r->err_headers_out;
         $hdr_out->add("Set-Cookie" => $cookie->as_string);
       }
