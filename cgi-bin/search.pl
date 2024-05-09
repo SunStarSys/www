@@ -233,7 +233,7 @@ my $host     = $r->headers_in->{host};
 my ($js, $count);
 
 
-my $env = BerkeleyDB::Env->new(-Home => "/x1/tmp", -Flags => DB_CREATE|DB_INIT_CDB|DB_INIT_MPOOL or die "Can't create DB env: $!";
+my $env = BerkeleyDB::Env->new(-Home => "/x1/tmp", -Flags => DB_CREATE|DB_INIT_CDB|DB_INIT_MPOOL) or die "Can't create DB env: $!";
 tie my %ncache, 'BerkeleyDB::Hash', -Filename => "ncache", -Flags => DB_CREATE, -Env => $env or die "Can't open ncache DB: $!";
 tie my %wcache, 'BerkeleyDB::Hash', -Filename => "wcache", -Flags => DB_CREATE, -Env => $env or die "Can't open wcache DB: $!";
 
