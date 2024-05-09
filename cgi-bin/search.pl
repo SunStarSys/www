@@ -469,7 +469,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
         push @$_, map {utf8::encode $_; $_} $svn->diff($dirname, 1, $$_[0]) for @$log;
-        @$log = grep $$_[3] ne $svnuser, @$log if IGNORE_SELFIES;
+        @$log = grep {length $$_[3] and $$_[3] ne $svnuser} @$log if IGNORE_SELFIES;
         freeze {log => $log, time => $r->request_time}
       });
 
