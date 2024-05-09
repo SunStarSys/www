@@ -234,8 +234,8 @@ my ($js, $count);
 
 
 my $env = BerkeleyDB::Env->new(-Home => "/x1/tmp", -Flags => DB_CREATE|DB_INIT_CDB|DB_INIT_MPOOL|DB_THREAD, -ErrFile => *STDERR) or die "Can't create DB env: $!";
-tie my %ncache, 'BerkeleyDB::Hash', -Filename => "ncache", -Flags => DB_CREATE, -Env => $env or die "Can't open ncache DB: $!";
-tie my %wcache, 'BerkeleyDB::Hash', -Filename => "wcache", -Flags => DB_CREATE, -Env => $env or die "Can't open wcache DB: $!";
+my $dbn = tie my %ncache, 'BerkeleyDB::Hash', -Filename => "ncache", -Flags => DB_CREATE, -Env => $env or die "Can't open ncache DB: $!";
+my $dbw = tie my %wcache, 'BerkeleyDB::Hash', -Filename => "wcache", -Flags => DB_CREATE, -Env => $env or die "Can't open wcache DB: $!";
 
 utf8::decode($_) for $re, $filter;
 
@@ -423,6 +423,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
+        $dbw->cds_lock;
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {utf8::encode($_); $_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -440,9 +441,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
         freeze { hash => $w, time => $r->request_time }
       });
-
-      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
+      $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
       $watchers = $watchers->{hash};
+      $dbw->cds_unlock;
       untie %wcache;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
@@ -464,6 +465,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname = $1;
 
       ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
+        $dbn->cds_lock;
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
@@ -472,7 +474,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze {log => $log, time => $r->request_time}
       });
 
-      delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
+      $dbn->cds_lock, delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
+      $dbn->cds_unlock;
       $log = $log->{log};
       untie %ncache;
       if (@$log) {
