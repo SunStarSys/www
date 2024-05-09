@@ -443,7 +443,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $lock //= $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
       $watchers = $watchers->{hash};
       undef $lock;
-      untie %wcache;
+
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
         push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
@@ -476,7 +476,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $lock //= $dbn->cds_lock, delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
       undef $lock;
       $log = $log->{log};
-      untie %ncache;
+
       if (@$log) {
         $revision = $$log[0][0];
         my $cookie = APR::Request::Cookie->new(
