@@ -28,7 +28,7 @@ use File::Basename;
 use FreezeThaw qw/freeze thaw/;
 use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
-use DB_File;
+use BerkeleyDB;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
@@ -231,8 +231,8 @@ my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my ($js, $count);
 
-tie my %ncache, DB_File => "/x1/tmp/ncache", O_RDWR|O_CREAT or die "Can't open ncache DB: $!";
-tie my %wcache, DB_File => "/x1/tmp/wcache", O_RDWR|O_CREAT or die "Can't open wcache DB: $!";
+tie my %ncache, 'BerkeleyDB::Hash', -Filename => "/x1/tmp/ncache", -Flags => DB_CREATE|DB_INIT_CDB|DB_INIT_MPOOL or die "Can't open ncache DB: $!";
+tie my %wcache, 'BerkeleyDB::Hash', -Filename => "/x1/tmp/wcache", -Flags => DB_CREATE|DB_INIT_CDB|DB_INIT_MPOOL or die "Can't open wcache DB: $!";
 
 utf8::decode($_) for $re, $filter;
 
