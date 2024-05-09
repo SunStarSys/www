@@ -29,6 +29,7 @@ use FreezeThaw qw/freeze thaw/;
 use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use BerkeleyDB;
+use DB_File;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
