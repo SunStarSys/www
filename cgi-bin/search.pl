@@ -29,7 +29,6 @@ use FreezeThaw qw/freeze thaw/;
 use List::Util qw/sum/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use BerkeleyDB;
-use DB_File;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
@@ -232,8 +231,7 @@ my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my ($js, $count);
 
-
-my $env = BerkeleyDB::Env->new(-Home => "/x1/tmp", -Flags => DB_CREATE|DB_INIT_CDB|DB_INIT_MPOOL|DB_THREAD|DB_NOMMAP, -ErrFile => *STDERR) or die "Can't create DB env: $!";
+my $env = BerkeleyDB::Env->new(-Home => "/x1/tmp", -Flags => DB_CREATE|DB_INIT_CDB|DB_INIT_MPOOL, -ErrFile => *STDERR) or die "Can't create DB env: $!";
 my $dbn = tie my %ncache, 'BerkeleyDB::Hash', -Filename => "ncache", -Flags => DB_CREATE, -Env => $env or die "Can't open ncache DB: $!";
 my $dbw = tie my %wcache, 'BerkeleyDB::Hash', -Filename => "wcache", -Flags => DB_CREATE, -Env => $env or die "Can't open wcache DB: $!";
 
@@ -272,7 +270,7 @@ my (@friends, @dlog, $revision, $yaml, $blog, $diff, $author, $date, $log, $grap
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
-  tie my %pw, DB_File => "/x1/repos/svn-auth/$repos/user+group", O_RDONLY or die "Can't open $repos database: $!";
+  tie my %pw, 'BerkeleyDB::Hash', -Filename => "/x1/repos/svn-auth/$repos/user+group", -Flags => DB_RDONLY or die "Can't open $repos database: $!";
   my $svnuser = $r->pnotes("svnuser");
   if (exists $pw{$svnuser}) {
     if ($re =~ /^build=/i) {
