@@ -422,8 +422,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
+      my $lock;
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
-        $dbw->cds_lock;
+        $lock = $dbw->cds_lock;
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {utf8::encode($_); $_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -441,9 +442,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
         freeze { hash => $w, time => $r->request_time }
       });
-      $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
+      $lock //= $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
       $watchers = $watchers->{hash};
-      $dbw->cds_unlock;
+      undef $lock;
       untie %wcache;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
@@ -463,9 +464,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
-
+      my $lock;
       ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
-        $dbn->cds_lock;
+        $lock = $dbn->cds_lock;
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
@@ -474,8 +475,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze {log => $log, time => $r->request_time}
       });
 
-      $dbn->cds_lock, delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
-      $dbn->cds_unlock;
+      $lock //= $dbn->cds_lock, delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
+      undef $lock;
       $log = $log->{log};
       untie %ncache;
       if (@$log) {
