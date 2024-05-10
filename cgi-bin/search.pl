@@ -422,7 +422,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       s/:4433//, s/-internal// for $url;
       my $lock;
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
-        $lock = $dbw->cds_lock;
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {utf8::encode($_); $_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -438,6 +437,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
           delete $$w{$key};
         }
+        $lock = $dbw->cds_lock;
         freeze { hash => $w, time => $r->request_time }
       });
       $lock //= $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
@@ -464,12 +464,12 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname = $1;
       my $lock;
       ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
-        $lock = $dbn->cds_lock;
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
         push @$_, map {utf8::encode $_; $_} $svn->diff($dirname, 1, $$_[0]) for @$log;
         @$log = grep {length $$_[3] and $$_[3] ne $svnuser} @$log if IGNORE_SELFIES;
+        $lock = $dbn->cds_lock;
         freeze {log => $log, time => $r->request_time}
       });
 
