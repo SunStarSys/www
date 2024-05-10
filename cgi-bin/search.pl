@@ -441,8 +441,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze { hash => $w, time => $r->request_time }
       });
       $lock //= $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
-      $watchers = $watchers->{hash};
       undef $lock;
+      $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
