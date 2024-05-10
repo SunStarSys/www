@@ -36,9 +36,9 @@ title: Caractéristiques Orion
 
 ## Une infrastructure système ultra-rapide
 
-- 50 ms ou moins de latence RTT pour la plupart de la population mondiale, avec des plans d'expansion de la couverture en Afrique
+- 50 ms ou moins de latence RTT pour la majeure partie de la population mondiale, avec une couverture élargie en Afrique en 2024
 
-- 2 fois plus de temps de livraison de pages multiplexées HTTP/2 (prêt à l'emploi, pour *tous* les clients) que la concurrence
+- 2 fois plus de temps de livraison de pages multiplexées HTTP/2 (hors de la boîte, pour *tous* les clients) que la concurrence
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -50,7 +50,7 @@ title: Caractéristiques Orion
 
 - Solaris 11.4 pour la stabilité ZFS, soutenu par Full Oracle Customer Support
 
-- node.js pour le rendu de démarque avec clustering de CPU
+- node.js pour le rendu de démarque avec la mise en cluster de CPU
 
 - 8-64 versions simultanées
 
@@ -80,6 +80,14 @@ title: Caractéristiques Orion
 
 - Français
 
+- Russe
+
+- Chinois
+
+- Hébreu
+
+- suédois
+
 ## Meilleure prise en charge des diffs de publipostage et de la création de clones
 
 - protégé par DMARC
@@ -100,7 +108,7 @@ title: Caractéristiques Orion
 
 <br>
 
-- Style Bootstrap (solarisé).
+- Style Bootstrap 4+ pour un style sémantique CSS facile et une intégration rapide.
 
 - Editor.md est incroyable : en utilisant relatif [`source`](#).
 
@@ -363,7 +371,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ]
+- [x]
 
 - [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Académie Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 
@@ -397,7 +405,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x]
 
-L'éditeur complète automatiquement et insère automatiquement le contenu. Il dispose d'un mode plein écran et prend en charge plusieurs autres modes de création de contenu disponibles pour le surligneur de syntaxe CodeMirror 5.
+L'éditeur complète automatiquement et insère automatiquement le contenu. Il dispose d'un mode plein écran et prend en charge plusieurs autres modes de création de contenu disponibles pour son surligneur de syntaxe CodeMirror 5.
 
 ## Prise en charge complète des builds de branche
 

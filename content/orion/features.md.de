@@ -36,7 +36,7 @@ title: Orion-Funktionen
 
 ## Schnelle Systeminfrastruktur
 
-- 50 ms oder weniger RTT-Latenz für den größten Teil der Weltbevölkerung, mit Plänen, die Abdeckung in Afrika zu erweitern
+- 50 ms oder weniger RTT-Latenz für den größten Teil der Weltbevölkerung, mit erweiterter Abdeckung in Afrika im Jahr 2024
 
 - 2-mal schnellere HTTP/2-Multiplex-Zustellzeiten (Out-of-the-Box, für *alle* Kunden) als die Konkurrenz
 
@@ -80,6 +80,14 @@ title: Orion-Funktionen
 
 - Französisch
 
+- Russisch
+
+- Chinesisch
+
+- Hebräisch
+
+- Schwedisch
+
 ## Bessere Unterstützung für Mailing-Diffs und das Erstellen von Klonen
 
 - DMARC-geschützt
@@ -100,13 +108,13 @@ title: Orion-Funktionen
 
 <br>
 
-- Bootstrap (Solarized) Styling.
+- Bootstrap 4+ Styling für einfaches CSS Semantic Styling und schnelles Onboarding.
 
 - Editor.md ist erstaunlich: mit relativen [`Quelle`](#).
 
-## Konsistentes GitHub-Rendering mit aromatisiertem Markdown (GFM) mit Editor.md :editormd-logo-1x: und Django Templating
+## Konsistentes GitHub-Rendering von aromatisiertem Markdown (GFM) mit Editor.md :editormd-logo-1x: und Django Templating
 
-- [x] **WYSIWYG:** {# lede #}Dieselbe Javascript-Code-Rendering-Engine in Ihrem Browser und im (node.js-basierten) markdown.js-Build-Skript{# lede #} gewährleistet eine 100-prozentige strukturelle Konsistenz zwischen dem Vorschaufenster Editor.md Markdown und der Produktions-Site.
+- [x] **WYSIWYG:** {# lede #}Dieselbe Javascript-Code-Rendering-Engine in Ihrem Browser und im (node.js-basierten) Build-Skript markdown.js{# lede #} gewährleistet eine 100-prozentige strukturelle Konsistenz zwischen dem Vorschaufenster Editor.md Markdown und der Produktions-Site.
 - [x] YAML-Header in Quelldateien (Markdown-Dateien) werden jetzt vollständig unterstützt.
 - [x]
 
@@ -363,7 +371,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ]
+- [x]
 
 - [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 

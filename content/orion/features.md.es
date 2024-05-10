@@ -36,7 +36,7 @@ title: Características de Orion
 
 ## Infraestructura de sistema rápida e intensa
 
-- 50 ms o menos de latencia de RTT para la mayor parte de la población mundial, con planes para ampliar la cobertura en África
+- 50 ms o menos de latencia de RTT para la mayor parte de la población mundial, con una cobertura ampliada en África en 2024
 
 - 2 veces más rápido HTTP / 2 tiempos de entrega de páginas multiplexadas (listos para usar, para * todos * los clientes) que la competencia
 
@@ -80,6 +80,14 @@ title: Características de Orion
 
 - Francés
 
+- Ruso
+
+Chino
+
+- Hebreo
+
+- Sueco
+
 ## Mejor soporte para diferenciadores de correo y creación de clonaciones
 
 - Protegido por DMARC
@@ -100,13 +108,13 @@ title: Características de Orion
 
 <br>
 
-- Estilo Bootstrap (Solarized).
+- Estilo Bootstrap 4+ para un estilo semántico CSS fácil y una incorporación rápida.
 
-- Editor.md es increíble: al utilizar relativo [`origen`](#).
+- Editor.md es increíble: al utilizar relativa [`origen`](#).
 
 ## Representación consistente de rebajas con sabor a GitHub (GFM) con Editor.md :editormd-logo-1x: y plantillas de Django
 
-- [x] **SEMIOLOGÍA:** {# lede #}El mismo motor de representación de código javascript tanto en el explorador como en el script de compilación markdown.js (basado en node.js){# lede #} garantiza una consistencia estructural del 100 % entre la ventana de vista previa de Markdown de Editor.md y el sitio de producción.
+- [x] **SEMIOLOGÍA:** {# lede #}El mismo motor de representación de código javascript tanto en el explorador como en el script de compilación markdown.js (basado en node.js){# lede #} garantiza una consistencia estructural del 100% entre la ventana de vista previa de Markdown de Editor.md y el sitio de producción.
 - [x] Las cabeceras YAML en los archivos de origen (markdown) ahora están totalmente soportadas.
 - [x]
 
@@ -363,7 +371,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ]
+- [x]
 
 - [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Academia de Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 
@@ -404,7 +412,7 @@ El editor se autocompletará y se autoindentará; tiene modo de pantalla complet
 - [x] No más ubicación temporal/publicación: sustituido por <span class="text-white">promoción</span> de rama por recurso.
 - [x]
 
-## Buscador de árbol fuente en vivo
+## Motor de búsqueda de árbol fuente en vivo
 
 <br>
 
@@ -423,8 +431,8 @@ El editor se autocompletará y se autoindentará; tiene modo de pantalla complet
 
 <br>
 
-- [x] Se basa en la expresión regular compatible (PCRE).
-- [x] La funcionalidad de búsqueda y sustitución global también (soporte único de PCRE); admite capturas de expresiones regulares.
+- [x] Basado en Expresión Regular Compatible (PCRE).
+- [x] La funcionalidad de búsqueda y sustitución global también (soporte único para PCRE); admite capturas de expresiones regulares.
 - [ ] La búsqueda en PDF llegará pronto.
 - [ ]
 
@@ -432,7 +440,7 @@ El editor se autocompletará y se autoindentará; tiene modo de pantalla complet
 
 ## Comentarios seguros por página
 
-## Traducciones de lenguaje natural automatizadas de Markdown (próximamente).
+## Traducciones automatizadas de lenguaje natural de Markdown (próximamente).
 
 ## Gráficos vectoriales matemáticos interactivos con @vectorgraphics/asymptote
 

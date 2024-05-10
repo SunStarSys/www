@@ -36,7 +36,7 @@ title: Orion-funktioner
 
 ## Blixtsnabb systeminfrastruktur
 
-- 50 ms eller mindre RTT latens för de flesta av världens befolkning, med planer på att utöka täckningen i Afrika
+- 50 ms eller mindre RTT latens för de flesta av världens befolkning, med utökad täckning i Afrika 2024
 
 - 2 gånger snabbare HTTP/2 multiplexade sidleveranstider (utanför lådan, för * alla * kunder) än konkurrenterna
 
@@ -80,6 +80,14 @@ title: Orion-funktioner
 
 - Franska
 
+- Ryska
+
+- Kinesiska
+
+- Hebreiska
+
+- Svenska
+
 ## Bättre stöd för utskicksdifferenser och skapande av kloner
 
 - DMARC-skyddad
@@ -100,7 +108,7 @@ title: Orion-funktioner
 
 <br>
 
-- Bootstrap (Solarized) styling.
+- Bootstrap 4+ styling för enkel CSS semantisk styling och snabb onboarding.
 
 - Editor.md är fantastiskt: genom att använda relativ [`src`](#).
 
@@ -363,7 +371,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ]
+- [x]
 
 - [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) från Kahn Academy [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 
@@ -373,7 +381,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Synkron, dubbelriktad generering av $$\LaTeX$$ Källfiler till/från Markdown+$$\KaTeX$$
 
-- [x] Navier-Stokes i Einsteins notation [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation).
+- [x] Sök efter hotell i Einstein Notation [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation).
 
 ```math
 \begin{aligned}
@@ -516,4 +524,4 @@ draw(tube(p,colorsec),render(merge=true));
 }
 </style>
 
-<!-- $Date: 2024-04-23 20:21:02 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23733 $ -->
+<!-- $Date: 2024-05-10 12:44:07 -0400 (Fri, 10 May 2024) $ $Author: joe $ $Revision: 25004 $ -->

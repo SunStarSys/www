@@ -36,9 +36,9 @@ title: תכונות אוריון
 
 מס' תשתיות מערכת מהירה מדהימה
 
-- 50ms או פחות זמן השהיה RTT עבור רוב אוכלוסיית העולם, עם תוכניות להרחיב את הכיסוי באפריקה
+- 50ms או פחות זמן השהיה RTT עבור רוב אוכלוסיית העולם, עם כיסוי מורחב באפריקה בשנת 2024
 
-- 2 פעמים מהיר יותר HTTP / 2 זמני משלוח דפים מרובי-פלקס (מחוץ לקופסה, עבור *כל* הלקוחות) מאשר המתחרים
+- 2 פעמים מהיר יותר HTTP / 2 זמני משלוח דפים מרובי-פלקס (מתוך הקופסה, עבור *כל* הלקוחות) מאשר המתחרים
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -80,6 +80,14 @@ title: תכונות אוריון
 
 - צרפתית
 
+- רוסית
+
+- סינית
+
+עברית
+
+- שוודית
+
 ## תמיכה טובה יותר בהפרשי דיוור ויצירת שכפולים
 
 - מוגן DMARC
@@ -100,9 +108,9 @@ title: תכונות אוריון
 
 <br>
 
-- עיצוב Bootstrap (Solarized).
+- Bootstrap 4+ סטיילינג עבור סגנון סמנטי CSS קל והשתלבות מהירה.
 
-- Editor.md מדהים: באמצעות יחסי [`מקור`](#).
+- Editor.md מדהים: על ידי שימוש יחסי [`מקור`](#).
 
 #הצגת GitHub-Flavored Markdown (GFM) עקבית עם Editor.md :editormd-logo-1x: ו-Django Templating
 
@@ -363,7 +371,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ]
+- [x]
 
 - [x] של דון קנות' [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / אקדמיית קאהן [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 
@@ -516,4 +524,4 @@ draw(tube(p,colorsec),render(merge=true));
 }
 </style>
 
-<!-- $Date: 2024-04-23 20:21:02 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23733 $ -->
+<!-- $Date: 2024-05-10 12:44:07 -0400 (Fri, 10 May 2024) $ $Author: joe $ $Revision: 25004 $ -->

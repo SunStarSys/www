@@ -36,7 +36,7 @@ title: Orion 功能
 
 ## 驚人的快速系統基礎架構
 
-- 全球大部分人口的 RTT 延遲時間為 50 毫秒或更短，並計畫在非洲擴大涵蓋範圍
+- 全球大部分人口的 RTT 延遲時間為 50 毫秒或更短，2024 年將涵蓋非洲地區
 
 - 比競爭對手快 2 倍的 HTTP/2 多工頁面傳遞時間 (立即可用，適用於 * 所有 * 客戶).
 
@@ -44,11 +44,11 @@ title: Orion 功能
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 500 MB / 持續建置多 GB 來源樹狀結構
+- 500 MB / 多 GB 來源樹狀結構的持續建置
 
 - NVMe 或更快速的組建儲存基礎架構
 
-- Solaris 11.4，針對 ZFS 穩定性提供支援，由 Full Oracle Customer Support 提供支援
+- Solaris 11.4 用於 ZFS 穩定性，以 Full Oracle Customer Support 為後盾
 
 - node.js 代表使用 CPU 叢集進行降價轉譯
 
@@ -80,6 +80,14 @@ title: Orion 功能
 
 - 法文
 
+- 俄文
+
+- 中文
+
+- 希伯來文
+
+- 瑞典文
+
 ## 更好地支援郵件差異與建立複製
 
 - DMARC 保護
@@ -100,7 +108,7 @@ title: Orion 功能
 
 <br>
 
-- Bootstrap (Solarized) 造型。
+- Bootstrap 4+ 造型，方便 CSS 語意造型和快速上線。
 
 - Editor.md 驚人：使用相對[`來源`](#).
 
@@ -363,7 +371,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [ ]
+- [x]
 
 - [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / 嘉恩學院[$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
 
@@ -481,7 +489,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## <span class='text-info'>Apache CMS</span> 功能的差異
+<span class='text-info'>Apache CMS</span> 功能的 ## 差異
 
 - 只提供以 Perl 為基礎的組建系統。
 
@@ -516,4 +524,4 @@ draw(tube(p,colorsec),render(merge=true));
 }
 </style>
 
-<!-- $Date: 2024-04-23 20:21:02 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23733 $ -->
+<!-- $Date: 2024-05-10 12:44:07 -0400 (Fri, 10 May 2024) $ $Author: joe $ $Revision: 25004 $ -->
