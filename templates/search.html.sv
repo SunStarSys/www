@@ -231,7 +231,7 @@
   for (var i=0; i < values.length; ++i)
       total += +values[i];
 
-const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
+const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":"
   x[4]);
   var myChart = new Chart(
       ctx,
