@@ -1,2 +1,3 @@
 RedirectMatch permanent ^/CMS/(.*) /orion/$1
 RedirectMatch permanent ^/essays/(.*) https://www.iconoclasts.blog/joe/$1
+Redirect temp /maxl.tex /maxl.tex.en
