@@ -496,7 +496,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       @$log = grep {
         my $rv;
         $rv = /^[+][^\n]*(?:$tokens)/ms && !/^[-][^\n]*(?:$tokens)/ms for $$_[-1];
-        $rv || scalar grep {s/^.*?\Q$prefix/\//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
+        $rv || scalar grep {s/^.*?\Q$prefix//; my $k=$_; exists $file_seen{$k} || scalar grep index($k, $_) == 0, keys %dir_seen} keys %{$$_[1]}
       } @$log;
 
       for (@$log) {
