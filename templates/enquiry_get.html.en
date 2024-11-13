@@ -95,7 +95,7 @@ var IN_GLOBAL_SCOPE=true;
       }, editormd);
       setTimeout(()=>{$(window).scrollTop(0)}, 500);
   });
-  document.cookie = "nonce={{nonce}}";
+  document.cookie = "nonce={{nonce}} path=/";
 </script>
 <script type="module" src="/editor.md/languages/{{ lang|cut:"." }}.js"></script>
 
