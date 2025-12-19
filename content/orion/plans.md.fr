@@ -19,7 +19,7 @@ title: Plans Orion
 			<hr />
 <p>
 
-10 $ / mois / site public géré
+$25 / mois / site public géré
 
 </p>
 
@@ -42,12 +42,12 @@ title: Plans Orion
 </ul>
 
 <ul style="min-height:200px">
-				<li>Taux de ressources mensuels supplémentaires (par site Web) :
+				<li>Tarifs Mensuels Supplémentaires pour les Ressources (par site web) :
 <p>
 <ol>
 						<li>10 $ / 10 Mo d'espace de stockage<sup>1</sup></li>
 						<li>Transfert de données de 10 $ / 40 Go</li>
-						<li>5 $ / siège</li>
+						<li>$5 / siège</li>
 						<li>10 $ / 100 minutes de construction</li>
                         <li>0,05 $ / page Traductions AI NLP</li>
 </ol>
@@ -61,11 +61,11 @@ title: Plans Orion
 <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
 		<div class="card-header">Plan commercial</div>
 		<div class="card-body">
-			Idéal pour les PME
+			Parfait pour les PME
 			<hr />
 <p>
 
-50 $ / mois / site public géré, ~50% de réduction sur tous les modèles de prix concurrents !
+$100 / mois / site public géré, ~50% sur tous les modèles de tarification concurrents !
 
 </p>
 
@@ -79,21 +79,21 @@ title: Plans Orion
 						<li>500 Mo d'espace de stockage<sup>1</sup></li>
 						<li>Transfert de données de 1 To</li>
 						<li>Utilisation illimitée de l'IDE pour 50 places</li>
-						<li>Jusqu'à 5 groupes d'ACL</li>
+						<li>Jusqu'à 5 groupes ACL</li>
 				<li>500 minutes de build</li>
-				<li>Contrat de niveau de service complet de 99,9 %<sup>3</sup></li>
+				<li>Contrat de niveau de service complet à 99,9 %<sup>3</sup></li>
 						<li>Support client par e-mail</li>
 </ol>
 </p>
 </li>
 </ul>
 <ul style="min-height:200px">
-				<li>Taux de ressources mensuels supplémentaires (par site Web) :
+				<li>Tarifs Mensuels Supplémentaires pour les Ressources (par site web) :
 <p>
 					<ol>
 						<li>10 $ / 20 Mo d'espace de stockage<sup>1</sup></li>
-						<li>Transfert de données de 20 $ / 100 Go</li>
-						<li>10 $ / siège</li>
+						<li>20 $ / 100 Go de transfert de données</li>
+						<li>$10 / siège</li>
 						<li>10 $ / 100 minutes de construction</li>
                         <li>0,04 $ / page Traductions AI NLP</li>
                     </ol>
@@ -111,7 +111,7 @@ title: Plans Orion
 			<hr />
 <p>
 
-500 $ / mois, ~67% de réduction sur tous les modèles de prix concurrents !
+$500 / mois, ~67% de rabais sur tous les modèles de prix concurrents !
 
 </p>
 
@@ -124,33 +124,33 @@ title: Plans Orion
 
 <p>
 <ol>
-						<li>Espace de stockage de 1 Go dans votre propre référentiel Subversion<sup>2</sup></li>
+						<li>1 Go d'espace de stockage dans votre propre référentiel Subversion<sup>2</sup></li>
 						<li>Transfert de données de 3 To</li>
-						<li>Sites Web illimités et sièges (autogérés)</li>
+						<li>Nombre illimité de sites Web et de sièges (autogérés)</li>
 						<li>2500 minutes de build</li>
-						<li>Contrôle total de la configuration d'autorisation Subversion</li>
-						<li>Conteneurs de build privés et en réseau</li>
-						<li>Contrat de niveau de service complet de 99,99 %<sup>3</sup></li>
-						<li>POP global<sup>4</sup> avec réseau de livraison géographiquement réparti sur le dernier kilomètre dans Q4</li>
+						<li>Contrôle total de la configuration de l'autorisation Subversion</li>
+						<li>Conteneurs de build privés en réseau</li>
+						<li>Contrat de niveau de service complet à 99,99 %<sup>3</sup></li>
+						<li>POP mondial<sup>4</sup> avec un réseau de livraison du dernier kilomètre distribué géographiquement dans Q4</li>
 						<li>SLA de support premium</li>
 					</ol>
 					</p>
 </li>
 			</ul>
 			<ul style="min-height:200px">
-				<li>
+				<li>Tarifs des Ressources Mensuels Supplémentaires :
 
 &nbsp;
 
 <p>
 <ol>
 						<li>100 $ / 250 Mo d'espace de stockage<sup>2</sup></li>
-						<li>Transfert de données de 15 $ / 100 Go</li>
+						<li>15 $ / 100 Go de transfert de données</li>
 						<li>100 $ / ithread mod_perl hébergement de registre</li>
 						<li>100 $ / région OCI pour les POP personnalisés</li>
-				<li>100 $ / 1K minutes de construction</li>
+				<li>100 $ / 1K Minutes de construction</li>
                 <li>0,03 $ / page Traductions AI NLP</li>
-                <li>WebSockets et/ou hébergement de conteneurs privés disponibles</li>
+                <li>WebSockets et/ou hébergement de conteneur privé disponible</li>
                       </ol>
 					</p>
 				</li>
@@ -160,53 +160,55 @@ title: Plans Orion
 </div>
 </div>
 
-- Tous les plans incluent la gestion automatisée interne des certificats SSL/TLS (via LetsEncrypt) et le moteur de recherche PCRE (+Markdown) intégré.
+- Tous les plans comprennent la gestion des certificats SSL/TLS automatisée en interne (via LetsEncrypt), le moteur de recherche PCRE (+Markdown) intégré et la passerelle de traitement des formulaires électroniques.
 
-- {# lede #}Remises annuelles à l'avance disponibles (jusqu'à 20 % sur les coûts de facturation mensuels){# lede #}
+- L'intégration implique simplement de fournir une structure de liens de menu topmatter, et un fichier bootstrap 4 ou bootstrap 5 css pour le style.
 
-- Réductions de volume disponibles.
+- {# lede #}Remises annuelles à l'avance disponibles (jusqu'à 20 % de réduction sur les coûts de facturation mensuels){# lede #}.
 
-- Les installations de serveur Orion basées sur Enterprise Kerberos sont maintenant disponibles, pour les clients qui cherchent des alternatives aux mises à niveau obligatoires de Confluence Data Center en 2024 Q1.
+- Remises sur volume disponibles.
 
-- Intégration de la technologie Serverless bientôt disponible.
+- Les installations Orion Server basées sur Enterprise Kerberos sont maintenant disponibles, pour les clients recherchant des alternatives aux mises à niveau obligatoires de Confluence Data Center en 2024 Q1.
+
+- L'intégration technologique sans serveur sera bientôt disponible.
 
 - Services de conseil et de portage de technologie de construction de site Web disponibles.
 
 - Les partenariats technologiques sont les bienvenus pour les agences et les revendeurs tiers.
 
-### Créer des minutes et des niveaux de planification : un guide approximatif
+### Créer des minutes et des niveaux de plan : un guide approximatif
 
-*Une estimation haut de gamme raisonnable pour la durée moyenne de construction par validation est de 10 secondes.*
+*Une estimation haut de gamme raisonnable de la durée moyenne de construction par validation est de 10 secondes.*
 
-- Les professionnels ayant moins de 20 engagements par jour devraient être bien avec les 100 minutes de construction incluses dans le plan.
+- Les professionnels avec moins de 20 engagements par jour devraient être bien avec les 100 minutes de construction incluses dans le plan.
 
-- Les entreprises ayant moins de 100 engagements par jour devraient être bien avec les 500 minutes de construction incluses dans le plan.
+- Les entreprises avec moins de 100 engagements par jour devraient être bien avec les 500 minutes de construction incluses dans le plan.
 
 - Les entreprises avec moins de 500 engagements par jour devraient être bien avec les 2500 minutes de construction incluses dans le plan.
 
 ------------
 
-#### Notes de bas de page
+#### notes de bas de page
 
 1. Utilisation du stockage calculée en fonction de la taille de quatre extractions de copie de travail de chaque site : deux arbres source et deux arbres de construction résultants.
 
-2. Utilisation du stockage calculée en fonction de la taille totale du référentiel Subversion hébergé par des systèmes SunStar pour les clients Enterprise, et non des extractions individuelles, qui est un *nombre comparativement plus petit* (environ la taille d'une seule extraction de l'arborescence source).
+2. Utilisation du stockage calculée sur la base de la taille totale du référentiel Subversion hébergé par les systèmes SunStar pour les clients Enterprise, et non des extractions individuelles, qui est un nombre *comparativement plus petit* (environ la taille d'une extraction d'arborescence source unique).
 
-3. SLA couvre les ressources du site Web * et * l'IDE en ligne Orion * et * la disponibilité du système de construction, mais exclut le système de contrôle de version Subversion, que nous prévoyons rester compétitifs avec les mesures de disponibilité générale de GitHub.
+3. Le contrat de niveau de service couvre les ressources du site Web *et* l'IDE en ligne d'Orion *et* la disponibilité du système, mais exclut le système de contrôle de version Subversion, qui devrait rester concurrentiel avec les indicateurs de disponibilité générale de GitHub.
 
-4. Points de présence client de l'entreprise (POP) :
+4. Points de présence des clients d'entreprise (POP) :
 
 - Fort Lauderdale, Floride
 
 - Washington, DC
 
-- Phoenix, Arizona
+- Phoenix, AZ
 
 - Francfort, DE
 
 - Sydney, Australie
 
-- SÃ£o Paolo, BZ
+- São Paolo, BZ
 
 - Hyderabad, IN
 
