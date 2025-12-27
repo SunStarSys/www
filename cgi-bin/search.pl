@@ -36,6 +36,14 @@ no warnings 'uninitialized';
 use sealed 'deparse';
 use constant IGNORE_SELFIES => 1;
 
+use constant AR     => "Apache2::RequestRec";
+use constant SR     => "Apache2::SubRequest";
+use constant SVN    => "SunStarSys::SVN::Client";
+use constant APREQ  => "APR::Request::Apache2";
+use constant DTL    => "Dotiac::DTL::Template";
+use constant COOKIE => "APR::Request::Cookie";
+use constant JSON   => "Cpanel::JSON::XS";
+
 local $@;
 
 local our %LANG = (
@@ -52,11 +60,14 @@ local our %LANG = (
 local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
 die $@ if $@;
 
-my Apache2::RequestRec $r = shift;
-my APR::Request::Apache2 $apreq;
+my AR $r = shift;
+
+my APREQ $apreq;
 $apreq = $apreq->handle($r);
 
-my SunStarSys::SVN::Client $svn = SunStarSys::SVN::Client->new($r);
+my SVN $svn;
+$svn = $svn->new($r);
+
 my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
 
 local our $lang = get_client_lang($r);
@@ -132,9 +143,8 @@ sub parser :Sealed {
   }
 }
 
-sub client_wants_json :Sealed {
-    my Apache2::RequestRec $r     = shift;
-    my APR::Request::Apache2 $apreq;
+sub client_wants_json :Sealed (AR $r) {
+    my APREQ $apreq;
     $apreq = $apreq->handle($r);
 
     return 1 if $apreq->args("as_json");
@@ -192,9 +202,7 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-sub negotiate_file :Sealed {
-  my Apache2::RequestRec $r = shift;
-  my ($file1, $file2) = @_;
+sub negotiate_file :Sealed (AR $r, $file1, $file2) {
     # The reason we take an intermediate subreq here is to
     # avoid any funky lookup optimizations which would trigger
     # the subrequest's uri to be filled in with a reasonable guess,
@@ -206,16 +214,16 @@ sub negotiate_file :Sealed {
     # avoid by doing a lookup of "/", which will resolve to
     # the docroot, not the base dir of the working copies.
 
-  my Apache2::SubRequest $s = $r->lookup_uri("/");
-  my Apache2::SubRequest $subr = $s->lookup_uri($file1);
+  my AS $s = $r->lookup_uri("/");
+  my AS $subr = $s->lookup_uri($file1);
   return $subr->filename
     if $subr->status == Apache2::Const::HTTP_OK or not $file2;
-  return $s->lookup_uri($file2)->filename;
+  $subr = $s->lookup_uri($file2);
+  return $subr->filename;
 }
 
-sub get_client_lang :Sealed {
-  my Apache2::RequestRec $r = shift;
-  my APR::Request::Apache2 $apreq;
+sub get_client_lang :Sealed (AR $r) {
+  my APREQ $apreq;
   $apreq = $apreq->handle($r);
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
   my $lang = $apreq->args("lang") // $cdata;
@@ -227,7 +235,7 @@ sub get_client_lang :Sealed {
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 my $re       = $apreq->args("regex") // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $filter   = $apreq->param("filter") // "";
-my $hash     = $apreq->body("hash") // "";
+my Digest::SHA1 $hash = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my ($js, $count);
 
@@ -479,7 +487,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       if (@$log) {
         $revision = $$log[0][0];
-        my $cookie = APR::Request::Cookie->new(
+        my COOKIE $cookie;
+        $cookie = $cookie->new(
           $r->pool,
           name => "last",
           value => $revision,
@@ -514,7 +523,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 }
 
 if ($re !~ $specials_re) {
-  my $sha1 = Digest::SHA1->new;
+  my Digest::SHA1 $sha1;
+  $sha1 = $sha1->new;
   $sha1->add(join ":", $r->dir_config("CookieSecret"), $apreq->body("files"));
   $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
   my $pffxg;
@@ -549,7 +559,7 @@ if ($re !~ $specials_re) {
       warn "$@" and next if $@;
     }
     else {
-      my Apache2::SubRequest $subr = $r->lookup_uri("/");
+      my AS $subr = $r->lookup_uri("/");
       index($subr->lookup_file("$dirname$k")->status, "4") == 0 and next;
     }
     my $filename = "$dirname$k";
@@ -599,7 +609,7 @@ my %title = (
   ".zh-TW" => "$markdown 的搜尋結果",
 );
 
-$hash =  Digest::SHA1->new;
+$hash = $hash->new;
 $hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
 $hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
 
@@ -641,7 +651,7 @@ if (my $origin = $r->headers_in->get("Origin")) {
 if (client_wants_json $r) {
   $r->content_type("application/json; charset='utf-8'");
   delete $$args{r};
-  my Cpanel::JSON::XS $jxs;
+  my JSON $jxs;
   $jxs = $jxs->new;
   $jxs = $jxs->utf8;
   $jxs = $jxs->pretty;
@@ -652,7 +662,9 @@ if (client_wants_json $r) {
 local @TEMPLATE_DIRS = map /(.*)/, "/x1/httpd/websites/$host/templates", "/x1/httpd/websites/www.sunstarsys.com/templates";
 local @ENV{qw/REPOS WEBSITE/} = ($repos, $host);
 $r->content_type("text/html; charset='utf-8'");
-my $rv = Template("search.html$lang")->render($args);
+my DTL $template = "search.html$lang";
+$template = Template($template);
+my $rv = $template->render($args);
 die $rv if $rv =~ /^.* cycle detected/;
 eval {$r->print($rv)};
 return Apache2::Const::OK;
