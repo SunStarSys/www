@@ -33,7 +33,6 @@ use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
 no warnings 'uninitialized';
-use sealed 'deparse';
 use constant IGNORE_SELFIES => 1;
 
 use constant AR     => "Apache2::RequestRec";
@@ -80,7 +79,7 @@ sub filtermd {
   }
 }
 
-sub parser :Sealed {
+sub parser  {
   my @text;
   my (undef, $dirname, undef, $paths) = (@_, {});
   my HTML::Parser $p;
@@ -143,7 +142,7 @@ sub parser :Sealed {
   }
 }
 
-sub client_wants_json :Sealed (AR $r) {
+sub client_wants_json  (AR $r) {
     my APREQ $apreq;
     $apreq = $apreq->handle($r);
 
@@ -202,7 +201,7 @@ sub breadcrumbs {
     return join "&nbsp;&raquo;&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
-sub negotiate_file :Sealed (AR $r, $file1, $file2) {
+sub negotiate_file  (AR $r, $file1, $file2) {
     # The reason we take an intermediate subreq here is to
     # avoid any funky lookup optimizations which would trigger
     # the subrequest's uri to be filled in with a reasonable guess,
@@ -222,7 +221,7 @@ sub negotiate_file :Sealed (AR $r, $file1, $file2) {
   return $subr->filename;
 }
 
-sub get_client_lang :Sealed (AR $r) {
+sub get_client_lang  (AR $r) {
   my APREQ $apreq;
   $apreq = $apreq->handle($r);
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
