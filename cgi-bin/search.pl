@@ -609,6 +609,7 @@ my %title = (
   ".zh-TW" => "$markdown 的搜尋結果",
 );
 
+$hash = "Digest::SHA1";
 $hash = $hash->new;
 $hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
 $hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
