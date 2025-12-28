@@ -36,7 +36,7 @@ no warnings 'uninitialized';
 use constant IGNORE_SELFIES => 1;
 
 use constant AR     => "Apache2::RequestRec";
-use constant SR     => "Apache2::SubRequest";
+use constant AS     => "Apache2::SubRequest";
 use constant SVN    => "SunStarSys::SVN::Client";
 use constant APREQ  => "APR::Request::Apache2";
 use constant DTL    => "Dotiac::DTL::Template";
