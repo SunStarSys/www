@@ -2,55 +2,69 @@
 archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
-keywords: wiki, jamstack, blog, sécurisé, sûr
+keywords: wiki, pile de james, blog, sécurisé
 published: ~
 status: projet
-title: SunStar Orion des systèmes
+title: SunStar Orion de Systems
 ---
 
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Le wiki Enterprise Jamstack.</em></span>&trade;
+	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Le Wiki d'Enterprise Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orion de Systems</span> &nbsp; est un
 <p>
 	<ul>
 	<li><p>sécurisé,</p></li>
-	<li><p>mobile amical,</p></li>
+	<li><p>mobile friendly,</p></li>
 	<li><p>collaboratif,</p></li>
 	<li><p>performances de pointe,</p></li>
 	<li><p>fédéré</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Wiki d'entreprise</span>&nbsp; pour <b>créer, gérer et fournir</b> des pages Web statiques à l'aide de la technologie #Jamstack pour les fonctionnalités dynamiques qu'elles contiennent{# lede #}
+{# lede #}<span class="text-white">Wiki d'entreprise</span>&nbsp; pour <b>créer, gérer et fournir</b> des pages Web statiques à l'aide de la technologie #Jamstack pour des fonctionnalités dynamiques{# lede #}.
+
+&nbsp;
 
 Pour plus d'informations sur les prix, consultez notre [Plans Orion](plans).
 
-### Voici le pitch, le décideur exécutif...
+&nbsp;
 
-Ce qui différencie ce produit de nos concurrents est le [Technologie Orion](technology)et comment son **efficacité** nous permet de maintenir des coûts d'exploitation très faibles tout en fournissant des contrôles éditoriaux supérieurs et des fonctionnalités révolutionnaires.  Nous répercutons les économies sur nos **clients**, avec seulement des surfacturations marginales pour les ressources supplémentaires des fournisseurs cloud. [Appelez-nous](/contact).
+### Voici le lancement, le décideur exécutif...
 
-<ul>
-  <li><p>un <span class="text-white">responsable de l'université</span> qui cherche à <b>éliminer le plagiat</b> sur le campus via une plate-forme de partage de documents, de curation et de publication en ligne avec contrôle de version <a href="https://en.wikipedia.org/wiki/Open_access">en libre accès</a>, ou un système de gestion des connaissances axé sur l'enseignement,</p></li>
+Pourquoi choisir Orion ? L'Enterprise Jamstack Wiki qui surpasse - et coûte beaucoup moins
 
-<li><p>un <span class="text-white">décideur du secteur du gouvernement informatique/de la défense</span> ayant des besoins de conformité FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a> ou des exigences de contrôle d'accès de niveau fin sur le référentiel de contrôle de version de votre site,</p></li>
+Ce qui distingue vraiment Orion n'est pas seulement un autre wiki, c'est notre technologie exclusive Orion, une approche éprouvée et en attente de brevet qui offre une efficacité inégalée.
 
-<li><p>un <span class="text-white">directeur marketing</span> souhaitant une plate-forme d'entreprise mondiale innovante pour la gestion des ressources de votre site Web d'entreprise, en utilisant Orion comme CMS "sans tête",</p></li>
+Cela nous permet d'exécuter des coûts d'exploitation ultra-faibles tout en offrant des contrôles éditoriaux supérieurs, une sécurité de niveau entreprise et des fonctionnalités révolutionnaires qu'aucun wiki hérité ne peut égaler. Nous vous transmettons ces énormes économies directement. N'attendez-vous qu'à des frais modestes et transparents pour les ressources cloud exactes que vous utilisez, sans niveaux de tarification élevés ni frais cachés.
 
-<li><p>un <span class="text-white">responsable de l'entreprise technologique ou de l'agence de site Web</span> disposant d'un wiki commercial très peu sécurisé, d'une montagne de documentation produit en ligne ou de sites client (possédant potentiellement des téléchargements binaires) à organiser,</p></li>
+Orion est construit pour les dirigeants qui refusent de s'installer :
 
-<li><p>un <span class="text-white">architecte de haute disponibilité de principe</span> fatigué de gérer les points de défaillance uniques inhérents aux piles LAMP basées sur SQL,</p></li>
+- **Les responsables de l'université** — Éliminez le plagiat sur les campus et renforcez la collaboration sécurisée et en libre accès grâce au partage de documents, à la conservation et à la publication en ligne contrôlés par les versions. Transformez votre gestion des connaissances académiques en une plate-forme innovante et auditable.
 
-<li><p>ou vraiment n'importe quel homme d'affaires insatisfait de la structure des coûts de n'importe quelle chose du wiki, y compris les offres gratuites qui assombrissent le temps et l'énergie de votre personnel.</p></li>
-</ul>
+- ** Gouvernement &amp; Décideurs informatiques de défense** — Répondez à l'infrastructure FedRAMP, aux exigences de confiance zéro du NIST 800-207 et aux contrôles d'accès de niveau fin sur votre référentiel de contrôle de version — le tout avec une sécurité conforme à la norme FIPS 140-3 et pouvant être installée dans votre VPN d'entreprise.
 
-*Il n'y a pas de blocage de fournisseur impliqué dans notre offre*. Mais ne vous contentez pas de prendre notre parole, voyez par vous-même ce qui est généralement impliqué en termes de personnalisation du système de construction en visitant
+- **Cadres marketing** - Exécutez une plate-forme d'entreprise rapide, globale et innovante pour les ressources de sites Web d'entreprise. Utilisez Orion comme un puissant CMS headless - sécurisé, performant et entièrement découplé de la livraison frontale.
 
-[notre arborescence lib source viewvc](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), ou son [<i class="fa fa-github fa-emoji" title="Github"></i> Miroir GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+- **Entreprises technologiques &amp; agences web** — Remplacer les wikis commerciaux non sécurisés, apprivoiser les montagnes de documentation produit, les sites client et même les téléchargements binaires. Organisez tout avec confiance, rapidité et historique des versions.
 
-Moins de <span class="text-info">100 LOC</span> pour fournir la logique de construction de ce site Web, et il inclut une gestion sophistiquée et mémorisée des dépendances pour la génération automatique d'un multilingue [SiteMap](/sitemap) et tous les index de répertoire (comme [cette portion](#Details) de cette page particulière).  Nous avons même mis le sous-jacent [Générateur de site statique pour le build sur GitHub](https://github.com/SunStarSys/Orion).
+- **Architectes haute disponibilité &amp; ingénieurs principaux** — Échappez les points d'échec uniques cuits dans des piles LAMP basées sur SQL. Adoptez la véritable évolutivité de Jamstack : builds simultanés, mises à jour incrémentielles, couverture globale des POP et performances maximales mesurées en secondes.
+
+- **Toute entreprise fatiguée de l'économie du wiki** — Ditch coûteux abonnements SaaS, des outils gratuits fragiles qui épuisent le temps du personnel, et des systèmes obsolètes qui ralentissent votre équipe. Orion vous donne la puissance de l'entreprise à une fraction du coût total de possession (souvent moins de 6 000 $/an pour une utilisation complète de l'entreprise).
+
+Aucune dépendance vis-à-vis d'un fournisseur — et nous prouvons que le contenu it.Your vit dans des workflows de Markdown et de contrôle de version standard. Aucun format propriétaire. Pas de cauchemar de migration.
+
+Vous voulez de la transparence ? Voyez par vous-même :
+
+Toute la logique de notre système de construction pour ce site : moins de 100 lignes de code, avec une gestion des dépendances sophistiquée et mémorisée qui génère automatiquement des sitemaps multilingues, des index d'annuaire, etc.
+
+Affichez la source : [notre arbre de bibliothèque source viewvc](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/)ou [<i class="fa fa-github fa-emoji" title="Github"></i> Miroir GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+Le générateur de site statique sous-jacent : open-sourced sur GitHub sous Apache License 2.0 → <https://github.com/SunStarSys/Orion>.
+
+Ce n'est pas un spin marketing – c'est un héritage d'ingénierie vérifiable et ouvert datant des innovations F/OSS pionnières en 2011. Prêt à découvrir un wiki qui permet d'économiser du temps, de l'argent et des maux de tête ? [Appelez-nous ou envoyez-nous une note](/contact) aujourd'hui.
 
 </div>
 
@@ -60,40 +74,42 @@ Moins de <span class="text-info">100 LOC</span> pour fournir la logique de const
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>Voici pourquoi, Développeur Full Stack / Blogueur public / DevOps Guru...</h3>
+<h3>Voici pourquoi, jeune universitaire / développeur de pile complète / blogueur public...</h3>
 
-Vous voulez un site Web **sécurisé par défaut** ?  Facile à mettre à jour et à gérer, tout en masquant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ?  Publication instantanée lorsque vous le souhaitez ; création de succursales en phase fluide et promotions granulaires personnalisables sur votre site de production en fonction du flux de travail préféré de votre équipe.
+Vous voulez un site Web **sécurisé par défaut** ?  Facile à mettre à jour et à gérer, tout en cachant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ?  Publication instantanée lorsque vous le souhaitez ; créations de succursales lisses et préparées et promotions granulaires personnalisables sur votre site de production selon le flux de travail préféré de votre équipe.
 
-Si vous en avez assez des licences par siège et des choix par cycle de CPU qui vous alourdissent chaque fois que vous avez besoin de corriger une faute de frappe, [Contactez-nous](/contact).
+Si vous êtes fatigué des licences par siège et des choix par cycle CPU qui vous pèsent chaque fois que vous avez besoin de corriger une faute de frappe, [contactez-nous](/contact). Si vous êtes un dompteur lion équipé d'une expression régulière pendant des décennies de contenu HTML hérité accumulé, ou simplement quelqu'un insatisfait des autres options sur le marché et de la façon dont elles fonctionnent à grande échelle, nous avons quelque chose de vraiment spécial à vous offrir.
 
-Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous l'êtes.  En un clin d'œil, même l'interface mobile (navigateur) le fera, *instantanément*.
+Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous le souhaitez.  Dans un pincement, même l'interface mobile (navigateur) le fera, *instantanément*.
 
-Les arbres sources de plusieurs gigaoctets ne correspondent tout simplement pas &mdash; les durées de création de site complètes sont mesurées en *secondes*, et non en heures et minutes.  Le système se maintient facilement [`500 Mo/s`](features).
+Les arbres sources multi-gigaoctets ne correspondent tout simplement pas &mdash; Les durées de construction du site complet sont mesurées en *secondes*, et non en heures et minutes.  Le système se maintient facilement [`500 Mo/s`](features) tout en traitant vos sources pour des builds de site complets, mais compte tenu de sa fonctionnalité <span class="text-white">unique de gestion des dépendances en attente de brevet</span>, il n'a presque jamais besoin d'y recourir :
 
 <span class="text-success"><em>Nous ne construisons que ce dont vous avez besoin.</span></em>&trade;
 
-Cette technologie a été inventée pour la première fois fin 2011 par les membres de l'équipe d'infrastructure Apache. La phrase"[Pile JAM](https://jamstack.wtf)" a été inventé des années plus tard, par un groupe ignorant notre art antérieur dans cet espace.  Mais le [dossier public](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion).
+Cette technologie a été inventée pour la première fois fin 2011 par des membres de l'équipe d'infrastructure Apache. La phrase"[Pile JAM](https://jamstack.wtf)" a été inventé des années plus tard, par un groupe ignorant notre art antérieur dans cet espace.  Mais le [dossier public](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/Orion) est limpide, et cette nouvelle offre de SunStar Systems témoigne de cet héritage original et de ses véritables origines open source.
 
 <h4>Vous voulez lui donner un tour rapide pour voir à quel point il est rapide et facile ?</h4>
 
-Ce site est auto-hébergé ; tous ces carrés de crayon rose chaud [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index).
+Ce site est auto-hébergé ; tous ces carrés de crayon rose chaud [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En haut à droite sont en direct.  N'hésitez pas à poke autour et expérimenter avec tout ce que vous voyez !  La seule chose que vous ne pouvez pas faire est de valider et de regarder vos modifications construire et déployer ; cela est limité à notre personnel pour des raisons évidentes.
 
-Notre réseau mondial de points de présence (POP) assure des connexions à faible latence à Orion &trade;
+Notre réseau mondial de points de présence (POP) assure des connexions à faible latence avec Orion &trade; et les sites Web de livraison finale que nous hébergeons.  Nous sommes actuellement sur quatre continents et avons une présence bicoastale aux États-Unis.  Et nous allons nous développer rapidement - prochainement en Asie de l'Est !
 
-<h3>Il est temps de changer radicalement votre façon de gérer et de livrer votre site à votre public cible.</h3>
+<h3>Il est temps de changer la façon dont vous gérez et offrez votre site à votre public cible.</h3>
 
-Allez à votre rythme, utilisez autant d'employés / aperçus / modifications / validations / succursales que vous le souhaitez, et ne payez que pour ce que vous utilisez réellement sur notre infrastructure.
+Allez à votre rythme, utilisez autant d'employés / de prévisualisations / de modifications / de validations / de succursales que vous le souhaitez, et ne payez que ce que vous *utilisez réellement* sur notre infrastructure.
 
-Voir notre [Plans Orion](plans).
+&nbsp;
+
+Voir notre [Plans Orion](plans) pour les opérations actuelles.
 
 </div>
 </div>
 
-### Grille de comparaison des fonctionnalités
+### grille de comparaison des fonctionnalités
 
 <br />
 
-| Caractéristique     |   Orion       | Dalle | Notion | Confluence |
+| Fonctionnalité     | Orion       | Dalle | Notion | Confluence |
 |:^-----------|:-------------:|:----:|:------:|:----------:|
 {% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
@@ -110,7 +126,7 @@ Voir notre [Plans Orion](plans).
 <br />
 <h2>Quelques captures d'écran représentatives :</h2>
 <br />
-<h3>Vue IDE avec allemand, français, hébreu et russe (UTF-8).</h3>
+<h3>Vue IDE avec l'allemand, le français, l'hébreu et le russe (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br />
 <h3>Vue Editeur IDE.</h3>
@@ -119,13 +135,13 @@ Voir notre [Plans Orion](plans).
 <h3>Vue Editeur IDE (espagnol).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
 <br />
-<h3>IDE - Création de site complet.</h3>
+<h3>Paramétrage complet du site IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
 <br />
-<h3>Paramétrage type de site IDE.</h3>
+<h3>Paramétrage de sites standard IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> <small>(les liens en <span style="color:#e83e8c">rose foncé</span> vous déposeront directement dans un écran d'éditeur, le curseur étant placé exactement en fonction du texte correspondant)</small>.</h3>
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> <small>(ces liens en <span style="color:#e83e8c">rouge chaud</span> vous déposeront directement dans un écran d'éditeur, le curseur étant placé exactement selon le texte correspondant)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
 
