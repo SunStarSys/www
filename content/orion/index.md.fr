@@ -82,7 +82,17 @@ Si vous êtes fatigué des licences par siège et des choix par cycle CPU qui vo
 
 Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous le souhaitez.  Dans un pincement, même l'interface mobile (navigateur) le fera, *instantanément*.
 
+<div id="lightning">
+
 ![Foudre](index.page/lightning).
+
+</div>
+
+<style type="text/css">
+
+div#lightning>image {width:100%}
+
+</style>
 
 Les arbres sources multi-gigaoctets ne correspondent tout simplement pas &mdash; Les durées de construction du site complet sont mesurées en *secondes*, et non en heures et minutes.  Le système se maintient facilement [`500 Mo/s`](features) tout en traitant vos sources pour des builds de site complets, mais compte tenu de sa fonctionnalité <span class="text-white">unique de gestion des dépendances en attente de brevet</span>, il n'a presque jamais besoin d'y recourir :
 

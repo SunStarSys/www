@@ -82,7 +82,17 @@ Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig 
 
 Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. IDE online är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa kommer även det mobila (webbläsargränssnittet) att få det gjort, * direkt*.
 
+<div id="lightning">
+
 ![Blixt](index.page/lightning).
+
+</div>
+
+<style type="text/css">
+
+div#lightning>image {width:100%}
+
+</style>
 
 Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`500 Mbyte/s`](features) när du bearbetar källorna för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unika, patentsökta beroendehantering</span>-funktionalitet, behöver du nästan aldrig använda dem:
 

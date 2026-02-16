@@ -82,7 +82,17 @@ Orion 專為拒絕解決的領導者而打造：
 
 絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 IDE 的設計可讓您隨時進行 ** 僅限瀏覽器的工作流程 **。* 立即 *，即使是行動 (瀏覽器) 介面也能順利完成。
 
+<div id="lightning">
+
 ![閃電](index.page/lightning).
+
+</div>
+
+<style type="text/css">
+
+div#lightning>image {width:100%}
+
+</style>
 
 多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 * 秒 * (而非小時和分鐘) 計算。系統容易維持於[`500 MB/ 秒`](features) 處理您原始碼的完整網站建置時，但由於其<span class="text-white">唯一、專利申請中的相依性管理</span>功能，因此幾乎不需要重新排序：
 

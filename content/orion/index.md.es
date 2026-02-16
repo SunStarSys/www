@@ -82,7 +82,17 @@ Si está cansado de las licencias por asiento y las opciones por ciclo de CPU qu
 
 Nunca tener que lidiar directamente con un sistema de control de versiones, o incluso un generador de sitios estáticos, en su propia computadora personal depende de usted. El IDE en línea está diseñado y listo para el **flujo de trabajo solo de explorador** siempre que lo esté.  En un abrir y cerrar de ojos, incluso la interfaz móvil (navegador) lo hará, *instantáneamente*.
 
+<div id="lightning">
+
 ![Rayo](index.page/lightning).
+
+</div>
+
+<style type="text/css">
+
+div#lightning>image {width:100%}
+
+</style>
 
 Los árboles fuente de varios gigabytes simplemente no coinciden &mdash; Las duraciones completas de la creación del sitio se miden en *segundos*, no en horas ni minutos.  El sistema se mantiene fácilmente sobre [`500 MB/s`](features) mientras procesa sus fuentes para la creación completa del sitio, pero dada su funcionalidad <span class="text-white">única y pendiente de patente</span>, casi nunca necesita recurrir a ellas:
 

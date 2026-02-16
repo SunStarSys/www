@@ -82,7 +82,17 @@ Wenn Sie es satt haben, die pro Sitzplatz lizenzierten und pro CPU-Zyklus Auswah
 
 Niemals direkt mit einem Versionskontrollsystem oder sogar einem statischen Site-Generator auf Ihrem eigenen Computer umgehen zu müssen, liegt an Ihnen. Die Online-IDE ist so konzipiert und bereit für Ihren **Nur-Browser-Workflow**, wann immer Sie es sind.  In einer Prise wird sogar die mobile (Browser-)Oberfläche es schaffen, *sofort*.
 
+<div id="lightning">
+
 ![Blitz](index.page/lightning).
+
+</div>
+
+<style type="text/css">
+
+div#lightning>image {width:100%}
+
+</style>
 
 Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Die Dauer der vollständigen Siteerstellung wird in *Sekunden*, nicht in Stunden und Minuten gemessen.  Das System hält leicht über [`500 MB/s`](features) während Sie Ihre Quellen für vollständige Site Builds verarbeiten, aber angesichts seiner <span class="text-white">eindeutigen, zum Patent angemeldeten Abhängigkeitsmanagement</span>-Funktionalität muss es fast nie auf sie zurückgreifen:
 
