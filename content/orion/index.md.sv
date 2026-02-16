@@ -50,7 +50,7 @@ Orion är byggd för ledare som vägrar att bosätta sig:
 
 - **Teknikföretag &amp; webbplatsbyråer** — Ersätt osäkra kommersiella wikier, tama berg av produktdokumentation, kundwebbplatser och till och med binära nedladdningar. Curate allt med förtroende, hastighet och ironclad versionshistorik.
 
-- ** Arkitekter med hög tillgänglighet &amp; principfasta ingenjörer** – Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt på några sekunder.
+- ** Arkitekter med hög tillgänglighet &amp; principfasta ingenjörer** – Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
 
 - **Alla företag trött på wiki ekonomi** — Ditch dyra SaaS prenumerationer, ömtåliga gratis verktyg som dränerar personal tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 6 000 dollar per år för full företagsanvändning).
 
@@ -81,6 +81,8 @@ Vill du ha en webbplats som är **secure-by-standard**?  Lätt att uppdatera och
 Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är en regex-utrustad lejon tamer i årtionden av ackumulerat äldre HTML-innehåll, eller bara någon missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
 
 Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. IDE online är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa kommer även det mobila (webbläsargränssnittet) att få det gjort, * direkt*.
+
+![Blixt](index.page/lightning).
 
 Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`500 Mbyte/s`](features) när du bearbetar källorna för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unika, patentsökta beroendehantering</span>-funktionalitet, behöver du nästan aldrig använda dem:
 

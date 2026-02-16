@@ -50,7 +50,7 @@ Orión está construido para los líderes que se niegan a establecerse:
 
 **Empresas de tecnología &amp; Reemplazar wikis comerciales inseguros, montañas domesticadas de documentación de productos, sitios de clientes e incluso descargas binarias. Cura todo con confianza, velocidad e historia de versiones revestidas de hierro.
 
-**Arquitectos de alta disponibilidad &amp; ingenieros de principios**: evite los puntos de fallo únicos incorporados a las pilas LAMP basadas en SQL. Adopte la verdadera escalabilidad de Jamstack: compilaciones simultáneas, actualizaciones incrementales, cobertura POP global y rendimiento máximo medido en segundos.
+**Arquitectos de alta disponibilidad &amp; ingenieros de principios**: evite los puntos de fallo únicos incorporados a las pilas LAMP basadas en SQL. Adopte la verdadera escalabilidad de Jamstack: compilaciones simultáneas, actualizaciones incrementales, cobertura POP global y rendimiento máximo medido en milisegundos.
 
 **Cualquier empresa cansada de la economía wiki**: abandona las costosas suscripciones a SaaS, las herramientas gratuitas frágiles que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 6.000 / año para el uso completo de la empresa).
 
@@ -81,6 +81,8 @@ Esto no es un giro de marketing: es una herencia de ingeniería verificable y ab
 Si está cansado de las licencias por asiento y las opciones por ciclo de CPU que lo pesan cada vez que necesita corregir un error tipográfico, [llegar a nosotros](/contact). Si usted es un manipulador de leones equipado con regex durante décadas de contenido HTML heredado acumulado, o simplemente alguien insatisfecho con las otras opciones en el mercado y cómo funcionan a escala, tenemos algo realmente especial que ofrecerle.
 
 Nunca tener que lidiar directamente con un sistema de control de versiones, o incluso un generador de sitios estáticos, en su propia computadora personal depende de usted. El IDE en línea está diseñado y listo para el **flujo de trabajo solo de explorador** siempre que lo esté.  En un abrir y cerrar de ojos, incluso la interfaz móvil (navegador) lo hará, *instantáneamente*.
+
+![Rayo](index.page/lightning).
 
 Los árboles fuente de varios gigabytes simplemente no coinciden &mdash; Las duraciones completas de la creación del sitio se miden en *segundos*, no en horas ni minutos.  El sistema se mantiene fácilmente sobre [`500 MB/s`](features) mientras procesa sus fuentes para la creación completa del sitio, pero dada su funcionalidad <span class="text-white">única y pendiente de patente</span>, casi nunca necesita recurrir a ellas:
 

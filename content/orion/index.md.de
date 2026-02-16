@@ -50,7 +50,7 @@ Orion ist für Führer gebaut, die sich weigern, sich niederzulassen:
 
 - **Technologieunternehmen &amp; Website-Agenturen** – Ersetzen Sie unsichere kommerzielle Wikis, zahme Berge von Produktdokumentation, Kundenseiten und sogar binäre Downloads. Kuratieren Sie alles mit Zuversicht, Geschwindigkeit und ironclad Versionsgeschichte.
 
-- **Hochverfügbare Architekten &amp; prinzipielle Ingenieure** – Entkommen Sie den einzelnen Fehlerpunkten, die in SQL-basierte LAMP-Stacks eingebacken wurden. Nutzen Sie echte Jamstack-Skalierbarkeit: gleichzeitige Builds, inkrementelle Updates, globale POP-Abdeckung und Spitzenleistung, gemessen in Sekunden.
+- **Hochverfügbare Architekten &amp; prinzipielle Ingenieure** – Entkommen Sie den einzelnen Fehlerpunkten, die in SQL-basierte LAMP-Stacks eingebacken wurden. Nutzen Sie echte Jamstack-Skalierbarkeit: gleichzeitige Builds, inkrementelle Updates, globale POP-Abdeckung und Spitzenleistung, gemessen in Millisekunden.
 
 - **Jedes Unternehmen, das von Wiki-Ökonomie müde ist** – Lassen Sie teure SaaS-Abonnements, fragile kostenlose Tools, die Zeit für das Personal entlasten, und veraltete Systeme, die Ihr Team verlangsamen. Orion gibt Ihnen Unternehmensmacht zu einem Bruchteil der Gesamtbetriebskosten (oft unter 6.000 US-Dollar pro Jahr für die vollständige Nutzung des Unternehmens).
 
@@ -81,6 +81,8 @@ Möchten Sie eine Website **Secure-by-Default**?  Einfach zu aktualisieren und z
 Wenn Sie es satt haben, die pro Sitzplatz lizenzierten und pro CPU-Zyklus Auswahlen abzuwägen, wann immer Sie einen Tippfehler beheben müssen, [Kontaktieren Sie uns](/contact). Wenn Sie ein regex-ausgestatteter Löwenbändiger für Jahrzehnte akkumulierter HTML-Inhalte sind oder einfach nur jemand unzufrieden mit den anderen Optionen auf dem Markt und wie sie in großem Maßstab funktionieren, haben wir etwas ganz Besonderes zu bieten.
 
 Niemals direkt mit einem Versionskontrollsystem oder sogar einem statischen Site-Generator auf Ihrem eigenen Computer umgehen zu müssen, liegt an Ihnen. Die Online-IDE ist so konzipiert und bereit für Ihren **Nur-Browser-Workflow**, wann immer Sie es sind.  In einer Prise wird sogar die mobile (Browser-)Oberfläche es schaffen, *sofort*.
+
+![Blitz](index.page/lightning).
 
 Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Die Dauer der vollständigen Siteerstellung wird in *Sekunden*, nicht in Stunden und Minuten gemessen.  Das System hält leicht über [`500 MB/s`](features) während Sie Ihre Quellen für vollständige Site Builds verarbeiten, aber angesichts seiner <span class="text-white">eindeutigen, zum Patent angemeldeten Abhängigkeitsmanagement</span>-Funktionalität muss es fast nie auf sie zurückgreifen:
 

@@ -50,7 +50,7 @@ Orion est construit pour les dirigeants qui refusent de s'installer :
 
 - **Entreprises technologiques &amp; agences web** — Remplacer les wikis commerciaux non sécurisés, apprivoiser les montagnes de documentation produit, les sites client et même les téléchargements binaires. Organisez tout avec confiance, rapidité et historique des versions.
 
-- **Architectes haute disponibilité &amp; ingénieurs principaux** — Échappez les points d'échec uniques cuits dans des piles LAMP basées sur SQL. Adoptez la véritable évolutivité de Jamstack : builds simultanés, mises à jour incrémentielles, couverture globale des POP et performances maximales mesurées en secondes.
+- **Architectes haute disponibilité &amp; ingénieurs principaux** — Échappez les points d'échec uniques cuits dans des piles LAMP basées sur SQL. Adoptez une véritable évolutivité Jamstack : builds simultanés, mises à jour incrémentielles, couverture globale des POP et performances maximales mesurées en millisecondes.
 
 - **Toute entreprise fatiguée de l'économie du wiki** — Ditch coûteux abonnements SaaS, des outils gratuits fragiles qui épuisent le temps du personnel, et des systèmes obsolètes qui ralentissent votre équipe. Orion vous donne la puissance de l'entreprise à une fraction du coût total de possession (souvent moins de 6 000 $/an pour une utilisation complète de l'entreprise).
 
@@ -81,6 +81,8 @@ Vous voulez un site Web **sécurisé par défaut** ?  Facile à mettre à jour e
 Si vous êtes fatigué des licences par siège et des choix par cycle CPU qui vous pèsent chaque fois que vous avez besoin de corriger une faute de frappe, [contactez-nous](/contact). Si vous êtes un dompteur lion équipé d'une expression régulière pendant des décennies de contenu HTML hérité accumulé, ou simplement quelqu'un insatisfait des autres options sur le marché et de la façon dont elles fonctionnent à grande échelle, nous avons quelque chose de vraiment spécial à vous offrir.
 
 Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous le souhaitez.  Dans un pincement, même l'interface mobile (navigateur) le fera, *instantanément*.
+
+![Foudre](index.page/lightning).
 
 Les arbres sources multi-gigaoctets ne correspondent tout simplement pas &mdash; Les durées de construction du site complet sont mesurées en *secondes*, et non en heures et minutes.  Le système se maintient facilement [`500 Mo/s`](features) tout en traitant vos sources pour des builds de site complets, mais compte tenu de sa fonctionnalité <span class="text-white">unique de gestion des dépendances en attente de brevet</span>, il n'a presque jamais besoin d'y recourir :
 
