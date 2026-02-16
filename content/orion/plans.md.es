@@ -184,7 +184,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 - Las empresas con menos de 100 confirmaciones al día deben estar bien con los 500 minutos de construcción incluidos en el plan.
 
-- Las empresas con menos de 500 compromisos al día deben estar bien con los 2500 minutos de construcción incluidos en el plan.
+- Las empresas con menos de 1000 confirmaciones al día deben estar bien con los 5000 minutos de construcción incluidos en el plan.
 
 ------------
 

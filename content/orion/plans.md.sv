@@ -184,7 +184,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 - Företag med mindre än 100 åtaganden per dag bör vara bra med de 500 byggminuter som ingår i planen.
 
-- Företag med mindre än 500 åtaganden per dag bör vara bra med de 2500 byggminuter som ingår i planen.
+- Företag med mindre än 1000 åtaganden per dag bör vara bra med de 5000 byggminuter som ingår i planen.
 
 ------------
 
@@ -232,4 +232,4 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2025-12-19 09:58:59 -0700 (Fri, 19 Dec 2025) $ $Author: joe $ $Revision: 27332 $ -->
+<!-- $Date: 2026-02-16 13:20:51 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27685 $ -->
