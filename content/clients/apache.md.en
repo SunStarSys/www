@@ -1,7 +1,8 @@
 Title: The Apache Software Foundation
 Keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,Apache CMS
 
-![The ASF](http://www.apache.org/images/feather.png)
+![The ASF](https://www.iconoclasts.blog/joe/apache-considered-harmful.page/feather2.png)
+
 
 [The Apache Software Foundation](http://www.apache.org/) (The ASF) is a 501(c)(3) public charity dedicated to the promotion and development of open source software.  In the 8 years I served as a (contracted) System Administrator for The ASF, the foundation tripled in both size and scope.  We went from a half-cabinet's worth of machines in 2006 to over 4 cabinets worth in 2014, and were starting the process of expanding into the cloud.
 
@@ -19,3 +20,5 @@ Over an 8 year span, the ecological impact of my `earlytalker` adjustments were 
 Beyond the routine chores facing every System Administrator, my other chief accomplishment at The ASF was the creation of the `Apache CMS`.  The reasons and rationale behind it were [documented](http://www.apache.org/dev/cms), but it is important to note that this software was rapidly developed over a 3 month period before being pressed into production for the <http://www.apache.org/> website.  It has achieved a popularity within The ASF beyond my wildest expectations: over 100 projects currently rely on it for their website needs.  It downscales to small but intricate sites like [Apache Thrift](http://thrift.apache.org/), while also scaling up to meet the needs of a 5GB website like [OpenOffice.org](http://www.openoffice.org/).
 
 I enjoyed the bulk of my time serving the needs of the Apache community, but after 8 years it was time for a change.  I will always look fondly on the many memories and friends I made while there, and wish Apache all the best going forward.
+
+<!-- $Date$ $Author$ $Revision$ -->
