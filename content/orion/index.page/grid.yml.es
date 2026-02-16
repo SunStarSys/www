@@ -77,7 +77,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "Construcciones simultáneas de 8-64 vías"
   Orion: "&check;"
-- Feature: "TCO &lt; $6000/año para Enterprise"
+- Feature: "TCO &lt; $10000/año para Enterprise"
   Orion: "&check;"
 - Feature: "SLA integral del 99,99%"
   Orion: "Empresa &amp; Instalación del servidor"
