@@ -30,27 +30,35 @@ For pricing information, see our [Orion Plans](plans).
 
 ### Here's the Pitch, Executive Decision Maker...
 
-What differentiates this product from our competitors is the [Orion Technology](technology), and how its **efficiency** allows us to maintain very low operating costs while providing a superior editorial controls and groundbreaking features.  We pass the cost savings on to our **customers**, with only marginal upcharges for additional cloud provider resources. [Give us a call](/contact), **especially** if you are
+Why Choose Orion? The Enterprise Jamstack Wiki That Outperforms — and Costs Far LessWhat truly sets Orion apart isn't just another wiki—it's our proprietary Orion Technology, a battle-tested, patent-pending approach that delivers unmatched efficiency.
 
-<ul>
-  <li><p>a <span class="text-white">University Leader</span> looking for way to <b>eliminate plagiarism</b> on campus via an <a href="https://en.wikipedia.org/wiki/Open_access">Open Access</a> version-controlled-document sharing, curation and online publishing platform, or an academic-oriented Knowledge Management System,</p></li>
+This lets us run ultra-low operating costs while offering superior editorial controls, enterprise-grade security, and groundbreaking features no legacy wiki can match. We pass those massive savings directly to you. Expect only modest, transparent upcharges for the exact cloud resources you use—no bloated pricing tiers or hidden fees.
 
-  <li><p>an <span class="text-white">IT government/defense sector decision-maker</span> with either FedRAMP/<a href="https://www.nist.gov/publications/zero-trust-architecture">NIST 800-207</a> compliance needs, or fine-grained Access Control requirements on your site's version control repository,</p></li>
+Orion is built for leaders who refuse to settle:
 
-  <li><p>a <span class="text-white">marketing executive</span> wanting an innovative, global enterprise platform for managing your corporate website assets, using Orion as a "headless" CMS,</p></li>
+- **University leaders** — Eliminate campus plagiarism and empower secure, open-access collaboration with version-controlled document sharing, curation, and online publishing. Transform your academic knowledge management into a modern, auditable platform.
 
-  <li><p>a <span class="text-white">technology company/website agency leader</span> with a very insecure commercial wiki, a mountain of online product documentation or client sites (potentially offering binary downloads) to curate,</p></li>
+- **Government &amp; defense IT decision-makers** — Meet FedRAMP infrastructure, NIST 800-207 zero-trust requirements, and fine-grained access controls on your version-control repository — all with FIPS 140-3 compliant security and installable inside your corporate VPN.
 
-  <li><p>a <span class="text-white">principled High Availability architect</span> tired of dealing with single-points-of-failure inherent in SQL-based LAMP stacks,</p></li>
+- **Marketing executives** — Run a fast, global, innovative enterprise platform for corporate website assets. Use Orion as a powerful headless CMS — secure, performant, and fully decoupled from frontend delivery.
 
-  <li><p>or really any business-person dissatisfied with the cost structure of any wiki thingy out there, including free offerings bogging down your staff's time and energy.</p></li>
-</ul>
+- **Technology companies &amp; website agencies** — Replace insecure commercial wikis, tame mountains of product documentation, client sites, and even binary downloads. Curate everything with confidence, speed, and ironclad version history.
 
-*There is no vendor lock-in involved with our offering*. But don't just take our word for it, see for yourself what's typically involved in terms of build system customization by visiting
+- **High-availability architects &amp; principled engineers** — Escape the single points of failure baked into SQL-based LAMP stacks. Embrace true Jamstack scalability: concurrent builds, incremental updates, global POP coverage, and peak performance measured in seconds.
 
-[our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
+- **Any business tired of wiki economics** — Ditch expensive SaaS subscriptions, fragile free tools that drain staff time, and outdated systems that slow your team down. Orion gives you enterprise power at a fraction of the total cost of ownership (often under $6,000/year for full enterprise use).
 
-Less than <span class="text-info">100 LOC</span> to provide the build logic for this website, and it includes sophisticated, memoized dependency management for auto-generation of a multilingual [SiteMap](/sitemap) and all directory indexes (like [this portion](#Details) of this particular page).  We even put the underlying [Static Site Generator for the build on GitHub](https://github.com/SunStarSys/Orion) under the Apache License 2.0.
+Zero vendor lock-in — and we prove it.Your content lives in clean Markdown and standard Version Control workflows. No proprietary formats. No migration nightmares.
+
+Want transparency? See for yourself:
+
+Our entire build-system logic for this very website: fewer than 100 lines of code, complete with sophisticated, memoized dependency management that auto-generates multilingual sitemaps, directory indexes, and more.
+
+View the source: [our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → <https://github.com/SunStarSys/Orion>.
+
+This isn't marketing spin—it's verifiable, open engineering heritage dating back to F/OSS innovations pioneered in 2011. Ready to experience a wiki that actually saves time, money, and headaches? [Give us a call or drop us a note](/contact) today.
 
 </div>
 
