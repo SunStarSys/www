@@ -35,6 +35,7 @@ p.editormd-tex {
 }
 
 .katex {
+	direction: ltr;
 	font-family: KaTeX_Main;
 	max-width: 100%;
 }
