@@ -111,7 +111,7 @@ $100 / mes / sitio público administrado, ~50% de descuento en todos los modelos
 			<hr />
 <p>
 
-$500 / mes, ~67% de descuento en todos los modelos de precios de la competencia!
+$1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia!
 
 </p>
 
@@ -124,10 +124,10 @@ $500 / mes, ~67% de descuento en todos los modelos de precios de la competencia!
 
 <p>
 <ol>
-						<li>1 GB de espacio de almacenamiento en su propio repositorio de Subversion<sup>2</sup></li>
-						<li>Transferencia de datos de 3 TB</li>
+						<li>2 GB de espacio de almacenamiento en su propio repositorio de Subversion<sup>2</sup></li>
+						<li>Transferencia de datos de 5 TB</li>
 						<li>Sitios web ilimitados y asientos (autogestionados)</li>
-						<li>2500 minutos de compilación</li>
+						<li>5000 minutos de creación</li>
 						<li>Control total de la configuración de autorización de Subversion</li>
 						<li>Contenedores de creación privados y en red</li>
 						<li>SLA integral del 99,99 %<sup>3</sup></li>

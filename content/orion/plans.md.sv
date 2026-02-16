@@ -111,7 +111,7 @@ $ 100 / månad / hanterad offentlig webbplats, ~ 50 % rabatt på alla konkurrent
 			<hr />
 <p>
 
-$ 500 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
+$ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 </p>
 
@@ -124,10 +124,10 @@ $ 500 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 <p>
 <ol>
-						<li>1 Gbyte lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
-						<li>3 Tbyte dataöverföring</li>
+						<li>2 Gbyte lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
+						<li>5 Tbyte dataöverföring</li>
 						<li>Obegränsade webbplatser och (självhanterade) platser</li>
-						<li>2500 byggminuter</li>
+						<li>5000 byggminuter</li>
 						<li>Full kontroll över konfiguration av Subversion-auktorisering</li>
 						<li>Privata, nätverksbaserade byggcontainrar</li>
 						<li>99,99 % heltäckande servicenivåavtal<sup>3</sup></li>
@@ -232,4 +232,4 @@ $ 500 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2024-05-10 09:29:14 -0700 (Fri, 10 May 2024) $ $Author: joe $ $Revision: 25002 $ -->
+<!-- $Date: 2025-12-19 09:58:59 -0700 (Fri, 19 Dec 2025) $ $Author: joe $ $Revision: 27332 $ -->
