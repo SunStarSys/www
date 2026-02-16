@@ -77,7 +77,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Orion: "&check;"
 - Feature: "8-64-vägs samtidiga byggen"
   Orion: "&check;"
-- Feature: "TCO &lt; $6000/år för Enterprise"
+- Feature: "TCO &lt; $10000/år för Enterprise"
   Orion: "&check;"
 - Feature: "Omfattande 99,99 % SLA"
   Orion: "Företag &amp; Serverinstallation"
