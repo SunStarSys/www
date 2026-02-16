@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
 published: ~
-status: skiss
+status: publicerad
 title: SunStar Orion för system
 ---
 
@@ -90,7 +90,7 @@ Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en s
 
 <style type="text/css">
 
-div#lightning>image {width:100%}
+div#lightning img {width:100%}
 
 </style>
 

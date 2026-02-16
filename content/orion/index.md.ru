@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
 published: ~
-status: черновик
+status: опубликовано
 title: SunStar Орион систем
 ---
 
@@ -90,7 +90,7 @@ title: SunStar Орион систем
 
 <style type="text/css">
 
-div#lightning>image {width:100%}
+div#lightning img {width:100%}
 
 </style>
 

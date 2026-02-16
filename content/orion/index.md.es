@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
 published: ~
-status: borrador
+status: publicado
 title: SunStar Orión de los Sistemas
 ---
 
@@ -90,7 +90,7 @@ Nunca tener que lidiar directamente con un sistema de control de versiones, o in
 
 <style type="text/css">
 
-div#lightning>image {width:100%}
+div#lightning img {width:100%}
 
 </style>
 
