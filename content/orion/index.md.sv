@@ -104,7 +104,7 @@ Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort 
 
 <h3>Det är dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp.</h3>
 
-Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du * faktiskt använder * på vår infrastruktur. Ta bara med ditt eget AI-förbättrade css/javascript-ramverk, perl-skript och Django-mallar, så tar vi hand om resten av din installation utan extra kostnad. Vi rekommenderar **Bootstrap ** för css / js styling, eftersom det är vad vi använder internt; men det är helt upp till dig.
+Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du * faktiskt använder * på vår infrastruktur. Ta bara med ditt eget AI-förbättrade css/javascript-ramverk, perl-skript och Django-mallar, så tar vi hand om resten av din installation utan extra kostnad. Vi rekommenderar **Bootstrap 5** för css/js styling, eftersom det är vad vi använder internt; men det är helt upp till dig.
 
 &nbsp;
 
