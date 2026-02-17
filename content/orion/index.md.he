@@ -26,11 +26,7 @@ title: SunStar אוריון מערכות
 </p>
 {# lede #}<span class="text-white">Enterprise Wiki</span>&nbsp; לדפי אינטרנט סטטיים של <b>יצירה, ניהול ומסירה</b> באמצעות הטכנולוגיה של #Jamstack לקבלת תכונות דינמיות{# lede #}.
 
-&nbsp;
-
 לקבלת מידע על תמחור, ראה שלנו [תוכניות אוריון](plans).
-
-&nbsp;
 
 ### הנה המגרש, מקבל החלטות מנהלים ...
 
@@ -123,7 +119,7 @@ div#lightning img {width:100%}
 
 | תכונה     |   אוריון       | לוח | תפיסה | השפעה |
 |:^-----------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-danger">{{ row.Slab|safe }}</span> |  <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

@@ -26,11 +26,7 @@ title: SunStar System-Orion
 </p>
 {# lede #}<span class="text-white">Enterprise Wiki</span>&nbsp; für das <b>Erstellen, Verwalten und Bereitstellen</b> statischer Webseiten mit der #Jamstack-Technologie für dynamische Features{# lede #}.
 
-&nbsp;
-
 Preisinformationen finden Sie unter [Orionpläne](plans).
-
-&nbsp;
 
 ### Hier ist der Pitch, Executive Decision Maker...
 
@@ -123,7 +119,7 @@ Sehen Sie unsere [Orionpläne](plans) für die aktuellen Deals.
 
 | Feature     |   Orion       | Platte | Begriff | Konflikt |
 |:^-----------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-danger">{{ row.Slab|safe }}</span> |  <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

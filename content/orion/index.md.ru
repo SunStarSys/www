@@ -26,11 +26,7 @@ title: SunStar Орион систем
 </p>
 {# lede #}<span class="text-white">Вики для предприятия</span>&nbsp; для <b>создания, управления и доставки</b> статических веб-страниц с использованием технологии #Jamstack для динамических функций в них{# lede #}.
 
-&nbsp;
-
 Для получения информации о ценах см. наш [Планы Ориона](plans).
-
-&nbsp;
 
 ### Вот шаг, ответственный за принятие решений...
 
@@ -123,7 +119,7 @@ div#lightning img {width:100%}
 
 | Функциональность     |   Orion       | Плита | Понятие | Слияние |
 |:^-----------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-danger">{{ row.Slab|safe }}</span> |  <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

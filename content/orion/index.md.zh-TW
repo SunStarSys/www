@@ -26,11 +26,7 @@ title: SunStar 系統的 Orion
 </p>
 {# lede #}<span class="text-white">企業 Wiki</span>&nbsp; <b>使用 #Jamstack 技術來建立、管理及傳遞</b>靜態網頁，以瞭解動態功能{# lede #}.
 
-&nbsp;
-
 如需價格資訊，請參閱我們的[Orion 計畫](plans).
-
-&nbsp;
 
 ### 以下是行政決策者
 
@@ -123,7 +119,7 @@ div#lightning img {width:100%}
 
 | 功能     |   Orion        | Slab | Notion | Confluence |
 |:^-----------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-danger">{{ row.Slab|safe }}</span> |  <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

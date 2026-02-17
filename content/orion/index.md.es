@@ -26,11 +26,7 @@ title: SunStar Orión de los Sistemas
 </p>
 {# lede #}<span class="text-white">Wiki de empresa</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas mediante la tecnología #Jamstack para funciones dinámicas en ellas{# lede #}.
 
-&nbsp;
-
 Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
-
-&nbsp;
 
 ### Aquí está el lanzamiento, decisor ejecutivo...
 
@@ -123,7 +119,7 @@ Cuadrícula de comparación de funciones ###
 
 | Función     |   Orion       | Losa | Noción | Confluencia |
 |:^-----------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-warning">{{ row.Slab|safe }}</span> |  <span class="text-warning">{{ row.Notion|safe }}</span> |  <span class="text-warning">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-danger">{{ row.Slab|safe }}</span> |  <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
