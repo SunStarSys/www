@@ -33,6 +33,7 @@ status: draft
   Confluence: "&check;"
 - Feature: "Multilingual (i18n)"
   Orion: "&check;"
+  Notion: "&check;"
 - Feature: 'Fully Searchable <span class="editormd-tex">\KaTeX</span> Expressions'
   Orion: "&check;"
   Confluence: "$$$"
@@ -45,6 +46,7 @@ status: draft
   Orion: "Server Install"
 - Feature: "Works Offline"
   Orion: "&check;"
+  Notion: "&check;"
 - Feature: 'Easy 3rd Party "Pull-Request" Contributor Workflow'
   Orion: "&check;"
 - Feature: "[GitHub Integration](https://youtu.be/FRc4qZkxVaI) w/ IDE &amp; Actions Support"
@@ -81,5 +83,5 @@ status: draft
   Slab: "&check;"
 - Feature: 'Markdown <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automation'
   Orion: "&check;"
-- Feature: AI NLP Automatic Translation
+- Feature: "AI NLP Automatic Translation"
   Orion: "&check;"
