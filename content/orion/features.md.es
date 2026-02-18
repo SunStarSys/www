@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
-keywords: jamstack,markdown, sirena,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluencia,slab,notion
+keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluencia,slab,noción
 published: ~
 status: borrador
 title: Características de Orion
@@ -34,33 +34,33 @@ title: Características de Orion
 &nbsp;
 </p>
 
-## Infraestructura de sistema rápida e intensa
+## Infraestructura de sistema rápido
 
-- 50 ms o menos de latencia de RTT para la mayor parte de la población mundial, con una cobertura ampliada en África en 2024
+- Latencia de 50 ms o menos RTT para la mayor parte de la población mundial, con una cobertura ampliada en África en 2024
 
-- 2 veces más rápido HTTP / 2 tiempos de entrega de páginas multiplexadas (listos para usar, para * todos * los clientes) que la competencia
+- 2 veces más rápido HTTP / 2 tiempos de entrega de páginas multiplexadas (fuera de la caja, para *todos * los clientes) que la competencia
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 500 MB/s de construcciones sostenidas para árboles de origen de varios gigabytes
+- 500 MB / s construcciones sostenidas para árboles fuente de varios gigabytes
 
-- NVMe o una infraestructura de almacenamiento de creación más rápida
+- NVMe o una infraestructura de almacenamiento de compilación más rápida
 
-- Solaris 11.4 para la estabilidad de ZFS, respaldado por Full Oracle Customer Support
+- Solaris 11.4 para la estabilidad de ZFS, respaldado por Soporte completo al cliente de Oracle
 
-- node.js para la representación de Markdown con clusters de CPU
+- node.js para la representación de rebajas con agrupación en clusters de CPU
 
-- 8-64 formas de construcciones simultáneas
+- Construcciones simultáneas de 8-64 vías
 
-- Compromiso rápido ahora la configuración por defecto para la mayoría de las circunstancias
+- Confirmación rápida ahora el valor por defecto para la mayoría de las circunstancias
 
-- IDE basado en httpd 2.4 de Apache:
+- Apache httpd 2.4 basado en IDE:
 
 - HTTP/2
 
-- evento mpm
+- mpm de evento
 
 - mod_perl con ithreads
 
@@ -68,11 +68,11 @@ title: Características de Orion
 
 - TLS 1.3
 
-- Personalizado [`SVN::Cliente`](#).
+- Personalizado [`SVN::Cliente`](#) módulo con soporte de ithread para agrupaciones por solicitud
 
 ## Multilingüe
 
-- Español
+- Inglés
 
 - Español
 
@@ -80,23 +80,27 @@ title: Características de Orion
 
 - Francés
 
+- Portugués brasileño
+
 - Ruso
 
-Chino
+- Chino
+
+- Coreano
 
 - Hebreo
 
 - Sueco
 
-## Mejor soporte para diferenciadores de correo y creación de clonaciones
+## Mejor soporte para el envío de diferencias y la creación de clones
 
-- Protegido por DMARC
+- DMARC protegido
 
-- Utiliza SRS y Responder a para la compatibilidad ezmlm
+- Utiliza SRS y Reply-To para la compatibilidad con ezmlm
 
-- Todos los usuarios se autentican a través del servicio OpenID-Connect de Google
+- Todos los usuarios son autenticados a través del servicio OpenID-Connect de Google
 
-## El patito curioso es ahora un cisne elegante
+## El pato curioso es ahora un elegante cisne
 
 <br>
 
@@ -110,13 +114,13 @@ Chino
 
 - Estilo Bootstrap 4+ para un estilo semántico CSS fácil y una incorporación rápida.
 
-- Editor.md es increíble: al utilizar relativa [`origen`](#).
+- Editor.md es increíble: mediante el uso de relativos [`src`](#) urls, las imágenes enlazadas se representarán en el panel de vista previa del editor.
 
-## Representación consistente de rebajas con sabor a GitHub (GFM) con Editor.md :editormd-logo-1x: y plantillas de Django
+## Representación consistente de rebaja con sabor GitHub (GFM) con Editor.md :editormd-logo-1x: y Creación de plantillas de Django
 
-- [x] **SEMIOLOGÍA:** {# lede #}El mismo motor de representación de código javascript tanto en el explorador como en el script de compilación markdown.js (basado en node.js){# lede #} garantiza una consistencia estructural del 100% entre la ventana de vista previa de Markdown de Editor.md y el sitio de producción.
+- [x] **WYSIWYG:** {# lede #}Mismo motor de representación de código javascript tanto en el explorador como en el script de compilación markdown.js (basado en node.js){# lede #} garantiza una consistencia estructural del 100% entre la ventana de vista previa de Markdown Editor.md y el sitio de producción.
 - [x] Las cabeceras YAML en los archivos de origen (markdown) ahora están totalmente soportadas.
-- [x]
+- [x] Soporte nativo para diagramas de flujo y secuencias:fa-glass:
 
 ```flow
 st=>start: börja
@@ -139,7 +143,7 @@ Andrew->>Jenni: I am good thanks!
 ----
 &nbsp;
 
-- [x]
+- [x] Soporte nativo d3-graphviz.js:
 
 ```graphviz
 digraph {
@@ -151,15 +155,15 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x]
+- [x] Nativo @mermaid-js/mermaid v10.7.0 con soporte de mindmap:
 
 ```mermaid
 graph TD
     A[Christmas]
  -->|Get money| B(Go shopping)
     B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
+    C -->|One| D[fa:fa-laptop Laptop]
+    C -->|Two| E[fa:fa-mobile iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
 ----
@@ -371,17 +375,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [x]
+- [x] Markmap.js Ver soporte
 
-- [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Academia de Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Academia de Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) Soporte para matemáticas, física y química:
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Generación Bidireccional Síncrona de $$\LaTeX$$ Archivos de origen a/desde Markdown+$$\KaTeX$$
+- [x] Generación Bidireccional y Síncrona de $$\LaTeX$$ Archivos de origen a/desde Markdown+$$\KaTeX$$ Archivos.
 
-- [x] Navier-Stokes en la notación de Einstein [DOLOR](https://en.wikipedia.org/wiki/Abstract_index_notation).
+- [x] Navier-Stokes en la notación de Einstein (aka [DOLOR](https://en.wikipedia.org/wiki/Abstract_index_notation)).
 
 ```math
 \begin{aligned}
@@ -391,7 +395,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x]
+- [x] Navier-Stokes en notación clásica
 
 ```math
 \begin{aligned}
@@ -403,16 +407,16 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x]
+- [x] ¡Eléctrico!
 
-El editor se autocompletará y se autoindentará; tiene modo de pantalla completa, así como soporte para varios otros modos de creación de contenido disponibles para su resaltador de sintaxis CodeMirror 5.
+Editor se autocompletará y autoindent; tiene modo de pantalla completa, así como soporte para varios otros modos de creación de contenido disponibles para su resaltador de sintaxis CodeMirror 5.
 
 ## Soporte completo para creaciones de sucursales
 
-- [x] No más ubicación temporal/publicación: sustituido por <span class="text-white">promoción</span> de rama por recurso.
-- [x]
+- [x] No hay más ubicación temporal/publicación: se ha sustituido por la <span class="text-white">promoción</span> de rama por recurso.
+- [x] La fusión de <span class="text-white">rollback</span> y <span class="text-white">sincronización</span> está totalmente soportada.
 
-## Motor de búsqueda de árbol fuente en vivo
+## Buscador de árbol de fuente en vivo
 
 <br>
 
@@ -431,22 +435,22 @@ El editor se autocompletará y se autoindentará; tiene modo de pantalla complet
 
 <br>
 
-- [x] Basado en Expresión Regular Compatible (PCRE).
-- [x] La funcionalidad de búsqueda y sustitución global también (soporte único para PCRE); admite capturas de expresiones regulares.
-- [ ] La búsqueda en PDF llegará pronto.
-- [ ]
+- [x] Perl Compatible Regular Expression (PCRE) basado.
+- [x] La funcionalidad de búsqueda y sustitución global también (compatibilidad única con PCRE); admite capturas de expresiones regulares.
+- [ ] Búsqueda en PDF próximamente.
+- [ ] Compatibilidad con GraphQL/AI próximamente. ¡La seguridad se ve divertida!
 
-## Archivos adjuntos de página ilimitados con tipos MIME arbitrarios
+## Anexos ilimitados de páginas con tipos MIME arbitrarios
 
-## Comentarios seguros por página
+## Comentarios seguros y roscados por página
 
 ## Traducciones automatizadas de lenguaje natural de Markdown (próximamente).
 
 ## Gráficos vectoriales matemáticos interactivos con @vectorgraphics/asymptote
 
-- [x] Resaltador de sintaxis para asíntota
-- [x] CMS fallará rápidamente en bloques de código asintótico no analizables
-- [x]
+- [x] Resaltar sintaxis para asíntota
+- [x] CMS fallará rápidamente en bloques de código asíntota no analizables
+- [x] Salida HTML activada para WebGL con varios subprocesos
 
 ```asy
 // tubular trefoil knot -*- asy -*-
@@ -491,13 +495,13 @@ draw(tube(p,colorsec),render(merge=true));
 
 ## Deltas de las funciones de <span class='text-info'>Apache CMS</span>
 
-- Solo está disponible el sistema de compilación basado en Perl.
+- Solo está disponible el sistema de creación basado en Perl.
 
-- El nuevo editor de Markdown es [`marcado/gfm`](#).
+- El nuevo editor de Markdown es [`marcado/gfm`](#) basado, por lo que el analizador es más moderno.  La última versión admite la especificación de enlace amigable (slug) al analizador original basado en python.
 
 - GFM utiliza un delimitador diferente para los bloques de código.
 
-- [`extpaths.txt`](#).
+- [`extpaths.txt`](#) ya no es compatible: a las personas seleccionadas de cada proyecto se les otorgará acceso de escritura al árbol del sitio web de producción en nuestros repositorios de subversión para cargar material producido externamente (javadocs, artefactos de versión de software, etc.).
 
 ----
 

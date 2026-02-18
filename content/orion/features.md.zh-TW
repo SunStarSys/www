@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
-keywords: jamstack，markdown，mermaid，graphviz，editor.md，ide，node.js，oracle，cloud，cdn，http/2，confluence，slab，notion，討論
+keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notes
 published: ~
 status: 草稿
 title: Orion 功能
@@ -34,29 +34,29 @@ title: Orion 功能
 &nbsp;
 </p>
 
-## 驚人的快速系統基礎架構
+## 閃爍的快速系統基礎架構
 
-- 全球大部分人口的 RTT 延遲時間為 50 毫秒或更短，2024 年將涵蓋非洲地區
+- 全球大部分人口的 RTT 延遲時間為 50 毫秒，2024 年在非洲擴大涵蓋範圍
 
-- 比競爭對手快 2 倍的 HTTP/2 多工頁面傳遞時間 (立即可用，適用於 * 所有 * 客戶).
+- 比競爭對手快 2 倍的 HTTP/2 多工頁面傳送時間 (立即可用，適用於 * 所有 * 客戶).
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 500 MB / 多 GB 來源樹狀結構的持續建置
+- 多 GB 來源樹狀結構的 500 MB / 持續建置版本
 
 - NVMe 或更快速的組建儲存基礎架構
 
-- Solaris 11.4 用於 ZFS 穩定性，以 Full Oracle Customer Support 為後盾
+- Solaris 11.4 (適用於 ZFS 穩定性)，並以完整 Oracle Customer Support 為後盾
 
-- node.js 代表使用 CPU 叢集進行降價轉譯
+- 使用 CPU 叢集進行降價轉譯的 node.js
 
-- 8-64 方式並行組建
+- 8-64 路並行組建
 
-- 快速確認現在大部分情況的預設設定
+- 立即快速確認大部分情況的預設設定
 
-- Apache httpd 2.4 版 IDE：
+- Apache httpd 2.4 型 IDE：
 
 - HTTP/2
 
@@ -66,9 +66,9 @@ title: Orion 功能
 
 - mod_apreq2
 
-- TLS 1.3
+- 1.3 台
 
-- 自訂[`SVN：：客戶`](#).
+- 自訂[`SVN：：客戶端`](#) 每個要求集區的模組 w/ ithread 支援
 
 ## 多語言
 
@@ -80,23 +80,27 @@ title: Orion 功能
 
 - 法文
 
+- 巴西葡萄牙文
+
 - 俄文
 
 - 中文
+
+- 韓文
 
 - 希伯來文
 
 - 瑞典文
 
-## 更好地支援郵件差異與建立複製
+## 更好的郵件差異和建立複製支援
 
 - DMARC 保護
 
-- 使用 SRS 與回覆 ezmlm-compatibility
+- 使用 SRS 與回覆對象進行 ezmlm 相容性
 
-- 所有用戶均通過 Google 的 OpenID-Connect Service 驗證
+- 所有用戶均通過 Google 的 OpenID-Connect 服務認證
 
-## 好奇的鴨子現在是優雅的天鵝
+## 奇妙的鴨子現在是優雅的天鵝
 
 <br>
 
@@ -108,15 +112,15 @@ title: Orion 功能
 
 <br>
 
-- Bootstrap 4+ 造型，方便 CSS 語意造型和快速上線。
+- Bootstrap 4+ 樣式，方便使用 CSS 語意樣式和快速上線。
 
-- Editor.md 驚人：使用相對[`來源`](#).
+- Editor.md 驚人：使用相對[`來源`](#) URL，您的連結影像將會顯示在編輯器預覽窗格中。
 
-## 使用 Editor.md ：editormd-logo-1x：和 Django Templating 呈現一致的 GitHub-Flavor Markdown (GFM).
+## 一致 GitHub-Flavorite Markdown (GFM) 呈現 Editor.md ：editormd-logo-1x：和 Django Templating
 
-- [x] ** 威斯威格：** {# lede #}您瀏覽器和 (node.js 型) markdown.js 組建命令檔中的 javascript 程式碼轉換引擎相同{# lede #} 確保 Editor.md Markdown 預覽視窗與生產網站之間有 100% 的結構一致性。
-- [x] 來源 (減價) 檔案中的 YAML 標頭現在已完全支援。
-- [x]
+- [X 軸] **WYSIWYG:** {# lede #}您的瀏覽器和 (node.js 型) markdown.js 組建命令檔中的相同 javascript 程式碼轉譯引擎{# lede #} 確保 Editor.md Markdown 預覽視窗與生產站台之間的 100% 結構一致性。
+- [X 軸] 現在完全支援來源 (markdown) 檔中的 YAML 標頭。
+- [X 軸] 原生流程圖與順序圖支援：fa-glass：
 
 ```flow
 st=>start: börja
@@ -139,7 +143,7 @@ Andrew->>Jenni: I am good thanks!
 ----
 &nbsp;
 
-- [x]
+- [X 軸] 原生 d3-graphviz.js 支援：
 
 ```graphviz
 digraph {
@@ -151,15 +155,15 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x]
+- [X 軸] 原生 @mermaid-js/mermaid v10.7.0，支援點陣圖：
 
 ```mermaid
 graph TD
     A[Christmas]
  -->|Get money| B(Go shopping)
     B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
+    C -->|One| D[fa:fa-laptop Laptop]
+    C -->|Two| E[fa:fa-mobile iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
 ----
@@ -371,17 +375,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [x]
+- [X 軸] Markmap.js 查看支持
 
-- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / 嘉恩學院[$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
+- [X 軸] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / 嘉恩學院[$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) 支援數學、物理與化學：
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] 同步、雙向產生$$\LaTeX$$ Markdown+ 的來源檔案$$\KaTeX$$
+- [X 軸] 同步、雙向產生$$\LaTeX$$ Markdown+ 的來源檔案$$\KaTeX$$ 檔案。
 
-- [x] Navier-Stokes in Einstein Notation (又稱 Einstein Notation) [支付方式](https://en.wikipedia.org/wiki/Abstract_index_notation).
+- [X 軸] Einstein Notation (又稱 Navier-Stokes) [支付方式](https://en.wikipedia.org/wiki/Abstract_index_notation)).
 
 ```math
 \begin{aligned}
@@ -391,7 +395,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x]
+- [X 軸] Navier-Stokes in Classical Notation
 
 ```math
 \begin{aligned}
@@ -403,16 +407,16 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x]
+- [X 軸] 電動！
 
-編輯器將會自動完成並自動縮排；具有全螢幕模式，並支援其 CodeMirror 5 語法強調器提供的數種其他內容撰寫模式。
+編輯器將自動完成並自動縮排；具有全螢幕模式，並支援其 CodeMirror 5 語法強調器的其他數種內容撰寫模式。
 
 ## 分支組建的完整支援
 
-- [x] 不再進行暫存 / 發布：已由每個資源分支<span class="text-white">促銷</span>取代。
-- [x]
+- [X 軸] 不再進行暫存 / 發布：已由每個資源分支<span class="text-white">促銷</span>取代。
+- [X 軸] 完整支援<span class="text-white">倒回</span>和<span class="text-white">同步</span>合併。
 
-## 即時來源樹狀結構搜尋引擎
+## 即時源樹搜尋引擎
 
 <br>
 
@@ -431,22 +435,22 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 <br>
 
-- [x] 以 Perl 相容的正規表示式 (PCRE) 為基礎。
-- [x] 全域搜尋與取代功能 (唯一提供的 PCRE 支援)；支援正規表示式擷取。
-- [ ] PDF 搜尋即將推出。
-- [ ]
+- [X 軸] 以 Perl 相容的正規表示式 (PCRE) 為基礎。
+- [X 軸] 全域搜尋與取代功能 (唯一提供 PCRE 支援)；支援正規表示式擷取。
+- [ ] 即將提供 PDF 搜尋。
+- [ ] 近期將提供 GraphQL/AI 支援。安全性看起來很有趣！
 
-## 任意 MIME 類型的無限制頁面附件
+## 無限頁數附件 (任意 MIME 類型).
 
-## 每頁安全、執行緒的註解
+## 安全、繫線的每頁評論
 
-## 自動化 Markdown 自然語言翻譯 (即將推出).
+## 降價的自動化自然語言翻譯 (即將推出).
 
 ## 互動式數學向量圖形與 @vectorgraphics/asymptote
 
-- [x] Asymptote 的語法強調器
-- [x] 在無法剖析的 Asymptote 程式碼區塊中，CMS 將會快速失敗
-- [x]
+- [X 軸] Asymptote 的語法強調器
+- [X 軸] 無法剖析的 Asymptote 程式碼區塊，CMS 將快速失敗
+- [X 軸] WebGL 啟用，多執行緒 HTML 輸出
 
 ```asy
 // tubular trefoil knot -*- asy -*-
@@ -489,15 +493,15 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-<span class='text-info'>Apache CMS</span> 功能的 ## 差異
+## <span class='text-info'>Apache CMS</span> 功能的差異
 
 - 只提供以 Perl 為基礎的組建系統。
 
-- 新的 Markdown 編輯器是[`已標示 /gfm`](#).
+- 新 Markdown 編輯器為[`已標示 /GFM`](#) 因此剖析器更為現代化。最新版本支援 slug 規格「以 python 為基礎的剖析器」。
 
-- GFM 對程式碼區塊使用不同的分隔符號。
+- GFM 對代碼區塊使用不同的分隔符號。
 
-- [`extpaths.txt`](#).
+- [`extpaths.txt`](#) 已不再支援：將從每個專案中選取個人的寫入存取權授予子版本儲存區域中的生產網站樹狀結構，以上傳外部產生的材料 (javadocs、軟體版本使用者自建物件等)。
 
 ----
 
@@ -524,4 +528,4 @@ draw(tube(p,colorsec),render(merge=true));
 }
 </style>
 
-<!-- $Date: 2024-05-10 12:44:07 -0400 (Fri, 10 May 2024) $ $Author: joe $ $Revision: 25004 $ -->
+<!-- $Date: 2025-02-06 10:57:03 -0700 (Thu, 06 Feb 2025) $ $Author: joe $ $Revision: 25560 $ -->

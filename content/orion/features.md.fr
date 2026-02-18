@@ -2,10 +2,10 @@
 archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
-keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
+keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,lab,notion
 published: ~
 status: projet
-title: Caractéristiques Orion
+title: Caractéristiques d'Orion
 ---
 
 <div class="row">
@@ -34,25 +34,25 @@ title: Caractéristiques Orion
 &nbsp;
 </p>
 
-## Une infrastructure système ultra-rapide
+## Infrastructure système ultra-rapide
 
-- 50 ms ou moins de latence RTT pour la majeure partie de la population mondiale, avec une couverture élargie en Afrique en 2024
+- Latence de 50 ms ou moins pour la plupart de la population mondiale, avec une couverture accrue en Afrique en 2024
 
-- 2 fois plus de temps de livraison de pages multiplexées HTTP/2 (hors de la boîte, pour *tous* les clients) que la concurrence
+- 2 fois plus rapide HTTP/2 multiplexé les délais de livraison des pages (hors de la boîte, pour *tous* les clients) que la concurrence
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 500 Mo/s de constructions soutenues pour les arbres sources de plusieurs gigaoctets
+- Constructions soutenues de 500 Mo/s pour des arbres sources de plusieurs gigaoctets
 
-- Infrastructure de stockage de build NVMe ou plus rapide
+- NVMe ou une infrastructure de stockage plus rapide
 
-- Solaris 11.4 pour la stabilité ZFS, soutenu par Full Oracle Customer Support
+- Solaris 11.4 pour la stabilité ZFS, soutenu par le support client Full Oracle
 
-- node.js pour le rendu de démarque avec la mise en cluster de CPU
+- node.js pour le rendu Markdown avec clustering CPU
 
-- 8-64 versions simultanées
+- Constructions simultanées de 8 à 64 façons
 
 - Validation rapide maintenant le paramètre par défaut pour la plupart des circonstances
 
@@ -60,15 +60,15 @@ title: Caractéristiques Orion
 
 - HTTP/2
 
-- mpm d'événement
+- événement mpm
 
-- mod_perl avec ithreads
+- mod_perl w/ ithreads
 
 - mod_apreq2
 
-- TLS 1,3
+- TLS 1.3
 
-- Personnalisé [`SVN : :Client`](#).
+- Personnalisé [`SVN : :Client`](#) module avec prise en charge ithread pour les pools par demande
 
 ## Multilingue
 
@@ -80,21 +80,25 @@ title: Caractéristiques Orion
 
 - Français
 
-- Russe
+- Portugais brésilien
+
+- russe
 
 - Chinois
 
+- Coréen
+
 - Hébreu
 
-- suédois
+- Suédois
 
-## Meilleure prise en charge des diffs de publipostage et de la création de clones
+## Meilleure prise en charge des différences de publipostage et de la création de clones
 
 - protégé par DMARC
 
 - Utilise SRS et Reply-To pour la compatibilité ezmlm
 
-- Tous les utilisateurs sont authentifiés via le service OpenID-Connect de Google.
+- Tous les utilisateurs sont authentifiés via le service OpenID-Connect de Google
 
 ## Le caneton curieux est maintenant un cygne élégant
 
@@ -110,13 +114,13 @@ title: Caractéristiques Orion
 
 - Style Bootstrap 4+ pour un style sémantique CSS facile et une intégration rapide.
 
-- Editor.md est incroyable : en utilisant relatif [`source`](#).
+- Editor.md est incroyable : en utilisant relatif [`source`](#) urls, vos images liées seront affichées dans le panneau d'aperçu de l'éditeur.
 
-## Affichage GitHub-Flavored Markdown (GFM) cohérent avec Editor.md :editormd-logo-1x : et Django Templating
+## Rendu GitHub-Flavored Markdown (GFM) cohérent avec Editor.md :editormd-logo-1x : et Django Templating
 
-- [x] **WYSIWYG :** {# lede #}Même moteur de rendu de code javascript dans votre navigateur et dans le script de build markdown.js (basé sur node.js){# lede #} garantit une cohérence structurelle à 100 % entre la fenêtre d'aperçu de démarque Editor.md et le site de production.
-- [x] Les en-têtes YAML dans les fichiers source (réduction) sont désormais entièrement pris en charge.
-- [x]
+- [x] **WYSIWYG :** {# lede #}Même moteur d'affichage de code javascript dans votre navigateur et dans le script de build markdown.js (basé sur node.js){# lede #} assure une cohérence structurelle à 100 % entre la fenêtre d'aperçu Editor.md Markdown et le site de production.
+- [x] Les en-têtes YAML dans les fichiers source (markdown) sont désormais entièrement pris en charge.
+- [x] Prise en charge du diagramme natif et du diagramme de séquence :fa-glass :
 
 ```flow
 st=>start: börja
@@ -139,7 +143,7 @@ Andrew->>Jenni: I am good thanks!
 ----
 &nbsp;
 
-- [x]
+- [x] Prise en charge native d3-graphviz.js :
 
 ```graphviz
 digraph {
@@ -151,15 +155,15 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x]
+- [x] @mermaid-js/mermaid v10.7.0 natif avec prise en charge mindmap :
 
 ```mermaid
 graph TD
     A[Christmas]
  -->|Get money| B(Go shopping)
     B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
+    C -->|One| D[fa:fa-laptop Laptop]
+    C -->|Two| E[fa:fa-mobile iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
 ----
@@ -371,17 +375,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [x]
+- [x] Markmap.js Voir l'assistance
 
-- [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Académie Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Académie de Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) support pour les mathématiques, la physique et la chimie :
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Génération synchrone et bidirectionnelle de $$\LaTeX$$ Fichiers source vers/depuis Markdown+$$\KaTeX$$
+- [x] Génération synchrone bidirectionnelle de $$\LaTeX$$ Fichiers source vers/depuis Markdown+$$\KaTeX$$ Fichiers.
 
-- [x] Navier-Stokes dans Einstein Notation (aka [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation).
+- [x] Navier-Stokes dans Einstein Notation (aka [DOULEUR](https://en.wikipedia.org/wiki/Abstract_index_notation)).
 
 ```math
 \begin{aligned}
@@ -391,7 +395,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x]
+- [x] Navier-Stokes dans la notation classique
 
 ```math
 \begin{aligned}
@@ -403,16 +407,16 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x]
+- [x] Électrique !
 
-L'éditeur complète automatiquement et insère automatiquement le contenu. Il dispose d'un mode plein écran et prend en charge plusieurs autres modes de création de contenu disponibles pour son surligneur de syntaxe CodeMirror 5.
+L'éditeur effectue la saisie semi-automatique et l'auto-indentation. Il dispose du mode plein écran, ainsi que de la prise en charge de plusieurs autres modes de création de contenu disponibles pour son surligneur de syntaxe CodeMirror 5.
 
-## Prise en charge complète des builds de branche
+## Prise en charge complète des builds de branchement
 
-- [x] Fin de la préparation/publication : remplacé par la <span class="text-white">promotion</span> de branche par ressource.
-- [x]
+- [x] Finie la préparation/publication : remplacée par une branche par ressource <span class="text-white">Promotion</span>.
+- [x] Les fonctions <span class="text-white">Annuler</span> et <span class="text-white">Synchroniser</span> fusionnent sont entièrement prises en charge.
 
-## Moteur de recherche d'arborescence source en direct
+## Moteur de recherche d'arborescence source active
 
 <br>
 
@@ -431,22 +435,22 @@ L'éditeur complète automatiquement et insère automatiquement le contenu. Il d
 
 <br>
 
-- [x] Basé sur l'expression régulière compatible Perl.
-- [x] Fonctionnalité globale de recherche et de remplacement (prise en charge unique de PCRE) ; prend en charge les captures d'expression régulière.
-- [ ] Recherche PDF à venir.
-- [ ]
+- [x] Expression régulière compatible Perl (PCRE).
+- [x] Fonctionnalité globale de recherche et de remplacement également (une seule prise en charge PCRE) ; prend en charge les captures d'expression régulière.
+- [ ] Recherche PDF bientôt disponible.
+- [ ] Le support GraphQL/AI sera bientôt disponible. La sécurité est amusante !
 
-## Pièces jointes de page illimitées avec des types MIME arbitraires
+## Pièces jointes de page illimitées avec types MIME arbitraires
 
-## Commentaires sécurisés par page
+## Commentaires sécurisés, threadés par page
 
-## Traductions automatiques en langage naturel de Markdown (bientôt disponibles).
+## Traductions en langage naturel automatisées de Markdown (bientôt disponibles).
 
 ## Graphiques vectoriels mathématiques interactifs avec @vectorgraphics/asymptote
 
-- [x] Surligneur de syntaxe pour Asymptote
+- [x] Mise en évidence de la syntaxe pour Asymptote
 - [x] Le CMS échouera rapidement sur les blocs de code Asymptote non analysables
-- [x]
+- [x] WebGL activé, sortie HTML multithread
 
 ```asy
 // tubular trefoil knot -*- asy -*-
@@ -491,13 +495,13 @@ draw(tube(p,colorsec),render(merge=true));
 
 ## Deltas des fonctionnalités <span class='text-info'>Apache CMS</span>
 
-- Seul le système de construction basé sur Perl est disponible.
+- Seul le système de paramétrage basé sur Perl est disponible.
 
-- Le nouvel éditeur Markdown est [`marqué/gfm`](#).
+- Le nouvel éditeur Markdown est [`marqué/gfm`](#) basé, donc l'analyseur est plus moderne.  La dernière version prend en charge la spécification slug a'la l'analyseur python d'origine.
 
 - GFM utilise un délimiteur différent pour les blocs de code.
 
-- [`extpaths.txt`](#).
+- [`extpaths.txt`](#) n'est plus pris en charge : certaines personnes de chaque projet bénéficieront d'un accès en écriture à l'arborescence du site de production dans nos référentiels de subversion pour télécharger du matériel produit en externe (javadocs, artefacts de version logicielle, etc.).
 
 ----
 

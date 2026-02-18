@@ -38,7 +38,7 @@ title: Orion-Funktionen
 
 - 50 ms oder weniger RTT-Latenz für den größten Teil der Weltbevölkerung, mit erweiterter Abdeckung in Afrika im Jahr 2024
 
-- 2-mal schnellere HTTP/2-Multiplex-Zustellzeiten (Out-of-the-Box, für *alle* Kunden) als die Konkurrenz
+- 2-mal schnellere HTTP/2-Multiplex-Seiten-Lieferzeiten (out-of-the-box, für *alle* Kunden) als die Konkurrenz
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -46,17 +46,17 @@ title: Orion-Funktionen
 
 - 500 MB / s nachhaltige Builds für Multi-Gigabyte-Quellbäume
 
-- NVMe oder schnellere Speicherinfrastruktur erstellen
+- NVMe oder schnellere Build-Speicherinfrastruktur
 
-- Solaris 11.4 für ZFS-Stabilität, unterstützt durch vollständigen Oracle Customer Support
+- Solaris 11.4 zur Stabilität von ZFS, unterstützt durch Full Oracle-Kundensupport
 
 - node.js für Markdown-Rendering mit CPU-Clustering
 
-- 8-64-Wege gleichzeitige Builds
+- 8-64-fache gleichzeitige Builds
 
-- Quick Commit jetzt die Standardeinstellung für die meisten Umstände
+- Schnelles Festschreiben jetzt die Standardeinstellung für die meisten Umstände
 
-- Apache httpd 2.4-basierte IDE:
+- Apache httpd 2.4 basierte IDE:
 
 - HTTP/2
 
@@ -66,9 +66,9 @@ title: Orion-Funktionen
 
 - mod_apreq2
 
-- TLS 1,3
+- TLS 1.3
 
-- Benutzerdefiniert [`SVN::Client`](#).
+- Benutzerdefiniert [`SVN: Client`](#) Modul mit ithread-Unterstützung für Pools pro Anforderung
 
 ## Mehrsprachig
 
@@ -80,23 +80,27 @@ title: Orion-Funktionen
 
 - Französisch
 
+- Brasilianisches Portugiesisch
+
 - Russisch
 
 - Chinesisch
+
+- Koreanisch
 
 - Hebräisch
 
 - Schwedisch
 
-## Bessere Unterstützung für Mailing-Diffs und das Erstellen von Klonen
+## Bessere Unterstützung für Mailing-Diffs und Erstellen von Klonen
 
 - DMARC-geschützt
 
-- Verwendet SRS und Antwort an für ezmlm-Kompatibilität
+- Verwendet SRS und Reply-To für ezmlm-Kompatibilität
 
 - Alle Benutzer werden über den OpenID-Connect-Service von Google authentifiziert
 
-## Das neugierig aussehende Entlein ist jetzt ein eleganter Schwan
+## Die neugierig aussehende Ente ist jetzt ein eleganter Schwan
 
 <br>
 
@@ -108,15 +112,15 @@ title: Orion-Funktionen
 
 <br>
 
-- Bootstrap 4+ Styling für einfaches CSS Semantic Styling und schnelles Onboarding.
+- Bootstrap 4+ Styling für einfaches CSS semantisches Styling und schnelles Onboarding.
 
-- Editor.md ist erstaunlich: mit relativen [`Quelle`](#).
+- Editor.md ist erstaunlich: durch die Verwendung von relativen [`Quelle`](#) URLs, Ihre verknüpften Bilder werden im Editorvorschaufenster wiedergegeben.
 
-## Konsistentes GitHub-Rendering von aromatisiertem Markdown (GFM) mit Editor.md :editormd-logo-1x: und Django Templating
+## Konsistentes Rendering von GitHub-Flavored Markdown (GFM) mit Editor.md :editormd-logo-1x: und Django Templating
 
-- [x] **WYSIWYG:** {# lede #}Dieselbe Javascript-Code-Rendering-Engine in Ihrem Browser und im (node.js-basierten) Build-Skript markdown.js{# lede #} gewährleistet eine 100-prozentige strukturelle Konsistenz zwischen dem Vorschaufenster Editor.md Markdown und der Produktions-Site.
-- [x] YAML-Header in Quelldateien (Markdown-Dateien) werden jetzt vollständig unterstützt.
-- [x]
+- [x] **WYSIWYG:** {# lede #}Dieselbe Javascript-Code-Rendering-Engine in Ihrem Browser und im (node.js-basierten) markdown.js-Build-Skript{# lede #} stellt eine 100%ige strukturelle Konsistenz zwischen dem Editor.md Markdown-Vorschaufenster und der Produktionssite sicher.
+- [x] YAML-Header in Quelldateien (Markdown) werden jetzt vollständig unterstützt.
+- [x] Unterstützung von nativem Flussdiagramm und Sequenzdiagramm :fa-glass:
 
 ```flow
 st=>start: börja
@@ -139,7 +143,7 @@ Andrew->>Jenni: I am good thanks!
 ----
 &nbsp;
 
-- [x]
+- [x] Native d3-graphviz.js-Unterstützung:
 
 ```graphviz
 digraph {
@@ -151,15 +155,15 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x]
+- [x] Native @mermaid-js/mermaid v10.7.0 mit Mindmap-Unterstützung:
 
 ```mermaid
 graph TD
     A[Christmas]
  -->|Get money| B(Go shopping)
     B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
+    C -->|One| D[fa:fa-laptop Laptop]
+    C -->|Two| E[fa:fa-mobile iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
 ----
@@ -371,17 +375,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [x]
+- [x] Markmap.js Support anzeigen
 
-- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Academy's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Kahn Akademie [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) Unterstützung für Mathematik, Physik und Chemie:
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Synchrone, bidirektionale Generierung von $$\LaTeX$$ Quelldateien zu/von Preisabschrift+$$\KaTeX$$
+- [x] Synchrone, bidirektionale Generierung von $$\LaTeX$$ Quelldateien zu/von Preisabschrift+$$\KaTeX$$ Dateien.
 
-- [x] Navier-Stokes in Einstein Notation (aka [SCHMERZ](https://en.wikipedia.org/wiki/Abstract_index_notation).
+- [x] Navier-Stokes in Einstein Notation [SCHICHTEN](https://en.wikipedia.org/wiki/Abstract_index_notation)).
 
 ```math
 \begin{aligned}
@@ -391,7 +395,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x]
+- [x] Navier-Stokes in klassischer Notation
 
 ```math
 \begin{aligned}
@@ -403,16 +407,16 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x]
+- [x] Elektrisch!
 
-Der Editor wird automatisch vervollständigt und automatisch eingefügt. Er verfügt über den Vollbildmodus sowie Unterstützung für mehrere andere Modi zum Erstellen von Inhalten, die im CodeMirror 5-Syntaxmarker verfügbar sind.
+Der Editor wird automatisch vervollständigt und automatisch eingehängt. Er verfügt über einen Vollbildmodus sowie Unterstützung für mehrere andere Inhaltserstellungsmodi, die dem CodeMirror 5-Syntaxmarker zur Verfügung stehen.
 
 ## Vollständige Unterstützung für Filial-Builds
 
-- [x] Keine weitere Bereitstellung/Veröffentlichung: durch <span class="text-white">Promotion</span> der Verzweigung pro Ressource ersetzt.
-- [x]
+- [x] Keine weitere Bereitstellung/Veröffentlichung: ersetzt durch <span class="text-white">Hochstufung</span> pro Ressourcenverzweigung.
+- [x] <span class="text-white">Rollback</span> und <span class="text-white">Sync</span> Merge werden vollständig unterstützt.
 
-## Live-Quellbaumsuchmaschine
+## Dynamische Quellbaum-Suchmaschine
 
 <br>
 
@@ -432,21 +436,21 @@ Der Editor wird automatisch vervollständigt und automatisch eingefügt. Er verf
 <br>
 
 - [x] Perl-kompatibler regulärer Ausdruck (PCRE).
-- [x] Globale Such- und Ersetzungsfunktionalität (eindeutige PCRE-Unterstützung); unterstützt reguläre Ausdruckserfassungen.
+- [x] Globale Such- und Ersetzungsfunktion (einzigartige PCRE-Unterstützung); unterstützt Regex-Erfassungen.
 - [ ] PDF-Suche in Kürze.
-- [ ]
+- [ ] GraphQL/AI-Unterstützung in Kürze verfügbar. Sicherheit macht Spaß!
 
 ## Unbegrenzte Seitenanhänge mit beliebigen MIME-Typen
 
-## Sichere, mit Threads versehene Kommentare pro Seite
+## Sichere, Thread-basierte Kommentare pro Seite
 
 ## Automatisierte Übersetzungen von Markdown in natürlicher Sprache (in Kürze).
 
-## Interaktive mathematische Vektor-Grafiken mit @vectorgraphics/asymptote
+## Interaktive mathematische Vektorgrafiken mit @vectorgraphics/asymptote
 
 - [x] Syntaxhervorhebung für Asymptote
-- [x] CMS schlägt bei nicht analysierbaren Asymptote-Codeblöcken schnell fehl
-- [x]
+- [x] CMS wird bei nicht analysierbaren Asymptote-Codeblöcken schnell fehlschlagen
+- [x] WebGL aktiviert, Multi-Thread-HTML-Ausgabe
 
 ```asy
 // tubular trefoil knot -*- asy -*-
@@ -489,15 +493,15 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## Deltas aus <span class='text-info'>Apache CMS</span>-Funktionen
+## Deltas von <span class='text-info'>Apache CMS</span>-Features
 
 - Nur das Perl-basierte Build-System ist verfügbar.
 
-- Neuer Markdown-Editor ist [`markiert/gfm`](#).
+- Neuer Markdown-Editor ist [`markiert/gfm`](#) basiert, so dass der Parser moderner ist.  Das neueste Release unterstützt die Slug-Spezifikation und den ursprünglichen python-basierten Parser.
 
 - GFM verwendet ein anderes Trennzeichen für Codeblöcke.
 
-- [`extpaths.txt`](#).
+- [`extpaths.txt`](#) wird nicht mehr unterstützt: ausgewählten Personen aus jedem Projekt wird Schreibzugriff auf den Produktionswebsite-Baum in unseren Subversion-Repositorys zum Hochladen von extern produziertem Material (Javadocs, Software-Release-Artefakte usw.) gewährt
 
 ----
 

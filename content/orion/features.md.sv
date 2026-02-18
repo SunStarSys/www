@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
-keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,not
+keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
 published: ~
 status: skiss
 title: Orion-funktioner
@@ -38,25 +38,25 @@ title: Orion-funktioner
 
 - 50 ms eller mindre RTT latens för de flesta av världens befolkning, med utökad täckning i Afrika 2024
 
-- 2 gånger snabbare HTTP/2 multiplexade sidleveranstider (utanför lådan, för * alla * kunder) än konkurrenterna
+- 2 gånger snabbare HTTP / 2 multiplexade sidleveranstider (ut ur lådan, för * alla * kunder) än konkurrenterna
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 500 MB / s ihållande byggen för multi-gigabyte källträd
+- 500 MB / s ihållande byggen för flera gigabyte källträd
 
 - NVMe eller snabbare bygga lagringsinfrastruktur
 
-- Solaris 11.4 för stabilitet i ZFS med fullständig Oracle Customer Support
+- Solaris 11.4 för ZFS-stabilitet, med stöd av Full Oracle Customer Support
 
-- node.js för nedsättningsrendering med CPU-klustring
+- node.js för nedsättningsåtergivning med CPU-klustring
 
-- 8-64-vägs samtidiga byggen
+- 8-64 sätt samtidiga byggen
 
-- Quick Commit nu standardinställningen för de flesta omständigheter
+- Snabb Bekräfta nu standardinställningen för de flesta omständigheter
 
-- Apache httpd 2.4 baserad IDE:
+- Apache httpd 2.4-baserad IDE:
 
 - HTTP/2
 
@@ -68,7 +68,7 @@ title: Orion-funktioner
 
 - TLS 1.3
 
-- Anpassad [`SVN::Klient`](#).
+- Anpassad [`SVN::Klient`](#) modul med ithread-stöd för pooler per begäran
 
 ## Flerspråkig
 
@@ -80,15 +80,19 @@ title: Orion-funktioner
 
 - Franska
 
+- Brasiliansk portugisiska
+
 - Ryska
 
 - Kinesiska
+
+- Koreanska
 
 - Hebreiska
 
 - Svenska
 
-## Bättre stöd för utskicksdifferenser och skapande av kloner
+## Bättre stöd för att skicka diff. och skapa kloner
 
 - DMARC-skyddad
 
@@ -110,13 +114,13 @@ title: Orion-funktioner
 
 - Bootstrap 4+ styling för enkel CSS semantisk styling och snabb onboarding.
 
-- Editor.md är fantastiskt: genom att använda relativ [`src`](#).
+- Editor.md är fantastiskt: genom att använda relativa [`src`](#) URL:er, dina länkade bilder återges i förhandsgranskningsfönstret i redigeraren.
 
-## Konsekvent GitHub-Flavored Markdown (GFM) rendering med Editor.md :editormd-logo-1x: och Django Templating
+## Konsekvent GitHub-smaksatt nedsättning (GFM) rendering med Editor.md:editormd-logo-1x: och Django Templating
 
-- [x] **WYSIWYG:** {# lede #}Samma javascript-kodåtergivningsmotor i både webbläsaren och i det (node.js-baserade) markdown.js-byggskriptet{# lede #} säkerställer en strukturell överensstämmelse på 100 % mellan fönstret för förhandsgranskning av nedsättning i Editor.md och produktionsplatsen.
-- [x] YAML-huvuden i källfiler (markdown) stöds nu fullt ut.
-- [x]
+- [x] **WYSIWYG:** {# lede #}Samma javascript-kodåtergivningsmotor i både webbläsaren och i byggskriptet (node.js-baserat) markdown.js{# lede #} säkerställer 100 % strukturell konsekvens mellan förhandsgranskningsfönstret för nedsättningar med Editor.md och produktionsplatsen.
+- [x] YAML-huvuden i källfiler (markdown-filer) stöds nu helt.
+- [x] Inbyggt flödesschema och sekvensdiagram stöd :fa-glass:
 
 ```flow
 st=>start: börja
@@ -139,7 +143,7 @@ Andrew->>Jenni: I am good thanks!
 ----
 &nbsp;
 
-- [x]
+- [x] Inbyggt stöd för d3-graphviz.js:
 
 ```graphviz
 digraph {
@@ -151,15 +155,15 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x]
+- [x] Native @mermaid-js/mermaid v10.7.0 med stöd för mindmap:
 
 ```mermaid
 graph TD
     A[Christmas]
  -->|Get money| B(Go shopping)
     B --> C{Let me think}
-    C -->|One| D[Laptop]
-    C -->|Two| E[iPhone]
+    C -->|One| D[fa:fa-laptop Laptop]
+    C -->|Two| E[fa:fa-mobile iPhone]
     C -->|Three| F[fa:fa-car Car]
 ```
 ----
@@ -371,17 +375,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [x]
+- [x] Markmap.js Visa support
 
-- [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) från Kahn Academy [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX).
+- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) Hotell nära Kahn Academy [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) Stöd för matematik, fysik och kemi:
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x] Synkron, dubbelriktad generering av $$\LaTeX$$ Källfiler till/från Markdown+$$\KaTeX$$
+- [x] Synkron, dubbelriktad generation av $$\LaTeX$$ Källfiler till/från Markdown+$$\KaTeX$$ Filer.
 
-- [x] Sök efter hotell i Einstein Notation [PAIN](https://en.wikipedia.org/wiki/Abstract_index_notation).
+- [x] Navier-Stokes i Einstein Notation [Smärta](https://en.wikipedia.org/wiki/Abstract_index_notation)).
 
 ```math
 \begin{aligned}
@@ -391,7 +395,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x]
+- [x] Navier-Stokes i klassisk notation
 
 ```math
 \begin{aligned}
@@ -403,16 +407,16 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x]
+- [x] Elektrisk!
 
-Redigeraren autokompletterar och autoindent; har helskärmsläge samt stöd för flera andra innehållssammanställningslägen tillgängliga för dess CodeMirror 5 syntax highlighter.
+Redigeraren kommer att autokomplettera och autoindent; har helskärmsläge, samt stöd för flera andra redigeringslägen för innehåll tillgängliga för dess CodeMirror 5 syntax highlighter.
 
-## Fullt stöd för filialbyggen
+## Fullt stöd för grenbyggen
 
-- [x] Ingen mer mellanlagring/publicering: ersatt med grenen <span class="text-white">Kampanj</span> per resurs.
-- [x]
+- [x] Ingen mer mellanlagring/publicering: ersätts med grenen <span class="text-white">Kampanj</span> per resurs.
+- [x] <span class="text-white">Återställ</span> och <span class="text-white">Synkronisera</span> sammanslagning stöds helt.
 
-## Sökmotor för realtidsträd
+## Aktiv sökmotor för källträd
 
 <br>
 
@@ -431,22 +435,22 @@ Redigeraren autokompletterar och autoindent; har helskärmsläge samt stöd för
 
 <br>
 
-- [x] PCRE-baserat (perl Compatible Regular Expression).
-- [x] Global sök- och ersättningsfunktionalitet (unikt PCRE-stöd); stöder inhämtning av reguljära uttryck.
+- [x] Perl-kompatibelt reguljärt uttryck (PCRE) baserat.
+- [x] Global sök- och ersätt-funktionalitet (unikt PCRE-stöd); stöder regex-fångst.
 - [ ] PDF-sökning kommer snart.
-- [ ]
+- [ ] Stöd för GraphQL/AI kommer inom kort. Säkerhet ser kul ut!
 
 ## Obegränsade sidbilagor med godtyckliga mime-typer
 
 ## Säkra, trådade kommentarer per sida
 
-## Automatiserade naturliga språköversättningar av nedsättning (kommer snart).
+## Automatiserade översättningar av nedsättning på naturligt språk (kommer snart).
 
-## Interaktiv matematisk vektorgrafik med @vectorgraphics/asymptot
+## Interaktiv matematisk vektorgrafik med @vectorgraphics/asymptote
 
-- [x] Syntaxmarkering för Asymptote
-- [x] CMS misslyckas snabbt på oparssebara Asymptote-kodblock
-- [x]
+- [x] Syntaxmarkering för asymptot
+- [x] CMS kommer snabbt misslyckas på unparseable Asymptote kodblock
+- [x] WebGL aktiverad, flertrådad HTML-utdata
 
 ```asy
 // tubular trefoil knot -*- asy -*-
@@ -489,15 +493,15 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## Deltas från funktioner i <span class='text-info'>Apache CMS</span>
+Antal# ändringar från <span class='text-info'>Apache CMS</span>-funktioner
 
 - Endast det Perl-baserade byggsystemet är tillgängligt.
 
-- Ny Markdown-redigerare är [`markerad/gfm`](#).
+- Ny Markdown editor är [`märkt/gfm`](#) baserat, så parsern är mer modern.  Den senaste versionen stöder sluggspecifikationen a'la den ursprungliga python-baserade parsern.
 
 - GFM använder en annan avgränsare för kodblock.
 
-- [`extpaths.txt`](#).
+- [`extpaths.txt`](#) stöds inte längre: utvalda individer från varje projekt kommer att beviljas skrivåtkomst till produktionswebbplatsträdet i våra subversion-repos för uppladdning av externt producerat material (javadocs, artefakter för programvaruutgåvor etc.).
 
 ----
 
@@ -524,4 +528,4 @@ draw(tube(p,colorsec),render(merge=true));
 }
 </style>
 
-<!-- $Date: 2024-05-10 12:44:07 -0400 (Fri, 10 May 2024) $ $Author: joe $ $Revision: 25004 $ -->
+<!-- $Date: 2025-02-06 10:57:03 -0700 (Thu, 06 Feb 2025) $ $Author: joe $ $Revision: 25560 $ -->
