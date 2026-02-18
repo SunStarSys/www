@@ -46,13 +46,17 @@ use constant JSON   => "Cpanel::JSON::XS";
 local $@;
 
 local our %LANG = (
+  ".ar" => "ar_SA",
   ".de" => "de_DE",
   ".en" => "en_US",
   ".es" => "es_ES",
   ".fr" => "fr_FR",
+  ".pt-BR" => "pt_BR",
   ".ru" => "ru_RU",
   ".sv" => "sv_SV",
   ".he" => "he_IL",
+  ".ko" => "ko_KR",
+  ".ja" => "ja_JP",
   ".zh-TW" => "zh_TW"
 );
 
