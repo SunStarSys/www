@@ -88,6 +88,10 @@ title: Orion-funktioner
 
 - Koreanska
 
+- Japanska
+
+- Arabiska
+
 - Hebreiska
 
 - Svenska
@@ -528,4 +532,4 @@ Antal# ändringar från <span class='text-info'>Apache CMS</span>-funktioner
 }
 </style>
 
-<!-- $Date: 2025-02-06 10:57:03 -0700 (Thu, 06 Feb 2025) $ $Author: joe $ $Revision: 25560 $ -->
+<!-- $Date: 2026-02-17 17:34:21 -0700 (Tue, 17 Feb 2026) $ $Author: joe $ $Revision: 27781 $ -->

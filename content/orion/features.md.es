@@ -88,6 +88,10 @@ title: Características de Orion
 
 - Coreano
 
+- Japonés
+
+- Árabe
+
 - Hebreo
 
 - Sueco
