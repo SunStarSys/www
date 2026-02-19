@@ -12,6 +12,8 @@ status: draft
   Orion: "&check;"
 - Feature: "FedRAMP Infrastructure"
   Orion: "Server Install"
+- Feature: "Global Fact Database"
+  Orion: "&check;"
 - Feature: "In-Browser Workflow (Mobile Friendly)"
   Orion: "&check;"
   Slab: "&check;"
