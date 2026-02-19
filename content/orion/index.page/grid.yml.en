@@ -70,7 +70,7 @@ status: draft
   Orion: "&check;"
 - Feature: "SSI / CGI / mod_perl / mod_wasm support"
   Orion: "&check;"
-- Feature: "Fine-Grained ACL on Source Repo"
+- Feature: "Fine-Grained Repo/.htaccess synced ACLs"
   Orion: "&check;"
 - Feature: "500 MB/s Full Site Builds"
   Orion: "&check;"
