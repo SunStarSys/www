@@ -36,7 +36,7 @@ status: draft
 - Feature: "Multilingual (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Fully Searchable <span class="editormd-tex">\KaTeX</span> Expressions'
+- Feature: 'Fully Searchable/Replaceable <span class="editormd-tex">\KaTeX</span>/PCRE Expressions'
   Orion: "&check;"
   Confluence: "$$$"
 - Feature: "Federated"
