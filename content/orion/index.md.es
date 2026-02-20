@@ -30,7 +30,7 @@ Para obtener información sobre los precios, consulte nuestro [Planes de Orion](
 
 ### Aquí está el lanzamiento, decisor ejecutivo...
 
-¿Por qué elegir Orion? La wiki Enterprise Jamstack que supera el rendimiento y cuesta mucho menos
+<span class="text-white">¿Por qué elegir Orion? La wiki Enterprise Jamstack que supera el rendimiento y cuesta mucho menos</span>
 
 Lo que realmente distingue a Orion no es solo otra wiki: es nuestra tecnología patentada Orion, un enfoque probado en batalla y pendiente de patente que ofrece una eficiencia inigualable.
 
@@ -74,7 +74,7 @@ Esto no es un giro de marketing: es una herencia de ingeniería verificable y ab
 
 ¿Desea un sitio web que sea **seguro por defecto**?  Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, pero que le da toda su potencia cuando realmente lo necesita?  Publicación instantánea cuando lo desee; creación de sucursales sin problemas y en etapas y promociones granulares personalizables para su sitio de producción según se adapte al flujo de trabajo preferido de su equipo.
 
-Si está cansado de las licencias por asiento y las opciones por ciclo de CPU que lo pesan cada vez que necesita corregir un error tipográfico, [llegar a nosotros](/contact). Si usted es un manipulador de leones equipado con regex durante décadas de contenido HTML heredado acumulado, o simplemente alguien insatisfecho con las otras opciones en el mercado y cómo funcionan a escala, tenemos algo realmente especial que ofrecerle.
+Si está cansado de las licencias por asiento y las opciones por ciclo de CPU que lo pesan cada vez que necesita corregir un error tipográfico, [llegar a nosotros](/contact). Si está a cargo de la curación de contenido y está buscando una base de datos de hechos personalizable para administrar sus enlaces externos, o si es un manipulador de león equipado con regex para décadas de contenido HTML heredado acumulado, o simplemente alguien insatisfecho con las otras opciones del mercado y cómo funcionan a escala, tenemos algo realmente especial que ofrecerle.
 
 Nunca tener que lidiar directamente con un sistema de control de versiones, o incluso un generador de sitios estáticos, en su propia computadora personal depende de usted. El IDE en línea está diseñado y listo para el **flujo de trabajo solo de explorador** siempre que lo esté.  En un abrir y cerrar de ojos, incluso la interfaz móvil (navegador) lo hará, *instantáneamente*.
 

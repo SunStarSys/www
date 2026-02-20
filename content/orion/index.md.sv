@@ -30,7 +30,7 @@ För prisinformation, se vår [Orionplaner](plans).
 
 ### Här är platsen, beslutsfattare för ledningen...
 
-Varför välja Orion? Enterprise Jamstack Wiki som överträffar - och kostar mycket mindre
+<span class="text-white">Varför välja Orion? Enterprise Jamstack Wiki som överträffar - och kostar mycket mindre</span>
 
 Vad som verkligen skiljer Orion är inte bara en annan wiki - det är vår egenutvecklade Orion Technology, en stridstestad, patentsökt metod som ger oöverträffad effektivitet.
 
@@ -74,7 +74,7 @@ Detta är inte marknadsföringsspinn - det är verifierbart, öppet ingenjörsar
 
 Vill du ha en webbplats som är **secure-by-standard**?  Lätt att uppdatera och hantera, samtidigt som du döljer komplexiteten hos ett underliggande versionskontrollsystem, men ändå ger dig full kraft när du verkligen behöver det?  Omedelbar publicering när du vill ha det; smidiga, mellanlagrade grenbyggen och anpassningsbara detaljerade kampanjer till din produktionswebbplats eftersom det passar ditt teams föredragna arbetsflöde.
 
-Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är en regex-utrustad lejon tamer i årtionden av ackumulerat äldre HTML-innehåll, eller bara någon missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
+Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
 
 Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. IDE online är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa kommer även det mobila (webbläsargränssnittet) att få det gjort, * direkt*.
 
