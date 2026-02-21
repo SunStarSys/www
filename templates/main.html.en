@@ -69,7 +69,7 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Enterprise Wiki</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Jamstack Wiki</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class="nav-link text-white"
