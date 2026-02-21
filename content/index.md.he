@@ -1,9 +1,9 @@
 ---
 archived: ~
 categories: ~
-keywords: ויקי,ידע,בלוגים
+keywords: ויקי,ידע,בלוגים,אוריון,jamstack,perl,f/oss
 published: ~
-status: טיוטה
+status: פורסם
 title: בית
 ---
 
@@ -15,12 +15,12 @@ title: בית
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar טכנולוגיית CI Linter של מערכות GitLab {{facts.releases.linter.tag}} זמין כעת ב-<a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> וב-<a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar מערכות' GitLab CI Linter טכנולוגיה {{facts.releases.linter.tag}} זמין כעת ב-<a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> וב-<a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתרים סטטי</a> {{facts.releases.orion.tag}} שוחרר.
+<h2 class="card-title">SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתרים סטטיים</a> {{facts.releases.orion.tag}} שוחרר.
 </h2>
 
 <br>
@@ -33,19 +33,19 @@ title: בית
 
 <h2>
 
-[אלגוריתם::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}).
+[אלגוריתם::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) שוחרר ל-CPAN!
 
 </h2>
 
 <br>
 
-<h2 class="card-title">SunStar מערכות <a href="{{facts.releases.orthrus.url}}">אורתרוס {{facts.releases.orthrus.tag}}</a> שוחררה!</h2>
+<h2 class="card-title">SunStar מערכות <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> שוחרר!</h2>
 
 <br>
 
-<h2 class="card-title">SunStar פטי מערכות {{facts.releases.pty.tag}} שוחרר!</h2>
+<h2 class="card-title">SunStar שטח מערכות {{facts.releases.pty.tag}} שוחרר!</h2>
 
-<p class="card-text">שדרג את התקנת <span class="text-info">הריק</span> שלך ל-<a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, הכולל תמיכה מקורית עבור <span class='text-info'>פייתון 3.10+</span>.</p>
+<p class="card-text">שדרג את ההתקנה <span class="text-info">הריקה</span> שלך ל<a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, הכולל תמיכה מקורית עבור <span class='text-info'>python 3.10+</span>.</p>
 
 </div>
 </div>
@@ -54,18 +54,19 @@ title: בית
 
 ![SunStar מערכות](images/sunstarlogowhole).
 
-מחפש אחר טוב יותר, בטוח יותר, מהיר יותר, **מאוחד** Enterprise Wiki?
+מחפש Wiki טוב יותר, בטוח יותר, מהיר יותר, **מאושר** Enterprise?
 
-הוצאת פריט  [אוריון](/orion/features)<span class="text-success"><img alt="לוגו Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki של Enterprise Jamstack.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM כמקורי [בתולת ים מפת חשיבה](/orion/features).
+הוצאת פריט  [אוריון](/orion/features)<span class="text-success"><img alt="לוגו Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>פלטפורמת Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM עם native [מפת חשיבה בתולת ים](/orion/features) אינטגרציה!
 
-לקבלת תיאור של <span class="text-white">סקירה טכנית</span> מאחורי הקלעים של הטכנולוגיה בהמתנה לפטנט שלנו, ראה את התיאור שלנו [ניהול תלות של תוכן חכם](/essays/dependencies)&trade;
+לתיאור <span class="text-white">נייר לבן</span> מאחורי הקלעים של הטכנולוגיה שלנו הממתינה לאישור פטנט, עיין ב- [ניהול תלות של תוכן חכם](/essays/dependencies)&trade; אסאי
 
 &nbsp;
 <img alt="GitHub סמן" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
 ## עקבו אחרינו באתר GitHub
+
 &nbsp;
 
-- @SunStarSys/orion
+- @SunStarSys/אוריון
 
 - @joesuf4
 
@@ -75,18 +76,20 @@ title: בית
 	<p style="height:20px">&nbsp;</p>
 
 &nbsp;
-## מאמרים מומלצים
+
+# מאמרים מומלצים
+
 &nbsp;
 
-- <span class="badge bg-success">חדש</span> [מוצרים משולשים של Eigenfunctions וגיאומטריה ספקטרלית](/essays/triple-products).
+- <span class="badge bg-success">חדש</span> [טריפל מוצרים של Eigenfunctions ו Spectral Geometry](/essays/triple-products) בקרוב באתר arXiv!
 
-- [ביצועי יישומים](/essays/performance) &mdash;
+- [ביצועי יישום](/essays/performance) &mdash; דוגמה עובדת: מצוואר בקבוק נצפה לפתרון יעיל.
 
-- [אבטחת מידע](/essays/infosec) &mdash;
+- [אבטחת מידע](/essays/infosec) &mdash; הפשטה של המושגים הבסיסיים מובילה לישימות רחבה בעולם האמיתי ובהירות.
 
-- [לקסיקלים אטומים לפרל 7](/essays/perl7-sealed-lexicals) &mdash;
+- [לקסיקלים אטומים לפרל 7](/essays/perl7-sealed-lexicals) &mdash; הוסף את <span class="text-info">:sealed</span> להגדרת פונקציה, ותיהנה מהמהירות הנוספת של lookups של שיטות זמן הידור לכל הלקסיקלים שהוקלדו.
 
-- [תנועת DevOps](/essays/devops) &mdash;
+- [תנועת DevOps](/essays/devops) &mdash; מלא את הפרטים החסרים במאמר זה.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -118,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2024-04-24 21:51:28 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23858 $ -->
+<!-- $Date: 2025-12-18 21:11:39 -0700 (Thu, 18 Dec 2025) $ $Author: joe $ $Revision: 27321 $ -->

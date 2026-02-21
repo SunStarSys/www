@@ -1,9 +1,9 @@
 ---
 archived: ~
 categories: ~
-keywords: wiki,kunskap,bloggar
+keywords: wiki,kunskap, bloggar,orion,jamstack,perl,f/oss
 published: ~
-status: skiss
+status: publicerad
 title: Hem
 ---
 
@@ -15,12 +15,12 @@ title: Hem
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nya</span> SunStar Systems' GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> och <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Nya</span> SunStar Systems GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> och <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Systems Orion&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt.
+<h2 class="card-title">SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt.
 </h2>
 
 <br>
@@ -33,17 +33,17 @@ title: Hem
 
 <h2>
 
-[Algoritm::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}).
+[Algoritm::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) Släppt till CPAN!
 
 </h2>
 
 <br>
 
-<h2 class="card-title">SunStar System <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> har släppts!</h2>
+<h2 class="card-title">SunStar System <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> släppt!</h2>
 
 <br>
 
-<h2 class="card-title">SunStar System fyrtio {{facts.releases.pty.tag}} Släppt!</h2>
+<h2 class="card-title">SunStar Systemtyper {{facts.releases.pty.tag}} Släppt!</h2>
 
 <p class="card-text">Uppgradera din <span class="text-info">tomma</span> installation till <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, som innehåller inbyggt stöd för <span class='text-info'>python 3.10+</span>.</p>
 
@@ -54,15 +54,16 @@ title: Hem
 
 ![SunStar System](images/sunstarlogowhole).
 
-Letar du efter en bättre, säkrare, snabbare ** förenad** Enterprise Wiki?
+Letar du efter en bättre, säkrare, snabbare, ** förenad ** Enterprise Wiki?
 
-Checka ut  [Orion](/orion/features)<span class="text-success"><img alt="Orions logotyp" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wikisystemet Enterprise Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru mindmap](/orion/features).
+Checka ut  [Orion](/orion/features)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
 
-För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna om vår patentsökta teknik, se vår [Hantering av smarta innehållsberoende](/essays/dependencies)&trade;
+För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna av vår patentsökta teknik, se vår [Beroendehantering för smart innehåll](/essays/dependencies)&trade; uppsats.
 
 &nbsp;
-<img alt="GitHub Markera" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+<img alt="GitHub-märke" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
 ## Följ oss på GitHub
+
 &nbsp;
 
 - @SunStarSys/orion
@@ -75,18 +76,20 @@ För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna
 	<p style="height:20px">&nbsp;</p>
 
 &nbsp;
-## Utvalda artiklar
+
+## Utvalda kurser
+
 &nbsp;
 
-- <span class="badge bg-success">Ny</span> [Trippelprodukter av Eigenfunctions och Spectral Geometry](/essays/triple-products).
+- <span class="badge bg-success">Nytt</span> [Trippelprodukter av Eigenfunktioner och spektral geometri](/essays/triple-products) Kommer inom kort på arXiv!
 
-- [Applikationsprestanda](/essays/performance) &mdash;
+- [Applikationsprestanda](/essays/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
 
-- [Informationssäkerhet](/essays/infosec) &mdash;
+- [Informationssäkerhet](/essays/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet.
 
-- [Förseglade Lexicals för Perl 7](/essays/perl7-sealed-lexicals) &mdash;
+- [Förseglade Lexicals för Perl 7](/essays/perl7-sealed-lexicals) &mdash; lägg till <span class="text-info">:förseglad</span> i en funktionsdefinition och njut av den extra hastigheten för uppslagningar av kompileringsmetoder för alla typangivna lexikaliska tecken.
 
-- [Rörelsen DevOps](/essays/devops) &mdash;
+- [DevOps-rörelsen](/essays/devops) &mdash; Fyll i de uppgifter som saknas i denna artikel.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -118,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2024-04-24 21:51:28 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23858 $ -->
+<!-- $Date: 2025-12-18 21:11:39 -0700 (Thu, 18 Dec 2025) $ $Author: joe $ $Revision: 27321 $ -->

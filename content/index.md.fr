@@ -1,9 +1,9 @@
 ---
 archived: ~
 categories: ~
-keywords: wiki,connaissance,blogs
+keywords: wiki, connaissance, blogs, orion, pile de james, perl, f/oss
 published: ~
-status: projet
+status: publié
 title: Accueil
 ---
 
@@ -15,12 +15,12 @@ title: Accueil
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nouvelle</span> technologie Linter CI GitLab de SunStar Systems {{facts.releases.linter.tag}} désormais disponible sur <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> et <a href="< !-- ### -->"
+<h2 class="card-title"><span class="badge bg-success">Nouvelle</span> SunStar Technologie CI Linter GitLab de Systems {{facts.releases.linter.tag}} désormais disponible sur <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> et <a href="< !-- ### -->"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Orion des systèmes&trade; <a href="{{facts.releases.linter.url}}">Générateur de site statique</a> {{facts.releases.orion.url}} libéré.
+<h2 class="card-title">SunStar Orion de Systems&trade; <a href="{{facts.releases.linter.url}}">Générateur de site statique</a> {{facts.releases.orion.url}} libéré.
 </h2>
 
 <br>
@@ -33,19 +33,19 @@ title: Accueil
 
 <h2>
 
-[Algorithme : :LCS : :XS {{facts.releases.sealed.tag}}]({{facts.releases.Algorithm_LCS_XS.tag}}).
+[Algorithme : :LCS : :XS {{facts.releases.sealed.tag}}]({{facts.releases.Algorithm_LCS_XS.tag}}) Libéré au CPAN !
 
 </h2>
 
 <br>
 
-<h2 class="card-title">SunStar Systèmes <a href="{{facts.releases.Algorithm_LCS_XS.url}}">orthrus {{facts.releases.orthrus.url}}</a> est disponible.</h2>
+<h2 class="card-title">SunStar Systèmes <a href="{{facts.releases.Algorithm_LCS_XS.url}}">orthrus {{facts.releases.orthrus.url}}</a> publié !</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Pty des systèmes {{facts.releases.orthrus.tag}} libéré !</h2>
+<h2 class="card-title">SunStar Pty de systèmes {{facts.releases.orthrus.tag}} libéré !</h2>
 
-<p class="card-text">Mettez à niveau votre installation <span class="text-info">pty</span> vers <a href="{{facts.releases.pty.tag}}/releases/tag/{{facts.releases.pty.url}}">{{facts.releases.pty.tag}}</a>, qui inclut la prise en charge native de <span class='text-info'>python 3.10+</span>.</p>
+<p class="card-text">Veuillez mettre à niveau votre installation <span class="text-info">pty</span> vers <a href="{{facts.releases.pty.tag}}/releases/tag/{{facts.releases.pty.url}}">{{facts.releases.pty.tag}}</a>, qui inclut la prise en charge native de <span class='text-info'>python 3.10+</span>.</p>
 
 </div>
 </div>
@@ -56,13 +56,14 @@ title: Accueil
 
 Vous recherchez un wiki d'entreprise meilleur, plus sûr, plus rapide et **fédéré** ?
 
-Départ  [Orion](/orion/features)<span class="text-success"><img alt="Logo Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Le wiki Enterprise Jamstack.</em></span>&trade; &mdash; Orion est le seul produit d'entreprise basé sur SCM avec natif [sirène-mindmap](/orion/features).
+Départ  [Orion](/orion/features)<span class="text-success"><img alt="Logo Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki Jamstack.</em></span>&trade; &mdash; Orion est le seul produit d'entreprise basé sur SCM avec natif [mermaid-mindmap](/orion/features) intégration !
 
-Pour une description en coulisses de notre technologie en attente de brevet dans le <span class="text-white">livre blanc</span>, consultez notre [Gestion intelligente des dépendances de contenu](/essays/dependencies)&trade;
+Pour une description en coulisse de notre technologie en attente de brevet dans le <span class="text-white">livre blanc</span>, consultez notre [Gestion intelligente des dépendances de contenu](/essays/dependencies)&trade; Essai.
 
 &nbsp;
 <img alt="GitHub Marquer" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
-## Suivez-nous sur GitHub
+## Suivez nous sur GitHub
+
 &nbsp;
 
 - @SunStarSys/orion
@@ -75,18 +76,20 @@ Pour une description en coulisses de notre technologie en attente de brevet dans
 	<p style="height:20px">&nbsp;</p>
 
 &nbsp;
+
 ## Essais en vedette
+
 &nbsp;
 
-- <span class="badge bg-success">Nouveau</span> [Triple produits d'Eigenfunctions et de géométrie spectrale](/essays/triple-products).
+- <span class="badge bg-success">Nouveau</span> [Triples produits des fonctions propres et de la géométrie spectrale](/essays/triple-products) Bientôt disponible sur arXiv !
 
-- [Performances des applications](/essays/performance) &mdash;
+- [Performances des applications](/essays/performance) &mdash; un exemple de travail : d'un goulet d'étranglement observable à une résolution efficace.
 
-- [Sécurité des informations](/essays/infosec) &mdash;
+- [Sécurité des informations](/essays/infosec) &mdash; L'abstraction des concepts de base conduit à une large applicabilité et clarté du monde réel.
 
-- [Lexiques scellés pour Perl 7](/essays/perl7-sealed-lexicals) &mdash;
+- [Lexiques scellés pour Perl 7](/essays/perl7-sealed-lexicals) &mdash; ajoutez <span class="text-info"> :sealed</span> à une définition de fonction et profitez de la vitesse supplémentaire des recherches de méthode de compilation pour tous ses lexiques typés.
 
-- [Le mouvement DevOps](/essays/devops) &mdash;
+- [Mouvement DevOps](/essays/devops) &mdash; rempli les détails manquants sur cet article.
 
 <style type="text/css">
 h2 { font-size: 18px }

@@ -1,10 +1,10 @@
 ---
 archived: ~
 categories: ~
-keywords: wiki,Знания,Блоги
+keywords: wiki,знание,блоги,orion,jamstack,perl,f/oss
 published: ~
-status: черновик
-title: Домашняя
+status: опубликовано
+title: Главная
 ---
 
 <div class="float-lg-right">
@@ -20,32 +20,32 @@ title: Домашняя
 
 <br>
 
-<h2 class="card-title">SunStarСистемы Orion&trade; <a href="{{facts.releases.orion.url}}">Генератор статических узлов</a> {{facts.releases.orion.tag}} освобожден.
+<h2 class="card-title">SunStar Орион систем&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} Освобожден.
 </h2>
 
 <br>
 
 <h2 class="card-title">
-<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}Выпущен </a> для CPAN!
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> выпущен в CPAN!
 </h2>
 
 <br>
 
 <h2>
 
-[Алгоритм::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}).
+[Алгоритм::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) Выпущен в CPAN!
 
 </h2>
 
 <br>
 
-<h2 class="card-title">SunStar Системы <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> выпущен!</h2>
+<h2 class="card-title">SunStar Системы <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}Выпущено: </a></h2>
 
 <br>
 
 <h2 class="card-title">SunStar Системы pty {{facts.releases.pty.tag}} освобожден!</h2>
 
-<p class="card-text">Обновите <span class="text-info">пустую</span> установку до <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, которая включает встроенную поддержку <span class='text-info'>python 3.10+</span>.</p>
+<p class="card-text">Обновите свою <span class="text-info">пустую</span> установку до <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, которая включает встроенную поддержку для <span class='text-info'>python 3.10+</span>.</p>
 
 </div>
 </div>
@@ -54,15 +54,16 @@ title: Домашняя
 
 ![SunStar Системы](images/sunstarlogowhole).
 
-Ищете лучшую, более безопасную, быструю **федеративную** Корпоративную Вики?
+Ищете лучшую, безопасную и быструю версию** Enterprise Wiki?
 
-Оформить заказ  [Орион](/orion/features)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-страница Enterprise Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на базе SCM с собственным ПО [русалка mindmap](/orion/features).
+Изъять  [Орион](/orion/features)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-платформа Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
 
-Ознакомьтесь с <span class="text-white">информационным документом</span> о нашей технологии, ожидающей патентования. [Управление зависимостями Smart Content](/essays/dependencies)&trade;
+Закулисное <span class="text-white">техническое описание</span> технологии, ожидающей патентования, см. в нашем информационном бюллетене [Управление зависимостями интеллектуального контента](/essays/dependencies)&trade; Эссе.
 
 &nbsp;
-<img alt="GitHub Отметка" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+<img alt="GitHub Пометка" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
 ## Следите за нами на GitHub
+
 &nbsp;
 
 - @SunStarSys/orion
@@ -75,18 +76,20 @@ title: Домашняя
 	<p style="height:20px">&nbsp;</p>
 
 &nbsp;
-## Избранные эссе
+
+## Рекомендуемые эссе
+
 &nbsp;
 
-- <span class="badge bg-success">Новинка</span> [Тройные продукты собственных функций и спектральной геометрии](/essays/triple-products).
+- <span class="badge bg-success">Новое</span> [Тройные продукты собственных функций и спектральной геометрии](/essays/triple-products) Скоро на arXiv!
 
-- [Производительность приложений](/essays/performance) &mdash;
+- [Производительность приложения](/essays/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения.
 
-- [Информационная безопасность](/essays/infosec) &mdash;
+- [Информационная безопасность](/essays/infosec) &mdash; Абстракция основных понятий приводит к широкой реальной применимости и ясности.
 
-- [Герметичные лексики для Perl 7](/essays/perl7-sealed-lexicals) &mdash;
+- [Герметичные лексикалы для перла 7](/essays/perl7-sealed-lexicals) &mdash; добавьте <span class="text-info">:sealed</span> в определение функции и воспользуйтесь дополнительной скоростью поиска метода времени компиляции для всех его типизированных лексик.
 
-- [Движение DevOps](/essays/devops) &mdash;
+- [Движение DevOps](/essays/devops) &mdash; Заполнить недостающие детали в этой статье.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -118,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2024-04-24 21:51:28 +0000 (Wed, 24 Apr 2024) $ $Author: joe $ $Revision: 23858 $ -->
+<!-- $Date: 2025-12-18 21:11:39 -0700 (Thu, 18 Dec 2025) $ $Author: joe $ $Revision: 27321 $ -->

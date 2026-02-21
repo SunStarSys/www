@@ -1,9 +1,9 @@
 ---
 archived: ~
 categories: ~
-keywords: wiki, conocimientos, blogs
+keywords: wiki,conocimiento,blogs,orion,jamstack,perl,f/oss
 published: ~
-status: borrador
+status: publicado
 title: Inicio
 ---
 
@@ -11,7 +11,7 @@ title: Inicio
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">Noticias</div>
         <div class="card-body">
-<h2 class="card-title"><a href="https://www.iconoclasts.blog/">¡Blogs gratis!</a></h2>
+<h2 class="card-title"><a href="https://www.iconoclasts.blog/">Blogs gratis!</a></h2>
 
 <br>
 
@@ -20,26 +20,26 @@ title: Inicio
 
 <br>
 
-<h2 class="card-title">SunStar Orión de sistemas&trade; <a href="{{facts.releases.orion.url}}">Generador de Sitios Estáticos</a> {{facts.releases.orion.tag}} liberado.
+<h2 class="card-title">SunStar Orión de los Sistemas&trade; <a href="{{facts.releases.orion.url}}">Generador de sitios estáticos</a> {{facts.releases.orion.tag}} liberado.
 </h2>
 
 <br>
 
 <h2 class="card-title">
-<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> liberado a CPAN.
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> publicado en CPAN
 </h2>
 
 <br>
 
 <h2>
 
-[Algoritmo::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}).
+[Algoritmo::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) ¡Lanzado a CPAN!
 
 </h2>
 
 <br>
 
-<h2 class="card-title">SunStar Sistemas <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> liberado.</h2>
+<h2 class="card-title">SunStar Sistemas <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> liberado</h2>
 
 <br>
 
@@ -52,17 +52,18 @@ title: Inicio
 <br>
 </div>
 
-![SunStar Sistemas](images/sunstarlogowhole).
+![Sistemas SunStar](images/sunstarlogowhole).
 
-¿Busca una Wiki empresarial mejor, más segura, más rápida y **federada**?
+Buscando un mejor, más seguro, más rápido, **federado** Enterprise Wiki?
 
-Desayuno  [Orión](/orion/features)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki de Enterprise Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mermaid-mindmap](/orion/features).
+Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
 
-Para ver una descripción en segundo plano de nuestra tecnología pendiente de patente, consulte nuestro <span class="text-white">documento técnico</span> [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade;
+Para obtener una descripción de <span class="text-white">whitepaper</span> detrás de escena de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
 
 &nbsp;
 <img alt="GitHub Marca" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
 ## Síguenos en GitHub
+
 &nbsp;
 
 - @SunStarSys/orión
@@ -70,23 +71,25 @@ Para ver una descripción en segundo plano de nuestra tecnología pendiente de p
 - @joesuf4
 
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="video"></iframe>
+	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="vídeo"></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
 &nbsp;
+
 ## Ensayos destacados
+
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Triple Productos de Eigenfunciones y Geometría Espectral](/essays/triple-products).
+- <span class="badge bg-success">Nuevo</span> [Triple producto de autofunciones y geometría espectral](/essays/triple-products) Próximamente en arXiv!
 
-- [Rendimiento de aplicaciones](/essays/performance) &mdash;
+- [Rendimiento de aplicaciones](/essays/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución efectiva.
 
-- [Seguridad de la información](/essays/infosec) &mdash;
+- [Seguridad de la información](/essays/infosec) &mdash; La abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real.
 
-- [Léxicos sellados para Perl 7](/essays/perl7-sealed-lexicals) &mdash;
+- [Léxico sellado para Perl 7](/essays/perl7-sealed-lexicals) &mdash; agregue <span class="text-info">:sealed</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos los léxicos escritos.
 
-- [Movimiento DevOps](/essays/devops) &mdash;
+- [El movimiento DevOps](/essays/devops) &mdash; completar los detalles que faltan en este artículo.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -118,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2024-04-26 22:54:11 +0000 (Fri, 26 Apr 2024) $ $Author: joe $ $Revision: 24330 $ -->
+<!-- $Date: 2025-12-18 21:11:39 -0700 (Thu, 18 Dec 2025) $ $Author: joe $ $Revision: 27321 $ -->
