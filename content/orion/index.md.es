@@ -24,15 +24,15 @@ title: SunStar Orión de los Sistemas
 	<li><p>federado</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Wiki de empresa</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas mediante la tecnología #Jamstack para funciones dinámicas en ellas{# lede #}.
+{# lede #}<span class="text-white">Plataforma wiki empresarial</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas mediante la tecnología #Jamstack para funciones dinámicas en ellas{# lede #}.
 
 Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
 
 ### Aquí está el lanzamiento, decisor ejecutivo...
 
-<span class="text-white">¿Por qué elegir Orion? La wiki Enterprise Jamstack que supera el rendimiento y cuesta mucho menos</span>
+<span class="text-white">¿Por qué elegir Orion? La plataforma Wiki Enterprise Jamstack que supera el rendimiento y cuesta mucho menos</span>
 
-Lo que realmente distingue a Orion no es solo otra wiki: es nuestra tecnología patentada Orion, un enfoque probado en batalla y pendiente de patente que ofrece una eficiencia inigualable.
+Lo que realmente distingue a Orion no es solo otra plataforma wiki: es nuestra tecnología Orion patentada, un enfoque probado en batalla y pendiente de patente que ofrece una eficiencia inigualable.
 
 Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece controles editoriales superiores, seguridad de nivel empresarial y características innovadoras que ninguna wiki heredada puede igualar. Pasamos esos ahorros masivos directamente a usted. Espere solo unos cargos adicionales modestos y transparentes para los recursos exactos en la nube que utiliza, sin niveles de precios excesivos ni tarifas ocultas.
 

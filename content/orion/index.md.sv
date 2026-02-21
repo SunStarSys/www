@@ -24,15 +24,15 @@ title: SunStar Orion för system
 	<li><p>samordnad</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Wiki för företag</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor med hjälp av tekniken #Jamstack för dynamiska funktioner i dem{# lede #}.
+{# lede #}<span class="text-white">Wiki-plattform för företag</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor med hjälp av tekniken #Jamstack för dynamiska funktioner i dem{# lede #}.
 
 För prisinformation, se vår [Orionplaner](plans).
 
 ### Här är platsen, beslutsfattare för ledningen...
 
-<span class="text-white">Varför välja Orion? Enterprise Jamstack Wiki som överträffar - och kostar mycket mindre</span>
+<span class="text-white">Varför välja Orion? Enterprise Jamstack Wiki-plattformen som överträffar - och kostar mycket mindre</span>
 
-Vad som verkligen skiljer Orion är inte bara en annan wiki - det är vår egenutvecklade Orion Technology, en stridstestad, patentsökt metod som ger oöverträffad effektivitet.
+Vad som verkligen skiljer Orion är inte bara en annan wiki-plattform - det är vår egenutvecklade Orion Technology, ett stridstestat, patentsökt tillvägagångssätt som ger oöverträffad effektivitet.
 
 Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjuder överlägsna redaktionella kontroller, säkerhet i företagsklass och banbrytande funktioner som ingen äldre wiki kan matcha. Vi skickar dessa enorma besparingar direkt till dig. Förvänta dig bara blygsamma och transparenta tilläggsavgifter för exakt de molnresurser du använder – inga uppsvällda prisnivåer eller dolda avgifter.
 
