@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}">
 <head>
@@ -45,7 +54,7 @@
         </button>
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
-	  <img alt="SunStar Символ Ориона линейный" src="/images/sunstar-orion-symbol-linear.png">
+	  <img alt="SunStar Линейный символ Ориона" src="/images/sunstar-orion-symbol-linear.png">
           <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
           <img alt="SunStar Линейный" src="/images/sunstarlinear.png" />
@@ -57,10 +66,10 @@
         <ul class="navbar-nav">
           <li class="nav-item{% ifequal path "/index.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link text" href="/">Домашняя</a></li>
+            {% endifequal %}"><a class="nav-link text" href="/">Главная</a></li>
           <li class="nav-item{% ifequal path "/about.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link text" href="/about">О программе</a></li>
+            {% endifequal %}"><a class="nav-link text" href="/about">О нас</a></li>
           <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
              active
              {% endifequal %}"><a class="nav-link" href="/contact">Контакт</a></li>
@@ -69,11 +78,11 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; Корпоративная вики-страница</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
-                {% endifequal %}"><a class=«nav-link текст-белый»
-                href="/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
+                {% endifequal %}"><a class=nav-link text-white
+                href="/orion/plans.html{{ lang }}»>Планы ценообразования Orion</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -81,16 +90,16 @@
 																{% endifequal %}"><a class="nav-link" href="/open-source">Открытый исходный код</a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Дополнительно.. <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Дополнительно... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Источник сайта</a>
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">i18n</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Английский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Британские единицы</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Испанский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Немецкий</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">немецкий</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Французский</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Русский</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Китайский</a></li>
@@ -98,7 +107,7 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">шведский</a></li>
 
 <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Взаимодействие</li>
+              <li class="dropdown-header text-white">Взаимодействия</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Клиенты</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Эссе</a></li>
               <li class="dropdown-item divider"></li>
@@ -110,7 +119,7 @@
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">На базе...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">При поддержке...</a>
           </li>
         </ul>
       </div>
@@ -118,13 +127,13 @@
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input name="lang" type="hidden" value="{{ lang }}" />
-          <input class="form-control" type="text" name="regex"
-               placeholder="PCRE
- рекурсивный поиск" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+          <input class=form-control type=text name=regex
+               Прототип=»PCRE
+ Рекурсивный поиск value={{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
 	    Поиск
           </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id=markdown-search value=1 {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>Снижение цен</small></label>
+          <input class=form-control form-check-input type=checkbox name=markdown_search
+          id=markdown-search value=1 {% if markdown_search %}отмечено{% endif %}/><label for="markdown-search"><small>Снижение цен</small></label>
         </form>
       </div>
     </div>
@@ -144,7 +153,7 @@
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img alt="Значок изменения" src="/images/edit.png" />
+        <img alt="Значок редактирования" src="/images/edit.png" />
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>
@@ -164,7 +173,7 @@
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
 
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script defer src="/editor.md/lib/copy-tex.js"></script>

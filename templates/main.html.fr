@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}">
 <head>
@@ -40,7 +49,7 @@
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
-        <button aria-expanded="false" aria-label="L'équipe" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+        <button aria-expanded="false" aria-label="La navigation" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand">
@@ -69,19 +78,19 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Wiki d'entreprise</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Origine&trade; Plate-forme Wiki Jamstack</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Plans de tarification Orion</a></li>
+                href="/orion/plans.html{{ lang }}">Plans de tarification d'Orion</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
             active
-																{% endifequal %}"><a class="nav-link" href="/open-source">Logiciel libre</a></li>
+																{% endifequal %}"><a class="nav-link" href="/open-source">Source ouverte</a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Plus d'informations... <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Plus d'informations. <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Source du site</a>
@@ -102,9 +111,9 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Clients</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Essais</a></li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Taxonomies</li>
+              <li class="dropdown-header text-white">Taxonomie</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Catégories</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Accueil</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Archives</a></li>
             </ul>
           </li>
 
@@ -124,7 +133,7 @@
 	    Rechercher
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}active{% endif %}/><label for="markdown-search"><small>Démarque</small></label>
+          id="markdown-search" value="1" {% if markdown_search %}coché{% endif %}/><label for="markdown-search"><small>Démarque</small></label>
         </form>
       </div>
     </div>
@@ -144,7 +153,7 @@
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img alt="Icône Modifier" src="/images/edit.png" />
+        <img alt="Modifier l'icône" src="/images/edit.png" />
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>
@@ -164,7 +173,7 @@
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
 
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script defer src="/editor.md/lib/copy-tex.js"></script>

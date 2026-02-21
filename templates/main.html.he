@@ -1,5 +1,14 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}" dir="rtl">
+<html lang="{{ lang|cut:"." }}">
 <head>
     <meta charset="utf-8">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
@@ -40,12 +49,12 @@
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
-        <button aria-expanded="false" aria-label="עברית" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+        <button aria-expanded="false" aria-label="איפוס סיסמה" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
-	  <img alt="SunStar ליניארי של סמל אוריון" src="/images/sunstar-orion-symbol-linear.png">
+	  <img alt="SunStar סמל אוריון לינארי" src="/images/sunstar-orion-symbol-linear.png">
           <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
           <img alt="SunStar לינארי" src="/images/sunstarlinear.png" />
@@ -69,14 +78,16 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">אוריון&trade; Enterprise Wiki</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">אוריון&trade; פלטפורמת Jamstack Wiki</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class="nav-link text-white"
                 href="/orion/plans.html{{ lang }}">תוכניות תמחור של אוריון</a></li>
             </ul>
           </li>
-          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %} active{% endifequal %}"><a class="nav-link" href="/open-source">קוד פתוח</a></li>
+          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
+            active
+																{% endifequal %}"><a class="nav-link" href="/open-source">קוד פתוח</a></li>
 
 <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">עוד.. <span class="caret"></span></a>
@@ -96,7 +107,7 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">שוודית</a></li>
 
 <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">התקשרויות</li>
+              <li class="dropdown-header text-white">מעורבות</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">לקוחות</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">מסות</a></li>
               <li class="dropdown-item divider"></li>
@@ -108,7 +119,7 @@
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">מופעל באמצעות...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">מופעל על ידי...</a>
           </li>
         </ul>
       </div>
@@ -118,11 +129,11 @@
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
                שומר מקום="PCRE
-רקורסיבי ערך" name="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+ חיפוש רקורסיבי" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
 	    חיפוש
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          מזהה="markdown-search" ערך="1" {% if markdown_search %}מסומן{% endif %}/><label for="markdown-search"><small>סימון למטה</small></label>
+          id="markdown-search" value="1" {% if markdown_search %}מסומן{% endif %}/><label for="markdown-search"><small>הוזלה</small></label>
         </form>
       </div>
     </div>
@@ -138,7 +149,7 @@
   {% endif %}
 {% endblock %}
 
-<div class="container theme-showcase rtl" id="content">
+<div class="container theme-showcase" id="content">
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
@@ -162,7 +173,7 @@
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
 
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script defer src="/editor.md/lib/copy-tex.js"></script>

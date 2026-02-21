@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}">
 <head>
@@ -40,12 +49,12 @@
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
-        <button aria-expanded="false" aria-label="La Torre" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+        <button aria-expanded="false" aria-label="Navegación de entradas" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
-	  <img alt="SunStar Símbolo de Orión lineal" src="/images/sunstar-orion-symbol-linear.png">
+	  <img alt="SunStar Símbolo de Orión Lineal" src="/images/sunstar-orion-symbol-linear.png">
           <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
           <img alt="SunStar Lineal" src="/images/sunstarlinear.png" />
@@ -69,11 +78,11 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orión&trade; Wiki de empresa</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orión&trade; Plataforma wiki de Jamstack</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Planes de precios de Orion</a></li>
+                href="/orion/plans.html{{ lang }}">Planes de precios de órdenes</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -81,14 +90,14 @@
 																{% endifequal %}"><a class="nav-link" href="/open-source">Código abierto</a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Más información. <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Más información... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Origen de sitio</a>
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">i18n</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Español</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Inglés</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Español</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Alemán</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Francés</a></li>
@@ -119,11 +128,12 @@
             }}{% endifequal %}/" class="form-inline right" method="GET">
           <input name="lang" type="hidden" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               placeholder="PCRE Búsqueda recursiva" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+               marcador de posición="PCRE
+ Búsqueda recursiva" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
 	    Buscar
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}active{% endif %}/><label for="markdown-search"><small>Rebaja</small></label>
+          id="markdown-search" value="1" {% if markdown_search %}marcado{% endif %}/><label for="markdown-search"><small>Rebaja</small></label>
         </form>
       </div>
     </div>
@@ -163,7 +173,7 @@
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
 
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script defer src="/editor.md/lib/copy-tex.js"></script>

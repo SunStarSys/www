@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}">
 <head>
@@ -45,10 +54,10 @@
         </button>
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
-	  <img alt="SunStar Linjär symbol för Orion" src="/images/sunstar-orion-symbol-linear.png">
+	  <img alt="SunStar Orionsymbol - linjärt" src="/images/sunstar-orion-symbol-linear.png">
           <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
-          <img alt="SunStar Linjär" src="/images/sunstarlinear.png" />
+          <img alt="SunStar Linjärt" src="/images/sunstarlinear.png" />
         {% endifequal %}
         </div>
       </div>
@@ -69,11 +78,11 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Wiki för företag</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Wiki-plattformen Jamstack</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-vit"
-                href="/orion/plans.html{{ lang }}">Orionsprisplaner</a></li>
+                {% endifequal %}"><a class="nav-link text-white"
+                href="/orion/plans.html{{ lang }}">Prisplaner för org.</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -90,17 +99,17 @@
               <li class="dropdown-header text-white">i18n</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Engelska</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Spanska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">tyska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">Tyska</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Franska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">ryska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ryska</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">kinesiska</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">hebreiska</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreiska</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Svenska</a></li>
 
 <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">Engagemang</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Kunder</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Uppsatser</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Essäer</a></li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">Taxonomier</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Kategorier</a></li>
@@ -123,8 +132,8 @@
  Rekursiv sökning" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
 	    Sök
           </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}markerad{% endif %}/><label for="markdown-search"><small>Nedsättning</small></label>
+          <input class="formulärkontrollformulärinmatning" type="kryssruta" name="markdown_search"
+          id="markdown-search" värde="1" {% if markdown_search %}markerad{% endif %}/><label for="markdown-search"><small>Nedsättning</small></label>
         </form>
       </div>
     </div>
@@ -164,7 +173,7 @@
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
 
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script defer src="/editor.md/lib/copy-tex.js"></script>

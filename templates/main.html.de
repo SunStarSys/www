@@ -1,3 +1,12 @@
+---
+archived: ~
+categories: ~
+keywords: ~
+published: ~
+status: ~
+title: ~
+---
+
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}">
 <head>
@@ -40,7 +49,7 @@
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
-        <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+        <button aria-expanded="false" aria-label="Toggle-Navigation" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand">
@@ -60,7 +69,7 @@
             {% endifequal %}"><a class="nav-link text" href="/">Startseite</a></li>
           <li class="nav-item{% ifequal path "/about.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link text" href="/about">Info</a></li>
+            {% endifequal %}"><a class="nav-link text" href="/about">Über uns</a></li>
           <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
              active
              {% endifequal %}"><a class="nav-link" href="/contact">Kontakt</a></li>
@@ -69,11 +78,11 @@
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Organisation&trade; Unternehmenswiki</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Jamstack Wiki-Plattform</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Preisfindungspläne für Organisationen</a></li>
+                href="/orion/plans.html{{ lang }}">Orion-Preispläne</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -81,7 +90,7 @@
 																{% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Weitere Informationen. <span class="caret"></span></a>
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Weitere Informationen.. <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Sitequelle</a>
@@ -95,10 +104,10 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Russisch</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Chinesisch</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebräisch</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Schweden</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Schwedisch</a></li>
 
 <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Engagements</li>
+              <li class="dropdown-header text-white">Projekte</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Kunden</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Essays</a></li>
               <li class="dropdown-item divider"></li>
@@ -110,7 +119,7 @@
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
             active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">Bereitgestellt von...</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">Ausgestattet mit...</a>
           </li>
         </ul>
       </div>
@@ -164,7 +173,7 @@
   <script src="/editor.md/js/d3-graphviz.js"></script>
   <script src="/editor.md/lib/mermaid.min.js"></script>
 
-  <script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
+<script src="/editor.md/lib/codemirror/codemirror.min.js"></script>
   <script src="/editor.md/lib/codemirror/addons.min.js"></script>
   <script src="/editor.md/lib/codemirror/modes.min.js"></script>
   <script defer src="/editor.md/lib/copy-tex.js"></script>
