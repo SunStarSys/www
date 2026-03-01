@@ -1,10 +1,10 @@
 ---
 archived: ~
 categories: ~
-keywords: South Florida, systemadministration, IT
+keywords: Södra Florida, systemadministration, IT
 published: ~
 status: skiss
-title: Om SunStar Systems
+title: Om SunStar System
 ---
 
 <div class="right col-lg-5">
@@ -18,9 +18,9 @@ title: Om SunStar Systems
 
 ![Familjen Schaefer](images/family.jpg).
 
-<span class="text-white">SunStar Systems, Inc. &nbsp;</span> har varit ett familjeägt företag i 25 år, och betjänar många olika [kunder](/clients).
+<span class="text-white">SunStar Systems, Inc. &nbsp;</span> har varit ett familjeägt företag i 25 år och har haft en mängd olika roller [kunder](/clients), från startups till företag med tusentals utvecklare ombord.
 
-Förutom att ge det bästa [Wiki för Enterprise Jamstack](/orion/).
+Förutom att ge det bästa [#Jamstack-wiki för företag](/orion/) på marknaden, vi är också specialiserade på att möta och överträffa din
 
 - Arkitektur
 
@@ -30,14 +30,14 @@ Förutom att ge det bästa [Wiki för Enterprise Jamstack](/orion/).
 
 - SRE
 
-- Prestanda
+- Prestation
 
-konsultbehov &mdash;
+konsultbehov &mdash; från en enkel och praktisk metod till en rådgivande roll i <span class="text-info">C-sviten</span>.
 
-Låt oss ge dig våra produkter, vår kunskap och erfarenhet för att bättre kunna tillgodose dina IT-behov.
+Låt oss ta med våra produkter, kunskaper och erfarenheter till dig för att bättre kunna tillgodose dina IT-behov.
 
 [Kontakta oss](/contact).
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5bc70a06-9acc-4f06-bcc3-9268416f5865" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-<!-- $Date: 2024-03-11 20:13:45 +0000 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19741 $ -->
+<!-- $Date: 2024-03-11 16:13:45 -0400 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19741 $ -->

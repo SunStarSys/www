@@ -4,7 +4,7 @@ categories: ~
 keywords: Южная Флорида, системное администрирование, ИТ
 published: ~
 status: черновик
-title: О системах SunStar
+title: О SunStar Systems
 ---
 
 <div class="right col-lg-5">
@@ -16,11 +16,11 @@ title: О системах SunStar
 
 </div>
 
-![Семья Шефер](images/family.jpg).
+![Семья Шефера](images/family.jpg).
 
-<span class="text-white">SunStar Системы, Inc. &nbsp;</span> является семейным бизнесом в течение 25 лет, обслуживающим широкий спектр [клиенты](/clients).
+<span class="text-white">SunStar Systems, Inc. &nbsp;</span> уже 25 лет является семейным бизнесом, обслуживая широкий спектр [клиенты](/clients)от стартапов до предприятий с тысячами разработчиков на борту.
 
-В дополнение к лучшему [Предприятие Jamstack Wiki](/orion/).
+В дополнение к лучшему [Вики для предприятия #Jamstack](/orion/) на рынке, мы также специализируемся на встрече и превосходя ваши
 
 - Архитектура
 
@@ -32,12 +32,12 @@ title: О системах SunStar
 
 - Производительность
 
-потребности в консалтинге &mdash;
+консультационные потребности &mdash; от простого практического подхода до консультативной роли <span class="text-info">C Suite</span>.
 
-Позвольте нам принести наши продукты, знания и опыт для вас, чтобы лучше обслуживать ваши ИТ-потребности.
+Позвольте нам предоставить вам наши продукты, знания и опыт для лучшего обслуживания ваших ИТ-потребностей.
 
-[Свяжитесь с нами](/contact).
+[Контакты](/contact).
 
 <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5bc70a06-9acc-4f06-bcc3-9268416f5865" data-share-badge-host="https://www.credly.com"></div><script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
 
-<!-- $Date: 2024-03-11 20:13:45 +0000 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19741 $ -->
+<!-- $Date: 2024-03-11 16:13:45 -0400 (Mon, 11 Mar 2024) $ $Author: joe $ $Revision: 19741 $ -->
