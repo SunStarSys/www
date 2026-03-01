@@ -12,7 +12,7 @@ title: SunStar Orion för system
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade;
+	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>#Jamstack Wiki-plattformen.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orion för system</span> &nbsp; är en
 <p>
@@ -30,7 +30,7 @@ För prisinformation, se vår [Orionplaner](plans).
 
 ### Här är platsen, beslutsfattare för ledningen...
 
-<span class="text-white">Varför välja Orion? Enterprise Jamstack Wiki-plattformen som överträffar - och kostar mycket mindre</span>
+<span class="text-white">Varför välja Orion? #Jamstack Wiki-plattformen som överträffar - och kostar mycket mindre</span>
 
 Vad som verkligen skiljer Orion är inte bara en annan wiki-plattform - det är vår egenutvecklade Orion Technology, ett stridstestat, patentsökt tillvägagångssätt som ger oöverträffad effektivitet.
 

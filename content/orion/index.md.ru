@@ -12,7 +12,7 @@ title: SunStar Орион систем
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-платформа Jamstack.</em></span>&trade;
+	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-платформа #Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Орион систем</span> &nbsp; является
 <p>
@@ -30,7 +30,7 @@ title: SunStar Орион систем
 
 ### Вот шаг, ответственный за принятие решений...
 
-<span class="text-white">Почему выбирают Орион? Корпоративная платформа Jamstack Wiki, которая превосходит – и стоит намного меньше</span>
+<span class="text-white">Почему выбирают Орион? Платформа Wiki #Jamstack, которая превосходит – и стоит намного меньше</span>
 
 То, что действительно отличает Orion, – это не просто еще одна вики-платформа – это наша собственная технология Orion, проверенный в бою и запатентованный подход, который обеспечивает непревзойденную эффективность.
 

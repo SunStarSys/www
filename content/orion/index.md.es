@@ -12,7 +12,7 @@ title: SunStar Orión de los Sistemas
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade;
+	<span class="text-success"><img src="../images/sunstar-orion-symbol-linear.png" style="width:100px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Plataforma wiki #Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orión de los Sistemas</span> &nbsp; es un
 <p>
@@ -30,7 +30,7 @@ Para obtener información sobre los precios, consulte nuestro [Planes de Orion](
 
 ### Aquí está el lanzamiento, decisor ejecutivo...
 
-<span class="text-white">¿Por qué elegir Orion? La plataforma Wiki Enterprise Jamstack que supera el rendimiento y cuesta mucho menos</span>
+<span class="text-white">¿Por qué elegir Orion? La plataforma Wiki #Jamstack que supera el rendimiento y cuesta mucho menos</span>
 
 Lo que realmente distingue a Orion no es solo otra plataforma wiki: es nuestra tecnología Orion patentada, un enfoque probado en batalla y pendiente de patente que ofrece una eficiencia inigualable.
 
