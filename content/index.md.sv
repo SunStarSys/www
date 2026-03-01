@@ -56,7 +56,7 @@ title: Hem
 
 Letar du efter en bättre, säkrare, snabbare, ** förenad ** Enterprise Wiki?
 
-Checka ut  [Orion](/orion/features)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
+Checka ut  [Orion](/orion/features)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>#Jamstack Wiki-plattformen.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
 
 För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna av vår patentsökta teknik, se vår [Beroendehantering för smart innehåll](/essays/dependencies)&trade; uppsats.
 
@@ -81,7 +81,7 @@ För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna
 
 &nbsp;
 
-- <span class="badge bg-success">Nytt</span> [Trippelprodukter av Eigenfunktioner och spektral geometri](/essays/triple-products) Kommer inom kort på arXiv!
+- <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](/essays/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
 
 - [Applikationsprestanda](/essays/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
 
@@ -121,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2025-12-18 21:11:39 -0700 (Thu, 18 Dec 2025) $ $Author: joe $ $Revision: 27321 $ -->
+<!-- $Date: 2026-02-21 11:54:21 -0700 (Sat, 21 Feb 2026) $ $Author: joe $ $Revision: 27898 $ -->

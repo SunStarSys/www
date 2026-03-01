@@ -56,7 +56,7 @@ title: Inicio
 
 Buscando un mejor, más seguro, más rápido, **federado** Enterprise Wiki?
 
-Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
+Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Plataforma wiki #Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
 
 Para obtener una descripción de <span class="text-white">whitepaper</span> detrás de escena de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
 
@@ -81,7 +81,7 @@ Para obtener una descripción de <span class="text-white">whitepaper</span> detr
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Triple producto de autofunciones y geometría espectral](/essays/triple-products) Próximamente en arXiv!
+- <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](/essays/wikis) &mdash; Una guía sobre cómo Orion encaja en el panorama general de 2026.
 
 - [Rendimiento de aplicaciones](/essays/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución efectiva.
 
@@ -121,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2025-12-18 21:11:39 -0700 (Thu, 18 Dec 2025) $ $Author: joe $ $Revision: 27321 $ -->
+<!-- $Date: 2026-02-21 11:54:21 -0700 (Sat, 21 Feb 2026) $ $Author: joe $ $Revision: 27898 $ -->

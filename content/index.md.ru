@@ -56,7 +56,7 @@ title: Главная
 
 Ищете лучшую, безопасную и быструю версию** Enterprise Wiki?
 
-Изъять  [Орион](/orion/features)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-платформа Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
+Изъять  [Орион](/orion/features)<span class="text-success"><img alt="Логотип Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Вики-платформа #Jamstack.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
 
 Закулисное <span class="text-white">техническое описание</span> технологии, ожидающей патентования, см. в нашем информационном бюллетене [Управление зависимостями интеллектуального контента](/essays/dependencies)&trade; Эссе.
 
@@ -81,7 +81,7 @@ title: Главная
 
 &nbsp;
 
-- <span class="badge bg-success">Новое</span> [Тройные продукты собственных функций и спектральной геометрии](/essays/triple-products) Скоро на arXiv!
+- <span class="badge bg-success">Новое</span> [Википедия:Системы управления знаниями](/essays/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
 
 - [Производительность приложения](/essays/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения.
 
@@ -121,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2025-12-18 21:11:39 -0700 (Thu, 18 Dec 2025) $ $Author: joe $ $Revision: 27321 $ -->
+<!-- $Date: 2026-02-21 11:54:21 -0700 (Sat, 21 Feb 2026) $ $Author: joe $ $Revision: 27898 $ -->
