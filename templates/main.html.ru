@@ -78,7 +78,7 @@ title: ~
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
                 active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; #Jamstack Вики-платформа</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 active
                 {% endifequal %}"><a class=nav-link text-white
