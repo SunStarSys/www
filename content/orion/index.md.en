@@ -45,9 +45,9 @@ Orion is built for leaders who refuse to settle:
 
 - **High-availability architects &amp; principled engineers** — Escape the single points of failure baked into SQL-based LAMP stacks. Embrace true Jamstack scalability: concurrent builds, incremental updates, global POP coverage, and peak performance measured in milliseconds.
 
-- **Any business tired of wiki economics** — Ditch expensive SaaS subscriptions, fragile free tools that drain staff time, and outdated systems that slow your team down. Orion gives you enterprise power at a fraction of the total cost of ownership (often under $6,000/year for full enterprise use).
+- **Any business tired of wiki economics** — Ditch expensive SaaS subscriptions, fragile free tools that drain staff time, and outdated systems that slow your team down. Orion gives you enterprise power at a fraction of the total cost of ownership (often under $10,000/year for full enterprise use).
 
-Zero vendor lock-in — and we prove it.Your content lives in clean Markdown and standard Version Control workflows. No proprietary formats. No migration nightmares.
+Zero vendor lock-in — and we prove it. Your content lives in clean Markdown and standard Version Control workflows. No proprietary formats. No migration nightmares.
 
 Want transparency? See for yourself:
 
@@ -55,7 +55,7 @@ Our entire build-system logic for this very website: fewer than 100 lines of cod
 
 View the source: [our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
 
-The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → <https://github.com/SunStarSys/Orion>.
+The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → @SunStarSys/orion
 
 This isn't marketing spin—it's verifiable, open engineering heritage dating back to F/OSS innovations pioneered in 2011. Ready to experience a wiki that actually saves time, money, and headaches? [Give us a call or drop us a note](/contact) today.
 
@@ -69,7 +69,7 @@ This isn't marketing spin—it's verifiable, open engineering heritage dating ba
 
 <h3>Here's Why, Young Academic / Full Stack Developer / Public Blogger...</h3>
 
-Want a website that's **secure-by-default**?  Easy to update and manage, while hiding the complexity of an underlying version control system, yet giving you its full power when you truly need it?  Instant publication when you want it; smooth, staged branch builds and customizable granular promotions to your production site as it suits your team's preferred workflow.
+Want a website that's **secure-by-default**? Easy to update and manage, while hiding the complexity of an underlying version control system, yet giving you its full power when you truly need it?  Instant publication when you want it; smooth, staged branch builds and customizable granular promotions to your production site as it suits your team's preferred workflow.
 
 If you are tired of the per-seat licensing and per-CPU-cycle choices weighing you down whenever you need to fix a typo, [reach out to us](/contact). If you are in charge of content curation and are pining for a customizable facts database to manage your external links, or if you are a regex-equipped lion tamer for decades of accumulated legacy HTML content, or just someone dissatisfied with the other options on the market and how they function at scale, we have something really special to offer you.
 
