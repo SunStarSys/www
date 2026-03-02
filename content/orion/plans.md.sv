@@ -49,7 +49,7 @@ $25/månad/hanterad allmän webbplats
 						<li>Dataöverföring på 10 USD/40 Gbyte</li>
 						<li>$5/säte</li>
 						<li>$10/100 byggminuter</li>
-                        <li>$0,05 / sida AI NLP översättningar</li>
+                        <li>$0,50 / sida AI NLP översättningar</li>
 </ol>
 					</p>
 </li>
@@ -95,7 +95,7 @@ $ 100 / månad / hanterad offentlig webbplats, ~ 50 % rabatt på alla konkurrent
 						<li>Dataöverföring på 20 USD/100 Gbyte</li>
 						<li>$10/säte</li>
 						<li>$10/100 byggminuter</li>
-                        <li>$0,04 / sida AI NLP översättningar</li>
+                        <li>$0,40 / sida AI NLP översättningar</li>
                     </ol>
 					</p>
 					</li>
@@ -149,7 +149,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 						<li>$100 / ithread mod_perl registervärd</li>
 						<li>$100/OCI-region för anpassade POP</li>
 				<li>$100/1K Byggminuter</li>
-                <li>$0,03 / sida AI NLP översättningar</li>
+                <li>$0,30 / sida AI NLP översättningar</li>
                 <li>WebSockets och/eller värdtjänster för privata containrar tillgängliga</li>
                       </ol>
 					</p>
@@ -232,4 +232,4 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-02-16 13:20:51 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27685 $ -->
+<!-- $Date: 2026-02-16 13:23:10 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27695 $ -->
