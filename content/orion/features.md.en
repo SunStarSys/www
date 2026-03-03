@@ -120,28 +120,6 @@ Status: draft
 
 - [x] **WYSIWYG:** {# lede #}Same javascript code rendering engine in both your browser and in the (node.js-based) markdown.js build script{# lede #} ensures 100% structural consistency between the Editor.md Markdown preview window and the production site.
 - [x] YAML headers in source (markdown) files now fully supported.
-- [x] Native Flowchart and Sequence Diagram Support :fa-glass:
-
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
-&nbsp;
-----
-&nbsp;
 
 - [x] Native d3-graphviz.js support:
 
