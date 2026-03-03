@@ -154,10 +154,10 @@
   <footer>{% block footer %}{% endblock footer %}</footer>
 
   <script src="/editor.md/js/bootstrap.bundle.min.js"></script>
-  <script src="/editor.md/js/raphael.min.js"></script>
+<!--  <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
-  <script src="/editor.md/js/jquery.flowchart.min.js"></script>
+  <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
   <script src="/editor.md/js/sequence-diagram.min.js"></script>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
