@@ -124,7 +124,7 @@
 	    Search
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" {% if markdown_search %}checked{% endif %}/><label for="markdown-search"><small>Markdown</small></label>
+          id="markdown-search" value="1" checked /><label for="markdown-search"><small>Markdown</small></label>
         </form>
       </div>
     </div>
