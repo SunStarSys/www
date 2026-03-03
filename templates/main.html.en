@@ -173,7 +173,6 @@
     if (typeof(editormd) === "undefined") {
         
         mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".flowchart").flowChart();
         $(".sequence-diagram").sequenceDiagram();
         for (const e of $("body").find(".graphviz").toArray()) {
             d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
