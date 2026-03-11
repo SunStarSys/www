@@ -53,7 +53,7 @@ Want transparency? See for yourself:
 
 Our entire build-system logic for this very website: fewer than 100 lines of code, complete with sophisticated, memoized dependency management that auto-generates multilingual sitemaps, directory indexes, and more.
 
-View the source: [our viewvc source lib tree](https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
+View the source: [our source lib tree](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
 
 The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → @SunStarSys/orion
 
