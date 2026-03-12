@@ -26,7 +26,7 @@ title: SunStar 系統的 Orion
 </p>
 {# lede #}<span class="text-white">企業 Wiki 平台</span>&nbsp; 針對 <b>建立、管理與提供</b> 使用 #Jamstack 技術的靜態網頁，提供動態功能{# lede #}.
 
-如需價格資訊，請參閱我們的[Orion 計畫](p.
+如需價格資訊，請參閱我們的[Orion 計畫](plans).
 
 ### 這裡'行政決策者，執行決策者 ...
 
@@ -56,11 +56,11 @@ Orion 專為拒絕的領導者而打造 settle:
 
 我們對此非常完整的建構系統邏輯 website: 不到 100 行的程式碼，完全運用複雜的重複相依性管理，自動產生多語言網站地圖、目錄索引等功能。
 
-檢視 source: [我們的來源 lib 樹)，或其[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](h.
+檢視 source: [我們的來源 lib 樹](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)，或其[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](https://github.com/SunStarSys/www/tree/trunk/lib).
 
 基礎靜態網站 Generator: 開源於 GitHub 的 Apache License 2.0 → @SunStarSys/orion
 
-這不是't 行銷微調 -it'可驗證、開放的工程傳承，可追溯至 2011 年 F/OSS 創新技術。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？[給我們打電話或給我們留言) 今天。
+這不是't 行銷微調 -it'可驗證、開放的工程傳承，可追溯至 2011 年 F/OSS 創新技術。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？[給我們打電話或給我們留言](/contact) 今天。
 
 </div>
 
@@ -74,13 +74,13 @@ Orion 專為拒絕的領導者而打造 settle:
 
 想要一個網站，'s ** 預設保護 **？易於更新和管理，同時隱藏基礎版本控制系統的複雜性，但是在您真正需要時提供其完整功能？隨時隨地進行即時發布；順暢、暫存的分公司可根據您的團隊需求，為您的生產現場建立可客製化的精細促銷's 喜好的工作流程。
 
-若您厭倦了每一台電腦的授權，以及每一 CPU 週期的選擇，在需要修正打字錯誤時會減輕您的負擔，[聯繫我們](h。如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
+若您厭倦了每一台電腦的授權，以及每一 CPU 週期的選擇，在需要修正打字錯誤時會減輕您的負擔，[聯繫我們](/contact)。如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
 
 絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 IDE 的設計可讓您隨時進行 ** 僅限瀏覽器的工作流程 **。在手指中，即使是行動裝置(瀏覽器) 介面將完成，* 立即 *。
 
 <div id="lightning">
 
-![閃電).
+![閃電](index.page/lightning).
 
 </div>
 
@@ -90,15 +90,15 @@ div#lightning img {width:100%}
 
 </style>
 
-多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 * 秒 * (而非小時和分鐘) 計算。系統容易維持於[`500 MB/ 秒`](/ 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新排序 them:
+多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 * 秒 * (而非小時和分鐘) 計算。系統容易維持於[`500 MB/ 秒`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新排序 them:
 
 <span class="text-success"><em>我們只建立您需要的建置項目。</em></span>&trade;
 
-此技術於 2011 年底首次由 Apache 基礎架構團隊成員發明。片語"[JAM 堆疊)" 多年後，由一群人不知悉我們在此空間之前的藝術。但[公開記錄](/ 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
+此技術於 2011 年底首次由 Apache 基礎架構團隊成員發明。片語"[JAM 堆疊](https://jamstack.wtf)" 多年後，由一群人不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
 
 <h4>想要讓它快速旋轉，看看它的速度和簡易性如何？</h4>
 
-這個網站是自主代管的，所有這些熱粉紅色鉛筆方塊[<img src="../images/edit.png" style="width:20px">) 右上角已上線。快來玩，並對您看到的任何東西進行實驗！唯一可以做的事't do 確認並監看您的變更建置與部署；'因明顯原因限制我們的人員。
+這個網站是自主代管的，所有這些熱粉紅色鉛筆方塊[<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上角已上線。快來玩，並對您看到的任何東西進行實驗！唯一可以做的事't do 確認並監看您的變更建置與部署；'因明顯原因限制我們的人員。
 
 我們的全球出席點(POP) 網路可確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於四大洲，在美國境內也有雙海濱。我們'正在快速擴展東亞！
 
@@ -110,7 +110,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-查看我們的[Orion 計畫](i 針對目前的交易。
+查看我們的[Orion 計畫](plans) 針對目前的交易。
 
 </div>
 </div>
@@ -129,8 +129,8 @@ div#lightning img {width:100%}
 ### 明細
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}) &mdash; {{d.0}}
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
 
 <hr />
 <br />

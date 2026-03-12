@@ -26,7 +26,7 @@ title: SunStar System-Orion
 </p>
 {# lede #}<span class="text-white">Enterprise Wiki-Plattform</span>&nbsp; für <b>Erstellen, Verwalten und Bereitstellen</b> statische Webseiten mit #Jamstack-Technologie für dynamische Funktionen darin{# lede #}.
 
-Preisinformationen finden Sie unter [Orionpläne](p.
+Preisinformationen finden Sie unter [Orionpläne](plans).
 
 ### Hier's der Pitch, Executive Entscheider...
 
@@ -56,11 +56,11 @@ Sie wollen Transparenz? Siehe für yourself:
 
 Unsere gesamte Build-Systemlogik für diese website: weniger als 100 Zeilen Code, komplett mit ausgefeilter, memoisierter Abhängigkeitsverwaltung, die automatisch mehrsprachige Sitemap, Verzeichnisindizes und mehr generiert.
 
-Anzeigen source: [Unser Quell-Lib-Baum)oder [<i class="fa fa-github fa-emoji" title="Github"></i> Spiegel GitHub](h.
+Anzeigen source: [Unser Quell-Lib-Baum](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)oder [<i class="fa fa-github fa-emoji" title="Github"></i> Spiegel GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
 
 Die zugrunde liegende statische Site Generator: Open-Sourced auf GitHub unter Apache License 2.0 → @SunStarSys/orion
 
-Dies ist'Marketing-Spin – es'ein nachweisbares, offenes technisches Erbe, das auf F/OSS-Innovationen zurückgeht, die 2011 Pionierarbeit geleistet haben. Bereit, ein Wiki zu erleben, das Zeit, Geld und Kopfschmerzen spart? [Rufen Sie uns an oder schreiben Sie uns eine Nachricht) heute.
+Dies ist'Marketing-Spin – es'ein nachweisbares, offenes technisches Erbe, das auf F/OSS-Innovationen zurückgeht, die 2011 Pionierarbeit geleistet haben. Bereit, ein Wiki zu erleben, das Zeit, Geld und Kopfschmerzen spart? [Rufen Sie uns an oder schreiben Sie uns eine Nachricht](/contact) heute.
 
 </div>
 
@@ -74,13 +74,13 @@ Dies ist'Marketing-Spin – es'ein nachweisbares, offenes technisches Erbe, das 
 
 Möchten Sie eine Website, die'**Secure-by-Default**? Einfach zu aktualisieren und zu verwalten, während Sie die Komplexität eines zugrunde liegenden Versionskontrollsystems verbergen und Ihnen dennoch die volle Leistung bieten, wenn Sie es wirklich brauchen?  Sofortige Veröffentlichung, wenn Sie es möchten; reibungslose, zwischengespeicherte Filialerstellung und anpassbare granulare Werbeaktionen auf Ihrer Produktionswebsite, wie es Ihrem Team entspricht'bevorzugten Workflow.
 
-Wenn Sie es satt haben, die pro Sitzplatz lizenzierten und pro CPU-Zyklus Auswahlen abzuwägen, wann immer Sie einen Tippfehler beheben müssen, [Kontaktieren Sie uns](h. Wenn Sie für die Inhaltspflege verantwortlich sind und für eine anpassbare Faktendatenbank zur Verwaltung Ihrer externen Links sorgen, oder wenn Sie ein regulärer Löwenzahmer für Jahrzehnte gesammelter HTML-Inhalte oder einfach nur jemand, der mit den anderen Optionen auf dem Markt unzufrieden ist und wie sie in großem Maßstab funktionieren, haben wir etwas ganz Besonderes zu bieten.
+Wenn Sie es satt haben, die pro Sitzplatz lizenzierten und pro CPU-Zyklus Auswahlen abzuwägen, wann immer Sie einen Tippfehler beheben müssen, [Kontaktieren Sie uns](/contact). Wenn Sie für die Inhaltspflege verantwortlich sind und für eine anpassbare Faktendatenbank zur Verwaltung Ihrer externen Links sorgen, oder wenn Sie ein regulärer Löwenzahmer für Jahrzehnte gesammelter HTML-Inhalte oder einfach nur jemand, der mit den anderen Optionen auf dem Markt unzufrieden ist und wie sie in großem Maßstab funktionieren, haben wir etwas ganz Besonderes zu bieten.
 
 Niemals direkt mit einem Versionskontrollsystem oder sogar einem statischen Site-Generator auf Ihrem eigenen Computer umgehen zu müssen, liegt an Ihnen. Die Online-IDE ist so konzipiert und bereit für Ihren **Nur-Browser-Workflow**, wann immer Sie es sind.  In einer Prise, sogar das mobile (Browser) Schnittstelle erledigt, *sofort*.
 
 <div id="lightning">
 
-![Blitz).
+![Blitz](index.page/lightning).
 
 </div>
 
@@ -90,15 +90,15 @@ div#lightning img {width:100%}
 
 </style>
 
-Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Die Dauer der vollständigen Siteerstellung wird in *Sekunden*, nicht in Stunden und Minuten gemessen.  Das System hält leicht über [`500 MB/s`](/ bei der Verarbeitung Ihrer Quellen für vollständige Site-Builds, aber aufgrund der <span class="text-white">einzigartiges, zum Patent angemeldetes Abhängigkeitsmanagement</span> Funktionalität, es muss fast nie auf them:
+Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Die Dauer der vollständigen Siteerstellung wird in *Sekunden*, nicht in Stunden und Minuten gemessen.  Das System hält leicht über [`500 MB/s`](features) bei der Verarbeitung Ihrer Quellen für vollständige Site-Builds, aber aufgrund der <span class="text-white">einzigartiges, zum Patent angemeldetes Abhängigkeitsmanagement</span> Funktionalität, es muss fast nie auf them:
 
 <span class="text-success"><em>Wir bauen nur das, was Sie bauen müssen.</em></span>&trade;
 
-Diese Technologie wurde Ende 2011 erstmals von Mitgliedern des Apache Infrastructure Teams erfunden. Der Satz "[JAM-Stack)" wurde Jahre später von einer Gruppe geprägt, die sich unseres Standes der Technik in diesem Raum nicht bewusst war.  Aber die [Öffentlicher Datensatz](/ ist kristallklar, und dieses neue Angebot von SunStar Systems zeugt von diesem ursprünglichen Erbe und seinen wahren Open-Source-Ursprüngen.
+Diese Technologie wurde Ende 2011 erstmals von Mitgliedern des Apache Infrastructure Teams erfunden. Der Satz "[JAM-Stack](https://jamstack.wtf)" wurde Jahre später von einer Gruppe geprägt, die sich unseres Standes der Technik in diesem Raum nicht bewusst war.  Aber die [Öffentlicher Datensatz](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ist kristallklar, und dieses neue Angebot von SunStar Systems zeugt von diesem ursprünglichen Erbe und seinen wahren Open-Source-Ursprüngen.
 
 <h4>Möchten Sie es kurz drehen, um zu sehen, wie schnell und einfach es ist?</h4>
 
-Diese Website ist selbst gehostet; alle diese hot-pink Bleistift Quadrate [<img src="../images/edit.png" style="width:20px">) rechts oben sind live.  Fühlen Sie sich frei herumzustoßen und mit allem zu experimentieren, was Sie sehen!  Das Einzige, was Sie können't do ist festschreiben und beobachten Sie Ihre Änderungen erstellen und bereitstellen.'aus offensichtlichen Gründen auf unser Personal beschränkt.
+Diese Website ist selbst gehostet; alle diese hot-pink Bleistift Quadrate [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) rechts oben sind live.  Fühlen Sie sich frei herumzustoßen und mit allem zu experimentieren, was Sie sehen!  Das Einzige, was Sie können't do ist festschreiben und beobachten Sie Ihre Änderungen erstellen und bereitstellen.'aus offensichtlichen Gründen auf unser Personal beschränkt.
 
 Unsere globale Präsenz (POP) Netzwerk stellt Verbindungen mit geringer Latenz zu beiden Orion sicher &trade; und die End-Delivery-Websites, die wir hosten.  Wir sind derzeit auf vier Kontinenten und haben eine bicoastale Präsenz in den USA.  und wir'rasant expandieren – nach Ostasien!
 
@@ -110,7 +110,7 @@ Darüber hinaus verfügen alle Kunden über kostenlose, anpassbare oder javascri
 
 &nbsp;
 
-Sehen Sie unsere [Orionpläne](i für die aktuellen Deals.
+Sehen Sie unsere [Orionpläne](plans) für die aktuellen Deals.
 
 </div>
 </div>
@@ -129,8 +129,8 @@ Sehen Sie unsere [Orionpläne](i für die aktuellen Deals.
 ### Details
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}) &mdash; {{d.0}}
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
 
 <hr />
 <br />

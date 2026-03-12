@@ -26,7 +26,7 @@ title: SunStar Orion för system
 </p>
 {# lede #}<span class="text-white">Wiki-plattform för företag</span>&nbsp; för <b>skapa, hantera och leverera</b> statiska webbsidor som använder #Jamstack-teknik för dynamiska funktioner däri{# lede #}.
 
-För prisinformation, se vår [Orionplaner](p.
+För prisinformation, se vår [Orionplaner](plans).
 
 ### Här'Pitch, Executive Decision Maker är en...
 
@@ -56,11 +56,11 @@ Vill du ha transparens? Se för yourself:
 
 Hela vårt byggsystems logik för just detta website: färre än 100 rader med kod, komplett med sofistikerad, uppdelad beroendehantering som automatiskt genererar flerspråkiga webbplatskartor, katalogindex med mera.
 
-Visa source: [Vårt källbiblioteksträd)eller dess [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub spegel](h.
+Visa source: [Vårt källbiblioteksträd](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)eller dess [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub spegel](https://github.com/SunStarSys/www/tree/trunk/lib).
 
 Den underliggande statiska webbplatsen Generator: öppen källkod på GitHub under Apache License 2.0 → @SunStarSys/orion
 
-Detta är't marknadsföring spin-it'Det är ett verifierbart, öppet ingenjörsarv som går tillbaka till F/OSS-innovationer som lanserades 2011. Redo att uppleva en wiki som faktiskt sparar tid, pengar och huvudvärk? [Ring eller skicka ett meddelande till oss) idag.
+Detta är't marknadsföring spin-it'Det är ett verifierbart, öppet ingenjörsarv som går tillbaka till F/OSS-innovationer som lanserades 2011. Redo att uppleva en wiki som faktiskt sparar tid, pengar och huvudvärk? [Ring eller skicka ett meddelande till oss](/contact) idag.
 
 </div>
 
@@ -74,13 +74,13 @@ Detta är't marknadsföring spin-it'Det är ett verifierbart, öppet ingenjörsa
 
 Vill ha en webbplats som's **säkerhet för standard**? Lätt att uppdatera och hantera, samtidigt som du döljer komplexiteten hos ett underliggande versionskontrollsystem, men ändå ger dig full kraft när du verkligen behöver det?  Direktpublicering när du vill ha det; smidiga, mellanlagrade grenbyggen och anpassningsbara granulära kampanjer till din produktionsplats som det passar ditt team'önskat arbetsflöde.
 
-Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](h. Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
+Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
 
 Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. IDE online är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa, även den mobila (webbläsare) gränssnittet kommer att få det gjort, *instant*.
 
 <div id="lightning">
 
-![Blixt).
+![Blixt](index.page/lightning).
 
 </div>
 
@@ -90,15 +90,15 @@ div#lightning img {width:100%}
 
 </style>
 
-Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`500 Mbyte/s`](/ när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa them:
+Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`500 Mbyte/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa them:
 
 <span class="text-success"><em>Vi bygger bara det du behöver.</em></span>&trade;
 
-Denna teknik uppfanns först i slutet av 2011 av medlemmar i Apache Infrastructure Team. Frasen "[JAM-stack)" Det myntades år senare av en grupp som inte kände till vår tidigare konst i detta utrymme.  Men den [allmän handling](/ Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
+Denna teknik uppfanns först i slutet av 2011 av medlemmar i Apache Infrastructure Team. Frasen "[JAM-stack](https://jamstack.wtf)" Det myntades år senare av en grupp som inte kände till vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
 
 <h4>Vill du ge det en snabb snurr för att se hur snabbt och enkelt det är?</h4>
 
-Denna webbplats är själv värd; alla dessa heta rosa penna rutor [<img src="../images/edit.png" style="width:20px">) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du kan't do är att bekräfta och titta på dina ändringar bygga och distribuera; att'Vi är begränsade till vår personal av uppenbara skäl.
+Denna webbplats är själv värd; alla dessa heta rosa penna rutor [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du kan't do är att bekräfta och titta på dina ändringar bygga och distribuera; att'Vi är begränsade till vår personal av uppenbara skäl.
 
 Vår globala närvaropunkt (POP) nätverket säkerställer anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi är för närvarande på fyra kontinenter och har en bicoastal närvaro inom USA.  Och vi'expanderar snabbt - nästa upp i Östasien!
 
@@ -110,7 +110,7 @@ Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade
 
 &nbsp;
 
-Se våra [Orionplaner](i för de aktuella avtalen.
+Se våra [Orionplaner](plans) för de aktuella avtalen.
 
 </div>
 </div>
@@ -129,8 +129,8 @@ Se våra [Orionplaner](i för de aktuella avtalen.
 ### Detaljer
 
 {% for d in deps %}
-- [{{d.1.headers.title|safe}}) &mdash; {{d.0}}
-{{d.1.content|lede}}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
 
 <hr />
 <br />
