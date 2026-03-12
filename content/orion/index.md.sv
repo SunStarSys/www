@@ -46,9 +46,9 @@ Orion är byggd för ledare som vägrar att bosätta sig:
 
 - **Teknikföretag &amp; Webbplatsbyråer** &mdash; Ersätt osäkra kommersiella wikier, tama berg av produktdokumentation, kundwebbplatser och till och med binära nedladdningar. Curate allt med förtroende, hastighet och ironclad versionshistorik.
 
-- ** Arkitekter med hög tillgänglighet &amp; principiella ingenjörer &mdash; Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
+- **Arkitekter med hög tillgänglighet &amp; principiella ingenjörer &mdash; Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
 
-- ** Alla företag trött på wiki ekonomi** &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 10 000 dollar per år för full företagsanvändning).
+- **Alla företag trött på wiki ekonomi** &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 10 000 dollar per år för full företagsanvändning).
 
 Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns i rena arbetsflöden för Markdown och standardversionskontroll. Inga proprietära format. Inga mardrömmar om migration.
 
@@ -76,7 +76,7 @@ Vill ha en webbplats som's **säkerhet för standard**? Lätt att uppdatera och 
 
 Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
 
-Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. IDE online är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa kommer även det mobila (webbläsargränssnittet) att få det gjort, * direkt*.
+Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. IDE online är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa kommer även det mobila (webbläsargränssnittet) att få det gjort, *direkt*.
 
 <div id="lightning">
 
@@ -104,7 +104,7 @@ Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort 
 
 <h3>Det'Dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp.</h3>
 
-Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du * faktiskt använder * på vår infrastruktur. Ta bara med ditt eget AI-förbättrade css/javascript-ramverk, perl-skript och Django-mallar, så tar vi hand om resten av din installation utan extra kostnad. Vi rekommenderar **Bootstrap 5** för css/js styling, eftersom det är vad vi använder internt; men det är helt upp till dig.
+Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du *faktiskt använder *på vår infrastruktur. Ta bara med ditt eget AI-förbättrade css/javascript-ramverk, perl-skript och Django-mallar, så tar vi hand om resten av din installation utan extra kostnad. Vi rekommenderar **Bootstrap 5** för css/js styling, eftersom det är vad vi använder internt; men det är helt upp till dig.
 
 Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade gränssnitt till vår kraftfulla, egenutvecklade PCRE-sökmotor.
 
