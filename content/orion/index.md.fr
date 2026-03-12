@@ -26,7 +26,7 @@ title: SunStar Orion de Systems
 </p>
 {# lede #}<span class="text-white">Plateforme Wiki d'entreprise</span>&nbsp; pour <b>création, gestion et livraison</b> pages Web statiques utilisant la technologie #Jamstack pour les fonctionnalités dynamiques{# lede #}.
 
-Pour plus d'informations sur les prix, consultez notre [Plans Orion](plans.
+Pour plus d'informations sur les prix, consultez notre [Plans Orion](p.
 
 ### Ici'Le Pitch, décideur exécutif...
 
@@ -48,7 +48,7 @@ Orion est construit pour les dirigeants qui refusent settle:
 
 - **Architectes haute disponibilité &amp; ingénieurs principaux** — Échappez les points d'échec uniques cuits dans des piles LAMP basées sur SQL. Embrassez le vrai Jamstack scalability: builds simultanés, mises à jour incrémentielles, couverture globale des POP et performances maximales mesurées en millisecondes.
 
-- **Toute entreprise fatiguée de l'économie du wiki** — Ditch coûteux abonnements SaaS, des outils gratuits fragiles qui épuisent le temps du personnel, et des systèmes obsolètes qui ralentissent votre équipe. Orion vous donne de l'énergie à l'entreprise à une fraction du coût total de possession (souvent moins de 10 000 $/an pour un usage professionnel complet).
+- **Toute entreprise fatiguée de l'économie du wiki** — Ditch coûteux abonnements SaaS, des outils gratuits fragiles qui épuisent le temps du personnel, et des systèmes obsolètes qui ralentissent votre équipe. Orion vous donne la puissance de l'entreprise à une fraction du coût total de possession (souvent moins de 10 000 $/an pour une utilisation professionnelle complète).
 
 Zéro verrouillage de fournisseur - et nous le prouvons. Votre contenu réside dans des flux de travail Markdown et Version Control standard. Aucun format propriétaire. Pas de cauchemar de migration.
 
@@ -56,7 +56,7 @@ Vous voulez de la transparence ? Voir pour yourself:
 
 toute la logique du système de construction pour ce website: moins de 100 lignes de code, avec une gestion sophistiquée et mémorisée des dépendances qui génère automatiquement des sitemaps multilingues, des index d'annuaire, etc.
 
-Afficher le source: [notre source lib tree)ou [<i class="fa fa-github fa-emoji" title="Github"></i> Miroir GitHub](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/.
+Afficher le source: [notre source lib tree)ou [<i class="fa fa-github fa-emoji" title="Github"></i> Miroir GitHub](h.
 
 Site statique sous-jacent Generator: open-sourced sur GitHub sous Apache License 2.0 → @SunStarSys/orion
 
@@ -74,9 +74,9 @@ Ceci est'marketing spin-it'Un patrimoine d'ingénierie ouvert et vérifiable dat
 
 Un site web qui's **sécurisé par défaut** ? Facile à mettre à jour et à gérer, tout en cachant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ?  Publication instantanée quand vous le souhaitez ; création de succursales lisses et préparées et promotions granulaires personnalisables sur votre site de production selon vos besoins'workflow préféré.
 
-Si vous êtes fatigué des licences par siège et des choix par cycle CPU qui vous pèsent chaque fois que vous avez besoin de corriger une faute de frappe, [contactez-nous](https://github.com/SunStarSys/www/tree/trunk/lib. Si vous êtes en charge de la curation du contenu et que vous recherchez une base de données de faits personnalisable pour gérer vos liens externes, ou si vous êtes un joueur de lion équipé d'une expression régulière pour Des décennies de contenu HTML historique accumulé, ou juste quelqu'un qui n'est pas satisfait des autres options sur le marché et de leur fonctionnement à grande échelle, nous avons quelque chose de vraiment spécial à vous offrir.
+Si vous êtes fatigué des licences par siège et des choix par cycle CPU qui vous pèsent chaque fois que vous avez besoin de corriger une faute de frappe, [contactez-nous](h. Si vous êtes en charge de la curation du contenu et que vous recherchez une base de données de faits personnalisable pour gérer vos liens externes, ou si vous êtes un joueur de lion équipé d'une expression régulière pour Des décennies de contenu HTML historique accumulé, ou juste quelqu'un qui n'est pas satisfait des autres options sur le marché et de leur fonctionnement à grande échelle, nous avons quelque chose de vraiment spécial à vous offrir.
 
-Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous le souhaitez.  Dans un pincement, même l'interface mobile (navigateur) le fera, *instantanément*.
+Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous le souhaitez.  En un clin d'œil, même le mobile (navigateur) l'interface le fera, *instantanément*.
 
 <div id="lightning">
 
@@ -90,17 +90,17 @@ div#lightning img {width:100%}
 
 </style>
 
-Les arbres sources multi-gigaoctets ne correspondent tout simplement pas &mdash; Les durées de construction du site complet sont mesurées en *secondes*, et non en heures et minutes.  Le système se maintient facilement [`500 Mo/s`](/contact lors du traitement de vos sources pour des builds de site complets, mais étant donné <span class="text-white">gestion de la dépendance unique et en attente de brevet</span> fonctionnalité, il n'a presque jamais besoin de recourir à them:
+Les arbres sources multi-gigaoctets ne correspondent tout simplement pas &mdash; Les durées de construction du site complet sont mesurées en *secondes*, et non en heures et minutes.  Le système se maintient facilement [`500 Mo/s`](/ lors du traitement de vos sources pour des builds de site complets, mais étant donné <span class="text-white">gestion de la dépendance unique et en attente de brevet</span> fonctionnalité, il n'a presque jamais besoin de recourir à them:
 
 <span class="text-success"><em>Nous ne construisons que ce dont vous avez besoin.</em></span>&trade;
 
-Cette technologie a été inventée pour la première fois fin 2011 par des membres de l'équipe d'infrastructure Apache. La phrase "[Pile JAM)" a été inventé des années plus tard, par un groupe ignorant notre art antérieur dans cet espace.  Mais le [dossier public](/contact est limpide, et cette nouvelle offre de SunStar Systems témoigne de cet héritage original et de ses véritables origines open source.
+Cette technologie a été inventée pour la première fois fin 2011 par des membres de l'équipe d'infrastructure Apache. La phrase "[Pile JAM)" a été inventé des années plus tard, par un groupe ignorant notre art antérieur dans cet espace.  Mais le [dossier public](/ est limpide, et cette nouvelle offre de SunStar Systems témoigne de cet héritage original et de ses véritables origines open source.
 
 <h4>Vous voulez lui donner un tour rapide pour voir à quel point il est rapide et facile ?</h4>
 
 Ce site est auto-hébergé ; tous ces carrés de crayon rose chaud [<img src="../images/edit.png" style="width:20px">) En haut à droite sont en direct.  N'hésitez pas à poke autour et expérimenter avec tout ce que vous voyez !  La seule chose que vous pouvez't do est valider et regarder vos modifications construire et déployer ; que's limité à notre personnel pour des raisons évidentes.
 
-Notre réseau mondial de points de présence (POP) assure des connexions à faible latence avec Orion &trade; et les sites Web de livraison finale que nous hébergeons.  Nous sommes actuellement sur quatre continents et avons une présence bicoastale aux États-Unis.  Et nous'se développer rapidement - prochainement l'Asie de l'Est !
+Notre point de présence mondial (POP) réseau assure des connexions à faible latence avec Orion &trade; et les sites Web de livraison finale que nous hébergeons.  Nous sommes actuellement sur quatre continents et avons une présence bicoastale aux États-Unis.  Et nous'se développer rapidement - prochainement l'Asie de l'Est !
 
 <h3>Ce'Le temps pour un changement dans la façon dont vous gérez et livrez votre site à votre public cible.</h3>
 
@@ -110,7 +110,7 @@ En outre, tous les clients disposent d'interfaces gratuites, personnalisables pa
 
 &nbsp;
 
-Voir notre [Plans Orion](index.page/lightning pour les opérations actuelles.
+Voir notre [Plans Orion](i pour les opérations actuelles.
 
 </div>
 </div>
@@ -142,7 +142,7 @@ Voir notre [Plans Orion](index.page/lightning pour les opérations actuelles.
 <h3>Vue Editeur IDE.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
 <br/>
-<h3>Vue Editeur IDE (espagnol).</h3>
+<h3>Vue Editeur IDE (Espagnol).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
 <br/>
 <h3>Paramétrage complet du site IDE.</h3>
@@ -151,7 +151,7 @@ Voir notre [Plans Orion](index.page/lightning pour les opérations actuelles.
 <h3>Paramétrage de sites standard IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> <small>(les liens dans <span style="color:#e83e8c">rose chaud</span> vous déposera directement dans un écran d'éditeur, avec le curseur placé exactement selon le texte correspondant)</small>.</h3>
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> <small>(ces liens dans <span style="color:#e83e8c">rose chaud</span> vous déposera directement dans un écran d'éditeur, avec le curseur placé exactement selon le texte correspondant)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
 

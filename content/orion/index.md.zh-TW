@@ -26,7 +26,7 @@ title: SunStar 系統的 Orion
 </p>
 {# lede #}<span class="text-white">企業 Wiki 平台</span>&nbsp; 針對 <b>建立、管理與提供</b> 使用 #Jamstack 技術的靜態網頁，提供動態功能{# lede #}.
 
-如需價格資訊，請參閱我們的[Orion 計畫](plans.
+如需價格資訊，請參閱我們的[Orion 計畫](p.
 
 ### 這裡'行政決策者，執行決策者 ...
 
@@ -48,7 +48,7 @@ Orion 專為拒絕的領導者而打造 settle:
 
 - ** 高可用性架構師&amp; 主要工程師 ** — 將單一故障點洩漏到以 SQL 為基礎的 LAMP 堆疊中。擁抱真正的 Jamstack scalability: 並行組建、增量更新、全域 POP 涵蓋範圍以及尖峰效能 (毫秒)。
 
-- ** 任何已厭倦了 Wiki 經濟效益 ** — 降低昂貴的 SaaS 訂閱費用、減少員工時間的易碎工具，以及拖慢團隊停止運作的過時系統。Orion 讓您以部分總體擁有成本擁有企業電力 (通常每年不到 10,000 美元供企業使用)。
+- ** 任何已厭倦了 Wiki 經濟效益 ** — 降低昂貴的 SaaS 訂閱費用、減少員工時間的易碎工具，以及拖慢團隊停止運作的過時系統。Orion 讓您擁有企業力量，佔總體擁有成本的一小部分(每年通常不到 $10,000 供全企業使用).
 
 零供應商鎖定 — 我們證明了。您的內容生活在乾淨的 Markdown 和標準版本控制工作流程中。沒有專屬格式。沒有遷移惡夢。
 
@@ -56,7 +56,7 @@ Orion 專為拒絕的領導者而打造 settle:
 
 我們對此非常完整的建構系統邏輯 website: 不到 100 行的程式碼，完全運用複雜的重複相依性管理，自動產生多語言網站地圖、目錄索引等功能。
 
-檢視 source: [我們的來源 lib 樹)，或其[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/.
+檢視 source: [我們的來源 lib 樹)，或其[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](h.
 
 基礎靜態網站 Generator: 開源於 GitHub 的 Apache License 2.0 → @SunStarSys/orion
 
@@ -74,9 +74,9 @@ Orion 專為拒絕的領導者而打造 settle:
 
 想要一個網站，'s ** 預設保護 **？易於更新和管理，同時隱藏基礎版本控制系統的複雜性，但是在您真正需要時提供其完整功能？隨時隨地進行即時發布；順暢、暫存的分公司可根據您的團隊需求，為您的生產現場建立可客製化的精細促銷's 喜好的工作流程。
 
-若您厭倦了每一台電腦的授權，以及每一 CPU 週期的選擇，在需要修正打字錯誤時會減輕您的負擔，[聯繫我們](https://github.com/SunStarSys/www/tree/trunk/lib。如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
+若您厭倦了每一台電腦的授權，以及每一 CPU 週期的選擇，在需要修正打字錯誤時會減輕您的負擔，[聯繫我們](h。如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
 
-絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 IDE 的設計可讓您隨時進行 ** 僅限瀏覽器的工作流程 **。* 立即 *，即使是行動 (瀏覽器) 介面也能順利完成。
+絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 IDE 的設計可讓您隨時進行 ** 僅限瀏覽器的工作流程 **。在手指中，即使是行動裝置(瀏覽器) 介面將完成，* 立即 *。
 
 <div id="lightning">
 
@@ -90,17 +90,17 @@ div#lightning img {width:100%}
 
 </style>
 
-多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 * 秒 * (而非小時和分鐘) 計算。系統容易維持於[`500 MB/ 秒`](/contact 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新排序 them:
+多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 * 秒 * (而非小時和分鐘) 計算。系統容易維持於[`500 MB/ 秒`](/ 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新排序 them:
 
 <span class="text-success"><em>我們只建立您需要的建置項目。</em></span>&trade;
 
-此技術於 2011 年底首次由 Apache 基礎架構團隊成員發明。片語"[JAM 堆疊)" 多年後，由一群人不知悉我們在此空間之前的藝術。但[公開記錄](/contact 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
+此技術於 2011 年底首次由 Apache 基礎架構團隊成員發明。片語"[JAM 堆疊)" 多年後，由一群人不知悉我們在此空間之前的藝術。但[公開記錄](/ 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
 
 <h4>想要讓它快速旋轉，看看它的速度和簡易性如何？</h4>
 
 這個網站是自主代管的，所有這些熱粉紅色鉛筆方塊[<img src="../images/edit.png" style="width:20px">) 右上角已上線。快來玩，並對您看到的任何東西進行實驗！唯一可以做的事't do 確認並監看您的變更建置與部署；'因明顯原因限制我們的人員。
 
-我們的全球網路連接點 (POP) 可確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於四大洲，在美國境內也有雙海濱。我們'正在快速擴展東亞！
+我們的全球出席點(POP) 網路可確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於四大洲，在美國境內也有雙海濱。我們'正在快速擴展東亞！
 
 <h3>它'是時候，您如何管理網站並將其傳遞給目標受眾。</h3>
 
@@ -110,7 +110,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-查看我們的[Orion 計畫](index.page/lightning 針對目前的交易。
+查看我們的[Orion 計畫](i 針對目前的交易。
 
 </div>
 </div>
@@ -136,13 +136,13 @@ div#lightning img {width:100%}
 <br />
 <h2>少數代表畫面 Shots:</h2>
 <br />
-<h3>IDE View - 德文、法文、希伯來文和俄文 (UTF-8)。</h3>
+<h3>IDE View - 德文、法文、希伯來文和俄文(UTF-8 用).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
 <h3>IDE 編輯器檢視。</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
 <br/>
-<h3>IDE 編輯器檢視 (西班牙文)。</h3>
+<h3>IDE 編輯器檢視(西班牙文).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
 <br/>
 <h3>IDE 完整網站建置。</h3>
@@ -151,7 +151,7 @@ div#lightning img {width:100%}
 <h3>IDE 一般網站建置。</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
 <br />
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE 搜尋</a> <small>(這些連結位於<span style="color:#e83e8c">熱粉紅</span> 將您直接放到編輯器螢幕中，游標會根據比對文字精確地放置)</small>.</h3>
+<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE 搜尋</a> <small>(這些連結位於<span style="color:#e83e8c">熱粉紅</span> 將您直接放到編輯器螢幕中，游標會根據比對文字而完全放置)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
 
