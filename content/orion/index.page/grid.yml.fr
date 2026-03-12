@@ -4,87 +4,182 @@ categories: ~
 keywords: ~
 published: ~
 status: projet
-title: Données de table pour la grille de comparaison des fonctionnalités
+title: Données de table pour la grille de comparaison des caractéristiques
 ---
 
 
+- Feature: "[à la carte AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+
+  Orion: "&check;"
+
 - Feature: "SSO : Kerberos / Répertoire actif / Intégration OpenID"
+
   Orion: "&check;"
+
   Slab: "&check;"
+
   Notify: "SCIM uniquement"
+
   Confluence: "&check;"
-- Feature: "Infrastructure à confiance zéro conforme FIPS 140-3"
+
+- Feature: "Infrastructure Zero Trust conforme à la norme FIPS 140-3"
+
   Orion: "&check;"
+
 - Feature: "FedRAMP Infrastructure"
+
   Orion: "Installation du serveur"
-- Feature: "Workflow intégré au navigateur (adapté aux mobiles)"
+
+- Feature: "Base de données de faits globale"
+
   Orion: "&check;"
+
+
+- Feature: "Workflow intégré au navigateur (portable)"
+
+  Orion: "&check;"
+
   Slab: "&check;"
+
   Notify: "&check;"
+
   Confluence: "&check;"
-- Feature: "Support DAV"
+
+- Feature: "Prise en charge de DAV"
+
   Orion: "&check;"
+
   Confluence: "&check;"
-- Feature: "Fabrication incrémentielle"
+
+- Feature: "Builds incrémentiels"
+
   Orion: "&check;"
-- Feature: "Bâtiments d'agence illimités"
+
+- Feature: "Nombre illimité de succursales"
+
   Orion: "&check;"
-- Feature: Builds planifiés de contenu dynamique uniquement
+
+
+- Feature: "Builds planifiés du contenu dynamique uniquement"
+
   Orion: "&check;"
-- Feature: "Prise en charge de l'analyse par la 3e partie"
+
+- Feature: "Support 3rd Party Analytics"
+
   Orion: "&check;"
-- Feature: "Regarder la liste des notifications d'appareil"
+
+- Feature: "Notifications d'appareil de liste de surveillance"
+
   Orion: "&check;"
+
   Confluence: "&check;"
-- Feature: "Multilingual (i18n)"
+
+- Feature: "Multilingue (i18n)"
+
   Orion: "&check;"
-- Feature: 'Recherche complète possible <span class="editormd-tex">\KaTeX</span> Expressions'
-  Orion: "&check;"
-  Confluence: "$$$"
-- Feature: "Fédéré"
-  Orion: "&check;"
-  Confluence: "[NON](https://jira.atlassian.com/browse/CONFSERVER-26528)"
-- Feature: "Prise en charge des étiquettes blanches"
-  Orion: "&check;"
-- Feature: "Installable Inside Corporate VPN"
-  Orion: "Installation du serveur"
-- Feature: "Travaille hors ligne"
-  Orion: "&check;"
-- Feature: 'Flux de travail du contributeur "Pull-Request" pour la 3ème partie facile'
-  Orion: "&check;"
-- Feature: "[GitHub Intégration](https://youtu.be/FRc4qZkxVaI) avec IDE &amp; Assistance aux actions"
-  Orion: "&check;"
-- Feature: "Aperçu illimité"
-  Orion: "&check;"
-  Slab: "&check;"
+
   Notion: "&check;"
-  Confluence: "&check;"
-- Feature: "Places illimitées"
-  Orion: " Entreprise &amp; Installation du serveur"
-- Feature: "Historique illimité du contrôle des versions"
+
+- Feature: 'Recherche complète/remplaçable <span class="editormd-tex">\KaTeX</span>Expressions /PCRE'
+
   Orion: "&check;"
-- Feature: "Suivi intégré des modifications d'URL"
+
+  Confluence: "$$$"
+
+- Feature: "Fédéré"
+
   Orion: "&check;"
-- Feature: "Hébergement de site Web"
+
+  Confluence: "[NON](https://jira.atlassian.com/browse/CONFSERVER-26528)"
+
+
+- Feature: "Prise en charge des étiquettes blanches"
+
   Orion: "&check;"
-- Feature: "[Graphiques vectoriels 3D](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Intégration"
+
+- Feature: "Installable dans le VPN d'entreprise"
+
+  Orion: "Installation du serveur"
+
+- Feature: "Fonctionne hors ligne"
+
   Orion: "&check;"
-- Feature: "Support SSI / CGI / mod_perl / mod_wasm"
+
+  Notion: "&check;"
+
+- Feature: '3e partie facile "Demande d'extraction" Workflow du contributeur'
+
   Orion: "&check;"
-- Feature: "Liste de contrôle d'accès de niveau fin sur référentiel source"
+
+- Feature: "[GitHub Intégration](https://youtu.be/FRc4qZkxVaI) avec IDE &amp; Prise en charge des actions"
+
   Orion: "&check;"
-- Feature: "500 Mo/s Constructions complètes du site"
+
+- Feature: "Prévisualisations illimitées"
+
   Orion: "&check;"
-- Feature: "Constructions simultanées sur 8-64 critères"
-  Orion: "&check;"
-- Feature: "TCO &lt; 10000 $/an pour l'entreprise"
-  Orion: "&check;"
-- Feature: "Contrat de niveau de service complet à 99,99 %"
-  Orion: " Entreprise &amp; Installation du serveur"
-- Feature: "Statut du document pouvant faire l'objet d'une recherche"
-  Orion: "&check;"
+
   Slab: "&check;"
-- Feature: 'Marque <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisation'
+
+  Notion: "&check;"
+
+  Confluence: "&check;"
+
+
+- Feature: "Sièges illimités"
+
+  Orion: "Entreprise &amp; Installation du serveur"
+
+- Feature: "Historique de contrôle de version illimité"
+
   Orion: "&check;"
-- Feature: Traduction automatique AI NLP
+
+- Feature: "Suivi intégré des modifications d'URL"
+
+  Orion: "&check;"
+
+- Feature: "Hébergement de site Web"
+
+  Orion: "&check;"
+
+- Feature: "[3D Graphique vectoriel](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Intégration"
+
+  Orion: "&check;"
+
+- Feature: "Support SSI / CGI / mod_perl / mod_wasm"
+
+  Orion: "&check;"
+
+- Feature: "ACL synchronisées Fine-Grained Repo/.htaccess"
+
+  Orion: "&check;"
+
+- Feature: "Builds de site complets de 500 Mo/s"
+
+  Orion: "&check;"
+
+- Feature: "Builds simultanés sur 8-64 critères"
+
+  Orion: "&check;"
+
+- Feature: "Coût total de possession &lt; 10000 $/an pour l'entreprise"
+
+  Orion: "&check;"
+
+- Feature: "Contrat de niveau de service complet à 99,99 %"
+
+  Orion: "Entreprise &amp; Installation du serveur"
+
+- Feature: "Statut du document recherchable"
+
+  Orion: "&check;"
+
+  Slab: "&check;"
+
+- Feature: 'Démarque <span class="editormd-tex">\flèche droite \LaTeX</span> Automatisation'
+
+  Orion: "&check;"
+
+- Feature: "Traduction automatique AI NLP"
+
   Orion: "&check;"

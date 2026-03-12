@@ -8,83 +8,178 @@ title: Tabelldata för rutnät för funktionsjämförelse
 ---
 
 
-- Feature: "SSO: Kerberos / Aktiv katalog / OpenID Integration"
+- Feature: "[à la carte AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+
   Orion: "&check;"
+
+- Feature: "SSO: Kerberos / Aktiv katalog / OpenID Integrering"
+
+  Orion: "&check;"
+
   Slab: "&check;"
+
   Notify: "Endast SCIM"
+
   Confluence: "&check;"
-- Feature: FIPS 140-3-kompatibel Zero Trust-infrastruktur
+
+- Feature: "FIPS 140-3 kompatibel infrastruktur med nolltillit"
+
   Orion: "&check;"
+
 - Feature: "FedRAMP Infrastruktur"
+
   Orion: "Serverinstallation"
-- Feature: "Webbläsararbetsflöde (mobilvänligt)"
+
+- Feature: "Global faktadata"
+
   Orion: "&check;"
+
+
+- Feature: "Arbetsflöde i webbläsare (mobilvänligt)"
+
+  Orion: "&check;"
+
   Slab: "&check;"
+
   Notify: "&check;"
+
   Confluence: "&check;"
-- Feature: "DAV-support"
+
+- Feature: "DAV-stöd"
+
   Orion: "&check;"
+
   Confluence: "&check;"
+
 - Feature: "Inkrementella byggen"
+
   Orion: "&check;"
-- Feature: "Obegränsade kontorsbyggen"
+
+- Feature: "Obegränsade kontorsbyggnader"
+
   Orion: "&check;"
-- Feature: "Endast schemalagda byggen av dynamiskt innehåll"
+
+
+- Feature: "Schemalagda byggen av endast dynamiskt innehåll"
+
   Orion: "&check;"
-- Feature: "3:e partens analyssupport"
+
+- Feature: "Stöd för 3:e partanalys"
+
   Orion: "&check;"
-- Feature: "Titta på listan Enhetsmeddelanden"
+
+- Feature: "Enhetsmeddelanden för bevakningslista"
+
   Orion: "&check;"
+
   Confluence: "&check;"
-- Feature: "Multilingual (i18n)"
+
+- Feature: "Flerspråkig (i18n)"
+
   Orion: "&check;"
-- Feature: 'Helt sökbar <span class="editormd-tex">\KaTeX</span> Uttryck'
-  Orion: "&check;"
-  Confluence: "$$$"
-- Feature: "Samordnade"
-  Orion: "&check;"
-  Confluence: "[Nej](https://jira.atlassian.com/browse/CONFSERVER-26528)"
-- Feature: "Stöd för vit etikett"
-  Orion: "&check;"
-- Feature: "Installerbar inuti företags-VPN"
-  Orion: "Serverinstallation"
-- Feature: "Fungerar nedkopplad"
-  Orion: "&check;"
-- Feature: 'Enkelt 3:e parts bidragsarbetsflöde för begäran'
-  Orion: "&check;"
-- Feature: "[GitHub Integrering](https://youtu.be/FRc4qZkxVaI) med integrerad utvecklingsmiljö &amp; Stöd för åtgärder"
-  Orion: "&check;"
-- Feature: "Obegränsade förhandsvisningar"
-  Orion: "&check;"
-  Slab: "&check;"
+
   Notion: "&check;"
-  Confluence: "&check;"
-- Feature: "Obegränsade platser"
-  Orion: "Företag &amp; Serverinstallation"
-- Feature: "Obegränsad versionskontrollhistorik"
+
+- Feature: 'Helt sökbar/utbytbar <span class="editormd-tex">\KaTeX</span>/PCRE-uttryck'
+
   Orion: "&check;"
-- Feature: "Integrerad spårning av URL-ändring"
+
+  Confluence: "$$$"
+
+- Feature: "Samordnad"
+
   Orion: "&check;"
-- Feature: "Webbplatshotell"
+
+  Confluence: "[Nej](https://jira.atlassian.com/browse/CONFSERVER-26528)"
+
+
+- Feature: "Stöd för vit etikett"
+
   Orion: "&check;"
-- Feature: "[3D-vektorgrafik](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integrering"
+
+- Feature: "Installerbar intern företags-VPN"
+
+  Orion: "Serverinstallation"
+
+- Feature: "Fungerar nedkopplad"
+
   Orion: "&check;"
-- Feature: "SSI / CGI / mod_perl / mod_wasm support"
+
+  Notion: "&check;"
+
+- Feature: 'Lätt 3:e part "Hämtningsbegäran" Arbetsflöde för medverkande'
+
   Orion: "&check;"
-- Feature: "Befintlig åtkomstkontrollista för källager"
+
+- Feature: "[GitHub-integrering](https://youtu.be/FRc4qZkxVaI) med IDE &amp; Stöd för åtgärder"
+
   Orion: "&check;"
-- Feature: "500 Mbyte/s fullständiga webbplatsbyggen"
+
+- Feature: "Obegränsade förhandsvisningar"
+
   Orion: "&check;"
-- Feature: "8-64-vägs samtidiga byggen"
-  Orion: "&check;"
-- Feature: "TCO &lt; $10000/år för Enterprise"
-  Orion: "&check;"
-- Feature: "Omfattande 99,99 % SLA"
-  Orion: "Företag &amp; Serverinstallation"
-- Feature: "Status på sökbart dokument"
-  Orion: "&check;"
+
   Slab: "&check;"
-- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering'
+
+  Notion: "&check;"
+
+  Confluence: "&check;"
+
+
+- Feature: "Obegränsade platser"
+
+  Orion: "Företag &amp; Serverinstallation"
+
+- Feature: "Obegränsad versionskontrollhistorik"
+
   Orion: "&check;"
-- Feature: Automatisk översättning av AI NLP
+
+- Feature: "Integrerad spårning av URL-ändring"
+
+  Orion: "&check;"
+
+- Feature: "Hem - Kundavdelning"
+
+  Orion: "&check;"
+
+- Feature: "[3D Vektorgrafik](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integrering"
+
+  Orion: "&check;"
+
+- Feature: "Stöd för SSI/CGI/mod_perl/mod_wasm"
+
+  Orion: "&check;"
+
+- Feature: "Detaljerad datalager-/.htaccess synkroniserade åtkomstkontrollistor"
+
+  Orion: "&check;"
+
+- Feature: "500 Mbyte/s fullständiga webbplatsbyggen"
+
+  Orion: "&check;"
+
+- Feature: "8-64-vägs samtidiga byggen"
+
+  Orion: "&check;"
+
+- Feature: "Total ägandekostnad &lt; 10000 USD/år för företag"
+
+  Orion: "&check;"
+
+- Feature: "Omfattande servicenivåavtal på 99,99 %"
+
+  Orion: "Företag &amp; Serverinstallation"
+
+- Feature: "Sökbar dokumentstatus"
+
+  Orion: "&check;"
+
+  Slab: "&check;"
+
+- Feature: 'Nedsättning <span class="editormd-tex">\vänsterpil \LaTeX</span> Automatisering'
+
+  Orion: "&check;"
+
+- Feature: "Automatisk översättning av AI NLP"
+
   Orion: "&check;"
