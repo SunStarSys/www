@@ -115,8 +115,7 @@
         </ul>
       </div>
       <div class="row right" id='search'>
-        <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" classe="formulaire intégré à droite" méthode="Obtenir">
+        <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="form-inline right" method="GET">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
                placeholder="PCRE
