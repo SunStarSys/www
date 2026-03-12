@@ -160,7 +160,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 </div>
 </div>
 
-- Alla planer inkluderar internt automatiserad SSL / TLS-certifikathantering (via LetsEncrypt), integrerad PCRE (+Markdown) sökmotor och Email Form Processing Gateway.
+- Alla planer omfattar internt automatiserad SSL/TLS-certifikathantering (via LetsEncrypt), integrerad PCRE (+Markdown) sökmotor, automatiserad stöd för naturlig språköversättning (via OCI AI) och nätsluss för bearbetning av e-postformulär.
 
 - Onboarding innebär helt enkelt att tillhandahålla en topmatter-menylänkstruktur och en bootstrap 4 eller bootstrap 5 css-fil för styling.
 
@@ -168,11 +168,11 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 - Volymrabatter tillgängliga.
 
-- Företag Kerberos-baserade Orion Server Installs är nu tillgängliga, för kunder som söker alternativ till Confluence Data Center obligatoriska uppgraderingar i 2024 Q1.
+- Företag Kerberos-baserade Orion Server Installs är nu tillgängliga, för kunder som söker alternativ till Atlassian Confluence.
 
 - Serverless Technology Integration kommer snart.
 
-- Konsulttjänster och webbplatstekniska porteringstjänster tillgängliga.
+- Konsulttjänster och tjänster för teknisk utbildning och portering av webbsidor.
 
 - Technology Parnerships är mycket välkomna för myndigheter och tredjepartsåterförsäljare.
 

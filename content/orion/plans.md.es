@@ -160,7 +160,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 </div>
 </div>
 
-- Todos los planes incluyen la gestión de certificados SSL/TLS automatizada internamente (a través de LetsEncrypt), el motor de búsqueda PCRE integrado (+Markdown) y el gateway de procesamiento de formularios de correo electrónico.
+- Todos los planes incluyen gestión de certificados SSL/TLS automatizada internamente (a través de LetsEncrypt), motor de búsqueda PCRE integrado (+Markdown), soporte automatizado de traducción de lenguaje natural (a través de OCI AI) y gateway de procesamiento de formularios de correo electrónico.
 
 - La incorporación simplemente implica el suministro de una estructura de enlace de menú de la materia superior y un archivo bootstrap 4 o bootstrap 5 css para el estilo.
 
@@ -168,11 +168,11 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 - Descuentos por volumen disponibles.
 
-- Las instalaciones del servidor Orion basadas en Enterprise Kerberos ya están disponibles para los clientes que buscan alternativas a las actualizaciones obligatorias del centro de datos de Confluence en 2024 Q1.
+- Las instalaciones de servidor Orion basadas en Enterprise Kerberos ya están disponibles para los clientes que buscan alternativas a Atlassian Confluence.
 
 - Integración de tecnología sin servidor próximamente.
 
-- Consultoría y servicios de transmisión de tecnología de construcción de sitios web disponibles.
+- Servicios de consultoría y construcción de sitios web de capacitación y transporte de tecnología disponibles.
 
 - Las asociaciones tecnológicas son muy bienvenidas para agencias y revendedores de terceros.
 
