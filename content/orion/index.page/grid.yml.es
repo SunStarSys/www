@@ -94,7 +94,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Estado de documento apto para búsqueda"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Rebaja <span class="editormd-tex">\flecha derecha \LaTeX</span> Automatización'
+- Feature: 'Rebaja <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatización'
   Orion: "&check;"
 - Feature: "Traducción automática de NLP de IA"
   Orion: "&check;"

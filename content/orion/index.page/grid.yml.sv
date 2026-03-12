@@ -94,7 +94,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Sökbar dokumentstatus"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Nedsättning <span class="editormd-tex">\vänsterpil \LaTeX</span> Automatisering'
+- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering'
   Orion: "&check;"
 - Feature: "Automatisk översättning av AI NLP"
   Orion: "&check;"
