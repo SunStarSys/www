@@ -122,8 +122,10 @@
  חיפוש רקורסיבי" ערך="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    חיפוש
           </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-חיפוש" ערך="1" נבדק /><label for="markdown-search"><small>הוזלה</small></label>
+          <input class="form-control form-check-input" type="checkbox" name="markdown_search" id="markdown-search" value="1" checked /><label for="markdown-search">
+			<small>
+			הוזלה
+			</small></label>
         </form>
       </div>
     </div>

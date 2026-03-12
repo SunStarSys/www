@@ -122,8 +122,10 @@
  Recherche récursive" valeur="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    Rechercher
           </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="recherche de démarque" valeur="1" coché /><label for="markdown-search"><small>Démarque</small></label>
+          <input class="form-control form-check-input" type="checkbox" name="markdown_search" id="markdown-search" value="1" checked /><label for="markdown-search">
+			<small>
+			Démarque
+			</small></label>
         </form>
       </div>
     </div>

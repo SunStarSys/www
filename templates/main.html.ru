@@ -122,8 +122,10 @@
  Рекурсивный поиск" значение="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    Поиск
           </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="поиск разметки" значение="1" проверено /><label for="markdown-search"><small>Снижение цен</small></label>
+          <input class="form-control form-check-input" type="checkbox" name="markdown_search" id="markdown-search" value="1" checked /><label for="markdown-search">
+			<small>
+			Снижение цен
+			</small></label>
         </form>
       </div>
     </div>

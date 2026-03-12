@@ -122,8 +122,10 @@
  遞迴搜尋" 值 ="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    搜尋
           </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="降價搜尋" 值 ="1 個" 已勾選 /><label for="markdown-search"><small>減價</small></label>
+          <input class="form-control form-check-input" type="checkbox" name="markdown_search" id="markdown-search" value="1" checked /><label for="markdown-search">
+			<small>
+			減價
+			</small></label>
         </form>
       </div>
     </div>
