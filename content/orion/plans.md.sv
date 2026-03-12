@@ -194,7 +194,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 2. Lagringsutnyttjande beräknat baserat på den totala storleken på SunStar Systembaserat Subversion-datalager för företagskunder, inte enskilda kassabetalningar, vilket är ett *jämfört mindre antal* (ungefär storleken på en enstaka utcheckning med källträd).
 
-3. SLA täcker webbplatsens tillgångar *och *Orion online IDE *och *bygga systemtillgänglighet, men utesluter Subversion versionskontrollsystem, som vi förväntar oss att förbli konkurrenskraftiga med GitHub's allmänna tillgänglighetsmått.
+3. SLA täcker webbplatsens tillgångar *och* Orion online IDE *och* bygga systemtillgänglighet, men utesluter Subversion versionskontrollsystem, som vi förväntar oss att förbli konkurrenskraftiga med GitHub's allmänna tillgänglighetsmått.
 
 4. Företagskundernas närvaropunkter (POP):
 
