@@ -45,7 +45,7 @@ $25 / Monat / verwaltete öffentliche Website
 				<li>Zusätzliche monatliche Ressourcensätze (pro Website):
 <p>
 <ol>
-						<li>10 $/10 MB Speicherplatz<sup>1</sup></li>
+						<li>$10 / 10 MB Speicherplatz<sup>1</sup></li>
 						<li>$10 / 40 GB Datenübertragung</li>
 						<li>$5 / Sitzplatz</li>
 						<li>$10 / 100 Build-Minuten</li>
@@ -81,7 +81,7 @@ $100 / Monat / verwaltete öffentliche Website, ~50% Rabatt auf alle Wettbewerbe
 						<li>Unbegrenzte IDE-Nutzung für 50 Plätze</li>
 						<li>Bis zu 5 ACL-Gruppen</li>
 				<li>500 Erstellungsminuten</li>
-				<li>99,9% umfassendes SLA<sup>3</sup></li>
+				<li>99,9% umfassende SLA<sup>3</sup></li>
 						<li>E-Mail-basierter Kundendienst</li>
 </ol>
 </p>
@@ -91,7 +91,7 @@ $100 / Monat / verwaltete öffentliche Website, ~50% Rabatt auf alle Wettbewerbe
 				<li>Zusätzliche monatliche Ressourcensätze (pro Website):
 <p>
 					<ol>
-						<li>10 $/20 MB Speicherplatz<sup>1</sup></li>
+						<li>$10 / 20 MB Speicherplatz<sup>1</sup></li>
 						<li>$20 / 100 GB Datenübertragung</li>
 						<li>$10 / Sitzplatz</li>
 						<li>$10 / 100 Build-Minuten</li>
@@ -130,8 +130,8 @@ $1000 / Monat, ~67% Rabatt auf alle Wettbewerber Preismodelle!
 						<li>5000 Erstellungsminuten</li>
 						<li>Vollständige Kontrolle über die Subversion-Autorisierungskonfiguration</li>
 						<li>Private, vernetzte Build-Container</li>
-						<li>99,99% umfassendes SLA<sup>3</sup></li>
-						<li>Globaler POP<sup>4</sup> mit geografisch verteiltem Last-Mile-Delivery-Netzwerk in Q4</li>
+						<li>99,99% umfassende SLA<sup>3</sup></li>
+						<li>Globaler POP<sup>4</sup> mit geografisch verteiltem Last Mile Delivery Network in Q4</li>
 						<li>Premium Support-SLA</li>
 					</ol>
 					</p>
@@ -144,7 +144,7 @@ $1000 / Monat, ~67% Rabatt auf alle Wettbewerber Preismodelle!
 
 <p>
 <ol>
-						<li>100 USD/250 MB Speicherplatz<sup>2</sup></li>
+						<li>$100 / 250 MB Speicherplatz<sup>2</sup></li>
 						<li>$15 / 100 GB Datenübertragung</li>
 						<li>$100 / ithread mod_perl Registrierung Hosting</li>
 						<li>100 $/OCI-Region für benutzerdefinierte POPs</li>
@@ -176,7 +176,7 @@ $1000 / Monat, ~67% Rabatt auf alle Wettbewerber Preismodelle!
 
 - Technologiepartnerschaften sind sehr willkommen für Agenturen und Drittanbieter.
 
-### Minuten und Planebenen erstellen: ein grober Leitfaden
+### Erstellen von Minuten und Planebenen: ein grober Leitfaden
 
 *Eine angemessene High-End-Schätzung für die durchschnittliche Build-Dauer pro Commit beträgt 10 Sekunden.*
 
@@ -194,7 +194,7 @@ Unternehmen mit weniger als 1000 Commits pro Tag sollten mit den 5000 Build-Minu
 
 2. Die Speicherauslastung wird basierend auf der Gesamtgröße des vom System gehosteten Subversion-Repositorys SunStar für Enterprise-Kunden berechnet, nicht für einzelne Checkouts. Dies ist eine *vergleichsweise kleinere Zahl* (etwa die Größe eines einzelnen Source-Tree-Checkouts).
 
-3. SLA umfasst Website-Assets *und* Orion Online-IDE *und* Build-Systemverfügbarkeit, schließt jedoch Subversion-Versionskontrollsystem aus, das wir mit den allgemeinen Verfügbarkeitsmetriken von GitHub konkurrenzfähig bleiben werden.
+3. SLA deckt Website-Assets *und* Orion Online-IDE *und* Build-Systemverfügbarkeit ab, schließt jedoch Subversion-Versionskontrollsystem aus, das wir mit GitHub wettbewerbsfähig bleiben werden'Allgemeine Verfügbarkeitsmetriken.
 
 4. Enterprise Customer Points of Presence (POP):
 
@@ -229,7 +229,7 @@ Phoenix, AZ
 </div>
 
 <style type="text/css">
-h4 { font-size:14px }
+h4 { Schriftgröße:14px }
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -45,7 +45,7 @@ $25/mes/sitio público gestionado
 				<li>Tarifas Mensuales Adicionales de Recursos (por sitio web):
 <p>
 <ol>
-						<li>10 $/10 MB de espacio de almacenamiento<sup>1</sup></li>
+						<li>$10 / 10 MB de espacio de almacenamiento<sup>1</sup></li>
 						<li>Transferencia de datos de $10/40 GB</li>
 						<li>$5/asiento</li>
 						<li>$10 / 100 minutos de compilación</li>
@@ -81,7 +81,7 @@ $100 / mes / sitio público administrado, ~50% de descuento en todos los modelos
 						<li>Uso ilimitado de IDE para 50 asientos</li>
 						<li>Hasta 5 grupos de ACL</li>
 				<li>500 minutos de creación</li>
-				<li>SLA integral del 99,9 %<sup>3</sup></li>
+				<li>99,9% SLA integral<sup>3</sup></li>
 						<li>Soporte al cliente basado en correo electrónico</li>
 </ol>
 </p>
@@ -91,7 +91,7 @@ $100 / mes / sitio público administrado, ~50% de descuento en todos los modelos
 				<li>Tarifas Mensuales Adicionales de Recursos (por sitio web):
 <p>
 					<ol>
-						<li>10 $/20 MB de espacio de almacenamiento<sup>1</sup></li>
+						<li>$10 / 20 MB de espacio de almacenamiento<sup>1</sup></li>
 						<li>Transferencia de datos de $20/100 GB</li>
 						<li>$10/asiento</li>
 						<li>$10 / 100 minutos de compilación</li>
@@ -130,7 +130,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 						<li>5000 minutos de creación</li>
 						<li>Control total de la configuración de autorización de Subversion</li>
 						<li>Contenedores de creación privados y en red</li>
-						<li>SLA integral del 99,99 %<sup>3</sup></li>
+						<li>99,99% SLA integral<sup>3</sup></li>
 						<li>POP global<sup>4</sup> con una red de entrega de última milla distribuida geográficamente en Q4</li>
 						<li>SLA de soporte premium</li>
 					</ol>
@@ -144,7 +144,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 <p>
 <ol>
-						<li>100 $/250 MB de espacio de almacenamiento<sup>2</sup></li>
+						<li>100 $ / 250 MB de espacio de almacenamiento<sup>2</sup></li>
 						<li>Transferencia de datos de $15/100 GB</li>
 						<li>$100 / ithread mod_perl alojamiento de registro</li>
 						<li>Región de $100/OCI para POP personalizados</li>
@@ -176,7 +176,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 - Las asociaciones tecnológicas son muy bienvenidas para agencias y revendedores de terceros.
 
-### Crear minutos y niveles de plan: una guía completa
+### Build Minutes and Plan Levels: a Rough Guide (Crear minutos y niveles de plan: una guía aproximada).
 
 *Una estimación razonable de gama alta para la duración media de compilación por confirmación es de 10 segundos.*
 
@@ -194,7 +194,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 2. Utilización de almacenamiento calculada en función del tamaño total del repositorio de Subversion alojado por sistemas SunStar para clientes de Enterprise, no para desprotecciones individuales, que es un *número comparativamente menor* (aproximadamente el tamaño de una única desprotección de árbol de origen).
 
-3. SLA cubre los activos del sitio web *y* el IDE en línea de Orion *y* la disponibilidad del sistema de compilación, pero excluye el sistema de control de versiones de Subversion, que esperamos que siga siendo competitivo con las métricas de disponibilidad general de GitHub.
+3. El SLA abarca los activos del sitio web *y* el IDE en línea de Orion *y* la disponibilidad del sistema de creación, pero excluye el sistema de control de versiones de Subversion, que esperamos seguir siendo competitivos con GitHub'las métricas de disponibilidad general.
 
 4. Puntos de presencia de clientes empresariales (POP):
 
@@ -229,7 +229,7 @@ Hyderabad, IN
 </div>
 
 <style type="text/css">
-h4 { font-size:14px }
+h4 { tamaño de fuente:14px }
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

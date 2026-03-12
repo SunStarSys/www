@@ -31,7 +31,7 @@ $25/månad/hanterad allmän webbplats
 <p>
 <ol>
 						<li>Offentlig subversion hosting</li>
-						<li>100 Mbyte lagringsutrymme<sup>1</sup></li>
+						<li>100 MB lagringsutrymme<sup>1</sup></li>
 						<li>500 Gbyte dataöverföring</li>
 						<li>Obegränsad IDE-användning för 10 platser</li>
 			<li>100 byggminuter</li>
@@ -45,7 +45,7 @@ $25/månad/hanterad allmän webbplats
 				<li>Ytterligare månatliga resurspriser (per webbplats):
 <p>
 <ol>
-						<li>$10/10 Mbyte lagringsutrymme<sup>1</sup></li>
+						<li>Lagringsutrymme på $10/10 Mbyte<sup>1</sup></li>
 						<li>Dataöverföring på 10 USD/40 Gbyte</li>
 						<li>$5/säte</li>
 						<li>$10/100 byggminuter</li>
@@ -76,12 +76,12 @@ $ 100 / månad / hanterad offentlig webbplats, ~ 50 % rabatt på alla konkurrent
 <p>
 <ol>
 						<li>Offentlig eller privat Subversion hosting</li>
-						<li>500 Mbyte lagringsutrymme<sup>1</sup></li>
+						<li>500 MB lagringsutrymme<sup>1</sup></li>
 						<li>1 Tbyte dataöverföring</li>
 						<li>Obegränsad IDE-användning för 50 platser</li>
 						<li>Upp till 5 åtkomstkontrollista-grupper</li>
 				<li>500 byggminuter</li>
-				<li>99,9 % omfattande servicenivåavtal<sup>3</sup></li>
+				<li>99,9 % heltäckande servicenivåavtal<sup>3</sup></li>
 						<li>E-postbaserad kundsupport</li>
 </ol>
 </p>
@@ -124,14 +124,14 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 <p>
 <ol>
-						<li>2 Gbyte lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
+						<li>2 GB lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
 						<li>5 Tbyte dataöverföring</li>
 						<li>Obegränsade webbplatser och (självhanterade) platser</li>
 						<li>5000 byggminuter</li>
 						<li>Full kontroll över konfiguration av Subversion-auktorisering</li>
 						<li>Privata, nätverksbaserade byggcontainrar</li>
 						<li>99,99 % heltäckande servicenivåavtal<sup>3</sup></li>
-						<li>Global POP<sup>4</sup> med geografiskt distribuerat nätverk för leverans av sista kilometern i Q4</li>
+						<li>Global POP<sup>4</sup> med geografiskt distribuerat leveransnätverk för sista kilometern i Q4</li>
 						<li>Servicenivåavtal för premiumsupport</li>
 					</ol>
 					</p>
@@ -144,7 +144,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 <p>
 <ol>
-						<li>$100/250 Mbyte lagringsutrymme<sup>2</sup></li>
+						<li>Lagringsutrymme på $100/250 Mbyte<sup>2</sup></li>
 						<li>Dataöverföring på 15 USD/100 Gbyte</li>
 						<li>$100 / ithread mod_perl registervärd</li>
 						<li>$100/OCI-region för anpassade POP</li>
@@ -176,7 +176,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 - Technology Parnerships är mycket välkomna för myndigheter och tredjepartsåterförsäljare.
 
-### Skapa minuter och plannivåer: en grov guide
+### Bygg minuter och plannivåer: en grov guide
 
 *En rimlig high-end uppskattning för den genomsnittliga byggtiden per åtagande är 10 sekunder.*
 
@@ -188,13 +188,13 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 ------------
 
-#### fotnoter
+#### Fotnoter
 
 1. Lagringsutnyttjandet beräknas baserat på storleken på fyra utcheckningar av arbetskopior på varje plats: två källträd och två resulterande byggträd.
 
 2. Lagringsutnyttjande beräknat baserat på den totala storleken på SunStar Systembaserat Subversion-datalager för företagskunder, inte enskilda kassabetalningar, vilket är ett *jämfört mindre antal* (ungefär storleken på en enstaka utcheckning med källträd).
 
-3. SLA täcker webbplatsens tillgångar * och * Orion online IDE * och * bygga systemtillgänglighet, men utesluter Subversion versionskontrollsystem, som vi förväntar oss att förbli konkurrenskraftiga med GitHubs allmänna tillgänglighetsmått.
+3. SLA täcker webbplatsens tillgångar *och *Orion online IDE *och *bygga systemtillgänglighet, men utesluter Subversion versionskontrollsystem, som vi förväntar oss att förbli konkurrenskraftiga med GitHub's allmänna tillgänglighetsmått.
 
 4. Företagskundernas närvaropunkter (POP):
 
@@ -229,7 +229,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 </div>
 
 <style type="text/css">
-h4 { font-size:14px }
+h4 { teckenstorlek:14px }
 </style>
 
-<!-- $Date: 2026-02-16 13:23:10 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27695 $ -->
+<!-- $Date: 2026-03-02 09:03:33 -0700 (Mon, 02 Mar 2026) $ $Author: joe $ $Revision: 28121 $ -->

@@ -31,7 +31,7 @@ $25 / mois / site public géré
 <p>
 <ol>
 						<li>Hébergement Subversion Public</li>
-						<li>100 Mo d'espace de stockage<sup>1</sup></li>
+						<li>Espace de stockage de 100 Mo<sup>1</sup></li>
 						<li>Transfert de données de 500 Go</li>
 						<li>Utilisation illimitée de l'IDE pour 10 places</li>
 			<li>100 minutes de build</li>
@@ -76,7 +76,7 @@ $100 / mois / site public géré, ~50% sur tous les modèles de tarification con
 <p>
 <ol>
 						<li>Hébergement Subversion public ou privé</li>
-						<li>500 Mo d'espace de stockage<sup>1</sup></li>
+						<li>Espace de stockage de 500 Mo<sup>1</sup></li>
 						<li>Transfert de données de 1 To</li>
 						<li>Utilisation illimitée de l'IDE pour 50 places</li>
 						<li>Jusqu'à 5 groupes ACL</li>
@@ -91,7 +91,7 @@ $100 / mois / site public géré, ~50% sur tous les modèles de tarification con
 				<li>Tarifs Mensuels Supplémentaires pour les Ressources (par site web) :
 <p>
 					<ol>
-						<li>10 $ / 20 Mo d'espace de stockage<sup>1</sup></li>
+						<li>10 $/20 Mo d'espace de stockage<sup>1</sup></li>
 						<li>20 $ / 100 Go de transfert de données</li>
 						<li>$10 / siège</li>
 						<li>10 $ / 100 minutes de construction</li>
@@ -130,8 +130,8 @@ $1000 / mois, ~67% de rabais sur tous les modèles de prix concurrents !
 						<li>5000 minutes de build</li>
 						<li>Contrôle total de la configuration de l'autorisation Subversion</li>
 						<li>Conteneurs de build privés en réseau</li>
-						<li>Contrat de niveau de service complet à 99,99 %<sup>3</sup></li>
-						<li>POP mondial<sup>4</sup> avec un réseau de livraison du dernier kilomètre distribué géographiquement dans Q4</li>
+						<li>SLA complet à 99,99 %<sup>3</sup></li>
+						<li>POP global<sup>4</sup> avec un réseau de livraison du dernier kilomètre géographiquement distribué dans Q4</li>
 						<li>SLA de support premium</li>
 					</ol>
 					</p>
@@ -176,9 +176,9 @@ $1000 / mois, ~67% de rabais sur tous les modèles de prix concurrents !
 
 - Les partenariats technologiques sont les bienvenus pour les agences et les revendeurs tiers.
 
-### Créer des minutes et des niveaux de plan : un guide approximatif
+### Construire des minutes et des niveaux de plan : un guide approximatif
 
-*Une estimation haut de gamme raisonnable de la durée moyenne de construction par validation est de 10 secondes.*
+*Une estimation raisonnable de la durée moyenne de compilation par validation est de 10 secondes.*
 
 - Les professionnels avec moins de 20 engagements par jour devraient être bien avec les 100 minutes de construction incluses dans le plan.
 
@@ -188,13 +188,13 @@ $1000 / mois, ~67% de rabais sur tous les modèles de prix concurrents !
 
 ------------
 
-#### notes de bas de page
+#### Notes de bas de page
 
 1. Utilisation du stockage calculée en fonction de la taille de quatre extractions de copie de travail de chaque site : deux arbres source et deux arbres de construction résultants.
 
 2. Utilisation du stockage calculée sur la base de la taille totale du référentiel Subversion hébergé par les systèmes SunStar pour les clients Enterprise, et non des extractions individuelles, qui est un nombre *comparativement plus petit* (environ la taille d'une extraction d'arborescence source unique).
 
-3. Le contrat de niveau de service couvre les ressources du site Web *et* l'IDE en ligne d'Orion *et* la disponibilité du système, mais exclut le système de contrôle de version Subversion, qui devrait rester concurrentiel avec les indicateurs de disponibilité générale de GitHub.
+3. SLA couvre les actifs du site Web *et* Orion IDE en ligne *et* construire la disponibilité du système, mais exclut le système de contrôle de version Subversion, que nous prévoyons rester compétitif avec GitHub's métriques de disponibilité générale.
 
 4. Points de présence des clients d'entreprise (POP) :
 
@@ -229,7 +229,7 @@ $1000 / mois, ~67% de rabais sur tous les modèles de prix concurrents !
 </div>
 
 <style type="text/css">
-h4 { font-size:14px }
+h4 { taille de police:14px }
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->
