@@ -1,41 +1,32 @@
----
-archived: ~
-categories: ~
-keywords: ~
-published: ~
-status: ~
-title: ~
----
-
 <!DOCTYPE html>
 <html lang="{{ lang|cut:"." }}">
 <head>
     <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta content="SunStar Systems" name="description">
-    <meta content="Joe Schaefer" name="author">
-    <meta content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}" name="keywords">
-    <meta content="black" name="theme-color">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SunStar Systems">
+    <meta name="author" content="Joe Schaefer">
+    <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
+    <meta name="theme-color" content="black">
         {% ifequal path|dirname "/orion" %}
-	<meta content="/images/sunstar-orion-symbol-linear.png" property="og:image">
+	<meta property="og:image" content="/images/sunstar-orion-symbol-linear.png">
 	{% else %}
-	<meta content="/images/sunstarstaronly.png" property="og:image">
+	<meta property="og:image" content="/images/sunstarstaronly.png">
 	{% endifequal %}
     <title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 	{% if permalink %}
-	<link href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}" rel="bookmark">
+	<link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
 	{% endif %}
-    <link href="/css/bootstrap.min.css" media="screen" rel="stylesheet">
-    <link href="/css/code.css" media="screen" rel="stylesheet">
-    <link href="/css/katex.min.css" media="screen" rel="stylesheet">
-    <link href="/css/mermaid.min.css" media="screen" rel="stylesheet">
-    <link href="/fontawesome/css/all.min.css" media="screen" rel="stylesheet">
-    <link href="/editor.md/css/editormd.min.css" media="screen" rel="stylesheet">
-    <link href="/editor.md/lib/codemirror/codemirror.min.css" media="screen" rel="stylesheet">
-    <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" media="screen" rel="stylesheet">
-    <link href="/editor.md/lib/codemirror/theme/solarized.css" media="screen" rel="stylesheet">
-    <link href="/css/local.css" media="screen" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="/css/code.css" rel="stylesheet" media="screen">
+    <link href="/css/katex.min.css" rel="stylesheet" media="screen">
+    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
+    <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/lib/codemirror/theme/pastel-on-dark.css" rel="stylesheet" media="screen">
+    <link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
+    <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
     <script src="/editor.md/js/jquery.min.js"></script>
     {% block header %}{% endblock %}
@@ -49,15 +40,15 @@ title: ~
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
-        <button aria-expanded="false" aria-label="Växla navigering" class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
-	  <img alt="SunStar Orionsymbol - linjärt" src="/images/sunstar-orion-symbol-linear.png">
+	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
           <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
-          <img alt="SunStar Linjärt" src="/images/sunstarlinear.png" />
+          <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
         </div>
       </div>
@@ -65,35 +56,35 @@ title: ~
 <div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           <li class="nav-item{% ifequal path "/index.html"|append:lang %}
-            active
+            deltagande
             {% endifequal %}"><a class="nav-link text" href="/">Hem</a></li>
           <li class="nav-item{% ifequal path "/about.html"|append:lang %}
-            active
+            deltagande
             {% endifequal %}"><a class="nav-link text" href="/about">Om</a></li>
           <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
-             active
+             deltagande
              {% endifequal %}"><a class="nav-link" href="/contact">Kontakt</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Produkter... <span class="caret"></span></a>
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Produkter... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
-                active
+                deltagande
                 {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; #Jamstack Wiki-plattform</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
-                active
+                deltagande
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Prisplaner för org.</a></li>
+                href="/orion/plans.html{{ lang }}">Orion: Prissättningsplaner</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
-            active
+            deltagande
 																{% endifequal %}"><a class="nav-link" href="/open-source">Öppen källkod</a></li>
 
 <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Mer.. <span class="caret"></span></a>
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mer... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item">
-                <a class="nav-link text-white" href="https://vcs.sunstarsys.com/viewvc/public/cms-sites/www.sunstarsys.com/trunk/">Webbplatskälla</a>
+                <a class="nav-link text-white" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/">Platskälla</a>
               </li>
               <li class="dropdown-item divider"></li>
               <li class="dropdown-header text-white">i18n</li>
@@ -118,22 +109,22 @@ title: ~
           </li>
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
-            active
+            deltagande
             {% endifequal %}"><a class="nav-link" href="/powered-by">Drivs av...</a>
           </li>
         </ul>
       </div>
       <div class="row right" id='search'>
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="form-inline right" method="GET">
-          <input name="lang" type="hidden" value="{{ lang }}" />
+            }}{% endifequal %}/" class="form-inline right" metod="GET">
+          <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
                platshållare="PCRE
- Rekursiv sökning" value="{{ regex }}" />&nbsp;<button class="btn btn-outline-danger" name="submit" type="submit" value="1">
+ Rekursiv sökning" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    Sök
           </button>&nbsp;
-          <input class="formulärkontrollformulärinmatning" type="kryssruta" name="markdown_search"
-          id="markdown-search" värde="1" {% if markdown_search %}markerad{% endif %}/><label for="markdown-search"><small>Nedsättning</small></label>
+          <input class="form-control form-check-input" type="checkbox" name="markdown_search"
+          id="markdown-search" value="1" markerad /><label for="markdown-search"><small>Nedsättning</small></label>
         </form>
       </div>
     </div>
@@ -153,7 +144,7 @@ title: ~
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img alt="Ikonen Redigera" src="/images/edit.png" />
+        <img src="/images/edit.png" alt="Edit Icon" />
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>
@@ -166,7 +157,7 @@ title: ~
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
-  <script src="/editor.md/js/jquery.flowchart.min.js"></script>
+  <!-- <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
   <script src="/editor.md/js/sequence-diagram.min.js"></script>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
@@ -182,7 +173,6 @@ title: ~
     if (typeof(editormd) === "undefined") {
         
         mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".flowchart").flowChart();
         $(".sequence-diagram").sequenceDiagram();
         for (const e of $("body").find(".graphviz").toArray()) {
             d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
