@@ -9,177 +9,92 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 
 
 - Feature: "[AI à la carte](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
-
   Orion: "&check;"
-
 - Feature: "SSO: Kerberos / מדריך פעיל / שילוב OpenID"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
   Notify: "SCIM בלבד"
-
   Confluence: "&check;"
-
 - Feature: "תשתית אפס-אמון תואמת ל-FIPS 140-3"
-
   Orion: "&check;"
-
 - Feature: "FedRAMP תשתית"
-
   Orion: "התקנת שרת"
-
 - Feature: "מסד נתונים של עובדות גלובליות"
-
   Orion: "&check;"
-
 
 - Feature: "תהליך עבודה בדפדפן (ידידותי לנייד)"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
   Notify: "&check;"
-
   Confluence: "&check;"
-
 - Feature: "תמיכת DAV"
-
   Orion: "&check;"
-
   Confluence: "&check;"
-
 - Feature: "בניות תוספתיות"
-
   Orion: "&check;"
-
 - Feature: "בניות סניפים בלתי מוגבלות"
-
   Orion: "&check;"
-
 
 - Feature: "בניות מתוזמנות של תוכן דינמי בלבד"
-
   Orion: "&check;"
-
 - Feature: "תמיכת 3rd Party Analytics"
-
   Orion: "&check;"
-
 - Feature: "הודעות התקן ברשימה"
-
   Orion: "&check;"
-
   Confluence: "&check;"
-
 - Feature: "רב-לשוני (i18n)"
-
   Orion: "&check;"
-
   Notion: "&check;"
-
 - Feature: 'ניתן לחיפוש מלא/ניתן להחלפה <span class="editormd-tex">\KaTeX</span>/ביטויי PCRE'
-
   Orion: "&check;"
-
   Confluence: "$$$"
-
 - Feature: "מאוחד"
-
   Orion: "&check;"
-
   Confluence: "[לא](https://jira.atlassian.com/browse/CONFSERVER-26528)"
 
-
 - Feature: "תמיכה בתווית לבנה"
-
   Orion: "&check;"
-
 - Feature: "ניתן להתקנה בתוך Corporate VPN"
-
   Orion: "התקנת שרת"
-
 - Feature: "עבודות לא מקוונות"
-
   Orion: "&check;"
-
   Notion: "&check;"
-
-- Feature: 'מסיבת קל 3 "משיכת בקשה" תהליך עבודה של תורם'
-
+- Feature: "מסיבת קל 3 'משיכת בקשה' תהליך עבודה של תורם"
   Orion: "&check;"
-
 - Feature: "[שילוב GitHub](https://youtu.be/FRc4qZkxVaI) עם זיהוי &amp; תמיכה בפעולות"
-
   Orion: "&check;"
-
 - Feature: "תצוגות מקדימות ללא הגבלה"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
   Notion: "&check;"
-
   Confluence: "&check;"
 
-
 - Feature: "מושבים ללא הגבלה"
-
   Orion: "ארגוני &amp; התקנת שרת"
-
 - Feature: "היסטוריית בקרת גרסאות ללא הגבלה"
-
   Orion: "&check;"
-
 - Feature: "מעקב משולב אחר שינוי כתובת URL"
-
   Orion: "&check;"
-
 - Feature: "שמירת פרטי ההתחברות"
-
   Orion: "&check;"
-
 - Feature: "[3D גרפיקה וקטורית](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) אינטגרציה"
-
   Orion: "&check;"
-
 - Feature: "תמיכה ב-SSI / CGI / mod_perl / mod_wasm"
-
   Orion: "&check;"
-
 - Feature: "רשימות בקרת גישה מסונכרנות עם הסכם רכש חוזר מפורט / גישה עדינה"
-
   Orion: "&check;"
-
 - Feature: "500 MB / s בניית אתר מלא"
-
   Orion: "&check;"
-
 - Feature: "8-64 מבני דרך מקביליים"
-
   Orion: "&check;"
-
 - Feature: "עלות בעלות כוללת &lt; $10000/שנתי עבור Enterprise"
-
   Orion: "&check;"
-
 - Feature: "הסכם רמת שירות (SLA) מקיף של 99.99%"
-
   Orion: "ארגוני &amp; התקנת שרת"
-
 - Feature: "סטטוס מסמך ניתן לחיפוש"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
 - Feature: 'הוזלה <span class="editormd-tex">\leftrightarrow \LaTeX</span> אוטומציה'
-
   Orion: "&check;"
-
 - Feature: "תרגום אוטומטי של AI NLP"
-
   Orion: "&check;"

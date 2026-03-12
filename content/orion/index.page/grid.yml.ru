@@ -9,177 +9,92 @@ title: Данные таблицы для сетки сравнения хара
 
 
 - Feature: "[à la carte ИИ](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
-
   Orion: "&check;"
-
 - Feature: "SSO: Kerberos / Активный каталог / Интеграция OpenID"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
   Notify: "Только SCIM"
-
   Confluence: "&check;"
-
 - Feature: "Инфраструктура с нулевым доверием, соответствующая требованиям FIPS 140-3"
-
   Orion: "&check;"
-
 - Feature: "Инфраструктура FedRAMP"
-
   Orion: "Установка сервера"
-
 - Feature: "Глобальная база данных фактов"
-
   Orion: "&check;"
-
 
 - Feature: "Поток операций в браузере (для мобильных устройств)"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
   Notify: "&check;"
-
   Confluence: "&check;"
-
 - Feature: "Поддержка DAV"
-
   Orion: "&check;"
-
   Confluence: "&check;"
-
 - Feature: "Поэтапные сборки"
-
   Orion: "&check;"
-
 - Feature: "Неограниченное число построений ветвей"
-
   Orion: "&check;"
-
 
 - Feature: "Только запланированные сборки динамического контента"
-
   Orion: "&check;"
-
 - Feature: "Поддержка аналитики 3-й стороны"
-
   Orion: "&check;"
-
 - Feature: "Уведомления устройства контрольного списка"
-
   Orion: "&check;"
-
   Confluence: "&check;"
-
 - Feature: "Многоязычный (i18n)"
-
   Orion: "&check;"
-
   Notion: "&check;"
-
 - Feature: 'Полностью поиск/замена <span class="editormd-tex">\KaTeX</span>/Выражения PCRE'
-
   Orion: "&check;"
-
   Confluence: "$$$"
-
 - Feature: "Федеративный"
-
   Orion: "&check;"
-
   Confluence: "[Нет](https://jira.atlassian.com/browse/CONFSERVER-26528)"
 
-
 - Feature: "Поддержка White Label"
-
   Orion: "&check;"
-
 - Feature: "Установка внутри корпоративного VPN"
-
   Orion: "Установка сервера"
-
 - Feature: "Работает автономно"
-
   Orion: "&check;"
-
   Notion: "&check;"
-
-- Feature: 'Легкая 3-я вечеринка "Pull-запрос" Поток операций участника'
-
+- Feature: "Легкая 3-я вечеринка 'Pull-запрос' Поток операций участника"
   Orion: "&check;"
-
 - Feature: "[GitHub Интеграция](https://youtu.be/FRc4qZkxVaI) с/ IDE &amp; Поддержка действий"
-
   Orion: "&check;"
-
 - Feature: "Безлимитный просмотр"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
   Notion: "&check;"
-
   Confluence: "&check;"
 
-
 - Feature: "Неограниченное количество мест"
-
   Orion: "Предприятие &amp; Установка сервера"
-
 - Feature: "История неограниченного контроля версий"
-
   Orion: "&check;"
-
 - Feature: "Интегрированное отслеживание изменений URL-адресов"
-
   Orion: "&check;"
-
 - Feature: "Хостинг сайта"
-
   Orion: "&check;"
-
 - Feature: "[3D Векторная графика](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Интеграция"
-
   Orion: "&check;"
-
 - Feature: "Поддержка SSI / CGI / mod_perl / mod_wasm"
-
   Orion: "&check;"
-
 - Feature: "Точные списки управления доступом для репозитория/синхронизированные списки управления доступом.htaccess"
-
   Orion: "&check;"
-
 - Feature: "500 МБ/с Полная сборка сайта"
-
   Orion: "&check;"
-
 - Feature: "8-64 параллельные сборки"
-
   Orion: "&check;"
-
 - Feature: "Общая стоимость владения &lt; $10000/год для предприятия"
-
   Orion: "&check;"
-
 - Feature: "Комплексное соглашение об уровне обслуживания (SLA) 99,99%"
-
   Orion: "Предприятие &amp; Установка сервера"
-
 - Feature: "Статус документа с возможностью поиска"
-
   Orion: "&check;"
-
   Slab: "&check;"
-
 - Feature: 'Снижение цен <span class="editormd-tex">\leftrightстрелка \LaTeX</span> Автоматизация'
-
   Orion: "&check;"
-
 - Feature: "ИИ: автоматический перевод NLP"
-
   Orion: "&check;"
