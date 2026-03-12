@@ -46,7 +46,7 @@
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
 	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
+          <!-- Derived work from Dennis Moskowitz'Imagen de Wikipedia original: CC-BySA v4.0 -->
 	{% else %}
           <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
@@ -73,7 +73,7 @@
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 activo
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Planes de precios de Orion</a></li>
+                href="/orion/plans.html{{ lang }}">Planes de precios de pedidos</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -116,15 +116,15 @@
       </div>
       <div class="row right" id='search'>
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="form-inline right" method="GET">
+            }}{% endifequal %}/" clase="derecho de formulario en línea" método="Obtener">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               marcador de posición="PCRE
- Búsqueda recursiva" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
+               placeholder="PCRE
+ Búsqueda recursiva" valor="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    Buscar
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" activado /><label for="markdown-search"><small>Rebaja</small></label>
+          id="búsqueda de rebajas" valor="1" marcado /><label for="markdown-search"><small>Rebaja</small></label>
         </form>
       </div>
     </div>
@@ -170,82 +170,82 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "undefined") {
+    Si (tipo de (editormd) === "no definido") {
         
-        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".sequence-diagram").sequenceDiagram();
-        for (const e of $("body").find(".graphviz").toArray()) {
-            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
+        mermaid.initialize({tema: "oscuro", startOnLoad: true, securityLevel: "suelto"});
+        $(".diagrama de secuencia").sequenceDiagram();
+        para (const e de $("cuerpo").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: falso}renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+        $("cuerpo").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
     }
-    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
+    si (document.cookie.indexOf("gdpr_analytics=1") == -1 &amp;&amp;
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("h1")) {
+        para (const. h1 de document.getElementsByTagName("h1")) {
             var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
+  <h3 class="card-title text-dark">Este sitio utiliza cookies para análisis.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Please choose your Analytics preference:</small><br>
+<small class="text-dark">Seleccione su preferencia de análisis:</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
-  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  onClick="document.cookie='gdpr_analytics=1; ruta=/; edad máxima=8640000';
+  $('#analytics').css('visualización', 'ninguno');verdadero">Consentimiento.</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
-  $('#analytics').css('display', 'none');true">I
-  Decline.</button><br><small class="text-dark">Should you elect to
-  Decline, we will not ask again for the next 10 days.</small>
+  onClick="document.cookie='gdpr_decline=1; ruta=/; edad máxima=864000';
+  $('#analytics').css('visualización', 'ninguno');verdadero">I
+  Rechazar.</button><br><small class="text-dark">¿Debería elegir
+  Rechazar, no volveremos a pedir los próximos 10 días.</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('beforeend', html);
+            h1.insertAdjacentHTML('antes de', html);
         }
     }
-    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
-        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
+    si no (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; ruta=/; edad máxima=8640000';
     }
   </script>
 
 <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
-		var permission = Notification.permission;
-		if (permission !== "granted") {
-            Notification.requestPermission().then((result) => {
-              permission = result;
+    si (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "denegado") {
+		permiso var = Notification.permission;
+		Si (permiso !== "concedido") {
+            Notification.requestPermission().then((resultado) => {
+              permission = resultado;
             });
         }
-        if (permission === "granted") {
-		   var revision;
-           var m = document.cookie.match(/last=([0-9]+)/);
-           if (m)
+        Si (permiso === "concedido") {
+		   var revisión;
+           var m = document.cookie.match(/último=([0-9]+)/);
+           si m)
 			 revision = m[1];
-           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
-                           {credentials: 'same-origin'});
-           try {
-              const json = await response.json();
-              for (const e of json.log) {
-                  var msg = e[3] + "\n";
-                  for (const [key, val] of Object.entries(e[1])) {
-                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+           respuesta constante = espera de recuperación("/dynamic/search/?regex=notify="+ revisión+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credenciales: 'mismo origen'});
+           intentar {
+              const json = espera response.json();
+              para (const e de json.log) {
+                  mensaje var = e[3] + "\n";
+                  para (const [clave, valor] de Object.entries(e[1])) {
+                      mensaje += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = new Notification(e[2],
+				  var n = nueva notificación(e[2],
      			    {
-					  body: msg,
+					  body: mensaje,
 					  tag: e[0],
-					  icon: "/favicon",
+					  icon: "/favicio",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			      n.addEventListener("clic", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { captura: verdadero });
 			  }
 		   }
-           catch (e) {
-             // alert(e);
+           capturas (e) {
+             // alerta(e);
 		   }
         }
 	}

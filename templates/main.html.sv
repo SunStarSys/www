@@ -46,7 +46,7 @@
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
 	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
+          <!-- Derived work from Dennis Moskowitz's ursprungliga Wikipedia-bild: CC-BySA v4.0 -->
 	{% else %}
           <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
@@ -73,7 +73,7 @@
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 deltagande
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Orion: Prissättningsplaner</a></li>
+                href="/orion/plans.html{{ lang }}">Prisplaner för Orion</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -116,15 +116,15 @@
       </div>
       <div class="row right" id='search'>
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="form-inline right" metod="GET">
+            }}{% endifequal %}/" klass="höger form-inline" metod="Hämta">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               platshållare="PCRE
- Rekursiv sökning" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
+               placeholder="PCRE
+ Rekursiv sökning" värde="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    Sök
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" markerad /><label for="markdown-search"><small>Nedsättning</small></label>
+          id="nedsättningssökning" värde="1" kontrollerad /><label for="markdown-search"><small>Nedsättning</small></label>
         </form>
       </div>
     </div>
@@ -170,82 +170,82 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "undefined") {
+    if (typeof(editormd) === "odefinierad") {
         
-        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".sequence-diagram").sequenceDiagram();
-        for (const e of $("body").find(".graphviz").toArray()) {
-            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
+        mermaid.initialize({tema: "mörk", startOnLoad: sant, securityLevel: "utlevad"});
+        $(".sekvensdiagram").sequenceDiagram();
+        för (const e of $("kropp").find("grafviz").toArray()) {
+            d3.select(e).graphviz({useWorker: falskt}).renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+        $("kropp").find("före").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
     }
-    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
+    om (document.cookie.indexOf("gdpr_analytics=1") == -1 &amp;&amp;
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("h1")) {
-            var html = `<div id="analytics"><br><div class="card border-warning">
+        för (konst h1 av document.getElementsByTagName("h1")) {
+            Var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
+  <h3 class="card-title text-dark">Den här webbplatsen använder cookies för analys.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Please choose your Analytics preference:</small><br>
+<small class="text-dark">Välj din analyspreferens:</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
-  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  onClick="document.cookie='gdpr_analytics=1; sökväg=/; maxålder=8640000';
+  $('#analytics').css('visa', 'inget');sant">Jag samtycker.</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
-  $('#analytics').css('display', 'none');true">I
-  Decline.</button><br><small class="text-dark">Should you elect to
-  Decline, we will not ask again for the next 10 days.</small>
+  onClick="document.cookie='gdpr_decline=1; sökväg=/; maxålder=864000';
+  $('#analytics').css('visa', 'inget');sant">I
+  Avslå.</button><br><small class="text-dark">Om du väljer att
+  Avböj, vi kommer inte att fråga igen för de kommande 10 dagarna.</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('beforeend', html);
+            h1.insertAdjacentHTML('försenad', html);
         }
     }
-    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
-        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
+    annars om (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; sökväg=/; maxålder=8640000';
     }
   </script>
 
 <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
-		var permission = Notification.permission;
-		if (permission !== "granted") {
-            Notification.requestPermission().then((result) => {
-              permission = result;
+    om (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "nekad") {
+		var-behörighet = Notification.permission;
+		om (behörighet !== "beviljad") {
+            Notification.requestPermission().then(((resultat) => {
+              permission = resultat;
             });
         }
-        if (permission === "granted") {
-		   var revision;
+        Om (behörighet === "beviljad") {
+		   Revidering.
            var m = document.cookie.match(/last=([0-9]+)/);
-           if (m)
+           om (m)
 			 revision = m[1];
-           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
-                           {credentials: 'same-origin'});
-           try {
-              const json = await response.json();
-              for (const e of json.log) {
-                  var msg = e[3] + "\n";
-                  for (const [key, val] of Object.entries(e[1])) {
-                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+           konst svar = väntar på hämtning("/dynamic/search/?regex=notify="+revision+";språk={{lang}};markdown_search=1;as_json=1",
+                           {inloggningsuppgifter: 'samma ursprung'});
+           försöka {
+              konst json = vänta på response.json();
+              för (st e av json.log) {
+                  var meddelande = e[3] + "\n";
+                  för (konstnär [nyckel, val] av Object.entries(e)[1])) {
+                      Meddelande += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = new Notification(e[2],
+				  var n = nytt meddelande (e)[2],
      			    {
-					  body: msg,
+					  body: meddelande,
 					  tag: e[0],
-					  icon: "/favicon",
+					  icon: "/favikon",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			      n.addEventListener("klicka", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";språk={{lang}};markdown_search=1") }, { capture: sant });
 			  }
 		   }
-           catch (e) {
-             // alert(e);
+           fångst (e) {
+             // varning(e);
 		   }
         }
 	}

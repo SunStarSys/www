@@ -46,7 +46,7 @@
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
 	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
+          <!-- Derived work from Dennis Moskowitz'原創維基百科影像：CC-BySA v4.0 -->
 	{% else %}
           <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
@@ -73,7 +73,7 @@
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
                 作用中
                 {% endifequal %}"><a class="nav-link text-white"
-                href="/orion/plans.html{{ lang }}">Orion 定價計畫</a></li>
+                href="/orion/plans.html{{ lang }}"> 訂單訂價計畫</a></li>
             </ul>
           </li>
           <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
@@ -116,15 +116,15 @@
       </div>
       <div class="row right" id='search'>
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="form-inline right" method="GET」>
+            }}{% endifequal %}/" 類別 ="表單行右" 方法 ="取得">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               預留位置 =」PCRE
- 遞迴搜尋 " value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
+               placeholder="公司簡介
+ 遞迴搜尋" 值 ="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    搜尋
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" 已勾選 /><label for="markdown-search"><small>減價</small></label>
+          id="降價搜尋" 值 ="1 個" 已勾選 /><label for="markdown-search"><small>減價</small></label>
         </form>
       </div>
     </div>
@@ -170,82 +170,82 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "undefined") {
+    if (typeof (editormd) === "未定義") {
         
-        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".sequence-diagram").sequenceDiagram();
-        for (const e of $("body").find(".graphviz").toArray()) {
-            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
-            e.innerHTML = ""
+        mermaid.initialize({主題 ："暗色"、startOnLoad：真、securityLevel："鬆散"});
+        $("。序列圖").sequenceDiagram();
+        用於 (const e of $ ("本體"繁體中文 (台灣)".graphviz").toArray()) {
+            d3.select (e) .graphviz ({useWorker：偽})。renderDot ($ (e) .text())；
+            e.inner HTML = ""
         }
-        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+        $("本體"繁體中文 (台灣)"前置") .parent().addClass ("編輯 - 預覽 - 主題 - 標記");
         CodeMirror.colorize();
     }
-    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
-    document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("h1")) {
-            var html = `<div id="analytics"><br><div class="card border-warning">
+    如果 (document.cookie.indexOf ("gdpr_analytics=1") == -1 &amp;&amp;
+    document.cookie.indexOf("gdpr_decline=1") == -1 {
+        (包含 document.getElementsByTagName 之 h1 的項目)"h1")) {
+            中文 (繁體) `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
+  <h3 class="card-title text-dark">此網站使用 Cookie 進行分析。</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Please choose your Analytics preference:</small><br>
+<small class="text-dark">請選擇您的「分析」偏好設定：</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
   onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
-  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  $('#analytics').css('顯示', '全不勾選') ;true"> 我同意。</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
-  $('#analytics').css('display', 'none');true">I
-  Decline.</button><br><small class="text-dark">Should you elect to
-  Decline, we will not ask again for the next 10 days.</small>
+  $('#analytics').css('顯示', '全不勾選') ;true">I
+  拒絕。</button><br><small class="text-dark">您應該選擇
+  拒絕，我們將不會在接下來的 10 天內再次詢問。</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('beforeend', html);
+            h1.insertAdjacentHTML('前端'繁體中文
         }
     }
-    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+    其他 if (document.cookie.indexOf ("gdpr_decline=1") == -1 {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
 
 <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
-		var permission = Notification.permission;
-		if (permission !== "granted") {
-            Notification.requestPermission().then((result) => {
-              permission = result;
+    如果 (document.cookie.indexOf ("can_search") >= 0 &amp;&amp; Notification.permission !== "已拒絕") {
+		var 權限 = Notification.permission；
+		if (權限 ！== "已授予") {
+            Notification.requestPermission().then ( (結果) => {
+              permission = 結果；
             });
         }
-        if (permission === "granted") {
-		   var revision;
-           var m = document.cookie.match(/last=([0-9]+)/);
-           if (m)
-			 revision = m[1];
-           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
-                           {credentials: 'same-origin'});
-           try {
-              const json = await response.json();
-              for (const e of json.log) {
-                  var msg = e[3] + "\n";
-                  for (const [key, val] of Object.entries(e[1])) {
-                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+        if (權限 === "已授予") {
+		   var 版本；
+           var m = document.cookie.match (/last=()[0-9]+)/);
+           如果 (m)
+			 revision = 公尺 length unit[1 個];
+           const 回應 = 等待擷取 ("/dynamic/search/？regex= 通知 ="+ 修訂 +";lang={{lang}};markdown_search=1;as_json=1",
+                           {證明資料：'同源'});
+           嘗試{
+              const json = 等待 response.json()；
+              (包含 json.log 的 e) {
+                  中文 (繁體)[3] + "\n";
+                  用於 (const [鍵值] / Object.entries (e)[1 個])) {
+                      訊息 += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = new Notification(e[2],
+				  var n = 新通知 (e)[2 個],
      			    {
-					  body: msg,
+					  body: 訊息，
 					  tag: e[0],
-					  icon: "/favicon",
+					  icon: "/ 圖示",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			      n.add 事件監聽器 ("點擊", () => {window.open("https://{{website}}/dynamic/search/？regex= 差異因子 ="+e[0]+";lang={{lang}};markdown_search=1") }, { 擷取：true });
 			  }
 		   }
-           catch (e) {
-             // alert(e);
+           捕捉 (e) {
+             // 警報 (e)；
 		   }
         }
 	}

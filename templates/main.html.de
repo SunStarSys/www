@@ -46,7 +46,7 @@
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
 	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
+          <!-- Derived work from Dennis Moskowitz's ursprüngliche Wikipedia-Bild: CC-BySA v4.0 -->
 	{% else %}
           <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
@@ -116,15 +116,15 @@
       </div>
       <div class="row right" id='search'>
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/" class="form-inline right" method="GET">
+            }}{% endifequal %}/" Klasse="Form-Inline rechts" Methode="ERFAHREN">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               Platzhalter="PCRE
- Rekursive Suche" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
+               placeholder="PCRE
+ Rekursive Suche" Wert="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    Suchen
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id="markdown-search" value="1" markiert /><label for="markdown-search"><small>Preisabschrift</small></label>
+          id="Markdown-Suche" Wert="1" markiert /><label for="markdown-search"><small>Preisabschrift</small></label>
         </form>
       </div>
     </div>
@@ -170,82 +170,82 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "undefined") {
+    if (typeof(editormd) === "nicht definiert") {
         
-        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".sequence-diagram").sequenceDiagram();
-        for (const e of $("body").find(".graphviz").toArray()) {
-            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
+        mermaid.initialize({Thema: "dunkel", startOnLoad: true, securityLevel: "lose"});
+        $(".Sequenzdiagramm").sequenceDiagram();
+        für (const e von $("Körper").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: falsch}).renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+        $("Körper").find("vor".parent().addClass("Editormd-preview-theme-dark");
         CodeMirror.colorize();
     }
-    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
+    wenn (document.cookie.indexOf("gdpr_analytics=1") == -1 &amp;&amp;
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("h1")) {
+        für (konst. h1 von document.getElementsByTagName("h1")) {
             var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
+  <h3 class="card-title text-dark">Diese Website verwendet Cookies für Analysen.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Please choose your Analytics preference:</small><br>
+<small class="text-dark">Wählen Sie Ihre Analytics-Voreinstellung aus:</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
-  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  onClick="document.cookie='gdpr_analytics=1; Pfad=/; max-age=8640000';
+  $('#analytics').css('anzeigen', 'keine');wahr">Ich bin einverstanden.</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
-  $('#analytics').css('display', 'none');true">I
-  Decline.</button><br><small class="text-dark">Should you elect to
-  Decline, we will not ask again for the next 10 days.</small>
+  onClick="document.cookie='gdpr_decline=1; Pfad=/; max-Alter=864000';
+  $('#analytics').css('anzeigen', 'keine');wahr">I
+  Ablehnen.</button><br><small class="text-dark">Sollten Sie sich entscheiden,
+  Ablehnen, wir werden nicht wieder für die nächsten 10 Tage fragen.</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('beforeend', html);
+            h1.insertAdjacentHTML('vor Ende', HTML);
         }
     }
-    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
-        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
+    andernfalls (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; Pfad=/; max-age=8640000';
     }
   </script>
 
 <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
-		var permission = Notification.permission;
-		if (permission !== "granted") {
-            Notification.requestPermission().then((result) => {
-              permission = result;
+    wenn (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "abgelehnt") {
+		var-Berechtigung = Notification.permission;
+		(Berechtigung !== "erteilt") {
+            Notification.requestPermission().then((Ergebnis) => {
+              permission = Ergebnis;
             });
         }
-        if (permission === "granted") {
-		   var revision;
+        if (Berechtigung === "erteilt") {
+		   Var-Revision;
            var m = document.cookie.match(/last=([0-9]+)/);
-           if (m)
+           wenn (m)
 			 revision = m[1];
-           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
-                           {credentials: 'same-origin'});
-           try {
-              const json = await response.json();
-              for (const e of json.log) {
+           const-Antwort = wartet auf Abruf("/dynamic/search/?regex=notify="+Überarbeitung+";lang={{lang}};markdown_search=1;as_json=1",
+                           {Zugangsdaten: 'Gleiche Herkunft'});
+           versuchen {
+              const json = warte auf response.json();
+              für (const e von json.log) {
                   var msg = e[3] + "\n";
-                  for (const [key, val] of Object.entries(e[1])) {
+                  für (Const [Schlüssel, Wert] von Object.entries(e[1])) {
                       msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = new Notification(e[2],
+				  var n = neue Benachrichtigung (e)[2],
      			    {
-					  body: msg,
+					  body: Nachricht,
 					  tag: e[0],
-					  icon: "/favicon",
+					  icon: "/Favicon",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			      n.addEventListener("klicken", () => {window.open("HTTPS://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { Erfassung: true });
 			  }
 		   }
-           catch (e) {
-             // alert(e);
+           fangen (e) {
+             // Warnung(e);
 		   }
         }
 	}

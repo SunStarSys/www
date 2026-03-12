@@ -46,7 +46,7 @@
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
 	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
+          <!-- Derived work from Dennis Moskowitz'оригинальное изображение википедии: CC-BySA v4.0 -->
 	{% else %}
           <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
@@ -116,15 +116,15 @@
       </div>
       <div class="row right" id='search'>
         <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname
-            }}{% endifequal %}/ class=form-inline right method=GET»>
+            }}{% endifequal %}/" класс="правая линия формы" метод="Получить">
           <input type="hidden" name="lang" value="{{ lang }}" />
           <input class="form-control" type="text" name="regex"
-               Прототип=»PCRE
- Рекурсивный поиск value={{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
+               placeholder="ПОДРОБНЕЕ
+ Рекурсивный поиск" значение="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
 	    Поиск
           </button>&nbsp;
           <input class="form-control form-check-input" type="checkbox" name="markdown_search"
-          id=markdown-search value=1 отмечено /><label for="markdown-search"><small>Снижение цен</small></label>
+          id="поиск разметки" значение="1" проверено /><label for="markdown-search"><small>Снижение цен</small></label>
         </form>
       </div>
     </div>
@@ -170,40 +170,40 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "undefined") {
+    if (type(editormd) === "не определено") {
         
-        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".sequence-diagram").sequenceDiagram();
-        for (const e of $("body").find(".graphviz").toArray()) {
-            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
+        mermaid.initialize({тема: "неотчетливый", startOnLoad: true, securityLevel: "широкий"});
+        $(".sequence-диаграмма").sequenceDiagram();
+        для (количество e $("тело").найти("Русский").toArray()) {
+            d3.select(e).graphviz(){useWorker: ложь}).renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
+        $("тело").найти("до").parent().addClass("editormd-preview-тема-темный");
         CodeMirror.colorize();
     }
-    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
+    если (document.cookie.indexOf("gdpr_analytics=1") == -1 &amp;&amp;
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("h1")) {
-            var html = `<div id="analytics"><br><div class="card border-warning">
+        для (содержит h1 из document.getElementsByTagName("h1")) {
+            вар. html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
+  <h3 class="card-title text-dark">Этот сайт использует файлы cookie для аналитики.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Please choose your Analytics preference:</small><br>
+<small class="text-dark">Выберите предпочитаемый тип аналитики:</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
   onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
-  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
+  $('#analytics').css('показывать', 'нет'истина"«Я согласен.</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
-  $('#analytics').css('display', 'none');true">I
-  Decline.</button><br><small class="text-dark">Should you elect to
-  Decline, we will not ask again for the next 10 days.</small>
+  $('#analytics').css('показывать', 'нет'истина">I
+  Отклонить.</button><br><small class="text-dark">Если вы решите
+  Мы больше не будем просить о следующих 10 днях.</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('beforeend', html);
+            h1.insertAdjacentHTML('перед', html);
         }
     }
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
@@ -212,40 +212,40 @@
   </script>
 
 <script async type="module">
-    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
-		var permission = Notification.permission;
-		if (permission !== "granted") {
-            Notification.requestPermission().then((result) => {
-              permission = result;
+    если (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "отрицательный") {
+		vr разрешение = Notification.permission;
+		if (разрешение !==) "предоставлено") {
+            Notification.requestPermission().then(result) => {
+              permission = результат;
             });
         }
-        if (permission === "granted") {
-		   var revision;
-           var m = document.cookie.match(/last=([0-9]+)/);
-           if (m)
-			 revision = m[1];
-           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
-                           {credentials: 'same-origin'});
-           try {
-              const json = await response.json();
-              for (const e of json.log) {
-                  var msg = e[3] + "\n";
-                  for (const [key, val] of Object.entries(e[1])) {
-                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
+        если (разрешение === "предоставлено") {
+		   пересмотр;
+           var m = document.cookie.match(/last=()[0-9]+)/);
+           если (м)
+			 revision = м[1];
+           ответ const = ожидает извлечения("/dynamic/search/?regex=notify="+ревизия+";язык={{lang}};markdown_search=1;as_json=1",
+                           {учетные данные: 'одноимённый'});
+           попытка {
+              const json = ожидает response.json();
+              для (содержит e из json.log) {
+                  вр. сообщение = e[3] + "\n";
+                  для [ключ, вал] из Object.entries(e[1])) {
+                      сообщение += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = new Notification(e[2],
+				  var n = новое уведомление (e)[2],
      			    {
-					  body: msg,
+					  body: сообщение,
 					  tag: e[0],
-					  icon: "/favicon",
+					  icon: "/фавикон",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
+			      n.addEventListener("щелкнуть", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";язык={{lang}};markdown_search=1") }, { захват: true });
 			  }
 		   }
-           catch (e) {
-             // alert(e);
+           поймать (e) {
+             // оповещение(e);
 		   }
         }
 	}
