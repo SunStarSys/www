@@ -140,6 +140,8 @@ Subversion Server-Side Commit Hooks are also customizable to your oversight conc
 
 ## Orion Application Security
 
+[Public SSR is a smell](https://queue.acm.org/detail.cfm?id=2721993) 
+
 ```graphviz
 digraph {
 "@path::acl" -> "authz-svn.conf" [label="svn"];
