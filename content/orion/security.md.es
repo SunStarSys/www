@@ -145,6 +145,8 @@ Los ganchos de confirmación del lado del servidor de Subversion también se pue
 
 ## Seguridad de la aplicación Orion
 
+[La SSR pública es un olor](https://queue.acm.org/detail.cfm?id=2721993) 
+
 ```graphviz
 digraph {
 "@path::acl" -> "authz-svn.conf" [label="svn"];

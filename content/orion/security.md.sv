@@ -145,6 +145,8 @@ Subversion Server-Side Commit Hooks är också anpassningsbara för dina tillsyn
 
 ## Orion-applikationssäkerhet
 
+[SSR är en lukt](https://queue.acm.org/detail.cfm?id=2721993) 
+
 ```graphviz
 digraph {
 "@path::acl" -> "authz-svn.conf" [label="svn"];
@@ -314,4 +316,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-13 09:43:21 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28959 $ -->
+<!-- $Date: 2026-03-13 10:41:14 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28992 $ -->
