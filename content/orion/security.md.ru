@@ -145,7 +145,9 @@ Ditto для сценариев CGI, которые полностью забл�
 
 ## Защита приложения Orion
 
-[Общественный SSR – это запах](https://queue.acm.org/detail.cfm?id=2721993) 
+### [Общественный SSR – это запах](https://queue.acm.org/detail.cfm?id=2721993).
+
+### Управление ACL
 
 ```graphviz
 digraph {
@@ -316,4 +318,4 @@ CSS должен быть доставлен с наших серверов.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-13 09:47:58 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28969 $ -->
+<!-- $Date: 2026-03-13 10:45:24 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28995 $ -->
