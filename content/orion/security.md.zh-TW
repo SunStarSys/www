@@ -1,21 +1,27 @@
 ---
-acl: '@staff=rw、*=r'
+acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
-keywords: security，infosec，appsec，ipsec，devsecops，it，acl，svnauthz，安全性，infosec，appsec，ipsec，devsecops，it，acl，svnauthz
+keywords: security，安全性，infosec，appsec，ipsec，devsecops，it，acl，svnauthz
 published: ~
 status: 已發布
-title: Orion Security
+title: Orion 安全
 ---
+
+<div class="right">
+
+![掛鎖](security.page/padlock).
+
+</div>
 
 [TOC]
 
-## {# lede #}「透過安全措施確保安全無虞。」{# lede #}
+## {# lede #}"穿透隱密的安全性根本不太安全。"{# lede #}
 
-美國鎖定史密斯的熱門典範[Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851 年，在今年倫敦一場展覽中輕鬆挑選水晶宮鎖。我們完全同意，這也是我們 Oracle Cloud Infrastructure (OCI) 自動化引擎藍圖的原因[GitHub 提供](https://github.com/joesuf4/home/blob/wsl/.ocirc).
+美國 locksmith 的熱門繪圖[Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851 年，當年在倫敦的一場展覽中輕易地拿到水晶宮鎖。我們完全同意，這就是我們的 Oracle Cloud Infrastructure (OCI) 自動化引擎藍圖的原因[可從 GitHub 取得](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Orion 基礎架構安全性
+## Orion Infrastructure 安全
 
 ```mermaid
 flowchart TB
@@ -85,55 +91,59 @@ vcs==vpn==>A8==ssh/vpn==>B8
 ```
 &nbsp;
 
-符合 FIPS 140-2 規範，適用於反向連接埠轉送服務 (HTTPS/SSH/IPsec) 的三重加密。皮帶，懸吊和攪拌！
+適用於逆向連接埠轉送服務 (HTTPS/SSH/IPsec) 的 FIPS 140-2 相容搭配 MFA 三重加密。皮帶，吊帶和攪拌！
 
 ----
 
 &nbsp;
 
-### Passwordless [RBAC 用](https://en.wikipedia.org/wiki/Role-based_access_control) 模型，對等[正交](https://github.com/SunStarSys/orthrus) [otp - sha1](https://en.wikipedia.org/wiki/One-time_password).
+### 無密碼[RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) 模型，胡椒[正弦](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo 挑戰
 
-伺服器沒有儲存任何固定密碼。* 極限 * 無頭 (headless) 自動化 sudo / RBAC 使用，理由好。不過，我們已經[工具](https://github.com/SunStarSys/pty).
+伺服器上沒有儲存固定的密碼。此 *限制* sudo/RBAC 使用無頭自動化，理由良好。然而，我們有[工具](https://github.com/SunStarSys/pty) 以消除回應各種提示的無限可能。
 
-### 封閉測試環境執行組建和 CGI 命令檔
+### 組建和 CGI 命令檔的封閉測試環境執行
 
-我們部署 "shared-nothing" 區域組建，預設為零網路可用性。這表示客戶建置可以存取或修改的唯一項目是自己的資產，而不是區域本身的任何其他客戶或任何其他系統路徑 (除了[`/ 暫存`](#).
+我們部署"無共享" 區域建置時，預設為零網路可用性。這表示客戶建置可以存取或修改的唯一項目是自己的資產，而非任何其他客戶或區域本身的任何其他系統路徑 (除了[`/tmp`](#)). 此外，唯有企業和企業客戶能夠在建置期間存取網際網路，因為他們正在使用自己的 *unique* Solaris 區域，而這些區域可以完全根據其建置需求量身打造。
 
-CGI 程序檔的 Ditto，在寫入存取權以外的任何項目時完全被鎖定[`/ 暫存`](#).
+CGI 文稿的 Ditto，在寫入存取時被完全鎖定 。[`/tmp`](#).
 
-### 端對端加密
+### 端到端加密
 
 - HTTPS FIPS 140-3 連線適用的 TLS 1.3 (+FS) AES (256) SHA (256).
 
-- SSHv2 ED25519 FIPS 140-3 / NIST 相容金鑰適用於跨主機[`批次`](#).
+- SSHv2 ED25519 跨主機適用的 FIPS 140-3 / NIST 相容金鑰[`迴圈`](#) 反向埠轉送
 
 - 跨區域 VPN 的 IPsec/IKEv2/PFS AES (256).
 
-- AES (256) 用於 ZFS 加密
+- AES (256) 加密 ZFS
 
 ### 零信任層面
 
-基本前提[零信任架構](https://csrc.nist.gov/publications/detail/sp/800-207/final) 避免在垃圾的生理周圍設計您的網絡安全：在外面硬著，但一旦進入，軟和鬆散。因此，我們不會這麼做；各種「存在點 (POP)」區域網路內每個有意義的授權網路連接埠，都只會暴露在裸機機器的回送裝置介面上[`lo0`](#).
+基本處所[零信任架構](https://csrc.nist.gov/publications/detail/sp/800-207/final) 是為了避免在垃圾的生理上設計您的網絡安全：在外面硬化，但一旦你進入，軟和鬆散。我們不't 這樣做；在各種網路連線點 (POP) 區域網路內，每個有意義的授權網路連接埠都只會顯示在裸機機器上'迴路裝置介面[`lo0`](#)，且僅在 (反向) 連接埠轉送 SSH 連線至其 *的相關資訊環境中有意義。
 
-當一個區域上線後，此基礎架構完全自動化，但我們可以公開分享架構 (與軍人手「鬆嘴船」平衡的霍布斯透明度比科學更為藝術)。保有&mdash; 超越破壞防偽[`lo0`](#).
+我們使用 TCP 代理主機，而非 HTTP，也沒有 MSA 後端介面 ** 因此，唯一可以看到您的 Web 流量的主機就是解密 TLS 流量的主機 **。相同的規則適用於 Subversion 流量：只有將端對端 TLS 加密流量直接導向至 **服務端點 **，才能看到您的資料。
 
-即使主要 OCI 控制帳戶受到危害，所有客戶資產的 ** 機密性 ** 和 ** 完整性 ** 仍會保持違規狀態。所有的黑色帽子都能夠與客戶網站 ** 可用性 ** 搞定。特別是，他們無法存取 Subversion 服務資料記錄。在無效 Apple 的 OCI 存取終止後，我們可以在 48-72 小時內從頭重新建構整個 OCI 基礎架構。
+**MSA 層和多層私人資料曝光 **等其他廠商都很幸運。敵人的"非功能工程" 複雜性。當您的產品是** 聯合貨幣，而不是大規模的 MSA minfield** (Orion 與其競爭對手領域之間的差異化因素) 時，提供有意義的安全承諾會變得更加簡單。
 
------
+此基礎架構在線上導引區域後完全自動化，但'我們都可以公開分享有關建築的資訊 (平衡荷布斯與軍事手段的透明度) "鬆嘴唇沉船" 比科學更藝術。放心&mdash; 超越防偽[`lo0`](#) Solaris 11 中的保護's (BSD) 封包篩選器本身，即使是客戶帳戶，也無法取得這些服務的存取權。
 
-### 記錄、監控與稽核
-
-我們鼓勵企業客戶建立 Splunk 帳戶，我們會從您所需的每個全球 POP 將近乎即時的 Weblogs 提供給您的帳戶。Splunk 也提供伺服器端 CGI 命令檔的錯誤日誌。
-
-我們會監控全球所有 OCI POP 的服務可用性，並在伺服器停機時間超過 30 秒時觸發 HA (可用性網域) 或區域容錯移轉事件。
-
-透過使用 Apache 授權建立網站的 Subversion HEAD，即可執行 ACL 稽核[Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) 命令檔並檢查產生的組建[`繁體中文 (香港)`](#).
-
-Subversion Server-Side Commit Hooks 也可根據您的監督問題自訂。從簡單的確認郵件程式到安全的 svnpubsub 常駐程式存取，都有不限數目的自訂配置可用。
+即使主要 OCI 控制帳戶受到危害，所有客戶資產的 **機密性** 和 **完整性** 仍保持違規。所有的黑帽子都可與客戶網站 **可用性** 一起訊息。特別是，他們無法存取 Subversion 服務資料記錄。蘋果不佳後，我們可以在 48-72 小時內從頭重新建構整個 OCI 基礎架構's OCI 存取已終止。
 
 -----
 
-## Orion 應用程式安全性
+### 記錄、監督以及稽核
+
+我們鼓勵企業客戶建立 Splunk 帳戶，我們將從您所需的每個全球 POP 將近乎即時的 Web 日誌傳遞給您的帳戶。Splunk 也提供伺服器端 CGI 命令檔的錯誤日誌。
+
+我們會監控全球所有 OCI POP 的服務可用性，如果伺服器停機持續超過 30 秒，則會觸發 HA (可用性網域) 或區域容錯移轉事件。
+
+只要建立網站，即可執行 ACL 稽核'使用 Apache 授權的 s Subversion HEAD [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) 指令碼並檢查產生的組建[`www/.acl`](#) 您可以隨時在結帳目錄中的檔案。一般而言，現代硬體上的建置程序將花費不到 10-15 秒的時間。
+
+Subversion 伺服器端確認鉤點也可根據您的監督問題自訂。從簡單的確認郵件程式到安全存取我們的 svnpubsub 常駐程式，都有許多可用的自訂配置。
+
+-----
+
+## Orion 應用程式安全
 
 ```graphviz
 digraph {
@@ -144,19 +154,19 @@ digraph {
 
 &nbsp;
 
-Orion 的安全模型由內含的設定集中管理[`@path::acl`](#) 被限制於[`程式庫 /path.pm`](#).
+奧里昂's 安全模型由包含的設定集中管理[`@path::acl`](#) 施作於[`程式庫 /path.pm`](#)。Offshoot 伺服器配置檔案會在每次確認的變更上動態產生。
 
-### OpenIDC SSO 安全
+### OpenIDC SSO 安全性
 
-階段作業 Cookie 標記為 HttpOnly 且安全，因此 Orion Online Editor 會有效中立 Javascript 階段作業竊取嘗試。
+階段作業 Cookie 是 HttpOnly 並加上安全標記，因此 Orion 線上編輯器會有效中立 Javascript 階段作業竊取嘗試。
 
-### Subversion 密碼加密
+### Subversion 密碼的加密
 
-可調整的捨入數目 (目前預設為 5)。
+可調整的捨入次數 (目前預設值為 5)。
 
-### 受污染的資料保護
+### 隱匿的資料保護
 
-我們所有的 Perl 程式實際執行都啟用了 -T 旗標的強制性 Taint 檢查；這是針對遠端 Shell 爆炸的強大唯一 Perl 防護。
+我們的所有 Perl 程式實際執行都啟用了 -T 旗標的強制性 taint 檢查；這是針對 Remote Shell Exploits 的強大、唯一 Perl 保護項目。
 
 ### Wiki 問題
 
@@ -170,131 +180,131 @@ Wiki 安全涉及數個因素：
 
 4. 搜尋引擎 ACL 相容性
 
-我們認為這些問題與以下的 Orion 有關。
+我們探討這些與以下 Orion 有關的問題。
 
 #### 線上編輯器
 
-線上編輯器支援 JSON UI，只要將使用者代理程式的 Accept 標頭設定為偏好[`應用程式 /json`](#).
+線上編輯器只要設定您的使用者代理程式，即可支援 JSON UI's 接受表頭以偏好[`應用程式 /json`](#) MIME 類型，因此 UI 和 API 的安全控制相同。
 
-** 直接 Subversion 存取之外沒有管理 UI/API**。
+**直接 Subversion 存取之外沒有管理 UI/API**。
 
-##### Subversion ACL 會管理伺服器端工作複本讀取存取
+##### Subversion ACL 管理伺服器端工作複本讀取存取權
 
-透過 UI 提供的每個工作複本資源在向使用者展示之前，會對 Subversion ACL 進行交叉檢查。如此一來，我們就無法對受版本控制的資產 (亦即 ** 所有項目 **) 讀取未經授權的資源。
+透過 UI 可用的每個工作複本資源會對照您的 Subversion ACL 進行交叉檢查，然後再將它們呈現給使用者。如此一來，我們就無法對受版本控制 (亦即 **所有項目 **) 的資產進行未經授權資源的讀取存取。
 
-##### 確認存取是由 Subversion ACL 直接控制
+##### 確認存取權是由 Subversion ACL 直接控制
 
-沒有相應的授權 Subversion 確認，就無法透過網路建立及後續檢視任何內容。此處的主要問題是控制 Wiki 頁面作者所確認和建立之編輯項目可用的資訊。
+沒有對應的授權 Subversion 確認，就無法再透過網路建立及後續檢視任何內容。此處的主要問題是控制 Wiki 頁面作者可用的資訊'已確認與已建立的編輯。
 
-如果您允許在減價來源頁面中預先處理範本，則必須瞭解範本引數如何讓樹狀結構中的其他檔案內容可作為已編輯頁面來源的變數。
+如果您在 Markdown 來源頁面中允許「樣板」預先處理，則必須瞭解樣板引數如何讓樹狀結構中其他檔案的內容成為編輯頁面來源的變數。
 
-通常，如果設定為這樣做，編輯過的頁面可以在頁面標頭中宣告自己的相依性檔案，這就像您在 Wiki 資訊架構中對安全控制的權重功能集一樣。
+通常，如果設定為這麼做，編輯的頁面可以在頁面的標頭中宣告自己的相依性檔案，這會是您在 Wiki 中針對安全控制權衡量功能集的考量。's 資訊架構。
 
-雖然我們可以根據您的需求提供指引和支援，但您還是可以決定如何平衡組織企業 Wiki 的規模。
+雖然我們可以提供符合您需求的指引和支援'您一定會決定如何平衡組織的規模's 企業 wiki。
 
-請參閱以下部分：[相依性 /ACL 注入控制](#h4-dependency-acl-injection-controls) 如需詳細資訊，請查看此即時範例，瞭解如何集中設定 ACL [`程式庫 /acl.yml`]({{snippetA.pretty_uri}}).
+請參閱下方的章節：[相依性 /ACL 射出控制](#h4-dependency-acl-injection-controls) 如需更多詳細資訊，請參閱此即時範例，瞭解 ACL 如何輕鬆's 可以集中配置於[`程式庫 /acl.yml`]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
-「內容作者」可以在頁面的設定頁面限制[標頭]({{snippetB.pretty_uri}}).
+「內容作者」可以在頁面中設定頁面限制'秒鐘[郵件資訊]({{snippetB.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
-作為側邊備註，即使未在建立與修改分支時放置任何其他 ACL 控制項，仍無法由未經授權的人員將受保護的資源複製到分支。換句話說，系統將支援分支實驗，而不會對您的零件進行任何其他控制，以確保保護資產在每個分支的自然生命週期中保持保護。
+請注意，未經授權的人員無法將受保護的資源複製到分支中，即使未在建立和修改分支時設置任何其他 ACL 控制項也一樣。換句話說，系統將支援分支實驗，無需對您的零件進行任何額外的控制，以確保保護資產在整個分支中保持保護'自然生命週期。
 
-#### 建置系統 ACL？
+#### 建立系統 ACL？
 
-建置系統是全方位且全盤瞭解的，但我們可以確保只有您在 Subversion ACL 中管理及控制的團隊才能看見您所建置、受保護的資產。
+建構系統是全方位且全知的，但我們可以確保只有您在 Subversion ACL 中管理與控制的團隊才能看到您內建、受保護的資產。
 
-組建系統會在確認時顯示其透過瀏覽器 IDE 建立的檔案名稱清單，但是該清單只根據使用者在確認中新增、更新或刪除內容動作所相依的資源讀取存取權而定。
+建置系統會在確認時顯示透過瀏覽器 IDE 建立的檔案名稱清單，但該清單僅以使用者為依據'依據使用者的資源讀取存取權's 在確認中新增、更新或刪除內容動作。
 
-##### 範本遍訪控制
+##### 範本追蹤控制項
 
-請參閱[sanitize_relative_path]({{snippetC.pretty_uri}}).
+請參閱[sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
 
-此代碼會強制執行本節下方的規則。
+此程式碼會強制執行以下段落中的規則。
 
-###### 包含與擴充標記
+###### 包含和延伸標籤
 
-所有目標檔案都在以下的子資料夾中[`/ 範本 /`](#).
+所有目標檔案都位於子資料夾中[`繁體中文`](#) 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
 
-###### ssi 標記
+###### ssi 標籤
 
-所有目標檔案都在以下的子資料夾中[`/ 內容 /`](#).
+所有目標檔案都位於子資料夾中[`/ 內容 /`](#) 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
 
-目標路徑若未設定於[`@path：：樣式`](#) 具有可封存或分類有問題之目標路徑的比對設定，[`ssi`](#).
+若未在其中設定目標路徑[`@path：：樣式`](#) 具有比對設定，允許將有問題的目標路徑存檔或分類，[`ssi`](#) 作業將會失敗。
 
-這是因為[`ssi`](#).
+這是因為[`ssi`](#) 支援是這些功能集的先決條件，以保留您的網站's 標籤集 *permalinks*。
 
-#### 相依性 /ACL 注入控制
+#### 相依性 /ACL 射出控制
 
-控制者[`程式庫 /path.pm`](#).
+控制者[`程式庫 /path.pm`](#) 匯入。
 
-#### lib/{path,view}.pm Subversion ACL
+##### 程式庫 /{路徑，檢視}.pm Subversion ACL
 
-若要控制這些資源的寫入存取權，請將它們限制在程式碼庫中的人員，並授權在版本控制下對整組資產實行安全控制 (亦即 * 一切 *)。
+它'明智地控制對這些資源的寫入存取權，方法是將它們限制在程式碼庫中的人員，並授權在版本控制 (亦即 *所有項目 *) 下對整組資產實行安全控制。
 
-它也是包含它的好主意[`@svnadmin`](#).
+它也是包含的一個好主意[`@svnadmin`](#) 具備讀寫存取權的群組，但'即使您需要我們手動重設您的 Subversion ACL，也不必嚴格要求。
 
-##### 透過動態產生的規則&#64;
+##### 動態產生的規則，透過&#64;路徑：：acl
 
-編譯系統會記下您的[`程式庫 /path.pm`](#).
+建構系統會記下您的[`程式庫 /path.pm`](#) 匯入 seed_file_deps() 和 seed_file_acl (或兩者) 的任一項目，然後在產生增量建置的 Subversion 確認變更的內部處理中，將該選項向前進行。
 
-##### 在 lib/path.pm 中對 seed_file_deps() 和 seed_file_acl() 的自訂控制項使用
+##### 自訂 lib/path.pm 中 seed_file_deps() 和 seed_file_acl() 用法的控制項
 
-超過這些符號的匯入[`程式庫 /path.pm`](#)，在 walk_content_tree () 程式碼區塊執行期間，您想要將它們套用至哪些檔案，以及套用至哪些檔案。畢竟，它不只是一個配置文件，而是一個代碼庫，具備所有 Turing 的完整功能。[`佩爾`](#).
+除了將這些符號匯入至[`程式庫 /path.pm`](#)，在執行 walk_content_tree () 程式碼區塊時，您也可以選擇要套用這些檔案的方式和目標檔案。畢竟，'不只是一個配置文件，而是一個代碼庫，具有所有杜林的完整功能[`佩爾`](#) 我們'向來認識和欣賞！
 
-#### 內建網站與 Subversion ACL 同步處理&#64;
+#### 建置的網站和 Subversion ACL'同步&#64;路徑：：acl 在確認時立即
 
-自動保護臨時分支組建。需要其他配置為零。
+臨時分支組建的自動保護。需要零其他組態。
 
 #### PCRE 搜尋引擎內建控制
 
 與一般用途 UI 相同的情況：它會對照 UI 中的 Subversion 伺服器進行交叉檢查。
 
-在即時網站上，搜尋引擎會在您啟用 Markdown (來源樹狀結構) 搜尋時執行完全相同的動作。否則，它會對您的即時網站執行 httpd 子要求，以測試使用者是否有存取該即時檔案的授權 (假設您有密碼保護您的搜尋引擎，因此有使用者資料可供使用)。
+在即時網站上，搜尋引擎會在您啟用減價 (來源樹狀結構) 搜尋時執行完全相同。否則，它會對您的即時網站執行 httpd 子要求，以測試使用者是否獲授權存取該即時檔案 (假設您有受密碼保護的搜尋引擎，讓使用者資料能夠使用)。
 
 ### 內容安全性政策
 
-- [x]
+- [X 軸] 分析限制
 
-Google 與 / 或 LinkedIn。
+Google 和 / 或 LinkedIn。
 
-- [x]
+- [X 軸] 資料限制
 
 資料必須由我們的伺服器提供。
 
-- [x]
+- [X 軸] 內容限制
 
 內容必須由我們的伺服器提供。
 
-- [x]
+- [X 軸] 程式碼限制
 
-必須從我們的伺服器提供 Javascript 程式碼。
+Javascript Code 必須由我們的伺服器提供。
 
-- [x]
+- [X 軸] 樣式限制
 
 CSS 必須由我們的伺服器提供。
 
-- [x]
+- [X 軸] 外掛程式限制
 
-僅 PDF。
+目前的 PDF'僅限。
 
 ### 跨來源資源共用
 
-- [x]
+- [X 軸] 擁有帳戶的所有使用者都可以使用其登入證明資料，從其他地方使用 UI/API。
 
-- [x] 企業與企業客戶可以將 Orion 視為[無頭 CMS](https://aws.amazon.com/what-is/headless-cms/) 如果想要從下列位置建立自己的 UI：[JSON Subversion 波蘭版](api/editor) 或者[JSON 搜尋](api/search).
+- [X 軸] 企業和企業客戶可以將 Orion 視為一種[無頭 CMS](https://aws.amazon.com/what-is/headless-cms/) 如果他們想要從下列位置建立自己的 UI：[JSON Subversion 陶瓷](api/editor) 或[JSON 搜尋](api/search) API。
 
 ### 第三方相依性
 
-非常短暫且經過時間測試的相依性；其主要元件涵蓋在[Orion 技術](technology).
+極為簡短且經過時間測試的相依性；其主要元件涵蓋在[奧里昂科技](technology) 頁面。
 
 #### 軟體用料表 (SBOM) 可依要求提供
 
-[聯絡我們](/contact).
+[聯絡我們](/contact) 以取得詳細資訊。
 
 --------
 
@@ -304,4 +314,4 @@ CSS 必須由我們的伺服器提供。
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2024-04-11 19:29:56 +0000 (Thu, 11 Apr 2024) $ $Author: joe $ $Revision: 22074 $ -->
+<!-- $Date: 2026-03-03 14:16:07 -0700 (Tue, 03 Mar 2026) $ $Author: joe $ $Revision: 28189 $ -->

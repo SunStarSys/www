@@ -3,19 +3,25 @@ acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
-keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz
+keywords: säkerhet,infosec,appsec,ipsec,devsecops,it,acl,svnauthz
 published: ~
 status: publicerad
-title: Orion Security
+title: Orion-säkerhet
 ---
+
+<div class="right">
+
+![hänglås](security.page/padlock).
+
+</div>
 
 [TOC]
 
-## {# lede #}"Säkerhet genom dunkel är inte mycket säkerhet alls."{# lede #}
+## {# lede #}"Säkerhet genom dunkelhet är inte mycket säkerhet alls."{# lede #}
 
-Populär parafrasering av amerikansk låssmed [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851, som lätt plockade Crystal Palace lås under en London-utställning det året.  Vi håller helt med, och därför är våra kopior för vår automatiseringsmotor för Oracle Cloud Infrastructure (OCI) [finns på GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
+Populär parafrasering av amerikansk låssmed [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851, som lätt plockade Crystal Palace lås under en London utställning det året.  Vi instämmer helt och hållet, och det är därför våra kopior av vår OCI-automatiseringsmotor för Oracle Cloud Infrastructure är [tillgänglig på GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Infrastruktursäkerhet för Orion
+## Orion-infrastruktursäkerhet
 
 ```mermaid
 flowchart TB
@@ -85,55 +91,59 @@ vcs==vpn==>A8==ssh/vpn==>B8
 ```
 &nbsp;
 
-FIPS 140-2-kompatibel med trippelkryptering för tjänster med bakåtporterad port (HTTPS/SSH/IPsec).  Bälte, hängslen och stigbyglar!
+FIPS 140-2-kompatibel med MFA-trippelkryptering för tjänster som körs bakåt i porten (HTTPS/SSH/IPsec).  Bälte, hängslen och stigbyglar!
 
 ----
 
 &nbsp;
 
-### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modell, pepprad med [ortrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password).
+### Lösenordslös [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modell, pepprad med [brunst](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudoutmaningar
 
-Inga fasta lösenord lagrade på servrar. Detta *begränsar * huvudlös automatisering av sudo / RBAC-användning, av goda skäl.  Men vi har [verktyg](https://github.com/SunStarSys/pty).
+Inga fasta lösenord lagrade på servrar. Denna *begränsar* huvudlös automatisering av sudo / RBAC-användning, av goda skäl.  Men vi har [verktyg](https://github.com/SunStarSys/pty) för att eliminera slit att svara på frågor av olika slag.
 
 ### Sandboxad körning för byggen och CGI-skript
 
-Vi distribuerar zonbyggen med "delat-inget" som standard är noll nätverkstillgänglighet. Det betyder att det enda som en kunds bygge kan komma åt eller ändra är sina egna tillgångar, inte de som någon annan kund har eller andra systemvägar i själva zonen (förutom [`/tmp`](#).
+Vi distribuerar "Delad-ingenting" zonbyggen, standardinställs på noll nätverkstillgänglighet. Det betyder att de enda saker som en kund kan komma åt eller ändra är deras egna tillgångar, inte de som någon annan kund, eller några andra systemvägar i själva zonen (förutom [`/tmp`](#)).  Dessutom är det bara företagskunder och företagskunder som har tillgång till internet under sina byggen, eftersom de använder sina egna *unika* Solaris-zoner som kan skräddarsys exakt efter sina byggkrav.
 
-Ditto för CGI-skript, som är helt låsta när det gäller skrivåtkomst till något annat än [`/tmp`](#).
+Dito för CGI-skript, som är helt låsta när det gäller skrivåtkomst till något annat än [`/tmp`](#).
 
 ### Kryptering från början till slut
 
 - TLS 1.3 (+FS) AES(256) SHA(256) för HTTPS FIPS 140-3-anslutningar
 
-- SSHv2 ED25519 FIPS 140-3 / NIST-kompatibla nycklar för korsvärd [`toalettstol`](#).
+- SSHv2 ED25519 FIPS 140-3 / NIST-kompatibla nycklar för flera värdar [`toalettstol`](#) spola bakåt i tiden
 
-- IPsec/IKEv2/PFS AES(256) för gränsöverskridande VPN
+- IPsec/IKEv2/PFS AES(256) för regionövergripande VPN
 
 - AES(256) för ZFS-kryptering
 
-### Nolltillit
+### Zero Trust-aspekter
 
-Den grundläggande förutsättningen för [arkitektur med noll förtroende](https://csrc.nist.gov/publications/detail/sp/800-207/final) är att undvika att utforma din nätverkssäkerhet kring musslans fysiologi: hårt på utsidan, men mjukt och löst när du är i.  Så vi gör inte det; varje meningsfull privilegierad nätverksport inuti de olika närvaropunkterna (POP) LAN utsätts bara för den nakna metallmaskinens loopback-enhetsgränssnitt. [`lo0`](#).
+Den grundläggande förutsättningen för [arkitektur med nolltillit](https://csrc.nist.gov/publications/detail/sp/800-207/final) Det är för att undvika att utforma din nätverkssäkerhet kring musslans fysiologi: hårt på utsidan, men mjukt och löst när du är i.  Så gör vi'Alla meningsfulla privilegierade nätverksportar i de olika POP-LAN-nätverken (Point of Presence) exponeras endast för en maskin utan metall.'s loopback-enhetens gränssnitt [`lo0`](#), och är endast meningsfull i samband med att en (omvänd) port vidarebefordrar SSH-anslutning *till den*.
 
-Denna infra är helt automatiserad när en region tas online, men det är allt vi kan dela offentligt om arkitekturen (balansering Hobbsian öppenhet med det militära mantrat "lösa läppar sjunka fartyg" är mer konst än vetenskap).  Var säker &mdash; bortom att bryta antispoofing [`lo0`](#).
+Vi använder TCP-proxyer, inte HTTP, och inga MSA-serverdelar **så den enda värd som ser din webbtrafik är den värd som dekrypterar din TLS-trafik**. Samma regler gäller för Subversionstrafik: endast direkt, end-to-end TLS-krypterad trafik till **tjänstslutpunkten** ser dina data under överföring.
 
-Även om huvudkontrollkontot för OCI har äventyrats fortsätter **konfidentialiteten** och **integriteten** för alla kundtillgångar att vara okränkbara.  Allt en svart hatt kan göra är att göra en röra med kundens hemsida ** tillgänglighet**. I synnerhet kan de inte komma åt dataposterna för Subversion-tjänsten.  Vi kan rekonstruera hela OCI-infrastrukturen från grunden på 48-72 timmar när det dåliga äpplets OCI-åtkomst har avslutats.
+Lycka till med **MSA-lagren och lagren av privat dataexponering** med andra leverantörer. Fienden till "icke-funktionell teknik" är komplexitet. Det är mycket lättare att ge meningsfulla säkerhetslöften när din produkt är en **förenad monolit istället för en massiv MSA-minfält**, vilket är en annan motsvarighet mellan Orion och dess kometitorfält.
+
+Denna infra är helt automatiserad när en region tas online, men det's allt vi kan dela offentligt om arkitekturen (balansera Hobbsian öppenhet med militära mantra "lösa läppar sjunka fartyg" är mer konst än vetenskap).  Var säker &mdash; Bortom att bryta antispoofing [`lo0`](#) skydd inom Solaris 11's (BSD) paketfilter själv, det finns inga meningsfulla sätt att få tillgång till dessa tjänster, även för kundkonton.
+
+Även om huvudkontot för OCI-kontroll har äventyrats är **sekretess** och **integritet** för alla kundtillgångar okränkbara.  Allt en svart hatt kan göra är att göra en röra med kundens webbplats **tillgänglighet**. Framför allt har de inte åtkomst till posterna med Subversion-tjänstdata.  Vi kan rekonstruera hela OCI-infrastrukturen från grunden på 48–72 timmar när det dåliga äpplet'OCI-åtkomsten har avslutats.
 
 -----
 
 ### Loggning, övervakning och granskning
 
-Vi uppmuntrar företagskunder att skapa ett Splunk-konto, och vi kommer att leverera webbloggar i nära realtid till ditt konto från varje global POP du behöver.  Felloggar för CGI-skript på serversidan görs också tillgängliga för Splunk.
+Vi uppmuntrar Enterprise-kunder att skapa ett Splunk-konto och vi kommer att leverera webbloggar i nära realtid till ditt konto från varje global POP du behöver.  Felloggar för CGI-skript på serversidan görs också tillgängliga för Splunk.
 
-Vi övervakar tjänstens tillgänglighet från alla våra OCI POP:er över hela världen och utlöser händelser för hög tillgänglighet (tillgänglighetsdomän) eller regional failover om ett serveravbrott varar längre än 30 sekunder.
+Vi övervakar tjänstens tillgänglighet från alla våra OCI POP:er över hela världen och utlöser HA (Tillgänglighetsdomän), eller regionala felöverlämningshändelser om ett serveravbrott varar i mer än 30 sekunder.
 
-ACL-granskning kan utföras genom att helt enkelt bygga en webbplats Subversion HEAD med hjälp av Apache Licensed [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) skript och undersöka den resulterande versionen till [`www/.acl`](#).
+ACL-granskning kan utföras genom att helt enkelt bygga en webbplats's Subversion HEAD med Apache Licensierad [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) skript och undersöka den resulterande versionen till [`www/.acl`](#) fil i din arbetskatalog, när du vill.  Normalt tar byggprocessen mindre än 10-15 sekunder på modern hårdvara.
 
-Bekräftelsehookar för Subversion Server-Side kan också anpassas efter dina tillsynsproblem. Från en enkel bekräftelse mailer till säker tillgång till vår svnpubsub daemon, det finns ett antal anpassade konfigurationer tillgängliga.
+Subversion Server-Side Commit Hooks är också anpassningsbara för dina tillsynsproblem. Från ett enkelt bekräftelsemeddelande till säker åtkomst till vår svnpubsub-demon finns det valfritt antal anpassade konfigurationer tillgängliga.
 
 -----
 
-## Säkerhet för Orion-applikation
+## Orion-applikationssäkerhet
 
 ```graphviz
 digraph {
@@ -144,27 +154,27 @@ digraph {
 
 &nbsp;
 
-Orions säkerhetsmodell hanteras centralt av inställningarna i [`@path::acl`](#) som konstuced i [`lib/path.pm`](#).
+Orion's säkerhetsmodell hanteras centralt av inställningarna i [`@path::acl`](#) som konstueras i [`lib/path.pm`](#). Konfigurationsfiler för offshoot-servrar genereras dynamiskt vid varje bekräftad ändring.
 
 ### OpenIDC Säkerhet för enkel inloggning
 
-Sessionscookies är HttpOnly och Secure-flaggade, så Javascript-sessionsstöldförsök neutraliseras effektivt av Orion Online Editor.
+Sessionscookies är HttpOnly och Secure-flaggade, så javascript-sessionsstöldförsök neutraliseras effektivt av Orion Online Editor.
 
 ### Bcrypt för Subversion-lösenord
 
-Justerbart antal omgångar (standard är för närvarande 5).
+Justerbart antal rundor (för närvarande är standardvärdet 5).
 
 ### Målade dataskydd
 
-Alla våra Perl-körtider har obligatoriska taint-kontroller aktiverade med -T-flaggan; en kraftfull, unikt Perl-skydd mot Remote Shell Exploits.
+Alla våra Perl-körningar har obligatoriska taint-kontroller aktiverade med -T-flaggan; ett kraftfullt, unikt Perl-skydd mot Remote Shell Exploits.
 
 ### Wiki-problem
 
-Wikisäkerhet involverar flera faktorer:
+Wikisäkerhet innefattar flera faktorer:
 
 1. Gränssnitts-/API-säkerhet
 
-2. Mellanprogramvara/säkerhet på serversidan
+2. Säkerhet för mellanprogramvara/serverdel
 
 3. Traversskydd för mall
 
@@ -172,129 +182,129 @@ Wikisäkerhet involverar flera faktorer:
 
 Vi gräver i dessa frågor som de relaterar till Orion nedan.
 
-#### Redigerare online
+#### Onlineredigerare
 
-Redigeraren online stöder ett JSON-gränssnitt genom att helt enkelt ställa in användaragentens Accept-rubrik så att den föredrar [`ansökan/json`](#).
+Online-redigeraren stöder ett JSON-gränssnitt genom att helt enkelt ställa in din användaragent's Acceptera huvudet för att föredra [`applikation/json`](#) MIME-typ, så säkerhetskontrollerna är samma för både användargränssnittet och API:t.
 
 **Det finns inget administrativt användargränssnitt/API** utanför direkt Subversion-åtkomst.
 
-##### Subversion-ACL:er styr läsbehörighet för arbetskopia på serversidan
+##### Subversion-åtkomstlistor styr läsbehörighet för arbetskopia på serversidan
 
-Varje resurs för arbetskopiering som är tillgänglig via användargränssnittet korskontrolleras mot dina åtkomstkontrollistor för Subversion innan de visas för användaren.  På så sätt säkerställer vi att läsåtkomst till obehöriga återkomster förhindras för tillgångarna under versionskontroll (aka ** allt**).
+Alla resurser för arbetskopiering som är tillgängliga via användargränssnittet är korskontrollerade mot dina åtkomstkontrollistor för Subversion innan de visas för användaren.  På detta sätt ser vi till att läsåtkomst till obehöriga resurser förhindras för tillgångarna under versionskontroll (aka **allt**).
 
-#### Bekräftelseåtkomst styrs direkt med Subversions åtkomstlistor
+##### Bekräftelseåtkomst kontrolleras direkt med Subversion-åtkomstkontrollistor
 
-Inget kan skapas och sedan visas över nätverket utan motsvarande auktoriserade Subversion-bekräftelse. Huvudproblemet här är att kontrollera vilken information som är tillgänglig för en wiki-sidförfattares bekräftade och byggda redigeringar.
+Ingenting kan skapas och sedan visas över nätverket utan en motsvarande auktoriserad Subversion-bekräftelse. Huvudfrågan här är att kontrollera vilken information som är tillgänglig för en wiki-sidförfattare's bekräftade och skapade redigeringar.
 
-Om du tillåter mallförbearbetning på källsidorna för nedsättning måste du vara medveten om hur mallargument gör innehållet i andra filer i trädet tillgängligt som variabler till källan till den redigerade sidan.
+Om du tillåter mallförbearbetning på källsidorna för nedsättning måste du vara medveten om hur mallargument gör innehållet i andra filer i trädet tillgängligt som variabler för källan till den redigerade sidan.
 
-Ofta, om det är konfigurerat att göra det, kan den redigerade sidan deklarera sina egna beroendefiler i sidhuvuden, vilket är något att tänka på när du väger funktionsuppsättningar mot säkerhetskontroller i Wikis informationsarkitektur.
+Ofta, om det är konfigurerat för att göra det, kan den redigerade sidan deklarera sina egna beroendefiler i sidhuvuden, vilket är något att tänka när du väger funktionsuppsättningar mot säkerhetskontroller i din Wiki's Informationsarkitektur.
 
-Medan vi kan erbjuda vägledning och stöd för att matcha dina behov, är det verkligen upp till dig att bestämma hur du ska balansera skalorna för din organisations företagswiki.
+Även om vi kan erbjuda vägledning och stöd för att matcha dina behov, det'är verkligen upp till dig att bestämma hur du ska balansera skalorna för din organisation'wiki för företag.
 
-Se avsnittet nedan på [Beroende-/ACL-insprutningskontroller](#h4-dependency-acl-injection-controls) för mer information, och kolla in detta live exempel på hur enkelt åtkomstkontrollistor kan konfigureras centralt i [`lib/acl.yml`]({{snippetA.pretty_uri}}).
+Se avsnittet nedan på [Beroende-/ACL-injektionskontroller](#h4-dependency-acl-injection-controls) för mer information, och kolla in detta levande exempel på hur lätt ACL's kan konfigureras centralt i [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
-Innehållsredigerare kan konfigurera sidbegränsningar på sidans [rubriker]({{snippetB.pretty_uri}}).
+Innehållsredigerare kan konfigurera sidbegränsningar på sidan's [rubriker]({{snippetB.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
-Som en sidoanteckning kan skyddade resurser inte kopieras till en gren av obehörig personal, även utan att placera några ytterligare åtkomstkontrollistor för skapande och ändring av grenar. Med andra ord kommer systemet att stödja försök på filialer utan ytterligare kontroller från din sida för att säkerställa att skyddade tillgångar förblir skyddade under varje filials naturliga livscykel.
+Som en sidoanteckning kan skyddade resurser inte kopieras till en gren av obehörig personal, även utan att lägga till ytterligare åtkomstkontrollistorskontroller för att skapa och ändra grenar. Med andra ord kommer systemet att stödja experiment med filialer utan ytterligare kontroller från din sida för att säkerställa att skyddade tillgångar förblir skyddade i varje filial.'naturlig livscykel.
 
-#### Skapa systemåtkomstlistor?
+#### Vill du skapa systemåtkomstlistor?
 
-Byggsystemet är allseende och allvetande, men vi kan se till att dina byggda, skyddade tillgångar endast är synliga för de team du hanterar och kontrollerar i Subversion ACL.
+Byggsystemet är allseende och allvetande, men vi kan se till att dina byggda, skyddade tillgångar bara är synliga för de team du hanterar och kontrollerar i Subversion ACLs.
 
-Byggsystemet visar listan över filnamn som den skapade via webbläsarens IDE vid en bekräftelse, men den listan baseras bara på en användares läsåtkomst till resurserna som är beroende av användarens lägg till, uppdatera eller ta bort innehållsåtgärder i bekräftelsen.
+Byggsystemet visar listan över filnamn som byggts genom webbläsaren IDE vid en bekräftelse, men den listan är endast baserad på en användare's läsåtkomst till resurserna som är beroende av användaren'lägga till, uppdatera eller ta bort innehållsåtgärder i bekräftelsen.
 
-#### Malltraverseringskontroller
+##### Mallkontroller för traversering
 
-Se [sanitize_relative_path]({{snippetC.pretty_uri}}).
+Se [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
 
-Den här koden tillämpar de regler som följer nedan i det här avsnittet.
+Koden tillämpar de regler som följer nedan i det här avsnittet.
 
-##### inkludera och utöka taggar
+###### inkluderar och utökar taggar
 
-Alla målfiler finns i en undermapp till [`/mallar/`](#).
+Alla målfiler finns i en undermapp i [`/Mallar/`](#) och måste refereras som absoluta sökvägar som är rotade i den mappen.
 
-##### ssi-tagg
+###### ssi-tagg
 
-Alla målfiler finns i en undermapp till [`/innehåll/`](#).
+Alla målfiler finns i en undermapp i [`/innehåll/`](#) och måste refereras som absoluta sökvägar som är rotade i den mappen.
 
-Om målsökvägen inte har konfigurerats i [`@path::mönster`](#) med en matchande inställning som gör att målsökvägen i fråga antingen kan arkiveras eller kategoriseras, [`ssi`](#).
+Om målsökvägen inte har konfigurerats i [`@path::mönster`](#) med en matchande inställning som gör att målsökvägen i fråga antingen kan arkiveras eller kategoriseras, [`ssi`](#) Åtgärden kommer att misslyckas.
 
-Detta beror på att [`ssi`](#).
+Detta beror på att [`ssi`](#) support är en förutsättning för dessa funktionsuppsättningar, för att bevara din webbplats's taget *permalinks*.
 
 #### Beroende-/ACL-injektionskontroller
 
-Kontrollerad av [`lib/path.pm`](#).
+Kontrollerad av [`lib/path.pm`](#) import.
 
-#### lib/{path,view}.pm Subversion ACL:er
+##### lib/{sökväg,visa}.pm Subversion ACL:er
 
-Det är klokt att kontrollera skrivåtkomst till dessa resurser genom att begränsa dem till personer som är både behöriga i kodbasen och behöriga att implementera säkerhetskontroller för hela uppsättningen tillgångar under versionskontroll (aka *allt*).
+Det'är klokt att kontrollera skrivåtkomst till dessa resurser, genom att begränsa dem till personer som är både kompetenta i kodbasen och behöriga att genomföra säkerhetskontroller för hela uppsättningen av tillgångar under versionskontroll (aka *allt *).
 
-Det är också en bra idé att inkludera [`@svnadmin`](#).
+Det är också en bra idé att inkludera [`@svnadmin`](#) grupp bland dem med läs- och skrivbehörighet, men det'är inte absolut nödvändigt även om du behöver att vi manuellt återställer dina Subversion ACLs.
 
-##### Dynamiskt genererade regler via &#64;
+##### Dynamiskt genererade regler via &#64;sökväg::acl
 
-Byggsystemet noterar din [`lib/path.pm`](#).
+Byggsystemet noterar din [`lib/path.pm`](#) import av antingen (eller båda) av seed_file_deps() och seed_file_acl(), och föra detta val framåt i sin interna bearbetning av Subversion commit-ändringar som ger upphov till en inkrementell bygge.
 
 ##### Anpassade kontroller för användning av seed_file_deps() och seed_file_acl() i lib/path.pm
 
-Utöver dessa symbolers betydelse för [`lib/path.pm`](#), det finns också ett val i hur och på vilka filer du vill använda dem under en körning av kodblocket walk_content_tree ().  När allt kommer omkring är det inte bara en konfigurationsfil, utan en kodbas, med alla Turing-kompletta funktioner i [`Perl`](#).
+Bortom importen av dessa symboler till [`lib/path.pm`](#), det finns också ett val i hur, och vilka filer du vill tillämpa dem på, under en körning av kodblocket walk_content_tree ().  När allt kommer omkring är det's inte bara en konfigurationsfil, utan en kodbas, med alla Turing fullständiga funktioner i [`Perl`](#) vi'Kom och lär känna och uppskatta!
 
-#### Byggda åtkomstkontrollistor för webbplats och subversion synkroniserade med &#64;
+#### Byggd åtkomstkontrollista för webbplats och subversion'synkroniserad med &#64;Sökväg::avsluta direkt vid bekräftelse
 
 Automatiskt skydd för efemära grenbyggen. Ingen ytterligare konfiguration krävs.
 
-### PCRE Inbyggda kontroller för sökmotor
+#### Inbyggda kontroller för sökmotorn i PCRE
 
-Samma situation som det allmänna användargränssnittet: det korskontrollerar mot Subversion-servern från användargränssnittet.
+Samma situation som det allmänna användargränssnittet: det korsar kontroller mot Subversion-servern från användargränssnittet.
 
-På den aktiva webbplatsen kommer sökmotorn att göra exakt samma sak när du aktiverar sökningar med nedsättning (källträd). Annars körs httpd-delbegäranden till den aktiva webbplatsen för att testa om användaren har behörighet att komma åt den aktiva filen (förutsatt att du har lösenordsskyddat sökmotorn så att den har användardata att arbeta med).
+På den aktiva webbplatsen gör sökmotorn exakt samma sak när du aktiverar sökningar med nedsättningar (källträd). Annars kommer det att köra httpd-delbegäranden till din aktiva webbplats för att testa om användaren har behörighet att komma åt den aktiva filen (förutsatt att du har lösenordsskyddad din sökmotor så att den har användardata att arbeta med).
 
-### Säkerhetspolicyer för innehåll
+### Policyer för innehållssäkerhet
 
-- [x]
+- [x] Analysbegränsningar
 
-Google och/eller LinkedIn.
+Googla och/eller LinkedIn.
 
-- [x]
+- [x] Databegränsningar
 
 Data måste levereras från våra servrar.
 
-- [x]
+- [x] Innehållsbegränsningar
 
 Innehållet måste levereras från våra servrar.
 
-- [x]
+- [x] Kodbegränsningar
 
-Javascript Code måste levereras från våra servrar.
+Javascript-koden måste levereras från våra servrar.
 
-- [x]
+- [x] Formatbegränsningar
 
 CSS måste levereras från våra servrar.
 
-- [x]
+- [x] Begränsningar för insticksprogram
 
-Endast PDF för närvarande.
+För närvarande PDF'Endast s.
 
-### Korsursprunglig resursdelning
+### Cross-Origin resursdelning
 
-- [x]
+- [x] Alla användare med ett konto kan använda användargränssnitt/API:er från andra håll med sina inloggningsuppgifter.
 
-- [x] Företag och företagskunder kan behandla Orion som en [Huvudlöst CMS](https://aws.amazon.com/what-is/headless-cms/) om de vill bygga sitt eget gränssnitt från [JSON Subversion Porslin](api/editor) eller [JSON-sökning](api/search).
+- [x] Företagskunder kan behandla Orion som en [Huvudlös CMS](https://aws.amazon.com/what-is/headless-cms/) om de vill bygga sitt eget användargränssnitt från [JSON Subversion Porslin](api/editor) eller [JSON Sök](api/search) API:er.
 
-### Tredjepartsberoenden
+### Beroenden för tredje part
 
-Anmärkningsvärt korta och beprövade beroenden, vars huvudkomponenter omfattas av [Orion-teknik](technology).
+Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna omfattas av [Orionteknik](technology) sida.
 
-#### stycklista för programvara (SBOM) tillgänglig på begäran
+#### Stycklista för programvara tillgänglig på begäran
 
-[Kontakta oss](/contact).
+[Kontakta oss](/contact) för mer information.
 
 --------
 
@@ -304,4 +314,4 @@ Anmärkningsvärt korta och beprövade beroenden, vars huvudkomponenter omfattas
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2024-04-11 19:29:56 +0000 (Thu, 11 Apr 2024) $ $Author: joe $ $Revision: 22074 $ -->
+<!-- $Date: 2026-03-03 14:16:07 -0700 (Tue, 03 Mar 2026) $ $Author: joe $ $Revision: 28189 $ -->
