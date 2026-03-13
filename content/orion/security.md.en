@@ -116,7 +116,7 @@ Ditto for CGI scripts, which are fully locked down in terms of write access to a
 
 The basic premise of [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various Point of Presence (POP) LANs is only exposed to the bare-metal machine's loopback device interface [`lo0`](#), and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
 
-We use TCP proxies, not HTTP, and no MSA backends, **so the only host that sees your web traffic is the host that decrypts your TLS traffic**. Same rules apply to Subversion traffic: only direct, end-to-end TLS encrypted traffic to the **service endpoint** sees your data in flight.
+We use TCP proxies, not HTTP proxies, and no MSA backends, **so the only host that sees your unencrpted TLS web traffic is the host that decrypts it**. Same rules apply to Subversion traffic &mdash; only direct, end-to-end TLS encrypted traffic to the **service endpoint** sees your unencrypted data on the wire.
 
 Good luck with the **MSA layers and layers of private data exposure** with other vendors. The enemy of "nonfunctional engineering" is complexity. Its a lot easier to provide meaningful security promises when your product is a **federated monolith instead of a massive MSA minefield**, which is another contrarian differentiator between Orion and its field of competitors.
 
@@ -149,7 +149,7 @@ digraph {
 
 &nbsp;
 
-Orion's security model is centrally managed by the settings contained in [`@path::acl`](#) as constucted in [`lib/path.pm`](#).  Offshoot server configuration files are dynamically generated on every committed change.
+Orion's security model is centrally managed by the settings contained in [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) as constucted in [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm).  Offshoot server configuration files are dynamically generated on every built change.
 
 ### OpenIDC SSO Security
 

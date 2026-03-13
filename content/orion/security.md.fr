@@ -121,9 +121,9 @@ Ditto pour les scripts CGI, qui sont entièrement verrouillés en termes d'accè
 
 La prémisse de base de [architecture sans confiance](https://csrc.nist.gov/publications/detail/sp/800-207/final) est d'éviter de concevoir votre sécurité réseau autour de la physiologie de la palourde : dur à l'extérieur, mais doux et lâche une fois que vous êtes dans.  Donc nous ne'Tous les ports réseau privilégiés significatifs à l'intérieur des différents réseaux locaux de point de présence (POP) ne sont exposés qu'à la machine à métaux nus.'interface de périphérique loopback s [`lo0`](#), et n'a de sens que dans le contexte d'une connexion SSH (inverse) transmise au port **.
 
-Nous utilisons des proxies TCP, pas HTTP, et aucun back-end MSA, **donc le seul hôte qui voit votre trafic Web est l'hôte qui déchiffre votre trafic TLS**. Les mêmes règles s'appliquent au trafic Subversion : seul le trafic crypté TLS direct de bout en bout vers l' **adresse de service** voit vos données en vol.
+Nous utilisons des proxies TCP, pas des proxies HTTP et aucun back-end MSA. **Le seul hôte qui voit votre trafic Web TLS non crypté est donc l'hôte qui le décrypte**. Les mêmes règles s'appliquent au trafic Subversion &mdash; seul le trafic crypté TLS direct et de bout en bout vers l' **adresse de service** voit vos données non cryptées sur le réseau.
 
-Bonne chance avec les **couches MSA et couches d'exposition de données privées** avec d'autres fournisseurs. L'ennemi de "ingénierie non fonctionnelle" est la complexité. Il est beaucoup plus facile de fournir des promesses de sécurité significatives lorsque votre produit est un **monolithe fédéré au lieu d'un énorme minfield MSA**, ce qui est un autre différenciateur contrarié entre Orion et son domaine de concurrents.
+Bonne chance avec les **couches MSA et couches d'exposition de données privées** avec d'autres fournisseurs. L'ennemi de "ingénierie non fonctionnelle" est la complexité. Il est beaucoup plus facile de fournir des promesses de sécurité significatives lorsque votre produit est un **monolithe fédéré au lieu d'un énorme champ de mines MSA**, ce qui est un autre différenciateur contradictoire entre Orion et son domaine de concurrents.
 
 Cette infra est entièrement automatisée une fois qu'une région est mise en ligne, mais que'Tout ce que nous pouvons partager publiquement sur l'architecture (équilibrer la transparence Hobbsian avec le mantra militaire) "bateaux d'évier de lèvres lâches" plus d'art que de science).  Soyez assuré &mdash; au-delà de briser l'antispoofing [`lo0`](#) protection au sein d' Solaris 11's (BSD) filtre de paquets lui-même, il n'y a pas de moyen significatif d'accéder à ces services, même pour les comptes clients.
 
@@ -154,7 +154,7 @@ digraph {
 
 &nbsp;
 
-Orion's le modèle de sécurité est géré de manière centralisée par les paramètres contenus dans [`@path : :acl`](#) comme contraint dans [`lib/path.pm`](#). Les fichiers de configuration du serveur de déconnexion sont générés dynamiquement à chaque modification validée.
+Orion's le modèle de sécurité est géré de manière centralisée par les paramètres contenus dans [`@path : :acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) comme contraint dans [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Les fichiers de configuration du serveur de déconnexion sont générés dynamiquement à chaque modification créée.
 
 ### OpenIDC Sécurité SSO
 

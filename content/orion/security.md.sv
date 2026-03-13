@@ -121,9 +121,9 @@ Dito för CGI-skript, som är helt låsta när det gäller skrivåtkomst till n�
 
 Den grundläggande förutsättningen för [arkitektur med nolltillit](https://csrc.nist.gov/publications/detail/sp/800-207/final) Det är för att undvika att utforma din nätverkssäkerhet kring musslans fysiologi: hårt på utsidan, men mjukt och löst när du är i.  Så gör vi'Alla meningsfulla privilegierade nätverksportar i de olika POP-LAN-nätverken (Point of Presence) exponeras endast för en maskin utan metall.'s loopback-enhetens gränssnitt [`lo0`](#), och är endast meningsfull i samband med att en (omvänd) port vidarebefordrar SSH-anslutning *till den*.
 
-Vi använder TCP-proxyer, inte HTTP, och inga MSA-serverdelar **så den enda värd som ser din webbtrafik är den värd som dekrypterar din TLS-trafik**. Samma regler gäller för Subversionstrafik: endast direkt, end-to-end TLS-krypterad trafik till **tjänstslutpunkten** ser dina data under överföring.
+Vi använder TCP-proxyer, inte HTTP-proxyer och inga MSA-serverdelar **så den enda värd som ser din okrypterade TLS-webbtrafik är den värd som dekrypterar den**. Samma regler gäller för omställningstrafik &mdash; Endast direkt, end-to-end TLS-krypterad trafik till **tjänstslutpunkten** ser dina okrypterade data på kabeln.
 
-Lycka till med **MSA-lagren och lagren av privat dataexponering** med andra leverantörer. Fienden till "icke-funktionell teknik" är komplexitet. Det är mycket lättare att ge meningsfulla säkerhetslöften när din produkt är en **förenad monolit istället för en massiv MSA-minfält**, vilket är en annan motsvarighet mellan Orion och dess konkurrentfält.
+Lycka till med **MSA-lagren och lagren av privat dataexponering** med andra leverantörer. Fienden till "icke-funktionell teknik" är komplexitet. Det är mycket lättare att ge meningsfulla säkerhetslöften när din produkt är en **förenad monolit i stället för en massiv MSA minfält**, vilket är en annan motsvarighet mellan Orion och dess konkurrentfält.
 
 Denna infra är helt automatiserad när en region tas online, men det's allt vi kan dela offentligt om arkitekturen (balansera Hobbsian öppenhet med militära mantra "lösa läppar sjunka fartyg" är mer konst än vetenskap).  Var säker &mdash; Bortom att bryta antispoofing [`lo0`](#) skydd inom Solaris 11's (BSD) paketfilter själv, det finns inga meningsfulla sätt att få tillgång till dessa tjänster, även för kundkonton.
 
@@ -154,7 +154,7 @@ digraph {
 
 &nbsp;
 
-Orion's säkerhetsmodell hanteras centralt av inställningarna i [`@path::acl`](#) som konstueras i [`lib/path.pm`](#). Konfigurationsfiler för offshoot-servrar genereras dynamiskt vid varje bekräftad ändring.
+Orion's säkerhetsmodell hanteras centralt av inställningarna i [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) som konstueras i [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Konfigurationsfiler för offshoot-servrar genereras dynamiskt vid varje skapad ändring.
 
 ### OpenIDC Säkerhet för enkel inloggning
 
@@ -314,4 +314,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-13 09:01:08 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28936 $ -->
+<!-- $Date: 2026-03-13 09:16:40 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28949 $ -->
