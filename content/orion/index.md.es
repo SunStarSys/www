@@ -94,7 +94,7 @@ Los árboles fuente de varios gigabytes simplemente no coinciden &mdash; Las dur
 
 <span class="text-success"><em>Solo construimos lo que necesitas construir.</em></span>&trade;
 
-Esta tecnología fue inventada por primera vez a finales de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf y yo como miembros del equipo de infraestructura de Apache. La frase "[Pila JAM](https://jamstack.wtf)" Fue acuñado años después, por un grupo que desconocía nuestro arte anterior en este espacio.  Pero el [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Esta nueva oferta de SunStar Systems es testimonio de ese legado original y sus verdaderos orígenes de código abierto.
+Esta tecnología fue inventada por primera vez a finales de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, y [Joe Schaefer](https://iconoclasts.blog/joe/) como miembros del equipo de infraestructura de Apache. La frase "[Pila JAM](https://jamstack.wtf)" Fue acuñado años después, por un grupo que desconocía nuestro arte anterior en este espacio.  Pero el [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Esta nueva oferta de SunStar Systems es testimonio de ese legado original y sus verdaderos orígenes de código abierto.
 
 <h4>¿Quieres darle un giro rápido para ver qué tan rápido y fácil es?</h4>
 
