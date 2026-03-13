@@ -171,82 +171,82 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "odefinierad") {
+    if (typeof(editormd) === "undefined") {
         
-        mermaid.initialize({tema: "mörk", startOnLoad: sant, securityLevel: "utlevad"});
-        $(".sekvensdiagram").sequenceDiagram();
-        för (const e of $("kropp").find("grafviz").toArray()) {
-            d3.select(e).graphviz({useWorker: falskt}).renderDot($(e).text());
+        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
+        $(".sequence-diagram").sequenceDiagram();
+        for (const e of $("body").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("kropp").find("före").parent().addClass("editormd-preview-theme-dark");
+        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
     }
-    om (document.cookie.indexOf("gdpr_analytics=1") == -1 &amp;&amp;
+    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        för (konst h1 av document.getElementsByTagName("h1")) {
-            Var html = `<div id="analytics"><br><div class="card border-warning">
+        for (const h1 of document.getElementsByTagName("h1")) {
+            var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">Den här webbplatsen använder cookies för analys.</h4>
+  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Välj din analyspreferens:</small><br>
+<small class="text-dark">Please choose your Analytics preference:</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_analytics=1; sökväg=/; maxålder=8640000';
-  $('#analytics').css('visa', 'inget');sant">Jag samtycker.</button> &nbsp;
+  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
+  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_decline=1; sökväg=/; maxålder=864000';
-  $('#analytics').css('visa', 'inget');sant">I
-  Avslå.</button><br><small class="text-dark">Om du väljer att
-  Avböj, vi kommer inte att fråga igen för de kommande 10 dagarna.</small>
+  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
+  $('#analytics').css('display', 'none');true">I
+  Decline.</button><br><small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 10 days.</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('försenad', html);
+            h1.insertAdjacentHTML('beforeend', html);
         }
     }
-    annars om (document.cookie.indexOf("gdpr_decline=1") == -1) {
-        document.cookie = 'gdpr_analytics=1; sökväg=/; maxålder=8640000';
+    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
 
 <script async type="module">
-    om (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "nekad") {
-		var-behörighet = Notification.permission;
-		om (behörighet !== "beviljad") {
-            Notification.requestPermission().then(((resultat) => {
-              permission = resultat;
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
+            Notification.requestPermission().then((result) => {
+              permission = result;
             });
         }
-        Om (behörighet === "beviljad") {
-		   Revidering.
+        if (permission === "granted") {
+		   var revision;
            var m = document.cookie.match(/last=([0-9]+)/);
-           om (m)
+           if (m)
 			 revision = m[1];
-           konst svar = väntar på hämtning("/dynamic/search/?regex=notify="+revision+";språk={{lang}};markdown_search=1;as_json=1",
-                           {inloggningsuppgifter: 'samma ursprung'});
-           försöka {
-              konst json = vänta på response.json();
-              för (st e av json.log) {
-                  var meddelande = e[3] + "\n";
-                  för (konstnär [nyckel, val] av Object.entries(e)[1])) {
-                      Meddelande += val.action + " " + key.replace(/^.*\//, "") + "\n";
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = nytt meddelande (e)[2],
+				  var n = new Notification(e[2],
      			    {
-					  body: meddelande,
+					  body: msg,
 					  tag: e[0],
-					  icon: "/favikon",
+					  icon: "/favicon",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("klicka", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";språk={{lang}};markdown_search=1") }, { capture: sant });
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
 			  }
 		   }
-           fångst (e) {
-             // varning(e);
+           catch (e) {
+             // alert(e);
 		   }
         }
 	}

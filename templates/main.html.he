@@ -171,82 +171,82 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "לא מוגדר") {
+    if (typeof(editormd) === "undefined") {
         
-        mermaid.initialize({ערכת נושא: "כהה", startOnLoad: true, securityLevel: "רופף"});
-        $("דיאגרמת רצף").sequenceDiagram();
-        עבור (const e of $("גוף").חיפוש("גרפביז").toArray()) {
-            d3.select(e).graphviz({useWorker: שקר}).renderDot($(e).text());
+        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
+        $(".sequence-diagram").sequenceDiagram();
+        for (const e of $("body").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("גוף").חיפוש("לפני").אב().addClass("עריכהתצוגה מקדימה-theme-dark");
+        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
     }
-    אם (document.cookie.indexOf("gdpr_analytics=1") == -1 &amp;&amp;
+    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        עבור (קונסט h1 של document.getElementsByTagName("h1")) {
+        for (const h1 of document.getElementsByTagName("h1")) {
             var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">אתר זה משתמש בעוגיות עבור Analytics.</h4>
+  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">בחר את העדפת Analytics שלך:</small><br>
+<small class="text-dark">Please choose your Analytics preference:</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
   onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
-  $('#analytics').css('תצוגה', 'אין');אמת""אני מסכים.</button> &nbsp;
+  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
   onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
-  $('#analytics').css('תצוגה', 'אין');אמת">אני
-  דחה.</button><br><small class="text-dark">אם אתה בוחר
-  דחה, לא נבקש שוב את 10 הימים הבאים.</small>
+  $('#analytics').css('display', 'none');true">I
+  Decline.</button><br><small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 10 days.</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('מקדים', HTML);
+            h1.insertAdjacentHTML('beforeend', html);
         }
     }
-    אחר אם (document.cookie.indexOf("gdpr_decline=1") == -1) {
+    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
         document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
 
 <script async type="module">
-    אם (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "נדחה") {
-		הרשאת var = Notification.permission;
-		אם (הרשאה!) "הוענק") {
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
             Notification.requestPermission().then((result) => {
-              permission = תוצאה;
+              permission = result;
             });
         }
-        אם (הרשאה === "הוענק") {
-		   מהדורה משתנה;
+        if (permission === "granted") {
+		   var revision;
            var m = document.cookie.match(/last=([0-9]+)/);
-           אם (מ)
-			 revision = מ״ש[1];
-           תגובת const = ממתין לשליפה("/dynamic/search/?regex=notify="+מהדורה+";לנג={{lang}};markdown_search=1;as_json=1",
-                           {פרטי אימות: 'אותו מקור'});
-           נסו {
-              Const json = ממתין response.json();
-              עבור (const e of json.log) {
-                  הודעת var = e[3] + "\n";
-                  עבור (const) [מפתח, val] של Object.entries(e)[1])) {
-                      הודעה += val.action + " " + key.replace(/^.*\//, "") + "\n";
+           if (m)
+			 revision = m[1];
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = הודעה חדשה (e)[2],
+				  var n = new Notification(e[2],
      			    {
-					  body: הודעה,
+					  body: msg,
 					  tag: e[0],
-					  icon: "/פביקון",
+					  icon: "/favicon",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("לחיצה", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";לנג={{lang}};markdown_search=1") }, { קליטה: true });
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
 			  }
 		   }
-           תפוס (e) {
-             התראה (e)
+           catch (e) {
+             // alert(e);
 		   }
         }
 	}

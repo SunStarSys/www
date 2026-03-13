@@ -171,82 +171,82 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
-    Si (tipo de (editormd) === "no definido") {
+    if (typeof(editormd) === "undefined") {
         
-        mermaid.initialize({tema: "oscuro", startOnLoad: true, securityLevel: "suelto"});
-        $(".diagrama de secuencia").sequenceDiagram();
-        para (const e de $("cuerpo").find(".graphviz").toArray()) {
-            d3.select(e).graphviz({useWorker: falso}renderDot($(e).text());
+        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
+        $(".sequence-diagram").sequenceDiagram();
+        for (const e of $("body").find(".graphviz").toArray()) {
+            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
             e.innerHTML = ""
         }
-        $("cuerpo").find("pre").parent().addClass("editormd-preview-theme-dark");
+        $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
     }
-    si (document.cookie.indexOf("gdpr_analytics=1") == -1 &amp;&amp;
+    if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        para (const. h1 de document.getElementsByTagName("h1")) {
+        for (const h1 of document.getElementsByTagName("h1")) {
             var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
-  <h3 class="card-title text-dark">Este sitio utiliza cookies para análisis.</h4>
+  <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
 </div>
 <div class="card-body">
 <p class="card-text">
-<small class="text-dark">Seleccione su preferencia de análisis:</small><br>
+<small class="text-dark">Please choose your Analytics preference:</small><br>
   <button type="button" class="btn btn-outline-warning text-white" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_analytics=1; ruta=/; edad máxima=8640000';
-  $('#analytics').css('visualización', 'ninguno');verdadero">Consentimiento.</button> &nbsp;
+  onClick="document.cookie='gdpr_analytics=1; path=/; max-age=8640000';
+  $('#analytics').css('display', 'none');true">I Consent.</button> &nbsp;
   <button type="button" class="btn btn-outline-danger text-dark" data-bs-dismiss="alert"
-  onClick="document.cookie='gdpr_decline=1; ruta=/; edad máxima=864000';
-  $('#analytics').css('visualización', 'ninguno');verdadero">I
-  Rechazar.</button><br><small class="text-dark">¿Debería elegir
-  Rechazar, no volveremos a pedir los próximos 10 días.</small>
+  onClick="document.cookie='gdpr_decline=1; path=/; max-age=864000';
+  $('#analytics').css('display', 'none');true">I
+  Decline.</button><br><small class="text-dark">Should you elect to
+  Decline, we will not ask again for the next 10 days.</small>
 </p>
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('antes de', html);
+            h1.insertAdjacentHTML('beforeend', html);
         }
     }
-    si no (document.cookie.indexOf("gdpr_decline=1") == -1) {
-        document.cookie = 'gdpr_analytics=1; ruta=/; edad máxima=8640000';
+    else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
+        document.cookie = 'gdpr_analytics=1; path=/; max-age=8640000';
     }
   </script>
 
 <script async type="module">
-    si (document.cookie.indexOf("can_search") >= 0 &amp;&amp; Notification.permission !== "denegado") {
-		permiso var = Notification.permission;
-		Si (permiso !== "concedido") {
-            Notification.requestPermission().then((resultado) => {
-              permission = resultado;
+    if (document.cookie.indexOf("can_search") >= 0 && Notification.permission !== "denied") {
+		var permission = Notification.permission;
+		if (permission !== "granted") {
+            Notification.requestPermission().then((result) => {
+              permission = result;
             });
         }
-        Si (permiso === "concedido") {
-		   var revisión;
-           var m = document.cookie.match(/último=([0-9]+)/);
-           si m)
+        if (permission === "granted") {
+		   var revision;
+           var m = document.cookie.match(/last=([0-9]+)/);
+           if (m)
 			 revision = m[1];
-           respuesta constante = espera de recuperación("/dynamic/search/?regex=notify="+ revisión+";lang={{lang}};markdown_search=1;as_json=1",
-                           {credenciales: 'mismo origen'});
-           intentar {
-              const json = espera response.json();
-              para (const e de json.log) {
-                  mensaje var = e[3] + "\n";
-                  para (const [clave, valor] de Object.entries(e[1])) {
-                      mensaje += val.action + " " + key.replace(/^.*\//, "") + "\n";
+           const response = await fetch("/dynamic/search/?regex=notify="+revision+";lang={{lang}};markdown_search=1;as_json=1",
+                           {credentials: 'same-origin'});
+           try {
+              const json = await response.json();
+              for (const e of json.log) {
+                  var msg = e[3] + "\n";
+                  for (const [key, val] of Object.entries(e[1])) {
+                      msg += val.action + " " + key.replace(/^.*\//, "") + "\n";
 				  }
-				  var n = nueva notificación(e[2],
+				  var n = new Notification(e[2],
      			    {
-					  body: mensaje,
+					  body: msg,
 					  tag: e[0],
-					  icon: "/favicio",
+					  icon: "/favicon",
 					  image: "/images/sunstarstaronly",
 				    }
 			  	  );
-			      n.addEventListener("clic", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { captura: verdadero });
+			      n.addEventListener("click", () => {window.open("https://{{website}}/dynamic/search/?regex=diff="+e[0]+";lang={{lang}};markdown_search=1") }, { capture: true });
 			  }
 		   }
-           capturas (e) {
-             // alerta(e);
+           catch (e) {
+             // alert(e);
 		   }
         }
 	}
