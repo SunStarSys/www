@@ -123,7 +123,7 @@ La premisa básica de [arquitectura de confianza cero](https://csrc.nist.gov/pub
 
 Utilizamos proxies TCP, no HTTP y ningún backend MSA, **por lo que el único host que ve su tráfico web es el host que descifra su tráfico TLS**. Se aplican las mismas reglas al tráfico de Subversion: solo el tráfico cifrado TLS directo y de extremo a extremo al **punto final de servicio** ve los datos en ejecución.
 
-Buena suerte con las **capas de MSA y capas de exposición de datos privados** con otros proveedores. El enemigo de "ingeniería no funcional" es la complejidad. Es mucho más fácil proporcionar promesas de seguridad significativas cuando su producto es un **monolito federado en lugar de un minfield MSA masivo**, que es otro diferenciador contrario entre Orion y su campo de títulos.
+Buena suerte con las **capas de MSA y capas de exposición de datos privados** con otros proveedores. El enemigo de "ingeniería no funcional" es la complejidad. Es mucho más fácil proporcionar promesas de seguridad significativas cuando su producto es un **monolito federado en lugar de un minfield MSA masivo**, que es otro diferenciador contrario entre Orion y su campo de competidores.
 
 Esta infraestructura está totalmente automatizada una vez que una región se pone en línea, pero que'Todo lo que podemos compartir públicamente sobre la arquitectura (equilibrando la transparencia de Hobbsian con el mantra militar) "barcos de fregadero de labios sueltos" Es más arte que ciencia).  Permanecer tranquilo &mdash; más allá de romper el antispoof [`lo0`](#) protección dentro de Solaris 11's (BSD) filtro de paquetes en sí, no hay medios significativos de obtener acceso a estos servicios, incluso para las cuentas de los clientes.
 

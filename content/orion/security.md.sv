@@ -123,7 +123,7 @@ Den grundläggande förutsättningen för [arkitektur med nolltillit](https://cs
 
 Vi använder TCP-proxyer, inte HTTP, och inga MSA-serverdelar **så den enda värd som ser din webbtrafik är den värd som dekrypterar din TLS-trafik**. Samma regler gäller för Subversionstrafik: endast direkt, end-to-end TLS-krypterad trafik till **tjänstslutpunkten** ser dina data under överföring.
 
-Lycka till med **MSA-lagren och lagren av privat dataexponering** med andra leverantörer. Fienden till "icke-funktionell teknik" är komplexitet. Det är mycket lättare att ge meningsfulla säkerhetslöften när din produkt är en **förenad monolit istället för en massiv MSA-minfält**, vilket är en annan motsvarighet mellan Orion och dess kometitorfält.
+Lycka till med **MSA-lagren och lagren av privat dataexponering** med andra leverantörer. Fienden till "icke-funktionell teknik" är komplexitet. Det är mycket lättare att ge meningsfulla säkerhetslöften när din produkt är en **förenad monolit istället för en massiv MSA-minfält**, vilket är en annan motsvarighet mellan Orion och dess konkurrentfält.
 
 Denna infra är helt automatiserad när en region tas online, men det's allt vi kan dela offentligt om arkitekturen (balansera Hobbsian öppenhet med militära mantra "lösa läppar sjunka fartyg" är mer konst än vetenskap).  Var säker &mdash; Bortom att bryta antispoofing [`lo0`](#) skydd inom Solaris 11's (BSD) paketfilter själv, det finns inga meningsfulla sätt att få tillgång till dessa tjänster, även för kundkonton.
 
@@ -314,4 +314,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-03 14:16:07 -0700 (Tue, 03 Mar 2026) $ $Author: joe $ $Revision: 28189 $ -->
+<!-- $Date: 2026-03-13 09:01:08 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28936 $ -->

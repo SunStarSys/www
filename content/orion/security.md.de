@@ -123,7 +123,7 @@ Die Grundvoraussetzung von [Zero Trust-Architektur](https://csrc.nist.gov/public
 
 Wir verwenden TCP-Proxys, nicht HTTP und keine MSA-Backends. **Der einzige Host, der Ihren Webtraffic sieht, ist der Host, der Ihren TLS-Traffic entschlüsselt**. Dieselben Regeln gelten für Subversion-Traffic: Nur direkter, End-to-End-TLS-verschlüsselter Traffic zum **Serviceendpunkt** sieht Ihre Daten im Flug.
 
-Viel Glück mit den **MSA-Ebenen und Ebenen der privaten Datenexposition** mit anderen Anbietern. Der Feind von "Nichtfunktionales Engineering" Komplexität ist. Es ist viel einfacher, aussagekräftige Sicherheitsversprechen zu geben, wenn Ihr Produkt ein **föderierter Monolith ist, anstatt ein massives MSA-Minfeld**, das ein weiteres konträres Unterscheidungsmerkmal zwischen Orion und seinem Kometenfeld ist.
+Viel Glück mit den **MSA-Ebenen und Ebenen der privaten Datenexposition** mit anderen Anbietern. Der Feind von "Nichtfunktionales Engineering" Komplexität ist. Es ist viel einfacher, aussagekräftige Sicherheitsversprechen zu geben, wenn Ihr Produkt ein **föderierter Monolith ist, anstatt ein massives MSA-Minfeld**, das ein weiteres konträres Unterscheidungsmerkmal zwischen Orion und seinem Wettbewerbsgebiet ist.
 
 Diese Infrastruktur ist voll automatisiert, sobald eine Region online gestellt wird, aber'Alles, was wir öffentlich über die Architektur teilen können (Ausgleich der hobbsischen Transparenz mit dem militärischen Mantra) "Lose Lippen spülen Schiffe" mehr Kunst als Wissenschaft).  Sicher sein &mdash; über das Brechen des Antispoofings hinaus [`lo0`](#) Schutz innerhalb Solaris 11's (BSD) Paketfilter selbst, es gibt keine sinnvollen Mittel, um Zugriff auf diese Dienste zu erhalten, auch nicht für Kundenkonten.
 
