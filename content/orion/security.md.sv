@@ -194,7 +194,7 @@ Online-redigeraren stöder ett JSON-gränssnitt genom att helt enkelt ställa in
 
 ##### Subversion-åtkomstlistor styr läsbehörighet för arbetskopia på serversidan
 
-Alla resurser för arbetskopiering som är tillgängliga via användargränssnittet är korskontrollerade mot dina åtkomstkontrollistor för Subversion innan de visas för användaren.  På detta sätt ser vi till att läsåtkomst till obehöriga resurser förhindras för tillgångarna under versionskontroll (aka **allt**).
+Alla resurser för arbetskopiering som är tillgängliga via användargränssnittet är korskontrollerade mot dina åtkomstkontrollistor för Subversion innan de visas för användaren.  På så sätt ser vi till att läsåtkomst till obehöriga resurser förhindras för tillgångarna under versionskontroll (dvs. **allt**).
 
 ##### Bekräftelseåtkomst kontrolleras direkt med Subversion-åtkomstkontrollistor
 

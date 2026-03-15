@@ -194,7 +194,7 @@ El editor en línea admite una interfaz de usuario de JSON simplemente configura
 
 ##### Las ACL de subversión rigen el acceso de lectura de copia de trabajo del servidor
 
-Cada recurso de copia de trabajo disponible a través de la interfaz de usuario se comprueba de forma cruzada con las ACL de Subversion antes de presentarlas al usuario.  De esta forma, nos aseguramos de que se impida el acceso de lectura a los recursos no autorizados para los activos bajo control de versiones (también conocido como **todo**).
+Cada recurso de copia de trabajo disponible a través de la interfaz de usuario se comprueba de forma cruzada con las ACL de Subversion antes de presentarlas al usuario.  De esta forma, garantizamos que se impide el acceso de lectura a los recursos no autorizados para los activos bajo control de versiones (también conocido como **todo**).
 
 ##### El acceso de confirmación se controla directamente con las ACL de Subversion
 
