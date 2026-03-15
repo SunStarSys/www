@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
-keywords: seguridad,infosec,appsec,ipsec,devsecops,it,acl,svnauthz
+keywords: seguridad,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,cerotrust
 published: ~
 status: publicado
 title: Seguridad de Orion

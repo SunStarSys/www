@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
-keywords: безопасность,инфосек,appsec,ipsec,devsecops,it,acl,svnauthz
+keywords: безопасность,инфосек,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
 published: ~
 status: опубликовано
 title: Безопасность Orion
@@ -318,4 +318,4 @@ CSS должен быть доставлен с наших серверов.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-13 10:45:24 -0700 (Fri, 13 Mar 2026) $ $Author: joe $ $Revision: 28995 $ -->
+<!-- $Date: 2026-03-15 09:44:09 -0700 (Sun, 15 Mar 2026) $ $Author: joe $ $Revision: 29032 $ -->

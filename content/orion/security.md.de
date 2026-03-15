@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
-keywords: Sicherheit,infosec,appsec,ipsec,devsecops,it,acl,svnauthz
+keywords: Sicherheit,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
 published: ~
 status: veröffentlicht
 title: Orion-Sicherheit
@@ -123,7 +123,7 @@ Die Grundvoraussetzung von [Zero Trust-Architektur](https://csrc.nist.gov/public
 
 Wir verwenden TCP-Proxys, keine HTTP-Proxys und keine MSA-Backends. **Der einzige Host, der Ihren unverschlüsselten TLS-Webverkehr sieht, ist der Host, der ihn entschlüsselt**. Dieselben Regeln gelten für Subversion-Traffic &mdash; Nur direkter, End-to-End-TLS-verschlüsselter Datenverkehr zum **Service-Endpunkt** sieht Ihre unverschlüsselten Daten auf der Leitung.
 
-Viel Glück mit den **MSA-Ebenen und Ebenen der privaten Datenexposition** mit anderen Anbietern. Der Feind von "Nichtfunktionales Engineering" Komplexität ist. Es ist viel einfacher, aussagekräftige Sicherheitsversprechen zu geben, wenn Ihr Produkt ein **föderierter Monolith anstelle eines massiven MSA-Minenfelds** ist, was ein weiteres konträres Unterscheidungsmerkmal zwischen Orion und seinem Wettbewerbsgebiet ist.
+Viel Glück mit den **MSA-Ebenen und Ebenen der privaten Datenexposition** mit anderen Anbietern. Der Feind von "Nichtfunktionales Engineering" Komplexität ist. Es ist viel einfacher, aussagekräftige Sicherheitsversprechen zu geben, wenn Ihr Produkt ein **föderierter Monolith anstelle eines massiven MSA-Minenfeldes** ist, was ein weiteres konträres Unterscheidungsmerkmal zwischen Orion und seinem Wettbewerbsgebiet ist.
 
 Diese Infrastruktur ist voll automatisiert, sobald eine Region online gestellt wird, aber'Alles, was wir öffentlich über die Architektur teilen können (Ausgleich der hobbsischen Transparenz mit dem militärischen Mantra) "Lose Lippen spülen Schiffe" mehr Kunst als Wissenschaft).  Sicher sein &mdash; über das Brechen des Antispoofings hinaus [`lo0`](#) Schutz innerhalb Solaris 11's (BSD) Paketfilter selbst, es gibt keine sinnvollen Mittel, um Zugriff auf diese Dienste zu erhalten, auch nicht für Kundenkonten.
 
