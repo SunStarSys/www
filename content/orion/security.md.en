@@ -118,7 +118,7 @@ The basic premise of [zero trust architecture](https://csrc.nist.gov/publication
 
 We use TCP proxies, not HTTP proxies, and no MSA backends, **so the only host that sees your unencrypted TLS web traffic is the host that decrypts it**. Same rules apply to Subversion traffic &mdash; only direct, end-to-end TLS encrypted traffic to the **service endpoint** sees your unencrypted data on the wire.
 
-Good luck with the **MSA layers and layers of private data exposure** with other vendors. The enemy of "nonfunctional engineering" is complexity. Its a lot easier to provide meaningful security promises when your product is a **federated monolith instead of a massive MSA minefield**, which is another contrarian differentiator between Orion and its field of competitors.
+Good luck with the **MSA layers and layers of private data exposure** with other vendors. The enemy of "nonfunctional engineering" is complexity. It is a lot easier to provide meaningful security promises when your product is a **federated monolith instead of a massive MSA minefield**, which is another contrarian differentiator between Orion and its field of competitors.
 
 This infra is fully automated once a region is brought online, but that's all we can share publicly about the architecture (balancing Hobbsian transparency with the military mantra "loose lips sink ships" is more art than science).  Rest assured &mdash; beyond breaking the antispoofing [`lo0`](#) protection within Solaris 11's (BSD) packet filter itself, there is no meaningful means of gaining access to these services, even for customer accounts.
 
