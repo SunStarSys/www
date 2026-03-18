@@ -168,9 +168,9 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 - Volymrabatter tillgängliga.
 
-- Företag Kerberos-baserade Orion Server Installs är nu tillgängliga, för kunder som söker alternativ till Atlassian Confluence.
+- Företag Kerberos-baserade Orion Server Installs är nu tillgängliga, för kunder som söker alternativ till Atlassian Confluence Data Center.
 
-- Serverless Technology Integration kommer snart.
+- OCI-funktion (serverlös teknik)/OCI RDBMS-integrering kommer snart.
 
 - Konsulttjänster och tjänster för teknisk utbildning och portering av webbsidor.
 
@@ -232,4 +232,4 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-03-18 12:24:36 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29136 $ -->
+<!-- $Date: 2026-03-18 13:27:08 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29149 $ -->
