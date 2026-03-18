@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
-keywords: Jamstack,wiki
+keywords: Jamstack,wiki,km,cms
 published: ~
 status: publicerad
 title: Orionplaner
@@ -32,7 +32,7 @@ $25/månad/hanterad allmän webbplats
 <ol>
 						<li>Offentlig subversion hosting</li>
 						<li>100 MB lagringsutrymme<sup>1</sup></li>
-						<li>500 Gbyte dataöverföring</li>
+						<li>100 Gbyte dataöverföring</li>
 						<li>Obegränsad IDE-användning för 10 platser</li>
 			<li>100 byggminuter</li>
 			<li>E-postbaserad kundsupport</li>
@@ -77,7 +77,7 @@ $ 100 / månad / hanterad offentlig webbplats, ~ 50 % rabatt på alla konkurrent
 <ol>
 						<li>Offentlig eller privat Subversion hosting</li>
 						<li>500 MB lagringsutrymme<sup>1</sup></li>
-						<li>1 Tbyte dataöverföring</li>
+						<li>500 Gbyte dataöverföring</li>
 						<li>Obegränsad IDE-användning för 50 platser</li>
 						<li>Upp till 5 åtkomstkontrollista-grupper</li>
 				<li>500 byggminuter</li>
@@ -124,7 +124,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 <p>
 <ol>
-						<li>2 GB lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
+						<li>5 GB lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
 						<li>5 Tbyte dataöverföring</li>
 						<li>Obegränsade webbplatser och (självhanterade) platser</li>
 						<li>5000 byggminuter</li>
@@ -229,7 +229,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 </div>
 
 <style type="text/css">
-h4 { teckenstorlek:14px }
+h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-03-02 09:03:33 -0700 (Mon, 02 Mar 2026) $ $Author: joe $ $Revision: 28121 $ -->
+<!-- $Date: 2026-03-18 12:22:16 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29126 $ -->

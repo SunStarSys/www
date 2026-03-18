@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
-keywords: Jamstack,wiki
+keywords: Jamstack,wiki,kms,cms
 published: ~
 status: publicado
 title: Planes de Orion
@@ -32,7 +32,7 @@ $25/mes/sitio público gestionado
 <ol>
 						<li>Alojamiento de subversión pública</li>
 						<li>100 MB de espacio de almacenamiento<sup>1</sup></li>
-						<li>Transferencia de datos de 500 GB</li>
+						<li>Transferencia de datos de 100 GB</li>
 						<li>Uso ilimitado de IDE para 10 asientos</li>
 			<li>100 minutos de creación</li>
 			<li>Soporte al cliente basado en correo electrónico</li>
@@ -77,7 +77,7 @@ $100 / mes / sitio público administrado, ~50% de descuento en todos los modelos
 <ol>
 						<li>Alojamiento de Subversion público o privado</li>
 						<li>500 MB de espacio de almacenamiento<sup>1</sup></li>
-						<li>Transferencia de datos de 1 TB</li>
+						<li>Transferencia de datos de 500 GB</li>
 						<li>Uso ilimitado de IDE para 50 asientos</li>
 						<li>Hasta 5 grupos de ACL</li>
 				<li>500 minutos de creación</li>
@@ -124,7 +124,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 <p>
 <ol>
-						<li>2 GB de espacio de almacenamiento en su propio repositorio de Subversion<sup>2</sup></li>
+						<li>5 GB de espacio de almacenamiento en su propio repositorio de Subversion<sup>2</sup></li>
 						<li>Transferencia de datos de 5 TB</li>
 						<li>Sitios web ilimitados y asientos (autogestionados)</li>
 						<li>5000 minutos de creación</li>
@@ -229,7 +229,7 @@ Hyderabad, IN
 </div>
 
 <style type="text/css">
-h4 { tamaño de fuente:14px }
+h4 { font-size:14px }
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
-keywords: Jamstack,wiki
+keywords: Jamstack，Wiki，公里，cms
 published: ~
 status: 已發布
 title: Orion 計畫
@@ -32,7 +32,7 @@ $25 / 月 / 管理公共網站
 <ol>
 						<li>公共 Subversion 主辦</li>
 						<li>100 MB 儲存空間<sup>1 個</sup></li>
-						<li>500 GB 資料傳輸</li>
+						<li>100 GB 資料傳輸</li>
 						<li>無限使用 IDE 10 個座位</li>
 			<li>100 分鐘組建</li>
 			<li>電子郵件型客戶支援</li>
@@ -77,7 +77,7 @@ $100 / 月 / 管理公共網站，比所有競爭對手定價模式高出 50%！
 <ol>
 						<li>公共或私有 Subversion 主辦</li>
 						<li>500 MB 儲存空間<sup>1 個</sup></li>
-						<li>1 TB 資料傳輸</li>
+						<li>500 GB 資料傳輸</li>
 						<li>無限使用 IDE 50 個座位</li>
 						<li>最多 5 個 ACL 群組</li>
 				<li>500 分鐘組建</li>
@@ -124,7 +124,7 @@ $100 / 月 / 管理公共網站，比所有競爭對手定價模式高出 50%！
 
 <p>
 <ol>
-						<li>您自己的 Subversion 儲存區域有 2 GB 的儲存空間<sup>2 個</sup></li>
+						<li>您自己的 Subversion 儲存區域有 5 GB 的儲存空間<sup>2 個</sup></li>
 						<li>5 TB 資料傳輸</li>
 						<li>無限網站及 (自行管理) 座位</li>
 						<li>5000 個組建分鐘數</li>
@@ -229,7 +229,7 @@ $100 / 月 / 管理公共網站，比所有競爭對手定價模式高出 50%！
 </div>
 
 <style type="text/css">
-h4 { 字體大小：14px }
+h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-03-02 09:03:33 -0700 (Mon, 02 Mar 2026) $ $Author: joe $ $Revision: 28121 $ -->
+<!-- $Date: 2026-03-18 12:22:16 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29126 $ -->

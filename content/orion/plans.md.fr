@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
-keywords: Jamstack, wiki
+keywords: Jamstack, wiki, km, cm
 published: ~
 status: publié
 title: Plans Orion
@@ -32,7 +32,7 @@ $25 / mois / site public géré
 <ol>
 						<li>Hébergement Subversion Public</li>
 						<li>Espace de stockage de 100 Mo<sup>1</sup></li>
-						<li>Transfert de données de 500 Go</li>
+						<li>Transfert de données de 100 Go</li>
 						<li>Utilisation illimitée de l'IDE pour 10 places</li>
 			<li>100 minutes de build</li>
 			<li>Support client par e-mail</li>
@@ -77,7 +77,7 @@ $100 / mois / site public géré, ~50% sur tous les modèles de tarification con
 <ol>
 						<li>Hébergement Subversion public ou privé</li>
 						<li>Espace de stockage de 500 Mo<sup>1</sup></li>
-						<li>Transfert de données de 1 To</li>
+						<li>Transfert de données de 500 Go</li>
 						<li>Utilisation illimitée de l'IDE pour 50 places</li>
 						<li>Jusqu'à 5 groupes ACL</li>
 				<li>500 minutes de build</li>
@@ -124,7 +124,7 @@ $1000 / mois, ~67% de rabais sur tous les modèles de prix concurrents !
 
 <p>
 <ol>
-						<li>2 Go d'espace de stockage dans votre propre référentiel Subversion<sup>2</sup></li>
+						<li>5 Go d'espace de stockage dans votre propre référentiel Subversion<sup>2</sup></li>
 						<li>Transfert de données de 5 To</li>
 						<li>Nombre illimité de sites Web et de sièges (autogérés)</li>
 						<li>5000 minutes de build</li>
@@ -229,7 +229,7 @@ $1000 / mois, ~67% de rabais sur tous les modèles de prix concurrents !
 </div>
 
 <style type="text/css">
-h4 { taille de police:14px }
+h4 { font-size:14px }
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

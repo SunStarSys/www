@@ -2,7 +2,7 @@
 archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
-keywords: Jamstack, Wiki
+keywords: Jamstack,Wiki,KMS,CMS
 published: ~
 status: veröffentlicht
 title: Orionpläne
@@ -32,7 +32,7 @@ $25 / Monat / verwaltete öffentliche Website
 <ol>
 						<li>Öffentliches Subversion-Hosting</li>
 						<li>100 MB Speicherplatz<sup>1</sup></li>
-						<li>500 GB Datenübertragung</li>
+						<li>100 GB Datenübertragung</li>
 						<li>Unbegrenzte IDE-Nutzung für 10 Plätze</li>
 			<li>100 Erstellungsminuten</li>
 			<li>E-Mail-basierter Kundendienst</li>
@@ -77,7 +77,7 @@ $100 / Monat / verwaltete öffentliche Website, ~50% Rabatt auf alle Wettbewerbe
 <ol>
 						<li>Öffentliches oder privates Subversion-Hosting</li>
 						<li>500 MB Speicherplatz<sup>1</sup></li>
-						<li>1 TB Datenübertragung</li>
+						<li>500 GB Datenübertragung</li>
 						<li>Unbegrenzte IDE-Nutzung für 50 Plätze</li>
 						<li>Bis zu 5 ACL-Gruppen</li>
 				<li>500 Erstellungsminuten</li>
@@ -124,7 +124,7 @@ $1000 / Monat, ~67% Rabatt auf alle Wettbewerber Preismodelle!
 
 <p>
 <ol>
-						<li>2 GB Speicherplatz in Ihrem eigenen Subversion-Repository<sup>2</sup></li>
+						<li>5 GB Speicherplatz in Ihrem eigenen Subversion-Repository<sup>2</sup></li>
 						<li>5 TB Datenübertragung</li>
 						<li>Unbegrenzte Webseiten und (selbstverwaltete) Plätze</li>
 						<li>5000 Erstellungsminuten</li>
@@ -229,7 +229,7 @@ Phoenix, AZ
 </div>
 
 <style type="text/css">
-h4 { Schriftgröße:14px }
+h4 { font-size:14px }
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->
