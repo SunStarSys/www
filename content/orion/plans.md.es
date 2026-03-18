@@ -190,7 +190,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 #### Notas al pie
 
-1. Utilización de almacenamiento calculada en función del tamaño de cuatro desprotecciones de copia de trabajo de cada sitio: dos árboles de origen y dos árboles de creación resultantes.
+1. Utilización de almacenamiento calculada en función del tamaño de dos desprotecciones de copia de trabajo de cada sitio: un árbol de origen y un árbol de creación de producción resultante.
 
 2. Utilización de almacenamiento calculada en función del tamaño total del repositorio de Subversion alojado por sistemas SunStar para clientes de Enterprise, no para desprotecciones individuales, que es un *número comparativamente menor* (aproximadamente el tamaño de una única desprotección de árbol de origen).
 

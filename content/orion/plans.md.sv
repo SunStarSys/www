@@ -190,7 +190,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 #### Fotnoter
 
-1. Lagringsutnyttjandet beräknas baserat på storleken på fyra utcheckningar av arbetskopior på varje plats: två källträd och två resulterande byggträd.
+1. Lagringsutnyttjande beräknat baserat på storleken på två kassabetalningar med arbetskopia av varje plats: ett källträd och ett resulterande produktionsträd.
 
 2. Lagringsutnyttjande beräknat baserat på den totala storleken på SunStar Systembaserat Subversion-datalager för företagskunder, inte enskilda kassabetalningar, vilket är ett *jämfört mindre antal* (ungefär storleken på en enstaka utcheckning med källträd).
 
@@ -232,4 +232,4 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-03-18 12:22:16 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29126 $ -->
+<!-- $Date: 2026-03-18 12:24:36 -0700 (Wed, 18 Mar 2026) $ $Author: joe $ $Revision: 29136 $ -->

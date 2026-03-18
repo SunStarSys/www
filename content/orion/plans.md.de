@@ -190,7 +190,7 @@ Unternehmen mit weniger als 1000 Commits pro Tag sollten mit den 5000 Build-Minu
 
 #### Fußnoten
 
-1. Die Speicherauslastung wird basierend auf der Größe von vier Arbeitskopie-Checkouts jedes Standorts berechnet: zwei Quellbäume und zwei resultierende Baumstrukturen.
+1. Die Speicherauslastung wird basierend auf der Größe von zwei Arbeitskopie-Checkouts jeder Site berechnet: einem Quellbaum und einem resultierenden Produktionserstellungsbaum.
 
 2. Die Speicherauslastung wird basierend auf der Gesamtgröße des vom System gehosteten Subversion-Repositorys SunStar für Enterprise-Kunden berechnet, nicht für einzelne Checkouts. Dies ist eine *vergleichsweise kleinere Zahl* (etwa die Größe eines einzelnen Source-Tree-Checkouts).
 
