@@ -86,7 +86,7 @@ Nunca tener que lidiar directamente con un sistema de control de versiones, o in
 
 <style type="text/css">
 
-div#lightning img {ancho: 100%}
+div#lightning img {width:100%}
 
 </style>
 
@@ -94,7 +94,7 @@ Los árboles fuente de varios gigabytes simplemente no coinciden &mdash; Las dur
 
 <span class="text-success"><em>Solo construimos lo que necesitas construir.</em></span>&trade;
 
-Esta tecnología fue inventada por primera vez a finales de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, y [Joe Schaefer](https://iconoclasts.blog/joe/) como miembros del equipo de infraestructura de Apache. La frase "[Pila JAM](https://jamstack.wtf)" Fue acuñado años después, por un grupo que desconocía nuestro arte anterior en este espacio.  Pero el [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Esta nueva oferta de SunStar Systems es testimonio de ese legado original y sus verdaderos orígenes de código abierto.
+Esta tecnología fue inventada por primera vez a finales de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher y [Joe Schaefer](https://iconoclasts.blog/joe/) como miembros del equipo de infraestructura de Apache. La frase "[Pila JAM](https://jamstack.wtf)" Fue acuñado años después, por un grupo que desconocía nuestro arte anterior en este espacio.  Pero el [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Esta nueva oferta de SunStar Systems es testimonio de ese legado original y sus verdaderos orígenes de código abierto.
 
 <h4>¿Quieres darle un giro rápido para ver qué tan rápido y fácil es?</h4>
 
@@ -157,17 +157,17 @@ Ver nuestra [Planes de Orion](plans) para las ofertas actuales.
 
 <style type="text/css">
 /*-------------------------------------------
-	Animaciones
+	Animations
 -------------------------------------------*/
 @-webkit-keyframes FADEY {
-  0 %   { opacidad: 0; }
-  100 % { opacidad: 1; }
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: facilidad de entrada;
+	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
 </style>

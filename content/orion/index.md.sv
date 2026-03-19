@@ -86,7 +86,7 @@ Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en s
 
 <style type="text/css">
 
-div#lightning img {bredd: 100 %}
+div#lightning img {width:100%}
 
 </style>
 
@@ -94,7 +94,7 @@ Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total
 
 <span class="text-success"><em>Vi bygger bara det du behöver.</em></span>&trade;
 
-Denna teknik uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "[JAM-stack](https://jamstack.wtf)" Det myntades år senare av en grupp som inte kände till vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
+Denna teknik uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "[JAM-stack](https://jamstack.wtf)" Det myntades år senare av en grupp som inte kände till vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
 
 <h4>Vill du ge det en snabb snurr för att se hur snabbt och enkelt det är?</h4>
 
@@ -157,18 +157,18 @@ Se våra [Orionplaner](plans) för de aktuella avtalen.
 
 <style type="text/css">
 /*-------------------------------------------
-	Animeringar
+	Animations
 -------------------------------------------*/
-@-webkit-nyckelramar FADEY {
-  0 %   { Opacitet: 0. }
-  100 % { Opacitet: 1. }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.theme-utställning {
+.theme-showcase {
 	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: lättnad,
-	-webkit-animation-iteration-count: 1.
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
 }
 </style>
 

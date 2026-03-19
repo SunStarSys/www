@@ -86,7 +86,7 @@ title: SunStar Орион систем
 
 <style type="text/css">
 
-div#lightning img {ширина:100%}
+div#lightning img {width:100%}
 
 </style>
 
@@ -94,7 +94,7 @@ div#lightning img {ширина:100%}
 
 <span class="text-success"><em>Мы строим только то, что вам нужно.</em></span>&trade;
 
-Эта технология была впервые изобретена в конце 2010 года. [Пол Керна](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Даниэль Шахаф, и [Джо Шефер](https://iconoclasts.blog/joe/) как члены команды инфраструктуры Apache. Фраза "[Стек JAM](https://jamstack.wtf)" был придуман много лет спустя группой, не знавшей о нашем предыдущем искусстве в этом пространстве.  Но [общественная запись](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) кристально ясно, и это новое предложение от SunStar Systems является свидетельством этого оригинального наследия и его истинного происхождения с открытым исходным кодом.
+Эта технология была впервые изобретена в конце 2010 года. [Пол Керна](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Даниэль Шахаф, Дейв Фишер, и [Джо Шефер](https://iconoclasts.blog/joe/) как члены команды инфраструктуры Apache. Фраза "[Стек JAM](https://jamstack.wtf)" был придуман много лет спустя группой, не знавшей о нашем предыдущем искусстве в этом пространстве.  Но [общественная запись](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) кристально ясно, и это новое предложение от SunStar Systems является свидетельством этого оригинального наследия и его истинного происхождения с открытым исходным кодом.
 
 <h4>Хотите, чтобы он быстро вращался, чтобы увидеть, насколько он быстрый и легкий?</h4>
 
@@ -157,17 +157,17 @@ div#lightning img {ширина:100%}
 
 <style type="text/css">
 /*-------------------------------------------
-	Анимации
+	Animations
 -------------------------------------------*/
-@-webkit-ключевые рамки FADEY {
-  0%   { непрозрачность: 0; }
-  100% { непрозрачность: 1; }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .theme-showcase {
-	-webkit-animation-name: ФАДИ;
+	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: легкость в эксплуатации;
+	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
 </style>

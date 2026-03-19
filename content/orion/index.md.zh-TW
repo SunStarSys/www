@@ -86,7 +86,7 @@ Orion 專為拒絕解決的領導者而打造：
 
 <style type="text/css">
 
-除法 #lightning img {寬度：100%}
+div#lightning img {width:100%}
 
 </style>
 
@@ -94,7 +94,7 @@ Orion 專為拒絕解決的領導者而打造：
 
 <span class="text-success"><em>我們只建立您需要的建置項目。</em></span>&trade;
 
-這項技術於 2010 年底首次發明，由[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)，Daniel Shahaf，和[Joe Schaefer](https://iconoclasts.blog/joe/) 作為 Apache 基礎架構小組的成員。片語"[JAM 堆疊](https://jamstack.wtf)" 多年後，由一群人不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
+這項技術於 2010 年底首次發明，由[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/),Daniel Shahaf,Dave Fisher, [Joe Schaefer](https://iconoclasts.blog/joe/) 作為 Apache 基礎架構小組的成員。片語"[JAM 堆疊](https://jamstack.wtf)" 多年後，由一群人不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
 
 <h4>想要讓它快速旋轉，看看它的速度和簡易性如何？</h4>
 
@@ -157,18 +157,18 @@ Orion 專為拒絕解決的領導者而打造：
 
 <style type="text/css">
 /*-------------------------------------------
-	動畫
+	Animations
 -------------------------------------------*/
 @-webkit-keyframes FADEY {
-  0% { 不透明度：0；}
-  100% { 不透明度：1；}
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-繁體中文{
-	-webkit-animation-name: 法迪；
+.theme-showcase {
+	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: 容易出去；
-	-webkit-animation-iteration-count: 1、
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
 }
 </style>
 

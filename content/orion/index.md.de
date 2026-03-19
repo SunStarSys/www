@@ -86,7 +86,7 @@ Niemals direkt mit einem Versionskontrollsystem oder sogar einem statischen Site
 
 <style type="text/css">
 
-div#lightning img {Breite:100%}
+div#lightning img {width:100%}
 
 </style>
 
@@ -94,7 +94,7 @@ Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Di
 
 <span class="text-success"><em>Wir bauen nur das, was Sie bauen müssen.</em></span>&trade;
 
-Diese Technologie wurde erstmals Ende 2010 von [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf und [Joe Schaefer](https://iconoclasts.blog/joe/) als Mitglied des Apache Infrastructure Teams. Der Satz "[JAM-Stack](https://jamstack.wtf)" wurde Jahre später von einer Gruppe geprägt, die sich unseres Standes der Technik in diesem Raum nicht bewusst war.  Aber die [Öffentlicher Datensatz](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ist kristallklar, und dieses neue Angebot von SunStar Systems zeugt von diesem ursprünglichen Erbe und seinen wahren Open-Source-Ursprüngen.
+Diese Technologie wurde erstmals Ende 2010 von [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher und [Joe Schaefer](https://iconoclasts.blog/joe/) als Mitglied des Apache Infrastructure Teams. Der Satz "[JAM-Stack](https://jamstack.wtf)" wurde Jahre später von einer Gruppe geprägt, die sich unseres Standes der Technik in diesem Raum nicht bewusst war.  Aber die [Öffentlicher Datensatz](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ist kristallklar, und dieses neue Angebot von SunStar Systems zeugt von diesem ursprünglichen Erbe und seinen wahren Open-Source-Ursprüngen.
 
 <h4>Möchten Sie es kurz drehen, um zu sehen, wie schnell und einfach es ist?</h4>
 
@@ -157,17 +157,17 @@ Sehen Sie unsere [Orionpläne](plans) für die aktuellen Deals.
 
 <style type="text/css">
 /*-------------------------------------------
-	Animationen
+	Animations
 -------------------------------------------*/
 @-webkit-keyframes FADEY {
-  0%   { Deckkraft: 0; }
-  100% { Deckkraft: 1; }
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.theme-Schaufenster {
+.theme-showcase {
 	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: Leichtigkeit;
+	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
 </style>

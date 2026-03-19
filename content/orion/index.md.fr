@@ -86,7 +86,7 @@ Ne jamais avoir à traiter directement avec un système de contrôle de version,
 
 <style type="text/css">
 
-img div#lightning {largeur:100%}
+div#lightning img {width:100%}
 
 </style>
 
@@ -94,7 +94,7 @@ Les arbres sources multi-gigaoctets ne correspondent tout simplement pas &mdash;
 
 <span class="text-success"><em>Nous ne construisons que ce dont vous avez besoin.</em></span>&trade;
 
-Cette technologie a été inventée pour la première fois fin 2010 par [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, et [Joe Schaefer](https://iconoclasts.blog/joe/) en tant que membres de l'équipe d'infrastructure Apache. La phrase "[Pile JAM](https://jamstack.wtf)" a été inventé des années plus tard, par un groupe ignorant notre art antérieur dans cet espace.  Mais le [dossier public](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) est limpide, et cette nouvelle offre de SunStar Systems témoigne de cet héritage original et de ses véritables origines open source.
+Cette technologie a été inventée pour la première fois fin 2010 par [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher, et [Joe Schaefer](https://iconoclasts.blog/joe/) en tant que membres de l'équipe d'infrastructure Apache. La phrase "[Pile JAM](https://jamstack.wtf)" a été inventé des années plus tard, par un groupe ignorant notre art antérieur dans cet espace.  Mais le [dossier public](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) est limpide, et cette nouvelle offre de SunStar Systems témoigne de cet héritage original et de ses véritables origines open source.
 
 <h4>Vous voulez lui donner un tour rapide pour voir à quel point il est rapide et facile ?</h4>
 
@@ -159,16 +159,16 @@ Voir notre [Plans Orion](plans) pour les opérations actuelles.
 /*-------------------------------------------
 	Animations
 -------------------------------------------*/
-@webkit-keyframes FADEY {
-  0 %   { opacité : 0 ; }
-  100 % { opacité : 1 ; }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.thème vitrine {
-	-webkit-animation-name: FADEY ;
+.theme-showcase {
+	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 1s;
-	-webkit-animation-timing-function: facilité de sortie ;
-	-webkit-animation-iteration-count: 1 ;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
 }
 </style>
 
