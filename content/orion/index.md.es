@@ -100,7 +100,7 @@ Este [tecnología](https://iconoclasts.blog/joe/apache-cms) fue inventado a fina
 
 Este sitio web es auto-alojado; todos esos cuadrados de lápiz rosa caliente [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En la parte superior derecha están vivos.  ¡Siéntete libre de moverte y experimentar con cualquier cosa que veas!  Lo único que puedes't do es confirmar y observar cómo se crean y despliegan los cambios; que'restringido a nuestro personal por razones obvias.
 
-Nuestra red global de puntos de presencia (POP) garantiza conexiones de baja latencia tanto a Orion &trade; y los sitios web de entrega final que alojamos.  Actualmente estamos en cuatro continentes y tenemos una presencia bicoastal dentro de los Estados Unidos.  Y nosotros'se está expandiendo rápidamente, ¡el próximo Asia Oriental!
+Nuestra red global de puntos de presencia (POP) garantiza conexiones de baja latencia tanto a Orion &trade; y los sitios web de entrega final que alojamos.  Actualmente estamos en cuatro continentes y tenemos una presencia bicoastal dentro de los Estados Unidos.  Y nosotros'se está expandiendo rápidamente: ¡la próxima África y Asia Oriental!
 
 <h3>Es'Es hora de un cambio radical en la forma de administrar y entregar su sitio a su público objetivo.</h3>
 

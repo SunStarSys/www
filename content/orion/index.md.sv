@@ -100,7 +100,7 @@ Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet
 
 Denna webbplats är själv värd; alla dessa heta rosa penna rutor [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du kan't do är att bekräfta och titta på dina ändringar bygga och distribuera; att'Vi är begränsade till vår personal av uppenbara skäl.
 
-Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi är för närvarande på fyra kontinenter och har en bicoastal närvaro inom USA.  Och vi'expanderar snabbt - nästa upp i Östasien!
+Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi är för närvarande på fyra kontinenter och har en bicoastal närvaro inom USA.  Och vi'expanderar snabbt - nästa upp Afrika och Östasien!
 
 <h3>Det'Dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp.</h3>
 
