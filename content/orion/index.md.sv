@@ -94,7 +94,7 @@ Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total
 
 <span class="text-success"><em>Vi bygger bara det du behöver.</em></span>&trade;
 
-Denna teknik uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "[JAM-stack](https://jamstack.wtf)" Det myntades år senare av en grupp som inte kände till vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
+Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
 
 <h4>Vill du ge det en snabb snurr för att se hur snabbt och enkelt det är?</h4>
 
