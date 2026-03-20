@@ -501,7 +501,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         );
 
         my APR::Table $hdr_out = $r->err_headers_out;
-        #$hdr_out->add("Set-Cookie" => $cookie->as_string);
+        $hdr_out->add("Set-Cookie" => $cookie->as_string);
       }
 
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
