@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
 published: ~
-status: publicado
+status: finalizado
 title: SunStar Orión de los Sistemas
 ---
 

@@ -4,7 +4,7 @@ categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
 published: ~
-status: publicerad
+status: avslutad
 title: SunStar Orion för system
 ---
 
