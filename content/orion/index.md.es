@@ -29,7 +29,11 @@ title: SunStar Orión de los Sistemas
 </p></li>
 	<li><p>amigable móvil,</p></li>
 	<li><p>colaboración,</p></li>
-	<li><p>rendimiento máximo,</p></li>
+	<li><p>
+
+[**rendimiento máximo**](features),
+
+</p></li>
 	<li><p>federado</p></li>
 	</ul>
 </p>
