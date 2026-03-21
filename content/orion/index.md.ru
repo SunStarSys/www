@@ -22,6 +22,11 @@ title: SunStar Орион систем
 [**невзломный**](security),
 
 </p></li>
+<li><p>
+
+[**неразрывной**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+
+</p></li>
 	<li><p>мобильный дружелюбный,</p></li>
 	<li><p>совместный,</p></li>
 	<li><p>пиковая производительность,</p></li>
