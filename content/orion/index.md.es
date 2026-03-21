@@ -17,14 +17,18 @@ title: SunStar Orión de los Sistemas
 <span class="text-white">Sistemas SunStar' Orión</span> &nbsp; es un
 <p>
 	<ul>
-	<li><p>seguro,</p></li>
+	<li><p>
+
+[**No hackeable**](security),
+
+</p></li>
 	<li><p>amigable móvil,</p></li>
 	<li><p>colaboración,</p></li>
 	<li><p>rendimiento máximo,</p></li>
 	<li><p>federado</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Plataforma wiki empresarial</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología #Jamstack para las funciones dinámicas que contiene{# lede #}.
+{# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología #Jamstack para las funciones dinámicas que contiene{# lede #}.
 
 Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
 

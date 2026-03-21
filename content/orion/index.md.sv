@@ -17,14 +17,18 @@ title: SunStar Orion för system
 <span class="text-white">SunStar System' Orion</span> &nbsp; är en
 <p>
 	<ul>
-	<li><p>säker,</p></li>
+	<li><p>
+
+[**ej staplingsbar**](security),
+
+</p></li>
 	<li><p>Mobilvänligt,</p></li>
 	<li><p>samarbete,</p></li>
 	<li><p>topprestanda,</p></li>
 	<li><p>samordnad</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Wiki-plattform för företag</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder #Jamstack-teknik för dynamiska funktioner däri{# lede #}.
+{# lede #}<span class="text-white">Wiki-plattformen Enterprise Jamstack</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder #Jamstack-teknik för dynamiska funktioner däri{# lede #}.
 
 För prisinformation, se vår [Orionplaner](plans).
 
