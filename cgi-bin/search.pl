@@ -71,7 +71,7 @@ $apreq = $apreq->handle($r);
 my SVN $svn;
 $svn = $svn->new($r);
 
-my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|acl=|deps=|svnauthz=)/i;
+my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|translation=|acl=|deps=|svnauthz=)/i;
 
 local our $lang = get_client_lang($r);
 
@@ -302,8 +302,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         read $fh, $yaml, -s $fh;
       }
     }
-    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^svnauthz=/i) {
-      if (open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/authz-svn.conf") {
+    elsif ($re =~ /^translation=/i) {
+      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.translation-log") {
         read $fh, $blog, -s $fh;
       }
     }
