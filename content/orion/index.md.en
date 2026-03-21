@@ -13,14 +13,18 @@ dependencies: "*.md.en api/index.md.en"
 <span class="text-white">SunStar Systems' Orion</span> &nbsp; is a
 <p>
 	<ul>
-	<li><p>secure,</p></li>
+	<li><p>
+
+   [**unhackable**](security),
+
+</p></li>
 	<li><p>mobile friendly,</p></li>
 	<li><p>collaborative,</p></li>
 	<li><p>peak performance,</p></li>
 	<li><p>federated</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Enterprise Wiki Platform</span>&nbsp; for <b>creating, managing, and delivering</b> static webpages using #Jamstack Technology for dynamic features therein{# lede #}.
+{# lede #}<span class="text-white">Enterprise Jamstack Wiki Platform</span>&nbsp; for <b>creating, managing, and delivering</b> static webpages using #Jamstack Technology for dynamic features therein{# lede #}.
 
 For pricing information, see our [Orion Plans](plans).
 
