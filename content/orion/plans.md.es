@@ -49,7 +49,7 @@ $25/mes/sitio público gestionado
 						<li>Transferencia de datos de $10/40 GB</li>
 						<li>$5/asiento</li>
 						<li>$10 / 100 minutos de compilación</li>
-                        <li>$0.50 / página AI NLP traducciones</li>
+                        <li>$0.10 / página AI NLP traducciones</li>
 </ol>
 					</p>
 </li>
@@ -95,7 +95,7 @@ $100 / mes / sitio público administrado, ~50% de descuento en todos los modelos
 						<li>Transferencia de datos de $20/100 GB</li>
 						<li>$10/asiento</li>
 						<li>$10 / 100 minutos de compilación</li>
-                        <li>$0.40 / página AI NLP traducciones</li>
+                        <li>$0.06 / página AI NLP traducciones</li>
                     </ol>
 					</p>
 					</li>
@@ -149,7 +149,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 						<li>$100 / ithread mod_perl alojamiento de registro</li>
 						<li>Región de $100/OCI para POP personalizados</li>
 				<li>$100 / 1K Minutos de compilación</li>
-                <li>$0.30 / página AI NLP traducciones</li>
+                <li>$0.03 / página AI NLP traducciones</li>
                 <li>WebSockets y/o alojamiento de contenedores privado disponible</li>
                       </ol>
 					</p>
