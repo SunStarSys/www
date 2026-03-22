@@ -131,9 +131,9 @@ Se våra [Orionplaner](plans) för de aktuella avtalen.
 
 <br />
 
-| Funktion     |   Orion       | Slab | Begrepp | Påverkan |
-|:^-----------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-danger">{{ row.Slab|safe }}</span> |  <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+| Funktion     |   Orion       | Begrepp | Påverkan |
+|:^-----------|:-------------:|:------:|:----------:|
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

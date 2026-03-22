@@ -131,9 +131,9 @@ Ver nuestra [Planes de Orion](plans) para las ofertas actuales.
 
 <br />
 
-| Función     |   Orion       | Losa | Noción | Confluencia |
-|:^-----------|:-------------:|:----:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> |  <span class="text-danger">{{ row.Slab|safe }}</span> |  <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+| Función     |   Orion       | Noción | Confluencia |
+|:^-----------|:-------------:|:------:|:----------:|
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
