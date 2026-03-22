@@ -65,7 +65,7 @@
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Productos... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orión&trade; #Jamstack Plataforma Wiki</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orión&trade; Plataforma Wiki de Jamstack</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white"
                 href="/orion/plans.html{{ lang }}">Planes de precios de pedidos</a></li>

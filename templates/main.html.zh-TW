@@ -65,7 +65,7 @@
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">產品 ... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">奧里昂&trade; #Jamstack Wiki 平台</a></li>
+                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">奧里昂&trade; Jamstack Wiki 平台</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white"
                 href="/orion/plans.html{{ lang }}"> 訂單訂價計畫</a></li>
