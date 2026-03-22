@@ -12,7 +12,7 @@ title: SunStar Orion för system
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>#Jamstack Wiki-plattformen.</em></span>&trade;
+	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar System' Orion</span> &nbsp; är en
 <p>
@@ -28,7 +28,6 @@ title: SunStar Orion för system
 
 </p></li>
 	<li><p>Mobilvänligt,</p></li>
-	<li><p>samarbete,</p></li>
 	<li><p>
 
 [**toppprestanda**](features),

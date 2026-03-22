@@ -12,7 +12,7 @@ title: SunStar Orión de los Sistemas
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's CC original BySA v4.0 --> &nbsp;<em>Plataforma Wiki #Jamstack.</em></span>&trade;
+	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's CC original BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">Sistemas SunStar' Orión</span> &nbsp; es un
 <p>
@@ -28,7 +28,6 @@ title: SunStar Orión de los Sistemas
 
 </p></li>
 	<li><p>amigable móvil,</p></li>
-	<li><p>colaboración,</p></li>
 	<li><p>
 
 [**rendimiento máximo**](features),

@@ -12,7 +12,7 @@ title: SunStar Орион систем
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's оригинал CC BySA v4.0 --> &nbsp;<em>Платформа Wiki #Jamstack.</em></span>&trade;
+	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's оригинал CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Системы' Орион</span> &nbsp; является
 <p>
@@ -28,7 +28,6 @@ title: SunStar Орион систем
 
 </p></li>
 	<li><p>мобильный дружелюбный,</p></li>
-	<li><p>совместный,</p></li>
 	<li><p>
 
 [**пиковая производительность**](features),
