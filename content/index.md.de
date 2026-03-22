@@ -15,18 +15,18 @@ title: Startseite
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Neue</span> SunStar Systems' GitLab CI Linter-Technologie {{facts.releases.linter.tag}} jetzt verfügbar unter <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> und <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Neu</span> SunStar Systeme' GitLab CI-Lintertechnologie {{facts.releases.linter.tag}} jetzt verfügbar unter <a href="https://hub.docker.com/r/schaefj/linter/">Docker-Hub</a> und <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar System-Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} freigegeben.
+<h2 class="card-title">SunStar Systeme' Orion&trade; <a href="{{facts.releases.orion.url}}">Statischer Standortgenerator</a> {{facts.releases.orion.tag}} freigegeben.
 </h2>
 
 <br>
 
 <h2 class="card-title">
-<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> für CPAN freigegeben!
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> Veröffentlicht in CPAN!
 </h2>
 
 <br>
@@ -39,13 +39,13 @@ title: Startseite
 
 <br>
 
-<h2 class="card-title">SunStar Systeme<a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> freigegeben!</h2>
+<h2 class="card-title">SunStar Systeme <a href="{{facts.releases.orthrus.url}}">Atrus {{facts.releases.orthrus.tag}}</a> freigegeben!</h2>
 
 <br>
 
 <h2 class="card-title">SunStar Systeme pty {{facts.releases.pty.tag}} freigegeben!</h2>
 
-<p class="card-text">Bitte aktualisieren Sie Ihre <span class="text-info">leere</span> Installation auf <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, einschließlich nativer Unterstützung für <span class='text-info'>python 3.10+</span>.</p>
+<p class="card-text">Bitte aktualisieren Sie Ihre <span class="text-info">PTY</span> Installation in <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, einschließlich nativer Unterstützung für <span class='text-info'>python 3.10+</span>.</p>
 
 </div>
 </div>
@@ -56,12 +56,12 @@ title: Startseite
 
 Auf der Suche nach einem besseren, sichereren, schnelleren **föderierten** Enterprise Wiki?
 
-Auschecken  [Orion](/orion/features)<span class="text-success"><img alt="Orion-Logo" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Die Wiki-Plattform #Jamstack.</em></span>&trade; &mdash; Orion ist das einzige SCM-basierte Unternehmensprodukt mit nativem [Meerjungfrau-Mindmap](/orion/features) Integration!
+Auschecken  [Orion](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Die Jamstack Wiki Plattform.</em></span>&trade; &mdash; Orion ist das einzige SCM-basierte Unternehmensprodukt mit nativem [Meerjungfrau-Mindmap](/orion/features) Integration!
 
-Eine Beschreibung unserer zum Patent angemeldeten Technologie im Hintergrund im <span class="text-white">Whitepaper</span> finden Sie unter [Smart Content-Abhängigkeitsmanagement](/essays/dependencies)&trade; Essay.
+Hinter den Kulissen <span class="text-white">Whitepaper</span> Beschreibung unserer zum Patent angemeldeten Technologie, siehe unsere [Smart Content-Abhängigkeitsmanagement](/essays/dependencies)&trade; Essay.
 
 &nbsp;
-<img alt="GitHub-Markierung" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
 ## Folgen Sie uns auf GitHub
 
 &nbsp;
@@ -71,7 +71,7 @@ Eine Beschreibung unserer zum Patent angemeldeten Technologie im Hintergrund im 
 - @joesuf4
 
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="Video"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -87,7 +87,7 @@ Eine Beschreibung unserer zum Patent angemeldeten Technologie im Hintergrund im 
 
 - [Informationssicherheit](/essays/infosec) &mdash; Die Abstraktion der Grundkonzepte führt zu einer breiten Realwelt Anwendbarkeit und Klarheit.
 
-- [Versiegelte Lexika für Perl 7](/essays/perl7-sealed-lexicals) &mdash; Fügen Sie <span class="text-info">:sealed</span> zu einer Funktionsdefinition hinzu, und genießen Sie die zusätzliche Geschwindigkeit von Compile-Time-Methoden-Lookups für alle seine typisierten Lexika.
+- [Versiegelte Lexika für Perl 7](/essays/perl7-sealed-lexicals) &mdash; hinzufügen <span class="text-info">:versiegelt</span> zu einer Funktionsdefinition und genießen Sie die zusätzliche Geschwindigkeit von Compile-Time-Methoden-Lookups für alle seine typisierten Lexika.
 
 - [Die Bewegung DevOps](/essays/devops) &mdash; Füllen Sie die fehlenden Details zu diesem Artikel aus.
 
@@ -121,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-02-21 11:54:21 -0700 (Sat, 21 Feb 2026) $ $Author: joe $ $Revision: 27898 $ -->
+<!-- $Date: 2026-03-01 14:48:10 -0700 (Sun, 01 Mar 2026) $ $Author: joe $ $Revision: 28063 $ -->

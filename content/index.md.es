@@ -15,18 +15,18 @@ title: Inicio
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nueva</span> SunStar Tecnología CI Linter de GitLab Systems {{facts.releases.linter.tag}} ahora disponible en <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> y <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Nuevo</span> Sistemas SunStar' GitLab Tecnología CI Linter {{facts.releases.linter.tag}} ahora disponible en <a href="https://hub.docker.com/r/schaefj/linter/">Hub de Docker</a> y <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Orión de los Sistemas&trade; <a href="{{facts.releases.orion.url}}">Generador de sitios estáticos</a> {{facts.releases.orion.tag}} liberado.
+<h2 class="card-title">Sistemas SunStar' Orión&trade; <a href="{{facts.releases.orion.url}}">Generador de sitios estáticos</a> {{facts.releases.orion.tag}} liberado.
 </h2>
 
 <br>
 
 <h2 class="card-title">
-<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> publicado en CPAN
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> ¡Lanzado a CPAN!
 </h2>
 
 <br>
@@ -39,13 +39,13 @@ title: Inicio
 
 <br>
 
-<h2 class="card-title">SunStar Sistemas <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> liberado</h2>
+<h2 class="card-title">Sistemas SunStar <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> liberado!</h2>
 
 <br>
 
 <h2 class="card-title">SunStar Sistemas pty {{facts.releases.pty.tag}} liberado!</h2>
 
-<p class="card-text">Actualice la instalación de <span class="text-info">pty</span> a <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, que incluye soporte nativo para <span class='text-info'>python 3.10+</span>.</p>
+<p class="card-text">Actualice su <span class="text-info">pty</span> instalación a <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>que incluye soporte nativo para <span class='text-info'>python 3.10+</span>.</p>
 
 </div>
 </div>
@@ -56,12 +56,12 @@ title: Inicio
 
 Buscando un mejor, más seguro, más rápido, **federado** Enterprise Wiki?
 
-Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Logotipo de Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Plataforma wiki #Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
+Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's CC original BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
 
-Para obtener una descripción de <span class="text-white">whitepaper</span> detrás de escena de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
+Para un detrás de escena <span class="text-white">documento técnico</span> descripción de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
 
 &nbsp;
-<img alt="GitHub Marca" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
 ## Síguenos en GitHub
 
 &nbsp;
@@ -71,7 +71,7 @@ Para obtener una descripción de <span class="text-white">whitepaper</span> detr
 - @joesuf4
 
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="vídeo"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -87,7 +87,7 @@ Para obtener una descripción de <span class="text-white">whitepaper</span> detr
 
 - [Seguridad de la información](/essays/infosec) &mdash; La abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real.
 
-- [Léxico sellado para Perl 7](/essays/perl7-sealed-lexicals) &mdash; agregue <span class="text-info">:sealed</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos los léxicos escritos.
+- [Léxico sellado para Perl 7](/essays/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos sus léxicos mecanografiados.
 
 - [El movimiento DevOps](/essays/devops) &mdash; completar los detalles que faltan en este artículo.
 
@@ -121,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-02-21 11:54:21 -0700 (Sat, 21 Feb 2026) $ $Author: joe $ $Revision: 27898 $ -->
+<!-- $Date: 2026-03-01 14:48:10 -0700 (Sun, 01 Mar 2026) $ $Author: joe $ $Revision: 28063 $ -->

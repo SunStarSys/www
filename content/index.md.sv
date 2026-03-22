@@ -15,18 +15,18 @@ title: Hem
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nya</span> SunStar Systems GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> och <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar System' GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Dockningsnav</a> och <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt.
+<h2 class="card-title">SunStar System' Orion&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt.
 </h2>
 
 <br>
 
 <h2 class="card-title">
-<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> släppt till CPAN!
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> Släppt till CPAN!
 </h2>
 
 <br>
@@ -39,13 +39,13 @@ title: Hem
 
 <br>
 
-<h2 class="card-title">SunStar System <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> släppt!</h2>
+<h2 class="card-title">SunStar System <a href="{{facts.releases.orthrus.url}}">brunst {{facts.releases.orthrus.tag}}</a> Släppt!</h2>
 
 <br>
 
 <h2 class="card-title">SunStar Systemtyper {{facts.releases.pty.tag}} Släppt!</h2>
 
-<p class="card-text">Uppgradera din <span class="text-info">tomma</span> installation till <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>, som innehåller inbyggt stöd för <span class='text-info'>python 3.10+</span>.</p>
+<p class="card-text">Uppgradera din <span class="text-info">part</span> installation till <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>som inkluderar stöd för <span class='text-info'>python 3.10+</span>.</p>
 
 </div>
 </div>
@@ -54,14 +54,14 @@ title: Hem
 
 ![SunStar System](images/sunstarlogowhole).
 
-Letar du efter en bättre, säkrare, snabbare, ** förenad ** Enterprise Wiki?
+Letar du efter en bättre, säkrare, snabbare, **förenad** Enterprise Wiki?
 
-Checka ut  [Orion](/orion/features)<span class="text-success"><img alt="Logotyp för Orion" src="images/sunstar-orion-symbol-linear.png" style="width:60px"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>#Jamstack Wiki-plattformen.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
+Checka ut  [Orion](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
 
-För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna av vår patentsökta teknik, se vår [Beroendehantering för smart innehåll](/essays/dependencies)&trade; uppsats.
+För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av vår patentsökta teknik, se vår [Beroendehantering för smart innehåll](/essays/dependencies)&trade; uppsats.
 
 &nbsp;
-<img alt="GitHub-märke" src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" />
+<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
 ## Följ oss på GitHub
 
 &nbsp;
@@ -71,13 +71,13 @@ För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna
 - @joesuf4
 
 <div class="embed-responsive embed-responsive-16by9">
-	 	<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="embed-responsive-item" frameborder="0" src="https://www.youtube.com/embed/H5XhAZtE3Ic" style="max-width:560;max-height:315" title="video"></iframe>
+	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
 &nbsp;
 
-## Utvalda kurser
+## Utvalda uppsatser
 
 &nbsp;
 
@@ -87,7 +87,7 @@ För en beskrivning av <span class="text-white">vitboken</span> bakom kulisserna
 
 - [Informationssäkerhet](/essays/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet.
 
-- [Förseglade Lexicals för Perl 7](/essays/perl7-sealed-lexicals) &mdash; lägg till <span class="text-info">:förseglad</span> i en funktionsdefinition och njut av den extra hastigheten för uppslagningar av kompileringsmetoder för alla typangivna lexikaliska tecken.
+- [Förseglade Lexicals för Perl 7](/essays/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njut av den extra hastigheten av kompileringstidsmetoduppslagningar för alla dess typangivna lexikaler.
 
 - [DevOps-rörelsen](/essays/devops) &mdash; Fyll i de uppgifter som saknas i denna artikel.
 
@@ -121,4 +121,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-02-21 11:54:21 -0700 (Sat, 21 Feb 2026) $ $Author: joe $ $Revision: 27898 $ -->
+<!-- $Date: 2026-03-01 14:48:10 -0700 (Sun, 01 Mar 2026) $ $Author: joe $ $Revision: 28063 $ -->
