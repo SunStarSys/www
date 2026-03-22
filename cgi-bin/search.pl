@@ -481,6 +481,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname = $1;
       my $lock;
       ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
+        $ncache{"$svnuser-$dirname-$revision"} = freeze {log => [], time => $r->request_time};
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
