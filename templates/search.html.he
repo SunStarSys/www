@@ -203,8 +203,8 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "translation=" %}
-  {% if blog %}
-  <pre class="text-primary">{{ blog }}</pre>
+  {% if translation %}
+  <pre class="text-primary">{{ translation }}</pre>
   {% endif %}
   {% endifequal %}
 
