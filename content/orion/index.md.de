@@ -102,7 +102,7 @@ div#lightning img {width:100%}
 
 </style>
 
-Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Die Dauer der vollständigen Siteerstellung wird in *Sekunden*, nicht in Stunden und Minuten gemessen.  Das System hält leicht über [`500 MB/s`](features) bei der Verarbeitung Ihrer Quellen für vollständige Site-Builds, aber aufgrund der <span class="text-white">einzigartiges, zum Patent angemeldetes Abhängigkeitsmanagement</span> Funktionalität, es muss fast nie auf sie zurückgreifen:
+Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Die Dauer der vollständigen Siteerstellung wird in *Sekunden*, nicht in Stunden und Minuten gemessen.  Das System hält leicht über [`300 MB/s`](features) bei der Verarbeitung Ihrer Quellen für vollständige Site-Builds, aber aufgrund der <span class="text-white">einzigartiges, zum Patent angemeldetes Abhängigkeitsmanagement</span> Funktionalität, es muss fast nie auf sie zurückgreifen:
 
 <span class="text-success"><em>Wir bauen nur das, was Sie bauen müssen.</em></span>&trade;
 

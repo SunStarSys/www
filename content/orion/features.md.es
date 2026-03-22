@@ -44,7 +44,7 @@ title: Características de Orion
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 500 MB / s construcciones sostenidas para árboles fuente de varios gigabytes
+- 300 MB/s construcciones sostenidas para árboles fuente de varios gigabytes
 
 - NVMe o una infraestructura de almacenamiento de compilación más rápida
 

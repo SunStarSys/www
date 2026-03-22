@@ -102,7 +102,7 @@ div#lightning img {width:100%}
 
 </style>
 
-Los árboles fuente de varios gigabytes simplemente no coinciden &mdash; Las duraciones completas de la creación del sitio se miden en *segundos*, no en horas ni minutos.  El sistema se mantiene fácilmente sobre [`500 MB/s`](features) al procesar sus orígenes para las compilaciones completas del sitio, pero dada su <span class="text-white">gestión de dependencia única pendiente de patente</span> funcionalidad, casi nunca necesita recurrir a ellos:
+Los árboles fuente de varios gigabytes simplemente no coinciden &mdash; Las duraciones completas de la creación del sitio se miden en *segundos*, no en horas ni minutos.  El sistema se mantiene fácilmente sobre [`300 MB/s`](features) al procesar sus orígenes para las compilaciones completas del sitio, pero dada su <span class="text-white">gestión de dependencia única pendiente de patente</span> funcionalidad, casi nunca necesita recurrir a ellos:
 
 <span class="text-success"><em>Solo construimos lo que necesitas construir.</em></span>&trade;
 

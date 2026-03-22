@@ -85,7 +85,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "ACL sincronizadas de repositorio/.htaccess detallado"
   Orion: "&check;"
-- Feature: "500 MB/s de compilaciones de sitios completos"
+- Feature: "300 MB/s de compilaciones de sitios completos"
   Orion: "&check;"
 - Feature: "Compilaciones Simultáneas de 8-64 Direcciones"
   Orion: "&check;"
