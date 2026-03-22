@@ -297,14 +297,19 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         close $fh;
       }
     }
-    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^(acl|deps)=/i) {
+    elsif ($re =~ /^(acl|deps)=/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.$1") {
         read $fh, $yaml, -s $fh;
       }
     }
-    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^translation=/i) {
+    elsif ($re =~ /^translation=/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.translation-log") {
         read $fh, $translation, -s $fh;
+      }
+    }
+	elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^svnauthz=/i) {
+      if (open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/authz-svn.conf") {
+        read $fh, $blog, -s $fh;
       }
     }
     elsif ($re =~ /^diff=/i) {
