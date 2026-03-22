@@ -277,7 +277,7 @@ $re =~ s/^"(.*)"$/\\Q$1\\E/;
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
@@ -302,9 +302,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         read $fh, $yaml, -s $fh;
       }
     }
-    elsif ($re =~ /^translation=/i) {
+    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^translation=/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.translation-log") {
-        read $fh, $blog, -s $fh;
+        read $fh, $translation, -s $fh;
       }
     }
     elsif ($re =~ /^diff=/i) {
@@ -634,6 +634,7 @@ my $args = {
   graphviz    => $graphviz,
   duration    => (@dlog ? \@dlog : undef),
   blog        => $blog,
+  translation => $translation,
   diff        => $diff,
   meta        => "\$Author: $author \$ \$Date: $date \$",
   log         => $log,
