@@ -55,29 +55,23 @@
 
 <div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <li class="nav-item{% ifequal path "/index.html"|append:lang %}
-            actif
+          <li class="nav-item{% ifequal path "/index.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/">Accueil</a></li>
-          <li class="nav-item{% ifequal path "/about.html"|append:lang %}
-            actif
+          <li class="nav-item{% ifequal path "/about.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/about">À propos</a></li>
-          <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
-             actif
+          <li class="nav-item{% ifequal path "/contact.html"|append:lang %} active
              {% endifequal %}"><a class="nav-link" href="/contact">Interlocuteur</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Produits... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
-                actif
+              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; Plateforme Wiki #Jamstack</a></li>
-              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
-                actif
+              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white"
                 href="/orion/plans.html{{ lang }}">Plans de tarification Orion</a></li>
             </ul>
           </li>
-          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
-            actif
+          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %} active
 																{% endifequal %}"><a class="nav-link" href="/open-source">Source ouverte</a></li>
 
 <li class="nav-item dropdown">
@@ -101,15 +95,10 @@
               <li class="dropdown-header text-white">Engagements</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Clients</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Essais</a></li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Taxonomie</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Catégories</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Archives</a></li>
             </ul>
           </li>
 
-<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
-            actif
+<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link" href="/powered-by">Propulsé par...</a>
           </li>
         </ul>

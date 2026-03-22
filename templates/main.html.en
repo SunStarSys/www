@@ -55,29 +55,23 @@
 
       <div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <li class="nav-item{% ifequal path "/index.html"|append:lang %}
-            active
+          <li class="nav-item{% ifequal path "/index.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/">Home</a></li>
-          <li class="nav-item{% ifequal path "/about.html"|append:lang %}
-            active
+          <li class="nav-item{% ifequal path "/about.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/about">About</a></li>
-          <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
-             active
+          <li class="nav-item{% ifequal path "/contact.html"|append:lang %} active
              {% endifequal %}"><a class="nav-link" href="/contact">Contact</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Products... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
-                active
+              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orion&trade; #Jamstack Wiki Platform</a></li>
-              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
-                active
+              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white"
                 href="/orion/plans.html{{ lang }}">Orion Pricing Plans</a></li>
             </ul>
           </li>
-          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
-            active
+          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %} active
 																{% endifequal %}"><a class="nav-link" href="/open-source">Open Source</a></li>
 
           <li class="nav-item dropdown">
@@ -101,15 +95,10 @@
               <li class="dropdown-header text-white">Engagements</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Clients</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Essays</a></li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Taxonomies</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Categories</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Archives</a></li>
             </ul>
           </li>
 
-          <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
-            active
+          <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link" href="/powered-by">Powered by...</a>
           </li>
         </ul>

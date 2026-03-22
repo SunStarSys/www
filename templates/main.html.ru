@@ -55,29 +55,23 @@
 
 <div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <li class="nav-item{% ifequal path "/index.html"|append:lang %}
-            активный
+          <li class="nav-item{% ifequal path "/index.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/">Главная</a></li>
-          <li class="nav-item{% ifequal path "/about.html"|append:lang %}
-            активный
+          <li class="nav-item{% ifequal path "/about.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/about">О нас</a></li>
-          <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
-             активный
+          <li class="nav-item{% ifequal path "/contact.html"|append:lang %} active
              {% endifequal %}"><a class="nav-link" href="/contact">Контакт</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Продукты... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
-                активный
+              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; #Jamstack Вики-платформа</a></li>
-              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
-                активный
+              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white"
                 href="/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
             </ul>
           </li>
-          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
-            активный
+          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %} active
 																{% endifequal %}"><a class="nav-link" href="/open-source">Открытый исходный код</a></li>
 
 <li class="nav-item dropdown">
@@ -101,15 +95,10 @@
               <li class="dropdown-header text-white">Взаимодействия</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Клиенты</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Эссе</a></li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Таксономии</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Категории</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Архивы</a></li>
             </ul>
           </li>
 
-<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
-            активный
+<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link" href="/powered-by">При поддержке...</a>
           </li>
         </ul>

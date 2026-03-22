@@ -55,29 +55,23 @@
 
 <div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <li class="nav-item{% ifequal path "/index.html"|append:lang %}
-            activo
+          <li class="nav-item{% ifequal path "/index.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/">Inicio</a></li>
-          <li class="nav-item{% ifequal path "/about.html"|append:lang %}
-            activo
+          <li class="nav-item{% ifequal path "/about.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link text" href="/about">Acerca de</a></li>
-          <li class="nav-item{% ifequal path "/contact.html"|append:lang %}
-             activo
+          <li class="nav-item{% ifequal path "/contact.html"|append:lang %} active
              {% endifequal %}"><a class="nav-link" href="/contact">Contacto</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Productos... <span class="caret"></span></a>
             <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %}
-                activo
+              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orión&trade; #Jamstack Plataforma Wiki</a></li>
-              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %}
-                activo
+              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white"
                 href="/orion/plans.html{{ lang }}">Planes de precios de pedidos</a></li>
             </ul>
           </li>
-          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %}
-            activo
+          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %} active
 																{% endifequal %}"><a class="nav-link" href="/open-source">Código abierto</a></li>
 
 <li class="nav-item dropdown">
@@ -101,15 +95,10 @@
               <li class="dropdown-header text-white">Compromisos</li>
               <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Clientes</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Ensayos</a></li>
-              <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Taxonomías</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/categories">Categorías</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/archives">Archivos</a></li>
             </ul>
           </li>
 
-<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %}
-            activo
+<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %} active
             {% endifequal %}"><a class="nav-link" href="/powered-by">Desarrollado por...</a>
           </li>
         </ul>
