@@ -17,6 +17,8 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Confluence: "&check;"
 - Feature: "Infraestructura de confianza cero compatible con FIPS 140-3"
   Orion: "&check;"
+- Feature: "Conformidad con HIPPA"
+  Orion: "&check;"
 - Feature: "Infraestructura FedRAMP"
   Orion: "Instalación del servidor"
 - Feature: "Base de datos de hechos globales"

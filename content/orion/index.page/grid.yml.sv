@@ -17,6 +17,8 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Confluence: "&check;"
 - Feature: "FIPS 140-3 kompatibel infrastruktur med nolltillit"
   Orion: "&check;"
+- Feature: "HIPPA-kompatibel"
+  Orion: "&check;"
 - Feature: "FedRAMP Infrastruktur"
   Orion: "Serverinstallation"
 - Feature: "Global faktadata"

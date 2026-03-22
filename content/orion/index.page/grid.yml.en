@@ -12,6 +12,8 @@ status: draft
   Confluence: "&check;"
 - Feature: "FIPS 140-3 Compliant Zero Trust Infrastructure"
   Orion: "&check;"
+- Feature: "HIPPA Compliant"
+  Orion: "&check;"
 - Feature: "FedRAMP Infrastructure"
   Orion: "Server Install"
 - Feature: "Global Fact Database"
