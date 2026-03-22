@@ -24,6 +24,7 @@ use Dotiac::DTL::Addon::markup;
 use Dotiac::DTL::Addon::json;
 use SunStarSys::Util qw/read_text_file parse_filename/;
 use SunStarSys::SVN::Client;
+use SVN::Repos;
 use File::Basename;
 use FreezeThaw qw/freeze thaw/;
 use List::Util qw/sum/;
@@ -446,8 +447,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           my ($path) = "$url$k" =~ m!/(/cms-sites/.*)$!;
           if (exists $$v{$svnuser}) {
             eval {
-              my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
-              die $err if $?;
+              my $err = SVN::_Repos::svn_repos_authz "accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos, "/x1/repos/svn-auth/$repos/authz-svn.conf", $r->pool;
+              die $err if $err;
             };
             $@ or next;
           }
@@ -562,8 +563,8 @@ if ($re !~ $specials_re) {
     if ($markdown) {
       s/\.md(?:text)?/.html/ and s!\.page/[^.]+!! or s/\.ya?ml\b/.json/ for $link;
       eval {
-        my $err = run_shell_command svnauthz => ["accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos], "/x1/repos/svn-auth/$repos/authz-svn.conf";
-        die $err if $?;
+        my $err = SVN::_Repos::svn_repos_authz "accessof", "--path" => $path, "--groups-file" => "/x1/repos/svn-auth/$repos/group-svn.conf", "--username" => $r->user // '*', "--repository" => $repos, "/x1/repos/svn-auth/$repos/authz-svn.conf", $r->pool;
+        die $err if $err;
       };
       warn "$@" and next if $@;
     }
