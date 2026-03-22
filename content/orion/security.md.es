@@ -91,7 +91,7 @@ vcs==vpn==>A8==ssh/vpn==>B8
 ```
 &nbsp;
 
-Cifrado triple compatible con FIPS 140-2 con MFA para servicios reenviados por puerto inverso (HTTPS/SSH/IPsec).  Cinturón, tirantes y estribos!
+Cifrado triple compatible con FIPS 140-3 con MFA para servicios reenviados por puerto inverso (HTTPS/SSH/IPsec).  Cinturón, tirantes y estribos!
 
 ----
 

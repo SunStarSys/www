@@ -91,7 +91,7 @@ vcs==vpn==>A8==ssh/vpn==>B8
 ```
 &nbsp;
 
-FIPS 140-2-kompatibel med MFA-trippelkryptering för tjänster som körs bakåt i porten (HTTPS/SSH/IPsec).  Bälte, hängslen och stigbyglar!
+FIPS 140-3-kompatibel med MFA-trippelkryptering för tjänster som körs bakåt i porten (HTTPS/SSH/IPsec).  Bälte, hängslen och stigbyglar!
 
 ----
 
@@ -318,4 +318,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-15 09:44:09 -0700 (Sun, 15 Mar 2026) $ $Author: joe $ $Revision: 29032 $ -->
+<!-- $Date: 2026-03-15 09:49:21 -0700 (Sun, 15 Mar 2026) $ $Author: joe $ $Revision: 29043 $ -->
