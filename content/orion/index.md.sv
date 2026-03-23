@@ -36,13 +36,13 @@ title: SunStar Orion för system
 	<li><p>samordnad</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Wiki-plattformen Enterprise Jamstack</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder #Jamstack-teknik för dynamiska funktioner däri{# lede #}.
+{# lede #}<span class="text-white">Wiki-plattformen Enterprise Jamstack</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder Jamstack-teknik för dynamiska funktioner däri{# lede #}.
 
 För prisinformation, se vår [Orionplaner](plans).
 
 ### Här'Pitch, Executive Decision Maker är en...
 
-<span class="text-white">Varför välja Orion? #Jamstack Wiki-plattformen som överträffar &mdash; och kostar betydligt mindre</span>
+<span class="text-white">Varför välja Orion? Jamstack Wiki-plattformen som överträffar &mdash; och kostar betydligt mindre</span>
 
 Vad som verkligen sätter Orion isär'Bara en annan wiki-plattform &mdash; det var så'Vår egenutvecklade Orion Technology, en patentsökt metod som levererar oöverträffad effektivitet.
 

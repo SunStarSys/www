@@ -20,7 +20,7 @@ title: Acerca de los sistemas SunStar
 
 <span class="text-white">SunStar Systems, Inc. &nbsp;</span> ha sido una empresa familiar durante 25 años, sirviendo a una amplia variedad de [clientes](/clients), desde startups hasta empresas con miles de desarrolladores a bordo.
 
-Además de proporcionar lo mejor [Wiki de Enterprise #Jamstack](/orion/) en el mercado, también nos especializamos en conocer y exceder su
+Además de proporcionar lo mejor [Wiki de Enterprise Jamstack](/orion/) en el mercado, también nos especializamos en conocer y exceder su
 
 - Arquitectura
 

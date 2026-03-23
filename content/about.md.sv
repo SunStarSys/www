@@ -20,7 +20,7 @@ title: Om SunStar System
 
 <span class="text-white">SunStar Systems, Inc. &nbsp;</span> har varit ett familjeägt företag i 25 år och har haft en mängd olika roller [kunder](/clients), från startups till företag med tusentals utvecklare ombord.
 
-Förutom att ge det bästa [#Jamstack-wiki för företag](/orion/) på marknaden, vi är också specialiserade på att möta och överträffa din
+Förutom att ge det bästa [Jamstack-wiki för företag](/orion/) på marknaden, vi är också specialiserade på att möta och överträffa din
 
 - Arkitektur
 

@@ -42,7 +42,7 @@ title: Tecnología Orion
 
 ### SQL
 
-Somos una tienda NoSQL para toda la infraestructura de nuestro sitio web, y si está cargado con un punto único de fallo gigante conocido como un RDBMS que maneja los activos de su sitio, reconsidere un enfoque más descentralizado basado en la tecnología #Jamstack y Serverless. Aunque no sea nuestra. ¡Nos lo agradecerás más tarde!
+Somos una tienda NoSQL para toda la infraestructura de nuestro sitio web, y si está cargado con un punto único de fallo gigante conocido como un RDBMS que maneja los activos de su sitio, reconsidere un enfoque más descentralizado basado en la tecnología Jamstack y Serverless. Aunque no sea nuestra. ¡Nos lo agradecerás más tarde!
 
 ### ¿Por qué no Git?
 

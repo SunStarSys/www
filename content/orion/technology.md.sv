@@ -42,7 +42,7 @@ title: Orion-teknik
 
 ### SQL
 
-Vi är en NoSQL butik för hela vår webbplats infrastruktur, och om du är sadlad med en gigantisk enda punkt-of-failure som kallas en RDBMS driver din webbplats tillgångar, vänligen ompröva en mer decentraliserad strategi baserat på #Jamstack och Serverless Technology. Även om det inte är vår. Du kommer att tacka oss senare!
+Vi är en NoSQL butik för hela vår webbplats infrastruktur, och om du är sadlad med en gigantisk enda punkt-of-failure som kallas en RDBMS driver din webbplats tillgångar, vänligen ompröva en mer decentraliserad strategi baserat på Jamstack och Serverless Technology. Även om det inte är vår. Du kommer att tacka oss senare!
 
 ### Varför inte Git?
 
