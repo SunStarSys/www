@@ -92,9 +92,9 @@ FIPS 140-3 compliant w/MFA triple-encryption for reverse-port-forwarded services
 
 &nbsp;
 
-### Passwordless [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo challenges
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) model, peppered with [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo challenges. All infrastucture account login access requires providing Multi-Factor Authentication credentials, including OCI accounts. There are no backdoors to this policy, by design.
 
-No fixed passwords stored on servers. This *limits* headless automation of sudo / RBAC usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
+No fixed passwords stored on disks. This *limits* headless automation of sudo / RBAC usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
 
 ### Sandboxed execution for builds and CGI scripts
 
@@ -155,9 +155,13 @@ digraph {
 
 Orion's security model is centrally managed by the settings contained in [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) as constucted in [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm).  Offshoot server configuration files are dynamically generated on every built change.
 
+If you understand the POSIX filesystem security model, you will be right at home with Orion's [mod_dav_svn]() authorization model and the Apache HTTPd webserver's .htaccess controls, automatically generated from your website's [lib/acl.yml](#) YAML configuration.
+
 ### OpenIDC SSO Security
 
-Session Cookies are HttpOnly and Secure flagged, so Javascript session stealing attempts are effectively neutralized by the Orion Online Editor.
+All OpenID session cookies are HttpOnly and Secure flagged, so Javascript session stealing attempts are effectively neutralized by the Orion Online Editor.
+
+All cookie credential storage is additionally AES-256 encrypted beneath an HMAC SHA-1 hash.
 
 ### Bcrypt for Subversion passwords
 
@@ -255,9 +259,9 @@ The build system takes note of your [`lib/path.pm`](#) imports of either (or bot
 
 Beyond the import of these symbols to [`lib/path.pm`](#), there is also a choice in how, and to which files you wish to apply them to, during a walk_content_tree () code block execution.  After all, it's not just a config file, but a codebase, with all the Turing complete features of [`Perl`](#) we've come to know and appreciate!
 
-#### Built Website and Subversion ACL's synchronized with &#64;path::acl instantly upon commit
+#### Built Website .htaccss files, and Subversion authorization files, are synchronized with &#64;path::acl instantly upon commit
 
-Automatic protection for ephemeral branch builds. Zero additional configuration required.
+Automatic ACL protection for ephemeral branch builds. Zero additional configuration required.
 
 #### PCRE Search Engine Builtin Controls
 

@@ -97,9 +97,9 @@ vcs==vpn==>A8==ssh/vpn==>B8
 
 &nbsp;
 
-### 無密碼[RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) 模型，胡椒[正弦](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo 挑戰
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) 模型，胡椒[正弦](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo 挑戰。所有基礎架構帳戶登入存取權都需要提供多重因素認證證明資料 (包括 OCI 帳戶)。依設計，此原則沒有後門。
 
-伺服器上沒有儲存固定的密碼。此 *限制* sudo/RBAC 使用無頭自動化，理由良好。然而，我們有[工具](https://github.com/SunStarSys/pty) 以消除回應各種提示的無限可能。
+磁碟上沒有儲存固定的密碼。此 *限制* sudo/RBAC 使用無頭自動化，理由良好。然而，我們有[工具](https://github.com/SunStarSys/pty) 以消除回應各種提示的無限可能。
 
 ### 組建和 CGI 命令檔的封閉測試環境執行
 
@@ -160,9 +160,13 @@ digraph {
 
 奧里昂's 安全模型由包含的設定集中管理[`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) 施作於[`程式庫 /path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm)。Offshoot 伺服器配置檔案會在每個建立的變更上動態產生。
 
+如果您瞭解 POSIX 檔案系統安全性模型，您就可以在家使用 Orion'秒鐘[mod_dav_svn]() 授權模型和 Apache HTTPd Web 伺服器's .htaccess 控制，從您的網站自動產生'秒鐘[程式庫 /acl.yml](#) YAML 組態。
+
 ### OpenIDC SSO 安全性
 
-階段作業 Cookie 是 HttpOnly 並加上安全標記，因此 Orion 線上編輯器會有效中立 Javascript 階段作業竊取嘗試。
+所有 OpenID 階段作業 Cookie 均為 HttpOnly 且已加上安全旗標，因此 Orion Online Editor 會有效中立 Javascript 階段作業竊取嘗試。
+
+所有 Cookie 證明資料儲存體在 HMAC SHA-1 雜湊底下均會另外加密 AES-256。
 
 ### Subversion 密碼的加密
 
@@ -260,9 +264,9 @@ Wiki 安全涉及數個因素：
 
 除了將這些符號匯入至[`程式庫 /path.pm`](#)，在執行 walk_content_tree () 程式碼區塊時，您也可以選擇要套用這些檔案的方式和目標檔案。畢竟，'不只是一個配置文件，而是一個代碼庫，具有所有杜林的完整功能[`佩爾`](#) 我們'向來認識和欣賞！
 
-#### 建置的網站和 Subversion ACL'同步&#64;路徑：：acl 在確認時立即
+#### 建立的網站 .htaccss 檔案和 Subversion 授權檔案會與&#64;路徑：：acl 在確認時立即
 
-臨時分支組建的自動保護。需要零其他組態。
+臨時分支組建的自動 ACL 保護。需要零其他組態。
 
 #### PCRE 搜尋引擎內建控制
 
@@ -318,4 +322,4 @@ CSS 必須由我們的伺服器提供。
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-15 09:49:21 -0700 (Sun, 15 Mar 2026) $ $Author: joe $ $Revision: 29043 $ -->
+<!-- $Date: 2026-03-22 08:55:24 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29754 $ -->

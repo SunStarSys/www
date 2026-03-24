@@ -97,9 +97,9 @@ Cifrado triple compatible con FIPS 140-3 con MFA para servicios reenviados por p
 
 &nbsp;
 
-### Sin contraseña [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modelo, salpicado de [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) desafíos sudo
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modelo, salpicado de [orthrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) desafíos sudo. Todo el acceso de conexión a la cuenta de infraestructura requiere proporcionar credenciales de autenticación multifactor, incluidas las cuentas de OCI. No hay puertas traseras a esta política, por diseño.
 
-No hay contraseñas fijas almacenadas en los servidores. Esto *limita* la automatización sin cabeza de sudo / RBAC uso, por una buena razón.  Sin embargo, hemos [herramientas](https://github.com/SunStarSys/pty) eliminar el trabajo de responder a peticiones de datos de diversos tipos.
+No hay contraseñas fijas almacenadas en los discos. Esto *limita* la automatización sin cabeza de sudo / RBAC uso, por una buena razón.  Sin embargo, hemos [herramientas](https://github.com/SunStarSys/pty) eliminar el trabajo de responder a peticiones de datos de diversos tipos.
 
 ### Ejecución en sandbox para compilaciones y scripts CGI
 
@@ -160,9 +160,13 @@ digraph {
 
 Orión'El modelo de seguridad de s se gestiona de forma centralizada mediante la configuración incluida en [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) como se constata en [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Los archivos de configuración del servidor de desconexión se generan dinámicamente en cada cambio creado.
 
+Si entiende el modelo de seguridad del sistema de archivos POSIX, estará en casa con Orion's [mod_dav_svn]() el modelo de autorización y el servidor web Apache HTTPd'controles s .htaccess, generados automáticamente desde su sitio web's [lib/acl.yml](#) Configuración de YAML.
+
 ### OpenIDC Seguridad de SSO
 
-Las cookies de sesión son HttpOnly y Secure marcadas, por lo que los intentos de robo de sesión de Javascript son neutralizados efectivamente por el editor en línea de Orion.
+Todas las cookies de sesión OpenID están marcadas como HttpOnly y Secure, por lo que los intentos de robo de sesión de Javascript son neutralizados efectivamente por Orion Online Editor.
+
+Todo el almacenamiento de credenciales de cookies también está cifrado AES-256 bajo un hash HMAC SHA-1.
 
 ### Cifrar para contraseñas de subversión
 
@@ -260,9 +264,9 @@ El sistema de creación toma nota de su [`lib/path.pm`](#) las importaciones (o 
 
 Más allá de la importancia de estos símbolos para [`lib/path.pm`](#), también hay una opción sobre cómo y a qué archivos desea aplicarlos durante la ejecución de un bloque de código walk_content_tree ().  Después de todo,'no solo un archivo de configuración, sino una base de código, con todas las características completas de [`Perl`](#) nosotros'¡Ven a conocer y apreciar!
 
-#### ACL de Subversion y Sitio Web Creados'sincronizado con &#64;path::acl instantáneamente al confirmar
+#### Los archivos .htaccss del sitio web construido y los archivos de autorización de Subversion se sincronizan con &#64;path::acl instantáneamente al confirmar
 
-Protección automática para construcciones de sucursales efímeras. Se requiere ninguna configuración adicional.
+Protección automática de ACL para compilaciones de ramas efímeras. Se requiere ninguna configuración adicional.
 
 #### Controles de acumulación del motor de búsqueda PCRE
 

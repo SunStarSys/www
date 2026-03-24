@@ -97,9 +97,9 @@ FIPS 140-3-kompatibel med MFA-trippelkryptering för tjänster som körs bakåt 
 
 &nbsp;
 
-### Lösenordslös [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modell, pepprad med [brunst](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudoutmaningar
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modell, pepprad med [brunst](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) Sudo utmaningar. All inloggningsåtkomst till infrastrukturkonto kräver flerfaktorautentisering, inklusive OCI-konton. Det finns inga bakdörrar till denna policy, genom design.
 
-Inga fasta lösenord lagrade på servrar. Denna *begränsar* huvudlös automatisering av sudo / RBAC-användning, av goda skäl.  Men vi har [verktyg](https://github.com/SunStarSys/pty) för att eliminera slit att svara på frågor av olika slag.
+Inga fasta lösenord lagrade på diskar. Denna *begränsar* huvudlös automatisering av sudo / RBAC-användning, av goda skäl.  Men vi har [verktyg](https://github.com/SunStarSys/pty) för att eliminera slit att svara på frågor av olika slag.
 
 ### Sandboxad körning för byggen och CGI-skript
 
@@ -160,9 +160,13 @@ digraph {
 
 Orion's säkerhetsmodell hanteras centralt av inställningarna i [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) som konstueras i [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Konfigurationsfiler för offshoot-servrar genereras dynamiskt vid varje skapad ändring.
 
+Om du förstår säkerhetsmodellen för POSIX-filsystemet kommer du att vara hemma hos Orion's [mod_dav_svn]() behörighetsmodell och Apache HTTPd-webbservern's .htaccess-kontroller som genereras automatiskt från din webbplats's [lib/acl.yml](#) YAML-konfiguration.
+
 ### OpenIDC Säkerhet för enkel inloggning
 
-Sessionscookies är HttpOnly och Secure-flaggade, så javascript-sessionsstöldförsök neutraliseras effektivt av Orion Online Editor.
+Alla OpenID-sessionscookies är HttpOnly och Secure-flaggade, så javascript-sessionsstöldförsök neutraliseras effektivt av Orion Online Editor.
+
+All lagring av cookie-inloggningsuppgifter är dessutom AES-256 krypterad under en HMAC SHA-1 hash.
 
 ### Bcrypt för Subversion-lösenord
 
@@ -260,9 +264,9 @@ Byggsystemet noterar din [`lib/path.pm`](#) import av antingen (eller båda) av 
 
 Bortom importen av dessa symboler till [`lib/path.pm`](#), det finns också ett val i hur, och vilka filer du vill tillämpa dem på, under en körning av kodblocket walk_content_tree ().  När allt kommer omkring är det's inte bara en konfigurationsfil, utan en kodbas, med alla Turing fullständiga funktioner i [`Perl`](#) vi'Kom och lär känna och uppskatta!
 
-#### Byggd åtkomstkontrollista för webbplats och subversion'synkroniserad med &#64;Sökväg::avsluta direkt vid bekräftelse
+#### Byggda .htaccss-filer för webbplats och Subversion-auktoriseringsfiler synkroniseras med &#64;Sökväg::avsluta direkt vid bekräftelse
 
-Automatiskt skydd för efemära grenbyggen. Ingen ytterligare konfiguration krävs.
+Automatiskt åtkomstkontrollista-skydd för efemära grenbyggen. Ingen ytterligare konfiguration krävs.
 
 #### Inbyggda kontroller för sökmotorn i PCRE
 
@@ -318,4 +322,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-15 09:49:21 -0700 (Sun, 15 Mar 2026) $ $Author: joe $ $Revision: 29043 $ -->
+<!-- $Date: 2026-03-22 08:55:24 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29754 $ -->

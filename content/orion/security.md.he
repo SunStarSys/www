@@ -97,9 +97,9 @@ vcs==vpn==>A8==ssh/vpn==>B8
 
 &nbsp;
 
-### ללא ססמה [חדר עבודה](https://en.wikipedia.org/wiki/Role-based_access_control) מודל, pepped עם [אורתרוס](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) אתגרים של sudo
+### [חדר עבודה](https://en.wikipedia.org/wiki/Role-based_access_control) מודל, pepped עם [אורתרוס](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) אתגרים. כל הגישה להתחברות לחשבון תשתית מחייבת לספק פרטי אימות של אימות מרובה גורמים, כולל חשבונות OCI. אין רקע למדיניות זו, על ידי עיצוב.
 
-אין סיסמאות קבועות המאוחסנות בשרתים. זה *מגביל* אוטומציה חסרת ראש של שימוש sudo / RBAC, מסיבה טובה.  עם זאת, יש [כלי](https://github.com/SunStarSys/pty) כדי לחסל את העמל של תגובה למנחים מסוגים שונים.
+אין ססמאות קבועות המאוחסנות בדיסקים. זה *מגביל* אוטומציה חסרת ראש של שימוש sudo / RBAC, מסיבה טובה.  עם זאת, יש [כלי](https://github.com/SunStarSys/pty) כדי לחסל את העמל של תגובה למנחים מסוגים שונים.
 
 ### ביצוע עם ארגז חול לבנייה ולתסריטי CGI
 
@@ -160,9 +160,13 @@ digraph {
 
 אוריון'מודל האבטחה מנוהל באופן מרכזי על-ידי ההגדרות הכלולות ב- [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) כפי שהתפרש ב [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). קובצי תצורה של שרת Offshoot נוצרים באופן דינמי על כל שינוי מובנה.
 
+אם אתה מבין את מודל האבטחה של מערכת הקבצים POSIX, אתה תהיה ממש בבית עם אוריון's [mod_dav_svn]() מודל ההרשאה ושרת האינטרנט של Apache HTTPd'פקדי .htaccess, מופקים באופן אוטומטי מאתר האינטרנט שלך's [lib/acl.yml](#) תצורת YAML.
+
 ### OpenIDC אבטחת SSO
 
-קובצי Cookie של מושב הם HttpOnly ו-Secure מסומנים בדגל, ולכן ניסיונות הגניבה של מושב Javascript מנוטרלים ביעילות על ידי העורך המקוון של אוריון.
+כל קובצי ה-cookie של המושב OpenID מסומנים בדגל HttpOnly ו-Secure, כך שהמושב של Javascript שגונב ניסיונות מנוטרל ביעילות על ידי העורך המקוון של אוריון.
+
+כל אחסון פרטי האימות של קובצי cookie מוצפן בנוסף ל-AES-256 מתחת לגיבוב HMAC SHA-1.
 
 ### הצפן סיסמאות של תת-גרסה
 
@@ -260,9 +264,9 @@ digraph {
 
 מעבר לייבוא של סמלים אלה אל [`lib/path.pm`](#), יש גם בחירה כיצד, ולאילו קבצים ברצונך להחיל אותם, במהלך ביצוע גוש קוד walk_content_tree ().  אחרי הכל, זה'לא רק קובץ תצורה, אלא בסיס קוד, עם כל התכונות המלאות של טיורינג [`פרל`](#) אנחנו'בואו להכיר ולהעריך!
 
-#### ACL בניית אתרים ו-Subversion's מסונכרן עם &#64;נתיב:acl מיידית בעת ביצוע commit
+#### קובצי .htaccss של אתרי אינטרנט וקובצי הרשאה של Subversion מסונכרנים עם &#64;נתיב:acl מיידית בעת ביצוע commit
 
-הגנה אוטומטית עבור בניית סניפים ephemeral. דרושה תצורה נוספת אפס.
+הגנת ACL אוטומטית לבנייה של סניפים אפמרליים. דרושה תצורה נוספת אפס.
 
 #### בקרות מובנות במנוע חיפוש PCRE
 
@@ -318,4 +322,4 @@ PDF נוכחי'רק.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-15 09:49:21 -0700 (Sun, 15 Mar 2026) $ $Author: joe $ $Revision: 29043 $ -->
+<!-- $Date: 2026-03-22 08:55:24 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29754 $ -->
