@@ -101,7 +101,7 @@ FIPS 140-3-konform mit MFA-Dreifachverschlüsselung für Reverse-Port-Weiterleit
 
 Der gesamte Anmeldezugriff für den Infrastrukturaccount erfordert die Bereitstellung von Zugangsdaten für die Multifaktor-Authentifizierung, einschließlich OCI-Accounts. Es gibt keine Hintertüren zu dieser Richtlinie.
 
-Für den externen SSH-Zugriff aller Mitarbeiter ist eine YubiKey PKI-Integration mit privaten ECDSA-SHA-2-NISTP-256-Autorisierungsschlüsseln erforderlich, die in PKCS11-Slots im Yubikey gespeichert sind, oder eine direkte Smartcard-Integration mit ED25519-sk-Schlüssel.
+Für den SSH-Zugriff aller Mitarbeiter auf Unternehmensrechner ist eine YubiKey PKI-Integration mit privaten ECDSA-SHA-2-NISTP-256-Autorisierungsschlüsseln erforderlich, die in PKCS11-Slots auf dem Yubikey gespeichert sind, oder eine direkte Smartcard-Integration mit ED25519-sk Pkeys.
 
 Keine festen Passwörter auf Festplatten gespeichert. Diese *limits* kopflose Automatisierung von sudo / RBAC Nutzung, aus gutem Grund.  Allerdings haben wir [Werkzeug](https://github.com/SunStarSys/pty) die Mühe zu beseitigen, auf Aufforderungen verschiedener Art zu reagieren.
 

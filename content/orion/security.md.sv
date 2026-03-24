@@ -101,7 +101,7 @@ FIPS 140-3-kompatibel med MFA-trippelkryptering för tjänster som körs bakåt 
 
 All inloggningsåtkomst till infrastrukturkonto kräver flerfaktorautentisering, inklusive OCI-konton. Det finns inga bakdörrar till denna policy, genom design.
 
-All extern SSH-åtkomst för anställda kräver YubiKey PKI-integrering med privata nycklar för auktorisering av ECDSA-SHA-2-NISTP-256 som lagras i PKCS11-platser på Yubikey eller direkt integrering av smartkort med ED25519-sk-nycklar.
+Alla anställdas SSH-åtkomst till företagsmaskiner kräver YubiKey PKI-integrering med privata nycklar för auktorisering av ECDSA-SHA-2-NISTP-256 som lagras i PKCS11-platser på Yubikey eller direkt integrering av smartkort med ED25519-sk-nycklar.
 
 Inga fasta lösenord lagrade på diskar. Denna *begränsar* huvudlös automatisering av sudo / RBAC-användning, av goda skäl.  Men vi har [verktyg](https://github.com/SunStarSys/pty) för att eliminera slit att svara på frågor av olika slag.
 
@@ -326,4 +326,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-24 14:32:05 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30005 $ -->
+<!-- $Date: 2026-03-24 15:34:04 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30018 $ -->

@@ -96,7 +96,7 @@ FIPS 140-3 compliant w/MFA triple-encryption for reverse-port-forwarded services
 
 All infrastucture account login access requires providing Multi-Factor Authentication credentials, including OCI accounts. There are no backdoors to this policy, by design.
 
-All employee external ssh access requires YubiKey PKI integration with either ECDSA-SHA-2-NISTP-256 authorization private keys stored in PKCS11 slots on the Yubikey, or direct Smart Card integration with ED25519-sk Pkeys.
+All employee ssh access to corporate machines requires YubiKey PKI integration with either ECDSA-SHA-2-NISTP-256 authorization private keys stored in PKCS11 slots on the Yubikey, or direct Smart Card integration with ED25519-sk Pkeys.
 
 No fixed passwords stored on disks. This *limits* headless automation of sudo / RBAC usage, for good reason.  However, we have [tooling](https://github.com/SunStarSys/pty) to eliminate the toil of  responding to prompts of various kinds.
 

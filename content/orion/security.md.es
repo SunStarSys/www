@@ -101,7 +101,7 @@ Cifrado triple compatible con FIPS 140-3 con MFA para servicios reenviados por p
 
 Todo el acceso de conexión a la cuenta de infraestructura requiere proporcionar credenciales de autenticación multifactor, incluidas las cuentas de OCI. No hay puertas traseras a esta política, por diseño.
 
-Todo acceso ssh externo del empleado requiere la integración de PKI YubiKey con las claves privadas de autorización ECDSA-SHA-2-NISTP-256 almacenadas en los espacios PKCS11 de Yubikey o la integración directa de Smart Card con las claves ED25519-sk.
+Todo el acceso SSH de los empleados a las máquinas corporativas requiere la integración de PKI YubiKey con las claves privadas de autorización ECDSA-SHA-2-NISTP-256 almacenadas en las ranuras PKCS11 de Yubikey o la integración directa de la tarjeta inteligente con las claves ED25519-sk.
 
 No hay contraseñas fijas almacenadas en los discos. Esto *limita* la automatización sin cabeza de sudo / RBAC uso, por una buena razón.  Sin embargo, hemos [herramientas](https://github.com/SunStarSys/pty) eliminar el trabajo de responder a peticiones de datos de diversos tipos.
 

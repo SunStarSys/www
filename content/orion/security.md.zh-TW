@@ -101,7 +101,7 @@ vcs==vpn==>A8==ssh/vpn==>B8
 
 所有基礎架構帳戶登入存取權都需要提供多重因素認證證明資料 (包括 OCI 帳戶)。依設計，此原則沒有後門。
 
-所有員工外部 ssh 存取都需要 YubiKey PKI 與存放在 Yubikey PKCS11 插槽中的 ECDSA-SHA-2-NISTP-256 授權私密金鑰整合，或與 ED25519-sk Pkeys 直接整合智慧卡。
+所有員工對公司機器的 ssh 存取都需要 YubiKey PKI 與 ECDSA-SHA-2-NISTP-256 授權私密金鑰 (儲存在 Yubikey 的 PKCS11 插槽中) 整合，或與 ED25519-sk Pkeys 直接整合智慧卡。
 
 磁碟上沒有儲存固定的密碼。此 *限制* sudo/RBAC 使用無頭自動化，理由良好。然而，我們有[工具](https://github.com/SunStarSys/pty) 以消除回應各種提示的無限可能。
 
@@ -326,4 +326,4 @@ CSS 必須由我們的伺服器提供。
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-24 14:32:05 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30005 $ -->
+<!-- $Date: 2026-03-24 15:34:04 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30018 $ -->
