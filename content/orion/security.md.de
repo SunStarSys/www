@@ -97,7 +97,11 @@ FIPS 140-3-konform mit MFA-Dreifachverschlüsselung für Reverse-Port-Weiterleit
 
 &nbsp;
 
-### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) Modell, gepfeffert mit [Atrus](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) sudo Herausforderungen. Der gesamte Anmeldezugriff für den Infrastrukturaccount erfordert die Bereitstellung von Zugangsdaten für die Multifaktor-Authentifizierung, einschließlich OCI-Accounts. Es gibt keine Hintertüren zu dieser Richtlinie.
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) Modell, gepfeffert mit [Atrus](https://github.com/SunStarSys/orthrus) OTP/TOTP-Herausforderungen
+
+Der gesamte Anmeldezugriff für den Infrastrukturaccount erfordert die Bereitstellung von Zugangsdaten für die Multifaktor-Authentifizierung, einschließlich OCI-Accounts. Es gibt keine Hintertüren zu dieser Richtlinie.
+
+Für den externen SSH-Zugriff aller Mitarbeiter ist eine YubiKey PKI-Integration mit privaten ECDSA-SHA-2-NISTP-256-Autorisierungsschlüsseln erforderlich, die in PKCS11-Slots im Yubikey gespeichert sind, oder eine direkte Smartcard-Integration mit ED25519-sk-Schlüssel.
 
 Keine festen Passwörter auf Festplatten gespeichert. Diese *limits* kopflose Automatisierung von sudo / RBAC Nutzung, aus gutem Grund.  Allerdings haben wir [Werkzeug](https://github.com/SunStarSys/pty) die Mühe zu beseitigen, auf Aufforderungen verschiedener Art zu reagieren.
 

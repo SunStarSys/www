@@ -97,7 +97,11 @@ vcs==vpn==>A8==ssh/vpn==>B8
 
 &nbsp;
 
-### [חדר עבודה](https://en.wikipedia.org/wiki/Role-based_access_control) מודל, pepped עם [אורתרוס](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) אתגרים. כל הגישה להתחברות לחשבון תשתית מחייבת לספק פרטי אימות של אימות מרובה גורמים, כולל חשבונות OCI. אין רקע למדיניות זו, על ידי עיצוב.
+### [חדר עבודה](https://en.wikipedia.org/wiki/Role-based_access_control) מודל, pepped עם [אורתרוס](https://github.com/SunStarSys/orthrus) אתגרי OTP/TOTP
+
+כל הגישה להתחברות לחשבון תשתית מחייבת לספק פרטי אימות של אימות מרובה גורמים, כולל חשבונות OCI. אין רקע למדיניות זו, על ידי עיצוב.
+
+כל גישת ה-ssh החיצונית של העובד מחייבת שילוב YubiKey PKI עם מפתחות פרטיים של הרשאת ECDSA-SHA-2-NISTP-256 המאוחסנים בחריצי PKCS11 ב-Yubikey, או שילוב ישיר של כרטיס חכם עם מקשי Sk ED25519.
 
 אין ססמאות קבועות המאוחסנות בדיסקים. זה *מגביל* אוטומציה חסרת ראש של שימוש sudo / RBAC, מסיבה טובה.  עם זאת, יש [כלי](https://github.com/SunStarSys/pty) כדי לחסל את העמל של תגובה למנחים מסוגים שונים.
 
@@ -322,4 +326,4 @@ PDF נוכחי'רק.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-22 08:55:24 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29754 $ -->
+<!-- $Date: 2026-03-24 14:32:05 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30005 $ -->

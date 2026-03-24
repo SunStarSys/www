@@ -97,7 +97,11 @@ FIPS 140-3-kompatibel med MFA-trippelkryptering för tjänster som körs bakåt 
 
 &nbsp;
 
-### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modell, pepprad med [brunst](https://github.com/SunStarSys/orthrus) [otp-sha1](https://en.wikipedia.org/wiki/One-time_password) Sudo utmaningar. All inloggningsåtkomst till infrastrukturkonto kräver flerfaktorautentisering, inklusive OCI-konton. Det finns inga bakdörrar till denna policy, genom design.
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) modell, pepprad med [brunst](https://github.com/SunStarSys/orthrus) Engångslösenord/TOTP-utmaningar
+
+All inloggningsåtkomst till infrastrukturkonto kräver flerfaktorautentisering, inklusive OCI-konton. Det finns inga bakdörrar till denna policy, genom design.
+
+All extern SSH-åtkomst för anställda kräver YubiKey PKI-integrering med privata nycklar för auktorisering av ECDSA-SHA-2-NISTP-256 som lagras i PKCS11-platser på Yubikey eller direkt integrering av smartkort med ED25519-sk-nycklar.
 
 Inga fasta lösenord lagrade på diskar. Denna *begränsar* huvudlös automatisering av sudo / RBAC-användning, av goda skäl.  Men vi har [verktyg](https://github.com/SunStarSys/pty) för att eliminera slit att svara på frågor av olika slag.
 
@@ -322,4 +326,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-22 08:55:24 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29754 $ -->
+<!-- $Date: 2026-03-24 14:32:05 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30005 $ -->
