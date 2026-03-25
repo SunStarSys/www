@@ -170,6 +170,8 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 - Las instalaciones de servidor Orion basadas en Enterprise Kerberos ya están disponibles para los clientes que buscan alternativas al Centro de datos Atlassian Confluence.
 
+- Los clientes empresariales pueden habilitar las restricciones de firewall de red para acceder directamente a su repositorio de control de versiones.
+
 - OCI Function (Serverless Technology) / OCI RDBMS Integration próximamente.
 
 - Servicios de consultoría y construcción de sitios web de capacitación y transporte de tecnología disponibles.
