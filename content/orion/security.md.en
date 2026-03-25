@@ -1,6 +1,6 @@
 Title: Orion Security
 Dependencies: *.md.en api/index.md.en
-ACL: @staff=rw, *=r
+ACL: @staff=rw, *=r, joe=rw
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
 Status: published
 
@@ -258,6 +258,14 @@ It is also a good idea to include the [`@svnadmin`](#) group amongst those with 
 ##### Dynamically Generated Rules via &#64;path::acl
 
 The build system takes note of your [`lib/path.pm`](#) imports of either (or both) of seed_file_deps() and seed_file_acl(), and carry that choice forward in its internal processing of Subversion commit changes that give rise to an incremental build.
+
+##### Controlled Content Migration Tracking
+
+When you expose the full version control history to your users, care must be taken to preserve authorization controls on the original location of the controlled material.
+
+Otherwise the material could be **inadvertently exposed to a historical researcher without the requisite authorizations**.
+
+The Orion CMS's move tracking logic handles this seamlessly.
 
 ##### Custom Controls on seed_file_deps() and  seed_file_acl() usage in lib/path.pm
 

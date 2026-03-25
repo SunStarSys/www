@@ -1,5 +1,5 @@
 ---
-acl: '@staff=rw, *=r'
+acl: '@staff=rw, *=r, joe=rw'
 archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
@@ -263,6 +263,14 @@ Wiki 安全涉及數個因素：
 ##### 動態產生的規則，透過&#64;路徑：：acl
 
 建構系統會記下您的[`程式庫 /path.pm`](#) 匯入 seed_file_deps() 和 seed_file_acl (或兩者) 的任一項目，然後在產生增量建置的 Subversion 確認變更的內部處理中，將該選項向前進行。
+
+##### 控制的內容移轉追蹤
+
+當您將完整版本控制歷史記錄公開給使用者時，必須小心，以保留控制原物料原始位置的授權控制。
+
+否則，材料可能 **無意間暴露在沒有必要授權的歷史研究人員 **。
+
+歐里昂 CMS's 移動追蹤邏輯可順暢地處理。
 
 ##### 自訂 lib/path.pm 中 seed_file_deps() 和 seed_file_acl() 用法的控制項
 

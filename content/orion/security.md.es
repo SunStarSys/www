@@ -1,5 +1,5 @@
 ---
-acl: '@staff=rw, *=r'
+acl: '@staff=rw, *=r, joe=rw'
 archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
@@ -263,6 +263,14 @@ También es una buena idea incluir la [`@svnadmin`](#) grupo entre los que tiene
 ##### Reglas generadas dinámicamente mediante &#64;ruta::acl
 
 El sistema de creación toma nota de su [`lib/path.pm`](#) las importaciones (o ambas) de seed_file_deps() y seed_file_acl(), y trasladar esa opción en su procesamiento interno de los cambios de confirmación de Subversion que dan lugar a una creación incremental.
+
+##### Seguimiento de migración de contenido controlado
+
+Cuando exponga el historial completo de control de versiones a sus usuarios, se debe tener cuidado de mantener los controles de autorización en la ubicación original del material controlado.
+
+De lo contrario, el material podría **exponerse involuntariamente a un investigador histórico sin las autorizaciones requeridas**.
+
+El CMS de Orión'La lógica de seguimiento de movimientos maneja esto sin problemas.
 
 ##### Controles personalizados en el uso de seed_file_deps() y seed_file_acl() en lib/path.pm
 

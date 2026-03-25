@@ -1,5 +1,5 @@
 ---
-acl: '@staff=rw, *=r'
+acl: '@staff=rw, *=r, joe=rw'
 archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
@@ -263,6 +263,14 @@ Es ist auch eine gute Idee, die [`@svnadmin`](#) Gruppe unter denen mit Lese- un
 ##### Dynamisch generierte Regeln über &#64;Pfad::acl
 
 Das Build-System nimmt Ihre [`lib/path.pm`](#) Importe von seed_file_deps() und seed_file_acl() oder beides und übertragen diese Auswahl bei der internen Verarbeitung von Subversion Commit-Änderungen, die zu einem inkrementellen Build führen.
+
+##### Tracking der kontrollierten Inhaltsmigration
+
+Wenn Sie den Benutzern die vollständige Versionskontrollhistorie zur Verfügung stellen, müssen Sie darauf achten, dass die Autorisierungskontrollen am ursprünglichen Standort des kontrollierten Materials beibehalten werden.
+
+Andernfalls könnte das Material **versehentlich einem historischen Forscher ohne die erforderlichen Autorisierungen** ausgesetzt werden.
+
+Das Orion CMS'Die Bewegungsverfolgungslogik behandelt dies nahtlos.
 
 ##### Benutzerdefinierte Steuerelemente für die Verwendung von seed_file_deps() und  seed_file_acl() in lib/path.pm
 

@@ -1,5 +1,5 @@
 ---
-acl: '@staff=rw, *=r'
+acl: '@staff=rw, *=r, joe=rw'
 archived: ~
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
@@ -263,6 +263,14 @@ Det är också en bra idé att inkludera [`@svnadmin`](#) grupp bland dem med l�
 ##### Dynamiskt genererade regler via &#64;sökväg::acl
 
 Byggsystemet noterar din [`lib/path.pm`](#) import av antingen (eller båda) av seed_file_deps() och seed_file_acl(), och föra detta val framåt i sin interna bearbetning av Subversion commit-ändringar som ger upphov till en inkrementell bygge.
+
+##### Migreringsspårning för kontrollerat innehåll
+
+När du visar användarnas fullständiga versionskontrollhistorik måste du se till att auktoriseringskontrollerna bevaras på det kontrollerade materialets ursprungliga plats.
+
+Annars kan materialet **oavsiktligt utsättas för en historisk forskare utan nödvändiga tillstånd**.
+
+och Orion CMS's flytta spårningslogik hanterar detta sömlöst.
 
 ##### Anpassade kontroller för användning av seed_file_deps() och seed_file_acl() i lib/path.pm
 

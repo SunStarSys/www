@@ -1,5 +1,5 @@
 ---
-acl: '@staff=rw, *=r'
+acl: '@staff=rw, *=r, joe=rw'
 archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
@@ -263,6 +263,14 @@ C'est aussi une bonne idée d'inclure le [`@svnadmin`](#) groupe parmi ceux qui 
 ##### Règles générées dynamiquement via &#64;chemin : :acl
 
 Le système de paramétrage prend note de votre [`lib/path.pm`](#) les importations de seed_file_deps() et seed_file_acl(), ou des deux, et le report de ce choix dans son traitement interne des modifications de validation Subversion qui donnent lieu à une construction incrémentielle.
+
+##### Suivi de la migration du contenu contrôlé
+
+Lorsque vous exposez l'historique complet des contrôles de version à vos utilisateurs, veillez à conserver les contrôles d'autorisation sur l'emplacement d'origine du matériel contrôlé.
+
+Sinon, le matériel pourrait être **inversement exposé à un chercheur historique sans les autorisations requises**.
+
+Le CMS Orion'La logique de suivi des déplacements gère cela de manière transparente.
 
 ##### Contrôles personnalisés sur l'utilisation de seed_file_deps() et de seed_file_acl() dans lib/path.pm
 
