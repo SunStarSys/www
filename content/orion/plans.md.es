@@ -31,7 +31,7 @@ $25/mes/sitio público gestionado
 <p>
 <ol>
 						<li>Alojamiento de subversión pública</li>
-						<li>100 MB de espacio de almacenamiento<sup>1</sup></li>
+						<li>250 MB de espacio de almacenamiento<sup>1</sup></li>
 						<li>Transferencia de datos de 100 GB</li>
 						<li>Uso ilimitado de IDE para 10 asientos</li>
 			<li>100 minutos de creación</li>
@@ -76,7 +76,7 @@ $100 / mes / sitio público administrado, ~50% de descuento en todos los modelos
 <p>
 <ol>
 						<li>Alojamiento de Subversion público o privado</li>
-						<li>500 MB de espacio de almacenamiento<sup>1</sup></li>
+						<li>1 GB de espacio de almacenamiento<sup>1</sup></li>
 						<li>Transferencia de datos de 500 GB</li>
 						<li>Uso ilimitado de IDE para 50 asientos</li>
 						<li>Hasta 5 grupos de ACL</li>
