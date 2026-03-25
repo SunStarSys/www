@@ -45,7 +45,7 @@ $25/mes/sitio público gestionado
 				<li>Tarifas Mensuales Adicionales de Recursos (por sitio web):
 <p>
 <ol>
-						<li>$10 / 10 MB de espacio de almacenamiento<sup>1</sup></li>
+						<li>$1 / 5 MB de espacio de almacenamiento<sup>1</sup></li>
 						<li>Transferencia de datos de $10/40 GB</li>
 						<li>$5/asiento</li>
 						<li>$10 / 100 minutos de compilación</li>
@@ -91,7 +91,7 @@ $100 / mes / sitio público administrado, ~50% de descuento en todos los modelos
 				<li>Tarifas Mensuales Adicionales de Recursos (por sitio web):
 <p>
 					<ol>
-						<li>$10 / 20 MB de espacio de almacenamiento<sup>1</sup></li>
+						<li>$10 / 100 MB de espacio de almacenamiento<sup>1</sup></li>
 						<li>Transferencia de datos de $20/100 GB</li>
 						<li>$10/asiento</li>
 						<li>$10 / 100 minutos de compilación</li>
@@ -144,7 +144,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 <p>
 <ol>
-						<li>100 $ / 250 MB de espacio de almacenamiento<sup>2</sup></li>
+						<li>100 $ / 1 GB de espacio de almacenamiento<sup>2</sup></li>
 						<li>Transferencia de datos de $15/100 GB</li>
 						<li>$100 / ithread mod_perl alojamiento de registro</li>
 						<li>Región de $100/OCI para POP personalizados</li>

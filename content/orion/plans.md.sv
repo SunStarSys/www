@@ -45,7 +45,7 @@ $25/månad/hanterad allmän webbplats
 				<li>Ytterligare månatliga resurspriser (per webbplats):
 <p>
 <ol>
-						<li>Lagringsutrymme på $10/10 Mbyte<sup>1</sup></li>
+						<li>Lagringsutrymme på $1/5 Mbyte<sup>1</sup></li>
 						<li>Dataöverföring på 10 USD/40 Gbyte</li>
 						<li>$5/säte</li>
 						<li>$10/100 byggminuter</li>
@@ -91,7 +91,7 @@ $ 100 / månad / hanterad offentlig webbplats, ~ 50 % rabatt på alla konkurrent
 				<li>Ytterligare månatliga resurspriser (per webbplats):
 <p>
 					<ol>
-						<li>Lagringsutrymme på $10/20 Mbyte<sup>1</sup></li>
+						<li>Lagringsutrymme på $10/100 Mbyte<sup>1</sup></li>
 						<li>Dataöverföring på 20 USD/100 Gbyte</li>
 						<li>$10/säte</li>
 						<li>$10/100 byggminuter</li>
@@ -144,7 +144,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 <p>
 <ol>
-						<li>Lagringsutrymme på $100/250 Mbyte<sup>2</sup></li>
+						<li>Lagringsutrymme på 100 USD/1 Gbyte<sup>2</sup></li>
 						<li>Dataöverföring på 15 USD/100 Gbyte</li>
 						<li>$100 / ithread mod_perl registervärd</li>
 						<li>$100/OCI-region för anpassade POP</li>
@@ -234,4 +234,4 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-03-25 13:07:12 -0700 (Wed, 25 Mar 2026) $ $Author: joe $ $Revision: 30184 $ -->
+<!-- $Date: 2026-03-25 13:23:49 -0700 (Wed, 25 Mar 2026) $ $Author: joe $ $Revision: 30201 $ -->
