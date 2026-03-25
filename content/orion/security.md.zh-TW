@@ -270,7 +270,7 @@ Wiki 安全涉及數個因素：
 
 否則，材料可能 **無意間暴露在沒有必要授權的歷史研究人員 **。
 
-歐里昂 CMS's 移動追蹤邏輯可順暢地處理。
+歐里昂 CMS's 移動 / 刪除追蹤邏輯會順暢地處理。
 
 ##### 自訂 lib/path.pm 中 seed_file_deps() 和 seed_file_acl() 用法的控制項
 
@@ -334,4 +334,4 @@ CSS 必須由我們的伺服器提供。
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-24 15:50:49 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30030 $ -->
+<!-- $Date: 2026-03-25 12:34:30 -0700 (Wed, 25 Mar 2026) $ $Author: joe $ $Revision: 30164 $ -->

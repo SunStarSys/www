@@ -270,7 +270,7 @@ Wenn Sie den Benutzern die vollständige Versionskontrollhistorie zur Verfügung
 
 Andernfalls könnte das Material **versehentlich einem historischen Forscher ohne die erforderlichen Autorisierungen** ausgesetzt werden.
 
-Das Orion CMS'Die Bewegungsverfolgungslogik behandelt dies nahtlos.
+Das Orion CMS'Die Verfolgungslogik zum Verschieben/Löschen verarbeitet diese nahtlos.
 
 ##### Benutzerdefinierte Steuerelemente für die Verwendung von seed_file_deps() und  seed_file_acl() in lib/path.pm
 

@@ -270,7 +270,7 @@ När du visar användarnas fullständiga versionskontrollhistorik måste du se t
 
 Annars kan materialet **oavsiktligt utsättas för en historisk forskare utan nödvändiga tillstånd**.
 
-och Orion CMS's flytta spårningslogik hanterar detta sömlöst.
+och Orion CMS's flytta/ta bort spårningslogik hanterar detta sömlöst.
 
 ##### Anpassade kontroller för användning av seed_file_deps() och seed_file_acl() i lib/path.pm
 
@@ -334,4 +334,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-24 15:50:49 -0700 (Tue, 24 Mar 2026) $ $Author: joe $ $Revision: 30030 $ -->
+<!-- $Date: 2026-03-25 12:34:30 -0700 (Wed, 25 Mar 2026) $ $Author: joe $ $Revision: 30164 $ -->

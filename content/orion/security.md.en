@@ -265,7 +265,7 @@ When you expose the full version control history to your users, care must be tak
 
 Otherwise the material could be **inadvertently exposed to a historical researcher without the requisite authorizations**.
 
-The Orion CMS's move tracking logic handles this seamlessly.
+The Orion CMS's move/delete tracking logic handles this seamlessly.
 
 ##### Custom Controls on seed_file_deps() and  seed_file_acl() usage in lib/path.pm
 

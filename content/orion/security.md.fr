@@ -270,7 +270,7 @@ Lorsque vous exposez l'historique complet des contrôles de version à vos utili
 
 Sinon, le matériel pourrait être **inversement exposé à un chercheur historique sans les autorisations requises**.
 
-Le CMS Orion'La logique de suivi des déplacements gère cela de manière transparente.
+Le CMS Orion'La logique de suivi de déplacement/suppression gère cela de manière transparente.
 
 ##### Contrôles personnalisés sur l'utilisation de seed_file_deps() et de seed_file_acl() dans lib/path.pm
 

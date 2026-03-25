@@ -270,7 +270,7 @@ Cuando exponga el historial completo de control de versiones a sus usuarios, se 
 
 De lo contrario, el material podría **exponerse involuntariamente a un investigador histórico sin las autorizaciones requeridas**.
 
-El CMS de Orión'La lógica de seguimiento de movimientos maneja esto sin problemas.
+El CMS de Orión'La lógica de seguimiento de movimiento/supresión de s maneja esto sin problemas.
 
 ##### Controles personalizados en el uso de seed_file_deps() y seed_file_acl() en lib/path.pm
 
