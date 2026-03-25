@@ -32,7 +32,6 @@ our @patterns = (
 # the "memoize" view corrects most of the speed problems with quick_deps == 3:
 
   [qr!/(index|sitemap)\.html!, memoize => {
-    compress   => 1,
     view       => [qw/sitemap/],
     nest       => 1,
     facts      => $facts,
@@ -42,11 +41,10 @@ our @patterns = (
   [qr!\.page/[^/]+.md[^/]*$!, skip => {}],
 
   # transform yml to json
-  [qr!\.ya?ml\b[^/]*$!, yml2ext => { compress => 1 }],
+  [qr!\.ya?ml\b[^/]*$!, yml2ext => { }],
 
   [qr!/(api|clients)/.*\.md(?:text)?!, memoize => {
     view            => [qw/set_template_from_capture snippet single_narrative/],
-    compress        => 1,
     facts           => $facts,
     markdown_search => 1, # search markdown instead of built html
     permalink       => 1,
@@ -54,13 +52,11 @@ our @patterns = (
 
   [qr!^/(categories|archives)/.*\.md(?:text)?!, memoize => {
     view       => [qw/set_template_from_capture ssi normalize_links snippet single_narrative/],
-    compress   => 1,
     facts      => $facts,
   }],
 
   [qr#^(?!/editor\.md/).*\.md(?:text)?[^/]*$#, memoize => {
     view       => [qw/snippet asymptote langify_template single_narrative/],
-    compress   => 1,
     template   => "main.html",
     facts      => $facts,
   }],
