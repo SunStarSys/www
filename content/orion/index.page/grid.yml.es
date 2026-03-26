@@ -37,7 +37,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Construcciones de sucursales ilimitadas"
   Orion: "&check;"
 - Feature: "Proveedor OpenID personalizado"
-  Orion: "Instalación de Enterprise/Servidor"
+  Orion: "Empresa &amp; Instalación del servidor"
 - Feature: "Solo compilaciones programadas de contenido dinámico"
   Orion: "&check;"
 - Feature: "Soporte de análisis de 3ª parte"

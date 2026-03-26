@@ -37,7 +37,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Obegränsade kontorsbyggnader"
   Orion: "&check;"
 - Feature: "Anpassad OpenID-leverantör"
-  Orion: "Företags-/serverinstallation"
+  Orion: "Företag &amp; Serverinstallation"
 - Feature: "Schemalagda byggen av endast dynamiskt innehåll"
   Orion: "&check;"
 - Feature: "Stöd för 3:e partanalys"
