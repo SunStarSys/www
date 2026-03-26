@@ -36,7 +36,8 @@ title: נתוני טבלה לסורג השוואת מאפיינים
   Orion: "&check;"
 - Feature: "בניות סניפים בלתי מוגבלות"
   Orion: "&check;"
-
+- Feature: "ספק OpenID מותאם אישית"
+  Orion: "התקנת Enterprise / Server"
 - Feature: "בניות מתוזמנות של תוכן דינמי בלבד"
   Orion: "&check;"
 - Feature: "תמיכת 3rd Party Analytics"
@@ -49,7 +50,6 @@ title: נתוני טבלה לסורג השוואת מאפיינים
   Notion: "&check;"
 - Feature: 'ניתן לחיפוש מלא/ניתן להחלפה <span class="editormd-tex">\KaTeX</span>/ביטויי PCRE'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "מאוחד"
   Orion: "&check;"
   Confluence: "[לא](https://jira.atlassian.com/browse/CONFSERVER-26528)"

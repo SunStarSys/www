@@ -36,7 +36,8 @@ title: Données de table pour la grille de comparaison des caractéristiques
   Orion: "&check;"
 - Feature: "Nombre illimité de succursales"
   Orion: "&check;"
-
+- Feature: "Fournisseur OpenID personnalisé"
+  Orion: "Installation d'entreprise/serveur"
 - Feature: "Builds planifiés du contenu dynamique uniquement"
   Orion: "&check;"
 - Feature: "Support 3rd Party Analytics"
@@ -49,7 +50,6 @@ title: Données de table pour la grille de comparaison des caractéristiques
   Notion: "&check;"
 - Feature: 'Recherche complète/remplaçable <span class="editormd-tex">\KaTeX</span>Expressions /PCRE'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "Fédéré"
   Orion: "&check;"
   Confluence: "[NON](https://jira.atlassian.com/browse/CONFSERVER-26528)"

@@ -36,7 +36,8 @@ title: Tabellendaten für Funktionsvergleichsraster
   Orion: "&check;"
 - Feature: "Unbegrenzte Filialmontagen"
   Orion: "&check;"
-
+- Feature: "Benutzerdefinierter OpenID-Provider"
+  Orion: "Enterprise/Server-Installation"
 - Feature: "Nur geplante Builds von dynamischem Inhalt"
   Orion: "&check;"
 - Feature: "3rd Party Analytics-Unterstützung"
@@ -49,7 +50,6 @@ title: Tabellendaten für Funktionsvergleichsraster
   Notion: "&check;"
 - Feature: 'Vollständig durchsuchbar/ersetzbar <span class="editormd-tex">\KaTeX</span>/PCRE-Ausdrücke'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "Föderiert"
   Orion: "&check;"
   Confluence: "[Nein](https://jira.atlassian.com/browse/CONFSERVER-26528)"

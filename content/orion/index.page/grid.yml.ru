@@ -36,7 +36,8 @@ title: Данные таблицы для сетки сравнения хара
   Orion: "&check;"
 - Feature: "Неограниченное число построений ветвей"
   Orion: "&check;"
-
+- Feature: "Пользовательский провайдер OpenID"
+  Orion: "Установка предприятия/сервера"
 - Feature: "Только запланированные сборки динамического контента"
   Orion: "&check;"
 - Feature: "Поддержка аналитики 3-й стороны"
@@ -49,7 +50,6 @@ title: Данные таблицы для сетки сравнения хара
   Notion: "&check;"
 - Feature: 'Полностью поиск/замена <span class="editormd-tex">\KaTeX</span>/Выражения PCRE'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "Федеративный"
   Orion: "&check;"
   Confluence: "[Нет](https://jira.atlassian.com/browse/CONFSERVER-26528)"

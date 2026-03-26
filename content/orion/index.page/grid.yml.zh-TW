@@ -36,7 +36,8 @@ title: 功能比較方格表的表格資料
   Orion: "&check;"
 - Feature: "無限分行建置版本"
   Orion: "&check;"
-
+- Feature: "自訂 OpenID 提供者"
+  Orion: "企業 / 伺服器安裝"
 - Feature: "僅限動態內容的排定組建"
   Orion: "&check;"
 - Feature: "第三方分析支援"
@@ -49,7 +50,6 @@ title: 功能比較方格表的表格資料
   Notion: "&check;"
 - Feature: '可完全搜尋 / 可取代<span class="editormd-tex">\KaTeX</span>/PCRE 表示式'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "同盟"
   Orion: "&check;"
   Confluence: "[不要](https://jira.atlassian.com/browse/CONFSERVER-26528)"

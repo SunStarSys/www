@@ -36,7 +36,8 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Orion: "&check;"
 - Feature: "Obegränsade kontorsbyggnader"
   Orion: "&check;"
-
+- Feature: "Anpassad OpenID-leverantör"
+  Orion: "Företags-/serverinstallation"
 - Feature: "Schemalagda byggen av endast dynamiskt innehåll"
   Orion: "&check;"
 - Feature: "Stöd för 3:e partanalys"
@@ -49,7 +50,6 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Notion: "&check;"
 - Feature: 'Helt sökbar/utbytbar <span class="editormd-tex">\KaTeX</span>/PCRE-uttryck'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "Samordnad"
   Orion: "&check;"
   Confluence: "[Nej](https://jira.atlassian.com/browse/CONFSERVER-26528)"

@@ -36,7 +36,8 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "Construcciones de sucursales ilimitadas"
   Orion: "&check;"
-
+- Feature: "Proveedor OpenID personalizado"
+  Orion: "Instalación de Enterprise/Servidor"
 - Feature: "Solo compilaciones programadas de contenido dinámico"
   Orion: "&check;"
 - Feature: "Soporte de análisis de 3ª parte"
@@ -49,7 +50,6 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Notion: "&check;"
 - Feature: 'Búsqueda/sustitución completa <span class="editormd-tex">\KaTeX</span>/Expresiones PCRE'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "Federado"
   Orion: "&check;"
   Confluence: "[NO](https://jira.atlassian.com/browse/CONFSERVER-26528)"

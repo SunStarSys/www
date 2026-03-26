@@ -31,7 +31,8 @@ status: draft
   Orion: "&check;"
 - Feature: "Unlimited Branch Builds"
   Orion: "&check;"
-
+- Feature: "Custom OpenID Provider"
+  Orion: "Enterprise / Server Install"
 - Feature: "Scheduled Builds of Dynamic Content Only"
   Orion: "&check;"
 - Feature: "3rd Party Analytics Support"
@@ -44,7 +45,6 @@ status: draft
   Notion: "&check;"
 - Feature: 'Fully Searchable/Replaceable <span class="editormd-tex">\KaTeX</span>/PCRE Expressions'
   Orion: "&check;"
-  Confluence: "$$$"
 - Feature: "Federated"
   Orion: "&check;"
   Confluence: "[NO](https://jira.atlassian.com/browse/CONFSERVER-26528)"
