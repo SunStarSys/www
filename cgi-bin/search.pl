@@ -439,9 +439,12 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       s/:4433//, s/-internal// for $url;
       my $lock;
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
+	    warn "GOT HERE: $svnuser-$url\n";
+        $lock = $dbw->cds_lock;
         $wcache{"$svnuser-$url"} = { freeze { hash => {}, time => $r->request_time }};
+        undef $lock;
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
-        $_ = {map {utf8::encode($_); $_=>1} split /[, ]+/} for values %$w;
+        $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
           my $key = $k;
           $k =~ s/^.*?\Q$prefix//;
