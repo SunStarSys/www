@@ -439,7 +439,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       s/:4433//, s/-internal// for $url;
       my $lock;
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
-	    warn "GOT HERE: $svnuser-$url\n";
         $lock = $dbw->cds_lock;
         $wcache{"$svnuser-$url"} = { freeze { hash => {}, time => $r->request_time }};
         undef $lock;
