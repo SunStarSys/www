@@ -8,7 +8,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 ---
 
 
-- Feature: "[à la carte AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[à la carte (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
   Orion: "&check;"
 - Feature: "SSO: Kerberos / Aktiv katalog / OpenID Integrering"
   Orion: "&check;"

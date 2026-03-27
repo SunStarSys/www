@@ -101,7 +101,7 @@ Fonctionnalité FIPS 140-3 avec triple chiffrement MFA pour les services transf�
 
 Tous les accès de connexion au compte d'infrastructure nécessitent de fournir des informations d'identification d'authentification à plusieurs facteurs, y compris les comptes OCI. Il n'y a pas de backdoors à cette politique, par conception.
 
-L'accès SSH de tous les employés aux machines d'entreprise nécessite l'intégration PKI YubiKey avec les clés privées d'autorisation ECDSA-SHA-2-NISTP-256 stockées dans les emplacements PKCS11 sur la Yubikey, ou l'intégration directe de la carte à puce avec les clés ED25519-sk.
+L'accès SSH de tous les employés aux machines d'entreprise nécessite l'intégration PKI YubiKey avec les clés privées d'autorisation ECDSA-SHA-2-NISTP-256 stockées dans les emplacements PKCS11 sur la Yubikey, ou l'intégration directe de la carte (BYOAI)à puce avec les clés ED25519-sk.
 
 Aucun mot de passe fixe stocké sur les disques. Cette *limite* l'automatisation sans tête de l'utilisation de sudo / RBAC, pour une bonne raison.  Cependant, nous avons [outils](https://github.com/SunStarSys/pty) pour éliminer le travail consistant à répondre à des invites de divers types.
 
