@@ -207,6 +207,15 @@
   <pre class="text-primary">{{ translation }}</pre>
   {% endif %}
   {% endifequal %}
+  {% ifequal specials "weblog=" %}
+  {% if weblog.0 %}
+  <pre class="text-primary">
+{% for w in weblog %}
+{{ w }}
+{% endfor %}
+  </pre>
+  {% endif %}
+  {% endifequal %}
 
   {% else %}
   <form method="POST" class="form-inline row">
