@@ -209,9 +209,18 @@
   {% endifequal %}
   {% ifequal specials "weblog=" %}
   {% if weblog.1 %}
-<div id="meta"><pre>Попадания = {{hits}}. Ошибки: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
+  <form method="POST" class="form-inline row">
+   <div id="meta"><pre>Попадания = {{hits}}. Ошибки: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Длительность (мкс):  Всего = {{tdur}}, среднее значение = {{meandur}}, StdDev = {{stddur}}, медиана = {{meddur}}, Макс = {{maxdur}}, мин. = {{mindur }}.
 Пропускная способность (КБ): Итого = {{ tbw }}, среднее значение = {{meanbw}}, StdDev = {{stdbw}}, медиана = {{medbw}}, Макс = {{maxbw}}, мин. = {{minbw}}.</pre></div>
+    <div class="right" id="filter">
+      <div class="d-flex float-end">
+        <input type="hidden" name="hash" value="{{hash}}">
+       <input class="form-control me-2" type="text" name="filter"
+             placeholder="Рекурсивный поиск PCRE" значение="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
+      </div>
+    </div>
+  </form>
 {% for w in weblog %}{{ w|safe }}<br>
 {% endfor %}
   {% endif %}

@@ -209,9 +209,18 @@
   {% endifequal %}
   {% ifequal specials "weblog=" %}
   {% if weblog.1 %}
-<div id="meta"><pre>命中數 = {{hits}}。錯誤：4xx = {{e4xx}}, 5xx = {{e5xx}}.
+  <form method="POST" class="form-inline row">
+   <div id="meta"><pre>命中數 = {{hits}}。錯誤：4xx = {{e4xx}}, 5xx = {{e5xx}}.
 持續時間 (μs)：總計 = {{tdur}}，平均 = {{meandur}}, StdDev = {{stddur}}，中位數 = {{meddur}}，最大 = {{maxdur}}，最小 = {{mindur }}.
 頻寬 (KB)：總計 = {{ tbw }}，平均 = {{meanbw}}, StdDev = {{stdbw}}，中位數 = {{medbw}}，最大 = {{maxbw}}，最小 = {{minbw}}.</pre></div>
+    <div class="right" id="filter">
+      <div class="d-flex float-end">
+        <input type="hidden" name="hash" value="{{hash}}">
+       <input class="form-control me-2" type="text" name="filter"
+             placeholder="PCRE 遞迴搜尋" 值 ="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
+      </div>
+    </div>
+  </form>
 {% for w in weblog %}{{ w|safe }}<br>
 {% endfor %}
   {% endif %}
