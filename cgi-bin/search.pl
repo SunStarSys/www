@@ -72,7 +72,7 @@ $apreq = $apreq->handle($r);
 my SVN $svn;
 $svn = $svn->new($r);
 
-my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|translation=|acl=|deps=|svnauthz=)/i;
+my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|translation=|acl=|deps=|svnauthz=|weblog=)/i;
 
 local our $lang = get_client_lang($r);
 
@@ -278,7 +278,7 @@ $re =~ s/^"(.*)"$/\\Q$1\\E/;
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $translation, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
@@ -308,9 +308,15 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         read $fh, $translation, -s $fh;
       }
     }
-	elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^svnauthz=/i) {
+    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^svnauthz=/i) {
       if (open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/authz-svn.conf") {
         read $fh, $blog, -s $fh;
+      }
+    }
+    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^weblog=/i) {
+      if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
+        /^$website/i and !/ HEAD / and push @weblog, $_ while <$fh>;
+        chomp @weblog;
       }
     }
     elsif ($re =~ /^diff=/i) {
@@ -645,6 +651,7 @@ my $args = {
   duration    => (@dlog ? \@dlog : undef),
   blog        => $blog,
   translation => $translation,
+  weblog      => \@weblog,
   diff        => $diff,
   meta        => "\$Author: $author \$ \$Date: $date \$",
   log         => $log,
