@@ -25,7 +25,7 @@ local our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
 local our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
 local our $validator = $r->dir_config->get("validator") // "orion";
 local our $lang = get_client_lang($r);
-foo
+foobar=
 local our %LANG = (
   ".de" => "de_DE",
   ".en" => "en_US",
