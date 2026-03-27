@@ -317,6 +317,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         while (<$fh>) {
           /^$host/i and !/"HEAD / or next;
+          s{ ([45])\d\d) }{q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> " }e
+            if +(split /'\s(?:"[^"]*"\s)*/)[6] >= 400;
           push @weblog, $_;
           /(\d+) \([\d-]+%\) (\d+)$/ or next;
           push @duration, $2;
