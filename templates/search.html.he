@@ -209,13 +209,11 @@
   {% endifequal %}
   {% ifequal specials "weblog=" %}
   {% if weblog.1 %}
-<div id="meta"><pre>פגיעות = {{hits}}. שגיאות: 4xx = {{e4xx}}, 4xx = {{e5xx}}.
+<div id="meta"><pre>פגיעות = {{hits}}. שגיאות: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 משך (μs):  סך הכל = {{tdur}}, ממוצע = {{meandur}}, StdDev = {{stddur}}, חציון = {{meddur}}, מרבי = {{maxdur}}, מזערי = {{mindur }}.
 רוחב פס (KB): סה"כ = {{ tbw }}, ממוצע = {{meanbw}}, StdDev = {{stdbw}}, חציון = {{medbw}}, מרבי = {{maxbw}}, מזערי = {{minbw}}.</pre></div>
-  <pre class="text-warning">
-{% for w in weblog %}{{ w }}
+{% for w in weblog %}{{ w|safe }}<br>
 {% endfor %}
-  </pre>
   {% endif %}
   {% endifequal %}
 

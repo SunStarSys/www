@@ -209,13 +209,11 @@
   {% endifequal %}
   {% ifequal specials "weblog=" %}
   {% if weblog.1 %}
-<div id="meta"><pre>Попадания = {{hits}}. Ошибки: 4xx = {{e4xx}}, 4xx = {{e5xx}}.
+<div id="meta"><pre>Попадания = {{hits}}. Ошибки: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Длительность (мкс):  Всего = {{tdur}}, среднее значение = {{meandur}}, StdDev = {{stddur}}, медиана = {{meddur}}, Макс = {{maxdur}}, мин. = {{mindur }}.
 Пропускная способность (КБ): Итого = {{ tbw }}, среднее значение = {{meanbw}}, StdDev = {{stdbw}}, медиана = {{medbw}}, Макс = {{maxbw}}, мин. = {{minbw}}.</pre></div>
-  <pre class="text-warning">
-{% for w in weblog %}{{ w }}
+{% for w in weblog %}{{ w|safe }}<br>
 {% endfor %}
-  </pre>
   {% endif %}
   {% endifequal %}
 

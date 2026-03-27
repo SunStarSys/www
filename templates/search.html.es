@@ -209,13 +209,11 @@
   {% endifequal %}
   {% ifequal specials "weblog=" %}
   {% if weblog.1 %}
-<div id="meta"><pre>Aciertos = {{hits}}. Errores: 4xx = {{e4xx}}, 4xx = {{e5xx}}.
+<div id="meta"><pre>Aciertos = {{hits}}. Errores: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Duración (μs):  Total = {{tdur}}, Media = {{meandur}}, StdDev = {{stddur}}, Mediana = {{meddur}}, Max = {{maxdur}}, Mín = {{mindur }}.
 Ancho de banda (KB): total = {{ tbw }}, Media = {{meanbw}}, StdDev = {{stdbw}}, Mediana = {{medbw}}, Max = {{maxbw}}, Mín = {{minbw}}.</pre></div>
-  <pre class="text-warning">
-{% for w in weblog %}{{ w }}
+{% for w in weblog %}{{ w|safe }}<br>
 {% endfor %}
-  </pre>
   {% endif %}
   {% endifequal %}
 
