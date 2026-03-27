@@ -337,7 +337,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $stddur = sum map $_**2, @duration;
         $stddur /= (@duration || 1);
         $stddur -= $meandur**2;
-        $stdur = sqrt($stddur);
+        $stddur = sqrt($stddur);
 
         $tbw = sum @bandwidth;
         $meanbw = $tbw / (@bandwidth || 1);
