@@ -208,8 +208,11 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.0 %}
-  <pre class="text-primary">
+  {% if weblog.1 %}
+<div id="meta"><pre>Accès réussis = {{ count }}. Erreurs : 4xx = {{4xx}}, 4xx = {{5xx}}.
+Durée (µs) : Total = {{ tdur }}, Moyenne = {{ meandur }}, StdDev = {{stddur}}, Médiane = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
+Bande passante (ko) : Total = {{ tbw }}, Moyenne = {{meanbw}}, StdDev = {{stdbw}}, Médiane = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
+  <pre class="text-warning">
 {% for w in weblog %}{{ w }}
 {% endfor %}
   </pre>

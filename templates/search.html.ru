@@ -208,8 +208,11 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.0 %}
-  <pre class="text-primary">
+  {% if weblog.1 %}
+<div id="meta"><pre>Попадания = {{ count }}. Ошибки: 4xx = {{4xx}}, 4xx = {{5xx}}.
+Длительность (мкс):  Всего = {{ tdur }}, среднее значение = {{ meandur }}, StdDev = {{stddur}}, медиана = {{meddur}}, Макс = {{maxdur}}, мин. = {{mindur }}.
+Пропускная способность (КБ): Итого = {{ tbw }}, среднее значение = {{meanbw}}, StdDev = {{stdbw}}, медиана = {{medbw}}, Макс = {{maxbw}}, мин. = {{minbw}}.</pre></div>
+  <pre class="text-warning">
 {% for w in weblog %}{{ w }}
 {% endfor %}
   </pre>

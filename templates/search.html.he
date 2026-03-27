@@ -208,8 +208,11 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.0 %}
-  <pre class="text-primary">
+  {% if weblog.1 %}
+<div id="meta"><pre>פגיעות = {{ count }}. שגיאות: 4xx = {{4xx}}, 4xx = {{5xx}}.
+משך (μs):  סך הכל = {{ tdur }}, ממוצע = {{ meandur }}, StdDev = {{stddur}}, חציון = {{meddur}}, מרבי = {{maxdur}}, מזערי = {{mindur }}.
+רוחב פס (KB): סה"כ = {{ tbw }}, ממוצע = {{meanbw}}, StdDev = {{stdbw}}, חציון = {{medbw}}, מרבי = {{maxbw}}, מזערי = {{minbw}}.</pre></div>
+  <pre class="text-warning">
 {% for w in weblog %}{{ w }}
 {% endfor %}
   </pre>

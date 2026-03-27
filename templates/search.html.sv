@@ -208,8 +208,11 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.0 %}
-  <pre class="text-primary">
+  {% if weblog.1 %}
+<div id="meta"><pre>Träffar = {{ count }}. Fel: 4xx = {{4xx}}, 4xx = {{5xx}}.
+Varaktighet (μs): Totalt = {{ tdur }}, medelvärde = {{ meandur }}, StdDev = {{stddur}}, Median = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
+Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdbw}}, Median = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
+  <pre class="text-warning">
 {% for w in weblog %}{{ w }}
 {% endfor %}
   </pre>
