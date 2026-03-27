@@ -278,7 +278,7 @@ $re =~ s/^"(.*)"$/\\Q$1\\E/;
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stdur, $e4xx, $e5xx);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
