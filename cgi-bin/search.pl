@@ -278,7 +278,7 @@ $re =~ s/^"(.*)"$/\\Q$1\\E/;
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx, $hits);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
@@ -354,6 +354,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $stdbw /= (@bandwidth || 1);
         $stdbw -= $meanbw**2;
         $stdbw = sqrt($stdbw);
+        $_ >= 500 ? $e5xx++ : ($_ >= 400 && $e4xx++) for map +(split /\s(?:"[^"]*"\s)*/)[6], @weblog;
       }
     }
     elsif ($re =~ /^diff=/i) {
@@ -689,6 +690,21 @@ my $args = {
   blog        => $blog,
   translation => $translation,
   weblog      => \@weblog,
+  hits        => scalar @weblog,
+  e4xx        => $e4xx,
+  e5xx        => $e5xx,
+  tdur        => $tdur,
+  maxdur      => $maxdur,
+  mindur      => $mindur,
+  meandur     => $meandur,
+  meddur      => $meddur,
+  stddur      => $stddur,
+  tbw         => $tbw / 1024,
+  maxbw       => $maxbw / 1024,
+  minbw       => $minbw / 1024,
+  meanbw      => $meanbw / 1024,
+  medbw       => $medbw / 1024,
+  stdbw       => $stdbw / 1024,
   diff        => $diff,
   meta        => "\$Author: $author \$ \$Date: $date \$",
   log         => $log,
