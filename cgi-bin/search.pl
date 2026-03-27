@@ -317,8 +317,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         while (<$fh>) {
           /^$host/i and !/"HEAD / or next;
-          s{ ([45])(\d\d) }{q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> " }e
-            if +(split /'\s(?:"[^"]*"\s)*/)[6] >= 400;
+          s{ ([45])(\d\d) }{$1 == 4 ? $e4xx++ : $e5xx++;q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> " }e
+            if +(split /\s(?:"[^"]*"\s)*/)[6] >= 400;
           push @weblog, $_;
           /(\d+) \([\d-]+%\) (\d+)$/ or next;
           push @duration, $2;
@@ -356,7 +356,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $stdbw /= (@bandwidth || 1);
         $stdbw -= $meanbw**2;
         $stdbw = sqrt($stdbw);
-        $_ >= 500 ? $e5xx++ : ($_ >= 400 && $e4xx++) for map +(split /\s(?:"[^"]*"\s)*/)[6], @weblog;
       }
     }
     elsif ($re =~ /^diff=/i) {
