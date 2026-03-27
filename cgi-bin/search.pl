@@ -317,7 +317,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         my $prefix = $r->path_info;
         while (<$fh>) {
-          /^$host/i and !/"HEAD / and +(split /\s(?:"[^"]*"\s)*/)[5] =~ /^\Q$prefix/ or next;
+          /^$host/i and !/"HEAD / and +(split /\s(?:"[^"]*"\s)*/)[4] =~ /^\Q$prefix/ or next;
           s{ ([45])(\d\d) }{$1 == 4 ? $e4xx++ : $e5xx++;q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> " }e
             if +(split /\s(?:"[^"]*"\s)*/)[6] >= 400;
           push @weblog, $_;
