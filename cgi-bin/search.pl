@@ -316,7 +316,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^weblog=/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         while (<$fh>) {
-          /^$host/i and !/HEAD / or next;
+          /^$host/i and !/"HEAD / or next;
           push @weblog, $_;
           /(\d+) \([\d-]+%\) (\d+)$/ or next;
           push @duration, $2;
