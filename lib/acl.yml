@@ -30,6 +30,6 @@
 - path: cgi-bin/search.pl
   rules:
     "@svnadmin": rw
-    "*":
+    "*": 
 
 #acl
