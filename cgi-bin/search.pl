@@ -504,7 +504,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze { hash => $w, time => $r->request_time }
       });
       $lock //= $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
-      undef $lock;
+      $lock = undef;
       $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
@@ -538,7 +538,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       });
 
       $lock //= $dbn->cds_lock, delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
-      undef $lock;
+      $lock = undef;
       $log = $log->{log};
 
       if (@$log) {
