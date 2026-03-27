@@ -485,7 +485,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $lock;
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         $wcache{"$svnuser-$url"} = freeze { hash => {}, time => $r->request_time };
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
@@ -503,11 +502,10 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           }
           delete $$w{$key};
         }
-        $lock = $dbw->cds_lock;
         freeze { hash => $w, time => $r->request_time }
       });
-      $lock //= $dbw->cds_lock, delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
-      $lock = undef;
+      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
+
       $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
@@ -528,7 +526,6 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
-      my $lock;
       ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         $ncache{"$svnuser-$dirname-$revision"} = freeze {log => [], time => $r->request_time};
         my $limit;
@@ -536,12 +533,11 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
         push @$_, map {utf8::encode $_; $_} $svn->diff($dirname, 1, $$_[0]) for @$log;
         @$log = grep {length $$_[3] and $$_[3] ne $svnuser} @$log if IGNORE_SELFIES;
-        $lock = $dbn->cds_lock;
         freeze {log => $log, time => $r->request_time}
       });
 
-      $lock //= $dbn->cds_lock, delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
-      $lock = undef;
+      delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
+
       $log = $log->{log};
 
       if (@$log) {
