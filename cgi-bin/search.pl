@@ -278,7 +278,7 @@ $re =~ s/^"(.*)"$/\\Q$1\\E/;
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $maxb, $minb, $medianb, $meanb, $maxd, $mind, $mediand, $meand);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $maxdur, $mindur, $meddur, $meandur, $stdur, $e4xx, $e5xx);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
@@ -316,14 +316,44 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^weblog=/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         while (<$fh>) {
-          /^$host/i and !/"HEAD / or next;
+          /^$host/i and !/HEAD / or next;
           push @weblog, $_;
           /(\d+) \([\d-]+%\) (\d+)$/ or next;
           push @duration, $2;
           push @bandwidth, $1;
         }
         chomp @weblog;
-        
+        $tdur = sum @duration;
+        $meandur = $tdur / (@duration || 1);
+        $maxdur = max @duration;
+        $mindur = min @duration;
+        my @sorted = sort {$a <=> $b} @duration;
+        if (@sorted % 2) {
+          $meddur = ($sorted[@sorted / 2] + $sorted[@sorted / 2 + 1]) / 2;
+        }
+        else {
+          $meddur = $sorted[@sorted / 2];
+        }
+        $stddur = sum map $_**2, @duration;
+        $stddur /= (@duration || 1);
+        $stddur -= $meandur**2;
+        $stdur = sqrt($stddur);
+
+        $tbw = sum @bandwidth;
+        $meanbw = $tbw / (@bandwidth || 1);
+        $maxbw = max @bandwidth;
+        $minbw = min @bandwidth;
+        @sorted = sort {$a <=> $b} @bandwidth;
+        if (@sorted % 2) {
+          $medbw = ($sorted[@sorted / 2] + $sorted[@sorted / 2 + 1]) / 2;
+        }
+        else {
+          $medbw = $sorted[@sorted / 2];
+        }
+        $stdbw = sum map $_**2, @bandwidth;
+        $stdbw /= (@bandwidth || 1);
+        $stdbw -= $meanbw**2;
+        $stdbw = sqrt($stdbw);
       }
     }
     elsif ($re =~ /^diff=/i) {
