@@ -211,8 +211,7 @@
   {% ifequal specials "weblog=" %}
   {% if weblog.0 %}
   <pre class="text-primary">
-{% for w in weblog %}
-{{ w }}
+{% for w in weblog %}{{ w }}
 {% endfor %}
   </pre>
   {% endif %}
