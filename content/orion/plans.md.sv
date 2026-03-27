@@ -30,7 +30,7 @@ $25/månad/hanterad allmän webbplats
 <li>Inkluderade månadsresurser (per webbplats):
 <p>
 <ol>
-						<li>Offentlig subversion hosting</li>
+						<li>Privat subversion hosting</li>
 						<li>250 MB lagringsutrymme<sup>1</sup></li>
 						<li>100 Gbyte dataöverföring</li>
 						<li>Obegränsad IDE-användning för 10 platser</li>
@@ -75,7 +75,7 @@ $ 100 / månad / hanterad offentlig webbplats, ~ 50 % rabatt på alla konkurrent
 				<li>Inkluderade månadsresurser (per webbplats):
 <p>
 <ol>
-						<li>Offentlig eller privat Subversion hosting</li>
+						<li>Privat subversion hosting</li>
 						<li>1 Gbyte lagringsutrymme<sup>1</sup></li>
 						<li>500 Gbyte dataöverföring</li>
 						<li>Obegränsad IDE-användning för 50 platser</li>
@@ -234,4 +234,4 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-03-25 13:23:49 -0700 (Wed, 25 Mar 2026) $ $Author: joe $ $Revision: 30201 $ -->
+<!-- $Date: 2026-03-25 13:28:05 -0700 (Wed, 25 Mar 2026) $ $Author: joe $ $Revision: 30211 $ -->
