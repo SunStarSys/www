@@ -27,7 +27,7 @@ use SunStarSys::SVN::Client;
 use SVN::Repos;
 use File::Basename;
 use FreezeThaw qw/freeze thaw/;
-use List::Util qw/sum/;
+use List::Util qw/sum max min/;
 use IO::Uncompress::Gunzip qw/gunzip/;
 use BerkeleyDB;
 use POSIX qw/:fcntl_h strftime :locale_h/;
@@ -278,7 +278,7 @@ $re =~ s/^"(.*)"$/\\Q$1\\E/;
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $maxb, $minb, $medianb, $meanb, $maxd, $mind, $mediand, $meand);
 
 if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
@@ -315,8 +315,15 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
     elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^weblog=/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
-        /^$host/i and !/ HEAD / and push @weblog, $_ while <$fh>;
+        while (<$fh>) {
+          /^$host/i and !/"HEAD / or next;
+          push @weblog, $_;
+          /(\d+) \([\d-]+%\) (\d+)$/ or next;
+          push @duration, $2;
+          push @bandwidth, $1;
+        }
         chomp @weblog;
+        
       }
     }
     elsif ($re =~ /^diff=/i) {
