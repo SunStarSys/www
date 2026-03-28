@@ -223,7 +223,7 @@ Bandwidth (KB): Total = {{ tbw }}, Mean = {{meanbw}}, StdDev = {{stdbw}}, Median
       </div>
     </div>
 {% for w in weblog %}
-<input type="hidden" name="lines" value="{{w|removetags:"span"}}">
+<input type="hidden" name="lines" value='{{w|removetags:"span"|safe}}'>
 {% endfor %}
   </form>
 {% for w in weblog %}{{ w|safe }}<br>
