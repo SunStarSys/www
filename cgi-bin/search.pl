@@ -312,7 +312,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         read $fh, $blog, -s $fh;
       }
     }
-    elsif ($re =~ /^weblog=(.*)$/i) {
+    elsif ($re =~ /^weblog=(.*)/i) {
 	 my $prefilter = $1;
 	 $prefilter = "" unless $pw{$svnuser} =~ /\bsvnadmin\b/;
      if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
@@ -346,7 +346,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $stddur -= $meandur**2;
         $stddur = sqrt($stddur);
 
-        $re =~ s/^weblog=(.*)$/$filter/ if $filter;
+        $re =~ s/^weblog=(.*)$/weblog=$filter/ if $filter;
 
         $tbw = sum @bandwidth;
         $meanbw = $tbw / (@bandwidth || 1);
