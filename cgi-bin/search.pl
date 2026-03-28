@@ -317,7 +317,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $filter =~ tr/{}//d if $filter;
         while (<$fh>) {
           /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
-          /$filter/ and warn "MATCH!" or next if $filter;
+          /$filter/ or next if $filter;
           s{ ([45])(\d\d) }{$1 == 4 ? $e4xx++ : $e5xx++;q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> " }e
             if +(split /\s(?:"[^"]*"\s)*/)[6] >= 400;
           push @weblog, $_;
