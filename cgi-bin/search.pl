@@ -345,7 +345,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $stddur -= $meandur**2;
         $stddur = sqrt($stddur);
 
-        $re =~ s/^weblog=(.*)$/weblog=$filter/ and $filter = "" if $filter;
+        $re =~ s/^weblog=(.*)$/weblog=$filter/ if $filter;
 
         $tbw = sum @bandwidth;
         $meanbw = $tbw / (@bandwidth || 1);
