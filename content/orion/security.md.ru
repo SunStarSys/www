@@ -1,5 +1,5 @@
 ---
-acl: '@staff=rw, *=r, joe=rw'
+acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
@@ -334,4 +334,4 @@ CSS должен быть доставлен с наших серверов.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-25 12:34:30 -0700 (Wed, 25 Mar 2026) $ $Author: joe $ $Revision: 30164 $ -->
+<!-- $Date: 2026-03-28 08:05:09 -0700 (Sat, 28 Mar 2026) $ $Author: joe $ $Revision: 30565 $ -->

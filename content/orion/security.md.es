@@ -1,5 +1,5 @@
 ---
-acl: '@staff=rw, *=r, joe=rw'
+acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
