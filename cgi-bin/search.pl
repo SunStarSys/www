@@ -314,6 +314,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     }
     elsif ($re =~ /^weblog=(.*)$/i) {
 	 my $prefilter = $1;
+	 $prefilter = "" unless $pw{$svnuser} =~ /\bsvnadmin\b/;
      if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         my $prefix = $r->path_info;
         $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
