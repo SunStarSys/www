@@ -216,14 +216,16 @@ Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdb
     <div class="right" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
+       <input type="hidden" name="hash" value="{{hash}}">
        <input class="form-control me-2" type="text" name="filter"
              placeholder="PCRE: Rekursiv sökning" värde="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
       </div>
     </div>
-  </form>
 {% for w in weblog %}{{ w|safe }}<br>
+<input type="hidden" name="lines" value="{{w|removetags:span}}">
 {% endfor %}
-  {% endif %}
+  </form>
+{% endif %}
   {% endifequal %}
 
 {% else %}
