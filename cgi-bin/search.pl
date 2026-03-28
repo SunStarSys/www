@@ -541,7 +541,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $enter = 0;
       delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
 
-      my $log = $log->{log};
+      $log = $log->{log};
 
       if (@$log) {
         $revision = $$log[0][0];
