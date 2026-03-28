@@ -292,7 +292,6 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
     $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
-
     while ($_ = ($sha1->hexdigest eq $hash ? shift @lines : <$fh>)) {
       /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
       /$filter/i or next if length $filter;
@@ -303,11 +302,11 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
       push @bandwidth, $1;
     }
     chomp @weblog;
-    $sha1 = "Digest::SHA1";
-    $sha1 = $sha1->new;
-    $sha1->add(join ":", $r->dir_config("CookieSecret"), @weblog);
-    $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
-    $hash = $sha1->hexdigest;
+
+    $hash = "Digest::SHA1";
+    $hash = $hash->new;
+    $hash->add(join ":", $r->dir_config("CookieSecret"), @weblog);
+    $hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
 
     +(split /\s(?:"[^"]*"\s)*/)[6] >= 400 and
       s{ ([45])(\d\d) }{
@@ -684,11 +683,12 @@ my %title = (
   ".zh-TW" => "$markdown 的搜尋結果",
 );
 
-$hash = "Digest::SHA1";
-$hash = $hash->new;
-$hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
-$hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
-
+if (@matches) {
+  $hash = "Digest::SHA1";
+  $hash = $hash->new;
+  $hash->add(join ":", $r->dir_config("CookieSecret"), map $$_[1], @matches);
+  $hash->add(join ":", $r->dir_config("CookieSecret"), $hash->hexdigest);
+}
 my $args = {
   path        => $r->path_info . "index",
   title       => $title{$lang},
