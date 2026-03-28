@@ -1,6 +1,6 @@
 #!/usr/local/bin/perl -T -I /x1/cms/build/lib
 # Copyright 2023 SunStar Systems, Inc.  All rights reserved.
-
+use v5.38;
 use utf8;
 use strict;
 use locale ':time';
@@ -485,8 +485,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my ($wwatchers) = thaw($wcache{"$svnuser-$url"} ||= do {
-        #$wcache{"$svnuser-$url"} = freeze { hash => {}, time => $r->request_time };
+      state $enter = 0;
+      my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= $enter ? freeze { hash => {}, time => $r->request_time } : do {
+        $enter = 1;
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -504,9 +505,10 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
         freeze { hash => $w, time => $r->request_time }
       });
-      delete $wcache{"$svnuser-$url"} unless $r->request_time - $wwatchers->{time} < 100_000;
+      $enter = 0;
+      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
 
-      my $watchers = $wwatchers->{hash};
+      $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
@@ -526,8 +528,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
-      my ($nlog) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
-        #$ncache{"$svnuser-$dirname-$revision"} = freeze {log => [], time => $r->request_time};
+      state $enter = 0;
+      my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= $enter ? freeze {log => [], time => $r->request_time} : do {
+        $enter = 1;
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
@@ -535,10 +538,10 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         @$log = grep {length $$_[3] and $$_[3] ne $svnuser} @$log if IGNORE_SELFIES;
         freeze {log => $log, time => $r->request_time}
       });
+      $enter = 0;
+      delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
 
-      delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $nlog->{time} < 1000;
-
-      my $log = $nlog->{log};
+      my $log = $log->{log};
 
       if (@$log) {
         $revision = $$log[0][0];
