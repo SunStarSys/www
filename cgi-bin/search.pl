@@ -307,7 +307,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     chomp @weblog;
 
     $sha1 = $sha1->new;
-    $sha1->add(join ":", $r->dir_config("CookieSecret"), @weblog);
+    $sha1->add(join ":", $r->dir_config("CookieSecret"), map {my $x = $_; $x =~ s!<span[^>]+>|</span>!!g, $x} @weblog);
     $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
     $hash = $sha1->hexdigest;
 
