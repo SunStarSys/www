@@ -297,19 +297,21 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
       /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
       /$filter/i or next if length $filter;
       /$prefilter/i or next if length $prefilter;
-      s{ ([45])(\d\d) }{$1 == 4 ? $e4xx++ : $e5xx++;q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> " }e
-      if +(split /\s(?:"[^"]*"\s)*/)[6] >= 400;
       push @weblog, $_;
       /(\d+) \([\d-]+%\) (\d+)$/ or next;
       push @duration, $2;
       push @bandwidth, $1;
     }
     chomp @weblog;
-
     $sha1 = $sha1->new;
-    $sha1->add(join ":", $r->dir_config("CookieSecret"), map {my $x = $_; $x =~ s!<span[^>]+>|</span>!!g, $x} @weblog);
+    $sha1->add(join ":", $r->dir_config("CookieSecret"), @weblog);
     $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
     $hash = $sha1->hexdigest;
+
+    +(split /\s(?:"[^"]*"\s)*/)[6] >= 400 and
+      s{ ([45])(\d\d) }{
+        $1 == 4 ? $e4xx++ : $e5xx++;q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> "
+      }e for @weblog;
 
     $tdur = sum @duration;
     $meandur = $tdur / (@duration || 1);
@@ -326,8 +328,6 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $stddur /= (@duration || 1);
     $stddur -= $meandur**2;
     $stddur = sqrt($stddur);
-
-    #$re =~ s/^weblog=(.*)$/weblog=$filter/ if $filter;
 
     $tbw = sum @bandwidth;
     $meanbw = $tbw / (@bandwidth || 1);
