@@ -222,7 +222,7 @@ Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdb
       </div>
     </div>
 {% for w in weblog %}{{ w|safe }}<br>
-<input type="hidden" name="lines" value="{{w|removetags:span}}">
+<input type="hidden" name="lines" value="{{w|removetags:"span"}}">
 {% endfor %}
   </form>
 {% endif %}
