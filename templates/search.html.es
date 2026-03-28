@@ -208,7 +208,7 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.1 %}
+  {% if weblog.0 %}
   <form method="POST" class="form-inline row">
    <div id="meta"><pre>Aciertos = {{hits}}. Errores: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Duración (μs):  Total = {{tdur}}, Media = {{meandur}}, StdDev = {{stddur}}, Mediana = {{meddur}}, Max = {{maxdur}}, Mín = {{mindur }}.

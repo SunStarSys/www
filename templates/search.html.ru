@@ -208,7 +208,7 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.1 %}
+  {% if weblog.0 %}
   <form method="POST" class="form-inline row">
    <div id="meta"><pre>Попадания = {{hits}}. Ошибки: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Длительность (мкс):  Всего = {{tdur}}, среднее значение = {{meandur}}, StdDev = {{stddur}}, медиана = {{meddur}}, Макс = {{maxdur}}, мин. = {{mindur }}.

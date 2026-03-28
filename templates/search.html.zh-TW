@@ -208,7 +208,7 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.1 %}
+  {% if weblog.0 %}
   <form method="POST" class="form-inline row">
    <div id="meta"><pre>命中數 = {{hits}}。錯誤：4xx = {{e4xx}}, 5xx = {{e5xx}}.
 持續時間 (μs)：總計 = {{tdur}}，平均 = {{meandur}}, StdDev = {{stddur}}，中位數 = {{meddur}}，最大 = {{maxdur}}，最小 = {{mindur }}.

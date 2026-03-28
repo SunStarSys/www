@@ -208,7 +208,7 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.1 %}
+  {% if weblog.0 %}
   <form method="POST" class="form-inline row">
    <div id="meta"><pre>פגיעות = {{hits}}. שגיאות: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 משך (μs):  סך הכל = {{tdur}}, ממוצע = {{meandur}}, StdDev = {{stddur}}, חציון = {{meddur}}, מרבי = {{maxdur}}, מזערי = {{mindur }}.

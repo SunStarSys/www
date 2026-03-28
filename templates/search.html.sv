@@ -208,7 +208,7 @@
   {% endif %}
   {% endifequal %}
   {% ifequal specials "weblog=" %}
-  {% if weblog.1 %}
+  {% if weblog.0 %}
   <form method="POST" class="form-inline row">
    <div id="meta"><pre>Träffar = {{hits}}. Fel: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Varaktighet (μs): Totalt = {{tdur}}, medelvärde = {{meandur}}, StdDev = {{stddur}}, Median = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
