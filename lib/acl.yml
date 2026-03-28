@@ -5,7 +5,7 @@
     "@svnadmin": rw
     "*": r
 
-- path: content/orion/
+- path: content/orion
   rules:
     "@staff": rw
     "@svnadmin": rw
