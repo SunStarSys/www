@@ -272,7 +272,7 @@ for ($d) {
 
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0 or index($re, '=') >= 0 or index($re, "#") == 0;
 $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0 or index($filter, "#") == 0;
-s/^"(.*)"$/\\Q$1\\E/ for $re, $filter;
+s/^"(.*)"$/\\Q$1\\E/ for $re;
 
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
