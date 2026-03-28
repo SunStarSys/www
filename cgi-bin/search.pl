@@ -312,10 +312,10 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         read $fh, $blog, -s $fh;
       }
     }
-    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^weblog=/i) {
+    elsif ($re =~ /^weblog=/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         my $prefix = $r->path_info;
-        $filter = $1 if $filter =~/(.*)/;
+        $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
         while (<$fh>) {
           /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
           /$filter/ or next if $filter;
