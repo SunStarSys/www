@@ -7,7 +7,6 @@
 
 - path: content/orion/
   rules:
-    "@marketing": rw
     "@staff": rw
     "@svnadmin": rw
     "*": r
