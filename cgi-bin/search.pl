@@ -247,8 +247,6 @@ my $env = BerkeleyDB::Env->new(-Home => "/x1/tmp", -Flags => DB_CREATE|DB_INIT_C
 my $dbn = tie my %ncache, 'BerkeleyDB::Hash', -Filename => "ncache", -Flags => DB_CREATE, -Env => $env or die "Can't open ncache DB: $!";
 my $dbw = tie my %wcache, 'BerkeleyDB::Hash', -Filename => "wcache", -Flags => DB_CREATE, -Env => $env or die "Can't open wcache DB: $!";
 
-utf8::decode($_) for $re, $filter;
-
 my $dirname;
 my $repos;
 
@@ -273,7 +271,7 @@ for ($d) {
 
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0 or index($re, '=') >= 0 or index($re, "#") == 0;
 $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0 or index($filter, "#") == 0;
-$re =~ s/^"(.*)"$/\\Q$1\\E/;
+s/^"(.*)"$/\\Q$1\\E/ for $re, $filter;
 
 my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
 s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
@@ -317,6 +315,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         my $prefix = $r->path_info;
         $filter =~ tr/{}//d if defined $filter;
+        warn "FILTER=$filter";
         while (<$fh>) {
           /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
           /$filter/ or next if $filter;
