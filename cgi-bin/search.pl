@@ -485,7 +485,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
+      my ($wwatchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         $wcache{"$svnuser-$url"} = freeze { hash => {}, time => $r->request_time };
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
@@ -504,9 +504,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
         freeze { hash => $w, time => $r->request_time }
       });
-      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
+      delete $wcache{"$svnuser-$url"} unless $r->request_time - $wwatchers->{time} < 100_000;
 
-      $watchers = $watchers->{hash};
+      my $watchers = $wwatchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
@@ -526,7 +526,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
-      ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
+      my ($nlog) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         $ncache{"$svnuser-$dirname-$revision"} = freeze {log => [], time => $r->request_time};
         my $limit;
         $limit = 10 unless defined $revision;
@@ -536,9 +536,9 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         freeze {log => $log, time => $r->request_time}
       });
 
-      delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
+      delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $nlog->{time} < 1000;
 
-      $log = $log->{log};
+      my $log = $nlog->{log};
 
       if (@$log) {
         $revision = $$log[0][0];
