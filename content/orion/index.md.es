@@ -1,4 +1,5 @@
 ---
+acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
@@ -36,13 +37,13 @@ title: SunStar Orión de los Sistemas
 	<li><p>federado</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología Jamstack para las funciones dinámicas que contiene{# lede #}.
+{# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología Jamstack para las funciones dinámicas de las mismas{# lede #}.
 
 Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
 
 ### Aquí's the Pitch, Responsable Ejecutivo de Decisiones...
 
-<span class="text-white">¿Por qué elegir Orion? La plataforma Wiki Jamstack que supera &mdash; y costos mucho menos</span>
+<span class="text-white">¿Por qué elegir Orion? La plataforma Wiki de Jamstack que supera &mdash; y costos mucho menos</span>
 
 Lo que realmente distingue a Orión es'Solo otra plataforma wiki &mdash; es'Nuestra tecnología patentada Orion, un enfoque probado en batalla y pendiente de patente que ofrece una eficiencia inigualable.
 

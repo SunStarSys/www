@@ -1,4 +1,5 @@
 ---
+acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
@@ -102,7 +103,7 @@ div#lightning img {width:100%}
 
 </style>
 
-Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`500 Mbyte/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa dem:
+Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`300 Mbyte/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa dem:
 
 <span class="text-success"><em>Vi bygger bara det du behöver.</em></span>&trade;
 

@@ -1,4 +1,5 @@
 ---
+acl: '@staff=rw, *=r'
 archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
@@ -36,13 +37,13 @@ title: SunStar 系統的 Orion
 	<li><p>同盟</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">企業 Jamstack Wiki 平台</span>&nbsp; 用於<b>建立、管理和提供</b> 使用 Jamstack 技術的靜態網頁，提供動態功能{# lede #}.
+{# lede #}<span class="text-white">企業 Jamstack Wiki 平台</span>&nbsp; 用於<b>建立、管理和提供</b> 使用 Jamstack Technology 靜態網頁，提供動態功能{# lede #}.
 
 如需價格資訊，請參閱我們的[Orion 計畫](plans).
 
 ### 這裡'行政決策者，執行決策者 ...
 
-<span class="text-white">為何選擇 Orion？Jamstack Wiki 平台的效能超越&mdash; 與成本更少</span>
+<span class="text-white">為何選擇 Orion？The Jamstack Wiki 平台的效能超越&mdash; 與成本更少</span>
 
 Orion 的真正組合不是'只是另一個維基平台&mdash; 它'我們的專屬 Orion Technology，這是一項經過嚴格測試的專利申請方法，可提供無與倫比的效率。
 
@@ -102,7 +103,7 @@ div#lightning img {width:100%}
 
 </style>
 
-多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 *秒* (而非小時和分鐘) 計算。系統容易維持於[`500 MB/ 秒`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新思考：
+多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 *秒* (而非小時和分鐘) 計算。系統容易維持於[`300 MB/ 秒`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新思考：
 
 <span class="text-success"><em>我們只建立您需要的建置項目。</em></span>&trade;
 
