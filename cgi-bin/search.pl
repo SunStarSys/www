@@ -2,6 +2,7 @@
 # Copyright 2023 SunStar Systems, Inc.  All rights reserved.
 use v5.38;
 use utf8;
+use re 'eval';
 use strict;
 use locale ':time';
 use warnings;
@@ -314,7 +315,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
     elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^weblog=/i) {
       if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
         my $prefix = $r->path_info;
-        use re 'eval';
+        $filter = $1 if $filter =~/(.*)/;
         while (<$fh>) {
           /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
           /$filter/ or next if $filter;
