@@ -486,7 +486,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
       my ($wwatchers) = thaw($wcache{"$svnuser-$url"} ||= do {
-        $wcache{"$svnuser-$url"} = freeze { hash => {}, time => $r->request_time };
+        #$wcache{"$svnuser-$url"} = freeze { hash => {}, time => $r->request_time };
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -527,7 +527,7 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
       my ($nlog) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
-        $ncache{"$svnuser-$dirname-$revision"} = freeze {log => [], time => $r->request_time};
+        #$ncache{"$svnuser-$dirname-$revision"} = freeze {log => [], time => $r->request_time};
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
