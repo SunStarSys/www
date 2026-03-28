@@ -501,7 +501,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
       my $lock;
-      $lock = $dbw->cdn_lock unless $wcache{"$svnuser-$url"};
+      $lock = $env->cdn_lock unless $wcache{"$svnuser-$url"};
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
@@ -544,7 +544,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
       my $lock;
-      $lock = $dbn->cdn_lock unless $wcache{"$svnuser-$dirname-$revision"};
+      $lock = $env->cdn_lock unless $wcache{"$svnuser-$dirname-$revision"};
       my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         my $limit;
         $limit = 10 unless defined $revision;
