@@ -221,10 +221,13 @@ Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdb
              placeholder="PCRE: Rekursiv sökning" värde="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
       </div>
     </div>
-{% for w in weblog %}{{ w|safe }}<br>
+{% for w in weblog %}
 <input type="hidden" name="lines" value="{{w|removetags:"span"}}">
 {% endfor %}
   </form>
+{% for w in weblog %}{{ w|safe }}<br>
+{% endfor %}
+
 {% endif %}
   {% endifequal %}
 
