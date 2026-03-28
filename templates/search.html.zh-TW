@@ -215,7 +215,7 @@
 頻寬 (KB)：總計 = {{ tbw }}，平均 = {{meanbw}}, StdDev = {{stdbw}}，中位數 = {{medbw}}，最大 = {{maxbw}}，最小 = {{minbw}}.</pre></div>
     <div class="right" id="filter">
       <div class="d-flex float-end">
-        <input type="hidden" name="hash" value="{{hash}}">
+       <input type="hidden" name="regex" value="{{regex}}">
        <input class="form-control me-2" type="text" name="filter"
              placeholder="PCRE 遞迴搜尋" 值 ="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
       </div>

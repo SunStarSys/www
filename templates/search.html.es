@@ -215,7 +215,7 @@ Duración (μs):  Total = {{tdur}}, Media = {{meandur}}, StdDev = {{stddur}}, Me
 Ancho de banda (KB): total = {{ tbw }}, Media = {{meanbw}}, StdDev = {{stdbw}}, Mediana = {{medbw}}, Max = {{maxbw}}, Mín = {{minbw}}.</pre></div>
     <div class="right" id="filter">
       <div class="d-flex float-end">
-        <input type="hidden" name="hash" value="{{hash}}">
+       <input type="hidden" name="regex" value="{{regex}}">
        <input class="form-control me-2" type="text" name="filter"
              placeholder="Búsqueda recursiva PCRE" valor="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
       </div>

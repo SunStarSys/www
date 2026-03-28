@@ -215,7 +215,7 @@ Durée (µs) : Total = {{tdur}}, Moyenne = {{meandur}}, StdDev = {{stddur}}, Mé
 Bande passante (ko) : Total = {{ tbw }}, Moyenne = {{meanbw}}, StdDev = {{stdbw}}, Médiane = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
     <div class="right" id="filter">
       <div class="d-flex float-end">
-        <input type="hidden" name="hash" value="{{hash}}">
+       <input type="hidden" name="regex" value="{{regex}}">
        <input class="form-control me-2" type="text" name="filter"
              placeholder="Recherche récursive PCRE" valeur="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
       </div>

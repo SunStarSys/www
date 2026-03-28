@@ -215,7 +215,7 @@ Varaktighet (μs): Totalt = {{tdur}}, medelvärde = {{meandur}}, StdDev = {{stdd
 Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdbw}}, Median = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
     <div class="right" id="filter">
       <div class="d-flex float-end">
-        <input type="hidden" name="hash" value="{{hash}}">
+       <input type="hidden" name="regex" value="{{regex}}">
        <input class="form-control me-2" type="text" name="filter"
              placeholder="PCRE: Rekursiv sökning" värde="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
       </div>
