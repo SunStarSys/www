@@ -500,9 +500,9 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      state $enter = 0;
-      my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= $enter ? freeze { hash => {}, time => $r->request_time } : do {
-        $enter = 1;
+      my $lock;
+      $lock = $dbw->cdn_lock unless $wcache{"$svnuser-$url"};
+      my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
@@ -520,9 +520,9 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
         freeze { hash => $w, time => $r->request_time }
       });
-      $enter = 0;
-      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
 
+      delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
+      undef $lock;
       $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
@@ -543,9 +543,9 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
-      state $enter = 0;
-      my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= $enter ? freeze {log => [], time => $r->request_time} : do {
-        $enter = 1;
+      my $lock;
+      $lock = $dbn->cdn_lock unless $wcache{"$svnuser-$dirname-$revision"};
+      my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         my $limit;
         $limit = 10 unless defined $revision;
         my $log = $svn->log($dirname, HEAD => $revision, $limit);
@@ -553,8 +553,9 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         @$log = grep {length $$_[3] and $$_[3] ne $svnuser} @$log if IGNORE_SELFIES;
         freeze {log => $log, time => $r->request_time}
       });
-      $enter = 0;
+
       delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
+      undef $lock;
 
       $log = $log->{log};
 
