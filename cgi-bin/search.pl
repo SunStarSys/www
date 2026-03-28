@@ -303,6 +303,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
       push @bandwidth, $1;
     }
     chomp @weblog;
+    $sha1 = "Digest::SHA1";
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), @weblog);
     $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
