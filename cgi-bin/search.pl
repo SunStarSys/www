@@ -320,8 +320,8 @@ if ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
         while (<$fh>) {
           /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
-          /$filter/i or next if $filter;
-          /$prefilter/i or next if $prefilter;
+          /$filter/i or next if length $filter;
+          /$prefilter/i or next if length $prefilter;
           s{ ([45])(\d\d) }{$1 == 4 ? $e4xx++ : $e5xx++;q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> " }e
             if +(split /\s(?:"[^"]*"\s)*/)[6] >= 400;
           push @weblog, $_;
