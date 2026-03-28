@@ -1,18 +1,18 @@
 #acl
-- path: content
+- path: content/
   rules:
     "@staff": rw
     "@svnadmin": rw
     "*": r
 
-- path: content/orion
+- path: content/orion/
   rules:
     "@marketing": rw
     "@staff": rw
     "@svnadmin": rw
     "*": r
 
-- path: lib
+- path: lib/
   rules:
     "@svnadmin": rw
     "@devops": rw
@@ -22,7 +22,7 @@
     "@svnadmin": rw
     "@security": rw
 
-- path: templates
+- path: templates/
   rules:
     "@svnadmin": rw
     "@frontend": rw
@@ -30,6 +30,6 @@
 - path: cgi-bin/search.pl
   rules:
     "@svnadmin": rw
-    "*": 
+    "*":
 
 #acl
