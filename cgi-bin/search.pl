@@ -238,9 +238,9 @@ sub get_client_lang  (AR $r) {
 }
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
-my ($re)       = ($apreq->param("regex"))[-1] // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
+my ($re)     = ($apreq->param("regex"))[-1] // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $filter   = $apreq->param("filter") // "";
-my Digest::SHA1 $hash = $apreq->body("hash") // "";
+my $hash     = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
 my ($js, $count);
 
@@ -287,8 +287,13 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
   $prefilter = "" unless $pw{$svnuser} =~ /\bsvnadmin\b/;
   if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
     my $prefix = $r->path_info;
-    $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;	
-    while (<$fh>) {
+    $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
+    my Digest::SHA1 $sha1;
+    $sha1 = $sha1->new;
+    $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
+    $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
+
+    while ($_ = ($sha1->hexdigest eq $hash ? shift @lines : <$fh>)) {
       /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
       /$filter/i or next if length $filter;
       /$prefilter/i or next if length $prefilter;
@@ -300,6 +305,12 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
       push @bandwidth, $1;
     }
     chomp @weblog;
+
+    $sha1 = $sha1->new;
+    $sha1->add(join ":", $r->dir_config("CookieSecret"), @weblog);
+    $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
+    $hash = $sha1->hexdigest;
+
     $tdur = sum @duration;
     $meandur = $tdur / (@duration || 1);
     $maxdur = max @duration;
