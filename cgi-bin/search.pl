@@ -499,7 +499,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
       my $lock;
-      $lock = $dbw->cds_lock unless $wcache{"$svnuser-$url"};
+      # $lock = $dbw->cds_lock unless $wcache{"$svnuser-$url"};
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
@@ -520,7 +520,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       });
 
       delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
-      $lock->cds_unlock and undef $lock if $lock;
+      #$lock->cds_unlock and undef $lock if $lock;
       $watchers = $watchers->{hash};
 
       while (my ($k, $v) = each %$watchers) {
@@ -542,7 +542,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
       my $lock;
-      $lock = $dbn->cds_lock unless $wcache{"$svnuser-$dirname-$revision"};
+      #$lock = $dbn->cds_lock unless $wcache{"$svnuser-$dirname-$revision"};
       my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         my $limit;
         $limit = 10 unless defined $revision;
@@ -553,7 +553,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       });
 
       delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
-      $lock->cds_unlock and undef $lock if $lock;
+      #$lock->cds_unlock and undef $lock if $lock;
 
       $log = $log->{log};
 
