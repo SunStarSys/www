@@ -522,7 +522,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
       #$lock->cds_unlock and undef $lock if $lock;
       $watchers = $watchers->{hash};
-
+      $dbw->db_close;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
         push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
@@ -554,7 +554,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
       #$lock->cds_unlock and undef $lock if $lock;
-
+      $dbn->db_close;
       $log = $log->{log};
 
       if (@$log) {
