@@ -295,7 +295,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
       /$filter/i or next if length $filter;
       /$prefilter/i or next if length $prefilter;
       push @weblog, $_;
-      /HTTP{.}{4}" \d+ (\d+) .* \([\d-]+%\) (\d+)$/ or next;
+      /HTTP.{5} \d+ (\d+) .* \([\d-]+%\) (\d+)$/ or next;
       push @duration, $2;
       push @bandwidth, $1;
     }
