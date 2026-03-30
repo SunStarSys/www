@@ -559,20 +559,21 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       if (@$log) {
         $revision = $$log[0][0];
-        my COOKIE $cookie;
-        $cookie = $cookie->new(
-          $r->pool,
-          name => "last",
-          value => $revision,
-          expires => "365d",
-          secure => 1,
-          path => "/",
-        );
-
-        my APR::Table $hdr_out = $r->err_headers_out;
-
-        $hdr_out->add("Set-Cookie" => $cookie->as_string);
+      } else {
+        $svn->info(substr($dirname, 0 , -1), sub {$revision = $_[1]->revision});
       }
+      my COOKIE $cookie;
+      $cookie = $cookie->new(
+        $r->pool,
+        name => "last",
+        value => $revision,
+        expires => "365d",
+        secure => 1,
+        path => "/",
+      );
+
+      my APR::Table $hdr_out = $r->err_headers_out;
+      $hdr_out->add("Set-Cookie" => $cookie->as_string);
 
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       @$log = grep {
