@@ -560,7 +560,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       if (@$log) {
         $revision = $$log[0][0];
       } else {
-        $svn->info(substr($dirname, 0 , -1), sub {$revision = $_[1]->revision});
+        $svn->info(substr($dirname, 0 , -1), sub {$revision = $_[1]->Revision});
       }
       my COOKIE $cookie;
       $cookie = $cookie->new(
