@@ -358,7 +358,6 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       else {
         open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-duration-log" or die "can't open build-duration-log: $!";
           @dlog = map {chomp; [split /:/]} <$fh>;
-        close $fh;
       }
     }
     elsif ($re =~ /^(acl|deps)=/i) {
@@ -524,7 +523,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
 
       $watchers = $watchers->{hash};
-      $dbw->db_close;
+      #$dbw->db_close;
       while (my ($k, $v) = each %$watchers) {
         $k =~ s/^.*?\Q$prefix//;
         push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
@@ -556,7 +555,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       delete $ncache{"$svnuser-$dirname-$revision"} unless defined $revision and $r->request_time - $log->{time} < 1000;
       #$lock->cds_unlock and undef $lock if $lock;
-      $dbn->db_close;
+      #$dbn->db_close;
       $log = $log->{log};
 
       if (@$log) {
