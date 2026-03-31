@@ -4,6 +4,8 @@ use v5.38;
 use utf8;
 use re 'eval';
 use locale ':time';
+use threads;
+use threads::shared;
 
 use Text::Balanced ();
 use Apache2::Const qw/HTTP_OK OK HTTP_BAD_REQUEST/;
@@ -498,8 +500,8 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $lock;
-      # $lock = $dbw->cds_lock unless $wcache{"$svnuser-$url"};
+      my $wlock :shared;
+      lock($wlock) unless $wcache{"$svnuser-$url"};
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
@@ -520,7 +522,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       });
 
       delete $wcache{"$svnuser-$url"} unless $r->request_time - $watchers->{time} < 100_000;
-      #$lock->cds_unlock and undef $lock if $lock;
+
       $watchers = $watchers->{hash};
       $dbw->db_close;
       while (my ($k, $v) = each %$watchers) {
@@ -541,8 +543,8 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
-      my $lock;
-      #$lock = $dbn->cds_lock unless $wcache{"$svnuser-$dirname-$revision"};
+      my $nlock :shared;
+      lock($nlock) unless $wcache{"$svnuser-$dirname-$revision"};
       my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         my $limit;
         $limit = 10 unless defined $revision;
