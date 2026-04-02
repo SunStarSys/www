@@ -279,7 +279,7 @@ s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
 
 my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx, $hits);
 
-tie my %pw, 'BerkeleyDB::Hash', -Filename => "/x1/repos/svn-auth/$repos/user+group", -Env => $env, -Flags => DB_RDONLY or die "Can't open $repos database: $!";
+tie my %pw, 'BerkeleyDB::Hash', -Filename => "/x1/repos/svn-auth/$repos/user+group", -Flags => DB_RDONLY or die "Can't open $repos database: $!";
 my $svnuser = $r->pnotes("svnuser");
 
 if ($repos and $re =~ /^weblog=(.*)/i) {
