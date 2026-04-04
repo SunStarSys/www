@@ -6,7 +6,7 @@ use re 'eval';
 use locale ':time';
 use threads;
 use threads::shared;
-
+use APR::Error;
 use Text::Balanced ();
 use Apache2::Const qw/HTTP_OK OK HTTP_BAD_REQUEST/;
 use Apache2::RequestRec;
