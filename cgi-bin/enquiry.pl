@@ -19,14 +19,14 @@ use Apache2::Const -compile => qw/HTTP_OK OK HTTP_BAD_REQUEST/;
 my Apache2::RequestRec $r = shift;
 
 my $DOMAIN = q/sunstarsys.com/;
-local our $date   = gmtime;
-local our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
+our $date   = gmtime;
+our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
 
-local our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
-local our $validator = $r->dir_config->get("validator") // "orion";
-local our $lang = get_client_lang($r);
+our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
+our $validator = $r->dir_config->get("validator") // "orion";
+our $lang = get_client_lang($r);
 
-local our %LANG = (
+our %LANG = (
   ".de" => "de_DE",
   ".en" => "en_US",
   ".es" => "es_ES",
@@ -37,7 +37,8 @@ local our %LANG = (
   ".zh-TW" => "zh_TW"
 );
 
-local our $LANG_RE = eval "qr/" . join("|", map "\\Q$_\\E\\b", keys %LANG) . "/";
+our $LANG_RE = eval "qr/" . join("|", map "\\Q$_\\E\\b", keys %LANG) . "/";
+warn $@ if $@;
 
 sub negotiate_file :Sealed {
   my Apache2::RequestRec $r = shift;
