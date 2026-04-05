@@ -65,6 +65,7 @@ sub get_client_lang :Sealed {
   my Apache2::RequestRec $r = shift;
   my APR::Request::Apache2 $apreq;
   $apreq = $apreq->handle($r);
+  our $LANG_RE;
   my ($cdata) = negotiate_file($r, "/sitemap", "/index") =~ /($LANG_RE)[^\/]*$/;
   my $lang = $apreq->args("lang") // $cdata;
   $lang =~ s/[_-].*$//;
