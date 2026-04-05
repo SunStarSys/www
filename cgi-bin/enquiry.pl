@@ -37,7 +37,7 @@ local our %LANG = (
   ".zh-TW" => "zh_TW"
 );
 
-local our $LANG_RE = eval "qr/" . join("|", map "\Q$_\E\\b", keys %LANG) . "/";
+local our $LANG_RE = eval "qr/" . join("|", map "\\Q$_\\E\\b", keys %LANG) . "/";
 
 sub negotiate_file :Sealed {
   my Apache2::RequestRec $r = shift;
