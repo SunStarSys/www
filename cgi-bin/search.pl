@@ -1,5 +1,5 @@
 #!/usr/local/bin/perl -T -I /x1/cms/build/lib
-# Copyright 2026 SunStar Systems, Inc.  All rights reserved.
+# Copyright 2023 SunStar Systems, Inc.  All rights reserved.
 use v5.38;
 use utf8;
 use re 'eval';
