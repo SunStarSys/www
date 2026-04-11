@@ -575,7 +575,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
       my $nlock :shared;
-      lock($nlock) unless $wcache{"$svnuser-$dirname-$revision"};
+      lock($nlock) unless $ncache{"$svnuser-$dirname-$revision"};
       my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         my $limit;
         $limit = 10 unless defined $revision;
