@@ -34,6 +34,7 @@ use BerkeleyDB;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
+use Safe;
 no warnings 'uninitialized';
 use constant IGNORE_SELFIES => 1;
 
