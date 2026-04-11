@@ -288,12 +288,38 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
   if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
     my $prefix = $r->path_info;
     $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
+    my @opcodes = qw/const padany lineseq rv2gv rv2sv gvsv concat multiconcat match cond_expr leaveeval
+    preinc i_preinc predec i_predec postinc i_postinc
+    postdec i_postdec int hex oct abs pow multiply i_multiply
+    divide i_divide modulo i_modulo add i_add subtract i_subtract
+    left_shift right_shift bit_and bit_xor bit_or nbit_and
+    nbit_xor nbit_or sbit_and sbit_xor sbit_or negate i_negate not
+    complement ncomplement scomplement
+    lt i_lt gt i_gt le i_le ge i_ge eq i_eq ne i_ne ncmp i_ncmp
+    slt sgt sle sge seq sne scmp
+    isa
+    substr substr_left vec stringify study pos length index
+    rindex ord chr
+    /;
+    my @args = qw/-CSD -Mutf8 -MSafe -i -nle/;
+    my $script = <<EOT;
+BEGIN {
+  my \$s=new Safe;
+  \$s->permit_only(qw/@opcodes/);
+  \$s->reval(q(m{$filter}i});
+  die \$@ if \$@;
+}
+EOT
+	local $@;
+	eval $script;
+	die $@ if $@;
     my Digest::SHA1 $sha1;
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
     $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
     while ($_ = ($sha1->hexdigest eq $hash ? shift @lines : <$fh>)) {
       /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
+
       /$filter/i or next if length $filter;
       /$prefilter/i or next if length $prefilter;
       push @weblog, $_;
