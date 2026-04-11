@@ -35,6 +35,9 @@ use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
 use Safe;
+use base 'sealed';
+use sealed;
+
 no warnings 'uninitialized';
 use constant IGNORE_SELFIES => 1;
 
