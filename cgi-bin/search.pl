@@ -303,13 +303,12 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     rindex ord chr
     /;
     my @args = qw/-CSD -Mutf8 -MSafe -i -nle/;
-    my $script = <<EOT;
-BEGIN {
-  my \$s=new Safe;
-  \$s->permit_only(qw/@opcodes/);
-  \$s->reval(q(m{$filter}i});
-  die \$@ if \$@;
-}
+    my $script = <<'EOT';
+  use Safe;
+  my $s=Safe->new;
+  $s->permit_only(qw/@opcodes/);
+  $s->reval(m{$filter}i);
+  die $@ if $@;
 EOT
 	local $@;
 	eval $script;
