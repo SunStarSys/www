@@ -306,7 +306,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     my $script = <<'EOT';
   use Safe;
   my $s=Safe->new;
-  $s->permit_only(qw/@opcodes/);
+  $s->permit_only(@opcodes);
   $s->reval(m{$filter}i);
   die $@ if $@;
 EOT
