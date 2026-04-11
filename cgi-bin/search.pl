@@ -308,9 +308,11 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     my Safe $s;
 	$s = $s->new;
     $s->permit_only(@opcodes);
-    $s->reval(qq(m{$prefilter}i));
-    $s->reval(qq(m{$filter}i));
-
+	eval {
+      $s->reval(qq(m{$prefilter}i));
+      $s->reval(qq(m{$filter}i));
+    };
+	return Apache2::Const::HTTP_BAD_REQUEST if $@;
     my Digest::SHA1 $sha1;
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
