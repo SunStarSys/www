@@ -308,6 +308,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     my Safe $s;
 	$s = $s->new;
     $s->permit_only(@opcodes);
+    $s->reval(qq(m{$prefilter}i));
     $s->reval(qq(m{$filter}i));
 
     my Digest::SHA1 $sha1;
