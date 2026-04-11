@@ -304,13 +304,15 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     substr vec stringify study pos length index
     rindex ord chr pos
     /;
-
+    local $@;
     my Safe $s;
 	$s = $s->new;
     $s->permit_only(@opcodes);
 	eval {
       $s->reval(qq(m{$prefilter}i));
+      die $@ if $@;
       $s->reval(qq(m{$filter}i));
+      die $@ if $@;
     };
 	return Apache2::Const::HTTP_BAD_REQUEST if $@;
     my Digest::SHA1 $sha1;
