@@ -308,20 +308,18 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     my Safe $s;
 	$s = $s->new;
     $s->permit_only(@opcodes);
-	eval {
-      $s->reval(qq(m{$prefilter}i));
-      $s->reval(qq(m{$filter}i));
-    };
-	return Apache2::Const::HTTP_BAD_REQUEST if $@;
     my Digest::SHA1 $sha1;
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
     $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
     while ($_ = ($sha1->hexdigest eq $hash ? shift @lines : <$fh>)) {
       /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
-
-      /$filter/i or next if length $filter;
-      /$prefilter/i or next if length $prefilter;
+      local $@;
+      eval {
+        $s->reval(qq(m{$prefilter}i)) or next if length $prefilter;
+        $s->reval(qq(m{$filter}i))    or next if length $filter;
+      };
+      return Apache2::Const::HTTP_BAD_REQUEST if $@;
       push @weblog, $_;
       /HTTP.{5} \d+ (\d+) .* \([\d-]+%\) (\d+)$/ or next;
       push @duration, $2;
