@@ -314,7 +314,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
       $s->reval(qq(m{$filter}i));
       die $@ if $@;
     };
-	return Apache2::Const::HTTP_BAD_REQUEST if $@;
+	$r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
     my Digest::SHA1 $sha1;
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
