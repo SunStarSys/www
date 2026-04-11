@@ -534,7 +534,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
       s/:4433//, s/-internal// for $url;
-      my $wlock :shared;
+      our $wlock :shared;
       lock($wlock) unless $wcache{"$svnuser-$url"};
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
         my $w = $svn->propget("orion:watchers", $url, "HEAD", 1);
@@ -577,7 +577,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 
       $dirname =~ /^(.*)$/ or die "Can't detaint '$dirname'!";
       $dirname = $1;
-      my $nlock :shared;
+      our $nlock :shared;
       lock($nlock) unless $ncache{"$svnuser-$dirname-$revision"};
       my ($log) = thaw($ncache{"$svnuser-$dirname-$revision"} ||= do {
         my $limit;
