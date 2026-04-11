@@ -306,7 +306,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
   use Safe;
   my $s=Safe->new;
   $s->permit_only(@opcodes);
-  $s->reval(m{$filter}i);
+  $s->reval(qq(m{$filter}i));
   die $@ if $@;
 EOT
 	local $@;
