@@ -283,13 +283,8 @@ my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $aut
 tie my %pw, 'BerkeleyDB::Hash', -Filename => "/x1/repos/svn-auth/$repos/user+group", -Flags => DB_RDONLY or die "Can't open $repos database: $!";
 my $svnuser = $r->pnotes("svnuser");
 
-if ($repos and $re =~ /^weblog=(.*)/i) {
-  my $prefilter = $1;
-  $prefilter = "" unless $pw{$svnuser} =~ /\bsvnadmin\b/;
-  if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
-    my $prefix = $r->path_info;
-    $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
-    state @opcodes = qw/const padany lineseq rv2gv rv2sv gvsv concat multiconcat match leaveeval
+state @opcodes = qw/
+    const padany lineseq rv2gv rv2sv gvsv concat multiconcat match leaveeval
     null stub scalar pushmark wantarray const defined undef
     rv2sv sassign padsv_store
     cond_expr flip flop andassign orassign dorassign and or dor xor helemexistsor
@@ -303,25 +298,34 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     slt sgt sle sge seq sne scmp
     substr vec stringify study pos length index
     rindex ord chr pos
-    /;
+/;
+
+if ($repos and $re =~ /^weblog=(.*)/i) {
+  my $prefilter = $1;
+  $prefilter = "" unless $pw{$svnuser} =~ /\bsvnadmin\b/;
+  if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
+    my $prefix = $r->path_info;
+    $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
+
     local $@;
     my Safe $s;
-	$s = $s->new;
+    $s = $s->new;
     $s->permit_only(@opcodes);
-	eval {
+    eval {
+      $s->reval(qq(m{\Q$prefix}));
+      die $@ if $@;
       $s->reval(qq(m{$prefilter}i));
       die $@ if $@;
       $s->reval(qq(m{$filter}i));
       die $@ if $@;
     };
-	$r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
+    $r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
     my Digest::SHA1 $sha1;
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
     $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
     while ($_ = ($sha1->hexdigest eq $hash ? shift @lines : <$fh>)) {
       /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
-
       /$filter/i or next if length $filter;
       /$prefilter/i or next if length $prefilter;
       push @weblog, $_;
@@ -631,6 +635,18 @@ if ($re !~ $specials_re) {
   $sha1->add(join ":", $r->dir_config("CookieSecret"), $apreq->body("files"));
   $sha1->add(join ":", $r->dir_config("CookieSecret"), $sha1->hexdigest);
   my $pffxg;
+
+  local $@;
+  my Safe $s;
+  $s = $s->new;
+  $s->permit_only(@opcodes);
+  eval {
+    $s->reval(qq(m{$re}i));
+    die $@ if $@;
+    $s->reval(qq(m{$filter}i));
+    die $@ if $@;
+  };
+  $r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
 
   if ($sha1->hexdigest ne $hash) {
     undef $filter;
