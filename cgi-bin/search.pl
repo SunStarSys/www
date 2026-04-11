@@ -36,7 +36,7 @@ use Digest::SHA1;
 use Time::timegm 'timegm';
 use Safe;
 use base 'sealed';
-use sealed 'deparse';
+use sealed;
 
 no warnings 'uninitialized';
 use constant IGNORE_SELFIES => 1;
