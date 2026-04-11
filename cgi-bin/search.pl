@@ -289,7 +289,8 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
   if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
     my $prefix = $r->path_info;
     $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
-    my @opcodes = qw/const padany lineseq rv2gv rv2sv gvsv concat multiconcat match cond_expr leaveeval
+    my @opcodes = qw/const padany lineseq rv2gv rv2sv gvsv concat multiconcat match leaveeval
+    cond_expr flip flop andassign orassign dorassign and or dor xor helemexistsor
     preinc i_preinc predec i_predec postinc i_postinc
     postdec i_postdec int hex oct abs pow multiply i_multiply
     divide i_divide modulo i_modulo add i_add subtract i_subtract
