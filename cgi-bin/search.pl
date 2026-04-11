@@ -298,9 +298,8 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     complement ncomplement scomplement
     lt i_lt gt i_gt le i_le ge i_ge eq i_eq ne i_ne ncmp i_ncmp
     slt sgt sle sge seq sne scmp
-    isa
-    substr substr_left vec stringify study pos length index
-    rindex ord chr
+    substr vec stringify study pos length index
+    rindex ord chr pos
     /;
     my @args = qw/-CSD -Mutf8 -MSafe -i -nle/;
     my $script = <<'EOT';
