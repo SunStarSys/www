@@ -289,7 +289,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
   if (open my $fh, "<:raw", "/x1/logs/httpd/access_log") {
     my $prefix = $r->path_info;
     $filter = $1 if $pw{$svnuser} =~ /\bsvnadmin\b/ and $filter =~/(.*)/;
-    my @opcodes = qw/const padany lineseq rv2gv rv2sv gvsv concat multiconcat match leaveeval
+    state @opcodes = qw/const padany lineseq rv2gv rv2sv gvsv concat multiconcat match leaveeval
     null stub scalar pushmark wantarray const defined undef
     rv2sv sassign padsv_store
     cond_expr flip flop andassign orassign dorassign and or dor xor helemexistsor
@@ -304,17 +304,12 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     substr vec stringify study pos length index
     rindex ord chr pos
     /;
-    my @args = qw/-CSD -Mutf8 -MSafe -i -nle/;
-    my $script = <<'EOT';
-  use Safe;
-  my $s=Safe->new;
-  $s->permit_only(@opcodes);
-  $s->reval(qq(m{$filter}i));
-  die $@ if $@;
-EOT
-	local $@;
-	eval $script;
-	die $@ if $@;
+
+    my Safe $s;
+	$s = $s->new;
+    $s->permit_only(@opcodes);
+    $s->reval(qq(m{$filter}i));
+
     my Digest::SHA1 $sha1;
     $sha1 = $sha1->new;
     $sha1->add(join ":", $r->dir_config("CookieSecret"), my @lines = $apreq->body("lines"));
