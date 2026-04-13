@@ -20,7 +20,8 @@ title: Hem
 
 <br>
 
-<h2 class="card-title">SunStar System' Orion&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt.
+<h2 class="card-title">SunStar System' Orion&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash;
+Nu med LAUNCH_APACHE2 support!
 </h2>
 
 <br>
@@ -121,4 +122,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-03-01 14:48:10 -0700 (Sun, 01 Mar 2026) $ $Author: joe $ $Revision: 28063 $ -->
+<!-- $Date: 2026-03-22 11:29:12 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29874 $ -->

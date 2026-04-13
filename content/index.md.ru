@@ -20,7 +20,8 @@ title: Главная
 
 <br>
 
-<h2 class="card-title">SunStar Системы' Орион&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} Освобожден.
+<h2 class="card-title">SunStar Системы' Орион&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash;
+Теперь с поддержкой LAUNCH_APACHE2!
 </h2>
 
 <br>
@@ -121,4 +122,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-03-01 14:48:10 -0700 (Sun, 01 Mar 2026) $ $Author: joe $ $Revision: 28063 $ -->
+<!-- $Date: 2026-03-22 11:29:12 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29874 $ -->
