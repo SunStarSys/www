@@ -45,7 +45,7 @@ Para obtener información sobre los precios, consulte nuestro [Planes de Orion](
 
 <span class="text-white">¿Por qué elegir Orion? La plataforma Wiki de Jamstack que supera &mdash; y costos mucho menos</span>
 
-Lo que realmente distingue a Orión es'Solo otra plataforma wiki &mdash; es'Nuestra tecnología patentada Orion, un enfoque probado en batalla y pendiente de patente que ofrece una eficiencia inigualable.
+Lo que realmente distingue a Orión es'Solo otra plataforma wiki &mdash; es's nuestra tecnología patentada Orion, un enfoque probado en batalla y pendiente de patente que ofrece una experiencia de usuario elegante con una eficiencia inigualable.
 
 Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece controles editoriales superiores, seguridad de nivel empresarial y características innovadoras que ninguna wiki heredada puede igualar. Pasamos esos ahorros masivos directamente a usted. Espere solo unos cargos adicionales modestos y transparentes para los recursos exactos en la nube que utilice &mdash; no hay niveles de precios inflados ni tarifas ocultas.
 
@@ -111,7 +111,7 @@ Este [tecnología](https://iconoclasts.blog/joe/apache-cms) fue inventado a fina
 
 <h4>¿Quieres darle un giro rápido para ver qué tan rápido y fácil es?</h4>
 
-Este sitio web es auto-alojado; todos esos cuadrados de lápiz rosa caliente [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En la parte superior derecha están vivos.  ¡Siéntete libre de moverte y experimentar con cualquier cosa que veas!  Lo único que puedes't do es confirmar y observar cómo se crean y despliegan los cambios; que'restringido a nuestro personal por razones obvias.
+Este sitio web se aloja automáticamente en Orion; todos esos cuadrados de lápiz rosa caliente [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En la parte superior derecha están vivos.  ¡Siéntete libre de moverte y experimentar con cualquier cosa que veas!  Lo único que puedes't do es confirmar y observar cómo se crean y despliegan los cambios; que'restringido a nuestro personal por razones obvias.
 
 Nuestra red global de puntos de presencia (POP) garantiza conexiones de baja latencia tanto a Orion &trade; y los sitios web de entrega final que alojamos.  Actualmente estamos en cuatro continentes y tenemos una presencia bicoastal dentro de los Estados Unidos.  Y nosotros'se está expandiendo rápidamente: ¡la próxima África y Asia Oriental!
 

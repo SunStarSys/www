@@ -45,7 +45,7 @@ För prisinformation, se vår [Orionplaner](plans).
 
 <span class="text-white">Varför välja Orion? Jamstack Wiki-plattformen som överträffar &mdash; och kostar betydligt mindre</span>
 
-Vad som verkligen sätter Orion isär'Bara en annan wiki-plattform &mdash; det var så'Vår egenutvecklade Orion Technology, en patentsökt metod som levererar oöverträffad effektivitet.
+Vad som verkligen sätter Orion isär'Bara en annan wiki-plattform &mdash; det var så'Vår egenutvecklade Orion-teknik, ett patentsökt tillvägagångssätt som ger en elegant användarupplevelse med oöverträffad effektivitet.
 
 Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjuder överlägsna redaktionella kontroller, säkerhet i företagsklass och banbrytande funktioner som ingen äldre wiki kan matcha. Vi skickar dessa enorma besparingar direkt till dig. Förvänta dig endast blygsamma, transparenta tilläggsavgifter för exakt de molnresurser du använder &mdash; inga uppsvällda prisnivåer eller dolda avgifter.
 
@@ -111,7 +111,7 @@ Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet
 
 <h4>Vill du ge det en snabb snurr för att se hur snabbt och enkelt det är?</h4>
 
-Denna webbplats är själv värd; alla dessa heta rosa penna rutor [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du kan't do är att bekräfta och titta på dina ändringar bygga och distribuera; att'Vi är begränsade till vår personal av uppenbara skäl.
+Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du kan't do är att bekräfta och titta på dina ändringar bygga och distribuera; att'Vi är begränsade till vår personal av uppenbara skäl.
 
 Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi är för närvarande på fyra kontinenter och har en bicoastal närvaro inom USA.  Och vi'expanderar snabbt - nästa upp Afrika och Östasien!
 
