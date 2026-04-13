@@ -537,6 +537,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
       our $wlock :shared;
       lock($wlock) unless $wcache{"$svnuser-$url"};
       my ($watchers) = thaw($wcache{"$svnuser-$url"} ||= do {
+        sleep 3;
         my $w = $svn->propget("orion:watchers", $dirname, undef, 1);
         $_ = {map {$_=>1} split /[, ]+/} for values %$w;
         while (my ($k, $v) = each %$w) {
