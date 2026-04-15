@@ -315,11 +315,11 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $s = $s->new;
     $s->permit_only(@opcodes);
     eval {
-      $s->reval(qq(m{\Q$prefix}));
+      $s->reval(qq(m{\Q$prefix})) if $prefix;
       die $@ if $@;
-      $s->reval(qq(m{$prefilter}i));
+      $s->reval(qq(m{$prefilter}i)) if $prefilter;
       die $@ if $@;
-      $s->reval(qq(m{$filter}i));
+      $s->reval(qq(m{$filter}i)) if $filter;
       die $@ if $@;
     };
     $r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
@@ -645,9 +645,9 @@ if ($re !~ $specials_re) {
   $s = $s->new;
   $s->permit_only(@opcodes);
   eval {
-    $s->reval(qq(m{$re}i));
+    $s->reval(qq(m{$re}i)) if $re;
     die $@ if $@;
-    $s->reval(qq(m{$filter}i));
+    $s->reval(qq(m{$filter}i)) if $filter;
     die $@ if $@;
   };
   $r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
