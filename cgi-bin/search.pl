@@ -315,7 +315,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $s = $s->new;
     $s->permit_only(@opcodes);
     eval {
-      $s->reval(qq(m{\Q$prefix})) if $prefix;
+      $s->reval(qq(m{\Q$prefix\E})) if $prefix;
       die $@ if $@;
       $s->reval(qq(m{$prefilter}i)) if $prefilter;
       die $@ if $@;
