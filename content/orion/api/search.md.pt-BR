@@ -1,0 +1,93 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR '
+keywords: DESCANSO,API
+published: ~
+status: rascunho
+title: Orion API - Pesquisar
+---
+
+{# lede #}Este documento aborda as APIs **Pesquisar**{# lede #}.
+
+[TOC]
+
+----
+
+## Pesquisa Dinâmica (/dynamic/search/...).
+
+### Argumentos da String de Consulta
+
+#### idioma
+
+- [`Português`](#)
+- [`.`](#)
+- [`.fr`](#)
+- [`.de`](#).
+
+#### markdown_search
+
+booliano (0 ou 1).
+
+#### regex
+
+##### modos especiais
+
+###### todas as contas
+
+- [`amigos=`](#)
+- [`relógio=`](#)
+- [`notificar=$revisão`](#)
+- [`como=`](#) (WIP)
+- [`diff=$revisão`](#)
+- [`log=$revisão`](#)
+- [`@$group=`](#)
+- [`$user=`](#).
+
+###### grupo svnadmin
+
+- [`build=`](#)
+- [`acl=`](#)
+- [`deps=`](#)
+- [`svnauthz=`](#).
+
+##### modos de compatibilidade
+
+- string entre aspas
+- lista de palavras-chave
+
+##### Modo PCRE
+
+### Filtrar iteração
+
+- [`filtro`](#).
+
+Filtro PCRE iterado e com monitoramento de estado em arquivos correspondentes.
+
+### Campos Genéricos de Resposta JSON
+
+- [`caminho`](#)
+- [`título`](#)
+- [`markdown_search`](#)
+- [`corresponder`](#)
+- [`idioma`](#)
+- [`regex`](#)
+- [`migalhas de pão`](#)
+- [`palavras-chave`](#)
+- [`amigos`](#)
+- [`relógio`](#)
+- [`grafite`](#)
+- [`duração`](#)
+- [`log`](#)
+- [`blog`](#)
+- [`diferente`](#)
+- [`meta`](#)
+- [`log`](#)
+- [`inhame`](#)
+- [`repositórios`](#)
+- [`site`](#)
+- [`hash`](#)
+- [`filtro`](#)
+- [`especiais`](#).
+
+<!-- $Date: 2024-04-23 11:57:27 -0700 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23677 $ -->

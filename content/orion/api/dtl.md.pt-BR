@@ -1,0 +1,89 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR'
+keywords: DESCANSO,API
+published: ~
+status: rascunho
+title: API do Orion - Biblioteca de Modelos do Django
+---
+
+{# lede #}Este documento aborda as APIs **Django Template Library (DTL)**{# lede #}.
+
+[TOC]
+
+----
+
+## DTL (Biblioteca de Modelos do Django 1.0).
+
+### Extensões de filtro do Django 1.0 ([Dotiac::DTL::Filtro](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm)).
+
+#### anexar
+
+Recebe um único argumento e anexa seu valor à entrada filtrada.  O argumento pode ser um varname ou uma string entre aspas; este filtro será inteligente sobre `/` personagens sendo unidos em [`anexar`](#).
+
+#### cortes
+
+Como [`corte`](#), mas o argumento é tomado como uma *substring* para ser omitido, em vez de uma lista de caracteres.
+
+#### lede
+
+Extrai o texto entre o &#123;# [`lede`](#) #&#125; blocos na string de entrada filtrada.
+
+#### ssi
+
+Avalia recursivamente todo o Django [`ssi`](#) tags na string de entrada filtrada.
+
+#### starts_with
+
+Testes para correspondência de prefixo.
+
+#### nome de diretório
+
+Retorna o UNIX tradicional [`nome de diretório`](#) do caminho na string de entrada filtrada.
+
+#### parse_filename
+
+Interface para [`SunStarSys::Util::parse_filename`](#). A principal diferença é que os dois primeiros valores de retorno dessa sub-rotina são trocados, e as extensões de caminho são todas interrompidas (com [`.`](#) prefixed) em argumentos individuais, permitindo que esse filtro use uma string de argumento representando uma lista de índices no array resultante. Como um caso especial, um argumento que termina em [`..`](#) unirá as extensões analisadas *all* ao final da string resultante.
+
+#### nome da base
+
+Retorna o UNIX tradicional [`nome da base`](#) do caminho na string de entrada filtrada. Passando um argumento de [`0`](#) para este filtro fará com que ele remova todas as extensões de arquivo da string resultante.
+
+#### tex2md
+
+Transformações $$\LaTeX$$ fontes em Markdown+$$\KaTeX$$ fontes.
+
+#### md2tex
+
+A transformação inversa de `tex2md`.
+
+#### vcs_date
+
+Leva um [`idioma`](#) para fornecer uma representação específica da localidade do dia, mês e ano da alteração mais recente apresentada pelo [`Data $`](#) Palavra-chave do Subversion na string de entrada filtrada (que normalmente é a [`conteúdo`](#) do recurso atual).
+
+#### vcs_time
+
+Representa o deslocamento numérico de hora, minuto, segundos e fuso horário da alteração mais recente apresentada pelo [`Data $`](#) Palavra-chave do subversion na string de entrada filtrada.
+
+#### vcs_author
+
+Apresenta um [`seguro`](#) Representação HTML do usuário que atualizou o conteúdo mais recentemente, conforme registrado pela palavra-chave Subversion [`$Autor`](#) palavra-chave na string de entrada filtrada.  Aceita um opcional [`idioma`](#) argumento para uma representação específica de localidade.
+
+#### vcs_revision
+
+Apresenta o número de revisão numérica da alteração mais recente do conteúdo, conforme registrado pelo [`$Revisão`](#) palavra-chave na string de entrada filtrada.
+
+#### strip_prefix
+
+Remove o prefixo (caminho), passado como um argumento para este filtro, da string de entrada filtrada (caminho). O prefixo é padronizado para o regex [`\S+/content/`](#) caso contrário.
+
+#### embaralhar
+
+Embaralhar o array.
+
+#### img
+
+Obtenha a primeira imagem HTML5/Markdown do conteúdo filtrado.
+
+<!-- $Date: 2024-04-22 08:48:18 -0700 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23266 $ -->

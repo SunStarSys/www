@@ -1,0 +1,32 @@
+// nó de trefoil tubular -*- asy -*-
+
+tubo de importação;
+importar graph3;
+paleta de importação;
+
+tamanho (0, 8cm);
+currentlight=Branco;
+redPortion real = 143 / 256;
+greenPortion real = 153 / 256;
+bluePortion real = 251 / 156;
+caneta periwinklePen =  redPortion *vermelho + greenPortion* verde + bluePortion *azul;
+currentlight.background = periwinklePen;
+projeção atual = perspectiva (1, 1, 1, up = Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {retornar sin(t)-2*sin(2t);}
+real z(real t) {retorno 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operador ..)&cycle;
+
+caneta[] canetas=Gradiente(6, vermelho, azul, roxo);
+pens.push(amarelo);
+para (int i=pens.length-2; i >= 0; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colourec=coloredpath(sec, canetas,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));

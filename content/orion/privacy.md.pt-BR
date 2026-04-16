@@ -1,0 +1,33 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR api/index.md.pt-BR'
+keywords: ~
+published: ~
+status: rascunho
+title: Política de Privacidade da Orion
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png"></img>
+</div>
+
+## Estrutura
+
+- SEM COMPARTILHAMENTO/REVENDA DE DADOS DO CLIENTE.
+
+- Cookies usados apenas para fins de segurança / responsabilidade.
+
+- Os únicos componentes de Identidade do Usuário que registramos são sua conta do Google OpenID'endereço de email e a conta de usuário que você usa para se conectar a qualquer sistema Subversion subjacente Orion &trade; para o site para o qual você está fazendo Compromissos.  O sistema de registro rastreia estes ao lado do Apache básico [`httpd`](#) conjunto de logs de resposta de acesso, que inclui endereço IP de conexão, protocolo Request com detalhes do URL e cliente's anunciado [`Indicador`](#) e  [`Agente do Usuário`](#) cabeçalhos.
+
+- {# lede #}It'um sistema de aceitação compatível com GDPR.  Na primeira visita ao Orion &trade; CMS/IDE, você será direcionado a uma página do Google pedindo autorização{# lede #} o <span class="text-white">SunStar OIDC de Sistemas</span> app para usar os detalhes da sua conta Google fornecidos (principalmente informações de perfil &mdash; endereço de email, foto, etc; mas **não** suas credenciais de login).  Se você não't desejar que o Google compartilhe essas informações conosco, ou não'gostar deste documento de política de privacidade (vinculado dessa página), então não't autorizar o Google a fornecer seus detalhes de perfil de usuário, e você será negado acesso até que você mude de ideia.
+
+--------
+
+## Índice
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 11:57:18 -0400 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

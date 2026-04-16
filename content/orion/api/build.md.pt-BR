@@ -1,0 +1,205 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR '
+keywords: DESCANSO,API
+published: ~
+status: rascunho
+title: Orion API - Criação
+---
+
+{# lede #}Este documento aborda as APIs do **Build System**{# lede #}.
+
+[TOC]
+
+----
+
+## Sistema de Build
+
+### [SunStarSys::Visualizar](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+
+#### single_narrative(%args).
+
+Argumentos Obrigatórios:
+
+- [`modelo`](#)
+- [`caminho`](#)
+- [`idioma`](#).
+
+Argumentos Opcionais:
+
+- [`deps`](#)
+- [`quick_deps`](#)
+- [`pré-processamento`](#)
+- [`archive_root`](#)
+- [`category_root`](#).
+
+#### news_page(%args).
+
+#### mapa do site(%args).
+
+Índice de dependências classificado e específico de localidade.
+
+Argumentos Obrigatórios:
+
+- [`caminho`](#)
+- [`idioma`](#).
+
+Argumentos opcionais:
+
+- [`quick_deps`](#)
+- [`aninhado`](#)
+- [`pré-processamento`](#).
+
+#### assíntota(%args).
+
+Builds e Caches [`assíntota`](#) blocos de código triplo-backquoted.
+
+Argumentos Obrigatórios:
+
+- [`exibir`](#)
+- [`idioma`](#)
+- [`caminho`](#).
+
+#### skip(%args).
+
+Não'construí-los em tudo.  Em vez disso, crie os arquivos de origem gerados associados (por exemplo, `Português (BR)` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) para ser criado em uma execução de sistema de compilação secundária.
+
+#### yml2ext(%args).
+
+Converter arquivos YAML.
+
+Argumentos opcionais:
+
+- [`ext.`](#) assume como padrão `json`
+- [`filtro`](#) assume como padrão `json_raw`
+-[`modelo`](#) substituições `filtro` expressão padrão
+
+#### fetch_deps($path, $data, $quick).
+
+Argumentos Obrigatórios:
+
+- [`caminho`](#)
+- [`dados`](#) - lojas resultantes de anon-array de deps
+- [`rápido`](#) - assume 2 como padrão
+
+#### breadcrumbs($path).
+
+Retorna a lista de caminhos detalhados HTML para [$path](#).
+
+#### memoize(%args).
+
+Coloca em cache a compilação; usada principalmente com fetch_deps e quick_deps > 2.
+
+#### compactar(%args).
+
+Obsoleto.
+
+#### next_view(%args).
+
+Utilitário para processamento de $args{exibir}.
+
+#### ssi(%args).
+
+Avalia recursivamente [ssi](#) etiquetas.
+
+#### off-line(%args).
+
+Executa o next_view no modo off-line.
+
+#### snippet(%args).
+
+Processa linhas de trecho de código.
+
+#### reconstruir(%args).
+
+Reprocessa diretivas de Modelo no conteúdo criado de next_view.
+
+#### trim_local_links(%args).
+
+Reduz extensões de arquivo de links locais.
+
+#### normalize_links(%args).
+
+Normaliza links locais (./ e ../).
+
+----
+
+### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+
+#### read_text_file($file, $out, $content_lines).
+
+Analisa cabeçalhos+conteúdo do arquivo codificado em UTF-8 [`$arquivo`](#) e armazena resultados em [`$out`](#). [`$content_lines`](#) é o número máximo (opcional) de linhas de conteúdo a serem lidas.
+Retorna o número real de linhas lidas (incluindo cabeçalhos).
+
+[`$arquivo`](#) pode ser uma referência a uma string bruta, representando o conteúdo completo de um arquivo.  Os resultados em [`$out`](#) ainda será codificado em UTF-8.
+
+#### copy_if_newer($src, $dest).
+
+Cópias [`$src`](#) para [`$destino`](#) Se o primeiro'O timestamp de modificação s é mais recente que o último's. Na cópia, gzip-compacta o [`$destino`](#) arquivo se ele'é um arquivo de texto e adiciona ".gz" extensão do nome.
+
+#### get_lock($lockfile).
+
+Usa um (f)bloqueio exclusivo (para o processo UNIX atual) em [`$lockfile`](#).
+
+#### embaralhamento(\\@deck).
+
+No local aleatório (Fisher-Yates) embaralhamento de [`@deck`](#).
+
+#### sort_tables($content).
+
+Classifica Tabelas de Markdown em $content de acordo com cada tabela's  especificação da coluna.  Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente [`n`](#), em qualquer ordem decrescente [`v`](#) ou crescente [`^`](#) pedido.
+
+#### fixup_code($prefix, $type, @\_).
+
+Remove $prefix de cada argumento em @\_. A função do argumento $type é específica de implementação, mas é usada principalmente para pré-implantação do editor.md "modo" para processar este conteúdo em @\_.
+
+#### unload_package($pkg).
+
+Descarrega agressivamente o pacote Perl [`$pkg`](#) da Tabela de Símbolos (STASH).
+
+#### purge_from_inc(@paths).
+
+Remoções [`@paths`](#) de [`@INC`](#).
+
+#### touch(@\_).
+
+Toca todos os arquivos em [`@_`](#). Se nenhum argumento for passado, usa [`$_`](#).
+
+#### normalize_svn_path(@\_).
+
+Normaliza todos os caminhos em [`@_`](#) para uso seguro como argumentos brutos para [`SVN::Cliente`](#) comandos.
+
+#### sanitize_relative_path(@\_).
+
+Protege os caminhos em [`@_`](#) para uso como caminhos relativos puros em [`Dotiac::DTL`](#) Comandos específicos de caminho (Django Template).
+
+#### parse_filename($path).
+
+Encapsulador ao redor [`Arquivo::Basename::fileparse`](#). Sem argumentos, usa [`$_`](#) como o nome do arquivo a ser analisado.
+
+#### walk_content_tree($code).
+
+Condicionalmente anda o [`./conteúdo`](#) árvore do check-out do sistema de compilação, primeiro normalizando [`$_`](#) como subcaminho formal e, em seguida, invocando [`Código $`](#), em cada item na caminhada.
+
+##### arquivado($path).
+
+Sinaliza cada [`Status: arquivar`](#) [`$path`](#). Usos [`$_`](#) se nenhum argumento for passado.
+
+##### seed_file_deps($path).
+
+Atualizações [`%path::dependências`](#) para isso [`$path`](#)Com base em sua [`Dependências`](#) glob(s) de cabeçalho Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
+
+##### seed_file_acl($path).
+
+Atualizações [`@path::acl`](#) para isso [`$path`](#)Com base em sua [`ACL`](#) especificação do cabeçalho. Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
+
+#### Carregar
+
+Igual a [`YAML::XS::Carregar`](#).
+
+#### Despejo
+
+Igual a [`YAML::XS::Dump`](#).
+
+<!-- $Date: 2024-04-13 22:05:29 -0400 (Sat, 13 Apr 2024) $ $Author: joe $ $Revision: 22295 $ -->

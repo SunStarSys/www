@@ -1,0 +1,124 @@
+<! Html DOCTYPE PÚBLICO "-//W3C//DTD XHTML 1.0 Estrito//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC Ajuda: View do Diretório</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC Ajuda: View do Diretório</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>Ajuda</h3>
+       <a href="help_rootview.html">Geral</a><br />
+       <strong>Diretório&nbsp;Exibir</strong><br />
+       <a href="help_log.html">Log&nbsp;Exibir</a><br />
+
+<h3>Internet</h3>
+       <a href="http://viewvc.org/index.html">Início</a><br />
+       <a href="http://viewvc.org/upgrading.html">Fazendo upgrade</a><br />
+       <a href="http://viewvc.org/contributing.html">Contribuindo</a><br />
+       <a href="http://viewvc.org/license-1.html">Licença</a><br />
+    </td><td colspan="2">
+
+<p>A exibição de listagem de diretórios deve ser uma visão familiar para qualquer
+    usuário do computador. Mostra o caminho do diretório atual que está sendo exibido
+    no topo da página. Abaixo, há uma tabela resumindo o
+    conteúdo do diretório e, em seguida, vem conteúdo real, uma lista classificável de
+    todos os arquivos e subdiretórios dentro do diretório atual.</p>
+
+<p><a name="summary"></a>A tabela de resumo é composta por alguns ou todos
+    das seguintes linhas:</p>
+    <ul>
+      <li><a name="summary-files-shown"><strong>Arquivos mostrados</strong></a>
+      - Número de arquivos mostrados na listagem de diretórios. Isso pode ser menos
+      do que o número real de arquivos no diretório se um
+      <a href="#option-search">pesquisa de expressão regular</a> está no local,
+      ocultando arquivos que não'atender aos critérios de pesquisa. No diretório CVS
+      listagens, esta linha também terá um link para alternar a exibição de
+      <a href="help_rootview.html#dead-files">arquivos mortos</a>, se houver algum
+      presente.</li>
+
+<li><a name="summary-revision"><strong>Diretório
+      Revisão</strong></a> - Apenas para diretórios Subversion.
+      Mostrado como "Nº de" onde o primeiro número é o mais recente
+      revisão do repositório onde o diretório (ou um caminho abaixo dele)
+      foi modificado. O segundo número é apenas o repositório mais recente
+      revisão. Ambos os números são links para
+      <a href="help_rootview.html#view-rev">visualizações de revisão</a></li>
+
+<li><a name="summary-sticky-revision-tag"><strong>Adesivo
+     Revisão/Tag</strong></a> - mostra o atual
+     <a href="help_rootview.html#sticky-revision-tag">revisão de adesivo ou
+     etiqueta</a> e contém campos de formulário para defini-lo ou limpá-lo.</li>
+
+<li><a name="summary-search"><strong>Pesquisa atual</strong></a> -
+     Se um <a href="#option-search">pesquisa de expressão regular</a> está no local,
+     mostra a string de pesquisa.</li>
+
+<li><a name="summary-query"><strong>Consulta</strong></a> - Fornece
+     um link para um <a href="help_rootview.html#view-query">formulário de consulta</a>
+     para o diretório</li>
+   </ul>
+
+<p><a name="list"></a>A lista de diretórios real é uma tabela com
+  nomes de arquivos e nomes de diretórios em uma coluna e informações sobre o
+  revisões mais recentes em que cada arquivo ou diretório foi modificado no
+  outras colunas. Os cabeçalhos de coluna podem ser clicados para classificar o diretório
+  entradas em ordem por uma coluna e clicado novamente para reverter a classificação
+  pedido.</p>
+
+<p>
+  <!-- If using directory.ezt template -->
+  Os nomes de arquivo são links para <a href="help_log.html">visualizações de log</a>
+  mostrando uma lista de revisões em que um arquivo foi modificado. Revisão
+  números são links para ambos
+  <a href="help_rootview.html#view-markup">exibir</a>
+  ou <a href="help_rootview.html#view-checkout">baixar</a> um arquivo
+  (dependendo do tipo de arquivo). Os links são revertidos para diretórios.
+  Os números de revisão do diretório são links para <a href="help_log.html">log
+  exibições</a>, enquanto os nomes dos diretórios são links que mostram o conteúdo desses
+  diretórios.
+
+<!-- If using dir_alt.ezt template -->
+  <!--
+  Os nomes de arquivo e diretório são links para recuperar seu conteúdo.
+  Os links do arquivo podem ser
+  <a href="help_rootview.html#view-markup">exibir</a>
+  ou <a href="help_rootview.html#view-download">baixar</a> links
+  dependendo do tipo de arquivo. Os links do diretório vão para o diretório
+  listagens. Os números de revisão são links para <a href="help_log.html">log
+  exibições</a> mostrando listas de revisões nas quais um arquivo ou diretório estava
+  modificado.
+  -->
+
+Além disso, em repositórios CVS com o <a
+  href="Gráfico help_rootview.html#view">exibição gráfica</a> habilitado, lá
+  serão pequenos ícones ao lado de nomes de arquivos que são links para revisão
+  gráficos.</p>
+
+<p>Dependendo de como o ViewVC está configurado, pode haver mais opções
+  na parte inferior das páginas do diretório:</p>
+
+<ul>
+    <li><a name="option-search"><strong>Expressão regular
+    procurar</strong></a> - Se ativado, mostrará um campo de formulário aceitando
+    uma string de pesquisa (a
+    <a href="http://doc.python.org/lib/re-syntax.html">python regular
+    expressão</a>). Após o envio, somente os arquivos que tiverem pelo menos
+    uma ocorrência da expressão aparecerá nas listagens de diretórios.
+    </li>
+    <li><a name="option-tarball"><strong>Baixar Tarball</strong></a> -
+    Se ativado, mostrará um link para fazer download de um arquivo tar compactado do
+    o conteúdo do diretório.</li>
+  </ul>
+
+</td></tr></table>
+  </body>
+</html>

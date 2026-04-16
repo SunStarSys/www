@@ -1,0 +1,41 @@
+---
+archived: ~
+categories: ~
+keywords: open source,osi,apache-license,usuário principal
+published: ~
+status: ~
+title: Projetos de Código Aberto
+---
+
+### Participação em Código Aberto
+
+O núcleo de nossas crenças é a proposta de valor inata do software de código aberto.  Colaborativo [lead-usuário](http://en.wikipedia.org/wiki/Lead_user) comunidades e suas redes vizinhas têm sido uma parte de nosso trabalho desde o início dos Sistemas SunStar, principalmente em tecnologias derivadas de ou originadas em [A Fundação Apache Software](http://www.apache.org/).
+
+Você tem uma estratégia de código aberto para sua linha de produtos?  Quão modular é o seu software, e faz sentido dar aos usuários acesso a esses pontos de extensão?  Nunca ouvi falar do [Princípio de Hollywood](http://en.wikipedia.org/wiki/Hollywood_principle)? Podemos ajudá-lo a navegar com sucesso na onda de inovação do usuário e aproveitar o potencial de seus clientes mais ativos, deixando as armadilhas e armadilhas para sua concorrência.
+
+#### Lista de Projetos'estiveram envolvidos, no todo ou em parte:
+
+- [mod_perl](https://perl.apache.org/) &mdash; Intérprete perl incorporado dentro de httpd.
+
+- [libapreq](https://httpd.apache.org/apreq/) &mdash; Dados de formulário HTML seguros/rápidos e biblioteca de análise de cookies.
+
+- [Apache CMS](https://github.com/SunStarSys/orion) &mdash; CMS que atende mais de 100 projetos Apache.
+
+- [ortrus](https://github.com/SunStarSys/orthrus) &mdash; [OTP](https://en.wikipedia.org/wiki/One-time_password) aplicação de segurança; AL-2.0 *portable* queda em substituição para OPIE.
+
+- [em](https://github.com/joesuf4/at) &mdash; [TAP](https://testanything.org)Estrutura de teste de unidade C compatível.
+
+- [pty](https://github.com/SunStarSys/pty) &mdash; Ferramentas para respostas de prompt de credenciais do terminal automatizado.  No espírito de [TCL esperado](https://en.wikipedia.org/wiki/Expect), mas *portable* em diferentes linguagens de programação.
+
+- [pffxg](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash; Funcionalidade grep recursiva paralelizada e filtrada semelhante à do Silver Searcher, mas 4x mais rápido.
+
+- [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; Ganchos de commit distribuídos para subversão.
+
+- [topo](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; Porta nova do Solaris 11.4 que inclui suporte a ZFS/Zone sem falhas.
+
+- [selado](https://github.com/SunStarSys/sealed) &mdash; Pesquisas de método em tempo de compilação para léxicos tipados.
+
+- [Algoritmo::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash; Implementação rápida (XS) do algoritmo Longest Common Subsequence.
+
+- [schaefj/linter](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; Contêiner do Docker para [linter.{rc,sh}](https://github.com/SunStarSys/linter) scripts.
+<!-- $Date: 2026-03-11 11:11:40 -0700 (Wed, 11 Mar 2026) $ $Author: joe $ $Revision: 28511 $ -->

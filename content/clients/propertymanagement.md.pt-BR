@@ -1,0 +1,17 @@
+---
+archived: ~
+categories: ~
+keywords: Sites da comunidade
+published: ~
+status: ~
+title: Gerenciamento de Propriedade
+---
+
+Meu trabalho nesta área abrangeu 2000-2006 como um desenvolvedor de software e webmaster que
+escreveu um serviço semelhante ao CMS para hospedar sites da comunidade oferecidos pela propriedade local
+Empresas de gestão.  Estabeleceu interface com o software Tops para fornecer contabilidade on-line
+dados para proprietários, bem como vários fóruns para membros da comunidade se comunicarem
+uns com os outros.  No seu auge, hospedamos mais de 100 sites.  A tecnologia foi baseada
+em `O nas`, `mod_perl`, `httpd`, e `ms`- material típico de pilha de LAMP.  O único romance
+peça era para armazenar `SQL` instruções no próprio banco de dados, para fazer drill-down sequencialmente
+para registros individuais sem codificar o `SQL` na base de código.

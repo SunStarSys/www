@@ -1,0 +1,28 @@
+---
+archived: ~
+categories: ~
+keywords: qpsmtpd,Apache::Qpsmtpd,earlytalker,Apache CMS
+published: ~
+status: ~
+title: A Fundação Apache Software
+---
+
+![O ASF](apache.page/feather2.png).
+
+[A Fundação Apache Software](http://www.apache.org/) (A ASF) é uma instituição de caridade pública 501(c)(3) dedicada à promoção e desenvolvimento de software de código aberto.  Nos 8 anos em que atuou como Administrador de Sistema (contratado) para o ASF, a fundação triplicou em tamanho e escopo.  Fomos de uma meia cabine'em 2006 para mais de 4 armários em 2014, e estavam iniciando o processo de expansão para a nuvem.
+
+Quando comecei a trabalhar na Apache em 2006, o problema mais urgente era os serviços de correio de entrada sobrecarregados.  A organização estava se afogando em spam e, com 1,5 milhão de conexões de entrada por dia, estava excedendo a organização.'entrega de saída e sobrecarga do software.  Minha primeira tarefa foi resolver essa situação, então o que eu criei foi uma abordagem dupla: primeiro upgrade `qpsmtpd` para `Apache::Qpsmtpd`, o `mod_perl` variante experimental que converte `httpd` em um servidor de e-mail de entrada.
+
+`Apache::Qpsmtpd` precisava de alguns patches para torná-lo adequado para o serviço empresarial, que eu forneci.  Isso cuidou das preocupações imediatas que giram em torno da carga esmagadora do serviço, mas se as tendências de crescimento continuassem, isso significaria investimentos contínuos em mais e melhores hardwares e softwares, principalmente para atender a todo o crescimento da conexão de spam. Tentamos até mesmo um esforço abortivo para implantar `aceleração`, que no equipamento da Apple era't bastante estável o suficiente para que possamos migrar para em 2006.  `Aceleração` (agora conhecido como `Momento` de [Sistemas de Mensagens](http://www.messagesystems.com)) é um software muito bem projetado, com um impressionante equilíbrio de loops de eventos, threads de trabalho e pontos de extensão, mas, em última análise, exagere para o ASF.  As soluções de código aberto foram "bom".
+
+Entre na segunda parte da minha abordagem: uma tentativa de dissuadir os spammers de bater no ASF'servidores de email em primeiro lugar.  Isso envolveu patches `qpsmtpd`'s `earlytalker` plugin a ser executado no `DADOS` fase, combinada com catraca até 20 segundos - uma quantidade alta, mas tolerável, para todos os agentes de entrega de mensagens compatíveis com RFC.  Foi um equilíbrio delicado à medida que os níveis de spam subiram para 2 milhões, depois 2,5 milhões por dia, porque o `earlytalker` atraso aumentou os níveis de simultaneidade 4-5 vezes acima "normal" Os níveis e o spam continuaram a crescer. Nós estávamos empurrando `httpd`'s `MaxClients` configurações durante esse período, até o ponto de ter que compilar `httpd` para aumentar o limite compilado, mas depois de alguns meses começamos a ver melhorias mensuráveis.
+
+Normalmente `earlytalker` é executado antes do banner ser entregue, o que é subótimo quando o seu plugin principal para lidar com spammers gira em torno de listas negras de dns.  Executando `earlytalker` o mais tarde possível no `SMTP` A sessão significava que outros plugins antispam de ação mais rápida poderiam eliminar a conexão o mais rápido possível, antes que os atrasos começassem a entrar e amarrar `httpd` crianças.  Também spammers pagam este preço de atraso para cada mensagem enviada quando `earlytalker` é executado no `DADOS` fase, não apenas na iniciação de uma conexão que é o que acontece quando você a executa antes do banner.  Em outras palavras, lá'Não há outra maneira de contorná-lo além de enviar uma longa lista de destinatários que pode acionar outras ferramentas antispam.
+
+Ao longo de 8 anos, o impacto ecológico do meu `earlytalker` os ajustes foram claros: reduzimos o número de conexões diárias de spam de entrada **ten-fold**, para cerca de 150K por dia, espalhadas por dois servidores.  Os spammers estavam simplesmente **abandonando** o envio de mensagens para o apache.org, que era a melhor solução antispam possível.
+
+Além das tarefas rotineiras enfrentadas por cada Administrador do Sistema, minha outra realização principal no ASF foi a criação do `Apache CMS`. As razões e a razão por trás disso foram [documentado](http://www.apache.org/dev/cms), mas é importante notar que este software foi desenvolvido rapidamente ao longo de um período de 3 meses antes de ser pressionado em produção para o <http://www.apache.org/> site.  Ele alcançou uma popularidade dentro do ASF além das minhas expectativas mais loucas: mais de 100 projetos atualmente dependem dele para suas necessidades de site.  Ele reduz para sites pequenos, mas complexos, como [Apache Thrift](http://thrift.apache.org/), ao mesmo tempo em que aumenta para atender às necessidades de um site de 5 GB como [OpenOffice.org](http://www.openoffice.org/).
+
+Gostei da maior parte do meu tempo servindo as necessidades da comunidade Apache, mas depois de 8 anos era hora de uma mudança.  Vou sempre olhar com carinho para as muitas memórias e amigos que fiz enquanto estava lá, e desejo a Apache tudo de melhor no futuro.
+
+<!-- $Date: 2026-02-16 12:36:11 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27669 $ -->

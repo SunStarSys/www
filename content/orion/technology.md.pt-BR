@@ -1,0 +1,134 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR api/index.md.pt-BR'
+keywords: Markdown, Assintota, Sereia
+published: ~
+status: rascunho
+title: Tecnologia Orion
+---
+
+## Solaris 11.4
+
+- DTrace &mdash; adotamos a abordagem da pia da cozinha: todas as nossas ferramentas de linguagem de programação dinâmica se integram a ela.  Embora o bpftrace seja um bom desenvolvimento recente para o Linux, fazê-lo fazer coisas úteis no espaço dinâmico da linguagem está muito longe, que é onde está a ação.
+
+- ZFS &mdash; melhor com o Solaris, com suporte do Oracle Support.  Não aceite substitutos.
+
+- Zonas &mdash; fornece isolamento de serviço e compilações de site em sandbox adequadas.
+
+## node.js v21.6.1
+
+- Como o Editor.md é **incrível**, nós o transferimos para [`node.js`](#) &mdash; WYSIWYG, independentemente do espectador'contexto (editar no nosso IDE on-line, ou navegar no site de produção resultante).
+
+## Perl v5.38.2
+
+- {# lede #}Agora com mod_perl v2.0.13 w/ ithreads e httpd v2.4.58 w/ evento mpm.{# lede #}
+
+## Subversão v1.14.4
+
+- personalizado ithread-safe [`SVN::Cliente`](#) bindings com pools de memória por solicitação.
+
+- associações python3 nativas (v3.8.3).
+
+- portas encadeadas python3 de svnpubsub e svnwcsub &mdash; todo o *kit e caboodle* para implantação distribuída de sites corporativos/CDN usando o Subversion.
+
+- completou o python3 [viewvc](https://vcs.sunstarsys.com/viewvc/public/site) porta.  Examinará uma solicitação de pull para minhas alterações upstream conforme o tempo permitir.
+
+------------
+
+## Algumas observações sobre as estradas não (ainda?) Tirada...
+
+<br/>
+
+### SQL
+
+Nós're uma loja NoSQL para toda a nossa infraestrutura de site, e se você estiver sobrecarregado com um ponto único de falha gigante conhecido como um RDBMS que conduz o seu site'Por favor, reconsidere uma abordagem mais descentralizada baseada na tecnologia Jamstack e Serverless. Mesmo que'Não é nosso. Você vai nos agradecer mais tarde!
+
+### Por que não o Git?
+
+- O [`svn git`](#) ponte já existe se você preferir trabalhar com git si mesmo, em vez de usar o IDE on-line para Orion &trade;. Você tem opções! Você pode descobrir que obtém ainda mais quilometragem das ações GitHub, enviando suas alterações para GitHub (e colocando-as em uma ação GitHub, ou gancho pré-commit, ou ambos, digamos) antes [`dcommit svn git`](#)para o nosso repositório Subversion para publicação ao vivo. [Aqui](https://github.com/SunStarSys/www) é uma cópia git ao vivo e completa do histórico deste site inteiro's fontes.
+
+- Árvores de origem do site são'Como as árvores de origem de software, em termos de como você as altera e gerencia.  Eles'mais alinhados com [desenvolvimento baseado em devops/tronco](/essays/devops) que com [`fluxo de git`](#). Além disso, sites gigantes precisarão de SSI, e talvez um pouco de CGI, para seu uso: pelo menos para evitar a rotatividade de sites massiva e irrevisível de remetentes de commits igualmente massivos [`diferente`](#) nos deltas resultantes da árvore de compilação.
+
+- Para saber: tentando obter uma implementação de SSI totalmente funcional de alguns locais "servidor web" que você usa para visualizar suas alterações em algum outro sistema de compilação, é apenas um pouco bobo se você parar e pensar sobre isso.  Com o nosso Orion, você apenas cria uma ramificação no svn e sai de você: editando, comprometendo, construindo, navegando e **iterando**, instantaneamente, em um site por ramo e efêmero servido pelo Apache que's integrado ao Orion &trade; IDE'infraestrutura de link bidirecional (e redirecionamento de bookmarklet).  <span class="text-success">Sem nunca sair do navegador</span>.
+
+- Quando'É hora de migrar essas mudanças para o site de produção baseado em tronco, você pode optar por promover tanto, ou tão pouco, do ramo quanto você achar melhor, de volta ao tronco.  Se o tronco avançou desde que suas alterações de ramificação estavam prontas para o horário nobre, basta clicar no botão <span class="text-white">Sincronizar</span> para sincronizar o tronco com sua ramificação.  Depois de verificar novamente os resultados do build do commit pós-sync-merge para sua ramificação's site, vá em frente e clique no <span class="text-white">Promover</span> link, siga isso com um <span class="text-white">Confirmar</span> na mesma página com uma mensagem de log de commit razoável, e voilà, você agora está transmitindo no tronco'construção de produção.
+
+- Se você precisa distribuir e lidar com as árvores de construção resultantes usando o controle de versão, você não vai gostar git em grande escala. Especialmente ao integrar artefatos binários (por exemplo, versões de software) ou documentação de produto (legado) (pense em oxigênio ou javadocs), construídos usando este sistema ou usando um construtor de terceiros que você usa localmente para apenas fazer upload desses resultados de compilação diretamente para nossos repositórios de destino. Com a nossa abordagem, você pode evitar desordem desnecessária e inchaço em seu site's árvore de origem, ao contrário de como ele'd trabalhar com git, usando ramificações em um repositório comum para suas árvores de origem e de construção.
+
+- O Subversion suporta **controle de acesso detalhado** e permite que você faça check-outs parciais/esparsos de [`CABEÇA`](#); com o Git, você tem **NO ACL**s diferentes de um push de ramificação all-or-nothing e deve clonar a ramificação inteira (que inclui histórico) antes.  Se você não't reconhecer a necessidade destes conjuntos de recursos svn-somente, você tem't groked o item anterior's (ver acima) observações ainda.
+
+- Para o IDE, precisaríamos de bindings Perl read+write para [`libgit2`](#) (que é **não fornecido pela equipe de desenvolvimento de git real**, e é amplamente apoiado por corporações megalíticas que NÃO fornecem um IDE on-line para git como um produto SaaS comparável; e não, GitHub é't) para corresponder svn'regime de gerenciamento de memória compatível com httpd e segurança de thread POSIX (+ Perl ithreads), em um tempo de execução persistente e em vários repositórios git em disco do lado do servidor de árvores de sites clientes.  A maturidade dessa infraestrutura de código aberto não é financiável para 2020 em nossa estimativa, mas manteremos o controle sobre os desenvolvimentos que estão avançando.  Olhando para você, [`Git::Bruto`](#)!
+
+- Eu ainda não't saber como fazer uma porcelana git posix-thread-safe.  Segurança de thread em repositórios separados, mas dentro de um processo comum's RAM, é o caso de uso, não thread-segurança dentro de um determinado repositório (que é uma pergunta maluca).
+
+### Por que não Python, Ruby, Javascript ou Go?
+
+- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)-adicionado [`mod_python`](#) ainda tem um caminho a percorrer antes de atingir a maturidade de [`mod_perl`](#) em um mpm roscado. Além disso, nosso produto'a implementação atual está totalmente integrada ao servidor Apache HTTPd'API do módulo completo, que somente [`mod_perl`](#) fornece.
+
+- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)-adicionado [`mod_ruby`](#) foi largamente abandonado pela comunidade Ruby por várias razões de controle de qualidade.  Portando as origens personalizadas 5K LOC Perl 5 do Orion &trade; para um ambiente de programação diferente resultaria em aproximadamente um <span class="text-warning">Balão de 10-100 dobras</span> da implementação'contagem de linhas e, consequentemente, uma grande degradação de desempenho em qualquer outra linguagem de programação dinâmica.
+
+Para ter certeza, aqui está um instantâneo, datado de 19 de julho de 2020, da parte Sistemas SunStar da árvore de origem de produção para todo o Orion (IDE+build).  Há pouco mais envolvido além do nosso [`Dotiac::DTL`](#) garfo.  Todo o código relacionado ao build já foi de código aberto no GitHub.  O que permanece privado são as personalizações baseadas em C para árvores de origem de terceiros, que são diferenciais exclusivos para o nosso produto.
+
+```shell
+joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
+     1 build/lib/SunStarSys/ASF.pm
+   128 build/lib/SunStarSys/SVNUtil.pm
+   270 build/lib/SunStarSys/Util.pm
+    36 build/lib/SunStarSys/Value.pm
+    82 build/lib/SunStarSys/Value/Blogs.pm
+    61 build/lib/SunStarSys/Value/Jira.pm
+    77 build/lib/SunStarSys/Value/Mail.pm
+    70 build/lib/SunStarSys/Value/SVN.pm
+   106 build/lib/SunStarSys/Value/Snippet.pm
+    85 build/lib/SunStarSys/Value/Twitter.pm
+   378 build/lib/SunStarSys/View.pm
+  1260 webgui/lib/SunStarSys/Orion.pm
+   112 webgui/lib/SunStarSys/Orion/Cookie.pm
+   183 webgui/lib/SunStarSys/Orion/Filter.pm
+    90 webgui/lib/SunStarSys/Orion/MapToStorage.pm
+    59 webgui/lib/SunStarSys/Orion/WC.pm
+   194 webgui/lib/SunStarSys/Orion/WC/Add.pm
+    97 webgui/lib/SunStarSys/Orion/WC/Browse.pm
+   133 webgui/lib/SunStarSys/Orion/WC/Commit.pm
+    79 webgui/lib/SunStarSys/Orion/WC/Copy.pm
+    66 webgui/lib/SunStarSys/Orion/WC/Delete.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Diff.pm
+   182 webgui/lib/SunStarSys/Orion/WC/Edit.pm
+   116 webgui/lib/SunStarSys/Orion/WC/Mail.pm
+    70 webgui/lib/SunStarSys/Orion/WC/Merge.pm
+    67 webgui/lib/SunStarSys/Orion/WC/Move.pm
+    52 webgui/lib/SunStarSys/Orion/WC/Production.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Promote.pm
+    60 webgui/lib/SunStarSys/Orion/WC/Resolve.pm
+    64 webgui/lib/SunStarSys/Orion/WC/Revert.pm
+    82 webgui/lib/SunStarSys/Orion/WC/Rollback.pm
+   123 webgui/lib/SunStarSys/Orion/WC/Search.pm
+    78 webgui/lib/SunStarSys/Orion/WC/Staged.pm
+    24 webgui/lib/SunStarSys/Orion/WC/Static.pm
+    49 webgui/lib/SunStarSys/Orion/WC/Update.pm
+   220 webgui/lib/SunStarSys/SVN/Client.pm
+  4848 total
+```
+
+- [`mod_js`](#) nunca fez o corte para httpd v2, muito menos mpm encadeado's.
+
+- Tentando incorporar [`GoLang`](#) em httpd, com ligações nativas de controle de versão, seria um desafio divertido; apenas não para mim pessoalmente.  Boa linguagem com tradeoffs interessantes quando se trata de ligação dinâmica, mas um definitivo talvez para investigação futura.
+
+- No que diz respeito ao sistema de compilação Perl 5, fique atento!  *Nenhuma razão pode't* ser portado para qualquer outra linguagem de programação, como o sistema de construção é completamente isolado de Orion &trade;'s IDE on-line (fora do daemon do renderizador de markdown baseado em [`node.js`](#), que é um sistema autônomo em si) por um milhão de razões de segurança / design arquitetônico.  Se você precisar de um teaser sobre as possibilidades, dê uma olhada no [`build_external.pl`](#) script no repositório Orion @SunStarSys: O ASF o usou para todos os tipos de coisas que não'T tem qualquer necessidade urgente de um sistema de gestão de dependência.
+
+- Sim, Perl'sua trajetória de popularidade ironicamente rastreia a de COBOL, ou mesmo Lisp Comum, apesar de Unix'dominância no mercado de servidores; mas algumas coisas envelhecem melhor do que outras. O sólido (e exclusivamente Perl) [`ithread`](#) engenharia fora de [`p5p`](#), em preparação para o advento do Perl 7, é uma notícia bem-vinda para os desenvolvedores do mod_perl que ainda se agarram ao Doug MacEachern'visão original.  Se você encontrar-se joelho-profundidade em mais de 100 fontes LOC Perl para obter o que você precisa fora do nosso sistema de construção Perl-somente atual, deixe'chat &mdash;  Talvez possamos colaborar em algo menos complexo para você usar para construir seu site.  Menos é mais com Perl.
+
+### Por que não com algo baseado na JVM?
+
+-  Acabei de trabalhar dessa forma, dada a minha história de 20 anos com o LAMP Stack e contribuições construtivas para a comunidade de servidores web Apache HTTPd estendida.  Doable, mas novamente uma empresa enorme com muitos problemas de engenharia difíceis de resolver ao longo do caminho.
+
+--------
+
+## Índice
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2026-03-23 04:38:51 -0700 (Mon, 23 Mar 2026) $ $Author: joe $ $Revision: 29918 $ -->

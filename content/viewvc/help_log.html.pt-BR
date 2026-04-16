@@ -1,0 +1,69 @@
+<! Html DOCTYPE PÚBLICO "-//W3C//DTD XHTML 1.0 Estrito//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC Ajuda: View de Log</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC Ajuda: View de Log</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>Ajuda</h3>
+       <a href="help_rootview.html">Geral</a><br />
+       <a href="help_dirview.html">Diretório&nbsp;Exibir</a><br />
+       <strong>Log&nbsp;Exibir</strong><br />
+
+<h3>Internet</h3>
+       <a href="http://viewvc.org/index.html">Início</a><br />
+       <a href="http://viewvc.org/upgrading.html">Fazendo upgrade</a><br />
+       <a href="http://viewvc.org/contributing.html">Contribuindo</a><br />
+       <a href="http://viewvc.org/license-1.html">Licença</a><br />
+    </td><td colspan="2">
+    <p>
+      A view de log exibe o histórico de revisão da origem selecionada
+      arquivo ou diretório. Para cada revisão, as seguintes informações são
+      displayed:
+
+<ul>
+        <li>O número da revisão. Nos repositórios do Subversion, este é um
+            link para o <a href="help_rootview.html#view-rev">revisão
+            exibir</a></li>
+        <li>Para arquivos, links para
+        <a href="help_rootview.html#view-markup">exibir</a>,
+        <a href="help_rootview.html#view-checkout">baixar</a>, e
+        <a href="help_rootview.html#view-annotate">anotar</a> o
+          revisão. Para diretórios, um link para
+        <a href="help_dirview.html">listar conteúdo do diretório</a></li>
+        <li>Um link para selecionar a revisão para diffs (veja abaixo)</li>
+        <li>A data e a idade da alteração</li>
+        <li>O autor da modificação</li>
+        <li>O ramo CVS (geralmente <em>PRINCIPAL</em>, se não estiver em uma filial)</li>
+        <li>Possivelmente uma lista de tags CVS vinculadas à revisão (se houver)</li>
+        <li>O tamanho da mudança medida em linhas adicionadas e removidas de
+            código. (Somente CVS)</li>
+        <li>O tamanho do arquivo em bytes no momento da revisão
+            (Somente subversão)</li>
+        <li>Links para exibir dif. para revisão anterior ou possivelmente para
+            uma revisão arbitrária selecionada (se houver, veja acima)</li>
+        <li>Se a revisão for o resultado de uma cópia, o caminho e a revisão
+            copiado de</li>
+        <li>Se a revisão preceder uma cópia ou renomear, o caminho no
+            hora da revisão</li>
+        <li>E por último, mas não menos importante, a mensagem de log de commit que deve informar
+            sobre o motivo da mudança.</li>
+      </ul>
+    <p>
+      Na parte inferior da página você encontrará um formulário que permite
+      para solicitar diferenças entre revisões arbitrárias.
+    </p>
+  </td></tr></table>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+---
+archived: ~
+categories: ~
+keywords: 오픈 소스,osi,apache-license의 지도 사용자
+published: ~
+status: ~
+title: 오픈 소스 프로젝트
+---
+
+### 오픈 소스 참여
+
+우리의 신념에 핵심은 오픈 소스 소프트웨어의 타고난 가치 제안입니다.  협업 [리드 사용자](http://en.wikipedia.org/wiki/Lead_user) 커뮤니티와 주변 네트워크는 SunStar Systems를 시작한 이래로 우리의 업무의 일부였으며, 주로 [아파치 소프트웨어 재단](http://www.apache.org/).
+
+제품 라인에 대한 오픈 소스 전략이 있습니까?  소프트웨어가 모듈식이며 사용자에게 이러한 확장 지점에 대한 액세스 권한을 부여하는 것이 합리적입니까?  관련 리뷰: Never heard of the... [할리우드 원리](http://en.wikipedia.org/wiki/Hollywood_principle)? 우리는 당신이 성공적으로 사용자 혁신의 물결을 탐색하고 당신의 경쟁에 함정과 함정을 남겨두고, 가장 적극적인 고객의 잠재력을 활용할 수 있도록 도울 수 있습니다.
+
+#### 프로젝트 목록'전체 또는 일부에 관여했습니다:
+
+- [mod_perl](https://perl.apache.org/) &mdash; httpd 내에 포함된 perl 인터프리터가 있습니다.
+
+- [라이브러리](https://httpd.apache.org/apreq/) &mdash; 안전/빠른 HTML 폼 데이터 및 쿠키 구문 분석 라이브러리입니다.
+
+- [아파치 CMS](https://github.com/SunStarSys/orion) &mdash; CMS는 100 개 이상의 아파치 프로젝트를 제공합니다.
+
+- [오르가즘](https://github.com/SunStarSys/orthrus) &mdash; [OTP](https://en.wikipedia.org/wiki/One-time_password) 보안 신청; OPIE를 위한 보충에서 AL-2.0 *portable* 하락.
+
+- [시간](https://github.com/joesuf4/at) &mdash; [탭](https://testanything.org)-준수 C 단위 시험 기구.
+
+- [pty](https://github.com/SunStarSys/pty) &mdash; 자동화된 터미널 자격 증명 프롬프트 응답을 위한 도구입니다.  원제 : The Spirit Of [TCL 예상](https://en.wikipedia.org/wiki/Expect), 그러나 다른 프로그래밍 언어에 걸쳐 *portable*.
+
+- [팩스](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash; The Silver Searcher와 비슷한 병렬화되고 필터링된 순환 grep 기능이지만 4x 속도가 더 빠릅니다.
+
+- [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; 하위 버전에 대한 분산 커밋 후크입니다.
+
+- [상단](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; segfault-free ZFS/Zone 지원을 포함하는 새로운 Solaris 11.4 포트
+
+- [비공개](https://github.com/SunStarSys/sealed) &mdash; 형식이 지정된 렉시칼에 대한 컴파일 타임 메소드 조회입니다.
+
+- [알고리즘::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash; 가장 긴 공통 하위 시퀀스 알고리즘의 빠른(XS) 구현.
+
+- [스채피/린터](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; 도커 컨테이너 대상 [린터{rc, sh}](https://github.com/SunStarSys/linter) 스크립트
+<!-- $Date: 2026-03-11 11:11:40 -0700 (Wed, 11 Mar 2026) $ $Author: joe $ $Revision: 28511 $ -->

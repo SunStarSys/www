@@ -1,0 +1,164 @@
+<! Html DOCTYPE PÚBLICO "-//W3C//DTD XHTML 1.0 Estrito//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC Ajuda: Geral</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC Ajuda: Geral</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>Ajuda</h3>
+       <strong>Geral</strong><br />
+       <a href="help_dirview.html">Diretório&nbsp;Exibir</a><br />
+       <a href="help_log.html">Log&nbsp;Exibir</a><br />
+
+<h3>Internet</h3>
+       <a href="http://viewvc.org/index.html">Início</a><br />
+       <a href="http://viewvc.org/upgrading.html">Fazendo upgrade</a><br />
+       <a href="http://viewvc.org/contributing.html">Contribuindo</a><br />
+       <a href="http://viewvc.org/license-1.html">Licença</a><br />
+    </td><td colspan="2">
+
+<p><em>ViewVC</em> é uma interface WWW para CVS e Subversion
+  repositórios. Ele permite que você navegue nos arquivos e diretórios em um
+  repositório ao mostrar metadados do histórico do repositório: log
+  mensagens, datas de modificação, nomes de autores, números de revisão, cópia
+  História, e assim por diante. Ele fornece várias exibições diferentes do repositório
+  dados para ajudá-lo a encontrar as informações que você está procurando:</p>
+
+<ul>
+    <li><a name="view-dir" href="help_dirview.html"><strong>Diretório
+    Exibir</strong></a> - Mostra uma lista de arquivos e subdiretórios em um
+    diretório do repositório, juntamente com metadados como nomes de autores e
+    entradas de log.</li>
+
+<li><a name="view-log" href="help_log.html"><strong>Log
+    Exibir</strong></a> - Mostra uma revisão por lista de revisão de todos os
+    alterações feitas em um arquivo ou diretório no repositório, com
+    metadados e links para visualizações de cada revisão.</li>
+
+<li><a name="view-markup"><strong>Visualização do conteúdo do arquivo (marcação)
+    Exibir)</strong></a> - Mostra o conteúdo de um arquivo em um determinado
+    revisão, com informações de revisão no topo da página. Arquivo
+    revisões que são imagens GIF, PNG ou JPEG são exibidas em linha no
+    a página. Outros tipos de arquivo são exibidos como texto marcado. A marcação
+    pode ser limitado a transformar URLs e endereços de email em links, ou
+    configurado para mostrar o código-fonte colorido.</li>
+
+<li><a name="view-checkout"><strong>Download de Arquivo (Checkout)
+    Exibir)</strong></a> - Recupera o conteúdo inalterado de um arquivo
+    revisão. Os navegadores podem tentar exibir o arquivo ou apenas salvá-lo
+    disco.</li>
+
+<li><a name="view-annotate"><strong>Visualização da anotação do arquivo</strong></a> -
+    Mostra o conteúdo de uma revisão de arquivo e a divide linha por linha,
+    mostrando o número de revisão em que cada um foi modificado pela última vez, junto
+    com links e outras informações. <em>Esta exibição está desativada em alguns
+    Configurações ViewVC</em></li>
+
+<li><a name="view-diff"><strong>Exibição Dif. do Arquivo</strong></a> - Shows
+    as alterações feitas entre duas revisões de um arquivo</li>
+
+<li><a name="view-tarball"><strong>Visualização do diretório Tarball</strong> -
+    Recupera um arquivo tar compactado contendo o conteúdo de um
+    diretório.<em>Esta exibição está desativada no ViewVC padrão
+    configuração.</em></li>
+
+<li><a name="view-query"><strong>Visualização Consulta de diretório</strong></a> -
+    Mostra informações sobre alterações feitas em todos os subdiretórios e arquivos
+    em um diretório pai, classificado e filtrado por critérios que você especificar.
+    <em>Essa exibição está desativada na configuração padrão do ViewVC.</em>
+    </li>
+
+<li><a name="view-rev"><strong>Exibição da Revisão</strong> - Shows
+    informações sobre uma revisão, incluindo mensagem de log, autor e uma lista
+    de caminhos alterados. <em>Somente para repositórios do Subversion.</em></li>
+
+<li><a name="view-graph"><strong>Exibição do Gráfico</strong></a> - Mostra um
+    representação gráfica de um arquivo'revisões e ramificações concluídas
+    com tags e nomes de autores e links para páginas de marcação e diff.
+    <em>Somente para repositórios CVS e desativados no padrão
+    configuração.</em></li>
+  </ul>
+
+<h3><a name="multiple-repositories">Vários Repositórios</a></h3>
+
+<p>Uma única instalação de ViewVC é geralmente usada para fornecer acesso a
+  mais de um repositório. Nessas instalações, o ViewVC mostra um
+  <em>Raiz do Projeto</em> caixa suspensa no canto superior direito de cada
+  página gerada para permitir acesso rápido a qualquer repositório.</p>
+
+<h3><a name="sticky-revision-tag">Etiqueta e revisão adesiva</a></h3>
+
+<p>Por padrão, ViewVC mostrará os arquivos, diretórios e revisões
+  que existem atualmente no repositório. Mas isso's também é possível navegar
+  o conteúdo de um repositório em um ponto de seu histórico passado, escolhendo
+  a "etiqueta adesiva" (em CVS) ou a "revisão autoadesiva" (no Subversion) do
+  formulários na parte superior das páginas de diretório e log. Eles're chamado pegajoso
+  Porque uma vez que eles're escolhido, eles ficam ao redor quando você navega para
+  outras páginas, até você redefini-las. Quando eles're set, diretório e log
+  páginas só mostram revisões que precedem o ponto especificado no histórico. Em
+  CVS, quando uma tag se refere a uma ramificação ou uma revisão em uma ramificação, apenas
+  revisões do histórico da ramificação são mostradas, incluindo pontos da ramificação e
+  suas revisões anteriores.</p>
+
+<h3><a name="dead-files">Arquivos Inativos</a></h3>
+
+<p>Em listagens de diretórios CVS, ViewVC pode exibir opcionalmente arquivos mortos.
+  Arquivos inativos são arquivos que costumavam estar em um diretório, mas atualmente
+  excluídos, ou arquivos que simplesmente não't existe no momento selecionado
+  <a href="#sticky-revision-tag">etiqueta adesiva</a>. Os arquivos inativos não podem ser
+  mostrado nos repositórios do Subversion. A única maneira de ver um arquivo excluído no
+  um diretório Subversion é navegar para uma revisão sticky onde o
+  arquivo existente anteriormente.</p>
+
+<h3><a name="artificial-tags">Tags artificiais</a></h3>
+
+<p>Em Repositórios CVS, ViewVC adiciona tags artificiais <em>CABEÇA</em> e
+  <em>PRINCIPAL</em> para etiquetas listagens e aceita-los no lugar de revisão
+  números e nomes de tags reais em todos os URLs. <em>PRINCIPAL</em> age como um ramo
+  tag apontando para a ramificação padrão, enquanto <em>CABEÇA</em> age como um
+  tag de revisão apontando para a última revisão na ramificação padrão. O
+  ramificação padrão é geralmente apenas o tronco, mas pode ser definido como outro
+  ramificações em arquivos de repositório individuais. O CVS sempre faz check-out
+  revisões de um arquivo'ramificação padrão s quando nenhuma outra ramificação for especificada
+  na linha de comando.</p>
+
+<h3><a name="more-information">Mais Informações</a></h3>
+
+<p>Mais informações sobre <em>ViewVC</em> está disponível em
+  <a href="http://viewvc.org/">viewvc.org</a>.
+  Veja os links abaixo para guias de CVS e Subversion</p>
+
+<h4>Documentação sobre CVS</h4>
+  <blockquote>
+    <p>
+      <a href="http://cvsbook.red-bean.com/"><em>Código aberto
+      Desenvolvimento com CVS</em></a><br />
+      <a href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">CVS
+      Usuário's Guia</a><br />
+      <a href="http://cellworks.washington.edu/pub/docs/cvs/tutorial/cvs_tutorial_1.html">Outro tutorial do CVS</a><br />
+      <a href="http://www.csc.calpoly.edu/~dbutler/tutorials/winter96/cvs/">Mais um tutorial CVS (um pouco velho, mas bom)</a><br />
+      <a href="http://www.cs.utah.edu/dept/old/texinfo/cvs/FAQ.txt">Um FAQ antigo, mas muito útil, sobre CVS</a>
+    </p>
+  </blockquote>
+
+<h4>Documentação sobre o Subversion</h3>
+  <blockquote>
+    <p>
+      <a href="http://svnbook.red-bean.com/"><em>Controle de Versão com
+      Subversão</em></a><br />
+    </p>
+  </blockquote>
+
+</td></tr></table>
+  </body>
+</html>

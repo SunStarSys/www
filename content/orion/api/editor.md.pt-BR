@@ -1,0 +1,126 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR '
+keywords: DESCANSO,API
+published: ~
+status: rascunho
+title: Orion API - Editor On-line
+---
+
+{# lede #}Este documento aborda as APIs e a IU do **Editor On-line**{# lede #}.
+
+[TOC]
+
+----
+
+## Editor de Orion (cms.sunstarsys.com).
+
+### Ações Genéricas
+
+#### redirecionar
+
+Ponto Final de Entrada para Orion'interface do s CMS.
+
+Argumentos Obrigatórios da String de Consulta:
+
+- [`uri`](#) - original document.location.href
+
+Argumentos Opcionais de String de Consulta:
+
+- [`atualizar`](#) - definido como 0 para desativar a atualização da cópia de trabalho
+- [`ação`](#) - escolha da ação de redirecionamento
+- [`idioma`](#) - idioma preferencial para IU
+- [`repositórios`](#) - nome do repositório do Subversion de destino
+- [`novo`](#) - criar uma nova cópia de trabalho
+- [`regex`](#) - PCRE para action=search
+
+#### log-in
+
+Valida e Armazena Credenciais do Subversion para o repositório atual. Apenas responde ao método POST.
+
+### Ações de Cópia de Trabalho
+
+#### Copiar campos de resposta JSON
+
+- [`repositórios`](#)
+- [`site`](#)
+- [`ação`](#)
+- [`idioma`](#)
+- [`migalhas de pão`](#)
+- [`modo`](#)
+- [`is_dir`](#)
+- [`is_root_dir`](#)
+- [`diretório`](#)
+- [`ext.`](#)
+- [`attachments_dir`](#)
+- [`is_attachment`](#)
+- [`status`](#)
+- [`agência`](#)
+- [`imagem`](#)
+- [`cabeçalhos`](#)
+- [`conteúdo`](#)
+- [`http_status`](#)
+- [`nav_options`](#)
+- [`actions_lang`](#)
+- [`observando`](#).
+
+#### Lista de Ações da API
+
+##### editar
+
+###### Conclusão dos amigos
+
+##### atualizar
+
+##### reverter
+
+##### copiar
+
+###### Traduções de IA
+
+##### mover
+
+##### excluir
+
+##### adicionar
+
+###### Conclusão dos amigos
+
+##### fazer commit
+
+##### diferente
+
+##### mesclar
+
+##### produção
+
+##### promover
+
+##### resolver
+
+##### fazer rollback
+
+##### procurar
+
+##### estático
+
+##### conta
+
+###### Alterações de Credenciais
+
+##### comentário
+
+###### Conclusão dos amigos
+
+##### relógio
+
+##### sem correspondência
+
+##### como
+
+##### diferente
+
+##### mapa de marca
+
+<!-- $Date: 2024-05-04 11:22:32 -0700 (Sat, 04 May 2024) $ $Author: joe $ $Revision: 24832 $ -->

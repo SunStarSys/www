@@ -1,0 +1,237 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR api/index.md.pt-BR'
+keywords: Jamstack,wiki,kms,cms
+published: ~
+status: publicado
+title: Planos Orion
+---
+
+## Detalhes do Plano
+
+<div class="row">
+<div class="col-lg-4">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Plano Profissional</div>
+		<div class="card-body">
+			Ideal para blogueiros independentes
+			<hr />
+<p>
+
+$25 / mês / site público gerenciado
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+
+<li>Recursos mensais incluídos (por site):
+<p>
+<ol>
+						<li>Hospedagem de subversão privada</li>
+						<li>250 MB de espaço de armazenamento<sup>1</sup></li>
+						<li>Transferência de dados de 100 GB</li>
+						<li>Uso ilimitado do IDE para 10 lugares</li>
+			<li>100 minutos de compilação</li>
+			<li>Suporte ao Cliente Baseado em E-mail</li>
+					</ol>
+					</p>
+</li>
+</ul>
+
+<ul style="min-height:200px">
+				<li>Taxas mensais adicionais de recursos (por site):
+<p>
+<ol>
+						<li>$1 / 5 MB de espaço de armazenamento<sup>1</sup></li>
+						<li>Transferência de dados de US$ 10/40 GB</li>
+						<li>$5 / assento</li>
+						<li>$10 / 100 minutos de compilação</li>
+                        <li>Traduções AI NLP de US$ 0,50 / página</li>
+</ol>
+					</p>
+</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Plano de negócios</div>
+		<div class="card-body">
+			Ótimo para SMB
+			<hr />
+<p>
+
+$100 / mês / site público gerenciado, ~50% de desconto em todos os modelos de preços do concorrente!
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>Recursos mensais incluídos (por site):
+<p>
+<ol>
+						<li>Hospedagem de subversão privada</li>
+						<li>1 GB de espaço de armazenamento<sup>1</sup></li>
+						<li>Transferência de dados de 500 GB</li>
+						<li>Uso ilimitado do IDE para 50 lugares</li>
+						<li>Até 5 Grupos ACL</li>
+				<li>500 minutos de compilação</li>
+				<li>SLA Abrangente de 99,9%<sup>3</sup></li>
+						<li>Suporte ao Cliente Baseado em E-mail</li>
+</ol>
+</p>
+</li>
+</ul>
+<ul style="min-height:200px">
+				<li>Taxas mensais adicionais de recursos (por site):
+<p>
+					<ol>
+						<li>$10 / 100 MB de espaço de armazenamento<sup>1</sup></li>
+						<li>Transferência de dados de US$ 20/100 GB</li>
+						<li>$10 / assento</li>
+						<li>$10 / 100 minutos de compilação</li>
+                        <li>Traduções AI NLP de US$ 40 / página</li>
+                    </ol>
+					</p>
+					</li>
+				</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">Plano Empresarial</div>
+		<div class="card-body">
+			Setor Público, ONG e Marcas Reconhecidas
+			<hr />
+<p>
+
+$1000 / mês, ~67% de desconto em todos os modelos de preços do concorrente!
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>Recursos mensais incluídos:  &nbsp;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<p>
+<ol>
+						<li>5 GB de espaço de armazenamento no seu próprio repositório do Subversion<sup>2</sup></li>
+						<li>Transferência de dados de 5 TB</li>
+						<li>Sites ilimitados e assentos (autogerenciados)</li>
+						<li>5000 minutos de compilação</li>
+						<li>Controle total sobre a configuração de autorização do Subversion</li>
+						<li>Contêineres de build privados e em rede</li>
+						<li>SLA Abrangente de 99,99%<sup>3</sup></li>
+						<li>POP Global<sup>4</sup> com rede de entrega de última milha distribuída geograficamente em Q4</li>
+						<li>SLA de Suporte Premium</li>
+					</ol>
+					</p>
+</li>
+			</ul>
+			<ul style="min-height:200px">
+				<li>Taxas de Recursos Mensais Adicionais:
+
+&nbsp;
+
+<p>
+<ol>
+						<li>$100 / 1 GB de espaço de armazenamento<sup>2</sup></li>
+						<li>Transferência de dados de US$ 15/100 GB</li>
+						<li>Hospedagem de registro $100 / ithread mod_perl</li>
+						<li>US$ 100 / Região do OCI para POPs personalizados</li>
+				<li>Minutos de compilação de US$ 100 / 1K</li>
+                <li>Traduções AI NLP de US$ 0,30 / página</li>
+                <li>WebSockets e/ou hospedagem de contêiner privado disponível</li>
+                      </ol>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+- Todos os planos incluem gerenciamento de certificados SSL/TLS automatizado internamente (via LetsEncrypt), mecanismo de pesquisa PCRE (+Markdown) integrado, suporte automatizado de tradução de linguagem natural (via OCI AI) e Gateway de processamento de formulário de email.
+
+- Onboarding envolve simplesmente fornecer uma estrutura de link de menu topmatter, e um bootstrap 4 ou bootstrap 5 arquivo css para styling.
+
+- {# lede #}Descontos anuais de preços antecipados disponíveis (até 20% de desconto nos custos de faturamento mensal){# lede #}.
+
+- Descontos por volume disponíveis.
+
+- Enterprise Kerberos-based Orion Server Installs já estão disponíveis, para clientes que procuram alternativas para Atlassian Confluence Data Center.
+
+- Os clientes corporativos podem ativar restrições de firewall de rede para acessar diretamente seu repositório de controle de versão.
+
+- OCI Function (Tecnologia sem Servidor) / Integração do OCI RDBMS em breve.
+
+- Serviços de consultoria e desenvolvimento de tecnologia e portabilidade disponíveis.
+
+Parcerias tecnológicas são muito bem-vindas para agências e revendedores terceirizados.
+
+### Criar Minutos e Níveis de Plano: um Guia Rough
+
+*Uma estimativa high-end razoável para a duração média do build por commit é de 10 segundos.*
+
+- Profissionais com menos de 20 commits por dia devem estar bem com os 100 minutos de compilação incluídos no plano.
+
+- Empresas com menos de 100 commits por dia devem estar bem com os 500 minutos de compilação incluídos no plano.
+
+- Empresas com menos de 1000 commits por dia devem ficar bem com os 5000 minutos de compilação incluídos no plano.
+
+------------
+
+#### Rodapés
+
+1. Utilização de Armazenamento calculada com base no tamanho de dois check-outs de cópia de trabalho de cada site: uma árvore de origem e uma árvore de compilação de produção resultante.
+
+2. Utilização de Armazenamento calculada com base no tamanho total do repositório do Subversion hospedado pelos Sistemas SunStar para clientes Corporativos, e não check-outs individuais, que é um número *comparativamente menor* (sobre o tamanho de um check-out de árvore de origem única).
+
+3. O SLA abrange os ativos do site *e* o Orion IDE on-line *e* a disponibilidade do sistema de compilação, mas exclui o sistema de controle de versão do Subversion, que esperamos permanecer competitivo com GitHub'métricas gerais de disponibilidade.
+
+4. Pontos de Presença (POP) do Cliente Empresarial:
+
+- Fort Lauderdale, FL
+
+- Rio de Janeiro
+
+- Phoenix, AZ
+
+- Frankfurt, Alemanha
+
+- Sydney, Austrália
+
+- São Paulo, BZ
+
+- Hyderabad, IN
+
+- Seul, SK
+
+------------
+
+## Índice
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
+
+------------
+
+<div class="col-lg-12">
+  {% include "/enquiry_get.html"|append:lang %}
+</div>
+
+<style type="text/css">
+h4 { font-size:14px }
+</style>
+
+<!-- $Date: 2026-03-29 04:25:31 -0700 (Sun, 29 Mar 2026) $ $Author: joe $ $Revision: 30830 $ -->
