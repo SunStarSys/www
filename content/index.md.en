@@ -2,7 +2,7 @@ Title: Home
 Keywords: wiki,knowledge,blogs,orion,jamstack,perl,f/oss
 Status: published
 
-<div class="float-lg-right">
+<div class="float-lg-right {% ifequal lang ".he" %}rtl{% endifequal %}{% ifequal lang ".ar" %}rtl{% endifequal %}">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">News</div>
         <div class="card-body">

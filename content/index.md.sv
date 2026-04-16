@@ -7,7 +7,7 @@ status: publicerad
 title: Hem
 ---
 
-<div class="float-lg-right">
+<div class="float-lg-right {% ifequal lang ".he" %}rtl{% endifequal %}{% ifequal lang ".ar" %}rtl{% endifequal %}">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">Nyheter</div>
         <div class="card-body">
@@ -122,4 +122,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-03-22 11:29:12 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29874 $ -->
+<!-- $Date: 2026-04-13 11:35:30 -0700 (Mon, 13 Apr 2026) $ $Author: $ $Revision: 31339 $ -->
