@@ -76,7 +76,7 @@ walk_content_tree {
 
   seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)[^\/]*$/;
 
-  for my $lang (qw/en es de ru sv he zh-TW fr/) {
+  for my $lang (qw/en es de ru sv he zh-TW fr ar ko jp pt-BR/) {
 
     if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
