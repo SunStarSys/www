@@ -1,0 +1,134 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ja api/index.md.ja'
+keywords: Markdown、 Asymptote、マーメイド
+published: ~
+status: 下書き
+title: Orionテクノロジー
+---
+
+## Solaris 11.4
+
+- DTrace &mdash; 私たちはキッチンシンクのアプローチをとりました: 私たちのすべてのdyamicプログラミング言語ツールがそれと統合されています。bpftraceは、Linuxの最近の優れた開発ですが、動的な言語スペースで有用なことを行うことは、長い道のりです。
+
+- ZFS &mdash; Oracle SupportでサポートされたSolarisの方が優れています。代替品を受け入れません。
+
+- ゾーン&mdash; サービス分離と適切なサンドボックス・サイト構築を提供します。
+
+## node.jsバージョン21.6.1
+
+- Editor.mdは**素晴らしい**であるため、次のように移植しました[`node.js`](#) &mdash; WYSIWYG、視聴者に関係なく'sコンテキスト(オンラインIDEでの編集、または結果の本番サイトの参照)。
+
+## Perl v5.38.2
+
+- {# lede #}mod_perl v2.0.13 w/ithreadsおよびhttpd v2.4.58 w/ event mpmで動作するようになりました。{# lede #}
+
+## Subversion v1.14.4
+
+- カスタムithread-safe [`SVN:: クライアント`](#) リクエストごとのメモリー・プールを持つバインディング。
+
+- ネイティブのpython3バインディング(v3.8.3)。
+
+- svnpubsubおよびsvnwcsubのスレッド化されたpython3ポート&mdash; Subversionを使用した分散エンタープライズ/CDNサイト・デプロイメント用の*kitおよびcaboodle*全体。
+
+- python3を完了します。[viewvc](https://vcs.sunstarsys.com/viewvc/public/site) ポート時間としてアップストリームでの変更のプル・リクエストを調べます。
+
+------------
+
+## Some Remarks on the Roads Not (Some Remarks on the Roads Not)シングル取得済...
+
+<br/>
+
+### SQL
+
+私たち'当社のウェブサイトインフラストラクチャ全体のためのNoSQLショップ、およびサイトを駆動するRDBMSと呼ばれる巨大な単一障害点に悩まされている場合'資産は、JamstackとServerless Technologyに基づいて、より分散型のアプローチを再検討してください。たとえ'わたしたちのではない。後でありがとうございます!
+
+### なんでGit?
+
+『THE [`git svn`](#) オンラインIDE for Orionを使用するのではなく、gitで作業する場合、ブリッジはすでに存在します&trade;。オプションがあります! 前にGitHubに変更をプッシュ(GitHubアクション、プリコミット・フック、またはその両方でそれらをlint)すると、GitHubアクションからさらにマイレージが得られる場合があります。[`git svn dcommit`](#)- ライブ出版のための私たちのSubversionリポジトリにそれら。[こちら](https://github.com/SunStarSys/www) このウェブサイト全体のライブ、履歴、完全なGitコピーです'ソース
+
+- ウェブサイトのソースツリー'ソフトウェアソースツリーとまったく同じです。これら'再調整[devops/トランクベースの開発](/essays/devops) より[`gitflow`](#)。さらに、巨大なサイトには、SSI、おそらく小さなCGIが必要になります。少なくとも、大規模なコミットメーラーからの大規模なレビュー不可能なサイト解約を回避するためです。[`差分`](#) 結果のビルド ツリー デルタの出力。
+
+- 知りたい: いくつかのローカルから完全に機能するSSI実装を取得しようとしています"ウェブサーバ" 他のビルドシステムで変更をプレビューするのに使用するのは、それを止めて考えると少し馬鹿げています。Orionでは、svnとoffでブランチを作成するだけです。編集、コミット、構築、参照、**iterating**は、ブランチのエフェメラルなApache-served Webサイトで即時に作成します。'Orionに統合&trade; 統合開発環境's双方向リンク(およびブックマークレットリダイレクト)インフラストラクチャ。<span class="text-success">いつでもブラウザーから移動できます</span>.
+
+- いつ'これらの変更をトランクベースのプロダクションサイトに移行する時期は、トランクに戻ると、ブランチをできるだけ多く、または少しだけプロモートすることを選択できます。ブランチの変更が最終的にプライムタイムの準備ができてからトランクが前進した場合は、<span class="text-white">同期</span> ブランチとトランクを同期するボタン。ブランチへのsync-mergeコミットのビルド結果をダブルチェックした後'sウェブサイト、先に進んでクリック<span class="text-white">宣伝</span> リンク: Follow that up with a <span class="text-white">コミット</span> 合理的なコミットログメッセージとvoilàの同じページで、あなたは今トランクで放送しています'生産ビルド
+
+- バージョン管理を使用して結果のビルドツリーを配布して処理する必要がある場合は、大規模なgitを好まないでしょう。特に、バイナリ・アーティファクト(ソフトウェア・リリースなど)または(レガシー)製品ドキュメント(dxygenやjavadocなど)を統合する場合、このシステムを使用して構築するか、ローカルで使用するサード・パーティ・ビルダーを使用して構築結果をターゲット・リポジトリに直接アップロードします。オラクルのアプローチにより、サイト内の不要な混乱や膨らみを回避できます'ソース・ツリー: 方法とは異なり'dは、ソース・ツリーとビルド・ツリーの両方に共通するリポジトリ内のブランチを使用して、gitを操作します。
+
+- Subversionは**ファイングレイン・アクセス制御**をサポートし、次の部分/疎チェックアウトを実行できます。[`ヘッド`](#); Gitでは、オール・オア・ナッシング・ブランチ・プッシュ以外に**ACLなし**があり、前にブランチ全体(履歴を含む)をクローニングする必要があります。Ifあなたdon'tは、これらのsvnのみの機能セットの必要性を認識しています。'前のアイテムをグロックしました'S(上記参照)は、まだまだ。
+
+- IDEでは、次のものに対してread+write Perlバインディングが必要になります。[`libgit2`](#) (これは**実際のgit開発チームによって提供されておらず**、gitに同等のSaaS製品としてオンラインIDEを提供していない巨石企業によって主に支援されています。いいえ、GitHubは't) svnに一致させるため'httpd互換のメモリー管理体制とPOSIX(+ Perl ithreads)スレッドの安全性、永続的なランタイム、およびクライアントWebサイト・ツリーの複数のサーバー側のディスク上のGitリポジトリ。そのオープンソース・インフラストラクチャの成熟度は、2020年の推定では実現できませんが、今後の進展を常に把握していきます。あなたを見て、[`Git::Raw`](#)!
+
+ISTILLDON'posix-thread-safe git磁器の作り方個別のリポジトリにまたがるスレッド・セーフティ(共通プロセス内)'RAM(s RAM)は、特定のリポジトリ内のスレッド安全性ではなく、ユース・ケースです(nutty ask)。
+
+### なぜPythonやRubyやJavascriptやGoではないのですか?
+
+- [ギル](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 追加済[`mod_python`](#) まだ成熟に達する前に行く方法があります[`mod_perl`](#) mpmにて。さらに、私たちの製品'現在の実装は、Apache HTTPdサーバーと緊密に統合されています。'sの完全なモジュールAPIだけ[`mod_perl`](#) 提供します。
+
+- [ギル](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 追加済[`mod_ruby`](#) 様々な品質管理上の理由から、ルービーのコミュニティによって放棄された。Orionのカスタム5K LOC Perl 5ソースの移植&trade; 異なるプログラミング環境では、<span class="text-warning">10-100の折目の気球</span> 実装について'sの行数、および結果として他の動的プログラミング言語でのパフォーマンスが大幅に低下します。
+
+ここでは、Orion全体(IDE+build)の本番ソース・ツリーのSunStarシステム部分の2020年7月19日付けのスナップショットを示します。我々以外にはほとんど関わっていない。[`ドチアク::DTL`](#) フォーク。ビルド関連のコードはすべて、GitHubですでにオープン・ソースになっています。非公開のままであるのは、サード・パーティのソース・ツリーに対するCベースのカスタマイズです。これは、当社の製品に特有の差別化要因です。
+
+```shell
+joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
+     1 build/lib/SunStarSys/ASF.pm
+   128 build/lib/SunStarSys/SVNUtil.pm
+   270 build/lib/SunStarSys/Util.pm
+    36 build/lib/SunStarSys/Value.pm
+    82 build/lib/SunStarSys/Value/Blogs.pm
+    61 build/lib/SunStarSys/Value/Jira.pm
+    77 build/lib/SunStarSys/Value/Mail.pm
+    70 build/lib/SunStarSys/Value/SVN.pm
+   106 build/lib/SunStarSys/Value/Snippet.pm
+    85 build/lib/SunStarSys/Value/Twitter.pm
+   378 build/lib/SunStarSys/View.pm
+  1260 webgui/lib/SunStarSys/Orion.pm
+   112 webgui/lib/SunStarSys/Orion/Cookie.pm
+   183 webgui/lib/SunStarSys/Orion/Filter.pm
+    90 webgui/lib/SunStarSys/Orion/MapToStorage.pm
+    59 webgui/lib/SunStarSys/Orion/WC.pm
+   194 webgui/lib/SunStarSys/Orion/WC/Add.pm
+    97 webgui/lib/SunStarSys/Orion/WC/Browse.pm
+   133 webgui/lib/SunStarSys/Orion/WC/Commit.pm
+    79 webgui/lib/SunStarSys/Orion/WC/Copy.pm
+    66 webgui/lib/SunStarSys/Orion/WC/Delete.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Diff.pm
+   182 webgui/lib/SunStarSys/Orion/WC/Edit.pm
+   116 webgui/lib/SunStarSys/Orion/WC/Mail.pm
+    70 webgui/lib/SunStarSys/Orion/WC/Merge.pm
+    67 webgui/lib/SunStarSys/Orion/WC/Move.pm
+    52 webgui/lib/SunStarSys/Orion/WC/Production.pm
+    47 webgui/lib/SunStarSys/Orion/WC/Promote.pm
+    60 webgui/lib/SunStarSys/Orion/WC/Resolve.pm
+    64 webgui/lib/SunStarSys/Orion/WC/Revert.pm
+    82 webgui/lib/SunStarSys/Orion/WC/Rollback.pm
+   123 webgui/lib/SunStarSys/Orion/WC/Search.pm
+    78 webgui/lib/SunStarSys/Orion/WC/Staged.pm
+    24 webgui/lib/SunStarSys/Orion/WC/Static.pm
+    49 webgui/lib/SunStarSys/Orion/WC/Update.pm
+   220 webgui/lib/SunStarSys/SVN/Client.pm
+  4848 total
+```
+
+- [`mod_js`](#) httpd v2に対して、スレッドがはるかに少ないmpmをカットしたことはありません。's。
+
+- 埋め込みを試みる[`GoLang`](#) httpdは、ネイティブなバージョン管理バインディングで、個人的にではなく、面白い課題になるでしょう。動的リンクに関しては、興味深いトレードオフを持つ良い言語ですが、将来の調査には確実かもしれません。
+
+- Perl 5ビルドシステムに関する限り、調整してください!  *理由はありません'ビルド・システムはOrionから完全に分離されているため、t*は他のプログラミング言語に移植されます。&trade;'sオンラインIDE (マークダウンレンダラーデーモンの外側) [`node.js`](#)100万のセキュリティ/アーキテクチャ設計上の理由から、スタンドアロン・システム自体です。可能性についてティーザーが必要な場合は、[`build_external.pl`](#) @SunStarSys Orionリポジトリ内のスクリプト: ASFは、すべての種類のものに使用しました。'tは、依存関係管理システムに対する緊急の必要性があります。
+
+- はい、パール'人気の軌道は皮肉にもCOBOL、またはUnixにもかかわらずCommon Lispのものを追跡します'サーバー市場での優位性。しかし、他のものより年齢が良いものもあります。ソリッド(そしてユニーク・パール) [`ithread`](#) エンジニアリング範囲外[`p5p`](#)Perl 7の出現に備えて、Doug MacEachernにまだ固執しているmod_perl開発者に歓迎のニュースです'オリジナルビジョン100以上のLOC Perlソースで膝の深さを見つけ、現在のPerlのみのビルドシステムから必要なものを取得する場合は、'sチャット&mdash;  多分私達はあなたのサイトの構築に使用するために、より複雑な何かで協力することができます。ペルーの方が少ない。
+
+### JVMに基づくものを使用しない理由
+
+-  LAMPスタックと私の20年の歴史と、拡張されたApache HTTPd Webサーバー・コミュニティへの建設的な貢献を考慮して、ちょうどそのように作業しました。Doableですが、途中で解決するために多くのハードエンジニアリングの問題を伴う大規模な事業です。
+
+--------
+
+## インデックス
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2026-03-23 04:38:51 -0700 (Mon, 23 Mar 2026) $ $Author: joe $ $Revision: 29918 $ -->

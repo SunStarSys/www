@@ -1,0 +1,337 @@
+---
+acl: '@staff=rw, *=r'
+archived: ~
+categories: ~
+dependencies: '*.md.ja api/index.md.ja'
+keywords: セキュリティ、infosec、appsec、ipsec、devsecops、it、acl、svnauthz、zerotrust
+published: ~
+status: 公開済み
+title: Orionのセキュリティ
+---
+
+<div class="right">
+
+![南京錠](security.page/padlock).
+
+</div>
+
+[TOC]
+
+## {# lede #}"不明瞭さによるセキュリティは、あまりセキュリティではありません。"{# lede #}
+
+American locksmithの発音を[Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851年、ロンドンの展覧会でクリスタル・パレス・ロックを容易に選んだ。Oracle Cloud Infrastructure(OCI)自動化エンジンのブループリントは、[GitHubで入手できます。](https://github.com/joesuf4/home/blob/wsl/.ocirc).
+
+## Orion Infrastructureのセキュリティ
+
+```mermaid
+flowchart TB
+classDef borderless stroke-width:0px
+classDef darkBlue fill:#00008B, color:#fff
+classDef brightBlue fill:#6082B6, color:#fff
+classDef gray fill:#62524F, color:#fff
+classDef gray2 fill:#4F625B, color:#fff
+
+subgraph vcs[ ]
+    A1[[Fort Lauderdale, FL]]
+    B1[Air-Gapped Version Control Server]
+end
+class vcs,A1 gray
+
+subgraph vpn-us-east[ ]
+    A2[[Reston, VA]]
+    B2[OCI Edge Servers]
+end
+class vpn-us-east,A2 darkBlue
+
+subgraph vpn-us-west[ ]
+    A3[[Phoenix, AZ]]
+    B3[OCI Edge Servers]
+end
+class vpn-us-west,A3 darkBlue
+
+subgraph vpn-de-central[ ]
+    A4[[Frankfurt, Germany]]
+    B4[OCI Edge Servers]
+end
+class vpn-de-central,A4 darkBlue
+
+subgraph vpn-bz-west[ ]
+    A5[[São Paolo, Brazil]]
+    B5[OCI Edge Servers]
+end
+class vpn-bz-west,A5 darkBlue
+
+subgraph vpn-au-west[ ]
+    A6[[Sydney, Australia]]
+    B6[OCI Edge Servers]
+end
+class vpn-au-west,A6 darkBlue
+
+subgraph vpn-ap-west[ ]
+    A7[[Hyderabad, India]]
+	B7[OCI Edge Servers]
+end
+class vpn-ap-west,A7 darkBlue
+
+subgraph vpn-ap-east[ ]
+    A8[[Seoul, South Korea]]
+    B8[OCI Edge Servers]
+end
+class vpn-ap-east,A8 darkBlue
+
+class A1,A2,A3,A4,A5,A6,A7,A8 borderless
+
+vcs==vpn==>A2==ssh/vpn==>B2
+vcs==vpn==>A3==ssh/vpn==>B3
+vcs==vpn==>A4==ssh/vpn==>B4
+vcs==vpn==>A5==ssh/vpn==>B5
+vcs==vpn==>A6==ssh/vpn==>B6
+vcs==vpn==>A7==ssh/vpn==>B7
+vcs==vpn==>A8==ssh/vpn==>B8
+```
+&nbsp;
+
+リバース・ポート転送サービス(HTTPS/SSH/IPsec)用のFIPS 140-3準拠のMFAトリプル暗号化。ベルト、サスペンダー、撹拌!
+
+----
+
+&nbsp;
+
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) モデル、ペッパー付き[オルスルス](https://github.com/SunStarSys/orthrus) OTP/TOTPの課題
+
+すべてのインフラストラクチャ・アカウントのログイン・アクセスには、OCIアカウントを含むマルチファクタ認証資格証明を指定する必要があります。設計上、この方針の裏側はありません。
+
+すべての従業員の企業マシンへのsshアクセスには、YubiKey PKIと、YubikeyのPKCS11スロットに格納されているECDSA-SHA-2-NISTP-256認可秘密キー、またはED25519-sk Pkeysとの直接スマート・カード統合が必要です。
+
+固定パスワードはディスクに格納されません。sudo / RBAC使用のヘッドレス自動化は、この*制限*正当な理由から。しかし、[ツール](https://github.com/SunStarSys/pty) さまざまな種類のプロンプトに応答するトイルを排除する。
+
+### ビルドおよびCGIスクリプトのサンドボックス実行
+
+デプロイ"共有なし" ゾーンビルド。デフォルトではネットワーク可用性はゼロになります。これは、お客様が構築してアクセスまたは変更できるものは、お客様自身のアセットのみであり、他のお客様やゾーン自体のその他のシステム・パスではありません(さらに、[`/tmp`](#)). さらに、ビルド中にインターネットにアクセスできるのは、ビジネスおよびエンタープライズのお客様のみです。これは、ビルド要件に合わせてカスタマイズできる独自の*unique* Solarisゾーンを使用しているためです。
+
+CGIスクリプトの場合はDitto。CGIスクリプト以外のものへの書込みアクセスに関して完全にロックされます。[`/tmp`](#).
+
+### エンドツーエンド暗号化
+
+- HTTPS FIPS 140-3接続用のTLS 1.3 (+FS) AES(256) SHA(256).
+
+- SSHv2 ED25519クロスホスト用のFIPS 140-3/NIST準拠キー[`lo`](#) リバースポート転送
+
+- クロスリージョンVPN用IPsec/IKEv2/PFS AES(256).
+
+- ZFS暗号化用のAES(256).
+
+### Zero Trustについて
+
+基本的な前提[ゼロトラスト・アーキテクチャ](https://csrc.nist.gov/publications/detail/sp/800-207/final) は、クラムの生理学の周りにあなたのネットワークセキュリティを設計することを避けることです: 外側では困難ですが、あなたが入ったら柔らかく、緩い。WeDon'さまざまなPoint of Presence (POP) LAN内の意味のある特権ネットワークポートはすべて、ベアメタルマシンにのみ公開されます。'sループバック・デバイス・インタフェース[`lo0`](#)は、(逆の)ポート転送されたSSH接続*to it*のコンテキストでのみ意味があります。
+
+HTTPプロキシではなくTCPプロキシを使用し、MSAバックエンドも使用しません。**したがって、暗号化されていないTLS Webトラフィックを認識するホストは、それを復号化するホストのみです**。同じルールがSubversionトラフィックに適用されます&mdash; **サービス・エンドポイント**への直接のエンドツーエンドTLS暗号化トラフィックのみが、暗号化されていないデータをワイヤ上に表示します。
+
+**MSAレイヤーおよびプライベート・データ・エクスポージャのレイヤー**と他のベンダーとの幸運。敵の"非機能工学" 複雑さです。製品が大規模なMSA鉱山フィールドではなく**フェデレーテッドモノリス**の場合、有意義なセキュリティ約束を提供する方がはるかに簡単です。これは、Orionと競合他社の分野との別の矛盾する差別化要因です。
+
+このインフラは、リージョンをオンラインにすると完全に自動化されますが、'建築について公に共有できること(ホブスの透明性を軍事マントラとバランスさせること) "緩い唇の流しの船" 科学よりも芸術である)。安心&mdash; BREAKINGTHEANTISPOOFING [`lo0`](#) Solaris 11内の保護's (BSD)パケットフィルタ自体は、顧客アカウントであっても、これらのサービスにアクセスする意味のある手段はありません。
+
+マスターOCI制御アカウントが侵害されても、すべての顧客資産の**機密性**と**整合性**は違反したままです。ブラックハットができることは、お客様のWebサイト**可用性**を混乱させることです。特に、Subversionサービス・データ・レコードにアクセスできません。不良りんごを48~72時間でOCIインフラストラクチャ全体をゼロから再構築できます'OCIアクセスは終了しました。
+
+-----
+
+### ロギング、監視および監査
+
+企業のお客様はSplunkアカウントを作成することをお勧めします。また、必要なすべてのグローバルPOPからお客様のアカウントにほぼリアルタイムのWebログを提供します。サーバー側のCGIスクリプトのエラー・ログは、Splunkでも使用できます。
+
+オラクルは、世界中のすべてのOCI POPからサービスの可用性を監視し、サーバーの停止が30秒を超えた場合にHA (可用性ドメイン)またはリージョナル・フェイルオーバー・イベントをトリガーします。
+
+ACL監査は、Webサイトを作成するだけで実行できます。'Apacheライセンスを使用したs Subversion HEAD [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) スクリプトおよび結果のビルドを[`www/.acl`](#) いつでもあなたのチェックアウトディレクトリにファイル。通常、最新のハードウェアでは、ビルド・プロセスに10秒から15秒かかりません。
+
+Subversionサーバー側のコミット・フックも、監視上の懸念に応じてカスタマイズできます。単純なコミット・メーラーからsvnpubsubデーモンへのセキュアなアクセスまで、使用可能なカスタム構成はいくつもあります。
+
+-----
+
+## Orionアプリケーションのセキュリティ
+
+### [Public SSRは臭い](https://queue.acm.org/detail.cfm?id=2721993).
+
+### ACL管理
+
+```graphviz
+digraph {
+"@path::acl" -> "authz-svn.conf" [label="svn"];
+"@path::acl" -> "/**/.htaccess" [label="httpd"];
+};
+```
+
+&nbsp;
+
+オリオン'セキュリティ・モデルは、次の設定によって一元管理されます。[`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) に構成される[`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm)。オフシュート・サーバー構成ファイルは、構築される変更ごとに動的に生成されます。
+
+POSIXファイルシステムのセキュリティモデルを理解すれば、Orionと一緒に自宅にいることになります。's [mod_dav_svn]()認可モデルとApache HTTPd Webサーバー'あなたのウェブサイトから自動的に生成されるs .htaccessコントロール's [lib/acl.yml](#) YAML構成。
+
+### OpenIDC SSOセキュリティ
+
+すべてのOpenIDセッションCookieは、HttpOnlyおよびSecureフラグが設定されているため、Javascriptセッション盗難の試行は、Orionオンライン・エディタによって効果的に中和されます。
+
+すべてのCookie資格証明ストレージは、HMAC SHA-1ハッシュの下にさらにAES-256で暗号化されます。
+
+### SubversionパスワードのBcrypt
+
+調整可能なラウンド数(現在のデフォルトは5).
+
+### 汚染されたデータの保護
+
+すべてのPerlランタイムでは、-Tフラグで必須のTaintチェックが有効になっています。これは、リモート・シェル・エクスプロイトに対する強力で一意なPurlガードです。
+
+### Wikiの問題
+
+Wikiセキュリティにはいくつかの要因があります。
+
+1.UI/APIセキュリティ
+
+2. ミドルウェア/バックエンドのセキュリティ
+
+3. テンプレート横断保護
+
+4. 検索エンジンACLの互換性
+
+これらの問題は、以下のOrionに関連するため、詳しく説明します。
+
+#### オンライン・エディタ
+
+オンライン・エディタは、ユーザー・エージェントを設定するだけで、JSON UIをサポートしています。'sヘッダを優先する[`アプリケーション/json`](#) MIMEタイプであるため、セキュリティ制御はUIとAPIの両方で同じです。
+
+**Subversionの直接アクセス以外に、管理UI/API**はありません。
+
+##### Subversion ACLは、サーバー側の作業用コピーの読取りアクセスを制御します。
+
+UIを介して使用可能な各作業コピー・リソースは、ユーザーに提示する前に、Subversion ACLに対してクロスチェックされます。このようにして、バージョン管理中のアセット(別名**everything**)に対して、認可されていないリソースへの読取りアクセスが防止されるようにします。
+
+##### コミット・アクセスは、Subversion ACLで直接制御されます。
+
+対応する認可されたSubversionコミットがないと、ネットワークを介して構築および表示することはできません。ここでの主な問題は、Wikiページ作成者が使用できる情報を制御することです'コミットおよびビルドされた編集。
+
+マークダウン・ソース・ページでテンプレートの前処理を許可する場合は、編集したページのソースに対する変数として、ツリー内の他のファイルの内容をテンプレート引数でどのように使用可能にするかを認識する必要があります。
+
+しばしば、そうするように構成されている場合、編集されたページは、ページのヘッダーに独自の依存関係ファイルを宣言できます。これは、Wiki内のセキュリティ制御に対して機能セットの重み付けを行うと考えられます。'情報アーキテクチャ
+
+お客様のニーズに合わせたガイダンスとサポートを提供しますが、'あなたの組織の規模を均衡させる方法を決定するためにあなた次第です'エンタープライズwiki
+
+次の項を参照してください[依存性/ACLインジェクション制御](#h4-dependency-acl-injection-controls) 詳細については、このライブ例をご覧ください。'sは一元的に構成できます[`lib/acl.yml`]({{snippetA.pretty_uri}}):
+
+[snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
+
+コンテンツ作成者はページでページ制限を構成できます's [ヘッダー]({{snippetB.pretty_uri}}):
+
+[snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
+
+副次的なノートとして、ブランチの作成や変更に追加のACLコントロールを配置しなくても、権限のない担当者が保護されたリソースをブランチにコピーすることはできません。言い換えると、システムは、保護資産が各ブランチ全体で保護されていることを確認するために、追加のコントロールなしでブランチ実験をサポートします。'自然なライフサイクル
+
+#### システムACLを構築しますか。
+
+ビルド・システムは完全に認識され、すべて知っていますが、構築された保護されたアセットが、Subversion ACLで管理および管理するチームにのみ表示されるようにすることができます。
+
+ビルド・システムでは、コミット時にブラウザIDEを介してビルドされたファイル名のリストが表示されますが、そのリストはユーザーのみに基づいています。'ユーザーに依存するリソースへの読取りアクセス'コミット内のコンテンツ・アクションを追加、更新または削除します。
+
+##### テンプレート横断制御
+
+参照[sanitize_relative_path]({{snippetC.pretty_uri}}):
+
+[snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
+
+このコードにより、この項の次のルールが適用されます。
+
+###### includeおよびextendsタグ
+
+すべてのターゲット・ファイルは、[`/テンプレート/`](#) フォルダ。そのフォルダをルートとする絶対パスとして参照する必要があります。
+
+###### ssiタグ
+
+すべてのターゲット・ファイルは、[`/コンテンツ/`](#) フォルダ。そのフォルダをルートとする絶対パスとして参照する必要があります。
+
+ターゲット・パスが構成されていない場合[`@path:: パターン`](#) 対象のターゲット・パスをアーカイブまたは分類できる一致設定を使用して、[`ssi`](#) 操作が失敗します。
+
+これは、[`ssi`](#) サポートは、サイトを保存するためのこれらの機能セットの前提条件です'sタケット*permalinks*
+
+#### 依存性/ACLインジェクション制御
+
+管理者[`lib/path.pm`](#) インポート
+
+##### ライブラリ/{パス、表示}.pm Subversion ACL
+
+▲'これらのリソースへの書込みアクセスを制御するには、コードベースで有能なユーザーに制限し、バージョン管理下にあるアセット・セット全体(*everything*)のセキュリティ制御を実装することを承認します。
+
+また、次のものを含めることをお薦めします。[`@svnadmin`](#) 読取り/書込みアクセス権を持つユーザーのグループ'Subversion ACLを手動でリセットする必要がある場合でも、厳密には必要ありません。
+
+##### 動的に生成されたルール&#64;パス::acl
+
+ビルド・システムは、[`lib/path.pm`](#) seed_file_deps()とseed_file_acl()のいずれか(または両方)をインポートし、増分ビルドを引き起こすSubversionコミット変更の内部処理でその選択を繰り越します。
+
+##### 制御されたコンテンツ移行トラッキング
+
+完全なバージョン管理履歴をユーザーに公開する場合は、制御された資料の元の場所での承認制御を保持するように注意する必要があります。
+
+それ以外の場合、資料は**不注意にも必要な承認なしに履歴研究者に公開される可能性があります**。
+
+オリオンCMS'移動/削除の追跡ロジックは、これをシームレスに処理します。
+
+##### lib/path.pmでのseed_file_deps()およびseed_file_acl()の使用に関するカスタム・コントロール
+
+これらのシンボルのインポートを超えて[`lib/path.pm`](#)また、walk_content_tree ()コード・ブロックの実行中に、どのように、どのファイルに適用するかも選択できます。結局、'構成ファイルだけでなく、コードベース、すべてのTuringの完全な機能[`Perl`](#) 私たちが'知って、評価する!
+
+#### ビルドされたWebサイトの.htaccssファイルとSubversion承認ファイルは、&#64;path:: コミット時に即座にacl
+
+エフェメラル・ブランチ・ビルドの自動ACL保護。追加構成は不要です。
+
+#### PCRE検索エンジン内蔵コントロール
+
+汎用UIと同じ状況: UIからSubversionサーバーに対してクロスチェックします。
+
+ライブ・サイトでは、マークダウン(ソース・ツリー)検索を有効にすると、検索エンジンはまったく同じことを行います。それ以外の場合は、ライブ・サイトにhttpdサブリクエストを実行して、ユーザーがそのライブ・ファイルにアクセスする権限があるかどうかをテストします(使用するユーザー・データがあるように、検索エンジンにパスワードで保護されている場合)。
+
+### コンテンツセキュリティポリシー
+
+- [x] 分析の制限
+
+Googleおよび/またはLinkedIn。
+
+- [x] データ制限
+
+データはサーバーから配信する必要があります。
+
+- [x] コンテンツの制限
+
+コンテンツはサーバーから配信する必要があります。
+
+- [x] コード制限
+
+Javascriptコードは、当社のサーバーから提供する必要があります。
+
+- [x] スタイルの制限
+
+CSSはサーバーからの提供が必要です。
+
+- [x] プラグインの制限
+
+現在PDF'Sのみ。
+
+### クロスオリジン・リソース共有
+
+- [x] アカウントを持つすべてのユーザーは、ログイン資格証明を使用して、他の場所からUI/APIを使用できます。
+
+- [x] 企業および企業のお客様は、Orionを[ヘッドレスCMS](https://aws.amazon.com/what-is/headless-cms/) 独自のUIを構築する場合[JSON Subversion磁器](api/editor) または[JSON検索](api/search) API。
+
+### サードパーティ依存関係
+
+非常に簡潔で時間テスト済の依存関係。主なコンポーネントについては、[Orionテクノロジー](technology) ページ。
+
+#### 要求時に利用可能なソフトウェア部品表(SBOM).
+
+[お問い合わせ](/contact) 詳細はこちら
+
+--------
+
+## インデックス
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2026-03-28 08:05:09 -0700 (Sat, 28 Mar 2026) $ $Author: joe $ $Revision: 30565 $ -->

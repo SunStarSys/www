@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ja api/index.md.ja'
+keywords: ~
+published: ~
+status: 下書き
+title: Orion参照
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png">
+</div>
+
+## ライブデモ
+
+Orionのデモ&trade;'IDE、訪問<https://www.openoffice.org/> 大規模なサイト、または<https://thrift.apache.org/> 複雑なものの場合は、上記のブックマークレットをクリックしてライブプロトタイプを表示します。
+
+もし'あなたにはあまりにも多くの迷惑、このウェブサイトはオリオンで自己ホストされています&trade;および{# lede #}ホットピンクの鉛筆アイコン[<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 右上のブレッドクラムでライブデモンストレーションを行います{# lede #} システムがどのように機能するか(コミット/ビルド・アクセスは、スタッフのみにロックダウンされます).
+
+## 推奨ブックマーク
+
+ブラウザのツールバーにブックマークレットを開いてインストールしてください。"新しいブックマーク" ブラウザからのダイアログ画面'sメニューおよび「場所/URL」フィールドに次のように入力します。
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+このブックマークレットがインストールされていなければ、ライブサイトを閲覧したり、Orionでページを編集したりすることはできません。&trade; ブックマークレットをクリックします。
+
+ブックマークレットを使用するには、ライブ・プロダクション・サイト(Orionではなく)を参照します。&trade;!)ページを検索'編集し、ブックマークレットをクリックします。あなた'llは、コンテンツを編集できるこのOrion内のページに移動します。
+
+## スタート・ガイド
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4-KiEDFbzl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+## IoCビルドAPI
+
+[snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
+
+## オンボーディング・プロセス
+
+アーリーアダプター用、オリオン&trade; サービスはSubversionリポジトリの間に置かれます。'Webサイトのソース・ツリーと、エンド・ユーザーにサイト・コンテンツを配信するライブ本番Webサーバー。独自のsvnpubsub対応Subversionサービスをすでに実行している組織にとって、オンボーディングは簡単です。
+
+1. サイトのURLを教えてください'Subversionのソース
+
+2. サイトの開発やメンテナンスに関する問題について、弊社(ロール、またはメーリングリスト)の電子メールアドレスをご提供いただき、アドレスが[SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- モデレーション施設の観点から準拠しています。
+
+3. 本番Webサーバーのサブスクライブ' `svnwcsub` デーモンをパブリックに`svnpubsub` サービスこれらのスタンドアロン・ソフトウェア・コンポーネントは、新しい各Subversionソース・リリースの一部であり、かなり成熟しており、Subversion開発チームによって適切にサポートされています。If You Just Can'python3ポートが終了するのを待って、代わりに(スレッド化された)ポートを使用できます。
+
+4. お問い合わせ'd. 送信されたビルドと配信する電子メール・アドレスの内容が異なります。
+
+## ソースディレクトリレイアウト
+
+トランク/
+	- cgi-bin/
+	- コンテンツ/
+	- テンプレート/
+	- lib/
+		- path.pm
+		- view.pm
+- 支店/
+	..各ブランチは上のトランクレイアウトに従います...
+
+参照<https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/> 生きた例です。
+
+## 動的コンテンツ
+
+### コンテンツを変更したソース・ページを再生成するスクリプトの例(ソースがない場合でも)。
+
+基本的な考え方は、注目のソース・ページの一部が次を使用して構築されていることです。"動的" コンテンツ(ビルドには、Jira滝や現在のメーリングリストスレッドなど、他のオンラインサイトからの絶え間なく変化するスニペットが組み込まれています)。
+
+その良い例が、"最新ニュース" セクション[ASFホーム・ページ](https://www.apache.org/)およびここ'ここに例示されているように、少しシェル+svn+cronの魔法を使って動作する舞台裏の仕方(ダイナミックビルドを取る)'ソースファイル`$file` 以下:
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+これは、キャッシュされたsvn資格証明を自分のPCで使用し、固定スケジュール(フロントエンドWebサーバー/CDN HTTPキャッシュに基づく)でcronが実行されるようにする小さなシェル・スクリプトに組み込みます。'TTL)。サーバー側のツールを使用する必要はありません。パスワード・セキュリティ、スケジューリングおよび動的ページ・ターゲットを完全に制御できます。独自のsvnpubsub対応Subversionサービスを使用している場合、そのトランザクションにはハードウェアが直接含まれません。コミットにより、svnwcsubクライアントがトリガーされ、常にsvnpubsubサーバーをリスニングして、これらの変更をオンデマンドで構築およびデプロイできます&mdash; 発音
+
+## 例外
+
+未定
+
+## 検索
+
+未定
+
+## クイック・コミット
+
+未定
+
+## リソースの追加
+
+未定
+
+--------
+
+## インデックス
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 11:57:18 -0400 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

@@ -1,0 +1,124 @@
+<!DOCTYPE HTMLパブリック"-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVCヘルプ: ディレクトリ・ビュー</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVCヘルプ: ディレクトリ・ビュー</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>ヘルプ</h3>
+       <a href="help_rootview.html">一般</a><br />
+       <strong>ディレクトリ&nbsp;表示</strong><br />
+       <a href="help_log.html">ログ&nbsp;表示</a><br />
+
+<h3>インターネット</h3>
+       <a href="http://viewvc.org/index.html">ホーム</a><br />
+       <a href="http://viewvc.org/upgrading.html">アップグレード中</a><br />
+       <a href="http://viewvc.org/contributing.html">貢献</a><br />
+       <a href="http://viewvc.org/license-1.html">ライセンス</a><br />
+    </td><td colspan="2">
+
+<p>ディレクトリ・リスト・ビューは、わかりやすいものである必要があります。
+    コンピュータユーザー現在のディレクトリのパスを表示します。
+    ページの先頭です。次に、次の表を示します。
+    ディレクトリの内容と、実際の内容、ソート可能なリスト
+    現在のディレクトリ内のすべてのファイルとサブディレクトリ。</p>
+
+<p><a name="summary"></a>サマリー表は、一部またはすべてで構成されます。
+    次の行:</p>
+    <ul>
+      <li><a name="summary-files-shown"><strong>表示されたファイル</strong></a>
+      - ディレクトリ・リストに表示されるファイルの数。これは少なくなる可能性があります
+      ディレクトリ内の実際のファイル数より
+      <a href="#option-search">正規表現検索</a> 所定の場所、
+      ファイルの非表示'検索基準を満たしている。CVSディレクトリ内
+      リスト、この行には、表示を切り替えるリンクもあります
+      <a href="help_rootview.html#dead-files">デッドファイル</a>存在する場合
+      現在</li>
+
+<li><a name="summary-revision"><strong>ディレクトリ
+      リビジョン</strong></a> - Subversionディレクトリの場合のみ。
+      表示形式"#" 最初の数値は最新です
+      ディレクトリ(またはその下にあるパス)のリポジトリのリビジョン
+      変更されました。2番目の数字は最新のリポジトリにすぎません。
+      改訂。両方の番号がリンクされています
+      <a href="help_rootview.html#view-rev">リビジョン・ビュー</a></li>
+
+<li><a name="summary-sticky-revision-tag"><strong>常駐
+     リビジョン/タグ</strong></a> - 現在を表示
+     <a href="help_rootview.html#sticky-revision-tag">固定改訂または
+     タグ</a> 設定またはクリアするフォーム・フィールドが含まれています。</li>
+
+<li><a name="summary-search"><strong>現在の検索</strong></a> -
+     次の場合<a href="#option-search">正規表現検索</a> 所定の場所、
+     に、検索文字列を示します。</li>
+
+<li><a name="summary-query"><strong>問合せ</strong></a> - 提供
+     Aへのリンク<a href="help_rootview.html#view-query">問合せフォーム</a>
+     ディレクトリ</li>
+   </ul>
+
+<p><a name="list"></a>実際のディレクトリ・リストは、次の表です。
+  1つの列のファイル名とディレクトリ名、および
+  各ファイルまたはディレクトリが変更された最新のリビジョン
+  その他の列列ヘッダーをクリックしてディレクトリをソートできます。
+  列順のエントリ。ソートを元に戻すために再度クリック
+  オーダー</p>
+
+<p>
+  <!-- If using directory.ezt template -->
+  ファイル名は<a href="help_log.html">ログ・ビュー</a>
+  ファイルが変更されたリビジョンのリストを表示します。リビジョン
+  数字はどちらにもリンクしています。
+  <a href="help_rootview.html#view-markup">ビュー</a>
+  または<a href="help_rootview.html#view-checkout">ダウンロードする</a> ファイル
+  (ファイル・タイプによって異なります)。ディレクトリのリンクは逆になります。
+  ディレクトリのリビジョン番号へのリンク<a href="help_log.html">ログ
+  ビュー</a>ディレクトリ名はそれらの内容を示すリンクです。
+  ディレクトリ
+
+<!-- If using dir_alt.ezt template -->
+  <!--
+  ファイル名とディレクトリ名は、その内容を取得するためのリンクです。
+  ファイル・リンクは次のいずれかです。
+  <a href="help_rootview.html#view-markup">ビュー</a>
+  または<a href="help_rootview.html#view-download">ダウンロードする</a> リンク
+  ファイルの種類によって異なります。ディレクトリ・リンクはディレクトリに移動します
+  リスト。リビジョン番号はリンク先です<a href="help_log.html">ログ
+  ビュー</a> ファイルまたはディレクトリが存在するリビジョンのリストの表示
+  変更。
+  -->
+
+また、CVSリポジトリでは<a
+  href="help_rootview.html#view- グラフ">グラフ表示</a> 有効、
+  リビジョンへのリンクであるファイル名の横にある小さなアイコンになります
+  グラフ。</p>
+
+<p>ViewVCの構成方法によっては、さらにオプションがある場合があります。
+  ディレクトリ・ページの下部:</p>
+
+<ul>
+    <li><a name="option-search"><strong>正規表現
+    検索</strong></a> - 有効にすると、フォーム・フィールド受入れが表示されます
+    検索文字列(a)
+    <a href="http://doc.python.org/lib/re-syntax.html">Pythonレギュラー
+    表情</a>). 送信後は、少なくとも
+    式の1つの出現がディレクトリ・リストに表示されます。
+    </li>
+    <li><a name="option-tarball"><strong>Tarballのダウンロード</strong></a> -
+    有効にすると、圧縮されたtarアーカイブをダウンロードするためのリンクが表示されます。
+    ディレクトリの内容。</li>
+  </ul>
+
+</td></tr></table>
+  </body>
+</html>

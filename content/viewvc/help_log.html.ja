@@ -1,0 +1,69 @@
+<!DOCTYPE HTMLパブリック"-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVCヘルプ: ログ・ビュー</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVCヘルプ: ログ・ビュー</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>ヘルプ</h3>
+       <a href="help_rootview.html">一般</a><br />
+       <a href="help_dirview.html">ディレクトリ&nbsp;表示</a><br />
+       <strong>ログ&nbsp;表示</strong><br />
+
+<h3>インターネット</h3>
+       <a href="http://viewvc.org/index.html">ホーム</a><br />
+       <a href="http://viewvc.org/upgrading.html">アップグレード中</a><br />
+       <a href="http://viewvc.org/contributing.html">貢献</a><br />
+       <a href="http://viewvc.org/license-1.html">ライセンス</a><br />
+    </td><td colspan="2">
+    <p>
+      ログ・ビューには、選択したソースのリビジョン履歴が表示されます
+      ファイルまたはディレクトリ。各改訂について、次の情報が示されます。
+      displayed:
+
+<ul>
+        <li>リビジョン番号。Subversionリポジトリでは、これは
+            リンク先<a href="help_rootview.html#view-rev">リビジョン
+            ビュー</a></li>
+        <li>ファイル用、リンク先
+        <a href="help_rootview.html#view-markup">ビュー</a>,
+        <a href="help_rootview.html#view-checkout">ダウンロードする</a>および
+        <a href="help_rootview.html#view-annotate">注釈</a> ▲
+          改訂。ディレクトリの場合、
+        <a href="help_dirview.html">リスト・ディレクトリの内容</a></li>
+        <li>識別要素のリビジョンを選択するためのリンク(下記参照)</li>
+        <li>変更の日付と年齢</li>
+        <li>変更の作成者</li>
+        <li>CVSブランチ(通常) <em>メイン</em>ブランチにない場合)</li>
+        <li>リビジョンにバインドされたCVSタグのリスト(ある場合)</li>
+        <li>追加および除去された行で測定された変更のサイズ
+            コード。(CVSのみ)</li>
+        <li>リビジョン時のファイルのサイズ(バイト)
+            (Subversionのみ)</li>
+        <li>前のリビジョンへの差分を表示するためのリンク、または
+            任意の選択されたリビジョン(ある場合、上記を参照)</li>
+        <li>リビジョンがコピーの結果である場合は、パスとリビジョン
+            コピー元</li>
+        <li>リビジョンがコピーまたは名前変更の前に存在する場合、
+            リビジョンの時刻</li>
+        <li>最後に、コミット・ログ・メッセージを示します。
+            変化の理由について。</li>
+      </ul>
+    <p>
+      ページの下部には、次のことが可能なフォームがあります。
+      任意のリビジョンの差分を要求します。
+    </p>
+  </td></tr></table>
+  </body>
+</html>

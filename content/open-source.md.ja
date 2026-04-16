@@ -1,0 +1,41 @@
+---
+archived: ~
+categories: ~
+keywords: オープンソース、osi、apacheライセンス、リードユーザー
+published: ~
+status: ~
+title: オープンソースプロジェクト
+---
+
+### オープン・ソース参加
+
+私たちの信念の中心は、オープンソースソフトウェアの本来の価値提案です。コラボレーション可能[リードユーザー](http://en.wikipedia.org/wiki/Lead_user) コミュニティとその周辺ネットワークは、SunStarシステムの開始以来、主に、以下に由来または由来するテクノロジーで私たちの活動の一部となっています。[アパチェソフトウェア財団](http://www.apache.org/).
+
+製品ラインにオープン・ソース戦略はありますか? ソフトウェアはどの程度モジュール化されており、ユーザーにこれらの拡張ポイントへのアクセス権を付与しても意味がありますか。聞いたことがない[ハリウッド・プリンシプル](http://en.wikipedia.org/wiki/Hollywood_principle)?ユーザー・イノベーションの波をうまく乗り越え、最もアクティブな顧客の潜在能力を活用しながら、競争に落とし穴を残すことができます。
+
+#### プロジェクト一覧'全体または一部に関わっている:
+
+- [mod_perl](https://perl.apache.org/) &mdash; httpd内に埋め込まれたperlインタプリタ。
+
+- [ライブラリ](https://httpd.apache.org/apreq/) &mdash; 安全で高速なHTMLフォーム・データおよびCookie解析ライブラリ。
+
+- [Apache CMS](https://github.com/SunStarSys/orion) &mdash; 100以上のApacheプロジェクトにサービスを提供するCMS。
+
+- [オルスルス](https://github.com/SunStarSys/orthrus) &mdash; [OTP](https://en.wikipedia.org/wiki/One-time_password) セキュリティ・アプリケーション。OPIEにかわるAL-2.0 *portable*ドロップ。
+
+- [場所](https://github.com/joesuf4/at) &mdash; [テープ](https://testanything.org)Cユニットテストフレームワーク
+
+- [pty](https://github.com/SunStarSys/pty) &mdash; 自動端末の資格情報のプロンプト応答のためのツール。の精神で[TCL予想](https://en.wikipedia.org/wiki/Expect)異なるプログラミング言語にまたがる*portable*。
+
+- [pffxg](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash; シルバー・サーチャーと同様のパラレル化およびフィルタ処理された再帰的grep機能。ただし、4xの方が高速です。
+
+- [svnpubsub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; subversionの分散コミット・フック。
+
+- [htop](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; 新しいSolaris 11.4ポート(segfault-free ZFS/Zoneサポートを含む)。
+
+- [密封された](https://github.com/SunStarSys/sealed) &mdash; 型付き字句のコンパイル時メソッド検索。
+
+- [アルゴリズム::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash; 最長共通サブシーケンス・アルゴリズムの高速(XS)実装。
+
+- [schaefj/linter](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; ドッカーコンテナ[linter。{rc、sh}](https://github.com/SunStarSys/linter) スクリプト
+<!-- $Date: 2026-03-11 11:11:40 -0700 (Wed, 11 Mar 2026) $ $Author: joe $ $Revision: 28511 $ -->

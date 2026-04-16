@@ -1,0 +1,33 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ja api/index.md.ja'
+keywords: ~
+published: ~
+status: 下書き
+title: Orionプライバシーポリシー
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png"></img>
+</div>
+
+## アウトライン
+
+- 顧客データの共有/再販はありません。
+
+- セキュリティ/説明責任目的にのみ使用されるCookie。
+
+- ログに記録する唯一のユーザーIDコンポーネントは、あなたのGoogle OpenIDアカウントです'sの電子メールアドレスと、SubversionシステムがOrionを支えるものに接続するために使用するユーザーアカウント&trade; あなたがコミットしているサイトのために。ロギング・システムでは、基本的なApacheと一緒にこれらを追跡します。[`httpd`](#) IPアドレスの接続、URL詳細を含むリクエスト・プロトコルおよびクライアントを含むアクセス・レスポンス・ログセット'広告[`参照元`](#) および[`ユーザーエージェント`](#) ヘッダー。
+
+- {# lede #}▲'GDPR準拠のオプトイン・システム。オリオンへの最初の訪問&trade; CMS/IDEは、承認を求めるGoogle Pageに移動します{# lede #} ▲<span class="text-white">SunStarシステムOIDC</span> 提供されているGoogleアカウントの詳細(主にプロフィール情報)を使用するアプリ&mdash; 電子メール・アドレス、写真など。ただし、ログイン資格証明は***ではありません)。Ifあなたdon'Googleが私たちとこの情報を共有したい、または寄付したい'このプライバシーポリシー文書(そのページからリンクされています)を気に入ったら、'あなたのユーザープロファイルの詳細を提供することをGoogleに許可し、あなたが考えを変えるまでアクセスを拒否されます。
+
+--------
+
+## インデックス
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 11:57:18 -0400 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

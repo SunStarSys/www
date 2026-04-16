@@ -1,0 +1,237 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ja api/index.md.ja'
+keywords: ジャムスタック、wiki、kms、cms
+published: ~
+status: 公開済み
+title: Orionプラン
+---
+
+## プラン詳細
+
+<div class="row">
+<div class="col-lg-4">
+	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">専門家プラン</div>
+		<div class="card-body">
+			独立系ブロガーに最適
+			<hr />
+<p>
+
+$25 /月/マネージド・パブリック・サイト
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+
+<li>月次リソースを含む(Webサイトごと):
+<p>
+<ol>
+						<li>プライベートSubversionホスティング</li>
+						<li>250MBのストレージ領域<sup>1</sup></li>
+						<li>100GBのデータ転送</li>
+						<li>10席のIDE使用制限なし</li>
+			<li>100ビルド(分)</li>
+			<li>電子メールベースのカスタマーサポート</li>
+					</ol>
+					</p>
+</li>
+</ul>
+
+<ul style="min-height:200px">
+				<li>追加の月間リソースレート(ウェブサイトごと):
+<p>
+<ol>
+						<li>1ドル/5MBのストレージ容量<sup>1</sup></li>
+						<li>10ドル/40GBのデータ転送</li>
+						<li>$5/座席</li>
+						<li>$10 / 100ビルド分</li>
+                        <li>$0.50 /ページAI NLP翻訳</li>
+</ol>
+					</p>
+</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">ビジネス・プラン</div>
+		<div class="card-body">
+			SMBに最適
+			<hr />
+<p>
+
+$ 100 /月/マネージドパブリックサイト、すべての競合他社の価格モデルから最大50%オフ!
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>月次リソースを含む(Webサイトごと):
+<p>
+<ol>
+						<li>プライベートSubversionホスティング</li>
+						<li>1GBのストレージ領域<sup>1</sup></li>
+						<li>500GBのデータ転送</li>
+						<li>50席のIDE使用制限なし</li>
+						<li>最大5つのACLグループ</li>
+				<li>500ビルド(分)</li>
+				<li>99.9%包括的なSLA<sup>3</sup></li>
+						<li>電子メールベースのカスタマーサポート</li>
+</ol>
+</p>
+</li>
+</ul>
+<ul style="min-height:200px">
+				<li>追加の月間リソースレート(ウェブサイトごと):
+<p>
+					<ol>
+						<li>10ドル/100MBのストレージ領域<sup>1</sup></li>
+						<li>20ドル/100GBのデータ転送</li>
+						<li>$10/座席</li>
+						<li>$10 / 100ビルド分</li>
+                        <li>$.40 /ページAI NLP翻訳</li>
+                    </ol>
+					</p>
+					</li>
+				</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-4">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+		<div class="card-header">エンタープライズ・プラン</div>
+		<div class="card-body">
+			公共部門、NGO、認定ブランド
+			<hr />
+<p>
+
+$1000 /月、すべての競合他社の価格モデルから最大67%オフ!
+
+</p>
+
+&nbsp;
+
+<ul style="min-height:400px">
+				<li>含まれる月次リソース: &nbsp;
+
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+<p>
+<ol>
+						<li>独自のSubversionリポジトリに5GBのストレージ領域<sup>2</sup></li>
+						<li>5TBのデータ転送</li>
+						<li>無制限のWebサイトと(自己管理)席</li>
+						<li>5000ビルド分</li>
+						<li>Subversion認可構成の完全制御</li>
+						<li>プライベートなネットワーク構築コンテナ</li>
+						<li>99.99%包括的なSLA<sup>3</sup></li>
+						<li>グローバルPOP<sup>4</sup> Q4に地理的に分散したラストマイル配信ネットワークを使用</li>
+						<li>プレミアム・サポートSL</li>
+					</ol>
+					</p>
+</li>
+			</ul>
+			<ul style="min-height:200px">
+				<li>追加の月次リソース・レート:
+
+&nbsp;
+
+<p>
+<ol>
+						<li>100ドル/1GBのストレージスペース<sup>2</sup></li>
+						<li>15ドル/100GBのデータ転送</li>
+						<li>$ 100 / ithread mod_perlレジストリホスティング</li>
+						<li>$100 /カスタムPOPのOCIリージョン</li>
+				<li>$100 / 1Kビルド(分)</li>
+                <li>$0.30 /ページAI NLP翻訳</li>
+                <li>WebSocketsおよび/または利用可能なプライベートコンテナホスティング</li>
+                      </ol>
+					</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+</div>
+
+- すべてのプランには、内部で自動化されたSSL/TLS証明書管理(LetsEncrypt経由)、統合されたPCRE (+Markdown)検索エンジン、自動化された自然言語翻訳(OCI AI経由)サポート、およびEmail Form Processing Gatewayが含まれます。
+
+- オンボーディングには、トマッターのメニューリンク構造と、スタイリング用のブートストラップ4またはブートストラップ5のcssファイルの提供が含まれます。
+
+- {# lede #}年間前払価格割引を利用可能(月次請求コストを最大20%オフ){# lede #}.
+
+- 利用可能なボリューム割引。
+
+- Enterprise KerberosベースのOrion Serverインストールが利用可能になり、Atlassian Confluence Data Centerの代替案を探しているお客様が利用できるようになりました。
+
+- 企業のお客様は、ネットワーク・ファイアウォール制限を有効にして、バージョン管理リポジトリに直接アクセスできます。
+
+- OCIファンクション(サーバーレス・テクノロジ)/OCI RDBMS統合は近日提供予定です。
+
+- コンサルティングおよびウェブサイト構築技術トレーニングおよびポーティングサービスが利用可能。
+
+- 技術Parnershipsは代理店および第三者の再販業者に非常に歓迎されています。
+
+### ビルド分数とプランレベル: ラフガイド
+
+*コミット当たりの平均ビルド時間の妥当なハイエンド見積りは10秒です。*
+
+- 1日に20コミット未満の専門家は、計画に含まれる100ビルド分で問題ありません。
+
+- 1日に100コミット未満の企業は、計画に含まれる500ビルド分で問題ありません。
+
+- 1日に1000コミット未満の企業は、計画に含まれる5000ビルド分で問題ありません。
+
+------------
+
+#### 脚注
+
+1. 各サイトの2つの作業用コピー・チェックアウトのサイズ(1つのソース・ツリーと1つの結果の本番ビルド・ツリー)に基づいて計算されたストレージ使用率。
+
+2. ストレージ使用率は、個々のチェックアウトではなく、エンタープライズ顧客用のSunStarシステム・ホストSubversionリポジトリの合計サイズに基づいて計算されます。これは、*比較的に小さい数値*です(単一のソース・ツリー・チェックアウトのサイズについて)。
+
+3.SLAは、Webサイト・アセット*およびOrionオンラインIDE*をカバーし、システムの可用性を構築しますが、GitHubとの競争力を維持することを期待するSubversionバージョン管理システムは除外します。'一般的な可用性メトリック。
+
+4. エンタープライズ・カスタマー・プレゼンス(POP):
+
+- フォートローダーデール、フロリダ
+
+- ワシントンDC
+
+- フェニックス、AZ
+
+- フランクフルト、DE
+
+- シドニー、AU
+
+- サンパウロ、BZ
+
+- ハイデラバード、IN
+
+- ソウル、SK
+
+------------
+
+## インデックス
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
+{% endfor %}
+
+------------
+
+<div class="col-lg-12">
+  {% include "/enquiry_get.html"|append:lang %}
+</div>
+
+<style type="text/css">
+h4 { font-size:14px }
+</style>
+
+<!-- $Date: 2026-03-29 04:25:31 -0700 (Sun, 29 Mar 2026) $ $Author: joe $ $Revision: 30830 $ -->

@@ -1,0 +1,164 @@
+<!DOCTYPE HTMLパブリック"-//W3C//DTD XHTML 1.0 Strict//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVCヘルプ: 一般</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVCヘルプ: 一般</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>ヘルプ</h3>
+       <strong>一般</strong><br />
+       <a href="help_dirview.html">ディレクトリ&nbsp;表示</a><br />
+       <a href="help_log.html">ログ&nbsp;表示</a><br />
+
+<h3>インターネット</h3>
+       <a href="http://viewvc.org/index.html">ホーム</a><br />
+       <a href="http://viewvc.org/upgrading.html">アップグレード中</a><br />
+       <a href="http://viewvc.org/contributing.html">貢献</a><br />
+       <a href="http://viewvc.org/license-1.html">ライセンス</a><br />
+    </td><td colspan="2">
+
+<p><em>ViewVC</em> CVSおよびSubversionのWWWインタフェースです。
+  リポジトリ。次のファイルやディレクトリを参照できます。
+  リポジトリ履歴からメタデータを表示中のリポジトリ: log
+  メッセージ、変更日、作成者名、リビジョン番号、コピー
+  歴史など。リポジトリの様々なビューを提供します。
+  探している情報を見つけるのに役立つデータ:</p>
+
+<ul>
+    <li><a name="view-dir" href="help_dirview.html"><strong>ディレクトリ
+    表示</strong></a> - ファイルおよびサブディレクトリのリストを表示します。
+    リポジトリのディレクトリと、作成者名などのメタデータ
+    ログ・エントリ。</li>
+
+<li><a name="view-log" href="help_log.html"><strong>ログ
+    表示</strong></a> - すべてのリビジョンのリビジョンリストを表示します
+    リポジトリ内のファイルまたはディレクトリに対する変更
+    各リビジョンのビューへのメタデータとリンク。</li>
+
+<li><a name="view-markup"><strong>ファイルコンテンツビュー(マークアップ)
+    表示)</strong></a> - 特定のファイルの内容を表示します。
+    改訂。ページの上部に改訂情報があります。ファイル
+    GIF、PNGまたはJPEGイメージのリビジョンがインラインで表示されます
+    ページ。その他のファイル・タイプはマークアップ・テキストとして表示されます。マークアップ
+    URLおよび電子メール・アドレスをリンクに変換することに制限がある場合があります。
+    色分けされたソース・コードを表示するように構成されています。</li>
+
+<li><a name="view-checkout"><strong>ファイルのダウンロード(チェックアウト)
+    表示)</strong></a> - 変更されていないファイルの内容を取得します。
+    改訂。ブラウザはファイルを表示しようとするか、単にファイルを保存して
+    ディスク。</li>
+
+<li><a name="view-annotate"><strong>ファイル注釈ビュー</strong></a> -
+    ファイルリビジョンの内容を表示し、その内容を行ごとに分類します。
+    それぞれが最後に変更されたリビジョン番号を表示します。
+    リンクとその他の情報<em>一部のビューでは無効化されています
+    ViewVC構成</em></li>
+
+<li><a name="view-diff"><strong>ファイル差分ビュー</strong></a> - ショー
+    ファイルの2つのリビジョン間で行われた変更</li>
+
+<li><a name="view-tarball"><strong>ディレクトリTarballビュー</strong> -
+    次の内容を含むgzipされたtarアーカイブを取得します。
+    ディレクトリ。<em>このビューは、デフォルトのViewVCでは無効です。
+    構成。</em></li>
+
+<li><a name="view-query"><strong>ディレクトリクエリービュー</strong></a> -
+    すべてのサブディレクトリおよびファイルに加えられた変更に関する情報を表示します。
+    親ディレクトリの下で、指定した基準でソートおよびフィルタされます。
+    <em>このビューは、デフォルトのViewVC構成では無効です。</em>
+    </li>
+
+<li><a name="view-rev"><strong>リビジョンビュー</strong> - ショー
+    ログ・メッセージ、作成者、リストなどのリビジョンに関する情報
+    変更されたパス<em>Subversionリポジトリの場合のみ。</em></li>
+
+<li><a name="view-graph"><strong>グラフ・ビュー</strong></a> - 表示
+    ファイルのグラフィカル表現'改訂および支店完了
+    タグおよび作成者の名前とマークアップおよび差分ページへのリンク。
+    <em>CVSリポジトリの場合のみ、デフォルトで無効になっています。
+    構成。</em></li>
+  </ul>
+
+<h3><a name="multiple-repositories">複数のリポジトリ</a></h3>
+
+<p>ViewVCの単一インストールは、多くの場合、
+  複数のリポジトリ。これらのインストールでは、ViewVCは
+  <em>プロジェクト・ルート</em> それぞれの右上隅にあるドロップダウン・ボックス
+  すべてのリポジトリにすばやくアクセスできるように生成されたページ。</p>
+
+<h3><a name="sticky-revision-tag">スティッキーなリビジョンとタグ</a></h3>
+
+<p>デフォルトでは、ViewVCはファイルおよびディレクトリおよびリビジョンを表示します
+  これは現在リポジトリに存在します。しかし、'sブラウズも可能です
+  過去の履歴の時点でのリポジトリの内容を選択します。
+  A "スティッキタグ" (CVS)または"スティッキーリビジョン" ということで、
+  ディレクトリ・ページおよびログ・ページの上部にあるフォーム。これら'「Sticky」
+  ONCETHE'あなたがナビゲートするとき、彼らは周りに固執する
+  他のページ、リセットするまでいつ'再設定、ディレクトリおよびログ
+  ページには、履歴内の指定されたポイントより前のリビジョンのみが表示されます。次に含まれる
+  CVS (タグがブランチまたはブランチのリビジョンを参照する場合のみ)
+  分岐点を含む分岐履歴からの改訂が表示されます。
+  前回の改訂。</p>
+
+<h3><a name="dead-files">デッドファイル</a></h3>
+
+<p>CVSディレクトリ・リストでは、ViewVCはオプションでデッド・ファイルを表示できます。
+  デッドファイルとは、以前ディレクトリに存在していたが、現在
+  削除されたファイル'現在選択されているtが存在します
+  <a href="#sticky-revision-tag">スティッキタグ</a>。デッドファイルは使用できません
+  Subversionリポジトリに表示されます。削除されたファイルを表示する唯一の方法
+  Subversionディレクトリは、次の場所にあるスティッキー・リビジョンに移動します。
+  ファイルは以前存在していた。</p>
+
+<h3><a name="artificial-tags">人工タグ</a></h3>
+
+<p>CVSリポジトリで、ViewVCは擬似タグを追加します<em>ヘッド</em> および
+  <em>メイン</em> リストにタグを付け、リビジョンの代わりに受け入れる
+  すべてのURLの数値と実際のタグ名。<em>メイン</em> ブランチのように動作
+  デフォルトのブランチを指すタグ、<em>ヘッド</em> 次のように動作します
+  デフォルト・ブランチの最新リビジョンを指すリビジョン・タグ。▲
+  defaultブランチは通常、トランクにすぎませんが、他のブランチに設定することもできます。
+  個々のリポジトリ・ファイル内で分岐します。CVSは常にチェックアウトします
+  ファイルからのリビジョン'他のブランチが指定されていない場合のデフォルトのブランチ
+  コマンドラインで</p>
+
+<h3><a name="more-information">詳細情報</a></h3>
+
+<p>詳細情報<em>ViewVC</em> 次から使用可能
+  <a href="http://viewvc.org/">viewvc.org</a>.
+  CVSおよびSubversionのガイドについては、次のリンクを参照してください。</p>
+
+<h4>CVSに関するドキュメント</h4>
+  <blockquote>
+    <p>
+      <a href="http://cvsbook.red-bean.com/"><em>オープン・ソース
+      CVSによる開発</em></a><br />
+      <a href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">CVS
+      ユーザー'Sガイド</a><br />
+      <a href="http://cellworks.washington.edu/pub/docs/cvs/tutorial/cvs_tutorial_1.html">別のCVSチュートリアル</a><br />
+      <a href="http://www.csc.calpoly.edu/~dbutler/tutorials/winter96/cvs/">しかし、別のCVSチュートリアル(少し古いが良い)</a><br />
+      <a href="http://www.cs.utah.edu/dept/old/texinfo/cvs/FAQ.txt">CVSに関する古くて非常に有用なFAQ</a>
+    </p>
+  </blockquote>
+
+<h4>Subversionに関するドキュメント</h3>
+  <blockquote>
+    <p>
+      <a href="http://svnbook.red-bean.com/"><em>バージョン管理
+      Subversion</em></a><br />
+    </p>
+  </blockquote>
+
+</td></tr></table>
+  </body>
+</html>

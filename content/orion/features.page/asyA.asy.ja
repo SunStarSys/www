@@ -1,0 +1,32 @@
+//チューブトレフォイルノット-*- asy -*-
+
+輸入の管;
+インポート graph3;
+パレットのインポート;
+
+サイズ(0、8cm);
+currentlight= ホワイト;
+実際のredPortion = 143 / 256。
+実際のgreenPortion = 153 / 256。
+実際のbluePortion = 251 / 156。
+ペンperiwinklePen =  redPortion *赤+ greenPortion *緑+ bluePortion *青;
+currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+実x(実t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+実z(実t) {2*e*sin(3t);}を返す
+
+path3 p=scale3(2)*graph(x、y、z、0,2pi、50、operator ..)&cycle;
+
+pen[] pens= グラデーション(6、赤、青、紫);
+pens.push(黄色);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(秒、ペン、colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true);
