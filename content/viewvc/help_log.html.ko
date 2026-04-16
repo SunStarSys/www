@@ -1,0 +1,69 @@
+아! DOCTYPE HTML 공개 "-//W3C//DTD XHTML 1.0 엄격///EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC 도움말: 로그 뷰</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC 도움말: 로그 뷰</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>도움말</h3>
+       <a href="help_rootview.html">일반</a><br />
+       <a href="help_dirview.html">디렉토리&nbsp;보기</a><br />
+       <strong>로그&nbsp;보기</strong><br />
+
+<h3>인터넷</h3>
+       <a href="http://viewvc.org/index.html">홈 페이지</a><br />
+       <a href="http://viewvc.org/upgrading.html">업그레이드 중</a><br />
+       <a href="http://viewvc.org/contributing.html">기여</a><br />
+       <a href="http://viewvc.org/license-1.html">라이센스</a><br />
+    </td><td colspan="2">
+    <p>
+      로그 뷰에는 선택한 소스의 개정 내역이 표시됩니다.
+      파일 또는 디렉토리 각 개정에 대해 다음 정보가 표시됩니다.
+      displayed:
+
+<ul>
+        <li>개정 번호입니다. Subversion 저장소에서 이것은
+            링크 <a href="help_rootview.html#view-rev">개정
+            보기</a></li>
+        <li>파일의 경우
+        <a href="help_rootview.html#view-markup">보기</a>,
+        <a href="help_rootview.html#view-checkout">다운로드</a>및
+        <a href="help_rootview.html#view-annotate">주석 추가</a> 해당
+          수정합니다. 디렉토리의 경우
+        <a href="help_dirview.html">디렉토리 내용 나열</a></li>
+        <li>차이에 대한 개정 선택 링크(아래 참조)</li>
+        <li>변경 일자 및 경과 시간</li>
+        <li>수정의 저자</li>
+        <li>CVS 분기(일반적으로 <em>메인</em>, 브랜치에 없는 경우)</li>
+        <li>개정에 바인딩된 CVS 태그 목록(있는 경우)</li>
+        <li>추가 및 제거된 라인에서 측정된 변경 크기
+            코드. (CVS만 해당)</li>
+        <li>개정 시 파일 크기(바이트)입니다.
+            (하위 버전만)</li>
+        <li>이전 개정에 대한 차이 또는 가능한 경우 보기 링크
+            임의로 선택된 개정(있는 경우 위 참조)</li>
+        <li>리비전이 복사본의 결과인 경우 경로 및 리비전
+            복사 출처</li>
+        <li>리비전이 복사본 또는 이름 바꾸기 앞에 나오면
+            개정의 시간</li>
+        <li>그리고 마지막으로 말해야 할 커밋 로그 메시지
+            변화의 이유에 대해.</li>
+      </ul>
+    <p>
+      페이지 하단에는 다음을 허용하는 폼이 있습니다.
+      임의 개정 간 차이를 요청합니다.
+    </p>
+  </td></tr></table>
+  </body>
+</html>

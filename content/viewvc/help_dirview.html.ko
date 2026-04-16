@@ -1,0 +1,124 @@
+아! DOCTYPE HTML 공개 "-//W3C//DTD XHTML 1.0 엄격///EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC 도움말: 디렉토리 뷰</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC 도움말: 디렉토리 뷰</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>도움말</h3>
+       <a href="help_rootview.html">일반</a><br />
+       <strong>디렉토리&nbsp;보기</strong><br />
+       <a href="help_log.html">로그&nbsp;보기</a><br />
+
+<h3>인터넷</h3>
+       <a href="http://viewvc.org/index.html">홈 페이지</a><br />
+       <a href="http://viewvc.org/upgrading.html">업그레이드 중</a><br />
+       <a href="http://viewvc.org/contributing.html">기여</a><br />
+       <a href="http://viewvc.org/license-1.html">라이센스</a><br />
+    </td><td colspan="2">
+
+<p>디렉토리 목록 보기는 모든
+    컴퓨터 사용자입니다. 현재 디렉토리의 경로를 표시합니다.
+    페이지 맨 위에 있습니다. 그 아래에는
+    디렉토리 컨텐트 및 정렬 가능한
+    현재 디렉토리 내의 모든 파일 및 하위 디렉토리.</p>
+
+<p><a name="summary"></a>요약 테이블은 일부 또는 모두로 구성됩니다.
+    다음 행 중에서 선택합니다.</p>
+    <ul>
+      <li><a name="summary-files-shown"><strong>표시된 파일</strong></a>
+      - 디렉토리 목록에 표시된 파일 수입니다. 이 값은
+      디렉토리의 실제 파일 수(
+      <a href="#option-search">정규 표현식 검색</a> 그 자리에,
+      하지 않는 파일 숨기기'검색 기준을 충족합니다. CVS 디렉토리에서
+      목록, 이 행에는 토글 표시에 대한 링크도 있습니다.
+      <a href="help_rootview.html#dead-files">죽은 파일</a>의 경우
+      있습니다.</li>
+
+<li><a name="summary-revision"><strong>디렉토리
+      개정</strong></a> - Subversion 디렉토리에만 해당합니다.
+      다음으로 표시 "번호 수" 여기서 첫번째 숫자는 가장 최근 숫자입니다.
+      디렉토리(또는 디렉토리 아래의 경로)가 있는 저장소 개정
+      수정되었습니다. 두번째 번호는 최신 Repository입니다.
+      수정합니다. 두 숫자는 모두
+      <a href="help_rootview.html#view-rev">개정 뷰</a></li>
+
+<li><a name="summary-sticky-revision-tag"><strong>고정
+     개정/태그</strong></a> - 현재
+     <a href="help_rootview.html#sticky-revision-tag">고정 개정 또는
+     태그</a> 설정하거나 지울 폼 필드를 포함합니다.</li>
+
+<li><a name="summary-search"><strong>현재 검색</strong></a> -
+     다음과 같은 경우 <a href="#option-search">정규 표현식 검색</a> 그 자리에,
+     은 검색 문자열을 나타냅니다.</li>
+
+<li><a name="summary-query"><strong>질의</strong></a> - 제공
+     링크 대상 <a href="help_rootview.html#view-query">쿼리 양식</a>
+     디렉토리</li>
+   </ul>
+
+<p><a name="list"></a>실제 디렉토리 리스트는
+  한 열의 파일 이름 및 디렉토리 이름과
+  각 파일 또는 디렉토리가 다음에서 수정된 최근 개정
+  기타 열 열 헤더를 눌러 디렉토리를 정렬할 수 있습니다.
+  항목을 열 순서대로 누르고 다시 눌러 정렬을 취소합니다.
+  주문.</p>
+
+<p>
+  <!-- If using directory.ezt template -->
+  파일 이름은 <a href="help_log.html">로그 뷰</a>
+  파일이 수정된 개정 목록을 표시합니다. 개정
+  숫자는 다음 중 하나에 연결됩니다.
+  <a href="help_rootview.html#view-markup">보기</a>
+  또는 <a href="help_rootview.html#view-checkout">다운로드</a> 파일
+  (파일 유형에 따라 다름) 링크는 디렉토리에 대해 반대로 표시됩니다.
+  디렉토리 개정 번호는 <a href="help_log.html">로그
+  뷰</a>, 디렉토리 이름은 해당 디렉토리의 내용을 보여주는 링크인 경우
+  디렉토리
+
+<!-- If using dir_alt.ezt template -->
+  <!--
+  파일 및 디렉토리 이름은 해당 내용을 검색하기 위한 링크입니다.
+  파일 링크는
+  <a href="help_rootview.html#view-markup">보기</a>
+  또는 <a href="help_rootview.html#view-download">다운로드</a> 링크
+  파일 형식에 따라 다릅니다. 디렉토리 링크 디렉토리로 이동
+  목록 개정 번호는 다음에 대한 링크입니다. <a href="help_log.html">로그
+  뷰</a> 파일 또는 디렉토리가 있는 개정 목록 표시
+  수정되었습니다.
+  -->
+
+또한 <a를 사용하는 CVS Repository에서도
+  href="help_rootview.html#view 그래프">그래프 뷰</a> 활성화, 거기
+  개정에 대한 링크인 파일 이름 옆에 작은 아이콘이 표시됩니다.
+  그래프.</p>
+
+<p>ViewVC 구성 방법에 따라 더 많은 옵션이 있을 수 있습니다.
+  디렉토리 페이지 하단에서 다음을 수행합니다.</p>
+
+<ul>
+    <li><a name="option-search"><strong>정규 표현식
+    검색</strong></a> - 사용으로 설정된 경우 수락하는 양식 필드가 표시됩니다.
+    검색 문자열(a
+    <a href="http://doc.python.org/lib/re-syntax.html">파이썬 정규
+    표현식</a>). 제출한 후에는 최소한
+    표현식의 한 발생이 디렉토리 목록에 표시됩니다.
+    </li>
+    <li><a name="option-tarball"><strong>Tarball 다운로드</strong></a> -
+    사용으로 설정된 경우 gzip으로 압축된 tar 아카이브를 다운로드하는 링크를 표시합니다.
+    디렉토리 컨텐트</li>
+  </ul>
+
+</td></tr></table>
+  </body>
+</html>
