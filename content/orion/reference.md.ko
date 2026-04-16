@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ko api/index.md.ko'
+keywords: ~
+published: ~
+status: 초안
+title: 오리온 참조
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png">
+</div>
+
+## 라이브 데모
+
+Orion의 발음을 Orion &trade;'s IDE, 방문 <https://www.openoffice.org/> 대규모 사이트, 또는 <https://thrift.apache.org/> 를 클릭하고 위의 책갈피를 클릭하여 실제 프로토타입을 확인합니다.
+
+만약'당신을 위해 너무 많은 귀찮게,이 웹 사이트는 Orion에서 자체 호스팅됩니다. &trade;및 {# lede #}핫 핑크 연필 아이콘 [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 이동 경로와 함께 오른쪽 상단에 라이브 데모를 제공합니다{# lede #} 시스템 작동 방식(sans commit/build 액세스, 직원만 잠김).
+
+## 권장 책갈피
+
+브라우저 도구 모음에 책갈피를 설치하려면 "새 북마크" 브라우저의 대화상자 화면'를 누르고 Location/URL 필드에 다음을 입력합니다.
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+이 책갈피를 설치하지 않으면 라이브 사이트를 탐색하고 Orion의 페이지를 즉시 편집할 수 없습니다. &trade; 책갈피를 클릭합니다.Click the bookmarklet.
+
+책갈피를 사용하려면 라이브 프로덕션 사이트로 이동하기만 하면 됩니다(Orion에 포함되지 않음). &trade;!) 사용자가 페이지를 찾습니다.'d는 편집을 좋아하고 책갈피를 클릭합니다. 사용자'이 Orion 내에서 콘텐츠를 편집할 수 있는 페이지로 이동합니다.
+
+## 시작하기 가이드
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4-KiEDFbzl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+## IoC API 구축
+
+[snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
+
+## 온보딩 프로세스
+
+조기 입양자를 위해, Orion &trade; Subversion 저장소 간 서비스 위치'웹 사이트 소스 트리 및 최종 사용자에게 사이트 컨텐츠를 제공하는 라이브 프로덕션 웹 서버  온보딩은 자체 svnpubsub 사용 Subversion 서비스를 이미 실행 중인 조직에 대해 불필요한 작업입니다.
+
+1. 사이트 URL 제공'Subversion의 소스입니다.
+
+2. 사이트 개발 및 유지보수 문제에 대해 논의하기 위한 (역할 또는 메일링 목록) 이메일 주소를 제공하고, 주소가 [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- 조정 시설의 측면에서 준수.
+
+3. 프로덕션 웹 서버 구독' `svnwcsub` 우리의 대중에게 데몬 `svnpubsub` 서비스.  이러한 독립형 소프트웨어 구성 요소는 각각의 새로운 Subversion 소스 릴리스의 일부이며, Subversion 개발 팀에서 합리적으로 성숙하고 잘 지원합니다.  할 수만 있다면't python3 포트가 완료될 때까지 기다립니다. 대신 스레드된 포트를 사용할 수 있습니다.
+
+4. 알려주세요.'d 전송된 빌드의 콘텐츠 차이 및 전달할 전자메일 주소를 좋아합니다.
+
+## 소스 디렉토리 레이아웃
+
+트렁크/
+	- cgi-bin/
+	- 내용/
+	- 템플릿/
+	- 라이브러리/
+		- path.pm
+		- view.pm
+- 지점/
+	.. 각 분기는 위의 트렁크 레이아웃을 따릅니다 ...
+
+참조 <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/> 살아있는 예를 위해.
+
+## 동적 콘텐츠
+
+### 소스가 재생성하지 않는 경우에도 콘텐츠를 변경하여 소스 페이지를 재생성하는 예제 스크립트입니다.
+
+기본적인 개념은 프로파일이 많은 소스 페이지 중 일부가 "동적" 콘텐츠(빌드는 Jira 폭포 또는 현재 메일링 리스트 스레드와 같은 다른 온라인 사이트의 끊임없이 변화하는 스니펫을 통합합니다.).
+
+이것의 좋은 예는 "최신 뉴스" 섹션 [ASF 홈페이지](https://www.apache.org/)및 여기's the behind-the-scenes way it works, with a little shell+svn+cron magic as exemplified here (동적 빌드 수행)'s 소스 파일 `$파일` 아래:
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+자신의 PC에서 캐시된 svn 자격 증명을 사용할 작은 셸 스크립트에 통합하고 cron이 고정된 일정(프런트엔드 웹 서버/CDN HTTP 캐시 기반)에 따라 이를 실행하도록 합니다.'s TTL).  서버측 툴링은 필요하지 않습니다. 자체 암호 보안, 예약 및 동적 페이지 대상을 완벽하게 제어할 수 있습니다.  자체 svnpubsub 지원 Subversion 서비스를 사용 하는 경우, 그 거래 중 어느 것도 우리의 하드웨어에 직접 관련 되지 않습니다. 커밋 시 svnwcsub 클라이언트가 트리거되고 항상 svnpubsub 서버를 수신하여 요청 시 이러한 변경 사항을 빌드하고 배포합니다. &mdash; 발음입니다.
+
+## 예외
+
+미정
+
+## 검색
+
+미정
+
+## 빠른 커밋
+
+미정
+
+## 자원 추가
+
+미정
+
+--------
+
+## 인덱스
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 11:57:18 -0400 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->
