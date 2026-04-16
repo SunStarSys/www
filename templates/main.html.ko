@@ -135,7 +135,7 @@
 {% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
 </style>
 
-<div class="container theme-showcase"{% ifequal lang ".he" %} style="direction:rtl"{% endifequal %}"{% ifequal lang ".ar" %} style="direction:rtl"{% endifequal %} id="content">
+<div class="container theme-showcase{% ifequal lang ".he" %} rtl{% endifequal %}"{% ifequal lang ".ar" %} rtl{% endifequal %}"  id="content">
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
