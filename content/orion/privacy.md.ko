@@ -1,0 +1,33 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ko api/index.md.ko'
+keywords: ~
+published: ~
+status: 초안
+title: Orion 개인 정보 보호 정책
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png"></img>
+</div>
+
+## 개요
+
+- 고객 데이터의 공유/판매 없음.
+
+- 쿠키는 보안/책임 목적으로만 사용됩니다.
+
+- 우리가 기록하는 유일한 사용자 ID 구성 요소는 구글 OpenID 계정입니다.'이메일 주소 및 Subversion 시스템에서 Orion을 수행하는 모든 것에 연결하는 데 사용하는 사용자 계정 &trade; 사용자가 커밋하고 있는 사이트입니다.  로깅 시스템은 기본 아파치와 함께 이것을 추적합니다. [`httpd`](#) IP 주소 연결, URL 세부정보가 포함된 요청 프로토콜 및 클라이언트를 포함하는 액세스 응답 로그 세트's 광고 [`추천인`](#) 및  [`사용자 에이전트`](#) 헤더
+
+- {# lede #}해당'GDPR 준수 옵트인 시스템입니다.  The Orion에 대한 리뷰 보기 &trade; CMS / IDE, 당신은 당신에게 권한을 요청 구글 페이지로 이동합니다{# lede #} 해당 <span class="text-white">SunStar 시스템 OIDC</span> 제공된 구글 계정 세부정보를 사용하는 앱(주로 프로파일 정보) &mdash; 이메일 주소, 사진 등, 하지만 **로그인 자격 증명이 아닙니다.  만약 당신이'구글이 이 정보를 우리와 공유하기를 원하거나'이 개인 정보 보호 정책 문서 (해당 페이지에서 링크)를 좋아한 다음't 사용자 프로필 세부 정보를 제공하기 위해 구글을 승인, 당신은 당신의 마음을 변경할 때까지 액세스가 거부됩니다.
+
+--------
+
+## 인덱스
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 11:57:18 -0400 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->
