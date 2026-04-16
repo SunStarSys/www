@@ -62,7 +62,7 @@ Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Orion lo
 Para un detrás de escena <span class="text-white">documento técnico</span> descripción de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
 
 &nbsp;
-<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
+<img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
 ## Síguenos en GitHub
 
 &nbsp;
@@ -122,4 +122,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-04-16 15:40:03 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31736 $ -->
+<!-- $Date: 2026-04-16 15:43:37 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31750 $ -->

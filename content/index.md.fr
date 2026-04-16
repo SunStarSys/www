@@ -62,7 +62,7 @@ Départ  [Orion](/orion/features)<span class="text-success"><img alt="Orion logo
 Pour les coulisses <span class="text-white">livre blanc</span> description de notre technologie en instance de brevet, voir notre [Gestion intelligente des dépendances de contenu](/essays/dependencies)&trade; Essai.
 
 &nbsp;
-<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
+<img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
 ## Suivez-nous sur GitHub
 
 &nbsp;

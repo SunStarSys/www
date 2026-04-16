@@ -62,7 +62,7 @@ title: Главная
 За кулисами <span class="text-white">документ</span> описание нашей технологии патентования, см. [Управление зависимостями интеллектуального контента](/essays/dependencies)&trade; Эссе.
 
 &nbsp;
-<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
+<img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
 ## Следуйте за нами на GitHub
 
 &nbsp;
@@ -122,4 +122,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-04-16 15:40:03 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31736 $ -->
+<!-- $Date: 2026-04-16 15:43:37 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31750 $ -->

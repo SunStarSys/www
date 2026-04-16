@@ -62,7 +62,7 @@ title: 홈 페이지
 백그라운드 A Behind Scenes <span class="text-white">백서</span> 우리의 특허 출원 기술에 대한 설명, 우리의 [스마트 콘텐츠 종속성 관리](/essays/dependencies)&trade; 에세이
 
 &nbsp;
-<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
+<img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
 ## GitHub에서 팔로우하기
 
 &nbsp;
@@ -122,4 +122,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date: 2026-04-16 15:40:03 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31736 $ -->
+<!-- $Date: 2026-04-16 15:43:37 -0700 (Thu, 16 Apr 2026) $ $Author: $ $Revision: 31750 $ -->
