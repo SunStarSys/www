@@ -1,0 +1,41 @@
+---
+archived: ~
+categories: ~
+keywords: مفتوح المصدر، أوسي، رخصة التخزين المؤقت، المستخدم الرئيسي
+published: ~
+status: ~
+title: المشروعات مفتوحة المصدر
+---
+
+### المشاركة مفتوحة المصدر
+
+جوهر معتقداتنا هو اقتراح القيمة الفطرية للبرمجيات مفتوحة المصدر.  تعاوني [مستخدم الفرص التسويقية](http://en.wikipedia.org/wiki/Lead_user) كانت المجتمعات والشبكات المحيطة بها جزءًا من عملنا منذ إنشاء أنظمة SunStar، ولا سيما في التقنيات المستمدة من أو نشأت في [مؤسسة برامج أباتشي](http://www.apache.org/).
+
+هل لديك استراتيجية مفتوحة المصدر لخط الإنتاج الخاص بك؟  ما مدى الوحدات النمطية لبرنامجك، وهل من المنطقي منح المستخدمين حق الوصول إلى نقاط الامتداد هذه؟  لم يسمع عن [مبدأ هوليوود](http://en.wikipedia.org/wiki/Hollywood_principle)? يمكننا مساعدتك في التنقل بنجاح في موجة ابتكار المستخدم والاستفادة من إمكانات عملائك الأكثر نشاطًا، مع ترك الفخاخ والمزالق لمنافسيك.
+
+#### قائمة المشاريع نحن'وقد شارك في ذلك، كليا أو جزئيا:
+
+- [mod_perl](https://perl.apache.org/) &mdash; مترجم perl مضمن داخل httpd.
+
+- [libapreq](https://httpd.apache.org/apreq/) &mdash; مكتبة تحليل ملفات تعريف الارتباط وبيانات نموذج HTML الآمنة/السرعة.
+
+- [أباتشي CMS](https://github.com/SunStarSys/orion) &mdash; CMS تخدم أكثر من 100 مشروع أباتشي.
+
+- [مقوس](https://github.com/SunStarSys/orthrus) &mdash; [كلمة سر المرة الواحدة](https://en.wikipedia.org/wiki/One-time_password) تطبيق الأمان؛ AL-2.0 *المحمولة* انخفاض في استبدال OPIE.
+
+- [في](https://github.com/joesuf4/at) &mdash; [تاب](https://testanything.org)إطار اختبار وحدة C متوافق.
+
+- [طريقة](https://github.com/SunStarSys/pty) &mdash; أدوات لاستجابات المطالبة ببيانات اعتماد المحطة الطرفية الآلية.  بروح من [توقع TCL](https://en.wikipedia.org/wiki/Expect)، ولكن *المحمولة* عبر لغات البرمجة المختلفة.
+
+- [بيفكسج](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) &mdash; وظيفة grep المتكررة المتوازية والمرشحة المشابهة لـ The Silver Searcher، ولكن 4x أسرع.
+
+- [اشتراك svnpub](https://svn.apache.org/repos/asf/subversion/trunk/tools/server-side/svnpubsub) &mdash; خطافات التثبيت الموزعة للإصدار الفرعي.
+
+- [يسيطر](https://github.com/joesuf4/htop/tree/solaris-stable) &mdash; منفذ Fresh Solaris 11.4 بما في ذلك دعم ZFS/Zone الخالي من الأخطاء.
+
+- [مختوم](https://github.com/SunStarSys/sealed) &mdash; عمليات البحث عن طريقة وقت التجميع للمعاملات المعجمية المكتوبة.
+
+- [خوارزمية::LCS::XS](https://github.com/SunStarSys/Algorithm-LCS-XS) &mdash; تنفيذ سريع (XS) لخوارزمية أطول تسلسل عام.
+
+- [شايفج/لينتر](https://hub.docker.com/repository/docker/schaefj/linter)  &mdash; حاوية أداة الإرساء لـ [لينتر.{rc، sh}](https://github.com/SunStarSys/linter) النصوص.
+<!-- $Date: 2026-03-11 11:11:40 -0700 (Wed, 11 Mar 2026) $ $Author: joe $ $Revision: 28511 $ -->

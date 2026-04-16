@@ -1,0 +1,125 @@
+---
+archived: ~
+categories: ~
+keywords: ويكي، المعرفة، المدونات، أوريون، جامستاك، بيرل، ف / لوس
+published: ~
+status: منشور
+title: الصفحة الرئيسية
+---
+
+<div class="float-lg-right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+		<div class="card-header">الأخبار</div>
+        <div class="card-body">
+<h2 class="card-title"><a href="https://www.iconoclasts.blog/">مدونات مجانية!</a></h2>
+
+<br>
+
+<h2 class="card-title"><span class="badge bg-success">جديد</span> SunStar الأنظمة' GitLab تكنولوجيا CI Linter {{facts.releases.linter.tag}} متوفر الآن في <a href="https://hub.docker.com/r/schaefj/linter/">مركز الإرساء</a> و <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
+
+<br>
+
+<h2 class="card-title">SunStar الأنظمة' أوريون&trade; <a href="{{facts.releases.orion.url}}">منشئ الموقع الثابت</a> {{facts.releases.orion.tag}} صدر &mdash;
+الآن مع دعم LAUNCH_APACHE2!
+</h2>
+
+<br>
+
+<h2 class="card-title">
+<a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> أطلق سراحه إلى CPAN!
+</h2>
+
+<br>
+
+<h2>
+
+[خوارزمية::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) أطلق سراحه إلى CPAN!
+
+</h2>
+
+<br>
+
+<h2 class="card-title">SunStar الأنظمة <a href="{{facts.releases.orthrus.url}}">مقوس {{facts.releases.orthrus.tag}}</a> أفرج عنه!</h2>
+
+<br>
+
+<h2 class="card-title">SunStar نمط الأنظمة {{facts.releases.pty.tag}} أفرج عنه!</h2>
+
+<p class="card-text">الرجاء ترقية <span class="text-info">طريقة</span> تثبيت إلى <a href="{{facts.releases.pty.url}}/releases/tag/{{facts.releases.pty.tag}}">{{facts.releases.pty.tag}}</a>التي تتضمن الدعم الأصلي لـ <span class='text-info'>بايثون 3.10+</span>.</p>
+
+</div>
+</div>
+<br>
+</div>
+
+![SunStar الأنظمة](images/sunstarlogowhole).
+
+هل تبحث عن أفضل وأمان وأسرع **موحد** Enterprise Wiki؟
+
+تسجيل الخروج  [أوريون](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's الأصلي CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade; &mdash; Orion هو منتج المؤسسة الوحيد المستند إلى إدارة سلسلة التوريد مع منتج أصلي [خريطة عقول حورية البحر](/orion/features) التكامل!
+
+ل وراء الكواليس <span class="text-white">مستند</span> وصف تقنيتنا المعلقة لبراءات الاختراع، راجع [إدارة تبعية المحتوى الذكي](/essays/dependencies)&trade; مقال.
+
+&nbsp;
+<img src="images/github-mark.png" style="width:64px;padding-right:15px;float:left" alt="GitHub Mark" />
+## تابعنا على GitHub
+
+&nbsp;
+
+- @SunStarSys/orion
+
+- @joesuf4
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+&nbsp;
+
+## مقالات مميزة
+
+&nbsp;
+
+- <span class="badge bg-success">جديد</span> [ويكي في أنظمة إدارة المعرفة](/essays/wikis) &mdash; مقدمة حول كيفية ملاءمة أوريون للنظرة العامة لعام 2026.
+
+- [أداء التطبيق](/essays/performance) &mdash; مثال عملي: من عنق الزجاجة الملحوظ إلى حل فعال.
+
+- [أمن المعلومات](/essays/infosec) &mdash; يؤدي تجريد المفاهيم الأساسية إلى قابلية التطبيق والوضوح على نطاق واسع في العالم الحقيقي.
+
+- [مختومة المعجم لبيرل 7](/essays/perl7-sealed-lexicals) &mdash; جمع <span class="text-info">:مختومة</span> إلى تعريف وظيفة والتمتع بالسرعة الإضافية لعمليات البحث عن طريقة وقت التجميع لجميع المعجميات المكتوبة.
+
+- [حركة DevOps](/essays/devops) &mdash; ملء التفاصيل المفقودة في هذه المقالة.
+
+<style type="text/css">
+h2 { font-size: 18px }
+
+button.btn a {
+    color:#fff;
+}
+div.jumbotron button.btn {
+    margin-bottom:5px;
+}
+
+div.jumbotron ul {
+    max-width: 600px;
+}
+
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2026-04-13 11:35:30 -0700 (Mon, 13 Apr 2026) $ $Author: $ $Revision: 31339 $ -->

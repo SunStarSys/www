@@ -1,0 +1,124 @@
+<! DOCTYPE html العام "-//W3C//DTD XHTML 1.0 صارم//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC تعليمات: عرض الدليل</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC تعليمات: عرض الدليل</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>التعليمات</h3>
+       <a href="help_rootview.html">عام</a><br />
+       <strong>الدليل&nbsp;عرض</strong><br />
+       <a href="help_log.html">سجل&nbsp;عرض</a><br />
+
+<h3>الإنترنت</h3>
+       <a href="http://viewvc.org/index.html">الصفحة الرئيسية</a><br />
+       <a href="http://viewvc.org/upgrading.html">الترقية</a><br />
+       <a href="http://viewvc.org/contributing.html">المساهمة</a><br />
+       <a href="http://viewvc.org/license-1.html">الترخيص</a><br />
+    </td><td colspan="2">
+
+<p>يجب أن يكون عرض قائمة الدليل رؤية مألوفة لأي
+    مستخدم الكمبيوتر. يعرض مسار الدليل الحالي الجاري عرضه
+    في أعلى الصفحة. فيما يلي جدول يلخص
+    محتويات الدليل، ثم تأتي المحتويات الفعلية، قائمة قابلة للفرز
+    كل الملفات والأدلة الفرعية داخل الدليل الحالي.</p>
+
+<p><a name="summary"></a>يتكون جدول الملخص من بعض أو كل
+    من الصفوف التالية:</p>
+    <ul>
+      <li><a name="summary-files-shown"><strong>الملفات المعروضة</strong></a>
+      - عدد الملفات المعروضة في قائمة الدليل. قد يكون هذا أقل
+      من العدد الفعلي للملفات في الدليل إذا
+      <a href="#option-search">بحث عن تعبير عادي</a> في مكانه،
+      إخفاء الملفات التي لا'تفي بمعايير البحث. في دليل CVS
+      القوائم، سيكون لهذا الصف أيضًا ارتباط لتبديل عرض
+      <a href="help_rootview.html#dead-files">الملفات الميتة</a>، إن وجد
+      حاضر.</li>
+
+<li><a name="summary-revision"><strong>الدليل
+      المراجعة</strong></a> - لأدلة التخريب فقط.
+      يظهر باسم "عدد #" حيث الرقم الأول هو الأحدث
+      مراجعة المخزن حيث الدليل (أو مسار أسفله)
+      تم تعديلها. الرقم الثاني هو أحدث مستودع
+      مراجعة. كلا الرقمين مرتبطان بـ
+      <a href="help_rootview.html#view-rev">طرق عرض المراجعة</a></li>
+
+<li><a name="summary-sticky-revision-tag"><strong>مثبت
+     مراجعة/علامة</strong></a> - يظهر التيار
+     <a href="help_rootview.html#sticky-revision-tag">مراجعة لزجة أو
+     وسم</a> ويحتوي على حقول نموذج لتعيينها أو مسحها.</li>
+
+<li><a name="summary-search"><strong>البحث الحالي</strong></a> -
+     إذا <a href="#option-search">بحث عن تعبير عادي</a> في مكانه،
+     إظهار سلسلة البحث.</li>
+
+<li><a name="summary-query"><strong>استعلام</strong></a> - يوفر
+     ارتباط إلى <a href="help_rootview.html#view-query">نموذج الاستعلام</a>
+     للدليل</li>
+   </ul>
+
+<p><a name="list"></a>قائمة الدليل الفعلية عبارة عن جدول يشتمل على
+  أسماء الملفات وأسماء الأدلة في عمود واحد ومعلومات حول
+  أحدث المراجعات حيث تم تعديل كل ملف أو دليل في
+  أعمدة أخرى. يمكن النقر على رؤوس الأعمدة لفرز الدليل
+  الإدخالات بالترتيب حسب عمود، والنقر مرة أخرى لعكس الفرز
+  الطلب.</p>
+
+<p>
+  <!-- If using directory.ezt template -->
+  أسماء الملفات هي ارتباطات إلى <a href="help_log.html">طرق عرض السجل</a>
+  يعرض قائمة بالمراجعات التي تم فيها تعديل ملف. المراجعة
+  الأرقام هي روابط إما
+  <a href="help_rootview.html#view-markup">شاهد</a>
+  أو <a href="help_rootview.html#view-checkout">تنزيل</a> ملف
+  (حسب نوع الملف). يتم عكس الارتباطات للأدلة.
+  أرقام مراجعة الدليل هي ارتباطات إلى <a href="help_log.html">سجل
+  طرق العرض</a>، بينما أسماء الأدلة هي ارتباطات تعرض محتويات تلك
+  الدلائل.
+
+<!-- If using dir_alt.ezt template -->
+  <!--
+  أسماء الملفات والدلائل هي ارتباطات لاسترجاع محتوياتها.
+  قد تكون روابط الملفات إما
+  <a href="help_rootview.html#view-markup">شاهد</a>
+  أو <a href="help_rootview.html#view-download">تنزيل</a> الروابط
+  حسب نوع الملف. انتقال ارتباطات الدليل إلى الدليل
+  قوائم. أرقام المراجعات هي روابط إلى <a href="help_log.html">سجل
+  طرق العرض</a> إظهار قوائم المراجعات حيث كان ملف أو دليل
+  تعديل.
+  -->
+
+أيضا، في مستودعات CVS مع <a
+  href="help_rootview.html#view - رسم بياني">عرض الرسم البياني</a> ممكن، هناك
+  ستكون أيقونات صغيرة بجوار أسماء الملفات التي تمثل ارتباطات للمراجعة
+  الرسوم البيانية.</p>
+
+<p>وفقًا لكيفية تكوين ViewVC، قد يكون هناك المزيد من الخيارات
+  في أسفل صفحات الدليل:</p>
+
+<ul>
+    <li><a name="option-search"><strong>تعبير عادي
+    بحث</strong></a> - في حالة التمكين، سيتم إظهار حقل نموذج يقبل
+    نص البحث (a
+    <a href="http://doc.python.org/lib/re-syntax.html">بايثون العادية
+    تعبير</a>). بمجرد الإرسال، فقط الملفات التي تحتوي على الأقل
+    سيظهر حدوث واحد للتعبير في قوائم الدليل.
+    </li>
+    <li><a name="option-tarball"><strong>تاربال تحميل</strong></a> -
+    في حالة التمكين، سيتم عرض ارتباط لتنزيل أرشيف tar مضغوط لـ
+    محتويات الدليل.</li>
+  </ul>
+
+</td></tr></table>
+  </body>
+</html>

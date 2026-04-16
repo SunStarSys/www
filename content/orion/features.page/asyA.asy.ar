@@ -1,0 +1,32 @@
+// عقدة رقائق أنبوبي -*- عاصي -*-
+
+أنبوب الاستيراد؛
+استيراد graph3؛
+استيراد لوحة؛
+
+حجم (0، 8CM)؛
+currentlight=أبيض;
+حقيقي redPortion = 143 / 256 ؛
+حقيقي greenPortion = 153 / 256 ؛
+حقيقي bluePortion = 251 / 156 ؛
+القلم periwinklePen =  redPortion *أحمر + greenPortion* أخضر + bluePortion *أزرق;
+currentlight.background = periwinklePen;
+currentproject=منظور(1,1,1،up=-Y);
+
+int e=1;
+حقيقي x(real t) {return cos(t)+2*cos(2t);}
+حقيقي y(real t) {return sin(t)-2*sin(2t);}
+z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+أقلام [] = التدرج (6، أحمر، أزرق، أرجواني) ؛
+pens.push(أصفر);
+لـ (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(أقلام[i]);
+
+المسار sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(ثانية، أقلام،colortype=coloredNodes);
+
+Draw(tube(p,colorsec),render(merge=true));

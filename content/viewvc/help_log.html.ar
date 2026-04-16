@@ -1,0 +1,69 @@
+<! DOCTYPE html العام "-//W3C//DTD XHTML 1.0 صارم//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC تعليمات: عرض السجل</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC تعليمات: عرض السجل</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>التعليمات</h3>
+       <a href="help_rootview.html">عام</a><br />
+       <a href="help_dirview.html">الدليل&nbsp;عرض</a><br />
+       <strong>سجل&nbsp;عرض</strong><br />
+
+<h3>الإنترنت</h3>
+       <a href="http://viewvc.org/index.html">الصفحة الرئيسية</a><br />
+       <a href="http://viewvc.org/upgrading.html">الترقية</a><br />
+       <a href="http://viewvc.org/contributing.html">المساهمة</a><br />
+       <a href="http://viewvc.org/license-1.html">الترخيص</a><br />
+    </td><td colspan="2">
+    <p>
+      تعرض طريقة عرض السجل محفوظات المراجعة للمصدر المحدد
+      ملف أو دليل. بالنسبة لكل مراجعة، المعلومات التالية هي
+      displayed:
+
+<ul>
+        <li>رقم المراجعة. في مستودعات الإصدار الفرعي، هذه
+            رابط إلى <a href="help_rootview.html#view-rev">مراجعة
+            شاهد</a></li>
+        <li>للملفات، الروابط إلى
+        <a href="help_rootview.html#view-markup">شاهد</a>,
+        <a href="help_rootview.html#view-checkout">تنزيل</a>، و
+        <a href="help_rootview.html#view-annotate">تعليق توضيحي</a> الـ
+          مراجعة. بالنسبة للدلائل، يتم ربط
+        <a href="help_dirview.html">محتويات دليل القائمة</a></li>
+        <li>رابط لتحديد مراجعة الاختلافات (انظر أدناه)</li>
+        <li>تاريخ التغيير وعمره</li>
+        <li>مؤلف التعديل</li>
+        <li>فرع CVS (عادة) <em>الرئيسية</em>، إن لم يكن في فرع)</li>
+        <li>ربما قائمة من علامات CVS المرتبطة بالمراجعة (إن وجدت)</li>
+        <li>حجم التغيير المقاس بخطوط مضافة ومحذوفة من
+            رمز. (CVS فقط)</li>
+        <li>حجم الملف بالبايت في وقت المراجعة
+            (الإصدار الفرعي فقط)</li>
+        <li>روابط لعرض الاختلافات إلى المراجعة السابقة أو ربما إلى
+            مراجعة محددة عشوائية (إن وجدت، انظر أعلاه)</li>
+        <li>إذا كانت المراجعة نتيجة لنسخة، فالمسار والمراجعة
+            نُسخ من</li>
+        <li>إذا كانت المراجعة تسبق نسخة أو إعادة تسمية، فإن المسار
+            وقت المراجعة</li>
+        <li>وأخيرًا وليس آخرًا، رسالة سجل التثبيت التي يجب إخبارها
+            حول سبب التغيير.</li>
+      </ul>
+    <p>
+      في أسفل الصفحة، ستجد نموذجًا يسمح
+      طلب الاختلافات بين المراجعات التعسفية.
+    </p>
+  </td></tr></table>
+  </body>
+</html>
