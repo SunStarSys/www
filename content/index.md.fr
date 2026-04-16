@@ -7,7 +7,7 @@ status: publié
 title: Accueil
 ---
 
-<div class="float-lg-right {% ifequal lang ".he" %}rtl{% endifequal %}{% ifequal lang ".ar" %}rtl{% endifequal %}">
+<div class="float-lg-right"{% ifequal lang ".he" %} style="float:left"{% endifequal %}{% ifequal lang ".ar" %} style="float:left"{% endifequal %}>
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">Actualités</div>
         <div class="card-body">
