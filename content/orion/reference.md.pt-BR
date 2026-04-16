@@ -1,0 +1,112 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.pt-BR api/index.md.pt-BR'
+keywords: ~
+published: ~
+status: rascunho
+title: Referência Orion
+---
+
+<div class="float-lg-right">
+	<img src="../images/sunstarstaronly.png">
+</div>
+
+## Demonstração ao Vivo
+
+Para uma demonstração de Orion &trade;'s IDE, visite <https://www.openoffice.org/> para um grande site, ou <https://thrift.apache.org/> para um intrincado, e clique no bookmarklet acima para ver um protótipo ao vivo em ação.
+
+Se isso'é muito preocupante para você, este site é auto-hospedado em Orion &trade;, e {# lede #}aqueles ícones de lápis hot-pink [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) no canto superior direito ao lado das trilhas de navegação lhe dará uma demonstração ao vivo{# lede #} do funcionamento do sistema (sem acesso a commit/build, que é bloqueado apenas para a equipe).
+
+## Bookmarklet recomendado
+
+Certifique-se de instalar o bookmarklet na barra de ferramentas do navegador abrindo um "Novo favorito" tela de diálogo do seu navegador's menu e digitando o seguinte no campo Localização/URL:
+
+```javascript
+	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
+```
+
+Sem este bookmarklet instalado você não será capaz de navegar no site ao vivo e editar instantaneamente páginas em Orion &trade; clicando no bookmarklet.
+
+Para usar o bookmarklet basta navegar para o seu site de produção ao vivo (NÃO em Orion) &trade;!), localize a página que você'd gostaria de editar e clique no bookmarklet. Você'll ser levado para uma página dentro deste Orion que lhe permite editar o conteúdo.
+
+## Guia de Introdução
+
+<div class="embed-responsive embed-responsive-16by9">
+	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/4-KiEDFbzl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+	<p style="height:20px">&nbsp;</p>
+
+## IoC API de Criação
+
+[snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
+
+## Processo de admissão
+
+Para os primeiros adotantes, Orion &trade; senta-se entre o repositório do Subversion'árvore de origem do site e seus servidores da Web de produção ao vivo que fornecem conteúdo do site para seus usuários finais.  A integração é totalmente simples para organizações que já executam seu próprio serviço Subversion habilitado para svnpubsub:
+
+1. Forneça-nos a URL do seu site's fontes no Subversion.
+
+2. Forneça-nos o endereço de email (função ou lista de discussão) para discutir problemas de desenvolvimento e manutenção do site e garantir que o endereço seja [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-conforme em termos de instalações de moderação.
+
+3. Assine seus servidores da Web de produção' `svnwcsub` Daemon para o nosso público `svnpubsub` serviço.  Esses componentes de software autônomos fazem parte de cada nova versão de origem do Subversion e são razoavelmente maduros e bem suportados pela Equipe de Desenvolvimento do Subversion.  Se você apenas pode'aguardar a conclusão da porta python3, podemos permitir que você use nossas portas (threaded).
+
+4. Informe-nos se você'd gostar conteúdo difs dos builds enviados, e para qual endereço de email você deseja que eles sejam entregues.
+
+## Layout do diretório de origem
+
+- tronco/
+	- cgi-bin/
+	- conteúdo/
+	- modelos/
+	- lib/
+		- path.pm
+		- view.pm
+- agências/
+	.. cada ramificação segue o layout do tronco acima ...
+
+Consulte <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/> para um exemplo vivo.
+
+## Conteúdo Dinâmico
+
+### Exemplo de script para gerar novamente uma página de origem com alteração de conteúdo, mesmo quando as origens não o fazem.
+
+A ideia básica é que algumas de suas páginas de origem de alto perfil construam com "dinâmico" conteúdo (build incorpora trechos em constante mudança de outros sites on-line, como cachoeiras Jira ou tópicos atuais da lista de discussão).
+
+Um bom exemplo disso é "Últimas notícias" seção de [ASF - Home Page](https://www.apache.org/), e aqui's a maneira por trás das cenas que funciona, com um pouco de shell + svn + cron mágica como exemplificado aqui (tome a construção dinâmica'arquivo de origem s como `$arquivo` abaixo):
+
+```shell
+% cp $file $file.tmp
+% svn rm $file
+% mv $file.tmp $file
+% svn add $file
+% svn commit -m "rebuild $file"
+```
+
+Incorpore isso em um pequeno script shell que usará suas credenciais svn armazenadas em cache em seu próprio PC e faça com que o cron o execute para você em uma programação fixa (com base no seu servidor web frontend / cache HTTP CDN)'s TTL).  Não há necessidade de ferramentas do lado do servidor do nosso lado; você tem controle total de sua própria segurança de senha, programação e alvos de página dinâmicos.  Se você estiver usando seu próprio serviço Subversion habilitado para svnpubsub, nenhuma dessas transações envolve diretamente qualquer um de nossos hardwares. Seu commit acionará nosso cliente svnwcsub, sempre ouvindo seu servidor svnpubsub, para criar e implantar essas alterações sob demanda &mdash; pronto.
+
+## Exceções
+
+TBD
+
+## Pesquisar
+
+TBD
+
+## Confirmação Rápida
+
+TBD
+
+## Adicionar Recurso
+
+TBD
+
+--------
+
+## Índice
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2024-03-29 11:57:18 -0400 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->

@@ -1,0 +1,26 @@
+---
+archived: ~
+categories: ~
+keywords: subversion,svnpubsub,svnwcsub,Apache CMS,Twitter Bootstrap,logotipo
+published: ~
+status: rascunho
+title: Desenvolvido por...
+---
+
+## Tecnologias do site
+
+- [Subversão](https://subversion.apache.org/) como armazenamento de dados.
+
+- [SvnPubSub](https://journal.paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/) para ganchos de commit distribuídos.
+
+- SvnWcSub (cliente SvnPubSub) para acionar builds de sites ativos.
+
+- [SunStar Sistemas' Orion](/orion/) para as tecnologias de construção e edição on-line.
+
+- [Bootstrap do Twitter](https://github.com/twbs/bootstrap) para o site'S olhar e sentir.
+
+- [pffxg.sh](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) para o mecanismo de pesquisa PCRE.
+
+- Design de logotipo do artista gráfico (e todo o homem renascentista) Joel Suraci.
+
+<!-- $Date: 2023-11-26 19:55:32 -0500 (Sun, 26 Nov 2023) $ $Author: joe $ $Revision: 15182 $ -->
