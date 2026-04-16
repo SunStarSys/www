@@ -1,0 +1,513 @@
+---
+archived: ~
+categories: ~
+dependencies: '*.md.ko api/index.md.ko'
+keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
+published: ~
+status: 초안
+title: Orion 특징
+---
+
+<div class="row">
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/xr67QX6aMqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/uhKLwl3HgMI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/aNwnmwIngrM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/gf19vVF-G9E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+<p>
+&nbsp;
+</p>
+
+## 초고속 시스템 인프라
+
+- 전 세계 50ms 이하의 RTT 대기 시간'2026년 아프리카/중동 지역의 인구 확대
+
+- 2배 더 빠른 HTTP/2 멀티플렉싱된 페이지 전달 시간(*모든* 고객의 경우).
+
+<div class="embed-responsive embed-responsive-16by9">
+	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+- 300MB/s의 멀티기가바이트 소스 트리용 지속 빌드
+
+- NVMe 이상으로 스토리지 인프라 구축
+
+- ZFS 안정성을 위한 Solaris 11.4, 전체 오라클 고객 지원 지원 지원
+
+- CPU 클러스터링을 사용한 마크다운 렌더링의 경우 node.js
+
+- 8-64 방법 동시 건축
+
+- 대부분의 경우 빠른 커밋 기본 설정
+
+- 아파치 httpd 2.4 기반 IDE:
+
+- HTTP/2
+
+이벤트 mpm
+
+- mod_perl ithreads 포함
+
+- mod_apreq2
+
+- TLS 1.3
+
+- 사용자 정의 [`품질 관리`](#) 요청별 풀에 대한 스레드 지원이 포함된 모듈
+
+## 다국어
+
+- 한국어
+
+- 스페인어
+
+- 독일어
+
+- 프랑스어
+
+- 브라질 포르투갈어
+
+러시아어
+
+- 중국어
+
+한국어
+
+- 일본어
+
+- 아랍어
+
+- 히브리어
+
+- 스웨덴어
+
+## 메일링 차이 및 복제본 생성에 대한 지원 향상
+
+- DMARC 보호
+
+- ezmlm 호환성을 위해 SRS 및 Reply-To 사용
+
+- 모든 사용자는 구글을 통해 인증됩니다.'s OpenID-연결 서비스
+
+## 호기심이 생긴 오클링은 이제 우아한 스완입니다.
+
+<br>
+
+<div class="col-lg-3">
+	<div class="embed-responsive embed-responsive-16by9">
+	<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/JNWybe63G3s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+</div>
+
+<br>
+
+- 간편한 CSS 시맨틱 스타일링과 빠른 온보딩을 위한 Bootstrap 4+ 스타일링.
+
+- Editor.md는 놀랍습니다 : 상대적 사용 [`소스`](#) URL, 링크된 이미지가 편집기 미리보기 창에서 렌더링됩니다.
+
+## Editor.md :editormd-logo-1x: 및 Django Templating을 사용하여 일관된 GitHub-Flavored Markdown(GFM) 렌더링
+
+- [x] **WYSIWYG:** {# lede #}브라우저와 (node.js 기반) markdown.js 빌드 스크립트에서 동일한 JavaScript 코드 렌더링 엔진{# lede #} Editor.md 마크다운 미리 보기 창과 프로덕션 사이트 간에 100% 구조적 일관성을 보장합니다.
+- [x] 이제 소스(마크다운) 파일의 YAML 헤더가 완전히 지원됩니다.
+
+- [x] 기본 d3-graphviz.js 지원:
+
+```graphviz
+digraph {
+a -> b;
+a -> c [color=red];
+}
+```
+&nbsp;
+----
+&nbsp;
+
+- [x] 마인드맵이 지원되는 네이티브 @mermaid-js/mermaid v10.7.0:
+
+```mermaid
+graph TD
+    A[Christmas]
+ -->|Get money| B(Go shopping)
+    B --> C{Let me think}
+    C -->|One| D[fa:fa-laptop Laptop]
+    C -->|Two| E[fa:fa-mobile iPhone]
+    C -->|Three| F[fa:fa-car Car]
+```
+----
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice->>John: Hello John, how are you?
+    loop Healthcheck
+        John->>John: Fight against hypochondria
+    end
+    Note right of John: Rational thoughts<br/>prevail...
+    John-->>Alice: Great!
+    John->>Bob: How about you?
+    Bob-->>John: Jolly good!
+```
+----
+```mermaid
+erDiagram
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+    CUSTOMER ||--o{ ORDER : places
+    CUSTOMER ||--o{ INVOICE : "liable for"
+    DELIVERY-ADDRESS ||--o{ ORDER : receives
+    INVOICE ||--|{ ORDER : covers
+    ORDER ||--|{ ORDER-ITEM : includes
+    PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+    PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+```
+----
+```mermaid
+stateDiagram-v2
+    [*] --> Still
+    Still --> [*]
+    Still --> Moving
+    Moving --> Still
+    Moving --> Crash
+    Crash --> [*]
+```
+----
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  YYYY-MM-DD
+    section Section
+    A task           :a1, 2014-01-01, 30d
+    Another task     :after a1  , 20d
+    section Another
+    Task in sec      :2014-01-12  , 12d
+    another task      : 24d
+```
+----
+```mermaid
+pie title Commits to orion on GitHub
+	"Sunday" : 4
+	"Monday" : 5
+	"Tuesday" : 7
+  "Wednesday" : 3
+```
+----
+```mermaid
+classDiagram
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+      +String beakColor
+      +swim()
+      +quack()
+    }
+    class Fish{
+      -int sizeInFeet
+      -canEat()
+    }
+    class Zebra{
+      +bool is_wild
+      +run()
+    }
+```
+----
+```mermaid
+gitGraph
+    commit
+    commit
+    branch develop
+    checkout develop
+    commit
+    commit
+    checkout main
+    merge develop
+    commit
+    commit
+```
+----
+```mermaid
+%%{init:{"theme":"default"}}%%
+graph TB
+    sq[Square shape] --> ci((Circle shape)).
+
+subgraph A
+        od>Odd shape]-- Two line<br/>edge comment --> ro
+        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
+        di==>ro2(Rounded square shape)
+    end
+
+%% Notice that no text in shape are added here instead that is appended further down
+    e --> od3>Really long text with linebreak<br>in an Odd shape]
+
+%% Comments after double percent signs
+    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+
+cyr[Cyrillic]-->cyr2((Circle shape Начало));
+
+classDef green fill:#9f6,stroke:#333,stroke-width:2px;
+     classDef orange fill:#f96,stroke:#333,stroke-width:4px;
+     class sq,e green
+     class di orange
+```
+----
+```mermaid
+mindmap
+  root((mindmap))
+    Origins
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectivness<br/>and features
+      On Automatic creation
+        Uses
+            Creative techniques
+            Strategic planning
+            Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
+```
+----
+```mermaid
+journey
+    title My working day
+    section Go to work
+      Make tea: 5: Me
+      Go upstairs: 3: Me
+      Do work: 1: Me, Cat
+    section Go home
+      Go downstairs: 5: Me
+      Sit down: 3: Me
+```
+----
+```mermaid
+flowchart TB
+classDef borderless stroke-width:0px
+classDef darkBlue fill:#00008B, color:#fff
+classDef brightBlue fill:#6082B6, color:#fff
+classDef gray fill:#62524F, color:#fff
+classDef gray2 fill:#4F625B, color:#fff
+
+subgraph publicUser[ ]
+    A1[[Public User<br/> Via REST API]]
+    B1[Backend Services/<br/>frontend services]
+end
+class publicUser,A1 gray
+
+subgraph authorizedUser[ ]
+    A2[[Authorized User<br/> Via REST API]]
+    B2[Backend Services/<br/>frontend services]
+end
+class authorizedUser,A2 darkBlue
+
+subgraph booksSystem[ ]
+    A3[[Books System]]
+    B3[Allows interacting with book records]
+end
+class booksSystem,A3 brightBlue
+
+publicUser--Reads records using-->booksSystem
+authorizedUser--Reads and writes records using-->booksSystem
+
+subgraph authorizationSystem[ ]
+    A4[[Authorization System]]
+    B4[Authorizes access to resources]
+end
+
+subgraph publisher1System[ ]
+    A5[[Publisher 1 System]]
+    B5[Gives details about books published by them]
+end
+subgraph publisher2System[ ]
+    A6[[Publisher 2 System]]
+    B6[Gives details about books published by them]
+end
+class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
+
+booksSystem--Accesses authorization details using-->authorizationSystem
+booksSystem--Accesses publisher details using-->publisher1System
+booksSystem--Accesses publisher details using-->publisher2System
+
+class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
+
+click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagram.md" "booksSystem"
+```
+
+&nbsp;
+----
+&nbsp;
+
+- [x] Markmap.js 지원 보기
+
+- [x] Don Knuth'초 [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / 칸 아카데미'초 [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) 수학, 물리학 및 화학 지원:
+
+```math
+\ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
+```
+
+- [x] 동기식 양방향 생성 $$\LaTeX$$ 출처 파일-매가인하+$$\KaTeX$$ 파일.
+
+- [x] 아인슈타인 표기법의 Navier-Stokes (aka) [로그인](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+
+```math
+\begin{aligned}
+\pdv{\rho}{t}+\pdv{(\rho u_i)}{x_i} &= 0 \\
+      \pdv{(\rho u_i)}{t}+\pdv{(\rho u_i u_j)}{x_j} &= -\pdv{p}{x_i}+\pdv{\tau_{ij}}{x_j}+\rho f_i \\
+      \pdv{(\rho e)}{t}+\pdv{(\rho e+p)u_i}{x_i} &= \pdv{(\tau_{ij} u_j)}{x_i}+\rho f_i u_i+\pdv{(\dot{q}_i)}{x_i}+r \\
+\end{aligned}
+```
+
+- [x] 클래식 표기법의 Navier-Stokes
+
+```math
+\begin{aligned}
+\pdv{\rho}{t}+\vec{\nabla}\cdot(\rho\vec{u}) &= 0 \\
+      \pdv{(\rho \vec{u})}{t}+\vec{\nabla}\cdot\rho\vec{u}\otimes\vec{u} &= -\vec{\nabla p}+\vec{\nabla}\cdot\bar{\bar{\tau}}+\rho\vec{f} \\
+      \pdv{(\rho e)}{t}+\vec{\nabla}\cdot(\rho e+p)\vec{u} &= \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\cdot\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
+\end{aligned}
+```
+
+----
+
+- [x] 전기!
+
+편집기가 자동 완성되고 자동 들여쓰기됩니다. 전체 화면 모드와 CodeMirror 5 구문 하이라이터에서 사용할 수 있는 여러 다른 콘텐츠 제작 모드가 지원됩니다.
+
+## 브랜치 빌드에 대한 전체 지원
+
+- [x] 더 이상 스테이징/게시 안함: 리소스별 브랜치로 대체됨 <span class="text-white">판촉</span>.
+- [x] <span class="text-white">롤백</span> 및 <span class="text-white">동기화</span> 병합이 완전히 지원됩니다.
+
+## 라이브 소스 트리 검색 엔진
+
+<br>
+
+<div class="row">
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/dftUs2Oqy-Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="col-lg-3">
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube.com/embed/TvgKXkoVsAU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+</div>
+
+<br>
+
+- [x] PCRE(Perl Compatible Regular Expression) 기반
+- [x] 글로벌 검색 및 대체 기능(고유한 PCRE 지원) 및 정규식 캡처를 지원합니다.
+- [ ] PDF 검색이 곧 나옵니다.
+- [ ] GraphQL/AI 지원이 곧 제공될 예정입니다. 보안은 재미있어 보인다!
+
+## 임의의 mime-types가 있는 무제한 페이지 첨부
+
+## 페이지당 보안, 스레드된 의견
+
+## 매가인하의 자동 자연어 번역
+
+## @vectorgraphics/asymptote와 대화 형 수학 벡터 그래픽
+
+- [x] Asymptote 구문 하이라이터
+- [x] CMS는 구문 분석할 수 없는 Asymptote 코드 블록에서 빠르게 실패합니다.
+- [x] WebGL 활성화됨, 다중 스레드 HTML 출력
+
+```asy
+// tubular trefoil knot -*- asy -*-
+
+import tube;
+import graph3;
+import palette;
+
+size(0, 8cm);
+currentlight=White;
+real redPortion = 143 / 256;
+real greenPortion = 153 / 256;
+real bluePortion = 251 / 156;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
+currentlight.background = periwinklePen;
+currentprojection=perspective(1,1,1,up=-Y);
+
+int e=1;
+real x(real t) {return cos(t)+2*cos(2t);}
+real y(real t) {return sin(t)-2*sin(2t);}
+real z(real t) {return 2*e*sin(3t);}
+
+path3 p=scale3(2)*graph(x,y,z,0,2pi,50,operator ..)&cycle;
+
+pen[] pens=Gradient(6,red,blue,purple);
+pens.push(yellow);
+for (int i=pens.length-2; i >= 0 ; --i)
+  pens.push(pens[i]);
+
+path sec=scale(0.25)*texpath("$\pi$")[0];
+
+coloredpath colorsec=coloredpath(sec, pens,colortype=coloredNodes);
+
+draw(tube(p,colorsec),render(merge=true));
+```
+
+&nbsp;
+
+----
+
+&nbsp;
+
+## 델타 출처 <span class='text-info'>아파치 CMS</span> 기능
+
+- Perl 기반 빌드 시스템만 사용할 수 있습니다.
+
+- 새 마크다운 편집기 [`표시됨/gfm`](#) 따라서 파서가 더 현대적입니다.  최신 릴리스에서는 슬러그 사양을 지원합니다.'원래 파이썬 기반 파서입니다.
+
+- GFM은 코드 블록에 대해 다른 구분자를 사용합니다.
+
+- [`extpaths.txt`](#) 더 이상 지원되지 않음: 외부에서 생산된 자료(javadocs, 소프트웨어 릴리스 아티팩트 등)를 업로드하기 위해 각 프로젝트에서 개인 선택에 하위 버전 저장소의 프로덕션 웹 사이트 트리에 대한 쓰기 액세스 권한이 부여됩니다.
+
+----
+
+## 인덱스
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<style type="text/css">
+/*-------------------------------------------
+	Animations
+-------------------------------------------*/
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+</style>
+
+<!-- $Date: 2026-03-22 15:18:25 -0700 (Sun, 22 Mar 2026) $ $Author: joe $ $Revision: 29903 $ -->

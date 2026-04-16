@@ -1,0 +1,337 @@
+---
+acl: '@staff=rw, *=r'
+archived: ~
+categories: ~
+dependencies: '*.md.ko api/index.md.ko'
+keywords: 보안,infosec, appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
+published: ~
+status: 공개됨
+title: Orion 보안
+---
+
+<div class="right">
+
+![자물쇠](security.page/padlock).
+
+</div>
+
+[TOC]
+
+## {# lede #}"어리석음을 통한 보안은 전혀 안전하지 않습니다."{# lede #}
+
+American Locksmith의 발음을 American Locksmith [en] [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851년에 런던 전시회에서 크리스탈 팰리스 자물쇠를 쉽게 골랐습니다.  Oracle Cloud Infrastructure(OCI) 자동화 엔진에 대한 우리의 청사진이 바로 이러한 이유에 전적으로 동의합니다. [GitHub에서 사용 가능](https://github.com/joesuf4/home/blob/wsl/.ocirc).
+
+## Orion Infrastructure 보안
+
+```mermaid
+flowchart TB
+classDef borderless stroke-width:0px
+classDef darkBlue fill:#00008B, color:#fff
+classDef brightBlue fill:#6082B6, color:#fff
+classDef gray fill:#62524F, color:#fff
+classDef gray2 fill:#4F625B, color:#fff
+
+subgraph vcs[ ]
+    A1[[Fort Lauderdale, FL]]
+    B1[Air-Gapped Version Control Server]
+end
+class vcs,A1 gray
+
+subgraph vpn-us-east[ ]
+    A2[[Reston, VA]]
+    B2[OCI Edge Servers]
+end
+class vpn-us-east,A2 darkBlue
+
+subgraph vpn-us-west[ ]
+    A3[[Phoenix, AZ]]
+    B3[OCI Edge Servers]
+end
+class vpn-us-west,A3 darkBlue
+
+subgraph vpn-de-central[ ]
+    A4[[Frankfurt, Germany]]
+    B4[OCI Edge Servers]
+end
+class vpn-de-central,A4 darkBlue
+
+subgraph vpn-bz-west[ ]
+    A5[[São Paolo, Brazil]]
+    B5[OCI Edge Servers]
+end
+class vpn-bz-west,A5 darkBlue
+
+subgraph vpn-au-west[ ]
+    A6[[Sydney, Australia]]
+    B6[OCI Edge Servers]
+end
+class vpn-au-west,A6 darkBlue
+
+subgraph vpn-ap-west[ ]
+    A7[[Hyderabad, India]]
+	B7[OCI Edge Servers]
+end
+class vpn-ap-west,A7 darkBlue
+
+subgraph vpn-ap-east[ ]
+    A8[[Seoul, South Korea]]
+    B8[OCI Edge Servers]
+end
+class vpn-ap-east,A8 darkBlue
+
+class A1,A2,A3,A4,A5,A6,A7,A8 borderless
+
+vcs==vpn==>A2==ssh/vpn==>B2
+vcs==vpn==>A3==ssh/vpn==>B3
+vcs==vpn==>A4==ssh/vpn==>B4
+vcs==vpn==>A5==ssh/vpn==>B5
+vcs==vpn==>A6==ssh/vpn==>B6
+vcs==vpn==>A7==ssh/vpn==>B7
+vcs==vpn==>A8==ssh/vpn==>B8
+```
+&nbsp;
+
+역방향 포트 전달 서비스(HTTPS/SSH/IPsec)에 대한 FIPS 140-3 호환(MFA 삼중 암호화 포함)입니다.  벨트, 서스펜더 및 스트럽!
+
+----
+
+&nbsp;
+
+### [RBAC](https://en.wikipedia.org/wiki/Role-based_access_control) 모델, 페퍼링 [오르가즘](https://github.com/SunStarSys/orthrus) OTP/TOTP 과제
+
+모든 인프라 계정 로그인 액세스에는 OCI 계정을 비롯한 다중 요소 인증 자격 증명을 제공해야 합니다. 이 정책에는 백도어가 없습니다.
+
+기업 시스템에 대한 모든 직원의 SSH 액세스에는 YubiKey PKI와 Yubikey의 PKCS11 슬롯에 저장된 ECDSA-SHA-2-NISTP-256 권한 부여 개인 키 또는 ED25519-sk Pkey와 직접 스마트 카드 통합이 필요합니다.
+
+디스크에 저장된 고정 암호가 없습니다. 좋은 이유로 sudo/RBAC 사용의 이 *limits* 헤드리스 자동화,.  그러나 [툴링](https://github.com/SunStarSys/pty) 다양한 종류의 프롬프트에 응답의 토일을 제거합니다.
+
+### 빌드 및 CGI 스크립트에 대한 샌드박스 실행
+
+배포 "공유 없음" 영역 빌드로, 기본적으로 네트워크 가용성이 0으로 설정됩니다. 즉, 고객이 빌드하여 액세스하거나 수정할 수 있는 유일한 것은 다른 고객이 아닌 자체 자산 또는 영역 자체의 다른 시스템 경로( [`/tmp`](#)).  또한 비즈니스 및 엔터프라이즈 고객만 빌드 시 인터넷에 액세스할 수 있습니다. 빌드 요구 사항에 맞게 정확하게 조정할 수 있는 고유* Solaris 영역을 사용하고 있기 때문입니다.
+
+CGI 스크립트에 대한 Ditto - 다른 스크립트에 대한 쓰기 액세스 측면에서 완전히 잠김 [`/tmp`](#).
+
+### 종단 간 암호화
+
+- TLS 1.3 (+FS) HTTPS FIPS 140-3 연결을 위한 AES (256) SHA (256).
+
+- SSHv2 ED25519 FIPS 140-3 / 교차 호스트용 NIST 호환 키 [`대출`](#) 역방향 포트 전달
+
+- 지역 간 VPN용 IPsec/IKEv2/PFS AES(256).
+
+- ZFS 암호화용 AES(256).
+
+### 제로 트러스트 측면
+
+기본 Premise [제로 트러스트 아키텍처](https://csrc.nist.gov/publications/detail/sp/800-207/final) 클램의 생리학 주위에 네트워크 보안을 설계하는 것을 피하는 것입니다 : 외부에 단단하지만 부드럽고 느슨한 일단 들어가면.  그래서 we don'즉, 다양한 POP(Point of Presence) LAN 내의 모든 의미 있는 권한 있는 네트워크 포트는 베어 메탈 시스템에만 노출됩니다.'s 루프백 장치 인터페이스 [`lo0`](#)는 (역방향) 포트 전달 SSH 연결 *to it*의 컨텍스트에서만 의미가 있습니다.
+
+HTTP 프록시가 아닌 TCP 프록시를 사용하며 MSA 백엔드가 없습니다. **암호화되지 않은 TLS 웹 트래픽을 확인하는 호스트만 해독하는 호스트입니다**. Subversion 트래픽에 동일한 규칙이 적용됩니다. &mdash; **서비스 엔드포인트**로 암호화된 직접 엔드투엔드 TLS 트래픽만 전송 시 암호화되지 않은 데이터를 볼 수 있습니다.
+
+**MSA 계층 및 개인 데이터 노출 계층**이 다른 공급업체와 함께 있으면 행운을 빕니다. 적의 "비기능 엔지니어링" 복잡성입니다. 제품이 대규모 MSA 광산 필드 대신 **연방 모놀리스**일 때 의미있는 보안 약속을 제공하는 것이 훨씬 쉽습니다. 이는 오리온과 경쟁사 분야의 또 다른 경쟁 차별화 요소입니다.
+
+이 인프라는 지역이 온라인 상태가 되면 완전히 자동화되지만,'s 우리가 건축에 관하여 공개적으로 공유할 수 있는 전부 (군사 만트라에 홉시안 투명성의 균형을 맞추기) "느슨한 입술 싱크 배" 과학보다는 예술이다.)  안심 &mdash; 브랜드명 상품명 Beyond Breaking the Antispoofing [`lo0`](#) Solaris 11 내 보호's (BSD) 패킷 필터 자체는 고객 계정에 대해서도 이러한 서비스에 대한 액세스 권한을 얻는 의미있는 수단이 없습니다.
+
+마스터 OCI 제어 계정이 손상되더라도 모든 고객 자산의 **기밀성** 및 **무결성**은 위반된 상태로 유지됩니다.  고객 웹 사이트 **가용성**으로 혼란을 야기할 수 있습니다. 특히 Subversion 서비스 데이터 레코드에 액세스할 수 없습니다.  48~72시간 안에 전체 OCI 인프라를 처음부터 재구성할 수 있습니다.'OCI 액세스가 종료되었습니다.
+
+-----
+
+### 로깅, 모니터링 및 감사
+
+우리는 기업 고객이 Splunk 계정을 만들 것을 권장합니다, 우리는 당신이 필요로하는 모든 글로벌 POP에서 귀하의 계정에 거의 실시간 웹 로그를 제공 할 것입니다.  서버측 CGI 스크립팅에 대한 오류 로그도 Splunk에서 사용할 수 있습니다.
+
+오라클은 전 세계 모든 OCI POP에서 서비스 가용성을 모니터링하고, 서버 중단이 30초 이상 지속될 경우 HA(가용성 도메인) 또는 지역별 페일오버 이벤트를 트리거합니다.
+
+ACL 감사는 단순히 웹 사이트를 구축하여 수행 할 수 있습니다.'s 아파치 라이선스를 사용한 Subversion HEAD [오리온 SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) 스크립트를 실행하고 결과 빌드를 [`www/.acl`](#) 원하는 시간에 체크 아웃 디렉토리에 파일을 저장합니다.  일반적으로 빌드 프로세스는 최신 하드웨어에서 10-15초 미만이 걸립니다.
+
+Subversion Server-Side Commit Hook도 감독 문제에 맞게 사용자 정의할 수 있습니다. 간단한 커밋 메일러에서 svnpubsub 데몬에 대한 보안 액세스에 이르기까지 사용 가능한 사용자 정의 구성이 몇 개나 있습니다.
+
+-----
+
+## Orion 애플리케이션 보안
+
+### [공공 SSR 냄새](https://queue.acm.org/detail.cfm?id=2721993).
+
+### ACL 관리
+
+```graphviz
+digraph {
+"@path::acl" -> "authz-svn.conf" [label="svn"];
+"@path::acl" -> "/**/.htaccess" [label="httpd"];
+};
+```
+
+&nbsp;
+
+오리온'보안 모델은 에 포함된 설정에 의해 중앙에서 관리됩니다. [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) as constucted공제 in [`라이브러리/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). 오프슈트 서버 구성 파일은 작성된 모든 변경 사항에 대해 동적으로 생성됩니다.
+
+POSIX 파일 시스템 보안 모델을 이해하면 Orion과 함께 집에서 바로 사용할 수 있습니다.'초 [mod_dav_svn]() 인증 모델 및 아파치 HTTPd 웹서버'웹 사이트에서 자동으로 생성되는 .htaccess 컨트롤'초 [라이브러리/acl.yml](#) YAML 구성입니다.
+
+### OpenIDC SSO 보안
+
+모든 OpenID 세션 쿠키는 HttpOnly이며 보안 플래그가 지정되어 있으므로 자바스크립트 세션 도용 시도는 Orion 온라인 편집기에 의해 효과적으로 중화됩니다.
+
+모든 쿠키 자격 증명 저장소는 HMAC SHA-1 해시 아래에 추가로 AES-256 암호화됩니다.
+
+### Subversion 비밀번호에 대한 암호화
+
+조정 가능한 라운드 수(현재 기본값은 5)입니다.
+
+### 다듬어진 데이터 보호
+
+모든 Perl 런타임에는 -T 플래그를 사용하여 필수 테인트 검사가 활성화되어 있습니다. 원격 셸 익스플로잇에 대한 강력하고 독보적인 Perl 가드입니다.
+
+### 위키 문제
+
+Wiki 보안에는 다음과 같은 여러 요소가 포함됩니다.
+
+1. UI/API 보안
+
+2. 미들웨어/백엔드 보안
+
+3. 템플리트 순회 보호
+
+4. 검색 엔진 ACL 호환성
+
+우리는 아래 Orion과 관련하여 이러한 문제를 탐구합니다.
+
+#### 온라인 편집기
+
+온라인 편집기는 단순히 사용자-에이전트를 설정하여 JSON UI를 지원합니다.'s Accept 헤더 to prefer [`애플리케이션/json`](#) MIME 형식이므로 UI와 API 모두에 대해 보안 컨트롤이 동일합니다.
+
+**직접 Subversion 액세스 외부에는 관리 UI/API**가 없습니다.
+
+##### Subversion ACL은 서버측 작업 복사본 읽기 액세스를 제어합니다.
+
+UI를 통해 사용할 수 있는 각 작업 복사본 리소스는 사용자에게 표시하기 전에 하위 버전 ACL에 대해 상호 확인됩니다.  이렇게 하면 버전 제어 중인 자산(즉, **모든 항목**)에 대해 무단 리소스에 대한 읽기 액세스가 금지됩니다.
+
+##### 커밋 액세스는 Subversion ACL로 직접 제어됩니다.
+
+해당 권한이 부여된 Subversion 커밋 없이 네트워크를 통해 빌드하고 나중에 볼 수 있는 항목이 없습니다. 여기서 중요한 문제는 위키 페이지 작성자가 사용할 수 있는 정보를 제어하는 것입니다.'편집 내용을 커밋하고 작성했습니다.
+
+마크다운 소스 페이지에서 템플리트 선행 처리를 허용할 경우 템플리트 인수가 트리에 있는 다른 파일의 콘텐츠를 편집된 페이지의 소스에 대한 변수로 사용할 수 있게 만드는 방법에 대해 알아야 합니다.
+
+편집된 페이지가 페이지 헤더에 자체 종속성 파일을 선언할 수 있는 경우가 종종 있습니다. 이 파일은 Wiki의 보안 제어에 대해 기능 세트의 무게를 측정할 때 고려해야 할 사항입니다.'s 정보 구조
+
+고객의 요구에 부합하는 지침과 지원을 제공할 수 있지만,'조직 규모의 균형을 맞추는 방법을 결정하는 것은 매우 중요합니다.'엔터프라이즈 위키입니다.
+
+다음 절을 참조하십시오. [종속성/ACL 주입 통제](#h4-dependency-acl-injection-controls) 자세한 내용을 확인하고 ACL이 얼마나 쉬운지에 대한 라이브 예제를 확인하십시오.'s는 중앙에서 [`라이브러리/acl.yml`]({{snippetA.pretty_uri}}):
+
+[snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
+
+콘텐츠 작성자는 페이지에서 페이지 제한을 구성할 수 있습니다.'초 [헤더]({{snippetB.pretty_uri}}):
+
+[snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
+
+브랜치 만들기 및 수정에 대한 추가 ACL 컨트롤을 배치하지 않아도 권한 없는 담당자가 보호된 리소스를 브랜치로 복사할 수 없습니다. 즉, 시스템은 부품에 대한 추가 제어 없이 지점 실험을 지원하여 보호된 자산이 각 지점 전체에서 보호되도록 합니다.'자연스러운 수명주기
+
+#### 시스템 ACL을 작성하시겠습니까?
+
+빌드 시스템은 모든 관광 및 모든 것을 알고 있지만, 구축되고 보호되는 자산이 Subversion ACL에서 관리하고 제어하는 팀에만 표시되도록 할 수 있습니다.
+
+빌드 시스템은 커밋 시 브라우저 IDE를 통해 작성된 파일 이름 목록을 표시하지만 해당 목록은 사용자를 기반으로 합니다.'사용자에 종속된 리소스에 대한 읽기 액세스'커밋에서 컨텐트 작업을 추가, 갱신 또는 삭제합니다.
+
+##### 템플리트 순회 제어
+
+참조 [sanitize_relative_path]({{snippetC.pretty_uri}}):
+
+[snippet:repo=SunStarSys/orion:path=lib/SunStarSys/Util.pm:token=#ttc:lang=perl]
+
+이 코드는 아래 섹션의 규칙을 적용합니다.
+
+###### 태그 포함 및 확장
+
+모든 대상 파일은 다음의 하위 폴더에 있습니다. [`/템플릿/`](#) 폴더는 해당 폴더에 루트 지정된 절대 경로로 참조되어야 합니다.
+
+###### ssi 태그
+
+모든 대상 파일은 다음의 하위 폴더에 있습니다. [`/콘텐츠/`](#) 폴더는 해당 폴더에 루트 지정된 절대 경로로 참조되어야 합니다.
+
+대상 경로가 구성되지 않은 경우 [`@path::패턴`](#) 해당 대상 경로를 아카이브하거나 범주화할 수 있는 일치 설정으로 [`ssi`](#) 작업이 실패합니다.
+
+그 이유는 [`ssi`](#) 지원은 해당 기능 세트에 대해 사이트를 보존하기 위한 전제 조건입니다.'s taget *permalinks*입니다.
+
+#### 종속성/ACL 주입 통제
+
+제어자 [`라이브러리/path.pm`](#) 가져오기.
+
+##### 라이브러리/{경로, 보기}.pm 하위 버전 ACL
+
+해당'이러한 리소스에 대한 쓰기 액세스를 제어하는 것이 현명합니다. 이 리소스는 코드베이스에서 유능한 사용자로 제한하고 버전 제어 하에 있는 전체 자산 세트에 대한 보안 제어를 구현할 권한이 있습니다(예: *everything*).
+
+또한 다음을 포함하는 것이 좋습니다. [`@svnadmin`](#) 읽기/쓰기 액세스 권한이 있는 그룹's는 Subversion ACL을 수동으로 재설정해야 하는 경우에도 반드시 필요하지 않습니다.
+
+##### 다음을 통해 동적 생성 규칙 &#64;경로::acl
+
+빌드 시스템이 사용자의 [`라이브러리/path.pm`](#) seed_file_deps() 및 seed_file_acl() 중 하나(또는 둘 다)를 임포트하고, 증분 빌드를 발생시키는 Subversion 커밋 변경 사항의 내부 처리에서 이 선택을 앞으로 수행합니다.
+
+##### 제어된 콘텐츠 이전 추적
+
+사용자에게 전체 버전 제어 내역을 노출할 때는 제어된 자료의 원래 위치에 대한 권한 부여 제어를 유지하도록 주의해야 합니다.
+
+그렇지 않으면 자료가 **실수로 필수 승인없이 역사적 연구자에게 노출 될 수 있습니다**.
+
+오리온 CMS's 이동/삭제 추적 논리는 이를 원활하게 처리합니다.
+
+##### lib/path.pm에서 seed_file_deps() 및  seed_file_acl() 사용에 대한 사용자 정의 제어
+
+이러한 기호의 가져오기를 넘어 [`라이브러리/path.pm`](#)또한 walk_content_tree () 코드 블록 실행 중에 적용하려는 파일과 적용 방법에 대한 선택이 있습니다.  결국, 그것은'구성 파일뿐만 아니라 모든 튜링의 전체 기능을 갖춘 코드베이스 [`펄`](#) 우리'오셔서 알아보고 감사합시다!
+
+#### 빌드된 웹 사이트 .htaccss 파일 및 Subversion 권한 부여 파일은 &#64;path::acl 즉시 커밋 시
+
+임시 분기 빌드에 대한 자동 ACL 보호입니다. 0개의 추가 구성이 필요합니다.
+
+#### PCRE 검색 엔진 내장 컨트롤
+
+범용 UI와 동일한 상황: UI에서 Subversion 서버와 상호 확인합니다.
+
+라이브 사이트에서 마크다운(소스 트리) 검색을 사용으로 설정하면 검색 엔진이 똑같이 수행합니다. 그렇지 않으면 라이브 사이트에 httpd 하위 요청을 실행하여 사용자가 해당 라이브 파일에 액세스할 수 있는 권한이 있는지 테스트합니다(작업할 사용자 데이터가 있도록 검색 엔진에 암호로 보호된 것으로 가정).
+
+### 콘텐츠 보안 정책
+
+- [x] 분석 제한 사항
+
+구글 및/또는 LinkedIn
+
+- [x] 데이터 제한 사항
+
+데이터는 서버에서 제공되어야 합니다.
+
+- [x] 콘텐츠 제한
+
+콘텐츠는 서버에서 제공되어야 합니다.
+
+- [x] 코드 제한
+
+JavaScript 코드는 서버에서 제공되어야 합니다.
+
+- [x] 스타일 제한 사항
+
+CSS는 서버에서 제공되어야 합니다.
+
+- [x] 플러그인 제한사항
+
+현재 PDF's만
+
+### Cross-Origin 리소스 공유
+
+- [x] 계정이 있는 모든 사용자는 로그인 자격 증명을 사용하여 다른 곳에서 UI/API를 사용할 수 있습니다.
+
+- [x] 기업 및 기업 고객은 Orion을 [헤드리스 CMS](https://aws.amazon.com/what-is/headless-cms/) iSQL*Plus에서 자체 UI를 작성하려는 경우 [JSON Subversion 도자기](api/editor) 또는 [JSON 검색](api/search) API
+
+### 제3자 종속성
+
+매우 짧고 시간 테스트를 거친 종속성; 주요 구성 요소는 [오리온 기술](technology) 페이지.
+
+#### 요청 시 사용 가능한 소프트웨어 자재 명세서(SBOM).
+
+[연락처](/contact) 를 참조하십시오.
+
+--------
+
+## 인덱스
+
+{% for d in deps %}
+- [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
+{% endfor %}
+
+<!-- $Date: 2026-03-28 08:05:09 -0700 (Sat, 28 Mar 2026) $ $Author: joe $ $Revision: 30565 $ -->
