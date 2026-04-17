@@ -76,7 +76,8 @@
 
 <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Подробнее... <span class="caret"></span></a>
-            <ul class="dropdown-menu {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu">            <ul class="dropdown-menu" role="menu">
+            <ul class="dropdown-menu {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu">
+			<li class="dropdown-item">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/">Источник отделения</a>
               </li>
               <li class="dropdown-item divider"></li>
