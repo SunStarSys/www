@@ -63,7 +63,7 @@
              {% endifequal %}"><a class="nav-link" href="/contact">Contacto</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Productos... <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
+            <ul class="dropdown-menu {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Orión&trade; Plataforma Wiki de Jamstack</a></li>
               <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
@@ -76,8 +76,7 @@
 
 <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Más.. <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li class="dropdown-item">
+            <ul class="dropdown-menu {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu">            <ul class="dropdown-menu" role="menu">
                 <a class="nav-link text-white" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/">Origen de sitio</a>
               </li>
               <li class="dropdown-item divider"></li>
@@ -135,7 +134,7 @@
 {% endblock %}
 
 <style type="text/css">
-{% ifequal lang ".he" %} .right {float:left}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left}{% endifequal %}
+{% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% endifequal %}
 {% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
 </style>
 
@@ -170,8 +169,8 @@
 
 <script blocking="render" async type="text/javascript">
     if (typeof(editormd) === "undefined") {
-        
-        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
+
+mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
         $(".sequence-diagram").sequenceDiagram();
         for (const e of $("body").find(".graphviz").toArray()) {
             d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
