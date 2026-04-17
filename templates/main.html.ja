@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}">
+<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}"{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,8 +86,12 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">スペイン語</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">ドイツ語</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">フランス語</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">ポルトガル語</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">ロシア語</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">中国語</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">韓国語</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">日本語</a></li>
+              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">アラビア語</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">ヘブライ語</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">スウェーデン語</a></li>
 
@@ -130,7 +134,12 @@
   {% endif %}
 {% endblock %}
 
-<div class="container theme-showcase" id="content">
+<style type="text/css">
+{% ifequal lang ".he" %} .right {float:left}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left}{% endifequal %}
+{% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
+</style>
+
+<div class="container theme-showcase{% ifequal lang ".he" %} rtl{% endifequal %}{% ifequal lang ".ar" %} rtl{% endifequal %}"  id="content">
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
