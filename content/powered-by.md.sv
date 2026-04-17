@@ -23,4 +23,4 @@ title: Tillhandahålls av...
 
 - Logo design av grafik artist (och all-around renässans man) Joel Suraci.
 
-<!-- $Date: 2023-11-27 00:55:32 +0000 (Mon, 27 Nov 2023) $ $Author: joe $ $Revision: 15182 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

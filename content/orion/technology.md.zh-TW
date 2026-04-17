@@ -131,4 +131,4 @@ joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2024-03-29 15:57:18 +0000 (Fri, 29 Mar 2024) $ $Author: joe $ $Revision: 21889 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

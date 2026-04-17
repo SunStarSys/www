@@ -1,0 +1,124 @@
+<! DOCTYPE html ציבורי "-//W3C//DTD XHTML 1.0 מחמיר//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC עזרה: תצוגת ספרייה</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC עזרה: תצוגת ספרייה</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>עזרה</h3>
+       <a href="help_rootview.html">כללי</a><br />
+       <strong>ספרייה&nbsp;הצג</strong><br />
+       <a href="help_log.html">יומן&nbsp;הצג</a><br />
+
+<h3>אינטרנט</h3>
+       <a href="http://viewvc.org/index.html">בית</a><br />
+       <a href="http://viewvc.org/upgrading.html">משדרג</a><br />
+       <a href="http://viewvc.org/contributing.html">תורם</a><br />
+       <a href="http://viewvc.org/license-1.html">רישיון</a><br />
+    </td><td colspan="2">
+
+<p>תצוגת רשימת הספריות צריכה להיות מראה מוכר לכל
+    משתמש מחשב. הוא מציג את הנתיב של הספרייה הנוכחית המוצגת
+    בחלק העליון של הדף. להלן טבלה המסכמת את
+    תוכן ספרייה, ולאחר מכן מגיע תוכן בפועל, רשימה ניתנת למיון של
+    כל הקבצים ותת־הספריות בספרייה הנוכחית.</p>
+
+<p><a name="summary"></a>טבלת הסיכום מורכבת מכמה או כולם
+    מתוך השורות הבאות:</p>
+    <ul>
+      <li><a name="summary-files-shown"><strong>הקבצים מוצגים</strong></a>
+      - מספר הקבצים המוצגים ברשימת הספריות. זה יכול להיות פחות
+      מספר הקבצים בספרייה אם a
+      <a href="#option-search">חיפוש regular expression</a> במקום,
+      הסתרת קבצים שאינם't עומד בקריטריוני החיפוש. בספרייה CVS
+      רשימות, לשורה זו יהיה גם קישור לתצוגת החלפה של
+      <a href="help_rootview.html#dead-files">קבצים מתים</a>אם יש
+      הווה.</li>
+
+<li><a name="summary-revision"><strong>ספרייה
+      מהדורה</strong></a> - לספריות Subversion בלבד.
+      מוצג בשם "מס'" כאשר המספר הראשון הוא האחרון
+      מהדורת מאגר שבה הספרייה (או נתיב מתחתיו)
+      שונה. המספר השני הוא רק המאגר האחרון
+      מהדורה. שני המספרים הם קישורים
+      <a href="help_rootview.html#view-rev">תצוגות מהדורה</a></li>
+
+<li><a name="summary-sticky-revision-tag"><strong>דביק
+     מהדורה/תגית</strong></a> מציג את הנוכחי
+     <a href="help_rootview.html#sticky-revision-tag">מהדורה דביקה או
+     תגית</a> ו- כולל שדות טופס לקביעה או לניקוי.</li>
+
+<li><a name="summary-search"><strong>חיפוש נוכחי</strong></a> -
+     אם a <a href="#option-search">חיפוש regular expression</a> במקום,
+     מציג את מחרוזת החיפוש.</li>
+
+<li><a name="summary-query"><strong>שאילתא</strong></a> - מספק
+     קישור ל- <a href="help_rootview.html#view-query">טופס שאילתה</a>
+     לספרייה</li>
+   </ul>
+
+<p><a name="list"></a>רשימת הספריות בפועל היא טבלה עם
+  שמות קבצים ושמות ספריות בעמודה אחת ומידע על
+  המהדורות האחרונות שבהן כל קובץ או ספרייה השתנו
+  עמודות אחרות. אפשר ללחוץ על כותרות עמודה כדי למיין את הספרייה
+  ערכים בסדר לפי עמודה ולחצו שוב כדי להפוך את המיון
+  פקודה</p>
+
+<p>
+  <!-- If using directory.ezt template -->
+  שמות קבצים הם קישורים אל <a href="help_log.html">תצוגות יומן</a>
+  מציג רשימה של מהדורות שבהן הקובץ השתנה. מהדורה
+  המספרים הם קישורים
+  <a href="help_rootview.html#view-markup">תצוגה</a>
+  או <a href="help_rootview.html#view-checkout">הורדה</a> קובץ
+  (בהתאם לסוג הקובץ). הקישורים הופכים לספריות.
+  מספרי מהדורת ספרייה הם קישורים אל <a href="help_log.html">רישום
+  תצוגות</a>, בעוד ששמות ספריות הם קישורים המציגים את התוכן של ספריות אלה
+  ספריות.
+
+<!-- If using dir_alt.ezt template -->
+  <!--
+  שמות קבצים וספריות הם קישורים לאחזור תוכנם.
+  ייתכן שקישורי קבצים
+  <a href="help_rootview.html#view-markup">תצוגה</a>
+  או <a href="help_rootview.html#view-download">הורדה</a> קישורים
+  תלוי בסוג הקובץ. קישורי ספרייה עוברים לספרייה
+  רשימות. מספרי מהדורה הם קישורים אל <a href="help_log.html">רישום
+  תצוגות</a> מציג רשימות של מהדורות שבהן היה קובץ או ספרייה
+  שונה.
+  -->
+
+כמו כן, במאגרי CVS עם <a
+  href="help_rootview.html#view-גרף">תצוגת תרשים</a> אפשרי, שם
+  יהיו איקונים קטנים לצד שמות קבצים שהם קישורים למהדורה
+  גרפים.</p>
+
+<p>בהתאם להגדרת התצורה של ViewVC, ייתכן שיהיו אפשרויות נוספות
+  בתחתית דפי הספרייה:</p>
+
+<ul>
+    <li><a name="option-search"><strong>ביטוי רגולרי
+    חיפוש</strong></a> - אם אפשרי, יציג שדה טופס המקבל
+    מחרוזת חיפוש (a)
+    <a href="http://doc.python.org/lib/re-syntax.html">פיתון רגיל
+    ביטוי</a>). לאחר השליחה, רק קבצים שיש להם לפחות
+    מופע אחד של הביטוי יופיע ברשימות ספריות.
+    </li>
+    <li><a name="option-tarball"><strong>הורדת Tarball</strong></a> -
+    אם אפשרות זו מופעלת, יוצג קישור להורדת ארכיב tar דחוס של
+    תוכן הספרייה.</li>
+  </ul>
+
+</td></tr></table>
+  </body>
+</html>

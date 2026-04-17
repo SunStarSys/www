@@ -1,0 +1,164 @@
+< ! PUBLIC HTML DOCTYPE "-//W3C//DTD XHTML 1.0 Strict//FR" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC Aide : Général</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC Aide : Général</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>Aide</h3>
+       <strong>Général</strong><br />
+       <a href="help_dirview.html">Répertoire&nbsp;Afficher</a><br />
+       <a href="help_log.html">Journal&nbsp;Afficher</a><br />
+
+<h3>Internet</h3>
+       <a href="http://viewvc.org/index.html">Accueil</a><br />
+       <a href="http://viewvc.org/upgrading.html">Mise à niveau</a><br />
+       <a href="http://viewvc.org/contributing.html">Contribuer</a><br />
+       <a href="http://viewvc.org/license-1.html">Licence</a><br />
+    </td><td colspan="2">
+
+<p><em>ViewVC</em> est une interface WWW pour CVS et Subversion
+  référentiels. Il vous permet de parcourir les fichiers et les répertoires dans un
+  référentiel lors de l'affichage des métadonnées de l'historique du référentiel : journal
+  messages, dates de modification, noms d'auteur, numéros de révision, copie
+  Histoire, etc. Il fournit plusieurs vues différentes du référentiel.
+  données pour vous aider à trouver les informations que vous recherchez :</p>
+
+<ul>
+    <li><a name="view-dir" href="help_dirview.html"><strong>Répertoire
+    Afficher</strong></a> - Affiche une liste de fichiers et de sous-répertoires dans un
+    répertoire du référentiel, ainsi que des métadonnées telles que les noms d'auteur et
+    entrées de journal.</li>
+
+<li><a name="view-log" href="help_log.html"><strong>Journal
+    Afficher</strong></a> - Affiche une liste de révision par révision de toutes les
+    modifications apportées à un fichier ou à un répertoire du référentiel, avec
+    métadonnées et liens vers les vues de chaque révision.</li>
+
+<li><a name="view-markup"><strong>Vue Contenu du fichier (annotation)
+    Vue)</strong></a> - Affiche le contenu d'un fichier à un niveau particulier
+    révision, avec les informations de révision en haut de la page. Fichier
+    les révisions qui sont des images GIF, PNG ou JPEG sont affichées en ligne sur
+    la page. Les autres types de fichiers s'affichent sous forme de texte balisé. Le balisage
+    peuvent se limiter à transformer des URL et des adresses e-mail en liens, ou
+    configuré pour afficher le code source coloré.</li>
+
+<li><a name="view-checkout"><strong>Téléchargement de fichier (extraction)
+    Vue)</strong></a> - Récupère le contenu non modifié d'un fichier
+    révision. Les navigateurs peuvent essayer d'afficher le fichier, ou simplement l'enregistrer dans
+    disque.</li>
+
+<li><a name="view-annotate"><strong>Vue Fichier annoté</strong></a> -
+    Affiche le contenu d'une révision de fichier et la décompose ligne par ligne,
+    indiquant le numéro de révision où chacun a été modifié pour la dernière fois,
+    avec des liens et autres informations. <em>Cette vue est désactivée dans certains
+    Configurations ViewVC</em></li>
+
+<li><a name="view-diff"><strong>Vue Différence de fichier</strong></a> - Salons
+    les modifications apportées entre deux révisions d'un fichier</li>
+
+<li><a name="view-tarball"><strong>Vue Directory Tarball</strong> -
+    Récupère une archive tar compressée contenant le contenu d'une
+    répertoire.<em>Cette vue est désactivée dans la vue par défaut ViewVC
+    configuration.</em></li>
+
+<li><a name="view-query"><strong>Vue Requête de répertoire</strong></a> -
+    Affiche des informations sur les modifications apportées à tous les sous-répertoires et fichiers
+    sous un répertoire parent, triés et filtrés selon les critères que vous spécifiez.
+    <em>Cette vue est désactivée dans la configuration ViewVC par défaut.</em>
+    </li>
+
+<li><a name="view-rev"><strong>Vue Révision</strong> - Salons
+    informations sur une révision, y compris un message de journal, un auteur et une liste
+    des chemins modifiés. <em>Pour les référentiels Subversion uniquement.</em></li>
+
+<li><a name="view-graph"><strong>Vue graphique</strong></a> - Montre un
+    représentation graphique d'un fichier'Révisions et succursales terminées
+    avec des noms de balise et d'auteur et des liens vers des pages de balisage et de comparaison.
+    <em>Pour les référentiels CVS uniquement et désactivés dans la valeur par défaut
+    configuration.</em></li>
+  </ul>
+
+<h3><a name="multiple-repositories">Référentiels multiples</a></h3>
+
+<p>Une installation unique de ViewVC est souvent utilisée pour fournir un accès à
+  plusieurs référentiels. Dans ces installations, ViewVC affiche une
+  <em>Racine du projet</em> dans le coin supérieur droit de chaque
+  page générée pour permettre un accès rapide à n'importe quel référentiel.</p>
+
+<h3><a name="sticky-revision-tag">Révision et balise persistantes</a></h3>
+
+<p>Par défaut, ViewVC affiche les fichiers, répertoires et révisions.
+  qui existent actuellement dans le référentiel. Mais'aussi possible de parcourir
+  le contenu d'un référentiel à un moment de son historique passé en choisissant
+  a "étiquette autocollante" (en CVS) ou un "révision persistante" (en subversion) de la
+  formulaires en haut des pages d'annuaire et de journal. Ils'appelé collant
+  parce qu'une fois're choisi, ils restent autour quand vous naviguez vers
+  d'autres pages, jusqu'à ce que vous les réinitialisiez. Quand ils'réinitialisation, répertoire et journal
+  les pages affichent uniquement les révisions précédant le point spécifié dans l'historique. Dans
+  CVS, lorsqu'une balise fait référence à une branche ou à une révision d'une branche, uniquement
+  les révisions de l'historique de la branche sont affichées, y compris les points de branche et
+  leurs révisions précédentes.</p>
+
+<h3><a name="dead-files">Fichiers morts</a></h3>
+
+<p>Dans les listes de répertoires CVS, ViewVC peut éventuellement afficher des fichiers morts.
+  Les fichiers morts sont des fichiers qui se trouvaient dans un répertoire mais qui sont actuellement
+  supprimé, ou des fichiers qui ne't existe dans le
+  <a href="#sticky-revision-tag">étiquette autocollante</a>. Les fichiers morts ne peuvent pas être
+  affiché dans les référentiels Subversion. La seule façon de voir un fichier supprimé dans
+  un répertoire Subversion permet d'accéder à une révision persistante où
+  fichier existait auparavant.</p>
+
+<h3><a name="artificial-tags">Balises artificielles</a></h3>
+
+<p>Dans les référentiels CVS, ViewVC ajoute des balises artificielles <em>Tête</em> et
+  <em>PRINCIPAL</em> pour marquer les listes et les accepter à la place de la révision
+  nombres et noms de balise réels dans toutes les URL. <em>PRINCIPAL</em> agit comme une branche
+  balise pointant vers la branche par défaut, <em>Tête</em> agit comme un
+  balise de révision pointant vers la dernière révision de la branche par défaut. Le
+  branche par défaut est généralement juste le tronc, mais peut être défini sur d'autres
+  branches dans des fichiers de référentiel individuels. CVS vérifiera toujours
+  révisions à partir d'un fichier's branche par défaut lorsqu'aucune autre branche n'est indiquée
+  sur la ligne de commande.</p>
+
+<h3><a name="more-information">Plus d'informations</a></h3>
+
+<p>Plus d'informations sur <em>ViewVC</em> disponible à partir de
+  <a href="http://viewvc.org/">viewvc.org</a>.
+  Voir les liens ci-dessous pour des guides sur CVS et Subversion</p>
+
+<h4>Documentation sur CVS</h4>
+  <blockquote>
+    <p>
+      <a href="http://cvsbook.red-bean.com/"><em>Source ouverte
+      Développement avec CVS</em></a><br />
+      <a href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">CVS
+      Utilisateur's Guide</a><br />
+      <a href="http://cellworks.washington.edu/pub/docs/cvs/tutorial/cvs_tutorial_1.html">Autre tutoriel CVS</a><br />
+      <a href="http://www.csc.calpoly.edu/~dbutler/tutorials/winter96/cvs/">Encore un autre tutoriel CVS (un peu vieux, mais sympa)</a><br />
+      <a href="http://www.cs.utah.edu/dept/old/texinfo/cvs/FAQ.txt">FAQ ancienne mais très utile sur CVS</a>
+    </p>
+  </blockquote>
+
+<h4>Documentation sur Subversion</h3>
+  <blockquote>
+    <p>
+      <a href="http://svnbook.red-bean.com/"><em>Contrôle des versions avec
+      Subversion</em></a><br />
+    </p>
+  </blockquote>
+
+</td></tr></table>
+  </body>
+</html>

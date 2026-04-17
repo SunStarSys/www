@@ -234,4 +234,4 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 h4 { font-size:14px }
 </style>
 
-<!-- $Date: 2026-03-27 16:12:44 -0700 (Fri, 27 Mar 2026) $ $Author: joe $ $Revision: 30523 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

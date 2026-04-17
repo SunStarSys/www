@@ -26,4 +26,4 @@ Utöver de rutinmässiga sysslor som varje systemadministratör står inför, va
 
 Jag njöt av den största delen av min tid som betjänade behoven hos Apache-gemenskapen, men efter 8 år var det dags för en förändring.  Jag kommer alltid att se förtjust på de många minnen och vänner jag gjorde där, och önskar Apache allt det bästa framöver.
 
-<!-- $Date: 2026-02-16 12:33:32 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27653 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

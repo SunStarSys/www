@@ -1,0 +1,164 @@
+< ！DOCTYPE HTML 公開"-//W3C//DTD XHTML 1.0 嚴格 //EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC 說明：一般</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC 說明：一般</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>說明</h3>
+       <strong>一般</strong><br />
+       <a href="help_dirview.html">目錄&nbsp;檢視</a><br />
+       <a href="help_log.html">日誌&nbsp;檢視</a><br />
+
+<h3>網際網路</h3>
+       <a href="http://viewvc.org/index.html">首頁</a><br />
+       <a href="http://viewvc.org/upgrading.html">升級中</a><br />
+       <a href="http://viewvc.org/contributing.html">貢獻</a><br />
+       <a href="http://viewvc.org/license-1.html">授權</a><br />
+    </td><td colspan="2">
+
+<p><em>ViewVC</em> 是 CVS 與 Subversion 的 WWW 介面
+  儲存庫。它可讓您瀏覽下列項目中的檔案和目錄：
+  顯示儲存區域歷史記錄中繼資料的儲存區域：日誌
+  訊息，修改日期，作者名稱，修訂號碼，複製
+  歷史記錄等等。它提供數個不同的儲存區域檢視
+  可協助您找到所需資訊的資料：</p>
+
+<ul>
+    <li><a name="view-dir" href="help_dirview.html"><strong>目錄
+    檢視</strong></a> - 顯示下列項目的檔案和子目錄清單：
+    儲存區域的目錄，以及像作者名稱和之類的描述資料
+    日誌項目。</li>
+
+<li><a name="view-log" href="help_log.html"><strong>日誌
+    檢視</strong></a> - 依所有修訂版本清單顯示修訂版本
+    對儲存庫中檔案或目錄所做的變更，包含
+    中繼資料和每個修訂版本的檢視連結。</li>
+
+<li><a name="view-markup"><strong>檔案內容檢視 (標記)
+    檢視)</strong></a> - 顯示特定檔案的內容
+    修訂版本，修訂版本資訊位於頁面頂端。檔案
+    GIF、PNG 或 JPEG 影像等修訂版本會以內嵌方式顯示於
+    頁面。其他檔案類型則會顯示為標示文字。標記
+    可能僅限於將 URL 和電子郵件地址轉換為連結，或
+    設定為顯示彩色原始程式碼。</li>
+
+<li><a name="view-checkout"><strong>檔案下載 (結帳)
+    檢視)</strong></a> - 擷取檔案的未更改內容
+    版本。瀏覽器可以嘗試顯示檔案，或只儲存至
+    磁碟。</li>
+
+<li><a name="view-annotate"><strong>檔案註記檢視</strong></a> -
+    顯示檔案修訂版本的內容，並依行細分，
+    顯示最後一次修改的修訂號碼，以及
+    包含連結和其他資訊。<em>部分已停用此檢視
+    ViewVC 組態</em></li>
+
+<li><a name="view-diff"><strong>檔案差異檢視</strong></a> - 展示
+    在檔案的兩個修訂版本之間所做的變更</li>
+
+<li><a name="view-tarball"><strong>目錄 Tarball 檢視</strong> -
+    擷取包含 a 內容的壓縮 tar 歸檔
+    目錄。<em>此檢視在預設的 ViewVC 中停用
+    組態。</em></li>
+
+<li><a name="view-query"><strong>目錄查詢檢視</strong></a> -
+    顯示所有子目錄與檔案所做的變更資訊
+    在上層目錄下，依您指定的條件排序和篩選。
+    <em>此檢視在預設的 ViewVC 組態中停用。</em>
+    </li>
+
+<li><a name="view-rev"><strong>版本檢視</strong> - 展示
+    有關修訂的資訊，包括記錄訊息、作者和清單
+    ，共變更路徑。<em>僅適用於 Subversion 儲存區域。</em></li>
+
+<li><a name="view-graph"><strong>圖表檢視</strong></a> - 顯示 a
+    檔案圖形表示's 修訂版本和分支完成
+    使用標記和作者名稱以及標記和差異頁面的連結。
+    <em>僅適用於 CVS 儲存庫，且在預設值中停用
+    組態。</em></li>
+  </ul>
+
+<h3><a name="multiple-repositories">多個儲存區域</a></h3>
+
+<p>ViewVC 的單一安裝通常用來提供存取權
+  一個以上的儲存區域。在這些安裝中，ViewVC 顯示
+  <em>專案根目錄</em> 下拉式方塊位於每個項目的右上角
+  產生的頁面可讓您快速存取任何儲存區域。</p>
+
+<h3><a name="sticky-revision-tag">相黏修訂版本和標記</a></h3>
+
+<p>依預設，ViewVC 會顯示檔案和目錄以及修訂版本
+  目前存在於儲存區域中。但它'也可以瀏覽
+  儲存庫在過去歷史記錄中某個時間點的內容，藉由選擇
+  一個"黏貼標籤" (在 CVS 中) 或"黏性修訂" (Subversion) 來自
+  目錄與日誌頁面頂端的表單。它們'被叫做黏性
+  因為一次'重新選擇，它們會在您瀏覽到
+  其他頁面，直到您重設。當他們'重新設定、目錄及日誌
+  頁面只會顯示在歷史記錄中指定點之前的修訂版本。位於
+  CVS，當標籤參考分支或分支的版本時，僅
+  顯示分支歷史記錄的修訂版本，包括分支點和
+  其前的修訂版本。</p>
+
+<h3><a name="dead-files">失效的檔案</a></h3>
+
+<p>在 CVS 目錄列表中，ViewVC 可以選擇性地顯示失效的檔案。
+  失效的檔案是指用來在目錄中，但目前使用的檔案
+  已刪除，或剛刪除的檔案't 存在於目前選取的項目中
+  <a href="#sticky-revision-tag">黏貼標籤</a>。無法刪除檔案
+  顯示在 Subversion 儲存區域中。查看已刪除檔案的唯一方法
+  Subversion 目錄是導覽至固定修訂版本，其中
+  檔案先前存在。</p>
+
+<h3><a name="artificial-tags">人工標記</a></h3>
+
+<p>在 CVS 儲存庫中，ViewVC 會新增人工標籤<em>頭部</em> 與
+  <em>主要</em> 標記物品並接受以取代版本
+  所有 URL 中的數字和真實標記名稱。<em>主要</em> 像分支一樣
+  標記指向預設分支，同時<em>頭部</em> 像一個
+  指向預設分支上最新修訂版本的修訂版本標記。繁體中文
+  預設分支通常只是中繼器，但可以設定為其他
+  個別儲存庫檔案中的分支。CVS 會永遠取出
+  檔案的修訂版本'未指定其他分支時的預設分支
+  在指令行上。</p>
+
+<h3><a name="more-information">更多資訊</a></h3>
+
+<p>更多關於 的資訊<em>ViewVC</em> 可用來源
+  <a href="http://viewvc.org/">viewvc.org</a>.
+  請參閱以下連結，以取得 CVS 和 Subversion 指南</p>
+
+<h4>CVS 的相關文件</h4>
+  <blockquote>
+    <p>
+      <a href="http://cvsbook.red-bean.com/"><em>開源
+      使用 CVS 進行開發</em></a><br />
+      <a href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">CVS
+      使用者'指南</a><br />
+      <a href="http://cellworks.washington.edu/pub/docs/cvs/tutorial/cvs_tutorial_1.html">其他 CVS 教學</a><br />
+      <a href="http://www.csc.calpoly.edu/~dbutler/tutorials/winter96/cvs/">還有一份 CVS 教學 (小老一點，但不錯)</a><br />
+      <a href="http://www.cs.utah.edu/dept/old/texinfo/cvs/FAQ.txt">CVS 的舊版但非常有用的常見問題 Name</a>
+    </p>
+  </blockquote>
+
+<h4>Subversion 的相關文件</h3>
+  <blockquote>
+    <p>
+      <a href="http://svnbook.red-bean.com/"><em>版本控制
+      子版本</em></a><br />
+    </p>
+  </blockquote>
+
+</td></tr></table>
+  </body>
+</html>

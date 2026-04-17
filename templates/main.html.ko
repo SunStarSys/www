@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}"{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
+<html lang="{{ lang|cut:"." }}">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -88,9 +88,6 @@
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">프랑스어</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">러시아어</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">중국어</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">한국어</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">일본어</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">아랍어</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">히브리어</a></li>
               <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">스웨덴어</a></li>
 
@@ -133,12 +130,7 @@
   {% endif %}
 {% endblock %}
 
-<style type="text/css">
-{% ifequal lang ".he" %} .right {float:left}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left}{% endifequal %}
-{% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
-</style>
-
-<div class="container theme-showcase{% ifequal lang ".he" %} rtl{% endifequal %}{% ifequal lang ".ar" %} rtl{% endifequal %}"  id="content">
+<div class="container theme-showcase" id="content">
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">

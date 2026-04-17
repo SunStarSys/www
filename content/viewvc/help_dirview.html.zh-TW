@@ -1,0 +1,124 @@
+< ！DOCTYPE HTML 公開"-//W3C//DTD XHTML 1.0 嚴格 //EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC 說明：目錄檢視</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC 說明：目錄檢視</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>說明</h3>
+       <a href="help_rootview.html">一般</a><br />
+       <strong>目錄&nbsp;檢視</strong><br />
+       <a href="help_log.html">日誌&nbsp;檢視</a><br />
+
+<h3>網際網路</h3>
+       <a href="http://viewvc.org/index.html">首頁</a><br />
+       <a href="http://viewvc.org/upgrading.html">升級中</a><br />
+       <a href="http://viewvc.org/contributing.html">貢獻</a><br />
+       <a href="http://viewvc.org/license-1.html">授權</a><br />
+    </td><td colspan="2">
+
+<p>目錄清單檢視應該是所有使用者都很熟悉的檢視
+    電腦使用者。顯示目前檢視的目錄路徑
+    位於頁面頂端。下方是彙總表格
+    目錄內容，然後實際的內容，可排序的清單
+    目前目錄內的所有檔案和子目錄。</p>
+
+<p><a name="summary"></a>摘要表格由部分或全部組成
+    以下資料列：</p>
+    <ul>
+      <li><a name="summary-files-shown"><strong>顯示的檔案</strong></a>
+      - 目錄清單中顯示的檔案數目。這可能較少
+      大於目錄中實際的檔案數目 (如果
+      <a href="#option-search">正規表示式搜尋</a> 就地，
+      隱藏沒有的檔案'符合搜尋準則。在 CVS 目錄中
+      清單，此資料列也將有切換顯示的連結
+      <a href="help_rootview.html#dead-files">失效檔案</a>，如果有
+      目前。</li>
+
+<li><a name="summary-revision"><strong>目錄
+      版本</strong></a> - 僅限 Subversion 目錄。
+      顯示為"# 數量" 其中第一個數字是最近的
+      目錄 (或目錄底下的路徑) 的儲存區域修訂版本
+      已修改。第二個數字只是最新的儲存區域
+      版本。這兩個數字都是連結到
+      <a href="help_rootview.html#view-rev">版次檢視</a></li>
+
+<li><a name="summary-sticky-revision-tag"><strong>相黏
+     版次 / 標記</strong></a> - 顯示目前的
+     <a href="help_rootview.html#sticky-revision-tag">黏貼修訂或
+     標籤</a> 並包含要設定或清除的表單欄位。</li>
+
+<li><a name="summary-search"><strong>目前搜尋</strong></a> -
+     如果<a href="#option-search">正規表示式搜尋</a> 就地，
+     顯示搜尋字串。</li>
+
+<li><a name="summary-query"><strong>查詢</strong></a> - 提供
+     連結至<a href="help_rootview.html#view-query">查詢表格</a>
+     用於目錄</li>
+   </ul>
+
+<p><a name="list"></a>實際的目錄清單是一個包含
+  一欄中的檔案名稱和目錄名稱，以及關於
+  最近修改的檔案或目錄所在的版本
+  其他資料欄。您可以按一下資料欄標頭來排序目錄
+  依資料欄排序的項目，然後再按一次即可反轉排序
+  訂單。</p>
+
+<p>
+  <!-- If using directory.ezt template -->
+  檔案名稱是連結到<a href="help_log.html">日誌檢視</a>
+  顯示修改檔案的修訂版本清單。版本
+  數字與下列任一項連結：
+  <a href="help_rootview.html#view-markup">檢視</a>
+  或<a href="help_rootview.html#view-checkout">下載</a> 一個檔案
+  (視其檔案類型而定)。目錄的連結會反轉。
+  目錄修訂版本號碼是連結到<a href="help_log.html">日誌
+  檢視</a>，而目錄名稱是顯示這些項目內容的連結
+  目錄。
+
+<!-- If using dir_alt.ezt template -->
+  <!--
+  檔案與目錄名稱是擷取其內容的連結。
+  檔案連結可以是
+  <a href="help_rootview.html#view-markup">檢視</a>
+  或<a href="help_rootview.html#view-download">下載</a> 連結
+  視檔案類型而定。目錄連結會移至目錄
+  刊登物品。版次編號是連結到<a href="help_log.html">日誌
+  檢視</a> 顯示檔案或目錄所在的修訂版本清單
+  已修改。
+  -->
+
+此外，在使用 <a 的 CVS 儲存庫中
+  href="help_rootview.html#view- 圖表"> 圖形視圖</a> 已啟用，存在
+  將為連結至修訂版本之檔案名稱旁的小圖示
+  圖表。</p>
+
+<p>視 ViewVC 的設定方式而定，可能會有更多選項
+  位於目錄頁面底端：</p>
+
+<ul>
+    <li><a name="option-search"><strong>正規表示式
+    搜尋</strong></a> - 如果啟用，將會顯示接受的表單欄位
+    搜尋字串 (a)
+    <a href="http://doc.python.org/lib/re-syntax.html">節奏常規
+    運算式</a>). 送出後，只會有至少
+    運算式的一個出現位置會顯示在目錄清單中。
+    </li>
+    <li><a name="option-tarball"><strong>Tarball 下載</strong></a> -
+    開啟此選項的話，將會顯示下載壓縮的 tar 壓縮檔的連結 。
+    目錄內容。</li>
+  </ul>
+
+</td></tr></table>
+  </body>
+</html>

@@ -334,4 +334,4 @@ CSS должен быть доставлен с наших серверов.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date: 2026-03-28 08:05:09 -0700 (Sat, 28 Mar 2026) $ $Author: joe $ $Revision: 30565 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

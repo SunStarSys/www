@@ -119,4 +119,4 @@ Validerar och cachelagrar inloggningsuppgifter för underversion för det aktuel
 
 #### till skillnad från
 
-<!-- $Date: 2024-04-14 02:02:48 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22286 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

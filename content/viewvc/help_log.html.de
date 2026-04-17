@@ -1,0 +1,69 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//DE" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC Hilfe: Logansicht</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC Hilfe: Logansicht</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>Hilfe</h3>
+       <a href="help_rootview.html">Allgemein</a><br />
+       <a href="help_dirview.html">Verzeichnis&nbsp;Anzeigen</a><br />
+       <strong>Protokoll&nbsp;Anzeigen</strong><br />
+
+<h3>Internet</h3>
+       <a href="http://viewvc.org/index.html">Startseite</a><br />
+       <a href="http://viewvc.org/upgrading.html">Upgrade wird ausgeführt</a><br />
+       <a href="http://viewvc.org/contributing.html">Mitwirkender</a><br />
+       <a href="http://viewvc.org/license-1.html">Lizenz</a><br />
+    </td><td colspan="2">
+    <p>
+      In der Logansicht wird die Revisionshistorie der ausgewählten Quelle angezeigt
+      Datei oder Verzeichnis. Für jede Revision sind folgende Informationen
+      displayed:
+
+<ul>
+        <li>Die Revisionsnummer. In Subversion-Repositorys ist dies ein
+            Link zum <a href="help_rootview.html#view-rev">Revision
+            Ansicht</a></li>
+        <li>Für Dateien, Links zu
+        <a href="help_rootview.html#view-markup">Ansicht</a>,
+        <a href="help_rootview.html#view-checkout">herunterladen</a>und
+        <a href="help_rootview.html#view-annotate">annotieren</a> die
+          Revision. Für Verzeichnisse einen Link zu
+        <a href="help_dirview.html">Verzeichnisinhalt auflisten</a></li>
+        <li>Ein Link zur Auswahl der Revision für Diffs (siehe unten)</li>
+        <li>Datum und Alter der Änderung</li>
+        <li>Der Autor der Änderung</li>
+        <li>Die CVS-Zweigstelle (normalerweise <em>HAUPT</em>, wenn nicht in einer Filiale)</li>
+        <li>Möglicherweise eine Liste von CVS-Tags, die an die Revision gebunden sind (falls vorhanden)</li>
+        <li>Die Größe der Änderung, gemessen in hinzugefügten und entfernten Zeilen von
+            Code. (nur CVS)</li>
+        <li>Die Größe der Datei in Byte zum Zeitpunkt der Revision
+            (Nur Subversion)</li>
+        <li>Links zum Anzeigen von Diffs zur vorherigen Revision oder möglicherweise zu
+            eine beliebige ausgewählte Revision (falls vorhanden, siehe oben)</li>
+        <li>Wenn die Revision das Ergebnis einer Kopie ist, werden Pfad und Revision
+            kopiert von</li>
+        <li>Wenn die Revision vor einer Kopie oder Umbenennung steht, wird der Pfad
+            Zeitpunkt der Überarbeitung</li>
+        <li>Und nicht zuletzt die Commit-Protokollmeldung, die
+            über den Grund für die Veränderung.</li>
+      </ul>
+    <p>
+      Am unteren Rand der Seite finden Sie ein Formular, das
+      um Unterschiede zwischen willkürlichen Revisionen anzufordern.
+    </p>
+  </td></tr></table>
+  </body>
+</html>

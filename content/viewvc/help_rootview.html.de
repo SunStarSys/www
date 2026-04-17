@@ -1,0 +1,164 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//DE" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC Hilfe: Allgemein</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC Hilfe: Allgemein</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>Hilfe</h3>
+       <strong>Allgemein</strong><br />
+       <a href="help_dirview.html">Verzeichnis&nbsp;Anzeigen</a><br />
+       <a href="help_log.html">Protokoll&nbsp;Anzeigen</a><br />
+
+<h3>Internet</h3>
+       <a href="http://viewvc.org/index.html">Startseite</a><br />
+       <a href="http://viewvc.org/upgrading.html">Upgrade wird ausgeführt</a><br />
+       <a href="http://viewvc.org/contributing.html">Mitwirkender</a><br />
+       <a href="http://viewvc.org/license-1.html">Lizenz</a><br />
+    </td><td colspan="2">
+
+<p><em>ViewVC</em> ist eine WWW-Schnittstelle für CVS und Subversion
+  Repositorys. Es ermöglicht Ihnen, die Dateien und Verzeichnisse in einem
+  Repository, während Sie Metadaten aus der Repository-Historie anzeigen: log
+  Nachrichten, Änderungsdaten, Entwicklernamen, Revisionsnummern, Kopieren
+  Geschichte und so weiter. Es bietet mehrere verschiedene Ansichten des Repositorys
+  Daten, die Ihnen helfen, die gesuchten Informationen zu finden:</p>
+
+<ul>
+    <li><a name="view-dir" href="help_dirview.html"><strong>Verzeichnis
+    Anzeigen</strong></a> - Zeigt eine Liste von Dateien und Unterverzeichnissen in einem
+    Verzeichnis des Repositorys zusammen mit Metadaten wie Autorennamen und
+    Logeinträge.</li>
+
+<li><a name="view-log" href="help_log.html"><strong>Protokoll
+    Anzeigen</strong></a> - Zeigt eine Revisionsliste nach Revisionsliste aller
+    Änderungen an einer Datei oder einem Verzeichnis im Repository, mit
+    Metadaten und Links zu Ansichten jeder Revision.</li>
+
+<li><a name="view-markup"><strong>Ansicht - Dateiinhalt (Markup)
+    Anzeigen</strong></a> - Zeigt den Inhalt einer Datei an einem bestimmten
+    Revision, mit Revisionsinformationen oben auf der Seite. Datei
+    Revisionen, die GIF-, PNG- oder JPEG-Bilder sind, werden inline auf
+    Seite. Andere Dateitypen werden als markierter Text angezeigt. Das Markup
+    kann darauf beschränkt sein, URLs und E-Mail-Adressen in Links zu verwandeln, oder
+    konfiguriert, um farbigen Quellcode anzuzeigen.</li>
+
+<li><a name="view-checkout"><strong>Datei-Download (Auschecken)
+    Anzeigen</strong></a> - Ruft den unveränderten Inhalt einer Datei ab
+    Revision. Browser versuchen möglicherweise, die Datei anzuzeigen, oder speichern sie einfach in
+    Festplatte.</li>
+
+<li><a name="view-annotate"><strong>Ansicht - Dateianmerkung</strong></a> -
+    Zeigt den Inhalt einer Dateirevision an und teilt ihn zeilenweise auf.
+    mit der Revisionsnummer, an der jeder zuletzt geändert wurde,
+    mit Links und anderen Informationen. <em>Diese Ansicht ist in einigen
+    Konfigurationen ViewVC</em></li>
+
+<li><a name="view-diff"><strong>Dateiversionsansicht</strong></a> - Shows
+    Änderungen, die zwischen zwei Revisionen einer Datei vorgenommen wurden</li>
+
+<li><a name="view-tarball"><strong>Verzeichnis-Tarball-Ansicht</strong> -
+    Ruft ein komprimiertes TAR-Archiv ab, das den Inhalt eines
+    Verzeichnis.<em>Diese Ansicht ist im Standard ViewVC deaktiviert
+    Konfiguration.</em></li>
+
+<li><a name="view-query"><strong>Verzeichnisabfrageansicht</strong></a> -
+    Zeigt Informationen zu Änderungen an allen Unterverzeichnissen und Dateien an
+    unter einem übergeordneten Verzeichnis, sortiert und gefiltert nach von Ihnen angegebenen Kriterien.
+    <em>Diese Ansicht ist in der Standardkonfiguration ViewVC deaktiviert.</em>
+    </li>
+
+<li><a name="view-rev"><strong>Versionsansicht</strong> - Shows
+    Informationen zu einer Revision einschließlich Logmeldung, Autor und Liste
+    von geänderten Pfaden. <em>Nur für Subversion-Repositorys.</em></li>
+
+<li><a name="view-graph"><strong>Diagrammansicht</strong></a> - Zeigt eine
+    Grafische Darstellung einer Datei's Revisionen und Verzweigungen abgeschlossen
+    mit Tag- und Autorennamen und Links zu Markup- und Diff-Seiten.
+    <em>Nur für CVS-Repositorys und im Standard deaktiviert
+    Konfiguration.</em></li>
+  </ul>
+
+<h3><a name="multiple-repositories">Mehrere Repositorys</a></h3>
+
+<p>Eine einzelne Installation von ViewVC wird häufig verwendet, um Zugriff auf
+  mehr als ein Repository. In diesen Installationen zeigt ViewVC eine
+  <em>Projektstamm</em> Dropdown-Box in der oberen rechten Ecke jeder
+  generierte Seite, um schnellen Zugriff auf jedes Repository zu ermöglichen.</p>
+
+<h3><a name="sticky-revision-tag">Wichtige Revision und Tag</a></h3>
+
+<p>Standardmäßig zeigt ViewVC die Dateien, Verzeichnisse und Revisionen an
+  die derzeit im Repository vorhanden sind. Aber es's auch möglich zu durchsuchen
+  den Inhalt eines Repositorys an einem Punkt in der Vergangenheit, indem Sie
+  ein "Sticky-Tag" (in CVS) oder a "Wichtige Revision" (in Subversion) aus der
+  Formulare oben auf Verzeichnis- und Logseiten. Sie'Re genannt sticky
+  weil sie einmal'Auserwählt, bleiben sie herum, wenn Sie zu
+  Andere Seiten, bis Sie sie zurücksetzen. Wenn sie're set, directory und log
+  Seiten zeigen nur Revisionen vor dem angegebenen Punkt in der Historie an. Ein
+  CVS, wenn ein Tag nur auf eine Verzweigung oder eine Revision in einer Verzweigung verweist
+  Revisionen aus der Verzweigungshistorie werden angezeigt, einschließlich Verzweigungspunkten und
+  Ihre vorherigen Revisionen.</p>
+
+<h3><a name="dead-files">Tote Dateien</a></h3>
+
+<p>In CVS-Verzeichnislisten kann ViewVC optional tote Dateien anzeigen.
+  Tote Dateien sind Dateien, die sich früher in einem Verzeichnis befanden, aber derzeit
+  gelöscht, oder Dateien, die einfach nicht't in der aktuell ausgewählten
+  <a href="#sticky-revision-tag">Sticky-Tag</a>. Dead-Dateien dürfen nicht
+  in Subversion-Repositorys angezeigt. Die einzige Möglichkeit, eine gelöschte Datei in
+  Ein Subversion-Verzeichnis ist die Navigation zu einer Sticky-Revision, bei der
+  Datei bereits vorhanden.</p>
+
+<h3><a name="artificial-tags">Künstliche Tags</a></h3>
+
+<p>In CVS-Repositorys fügt ViewVC künstliche Tags hinzu <em>Kopf</em> und
+  <em>HAUPT</em> um Einträge zu markieren und anstelle von Revisionen zu akzeptieren
+  Zahlen und echte Tag-Namen in allen URLs. <em>HAUPT</em> agiert wie ein Zweig
+  Tag, das auf die Standardverzweigung zeigt, während <em>Kopf</em> agiert wie ein
+  Revisions-Tag, das auf die letzte Revision in der Standardverzweigung verweist. Die
+  Standardverzweigung ist in der Regel nur der Stamm, kann aber auf andere
+  Verzweigungen in einzelnen Repository-Dateien. CVS checkt immer aus
+  Revisionen einer Datei's Standardverzweigung, wenn keine andere Verzweigung angegeben ist
+  in der Befehlszeile.</p>
+
+<h3><a name="more-information">Weitere Informationen</a></h3>
+
+<p>Weitere Informationen zu <em>ViewVC</em> ist verfügbar von
+  <a href="http://viewvc.org/">viewvc.org</a>.
+  Siehe Links unten für Anleitungen zu CVS und Subversion</p>
+
+<h4>Dokumentation zu CVS</h4>
+  <blockquote>
+    <p>
+      <a href="http://cvsbook.red-bean.com/"><em>Open Source
+      Entwicklung mit CVS</em></a><br />
+      <a href="http://www.loria.fr/~molli/cvs/doc/cvs_toc.html">Lebenslauf
+      Benutzer's-Anleitung</a><br />
+      <a href="http://cellworks.washington.edu/pub/docs/cvs/tutorial/cvs_tutorial_1.html">Weiteres CVS-Tutorial</a><br />
+      <a href="http://www.csc.calpoly.edu/~dbutler/tutorials/winter96/cvs/">Noch ein CVS-Tutorial (ein wenig alt, aber nett)</a><br />
+      <a href="http://www.cs.utah.edu/dept/old/texinfo/cvs/FAQ.txt">Eine alte, aber sehr nützliche FAQ über CVS</a>
+    </p>
+  </blockquote>
+
+<h4>Dokumentation zu Subversion</h3>
+  <blockquote>
+    <p>
+      <a href="http://svnbook.red-bean.com/"><em>Versionskontrolle mit
+      Subversion</em></a><br />
+    </p>
+  </blockquote>
+
+</td></tr></table>
+  </body>
+</html>

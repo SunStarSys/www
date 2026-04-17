@@ -26,4 +26,4 @@ Más allá de las tareas rutinarias que enfrenta cada Administrador del Sistema,
 
 Disfruté de la mayor parte de mi tiempo sirviendo a las necesidades de la comunidad de Apache, pero después de 8 años fue hora de un cambio.  Siempre miraré con cariño los muchos recuerdos y amigos que hice mientras estaba allí, y le deseo a Apache todo lo mejor en el futuro.
 
-<!-- $Date: 2026-02-16 12:33:32 -0700 (Mon, 16 Feb 2026) $ $Author: joe $ $Revision: 27653 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,0 +1,124 @@
+<! DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//DE" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC Hilfe: Verzeichnisansicht</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC Hilfe: Verzeichnisansicht</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>Hilfe</h3>
+       <a href="help_rootview.html">Allgemein</a><br />
+       <strong>Verzeichnis&nbsp;Anzeigen</strong><br />
+       <a href="help_log.html">Protokoll&nbsp;Anzeigen</a><br />
+
+<h3>Internet</h3>
+       <a href="http://viewvc.org/index.html">Startseite</a><br />
+       <a href="http://viewvc.org/upgrading.html">Upgrade wird ausgeführt</a><br />
+       <a href="http://viewvc.org/contributing.html">Mitwirkender</a><br />
+       <a href="http://viewvc.org/license-1.html">Lizenz</a><br />
+    </td><td colspan="2">
+
+<p>Die Verzeichnislistenansicht sollte ein vertrauter Anblick für jede
+    Computerbenutzer. Zeigt den Pfad des aktuellen Verzeichnisses an, das angezeigt wird
+    oben auf der Seite. Darunter eine Tabelle, in der die
+    Verzeichnisinhalt, und dann kommt der tatsächliche Inhalt, eine sortierbare Liste von
+    alle Dateien und Unterverzeichnisse im aktuellen Verzeichnis.</p>
+
+<p><a name="summary"></a>Die Übersichtstabelle besteht aus einigen oder allen
+    der folgenden Zeilen:</p>
+    <ul>
+      <li><a name="summary-files-shown"><strong>Angezeigte Dateien</strong></a>
+      - Anzahl der Dateien, die in der Verzeichnisliste angezeigt werden. Das könnte weniger sein
+      als die tatsächliche Anzahl von Dateien im Verzeichnis, wenn
+      <a href="#option-search">Reguläre Ausdruckssuche</a> ist vorhanden,
+      Ausblenden von Dateien, die't die Suchkriterien erfüllen. Im CVS-Verzeichnis
+      Diese Zeile enthält auch einen Link zum Umschalten der Anzeige von
+      <a href="help_rootview.html#dead-files">tote Dateien</a>, falls vorhanden
+      vorhanden.</li>
+
+<li><a name="summary-revision"><strong>Verzeichnis
+      Version</strong></a> - Nur für Subversion-Verzeichnisse.
+      Angezeigt als "Anz." wobei die erste Zahl die letzte ist
+      Repository-Revision, in der das Verzeichnis (oder ein Pfad darunter) gespeichert ist
+      wurde geändert. Die zweite Nummer ist nur das neueste Repository
+      Revision. Beide Zahlen sind Links zu
+      <a href="help_rootview.html#view-rev">Revisionsansichten</a></li>
+
+<li><a name="summary-sticky-revision-tag"><strong>Wichtig
+     Revision/Tag</strong></a> - zeigt die aktuelle
+     <a href="help_rootview.html#sticky-revision-tag">Wichtige Revision oder
+     Tag</a> und enthält Formularfelder zum Festlegen oder Löschen.</li>
+
+<li><a name="summary-search"><strong>Aktuelle Suche</strong></a> -
+     Wenn ein <a href="#option-search">Reguläre Ausdruckssuche</a> ist vorhanden,
+     zeigt die Suchzeichenfolge an.</li>
+
+<li><a name="summary-query"><strong>Abfrage</strong></a> - Liefert
+     ein Link zu einem <a href="help_rootview.html#view-query">Abfrageformular</a>
+     für das Verzeichnis</li>
+   </ul>
+
+<p><a name="list"></a>Die eigentliche Verzeichnisliste ist eine Tabelle mit
+  Dateinamen und Verzeichnisnamen in einer Spalte und Informationen über die
+  die letzten Änderungen, an denen jede Datei oder jedes Verzeichnis geändert wurde
+  weitere Spalten. Sie können auf Spaltenheader klicken, um das Verzeichnis zu sortieren
+  Einträge nach einer Spalte sortieren und erneut klicken, um die Sortierung umzukehren
+  Bestellung.</p>
+
+<p>
+  <!-- If using directory.ezt template -->
+  Dateinamen sind Links zu <a href="help_log.html">Logansichten</a>
+  mit einer Liste der Revisionen, an denen eine Datei geändert wurde. Version
+  Zahlen sind Links zu
+  <a href="help_rootview.html#view-markup">Ansicht</a>
+  oder <a href="help_rootview.html#view-checkout">herunterladen</a> eine Datei
+  (je nach Dateityp). Die Links werden für Verzeichnisse umgekehrt.
+  Verzeichnisrevisionsnummern sind Links zu <a href="help_log.html">Protokoll
+  Ansichten</a>, während Verzeichnisnamen Links sind, die den Inhalt dieser
+  Verzeichnisse.
+
+<!-- If using dir_alt.ezt template -->
+  <!--
+  Datei- und Verzeichnisnamen sind Links zum Abrufen des Inhalts.
+  Dateilinks können entweder
+  <a href="help_rootview.html#view-markup">Ansicht</a>
+  oder <a href="help_rootview.html#view-download">herunterladen</a> Links
+  abhängig vom Dateityp. Verzeichnislinks zu Verzeichnis
+  Listen. Revisionsnummern sind Links zu <a href="help_log.html">Protokoll
+  Ansichten</a> Anzeigen von Listen mit Revisionen, in denen eine Datei oder ein Verzeichnis vorhanden war
+  geändert.
+  -->
+
+Auch in CVS-Repositorys mit dem <a
+  href="help_rootview.html#view-Diagramm">Diagrammansicht</a> aktiviert, dort
+  werden kleine Symbole neben Dateinamen sein, die Links zu Revisionen sind
+  Diagramme.</p>
+
+<p>Je nachdem, wie ViewVC konfiguriert ist, gibt es möglicherweise weitere Optionen.
+  unten auf den Verzeichnisseiten:</p>
+
+<ul>
+    <li><a name="option-search"><strong>Regulärer Ausdruck
+    Suchen</strong></a> - Wenn aktiviert, wird ein Formularfeld angezeigt, das akzeptiert
+    eine Suchzeichenfolge (a
+    <a href="http://doc.python.org/lib/re-syntax.html">python regular
+    Ausdruck</a>). Einmal eingereicht, nur Dateien, die mindestens
+    ein Vorkommen des Ausdrucks wird in Verzeichnislisten angezeigt.
+    </li>
+    <li><a name="option-tarball"><strong>Tarball herunterladen</strong></a> -
+    Wenn diese Option aktiviert ist, wird ein Link zum Herunterladen eines komprimierten TAR-Archivs von
+    den Verzeichnisinhalt.</li>
+  </ul>
+
+</td></tr></table>
+  </body>
+</html>

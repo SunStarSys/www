@@ -1,0 +1,69 @@
+< ！DOCTYPE HTML 公開"-//W3C//DTD XHTML 1.0 嚴格 //EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC 說明：日誌檢視</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC 說明：日誌檢視</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>說明</h3>
+       <a href="help_rootview.html">一般</a><br />
+       <a href="help_dirview.html">目錄&nbsp;檢視</a><br />
+       <strong>日誌&nbsp;檢視</strong><br />
+
+<h3>網際網路</h3>
+       <a href="http://viewvc.org/index.html">首頁</a><br />
+       <a href="http://viewvc.org/upgrading.html">升級中</a><br />
+       <a href="http://viewvc.org/contributing.html">貢獻</a><br />
+       <a href="http://viewvc.org/license-1.html">授權</a><br />
+    </td><td colspan="2">
+    <p>
+      日誌檢視會顯示所選來源的修訂版本歷史記錄
+      檔案或目錄。每個修訂版本的資訊如下
+      displayed:
+
+<ul>
+        <li>版次編號。在 Subversion 儲存區域中，這是
+            連結至<a href="help_rootview.html#view-rev">版次
+            檢視</a></li>
+        <li>若為檔案，連結至
+        <a href="help_rootview.html#view-markup">檢視</a>,
+        <a href="help_rootview.html#view-checkout">下載</a>，和
+        <a href="help_rootview.html#view-annotate">註解</a> 其中
+          版本。若為目錄，則為連結至
+        <a href="help_dirview.html">列出目錄內容</a></li>
+        <li>此連結用於選擇 diff 的版本 (請參考底下)</li>
+        <li>變更的日期與年齡</li>
+        <li>修改的作者</li>
+        <li>CVS 分支 (通常為<em>主要</em>，如果不在分支上)</li>
+        <li>可能是一份 CVS 標籤清單 (如果有的話)</li>
+        <li>在新增和移除的行中測量的變更大小
+            代碼。(只限 CVS)</li>
+        <li>修訂版本時的檔案大小 (位元組)
+            (僅限 Subversion)</li>
+        <li>要檢視的連結與前一個版本不同，或是有可能會
+            任意選取的修訂版本 (若有的話，請參閱上面)</li>
+        <li>如果修訂版本是複本的結果，路徑和修訂版本
+            複製來源</li>
+        <li>如果修訂版本在複製或重新命名之前，則路徑位於
+            修訂時間</li>
+        <li>最後 (但不是最少) 應該告訴的確認日誌訊息
+            關於變更的原因。</li>
+      </ul>
+    <p>
+      頁面底端您會找到允許的表單
+      要求任意修訂版本之間的差異。
+    </p>
+  </td></tr></table>
+  </body>
+</html>

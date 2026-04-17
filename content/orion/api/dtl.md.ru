@@ -86,4 +86,4 @@ title: Orion API – Библиотека шаблонов Django
 
 Захватите первое изображение HTML5/Markdown из отфильтрованного содержимого.
 
-<!-- $Date: 2024-04-22 15:48:18 +0000 (Mon, 22 Apr 2024) $ $Author: joe $ $Revision: 23266 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

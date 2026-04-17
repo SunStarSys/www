@@ -202,4 +202,4 @@ title: Orion API – сборка
 
 Совпадает с [`YAML::XS::Дамп`](#).
 
-<!-- $Date: 2024-04-14 02:05:29 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22295 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

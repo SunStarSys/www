@@ -90,4 +90,4 @@ Tillståndsbaserat, itererat PCRE-filter för matchande filer.
 - [`filtrera`](#)
 - [`specialerbjudanden`](#).
 
-<!-- $Date: 2024-04-23 18:57:27 +0000 (Tue, 23 Apr 2024) $ $Author: joe $ $Revision: 23677 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

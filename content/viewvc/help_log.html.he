@@ -1,0 +1,69 @@
+<! DOCTYPE html ציבורי "-//W3C//DTD XHTML 1.0 מחמיר//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>ViewVC עזרה: תצוגת יומן רישום</title>
+  <link rel="stylesheet" href="help.css" type="text/css" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+</head>
+<body>
+  <table>
+    <col class="menu" />
+    <col />
+    <tr>
+      <td colspan="2">
+	<h1>ViewVC עזרה: תצוגת יומן רישום</h1>
+      </td>
+    </tr>
+    <tr><td>
+       <h3>עזרה</h3>
+       <a href="help_rootview.html">כללי</a><br />
+       <a href="help_dirview.html">ספרייה&nbsp;הצג</a><br />
+       <strong>יומן&nbsp;הצג</strong><br />
+
+<h3>אינטרנט</h3>
+       <a href="http://viewvc.org/index.html">בית</a><br />
+       <a href="http://viewvc.org/upgrading.html">משדרג</a><br />
+       <a href="http://viewvc.org/contributing.html">תורם</a><br />
+       <a href="http://viewvc.org/license-1.html">רישיון</a><br />
+    </td><td colspan="2">
+    <p>
+      תצוגת היומן מציגה את היסטוריית המהדורות של המקור שנבחר
+      קובץ או ספרייה. לכל מהדורה המידע הבא הוא
+      displayed:
+
+<ul>
+        <li>מספר המהדורה. במאגרי Subversion, זהו
+            קישור אל <a href="help_rootview.html#view-rev">מהדורה
+            תצוגה</a></li>
+        <li>לקבצים, קישורים אל
+        <a href="help_rootview.html#view-markup">תצוגה</a>,
+        <a href="help_rootview.html#view-checkout">הורדה</a>, וגם
+        <a href="help_rootview.html#view-annotate">הערה</a> דה
+          מהדורה. עבור ספריות, קישור אל
+        <a href="help_dirview.html">תוכן ספריית רשימה</a></li>
+        <li>קישור לבחירת המהדורה לשונות (ראה להלן)</li>
+        <li>התאריך והגיל של השינוי</li>
+        <li>המחבר של השינוי</li>
+        <li>סניף CVS (בדרך כלל) <em>ראשי</em>(אם לא בסניף)</li>
+        <li>ייתכן שיש רשימה של תגי CVS הכרוכים למהדורה (אם יש)</li>
+        <li>גודל השינוי שנמדד בשורות שנוספו ושורות שהוסרו של
+            קוד. (CVS בלבד)</li>
+        <li>גודל הקובץ בבייטים בזמן המהדורה
+            (תת-גרסה בלבד)</li>
+        <li>קישורים לתצוגה שונים מהמהדורה הקודמת או אולי ל-
+            מהדורה נבחרת שרירותית (אם קיימת, ראה למעלה)</li>
+        <li>אם המהדורה היא תוצאה של עותק, הנתיב והמהדורה
+            הועתק מ-</li>
+        <li>אם המהדורה קודמת לעותק או לשינוי שם, הנתיב ב-
+            שעת המהדורה</li>
+        <li>ואחרון, אך לא פחות, הודעת יומן commit שאמורה לספר
+            לגבי הסיבה לשינוי.</li>
+      </ul>
+    <p>
+      בחלק התחתון של הדף תמצאו טופס המאפשר
+      הבקשה שונה בין מהדורות שרירותיות.
+    </p>
+  </td></tr></table>
+  </body>
+</html>

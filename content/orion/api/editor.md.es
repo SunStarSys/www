@@ -119,4 +119,4 @@ Valida y almacena en caché las credenciales de subversión para el repositorio 
 
 ##### a diferencia
 
-<!-- $Date: 2024-04-14 02:02:48 +0000 (Sun, 14 Apr 2024) $ $Author: joe $ $Revision: 22286 $ -->
+<!-- $Date$ $Author$ $Revision$ -->
