@@ -42,7 +42,7 @@ end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[鳳凰城 (AZ)]]
+    A3[[鳳凰城, AZ]]
     B3[OCI 邊緣處理伺服器]
 end
 class vpn-us-west,A3 darkBlue
@@ -54,7 +54,7 @@ end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[聖保羅 (巴西)]]
+    A5[[聖保羅, 巴西]]
     B5[OCI 邊緣處理伺服器]
 end
 class vpn-bz-west,A5 darkBlue
