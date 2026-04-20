@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
-published: ~
 status: Entwurf
 title: Orion-Funktionen
 ---
@@ -36,7 +34,7 @@ title: Orion-Funktionen
 
 ## Schnelle Systeminfrastruktur
 
-- 50 ms oder weniger RTT-Latenz für den größten Teil der Weltbevölkerung, mit erweiterter Abdeckung in Afrika im Jahr 2024
+- 50 ms oder weniger RTT-Latenz für den größten Teil der Weltbevölkerung, mit erweiterter Abdeckung in Afrika/Naher Osten im Jahr 2026
 
 - 2-mal schnellere HTTP/2-Multiplex-Seiten-Lieferzeiten (out-of-the-box, für *alle* Kunden) als die Konkurrenz
 
@@ -120,32 +118,10 @@ title: Orion-Funktionen
 
 - Editor.md ist erstaunlich: durch die Verwendung von relativen [`Quelle`](#) URLs, Ihre verknüpften Bilder werden im Editorvorschaufenster wiedergegeben.
 
-## Konsistentes Rendering von GitHub-Flavored Markdown (GFM) mit Editor.md :editormd-logo-1x: und Django Templating
+## Konsistente Wiedergabe von GitHub-Flavored Markdown (GFM) mit Editor.md :editormd-logo-1x: und Django-Templating
 
 - [x] **WYSIWYG:** {# lede #}Dieselbe Javascript-Code-Rendering-Engine in Ihrem Browser und im (node.js-basierten) markdown.js-Build-Skript{# lede #} stellt eine 100%ige strukturelle Konsistenz zwischen dem Editor.md Markdown-Vorschaufenster und der Produktionssite sicher.
 - [x] YAML-Header in Quelldateien (Markdown) werden jetzt vollständig unterstützt.
-- [x] Unterstützung von nativem Flussdiagramm und Sequenzdiagramm :fa-glass:
-
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
-&nbsp;
-----
-&nbsp;
 
 - [x] Native d3-graphviz.js-Unterstützung:
 
@@ -163,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[Weihnachten]
+ -->|Geld erhalten| B(Einkaufen)
+    B --> C{Lass mich denken}
+    C -->|Eins| D[fa:fa-laptop Laptop]
+    C -->|Zwei| E[fa:fa-mobile iPhone]
+    C -->|Drei| F[fa:fa-car Auto]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice->>John: Hallo John, wie geht es dir?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        John->>John: Kampf gegen Hypochondrien
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: Rationale Gedanken<br/>vorherrschen...
+    John-->>Alice: Großartig!
+    John->>Bob: Wie wär's mit dir?
+    Bob-->>John: Sehr gut!
 ```
 ----
 ```mermaid
@@ -199,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> Noch
+    Immer --> [*]
+    Immer --> Verschieben
+    Verschieben --> Immer
+    Verschieben --> Absturz
+    Absturz --> [*]
 ```
 ----
 ```mermaid
@@ -212,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    Eine Aufgabe           :a1, 2014-01-01, 30d
+    Weitere Aufgabe     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    Aufgabe in Sekunden    :2014-01-12  , 12d
+    weitere Aufgabe      : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"Sonntag" : 4
+	"Montag" : 5
+	"Dienstag" : 7
+  "Mittwoch" : 3
 ```
 ----
 ```mermaid
@@ -268,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[Quadratische Form] --> ci((Kreisform))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>Ungerade Form]-- Zwei Zeilen<br/>Kantenkommentar --> Rohre
+        di{Diamant mit <br/> Zeilenumbruch} -.-> ro(Gerundet<br>Quadrat<br>Form)
+        di==>ro2(Rounded quadratische Form)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>Wirklich langer Text mit Zeilenumbruch<br>in einer ungeraden Form]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((Innen/Kreis<br>und einige seltsame <br>Sonderzeichen)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[Kyrillisch]-->cyr2((Kreisform Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -292,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((Mindmap))
+    Ursprünge
+      Lange Geschichte
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      Popularisierung
+        Britischer Psychologieautor Tony Buzan
+    Forschung
+      Auf Effektivität<br/>und Funktionen
+      Bei automatischer Erstellung
+        Verwendungen
+            Kreative Techniken
+            Strategische Planung
+            Argumentzuordnung
+    Werkzeuge
+      Stift und Papier
+      Meerjungfrau
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title Mein Arbeitstag
+    section Zur Arbeit
+      Tee machen: 5: Ich
+      Nach oben: 3: Ich
+      Arbeit: 1: Ich, Katze
+    section Nach Hause gehen
+      Nach unten: 5: Ich
+      Platz: 3: Ich
 ```
 ----
 ```mermaid
@@ -331,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[Öffentlicher Benutzer<br/> Über REST API]]
+    B1[Backend-Dienste/<br/>Frontend-Dienste]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[Autorisierter Benutzer<br/> Über REST API]]
+    B2[Backend-Dienste/<br/>Frontend-Dienste]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[Buchsystem]]
+    B3[Ermöglicht die Interaktion mit Buchdatensätzen]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--Liest Datensätze mit-->booksSystem
+authorizedUser--Liest und schreibt Datensätze mit-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[Autorisierungssystem]]
+    B4[Autorisiert den Zugriff auf Ressourcen]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[System Publisher 1]]
+    B5[Gibt Details zu den von ihnen veröffentlichten Büchern an]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[Publisher 2-System]]
+    B6[Gibt Details zu den von ihnen veröffentlichten Büchern an]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--Greift auf Autorisierungsdetails zu, indem-->authorizationSystem
+booksSystem--Greift auf Herausgeberdetails zu mit-->publisher1System
+booksSystem--Greift auf Herausgeberdetails zu mit-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -389,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Synchrone, bidirektionale Generierung von $$\LaTeX$$ Quelldateien zu/von Preisabschrift+$$\KaTeX$$ Dateien.
 
-- [x] Navier-Stokes in Einstein Notation [SCHICHTEN](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x] Navier-Stokes in Einstein Notation [SCHICHTEN](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -417,10 +393,10 @@ Der Editor wird automatisch vervollständigt und automatisch eingehängt. Er ver
 
 ## Vollständige Unterstützung für Filial-Builds
 
-- [x] Keine weitere Bereitstellung/Veröffentlichung: ersetzt durch <span class="text-white">Hochstufung</span> pro Ressourcenverzweigung.
-- [x] <span class="text-white">Rollback</span> und <span class="text-white">Sync</span> Merge werden vollständig unterstützt.
+- [x] Keine weitere Bereitstellung/Veröffentlichung: durch Verzweigung pro Ressource ersetzt <span class="text-white">Promotion</span>.
+- [x] <span class="text-white">Rollback</span> und <span class="text-white">Synchronisieren</span> Zusammenführung wird vollständig unterstützt.
 
-## Dynamische Quellbaum-Suchmaschine
+## Live-Quellbaumsuchmaschine
 
 <br>
 
@@ -446,11 +422,11 @@ Der Editor wird automatisch vervollständigt und automatisch eingehängt. Er ver
 
 ## Unbegrenzte Seitenanhänge mit beliebigen MIME-Typen
 
-## Sichere, Thread-basierte Kommentare pro Seite
+## Sichere Kommentare pro Seite mit Thread
 
-## Automatisierte Übersetzungen von Markdown in natürlicher Sprache (in Kürze).
+## Automatisierte Übersetzungen von Preisabschriften in natürlicher Sprache
 
-## Interaktive mathematische Vektorgrafiken mit @vectorgraphics/asymptote
+## Interaktive mathematische Vektorgrafiken mit @vectorgraphics/Asymptote
 
 - [x] Syntaxhervorhebung für Asymptote
 - [x] CMS wird bei nicht analysierbaren Asymptote-Codeblöcken schnell fehlschlagen
@@ -468,7 +444,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -497,7 +473,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## Deltas von <span class='text-info'>Apache CMS</span>-Features
+## Deltas von <span class='text-info'>Apache-CMS</span> Funktionen
 
 - Nur das Perl-basierte Build-System ist verfügbar.
 

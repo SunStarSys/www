@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluencia,slab,noción
-published: ~
 status: borrador
 title: Características de Orion
 ---
@@ -36,15 +34,15 @@ title: Características de Orion
 
 ## Infraestructura de sistema rápido
 
-- Latencia de 50 ms o menos RTT para la mayor parte de la población mundial, con una cobertura ampliada en África en 2024
+- Latencia de 50 ms o menos RTT para la mayor parte de la población mundial, con una cobertura ampliada en África/Oriente Medio en 2026
 
-- 2 veces más rápido HTTP / 2 tiempos de entrega de páginas multiplexadas (fuera de la caja, para *todos * los clientes) que la competencia
+- 2 veces más rápido HTTP / 2 tiempos de entrega de páginas multiplexadas (fuera de la caja, para *todos *los clientes) que la competencia
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 300 MB/s construcciones sostenidas para árboles fuente de varios gigabytes
+- Construcciones sostenidas de 300 MB/s para árboles fuente de varios gigabytes
 
 - NVMe o una infraestructura de almacenamiento de compilación más rápida
 
@@ -96,7 +94,7 @@ title: Características de Orion
 
 - Sueco
 
-## Mejor soporte para el envío de diferencias y la creación de clones
+## Mejor soporte para Diffs de Correo y Creación de Clones
 
 - DMARC protegido
 
@@ -104,7 +102,7 @@ title: Características de Orion
 
 - Todos los usuarios son autenticados a través del servicio OpenID-Connect de Google
 
-## El pato curioso es ahora un elegante cisne
+## El curioso pato es ahora un elegante cisne
 
 <br>
 
@@ -120,32 +118,10 @@ title: Características de Orion
 
 - Editor.md es increíble: mediante el uso de relativos [`src`](#) urls, las imágenes enlazadas se representarán en el panel de vista previa del editor.
 
-## Representación consistente de rebaja con sabor GitHub (GFM) con Editor.md :editormd-logo-1x: y Creación de plantillas de Django
+## Representación consistente de Markdown de tipo GitHub (GFM) con Editor.md:editormd-logo-1x y plantillas de Django
 
 - [x] **WYSIWYG:** {# lede #}Mismo motor de representación de código javascript tanto en el explorador como en el script de compilación markdown.js (basado en node.js){# lede #} garantiza una consistencia estructural del 100% entre la ventana de vista previa de Markdown Editor.md y el sitio de producción.
 - [x] Las cabeceras YAML en los archivos de origen (markdown) ahora están totalmente soportadas.
-- [x] Soporte nativo para diagramas de flujo y secuencias:fa-glass:
-
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
-&nbsp;
-----
-&nbsp;
 
 - [x] Soporte nativo d3-graphviz.js:
 
@@ -163,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[Navidad]
+ -->|Obtenga dinero| B(Ir de compras)
+    B --> C{Déjame pensar}
+    C -->|Uno| D[fa:fa-laptop Equipo portátil]
+    C -->|Dos| E[fa:fa-mobile iPhone]
+    C -->|Tres| F[fa:fa-car Coche]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice->>John: Hola John, ¿cómo estás?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        John->>John: Lucha contra la hipocondría
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: Pensamientos racionales<br/>prevalezcan...
+    John-->>Alice: ¡Genial!
+    John->>Bob: ¿Y tú?
+    Bob-->>John: ¡Bien!
 ```
 ----
 ```mermaid
@@ -199,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> Aún
+    Aún --> [*]
+    Aún --> Moviendo
+    Moviendo --> Aún
+    Moviendo --> Bloqueo
+    Bloqueo --> [*]
 ```
 ----
 ```mermaid
@@ -212,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    Tarea           :a1, 2014-01-01, 30d
+    Otra tarea     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    Tarea en segundo      :2014-01-12  , 12d
+    otra tarea    : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"Domingo" : 4
+	"Lunes" : 5
+	"Martes" : 7
+  "Miércoles" : 3
 ```
 ----
 ```mermaid
@@ -268,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[Forma cuadrada] --> ci((Forma de círculo))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>Forma impar]-- Dos líneas<br/>comentario de borde --> ro
+        di{Diamante con <br/> salto de línea} -.-> ro(Redondeado<br>cuadrado<br>forma)
+        di==>ro2(Rounded forma cuadrada)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>Texto realmente largo con salto de línea<br>en una forma extraña]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((Interior/círculo<br>y algunos extraños <br>caracteres especiales)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[Cirílico]-->cyr2((forma de círculo Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -292,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((mapa mental))
+    Orígenes
+      Larga historia
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      Popularización
+        Autor de psicología popular británico Tony Buzan
+    Investigación
+      Sobre la eficacia<br/>y características
+      En creación automática
+        Usos
+            Técnicas creativas
+            Planificación estratégica
+            Asignación de argumentos
+    Herramientas
+      Pluma y papel
+      Sirena
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title Mi día laborable
+    section Ir al trabajo
+      Hacer té: 5: Yo
+      Arriba: 3: Yo
+      Hacer trabajo: 1: Yo, Gato
+    section Ir a inicio
+      Bajar las escaleras: 5: Yo
+      Siéntate: 3: Yo
 ```
 ----
 ```mermaid
@@ -331,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[Usuario público<br/> Mediante API de REST]]
+    B1[Servicios de backend/<br/>servicios de frontend]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[Usuario autorizado<br/> Mediante API de REST]]
+    B2[Servicios de backend/<br/>servicios de frontend]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[Sistema de libros]]
+    B3[Permite interactuar con registros de libros]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--Lee registros mediante-->booksSystem
+authorizedUser--Lee y escribe registros mediante-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[Sistema de autorización]]
+    B4[Autoriza el acceso a los recursos]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[Sistema Publisher 1]]
+    B5[Proporciona detalles sobre los libros publicados por ellos]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[Sistema Publisher 2]]
+    B6[Proporciona detalles sobre los libros publicados por ellos]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--Accede a los detalles de autorización usando-->authorizationSystem
+booksSystem--Accede a los detalles del editor mediante-->publisher1System
+booksSystem--Accede a los detalles del editor mediante-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -389,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Generación Bidireccional y Síncrona de $$\LaTeX$$ Archivos de origen a/desde Markdown+$$\KaTeX$$ Archivos.
 
-- [x] Navier-Stokes en la notación de Einstein (aka [DOLOR](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x] Navier-Stokes en la notación de Einstein (aka [DOLOR](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -417,10 +393,10 @@ Editor se autocompletará y autoindent; tiene modo de pantalla completa, así co
 
 ## Soporte completo para creaciones de sucursales
 
-- [x] No hay más ubicación temporal/publicación: se ha sustituido por la <span class="text-white">promoción</span> de rama por recurso.
-- [x] La fusión de <span class="text-white">rollback</span> y <span class="text-white">sincronización</span> está totalmente soportada.
+- [x] No hay más ubicación temporal/publicación: se ha sustituido por una rama por recurso <span class="text-white">Promoción</span>.
+- [x] <span class="text-white">Rollback</span> y <span class="text-white">Sincronizar</span> Combinación totalmente soportada.
 
-## Buscador de árbol de fuente en vivo
+## Motor de búsqueda de árbol de origen activo
 
 <br>
 
@@ -444,11 +420,11 @@ Editor se autocompletará y autoindent; tiene modo de pantalla completa, así co
 - [ ] Búsqueda en PDF próximamente.
 - [ ] Compatibilidad con GraphQL/AI próximamente. ¡La seguridad se ve divertida!
 
-## Anexos ilimitados de páginas con tipos MIME arbitrarios
+## Anexos de página ilimitados con tipos MIME arbitrarios
 
-## Comentarios seguros y roscados por página
+## Comentarios por página seguros y roscados
 
-## Traducciones automatizadas de lenguaje natural de Markdown (próximamente).
+## Traducciones automatizadas de lenguaje natural de Markdown
 
 ## Gráficos vectoriales matemáticos interactivos con @vectorgraphics/asymptote
 
@@ -468,7 +444,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -497,7 +473,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## Deltas de las funciones de <span class='text-info'>Apache CMS</span>
+## Deltas de <span class='text-info'>CMS de apache</span> Funciones
 
 - Solo está disponible el sistema de creación basado en Perl.
 
@@ -505,7 +481,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 - GFM utiliza un delimitador diferente para los bloques de código.
 
-- [`extpaths.txt`](#) ya no es compatible: a las personas seleccionadas de cada proyecto se les otorgará acceso de escritura al árbol del sitio web de producción en nuestros repositorios de subversión para cargar material producido externamente (javadocs, artefactos de versión de software, etc.).
+- [`extpaths.txt`](#) ya no es compatible: a las personas seleccionadas de cada proyecto se les otorgará acceso de escritura al árbol del sitio web de producción en nuestros repositorios de subversión para cargar material producido externamente (javadocs, artefactos de versión de software, etc.)
 
 ----
 

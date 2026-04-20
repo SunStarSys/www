@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notes
-published: ~
 status: 草稿
 title: Orion 功能
 ---
@@ -34,17 +32,17 @@ title: Orion 功能
 &nbsp;
 </p>
 
-## 閃爍的快速系統基礎架構
+## 驚人的快速系統基礎架構
 
-- 全球大部分人口的 RTT 延遲時間為 50 毫秒，2024 年在非洲擴大涵蓋範圍
+- 全球大部分人口的 RTT 延遲時間為 50 毫秒，2026 年涵蓋非洲 / 中東地區
 
-- 比競爭對手快 2 倍的 HTTP/2 多工頁面傳送時間 (立即可用，適用於 * 所有 * 客戶).
+- 比競爭對手快 2 倍的 HTTP/2 多工頁面傳送時間 (立即可用，適用於 *所有* 客戶)
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 多 GB 來源樹狀結構的 500 MB / 持續建置版本
+- 適用於多 GB 來源樹狀結構的 300 MB/ 秒持續組建
 
 - NVMe 或更快速的組建儲存基礎架構
 
@@ -62,7 +60,7 @@ title: Orion 功能
 
 - 事件 mpm
 
-- mod_perl (含執行緒).
+- mod_perl (含執行緒)
 
 - mod_apreq2
 
@@ -96,7 +94,7 @@ title: Orion 功能
 
 - 瑞典文
 
-## 更好的郵件差異和建立複製支援
+## 更好地支援郵件差異與建立複製
 
 - DMARC 保護
 
@@ -120,32 +118,10 @@ title: Orion 功能
 
 - Editor.md 驚人：使用相對[`來源`](#) URL，您的連結影像將會顯示在編輯器預覽窗格中。
 
-## 一致 GitHub-Flavorite Markdown (GFM) 呈現 Editor.md ：editormd-logo-1x：和 Django Templating
+## 一致的 GitHub-Flavorite Markdown (GFM) 呈現 Editor.md ：editormd-logo-1x：和 Django Templating
 
 - [X 軸] **WYSIWYG:** {# lede #}您的瀏覽器和 (node.js 型) markdown.js 組建命令檔中的相同 javascript 程式碼轉譯引擎{# lede #} 確保 Editor.md Markdown 預覽視窗與生產站台之間的 100% 結構一致性。
 - [X 軸] 現在完全支援來源 (markdown) 檔中的 YAML 標頭。
-- [X 軸] 原生流程圖與順序圖支援：fa-glass：
-
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
-&nbsp;
-----
-&nbsp;
 
 - [X 軸] 原生 d3-graphviz.js 支援：
 
@@ -163,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[聖誕節]
+ -->| 賺錢 | B(前往購物)
+    B 型 --> C{讓我想}
+    C -->|一個| D[fa:fa-laptop 筆記型電腦]
+    C -->|兩個| E[fa:fa-mobile iPhone]
+    C -->|三個| F[fa:fa-car 汽車]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice->>John：John 您好，您好嗎？
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        John->>John：對抗高潮
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: 理性思維<br/>可用...
+    John-->>愛麗絲：好！
+    John->>Bob：您好嗎？
+    Bob-->>John：Jolly 好！
 ```
 ----
 ```mermaid
@@ -199,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> 仍然
+    靜態 --> [*]
+    靜態 --> 移動中
+    移動中 --> 靜態
+    移動中 --> 損毀
+    損毀 --> [*]
 ```
 ----
 ```mermaid
@@ -212,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    工作            ：a1、2014-01-01、30d
+    其他任務     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    秒內的工作       ：2014-01-12  ，12d
+    另一個任務    ：24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"星期日" :4
+	"星期一" : 5
+	"星期二" :7
+  "星期三" : 3
 ```
 ----
 ```mermaid
@@ -268,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[方形] --> ci((圓形形狀))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>奇數形狀]-- 兩行<br/>邊緣註解 --> 玫瑰
+        di{鑽石與<br/> 線斷} -.-> ro(捨入<br>平方<br>形狀)
+        di==>ro2(Rounded 方形)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>找到長文字且有換行符號<br>在奇形中]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((內部 / 圓<br>和一些奇數<br>特殊字元)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[斯拉夫文]-->cyr2( (Circle shape 便宜的床))；
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -292,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((心智圖))
+    來源
+      長歷史
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
+      熱門
+        英國流行心理學作家 Tony Buzan
+    研究
+      有效性<br/>和功能
+      自動建立時
+        使用
+            創意技術
+            策略規劃
+            引數對應
+    工具
+      筆紙
       Mermaid
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title 我的工作天
+    section 前往工作
+      茶：5：我
+      上樓：3：我
+      工作：1：我，貓
+    section 前往首頁
+      下樓：5：我
+      坐下：3：我
 ```
 ----
 ```mermaid
@@ -331,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[公用使用者<br/> 透過 REST API]]
+    B1[後端服務 /<br/>前端服務]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[授權的使用者<br/> 透過 REST API]]
+    B2[後端服務 /<br/>前端服務]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[帳本系統]]
+    B3[允許與工作簿記錄互動]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--讀取記錄使用-->booksSystem
+authorizedUser--讀取和寫入記錄使用-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[授權系統]]
+    B4[授權存取資源]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[發佈者 1 系統]]
+    B5[提供有關由其發布之工作簿的詳細資料]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[發佈者 2 系統]]
+    B6[提供有關由其發布之工作簿的詳細資料]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--存取授權詳細資訊，使用-->authorizationSystem
+booksSystem--存取發布者詳細資訊，使用-->publisher1System
+booksSystem--存取發布者詳細資訊，使用-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -389,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [X 軸] 同步、雙向產生$$\LaTeX$$ Markdown+ 的來源檔案$$\KaTeX$$ 檔案。
 
-- [X 軸] Einstein Notation (又稱 Navier-Stokes) [支付方式](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [X 軸] Einstein Notation (又稱 Navier-Stokes) [支付方式](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -415,12 +391,12 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 編輯器將自動完成並自動縮排；具有全螢幕模式，並支援其 CodeMirror 5 語法強調器的其他數種內容撰寫模式。
 
-## 分支組建的完整支援
+## 完全支援分支組建
 
-- [X 軸] 不再進行暫存 / 發布：已由每個資源分支<span class="text-white">促銷</span>取代。
-- [X 軸] 完整支援<span class="text-white">倒回</span>和<span class="text-white">同步</span>合併。
+- [X 軸] 沒有其他暫存 / 發布：已由每個資源分支取代<span class="text-white">促銷</span>.
+- [X 軸] <span class="text-white">倒回</span> 與<span class="text-white">同步</span> 完全支援合併。
 
-## 即時源樹搜尋引擎
+## 即時來源樹狀結構搜尋引擎
 
 <br>
 
@@ -444,11 +420,11 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 - [ ] 即將提供 PDF 搜尋。
 - [ ] 近期將提供 GraphQL/AI 支援。安全性看起來很有趣！
 
-## 無限頁數附件 (任意 MIME 類型).
+## 無限分頁附件，以及任意的 MIME 類型
 
-## 安全、繫線的每頁評論
+## 安全、執行緒的每頁留言
 
-## 降價的自動化自然語言翻譯 (即將推出).
+## 自動化 Markdown 自然語言翻譯
 
 ## 互動式數學向量圖形與 @vectorgraphics/asymptote
 
@@ -468,7 +444,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -497,7 +473,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## <span class='text-info'>Apache CMS</span> 功能的差異
+## 差異來源<span class='text-info'>快取 CMS</span> 功能
 
 - 只提供以 Perl 為基礎的組建系統。
 

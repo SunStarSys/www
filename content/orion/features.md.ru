@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: jamstack,markdown,ermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notation
-published: ~
 status: черновик
 title: Особенности Orion
 ---
@@ -36,7 +34,7 @@ title: Особенности Orion
 
 ## Быстрая инфраструктура системы
 
-- 50 мс или меньше задержки RTT для большей части населения мира, с расширенным охватом в Африке в 2024 году
+- 50 мс или менее задержки RTT для большинства населения мира, с расширенным охватом в Африке / на Ближнем Востоке в 2026 году
 
 - в 2 раза быстрее HTTP/2 мультиплексированные сроки доставки страниц (из коробки, для *всех* клиентов), чем у конкурентов
 
@@ -44,7 +42,7 @@ title: Особенности Orion
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 500 МБ/с для многогигабайтных исходных деревьев
+- 300 МБ/с для многогигабайтных исходных деревьев
 
 - NVMe или более быстрое создание инфраструктуры хранения данных
 
@@ -120,32 +118,10 @@ title: Особенности Orion
 
 - Editor.md удивительно: используя относительный [`источник`](#) URL-адреса, связанные изображения будут отображаться на панели предварительного просмотра редактора.
 
-## Последовательный рендеринг GitHub-Flavored Markdown (GFM) с Editor.md :editormd-logo-1x: и Django Templating
+## Согласованная рендеринг GitHub-Flavored Markdown (GFM) с Editor.md :editormd-logo-1x: и Django Templating
 
 - [x x] **ВЫСИВЫГ:** {# lede #}Один и тот же механизм рендеринга кода Java в браузере и в сценарии сборки markdown.js (на основе node.js){# lede #} обеспечивает 100% структурную согласованность между окном предварительного просмотра Markdown Editor.md и производственной площадкой.
 - [x x] Теперь полностью поддерживаются заголовки YAML в исходных файлах (разметках).
-- [x x] Нативная блок-схема и последовательная диаграмма Поддержка :fa-glass:
-
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
-&nbsp;
-----
-&nbsp;
 
 - [x x] Собственная поддержка d3-graphviz.js:
 
@@ -163,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[Рождество]
+ -->|Получить деньги| B(Покупки)
+    B --> C{Позвольте мне подумать}
+    C -->|Один| D[fa:fa-laptop Ноутбук]
+    C -->|Два| E[fa:fa-mobile iPhone]
+    C -->|Три| F[fa:fa-car Автомобиль]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Алиса->>Джон: Здравствуйте, Джон, как вы?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        Джон->>Джон: Борьба с ипохондрией
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: Рациональные мысли<br/>преобладать...
+    John-->>Алиса: Отлично!
+    Джон->>Боб: А как насчет тебя?
+    Bob-->>Джон: Jolly Good!
 ```
 ----
 ```mermaid
@@ -199,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> Осталось
+    Всё --> [*]
+    Всё --> Перемещение
+    Перемещение --> Всё
+    Перемещение --> Падение
+    Падение --> [*]
 ```
 ----
 ```mermaid
@@ -212,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    Задача        :a1, 2014-01-01, 30d
+    Другая задача     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    Задача с      :2014-01-12  , 12d
+    другая задача      : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"Воскресенье" : 4
+	"Понедельник" : 5
+	"вторник" : 7
+  "Среда" : 3
 ```
 ----
 ```mermaid
@@ -268,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[Квадратная форма] --> ci((Форма круга))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>Нечетная форма]-- Две линии<br/>комментарий к границе --> рожать
+        di{Ромб с <br/> грейдер} -.-> ro(Округление<br>квадратный<br>форма)
+        di==>ro2(Rounded квадратная форма)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>Действительно длинный текст с разрывом строки<br>в нечетной форме]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((Внутренний / круг<br>и некоторые странные <br>специальные символы)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[кириллица]-->cyr2((Начало формы круга));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -292,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((ментальная карта))
+    Происхождение
+      Длинная история
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      Популяризация
+        Британский автор психологии Тони Бузан
+    Исследования
+      По эффективности<br/>и особенности
+      При автоматическом создании
+        Использование
+            Творческие методы
+            Стратегическое планирование
+            Отображение аргумента
+    Инструменты
+      Ручка и бумага
+      Русалка
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title Мой рабочий день
+    section Перейти к работе
+      Чай: 5: Я
+      Наверх: 3: Я
+      1: Я, кошка
+    section На главную
+      Спуск по лестнице: 5: Я
+      Сядьте: 3: Я
 ```
 ----
 ```mermaid
@@ -331,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[Общий пользователь<br/> Через REST API]]
+    B1[Бэкенд-сервисы/<br/>фронт-сервисы]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[Авторизованный пользователь<br/> Через REST API]]
+    B2[Бэкенд-сервисы/<br/>фронт-сервисы]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[Книжная система]]
+    B3[Позволяет взаимодействовать с записями книг]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--Чтение записей с помощью-->booksSystem
+authorizedUser--Чтение и запись записей с использованием-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[Система авторизации]]
+    B4[Авторизация доступа к ресурсам]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[Система издателя 1]]
+    B5[Сведения о книгах, опубликованных ими]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[Система издателя 2]]
+    B6[Сведения о книгах, опубликованных ими]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--Доступ к сведениям об авторизации с помощью-->authorizationSystem
+booksSystem--Доступ к сведениям об издателе с использованием-->publisher1System
+booksSystem--Доступ к сведениям об издателе с использованием-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -389,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x x] Синхронное, двунаправленное создание $$\LaTeX$$ Исходные файлы в Markdown+$$\KaTeX$$ Файлы.
 
-- [x x] Навье-Стокс в системе обозначений Эйнштейна [БОЛЬ](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x x] Навье-Стокс в системе обозначений Эйнштейна [БОЛЬ](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -415,12 +391,12 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 Редактор будет автодополнять и автоотступать; имеет полноэкранный режим, а также поддержку нескольких других режимов создания контента, доступных для его подсветки синтаксиса CodeMirror 5.
 
-## Полная поддержка построений ветвей
+## Полная поддержка построения филиалов
 
-- [x x] Больше нет промежуточного хранения/публикации: замена на <span class="text-white">Рекламную акцию</span> для каждой ветви ресурса.
-- [x x] Полностью поддерживается объединение <span class="text-white">Откат</span> и <span class="text-white">Синхронизация</span>.
+- [x x] Больше нет промежуточного хранения/публикации: заменено ветвью по ресурсам <span class="text-white">Промоакция</span>.
+- [x x] <span class="text-white">Откат</span> и <span class="text-white">Синхронизация</span> Объединение полностью поддерживается.
 
-## Поисковая система дерева живых исходников
+## Поисковая система Live Source Tree
 
 <br>
 
@@ -446,9 +422,9 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ## Неограниченное количество вложений страницы с произвольными MIME-типами
 
-## Безопасные, многопоточные комментарии на странице
+## Безопасные, многопоточные комментарии на каждой странице
 
-## Автоматические переводы разметки на естественном языке (скоро).
+## Автоматизированные переводы разметки на естественном языке
 
 ## Интерактивная математическая векторная графика с @vectorgraphics/asymptote
 
@@ -468,7 +444,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -497,7 +473,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## Дельта из функций <span class='text-info'>Apache CMS</span>
+## Дельты из <span class='text-info'>CMS Apache</span> Возможности
 
 - Доступна только система сборки на базе Perl.
 
@@ -505,11 +481,11 @@ draw(tube(p,colorsec),render(merge=true));
 
 - GFM использует другой разделитель для блоков кода.
 
-- [`extpaths.txt`](#) больше не поддерживается: отдельным лицам из каждого проекта будет предоставлен доступ для записи к дереву производственного веб-сайта в наших репозиториях для загрузки материалов, созданных извне (javadocs, артефакты выпуска программного обеспечения и т.д.).
+- [`extpaths.txt`](#) больше не поддерживается: отдельным лицам из каждого проекта будет предоставлен доступ для записи к дереву производственного веб-сайта в наших репозиториях для загрузки материалов, созданных извне (javadocs, артефакты выпуска программного обеспечения и т.д.)
 
 ----
 
-# индекс
+## Индекс
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...

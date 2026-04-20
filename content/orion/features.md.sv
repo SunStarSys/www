@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
-published: ~
 status: skiss
 title: Orion-funktioner
 ---
@@ -36,15 +34,15 @@ title: Orion-funktioner
 
 ## Blixtsnabb systeminfrastruktur
 
-- 50 ms eller mindre RTT latens för de flesta av världens befolkning, med utökad täckning i Afrika 2024
+- 50 ms eller mindre RTT latens för de flesta av världens befolkning, med utökad täckning i Afrika / Mellanöstern 2026
 
-- 2 gånger snabbare HTTP / 2 multiplexade sidleveranstider (ut ur lådan, för * alla * kunder) än konkurrenterna
+- 2 gånger snabbare HTTP / 2 multiplexade sidleveranstider (ut ur lådan, för *alla* kunder) än konkurrenterna
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 300 MB/s ihållande byggen för flera gigabyte källträd
+- 300 MB / s ihållande byggen för flera gigabyte källträd
 
 - NVMe eller snabbare bygga lagringsinfrastruktur
 
@@ -104,7 +102,7 @@ title: Orion-funktioner
 
 - Alla användare är autentiserade via Googles OpenID-anslutningstjänst
 
-## Den nyfikna ankungen är nu en elegant svan
+## Den nyfikna anklingen är nu en elegant svan
 
 <br>
 
@@ -124,28 +122,6 @@ title: Orion-funktioner
 
 - [x] **WYSIWYG:** {# lede #}Samma javascript-kodåtergivningsmotor i både webbläsaren och i byggskriptet (node.js-baserat) markdown.js{# lede #} säkerställer 100 % strukturell konsekvens mellan förhandsgranskningsfönstret för nedsättningar med Editor.md och produktionsplatsen.
 - [x] YAML-huvuden i källfiler (markdown-filer) stöds nu helt.
-- [x] Inbyggt flödesschema och sekvensdiagram stöd :fa-glass:
-
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
-&nbsp;
-----
-&nbsp;
 
 - [x] Inbyggt stöd för d3-graphviz.js:
 
@@ -163,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[Jul]
+ -->|Få pengar| B(Gå och handla)
+    B --> C{Låt mig tänka}
+    C -->|Ett| D[fa:fa-laptop Bärbar dator]
+    C -->|Två| E[fa:fa-mobile iPhone]
+    C -->|Tre| F[fa:fa-car Bil]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice->>Hej John, hur mår du?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        John->>John: Kampen mot hypokondrier
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: Rationella tankar<br/>föregå...
+    John-->>Alice: Utmärkt!
+    John->>Bob: Vad sägs om dig?
+    Bob-->>John: Jolly bra!
 ```
 ----
 ```mermaid
@@ -199,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> Fortfarande
+    Fortfarande --> [*]
+    Fortfarande --> Flyttar
+    Flyttar --> Fortfarande
+    Flyttar --> Krasch
+    Krasch --> [*]
 ```
 ----
 ```mermaid
@@ -212,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    En uppgift           :a1, 2014-01-01, 30d
+    Ytterligare uppgift     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    Uppgift i sek      :2014-01-12  , 12d
+    en annan uppgift    : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"Söndag" : 4
+	"Måndag" : 5
+	"Tisdag" : 7
+  "Onsdag" : 3
 ```
 ----
 ```mermaid
@@ -268,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[Fyrkantig form] --> ci((Cirkelform))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>Udda form]-- Två rader<br/>kanttkommentar --> ro
+        di{Diamant med <br/> linjebrytning} -.-> ro(Avrundad<br>kvadrera<br>form)
+        di==>ro2(Rounded fyrkantig form)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>Riktigt lång text med linebreak<br>I en udda form]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((Inre/cirkel<br>och några udda <br>specialtecken)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[Kyrilliska språk]-->cyr2((Cirkelform Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -292,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((färdplan))
+    Ursprung
+      Lång historia
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      Popularisering
+        Brittisk psykologförfattare Tony Buzan
+    Forskning
+      Vid giltighet<br/>och funktioner
+      Vid automatiskt skapande
+        Användningar
+            Kreativa tekniker
+            Strategisk planering
+            Argumentmappning
+    Verktyg
+      Penna och papper
+      Sjöjungfru
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title Min arbetsdag
+    section Gå till jobbet
+      Gör te: 5: Jag
+      Gå upp för trappan: 3: Jag
+      Gör jobbet: 1: Jag, katt
+    section Gå hem
+      Gå nerför trappan: 5: Jag
+      Sätt dig ner: 3: Jag
 ```
 ----
 ```mermaid
@@ -331,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[Allmän användare<br/> Via REST API]]
+    B1[Serverdelstjänster/<br/>frontend-tjänster]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[Auktoriserad användare<br/> Via REST API]]
+    B2[Serverdelstjänster/<br/>frontend-tjänster]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[Böcker - system]]
+    B3[Tillåter interaktion med bokposter]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--Läser poster med-->booksSystem
+authorizedUser--Läser och skriver poster med-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[Auktoriseringssystem]]
+    B4[Auktoriserar åtkomst till resurser]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[Utgivare 1, system]]
+    B5[Ger detaljer om böcker som publicerats av dem]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[Publisher 2-system]]
+    B6[Ger detaljer om böcker som publicerats av dem]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--Åtkomst till behörighetsdetaljer med-->authorizationSystem
+booksSystem--Ger åtkomst till utgivardetaljer med-->publisher1System
+booksSystem--Ger åtkomst till utgivardetaljer med-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -389,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Synkron, dubbelriktad generation av $$\LaTeX$$ Källfiler till/från Markdown+$$\KaTeX$$ Filer.
 
-- [x] Navier-Stokes i Einstein Notation [Smärta](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x] Navier-Stokes i Einstein Notation [Smärta](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -415,10 +391,10 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 Redigeraren kommer att autokomplettera och autoindent; har helskärmsläge, samt stöd för flera andra redigeringslägen för innehåll tillgängliga för dess CodeMirror 5 syntax highlighter.
 
-## Fullt stöd för grenbyggen
+## Fullt stöd för filialbyggen
 
-- [x] Ingen mer mellanlagring/publicering: ersätts med grenen <span class="text-white">Kampanj</span> per resurs.
-- [x] <span class="text-white">Återställ</span> och <span class="text-white">Synkronisera</span> sammanslagning stöds helt.
+- [x] Ingen mer mellanlagring/publicering: ersatt med gren per resurs <span class="text-white">Specialerbjudande</span>.
+- [x] <span class="text-white">Återställ</span> och <span class="text-white">Synkronisera</span> Sammanslagning stöds helt.
 
 ## Aktiv sökmotor för källträd
 
@@ -448,7 +424,7 @@ Redigeraren kommer att autokomplettera och autoindent; har helskärmsläge, samt
 
 ## Säkra, trådade kommentarer per sida
 
-## Automatiserade översättningar av nedsättning på naturligt språk (kommer snart).
+## Automatiserade översättningar av nedsättning på naturligt språk
 
 ## Interaktiv matematisk vektorgrafik med @vectorgraphics/asymptote
 
@@ -468,7 +444,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -497,7 +473,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-Antal# ändringar från <span class='text-info'>Apache CMS</span>-funktioner
+## Deluppgifter från <span class='text-info'>Apache CMS</span> Funktioner
 
 - Endast det Perl-baserade byggsystemet är tillgängligt.
 
@@ -505,7 +481,7 @@ Antal# ändringar från <span class='text-info'>Apache CMS</span>-funktioner
 
 - GFM använder en annan avgränsare för kodblock.
 
-- [`extpaths.txt`](#) stöds inte längre: utvalda individer från varje projekt kommer att beviljas skrivåtkomst till produktionswebbplatsträdet i våra subversion-repos för uppladdning av externt producerat material (javadocs, artefakter för programvaruutgåvor etc.).
+- [`extpaths.txt`](#) stöds inte längre: utvalda individer från varje projekt kommer att beviljas skrivåtkomst till produktionswebbplatsträdet i våra subversion-repos för uppladdning av externt producerat material (javadocs, artefakter för programvaruutgåvor etc.)
 
 ----
 

@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: jamstack,markdown, sereia,graphviz,editor.md,ide,node.js, oracle,nuvem,cdn,http/2,confluência,laje,notion
-published: ~
 status: rascunho
 title: Recursos do Orion
 ---
@@ -36,7 +34,7 @@ title: Recursos do Orion
 
 ## Infraestrutura de sistema rápida
 
-- 50 ms ou menos de latência RTT para a maioria do mundo'população, com cobertura ampliada na África/Oriente Médio em 2026
+- 50ms ou menos de latência RTT para a maioria da população mundial, com cobertura expandida na África / Oriente Médio em 2026
 
 - 2 vezes mais rápido HTTP/2 multiplexed page delivery times (fora da caixa, para *all* clientes) do que a concorrência
 
@@ -102,7 +100,7 @@ title: Recursos do Orion
 
 - Usa SRS e Responder-Para para compatibilidade com ezmlm
 
-- Todos os usuários são autenticados via Google's OpenID-Serviço Connect
+- Todos os usuários são autenticados via Google's OpenID-Connect Service
 
 ## O patinho de aparência curiosa é agora um cisne elegante
 
@@ -141,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[Natal]
+ -->|Obter dinheiro| B(Ir às compras)
+    B --> C{Deixe-me pensar}
+    C -->|Um| D[fa:fa-laptop Computador]
+    C -->|Dois| E[fa:fa-mobile iPhone]
+    C -->|Três| F[fa:fa-car Carro]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    Alice->>John: Olá John, como você está?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        João->>John: Luta contra a hipocondria
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: Pensamentos racionais<br/>prevalecer...
+    John-->>Alice: Ótimo!
+    João->>Bob: E você?
+    Bob-->>John: Muito bom!
 ```
 ----
 ```mermaid
@@ -177,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> Ainda
+    Ainda --> [*]
+    Ainda --> Movendo
+    Movendo --> Ainda
+    Movendo --> Falha
+    Falha --> [*]
 ```
 ----
 ```mermaid
@@ -190,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    Uma tarefa           :a1, 2014-01-01, 30d
+    Outra tarefa     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    Tarefa em seg      :2014-01-12  , 12d
+    outra tarefa      : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"Domingo" : 4
+	"Segunda-feira" : 5
+	"Terça-feira" : 7
+  "Quarta-feira" : 3
 ```
 ----
 ```mermaid
@@ -246,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[Forma quadrada] --> ci((Forma do círculo))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>Forma ímpar]-- Duas linhas<br/>comentário de borda --> ro
+        di{Diamante com <br/> quebra de linha} -.-> ro(Arredondado<br>quadrado<br>forma)
+        di==>ro2(Rounded forma quadrada)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>Texto muito longo com quebra de linha<br>em uma forma estranha]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((Interno / círculo<br>e algum estranho <br>caracteres especiais)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[Cirílico]-->cyr2(Forma do círculo Начало);
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((mapa mental))
+    Origens
+      História longa
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      Popularização
+        Autor britânico Tony Buzan
+    Pesquisa
+      Na efetividade<br/>e recursos
+      Criação automática
+        Usos
+            Técnicas criativas
+            Planejamento estratégico
+            Mapeamento de argumentos
+    Ferramentas
+      Caneta e papel
+      Sereia
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title Meu dia de trabalho
+    section Ir ao trabalho
+      Fazer chá: 5: Me
+      Suba: 3: Eu
+      Faça o trabalho: 1: Me, Cat
+    section Ir para casa
+      Desça: 5: Me
+      Sentar-se: 3: Me
 ```
 ----
 ```mermaid
@@ -309,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[Usuário público<br/> Via API REST]]
+    B1[Serviços de Backend/<br/>serviços de front-end]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[Usuário autorizado<br/> Via API REST]]
+    B2[Serviços de Backend/<br/>serviços de front-end]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[Sistema de Livros]]
+    B3[Permite interagir com registros de livro]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--Lê registros usando-->booksSystem
+authorizedUser--Lê e grava registros usando-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[Sistema de Autorização]]
+    B4[Autoriza o acesso a recursos]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[Sistema do Publisher 1]]
+    B5[Fornece detalhes sobre livros publicados por eles]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[Sistema do Publisher 2]]
+    B6[Fornece detalhes sobre livros publicados por eles]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--Acessa detalhes de autorização usando-->authorizationSystem
+booksSystem--Acessa detalhes do editor usando-->publisher1System
+booksSystem--Acessa detalhes do editor usando-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -359,7 +357,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Markmap.js Ver suporte
 
-- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Academia Kahn's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) suporte para matemática, física e química:
+- [x] Don Knuth [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) A Academia Kahn [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) suporte para matemática, física e química:
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
@@ -367,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Geração síncrona e bidirecional de $$\LaTeX$$ Arquivos de Origem de/para Markdown+$$\KaTeX$$ Arquivos.
 
-- [x] Navier-Stokes em Notação Einstein (aka [DOR](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x] Navier-Stokes em Notação Einstein (aka [DOR](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -479,11 +477,11 @@ draw(tube(p,colorsec),render(merge=true));
 
 - Apenas o sistema de compilação baseado em Perl está disponível.
 
-- Novo editor de Markdown é [`marcado/gfm`](#) baseado, então o parser é mais moderno.  A versão mais recente suporta a especificação de slug a'o parser original baseado em python.
+- Novo editor de Markdown é [`marcado/gfm`](#) baseado, então o parser é mais moderno.  A versão mais recente suporta a especificação slug a'la, o parser original baseado em python.
 
 - O GFM usa um delimitador diferente para blocos de código.
 
-- [`extpaths.txt`](#) não é mais suportado: indivíduos selecionados de cada projeto receberão acesso de gravação à árvore do site de produção em nossos repositórios de subversão para upload de material produzido externamente (javadocs, artefatos de release de software, etc.).
+- [`extpaths.txt`](#) não é mais suportado: indivíduos selecionados de cada projeto receberão acesso de gravação à árvore do site de produção em nossos repositórios de subversão para upload de material produzido externamente (javadocs, artefatos de release de software, etc.)
 
 ----
 

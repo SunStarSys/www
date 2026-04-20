@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
-published: ~
 status: 초안
 title: Orion 특징
 ---
@@ -36,9 +34,9 @@ title: Orion 특징
 
 ## 초고속 시스템 인프라
 
-- 전 세계 50ms 이하의 RTT 대기 시간'2026년 아프리카/중동 지역의 인구 확대
+- 전 세계 인구의 50ms 이하 RTT 대기시간, 2026년 아프리카/중동 지역 확대
 
-- 2배 더 빠른 HTTP/2 멀티플렉싱된 페이지 전달 시간(*모든* 고객의 경우).
+- 2배 더 빠른 HTTP/2 멀티플렉싱된 페이지 전달 시간(*모든* 고객의 경우)
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -102,7 +100,7 @@ title: Orion 특징
 
 - ezmlm 호환성을 위해 SRS 및 Reply-To 사용
 
-- 모든 사용자는 구글을 통해 인증됩니다.'s OpenID-연결 서비스
+- 모든 사용자는 구글의 OpenID-Connect 서비스를 통해 인증됩니다.
 
 ## 호기심이 생긴 오클링은 이제 우아한 스완입니다.
 
@@ -141,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[크리스마스]
+ -->|돈 받기| B(쇼핑)
+    B --> C{생각해 보자}
+    C -->|하나| D[fa:fa-laptop 랩톱]
+    C -->|두 개| E[fa:fa-mobile iPhone]
+    C -->|세 개| F[fa:fa-car 자동차]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    앨리스->>안녕하세요 존, 어떻게 지내십니까?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        John->>존: 하이포콘드리아와의 싸움
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: 합리적인 생각<br/>이전...
+    John-->>관련 리뷰: Great!
+    John->>밥: 너는 어때?
+    Bob-->>존 : Jolly Good!
 ```
 ----
 ```mermaid
@@ -177,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> 계속
+    아직 --> [*]
+    아직 --> 이동 중
+    이동 중 --> 아직
+    이동 중 --> 충돌
+    충돌 --> [*]
 ```
 ----
 ```mermaid
@@ -190,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    작업           :a1, 2014-01-01, 30d
+    다른 태스크     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    초 단위의 작업      :2014-01-12  , 12d
+    다른 작업      : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"일요일" : 4
+	"월요일" : 5
+	"화요일" : 7
+  "수요일" : 3
 ```
 ----
 ```mermaid
@@ -246,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[정사각형 모양] --> ci((원 모양))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>홀수 모양]-- 두 줄<br/>가장자리 설명 --> 로
+        di{다이아몬드 with <br/> 줄바꿈} -.-> ro(반올림<br>사각형<br>모양)
+        di==>ro2(Rounded 정사각형 모양)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>줄바꿈이 있는 긴 텍스트<br>홀수 모양]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((내부/원<br>일부 odd <br>특수 문자)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[키릴 문자]-->cyr2((원 모양 Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((마음 맵))
+    출처
+      긴 역사
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      대중화
+        영국의 인기 심리학 작가 토니 부잔
+    연구
+      유효성<br/>및 기능
+      자동 생성 시
+        사용
+            창조 기법
+            전략적 계획 수립
+            인수 매핑
+    도구
+      펜 및 종이
+      인어
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title 내 근무일
+    section 작업으로 이동
+      차 만들기: 5: 나
+      위층으로 이동: 3: 나
+      작업 : 1 : 나, 고양이
+    section 홈으로 이동
+      아래층으로 이동: 5: 나
+      앉기: 3: 나
 ```
 ----
 ```mermaid
@@ -309,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[공용 사용자<br/> REST API를 통해]]
+    B1[백엔드 서비스/<br/>프론트엔드 서비스]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[승인된 사용자<br/> REST API를 통해]]
+    B2[백엔드 서비스/<br/>프론트엔드 서비스]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[장부 시스템]]
+    B3[장부 레코드와의 상호 작용 허용]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--다음을 사용하여 레코드를 읽습니다.-->booksSystem
+authorizedUser--다음을 사용하여 레코드 읽기 및 쓰기-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[인증 시스템]]
+    B4[리소스에 대한 액세스 권한 부여]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[게시자 1 시스템]]
+    B5[사용자가 게시한 장부에 대한 세부정보를 제공합니다.]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[게시자 2 시스템]]
+    B6[사용자가 게시한 장부에 대한 세부정보를 제공합니다.]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--다음을 사용하여 권한 부여 세부정보에 액세스합니다.-->authorizationSystem
+booksSystem--다음을 사용하여 게시자 세부정보에 액세스합니다.-->publisher1System
+booksSystem--다음을 사용하여 게시자 세부정보에 액세스합니다.-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -359,7 +357,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Markmap.js 지원 보기
 
-- [x] Don Knuth'초 [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / 칸 아카데미'초 [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) 수학, 물리학 및 화학 지원:
+- [x] 돈 크누스 [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) Kahn Academy 부근의 호텔 [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) 수학, 물리학 및 화학 지원:
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
@@ -367,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] 동기식 양방향 생성 $$\LaTeX$$ 출처 파일-매가인하+$$\KaTeX$$ 파일.
 
-- [x] 아인슈타인 표기법의 Navier-Stokes (aka) [로그인](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x] 아인슈타인 표기법의 Navier-Stokes (aka) [로그인](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -479,7 +477,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 - Perl 기반 빌드 시스템만 사용할 수 있습니다.
 
-- 새 마크다운 편집기 [`표시됨/gfm`](#) 따라서 파서가 더 현대적입니다.  최신 릴리스에서는 슬러그 사양을 지원합니다.'원래 파이썬 기반 파서입니다.
+- 새 마크다운 편집기 [`표시됨/gfm`](#) 따라서 파서가 더 현대적입니다.  최신 릴리스는 원래 파이썬 기반 구문 분석기인 슬러그 사양을 지원합니다.
 
 - GFM은 코드 블록에 대해 다른 구분자를 사용합니다.
 

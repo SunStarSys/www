@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: jamstack,markdown,mermaid,graphviz,editor.md,ide,node.js,oracle,cloud,cdn,http/2,confluence,slab,notion
-published: ~
 status: טיוטה
 title: תכונות אוריון
 ---
@@ -34,9 +32,9 @@ title: תכונות אוריון
 &nbsp;
 </p>
 
-#תשתית מערכת מהירה מדהימה
+## תשתית מערכת מהירה
 
-50ms או פחות זמן המתנה RTT עבור רוב אוכלוסיית העולם, עם כיסוי מורחב באפריקה בשנת 2024
+50ms או פחות זמן המתנה RTT עבור רוב אוכלוסיית העולם, עם כיסוי מורחב באפריקה / המזרח התיכון בשנת 2026
 
 - זמני משלוח דפים מרובי-פלקס מהירים פי 2 מ-HTTP/2 (מחוץ לקופסה, עבור *כל* הלקוחות) לעומת המתחרים
 
@@ -44,7 +42,7 @@ title: תכונות אוריון
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-- 300 MB/s בנייה מתמשכת עבור עצי מקור מרובי ג'יגהבייט
+- 300 MB / s בנייה מתמשכת עבור עצי מקור מרובי ג'יגהבייט
 
 - NVMe או תשתית אחסון מהירה יותר
 
@@ -70,7 +68,7 @@ title: תכונות אוריון
 
 - מותאם אישית [`SVN::לקוח`](#) תמיכה במודול עם הליכי משנה עבור מאגרי בקשות
 
-מס' רב-לשוני
+## רב-לשוני
 
 - עברית
 
@@ -96,7 +94,7 @@ title: תכונות אוריון
 
 - שוודית
 
-## תמיכה טובה יותר עבור הבדלי דיוור ויצירת שכפולים
+## תמיכה טובה יותר בהפרשי דיוור ויצירת שכפולים
 
 - מוגן DMARC
 
@@ -104,7 +102,7 @@ title: תכונות אוריון
 
 - כל המשתמשים מאומתים באמצעות שירות OpenID-Connect של גוגל
 
-# הברווזון הסקרן למראה הוא עכשיו ברבור אלגנטי
+## הברווזון הסקרן הוא עכשיו ברבור אלגנטי
 
 <br>
 
@@ -120,32 +118,10 @@ title: תכונות אוריון
 
 - Editor.md מדהים: על ידי שימוש יחסי [`מקור`](#) urls, התמונות המקושרות יוצגו בחלונית התצוגה המקדימה של העורך.
 
-## GitHub-Flavored Markdown (GFM) רינדור עם Editor.md :editormd-logo-1x: ו-Django Templating
+## הצגת GitHub-Flavored Markdown (GFM) עקבית עם Editor.md :editormd-logo-1x: ו-Django Templating
 
 - [x] **WYSIWYG:** {# lede #}אותו מנוע עיבוד קוד javascript הן בדפדפן והן בתסריט הבנייה (node.js-based) markdown.js{# lede #} מבטיח עקביות מבנית של 100% בין חלון התצוגה המקדימה של Markdown Editor.md לבין אתר הייצור.
 - [x] כותרות YAML בקובצי מקור (סמן למטה) נתמכות כעת באופן מלא.
-- [x] תמיכה בתרשים זרימה ורצף מקורי :fa-glass:
-
-```flow
-st=>start: börja
-op=>operation: operation
-cond=>condition: villkor Ja eller Nej?
-e=>end: slutet
-
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
-----
-```seq
-Andrew->Jenni: Says Hello
-Note right of Jenni: Jenni thinks\nabout it
-Jenni-->Andrew: How are you?
-Andrew->>Jenni: I am good thanks!
-```
-&nbsp;
-----
-&nbsp;
 
 - [x] תמיכה ב-d3-graphviz.js:
 
@@ -163,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[חג המולד]
+ -->|קבל כסף| B(ביצוע קניות)
+    ב' --> C{תן לי לחשוב}
+    C -->|אחד| D[fa:fa-laptop מחשב נייד]
+    C -->|שתיים| E[fa:fa-mobile iPhone]
+    C -->|שלוש| F[fa:fa-car מכונית]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    אליס->>שלום ג'ון, מה שלומך?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        יוחנן->>ג'ון: להילחם נגד היפוכונדריה
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: מחשבות רציונליות<br/>הקודם...
+    John-->>אליס: מעולה!
+    יוחנן->>מה איתך?
+    Bob-->>ג'ולי טוב!
 ```
 ----
 ```mermaid
@@ -199,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] --> עדיין
+    עדיין --> [*]
+    עדיין --> מעביר
+    מעביר --> עדיין
+    מעביר --> קריסה
+    קריסה --> [*]
 ```
 ----
 ```mermaid
@@ -212,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    משימה           :a1, 2014-01-01, 30d
+    משימה אחרת     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    משימה בשניות      :2014-01-12  , 12d
+    משימה אחרת      : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"יום ראשון" : 4
+	"יום שני" : 5
+	"יום שלישי" : 7
+  "יום רביעי" : 3
 ```
 ----
 ```mermaid
@@ -268,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[צורה מרובעת] --> ci((צורת עיגול))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>צורה אי-זוגית]-- שני קווים<br/>הערת קצה --> שורש
+        di{יהלום עם <br/> מעבר שורה} -.-> ro(מעוגל<br>ריבוע<br>צורה)
+        di==>ro2(Rounded צורה מרובעת)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    e --> od3>טקסט ארוך עם מעבר שורה<br>בצורה מוזרה]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((פנימי / עיגול<br>קצת מוזר <br>תווים מיוחדים)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[קירילית]-->cyr2(צורת מעגל Начало);
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -292,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((מפת חשיבה))
+    מקורות
+      היסטוריה ארוכה
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      פופולריות
+        מחבר הפסיכולוגיה הפופולרית הבריטית טוני בוזאן
+    מחקר
+      אפקטיביות<br/>ותכונות
+      ביצירה אוטומטית
+        שימושים
+            טכניקות יצירתיות
+            תכנון אסטרטגי
+            מיפוי ארגומנטים
+    כלים
+      עט ונייר
+      בתולת ים
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title יום העבודה שלי
+    section עבור לעבודה
+      תה: 5: אני
+      למעלה: 3: אני
+      עבודה: 1: אני, חתול
+    section הביתה
+      למטה: 5: אני
+      שב: 3: אני
 ```
 ----
 ```mermaid
@@ -331,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[משתמש ציבורי<br/> באמצעות API של REST]]
+    B1[שירותים עורפיים/<br/>שירותי חזית]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[משתמש מורשה<br/> באמצעות API של REST]]
+    B2[שירותים עורפיים/<br/>שירותי חזית]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[מערכת ספרים]]
+    B3[מאפשר אינטראקציה עם רשומות ספר]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--קורא רשומות באמצעות-->booksSystem
+authorizedUser--קורא וכותב רשומות באמצעות-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[מערכת הרשאות]]
+    B4[נותן הרשאה לגישה למשאבים]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[מערכת Publisher 1]]
+    B5[מספק פרטים על ספרים שפורסמו על ידי אותם]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[מערכת Publisher 2]]
+    B6[מספק פרטים על ספרים שפורסמו על ידי אותם]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--ניגש לפרטי הרשאה באמצעות-->authorizationSystem
+booksSystem--ניגש לפרטי מפרסם באמצעות-->publisher1System
+booksSystem--ניגש לפרטי מפרסם באמצעות-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -389,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] הפקה סינכרונית דו-כיוונית של $$\LaTeX$$ קובצי מקור אל/מ-Markdown+$$\KaTeX$$ קבצים.
 
-- [x] נאוויה-סטוקס בסימון איינשטיין [כאב](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x] נאוויה-סטוקס בסימון איינשטיין [כאב](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -415,12 +391,12 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 העורך יבצע השלמה אוטומטית והזחה אוטומטית; יש לו מצב מסך מלא, כמו גם תמיכה במספר מצבי חיבור תוכן אחרים הזמינים להדגשת התחביר CodeMirror 5 שלו.
 
-## תמיכה מלאה לבניית סניפים
+## תמיכה מלאה בבניית סניפים
 
-- [x] אין עוד תכנון/פרסום: מוחלף בענף לכל משאב <span class="text-white">קידום</span>.
-- [x] <span class="text-white">שחזור לאחור</span> ו<span class="text-white">סנכרון</span> מיזוג נתמכים במלואם.
+- [x] אין יותר תכנון/פרסום: מוחלף בענף לכל משאב <span class="text-white">מבצע</span>.
+- [x] <span class="text-white">שחזור</span> וגם <span class="text-white">סנכרון</span> מיזוג נתמך במלואו.
 
-## מנוע חיפוש של עץ מקור חי
+## מנוע חיפוש בעץ מקור חי
 
 <br>
 
@@ -446,11 +422,11 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ## קבצים מצורפים לדף ללא הגבלה עם טיפוסי Mime שרירותיים
 
-## הערות מאובטחות ומשורשרות לדף
+## הערות מאובטחות ומשורשרות לכל עמוד
 
-## תרגומי שפה טבעית אוטומטית של Markdown (בקרוב).
+## תרגום אוטומטי של שפת הטבע Markdown
 
-## גרפיקת וקטור מתמטית אינטראקטיבית עם @vectorgraphics/asymptote
+## גרפיקה וקטורית מתמטית אינטראקטיבית עם @vectorgraphics/asymptote
 
 - [x] מדגיש תחביר עבור אסימפטוטה
 - [x] CMS ייכשל במהירות על גושי קוד אסימפטוטים בלתי ניתנים להפרדה
@@ -468,7 +444,7 @@ currentlight=White;
 real redPortion = 143 / 256;
 real greenPortion = 153 / 256;
 real bluePortion = 251 / 156;
-pen periwinklePen =  redPortion * red + greenPortion * green + bluePortion * blue;
+pen periwinklePen =  redPortion *red + greenPortion* green + bluePortion *blue;
 currentlight.background = periwinklePen;
 currentprojection=perspective(1,1,1,up=-Y);
 
@@ -497,7 +473,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 &nbsp;
 
-## דלתא ממאפייני <span class='text-info'>Apache CMS</span>
+## מעדניה <span class='text-info'>אפאצ'י</span> מאפיינים
 
 רק מערכת הבנייה מבוססת Perl זמינה.
 
@@ -505,11 +481,11 @@ draw(tube(p,colorsec),render(merge=true));
 
 - GFM משתמש בתוחם אחר עבור גושי קוד.
 
-- [`extpaths.txt`](#) אינו נתמך עוד: אנשים נבחרים מכל פרויקט יקבלו גישת כתיבה לעץ אתרי הייצור במאגר הגרסאות שלנו להעלאת חומר המיוצר חיצונית (javadocs, artifacts של מהדורת תוכנה, וכו ').
+- [`extpaths.txt`](#) אינו נתמך עוד: אנשים נבחרים מכל פרויקט יקבלו גישת כתיבה לעץ אתרי הייצור במאגר הגרסאות שלנו להעלאת חומר המיוצר חיצונית (javadocs, artifacts של מהדורת תוכנה, וכו ')
 
 ----
 
-מדד ##
+## אינדקס
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...

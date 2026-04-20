@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: jamstack、markdown、人魚、graphviz、editor.md、ide、node.js、oracle、クラウド、cdn、http/2、影響、スラブ、notion
-published: ~
 status: 下書き
 title: Orionの特徴
 ---
@@ -36,9 +34,9 @@ title: Orionの特徴
 
 ## 超高速システム・インフラストラクチャ
 
-- 世界のほとんどの場合、50ms以下のRTTレイテンシ'2026年にアフリカ/中東で拡大した人口
+- 2026年にアフリカ/中東で拡大されたカバレッジを持つ、世界の人口のほとんどで50ms以下のRTTレイテンシ
 
-- 競合他社より2倍高速なHTTP/2多重ページ配信時間(*すべての*顧客向け).
+- 競合他社より2倍高速なHTTP/2多重ページ配信時間(*すべての*顧客向け)
 
 <div class="embed-responsive embed-responsive-16by9">
 	 		<iframe loading="lazy" class="embed-responsive-item" style="margin-bottom:20px;max-width:560;max-height:315" src="https://www.youtube.com/embed/z8QveI4CHT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -62,7 +60,7 @@ title: Orionの特徴
 
 - イベントmpm
 
-- mod_perl (スレッドあり).
+- mod_perl (スレッドあり)
 
 - mod_apreq2
 
@@ -102,7 +100,7 @@ title: Orionの特徴
 
 - ezmlm-compatibilityにSRSおよび返信先を使用します
 
-- すべてのユーザーがGoogle経由で認証されます's OpenID- 接続サービス
+- すべてのユーザーは、GoogleのOpenID接続サービスを介して認証されます
 
 ## 好奇心旺盛なアヒルは今や優雅な白鳥です
 
@@ -141,26 +139,26 @@ a -> c [color=red];
 
 ```mermaid
 graph TD
-    A[Christmas]
- -->|Get money| B(Go shopping)
-    B --> C{Let me think}
-    C -->|One| D[fa:fa-laptop Laptop]
-    C -->|Two| E[fa:fa-mobile iPhone]
-    C -->|Three| F[fa:fa-car Car]
+    A[クリスマス]
+ -->|お金を得る| B(ショッピング)
+    B --> C{考えさせてください}
+    C -->|1つ| D[fa:fa-laptop ラップトップ]
+    C -->|二つ| E[fa:fa-mobile iPhone]
+    C -->|三つ| F[fa:fa-car 自動車]
 ```
 ----
 ```mermaid
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hello John, how are you?
+    アリス->>こんにちはジョン、お元気ですか?
     loop Healthcheck
-        John->>John: Fight against hypochondria
+        ジョン->>ジョン: ハイポコンドリアとの戦い
     end
-    Note right of John: Rational thoughts<br/>prevail...
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
+    Note right of John: 理性的な思考<br/>支配...
+    John-->>Alice: 素晴らしいです!
+    ジョン->>ボブ: あなたはどうですか?
+    Bob-->>ジョン:Jolly good!
 ```
 ----
 ```mermaid
@@ -177,12 +175,12 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
+    [*] -->まだ
+    まだ --> [*]
+    まだ --> 移動
+    移動 --> まだ
+    移動 --> クラッシュ
+    クラッシュ --> [*]
 ```
 ----
 ```mermaid
@@ -190,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    A task           :a1, 2014-01-01, 30d
-    Another task     :after a1  , 20d
+    タスク           :a1、2014-01-01、30d
+    別のタスク     :after a1  , 20d
     section Another
-    Task in sec      :2014-01-12  , 12d
-    another task      : 24d
+    秒単位のタスク      :2014-01-12  、 12d
+    別のタスク      : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Sunday" : 4
-	"Monday" : 5
-	"Tuesday" : 7
-  "Wednesday" : 3
+	"日曜日" : 4
+	"月曜日" : 5
+	"火曜日" : 7
+  "水曜日" : 3
 ```
 ----
 ```mermaid
@@ -246,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Square shape] --> ci((Circle shape)).
+    sq[正方形の形状] --> ci((円形状))
 
 subgraph A
-        od>Odd shape]-- Two line<br/>edge comment --> ro
-        di{Diamond with <br/> line break} -.-> ro(Rounded<br>square<br>shape)
-        di==>ro2(Rounded square shape)
+        od>奇数シェイプ]-- 2行<br/>エッジコメント --> ロバ
+        di{ダイヤモンド<br/> 改行} -.-> ro(端数処理済<br>広場<br>形状)
+        di==>ro2(Rounded 正方形の形)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Really long text with linebreak<br>in an Odd shape]
+    Eメール --> od3>本当に長いテキストとラインブレイク<br>奇妙な形]
 
 %% Comments after double percent signs
-    e((Inner / circle<br>and some odd <br>special characters)) --> f(,.?!+-*ز).
+    e((内部/円<br>SOMEODD <br>特殊文字)) --> f(,.?!+-*ز)
 
-cyr[Cyrillic]-->cyr2((Circle shape Начало));
+cyr[キリル文字]-->cyr2(円形 Начало);
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,34 +268,34 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 ----
 ```mermaid
 mindmap
-  root((mindmap))
-    Origins
-      Long history
+  root((マインドマップ))
+    オリジン
+      長い歴史
       ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectivness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
+      人気
+        イギリス人気心理学作家トニー・ブザン
+    調査
+      有効性<br/>および機能
+      自動作成時
+        使用
+            クリエイティブテクニック
+            戦略的プランニング
+            引数マッピング
+    ツール
+      ペンと紙
+      マーメイド
 ```
 ----
 ```mermaid
 journey
-    title My working day
-    section Go to work
-      Make tea: 5: Me
-      Go upstairs: 3: Me
-      Do work: 1: Me, Cat
-    section Go home
-      Go downstairs: 5: Me
-      Sit down: 3: Me
+    title 勤務日
+    section 作業に移動
+      お茶:5: 私
+      階段を上る:3: 私
+      タイトル(英名):1:ME、 CAT
+    section ホーム画面を開く
+      階下:5: 私
+      座る: 3: 私
 ```
 ----
 ```mermaid
@@ -309,44 +307,44 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph publicUser[ ]
-    A1[[Public User<br/> Via REST API]]
-    B1[Backend Services/<br/>frontend services]
+    A1[[公開ユーザー<br/> REST API経由]]
+    B1[バックエンドサービス/<br/>フロントエンド・サービス]
 end
 class publicUser,A1 gray
 
 subgraph authorizedUser[ ]
-    A2[[Authorized User<br/> Via REST API]]
-    B2[Backend Services/<br/>frontend services]
+    A2[[承認済ユーザー<br/> REST API経由]]
+    B2[バックエンドサービス/<br/>フロントエンド・サービス]
 end
 class authorizedUser,A2 darkBlue
 
 subgraph booksSystem[ ]
-    A3[[Books System]]
-    B3[Allows interacting with book records]
+    A3[[ブックシステム]]
+    B3[ブックレコードの操作を許可します。]
 end
 class booksSystem,A3 brightBlue
 
-publicUser--Reads records using-->booksSystem
-authorizedUser--Reads and writes records using-->booksSystem
+publicUser--次を使用してレコードを読み取ります。-->booksSystem
+authorizedUser--次を使用してレコードの読取りおよび書込みを行います。-->booksSystem
 
 subgraph authorizationSystem[ ]
-    A4[[Authorization System]]
-    B4[Authorizes access to resources]
+    A4[[承認システム]]
+    B4[リソースへのアクセスを許可します]
 end
 
 subgraph publisher1System[ ]
-    A5[[Publisher 1 System]]
-    B5[Gives details about books published by them]
+    A5[[公開者1システム]]
+    B5[発行した書籍に関する詳細を提供します]
 end
 subgraph publisher2System[ ]
-    A6[[Publisher 2 System]]
-    B6[Gives details about books published by them]
+    A6[[公開者2システム]]
+    B6[発行した書籍に関する詳細を提供します]
 end
 class authorizationSystem,A4,publisher1System,A5,publisher2System,A6 gray2
 
-booksSystem--Accesses authorization details using-->authorizationSystem
-booksSystem--Accesses publisher details using-->publisher1System
-booksSystem--Accesses publisher details using-->publisher2System
+booksSystem--次を使用して承認詳細にアクセスします-->authorizationSystem
+booksSystem--次を使用してパブリッシャの詳細にアクセスします。-->publisher1System
+booksSystem--次を使用してパブリッシャの詳細にアクセスします。-->publisher2System
 
 class A1,A2,A3,A4,A5,A6,B1,B2,B3,B4,B5,B6 borderless
 
@@ -359,7 +357,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] Markmap.jsサポートの表示
 
-- [x] Don Knuth's [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) /カーンアカデミー's [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) 数学、物理学、化学のサポート:
+- [x] ドン・クヌース[$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) /カーンアカデミー[$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) 数学、物理学、化学のサポート:
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
@@ -367,7 +365,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 - [x] 同期、双方向の生成$$\LaTeX$$ Markdown+との間でソース・ファイル$$\KaTeX$$ ファイル。
 
-- [x] Navier-Stokes in Einstein Notation(アインシュタイン表記法) [ペイン](https://en.wikipedia.org/wiki/Abstract_index_notation)).
+- [x] Navier-Stokes in Einstein Notation(アインシュタイン表記法) [ペイン](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -377,7 +375,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x] Navier-Stokes in Classical Notation(クラシック表記法).
+- [x] Navier-Stokes in Classical Notation(クラシック表記法)
 
 ```math
 \begin{aligned}
@@ -479,7 +477,7 @@ draw(tube(p,colorsec),render(merge=true));
 
 - Perlベースのビルド・システムのみが使用可能です。
 
-- 新しいMarkdownエディタ[`マーク/gfm`](#) 従って、パーサーはより現代的です。最新リリースでは、スラグ仕様をサポート'元のpythonベースのパーサー。
+- 新しいMarkdownエディタ[`マーク/gfm`](#) 従って、パーサーはより現代的です。最新リリースでは、元のpythonベースのパーサーであるスラグ仕様がサポートされます。
 
 - GFMは、コード・ブロックに異なるデリミタを使用します。
 
