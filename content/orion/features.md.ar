@@ -151,7 +151,7 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    أليس->>يوحنا: أرحب بك يوحنا, كيف هل أنت؟
+    Alice->>John: أرحب بك يوحنا, كيف هل أنت؟
     loop Healthcheck
         يوحنا->>يوحنا: قتال ضد هيبوكوندريا
     end
@@ -189,7 +189,7 @@ gantt
     dateFormat  YYYY-MM-DD
     section Section
     مهمة           :a1, 2014-01-01, 30d
-    مهمة أخرى     :بعد a1  , 20d
+    مهمة أخرى     :after a1  , 20d
     section Another
     المهمة بالثواني      :2014-01-12  , 12d
     مهمة أخرى      : 24d
