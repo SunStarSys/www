@@ -30,49 +30,49 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[Fort Lauderdale, FL]]
+    A1[["Fort Lauderdale, FL"]]
     B1[Servidor de control de versiones con espacio aéreo]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston, VA]]
+    A2[["Reston, VA"]]
     B2[Servidores de perímetro de OCI]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Phoenix, AZ]]
+    A3[["Phoenix, AZ"]]
     B3[Servidores de perímetro de OCI]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[Frankfurt, Alemania]]
+    A4[["Frankfurt, Alemania"]]
     B4[Servidores de perímetro de OCI]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo, Brasil]]
+    A5[["São Paolo, Brasil"]]
     B5[Servidores de perímetro de OCI]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[Sídney, Australia]]
+    A6[["Sídney, Australia"]]
     B6[Servidores de perímetro de OCI]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad, India]]
+    A7[["Hyderabad, India"]]
 	B7[Servidores de perímetro de OCI]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[Seúl, Corea del Sur]]
+    A8[["Seúl, Corea del Sur"]]
     B8[Servidores de perímetro de OCI]
 end
 class vpn-ap-east,A8 darkBlue

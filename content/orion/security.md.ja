@@ -30,49 +30,49 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[フォートローダーデール、 FL]]
+    A1[["フォートローダーデール、 FL"]]
     B1[エアギャップ・バージョン・コントロール・サーバー]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston、VA]]
+    A2[["Reston、VA"]]
     B2[OCI Edgeサーバー]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[AZフェニックス]]
+    A3[["AZフェニックス"]]
     B3[OCI Edgeサーバー]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[フランクフルト、ドイツ]]
+    A4[["フランクフルト、ドイツ"]]
     B4[OCI Edgeサーバー]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[サンパウロ、ブラジル]]
+    A5[["サンパウロ、ブラジル"]]
     B5[OCI Edgeサーバー]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[シドニー、オーストラリア]]
+    A6[["シドニー、オーストラリア"]]
     B6[OCI Edgeサーバー]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[ハイデラバード、インド]]
+    A7[["ハイデラバード、インド"]]
 	B7[OCI Edgeサーバー]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[ソウル、韓国]]
+    A8[["ソウル、韓国"]]
     B8[OCI Edgeサーバー]
 end
 class vpn-ap-east,A8 darkBlue

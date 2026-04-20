@@ -30,49 +30,49 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[فورت لودرديل، فلوريدا]]
+    A1[["فورت لودرديل، فلوريدا"]]
     B1[خادم التحكم في الإصدار الهوائي]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[ريستون، VA]]
+    A2[["ريستون، VA"]]
     B2[خوادم OCI Edge]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[فينيكس، أريزونا]]
+    A3[["فينيكس، أريزونا"]]
     B3[خوادم OCI Edge]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[فرانكفورت ألمانيا]]
+    A4[["فرانكفورت (ألمانيا)"]]
     B4[خوادم OCI Edge]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[ساو باولو، البرازيل]]
+    A5[["ساو باولو، البرازيل"]]
     B5[خوادم OCI Edge]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[سيدني، أستراليا]]
+    A6[["سيدني، أستراليا"]]
     B6[خوادم OCI Edge]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[حيدر أباد، الهند]]
+    A7[["حيدر أباد، الهند"]]
 	B7[خوادم OCI Edge]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[سيول، كوريا الجنوبية]]
+    A8[["سيول، كوريا الجنوبية"]]
     B8[خوادم OCI Edge]
 end
 class vpn-ap-east,A8 darkBlue

@@ -30,49 +30,49 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[Fort Lauderdale，佛羅里達州]]
+    A1[["Fort Lauderdale，佛羅里達州"]]
     B1[Air-Gapped 版本控制伺服器]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston，加州]]
+    A2[["Reston，加州"]]
     B2[OCI 邊緣處理伺服器]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[鳳凰城 (AZ)]]
+    A3[["鳳凰城 (AZ)"]]
     B3[OCI 邊緣處理伺服器]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[德國法蘭克福]]
+    A4[["德國法蘭克福"]]
     B4[OCI 邊緣處理伺服器]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[聖保羅 (巴西)]]
+    A5[["聖保羅 (巴西)"]]
     B5[OCI 邊緣處理伺服器]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[悉尼，澳洲]]
+    A6[["悉尼，澳洲"]]
     B6[OCI 邊緣處理伺服器]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[海得拉巴，印度]]
+    A7[["海得拉巴，印度"]]
 	B7[OCI 邊緣處理伺服器]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[首爾，韓國]]
+    A8[["首爾，韓國"]]
     B8[OCI 邊緣處理伺服器]
 end
 class vpn-ap-east,A8 darkBlue

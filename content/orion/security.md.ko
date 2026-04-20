@@ -30,49 +30,49 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[포트 로더데일, FL]]
+    A1[["포트 로더데일, FL"]]
     B1[에어갭 버전 제어 서버]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[레스턴, VA]]
+    A2[["레스턴, VA"]]
     B2[OCI 에지 서버]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[애리조나주 피닉스]]
+    A3[["애리조나주 피닉스"]]
     B3[OCI 에지 서버]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[독일 프랑크푸르트]]
+    A4[["독일 프랑크푸르트"]]
     B4[OCI 에지 서버]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[브라질 상파울로]]
+    A5[["브라질 상파울로"]]
     B5[OCI 에지 서버]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[시드니, 오스트레일리아]]
+    A6[["시드니, 오스트레일리아"]]
     B6[OCI 에지 서버]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[하이데라바드 (인도)]]
+    A7[["하이데라바드 (인도)"]]
 	B7[OCI 에지 서버]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[서울, 대한민국]]
+    A8[["서울, 대한민국"]]
     B8[OCI 에지 서버]
 end
 class vpn-ap-east,A8 darkBlue

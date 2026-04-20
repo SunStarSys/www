@@ -30,49 +30,49 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[Форт-Лодердейл, Флорида]]
+    A1[["Форт-Лодердейл, Флорида"]]
     B1[Сервер управления версиями с воздушным зазором]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Рестон (Виргиния)]]
+    A2[["Рестон (Виргиния)"]]
     B2[Периферийные серверы OCI]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Феникс (Аризона)]]
+    A3[["Феникс (Аризона)"]]
     B3[Периферийные серверы OCI]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[Франкфурт, Германия]]
+    A4[["Франкфурт, Германия"]]
     B4[Периферийные серверы OCI]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[Сан-Паулу, Бразилия]]
+    A5[["Сан-Паулу, Бразилия"]]
     B5[Периферийные серверы OCI]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[Сидней, Австралия]]
+    A6[["Сидней, Австралия"]]
     B6[Периферийные серверы OCI]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Хайдарабад, Индия]]
+    A7[["Хайдарабад, Индия"]]
 	B7[Периферийные серверы OCI]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[Сеул, Южная Корея]]
+    A8[["Сеул, Южная Корея"]]
     B8[Периферийные серверы OCI]
 end
 class vpn-ap-east,A8 darkBlue

@@ -30,49 +30,49 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[Fort Lauderdale, FL]]
+    A1[["Fort Lauderdale, FL"]]
     B1[Air-Gapped versionskontrollserver]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston (ort)]]
+    A2[["Reston (ort)"]]
     B2[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Phoenix, Arizona, USA]]
+    A3[["Phoenix, Arizona, USA"]]
     B3[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[Frankfurt, Tyskland]]
+    A4[["Frankfurt, Tyskland"]]
     B4[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo (ort)]]
+    A5[["São Paolo (ort)"]]
     B5[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[Sydney, Australien]]
+    A6[["Sydney, Australien"]]
     B6[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad (ort)]]
+    A7[["Hyderabad (ort)"]]
 	B7[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[Seoul, Sydkorea]]
+    A8[["Seoul, Sydkorea"]]
     B8[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-ap-east,A8 darkBlue
