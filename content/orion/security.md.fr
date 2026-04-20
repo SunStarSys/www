@@ -1,17 +1,15 @@
 ---
 acl: '@staff=rw, *=r'
-archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: sécurité,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-published: ~
 status: publié
 title: Sécurité d'Orion
 ---
 
 <div class="right">
 
-![cadenas](security.page/padlock).
+![cadenas](security.page/padlock)
 
 </div>
 
@@ -32,50 +30,50 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[Fort Lauderdale, FL]]
-    B1[Air-Gapped Version Control Server]
+    A1[[Fort Lauderdale, Floride]]
+    B1[Serveur Air-Gapped Version Control]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston, VA]]
-    B2[OCI Edge Servers]
+    A2[[Reston, Virginie]]
+    B2[Serveurs OCI Edge]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Phoenix, AZ]]
-    B3[OCI Edge Servers]
+    A3[[Phoenix (Australie)]]
+    B3[Serveurs OCI Edge]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[Frankfurt, Germany]]
-    B4[OCI Edge Servers]
+    A4[[Francfort, Allemagne]]
+    B4[Serveurs OCI Edge]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo, Brazil]]
-    B5[OCI Edge Servers]
+    A5[[São Paolo (Brésil)]]
+    B5[Serveurs OCI Edge]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[Sydney, Australia]]
-    B6[OCI Edge Servers]
+    A6[[Sydney, Australie]]
+    B6[Serveurs OCI Edge]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad, India]]
-	B7[OCI Edge Servers]
+    A7[[Hyderabad (Inde)]]
+	B7[Serveurs OCI Edge]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[Seoul, South Korea]]
-    B8[OCI Edge Servers]
+    A8[[Séoul, Corée du Sud]]
+    B8[Serveurs OCI Edge]
 end
 class vpn-ap-east,A8 darkBlue
 
@@ -123,15 +121,15 @@ Ditto pour les scripts CGI, qui sont entièrement verrouillés en termes d'accè
 
 ### Aspects de confiance zéro
 
-La prémisse de base de [architecture sans confiance](https://csrc.nist.gov/publications/detail/sp/800-207/final) est d'éviter de concevoir votre sécurité réseau autour de la physiologie de la palourde : dur à l'extérieur, mais doux et lâche une fois que vous êtes dans.  Donc nous ne'Tous les ports réseau privilégiés significatifs à l'intérieur des différents réseaux locaux de point de présence (POP) ne sont exposés qu'à la machine à métaux nus.'interface de périphérique loopback s [`lo0`](#), et n'a de sens que dans le contexte d'une connexion SSH (inverse) transmise au port **.
+La prémisse de base de [architecture sans confiance](https://csrc.nist.gov/publications/detail/sp/800-207/final) est d'éviter de concevoir votre sécurité réseau autour de la physiologie de la palourde : dur à l'extérieur, mais doux et lâche une fois que vous êtes dans.  Donc, nous ne faisons pas cela ; chaque port réseau privilégié significatif à l'intérieur des différents LAN du point de présence (POP) n'est exposé qu'à l'interface de périphérique loopback de la machine bare metal [`lo0`](#), et n'a de sens que dans le contexte d'une connexion SSH (inverse) transmise au port **.
 
 Nous utilisons des proxies TCP, pas des proxies HTTP, et aucun back-end MSA, **donc le seul hôte qui voit votre trafic Web TLS non chiffré est l'hôte qui le déchiffre**. Les mêmes règles s'appliquent au trafic Subversion &mdash; seul le trafic crypté TLS direct et de bout en bout vers l' **adresse de service** voit vos données non cryptées sur le réseau.
 
 Bonne chance avec les **couches MSA et couches d'exposition de données privées** avec d'autres fournisseurs. L'ennemi de "ingénierie non fonctionnelle" est la complexité. Il est beaucoup plus facile de fournir des promesses de sécurité significatives lorsque votre produit est un **monolithe fédéré au lieu d'un énorme champ de mines MSA**, ce qui est un autre différenciateur contradictoire entre Orion et son domaine de concurrents.
 
-Cette infra est entièrement automatisée une fois qu'une région est mise en ligne, mais que'Tout ce que nous pouvons partager publiquement sur l'architecture (équilibrer la transparence Hobbsian avec le mantra militaire) "bateaux d'évier de lèvres lâches" plus d'art que de science).  Soyez assuré &mdash; au-delà de briser l'antispoofing [`lo0`](#) protection au sein d' Solaris 11's (BSD) filtre de paquets lui-même, il n'y a pas de moyen significatif d'accéder à ces services, même pour les comptes clients.
+Cette infra est entièrement automatisée une fois qu'une région est mise en ligne, mais c'est tout ce que nous pouvons partager publiquement sur l'architecture (équilibrer la transparence Hobbsian avec le mantra militaire) "bateaux d'évier de lèvres lâches" plus d'art que de science).  Soyez assuré &mdash; au-delà de briser l'antispoofing [`lo0`](#) protection dans le filtre de paquets d' Solaris 11 (BSD) lui-même, il n'y a pas de moyen significatif d'accéder à ces services, même pour les comptes client.
 
-Même si le compte de contrôle OCI maître est compromis, la **confidentialité** et l' **intégrité** de tous les actifs client restent inchangées.  Tout ce qu'un black-hat peut faire est de perturber la **disponibilité** du site Web du client. En particulier, ils ne peuvent pas accéder aux enregistrements de données du service Subversion.  Nous pouvons reconstruire toute l'infrastructure OCI à partir de zéro en 48 à 72 heures une fois la mauvaise pomme'l'accès à OCI a été interrompu.
+Même si le compte de contrôle OCI maître est compromis, la **confidentialité** et l' **intégrité** de tous les actifs client restent inchangées.  Tout ce qu'un black-hat peut faire est de perturber la **disponibilité** du site Web du client. En particulier, ils ne peuvent pas accéder aux enregistrements de données du service Subversion.  Nous pouvons reconstruire l'ensemble de l'infrastructure OCI de toutes pièces en 48 à 72 heures une fois l'accès OCI de la mauvaise pomme terminé.
 
 -----
 
@@ -141,7 +139,7 @@ Nous encourageons les entreprises clientes à créer un compte Splunk, et nous l
 
 Nous surveillons la disponibilité du service à partir de tous nos POP OCI à l'échelle mondiale et déclenchons des événements de basculement de haute disponibilité (domaine de disponibilité) ou régionaux si une panne de serveur dure plus de 30 secondes.
 
-L'audit d'ACL peut être effectué simplement en créant un site Web's Subversion HEAD utilisant l'Apache sous licence [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) le script et l'examen du paramétrage résultant dans la [`www/.acl`](#) fichier dans votre répertoire de paiement, à tout moment.  Normalement, le processus de construction prendra moins de 10 à 15 secondes sur le matériel moderne.
+L'audit ACL peut être effectué en construisant simplement la tête Subversion d'un site Web à l'aide de la licence Apache. [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) le script et l'examen du paramétrage résultant dans la [`www/.acl`](#) fichier dans votre répertoire de paiement, à tout moment.  Normalement, le processus de construction prendra moins de 10 à 15 secondes sur le matériel moderne.
 
 Les crochets de validation côté serveur Subversion sont également personnalisables en fonction de vos problèmes de supervision. D'un simple logiciel de messagerie de validation à un accès sécurisé à notre démon svnpubsub, il existe un certain nombre de configurations personnalisées disponibles.
 
@@ -149,7 +147,7 @@ Les crochets de validation côté serveur Subversion sont également personnalis
 
 ## Sécurité applicative Orion
 
-### [La SSR publique est une odeur](https://queue.acm.org/detail.cfm?id=2721993).
+### [La SSR publique est une odeur](https://queue.acm.org/detail.cfm?id=2721993)
 
 ### Gestion des listes de contrôle d'accès
 
@@ -162,9 +160,9 @@ digraph {
 
 &nbsp;
 
-Orion's le modèle de sécurité est géré de manière centralisée par les paramètres contenus dans [`@path : :acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) comme contraint dans [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Les fichiers de configuration du serveur de déconnexion sont générés dynamiquement à chaque modification créée.
+Le modèle de sécurité d'Orion est géré de manière centralisée par les paramètres contenus dans [`@path : :acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) comme contraint dans [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Les fichiers de configuration du serveur de déconnexion sont générés dynamiquement à chaque modification créée.
 
-Si vous comprenez le modèle de sécurité du système de fichiers POSIX, vous serez chez vous avec Orion's [mod_dav_svn]() le modèle d'autorisation et le serveur Web Apache HTTPd'Contrôles s .htaccess générés automatiquement à partir de votre site Web's [lib/acl.yml](#) Configuration YAML.
+Si vous comprenez le modèle de sécurité du système de fichiers POSIX, vous serez chez vous avec Orion's [mod_dav_svn]() le modèle d'autorisation et les contrôles .htaccess du serveur Web Apache HTTPd, générés automatiquement à partir de votre site Web [lib/acl.yml](#) Configuration YAML.
 
 ### OpenIDC Sécurité SSO
 
@@ -196,7 +194,7 @@ Nous explorons ces questions en relation avec Orion ci-dessous.
 
 #### Editeur en ligne
 
-L'éditeur en ligne prend en charge une interface utilisateur JSON en définissant simplement votre user-agent's Acceptez l'en-tête pour préférer [`application/json`](#) Type MIME, les contrôles de sécurité sont donc les mêmes pour l'interface utilisateur et l'API.
+L'éditeur en ligne prend en charge une interface utilisateur JSON en définissant simplement l'en-tête Accept de votre agent utilisateur pour préférer la [`application/json`](#) Type MIME, les contrôles de sécurité sont donc les mêmes pour l'interface utilisateur et l'API.
 
 **Aucune interface utilisateur/API d'administration** n'est disponible en dehors de l'accès Subversion direct.
 
@@ -206,29 +204,29 @@ Chaque ressource de copie de travail disponible via l'interface utilisateur fait
 
 ##### L'accès de validation est directement contrôlé par les ACL Subversion
 
-Rien ne peut être construit et affiché par la suite sur le réseau sans une validation Subversion autorisée correspondante. Le principal problème ici est de contrôler quelles informations sont disponibles pour un auteur de page wiki.'éditions validées et créées.
+Rien ne peut être construit et affiché par la suite sur le réseau sans une validation Subversion autorisée correspondante. Le principal problème ici est de contrôler quelles informations sont disponibles pour les modifications validées et construites d'un auteur de page wiki.
 
 Si vous autorisez le prétraitement de modèle dans les pages source de démarque, vous devez savoir comment les arguments de modèle rendent le contenu des autres fichiers de l'arborescence disponible en tant que variables pour la source de la page modifiée.
 
-Souvent, si elle est configurée pour le faire, la page modifiée peut déclarer ses propres fichiers de dépendance dans les en-têtes de la page, ce qui est quelque chose à penser lorsque vous pesez les jeux de fonctionnalités contre les contrôles de sécurité dans votre Wiki's Architecture d'information.
+Souvent, si elle est configurée pour le faire, la page modifiée peut déclarer ses propres fichiers de dépendance dans les en-têtes de la page, ce qui est quelque chose à penser lorsque vous pesez les jeux de fonctionnalités contre les contrôles de sécurité dans l'architecture d'information de votre wiki.
 
-Alors que nous pouvons offrir des conseils et un soutien pour répondre à vos besoins, il'c'est à vous de décider comment équilibrer les échelles pour votre organisation'wiki d'entreprise.
+Bien que nous puissions offrir des conseils et un soutien pour répondre à vos besoins, c'est à vous de décider comment équilibrer les échelles pour le wiki d'entreprise de votre organisation.
 
-Voir la section ci-dessous sur [Contrôles d'injection de dépendance/ACL](#h4-dependency-acl-injection-controls) pour plus de détails, et consultez cet exemple en direct de la facilité d'ACL's peut être configuré de manière centralisée dans [`lib/acl.yml`]({{snippetA.pretty_uri}}):
+Voir la section ci-dessous sur [Contrôles d'injection de dépendance/ACL](#h4-dependency-acl-injection-controls) pour plus de détails, et consultez cet exemple en direct de la façon dont les ACL peuvent être configurées de manière centralisée dans [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
-Les auteurs de contenu peuvent configurer les restrictions de page dans la page's [en-têtes]({{snippetB.pretty_uri}}):
+Les auteurs de contenu peuvent configurer les restrictions de page dans la page [en-têtes]({{snippetB.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
-Par ailleurs, les ressources protégées ne peuvent pas être copiées dans une branche par du personnel non autorisé, même sans placer de contrôles ACL supplémentaires lors de la création et de la modification de la branche. En d'autres termes, le système prendra en charge l'expérimentation des succursales sans aucun contrôle supplémentaire de votre part pour garantir que les actifs protégés restent protégés dans chaque succursale.'cycle de vie naturel.
+Par ailleurs, les ressources protégées ne peuvent pas être copiées dans une branche par du personnel non autorisé, même sans placer de contrôles ACL supplémentaires lors de la création et de la modification de la branche. En d'autres termes, le système prendra en charge l'expérimentation des succursales sans aucun contrôle supplémentaire de votre part pour garantir que les actifs protégés restent protégés tout au long du cycle de vie naturel de chaque succursale.
 
 #### Créer des listes de contrôle d'accès système ?
 
 Le système de construction est all-seeing et all-knowing, mais nous pouvons nous assurer que vos actifs construits et protégés ne sont visibles que par les équipes que vous gérez et contrôlez dans les ACL Subversion.
 
-Le système de compilation affiche la liste des noms de fichier qu'il a créés via l'IDE du navigateur lors d'une validation, mais cette liste est uniquement basée sur un utilisateur'accès en lecture aux ressources dépendantes de l'utilisateur'ajouter, mettre à jour ou supprimer des actions de contenu dans la validation.
+Le système de compilation affiche la liste des noms de fichier qu'il a créés via l'IDE du navigateur lors d'une validation, mais cette liste est uniquement basée sur l'accès en lecture d'un utilisateur aux ressources dépendantes des actions d'ajout, de mise à jour ou de suppression de contenu de l'utilisateur dans la validation.
 
 ##### Contrôles de traversée de modèle
 
@@ -248,7 +246,7 @@ Tous les fichiers cible se trouvent dans un sous-dossier de [`/contenu/`](#) et 
 
 Si le chemin cible n'est pas configuré dans [`@path : :modèles`](#) avec un paramètre de correspondance qui permet au chemin cible en question d'être archivé ou catégorisé, [`ssi`](#) l'opération échouera.
 
-C'est parce que [`ssi`](#) le support est un prérequis pour ces ensembles de fonctionnalités, afin de préserver votre site's taget *permalinks*.
+C'est parce que [`ssi`](#) Le support est un prérequis pour ces jeux de fonctionnalités, afin de préserver le taget *permalinks* de votre site.
 
 #### Contrôles d'injection de dépendance/ACL
 
@@ -256,9 +254,9 @@ Contrôlé par [`lib/path.pm`](#) importations.
 
 ##### lib./{chemin,vue}.pm Liste de contrôle d'accès Subversion
 
-Ce's sage de contrôler l'accès en écriture à ces ressources, en les limitant aux personnes à la fois compétentes dans la base de code et autorisées à mettre en œuvre des contrôles de sécurité pour l'ensemble des actifs sous contrôle de version (aka *tout*).
+Il est sage de contrôler l'accès en écriture à ces ressources, en les limitant aux personnes à la fois compétentes dans la base de code et autorisées à mettre en œuvre des contrôles de sécurité pour l'ensemble des ressources sous contrôle de version (aka *tout*).
 
-C'est aussi une bonne idée d'inclure le [`@svnadmin`](#) groupe parmi ceux qui disposent d'un accès en lecture-écriture, mais'n'est pas strictement nécessaire même si vous avez besoin de nous pour réinitialiser manuellement vos ACL Subversion.
+C'est aussi une bonne idée d'inclure le [`@svnadmin`](#) groupe parmi ceux qui ont un accès en lecture-écriture, mais ce n'est pas strictement nécessaire même si vous avez besoin de nous pour réinitialiser manuellement vos ACL Subversion.
 
 ##### Règles générées dynamiquement via &#64;chemin : :acl
 
@@ -270,11 +268,11 @@ Lorsque vous exposez l'historique complet des contrôles de version à vos utili
 
 Sinon, le matériel pourrait être **inversement exposé à un chercheur historique sans les autorisations requises**.
 
-Le CMS Orion'La logique de suivi de déplacement/suppression gère cela de manière transparente.
+La logique de suivi de déplacement/suppression d'Orion CMS gère cela de manière transparente.
 
 ##### Contrôles personnalisés sur l'utilisation de seed_file_deps() et de seed_file_acl() dans lib/path.pm
 
-Au-delà de l'importation de ces symboles [`lib/path.pm`](#), vous pouvez également choisir comment et à quels fichiers vous souhaitez les appliquer lors de l'exécution d'un bloc de code walk_content_tree ().  Après tout, il's pas seulement un fichier de configuration, mais une base de code, avec toutes les fonctionnalités complètes de Turing [`Perl`](#) nous'Venez découvrir et apprécier !
+Au-delà de l'importation de ces symboles [`lib/path.pm`](#), vous pouvez également choisir comment et à quels fichiers vous souhaitez les appliquer lors de l'exécution d'un bloc de code walk_content_tree ().  Après tout, ce n'est pas seulement un fichier de configuration, mais une base de code, avec toutes les fonctionnalités complètes de Turing. [`Perl`](#) Nous avons appris à connaître et à apprécier !
 
 #### Les fichiers .htaccss du site Web et les fichiers d'autorisation Subversion sont synchronisés avec &#64;path : :acl instantanément lors de la validation
 
@@ -310,7 +308,7 @@ CSS doit être livré à partir de nos serveurs.
 
 - [x] Restrictions de plug-in
 
-Actuellement PDF's uniquement.
+Actuellement PDF uniquement.
 
 ### Partage de ressources d'origine croisée
 

@@ -1,17 +1,15 @@
 ---
 acl: '@staff=rw, *=r'
-archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: Sicherheit,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-published: ~
 status: veröffentlicht
 title: Orion-Sicherheit
 ---
 
 <div class="right">
 
-![Schloss](security.page/padlock).
+![Schloss](security.page/padlock)
 
 </div>
 
@@ -32,62 +30,62 @@ classDef gray fill:#62524F, color:#fff
 classDef gray2 fill:#4F625B, color:#fff
 
 subgraph vcs[ ]
-    A1[[Fort Lauderdale, FL]]
+    A1[[Fort Lauderdale]]
     B1[Air-Gapped Version Control Server]
 end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston, VA]]
-    B2[OCI Edge Servers]
+    A2[[Reston (VA)]]
+    B2[OCI-Edge-Server]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Phoenix, AZ]]
-    B3[OCI Edge Servers]
+    A3[[Phoenix (Vereinigte Staaten)]]
+    B3[OCI-Edge-Server]
 end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[Frankfurt, Germany]]
-    B4[OCI Edge Servers]
+    A4[[Frankfurt, Deutschland]]
+    B4[OCI-Edge-Server]
 end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo, Brazil]]
-    B5[OCI Edge Servers]
+    A5[[São Paolo (Brasilien)]]
+    B5[OCI-Edge-Server]
 end
 class vpn-bz-west,A5 darkBlue
 
 subgraph vpn-au-west[ ]
-    A6[[Sydney, Australia]]
-    B6[OCI Edge Servers]
+    A6[[Sydney, Australien]]
+    B6[OCI-Edge-Server]
 end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad, India]]
-	B7[OCI Edge Servers]
+    A7[[Hyderabad (Indien)]]
+	B7[OCI-Edge-Server]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[Seoul, South Korea]]
-    B8[OCI Edge Servers]
+    A8[[Seoul (Südkorea)]]
+    B8[OCI-Edge-Server]
 end
 class vpn-ap-east,A8 darkBlue
 
 class A1,A2,A3,A4,A5,A6,A7,A8 borderless
 
-vcs==vpn==>A2==ssh/vpn==>B2
-vcs==vpn==>A3==ssh/vpn==>B3
-vcs==vpn==>A4==ssh/vpn==>B4
-vcs==vpn==>A5==ssh/vpn==>B5
-vcs==vpn==>A6==ssh/vpn==>B6
-vcs==vpn==>A7==ssh/vpn==>B7
-vcs==vpn==>A8==ssh/vpn==>B8
+vcs==VPN==>A2==SSH/vpn==>B2
+vcs==VPN==>A3==SSH/vpn==>B3
+vcs==VPN==>A4==SSH/vpn==>B4
+vcs==VPN==>A5==SSH/vpn==>B5
+vcs==VPN==>A6==SSH/vpn==>B6
+vcs==VPN==>A7==SSH/vpn==>B7
+vcs==VPN==>A8==SSH/vpn==>B8
 ```
 &nbsp;
 
@@ -123,15 +121,15 @@ Ditto für CGI-Skripte, die vollständig im Hinblick auf den Schreibzugriff auf 
 
 ### Zero Trust-Aspekte
 
-Die Grundvoraussetzung von [Zero Trust-Architektur](https://csrc.nist.gov/publications/detail/sp/800-207/final) Es ist zu vermeiden, Ihre Netzwerksicherheit um die Physiologie der Muschel zu gestalten: hart auf der Außenseite, aber weich und locker, wenn Sie in sind.  Wir spenden't tun das; jeder bedeutende privilegierte Netzwerkport innerhalb der verschiedenen Point of Presence (POP) LANs ist nur der Bare-Metal-Maschine ausgesetzt's-Loopback-Geräteschnittstelle [`lo0`](#), und ist nur im Kontext einer (umgekehrten) übermittelten SSH-Verbindung *zu dieser* sinnvoll.
+Die Grundvoraussetzung von [Zero Trust-Architektur](https://csrc.nist.gov/publications/detail/sp/800-207/final) Es ist zu vermeiden, Ihre Netzwerksicherheit um die Physiologie der Muschel zu gestalten: hart auf der Außenseite, aber weich und locker, wenn Sie in sind.  Das tun wir nicht; jeder bedeutende privilegierte Netzwerkport innerhalb der verschiedenen Point of Presence-(POP-)LANs ist nur der Loopback-Geräteschnittstelle des Bare-Metal-Rechners ausgesetzt [`lo0`](#), und ist nur im Kontext einer (umgekehrten) übermittelten SSH-Verbindung *zu dieser* sinnvoll.
 
 Wir verwenden TCP-Proxys, keine HTTP-Proxys und keine MSA-Backends. **Der einzige Host, der Ihren unverschlüsselten TLS-Webverkehr sieht, ist der Host, der ihn entschlüsselt**. Dieselben Regeln gelten für Subversion-Traffic &mdash; Nur direkter, End-to-End-TLS-verschlüsselter Datenverkehr zum **Service-Endpunkt** sieht Ihre unverschlüsselten Daten auf der Leitung.
 
 Viel Glück mit den **MSA-Ebenen und Ebenen der privaten Datenexposition** mit anderen Anbietern. Der Feind von "Nichtfunktionales Engineering" Komplexität ist. Es ist viel einfacher, aussagekräftige Sicherheitsversprechen zu geben, wenn Ihr Produkt ein **föderierter Monolith anstelle eines massiven MSA-Minenfeldes** ist, was ein weiteres konträres Unterscheidungsmerkmal zwischen Orion und seinem Wettbewerbsgebiet ist.
 
-Diese Infrastruktur ist voll automatisiert, sobald eine Region online gestellt wird, aber'Alles, was wir öffentlich über die Architektur teilen können (Ausgleich der hobbsischen Transparenz mit dem militärischen Mantra) "Lose Lippen spülen Schiffe" mehr Kunst als Wissenschaft).  Sicher sein &mdash; über das Brechen des Antispoofings hinaus [`lo0`](#) Schutz innerhalb Solaris 11's (BSD) Paketfilter selbst, es gibt keine sinnvollen Mittel, um Zugriff auf diese Dienste zu erhalten, auch nicht für Kundenkonten.
+Diese Infrastruktur ist vollständig automatisiert, sobald eine Region online gestellt wird, aber das ist alles, was wir öffentlich über die Architektur teilen können (Ausgleich der hobbsischen Transparenz mit dem militärischen Mantra) "Lose Lippen spülen Schiffe" mehr Kunst als Wissenschaft).  Sicher sein &mdash; über das Brechen des Antispoofings hinaus [`lo0`](#) Schutz innerhalb des BSD-Paketfilters (Solaris 11) selbst gibt es keine sinnvollen Möglichkeiten, Zugriff auf diese Services zu erhalten, selbst für Kundenkonten.
 
-Selbst wenn der Master-OCI-Kontrollaccount kompromittiert ist, bleibt die **Vertraulichkeit** und **Integrität** aller Kundenassets unverletzlich.  Alles, was ein Black-Hat tun kann, ist ein Chaos mit der Kundenwebsite **Verfügbarkeit** zu machen. Insbesondere können sie nicht auf die Subversion-Servicedatensätze zugreifen.  Wir können die gesamte OCI-Infrastruktur von Grund auf in 48-72 Stunden nach dem schlechten Apfel rekonstruieren'OCI-Zugriff wurde beendet.
+Selbst wenn der Master-OCI-Kontrollaccount kompromittiert ist, bleibt die **Vertraulichkeit** und **Integrität** aller Kundenassets unverletzlich.  Alles, was ein Black-Hat tun kann, ist ein Chaos mit der Kundenwebsite **Verfügbarkeit** zu machen. Insbesondere können sie nicht auf die Subversion-Servicedatensätze zugreifen.  Wir können die gesamte OCI-Infrastruktur in 48-72 Stunden von Grund auf neu rekonstruieren, nachdem der OCI-Zugriff des schlechten Apfels beendet wurde.
 
 -----
 
@@ -141,7 +139,7 @@ Wir empfehlen Enterprise-Kunden, ein Splunk-Konto zu erstellen, und wir werden I
 
 Wir überwachen die Serviceverfügbarkeit von allen unseren OCI-POPs weltweit und lösen HA (Availability-Domain) oder regionale Failover-Ereignisse aus, wenn ein Serverausfall länger als 30 Sekunden dauert.
 
-ACL-Auditing kann durch einfaches Erstellen einer Website durchgeführt werden's Subversion HEAD mit Apache Licensed [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) Skript und Prüfung des resultierenden Builds [`www/.acl`](#) Datei in Ihrem Kassenausgangsverzeichnis, jederzeit wünschen.  Normalerweise dauert der Build-Prozess auf moderner Hardware weniger als 10-15 Sekunden.
+ACL Auditing kann durchgeführt werden, indem Sie einfach den Subversion HEAD einer Website mit dem Apache Licensed erstellen [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) Skript und Prüfung des resultierenden Builds [`www/.acl`](#) Datei in Ihrem Kassenausgangsverzeichnis, jederzeit wünschen.  Normalerweise dauert der Build-Prozess auf moderner Hardware weniger als 10-15 Sekunden.
 
 Subversion Server-seitige Commit-Hooks sind auch an Ihre Aufsichtsprobleme anpassbar. Von einem einfachen Commit-Mailer bis hin zum sicheren Zugriff auf unseren svnpubsub-Daemon gibt es eine beliebige Anzahl von benutzerdefinierten Konfigurationen.
 
@@ -149,7 +147,7 @@ Subversion Server-seitige Commit-Hooks sind auch an Ihre Aufsichtsprobleme anpas
 
 ## Orion-Anwendungssicherheit
 
-### [Öffentliche SSR ist ein Geruch](https://queue.acm.org/detail.cfm?id=2721993).
+### [Öffentliche SSR ist ein Geruch](https://queue.acm.org/detail.cfm?id=2721993)
 
 ### ACL-Verwaltung
 
@@ -162,9 +160,9 @@ digraph {
 
 &nbsp;
 
-Orion'Das Sicherheitsmodell wird zentral von den Einstellungen verwaltet, die in [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) als verstopft in [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Offshoot-Serverkonfigurationsdateien werden bei jeder erstellten Änderung dynamisch generiert.
+Das Sicherheitsmodell von Orion wird zentral von den Einstellungen verwaltet, die in [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) als verstopft in [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Offshoot-Serverkonfigurationsdateien werden bei jeder erstellten Änderung dynamisch generiert.
 
-Wenn Sie das Sicherheitsmodell des POSIX-Dateisystems verstehen, sind Sie mit Orion zu Hause's [mod_dav_svn]() Autorisierungsmodell und der Apache HTTPd Webserver's .htaccess-Kontrollen, die automatisch von Ihrer Website generiert werden's [lib/acl.yml](#) YAML-Konfiguration.
+Wenn Sie das Sicherheitsmodell des POSIX-Dateisystems verstehen, sind Sie mit Orion zu Hause. [mod_dav_svn]() Autorisierungsmodell und die .htaccess-Steuerelemente des Apache HTTPd-Webservers, die automatisch von der [lib/acl.yml](#) YAML-Konfiguration.
 
 ### OpenIDC SSO-Sicherheit
 
@@ -196,7 +194,7 @@ Wir befassen uns mit diesen Themen, wie sie sich unten auf Orion beziehen.
 
 #### Online-Editor
 
-Der Online-Editor unterstützt eine JSON-UI, indem Sie einfach Ihren User-Agent festlegen's Akzeptieren Sie die Kopfzeile, um die [`Anwendung/json`](#) MIME-Typ, sodass die Sicherheitskontrollen sowohl für die UI als auch für die API identisch sind.
+Der Online-Editor unterstützt eine JSON-UI, indem Sie einfach den Accept-Header Ihres Benutzer-Agent so einstellen, dass er die [`Anwendung/json`](#) MIME-Typ, sodass die Sicherheitskontrollen sowohl für die UI als auch für die API identisch sind.
 
 **Außerhalb des direkten Subversion-Zugriffs ist keine administrative UI/API** vorhanden.
 
@@ -206,29 +204,29 @@ Jede über die Benutzeroberfläche verfügbare Arbeitskopierressource wird mit I
 
 ##### Commit-Zugriff wird direkt mit Subversion-ACLs gesteuert
 
-Nichts kann ohne einen entsprechenden autorisierten Subversion Commit über das Netzwerk erstellt und anschließend angezeigt werden. Das Hauptproblem hier ist die Kontrolle darüber, welche Informationen einem Wiki-Seitenautor zur Verfügung stehen.'S festgeschriebene und erstellte Bearbeitungen.
+Nichts kann ohne einen entsprechenden autorisierten Subversion Commit über das Netzwerk erstellt und anschließend angezeigt werden. Das Hauptproblem hier ist, zu kontrollieren, welche Informationen für die engagierten und erstellten Bearbeitungen eines Wiki-Seitenautors verfügbar sind.
 
 Wenn Sie die Vorverarbeitung von Vorlagen auf den Markdown-Quellseiten zulassen, müssen Sie wissen, wie Vorlagenargumente den Inhalt anderer Dateien im Baum als Variablen für die Quelle der bearbeiteten Seite verfügbar machen.
 
-Oft kann die bearbeitete Seite, wenn sie dazu konfiguriert ist, ihre eigenen Abhängigkeitsdateien in den Kopfzeilen der Seite deklarieren, was zu denken ist, wenn Sie Feature-Sets gegen Sicherheitseinstellungen in Ihrem Wiki abwägen.'s Informationsarchitektur.
+Oft kann die bearbeitete Seite, wenn sie dazu konfiguriert ist, ihre eigenen Abhängigkeitsdateien in den Kopfzeilen der Seite deklarieren, was zu denken ist, wenn Sie Feature-Sets gegen Sicherheitssteuerelemente in der Informationsarchitektur Ihres Wikis abwägen.
 
-Während wir Ihnen Unterstützung und Unterstützung anbieten können, um Ihren Bedürfnissen gerecht zu werden,'Es liegt wirklich an Ihnen, zu entscheiden, wie Sie die Skalen für Ihr Unternehmen ausgleichen.'Unternehmens-Wiki.
+Wir können zwar Anleitung und Unterstützung anbieten, um Ihren Bedürfnissen gerecht zu werden, aber es liegt wirklich an Ihnen, zu entscheiden, wie Sie die Skalen für das Enterprise-Wiki Ihrer Organisation ausgleichen.
 
-Siehe folgenden Abschnitt auf [Abhängigkeits-/ACL-Injection-Steuerelemente](#h4-dependency-acl-injection-controls) für weitere Details und Checkout dieses Live-Beispiel, wie einfach ACL's kann zentral konfiguriert werden in [`lib/acl.yml`]({{snippetA.pretty_uri}}):
+Siehe folgenden Abschnitt auf [Abhängigkeits-/ACL-Injection-Steuerelemente](#h4-dependency-acl-injection-controls) für weitere Details und Checkout dieses Live-Beispiels, wie einfach ACLs zentral konfiguriert werden können [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
-Inhaltsautoren können Seitenbeschränkungen auf der Seite konfigurieren's [Kopfzeilen]({{snippetB.pretty_uri}}):
+Inhaltsautoren können Seitenbeschränkungen in den Seiten konfigurieren [Kopfzeilen]({{snippetB.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=content/orion/security.md.en:branch=trunk:lines=1,4:lang=yaml]
 
-Geschützte Ressourcen können von nicht autorisiertem Personal nicht in eine Verzweigung kopiert werden, auch wenn keine zusätzlichen ACL-Steuerelemente bei der Erstellung und Änderung von Verzweigungen vorhanden sind. Das heißt, das System unterstützt Filialexperimente ohne zusätzliche Kontrollen Ihrerseits, um sicherzustellen, dass geschützte Vermögenswerte in jeder Filiale geschützt bleiben.'natürlichen Lebenszyklus.
+Geschützte Ressourcen können von nicht autorisiertem Personal nicht in eine Verzweigung kopiert werden, auch wenn keine zusätzlichen ACL-Steuerelemente bei der Erstellung und Änderung von Verzweigungen vorhanden sind. Mit anderen Worten, das System unterstützt Zweigsexperimente ohne zusätzliche Kontrollen Ihrerseits, um sicherzustellen, dass geschützte Assets während des gesamten natürlichen Lebenszyklus jeder Filiale geschützt bleiben.
 
 #### System-ACLs erstellen?
 
 Das Build-System ist allsehend und allwissend, aber wir können sicherstellen, dass Ihre gebauten, geschützten Assets nur für die Teams sichtbar sind, die Sie in den Subversion-ACLs verwalten und kontrollieren.
 
-Das Build-System zeigt die Liste der Dateinamen an, die bei einem Commit über die Browser-IDE erstellt wurden. Diese Liste basiert jedoch nur auf einem Benutzer.'s Lesezugriff auf die vom Benutzer abhängigen Ressourcen's Hinzufügen, Aktualisieren oder Löschen von Inhaltsaktionen im Commit.
+Das Build-System zeigt die Liste der Dateinamen an, die es bei einem Commit über die Browser-IDE erstellt hat. Diese Liste basiert jedoch nur auf dem Lesezugriff eines Benutzers auf die Ressourcen, je nachdem, welche Inhaltsaktionen der Benutzer beim Commit hinzufügen, aktualisieren oder löschen.
 
 ##### Durchlaufkontrollen für Vorlage
 
@@ -248,7 +246,7 @@ Alle Zieldateien befinden sich in einem Unterordner der [`/Inhalt/`](#) Ordner u
 
 Wenn der Zielpfad nicht konfiguriert ist in [`@path::Muster`](#) mit einer übereinstimmenden Einstellung, mit der der betreffende Zielpfad entweder archiviert oder kategorisiert werden kann, [`Ssi`](#) Vorgang nicht erfolgreich.
 
-Das liegt daran, [`Ssi`](#) Unterstützung ist eine Voraussetzung für diese Featuresets, um Ihre Site zu erhalten's taget *permalinks*.
+Das liegt daran, [`Ssi`](#) Der Support ist eine Voraussetzung für diese Featuresets, um die taget *permalinks* Ihrer Site zu erhalten.
 
 #### Abhängigkeits-/ACL-Injection-Steuerelemente
 
@@ -256,9 +254,9 @@ Kontrolliert von [`lib/path.pm`](#) Importe.
 
 ##### Bibliothek/{Pfad, Anzeigen}.pm Subversion-ACLs
 
-Es'klug, den Schreibzugriff auf diese Ressourcen zu kontrollieren, indem sie auf Personen beschränkt werden, die sowohl in der Codebase als auch autorisiert sind, Sicherheitskontrollen für den gesamten Satz von Assets unter Versionskontrolle (auch *alles* genannt) zu implementieren.
+Es ist ratsam, den Schreibzugriff auf diese Ressourcen zu kontrollieren, indem sie auf Personen beschränkt werden, die sowohl in der Codebasis als auch autorisiert sind, Sicherheitskontrollen für den gesamten Satz von Assets unter Versionskontrolle (auch bekannt als *alles *) zu implementieren.
 
-Es ist auch eine gute Idee, die [`@svnadmin`](#) Gruppe unter denen mit Lese- und Schreibzugriff, aber es'Es ist nicht unbedingt notwendig, auch wenn Sie von uns verlangen, dass wir Ihre Subversion-ACLs manuell zurücksetzen.
+Es ist auch eine gute Idee, die [`@svnadmin`](#) Gruppe unter denen mit Lese-Schreibzugriff, aber es ist nicht unbedingt notwendig, auch wenn Sie uns benötigen, um Ihre Subversion-ACLs manuell zurückzusetzen.
 
 ##### Dynamisch generierte Regeln über &#64;Pfad::acl
 
@@ -270,11 +268,11 @@ Wenn Sie den Benutzern die vollständige Versionskontrollhistorie zur Verfügung
 
 Andernfalls könnte das Material **versehentlich einem historischen Forscher ohne die erforderlichen Autorisierungen** ausgesetzt werden.
 
-Das Orion CMS'Die Verfolgungslogik zum Verschieben/Löschen verarbeitet diese nahtlos.
+Die Verfolgungslogik des Orion CMS zum Verschieben/Löschen übernimmt diese nahtlos.
 
 ##### Benutzerdefinierte Steuerelemente für die Verwendung von seed_file_deps() und  seed_file_acl() in lib/path.pm
 
-Neben dem Import dieser Symbole auf [`lib/path.pm`](#), gibt es auch eine Wahl, wie und auf welche Dateien Sie sie anwenden möchten, während einer walk_content_tree ()-Codeblockausführung.  Schließlich ist es's nicht nur eine Konfigurationsdatei, sondern eine Codebasis, mit allen Turing-Funktionen [`Perl`](#) wir'Sie kennen und schätzen es!
+Neben dem Import dieser Symbole auf [`lib/path.pm`](#), gibt es auch eine Wahl, wie und auf welche Dateien Sie sie anwenden möchten, während einer walk_content_tree ()-Codeblockausführung.  Schließlich ist es nicht nur eine Konfigurationsdatei, sondern eine Codebasis, mit allen Turing-Funktionen. [`Perl`](#) Wir haben uns kennengelernt und schätzen gelernt!
 
 #### Built Website .htaccss-Dateien und Subversion-Autorisierungsdateien werden mit &#64;Pfad::acl sofort nach Commit
 
@@ -310,7 +308,7 @@ CSS muss von unseren Servern geliefert werden.
 
 - [x] Plugin-Einschränkungen
 
-Aktuell PDF'Nur s.
+Derzeit nur PDF.
 
 ### Quellübergreifende Ressourcenfreigabe
 
