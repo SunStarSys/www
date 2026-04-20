@@ -13,7 +13,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Slab: "&check;"
   Notify: "Endast SCIM"
   Confluence: "&check;"
-- Feature: "FIPS 140-3-kompatibel, krypterad infrastruktur med nolltillit efter kvantitet"
+- Feature: "FIPS 140-3-kompatibel post-Quantum krypterad infrastruktur med nolltillit"
   Orion: "&check;"
 - Feature: "HIPPA-kompatibel"
   Orion: "&check;"

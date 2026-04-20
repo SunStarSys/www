@@ -13,7 +13,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Slab: "&check;"
   Notify: "Solo SCIM"
   Confluence: "&check;"
-- Feature: "Infraestructura Cero Confianza Cifrada Post-Quantum compatible con FIPS 140-3"
+- Feature: "Infraestructura de confianza cero cifrada post-cuántica compatible con FIPS 140-3"
   Orion: "&check;"
 - Feature: "Conformidad con HIPPA"
   Orion: "&check;"
