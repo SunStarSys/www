@@ -140,8 +140,8 @@ a -> c [color=red];
 ```mermaid
 graph TD
     A[Weihnachten]
- -->|Geld erhalten| B(Einkaufen)
-    B --> C{Lass mich denken}
+ -->|Geld verdienen| B(Einkaufen)
+    B --> C{Lassen Ich denke}
     C -->|Eins| D[fa:fa-laptop Laptop]
     C -->|Zwei| E[fa:fa-mobile iPhone]
     C -->|Drei| F[fa:fa-car Auto]
@@ -151,13 +151,13 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hallo John, wie geht es dir?
+    Alice->>John: Hallo John, Wie Sind Sie es?
     loop Healthcheck
         John->>John: Kampf gegen Hypochondrien
     end
-    Note right of John: Rationale Gedanken<br/>vorherrschen...
+    Note right of John: Rational Gedanken<br/>vorherrschen...
     John-->>Alice: Großartig!
-    John->>Bob: Wie wär's mit dir?
+    John->>Bob: Wie über Sie?
     Bob-->>John: Sehr gut!
 ```
 ----
@@ -175,7 +175,7 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> Noch
+    [*] --> Immer
     Immer --> [*]
     Immer --> Verschieben
     Verschieben --> Immer
@@ -191,7 +191,7 @@ gantt
     Eine Aufgabe           :a1, 2014-01-01, 30d
     Weitere Aufgabe     :after a1  , 20d
     section Another
-    Aufgabe in Sekunden    :2014-01-12  , 12d
+    Aufgabe in Sekunden      :(2014)-01-12  , 12d
     weitere Aufgabe      : 24d
 ```
 ----
@@ -244,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Quadratische Form] --> ci((Kreisform))
+    sq[Quadratische Form] --> KI((Kreis Form))
 
 subgraph A
         od>Ungerade Form]-- Zwei Zeilen<br/>Kantenkommentar --> Rohre
-        di{Diamant mit <br/> Zeilenumbruch} -.-> ro(Gerundet<br>Quadrat<br>Form)
-        di==>ro2(Rounded quadratische Form)
+        di{Diamant mit <br/> Zeilenumbruch} -.-> Rohre(Gerundet<br>Quadrat<br>Form)
+        di==>ro2(Rounded Quadratische Form)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Wirklich langer Text mit Zeilenumbruch<br>in einer ungeraden Form]
+    e --> od3>Echt langer Text mit Zeilenumbruch<br>in einer ungeraden Form]
 
-%% Comments after double percent signs
+%% Kommentare nach doppelten Prozentzeichen
     e((Innen/Kreis<br>und einige seltsame <br>Sonderzeichen)) --> f(,.?!+-*ز)
 
-cyr[Kyrillisch]-->cyr2((Kreisform Начало));
+Kyr[Cyrillic]-->cyr2((Circle shape Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,17 +270,17 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 mindmap
   root((Mindmap))
     Ursprünge
-      Lange Geschichte
-      ::icon(fa fa-book)
+      Lang Geschichte
+      ::icon(fa fa-Buch)
       Popularisierung
-        Britischer Psychologieautor Tony Buzan
+        Britisch Psychologieautor Tony Buzan
     Forschung
       Auf Effektivität<br/>und Funktionen
-      Bei automatischer Erstellung
+      Ein Automatische Erstellung
         Verwendungen
             Kreative Techniken
-            Strategische Planung
-            Argumentzuordnung
+            Strategisch Planung
+            Argument zuordnen
     Werkzeuge
       Stift und Papier
       Meerjungfrau

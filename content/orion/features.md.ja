@@ -141,7 +141,7 @@ a -> c [color=red];
 graph TD
     A[クリスマス]
  -->|お金を得る| B(ショッピング)
-    B --> C{考えさせてください}
+    B --> C{許可 考える}
     C -->|1つ| D[fa:fa-laptop ラップトップ]
     C -->|二つ| E[fa:fa-mobile iPhone]
     C -->|三つ| F[fa:fa-car 自動車]
@@ -151,13 +151,13 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    アリス->>こんにちはジョン、お元気ですか?
+    アリス->>ジョン: こんにちは ジョン, 方法 あなたは?
     loop Healthcheck
-        ジョン->>ジョン: ハイポコンドリアとの戦い
+        ジョン->>ジョン: 戦う ハイポコンドリア
     end
-    Note right of John: 理性的な思考<br/>支配...
+    Note right of John: 合理的 思考<br/>支配...
     John-->>Alice: 素晴らしいです!
-    ジョン->>ボブ: あなたはどうですか?
+    ジョン->>ボブ: 方法 あなたについて?
     Bob-->>ジョン:Jolly good!
 ```
 ----
@@ -175,7 +175,7 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] -->まだ
+    [*] --> まだ
     まだ --> [*]
     まだ --> 移動
     移動 --> まだ
@@ -188,11 +188,11 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    タスク           :a1、2014-01-01、30d
-    別のタスク     :after a1  , 20d
+    タスク:a1, 2014-01-01, 30d
+    別のタスク:after a1 , 20d
     section Another
-    秒単位のタスク      :2014-01-12  、 12d
-    別のタスク      : 24d
+    タスク(秒) :2014-01-12 , 12d
+    別のタスク: 24d
 ```
 ----
 ```mermaid
@@ -244,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[正方形の形状] --> ci((円形状))
+    sq[正方形の形状] --> シ((円 形状))
 
 subgraph A
         od>奇数シェイプ]-- 2行<br/>エッジコメント --> ロバ
-        di{ダイヤモンド<br/> 改行} -.-> ro(端数処理済<br>広場<br>形状)
+        di{ダイヤモンド<br/> 改行} -.-> ロバ(端数処理済<br>スクエア<br>形状)
         di==>ro2(Rounded 正方形の形)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    Eメール --> od3>本当に長いテキストとラインブレイク<br>奇妙な形]
+    Eメール --> od3>本当に長いテキストと行リーク<br>奇妙な形]
 
-%% Comments after double percent signs
+%% コメント 二重パーセント記号の後
     e((内部/円<br>SOMEODD <br>特殊文字)) --> f(,.?!+-*ز)
 
-cyr[キリル文字]-->cyr2(円形 Начало);
+cyr[Cyrillic]-->cyr2((Circle 形 Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,17 +270,17 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 mindmap
   root((マインドマップ))
     オリジン
-      長い歴史
-      ::icon(fa fa-book)
+      ロング 歴史学
+      ::icon(fa fa-登録する)
       人気
-        イギリス人気心理学作家トニー・ブザン
+        イギリス 人気心理学作家 トニー・ブザン
     調査
       有効性<br/>および機能
-      自動作成時
+      オン 自動作成
         使用
             クリエイティブテクニック
-            戦略的プランニング
-            引数マッピング
+            戦略的 計画
+            引数 マッピング
     ツール
       ペンと紙
       マーメイド

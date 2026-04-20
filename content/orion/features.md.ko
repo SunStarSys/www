@@ -141,7 +141,7 @@ a -> c [color=red];
 graph TD
     A[크리스마스]
  -->|돈 받기| B(쇼핑)
-    B --> C{생각해 보자}
+    B --> C{허가 내 생각}
     C -->|하나| D[fa:fa-laptop 랩톱]
     C -->|두 개| E[fa:fa-mobile iPhone]
     C -->|세 개| F[fa:fa-car 자동차]
@@ -151,13 +151,13 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    앨리스->>안녕하세요 존, 어떻게 지내십니까?
+    앨리스->>John: 안녕하세요 John, 방법 당신은?
     loop Healthcheck
-        John->>존: 하이포콘드리아와의 싸움
+        John->>John: 싸움 저자 hypochondria
     end
     Note right of John: 합리적인 생각<br/>이전...
     John-->>관련 리뷰: Great!
-    John->>밥: 너는 어때?
+    John->>밥: 방법 당신에 관하여?
     Bob-->>존 : Jolly Good!
 ```
 ----
@@ -175,7 +175,7 @@ erDiagram
 ----
 ```mermaid
 stateDiagram-v2
-    [*] --> 계속
+    [*] --> 아직
     아직 --> [*]
     아직 --> 이동 중
     이동 중 --> 아직
@@ -188,11 +188,11 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    작업           :a1, 2014-01-01, 30d
-    다른 태스크     :after a1  , 20d
+    태스크           :a1, 2014-01-01, 30d
+    다른 태스크     :이후 a1  , 20d
     section Another
-    초 단위의 작업      :2014-01-12  , 12d
-    다른 작업      : 24d
+    태스크(초)      :2014년-01-12  , 12d
+    다른 태스크      : 24d
 ```
 ----
 ```mermaid
@@ -248,17 +248,17 @@ graph TB
 
 subgraph A
         od>홀수 모양]-- 두 줄<br/>가장자리 설명 --> 로
-        di{다이아몬드 with <br/> 줄바꿈} -.-> ro(반올림<br>사각형<br>모양)
-        di==>ro2(Rounded 정사각형 모양)
+        di{다이아몬드 with <br/> 줄바꿈} -.-> 로(반올림<브릿지<br>모양)
+        di==>ro2(Rounded 사각형 모양)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>줄바꿈이 있는 긴 텍스트<br>홀수 모양]
+    e --> od3>라인브레이크가 있는 실제 긴 텍스트<br>홀수 모양]
 
-%% Comments after double percent signs
+%% 설명 이중 퍼센트 기호
     e((내부/원<br>일부 odd <br>특수 문자)) --> f(,.?!+-*ز)
 
-cyr[키릴 문자]-->cyr2((원 모양 Начало));
+사이어[Cyrillic]-->cyr2((Circle 모양 Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,16 +270,16 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 mindmap
   root((마음 맵))
     출처
-      긴 역사
-      ::icon(fa fa-book)
+      길게 기록
+      ::icon(fa fa-장부)
       대중화
-        영국의 인기 심리학 작가 토니 부잔
+        영국인 심리학자 토니 부잔
     연구
       유효성<br/>및 기능
-      자동 생성 시
+      켜기 자동 생성
         사용
             창조 기법
-            전략적 계획 수립
+            전략적 계획
             인수 매핑
     도구
       펜 및 종이

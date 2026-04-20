@@ -141,7 +141,7 @@ a -> c [color=red];
 graph TD
     A[Natal]
  -->|Obter dinheiro| B(Ir às compras)
-    B --> C{Deixe-me pensar}
+    B --> C{Deixar eu acho}
     C -->|Um| D[fa:fa-laptop Computador]
     C -->|Dois| E[fa:fa-mobile iPhone]
     C -->|Três| F[fa:fa-car Carro]
@@ -151,13 +151,13 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Olá John, como você está?
+    Alice->>João: Olá João, como você é?
     loop Healthcheck
-        João->>John: Luta contra a hipocondria
+        João->>João: Luta contra a hipocondria
     end
-    Note right of John: Pensamentos racionais<br/>prevalecer...
+    Note right of John: Racional pensamentos<br/>prevalecer...
     John-->>Alice: Ótimo!
-    João->>Bob: E você?
+    João->>Bob: Como sobre você?
     Bob-->>John: Muito bom!
 ```
 ----
@@ -189,9 +189,9 @@ gantt
     dateFormat  YYYY-MM-DD
     section Section
     Uma tarefa           :a1, 2014-01-01, 30d
-    Outra tarefa     :after a1  , 20d
+    Outra tarefa     :após a1  , 20d
     section Another
-    Tarefa em seg      :2014-01-12  , 12d
+    Tarefa em segundo      :2014-01-12  , 12d
     outra tarefa      : 24d
 ```
 ----
@@ -244,7 +244,7 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Forma quadrada] --> ci((Forma do círculo))
+    sq[Forma quadrada] --> ci((Circular forma))
 
 subgraph A
         od>Forma ímpar]-- Duas linhas<br/>comentário de borda --> ro
@@ -255,10 +255,10 @@ subgraph A
 %% Notice that no text in shape are added here instead that is appended further down
     e --> od3>Texto muito longo com quebra de linha<br>em uma forma estranha]
 
-%% Comments after double percent signs
+%% Comentários após sinais de porcentagem dupla
     e((Interno / círculo<br>e algum estranho <br>caracteres especiais)) --> f(,.?!+-*ز)
 
-cyr[Cirílico]-->cyr2(Forma do círculo Начало);
+cyr[Cyrillic]-->cyr2((Circle shape Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,17 +270,17 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 mindmap
   root((mapa mental))
     Origens
-      História longa
-      ::icon(fa fa-book)
+      Longo história
+      ::icon(fa fa-livro)
       Popularização
-        Autor britânico Tony Buzan
+        Britânico autor de psicologia popular Tony Buzan
     Pesquisa
       Na efetividade<br/>e recursos
-      Criação automática
+      Ativado Criação automática
         Usos
             Técnicas criativas
-            Planejamento estratégico
-            Mapeamento de argumentos
+            Estratégico planejamento
+            Argumento mapeamento
     Ferramentas
       Caneta e papel
       Sereia

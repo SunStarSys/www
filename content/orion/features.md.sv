@@ -151,9 +151,9 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>Hej John, hur mår du?
+    Alice->>John: Hej John, hur mår du?
     loop Healthcheck
-        John->>John: Kampen mot hypokondrier
+        John->>John: Kampen mot hypokondri
     end
     Note right of John: Rationella tankar<br/>föregå...
     John-->>Alice: Utmärkt!
@@ -191,8 +191,8 @@ gantt
     En uppgift           :a1, 2014-01-01, 30d
     Ytterligare uppgift     :after a1  , 20d
     section Another
-    Uppgift i sek      :2014-01-12  , 12d
-    en annan uppgift    : 24d
+    Uppgift i sek.      :2014-01-12  , 12d
+    en annan uppgift      : 24d
 ```
 ----
 ```mermaid
@@ -244,7 +244,7 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Fyrkantig form] --> ci((Cirkelform))
+    sq[Fyrkantig form] --> bigarrå((Cirkelform))
 
 subgraph A
         od>Udda form]-- Två rader<br/>kanttkommentar --> ro
@@ -253,10 +253,10 @@ subgraph A
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>Riktigt lång text med linebreak<br>I en udda form]
+    e --> od3>Riktigt lång text med radbrytning<br>I en udda form]
 
-%% Comments after double percent signs
-    e((Inre/cirkel<br>och några udda <br>specialtecken)) --> f(,.?!+-*ز)
+%% Kommentarer efter tecken med dubbla procent
+    e((Inre/cirkel<br>och några udda <br>specialtecken)) --> fm(,.?!+-*ز)
 
 cyr[Kyrilliska språk]-->cyr2((Cirkelform Начало));
 
@@ -271,7 +271,7 @@ mindmap
   root((färdplan))
     Ursprung
       Lång historia
-      ::icon(fa fa-book)
+      ::icon(fa fa-bok)
       Popularisering
         Brittisk psykologförfattare Tony Buzan
     Forskning

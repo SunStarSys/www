@@ -141,7 +141,7 @@ a -> c [color=red];
 graph TD
     A[Noël]
  -->|Obtenir de l'argent| B(Faire du shopping)
-    B --> C{Laissez-moi réfléchir}
+    B --> C{Laissez je pense}
     C -->|Un| D[fa:fa-laptop Ordinateur portable]
     C -->|Deux| E[fa:fa-mobile iPhone]
     C -->|Trois| F[fa:fa-car Voiture]
@@ -151,13 +151,13 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John : Bonjour John, comment vas-tu ?
+    Alice->>John: Bonjour John, comment êtes-vous ?
     loop Healthcheck
-        John->>John : Lutte contre l'hypochondrie
+        John->>John: Combat contre l'hypochondrie
     end
-    Note right of John: Pensées rationnelles<br/>prévaut...
+    Note right of John: Rationnel pensées<br/>prévaut...
     John-->>Alice : Génial !
-    John->>Bob : Et toi ?
+    John->>Bob: Comment et toi ?
     Bob-->>John : Très bien !
 ```
 ----
@@ -188,19 +188,19 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    Une tâche         :a1, 2014-01-01, 30d
-    Autre tâche     :after a1  , 20d
+    Une tâche           :a1, 2014-01-01, 30d
+    Autre tâche     :après a1  , 20d
     section Another
-    Tâche en seconde       :2014-01-12  , 12d
-    autre tâche     : 24d
+    Tâche en secondes      :2014-01-12  , 12d
+    autre tâche      : 24d
 ```
 ----
 ```mermaid
 pie title Commits to orion on GitHub
-	"Dimanche"  : 4
-	"Lundi"  : 5
-	"Mardi"  : 7
-  "Mercredi"  : 3
+	"Dimanche" : 4
+	"Lundi" : 5
+	"Mardi" : 7
+  "Mercredi" : 3
 ```
 ----
 ```mermaid
@@ -244,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Forme carrée] --> ci((Forme du cercle))
+    sq[Forme carrée] --> ci-dessous((Cercle forme))
 
 subgraph A
         od>Forme impaire]-- Deux lignes<br/>commentaire d'arête --> rocher
-        di{Diamant avec <br/> saut de ligne} -.-> ro(Arrondi<br>carré<br>forme)
+        di{Diamant avec <br/> saut de ligne} -.-> rocher(Arrondi<br>carré<br>forme)
         di==>ro2(Rounded forme carrée)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
     e --> od3>Texte vraiment long avec saut de ligne<br>dans une forme impaire]
 
-%% Comments after double percent signs
+%% Commentaires après deux signes de pourcentage
     e((Intérieur / cercle<br>et un peu bizarre <br>caractères spéciaux)) --> f(,.?!+-*ز)
 
-cyr[Cyrillique]-->cyr2((Forme de cercle Начало)) ;
+cyr[Cyrillic]-->cyr2((Circle shape Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,17 +270,17 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 mindmap
   root((carte mentale))
     Origines
-      Longue histoire
-      ::icon(fa fa-book)
+      Long historique
+      ::icon(fa fa-livre)
       Popularisation
-        Auteur britannique de psychologie populaire Tony Buzan
+        Britannique Auteur de psychologie Tony Buzan
     Recherche
       Sur l'effectivité<br/>et fonctionnalités
-      Lors de la création automatique
+      Activé Création automatique
         Utilisations
             Techniques créatives
-            Planification stratégique
-            Mappage des arguments
+            Stratégique planification
+            Argument mappage
     Outils
       Stylo et papier
       Sirène

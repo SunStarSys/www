@@ -140,8 +140,8 @@ a -> c [color=red];
 ```mermaid
 graph TD
     A[Navidad]
- -->|Obtenga dinero| B(Ir de compras)
-    B --> C{Déjame pensar}
+ -->|Obtener dinero| B(Ir de compras)
+    B --> C{Permitir pienso yo}
     C -->|Uno| D[fa:fa-laptop Equipo portátil]
     C -->|Dos| E[fa:fa-mobile iPhone]
     C -->|Tres| F[fa:fa-car Coche]
@@ -151,13 +151,13 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    Alice->>John: Hola John, ¿cómo estás?
+    Alice->>John: Hola John, cómo ¿Eres tú?
     loop Healthcheck
         John->>John: Lucha contra la hipocondría
     end
-    Note right of John: Pensamientos racionales<br/>prevalezcan...
+    Note right of John: Racional pensamientos<br/>prevalezcan...
     John-->>Alice: ¡Genial!
-    John->>Bob: ¿Y tú?
+    John->>Bob: Cómo acerca de usted?
     Bob-->>John: ¡Bien!
 ```
 ----
@@ -188,11 +188,11 @@ gantt
     title A Gantt Diagram
     dateFormat  YYYY-MM-DD
     section Section
-    Tarea           :a1, 2014-01-01, 30d
-    Otra tarea     :after a1  , 20d
+    Una tarea           :a1, 2014-01-01, 30d
+    Otra tarea     :after de a1  , 20d
     section Another
-    Tarea en segundo      :2014-01-12  , 12d
-    otra tarea    : 24d
+    Tarea en segundos      :2014-01-12  , 12d
+    otra tarea      : 24d
 ```
 ----
 ```mermaid
@@ -244,7 +244,7 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[Forma cuadrada] --> ci((Forma de círculo))
+    sq[Forma cuadrada] --> CI((Círculo forma))
 
 subgraph A
         od>Forma impar]-- Dos líneas<br/>comentario de borde --> ro
@@ -255,10 +255,10 @@ subgraph A
 %% Notice that no text in shape are added here instead that is appended further down
     e --> od3>Texto realmente largo con salto de línea<br>en una forma extraña]
 
-%% Comments after double percent signs
+%% Comentarios tras signos del doble por ciento
     e((Interior/círculo<br>y algunos extraños <br>caracteres especiales)) --> f(,.?!+-*ز)
 
-cyr[Cirílico]-->cyr2((forma de círculo Начало));
+Cir[Cyrillic]-->cyr2((Circle shape Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,17 +270,17 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 mindmap
   root((mapa mental))
     Orígenes
-      Larga historia
-      ::icon(fa fa-book)
+      Largo historial
+      ::icon(fa fa-libro)
       Popularización
-        Autor de psicología popular británico Tony Buzan
+        Británico autor de psicología Tony Buzan
     Investigación
       Sobre la eficacia<br/>y características
-      En creación automática
+      Activado Creación automática
         Usos
             Técnicas creativas
-            Planificación estratégica
-            Asignación de argumentos
+            Estratégico planificación
+            Argumento asignación
     Herramientas
       Pluma y papel
       Sirena

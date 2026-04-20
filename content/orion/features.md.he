@@ -141,7 +141,7 @@ a -> c [color=red];
 graph TD
     A[חג המולד]
  -->|קבל כסף| B(ביצוע קניות)
-    ב' --> C{תן לי לחשוב}
+    ב' --> ג{לתת אני חושב}
     C -->|אחד| D[fa:fa-laptop מחשב נייד]
     C -->|שתיים| E[fa:fa-mobile iPhone]
     C -->|שלוש| F[fa:fa-car מכונית]
@@ -151,13 +151,13 @@ graph TD
 sequenceDiagram
     participant Alice
     participant Bob
-    אליס->>שלום ג'ון, מה שלומך?
+    אליס->>יוחנן: שלום יוחנן, איך אתה?
     loop Healthcheck
-        יוחנן->>ג'ון: להילחם נגד היפוכונדריה
+        יוחנן->>יוחנן: קרב נגד היפוכונדריה
     end
-    Note right of John: מחשבות רציונליות<br/>הקודם...
+    Note right of John: רציונלי מחשבות<br/>הקודם...
     John-->>אליס: מעולה!
-    יוחנן->>מה איתך?
+    יוחנן->>בוב: איך אודותיך?
     Bob-->>ג'ולי טוב!
 ```
 ----
@@ -189,7 +189,7 @@ gantt
     dateFormat  YYYY-MM-DD
     section Section
     משימה           :a1, 2014-01-01, 30d
-    משימה אחרת     :after a1  , 20d
+    משימה אחרת     :אחרי a1  , 20d
     section Another
     משימה בשניות      :2014-01-12  , 12d
     משימה אחרת      : 24d
@@ -244,21 +244,21 @@ gitGraph
 ```mermaid
 %%{init:{"theme":"default"}}%%
 graph TB
-    sq[צורה מרובעת] --> ci((צורת עיגול))
+    sq[צורה מרובעת] --> צ'י((עיגול צורה))
 
 subgraph A
         od>צורה אי-זוגית]-- שני קווים<br/>הערת קצה --> שורש
-        di{יהלום עם <br/> מעבר שורה} -.-> ro(מעוגל<br>ריבוע<br>צורה)
+        di{יהלום עם <br/> מעבר שורה} -.-> שורש(מעוגל<br>ריבוע<br>צורה)
         di==>ro2(Rounded צורה מרובעת)
     end
 
 %% Notice that no text in shape are added here instead that is appended further down
-    e --> od3>טקסט ארוך עם מעבר שורה<br>בצורה מוזרה]
+    e --> od3>טקסט ארוך מאוד עם linebreak<br>בצורה מוזרה]
 
-%% Comments after double percent signs
+%% הערות סימני אחוזים כפולים
     e((פנימי / עיגול<br>קצת מוזר <br>תווים מיוחדים)) --> f(,.?!+-*ز)
 
-cyr[קירילית]-->cyr2(צורת מעגל Начало);
+שנה[Cyrillic]-->cyr2((Circle shape Начало));
 
 classDef green fill:#9f6,stroke:#333,stroke-width:2px;
      classDef orange fill:#f96,stroke:#333,stroke-width:4px;
@@ -270,17 +270,17 @@ classDef green fill:#9f6,stroke:#333,stroke-width:2px;
 mindmap
   root((מפת חשיבה))
     מקורות
-      היסטוריה ארוכה
-      ::icon(fa fa-book)
+      ארוך היסטוריה
+      ::icon(fa fa-ספר)
       פופולריות
-        מחבר הפסיכולוגיה הפופולרית הבריטית טוני בוזאן
+        בריטי הפסיכולוגיה הפופולרית טוני בוזאן
     מחקר
       אפקטיביות<br/>ותכונות
-      ביצירה אוטומטית
+      מופעל יצירה אוטומטית
         שימושים
             טכניקות יצירתיות
-            תכנון אסטרטגי
-            מיפוי ארגומנטים
+            אסטרטגי תכנון
+            ארגומנט מיפוי
     כלים
       עט ונייר
       בתולת ים
