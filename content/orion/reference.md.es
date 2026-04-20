@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: ~
-published: ~
 status: borrador
 title: Referencia de Orion
 ---
@@ -14,21 +12,21 @@ title: Referencia de Orion
 
 ## Demostración en directo
 
-Para una demostración de Orión &trade;
+Para una demostración de Orión &trade;IDE, visite <https://www.openoffice.org/> para un sitio masivo, o <https://thrift.apache.org/> para obtener una intrincada, y haga clic en el marcador anterior para ver un prototipo en vivo en acción.
 
-Si eso es demasiado molesto para usted, este sitio web se aloja en Orion &trade;, y {# lede #}esos iconos de lápiz rosa [<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en la parte superior derecha junto a las migas de pan le dará una demostración en vivo{# lede #}
+Si eso es demasiado molesto para usted, este sitio web se aloja automáticamente en Orion &trade;y {# lede #}esos iconos de lápiz rosa caliente [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en la parte superior derecha junto a las migas de pan le dará una demostración en vivo{# lede #} de cómo funciona el sistema (sin acceso de confirmación/creación, que está bloqueado únicamente para el personal).
 
-## Marcador recomendado
+## Bookmarklet recomendado
 
-Asegúrese de instalar el marcador en la barra de herramientas de su navegador abriendo una pantalla de diálogo "Nuevo marcador" desde el menú de su navegador y escribiendo lo siguiente en el campo Ubicación/URL:
+Por favor, asegúrese de instalar el marcador en la barra de herramientas de su navegador abriendo un "Nuevo marcador" Pantalla de diálogo del menú del explorador y escribiendo lo siguiente en el campo Ubicación/URL:
 
 ```javascript
 	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
 ```
 
-Sin este bookmarklet instalado no podrá navegar por el sitio en vivo y editar instantáneamente páginas en Orion &trade;
+Sin este bookmarklet instalado no podrás navegar por el sitio en directo y editar páginas al instante en Orion &trade; haciendo clic en el bookmarklet.
 
-Para utilizar el bookmarklet simplemente vaya a su sitio de producción en vivo (NO en Orion) &trade;
+Para usar el marcador simplemente navegue a su sitio de producción en vivo (NO en Orion) &trade;!), busque la página que desea editar y haga clic en el marcador. Usted será llevado a una página dentro de este Orion que le permite editar el contenido.
 
 ## Guía de introducción
 
@@ -41,17 +39,17 @@ Para utilizar el bookmarklet simplemente vaya a su sitio de producción en vivo 
 
 [snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
 
-No de procesos de vinculación
+## Proceso de vinculación
 
-Para los primeros en adoptar, Orion &trade;
+Para los primeros usuarios, Orion &trade; el servicio se encuentra entre el árbol de origen del sitio web del repositorio de Subversion y los servidores web de producción en directo que entregan contenido del sitio a los usuarios finales.  La incorporación es muy sencilla para las organizaciones que ya ejecutan su propio servicio Subversion habilitado para svnpubsub:
 
 1. Proporcionarnos la URL de las fuentes de su sitio en Subversion.
 
-2. Proporcionarnos la dirección de correo electrónico (rol o lista de correo) para discutir los problemas de desarrollo y mantenimiento del sitio, y garantizar que la dirección sea [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+2. Proporcionarnos la dirección de correo electrónico (rol, o lista de correo) para analizar los problemas de desarrollo y mantenimiento del sitio, y garantizar que la dirección sea [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-compatible en términos de facilidades de moderación.
 
-3. Suscríbete a tus servidores web de producción `svnwcsub` daemon a nuestro público `svnpubsub`
+3. Suscribe a tus servidores web de producción `svnwcsub` daemon a nuestro público `svnpubsub` servicio.  Estos componentes de software independientes son parte de cada nueva versión de origen de Subversion, y están razonablemente maduros y bien respaldados por el equipo de desarrollo de Subversion.  Si no puede esperar a que finalice el puerto python3, podemos permitirle usar nuestros puertos (thread) en su lugar.
 
-4. Háganos saber si desea que se envíen diferencias de contenido de las compilaciones y a qué dirección de correo electrónico desea que se envíen.
+4. Háganos saber si desea que se envíen las diferencias de contenido de las compilaciones y a qué dirección de correo electrónico desea que se entreguen.
 
 ## Diseño de directorio de origen
 
@@ -62,18 +60,18 @@ Para los primeros en adoptar, Orion &trade;
 	- lib/
 		- path.pm
 		- view.pm
-- ramas/
+- sucursales/
+	.. cada rama sigue el diseño del tronco por encima ...
 
-
-Consulte <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/> para obtener un ejemplo activo.
+Ver <https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> para un ejemplo vivo.
 
 ## Contenido dinámico
 
-### Ejemplo de script para volver a generar una página de origen con contenido cambiante, incluso cuando los orígenes no lo hacen.
+### Script de ejemplo para volver a generar una página de origen con el cambio de contenido, incluso cuando los orígenes no lo hacen.
 
-La idea básica es que algunas de sus páginas de origen de alto perfil se construyen con contenido "dinámico" (construir incorpora fragmentos siempre cambiantes de otros sitios en línea, como cascadas de Jira o hilos de listas de correo actuales).
+La idea básica es que algunas de sus páginas de origen de alto perfil construyen con "dinámica" contenido (build incorpora fragmentos en constante cambio de otros sitios en línea, como cascadas de Jira o hilos de listas de correo actuales).
 
-Un buen ejemplo de esto es la sección "Últimas noticias" de [Página de inicio de ASF](https://www.apache.org/), y aquí está la forma detrás de las escenas que funciona, con un poco de magia shell + svn + cron como se ejemplifica aquí (tomar el archivo fuente de la compilación dinámica como `Archivo $`
+Un buen ejemplo de ello es "Últimas noticias" sección de [Página de inicio de ASF](https://www.apache.org/), y aquí está la forma detrás de escena en que funciona, con un poco de magia shell+svn+cron como se ejemplifica aquí (tome el archivo de origen de la compilación dinámica como `$archivo` abajo):
 
 ```shell
 % cp $file $file.tmp
@@ -83,17 +81,17 @@ Un buen ejemplo de esto es la sección "Últimas noticias" de [Página de inicio
 % svn commit -m "rebuild $file"
 ```
 
-Incorpore esto en un pequeño script de shell que usará sus credenciales svn almacenadas en caché en su propio PC, y haga que cron lo ejecute para usted en un horario fijo (basado en su servidor web frontend / TTL de la caché HTTP de CDN).  No hay necesidad de herramientas del lado del servidor de nuestro lado; usted tiene el control total de su propia seguridad de contraseña, programación y destinos de página dinámica.  Si está utilizando su propio servicio de Subversion habilitado para svnpubsub, ninguna de esas transacciones involucra directamente a nuestro hardware. Su confirmación disparará nuestro cliente svnwcsub, siempre escuchando su servidor svnpubsub, para crear y desplegar esos cambios bajo demanda &mdash;
+Incorpore esto en un pequeño script de shell que usará sus credenciales svn almacenadas en caché en su propio PC y haga que cron lo ejecute por usted en un horario fijo (basado en su TTL de TTL de caché HTTP de servidor web / CDN de frontend).  Sin necesidad de herramientas del lado del servidor; usted tiene control total de su propia seguridad de contraseña, programación y destinos de página dinámica.  Si utiliza su propio servicio Subversion habilitado para svnpubsub, ninguna de esas transacciones involucra directamente a nuestro hardware. Su confirmación activará nuestro cliente svnwcsub, siempre escuchando su servidor svnpubsub, para crear e implementar esos cambios bajo demanda &mdash; pronto.
 
-No de excepciones
-
-Por determinar
-
-No de búsquedas
+## Excepciones
 
 Por determinar
 
-No de confirmaciones rápidas
+## Buscar
+
+Por determinar
+
+## Confirmación rápida
 
 Por determinar
 

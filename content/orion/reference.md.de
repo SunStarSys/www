@@ -1,11 +1,9 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: ~
-published: ~
 status: Entwurf
-title: Orionreferenz
+title: Orion-Referenz
 ---
 
 <div class="float-lg-right">
@@ -14,21 +12,21 @@ title: Orionreferenz
 
 ## Live-Demo
 
-Zur Demonstration von Orion &trade;
+Für eine Demonstration von Orion &trade;'s IDE, besuchen <https://www.openoffice.org/> für eine riesige Website oder <https://thrift.apache.org/> Klicken Sie auf das obige Bookmarklet, um einen Live-Prototyp in Aktion anzuzeigen.
 
-Wenn das zu viel für Sie ist, ist diese Website selbst gehostet auf Orion &trade;und {# lede #}Diese Hot-Pink-Bleistift-Icons [<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) oben rechts neben den Brotkrümeln wird Ihnen eine Live-Demonstration geben{# lede #}
+Wenn das zu viel Ärger für Sie ist, ist diese Website auf Orion selbst gehostet &trade;und {# lede #}Diese Hot-Pink-Bleistift-Symbole [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) oben rechts neben den Brotkrümeln gibt Ihnen eine Live-Demonstration{# lede #} der Funktionsweise des Systems (ohne Commit/Build-Zugriff, der nur für Mitarbeiter gesperrt ist).
 
 ## Empfohlenes Lesezeichen
 
-Stellen Sie sicher, dass Sie das Bookmarklet in der Symbolleiste Ihres Browsers installieren, indem Sie einen Dialogbildschirm "Neues Lesezeichen" aus dem Menü Ihres Browsers öffnen und Folgendes in das Feld "Speicherort/URL" eingeben:
+Bitte installieren Sie das Bookmarklet in der Symbolleiste Ihres Browsers, indem Sie eine "Neues Lesezeichen" Dialogfenster aus dem Menü Ihres Browsers, und geben Sie Folgendes in das Feld Standort/URL ein:
 
 ```javascript
 	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
 ```
 
-Wenn dieses Lesezeichen nicht installiert ist, können Sie die Live-Website nicht durchsuchen und Seiten in Orion sofort bearbeiten &trade;
+Wenn dieses Bookmarklet nicht installiert ist, können Sie die Live-Site nicht durchsuchen und Seiten in Orion sofort bearbeiten &trade; durch Klicken auf das Bookmarklet.
 
-Um das Bookmarklet zu verwenden, navigieren Sie einfach zu Ihrer Live-Produktionswebsite (NICHT in Orion) &trade;
+Um das Bookmarklet zu verwenden, navigieren Sie einfach zu Ihrer Live-Produktionswebsite (NICHT in Orion) &trade;!), suchen Sie eine Seite, die Sie bearbeiten möchten, und klicken Sie auf das Bookmarklet. Sie werden zu einer Seite in diesem Orion weitergeleitet, auf der Sie den Inhalt bearbeiten können.
 
 ## Erste Schritte
 
@@ -43,15 +41,15 @@ Um das Bookmarklet zu verwenden, navigieren Sie einfach zu Ihrer Live-Produktion
 
 ## Onboardingprozess
 
-Für Early Adopters, Orion &trade;
+Für Early Adopters, Orion &trade; Der Service befindet sich zwischen dem Website-Quellbaum Ihres Subversion-Repositorys und Ihren Live-Produktionswebservern, die Ihren Endbenutzern Site-Inhalte bereitstellen.  Onboarding ist für Organisationen, die bereits ihren eigenen Subversion-Service mit svnpubsub-Unterstützung ausführen, einfach:
 
-1. Stellen Sie uns die URL der Quellen Ihrer Website in Subversion zur Verfügung.
+1. Geben Sie uns die URL der Quellen Ihrer Website in Subversion.
 
-2. Geben Sie uns die E-Mail-Adresse (Rolle oder Mailingliste) für die Besprechung von Problemen bei der Siteentwicklung und -wartung und stellen Sie sicher, dass die Adresse [Standardprozesse](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+2. Geben Sie die E-Mail-Adresse (Rolle oder Mailingliste) an, um Probleme bei der Entwicklung und Wartung der Website zu besprechen, und stellen Sie sicher, dass die Adresse [Standardprozesse](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-konform in Bezug auf Moderationseinrichtungen.
 
-3. Abonnieren Sie Ihre Produktion Webserver' `svnwcsub` Dämon für unsere Öffentlichkeit `svnpubsub`
+3. Abonnieren Sie Ihre Produktionswebserver' `svnwcsub` Daemon für unsere Öffentlichkeit `svnpubsub` Service.  Diese eigenständigen Softwarekomponenten sind Teil jeder neuen Subversion-Quellversion und werden vom Subversion Development Team angemessen ausgereift und gut unterstützt.  Wenn Sie nur nicht warten können, bis der python3-Port fertig ist, können Sie stattdessen unsere (Thread-)Ports verwenden.
 
-4. Teilen Sie uns mit, ob Sie Inhaltsunterschiede der versendeten Builds wünschen und an welche E-Mail-Adresse Sie sie senden möchten.
+4. Teilen Sie uns mit, ob Sie die Inhaltsunterschiede der gesendeten Builds und die E-Mail-Adresse, an die sie gesendet werden sollen, berücksichtigen möchten.
 
 ## Quellverzeichnislayout
 
@@ -62,18 +60,18 @@ Für Early Adopters, Orion &trade;
 	- lib/
 		- path.pm
 		- view.pm
-- Zweige/
+- Niederlassungen/
+	.. jeder Zweig folgt dem Trunk-Layout oben ...
 
-
-Ein Live-Beispiel finden Sie unter <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/>.
+Siehe <https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> für ein Live-Beispiel.
 
 ## Dynamischer Inhalt
 
-### Beispielskript zum erneuten Generieren einer Quellseite mit sich änderndem Inhalt, auch wenn die Quellen dies nicht tun.
+### Beispielskript zur erneuten Generierung einer Quellseite mit sich änderndem Inhalt, auch wenn die Quellen dies nicht tun.
 
-Die Grundidee ist, dass einige Ihrer hochkarätigen Quellseiten mit "dynamischen" Inhalten erstellt werden (Build enthält ständig wechselnde Snippets von anderen Online-Websites, wie Jira Wasserfälle oder aktuelle Mailinglisten-Threads).
+Die Grundidee ist, dass einige Ihrer hochkarätigen Quellseiten mit "dynamisch" Inhalt (Build enthält sich ständig ändernde Snippets von anderen Online-Sites, wie Jira Wasserfälle oder aktuelle Mailinglisten-Threads).
 
-Ein gutes Beispiel dafür ist der Abschnitt "Neueste Nachrichten" von [ASF Homepage](https://www.apache.org/), und hier ist die Art und Weise, wie es hinter den Kulissen funktioniert, mit einer kleinen Shell + svn + cron Magie, wie sie hier veranschaulicht wird (nehmen Sie die Quelldatei des dynamischen Builds als `$Datei`
+Ein gutes Beispiel dafür ist "Aktuelle News" Abschnitt [Die ASF-Homepage](https://www.apache.org/), und hier ist die Art und Weise hinter den Kulissen, wie es funktioniert, mit ein wenig Shell+svn+cron Magie, wie hier veranschaulicht (nehmen Sie die Quelldatei des dynamischen Build als `$Datei` unten:
 
 ```shell
 % cp $file $file.tmp
@@ -83,23 +81,23 @@ Ein gutes Beispiel dafür ist der Abschnitt "Neueste Nachrichten" von [ASF Homep
 % svn commit -m "rebuild $file"
 ```
 
-Integrieren Sie dies in ein kleines Shell-Skript, das Ihre gecachten svn-Zugangsdaten auf Ihrem eigenen PC verwendet und cron es für Sie nach einem festen Zeitplan ausführen lässt (basierend auf der TTL Ihres Frontend-Webservers / CDN-HTTP-Cache).  Sie benötigen keine serverseitigen Tools auf unserer Seite. Sie haben die volle Kontrolle über Ihre eigenen Passwortsicherheit, Planung und dynamischen Seitenziele.  Wenn Sie Ihren eigenen svnpubsub-fähigen Subversion-Service verwenden, ist keine dieser Transaktionen direkt mit unserer Hardware verbunden. Ihr Commit löst unseren svnwcsub-Client aus und hört immer auf Ihren svnpubsub-Server, um diese Änderungen bei Bedarf zu erstellen und bereitzustellen &mdash;
+Integrieren Sie dies in ein kleines Shell-Skript, das Ihre gecachten svn-Zugangsdaten auf Ihrem eigenen PC verwendet und cron es für Sie nach einem festen Zeitplan ausführen lässt (basierend auf der TTL Ihres Frontend-Webservers / CDN-HTTP-Cache).  Sie brauchen keine serverseitigen Tools auf unserer Seite. Sie haben die volle Kontrolle über Ihre eigenen Passwortsicherheits-, Planungs- und dynamischen Seitenziele.  Wenn Sie Ihren eigenen svnpubsub-fähigen Subversion-Service verwenden, beinhaltet keine dieser Transaktionen direkt eine unserer Hardware. Ihr Commit löst unseren svnwcsub-Client aus, der immer auf Ihren svnpubsub-Server horcht, um diese Änderungen bei Bedarf zu erstellen und bereitzustellen &mdash; Pronto.
 
 ## Ausnahmen
 
-TB
+Unbestimmt
 
-## Suche
+## Suchen
 
-TB
+Unbestimmt
 
-## Schnelleingabe
+## Schnelle Zusage
 
-TB
+Unbestimmt
 
 ## Ressource hinzufügen
 
-TB
+Unbestimmt
 
 --------
 

@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: ~
-published: ~
 status: projet
 title: Référence Orion
 ---
@@ -14,21 +12,21 @@ title: Référence Orion
 
 ## Démo en direct
 
-Pour une démonstration d'Orion &trade;
+Pour une démonstration d'Orion &trade;IDE, visite <https://www.openoffice.org/> pour un site massif, ou <https://thrift.apache.org/> et cliquez sur le bookmarklet ci-dessus pour voir un prototype en direct en action.
 
-Si cela vous dérange trop, ce site est auto-hébergé sur Orion &trade;, et {# lede #}ces icônes de crayon rose vif [<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en haut à droite le long de la chapelle vous donnera une démonstration en direct{# lede #}
+Si c'est trop gênant pour vous, ce site est auto-hébergé sur Orion &trade;, et {# lede #}ces icônes de crayon rose chaud [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en haut à droite à côté du chemin de navigation vous donnera une démonstration en direct{# lede #} de la façon dont le système fonctionne (sans accès commit/build, qui est verrouillé pour le personnel uniquement).
 
-## Signet recommandé
+## Bookmarklet recommandé
 
-Veillez à installer le signet dans la barre d'outils de votre navigateur en ouvrant un écran de dialogue "Nouveau signet" à partir du menu de votre navigateur et en tapant ce qui suit dans le champ Emplacement/URL :
+Veillez à installer le bookmarklet sur la barre d'outils de votre navigateur en ouvrant un "Nouveau marque-page" dans le menu de votre navigateur et en saisissant ce qui suit dans le champ Emplacement/URL :
 
 ```javascript
 	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
 ```
 
-Sans ce bookmarklet installé, vous ne pourrez pas naviguer sur le site en direct et éditer instantanément des pages dans Orion &trade;
+Sans ce bookmarklet installé, vous ne pourrez pas parcourir le site en direct et modifier instantanément les pages dans Orion &trade; en cliquant sur le bookmarklet.
 
-Pour utiliser le bookmarklet, il vous suffit de consulter votre site de production en direct (PAS à Orion) &trade;
+Pour utiliser le bookmarklet, accédez simplement à votre site de production en direct (PAS à Orion) &trade; !), recherchez une page que vous souhaitez modifier, puis cliquez sur le bookmarklet. Vous serez redirigé vers une page de cet Orion qui vous permet de modifier le contenu.
 
 ## Guide de mise en route
 
@@ -37,25 +35,25 @@ Pour utiliser le bookmarklet, il vous suffit de consulter votre site de producti
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-## IoC Créer une API
+## IoC API de création
 
 [snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
 
 ## Processus d'intégration
 
-Pour les adopteurs précoces, Orion &trade;
+Pour les débutants, Orion &trade; le service se trouve entre l'arborescence source du site Web de votre référentiel Subversion et vos serveurs Web de production en direct qui fournissent le contenu du site à vos utilisateurs finaux.  L'intégration est simple pour les organisations qui exécutent déjà leur propre service Subversion compatible svnpubsub :
 
-1. Donnez-nous l'URL des sources de votre site dans Subversion.
+1. Fournissez-nous l'URL des sources de votre site dans Subversion.
 
-2. Fournissez-nous l'adresse e-mail (rôle ou liste de diffusion) pour discuter des problèmes de développement et de maintenance du site et assurez-vous que l'adresse est [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+2. Fournissez-nous l'adresse e-mail (rôle ou liste de diffusion) pour discuter des problèmes de développement et de maintenance du site, et assurez-vous que l'adresse est [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- conforme en termes de facilités de modération.
 
-3. Abonnez vos webservers de production `svnwcsub` daemon à notre public `svnpubsub`
+3. Abonnez vos serveurs Web de production `svnwcsub` démon à notre public `svnpubsub` service.  Ces composants logiciels autonomes font partie de chaque nouvelle version de Subversion et sont raisonnablement matures et bien supportées par l'équipe de développement Subversion.  Si vous ne pouvez pas attendre la fin du port python3, nous pouvons vous laisser utiliser nos ports (thread).
 
-4. Faites-nous savoir si vous souhaitez que les différences de contenu des versions soient envoyées et à quelle adresse e-mail vous souhaitez qu'elles soient envoyées.
+4. Faites-nous savoir si vous souhaitez que le contenu diffère des builds envoyés et à quelle adresse électronique vous souhaitez qu'ils soient livrés.
 
-Présentation du répertoire source ##
+## Présentation du répertoire source
 
-- coffre/
+- tronc/
 	- cgi-bin/
 	- contenu/
 	- modèles/
@@ -63,17 +61,17 @@ Présentation du répertoire source ##
 		- path.pm
 		- view.pm
 - branches/
+	.. chaque branche suit la disposition du coffre ci-dessus ...
 
-
-Pour obtenir un exemple en direct, reportez-vous à la section <https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/>.
+Voir <https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> pour un exemple vivant.
 
 ## Contenu dynamique
 
-### Exemple de script pour régénérer une page source avec modification de contenu, même si les sources ne le font pas.
+### Exemple de script permettant de régénérer une page source avec des modifications de contenu, même si les sources ne le font pas.
 
-L'idée de base est que certaines de vos pages sources de haut niveau construisent avec du contenu "dynamique" (build intègre des extraits en constante évolution d'autres sites en ligne, comme les cascades de Jira ou les fils de liste de diffusion actuels).
+L'idée de base est que certaines de vos pages source haut de gamme construisent avec "dynamique" contenu (construction incorpore des extraits en constante évolution d'autres sites en ligne, comme les cascades Jira ou les fils de liste de diffusion actuels).
 
-Un bon exemple en est la section "Dernières nouvelles" de [Page d'accueil ASF](https://www.apache.org/), et voici la façon dont cela fonctionne en coulisses, avec un peu de magie shell+svn+cron comme illustré ici (prenez le fichier source de la construction dynamique comme `Fichier $`
+Un bon exemple de ceci est "Dernières nouvelles" section de [ASF - Page d'accueil](https://www.apache.org/), et voici les coulisses de son fonctionnement, avec un peu de magie shell+svn+cron comme illustré ici (prenez le fichier source de la construction dynamique comme `Fichier $` ci-dessous :
 
 ```shell
 % cp $file $file.tmp
@@ -83,13 +81,13 @@ Un bon exemple en est la section "Dernières nouvelles" de [Page d'accueil ASF](
 % svn commit -m "rebuild $file"
 ```
 
-Incorporez-le dans un petit script shell qui utilisera vos informations d'identification svn mises en cache sur votre propre PC, et demandez à cron de l'exécuter pour vous selon un calendrier fixe (en fonction de la durée de vie de votre serveur Web frontal / cache HTTP CDN).  Pas besoin d'outils côté serveur de notre côté ; vous avez un contrôle total sur votre propre sécurité de mot de passe, la planification et les cibles de page dynamiques.  Si vous utilisez votre propre service Subversion activé par svnpubsub, aucune de ces transactions n'implique directement notre matériel. Votre commit déclenchera notre client svnwcsub, toujours à l'écoute de votre serveur svnpubsub, pour construire et déployer ces modifications à la demande &mdash;
+Intégrez cela dans un petit script shell qui utilisera vos informations d'identification svn mises en cache sur votre propre PC, et demandez à cron de l'exécuter pour vous selon un calendrier fixe (en fonction de la durée de vie de votre cache HTTP serveur Web / CDN frontend).  Pas besoin d'outils côté serveur de notre côté ; vous avez le contrôle total de votre propre sécurité de mot de passe, de la planification et des cibles de page dynamiques.  Si vous utilisez votre propre service Subversion activé par svnpubsub, aucune de ces transactions n'implique directement notre matériel. Votre validation déclenchera notre client svnwcsub, toujours à l'écoute de votre serveur svnpubsub, pour créer et déployer ces modifications à la demande &mdash; avant.
 
-Nb d'exceptions
+## Exceptions
 
 A définir
 
-Recherche ##
+## Rechercher
 
 A définir
 

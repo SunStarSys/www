@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: ~
-published: ~
 status: 草稿
 title: Orion 參考
 ---
@@ -14,21 +12,21 @@ title: Orion 參考
 
 ## 即時示範
 
-Orion 示範&trade;
+針對 Orion 的示範&trade;的 IDE，造訪<https://www.openoffice.org/> 針對大型網站，或<https://thrift.apache.org/> 如果是複雜的，請按一下上方的 Bookmarklet 以檢視即時原型。
 
-假如你太母親，這個網站會在 Orion 上自行代管。&trade;，和{# lede #}這些熱粉紅色鉛筆圖示[<img src="../images/edit.png" style="width:20px">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 右上方的來源路徑會提供您即時示範{# lede #}
+如果這對您來說太自豪，本網站將自行託管於 Orion &trade;，和{# lede #}那些熱粉紅色鉛筆圖示[<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 在右上方與來源路徑旁邊，將為您提供即時示範{# lede #} 系統運作方式 (僅對員工鎖定的確認 / 建置存取權)。
 
-## 建議的書籤程式
+## 建議的 Bookmarklet
 
-請務必在瀏覽器工具列上安裝書籤，方法是從瀏覽器功能表開啟「新書籤」對話方塊畫面，然後在 Location/URL 欄位中輸入以下內容：
+請務必在您的瀏覽器工具列上開啟 Bookmarklet "新增書籤" 從瀏覽器功能表的對話方塊畫面，然後在「位置 /URL」欄位中輸入下列項目：
 
 ```javascript
 	javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))
 ```
 
-若未安裝此書籤，您將無法瀏覽即時網站，並立即編輯 Orion 中的頁面&trade;
+若未安裝此 Bookmarklet，您將無法瀏覽即時網站並立即編輯 Orion 中的頁面&trade; 按一下 Bookmarklet。
 
-若要使用書籤程式，只需瀏覽您的即時生產網站 (不在 Orion 中) &trade;
+若要使用 Bookmarklet，只需瀏覽至您的即時生產網站 (不在 Orion 中) &trade;！)，找出您要編輯的頁面，然後按一下 Bookmarklet。您將被帶到此 Orion 內的頁面，以允許您編輯內容。
 
 ## 入門指南
 
@@ -41,39 +39,39 @@ Orion 示範&trade;
 
 [snippet:lang=perl:repo=SunStarSys/orion:path=README.md:token=#api]
 
-## 到職處理
+## 入職流程
 
-對於早期採用者，Orion &trade;
+對於早期採用者，Orion &trade; 服務位於您的 Subversion 儲存區域的網站來源樹狀結構和將網站內容傳遞給一般使用者的即時生產環境 Web 伺服器之間。若組織已執行自己的已啟用 svnpubsub 的 Subversion 服務，則 Onboarding 非常簡單：
 
-1. 為我們提供您在 Subversion 中網站來源的 URL。
+1. 請提供 Subversion 中您網站來源的 URL。
 
-2. 請提供 (角色或郵寄清單) 電子郵件地址，以討論網站開發與維護問題，並確保地址為[SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme).
+2. 提供我們討論網站開發和維護問題的 (角色或郵寄清單) 電子郵件地址，並確保地址正確無誤[SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- 符合調適設施。
 
-3. 訂閱您的生產環境 Web 伺服器`svnwcsub` 公眾守護程式`svnpubsub`
+3. 訂閱您的生產 Web 伺服器`svnwcsub` 公開的協助程式`svnpub` 服務。這些獨立軟體元件是每個新 Subversion 來源發行版本的一部分，並且經過 Subversion 開發團隊合理地成熟，也受到支援。如果您只是無法等候 python3 連接埠完成，我們可以讓您改用我們的 (執行緒) 連接埠。
 
-4. 請讓我們知道您想要的內容與送出之組建的內容不同，以及要傳遞至哪一個電子郵件地址。
+4. 若您喜歡不同組建的內容，以及想要收到的電子郵件地址，請讓我們知道。
 
 ## 來源目錄版面配置
 
-- 中繼線 /
+- 中繼器 /
 	- cgi-bin/
 	- 內容 /
-	- 範本 /
-	- 程式庫 /
+	- 模板 /
+	- 檔案庫 /
 		- path.pm
 		- view.pm
 - 分支 /
+	。。每個分支依循上方的中繼器配置 ...
 
-
-如需即時範例，請參閱<https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/>。
+請參閱<https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> 以取得即時範例。
 
 ## 動態內容
 
-### 使用變更內容重新產生來源頁面的範例指令碼，即使來源沒有變更。
+### 使用變更內容重新產生來源頁面的範例命令檔，即使來源沒有變更。
 
-基本的想法是，您的部分高設定檔來源頁面以「動態」內容建立 (建置包含從其他線上網站 (例如 Jira 瀑布或目前郵寄清單執行緒) 改變的片段。
+基本概念是，部分高設定檔來源頁面是使用"動態" 內容 (組建包含來自其他線上網站 (例如 Jira Waterfalls 或目前的郵寄清單繫線) 的不斷變更程式碼片段)。
 
-這是「最新新聞」一節的好例子[ASF 首頁](https://www.apache.org/)，這裡是幕後運作的方式，這裡有一些 shell+svn+cron 魔法 (將動態編譯的源碼檔做為) `$file`
+這是一個很好的例子"最新消息" 區段[ASF 首頁](https://www.apache.org/)，以下是其運作的幕後方式，這裡有一些 shell+svn+cron 魔術 (將動態組建的來源檔案視為`$ 檔案` 下方：
 
 ```shell
 % cp $file $file.tmp
@@ -83,7 +81,7 @@ Orion 示範&trade;
 % svn commit -m "rebuild $file"
 ```
 
-將此項目併入一些 shell 程序檔中，將會在您自己的 PC 上使用您快取的 svn 憑證，並讓 cron 以固定的排程執行 (根據您的前端 Web 伺服器 / CDN HTTP 快取的 TTL)。我們完全不需要使用伺服器端工具，您可以完全控制自己的密碼安全性、排程和動態頁面目標。如果您使用的是已啟用 svnpubsub 的 Subversion 服務，則該交易都不會直接與我們的任何硬體有關。您的確認將會觸發我們的 svnwcsub 從屬端，一律監聽您的 svnpubsub 伺服器，在需要時建立及部署這些變更&mdash;
+將此資訊併入一些 Shell 命令檔，它會在您自己的 PC 上使用快取的 svn 證明資料，並按照固定的排程 (根據前端 Web 伺服器 / CDN HTTP 快取的 TTL) 為您執行 cron。無需在我們這端進行伺服器端工具；您可以完全控制自己的密碼安全性、排程和動態頁面目標。如果您使用自己的已啟用 svnpubsub 的 Subversion 服務，則該交易不會直接與我們的任何硬體相關。您的確認將會觸發我們的 svnwcsub 客戶端程式，並且隨時聆聽您的 svnpubsub 伺服器，在需要時建立並部署這些變更&mdash; 原音。
 
 ## 例外
 
@@ -93,7 +91,7 @@ Orion 示範&trade;
 
 待定
 
-## 快速承諾
+## 快速確認
 
 待定
 
