@@ -189,9 +189,9 @@ gantt
     dateFormat  YYYY-MM-DD
     section Section
     태스크           :a1, 2014-01-01, 30d
-    다른 태스크     :이후 a1  , 20d
+    다른 태스크     :after a1  , 20d
     section Another
-    태스크(초)      :2014년-01-12  , 12d
+    태스크(초)      :2014-01-12  , 12d
     다른 태스크      : 24d
 ```
 ----

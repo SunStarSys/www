@@ -141,7 +141,7 @@ a -> c [color=red];
 graph TD
     A[聖誕節]
  -->|賺錢| B(前往購物)
-    B 型 --> C{讓我想}
+    B  --> C{讓我想}
     C -->|一個| D[fa:fa-laptop 筆記型電腦]
     C -->|兩個| E[fa:fa-mobile iPhone]
     C -->|三個| F[fa:fa-car 汽車]
@@ -156,9 +156,9 @@ sequenceDiagram
         John->>John: 對抗下軟骨
     end
     Note right of John: 理性思維<br/>可用...
-    John-->>愛麗絲：好！
+    John->>Alice：好！
     John->>Bob: 您好嗎？
-    Bob-->>John：Jolly 好！
+    Bob->>John：Jolly 好！
 ```
 ----
 ```mermaid
