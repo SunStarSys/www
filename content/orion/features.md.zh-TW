@@ -146,20 +146,7 @@ graph TD
     C -->|兩個| E[fa:fa-mobile iPhone]
     C -->|三個| F[fa:fa-car 汽車]
 ```
-----
-```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    Alice->>John: Hello John, 你好嗎？
-    loop Healthcheck
-        John->>John: 對抗下軟骨
-    end
-    Note right of John: 理性思維<br/>可用...
-    John->>Alice：好！
-    John->>Bob: 您好嗎？
-    Bob->>John：Jolly 好！
-```
+
 ----
 ```mermaid
 erDiagram
@@ -182,24 +169,13 @@ stateDiagram-v2
     移動中 --> 損毀
     損毀 --> [*]
 ```
-----
-```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat  YYYY-MM-DD
-    section Section
-    任務:a1, 2014-01-01, 30d
-    其他任務:a1 之後, 20d
-    section Another
-    作業 (秒) :2014-01-12 , 12d
-    其他任務: 24d
-```
+
 ----
 ```mermaid
 pie title Commits to orion on GitHub
 	"星期日" : 4
-	"星期一" : 5 個
-	"星期二" : 7 天
+	"星期一" : 5
+	"星期二" : 7
   "星期三" : 3
 ```
 ----
@@ -271,7 +247,7 @@ mindmap
   root((心智圖))
     來源
       長歷史
-      ::icon(fa fa-書籍)
+      ::icon(fa fa-book)
       熱門
         英國流行心理學作家 Tony Buzan
     研究
@@ -284,18 +260,6 @@ mindmap
     工具
       筆紙
       Mermaid
-```
-----
-```mermaid
-journey
-    title 我的工作天
-    section 前往工作
-      茶：5：我
-      上樓：3：我
-      工作：1：我，貓
-    section 前往首頁
-      下樓：5：我
-      坐下：3：我
 ```
 ----
 ```mermaid
