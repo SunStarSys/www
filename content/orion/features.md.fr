@@ -189,7 +189,7 @@ gantt
     dateFormat  YYYY-MM-DD
     section Section
     Une tâche           :a1, 2014-01-01, 30d
-    Autre tâche     :après a1  , 20d
+    Autre tâche     :after a1  , 20d
     section Another
     Tâche en secondes      :2014-01-12  , 12d
     autre tâche      : 24d
@@ -271,7 +271,7 @@ mindmap
   root((carte mentale))
     Origines
       Long historique
-      ::icon(fa fa-livre)
+      ::icon(fa fa-book)
       Popularisation
         Britannique Auteur de psychologie Tony Buzan
     Recherche
