@@ -148,20 +148,6 @@ graph TD
 ```
 ----
 ```mermaid
-sequenceDiagram
-    participant Alice
-    participant Bob
-    אליס->>יוחנן: שלום יוחנן, איך אתה?
-    loop Healthcheck
-        יוחנן->>יוחנן: קרב נגד היפוכונדריה
-    end
-    Note right of John: רציונלי מחשבות<br/>הקודם...
-    John-->>אליס: מעולה!
-    יוחנן->>בוב: איך אודותיך?
-    Bob-->>ג'ולי טוב!
-```
-----
-```mermaid
 erDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : has
     CUSTOMER ||--o{ ORDER : places
@@ -181,18 +167,6 @@ stateDiagram-v2
     מעביר --> עדיין
     מעביר --> קריסה
     קריסה --> [*]
-```
-----
-```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat  YYYY-MM-DD
-    section Section
-    משימה           :a1, 2014-01-01, 30d
-    משימה אחרת     :אחרי a1  , 20d
-    section Another
-    משימה בשניות      :2014-01-12  , 12d
-    משימה אחרת      : 24d
 ```
 ----
 ```mermaid
