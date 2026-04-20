@@ -36,7 +36,7 @@ end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston (ort)]]
+    A2[[Reston, ort]]
     B2[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-us-east,A2 darkBlue
@@ -54,7 +54,7 @@ end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo (ort)]]
+    A5[[São Paolo, ort]]
     B5[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-bz-west,A5 darkBlue
@@ -66,7 +66,7 @@ end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad (ort)]]
+    A7[[Hyderabad, ort]]
 	B7[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-ap-west,A7 darkBlue
