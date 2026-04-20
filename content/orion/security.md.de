@@ -36,13 +36,13 @@ end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston (VA)]]
+    A2[[Reston, VA]]
     B2[OCI-Edge-Server]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Phoenix (Vereinigte Staaten)]]
+    A3[[Phoenix, Vereinigte Staaten]]
     B3[OCI-Edge-Server]
 end
 class vpn-us-west,A3 darkBlue
@@ -54,7 +54,7 @@ end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo (Brasilien)]]
+    A5[[São Paolo, Brasilien]]
     B5[OCI-Edge-Server]
 end
 class vpn-bz-west,A5 darkBlue
@@ -66,13 +66,13 @@ end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad (Indien)]]
+    A7[[Hyderabad, Indien]]
 	B7[OCI-Edge-Server]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[Seoul (Südkorea)]]
+    A8[[Seoul, Südkorea]]
     B8[OCI-Edge-Server]
 end
 class vpn-ap-east,A8 darkBlue
