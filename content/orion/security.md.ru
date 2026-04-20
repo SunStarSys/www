@@ -36,13 +36,13 @@ end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Рестон (Виргиния)]]
+    A2[[Рестон, Виргиния]]
     B2[Периферийные серверы OCI]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Феникс (Аризона)]]
+    A3[[Феникс, Аризона]]
     B3[Периферийные серверы OCI]
 end
 class vpn-us-west,A3 darkBlue
