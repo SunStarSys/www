@@ -111,9 +111,9 @@ Ditto para scripts CGI, que están completamente bloqueados en términos de acce
 
 ### Cifrado completo
 
-- TLS 1.3 (+FS) AES(256) SHA(256) para conexiones HTTPS FIPS 140-3
+- OpenSSL v4+ TLS 1.3 (+FS) AES(256) SHA(256) para conexiones HTTPS FIPS 140-3
 
-- SSHv2 ED25519 Claves compatibles con FIPS 140-3 / NIST para host cruzado [`Lote`](#) reenvío de puerto inverso
+- OpenSSH v10+ ED25519 FIPS 140-3 con claves compatibles con Post-Quantum KexAlgorithm / NIST para host cruzado [`Lote`](#) reenvío de puerto inverso
 
 - IPsec/IKEv2/PFS AES(256) para VPN interregional
 
@@ -206,11 +206,11 @@ Cada recurso de copia de trabajo disponible a través de la interfaz de usuario 
 
 No se puede crear nada y, posteriormente, verlo a través de la red sin la correspondiente confirmación de Subversion autorizada. El problema principal aquí es controlar qué información está disponible para las ediciones comprometidas y construidas de un autor de una página wiki.
 
-Si permite el preprocesamiento de plantillas en las páginas de origen de rebaja, debe ser consciente de cómo los argumentos de plantilla hacen que el contenido de otros archivos del árbol esté disponible como variables para el origen de la página editada.
+Si permite el preprocesamiento de plantillas en las páginas de origen de Markdown, debe tener en cuenta cómo los argumentos de plantilla hacen que el contenido de otros archivos del árbol esté disponible como variables para el origen de la página editada.
 
-A menudo, si se configura para hacerlo, la página editada puede declarar sus propios archivos de dependencia en los encabezados de la página, lo que es algo que pensar a medida que sopesa los conjuntos de funciones contra los controles de seguridad en la arquitectura de información de su Wiki.
+A menudo, si se configura para hacerlo, la página editada puede declarar sus propios archivos de dependencia en los encabezados de la página, lo que también es algo en lo que pensar a medida que sopesa los conjuntos de funciones contra los controles de seguridad en la arquitectura de información de su Wiki.
 
-Si bien podemos ofrecer orientación y soporte para satisfacer sus necesidades, realmente depende de usted decidir cómo equilibrar las escalas para la wiki empresarial de su organización.
+Si bien podemos ofrecer orientación y soporte para satisfacer sus necesidades, realmente depende de usted decidir cómo equilibrar las escalas de los activos gestionados de su organización en una wiki respaldada por Orion.
 
 Consulte la siguiente sección sobre [Controles de inyección de dependencia/ACL](#h4-dependency-acl-injection-controls) para obtener más detalles, y consulte este ejemplo en directo de la facilidad con la que se pueden configurar las ACL de forma centralizada en [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 

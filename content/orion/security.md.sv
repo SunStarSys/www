@@ -36,7 +36,7 @@ end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston, ort]]
+    A2[[Reston (ort)]]
     B2[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-us-east,A2 darkBlue
@@ -54,7 +54,7 @@ end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo, ort]]
+    A5[[São Paolo (ort)]]
     B5[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-bz-west,A5 darkBlue
@@ -66,7 +66,7 @@ end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad, ort]]
+    A7[[Hyderabad (ort)]]
 	B7[Oracles molninfrastruktur - kantservrar]
 end
 class vpn-ap-west,A7 darkBlue
@@ -111,9 +111,9 @@ Dito för CGI-skript, som är helt låsta när det gäller skrivåtkomst till n�
 
 ### Kryptering från början till slut
 
-- TLS 1.3 (+FS) AES(256) SHA(256) för HTTPS FIPS 140-3-anslutningar
+- OpenSSL v4+ TLS 1.3 (+FS) AES(256) SHA(256) för HTTPS FIPS 140-3-anslutningar
 
-- SSHv2 ED25519 FIPS 140-3 / NIST-kompatibla nycklar för flera värdar [`toalettstol`](#) spola bakåt i tiden
+- OpenSSH v10+ ED25519 FIPS 140-3 med Post-Quantum KexAlgorithm / NIST-kompatibla nycklar för flera värdar [`toalettstol`](#) spola bakåt i tiden
 
 - IPsec/IKEv2/PFS AES(256) för regionövergripande VPN
 
@@ -208,9 +208,9 @@ Ingenting kan skapas och sedan visas över nätverket utan en motsvarande auktor
 
 Om du tillåter mallförbearbetning på källsidorna för nedsättning måste du vara medveten om hur mallargument gör innehållet i andra filer i trädet tillgängligt som variabler för källan till den redigerade sidan.
 
-Ofta, om det är konfigurerat för att göra det, kan den redigerade sidan deklarera sina egna beroendefiler i sidhuvuden, vilket är något att tänka när du väger funktionsuppsättningar mot säkerhetskontroller i din Wikis informationsarkitektur.
+Ofta, om det är konfigurerat att göra det, kan den redigerade sidan deklarera sina egna beroendefiler i sidans rubriker, vilket också är något att tänka på när du väger funktionsuppsättningar mot säkerhetskontroller i din Wikis informationsarkitektur.
 
-Medan vi kan erbjuda vägledning och stöd för att matcha dina behov, är det verkligen upp till dig att bestämma hur du ska balansera skalorna för din organisations företags wiki.
+Medan vi kan erbjuda vägledning och stöd för att matcha dina behov, är det verkligen upp till dig att bestämma hur du ska balansera skalorna för din organisations förvaltade tillgångar i en Orion-stödd wiki.
 
 Se avsnittet nedan på [Beroende-/ACL-injektionskontroller](#h4-dependency-acl-injection-controls) för mer information, och kolla in detta live-exempel på hur enkla åtkomstlistor kan konfigureras centralt i [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 

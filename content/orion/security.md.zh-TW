@@ -42,7 +42,7 @@ end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[鳳凰城, AZ]]
+    A3[[鳳凰城 (AZ)]]
     B3[OCI 邊緣處理伺服器]
 end
 class vpn-us-west,A3 darkBlue
@@ -54,7 +54,7 @@ end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[聖保羅, 巴西]]
+    A5[[聖保羅 (巴西)]]
     B5[OCI 邊緣處理伺服器]
 end
 class vpn-bz-west,A5 darkBlue
@@ -111,9 +111,9 @@ CGI 文稿的 Ditto，在寫入存取時被完全鎖定 。[`/tmp`](#).
 
 ### 端到端加密
 
-- HTTPS FIPS 140-3 連線適用的 TLS 1.3 (+FS) AES (256) SHA (256)
+- OpenSSL v4+ HTTPS FIPS 140-3 連線適用的 TLS 1.3 (+FS) AES (256) SHA (256)
 
-- SSHv2 ED25519 跨主機適用的 FIPS 140-3 / NIST 相容金鑰[`迴圈`](#) 反向埠轉送
+- OpenSSH v10+ ED25519 FIPS 140-3，搭配跨主機適用的 Post-Quantum KexAlgorithm / NIST 相容金鑰[`迴圈`](#) 反向埠轉送
 
 - 跨區域 VPN 的 IPsec/IKEv2/PFS AES (256)
 
@@ -206,11 +206,11 @@ Wiki 安全涉及數個因素：
 
 沒有對應的授權 Subversion 確認，就無法再透過網路建立及後續檢視任何內容。此處的主要問題是控制 Wiki 頁面作者所確認和建立之編輯可用的資訊。
 
-如果您在 Markdown 來源頁面中允許「樣板」預先處理，則必須瞭解樣板引數如何讓樹狀結構中其他檔案的內容成為編輯頁面來源的變數。
+如果您在 Markdown 來源頁面中允許「樣板」預先處理，則必須瞭解樣板引數如何讓樹狀結構中其他檔案的內容作為編輯頁面來源的變數。
 
-通常，如果設定為這麼做，編輯的頁面可以在頁面的標頭中宣告自己的相依性檔案，這會是您在 Wiki 資訊架構中的安全性控制項權重功能集時所想的。
+通常，如果設定為這麼做，編輯的頁面可以在頁面的標頭中宣告自己的相依性檔案，這也是您在 Wiki 資訊架構中的安全控制項權重功能集時要考慮的事項。
 
-雖然我們可以提供符合您需求的指引和支援，但您確實可以決定如何平衡組織的企業 Wiki 規模。
+雖然我們可以提供符合您需求的指引和支援，但您確實可以決定如何在 Orion 支援的 Wiki 中平衡組織的受管理資產規模。
 
 請參閱下方的章節：[相依性 /ACL 射出控制](#h4-dependency-acl-injection-controls) 如需詳細資訊，請參閱此即時範例，瞭解如何集中設定 ACL 的方式[`程式庫 /acl.yml`]({{snippetA.pretty_uri}}):
 

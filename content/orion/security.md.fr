@@ -111,9 +111,9 @@ Ditto pour les scripts CGI, qui sont entièrement verrouillés en termes d'accè
 
 ### Chiffrement de bout en bout
 
-- TLS 1.3 (+FS) AES(256) SHA(256) pour les connexions HTTPS FIPS 140-3
+- OpenSSL v4+ TLS 1.3 (+FS) AES(256) SHA(256) pour les connexions HTTPS FIPS 140-3
 
-- SSHv2 ED25519 Clés compatibles FIPS 140-3 / NIST pour l'hôte croisé [`lo`](#) rétro-transfert de port
+- OpenSSH v10+ ED25519 FIPS 140-3 avec clés conformes à Post-Quantum KexAlgorithm / NIST pour les hôtes croisés [`lo`](#) rétro-transfert de port
 
 - IPsec/IKEv2/PFS AES(256) pour le VPN interrégional
 
@@ -208,9 +208,9 @@ Rien ne peut être construit et affiché par la suite sur le réseau sans une va
 
 Si vous autorisez le prétraitement de modèle dans les pages source de démarque, vous devez savoir comment les arguments de modèle rendent le contenu des autres fichiers de l'arborescence disponible en tant que variables pour la source de la page modifiée.
 
-Souvent, si elle est configurée pour le faire, la page modifiée peut déclarer ses propres fichiers de dépendance dans les en-têtes de la page, ce qui est quelque chose à penser lorsque vous pesez les jeux de fonctionnalités contre les contrôles de sécurité dans l'architecture d'information de votre wiki.
+Souvent, si elle est configurée pour le faire, la page modifiée peut déclarer ses propres fichiers de dépendance dans les en-têtes de la page, ce qui est également quelque chose à penser lorsque vous pesez les jeux de fonctionnalités contre les contrôles de sécurité dans l'architecture d'information de votre wiki.
 
-Bien que nous puissions offrir des conseils et un soutien pour répondre à vos besoins, c'est à vous de décider comment équilibrer les échelles pour le wiki d'entreprise de votre organisation.
+Bien que nous puissions offrir des conseils et un soutien pour répondre à vos besoins, c'est à vous de décider comment équilibrer les échelles pour les actifs gérés de votre organisation dans un wiki soutenu par Orion.
 
 Voir la section ci-dessous sur [Contrôles d'injection de dépendance/ACL](#h4-dependency-acl-injection-controls) pour plus de détails, et consultez cet exemple en direct de la façon dont les ACL peuvent être configurées de manière centralisée dans [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 

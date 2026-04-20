@@ -36,13 +36,13 @@ end
 class vcs,A1 gray
 
 subgraph vpn-us-east[ ]
-    A2[[Reston, VA]]
+    A2[[Reston (VA)]]
     B2[OCI-Edge-Server]
 end
 class vpn-us-east,A2 darkBlue
 
 subgraph vpn-us-west[ ]
-    A3[[Phoenix, Vereinigte Staaten]]
+    A3[[Phoenix (Vereinigte Staaten)]]
     B3[OCI-Edge-Server]
 end
 class vpn-us-west,A3 darkBlue
@@ -54,7 +54,7 @@ end
 class vpn-de-central,A4 darkBlue
 
 subgraph vpn-bz-west[ ]
-    A5[[São Paolo, Brasilien]]
+    A5[[São Paolo (Brasilien)]]
     B5[OCI-Edge-Server]
 end
 class vpn-bz-west,A5 darkBlue
@@ -66,13 +66,13 @@ end
 class vpn-au-west,A6 darkBlue
 
 subgraph vpn-ap-west[ ]
-    A7[[Hyderabad, Indien]]
+    A7[[Hyderabad (Indien)]]
 	B7[OCI-Edge-Server]
 end
 class vpn-ap-west,A7 darkBlue
 
 subgraph vpn-ap-east[ ]
-    A8[[Seoul, Südkorea]]
+    A8[[Seoul (Südkorea)]]
     B8[OCI-Edge-Server]
 end
 class vpn-ap-east,A8 darkBlue
@@ -111,9 +111,9 @@ Ditto für CGI-Skripte, die vollständig im Hinblick auf den Schreibzugriff auf 
 
 ### Ende-Ende-Verschlüsselung
 
-- TLS 1.3 (+FS) AES(256) SHA(256) für HTTPS-FIPS 140-3-Verbindungen
+- OpenSSL v4+ TLS 1.3 (+FS) AES(256) SHA(256) für HTTPS-FIPS 140-3-Verbindungen
 
-- SSHv2 ED25519 FIPS 140-3-/NIST-konforme Schlüssel für hostübergreifende Schlüssel [`Lo`](#) Reverse-Port-Weiterleitung
+- OpenSSH v10+ ED25519 FIPS 140-3 mit Post-Quantum KexAlgorithm-/NIST-konformen Schlüsseln für hostübergreifende Verbindungen [`Lo`](#) Reverse-Port-Weiterleitung
 
 - IPsec/IKEv2/PFS AES(256) für regionsübergreifendes VPN
 
@@ -208,9 +208,9 @@ Nichts kann ohne einen entsprechenden autorisierten Subversion Commit über das 
 
 Wenn Sie die Vorverarbeitung von Vorlagen auf den Markdown-Quellseiten zulassen, müssen Sie wissen, wie Vorlagenargumente den Inhalt anderer Dateien im Baum als Variablen für die Quelle der bearbeiteten Seite verfügbar machen.
 
-Oft kann die bearbeitete Seite, wenn sie dazu konfiguriert ist, ihre eigenen Abhängigkeitsdateien in den Kopfzeilen der Seite deklarieren, was zu denken ist, wenn Sie Feature-Sets gegen Sicherheitssteuerelemente in der Informationsarchitektur Ihres Wikis abwägen.
+Oft kann die bearbeitete Seite, wenn sie dazu konfiguriert ist, ihre eigenen Abhängigkeitsdateien in den Kopfzeilen der Seite deklarieren, was auch zu beachten ist, wenn Sie Feature-Sets gegen Sicherheitssteuerelemente in der Informationsarchitektur Ihres Wikis abwägen.
 
-Wir können zwar Anleitung und Unterstützung anbieten, um Ihren Bedürfnissen gerecht zu werden, aber es liegt wirklich an Ihnen, zu entscheiden, wie Sie die Skalen für das Enterprise-Wiki Ihrer Organisation ausgleichen.
+Wir können zwar Anleitung und Unterstützung anbieten, um Ihre Bedürfnisse zu erfüllen, aber es liegt wirklich an Ihnen, zu entscheiden, wie Sie die Waagen für die verwalteten Assets Ihrer Organisation in einem von Orion unterstützten Wiki ausgleichen.
 
 Siehe folgenden Abschnitt auf [Abhängigkeits-/ACL-Injection-Steuerelemente](#h4-dependency-acl-injection-controls) für weitere Details und Checkout dieses Live-Beispiels, wie einfach ACLs zentral konfiguriert werden können [`lib/acl.yml`]({{snippetA.pretty_uri}}):
 
