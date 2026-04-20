@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: مُسَوَّدَة
 title: بيانات الجدول لشبكة مقارنة الميزات
 ---
@@ -15,7 +13,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
   Slab: "&check;"
   Notify: "SCIM فقط"
   Confluence: "&check;"
-- Feature: "FIPS 140-3 البنية التحتية المتوافقة مع Zero Trust"
+- Feature: "البنية التحتية المتوافقة مع FIPS 140-3 بعد الكمية المشفرة بدون ثقة"
   Orion: "&check;"
 - Feature: "متوافق مع HIPPA"
   Orion: "&check;"
@@ -48,7 +46,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
 - Feature: "متعدد اللغات (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'قابل للبحث بالكامل/قابل للاستبدال <span class="editormd-tex">\KaTeX</span>/تعبيرات PCRE'
+- Feature: 'قابل للبحث بالكامل/قابل للاستبدال <span class="editormd-tex">\KaTeX</span>/PCRE التعبيرات'
   Orion: "&check;"
 - Feature: "موحد"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
 - Feature: "يعمل دون اتصال"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "من السهل طرف ثالث 'طلب السحب' سير عمل المساهم"
+- Feature: "سير عمل مساهم "سحب طلب" من جهة خارجية سهلة"
   Orion: "&check;"
 - Feature: "[GitHub التكامل](https://youtu.be/FRc4qZkxVaI) w/ IDE &amp; دعم الإجراءات"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
 - Feature: "موقف المستند القابل للبحث"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'تخفيض السعر <span class="editormd-tex">\leftrightarrow \LaTeX</span> الأتمتة'
+- Feature: 'تعليم' <span class="editormd-tex">\leftrightarrow \LaTeX</span> الأتمتة
   Orion: "&check;"
 - Feature: "الترجمة الآلية لمعالجة اللغة الطبيعية بالذكاء الاصطناعي"
   Orion: "&check;"

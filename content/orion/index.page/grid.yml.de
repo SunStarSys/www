@@ -1,21 +1,19 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: Entwurf
 title: Tabellendaten für Funktionsvergleichsraster
 ---
 
 
-- Feature: "[à la carte (BYOAI)KI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[à la carte (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
   Orion: "&check;"
 - Feature: "SSO: Kerberos / Active Directory / OpenID Integration"
   Orion: "&check;"
   Slab: "&check;"
   Notify: "Nur SCIM"
   Confluence: "&check;"
-- Feature: "FIPS 140-3-konforme Zero Trust-Infrastruktur"
+- Feature: "FIPS 140-3-konforme, postquantum verschlüsselte Zero Trust-Infrastruktur"
   Orion: "&check;"
 - Feature: "HIPPA-konform"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: Tabellendaten für Funktionsvergleichsraster
 - Feature: "Funktioniert offline"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "Einfache 3. Partei 'Pull-Anforderung' Mitarbeiterworkflow"
+- Feature: "Einfacher 3rd Party 'Pull-Request'-Mitwirkendenworkflow"
   Orion: "&check;"
 - Feature: "[GitHub-Integration](https://youtu.be/FRc4qZkxVaI) mit IDE &amp; Aktionsunterstützung"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: Tabellendaten für Funktionsvergleichsraster
 - Feature: "Durchsuchbarer Dokumentstatus"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Preisabschrift <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisierung'
+- Feature: Preisabschrift <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisierung"
   Orion: "&check;"
 - Feature: "AI NLP Automatische Übersetzung"
   Orion: "&check;"

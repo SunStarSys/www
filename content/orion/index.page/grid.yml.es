@@ -1,21 +1,19 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: borrador
 title: Datos de tabla para cuadrícula de comparación de funciones
 ---
 
 
-- Feature: "[IA a la carta](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[A la carta (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
   Orion: "&check;"
 - Feature: "SSO: Integración de Kerberos/Directorio activo/OpenID"
   Orion: "&check;"
   Slab: "&check;"
   Notify: "Solo SCIM"
   Confluence: "&check;"
-- Feature: "Infraestructura de confianza cero compatible con FIPS 140-3"
+- Feature: "Infraestructura Cero Confianza Cifrada Post-Quantum compatible con FIPS 140-3"
   Orion: "&check;"
 - Feature: "Conformidad con HIPPA"
   Orion: "&check;"
@@ -48,7 +46,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Multilingüe (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Búsqueda/sustitución completa <span class="editormd-tex">\KaTeX</span>/Expresiones PCRE'
+- Feature: 'Se puede buscar/sustituir completamente <span class="editormd-tex">\KaTeX</span>Expresiones /PCRE"
   Orion: "&check;"
 - Feature: "Federado"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Funciona sin conexión"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "3ª fiesta fácil 'Solicitud de extracción' Flujo de trabajo de colaborador"
+- Feature: "Flujo de trabajo de colaborador de "solicitud de extracción" de 3ª parte sencilla"
   Orion: "&check;"
 - Feature: "[GitHub Integración](https://youtu.be/FRc4qZkxVaI) con IDE &amp; Soporte de acciones"
   Orion: "&check;"

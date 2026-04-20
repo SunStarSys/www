@@ -1,21 +1,19 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: 草稿
 title: 功能比較方格表的表格資料
 ---
 
 
-- Feature: "[à la carte (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[à la Carte (BYOAI) AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
   Orion: "&check;"
 - Feature: "SSO：Kerberos / Active Directory / OpenID 整合"
   Orion: "&check;"
   Slab: "&check;"
   Notify: "僅限 SCIM"
   Confluence: "&check;"
-- Feature: "符合 FIPS 140-3 規範的零信任基礎架構"
+- Feature: "符合 FIPS 140-3 規範的 Quantum 後加密零信任基礎架構"
   Orion: "&check;"
 - Feature: "符合 HIPPA"
   Orion: "&check;"
@@ -48,7 +46,7 @@ title: 功能比較方格表的表格資料
 - Feature: "多語言 (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: '可完全搜尋 / 可取代<span class="editormd-tex">\KaTeX</span>/PCRE 表示式'
+- Feature: 「可完全搜尋 / 可取代」<span class="editormd-tex">\KaTeX</span>/PCRE 表示式」
   Orion: "&check;"
 - Feature: "同盟"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: 功能比較方格表的表格資料
 - Feature: "可在離線時使用"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "簡單的第三方'提取要求' 提供者工作流程"
+- Feature: "簡單的第三方「提取要求」貢獻者工作流程"
   Orion: "&check;"
 - Feature: "[GitHub 整合](https://youtu.be/FRc4qZkxVaI) 含 IDE &amp; 動作支援"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: 功能比較方格表的表格資料
 - Feature: "可搜尋文件狀態"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: '減價<span class="editormd-tex">\leftrightarrow \LaTeX</span> 自動化'
+- Feature: 「減價」<span class="editormd-tex">\leftrightarrow \LaTeX</span> 自動化
   Orion: "&check;"
 - Feature: "AI NLP 自動翻譯"
   Orion: "&check;"

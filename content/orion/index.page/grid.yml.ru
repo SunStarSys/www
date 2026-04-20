@@ -1,14 +1,12 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: черновик
 title: Данные таблицы для сетки сравнения характеристик
 ---
 
 
-- Feature: "[à la carte (BYOAI)ИИ](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[à la carte (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
   Orion: "&check;"
 - Feature: "SSO: Kerberos / Активный каталог / Интеграция OpenID"
   Orion: "&check;"
@@ -48,7 +46,7 @@ title: Данные таблицы для сетки сравнения хара
 - Feature: "Многоязычный (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Полностью поиск/замена <span class="editormd-tex">\KaTeX</span>/Выражения PCRE'
+- Feature: 'Полностью доступный для поиска/заменяемый <span class="editormd-tex">\KaTeX</span>/Выражения PCRE'
   Orion: "&check;"
 - Feature: "Федеративный"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: Данные таблицы для сетки сравнения хара
 - Feature: "Работает автономно"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "Легкая 3-я вечеринка 'Pull-запрос' Поток операций участника"
+- Feature: "Простой поток операций соавтора 3-й стороны Pull-Request"
   Orion: "&check;"
 - Feature: "[GitHub Интеграция](https://youtu.be/FRc4qZkxVaI) с/ IDE &amp; Поддержка действий"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: Данные таблицы для сетки сравнения хара
 - Feature: "Статус документа с возможностью поиска"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Снижение цен <span class="editormd-tex">\leftrightarrow \LaTeX</span> Автоматизация'
+- Feature: 'Снижение цен <span class="editormd-tex">\leftrightarrow \LaTeX</span> Автоматизация
   Orion: "&check;"
 - Feature: "ИИ: автоматический перевод NLP"
   Orion: "&check;"

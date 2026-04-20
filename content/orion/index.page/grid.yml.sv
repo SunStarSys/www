@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: skiss
 title: Tabelldata för rutnät för funktionsjämförelse
 ---
@@ -15,7 +13,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Slab: "&check;"
   Notify: "Endast SCIM"
   Confluence: "&check;"
-- Feature: "FIPS 140-3 kompatibel infrastruktur med nolltillit"
+- Feature: "FIPS 140-3-kompatibel, krypterad infrastruktur med nolltillit efter kvantitet"
   Orion: "&check;"
 - Feature: "HIPPA-kompatibel"
   Orion: "&check;"
@@ -48,7 +46,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Flerspråkig (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Helt sökbar/utbytbar <span class="editormd-tex">\KaTeX</span>/PCRE-uttryck'
+- Feature: Fullständigt sökbar/utbytbar <span class="editormd-tex">\KaTeX</span>/PCRE-uttryck"
   Orion: "&check;"
 - Feature: "Samordnad"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Fungerar nedkopplad"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "Lätt 3:e part 'Hämtningsbegäran' Arbetsflöde för medverkande"
+- Feature: "Arbetsflöde för Easy 3rd Party 'Pull-Request'-bidragare"
   Orion: "&check;"
 - Feature: "[GitHub-integrering](https://youtu.be/FRc4qZkxVaI) med IDE &amp; Stöd för åtgärder"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Sökbar dokumentstatus"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering'
+- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering
   Orion: "&check;"
 - Feature: "Automatisk översättning av AI NLP"
   Orion: "&check;"

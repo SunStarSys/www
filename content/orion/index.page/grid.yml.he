@@ -1,21 +1,19 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: טיוטה
 title: נתוני טבלה לסורג השוואת מאפיינים
 ---
 
 
-- Feature: "[AI à la carte](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[א-לה קארט (BYOAI)](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
   Orion: "&check;"
 - Feature: "SSO: Kerberos / מדריך פעיל / שילוב OpenID"
   Orion: "&check;"
   Slab: "&check;"
   Notify: "SCIM בלבד"
   Confluence: "&check;"
-- Feature: "תשתית אפס-אמון תואמת ל-FIPS 140-3"
+- Feature: "תשתית אפס-אמון מוצפנת, תואמת ל-FIPS 140-3"
   Orion: "&check;"
 - Feature: "תואם HIPPA"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 - Feature: "עבודות לא מקוונות"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "מסיבת קל 3 'משיכת בקשה' תהליך עבודה של תורם"
+- Feature: "תהליך עבודה של תורם 'משיכה לבקשת' של צד 3 קל"
   Orion: "&check;"
 - Feature: "[שילוב GitHub](https://youtu.be/FRc4qZkxVaI) עם זיהוי &amp; תמיכה בפעולות"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 - Feature: "סטטוס מסמך ניתן לחיפוש"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'הוזלה <span class="editormd-tex">\leftrightarrow \LaTeX</span> אוטומציה'
+- Feature: 'סמן מטה' <span class="editormd-tex">\leftrightarrow \LaTeX</span> אוטומציה'
   Orion: "&check;"
 - Feature: "תרגום אוטומטי של AI NLP"
   Orion: "&check;"

@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: projet
 title: Données de table pour la grille de comparaison des caractéristiques
 ---
@@ -15,7 +13,7 @@ title: Données de table pour la grille de comparaison des caractéristiques
   Slab: "&check;"
   Notify: "SCIM uniquement"
   Confluence: "&check;"
-- Feature: "Infrastructure Zero Trust conforme à la norme FIPS 140-3"
+- Feature: "Infrastructure Zero Trust conforme à la norme FIPS 140-3, après quantification"
   Orion: "&check;"
 - Feature: "Conformité HIPPA"
   Orion: "&check;"
@@ -48,7 +46,7 @@ title: Données de table pour la grille de comparaison des caractéristiques
 - Feature: "Multilingue (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Recherche complète/remplaçable <span class="editormd-tex">\KaTeX</span>Expressions /PCRE'
+- Feature: 'Recherche complète/remplaçable <span class="editormd-tex">\KaTeX</span>/Expressions PCRE'
   Orion: "&check;"
 - Feature: "Fédéré"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: Données de table pour la grille de comparaison des caractéristiques
 - Feature: "Fonctionne hors ligne"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "3e partie facile 'Demande d'extraction' Workflow du contributeur"
+- Feature: "Workflow du contributeur "Pull-Request" de la 3e partie"
   Orion: "&check;"
 - Feature: "[GitHub Intégration](https://youtu.be/FRc4qZkxVaI) avec IDE &amp; Prise en charge des actions"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: Données de table pour la grille de comparaison des caractéristiques
 - Feature: "Statut du document recherchable"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Démarque <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisation'
+- Feature: 'Markdown <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisation
   Orion: "&check;"
 - Feature: "Traduction automatique AI NLP"
   Orion: "&check;"

@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: ~
-published: ~
 status: 下書き
 title: 機能比較グリッドの表データ
 ---
@@ -15,7 +13,7 @@ title: 機能比較グリッドの表データ
   Slab: "&check;"
   Notify: "SCIMのみ"
   Confluence: "&check;"
-- Feature: "FIPS 140-3準拠のゼロトラスト・インフラストラクチャ"
+- Feature: "FIPS 140-3準拠のPost-Quantum暗号化ゼロトラスト・インフラストラクチャ"
   Orion: "&check;"
 - Feature: "HIPPA準拠"
   Orion: "&check;"
@@ -48,7 +46,7 @@ title: 機能比較グリッドの表データ
 - Feature: "多言語(i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: '完全に検索可能/置換可能<span class="editormd-tex">\KaTeX</span>/PCRE式'
+- Feature: '完全検索可能/置換可能<span class="editormd-tex">\KaTeX</span>/PCRE式'
   Orion: "&check;"
 - Feature: "フェデレーテッド"
   Orion: "&check;"
@@ -61,7 +59,7 @@ title: 機能比較グリッドの表データ
 - Feature: "オフライン対応"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "簡単なサードパーティ'プル・リクエスト' コントリビュータ・ワークフロー"
+- Feature: "サード・パーティの簡単な「プル・リクエスト」コントリビュータ・ワークフロー"
   Orion: "&check;"
 - Feature: "[GitHub統合](https://youtu.be/FRc4qZkxVaI) IDEを使用&amp; アクションのサポート"
   Orion: "&check;"
@@ -96,7 +94,7 @@ title: 機能比較グリッドの表データ
 - Feature: "検索可能な文書ステータス"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: '値下げ<span class="editormd-tex">\leftrightarrow \LaTeX</span> 自動化'
+- Feature: マークダウン<span class="editormd-tex">\leftrightarrow \LaTeX</span> 自動化
   Orion: "&check;"
 - Feature: "AI NLP自動翻訳"
   Orion: "&check;"
