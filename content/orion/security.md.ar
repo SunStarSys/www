@@ -48,7 +48,7 @@ end
 class vpn-us-west,A3 darkBlue
 
 subgraph vpn-de-central[ ]
-    A4[[فرانكفورت (ألمانيا)]]
+    A4[[فرانكفورت ألمانيا]]
     B4[خوادم OCI Edge]
 end
 class vpn-de-central,A4 darkBlue
