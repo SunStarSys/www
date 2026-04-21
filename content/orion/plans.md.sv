@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: Jamstack,wiki,km,cms
-published: ~
 status: publicerad
 title: Orionplaner
 ---
@@ -11,15 +9,15 @@ title: Orionplaner
 ## Plandetaljer
 
 <div class="row">
-<div class="col-lg-4">
-	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">Vårdpersonalplan</div>
-		<div class="card-body">
+  <div class="col-lg-4">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+      <div class="card-header">Vårdpersonalplan</div>
+        <div class="card-body">
 			Perfekt för oberoende bloggare
-			<hr />
+<hr />
 <p>
 
-$25/månad/hanterad allmän webbplats
+$25/månad/hanterad webbplats
 
 </p>
 
@@ -30,85 +28,85 @@ $25/månad/hanterad allmän webbplats
 <li>Inkluderade månadsresurser (per webbplats):
 <p>
 <ol>
-						<li>Privat subversion hosting</li>
-						<li>250 MB lagringsutrymme<sup>1</sup></li>
-						<li>100 Gbyte dataöverföring</li>
-						<li>Obegränsad IDE-användning för 10 platser</li>
-			<li>100 byggminuter</li>
-			<li>E-postbaserad kundsupport</li>
-					</ol>
-					</p>
+  <li>Privat subversion hosting</li>
+  <li>250 MB lagringsutrymme<sup>1</sup></li>
+  <li>100 Gbyte dataöverföring</li>
+  <li>Obegränsad IDE-användning för 10 platser</li>
+  <li>100 byggminuter</li>
+  <li>E-postbaserad kundsupport</li>
+</ol>
+</p>
 </li>
 </ul>
 
 <ul style="min-height:200px">
-				<li>Ytterligare månatliga resurspriser (per webbplats):
+<li>Ytterligare månatliga resurspriser (per webbplats):
 <p>
 <ol>
-						<li>Lagringsutrymme på $1/5 Mbyte<sup>1</sup></li>
-						<li>Dataöverföring på 10 USD/40 Gbyte</li>
-						<li>$5/säte</li>
-						<li>$10/100 byggminuter</li>
-                        <li>$0,50 / sida AI NLP översättningar</li>
+  <li>Lagringsutrymme på $1/5 Mbyte<sup>1</sup></li>
+  <li>Dataöverföring på 10 USD/40 Gbyte</li>
+  <li>$5/säte</li>
+  <li>$10/100 byggminuter</li>
+  <li>$0,50 / sida AI NLP översättningar</li>
 </ol>
-					</p>
+</p>
 </li>
-			</ul>
-		</div>
-	</div>
+</ul>
+</div>
+</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">Affärsplan</div>
-		<div class="card-body">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card-header">Affärsplan</div>
+      <div class="card-body">
 			Bra för SMB
-			<hr />
+<hr />
 <p>
 
-$ 100 / månad / hanterad offentlig webbplats, ~ 50 % rabatt på alla konkurrentprissättningsmodeller!
+$ 100 / månad / hanterad webbplats, ~ 50 % rabatt på alla konkurrent prismodeller!
 
 </p>
 
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>Inkluderade månadsresurser (per webbplats):
+<li>Inkluderade månadsresurser (per webbplats):
 <p>
 <ol>
-						<li>Privat subversion hosting</li>
-						<li>1 Gbyte lagringsutrymme<sup>1</sup></li>
-						<li>500 Gbyte dataöverföring</li>
-						<li>Obegränsad IDE-användning för 50 platser</li>
-						<li>Upp till 5 åtkomstkontrollista-grupper</li>
-				<li>500 byggminuter</li>
-				<li>99,9 % heltäckande servicenivåavtal<sup>3</sup></li>
-						<li>E-postbaserad kundsupport</li>
+  <li>Privat subversion hosting</li>
+  <li>1 Gbyte lagringsutrymme<sup>1</sup></li>
+  <li>500 Gbyte dataöverföring</li>
+  <li>Obegränsad IDE-användning för 50 platser</li>
+  <li>Upp till 5 åtkomstkontrollista-grupper</li>
+  <li>500 byggminuter</li>
+  <li>99,9 % heltäckande servicenivåavtal<sup>3</sup></li>
+  <li>E-postbaserad kundsupport</li>
 </ol>
 </p>
 </li>
 </ul>
 <ul style="min-height:200px">
-				<li>Ytterligare månatliga resurspriser (per webbplats):
+<li>Ytterligare månatliga resurspriser (per webbplats):
 <p>
-					<ol>
-						<li>Lagringsutrymme på $10/100 Mbyte<sup>1</sup></li>
-						<li>Dataöverföring på 20 USD/100 Gbyte</li>
-						<li>$10/säte</li>
-						<li>$10/100 byggminuter</li>
-                        <li>$.40 / sida AI NLP översättningar</li>
-                    </ol>
-					</p>
-					</li>
-				</ul>
+<ol>
+  <li>Lagringsutrymme på $10/100 Mbyte<sup>1</sup></li>
+  <li>Dataöverföring på 20 USD/100 Gbyte</li>
+  <li>$10/säte</li>
+  <li>$10/100 byggminuter</li>
+  <li>$.40 / sida AI NLP översättningar</li>
+</ol>
+</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="col-lg-4">
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">Företagsplan</div>
-		<div class="card-body">
-			Offentlig sektor, icke-statliga organisationer och erkända varumärken
-			<hr />
+  <div class="card-header">Företagsplan</div>
+    <div class="card-body">
+Offentlig sektor, icke-statliga organisationer och erkända varumärken
+<hr />
 <p>
 
 $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
@@ -118,45 +116,45 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>Inkluderade månadsresurser:  &nbsp;
+<li>Inkluderade månadsresurser:  &nbsp;
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
 <p>
 <ol>
-						<li>5 GB lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
-						<li>5 Tbyte dataöverföring</li>
-						<li>Obegränsade webbplatser och (självhanterade) platser</li>
-						<li>5000 byggminuter</li>
-						<li>Full kontroll över konfiguration av Subversion-auktorisering</li>
-						<li>Privata, nätverksbaserade byggcontainrar</li>
-						<li>99,99 % heltäckande servicenivåavtal<sup>3</sup></li>
-						<li>Global POP<sup>4</sup> med geografiskt distribuerat leveransnätverk för sista kilometern i Q4</li>
-						<li>Servicenivåavtal för premiumsupport</li>
-					</ol>
-					</p>
+  <li>5 GB lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
+  <li>5 Tbyte dataöverföring</li>
+  <li>Obegränsade webbplatser och (självhanterade) platser</li>
+  <li>5000 byggminuter</li>
+  <li>Full kontroll över konfiguration av Subversion-auktorisering</li>
+  <li>Privata, nätverksbaserade byggcontainrar</li>
+  <li>99,99 % heltäckande servicenivåavtal<sup>3</sup></li>
+  <li>Global POP<sup>4</sup> med geografiskt distribuerat leveransnätverk för sista kilometern i Q4</li>
+  <li>Servicenivåavtal för premiumsupport</li>
+</ol>
+</p>
 </li>
-			</ul>
-			<ul style="min-height:200px">
-				<li>Ytterligare månatliga resurskostnader:
+</ul>
+<ul style="min-height:200px">
+<li>Ytterligare månatliga resurskostnader:
 
 &nbsp;
 
 <p>
 <ol>
-						<li>Lagringsutrymme på 100 USD/1 Gbyte<sup>2</sup></li>
-						<li>Dataöverföring på 15 USD/100 Gbyte</li>
-						<li>$100 / ithread mod_perl registervärd</li>
-						<li>$100/OCI-region för anpassade POP</li>
-				<li>$100/1K Byggminuter</li>
-                <li>$0,30 / sida AI NLP översättningar</li>
-                <li>WebSockets och/eller värdtjänster för privata containrar tillgängliga</li>
-                      </ol>
-					</p>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <li>Lagringsutrymme på 100 USD/1 Gbyte<sup>2</sup></li>
+  <li>Dataöverföring på 15 USD/100 Gbyte</li>
+  <li>$100 / ithread mod_perl registervärd</li>
+  <li>$100/OCI-region för anpassade POP</li>
+  <li>$100/1K Byggminuter</li>
+  <li>$0,30 / sida AI NLP översättningar</li>
+  <li>WebSockets och/eller värdtjänster för privata containrar tillgängliga</li>
+</ol>
+</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 
@@ -192,11 +190,11 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 #### Fotnoter
 
-1. Lagringsutnyttjande beräknat baserat på storleken på två kassabetalningar med arbetskopia av varje plats: ett källträd och ett resulterande produktionsträd.
+1.  Lagringsutnyttjande beräknat baserat på storleken på två kassabetalningar med arbetskopia av varje plats: ett källträd och ett resulterande produktionsträd.
 
 2. Lagringsutnyttjande beräknat baserat på den totala storleken på SunStar Systembaserat Subversion-datalager för företagskunder, inte enskilda kassabetalningar, vilket är ett *jämfört mindre antal* (ungefär storleken på en enstaka utcheckning med källträd).
 
-3. SLA täcker webbplatsens tillgångar *och* Orion online IDE *och* bygga systemtillgänglighet, men utesluter Subversion versionskontrollsystem, som vi förväntar oss att förbli konkurrenskraftiga med GitHub's allmänna tillgänglighetsmått.
+3. SLA täcker webbplatsens tillgångar *och* Orion online IDE *och* bygga systemtillgänglighet, men utesluter Subversion versionskontrollsystem, som vi förväntar oss att förbli konkurrenskraftiga med GitHubs allmänna tillgänglighetsmått.
 
 4. Företagskundernas närvaropunkter (POP):
 

@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: Jamstack,wiki,kms,cms
-published: ~
 status: publicado
 title: Planos Orion
 ---
@@ -11,15 +9,15 @@ title: Planos Orion
 ## Detalhes do Plano
 
 <div class="row">
-<div class="col-lg-4">
-	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">Plano Profissional</div>
-		<div class="card-body">
+  <div class="col-lg-4">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+      <div class="card-header">Plano Profissional</div>
+        <div class="card-body">
 			Ideal para blogueiros independentes
-			<hr />
+<hr />
 <p>
 
-$25 / mês / site público gerenciado
+$25 / mês / site gerenciado
 
 </p>
 
@@ -30,85 +28,85 @@ $25 / mês / site público gerenciado
 <li>Recursos mensais incluídos (por site):
 <p>
 <ol>
-						<li>Hospedagem de subversão privada</li>
-						<li>250 MB de espaço de armazenamento<sup>1</sup></li>
-						<li>Transferência de dados de 100 GB</li>
-						<li>Uso ilimitado do IDE para 10 lugares</li>
-			<li>100 minutos de compilação</li>
-			<li>Suporte ao Cliente Baseado em E-mail</li>
-					</ol>
-					</p>
+  <li>Hospedagem de subversão privada</li>
+  <li>250 MB de espaço de armazenamento<sup>1</sup></li>
+  <li>Transferência de dados de 100 GB</li>
+  <li>Uso ilimitado do IDE para 10 lugares</li>
+  <li>100 minutos de compilação</li>
+  <li>Suporte ao Cliente Baseado em E-mail</li>
+</ol>
+</p>
 </li>
 </ul>
 
 <ul style="min-height:200px">
-				<li>Taxas mensais adicionais de recursos (por site):
+<li>Taxas mensais adicionais de recursos (por site):
 <p>
 <ol>
-						<li>$1 / 5 MB de espaço de armazenamento<sup>1</sup></li>
-						<li>Transferência de dados de US$ 10/40 GB</li>
-						<li>$5 / assento</li>
-						<li>$10 / 100 minutos de compilação</li>
-                        <li>Traduções AI NLP de US$ 0,50 / página</li>
+  <li>$1 / 5 MB de espaço de armazenamento<sup>1</sup></li>
+  <li>Transferência de dados de US$ 10/40 GB</li>
+  <li>$5 / assento</li>
+  <li>$10 / 100 minutos de compilação</li>
+  <li>Traduções AI NLP de US$ 0,50 / página</li>
 </ol>
-					</p>
+</p>
 </li>
-			</ul>
-		</div>
-	</div>
+</ul>
+</div>
+</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">Plano de negócios</div>
-		<div class="card-body">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card-header">Plano de negócios</div>
+      <div class="card-body">
 			Ótimo para SMB
-			<hr />
+<hr />
 <p>
 
-$100 / mês / site público gerenciado, ~50% de desconto em todos os modelos de preços do concorrente!
+$100 / mês / site gerenciado, ~50% de desconto em todos os modelos de preços do concorrente!
 
 </p>
 
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>Recursos mensais incluídos (por site):
+<li>Recursos mensais incluídos (por site):
 <p>
 <ol>
-						<li>Hospedagem de subversão privada</li>
-						<li>1 GB de espaço de armazenamento<sup>1</sup></li>
-						<li>Transferência de dados de 500 GB</li>
-						<li>Uso ilimitado do IDE para 50 lugares</li>
-						<li>Até 5 Grupos ACL</li>
-				<li>500 minutos de compilação</li>
-				<li>SLA Abrangente de 99,9%<sup>3</sup></li>
-						<li>Suporte ao Cliente Baseado em E-mail</li>
+  <li>Hospedagem de subversão privada</li>
+  <li>1 GB de espaço de armazenamento<sup>1</sup></li>
+  <li>Transferência de dados de 500 GB</li>
+  <li>Uso ilimitado do IDE para 50 lugares</li>
+  <li>Até 5 Grupos ACL</li>
+  <li>500 minutos de compilação</li>
+  <li>SLA Abrangente de 99,9%<sup>3</sup></li>
+  <li>Suporte ao Cliente Baseado em E-mail</li>
 </ol>
 </p>
 </li>
 </ul>
 <ul style="min-height:200px">
-				<li>Taxas mensais adicionais de recursos (por site):
+<li>Taxas mensais adicionais de recursos (por site):
 <p>
-					<ol>
-						<li>$10 / 100 MB de espaço de armazenamento<sup>1</sup></li>
-						<li>Transferência de dados de US$ 20/100 GB</li>
-						<li>$10 / assento</li>
-						<li>$10 / 100 minutos de compilação</li>
-                        <li>Traduções AI NLP de US$ 40 / página</li>
-                    </ol>
-					</p>
-					</li>
-				</ul>
+<ol>
+  <li>$10 / 100 MB de espaço de armazenamento<sup>1</sup></li>
+  <li>Transferência de dados de US$ 20/100 GB</li>
+  <li>$10 / assento</li>
+  <li>$10 / 100 minutos de compilação</li>
+  <li>Traduções AI NLP de US$ 40 / página</li>
+</ol>
+</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="col-lg-4">
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">Plano Empresarial</div>
-		<div class="card-body">
-			Setor Público, ONG e Marcas Reconhecidas
-			<hr />
+  <div class="card-header">Plano Empresarial</div>
+    <div class="card-body">
+Setor Público, ONG e Marcas Reconhecidas
+<hr />
 <p>
 
 $1000 / mês, ~67% de desconto em todos os modelos de preços do concorrente!
@@ -118,45 +116,45 @@ $1000 / mês, ~67% de desconto em todos os modelos de preços do concorrente!
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>Recursos mensais incluídos:  &nbsp;
+<li>Recursos mensais incluídos:  &nbsp;
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
 <p>
 <ol>
-						<li>5 GB de espaço de armazenamento no seu próprio repositório do Subversion<sup>2</sup></li>
-						<li>Transferência de dados de 5 TB</li>
-						<li>Sites ilimitados e assentos (autogerenciados)</li>
-						<li>5000 minutos de compilação</li>
-						<li>Controle total sobre a configuração de autorização do Subversion</li>
-						<li>Contêineres de build privados e em rede</li>
-						<li>SLA Abrangente de 99,99%<sup>3</sup></li>
-						<li>POP Global<sup>4</sup> com rede de entrega de última milha distribuída geograficamente em Q4</li>
-						<li>SLA de Suporte Premium</li>
-					</ol>
-					</p>
+  <li>5 GB de espaço de armazenamento no seu próprio repositório do Subversion<sup>2</sup></li>
+  <li>Transferência de dados de 5 TB</li>
+  <li>Sites ilimitados e assentos (autogerenciados)</li>
+  <li>5000 minutos de compilação</li>
+  <li>Controle total sobre a configuração de autorização do Subversion</li>
+  <li>Contêineres de build privados e em rede</li>
+  <li>SLA Abrangente de 99,99%<sup>3</sup></li>
+  <li>POP Global<sup>4</sup> com rede de entrega de última milha distribuída geograficamente em Q4</li>
+  <li>SLA de Suporte Premium</li>
+</ol>
+</p>
 </li>
-			</ul>
-			<ul style="min-height:200px">
-				<li>Taxas de Recursos Mensais Adicionais:
+</ul>
+<ul style="min-height:200px">
+<li>Taxas de Recursos Mensais Adicionais:
 
 &nbsp;
 
 <p>
 <ol>
-						<li>$100 / 1 GB de espaço de armazenamento<sup>2</sup></li>
-						<li>Transferência de dados de US$ 15/100 GB</li>
-						<li>Hospedagem de registro $100 / ithread mod_perl</li>
-						<li>US$ 100 / Região do OCI para POPs personalizados</li>
-				<li>Minutos de compilação de US$ 100 / 1K</li>
-                <li>Traduções AI NLP de US$ 0,30 / página</li>
-                <li>WebSockets e/ou hospedagem de contêiner privado disponível</li>
-                      </ol>
-					</p>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <li>$100 / 1 GB de espaço de armazenamento<sup>2</sup></li>
+  <li>Transferência de dados de US$ 15/100 GB</li>
+  <li>Hospedagem de registro $100 / ithread mod_perl</li>
+  <li>US$ 100 / Região do OCI para POPs personalizados</li>
+  <li>Minutos de compilação de US$ 100 / 1K</li>
+  <li>Traduções AI NLP de US$ 0,30 / página</li>
+  <li>WebSockets e/ou hospedagem de contêiner privado disponível</li>
+</ol>
+</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 
@@ -192,11 +190,11 @@ Parcerias tecnológicas são muito bem-vindas para agências e revendedores terc
 
 #### Rodapés
 
-1. Utilização de Armazenamento calculada com base no tamanho de dois check-outs de cópia de trabalho de cada site: uma árvore de origem e uma árvore de compilação de produção resultante.
+1.  Utilização de Armazenamento calculada com base no tamanho de dois check-outs de cópia de trabalho de cada site: uma árvore de origem e uma árvore de compilação de produção resultante.
 
 2. Utilização de Armazenamento calculada com base no tamanho total do repositório do Subversion hospedado pelos Sistemas SunStar para clientes Corporativos, e não check-outs individuais, que é um número *comparativamente menor* (sobre o tamanho de um check-out de árvore de origem única).
 
-3. O SLA abrange os ativos do site *e* o Orion IDE on-line *e* a disponibilidade do sistema de compilação, mas exclui o sistema de controle de versão do Subversion, que esperamos permanecer competitivo com GitHub'métricas gerais de disponibilidade.
+3. O SLA abrange os ativos do site *e* o Orion IDE on-line *e* a disponibilidade do sistema de compilação, mas exclui o sistema de controle de versão do Subversion, que esperamos permanecer competitivo com as métricas de disponibilidade geral do GitHub.
 
 4. Pontos de Presença (POP) do Cliente Empresarial:
 

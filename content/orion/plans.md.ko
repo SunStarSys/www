@@ -1,9 +1,7 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: Jamstack, Wiki, kms, cms
-published: ~
 status: 공개됨
 title: 오리온 계획
 ---
@@ -11,15 +9,15 @@ title: 오리온 계획
 ## 계획 세부정보
 
 <div class="row">
-<div class="col-lg-4">
-	<div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">전문 계획</div>
-		<div class="card-body">
+  <div class="col-lg-4">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+      <div class="card-header">전문 계획</div>
+        <div class="card-body">
 			독립 블로거에게 이상적
-			<hr />
+<hr />
 <p>
 
-매월 $25/관리되는 공용 사이트
+매월 $25 / 관리 사이트
 
 </p>
 
@@ -30,85 +28,85 @@ title: 오리온 계획
 <li>포함된 월간 리소스(웹 사이트당):
 <p>
 <ol>
-						<li>개인 Subversion 호스팅</li>
-						<li>250MB 스토리지 공간<sup>1</sup></li>
-						<li>100GB 데이터 전송</li>
-						<li>10석에 대한 무제한 IDE 사용</li>
-			<li>100 빌드분</li>
-			<li>이메일 기반 고객 지원</li>
-					</ol>
-					</p>
+  <li>개인 Subversion 호스팅</li>
+  <li>250MB 스토리지 공간<sup>1</sup></li>
+  <li>100GB 데이터 전송</li>
+  <li>10석에 대한 무제한 IDE 사용</li>
+  <li>100 빌드분</li>
+  <li>이메일 기반 고객 지원</li>
+</ol>
+</p>
 </li>
 </ul>
 
 <ul style="min-height:200px">
-				<li>추가 월별 자원 단가(웹 사이트당):
+<li>추가 월별 자원 단가(웹 사이트당):
 <p>
 <ol>
-						<li>$1/5MB 스토리지 공간<sup>1</sup></li>
-						<li>$10/40GB 데이터 전송</li>
-						<li>$5 / 좌석</li>
-						<li>$10 / 100 빌드 분</li>
-                        <li>$0.50/페이지 AI NLP 번역</li>
+  <li>$1/5MB 스토리지 공간<sup>1</sup></li>
+  <li>$10/40GB 데이터 전송</li>
+  <li>$5 / 좌석</li>
+  <li>$10 / 100 빌드 분</li>
+  <li>$0.50/페이지 AI NLP 번역</li>
 </ol>
-					</p>
+</p>
 </li>
-			</ul>
-		</div>
-	</div>
+</ul>
+</div>
+</div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">비즈니스 계획</div>
-		<div class="card-body">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card-header">비즈니스 계획</div>
+      <div class="card-body">
 			SMB에 적합
-			<hr />
+<hr />
 <p>
 
-매월 $100/매니지드 퍼블릭 사이트, 모든 경쟁업체 가격 모델에서 최대 50% 할인!
+매월 $ 100 / 관리 사이트, 모든 경쟁 업체 가격 모델에서 최대 50 % 할인!
 
 </p>
 
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>포함된 월간 리소스(웹 사이트당):
+<li>포함된 월간 리소스(웹 사이트당):
 <p>
 <ol>
-						<li>개인 Subversion 호스팅</li>
-						<li>1GB 스토리지 공간<sup>1</sup></li>
-						<li>500GB 데이터 전송</li>
-						<li>50석 무제한 IDE 사용</li>
-						<li>최대 5개의 ACL 그룹</li>
-				<li>500 빌드분</li>
-				<li>99.9% 종합 SLA<sup>3</sup></li>
-						<li>이메일 기반 고객 지원</li>
+  <li>개인 Subversion 호스팅</li>
+  <li>1GB 스토리지 공간<sup>1</sup></li>
+  <li>500GB 데이터 전송</li>
+  <li>50석 무제한 IDE 사용</li>
+  <li>최대 5개의 ACL 그룹</li>
+  <li>500 빌드분</li>
+  <li>99.9% 종합 SLA<sup>3</sup></li>
+  <li>이메일 기반 고객 지원</li>
 </ol>
 </p>
 </li>
 </ul>
 <ul style="min-height:200px">
-				<li>추가 월별 자원 단가(웹 사이트당):
+<li>추가 월별 자원 단가(웹 사이트당):
 <p>
-					<ol>
-						<li>$10/100MB 스토리지 공간<sup>1</sup></li>
-						<li>$20/100GB 데이터 전송</li>
-						<li>$10 / 좌석</li>
-						<li>$10 / 100 빌드 분</li>
-                        <li>$40 / 페이지 AI NLP 번역</li>
-                    </ol>
-					</p>
-					</li>
-				</ul>
+<ol>
+  <li>$10/100MB 스토리지 공간<sup>1</sup></li>
+  <li>$20/100GB 데이터 전송</li>
+  <li>$10 / 좌석</li>
+  <li>$10 / 100 빌드 분</li>
+  <li>$40 / 페이지 AI NLP 번역</li>
+</ol>
+</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="col-lg-4">
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
-		<div class="card-header">기업 계획</div>
-		<div class="card-body">
-			공공 부문, NGO 및 인정 브랜드
-			<hr />
+  <div class="card-header">기업 계획</div>
+    <div class="card-body">
+공공 부문, NGO 및 인정 브랜드
+<hr />
 <p>
 
 매월 $1000, 모든 경쟁업체 가격 모델에서 최대 67% 할인!
@@ -118,45 +116,45 @@ title: 오리온 계획
 &nbsp;
 
 <ul style="min-height:400px">
-				<li>포함된 월별 리소스:  &nbsp;
+<li>포함된 월별 리소스:  &nbsp;
 
 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
 
 <p>
 <ol>
-						<li>자체 Subversion 저장소의 5GB 스토리지 공간<sup>2</sup></li>
-						<li>5TB 데이터 전송</li>
-						<li>무제한 웹 사이트 및 (자체 관리) 좌석</li>
-						<li>5000 빌드 시간(분)</li>
-						<li>하위 버전 권한 부여 구성에 대한 전체 제어</li>
-						<li>네트워크로 연결된 전용 빌드 컨테이너</li>
-						<li>99.99% 종합 SLA<sup>3</sup></li>
-						<li>글로벌 POP<sup>4</sup> Q4에 지리적으로 분산 된 마지막 마일 배달 네트워크</li>
-						<li>프리미엄 지원 SLA</li>
-					</ol>
-					</p>
+  <li>자체 Subversion 저장소의 5GB 스토리지 공간<sup>2</sup></li>
+  <li>5TB 데이터 전송</li>
+  <li>무제한 웹 사이트 및 (자체 관리) 좌석</li>
+  <li>5000 빌드 시간(분)</li>
+  <li>하위 버전 권한 부여 구성에 대한 전체 제어</li>
+  <li>네트워크로 연결된 전용 빌드 컨테이너</li>
+  <li>99.99% 종합 SLA<sup>3</sup></li>
+  <li>글로벌 POP<sup>4</sup> Q4에 지리적으로 분산 된 마지막 마일 배달 네트워크</li>
+  <li>프리미엄 지원 SLA</li>
+</ol>
+</p>
 </li>
-			</ul>
-			<ul style="min-height:200px">
-				<li>추가 월별 자원 단가:
+</ul>
+<ul style="min-height:200px">
+<li>추가 월별 자원 단가:
 
 &nbsp;
 
 <p>
 <ol>
-						<li>1GB 스토리지 공간당 100달러<sup>2</sup></li>
-						<li>100GB 데이터 전송당 $15</li>
-						<li>$100 / ithread mod_perl 레지스트리 호스팅</li>
-						<li>커스텀 POP를 위한 OCI 리전당 $100</li>
-				<li>$100 / 1K 빌드 시간(분)</li>
-                <li>$0.30/페이지 AI NLP 번역</li>
-                <li>WebSockets 및/또는 전용 컨테이너 호스팅 사용 가능</li>
-                      </ol>
-					</p>
-				</li>
-			</ul>
-		</div>
-	</div>
+  <li>1GB 스토리지 공간당 100달러<sup>2</sup></li>
+  <li>100GB 데이터 전송당 $15</li>
+  <li>$100 / ithread mod_perl 레지스트리 호스팅</li>
+  <li>커스텀 POP를 위한 OCI 리전당 $100</li>
+  <li>$100 / 1K 빌드 시간(분)</li>
+  <li>$0.30/페이지 AI NLP 번역</li>
+  <li>WebSockets 및/또는 전용 컨테이너 호스팅 사용 가능</li>
+</ol>
+</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 
@@ -178,7 +176,7 @@ title: 오리온 계획
 
 - Technology Parnerships는 기관 및 타사 리셀러에게 매우 환영합니다.
 
-### Build Minutes and Plan Levels: A Rough Guide(시간 및 계획 레벨 구축: 거친 가이드).
+### Build Minutes and Plan Levels: A Rough Guide(시간 및 계획 레벨 구축: 거친 가이드)
 
 *커밋당 평균 빌드 기간에 대한 합당한 고급 예측은 10초입니다.*
 
@@ -192,11 +190,11 @@ title: 오리온 계획
 
 #### 각주
 
-1. 각 사이트의 두 작업 복사본 체크아웃 크기(소스 트리 하나와 생산 빌드 트리 하나)를 기준으로 계산된 스토리지 활용률입니다.
+1.  각 사이트의 두 작업 복사본 체크아웃 크기(소스 트리 하나와 생산 빌드 트리 하나)를 기준으로 계산된 스토리지 활용률입니다.
 
 2. 개별 체크아웃이 아닌 엔터프라이즈 고객을 위한 SunStar 시스템 호스트 Subversion 저장소의 총 크기를 기반으로 계산된 스토리지 활용률로, *비교적으로 작은 숫자*입니다(단일 소스 트리 체크아웃 크기).
 
-3. SLA는 웹 사이트 자산 *및* Orion 온라인 IDE *및* 빌드 시스템 가용성을 포함하지만 Subversion 버전 제어 시스템은 제외되며, GitHub와 경쟁력을 유지할 것으로 예상됩니다.'일반 가용성 metrics
+3. SLA는 웹 사이트 자산 *및* Orion 온라인 IDE *및* 빌드 시스템 가용성을 다루지만, GitHub의 일반 가용성 지표와 경쟁력을 유지할 것으로 예상되는 Subversion 버전 제어 시스템은 제외됩니다.
 
 4. 엔터프라이즈 고객 POP(Point of Presence):
 
