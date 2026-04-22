@@ -122,7 +122,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 <p>
 <ol>
-  <li>5 GB lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
+  <li>10 GB lagringsutrymme i ditt eget Subversion-datalager<sup>2</sup></li>
   <li>5 Tbyte dataöverföring</li>
   <li>Obegränsade webbplatser och (självhanterade) platser</li>
   <li>5000 byggminuter</li>

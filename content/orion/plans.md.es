@@ -122,7 +122,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 <p>
 <ol>
-  <li>5 GB de espacio de almacenamiento en su propio repositorio de Subversion<sup>2</sup></li>
+  <li>10 GB de espacio de almacenamiento en su propio repositorio de Subversion<sup>2</sup></li>
   <li>Transferencia de datos de 5 TB</li>
   <li>Sitios web ilimitados y asientos (autogestionados)</li>
   <li>5000 minutos de creación</li>
