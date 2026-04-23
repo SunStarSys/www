@@ -208,7 +208,7 @@ Ingenting kan skapas och sedan visas över nätverket utan en motsvarande auktor
 
 Om du tillåter mallförbearbetning på källsidorna för nedsättning måste du vara medveten om hur mallargument gör innehållet i andra filer i trädet tillgängligt som variabler för källan till den redigerade sidan.
 
-Ofta, om det är konfigurerat att göra det, kan den redigerade sidan deklarera sina egna beroendefiler i sidans rubriker, vilket också är något att tänka på när du väger funktionsuppsättningar mot säkerhetskontroller i din Wikis informationsarkitektur.
+Ofta, om det är konfigurerat att göra det, kan den redigerade sidan deklarera sina egna beroendefiler i sidans rubriker, vilket också är något att tänka på när du väger funktionsuppsättningar mot säkerhetskontroller i din Wikis informationsarkitektur. Oavsett din inställning säkrar vi din webbplats som standard &mdash; inklusive innehållsberoenden och `ssi` innehåller.
 
 Medan vi kan erbjuda vägledning och stöd för att matcha dina behov, är det verkligen upp till dig att bestämma hur du ska balansera skalorna för din organisations förvaltade tillgångar i en Orion-stödd wiki.
 
@@ -244,7 +244,7 @@ Alla målfiler finns i en undermapp i [`/Mallar/`](#) och måste refereras som a
 
 Alla målfiler finns i en undermapp i [`/innehåll/`](#) och måste refereras som absoluta sökvägar som är rotade i den mappen.
 
-Om målsökvägen inte har konfigurerats i [`@path::mönster`](#) med en matchande inställning som gör att målsökvägen i fråga antingen kan arkiveras eller kategoriseras, [`ssi`](#) Åtgärden kommer att misslyckas.
+Om målsökvägen inte har konfigurerats i [`@path::mönster`](#) med en matchande inställning som gör att målsökvägen i fråga antingen kan arkiveras eller kategoriseras, eller så är den senast ändrade författaren av källfilen helt enkelt inte behörig att visa målsökvägen, [`ssi`](#) Åtgärden kommer att misslyckas.
 
 Detta beror på att [`ssi`](#) support är en förutsättning för dessa funktionsuppsättningar, för att bevara webbplatsens mål *permalinks*.
 

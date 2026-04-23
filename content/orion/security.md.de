@@ -208,7 +208,7 @@ Nichts kann ohne einen entsprechenden autorisierten Subversion Commit über das 
 
 Wenn Sie die Vorverarbeitung von Vorlagen auf den Markdown-Quellseiten zulassen, müssen Sie wissen, wie Vorlagenargumente den Inhalt anderer Dateien im Baum als Variablen für die Quelle der bearbeiteten Seite verfügbar machen.
 
-Oft kann die bearbeitete Seite, wenn sie dazu konfiguriert ist, ihre eigenen Abhängigkeitsdateien in den Kopfzeilen der Seite deklarieren, was auch zu beachten ist, wenn Sie Feature-Sets gegen Sicherheitssteuerelemente in der Informationsarchitektur Ihres Wikis abwägen.
+Oft kann die bearbeitete Seite, wenn sie dazu konfiguriert ist, ihre eigenen Abhängigkeitsdateien in den Kopfzeilen der Seite deklarieren, was auch zu beachten ist, wenn Sie Feature-Sets gegen Sicherheitssteuerelemente in der Informationsarchitektur Ihres Wikis abwägen. Unabhängig von Ihrer Haltung sichern wir Ihre Website standardmäßig &mdash; einschließlich Inhaltsabhängigkeiten und `Ssi` beinhaltet.
 
 Wir können zwar Anleitung und Unterstützung anbieten, um Ihre Bedürfnisse zu erfüllen, aber es liegt wirklich an Ihnen, zu entscheiden, wie Sie die Waagen für die verwalteten Assets Ihrer Organisation in einem von Orion unterstützten Wiki ausgleichen.
 
@@ -244,7 +244,7 @@ Alle Zieldateien befinden sich in einem Unterordner der [`/Vorlagen/`](#) Ordner
 
 Alle Zieldateien befinden sich in einem Unterordner der [`/Inhalt/`](#) Ordner und muss als absolute Pfade referenziert werden, die in diesem Ordner verwurzelt sind.
 
-Wenn der Zielpfad nicht konfiguriert ist in [`@path::Muster`](#) mit einer übereinstimmenden Einstellung, mit der der betreffende Zielpfad entweder archiviert oder kategorisiert werden kann, [`Ssi`](#) Vorgang nicht erfolgreich.
+Wenn der Zielpfad nicht konfiguriert ist in [`@path::Muster`](#) mit einer übereinstimmenden Einstellung, mit der der betreffende Zielpfad entweder archiviert oder kategorisiert werden kann, oder der zuletzt geänderte Autor der Quelldatei einfach nicht autorisiert ist, den Zielpfad anzuzeigen, [`Ssi`](#) Vorgang nicht erfolgreich.
 
 Das liegt daran, [`Ssi`](#) Der Support ist eine Voraussetzung für diese Featuresets, um die taget *permalinks* Ihrer Site zu erhalten.
 

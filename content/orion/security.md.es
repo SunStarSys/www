@@ -208,7 +208,7 @@ No se puede crear nada y, posteriormente, verlo a través de la red sin la corre
 
 Si permite el preprocesamiento de plantillas en las páginas de origen de Markdown, debe tener en cuenta cómo los argumentos de plantilla hacen que el contenido de otros archivos del árbol esté disponible como variables para el origen de la página editada.
 
-A menudo, si se configura para hacerlo, la página editada puede declarar sus propios archivos de dependencia en los encabezados de la página, lo que también es algo en lo que pensar a medida que sopesa los conjuntos de funciones contra los controles de seguridad en la arquitectura de información de su Wiki.
+A menudo, si se configura para hacerlo, la página editada puede declarar sus propios archivos de dependencia en los encabezados de la página, lo que también es algo en lo que pensar a medida que sopesa los conjuntos de funciones contra los controles de seguridad en la arquitectura de información de su Wiki. Independientemente de su postura, protegemos su sitio por defecto &mdash; incluidas las dependencias de contenido y `ssi` incluye.
 
 Si bien podemos ofrecer orientación y soporte para satisfacer sus necesidades, realmente depende de usted decidir cómo equilibrar las escalas de los activos gestionados de su organización en una wiki respaldada por Orion.
 
@@ -244,7 +244,7 @@ Todos los archivos de destino están en una subcarpeta de la [`/plantillas/`](#)
 
 Todos los archivos de destino están en una subcarpeta de la [`/contenido/`](#) carpeta, y se debe hacer referencia a ella como rutas de acceso absolutas con raíz en esa carpeta.
 
-Si la ruta de destino no está configurada en [`@path::patrones`](#) con una configuración coincidente que permite que la ruta de destino en cuestión se archive o se categorice, la [`ssi`](#) la operación fallará.
+Si la ruta de destino no está configurada en [`@path::patrones`](#) con una configuración coincidente que permite archivar o categorizar la ruta de destino en cuestión, o el último autor cambiado del archivo de origen simplemente no está autorizado a ver la ruta de destino, la [`ssi`](#) la operación fallará.
 
 Esto se debe a [`ssi`](#) El soporte es un requisito previo para esos conjuntos de características, para preservar el taget *permalinks* de su sitio.
 

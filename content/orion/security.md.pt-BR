@@ -208,7 +208,7 @@ Nada pode ser construído e posteriormente visualizado pela rede sem um commit d
 
 Se você permitir o pré-processamento de Modelo nas páginas de origem de markdown, deverá estar ciente de como os argumentos de modelo tornam o conteúdo de outros arquivos na árvore disponível como variáveis para a origem da página editada.
 
-Muitas vezes, se configurado para fazê-lo, a página editada pode declarar seus próprios arquivos de dependência nos cabeçalhos da página, o que também é algo para pensar enquanto você pesa conjuntos de recursos contra controles de segurança na Arquitetura de Informações da sua Wiki.
+Muitas vezes, se configurado para fazê-lo, a página editada pode declarar seus próprios arquivos de dependência nos cabeçalhos da página, o que também é algo para pensar enquanto você pesa conjuntos de recursos contra controles de segurança na Arquitetura de Informações da sua Wiki. Independentemente da sua posição, protegemos o seu site por padrão &mdash; incluindo dependências de conteúdo e `ssi` inclui.
 
 Embora possamos oferecer orientação e suporte para atender às suas necessidades, cabe a você decidir como equilibrar as escalas dos ativos gerenciados da sua organização em uma wiki apoiada pela Orion.
 
@@ -244,7 +244,7 @@ Todos os arquivos de destino estão em uma subpasta do [`/modelos/`](#) e deve s
 
 Todos os arquivos de destino estão em uma subpasta do [`/conteúdo`](#) e deve ser referenciado como caminhos absolutos com raiz nessa pasta.
 
-Se o caminho de destino não estiver configurado no [`@path::padrões`](#) com uma configuração correspondente que permite que o caminho de destino em questão seja arquivado ou categorizado, o [`ssi`](#) operação falhará.
+Se o caminho de destino não estiver configurado no [`@path::padrões`](#) com uma configuração correspondente que permite que o caminho de destino em questão seja arquivado ou categorizado, ou que o último autor alterado do arquivo de origem simplesmente não esteja autorizado a exibir o caminho de destino, o [`ssi`](#) operação falhará.
 
 Isso porque [`ssi`](#) o suporte é um pré-requisito para esses conjuntos de recursos, para preservar o taget *permalinks*. do seu site
 

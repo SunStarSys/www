@@ -208,7 +208,7 @@ Rien ne peut être construit et affiché par la suite sur le réseau sans une va
 
 Si vous autorisez le prétraitement de modèle dans les pages source de démarque, vous devez savoir comment les arguments de modèle rendent le contenu des autres fichiers de l'arborescence disponible en tant que variables pour la source de la page modifiée.
 
-Souvent, si elle est configurée pour le faire, la page modifiée peut déclarer ses propres fichiers de dépendance dans les en-têtes de la page, ce qui est également quelque chose à penser lorsque vous pesez les jeux de fonctionnalités contre les contrôles de sécurité dans l'architecture d'information de votre wiki.
+Souvent, si elle est configurée pour le faire, la page modifiée peut déclarer ses propres fichiers de dépendance dans les en-têtes de la page, ce qui est également quelque chose à penser lorsque vous pesez les jeux de fonctionnalités contre les contrôles de sécurité dans l'architecture d'information de votre wiki. Quelle que soit votre position, nous sécurisons votre site par défaut &mdash; incluant les dépendances de contenu et `ssi` inclut.
 
 Bien que nous puissions offrir des conseils et un soutien pour répondre à vos besoins, c'est à vous de décider comment équilibrer les échelles pour les actifs gérés de votre organisation dans un wiki soutenu par Orion.
 
@@ -244,7 +244,7 @@ Tous les fichiers cible se trouvent dans un sous-dossier de [`/modèles/`](#) et
 
 Tous les fichiers cible se trouvent dans un sous-dossier de [`/contenu/`](#) et doit être référencé en tant que chemins absolus ancrés dans ce dossier.
 
-Si le chemin cible n'est pas configuré dans [`@path : :modèles`](#) avec un paramètre de correspondance qui permet au chemin cible en question d'être archivé ou catégorisé, [`ssi`](#) l'opération échouera.
+Si le chemin cible n'est pas configuré dans [`@path : :modèles`](#) avec un paramètre de correspondance qui permet d'archiver ou de catégoriser le chemin cible en question, ou le dernier auteur modifié du fichier source n'est tout simplement pas autorisé à afficher le chemin cible, le [`ssi`](#) l'opération échouera.
 
 C'est parce que [`ssi`](#) Le support est un prérequis pour ces jeux de fonctionnalités, afin de préserver le taget *permalinks* de votre site.
 

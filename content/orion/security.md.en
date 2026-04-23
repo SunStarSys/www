@@ -205,7 +205,7 @@ Nothing can be built and subsequently viewed over the network without a correspo
 
 If you allow Template preprocessing in the markdown source pages, you need to be aware of how template arguments make the contents of other files in the tree available as variables to the source of the edited page.
 
-Often times, if configured to do so, the edited page can declare its own dependency files in the headers of the page, which is also something to think about as you weigh feature-sets against security-controls in your Wiki's Information Architecture.
+Often times, if configured to do so, the edited page can declare its own dependency files in the headers of the page, which is also something to think about as you weigh feature-sets against security-controls in your Wiki's Information Architecture. Regardless of your stance, we secure your site by default &mdash; including content dependencies and `ssi` includes.
 
 While we can offer guidance and support to match your needs, it's really up to you to decide how to balance the scales for your organization's managed assets in an Orion-backed wiki.
 
@@ -241,7 +241,7 @@ All target files are in a subfolder of the [`/templates/`](#) folder, and must b
 
 All target files are in a subfolder of the [`/content/`](#) folder, and must be referenced as absolute paths rooted at that folder.
 
-If the target path is not configured in [`@path::patterns`](#) with a matching setting that allows the target path in question to either be archived or categorized, the [`ssi`](#) operation will fail.
+If the target path is not configured in [`@path::patterns`](#) with a matching setting that allows the target path in question to either be archived or categorized, or the last changed author of the source file is simply not authorized to view the target path, the [`ssi`](#) operation will fail.
 
 This is because [`ssi`](#) support is a pre-requisite for those feature-sets, to preserve your site's taget *permalinks*.
 
