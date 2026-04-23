@@ -243,7 +243,7 @@ All target files are in a subfolder of the [`/content/`](#) folder, and must be 
 
 If the target path is not configured in [`@path::patterns`](#) with a matching setting that allows the target path in question to either be archived or categorized, or the last changed author of the source file is simply not authorized to view the target path, the [`ssi`](#) operation will fail.
 
-This is because [`ssi`](#) support is a pre-requisite for those feature-sets, to preserve your site's taget *permalinks*.
+This is because [`ssi`](#) support is a pre-requisite for those feature-sets, to preserve your site's target *permalinks*.
 
 #### Dependency/ACL Injection Controls
 
