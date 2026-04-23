@@ -246,7 +246,7 @@ Tous les fichiers cible se trouvent dans un sous-dossier de [`/contenu/`](#) et 
 
 Si le chemin cible n'est pas configuré dans [`@path : :modèles`](#) avec un paramètre de correspondance qui permet d'archiver ou de catégoriser le chemin cible en question, ou le dernier auteur modifié du fichier source n'est tout simplement pas autorisé à afficher le chemin cible, le [`ssi`](#) l'opération échouera.
 
-C'est parce que [`ssi`](#) Le support est un prérequis pour ces jeux de fonctionnalités, afin de préserver le taget *permalinks* de votre site.
+C'est parce que [`ssi`](#) Le support est un prérequis pour ces jeux de fonctionnalités, afin de préserver la cible de votre site *permalinks*.
 
 #### Contrôles d'injection de dépendance/ACL
 

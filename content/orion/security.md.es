@@ -246,7 +246,7 @@ Todos los archivos de destino están en una subcarpeta de la [`/contenido/`](#) 
 
 Si la ruta de destino no está configurada en [`@path::patrones`](#) con una configuración coincidente que permite archivar o categorizar la ruta de destino en cuestión, o el último autor cambiado del archivo de origen simplemente no está autorizado a ver la ruta de destino, la [`ssi`](#) la operación fallará.
 
-Esto se debe a [`ssi`](#) El soporte es un requisito previo para esos conjuntos de características, para preservar el taget *permalinks* de su sitio.
+Esto se debe a [`ssi`](#) el soporte es un requisito previo para esos conjuntos de funciones, para preservar los *permalinks* de destino de su sitio.
 
 #### Controles de inyección de dependencia/ACL
 

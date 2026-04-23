@@ -246,7 +246,7 @@ Todos os arquivos de destino estão em uma subpasta do [`/conteúdo`](#) e deve 
 
 Se o caminho de destino não estiver configurado no [`@path::padrões`](#) com uma configuração correspondente que permite que o caminho de destino em questão seja arquivado ou categorizado, ou que o último autor alterado do arquivo de origem simplesmente não esteja autorizado a exibir o caminho de destino, o [`ssi`](#) operação falhará.
 
-Isso porque [`ssi`](#) o suporte é um pré-requisito para esses conjuntos de recursos, para preservar o taget *permalinks*. do seu site
+Isso porque [`ssi`](#) o suporte é um pré-requisito para esses conjuntos de recursos, para preservar os *permalinks*. do alvo do seu site
 
 #### Controles de Injeção de Dependência/ACL
 

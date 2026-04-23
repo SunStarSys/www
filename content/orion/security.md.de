@@ -246,7 +246,7 @@ Alle Zieldateien befinden sich in einem Unterordner der [`/Inhalt/`](#) Ordner u
 
 Wenn der Zielpfad nicht konfiguriert ist in [`@path::Muster`](#) mit einer übereinstimmenden Einstellung, mit der der betreffende Zielpfad entweder archiviert oder kategorisiert werden kann, oder der zuletzt geänderte Autor der Quelldatei einfach nicht autorisiert ist, den Zielpfad anzuzeigen, [`Ssi`](#) Vorgang nicht erfolgreich.
 
-Das liegt daran, [`Ssi`](#) Der Support ist eine Voraussetzung für diese Featuresets, um die taget *permalinks* Ihrer Site zu erhalten.
+Das liegt daran, [`Ssi`](#) Unterstützung ist eine Voraussetzung für diese Featuresets, um das Ziel Ihrer Site *permalinks* beizubehalten.
 
 #### Abhängigkeits-/ACL-Injection-Steuerelemente
 
