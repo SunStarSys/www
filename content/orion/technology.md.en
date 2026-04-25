@@ -19,7 +19,7 @@ Status: draft
 
 - {# lede #}Now w/ mod_perl v2.0.13 w/ ithreads and httpd v2.4.58 w/ event mpm.{# lede #}
 
-## Subversion v1.14.4
+## Subversion v1.14.6
 
 - custom ithread-safe [`SVN::Client`](#) bindings w/ per-request memory pools.
 
