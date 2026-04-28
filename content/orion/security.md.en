@@ -271,7 +271,7 @@ The Orion CMS's move/delete tracking logic handles this seamlessly.
 
 Beyond the import of these symbols to [`lib/path.pm`](#), there is also a choice in how, and to which files you wish to apply them to, during a walk_content_tree () code block execution.  After all, it's not just a config file, but a codebase, with all the Turing complete features of [`Perl`](#) we've come to know and appreciate!
 
-#### Built Website .htaccss files, and Subversion authorization files, are synchronized with &#64;path::acl instantly upon commit
+#### Built Website .htaccess files, and Subversion authorization files, are synchronized with &#64;path::acl instantly upon commit
 
 Automatic ACL protection for ephemeral branch builds. Zero additional configuration required.
 
