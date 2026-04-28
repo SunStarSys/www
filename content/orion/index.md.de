@@ -115,7 +115,7 @@ Unser globales Point of Presence (POP)-Netzwerk stellt Verbindungen mit geringer
 
 Gehen Sie in Ihrem eigenen Tempo, verwenden Sie so viele Mitarbeiter / Vorschauen / Bearbeitungen / Commits / Filialen, wie Sie möchten, und bezahlen Sie nur für das, was Sie *wirklich* in unserer Infrastruktur verwenden. Bringen Sie einfach Ihr eigenes KI-optimiertes CSS/Javascript-Framework, Perl-Skripte und Django-Vorlagen mit, und wir kümmern uns um den Rest Ihres Setups ohne zusätzliche Kosten. Wir empfehlen **Bootstrap 5** für das CSS/js-Styling, da es das ist, was wir intern verwenden; aber das liegt ganz bei Ihnen.
 
-Der schnellste Einstieg ist das Spielen mit @SunStarSys/orions Build von <https://iconoclasts.blog> und die Quellen in Stamm/Inhalt aushöhlen.
+Der schnellste Einstieg ist das Spielen mit @SunStarSys/orions Build von <https://iconoclasts.blog> und die Quellen in Stamm/Inhalt aushöhlen. ~90% der Stylinganpassungen sind in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassung an den Geschmack!
 
 Darüber hinaus verfügen alle Kunden über kostenlose, anpassbare oder javascript-fähige Schnittstellen zu unserer leistungsstarken, proprietären PCRE-Suchmaschine.
 

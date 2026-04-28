@@ -115,7 +115,7 @@ Nuestra red global de puntos de presencia (POP) garantiza conexiones de baja lat
 
 Vaya a su propio ritmo, utilice tantos empleados, previsualizaciones, ediciones, confirmaciones y sucursales como desee y solo pague por lo que *utilice realmente* en nuestra infraestructura. Solo tiene que traer su propio marco css/javascript mejorado por IA, scripts perl y plantillas Django, y nos encargaremos del resto de su configuración sin costo adicional. Recomendamos **Bootstrap 5** para el estilo css/js, ya que es lo que usamos internamente, pero eso depende totalmente de usted.
 
-La forma más rápida de comenzar es jugar con la versión de @SunStarSys/orion de <https://iconoclasts.blog> y vaciar las fuentes en el tronco / contenido.
+La forma más rápida de comenzar es jugar con la versión de @SunStarSys/orion de <https://iconoclasts.blog> y vacíe los orígenes en el tronco/contenido. Aproximadamente el 90 % de las personalizaciones de estilo están en [`tronco/contenido/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; ¡Adáptate al gusto!
 
 Además, todos los clientes tienen interfaces gratuitas, personalizables por plantillas o habilitadas para javascript a nuestro potente motor de búsqueda PCRE.
 

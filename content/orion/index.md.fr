@@ -115,7 +115,7 @@ Notre réseau mondial de points de présence (POP) assure des connexions à faib
 
 Allez à votre rythme, utilisez autant d'employés / de prévisualisations / de modifications / de validations / de succursales que vous le souhaitez, et ne payez que ce que vous *utilisez réellement* sur notre infrastructure. Apportez simplement votre propre framework css/javascript amélioré par l'IA, vos scripts perl et vos modèles Django, et nous prendrons soin du reste de votre configuration sans frais supplémentaires. Nous recommandons **Bootstrap 5** pour le style css/js, car c'est ce que nous utilisons en interne, mais c'est entièrement à vous de décider.
 
-Le moyen le plus rapide de commencer est de jouer avec la construction de @SunStarSys/orion <https://iconoclasts.blog> et creuser les sources dans le tronc / contenu.
+Le moyen le plus rapide de commencer est de jouer avec la construction de @SunStarSys/orion <https://iconoclasts.blog> et creuser les sources dans le tronc / contenu. ~90% des personnalisations de style sont dans [`coffre/contenu/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Adaptez-vous au goût !
 
 En outre, tous les clients disposent d'interfaces gratuites, personnalisables par modèle ou compatibles javascript vers notre puissant moteur de recherche propriétaire PCRE.
 
