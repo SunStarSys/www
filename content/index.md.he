@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: ויקי,ידע,בלוגים,אוריון,jamstack,perl,f/oss
-published: ~
 status: פורסם
 title: בית
 ---
@@ -15,12 +13,12 @@ title: בית
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar מערכות' GitLab CI טכנולוגיית לינטר {{facts.releases.linter.tag}} זמין כעת ב- <a href="https://hub.docker.com/r/schaefj/linter/">רכזת דוקר</a> וגם <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar מערכות' GitLab CI Linter טכנולוגיה {{facts.releases.linter.tag}} זמין כעת ב- <a href="https://hub.docker.com/r/schaefj/linter/">רכזת דוקר</a> וגם <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar מערכות' אוריון&trade; <a href="{{facts.releases.orion.url}}">מחולל אתר סטטי</a> {{facts.releases.orion.tag}} שוחרר &mdash;
+<h2 class="card-title">SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתר סטטי</a> {{facts.releases.orion.tag}} שוחרר &mdash;
 עכשיו עם תמיכה LAUNCH_APACHE2!
 </h2>
 
@@ -53,11 +51,11 @@ title: בית
 <br>
 </div>
 
-![SunStar מערכות](images/sunstarlogowhole).
+![SunStar מערכות](images/sunstarlogowhole)
 
 מחפש Wiki טוב יותר, בטוח יותר, מהיר יותר, **מאושר** Enterprise?
 
-הוצאת פריט  [אוריון](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's המקורי CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM עם native [מפת חשיבה בתולת ים](/orion/features) אינטגרציה!
+הוצאת פריט  [אוריון](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM עם native [מפת חשיבה בתולת ים](/orion/features) אינטגרציה!
 
 מאחורי הקלעים <span class="text-white">סקירה טכנית</span> תיאור של הטכנולוגיה הממתינה לפטנט שלנו, ראה שלנו [ניהול תלות של תוכן חכם](/essays/dependencies)&trade; אסאי
 
@@ -69,7 +67,7 @@ title: בית
 
 - @SunStarSys/אוריון
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

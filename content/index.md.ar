@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: ويكي، المعرفة، المدونات، أوريون، جامستاك، بيرل، ف / لوس
-published: ~
 status: منشور
 title: الصفحة الرئيسية
 ---
@@ -15,12 +13,12 @@ title: الصفحة الرئيسية
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">جديد</span> SunStar الأنظمة' GitLab تكنولوجيا CI Linter {{facts.releases.linter.tag}} متوفر الآن في <a href="https://hub.docker.com/r/schaefj/linter/">مركز الإرساء</a> و <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">جديد</span> SunStar تقنية GitLab CI Linter الخاصة بالأنظمة {{facts.releases.linter.tag}} متوفر الآن في <a href="https://hub.docker.com/r/schaefj/linter/">مركز الإرساء</a> و <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar الأنظمة' أوريون&trade; <a href="{{facts.releases.orion.url}}">منشئ الموقع الثابت</a> {{facts.releases.orion.tag}} صدر &mdash;
+<h2 class="card-title">SunStar أوريون الأنظمة&trade; <a href="{{facts.releases.orion.url}}">منشئ الموقع الثابت</a> {{facts.releases.orion.tag}} صدر &mdash;
 الآن مع دعم LAUNCH_APACHE2!
 </h2>
 
@@ -53,11 +51,11 @@ title: الصفحة الرئيسية
 <br>
 </div>
 
-![SunStar الأنظمة](images/sunstarlogowhole).
+![SunStar الأنظمة](images/sunstarlogowhole)
 
 هل تبحث عن أفضل وأمان وأسرع **موحد** Enterprise Wiki؟
 
-تسجيل الخروج  [أوريون](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's الأصلي CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade; &mdash; Orion هو منتج المؤسسة الوحيد المستند إلى إدارة سلسلة التوريد مع منتج أصلي [خريطة عقول حورية البحر](/orion/features) التكامل!
+تسجيل الخروج  [أوريون](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade; &mdash; Orion هو منتج المؤسسة الوحيد المستند إلى إدارة سلسلة التوريد مع منتج أصلي [خريطة عقول حورية البحر](/orion/features) التكامل!
 
 ل وراء الكواليس <span class="text-white">مستند</span> وصف تقنيتنا المعلقة لبراءات الاختراع، راجع [إدارة تبعية المحتوى الذكي](/essays/dependencies)&trade; مقال.
 
@@ -69,7 +67,7 @@ title: الصفحة الرئيسية
 
 - @SunStarSys/orion
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: wiki,знание,блоги,orion,jamstack,perl,f/oss
-published: ~
 status: опубликовано
 title: Главная
 ---
@@ -15,12 +13,12 @@ title: Главная
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Новый</span> SunStar Системы' GitLab Технология CI Linter {{facts.releases.linter.tag}} сейчас доступно в <a href="https://hub.docker.com/r/schaefj/linter/">Центр Docker</a> и <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Новый</span> SunStar Технология CI Linter для систем GitLab {{facts.releases.linter.tag}} сейчас доступно в <a href="https://hub.docker.com/r/schaefj/linter/">Центр Docker</a> и <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Системы' Орион&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash;
+<h2 class="card-title">SunStar Орион систем&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash;
 Теперь с поддержкой LAUNCH_APACHE2!
 </h2>
 
@@ -53,11 +51,11 @@ title: Главная
 <br>
 </div>
 
-![SunStar Системы](images/sunstarlogowhole).
+![SunStar Системы](images/sunstarlogowhole)
 
 Ищете лучшую, безопасную и быструю версию** Enterprise Wiki?
 
-Изъять  [Орион](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's оригинал CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
+Изъять  [Орион](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
 
 За кулисами <span class="text-white">документ</span> описание нашей технологии патентования, см. [Управление зависимостями интеллектуального контента](/essays/dependencies)&trade; Эссе.
 
@@ -69,7 +67,7 @@ title: Главная
 
 - @SunStarSys/orion
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

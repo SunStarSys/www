@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: wiki, connaissance, blogs, orion, pile de james, perl, f/oss
-published: ~
 status: publié
 title: Accueil
 ---
@@ -15,12 +13,12 @@ title: Accueil
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nouveau</span> SunStar Systèmes' GitLab Technologie CI Linter {{facts.releases.linter.tag}} maintenant disponible à <a href="https://hub.docker.com/r/schaefj/linter/">Hub Docker</a> et <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Nouveau</span> SunStar Technologie CI Linter GitLab de Systems {{facts.releases.linter.tag}} maintenant disponible à <a href="https://hub.docker.com/r/schaefj/linter/">Hub Docker</a> et <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Systèmes' Orion&trade; <a href="{{facts.releases.orion.url}}">Générateur de site statique</a> {{facts.releases.orion.tag}} publié &mdash;
+<h2 class="card-title">SunStar Orion de Systems&trade; <a href="{{facts.releases.orion.url}}">Générateur de site statique</a> {{facts.releases.orion.tag}} publié &mdash;
 Avec le support LAUNCH_APACHE2 !
 </h2>
 
@@ -53,7 +51,7 @@ Avec le support LAUNCH_APACHE2 !
 <br>
 </div>
 
-![SunStar Systèmes](images/sunstarlogowhole).
+![SunStar Systèmes](images/sunstarlogowhole)
 
 Vous recherchez un wiki d'entreprise meilleur, plus sûr, plus rapide et **fédéré** ?
 
@@ -69,7 +67,7 @@ Pour les coulisses <span class="text-white">livre blanc</span> description de no
 
 - @SunStarSys/orion
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

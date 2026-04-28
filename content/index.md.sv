@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: wiki,kunskap, bloggar,orion,jamstack,perl,f/oss
-published: ~
 status: publicerad
 title: Hem
 ---
@@ -15,12 +13,12 @@ title: Hem
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar System' GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Dockningsnav</a> och <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar Systems GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Dockningsnav</a> och <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar System' Orion&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash;
+<h2 class="card-title">SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash;
 Nu med LAUNCH_APACHE2 support!
 </h2>
 
@@ -53,7 +51,7 @@ Nu med LAUNCH_APACHE2 support!
 <br>
 </div>
 
-![SunStar System](images/sunstarlogowhole).
+![SunStar System](images/sunstarlogowhole)
 
 Letar du efter en bättre, säkrare, snabbare, **förenad** Enterprise Wiki?
 
@@ -69,7 +67,7 @@ För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av v
 
 - @SunStarSys/orion
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

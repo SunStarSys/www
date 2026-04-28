@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: wiki,conocimiento,blogs,orion,jamstack,perl,f/oss
-published: ~
 status: publicado
 title: Inicio
 ---
@@ -15,12 +13,12 @@ title: Inicio
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nuevo</span> Sistemas SunStar' GitLab Tecnología CI Linter {{facts.releases.linter.tag}} ahora disponible en <a href="https://hub.docker.com/r/schaefj/linter/">Hub de Docker</a> y <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">Nuevo</span> SunStar Tecnología CI Linter de GitLab Systems {{facts.releases.linter.tag}} ahora disponible en <a href="https://hub.docker.com/r/schaefj/linter/">Hub de Docker</a> y <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">Sistemas SunStar' Orión&trade; <a href="{{facts.releases.orion.url}}">Generador de sitios estáticos</a> {{facts.releases.orion.tag}} liberado &mdash;
+<h2 class="card-title">SunStar Orión de los Sistemas&trade; <a href="{{facts.releases.orion.url}}">Generador de sitios estáticos</a> {{facts.releases.orion.tag}} liberado &mdash;
 ¡Ahora con soporte LAUNCH_APACHE2!
 </h2>
 
@@ -53,11 +51,11 @@ title: Inicio
 <br>
 </div>
 
-![Sistemas SunStar](images/sunstarlogowhole).
+![Sistemas SunStar](images/sunstarlogowhole)
 
 Buscando un mejor, más seguro, más rápido, **federado** Enterprise Wiki?
 
-Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's CC original BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
+Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
 
 Para un detrás de escena <span class="text-white">documento técnico</span> descripción de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
 
@@ -69,7 +67,7 @@ Para un detrás de escena <span class="text-white">documento técnico</span> des
 
 - @SunStarSys/orión
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

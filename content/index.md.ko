@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: 위키,지식,블로그,오리온,잼스택,perl,f/oss
-published: ~
 status: 공개됨
 title: 홈 페이지
 ---
@@ -15,12 +13,12 @@ title: 홈 페이지
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">신규</span> SunStar 시스템' GitLab CI Linter 기술 {{facts.releases.linter.tag}} 현재 사용 가능 위치 <a href="https://hub.docker.com/r/schaefj/linter/">도커 허브</a> 및 <a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">신규</span> SunStar Systems의 GitLab CI Linter 기술 {{facts.releases.linter.tag}} 현재 사용 가능 위치 <a href="https://hub.docker.com/r/schaefj/linter/">도커 허브</a> 및 <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStar 시스템' 오리온&trade; <a href="{{facts.releases.orion.url}}">정적 사이트 생성기</a> {{facts.releases.orion.tag}} 해제됨 &mdash;
+<h2 class="card-title">SunStar 시스템스 오리온&trade; <a href="{{facts.releases.orion.url}}">정적 사이트 생성기</a> {{facts.releases.orion.tag}} 해제됨 &mdash;
 이제 LAUNCH_APACHE2 지원!
 </h2>
 
@@ -53,11 +51,11 @@ title: 홈 페이지
 <br>
 </div>
 
-![SunStar 시스템](images/sunstarlogowhole).
+![SunStar 시스템](images/sunstarlogowhole)
 
 더 좋고, 안전하고, 빠르고, **연합된** Enterprise Wiki를 찾고 계십니까?
 
-체크아웃  [오리온](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's 본래 CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; Orion은 고유의 SCM 기반 엔터프라이즈 제품입니다. [인어-마인드맵](/orion/features) 통합!
+체크아웃  [오리온](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; Orion은 고유의 SCM 기반 엔터프라이즈 제품입니다. [인어-마인드맵](/orion/features) 통합!
 
 백그라운드 A Behind Scenes <span class="text-white">백서</span> 우리의 특허 출원 기술에 대한 설명, 우리의 [스마트 콘텐츠 종속성 관리](/essays/dependencies)&trade; 에세이
 
@@ -69,7 +67,7 @@ title: 홈 페이지
 
 - @SunStarSys/orion
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

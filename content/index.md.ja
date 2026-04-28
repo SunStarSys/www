@@ -1,8 +1,6 @@
 ---
-archived: ~
 categories: ~
 keywords: wiki、知識、ブログ、orion、jamstack、perl、f/oss
-published: ~
 status: 公開済み
 title: ホーム
 ---
@@ -15,12 +13,12 @@ title: ホーム
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">新規</span> SunStarシステム' GitLab CI Linterテクノロジー{{facts.releases.linter.tag}} 現在利用可能<a href="https://hub.docker.com/r/schaefj/linter/">ドッカーハブ</a> および<a href="{{facts.releases.linter.url}}"
+<h2 class="card-title"><span class="badge bg-success">新規</span> SunStarシステムのGitLab CI Linter Technology {{facts.releases.linter.tag}} 現在利用可能<a href="https://hub.docker.com/r/schaefj/linter/">ドッカーハブ</a> および<a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
 <br>
 
-<h2 class="card-title">SunStarシステム' オリオン&trade; <a href="{{facts.releases.orion.url}}">静的サイトジェネレータ</a> {{facts.releases.orion.tag}} リリース済&mdash;
+<h2 class="card-title">SunStarシステムのOrion&trade; <a href="{{facts.releases.orion.url}}">静的サイトジェネレータ</a> {{facts.releases.orion.tag}} リリース済&mdash;
 LAUNCH_APACHE2サポートあり!
 </h2>
 
@@ -53,11 +51,11 @@ LAUNCH_APACHE2サポートあり!
 <br>
 </div>
 
-![SunStarシステム](images/sunstarlogowhole).
+![SunStarシステム](images/sunstarlogowhole)
 
 より良く、より安全で、より速く、**連邦**エンタープライズWikiをお探しですか?
 
-チェックアウト[オリオン](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz'元のCC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade; &mdash; Orionは、独自のSCMベースのエンタープライズ製品です。[マーメイドマインドマップ](/orion/features) 統合!
+チェックアウト[オリオン](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade; &mdash; Orionは、独自のSCMベースのエンタープライズ製品です。[マーメイドマインドマップ](/orion/features) 統合!
 
 舞台裏で<span class="text-white">ホワイトペーパー</span> 私達の特許出願中の技術の記述は、私達を見ます[スマート・コンテンツ依存性管理](/essays/dependencies)&trade; エッセイ
 
@@ -69,7 +67,7 @@ LAUNCH_APACHE2サポートあり!
 
 - @SunStarSys/orion
 
-- @joesuf4
+- @joesuf4/mod_perl
 
 <div class="embed-responsive embed-responsive-16by9">
 	 	<iframe title="video" class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/H5XhAZtE3Ic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
