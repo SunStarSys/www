@@ -115,7 +115,7 @@ Unser globales Point of Presence (POP)-Netzwerk stellt Verbindungen mit geringer
 
 Gehen Sie in Ihrem eigenen Tempo, verwenden Sie so viele Mitarbeiter / Vorschauen / Bearbeitungen / Commits / Filialen, wie Sie möchten, und bezahlen Sie nur für das, was Sie *wirklich* in unserer Infrastruktur verwenden. Bringen Sie einfach Ihr eigenes KI-optimiertes CSS/Javascript-Framework, Perl-Skripte und Django-Vorlagen mit, und wir kümmern uns um den Rest Ihres Setups ohne zusätzliche Kosten. Wir empfehlen **Bootstrap 5** für das CSS/js-Styling, da es das ist, was wir intern verwenden; aber das liegt ganz bei Ihnen.
 
-<div class="card">
+<div class="card border-success text-light" style="max-width:25rem;background-color:transparent">
 <div class="card-header">Erste Schritte</div>
 <div class="card-body">
 

@@ -115,7 +115,7 @@ div#lightning img {width:100%}
 
 לך בקצב שלך, להשתמש כמה עובדים / תצוגה מקדימה / עריכות / התחייבויות / סניפים כמו שאתה רוצה, ולשלם רק על מה שאתה *למעשה להשתמש* על התשתית שלנו. פשוט להביא מסגרת css/javascript משופרת הבינה המלאכותית שלך, סקריפטים perl ותבניות Django, ואנו נדאג לשאר ההתקנה שלך ללא תשלום נוסף. אנו ממליצים **Bootstrap 5** עבור עיצוב css/js, כפי שזה מה שאנחנו משתמשים באופן פנימי; אבל זה לגמרי תלוי בך.
 
-<div class="card">
+<div class="card border-success text-light" style="max-width:25rem;background-color:transparent">
 <div class="card-header">צעדים ראשונים</div>
 <div class="card-body">
 
