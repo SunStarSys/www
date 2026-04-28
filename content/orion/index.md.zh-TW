@@ -115,7 +115,14 @@ div#lightning img {width:100%}
 
 您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分行，並僅支付在我們的基礎設施上使用 *的費用。只要攜帶您自己的 AI 增強型 css/javascript 架構、Perl 指令碼和 Django 範本，我們就能免費處理其他設定。建議使用 **Bootstrap 5** 作為 css/js 樣式，因為它是內部使用的；但完全由您決定。
 
-最快速的入門方式是使用 @SunStarSys/orion 的建置版本<https://iconoclasts.blog> 並清除中繼器 / 內容中的來源。約 90% 的樣式自訂項目位於[`中繼器 / 內容 /css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
+<div class="card">
+<div class="card-header">入門</div>
+<div class="card-body">
+
+最快的方法是與 @SunStarSys/orion 的建置版本一起玩<https://iconoclasts.blog> 並清除中繼器 / 內容中的來源。約 90% 的樣式自訂項目位於[`中繼器 / 內容 /css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
+
+</div>
+</div>
 
 此外，所有客戶都擁有免費、可自訂範本或支援 javascript 的介面，適用於我們強大的專屬 PCRE 搜尋引擎。
 

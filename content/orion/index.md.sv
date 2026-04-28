@@ -115,7 +115,14 @@ Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort 
 
 Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du *faktiskt använder* på vår infrastruktur. Ta bara med ditt eget AI-förbättrade css/javascript-ramverk, perl-skript och Django-mallar, så tar vi hand om resten av din installation utan extra kostnad. Vi rekommenderar **Bootstrap 5** för css/js styling, eftersom det är vad vi använder internt; men det är helt upp till dig.
 
+<div class="card">
+<div class="card-header">Komma igång</div>
+<div class="card-body">
+
 Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka källorna i bagageutrymmet/innehållet.  ~90 % av stylinganpassningarna finns i [`bål/innehåll/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
+
+</div>
+</div>
 
 Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade gränssnitt till vår kraftfulla, egenutvecklade PCRE-sökmotor.
 

@@ -115,7 +115,14 @@ div#lightning img {width:100%}
 
 원하는 만큼의 직원/미리보기/편집/커밋/분기를 사용하고 인프라에서 실제로 사용하는 것에 대해서만 비용을 지불합니다. 자체 AI 고급 CSS/자바스크립트 프레임워크, 펄 스크립트 및 장고 템플릿을 가져오면 추가 비용 없이 나머지 설정을 관리할 수 있습니다. css/js 스타일링의 경우 **Bootstrap 5**를 사용하는 것이 내부적으로 사용되지만 이는 전적으로 귀하에게 달려 있습니다.
 
-가장 빠른 시작 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 소스를 숨깁니다. 스타일 지정 사용자 정의의 90%가 [`트렁크/콘텐츠/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
+<div class="card">
+<div class="card-header">시작하기</div>
+<div class="card-body">
+
+가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 소스를 숨깁니다. 스타일 지정 사용자 정의의 90%가 [`트렁크/콘텐츠/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
+
+</div>
+</div>
 
 또한 모든 고객은 강력하고 독점적인 PCRE 검색 엔진에 대한 무료 템플릿 사용자 정의 또는 자바 스크립트 지원 인터페이스를 갖추고 있습니다.
 
