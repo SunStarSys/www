@@ -1,21 +1,18 @@
 ---
 acl: '@staff=rw, *=r'
-archived: ~
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-published: ~
 status: finalizado
 title: SunStar Orión de los Sistemas
 ---
 
-
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's CC original BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade;
+	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade;
 </p>
-<span class="text-white">Sistemas SunStar' Orión</span> &nbsp; es un
+<span class="text-white">SunStar Orión de los Sistemas</span> &nbsp; es un
 <p>
 	<ul>
 	<li><p>
@@ -37,15 +34,14 @@ title: SunStar Orión de los Sistemas
 	<li><p>federado</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología Jamstack para las funciones dinámicas de las mismas{# lede #}.
 
-Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
+{# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología Jamstack para las funciones dinámicas de las mismas{# lede #}. Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
 
-### Aquí's the Pitch, Responsable Ejecutivo de Decisiones...
+### Aquí está el lanzamiento, decisor ejecutivo...
 
 <span class="text-white">¿Por qué elegir Orion? La plataforma Wiki de Jamstack que supera &mdash; y costos mucho menos</span>
 
-Lo que realmente distingue a Orión es'Solo otra plataforma wiki &mdash; es's nuestra tecnología patentada Orion, un enfoque probado en batalla y pendiente de patente que ofrece una experiencia de usuario elegante con una eficiencia inigualable.
+Lo que realmente distingue a Orion no es solo otra plataforma wiki &mdash; Es nuestra tecnología patentada Orion, un enfoque probado en batalla y pendiente de patente que ofrece una experiencia de usuario elegante con una eficiencia inigualable.
 
 Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece controles editoriales superiores, seguridad de nivel empresarial y características innovadoras que ninguna wiki heredada puede igualar. Pasamos esos ahorros masivos directamente a usted. Espere solo unos cargos adicionales modestos y transparentes para los recursos exactos en la nube que utilice &mdash; no hay niveles de precios inflados ni tarifas ocultas.
 
@@ -73,7 +69,7 @@ Ver el código fuente: [nuestro árbol lib fuente](https://vcs.sunstarsys.com/re
 
 El generador de sitios estáticos subyacente: de código abierto en GitHub bajo la licencia Apache 2.0 → @SunStarSys/orion
 
-Esto es't marketing spin &mdash; es'El patrimonio de ingeniería verificable y abierto se remonta a las innovaciones de F / OSS pioneras en 2011. ¿Listo para experimentar una wiki que realmente ahorra tiempo, dinero y dolores de cabeza? [Llámenos o envíenos una nota](/contact) hoy.
+Esto no es marketing spin &mdash; Es un patrimonio de ingeniería verificable y abierto que se remonta a las innovaciones de F / OSS pioneras en 2011. ¿Listo para experimentar una wiki que realmente ahorra tiempo, dinero y dolores de cabeza? [Llámenos o envíenos una nota](/contact) hoy.
 
 </div>
 
@@ -83,9 +79,9 @@ Esto es't marketing spin &mdash; es'El patrimonio de ingeniería verificable y a
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>Aquí's Por qué, Joven Académico / Full Stack Desarrollador / Blogger Público...</h3>
+<h3>He aquí por qué, joven académico / desarrollador de pila completa / blogger público...</h3>
 
-¿Quieres un sitio web que's **seguro por defecto**? Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, pero que le da toda su potencia cuando realmente lo necesita?  Publicación instantánea cuando lo desee; creación de sucursales sin problemas y en etapas y promociones granulares personalizables para su sitio de producción según se adapte a su equipo'el flujo de trabajo preferido.
+¿Desea un sitio web que sea **seguro por defecto**? Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, pero que le da toda su potencia cuando realmente lo necesita?  Publicación instantánea cuando lo desee; creación de sucursales sin problemas y en etapas y promociones granulares personalizables para su sitio de producción según se adapte al flujo de trabajo preferido de su equipo.
 
 Si está cansado de las licencias por asiento y las opciones por ciclo de CPU que lo pesan cada vez que necesita corregir un error tipográfico, [llegar a nosotros](/contact). Si está a cargo de la curación de contenido y está buscando una base de datos de hechos personalizable para administrar sus enlaces externos, o si es un manipulador de león equipado con regex para décadas de contenido HTML heredado acumulado, o simplemente alguien insatisfecho con las otras opciones del mercado y cómo funcionan a escala, tenemos algo realmente especial que ofrecerle.
 
@@ -93,7 +89,7 @@ Nunca tener que lidiar directamente con un sistema de control de versiones, o in
 
 <div id="lightning">
 
-![Rayo](index.page/lightning).
+![Rayo](index.page/lightning)
 
 </div>
 
@@ -111,11 +107,11 @@ Este [tecnología](https://iconoclasts.blog/joe/apache-cms) fue inventado a fina
 
 <h4>¿Quieres darle un giro rápido para ver qué tan rápido y fácil es?</h4>
 
-Este sitio web se aloja automáticamente en Orion; todos esos cuadrados de lápiz rosa caliente [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En la parte superior derecha están vivos.  ¡Siéntete libre de moverte y experimentar con cualquier cosa que veas!  Lo único que puedes't do es confirmar y observar cómo se crean y despliegan los cambios; que'restringido a nuestro personal por razones obvias.
+Este sitio web se aloja automáticamente en Orion; todos esos cuadrados de lápiz rosa caliente [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En la parte superior derecha están vivos.  ¡Siéntete libre de moverte y experimentar con cualquier cosa que veas!  Lo único que no puede hacer es comprometerse y ver cómo se crean y despliegan sus cambios; eso está restringido a nuestro personal por razones obvias.
 
-Nuestra red global de puntos de presencia (POP) garantiza conexiones de baja latencia tanto a Orion &trade; y los sitios web de entrega final que alojamos.  Actualmente estamos en cuatro continentes y tenemos una presencia bicoastal dentro de los Estados Unidos.  Y nosotros'se está expandiendo rápidamente: ¡la próxima África y Asia Oriental!
+Nuestra red global de puntos de presencia (POP) garantiza conexiones de baja latencia tanto a Orion &trade; y los sitios web de entrega final que alojamos.  Actualmente estamos en cuatro continentes y tenemos una presencia bicoastal dentro de los Estados Unidos.  Y estamos expandiendo rápidamente: ¡la próxima África y Asia Oriental!
 
-<h3>Es'Es hora de un cambio radical en la forma de administrar y entregar su sitio a su público objetivo.</h3>
+<h3>Es hora de un cambio radical en la forma de gestionar y entregar su sitio a su público objetivo.</h3>
 
 Vaya a su propio ritmo, utilice tantos empleados, previsualizaciones, ediciones, confirmaciones y sucursales como desee y solo pague por lo que *utilice realmente* en nuestra infraestructura. Solo tiene que traer su propio marco css/javascript mejorado por IA, scripts perl y plantillas Django, y nos encargaremos del resto de su configuración sin costo adicional. Recomendamos **Bootstrap 5** para el estilo css/js, ya que es lo que usamos internamente, pero eso depende totalmente de usted.
 

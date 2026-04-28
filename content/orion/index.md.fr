@@ -1,21 +1,18 @@
 ---
 acl: '@staff=rw, *=r'
-archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-published: ~
 status: terminé
 title: SunStar Orion de Systems
 ---
-
 
 <div class="row">
 <div class="col-lg-5">
 <p>
 	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade;
 </p>
-<span class="text-white">SunStar Systèmes' Orion</span> &nbsp; est une
+<span class="text-white">SunStar Orion de Systems</span> &nbsp; est une
 <p>
 	<ul>
 	<li><p>
@@ -37,15 +34,14 @@ title: SunStar Orion de Systems
 	<li><p>fédéré</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Plateforme Wiki d'Enterprise Jamstack</span>&nbsp; pour <b>créer, gérer et fournir</b> pages Web statiques utilisant la technologie Jamstack pour des fonctionnalités dynamiques{# lede #}.
 
-Pour plus d'informations sur les prix, consultez notre [Plans Orion](plans).
+{# lede #}<span class="text-white">Plateforme Wiki d'Enterprise Jamstack</span>&nbsp; pour <b>créer, gérer et fournir</b> pages Web statiques utilisant la technologie Jamstack pour des fonctionnalités dynamiques{# lede #}. Pour plus d'informations sur les prix, consultez notre [Plans Orion](plans).
 
-### Ici'Le Pitch, décideur exécutif...
+### Voici le lancement, le décideur exécutif...
 
 <span class="text-white">Pourquoi choisir Orion ? La plateforme Wiki Jamstack qui surpasse &mdash; et coûte beaucoup moins</span>
 
-Ce qui distingue vraiment Orion't juste une autre plateforme wiki &mdash; ce'Notre technologie exclusive Orion, une approche éprouvée et en attente de brevet qui offre une expérience utilisateur élégante avec une efficacité inégalée.
+Ce qui distingue vraiment Orion n'est pas seulement une autre plateforme wiki &mdash; C'est notre technologie exclusive Orion, une approche éprouvée et en attente de brevet qui offre une expérience utilisateur élégante avec une efficacité inégalée.
 
 Cela nous permet d'exécuter des coûts d'exploitation ultra-faibles tout en offrant des contrôles éditoriaux supérieurs, une sécurité de niveau entreprise et des fonctionnalités révolutionnaires qu'aucun wiki hérité ne peut égaler. Nous vous transmettons ces énormes économies directement. S'attendre à des frais supplémentaires modestes et transparents pour les ressources cloud exactes que vous utilisez &mdash; pas de niveaux de prix bloqués ou de frais cachés.
 
@@ -73,7 +69,7 @@ Affichez la source : [notre source lib tree](https://vcs.sunstarsys.com/repos/sv
 
 Le générateur de site statique sous-jacent : open-sourced sur GitHub sous Apache License 2.0 → @SunStarSys/orion
 
-Ceci est'spin marketing &mdash; ce'Un patrimoine d'ingénierie ouvert et vérifiable datant des innovations F/OSS lancées en 2011. Prêt à découvrir un wiki qui permet d'économiser du temps, de l'argent et des maux de tête ? [Appelez-nous ou envoyez-nous une note](/contact) aujourd'hui.
+Ce n'est pas du marketing spin &mdash; C'est un patrimoine d'ingénierie vérifiable et ouvert qui remonte aux innovations F/OSS lancées en 2011. Prêt à découvrir un wiki qui permet d'économiser du temps, de l'argent et des maux de tête ? [Appelez-nous ou envoyez-nous une note](/contact) aujourd'hui.
 
 </div>
 
@@ -83,9 +79,9 @@ Ceci est'spin marketing &mdash; ce'Un patrimoine d'ingénierie ouvert et vérifi
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>Ici's Pourquoi, Jeune Académique / Développeur Full Stack / Blogueur public...</h3>
+<h3>Voici pourquoi, jeune universitaire / développeur de pile complète / blogueur public...</h3>
 
-Un site web qui's **sécurisé par défaut** ? Facile à mettre à jour et à gérer, tout en cachant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ?  Publication instantanée quand vous le souhaitez ; création de succursales lisses et préparées et promotions granulaires personnalisables sur votre site de production selon vos besoins'workflow préféré.
+Vous voulez un site Web **sécurisé par défaut** ? Facile à mettre à jour et à gérer, tout en cachant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ?  Publication instantanée lorsque vous le souhaitez ; créations de succursales lisses et préparées et promotions granulaires personnalisables sur votre site de production selon le flux de travail préféré de votre équipe.
 
 Si vous êtes fatigué des licences par siège et des choix par cycle CPU qui vous pèsent chaque fois que vous avez besoin de corriger une faute de frappe, [contactez-nous](/contact). Si vous êtes en charge de la curation du contenu et que vous recherchez une base de données de faits personnalisable pour gérer vos liens externes, ou si vous êtes un joueur de lion équipé d'une expression régulière pour Des décennies de contenu HTML historique accumulé, ou juste quelqu'un qui n'est pas satisfait des autres options sur le marché et de leur fonctionnement à grande échelle, nous avons quelque chose de vraiment spécial à vous offrir.
 
@@ -93,7 +89,7 @@ Ne jamais avoir à traiter directement avec un système de contrôle de version,
 
 <div id="lightning">
 
-![Foudre](index.page/lightning).
+![Foudre](index.page/lightning)
 
 </div>
 
@@ -111,11 +107,11 @@ Ce [technologie](https://iconoclasts.blog/joe/apache-cms) a été inventé fin 2
 
 <h4>Vous voulez lui donner un tour rapide pour voir à quel point il est rapide et facile ?</h4>
 
-Ce site web est auto-hébergé sur Orion ; tous ces carrés de crayon rose chaud [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En haut à droite sont en direct.  N'hésitez pas à poke autour et expérimenter avec tout ce que vous voyez !  La seule chose que vous pouvez't do est valider et regarder vos modifications construire et déployer ; que's limité à notre personnel pour des raisons évidentes.
+Ce site web est auto-hébergé sur Orion ; tous ces carrés de crayon rose chaud [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En haut à droite sont en direct.  N'hésitez pas à poke autour et expérimenter avec tout ce que vous voyez !  La seule chose que vous ne pouvez pas faire est de valider et de regarder vos modifications construire et déployer ; cela est limité à notre personnel pour des raisons évidentes.
 
-Notre réseau mondial de points de présence (POP) assure des connexions à faible latence avec Orion &trade; et les sites Web de livraison finale que nous hébergeons.  Nous sommes actuellement sur quatre continents et avons une présence bicoastale aux États-Unis.  Et nous'se développer rapidement - prochain Afrique et Asie de l'Est !
+Notre réseau mondial de points de présence (POP) assure des connexions à faible latence avec Orion &trade; et les sites Web de livraison finale que nous hébergeons.  Nous sommes actuellement sur quatre continents et avons une présence bicoastale aux États-Unis.  Et nous sommes en expansion rapide - prochain Afrique et Asie de l'Est !
 
-<h3>Ce'Le temps pour un changement dans la façon dont vous gérez et livrez votre site à votre public cible.</h3>
+<h3>Il est temps de changer la façon dont vous gérez et offrez votre site à votre public cible.</h3>
 
 Allez à votre rythme, utilisez autant d'employés / de prévisualisations / de modifications / de validations / de succursales que vous le souhaitez, et ne payez que ce que vous *utilisez réellement* sur notre infrastructure. Apportez simplement votre propre framework css/javascript amélioré par l'IA, vos scripts perl et vos modèles Django, et nous prendrons soin du reste de votre configuration sans frais supplémentaires. Nous recommandons **Bootstrap 5** pour le style css/js, car c'est ce que nous utilisons en interne, mais c'est entièrement à vous de décider.
 

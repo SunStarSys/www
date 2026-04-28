@@ -1,21 +1,18 @@
 ---
 acl: '@staff=rw, *=r'
-archived: ~
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: wiki,jamstack,blog,sicher,sicher
-published: ~
 status: beendet
 title: SunStar System-Orion
 ---
-
 
 <div class="row">
 <div class="col-lg-5">
 <p>
 	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Die Jamstack Wiki Plattform.</em></span>&trade;
 </p>
-<span class="text-white">SunStar Systeme' Orion</span> &nbsp; ist ein
+<span class="text-white">SunStar System-Orion</span> &nbsp; ist ein
 <p>
 	<ul>
 	<li><p>
@@ -37,15 +34,14 @@ title: SunStar System-Orion
 	<li><p>föderiert</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Enterprise Jamstack Wiki-Plattform</span>&nbsp; für <b>Erstellen, Verwalten und Bereitstellen</b> statische Webseiten mit Jamstack Technology für dynamische Features{# lede #}.
 
-Preisinformationen finden Sie unter [Orionpläne](plans).
+{# lede #}<span class="text-white">Enterprise Jamstack Wiki-Plattform</span>&nbsp; für <b>Erstellen, Verwalten und Bereitstellen</b> statische Webseiten mit Jamstack Technology für dynamische Features{# lede #}. Preisinformationen finden Sie unter [Orionpläne](plans).
 
-### Hier's der Pitch, Executive Entscheider...
+### Hier ist der Pitch, Entscheidungsträger der Geschäftsleitung...
 
 <span class="text-white">Warum Orion wählen? Die Jamstack Wiki Plattform, die übertrifft &mdash; und Kosten weit weniger</span>
 
-Was Orion wirklich auszeichnet'Nur eine andere Wiki-Plattform &mdash; es'Unsere proprietäre Orion-Technologie, ein kampferprobter, zum Patent angemeldeter Ansatz, der eine elegante Benutzererfahrung mit unübertroffener Effizienz bietet.
+Was Orion wirklich auszeichnet, ist nicht nur eine andere Wiki-Plattform &mdash; Es ist unsere proprietäre Orion-Technologie, ein kampferprobter, zum Patent angemeldeter Ansatz, der eine elegante Benutzererfahrung mit unübertroffener Effizienz bietet.
 
 Auf diese Weise können wir extrem niedrige Betriebskosten verursachen und gleichzeitig überlegene redaktionelle Kontrollen, unternehmensgerechte Sicherheit und bahnbrechende Funktionen bieten, mit denen kein altes Wiki übereinstimmen kann. Wir geben diese massiven Einsparungen direkt an Sie weiter. Erwarten Sie nur bescheidene, transparente Gebühren für die exakten Cloud-Ressourcen, die Sie verwenden &mdash; Keine aufgeblähten Preisstufen oder versteckte Gebühren.
 
@@ -73,7 +69,7 @@ Quelltext anzeigen: [Unser Quell-Lib-Baum](https://vcs.sunstarsys.com/repos/svn/
 
 Der zugrundeliegende Static Site Generator: Open-Source auf GitHub unter Apache License 2.0 → @SunStarSys/orion
 
-Dies ist'T-Marketing-Spin &mdash; es'ein nachweisbares, offenes technisches Erbe, das auf F/OSS-Innovationen zurückgeht, die 2011 Pionierarbeit geleistet haben. Bereit, ein Wiki zu erleben, das Zeit, Geld und Kopfschmerzen spart? [Rufen Sie uns an oder schreiben Sie uns eine Nachricht](/contact) heute.
+Das ist kein Marketing-Spin &mdash; Es ist ein nachweisbares, offenes technisches Erbe, das auf F/OSS-Innovationen zurückgeht, die 2011 Pionierarbeit geleistet haben. Bereit, ein Wiki zu erleben, das Zeit, Geld und Kopfschmerzen spart? [Rufen Sie uns an oder schreiben Sie uns eine Nachricht](/contact) heute.
 
 </div>
 
@@ -83,9 +79,9 @@ Dies ist'T-Marketing-Spin &mdash; es'ein nachweisbares, offenes technisches Erbe
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>Hier's Warum, Young Academic / Full Stack Developer / Öffentlicher Blogger...</h3>
+<h3>Hier ist warum, Young Academic / Full Stack Developer / Public Blogger...</h3>
 
-Möchten Sie eine Website, die'**Secure-by-Default**? Einfach zu aktualisieren und zu verwalten, während Sie die Komplexität eines zugrunde liegenden Versionskontrollsystems verbergen und Ihnen dennoch die volle Leistung bieten, wenn Sie es wirklich brauchen?  Sofortige Veröffentlichung, wenn Sie es möchten; reibungslose, zwischengespeicherte Filialerstellung und anpassbare granulare Werbeaktionen auf Ihrer Produktionswebsite, wie es Ihrem Team entspricht'bevorzugten Workflow.
+Möchten Sie eine Website **Secure-by-Default**? Einfach zu aktualisieren und zu verwalten, während Sie die Komplexität eines zugrunde liegenden Versionskontrollsystems verbergen und Ihnen dennoch die volle Leistung bieten, wenn Sie es wirklich brauchen?  Sofortige Veröffentlichung, wenn Sie es möchten; reibungslose, zwischengespeicherte Filialerstellung und anpassbare granulare Promotions an Ihre Produktionswebsite, je nachdem, wie es dem bevorzugten Workflow Ihres Teams entspricht.
 
 Wenn Sie es satt haben, die pro Sitzplatz lizenzierten und pro CPU-Zyklus Auswahlen abzuwägen, wann immer Sie einen Tippfehler beheben müssen, [Kontaktieren Sie uns](/contact). Wenn Sie für die Inhaltspflege verantwortlich sind und für eine anpassbare Faktendatenbank zur Verwaltung Ihrer externen Links sorgen, oder wenn Sie ein regulärer Löwenzahmer für Jahrzehnte gesammelter HTML-Inhalte oder einfach nur jemand, der mit den anderen Optionen auf dem Markt unzufrieden ist und wie sie in großem Maßstab funktionieren, haben wir etwas ganz Besonderes zu bieten.
 
@@ -93,7 +89,7 @@ Niemals direkt mit einem Versionskontrollsystem oder sogar einem statischen Site
 
 <div id="lightning">
 
-![Blitz](index.page/lightning).
+![Blitz](index.page/lightning)
 
 </div>
 
@@ -111,11 +107,11 @@ Dies [Technologie](https://iconoclasts.blog/joe/apache-cms) wurde erstmals Ende 
 
 <h4>Möchten Sie es kurz drehen, um zu sehen, wie schnell und einfach es ist?</h4>
 
-Diese Website ist selbst gehostet auf Orion; all diese hot-pink Bleistift Quadrate [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) rechts oben sind live.  Fühlen Sie sich frei herumzustoßen und mit allem zu experimentieren, was Sie sehen!  Das Einzige, was Sie können't do ist festschreiben und beobachten Sie Ihre Änderungen erstellen und bereitstellen.'aus offensichtlichen Gründen auf unser Personal beschränkt.
+Diese Website ist selbst gehostet auf Orion; all diese hot-pink Bleistift Quadrate [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) rechts oben sind live.  Fühlen Sie sich frei herumzustoßen und mit allem zu experimentieren, was Sie sehen!  Das einzige, was Sie nicht tun können, ist zu beobachten, wie Ihre Änderungen erstellt und bereitgestellt werden. Das ist auf unsere Mitarbeiter aus offensichtlichen Gründen beschränkt.
 
-Unser globales Point of Presence (POP)-Netzwerk stellt Verbindungen mit geringer Latenz zu beiden Orion sicher &trade; und die End-Delivery-Websites, die wir hosten.  Wir sind derzeit auf vier Kontinenten und haben eine bicoastale Präsenz in den USA.  und wir'rasant expandieren – Afrika und Ostasien weiterführen!
+Unser globales Point of Presence (POP)-Netzwerk stellt Verbindungen mit geringer Latenz zu beiden Orion sicher &trade; und die End-Delivery-Websites, die wir hosten.  Wir sind derzeit auf vier Kontinenten und haben eine bicoastale Präsenz in den USA.  Und wir expandieren rasant – nach Afrika und Ostasien!
 
-<h3>Es'Es ist Zeit für einen Wandel in der Art und Weise, wie Sie Ihre Website verwalten und an Ihre Zielgruppe liefern.</h3>
+<h3>Es ist Zeit für einen Wandel in der Art und Weise, wie Sie Ihre Website verwalten und an Ihre Zielgruppe liefern.</h3>
 
 Gehen Sie in Ihrem eigenen Tempo, verwenden Sie so viele Mitarbeiter / Vorschauen / Bearbeitungen / Commits / Filialen, wie Sie möchten, und bezahlen Sie nur für das, was Sie *wirklich* in unserer Infrastruktur verwenden. Bringen Sie einfach Ihr eigenes KI-optimiertes CSS/Javascript-Framework, Perl-Skripte und Django-Vorlagen mit, und wir kümmern uns um den Rest Ihres Setups ohne zusätzliche Kosten. Wir empfehlen **Bootstrap 5** für das CSS/js-Styling, da es das ist, was wir intern verwenden; aber das liegt ganz bei Ihnen.
 

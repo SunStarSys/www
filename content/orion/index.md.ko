@@ -1,10 +1,8 @@
 ---
 acl: '@staff=rw, *=r'
-archived: ~
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-published: ~
 status: 완료
 title: SunStar 시스템스 오리온
 ---
@@ -12,9 +10,9 @@ title: SunStar 시스템스 오리온
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's 본래 CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade;
+	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade;
 </p>
-<span class="text-white">SunStar 시스템' 오리온</span> &nbsp; 다음과 같음
+<span class="text-white">SunStar 시스템스 오리온</span> &nbsp; 다음과 같음
 <p>
 	<ul>
 	<li><p>
@@ -36,15 +34,14 @@ title: SunStar 시스템스 오리온
 	<li><p>통합</p></li>
 	</ul>
 </p>
-{# lede #}<span class="text-white">Enterprise Jamstack 위키 플랫폼</span>&nbsp; <b>만들기, 관리 및 제공</b> 정적 웹페이지는 Jamstack 기술을 사용하여 동적 기능을 제공합니다.{# lede #}.
 
-가격 정보는 [오리온 계획](plans).
+{# lede #}<span class="text-white">Enterprise Jamstack 위키 플랫폼</span>&nbsp; <b>만들기, 관리 및 제공</b> 정적 웹페이지는 Jamstack 기술을 사용하여 동적 기능을 제공합니다.{# lede #}. 가격 정보는 [오리온 계획](plans).
 
-### 여기'Pitch, Executive Decision Maker의 ...
+### 피치(Pitch), Executive Decision Maker...
 
 <span class="text-white">왜 Orion을 선택해야합니까? 성능이 뛰어난 Jamstack Wiki 플랫폼 &mdash; 비용 절감</span>
 
-진정으로 오리온을 구별하는 것은'또 다른 Wiki 플랫폼 &mdash; 그것은'독자적인 Orion Technology는 탁월한 효율성과 함께 뛰어난 사용자 경험을 제공하는 특허 출원 중인 전투 테스트 방식입니다.
+Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash; Oracle의 독자적인 Orion Technology는 탁월한 효율성을 자랑하는 우아한 사용자 경험을 제공하는 특허 출원 중인 전투 테스트 접근 방식입니다.
 
 이를 통해 매우 낮은 운영 비용을 실행하는 동시에 탁월한 편집 제어, 엔터프라이즈급 보안 및 레거시 위키와 비교할 수 없는 획기적인 기능을 제공할 수 있습니다. 우리는 그 엄청난 비용을 당신에게 직접 전달합니다. 사용하는 정확한 클라우드 리소스에 대해 겸손하고 투명한 업그레이드만 기대 &mdash; 가격 계층이나 숨겨진 수수료가 없습니다.
 
@@ -72,7 +69,7 @@ title: SunStar 시스템스 오리온
 
 기본 정적 사이트 생성기: 아파치 라이센스 2.0 → @SunStarSys/orion에 따라 GitHub에 오픈 소스
 
-다음과 같음't 마케팅 스핀 &mdash; 그것은'2011년 개척한 F/OSS 혁신으로 거슬러 올라가는 검증 가능한 개방형 엔지니어링 유산 실제로 시간, 돈 및 두통을 절약하는 위키를 경험할 준비가 되셨습니까? [우리에게 전화를하거나 우리에게 메모를 드롭](/contact) 오늘.
+마케팅 스핀이 아님 &mdash; 2011년에 개척된 F/OSS 혁신으로 거슬러 올라가는 검증 가능한 개방형 엔지니어링 유산입니다. 실제로 시간, 돈 및 두통을 절약하는 위키를 경험할 준비가 되셨습니까? [우리에게 전화를하거나 우리에게 메모를 드롭](/contact) 오늘.
 
 </div>
 
@@ -82,9 +79,9 @@ title: SunStar 시스템스 오리온
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>여기's 왜, 젊은 학업 / 전체 스택 개발자 / 공공 블로거 ...</h3>
+<h3>여기 왜, 젊은 학업 / 전체 스택 개발자 / 공공 블로거...</h3>
 
-원하는 웹 사이트's **기본 보안**? 기본 버전 제어 시스템의 복잡성을 숨기면서 업데이트 및 관리가 용이하지만 실제로 필요할 때 전력을 공급합니까?  당신이 그것을 원할 때 즉시 간행물; 매끄럽고, 단계가 있는 분기는 당신의 팀에 적합하 당신의 생산 위치에 건축하고 그리고 customizable 과립상 승진시킵니다'기본 워크플로
+**기본 보안** 웹 사이트를 원하십니까? 기본 버전 제어 시스템의 복잡성을 숨기면서 업데이트 및 관리가 용이하지만 실제로 필요할 때 전력을 공급합니까?  원할 때 즉시 게시할 수 있습니다. 매끄럽고 스테이징된 브랜치 빌드 및 사용자 정의 가능한 세분화된 프로모션을 팀의 선호 워크플로우에 맞게 프로덕션 사이트에 적용할 수 있습니다.
 
 오타를 고쳐야 할 때마다 좌석별 라이센스 및 CPU 주기별 선택에 지쳤다면, [연락하기](/contact). 콘텐츠 큐레이션을 담당하고 있으며 외부 링크를 관리하기 위해 사용자 정의 가능한 팩트 데이터베이스에 대해 파이닝하는 경우 또는 정규식으로 제공되는 사자 테이머인 경우 수십 년 동안 축적 된 레거시 HTML 콘텐츠, 또는 시장에서 다른 옵션에 불만족 한 사람 및 그들이 어떻게 대규모로 작동하는지, 우리는 당신에게 제공하는 특별한 것을 가지고 있습니다.
 
@@ -92,7 +89,7 @@ title: SunStar 시스템스 오리온
 
 <div id="lightning">
 
-![라이트닝](index.page/lightning).
+![라이트닝](index.page/lightning)
 
 </div>
 
@@ -110,11 +107,11 @@ div#lightning img {width:100%}
 
 <h4>빠른 스핀을 제공하여 얼마나 빠르고 쉬운지 확인하고 싶습니까?</h4>
 
-이 웹 사이트는 Orion에서 자체 호스팅됩니다; 모든 핫 핑크 연필 광장 [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 오른쪽 맨 위는 살아있다.  주위를 둘러보고 당신이 보는 모든 것을 실험하십시오!  당신이 할 수 있는 유일한 것'변경 사항을 커밋하고 검토하여 구축 및 배포합니다.'우리는 분명한 이유로 우리의 직원에 제한.
+이 웹 사이트는 Orion에서 자체 호스팅됩니다; 모든 핫 핑크 연필 광장 [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 오른쪽 맨 위는 살아있다.  주위를 둘러보고 당신이 보는 모든 것을 실험하십시오!  당신이 할 수없는 유일한 것은 커밋하고 변경 사항을보고 구축 및 배포하는 것입니다; 그것은 명백한 이유로 우리의 직원으로 제한됩니다.
 
-오라클의 글로벌 POP(Point of Presence) 네트워크는 두 Orion에 대한 대기 시간이 짧은 연결을 보장합니다. &trade; 그리고 우리가 호스팅하는 최종 배달 웹 사이트.  우리는 현재 네 대륙에 있으며 미국 내에서 바이코아스탈 입지를 가지고 있습니다.  그리고 우리'급격히 확대되는 아프리카와 동아시아!
+오라클의 글로벌 POP(Point of Presence) 네트워크는 두 Orion에 대한 대기 시간이 짧은 연결을 보장합니다. &trade; 그리고 우리가 호스팅하는 최종 배달 웹 사이트.  우리는 현재 네 대륙에 있으며 미국 내에서 바이코아스탈 입지를 가지고 있습니다.  그리고 우리는 아프리카와 동아시아를 빠르게 확장하고 있습니다!
 
-<h3>해당'사이트를 관리하고 대상 고객에게 전달하는 방식에 대한 바다 변화의 시기입니다.</h3>
+<h3>이제 대상 고객을 대상으로 사이트를 관리하고 제공하는 방식이 크게 바뀌어야 할 때입니다.</h3>
 
 원하는 만큼의 직원/미리보기/편집/커밋/분기를 사용하고 인프라에서 실제로 사용하는 것에 대해서만 비용을 지불합니다. 자체 AI 고급 CSS/자바스크립트 프레임워크, 펄 스크립트 및 장고 템플릿을 가져오면 추가 비용 없이 나머지 설정을 관리할 수 있습니다. css/js 스타일링의 경우 **Bootstrap 5**를 사용하는 것이 내부적으로 사용되지만 이는 전적으로 귀하에게 달려 있습니다.
 
