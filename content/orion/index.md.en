@@ -112,9 +112,12 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure. Just bring your own AI enhanced css/javascript framework, perl scripts, and Django Templates, and we will take care of the rest of your setup at no additional charge. We recommend **Bootstrap 5** for css/js styling, as it is what we use internally; but that is entirely up to you.
 
-<div class="card border-success text-light" style="max-width:25rem;background-color:transparent">
+</div>
+</div>
+
+<div class="card border-success right" style="max-width:25rem;background-color:transparent">
 <div class="card-header">Getting Started</div>
-<div class="card-body">
+<div class="card-body text-white">
 
 The quickest way to get going is to play with @SunStarSys/orion's build of <https://iconoclasts.blog> and hollow out the sources in trunk/content.  ~90% of the styling customizations are in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; adjust to taste!
 
@@ -125,8 +128,6 @@ In addition, all clients have free, template-customizable or javascript-enabled 
 
 See our [Orion Plans](plans) for the current deals.
 
-</div>
-</div>
 
 ### Feature Comparison Grid
 
