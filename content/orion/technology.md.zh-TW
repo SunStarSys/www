@@ -1,74 +1,72 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
-keywords: Markdown, Asymptote, Mermaid
-published: ~
+keywords: Markdown，Asymptote，美人魚
 status: 草稿
-title: Orion 技術
+title: 奧里昂科技
 ---
 
 ## Solaris 11.4
 
-- DTrace &mdash;
+- DTrace &mdash; 我們採用廚房水槽方法：我們所有的陶瓷程式設計語言工具都與其整合。雖然 bpftrace 是 Linux 的近期開發成果非常好，但在動態語言空間中做有用的事情卻很長一段時間，這就是動作所在的位置。
 
-- ZFS &mdash;
+- ZFS &mdash; 更適合使用 Solaris，並由 Oracle Support 提供支援。不接受替代。
 
-- 區域&mdash;
+- 區域&mdash; 提供服務隔離及適當封閉測試環境的網站建置。
 
-## node.js 21.6.1 版
+## node.js21.6.1 版
 
-- 由於 Editor.md 是 **awesome**，因此已將它移植到[`node.js`](#) &mdash;
+- 由於 Editor.md 為 **awesome**，因此我們已將其移植到[`node.js`](#) &mdash; WYSIWYG，無論檢視者的內容為何 (在我們的線上 IDE 中編輯，或瀏覽產生的生產網站)。
 
-## 珀爾 v5.38.2
+## 保存 v5.38.2
 
-- {# lede #}現在 w/ mod_perl v2.0.13 w/ ithreads 和 httpd v2.4.58 w/ event mpm 。{# lede #}
+- {# lede #}現在 w/ mod_perl v2.0.14 w/ ithreads 和 httpd v2.4.67 w/ event mpm。{# lede #}
 
-## Subversion 版本 1.14.4
+## Subversion 1.14.6 版
 
-- 自訂 ithread-safe [`SVN：：客戶`](#).
+- 客製化 ithread-safe [`SVN：：客戶端`](#) 每個要求之記憶體集區的連結。
 
-- 原生 python3 組合 (v3.8.3)。
+- 原生 python3 連結 (v3.8.3)。
 
-- svnpubsub 和 svnwcsub 的執行緒 python3 連接埠&mdash;
+- 執行緒 python3 連接埠的 svnpubsub 和 svnwcsub &mdash; 使用 Subversion 進行分散式企業 /CDN 網站部署的整個 *套件和 caboodle*。
 
-- 完成 python3 [檢視](https://vcs.sunstarsys.com/viewvc/public/site).
+- 已完成 python3 [檢視 vc](https://vcs.sunstarsys.com/viewvc/public/site) 連接埠將根據時間許可證查看上游變更的提取要求。
 
 ------------
 
-## 道路上的一些註記 (尚未？) 已採用 ...
+## 道路上有些註記 (尚未) 已採用...
 
 <br/>
 
 ### SQL
 
-我們是整個網站基礎架構的 NoSQL 商店，如果您遭遇巨大的單一故障點 (稱為 RDBMS) 驅動您網站的資產，請重新考慮以 Jamstack 和 Serverless 技術為基礎的更分散式方法。即使這不是我們的。謝謝您！
+我們是整個網站基礎架構的 NoSQL 商店，如果您被巨大的單點故障 (稱為 RDBMS) 包圍，以驅動您網站的資產，請重新考慮以 Jamstack 和無伺服器技術為基礎的更分散式方法。即使不是我們的，您稍後會謝謝！
 
-### 為何不使用 Git？
+### 為什麼不使用 Git？
 
-- [`Git 伺服器`](#) 如果您希望自己使用 git，而非使用 Orion 線上 IDE，則橋接器已存在&trade;繁體中文您有選項！您可以在 GitHub 動作中找到更多里程，方法是將變更推送至 GitHub (並在 GitHub 動作或預先確認鉤點 (或二者，如) [`git svn dcommit`](#)- 將它們加入我們的 Subversion 儲存庫，以便即時發佈。[這裡](https://github.com/SunStarSys/www).
+- The [`git svn`](#) 如果您希望自己使用 git，則橋接器已存在，而不是使用 Orion 的線上 IDE &trade;。您有選擇！您可以在之前將變更推送至 GitHub (並以 GitHub 動作或預先確認鉤點 (或兩者都說) 來找出更多的里程數。[`git svn 確認`](#)- 向我們的 Subversion 儲存庫進行即時出版。[這裡](https://github.com/SunStarSys/www) 這是整個網站原始碼的即時、完整歷史 Git 複本。
 
-- 網站來源樹狀結構不像軟體來源樹狀結構，就您如何更改及管理它們而言。它們比較一致[裝置 / 中繼器式開發](/essays/devops) 大於[`位元流`](#)繁體中文此外，大西洋網站將需要 SSI，也許有一些 CGI 供其使用：至少要避免大量、無法複查的網站流失，而有大量確認郵件程式[`差異`](#).
+- 網站來源樹狀結構不像軟體來源樹狀結構，就您如何更改及管理它們而言。它們更符合[devops/ 中繼器式開發](/essays/devops) 大於[`巨流`](#)。此外，大西洋網站將需要 SSI，也可能需要一些 CGI 才能使用：至少要避免大規模、無法複查的網站流失，造成大規模的確認郵件程式流失[`差異`](#) 輸出至產生的建置樹狀目錄差異。
 
-- wit：嘗試從您用來預覽其他組建系統變更的本機 "webserver" 取得功能完整的 SSI 實行，如果您停止並考慮變更，只是稍微安靜。透過我們的 Orion，您只需在 svn 和 off 中建立分支：編輯、承諾、建置、瀏覽和 **iterating**，立即在整合到 Orion 的每個分支臨時 Apache 網站上&trade;
+- 若要查看：嘗試從部分本機取得功能完整的 SSI 實行"Web 伺服器" 您用來預覽其他組建系統中的變更，如果您停止並思考變更，這只是稍微安靜。透過我們的 Orion，您只需在 svn 和 off you go 中建立分支：編輯、確認、建置、瀏覽和 **iterating**，立即在整合至 Orion 的每個分支、臨時 Apache 網站上進行編輯。&trade; IDE 的雙向連結 (和 Bookmarklet 重新導向) 基礎架構。<span class="text-success">不用離開瀏覽器</span>.
 
-- 將這些變更移轉至以主幹為基準的生產站台時，您可以選擇儘量提升分支的速度，或儘量減少分支的速度，從右至主幹。如果中繼器自分支變更最終已準備好供主要時間之後往前移動，只要按一下<span class="text-white">同步</span>按鈕即可與您的分支同步合併中繼器即可。將同步後合併確認的組建結果重複檢查至您分支的網站之後，請繼續進行並按一下<span class="text-white">升級</span>連結，然後在同一個頁面上使用<span class="text-white">確認</span>並附上合理的確認日誌訊息，以及 voil 該訊息，您現在就會在行李箱的生產環境建置廣播。
+- 將這些變更移轉至行李箱式生產站台時，您可以選擇儘可能多或少升級分支，如您所見，可直接返回行李箱。如果中繼器已向前移動，因為您的分支修改最終已準備好供主時間使用，只要按一下<span class="text-white">同步</span> 按鈕以與您的分支同步合併中繼器。再次檢查您後續同步合併確認的組建結果之後，請繼續進行，然後按一下<span class="text-white">升級</span> 連結，使用<span class="text-white">確認</span> 在同一個頁面加上合理的提交日誌訊息，以及 voilà，您現在正對中繼器的生產建置進行廣播。
 
-- 如果您需要使用版本控制來分配和處理產生的組建樹狀結構，您將不會喜歡大規模的 git。尤其在整合二進位使用者自建物件 (例如軟體發行版本) 或 (舊版) 產品文件 (例如 doxygen 或 javadocs) 時，會使用此系統建置，或是使用您本機使用的第三方產生器，直接將這些組建結果上傳到我們的目標儲存區域。透過我們的方法，您可以使用來源和建立樹狀結構通用的儲存區域中的分支，避免網站來源樹狀結構中不必要的雜亂和浮動情況，而不像使用 git 的方式。
+- 如果您需要使用版本控制來分配和處理產生的組建樹狀結構，您將不喜歡大規模的 Git。尤其在整合二進位使用者自建物件 (例如軟體版本) 或 (舊版) 產品文件 (例如 doxygen 或 javadocs) 時，請使用此系統或使用您本機使用的第三方產生器，將這些組建結果直接上傳至我們的目標儲存區域。使用我們的方法，您可以避免在網站的來源樹狀結構中使用不必要的雜亂和浮點，與使用 git 的方式不同，在來源和建立樹狀結構通用的儲存區域中使用分支。
 
-- Subversion 支援 ** 微點存取控制 **，而且可讓您執行部分 / 稀疏取出[`標頭`](#).
+- Subversion 支援 **微點存取控制 **，可讓您進行部分 / 稀疏取出[`頭部`](#)如果使用 Git，除了在全或無分支推送上之外，您還沒有 **無 ACL**，您必須在之前複製整個分支 (包括歷史記錄)。如果您無法辨識這些僅限 svn 功能集的必要性，您尚未仔細檢視先前項目的註記 (見上文)。
 
-- 對於 IDE，我們需要讀取 + 寫入 Perl 連結[`libgit2`](#) (** 並非由實際 git 開發團隊提供 **，大致是由不提供 git 線上 IDE 作為可比較 SaaS 產品的大型企業提供支援；不提供 GitHub 為符合 svn 與 httpd 相容的記憶體管理制度與 POSIX (+ Perl ithreads) 執行緒安全性、持續執行時間，以及跨用戶端網站樹狀結構的多個伺服器端磁碟 Git 儲存庫。2020 年，開源基礎設施的成熟期無法在估計中作銀行用途，但我們會持續關注發展趨勢。查看您，[`Git::Raw`](#).
+- 對於 IDE，我們需要 read+write Perl 連結[`libgit2`](#) (** 並非由實際的 git 開發團隊提供 **，主要由不提供線上 IDE 作為可比較 SaaS 產品的大型企業提供支持；否，GitHub 這不是) 為了符合 svn 的 httpd 相容記憶體管理制度和 POSIX (+ Perl ithreads) 繫線安全、持續執行階段，以及從屬端網站樹狀結構的多個伺服器端磁碟 Git 儲存區域。我們估計，2020 年開放原始碼基礎設施的到期日無法銀行化，但我們會持續追蹤發展情況。看看你，[`Git：：原始`](#)!
 
-- 我仍不知道如何製作一個正面、安全且安全的 git porcelain。在個別儲存區域中執行緒安全，但在通用處理作業的 RAM 內，是使用案例，而不是在指定儲存區域內執行緒安全 (這是一種堅果要求)。
+- 我仍然不知道如何製作一個具執行緒安全性的 git porcelain。跨不同儲存區域的執行緒安全，但在一般處理作業的 RAM 內，是使用案例，而非指定儲存區域內的執行緒安全 (其為營養要求)。
 
-### 為何不使用 Python、Ruby、Javascript 或 Go？
+### 為何選擇 Python、Ruby、Javascript 或 Go？
 
-- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 已新增[`mod_python`](#) 在達到到期日之前，仍然有個方法[`mod_perl`](#) 在執行緒 mpm 中。此外，我們的產品目前實作與 Apache HTTPd 伺服器的完整模組 API 緊密整合，僅限[`mod_perl`](#).
+- [公升](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 已新增[`mod_python`](#) 仍有辦法在達到到期日之前進行[`mod_perl`](#) 在執行緒 mpm 中。此外，我們的產品目前實作與 Apache HTTPd 伺服器的完整模組 API 緊密整合，只有[`mod_perl`](#) 提供。
 
-- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 已新增[`mod_ruby`](#) 由於各種質量控制原因，魯比社區大多被遺棄。移植自訂的 5K LOC Perl 5 來源 Orion &trade;
+- [公升](https://en.wikipedia.org/wiki/Global_interpreter_lock)- 已新增[`mod_ruby`](#) 由於各種質量控制因素，盧比社區大致放棄。移植自訂的 5K LOC Perl 5 來源 Orion &trade; 至於不同的程式設計環境，大致上會造成<span class="text-warning">10-100 折疊氣球</span> 此實作的行數，因此任何其他動態程式設計語言中的效能重大降低。
 
-為確定，以下是整個 Orion (IDE+build) 生產來源樹狀結構之 SunStar 系統部分的快照 (日期為 2020 年 7 月 19 日)。除了我們之外，還有其他一些參與[`Dotiac:DTL`](#).
+為確保，以下為日期為 2020 年 7 月 19 日的快照，為整個 Orion (IDE+build) 生產來源樹狀結構的 SunStar 系統部分。除了我們以外，我們還沒有其他參與[`多蒂亞克：：DTL`](#) 叉。所有組建相關程式碼都已開放原始碼至 GitHub。保持私密性是第三方來源樹狀結構的 C 型自訂項目，這是我們產品的獨特差異。
 
 ```shell
 joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
@@ -111,17 +109,17 @@ joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
   4848 total
 ```
 
-- [`mod_js`](#).
+- [`mod_js`](#) 從未剪下 httpd v2，執行緒 mpm 更少。
 
-- 嘗試嵌入[`GoLang`](#).
+- 嘗試嵌入[`GoLang`](#) 使用原生版本控制連結進入 httpd 會是一項有趣的挑戰，不只是對我個人來說。在動態連結時，有趣的權衡語言很好，但未來可能存在一定的調查。
 
-- 至於 Perl 5 建置系統，請隨時調整！  * 由於建置系統完全隔離於 Orion，因此無法將其移植到任何其他程式設計語言&trade;線上 IDE (位於 Markdown 轉換程式協助程式之外，依據[`node.js`](#)，這是獨立系統本身，基於數百萬個安全性 / 架構設計原因。如果您需要一位老師來了解他們的可能性，請查看[`build_external.pl`](#).
+- 至於 Perl 5 建置系統，請隨時調整！  *由於建置系統完全與 Orion 隔離，因此無法* 移植到任何其他程式設計語言。&trade;的線上 IDE (在 Markdown 轉換器協助程式之外，以[`node.js`](#)基於百萬個安全性 / 架構設計原因，這是獨立系統本身。如果您需要一位老師作為可能的，請查看[`build_external.pl`](#) @SunStarSys Orion repo 中的命令檔：ASF 用於沒有相依性管理系統任何按下需求的所有項目。
 
-- 是的，儘管 Unix 在伺服器市場上佔據優勢，但 Perl 的知名度軌跡以鐵方式追蹤 COBOL 或甚至是 Common Lisp 的軌跡；但有些東西比其他人的年齡更好。實體 (與獨特的 Perl) [`對數`](#) 工程輸出[`p5p`](#)為了準備迎接 Perl 7 的冒險，歡迎 mod_perl 開發人員加入 Doug MacEachern 的原始願景。如果您發現自己在超過 100 個 LOC Perl 來源中的膝蓋深度，從我們目前的僅限 Perl 建置系統取得您需要的內容，讓我們聊天&mdash;
+- 是的，儘管 Unix 在伺服器市場上佔有優勢，但 Perl 的流行軌跡卻以鐵質追蹤 COBOL 或甚至是 Common Lisp。固體 (和唯一的 Perl) [`ithread`](#) 工程輸出[`p5p`](#)，為了準備 Perl 7 的冒險，歡迎 mod_perl 開發人員加入 Doug MacEachern 的原始願景。如果您發現自己在超過 100 個 LOC Perl 來源中找到膝關節，以便從我們目前的純 Perl 建置系統取得您需要的內容，讓我們聊天&mdash;  或許我們可以針對較不複雜的部分進行協作，以用於建立您的網站。使用 Perl 時更少。
 
-### 為什麼沒有基於 JVM 的東西？
+### 為什麼不使用以 JVM 為基礎的東西？
 
--   以這種方式工作，讓我擁有 20 年的 LAMP 堆疊歷史，並為擴展的 Apache HTTPd Web 伺服器社群帶來建設性貢獻。可做，但又有大量的工程問題，以便在過程中解決。
+-   以那種方式工作，因為我的 20 年歷史包含 LAMP Stack，並為擴展的 Apache HTTPd Web 伺服器社群做出有建設性的貢獻。可行，但又再次進行大量硬質工程問題，以解決方法。
 
 --------
 

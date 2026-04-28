@@ -1,74 +1,72 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: Markdown, Asymptote, Sirène
-published: ~
 status: projet
 title: Technologie Orion
 ---
 
 ## Solaris 11.4
 
-- DTrace &mdash;
+- DTrace &mdash; nous avons pris l'approche de l'évier de cuisine : tous nos outils en langage de programmation dyamique s'y intègrent.  Bien que bpftrace soit un bon développement récent pour Linux, le fait de faire des choses utiles dans l'espace du langage dynamique est un long chemin, c'est là que l'action est.
 
-- ZFS &mdash;
+- ZFS &mdash; mieux avec Solaris, soutenu par Oracle Support.  Ne pas accepter de substituts.
 
-- Zones &mdash;
+- Zones &mdash; offre une isolation des services et des builds de site adaptés en bac à sable.
 
 ## node.js v21.6.1
 
-- Comme Editor.md est **excellent**, nous l'avons porté vers [`node.js`](#) &mdash;
+- Etant donné que Editor.md est **génial**, nous l'avons porté vers [`node.js`](#) &mdash; WYSIWYG, quel que soit le contexte du spectateur (édition dans notre IDE en ligne, ou navigation sur le site de production résultant).
 
 ## Perl v5.38.2
 
-- {# lede #}Maintenant avec mod_perl v2.0.13 w/ ithreads et httpd v2.4.58 w/ event mpm.{# lede #}
+- {# lede #}Maintenant w/ mod_perl v2.0.14 w/ ithreads et httpd v2.4.67 w/ event mpm.{# lede #}
 
-## Subversion v1.14.4
+## Subversion v1.14.6
 
-- ithread-safe personnalisé [`SVN : :Client`](#).
+- ithread-safe personnalisé [`SVN : :Client`](#) Liaisons avec des pools de mémoire par demande.
 
 - liaisons python3 natives (v3.8.3).
 
-- ports python3 thread de svnpubsub et svnwcsub &mdash;
+- ports python3 threadés de svnpubsub et svnwcsub &mdash; l'ensemble du *kit et du caboodle* pour le déploiement de site d'entreprise/CDN distribué à l'aide de Subversion.
 
-- terminé le python3 [affichervc](https://vcs.sunstarsys.com/viewvc/public/site).
+- complété le python3 [affichage](https://vcs.sunstarsys.com/viewvc/public/site) port.  Examinera une demande d'extraction pour mes modifications en amont si le temps le permet.
 
 ------------
 
-## Quelques remarques sur les routes non (encore ?) Pris...
+## Quelques remarques sur les routes pas (encore ?) Pris...
 
 <br/>
 
 ### SQL
 
-Nous sommes une boutique NoSQL pour l'ensemble de notre infrastructure de site Web, et si vous êtes confronté à un point de défaillance unique géant connu sous le nom de SGBDR qui pilote les actifs de votre site, veuillez reconsidérer une approche plus décentralisée basée sur la technologie Jamstack et Serverless. Même si ce n'est pas le nôtre. Vous nous remercierez plus tard !
+Nous sommes une boutique NoSQL pour l'ensemble de notre infrastructure de site Web, et si vous avez un point d'échec unique géant connu sous le nom de SGBDR qui gère les actifs de votre site, veuillez reconsidérer une approche plus décentralisée basée sur Jamstack et la technologie sans serveur. Même si ce n'est pas le nôtre. Merci plus tard !
 
 ### Pourquoi pas Git ?
 
-- Le [`svn git`](#) bridge existe déjà si vous préférez travailler avec git vous-même, au lieu d'utiliser l'IDE en ligne pour Orion &trade;. Vous avez des options ! Vous pouvez constater que vous obtenez encore plus de kilométrage sur les actions GitHub en poussant vos modifications vers GitHub (et en les affichant dans une action GitHub, ou un hook pré-commit, ou les deux, disons) avant [`git svn dcommit`](#)- les envoyer à nos dépôts Subversion pour publication en direct. [Ici](https://github.com/SunStarSys/www).
+- Le [`git svn`](#) bridge existe déjà si vous préférez travailler avec git vous-même, au lieu d'utiliser l'IDE en ligne pour Orion &trade;. Vous avez des options ! Vous pouvez constater que vous obtenez encore plus de kilométrage des actions GitHub en poussant vos modifications vers GitHub (et en les lintant dans une action GitHub, ou un hook pré-commit, ou les deux, par exemple) avant [`git svn dcommit`](#)- les envoyer à nos référentiels Subversion pour publication en direct. [Ici](https://github.com/SunStarSys/www) est une copie git en direct et complète de l'historique des sources de ce site Web.
 
-- Les arbres de source de site Web ne sont pas tout à fait comme les arbres de source de logiciel, en termes de la façon dont vous les modifiez et les gérez.  Ils sont plus alignés avec [devops / développement basé sur le tronc](/essays/devops) avec [`gitflow`](#). De plus, des sites gigantesques vont avoir besoin de SSI, et peut-être d'un peu de CGI, pour leur utilisation : à tout le moins pour éviter l'attrition massive et peu consultable du site par un mailer de commit tout aussi massif [`diff.`](#).
+- Les arbres sources du site Web ne sont pas tout à fait comme les arbres sources du logiciel, en termes de comment vous les modifiez et les gérez.  Ils sont plus alignés avec [développement basé sur devops / trunk](/essays/devops) avec [`gitflow`](#). De plus, des sites gigantesques vont avoir besoin de SSI, et peut-être un peu de CGI, pour leur utilisation : à tout le moins pour éviter l'attrition massive et non vérifiable du site à partir d'un logiciel de messagerie commit tout aussi massif [`diff`](#) sortie sur les deltas de l'arbre de création résultant.
 
-Essayer d'obtenir une implémentation SSI entièrement fonctionnelle à partir d'un "serveur Web" local que vous utilisez pour prévisualiser vos modifications dans un autre système de construction, est juste un peu stupide si vous arrêtez et pensez à cela.  Avec notre Orion, il vous suffit de créer une branche dans svn et hors de vous : éditer, valider, construire, naviguer et **itérer**, instantanément, sur un site Web éphémère et connecté à Apache intégré à Orion. &trade;
+- À l'esprit : essayer d'obtenir une implémentation SSI entièrement fonctionnelle de certains locaux "serveur web" que vous utilisez pour prévisualiser vos modifications dans un autre système de construction, est juste un peu idiot si vous arrêtez et y pensez.  Avec notre Orion, il vous suffit de créer une branche en svn et hors de vous : édition, engagement, construction, navigation, et **itération**, instantanément, sur un site Web éphémère par branche, desservi par Apache qui est intégré dans Orion &trade; Infrastructure de liaison bidirectionnelle (et de redirection de bookmarklet) de l'IDE.  <span class="text-success">Sans jamais quitter votre navigateur</span>.
 
-- Lorsqu'il est temps de migrer ces modifications vers le site de production basé sur le tronc, vous pouvez choisir de promouvoir autant, ou aussi peu, de la branche que vous le souhaitez, directement vers le tronc.  Si le tronçon s'est déplacé vers l'avant depuis que les modifications de votre branche étaient finalement prêtes pour l'heure de début, cliquez simplement sur le bouton <span class="text-white">Synchroniser</span> pour synchroniser le tronçon fusionné avec votre branche.  Après avoir revérifié les résultats de construction de votre validation post-sync-merge sur le site Web de votre agence, allez-y et cliquez sur le lien <span class="text-white">Promouvoir</span>, suivez-le avec un <span class="text-white">engagement</span> sur la même page avec un message de journal de validation raisonnable, et voilÃ , vous diffusez maintenant sur la construction de production du tronçon.
+- Lorsqu'il est temps de migrer ces modifications vers le site de production basé sur le tronc, vous pouvez choisir de promouvoir autant, ou aussi peu, de la branche que vous le souhaitez, juste en arrière vers le tronc.  Si le tronc a progressé depuis que vos modifications de branche ont finalement été prêtes pour le premier temps, cliquez simplement sur le bouton <span class="text-white">Synchronisation</span> pour synchroniser le tronc de fusion avec votre branche.  Après avoir vérifié à nouveau les résultats de votre validation post-sync-merge sur le site Web de votre branche, allez-y et cliquez sur le <span class="text-white">Promouvoir</span> lien, suivre avec un <span class="text-white">Valider</span> sur la même page avec un message de journal de validation raisonnable, et voilà, vous diffusez maintenant sur la version de production de trunk.
 
-- Si vous avez besoin de distribuer et de traiter les arbres de construction résultants en utilisant le contrôle de version, vous n'aimerez pas git à grande échelle. Surtout lors de l'intégration d'artefacts binaires (par exemple, des versions logicielles) ou de la documentation produit (héritée) (pensez à doxygène ou javadocs), construits à l'aide de ce système ou à l'aide d'un constructeur tiers que vous utilisez localement pour simplement télécharger ces résultats de build directement dans nos référentiels cible. Grâce à notre approche, vous pouvez éviter l'encombrement et le gonflement inutiles dans l'arbre source de votre site, contrairement à la façon dont il fonctionnerait avec git, en utilisant des branches dans un référentiel commun à votre source et à construire des arbres.
+- Si vous devez distribuer et traiter les arbres de construction résultant en utilisant le contrôle de version, vous n'aimerez pas git à grande échelle. Surtout lors de l'intégration d'artefacts binaires (par exemple, des versions logicielles) ou de la documentation produit (héritée) (pensez à doxygen ou javadocs), construits à l'aide de ce système ou à l'aide d'un constructeur tiers que vous utilisez localement pour simplement télécharger ces résultats de construction directement dans nos référentiels cible. Avec notre approche, vous pouvez éviter l'encombrement inutile et le gonflement dans l'arbre source de votre site, contrairement à la façon dont il fonctionnerait avec git, en utilisant des branches dans un référentiel commun à votre source et de construire des arbres.
 
-- Subversion prend en charge le **contrôle d'accès de niveau fin** et vous permet d'effectuer des extractions partielles/sparses de [`TÊTE`](#).
+- Subversion prend en charge le **contrôle d'accès de niveau fin** et vous permet d'effectuer des extractions partielles/sparses de [`Tête`](#) ; avec Git, vous n'avez **AUCUNE ACL** autre que sur une dérivation de branche tout ou rien, et vous devez cloner la branche entière (qui inclut l'historique) au préalable.  Si vous ne reconnaissez pas la nécessité de ces jeux de fonctionnalités uniquement svn, vous n'avez pas encore groked les remarques de l'élément précédent (voir ci-dessus).
 
-- Pour l'IDE, nous aurions besoin de liaisons Perl en lecture + écriture pour [`libgit2`](#) (qui n'est **pas fourni par l'équipe de développement git réelle**, et est en grande partie soutenu par des sociétés mégalithiques qui ne fournissent PAS d'IDE en ligne pour git en tant que produit SaaS comparable ; et non, GitHubn'est-ce pas) afin de correspondre au régime de gestion de la mémoire compatible httpd de svn et à la sécurité des threads POSIX (+ Perl ithreads), dans un environnement d'exécution persistant, et sur plusieurs référentiels git côté serveur sur disque des arborescences de sites Web client.  La maturité de cette infrastructure open source n'est pas bancable pour 2020 dans notre estimation, mais nous garderons un œil sur l'évolution de la situation.  En vous regardant, [`Git : :Raw`](#).
+- Pour l'IDE, nous aurions besoin des liaisons Perl en lecture + écriture pour [`libgit2`](#) (qui n'est **pas fourni par l'équipe de développement git**, et est largement soutenu par des sociétés mégalithiques qui ne fournissent PAS d'IDE en ligne pour git en tant que produit SaaS comparable ; et non, GitHubn'est-ce pas) afin de correspondre au régime de gestion de la mémoire compatible httpd de svn et à la sécurité des threads POSIX (+ Perl ithreads), dans un environnement d'exécution persistant et dans plusieurs référentiels git sur disque côté serveur des arborescences de sites Web client.  La maturité de cette infrastructure open source n'est pas bancable pour 2020 dans notre estimation, mais nous garderons un œil sur les développements à venir.  En vous regardant, [`Git : :Raw`](#)!
 
-- Je ne sais toujours pas comment faire une porcelaine git posix-thread-safe.  La sécurité des fils dans des référentiels distincts, mais dans la RAM d'un processus commun, est le cas d'utilisation, et non la sécurité des fils dans un référentiel donné (ce qui est une demande nutty).
+- Je ne sais toujours pas comment faire une porcelaine git posix-thread-safe.  La sécurité des threads dans des référentiels distincts, mais dans la RAM d'un processus commun, est le cas d'utilisation, et non la sécurité des threads dans un référentiel donné (ce qui est une demande fou).
 
-### Pourquoi pas Python, Ruby, Javascript ou Go ?
+### Pourquoi pas Python ou Ruby ou Javascript ou Go ?
 
-- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)-adresse [`mod_python`](#) encore un chemin à parcourir avant d'atteindre la maturité de [`mod_perl`](#) dans un mpm fileté. De plus, l'implémentation actuelle de notre produit est étroitement intégrée à l'API du module complet du serveur Apache HTTPd, qui ne [`mod_perl`](#).
+- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)-collé [`mod_python`](#) a encore un chemin à parcourir avant d'atteindre la maturité de [`mod_perl`](#) dans un mpm fileté. De plus, l'implémentation actuelle de notre produit est étroitement intégrée à l'API du module complet du serveur Apache HTTPd, qui ne [`mod_perl`](#) fournit.
 
-- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)-adresse [`mod_ruby`](#) a été largement abandonné par la communauté Ruby pour diverses raisons de contrôle de la qualité.  Port des sources personnalisées 5K LOC Perl 5 d'Orion &trade;
+- [GIL](https://en.wikipedia.org/wiki/Global_interpreter_lock)-collé [`mod_ruby`](#) a été largement abandonnée par la communauté Ruby pour diverses raisons de contrôle de la qualité.  Portage des sources personnalisées 5K LOC Perl 5 d'Orion &trade; dans un environnement de programmation différent entraînerait à peu près une <span class="text-warning">Ballon de 10-100 plis</span> du nombre de lignes de l'implémentation, et par conséquent d'une dégradation majeure des performances dans tout autre langage de programmation dynamique.
 
-Voici un instantané, daté du 19 juillet 2020, de la partie SunStar Systems de l'arborescence source de production pour l'ensemble de l'Orion (IDE+build).  Il y a peu d'autres personnes impliquées au-delà de notre [`Dotiac : :DTL`](#).
+Bien sûr, voici un instantané, daté du 19 juillet 2020, de la partie SunStar Systems de l'arborescence source de production pour l'ensemble d'Orion (IDE+build).  Il y a peu d'autres choses impliquées au-delà de notre [`Dotiac : :DTL`](#) fourchette.  Tout le code lié au build a déjà été open source sur GitHub.  Ce qui reste privé, ce sont les personnalisations basées sur C vers des arbres sources tiers, qui sont des différenciateurs uniques pour notre produit.
 
 ```shell
 joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
@@ -111,17 +109,17 @@ joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
   4848 total
 ```
 
-- [`mod_js`](#).
+- [`mod_js`](#) jamais fait la coupe pour httpd v2, beaucoup moins fileté mpm.
 
-- Tentative d'intégration [`GoLang`](#).
+- Essayer d'intégrer [`GoLang`](#) dans httpd, avec des liaisons de contrôle de version natives, serait un défi amusant ; tout simplement pas pour moi personnellement.  Un bon langage avec des compromis intéressants quand il s'agit de liens dynamiques, mais un certain peut-être pour une enquête future.
 
-- En ce qui concerne le système de construction Perl 5, restez à l'écoute !  *Aucune raison pour qu'il ne puisse pas * être porté à un autre langage de programmation, car le système de construction est complètement isolé d'Orion &trade;IDE en ligne de 's (en dehors du démon de rendu de démarque basé sur [`node.js`](#), qui est un système autonome lui-même) pour un million de raisons de sécurité / conception architecturale.  Si vous avez besoin d'un teaser sur les possibilités, jetez un oeil à la [`build_external.pl`](#).
+- En ce qui concerne le système de construction Perl 5, restez à l'écoute !  *Aucune raison pour laquelle il ne peut *pas être porté à un autre langage de programmation, car le système de construction est complètement isolé d'Orion &trade;IDE en ligne (en dehors du démon de rendu Markdown basé sur [`node.js`](#), qui est un système autonome lui-même) pour un million de raisons de sécurité / conception architecturale.  Si vous avez besoin d'un teaser sur les possibilités, jetez un coup d'œil à la [`build_external.pl`](#) script over dans le référentiel @SunStarSys Orion : L'ASF l'a utilisé pour toutes sortes de choses qui n'avaient pas besoin d'un système de gestion des dépendances.
 
-- Oui, la trajectoire de popularité de Perl suit ironiquement celle de COBOL, ou même de Common Lisp, malgré la domination d'Unix sur le marché des serveurs ; mais certaines choses vieillissent mieux que d'autres. Le solide (et unique Perl) [`ithread`](#) ingénierie hors [`p5p`](#), en prévision de l'avènement de Perl 7, est une bonne nouvelle pour les développeurs mod_perl qui s'accrochent toujours à la vision originale de Doug MacEachern.  Si vous êtes au genou dans plus de 100 sources LOC Perl pour obtenir ce dont vous avez besoin de notre système de construction Perl uniquement actuel, discutons &mdash;
+- Oui, la trajectoire de popularité de Perl suit ironiquement celle de COBOL, ou même Common Lisp, malgré la domination d'Unix sur le marché des serveurs ; mais certaines choses vieillissent mieux que d'autres. Le solide (et unique Perl) [`ithread`](#) ingénierie hors de [`p5p`](#), en préparation de l'avènement de Perl 7, est une bonne nouvelle pour les développeurs mod_perl qui s'accrochent toujours à la vision originale de Doug MacEachern.  Si vous trouvez que vous êtes à genoux dans plus de 100 sources LOC Perl pour obtenir ce dont vous avez besoin de notre système de construction Perl-only actuel, discutons &mdash;  peut-être que nous pouvons collaborer sur quelque chose de moins complexe à utiliser pour construire votre site.  Moins c'est plus avec Perl.
 
 ### Pourquoi pas avec quelque chose basé sur la JVM ?
 
--  Je viens de travailler de cette façon, compte tenu de mes 20 ans d'histoire avec le LAMP Stack et des contributions constructives à la communauté étendue de serveurs Web Apache HTTPd.  Doable, mais encore une fois une entreprise massive avec beaucoup de problèmes d'ingénierie difficiles à résoudre en cours de route.
+-  Je viens de travailler de cette façon, compte tenu de mes 20 ans d'histoire avec la pile LAMP et de mes contributions constructives à la communauté étendue des serveurs Web Apache HTTPd.  Faisable, mais encore une fois une entreprise massive avec beaucoup de problèmes d'ingénierie difficiles à résoudre en cours de route.
 
 --------
 
