@@ -115,18 +115,18 @@ div#lightning img {width:100%}
 
 اذهب بالوتيرة الخاصة بك، واستخدم أكبر عدد ممكن من الموظفين / المعاينات / التعديلات / الالتزامات / الفروع كما تريد، ولا تدفع إلا مقابل ما تستخدمه *في الواقع* على بنيتنا التحتية. ما عليك سوى إحضار إطار عمل css/javascript المحسن الخاص بالذكاء الاصطناعي ونصوص perl وقوالب Django، وسنعتني ببقية الإعداد الخاص بك دون أي رسوم إضافية. نوصي **Bootstrap 5** لتصميم css / js، لأنه ما نستخدمه داخليًا ؛ لكن الأمر متروك لك تمامًا.
 
-<div class="card border-success text-light" style="max-width:25rem;background-color:transparent">
-<div class="card-header">البدء</div>
-<div class="card-body">
-
-أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء المصادر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`جذع/محتوى/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
-
-</div>
-</div>
-
 بالإضافة إلى ذلك، فإن جميع العملاء لديهم واجهات مجانية أو قابلة للتخصيص أو تدعم جافا سكريبت لمحرك بحث PCRE القوي والمملوك.
 
 اطلع على [خطط أوريون](plans) للصفقات الحالية.
+
+</div>
+</div>
+
+<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="card-header">البدء</div>
+<div class="card-body text-white">
+
+أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء المصادر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`جذع/محتوى/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
 
 </div>
 </div>

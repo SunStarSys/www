@@ -115,18 +115,18 @@ div#lightning img {width:100%}
 
 Идите в своем собственном темпе, используйте столько сотрудников / предварительный просмотр / правки / фиксации / филиалы, сколько вам нравится, и платите только за то, что вы *фактически используете* в нашей инфраструктуре. Просто возьмите с собой улучшенную платформу CSS / JavaScript, сценарии perl и шаблоны Django, и мы позаботимся об остальной части вашей настройки без дополнительной платы. Мы рекомендуем **Bootstrap 5** для стилей css/js, так как это то, что мы используем внутри; но это полностью зависит от вас.
 
-<div class="card border-success text-light" style="max-width:25rem;background-color:transparent">
-<div class="card-header">Начало работы</div>
-<div class="card-body">
-
-Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить источники в багажнике/контенте. ~90% настроек стиля в [`багажник/содержимое/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
-
-</div>
-</div>
-
 Кроме того, все клиенты имеют бесплатные, настраиваемые шаблонами или поддерживаемые JavaScript интерфейсы для нашей мощной, проприетарной поисковой системы PCRE.
 
 Смотреть [Планы Ориона](plans) для текущих сделок.
+
+</div>
+</div>
+
+<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="card-header">Начало работы</div>
+<div class="card-body text-white">
+
+Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить источники в багажнике/контенте. ~90% настроек стиля в [`багажник/содержимое/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
 
 </div>
 </div>
