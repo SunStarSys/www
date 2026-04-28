@@ -112,7 +112,7 @@ Ditto for CGI scripts, which are fully locked down in terms of write access to a
 
 - OpenSSH v10+ ED25519 FIPS 140-3 with Post-Quantum KexAlgorithm / NIST compliant keys for cross-host [`lo`](#) reverse-port-forwarding
 
-- IPsec/IKEv2/PFS AES(256) for cross-regional VPN
+- IPsec/IKEv2/PFS AES(256) FIPS 140-2 for cross-regional VPN
 
 - AES(256) for ZFS encryption
 
