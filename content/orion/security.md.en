@@ -173,7 +173,7 @@ Adjustable number of rounds (currently defaults to 5).
 
 ### Tainted Data Protections
 
-All of our Perl runtimes have mandatory taint checks enabled with the -T flag; a powerful, uniquely Perl guard against Remote Shell Exploits.
+All of our Perl runtimes have mandatory taint checks enabled with the -T flag; a powerful, uniquely Perl guard against [Remote Shell Exploits](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/).
 
 ### Wiki Issues
 
