@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado=34581
+status: verificado=34604
 title: API de Orion - Crear
 ---
 
@@ -13,10 +13,10 @@ Básicamente, el sistema de creación se rige por dos módulos Perl proporcionad
 El trabajo del primero es hacer tres cosas:
 
 0. carga [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) y [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. construcción [`@path::patrones`](#)y
-2. oportunista caminar [`contenido/`](#) árbol para sembrar [`%path::dependencias`](#) y [`@path::acls`](#) de los metadatos de cabecera del archivo markdown/yaml.
+1. construcción `@path::patrones`y
+2. oportunista caminar `contenido/` árbol para sembrar `%path::dependencias` y `@path::acls` de los metadatos de cabecera del archivo markdown/yaml.
 
-El trabajo de este último es proporcionar invocable [`vista`](#)basado en [`Método $`](#)'s para las entradas coincidentes en [`@path::patrones`](#) (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), invocado por el [creación de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abajo ...
+El trabajo de este último es proporcionar invocable `vista`basado en `Método $`s para las entradas coincidentes en `@path::patrones` (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), invocado por el [creación de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abajo ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en [`$ruta`](#) que son novedosas, como el código externo [`fragmentos`](#) o [`asíntota`](#)-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en `$ruta` que son novedosas, como el código externo `fragmentos` o `asíntota`-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar a
 
 ## Sistema de creación
 
-### [SunStarSys::Ver](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; clase base para [`lib/view.pm`](#)
+### [SunStarSys::Ver](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; clase base para `lib/view.pm`
 
 #### single_narrative(%args) &mdash; La visión más popular (y sofisticada)
 
-Esta vista incorpora el procesamiento automatizado de archivos ubicados dentro de la [`$ruta`]directorio de anexos. Es decir, si [`$ruta = "/es.md.es"`], a continuación, los archivos almacenados en el  [`/foo.page/`] directorio asociado con el ".en" extensión lingüística se incorporará en la plantilla de argumentos direccionables para que [`$ruta`]independientemente de la [`preprocesamiento`] configuración de argumentos, que si es verdadera herida hacen que ese material sea accesible por el propio contenido de la **página**.
+Esta vista incorpora el procesamiento automatizado de archivos ubicados dentro de la `$ruta`directorio de anexos. Es decir, si `$ruta = "/es.md.es"`, a continuación, los archivos almacenados en el  `/foo.page/` directorio asociado con el ".en" extensión lingüística se incorporará en la plantilla de argumentos direccionables para que `$ruta` independientemente del `preprocesamiento` configuración del argumento &mdash; que, si es cierto, también haría que ese material fuera accesible por el propio contenido de la **página**.
 
 Argumentos obligatorios:
 
@@ -151,7 +151,7 @@ Ejecuta next_view en modo fuera de línea.
 
 #### fragmento (%args)
 
-[Procesos](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [líneas de fragmento](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[Procesa el código externo](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [líneas de fragmento](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), normalmente importando sus ubicaciones de origen en GitHub en bloques de rebaja con aislamiento específicos del lenguaje de programación. [Ejemplo aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### reconstruir(%args)
 

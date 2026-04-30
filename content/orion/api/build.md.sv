@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=34581
+status: verifierad=34604
 title: Orion API - bygge
 ---
 
@@ -13,10 +13,10 @@ I grund och botten styrs byggsystemet av två Perl-moduler som tillhandahålls a
 Det första är att göra tre saker:
 
 0. ladda [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) och [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. konstruera [`@path::mönster`](#)och
-2. opportunistiskt gå den [`innehåll/`](#) träd att fördefiniera [`%path::beroenden`](#) och [`@path::acls`](#) från metadata för filhuvud för nedsättning/yaml.
+1. konstruera `@path::mönster`och
+2. opportunistiskt gå den `innehåll/` träd att fördefiniera `%path::beroenden` och `@path::acls` från metadata för filhuvud för nedsättning/yaml.
 
-Den senares jobb är att tillhandahålla bokningsbara [`visa`](#)-baserad [`$metod`](#)s för matchande poster i [`@path::mönster`](#) (som ett strängifierat metodnamn i den andra rutan för varje arrayref-post), anropat av [skapa skript](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) enligt nedan ...
+Den senares jobb är att tillhandahålla bokningsbara `visa`-baserad `$metod`s för matchande poster i `@path::mönster` (som ett strängifierat metodnamn i den andra rutan för varje arrayref-post), anropat av [skapa skript](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) enligt nedan ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i [`$sökväg`](#) som är nya, som extern kod [`kodfragment`](#) eller [`asymptot`](#)-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i `$sökväg` som är nya, som extern kod `kodfragment` eller `asymptot`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av fi
 
 ## Byggsystem
 
-### [SunStarSys::Visa](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; basklass för [`lib/view.pm`](#)
+### [SunStarSys::Visa](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; basklass för `lib/view.pm`
 
 #### single_narrative(%args) &mdash; den mest populära (och sofistikerade) vyn
 
-Den här vyn innehåller automatisk bearbetning av filer som finns i [`$sökväg`]bilagekatalog. Med andra ord, om [`$path = "/foo.md.en"`], sedan de filer som lagras i  [`/foo.page/`] katalog associerad med "och" språktillägg kommer att införlivas i mallens adresserbara argument för att [`$sökväg`]Oavsett om [`förbearbetning`] argumentinställning, som om sant sår gör det materialet tillgängligt för själva **sidans innehåll**.
+Den här vyn innehåller automatisk bearbetning av filer som finns i `$sökväg`bilagekatalog. Med andra ord, om `$path = "/foo.md.en"`, sedan de filer som lagras i  `/foo.page/` katalog associerad med "och" språktillägg kommer att införlivas i mallens adresserbara argument för att `$sökväg` Oavsett om `förbearbetning` argumentinställning &mdash; som, om det är sant, också skulle göra det materialet tillgängligt för själva **sidans innehåll**.
 
 Obligatoriska argument:
 
@@ -151,7 +151,7 @@ Kör next_view i offlineläge.
 
 #### utdrag(%args)
 
-[Processer](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [utdragslinjer](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[Bearbetar extern kod](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [utdragslinjer](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), importerar vanligtvis sina källplatser på GitHub till programmeringsspråkiga avgränsade nedsättningsblock. [Exempel här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### rekonstruera (%args)
 

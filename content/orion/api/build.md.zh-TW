@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =34581
+status: 驗證 =34604
 title: Orion API - 建置
 ---
 
@@ -13,10 +13,10 @@ title: Orion API - 建置
 前的工作是做三件事：
 
 0. 載入[`程式庫 /facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) 與[`程式庫 /acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. 建構[`@path：：樣式`](#)，和
-2. 當機行走[`內容 /`](#) 種樹[`%path::dependencies`](#) 與[`@path::acls`](#) 來自 Markdown/yaml 檔案標頭描述資料。
+1. 建構`@path：：樣式`，和
+2. 當機行走`內容 /` 種樹`%path::dependencies` 與`@path::acls` 來自 Markdown/yaml 檔案標頭描述資料。
 
-後者的工作是提供不可呼叫的工作[`檢視`](#)- 基底[`$ 方法`](#)」s，用於比對下列項目：[`@path：：樣式`](#) (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 下方 ...
+後者的工作是提供不可呼叫的工作`檢視`- 基底`$ 方法`s，用於比對下列項目：`@path：：樣式` (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 下方 ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-許多視觀表的堆疊方式"篩選" 預先處理檔案的層面[`$path`](#) 新穎，如外部程式碼[`片段`](#) 或[`漸近體`](#)-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+許多視觀表的堆疊方式"篩選" 預先處理檔案的層面`$path` 新穎，如外部程式碼`片段` 或`漸近體`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## 建立系統
 
-### [SunStarSys：：查看](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別[`程式庫 /view.pm`](#)
+### [SunStarSys：：查看](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`程式庫 /view.pm`
 
 #### single_narrative (%args) &mdash; 最受歡迎 (和最複雜的) 檢視
 
-此檢視包含檔案自動處理 (位於[`$path`]的附件目錄。也就是說，如果[`$path = "繁體中文"`]，然後儲存於 中的檔案[`/foo.page/`] 與目錄關聯的目錄".en" 語言延伸將併入該範本可定址引數[`$path`]，不論[`前處理`] 引數設定，如果真的傷口，就會讓 **頁面的內容本身** 可以存取該材料。
+此檢視包含檔案自動處理 (位於`$path`的附件目錄。也就是說，如果`$path = "繁體中文"`，然後儲存於 中的檔案`/foo.page/` 與目錄關聯的目錄".en" 語言延伸將併入該範本可定址引數`$path` 無論`前處理` 引數設定&mdash; 如果為 true，也會讓 **頁面的內容本身能夠存取該資料 **。
 
 必要引數：
 
@@ -151,7 +151,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### 程式碼片段 (%args)
 
-[處理](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [片段線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[處理外部代碼](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [片段線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)，通常會將其 GitHub 上的來源位置匯入程式設計語言特定的圍欄標記區塊。[這裡範例](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### 重新建構 (%args)
 

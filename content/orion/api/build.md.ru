@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=34581
+status: проверено=34604
 title: API Orion – сборка
 ---
 
@@ -13,10 +13,10 @@ title: API Orion – сборка
 Первая задача состоит в том, чтобы сделать три вещи:
 
 0. тяжесть [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) и [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. изготавливать [`@path::шаблоны`](#), и
-2. условно ходить [`содержание/`](#) дерево для семян [`%path::зависимости`](#) и [`@path::acls`](#) из метаданных заголовка файла разметки/ямла.
+1. изготавливать `@path::шаблоны`, и
+2. условно ходить `содержание/` дерево для семян `%path::зависимости` и `@path::acls` из метаданных заголовка файла разметки/ямла.
 
-Задача последнего состоит в том, чтобы обеспечить вызываемый [`просмотр`](#)на основе [`$метод`](#)s для соответствующих записей в [`@path::шаблоны`](#) (в качестве строкового имени метода во втором слоте каждой записи ссылки массива), вызываемого [создание сценариев](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) как показано ниже ...
+Задача последнего состоит в том, чтобы обеспечить вызываемый `просмотр`на основе `$метод`s для соответствующих записей в `@path::шаблоны` (в качестве строкового имени метода во втором слоте каждой записи ссылки массива), вызываемого [создание сценариев](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) как показано ниже ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Многие виды должны быть сложены как "фильтры" для предварительной обработки аспектов файла в [`$path`](#) Это новый, как внешний код. [`фрагменты`](#) или [`асимптота`](#)-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Многие виды должны быть сложены как "фильтры" для предварительной обработки аспектов файла в `$path` Это новый, как внешний код. `фрагменты` или `асимптота`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## Система сборки
 
-### [SunStarSys::Просмотр](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; базовый класс для [`lib/view.pm`](#)
+### [SunStarSys::Просмотр](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; базовый класс для `lib/view.pm`
 
 #### single_narrative(%args) &mdash; самый популярный (и сложный) вид
 
-Это представление включает автоматическую обработку файлов, расположенных внутри [`$path`]каталог вложений. Другими словами, если [`$path = "/foo.md."`], затем файлы, хранящиеся в  [`/foo.page/`] каталог, связанный с ".ru" расширение языка будет включено в шаблон адресных аргументов для этого [`$path`]независимо от [`предварительная обработка`] параметр аргумента, который, если истинная рана делает этот материал доступным по самому содержанию **страницы**.
+Это представление включает автоматическую обработку файлов, расположенных внутри `$path`каталог вложений. Другими словами, если `$path = "/foo.md."`, затем файлы, хранящиеся в  `/foo.page/` каталог, связанный с ".ru" расширение языка будет включено в шаблон адресных аргументов для этого `$path` независимо от `предварительная обработка` параметр аргумента &mdash; который, если это правда, также сделает этот материал доступным по самому содержанию **страницы**.
 
 Обязательные аргументы:
 
@@ -151,7 +151,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### фрагмент(%args)
 
-[Процессы](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [линии фрагментов](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[Обработка внешнего кода](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [линии фрагментов](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), обычно импортируя их исходные местоположения на GitHub в блоки разметки, зависящие от языка программирования. [Пример здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### реконструкция(%args)
 

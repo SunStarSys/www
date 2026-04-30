@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: אומתה=34581
+status: אומתה=34604
 title: API של אוריון - בנייה
 ---
 
@@ -13,10 +13,10 @@ title: API של אוריון - בנייה
 תפקידו של הראשון הוא לעשות שלושה דברים:
 
 0. טעינה [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) וגם [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. בנייה [`@path::תבניות`](#), וגם
-2. הליכה אופורטוניסטית [`תוכן/`](#) עץ לזרע [`%path::תלות`](#) וגם [`@path::acls`](#) מטאדטה של כותרת קובץ markdown/yaml.
+1. בנייה `@path::תבניות`, וגם
+2. הליכה אופורטוניסטית `תוכן/` עץ לזרע `%path::תלות` וגם `@path::acls` מטאדטה של כותרת קובץ markdown/yaml.
 
-תפקידו של השני הוא לספק בלתי אפשרי. [`תצוגה`](#)מבוסס [`שיטה $`](#)'s לרשומות המתאימות ב- [`@path::תבניות`](#) (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) כמו למטה ...
+תפקידו של השני הוא לספק בלתי אפשרי. `תצוגה`מבוסס `שיטה $`s לרשומות תואמות ב- `@path::תבניות` (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) כמו למטה ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- [`$path`](#) זה רומן, כמו קוד חיצוני. [`גזירים`](#) או [`אסימפטוטה`](#)גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- `$path` זה רומן, כמו קוד חיצוני. `גזירים` או `אסימפטוטה`גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## מערכת בנייה
 
-### [SunStarSys::הצגה](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; סיווג בסיס של [`lib/view.pm`](#)
+### [SunStarSys::הצגה](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; סיווג בסיס של `lib/view.pm`
 
 #### single_narrative(%args) &mdash; התצוגה הפופולרית ביותר (והמתוחכמת)
 
-תצוגה זו כוללת עיבוד אוטומטי של קבצים הנמצאים בתוך [`$path`]'s ספריית מסמכים מצורפים'. במילים אחרות, אם [`$path = "איפוס סיסמה"`], לאחר מכן הקבצים המאוחסנים בתוך  [`/foo.page/`] הספרייה המקושרת עם "איפוס סיסמה" הרחבת השפה תשולב בארגומנטים המכתבים של התבנית עבור [`$path`], ללא קשר [`קדם-תהליך`] הגדרת ארגומנט, שאם פצע אמיתי הופך את החומר לנגיש באמצעות התוכן של הדף עצמו**.
+תצוגה זו כוללת עיבוד אוטומטי של קבצים הנמצאים בתוך `$path`'s ספריית מסמכים מצורפים'. במילים אחרות, אם `$path = "איפוס סיסמה"`, לאחר מכן הקבצים המאוחסנים בתוך  `/foo.page/` הספרייה המקושרת עם "איפוס סיסמה" הרחבת השפה תשולב בארגומנטים המכתבים של התבנית עבור `$path` ללא קשר ל `קדם-תהליך` הגדרת הארגומנט &mdash; אשר, אם כן, יהפוך את החומר הזה לנגיש על ידי התוכן של הדף עצמו**.
 
 ארגומנטי חובה:
 
@@ -151,7 +151,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### גזיר(%args)
 
-[תהליכים](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [שורות גזיר](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[מעבד קוד חיצוני](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [שורות גזיר](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)בדרך כלל מייבאים את מיקומי המקור שלהם ב-GitHub לבלוקי markdown ספציפיים לשפת התכנות. [דוגמה כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### בנייה מחדש(%args)
 

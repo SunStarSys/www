@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: überprüft=34581
+status: überprüft=34604
 title: Orion API - Erstellen
 ---
 
@@ -13,10 +13,10 @@ Grundsätzlich wird das Build-System von zwei vom Benutzer bereitgestellten Perl
 Die erste Aufgabe besteht darin, drei Dinge zu tun:
 
 0. laden [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) und [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. erstellen [`@path::Muster`](#)und
-2. opportunistisch gehen [`Inhalt/`](#) Baum für Seed [`%path::Abhängigkeiten`](#) und [`@path::acls`](#) aus Headermetadaten der Markup-/YAML-Datei.
+1. erstellen `@path::Muster`und
+2. opportunistisch gehen `Inhalt/` Baum für Seed `%path::Abhängigkeiten` und `@path::acls` aus Headermetadaten der Markup-/YAML-Datei.
 
-Letzterer hat die Aufgabe, unlösbar zu sein. [`Ansicht`](#)-basiert [`$Methode`](#)'s für die übereinstimmenden Einträge in [`@path::Muster`](#) (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), der vom [Skripting erstellen](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) wie unten ...
+Letzterer hat die Aufgabe, unlösbar zu sein. `Ansicht`-basiert `$Methode`s für die übereinstimmenden Einträge in `@path::Muster` (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), der vom [Skripting erstellen](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) wie unten ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in [`$Pfad`](#) Das ist neu, wie externer Code [`Snippets`](#) oder [`Asymptote`](#)-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in `$Pfad` Das ist neu, wie externer Code `Snippets` oder `Asymptote`-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in [`$
 
 ## System erstellen
 
-### [SunStarSys::Anzeigen](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; Basisklasse für [`lib/view.pm`](#)
+### [SunStarSys::Anzeigen](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; Basisklasse für `lib/view.pm`
 
 #### single_narrative(%args) &mdash; die beliebteste (und anspruchsvollste) Ansicht
 
-Diese Ansicht beinhaltet die automatisierte Verarbeitung von Dateien, die sich innerhalb der [`$Pfad`]'s Anhangsverzeichnis. Mit anderen Worten, wenn [`$Pfad = "/foo.md.en"`], dann die Dateien, die in der  [`/foo.page/`] Verzeichnis, das mit dem ".de" Die Spracherweiterung wird in die adressierbaren Argumente für die Vorlage integriert. [`$Pfad`]unabhängig von der [`Vorverarbeitung`] Argumenteinstellung, die, falls wahr, das Material durch den **Seiteninhalt selbst** zugänglich macht.
+Diese Ansicht beinhaltet die automatisierte Verarbeitung von Dateien, die sich innerhalb der `$Pfad`'s Anhangsverzeichnis. Mit anderen Worten, wenn `$Pfad = "/foo.md.en"`, dann die Dateien, die in der  `/foo.page/` Verzeichnis, das mit dem ".de" Die Spracherweiterung wird in die adressierbaren Argumente für die Vorlage integriert. `$Pfad` unabhängig von der `Vorverarbeitung` Argumenteinstellung &mdash; die, wenn wahr, das Material auch für den Inhalt der **Seite selbst zugänglich machen würde**.
 
 Erforderliche Argumente:
 
@@ -151,7 +151,7 @@ Führt next_view im Offlinemodus aus.
 
 #### Snippet (%args)
 
-[Prozesse](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [Snippet-Zeilen](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[Externen Code verarbeiten](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [Snippet-Zeilen](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), in der Regel ihre Quellspeicherorte in GitHub in programmiersprachenspezifische abgegrenzte Markdown-Blöcke importiert. [Beispiel hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### rekonstruieren(%args)
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=34581
+status: 確認済み=34604
 title: Orion API - ビルド
 ---
 
@@ -13,10 +13,10 @@ title: Orion API - ビルド
 前者の仕事は三つのことをすることである。
 
 0. ロード[`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) および[`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. 構成[`@path:: パターン`](#)および
-2. 便宜的に歩く[`コンテンツ/`](#) シードするツリー[`%path:: 依存関係`](#) および[`@path::acls`](#) Markdown/yamlファイル・ヘッダー・メタデータ。
+1. 構成`@path:: パターン`および
+2. 便宜的に歩く`コンテンツ/` シードするツリー`%path:: 依存関係` および`@path::acls` Markdown/yamlファイル・ヘッダー・メタデータ。
 
-後者の仕事は、invokableを提供することです。[`ビュー`](#)- ベース[`$メソッド`](#)で一致するエントリの's [`@path:: パターン`](#) (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 以下 ...
+後者の仕事は、invokableを提供することです。`ビュー`- ベース`$メソッド`s: 一致するエントリ`@path:: パターン` (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 以下 ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには[`パス`](#) 外部コードのように新しい[`スニペット`](#) または[`漸近線`](#)- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには`パス` 外部コードのように新しい`スニペット` または`漸近線`- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## システム構築
 
-### [SunStarSys:: ビュー](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス[`lib/view.pm`](#)
+### [SunStarSys:: ビュー](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス`lib/view.pm`
 
 #### single_narrative(%args) &mdash; 最も人気のある(そして洗練された)ビュー
 
-このビューには、内部にあるファイルの自動処理が組み込まれています。[`パス`]の添付ディレクトリ。言い換えれば、[`$path = "/foo.md.en"`]に保存されたファイル[`/foo.page/`] 関連するディレクトリ".en" 言語拡張は、そのテンプレートのアドレス可能な引数に組み込まれます[`パス`]関係なく[`前処理`] 引数設定。真傷の場合、**ページのコンテンツ自体**によってそのマテリアルにアクセスできるようになります。
+このビューには、内部にあるファイルの自動処理が組み込まれています。`パス`の添付ディレクトリ。言い換えれば、`$path = "/foo.md.en"`に保存されたファイル`/foo.page/` 関連するディレクトリ".en" 言語拡張は、そのテンプレートのアドレス可能な引数に組み込まれます`パス` 関係なく`前処理` 引数の設定&mdash; trueの場合、**ページのコンテンツ自体**がその資料にアクセスできるようにします。
 
 必須引数:
 
@@ -151,7 +151,7 @@ next_viewをオフライン・モードで実行します。
 
 #### スニペット(%args)
 
-[プロセス](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [スニペット線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[外部コードを処理](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [スニペット線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)通常は、GitHub上のソースの場所をプログラミング言語固有のフェンス・マークダウン・ブロックにインポートします。[ここでの例](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### 再構築(%args)
 

@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: draft
+status: verified=34604
 Dependencies: *.md.en
 
 {# lede #}This document covers the **Build System** APIs{# lede #}.
@@ -10,10 +10,10 @@ Basically, the build system is governed by two user-supplied Perl modules: [`lib
 The former's job is to do three things:
 
 0. load [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) and [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. construct [`@path::patterns`](#), and
-2. opportunistically walk the [`content/`](#) tree to seed [`%path::dependencies`](#) and [`@path::acls`](#) from markdown/yaml file header metadata.
+1. construct `@path::patterns`, and
+2. opportunistically walk the `content/` tree to seed `%path::dependencies` and `@path::acls` from markdown/yaml file header metadata.
 
-The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for the matching entries in [`@path::patterns`](#) (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) as below ...
+The latter's job is to provide invokable `view`-based `$method`s for the matching entries in `@path::patterns` (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) as below ...
 
 ```perl
 #api
@@ -37,7 +37,7 @@ The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for 
 #api
 ```
 
-Many views are meant to be stacked as "filters" to preprocess aspects of the file in [`$path`](#) that are novel, like external code [`snippets`](#) or [`asymptote`](#)-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Many views are meant to be stacked as "filters" to preprocess aspects of the file in `$path` that are novel, like external code `snippets` or `asymptote`-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -45,11 +45,11 @@ Many views are meant to be stacked as "filters" to preprocess aspects of the fil
 
 ## Build System
 
-### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for [`lib/view.pm`](#)
+### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for `lib/view.pm`
 
 #### single_narrative(%args) &mdash; the most popular (and sophisticated) view
 
-This view incorporates automated processing of files located within the [`$path`]'s attachment directory. In other words, if [`$path = "/foo.md.en"`], then the files stored within the  [`/foo.page/`] directory associated with the ".en" language extension will be incorporated into the template addressable arguments for that [`$path`], regardless of the [`preprocess`] argument setting, which if true wound make that material accessible by the **page's content itself**.
+This view incorporates automated processing of files located within the `$path`'s attachment directory. In other words, if `$path = "/foo.md.en"`, then the files stored within the  `/foo.page/` directory associated with the ".en" language extension will be incorporated into the template addressable arguments for that `$path` regardless of the `preprocess` argument's setting &mdash; which if true, would also make that material accessible by the **page's content itself**.
 
 Mandatory Arguments:
 

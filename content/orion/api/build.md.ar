@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 34581
+status: التحقق = 34604
 title: أوريون API - بناء
 ---
 
@@ -13,10 +13,10 @@ title: أوريون API - بناء
 المهمة الأولى هي القيام بثلاثة أشياء:
 
 0. حمل [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) و [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. بناء [`@path::النماذج`](#)، و
-2. انتهازية المشي [`المحتوى/`](#) يبذر الشجرة إلى البذور [`%path::dependencies`](#) و [`@path::acls`](#) من ميتاديتا رأس ملف markdown/yaml.
+1. بناء `@path::النماذج`، و
+2. انتهازية المشي `المحتوى/` يبذر الشجرة إلى البذور `%path::dependencies` و `@path::acls` من ميتاديتا رأس ملف markdown/yaml.
 
-وظيفة الأخير هو توفير الاستدعاء [`شاهد`](#)على أساس [`طريقة $`](#)'s للإدخالات المطابقة في [`@path::النماذج`](#) (باعتباره اسم أسلوب ذي سلسلة في الفتحة الثانية من كل إدخال arrayref)، يتم استدعاؤه بواسطة [يصنع النصوص البرمجية](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) أسفل ...
+وظيفة الأخير هو توفير الاستدعاء `شاهد`على أساس `طريقة $`s للإدخالات المطابقة في `@path::النماذج` (باعتباره اسم أسلوب ذي سلسلة في الفتحة الثانية من كل إدخال arrayref)، يتم استدعاؤه بواسطة [يصنع النصوص البرمجية](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) أسفل ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة جوانب الملف مسبقًا في [`مسار $`](#) تلك رواية، مثل الكود الخارجي [`المقتطفات`](#) أو [`مُقَارِبًا`](#)قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة جوانب الملف مسبقًا في `مسار $` تلك رواية، مثل الكود الخارجي `المقتطفات` أو `مُقَارِبًا`قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## نظام الإنشاء
 
-### [SunStarSys::عرض](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; الفئة الأساسية لـ [`lib/view.pm`](#)
+### [SunStarSys::عرض](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; الفئة الأساسية لـ `lib/view.pm`
 
 #### single_narrative(%args) &mdash; العرض الأكثر شعبية (والمتطورة)
 
-يتضمن هذا العرض المعالجة الآلية للملفات الموجودة داخل [`مسار $`]'s دليل المرفق. وبعبارة أخرى، إذا [`$path = "/foo.md.en"`]، ثم الملفات المخزنة داخل  [`/foo.page/`] الدليل المقترن بـ "سن" سيتم دمج امتداد اللغة في الوسائط القابلة للعنونة لهذا القالب [`مسار $`]، بغض النظر عن [`يعالج`] إعداد الحجة، والذي إذا كان الجرح الحقيقي يجعل هذه المادة متاحة من خلال محتوى **الصفحة نفسها**.
+يتضمن هذا العرض المعالجة الآلية للملفات الموجودة داخل `مسار $`'s دليل المرفق. وبعبارة أخرى، إذا `$path = "/foo.md.en"`، ثم الملفات المخزنة داخل  `/foo.page/` الدليل المقترن بـ "سن" سيتم دمج امتداد اللغة في الوسائط القابلة للعنونة لهذا القالب `مسار $` بغض النظر عن `يعالج` إعداد الوسيطة &mdash; والتي إذا كانت صحيحة، ستجعل هذه المادة متاحة أيضًا من خلال محتوى **الصفحة نفسها**.
 
 الوسائط الإلزامية:
 
@@ -151,7 +151,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 #### قصاصة(%args)
 
-[العمليات](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [خطوط القصاصة](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[معالجة التعليمات البرمجية الخارجية](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [خطوط القصاصة](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)، عادة ما تستورد مواقعها المصدر على GitHub في كتل تخفيض السعر المسيجة الخاصة بلغة البرمجة. [مثال هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### إعادة الإعمار(%args)
 

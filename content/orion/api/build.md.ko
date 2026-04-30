@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=34581
+status: 확인=34604
 title: Orion API - 빌드
 ---
 
@@ -13,10 +13,10 @@ title: Orion API - 빌드
 이전 작업은 다음 세 가지를 수행하는 것입니다.
 
 0. 로드 [`라이브러리/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) 및 [`라이브러리/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. 생성 [`@path::패턴`](#)및
-2. 기회주의적으로 걷다 [`콘텐츠/`](#) 시드할 트리 [`%path::종속성`](#) 및 [`@path::acls`](#) 마크다운/yaml 파일 헤더 메타데이터에서
+1. 생성 `@path::패턴`및
+2. 기회주의적으로 걷다 `콘텐츠/` 시드할 트리 `%path::종속성` 및 `@path::acls` 마크다운/yaml 파일 헤더 메타데이터에서
 
-후자의 임무는 호출을 제공하는 것입니다 [`보기`](#)- 기반 [`$방법`](#)에서 일치하는 항목의 경우 [`@path::패턴`](#) (각 arrayref 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), [스크립트 작성](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 아래와 같이 ...
+후자의 임무는 호출을 제공하는 것입니다 `보기`- 기반 `$방법`s - 일치하는 항목의 경우 `@path::패턴` (각 arrayref 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), [스크립트 작성](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 아래와 같이 ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-많은 뷰가 "필터" 파일의 측면을 미리 처리하려면 [`$경로`](#) 외부 코드와 마찬가지로 참신합니다. [`코드 조각`](#) 또는 [`asymptote`](#)-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+많은 뷰가 "필터" 파일의 측면을 미리 처리하려면 `$경로` 외부 코드와 마찬가지로 참신합니다. `코드 조각` 또는 `asymptote`-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## 빌드 시스템
 
-### [SunStarSys::보기](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 [`라이브러리/view.pm`](#)
+### [SunStarSys::보기](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 `라이브러리/view.pm`
 
 #### single_narrative(%args) &mdash; 가장 인기있는 (그리고 정교한)보기
 
-이 뷰에는 내부에 있는 파일의 자동 처리 기능이 포함되어 있습니다. [`$경로`]첨부 디렉토리입니다. 즉, [`$path = "한국어/조선말"`]에 저장된 파일이  [`/foo.page/`] 디렉토리: "한국어" 언어 확장이 템플리트 주소 지정 가능 인수에 통합됩니다. [`$경로`]에 관계없이 [`선행 처리`] 인수 설정 - 실제 상처가 발생할 경우 **페이지의 콘텐츠 자체**에서 해당 자료에 액세스할 수 있게 합니다.
+이 뷰에는 내부에 있는 파일의 자동 처리 기능이 포함되어 있습니다. `$경로`첨부 디렉토리입니다. 즉, `$path = "한국어/조선말"`에 저장된 파일이  `/foo.page/` 디렉토리: "한국어" 언어 확장이 템플리트 주소 지정 가능 인수에 통합됩니다. `$경로` 에 관계없이 `선행 처리` 인수의 설정 &mdash; true인 경우 **페이지의 콘텐츠 자체**에서 해당 자료에 액세스할 수 있게 됩니다.
 
 필수 인수:
 
@@ -151,7 +151,7 @@ $args 처리를 위한 유틸리티{보기}.
 
 #### 코드 조각(%args)
 
-[프로세스](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [코드 조각 행](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[외부 코드 처리](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [코드 조각 행](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)일반적으로 GitHub의 소스 위치를 프로그래밍 언어별 보호된 마크다운 블록으로 가져옵니다. [예제](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### 재구성(%args)
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=34581
+status: verificado=34604
 title: Orion API - Criação
 ---
 
@@ -13,10 +13,10 @@ Basicamente, o sistema de compilação é regido por dois módulos Perl fornecid
 O trabalho do primeiro é fazer três coisas:
 
 0. carregar [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) e [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. construir [`@path::padrões`](#), e
-2. caminhando oportunamente [`conteúdo/`](#) árvore para semente [`%path::dependências`](#) e [`@path::acls`](#) de metadados de cabeçalho de arquivo de markdown/yaml.
+1. construir `@path::padrões`, e
+2. caminhando oportunamente `conteúdo/` árvore para semente `%path::dependências` e `@path::acls` de metadados de cabeçalho de arquivo de markdown/yaml.
 
-O trabalho deste último é fornecer invocável [`exibir`](#)com base em [`Método $`](#)'s para as entradas correspondentes no [`@path::padrões`](#) (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abaixo ...
+O trabalho deste último é fornecer invocável `exibir`com base em `Método $`s para as entradas correspondentes em `@path::padrões` (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abaixo ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no [`$path`](#) que são novos, como o código externo [`trechos de código`](#) ou [`assíntota`](#)-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no `$path` que são novos, como o código externo `trechos de código` ou `assíntota`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do
 
 ## Sistema de Build
 
-### [SunStarSys::Visualizar](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe base para [`lib/view.pm`](#)
+### [SunStarSys::Visualizar](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe base para `lib/view.pm`
 
 #### single_narrative(%args) &mdash; a visão mais popular (e sofisticada)
 
-Esta visualização incorpora o processamento automatizado de arquivos localizados no [`$path`]diretório do anexo 's. Em outras palavras, se [`$path = "Português (Brasil)"`], depois os arquivos armazenados no  [`/foo.page/`] diretório associado ao "Português" a extensão do idioma será incorporada aos argumentos endereçáveis do modelo para que [`$path`], independentemente do [`pré-processamento`] definição de argumento, que se verdadeira ferida tornar esse material acessível pelo próprio conteúdo da **página**.
+Esta visualização incorpora o processamento automatizado de arquivos localizados no `$path`diretório do anexo 's. Em outras palavras, se `$path = "Português (Brasil)"`, depois os arquivos armazenados no  `/foo.page/` diretório associado ao "Português" a extensão do idioma será incorporada aos argumentos endereçáveis do modelo para que `$path` independentemente do `pré-processamento` definição do argumento &mdash; que, se verdadeiro, também tornaria esse material acessível pelo próprio conteúdo da **página**.
 
 Argumentos Obrigatórios:
 
@@ -151,7 +151,7 @@ Executa o next_view no modo off-line.
 
 #### snippet(%args)
 
-[Processos](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [linhas de snippet](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[Processa código externo](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [linhas de snippet](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), normalmente importando seus locais de origem no GitHub para blocos de markdown cercados específicos de linguagem de programação. [Exemplo aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### reconstruir(%args)
 

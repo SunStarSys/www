@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: vérifié=34581
+status: vérifié=34604
 title: API Orion - Créer
 ---
 
@@ -13,10 +13,10 @@ Fondamentalement, le système de construction est régi par deux modules Perl fo
 Le travail du premier est de faire trois choses :
 
 0. chargement [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) et [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. construction [`@path : :modèles`](#), et
-2. de manière opportuniste, [`contenu/`](#) arbre à ensemencer [`%path : :dépendances`](#) et [`@path : :acls`](#) à partir des métadonnées d'en-tête de fichier markdown/yaml.
+1. construction `@path : :modèles`, et
+2. de manière opportuniste, `contenu/` arbre à ensemencer `%path : :dépendances` et `@path : :acls` à partir des métadonnées d'en-tête de fichier markdown/yaml.
 
-Le travail de ce dernier est de fournir invokable [`vue`](#)-basé [`Méthode $`](#)'s pour les entrées correspondantes dans [`@path : :modèles`](#) (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée arrayref), appelé par le [génération de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) comme ci-dessous ...
+Le travail de ce dernier est de fournir invokable `vue`-basé `Méthode $`s pour les entrées correspondantes dans `@path : :modèles` (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée arrayref), appelé par le [génération de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) comme ci-dessous ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans [`$chemin`](#) qui sont nouveaux, comme le code externe [`fragments de code`](#) ou [`asymptote`](#)-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans `$chemin` qui sont nouveaux, comme le code externe `fragments de code` ou `asymptote`-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,11 +48,11 @@ Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétra
 
 ## Créer un système
 
-### [SunStarSys : :Voir](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe de base pour [`lib/view.pm`](#)
+### [SunStarSys : :Voir](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe de base pour `lib/view.pm`
 
 #### single_narrative(%args) &mdash; la vue la plus populaire (et sophistiquée)
 
-Cette vue intègre le traitement automatisé des fichiers situés dans le [`$chemin`]répertoire des pièces jointes. Autrement dit, si [`$path = "/foo.md.fr"`], puis les fichiers stockés dans  [`/foo.page/`] répertoire associé au ".fr" l'extension de langue sera incorporée dans le modèle des arguments adressables pour [`$chemin`], indépendamment du [`prétraitement`] paramètre d'argument, qui, si la plaie est vraie, rend ce matériel accessible par le contenu de la **page elle-même**.
+Cette vue intègre le traitement automatisé des fichiers situés dans le `$chemin`répertoire des pièces jointes. Autrement dit, si `$path = "/foo.md.fr"`, puis les fichiers stockés dans  `/foo.page/` répertoire associé au ".fr" l'extension de langue sera incorporée dans le modèle des arguments adressables pour `$chemin` indépendamment du `prétraitement` paramètre de l'argument &mdash; qui, si elle est vraie, rendrait également ce matériel accessible par le contenu de la **page elle-même**.
 
 Arguments obligatoires :
 
@@ -151,7 +151,7 @@ Exécute le fichier next_view en mode hors ligne.
 
 #### fragment de code (%args)
 
-[Processus](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [lignes de fragment de code](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[Code externe des processus](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [lignes de fragment de code](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), généralement l'importation de leurs emplacements source sur GitHub dans des blocs de démarque clôturés propres à la langue de programmation. [Exemple ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### reconstruire(%args)
 
