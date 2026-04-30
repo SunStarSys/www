@@ -170,7 +170,7 @@ Copies [`$src`](#) to [`$dest`](#) if the former's modification timestamp is new
 
 Takes an exclusive (f)lock (for the current UNIX process) on [`$lockfile`](#).
 
-#### shuffle(\\@deck)
+#### shuffle(\\&#64;deck)
 
 In-place random (Fisher-Yates) shuffle of [`@deck`](#).
 
@@ -178,27 +178,27 @@ In-place random (Fisher-Yates) shuffle of [`@deck`](#).
 
 Sorts Markdown Tables in $content according to each table's  column spec.  Exactly one column may be sorted per table, optionally numerically [`n`](#), in either descending [`v`](#) or ascending [`^`](#) order.
 
-#### fixup_code($prefix, $type, @\_)
+#### fixup_code($prefix, $type, &#64;_)
 
-Strips $prefix from every arg in @\_. The function of the $type argument is implementation specific, but is mainly used to seed the editor.md "mode" for processing this content in @\_.
+Strips $prefix from every arg in &#64;\_. The function of the $type argument is implementation specific, but is mainly used to seed the editor.md "mode" for processing this content in &#64;_.
 
 #### unload_package($pkg)
 
 Aggressively unloads Perl (leaf) package [`$pkg`](#) from the Symbol Table (STASH).
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;paths)
 
 Removes [`@paths`](#) from [`@INC`](#).
 
-#### touch(@\_)
+#### touch(&#64;_)
 
 Touches all files in [`@_`](#). If no args are passed, uses [`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 Normalizes all paths in [`@_`](#) for safe use as raw arguments to [`SVN::Client`](#) commands.
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 Secures paths in [`@_`](#) for use as pure relative paths in [`Dotiac::DTL`](#) (Django Template) path-specific commands.
 
