@@ -148,7 +148,7 @@ Runs the next_view in offline mode.
 
 #### snippet(%args)
 
-[Processes external code](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [snippet lines](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), normally importing their source locations on GitHub into programming-language-specific fenced markdown blocks.
+[Processes external code](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [snippet lines](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), normally importing their source locations on GitHub into programming-language-specific fenced markdown blocks. [Example here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
 #### reconstruct(%args)
 
