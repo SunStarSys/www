@@ -138,7 +138,7 @@ Runs the next_view in offline mode.
 
 #### snippet(%args)
 
-Processes snippet lines.
+[Processes](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [snippet lines](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### reconstruct(%args)
 
