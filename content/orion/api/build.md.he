@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: אומתו 34647
+status: אומתו = 34675
 title: API של אוריון - בנייה
 ---
 
@@ -427,7 +427,19 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ספריית תוכניות שירות של `lib/path.pm` וגם `lib/view.pm`
 
-#### read_text_file($file, $out, $content_lines) &mdash; מעבד קבצי הטקסט האוניברסלי של אוריון
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `read_text_file($file, $out, $content_lines)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+מעבד קבצי הטקסט האוניברסלי של אוריון
+
+</div>
+<p class="card-text">
 
 מנתח כותרות + תוכן של קובץ מקודד UTF-8 `$file` מאחסן תוצאות ב-hashref `$out`. `$content_lines` הוא המספר המרבי (אופציונלי) של שורות תוכן לקריאה.
 
@@ -435,78 +447,322 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 `$file` עשויה להיות הפניה למחרוזת raw המייצגת את התוכן המלא של קובץ.  התוצאות ב `$out` זה יהיה UTF-8 מקודד.
 
-#### copy_if_newer($src, $dest)
+</p>
+</div>
+</div>
 
-עותקים `$src` אל `$dest` אם חותמת הזמן של השינוי של הקודם היא חדשה יותר מזו של האחרון. על עותק, בנוסף gzip-דחיסת `$dest` קובץ אם הוא קובץ טקסט, ומוסיף ".gz" הרחבה לשם.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### get_lock($lockfile)
+#### `copy_if_newer($src, $dest)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+עותקים `$src` אל `$dest` אם חותמת הזמן של השינוי של הקודם היא חדשה יותר מזו של האחרון.
+
+</div>
+<p class="card-text">
+
+על עותק, בנוסף gzip-דחיסת `$dest` קובץ אם הוא קובץ טקסט, ומוסיף ".gz" הרחבה לשם.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `get_lock($lockfile)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 לוקח (f) נעילה בלעדית (עבור תהליך UNIX הנוכחי) על `$lockfile`.
 
-#### ערפילית(\\)&#64;כרטסת)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `shuffle(\@deck)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 במקום אקראי (Fisher-Yates) shuffle של `@deck`.
 
-#### sort_tables($content)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-ממיין טבלאות Markdown ב-$content לפי מפרט העמודה של כל טבלה.  ניתן למיין בדיוק עמודה אחת לכל טבלה, כאופציה מספרית `n`, בסדר יורד `v` או בסדר עולה `^` פקודה
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### fixup_code($prefix, $type, &#64;_)
+#### `sort_tables($content)`
 
-מסיר קידומת $ מכל ארגומנט ב- &#64;\_. הפונקציה של הארגומנט $type ספציפית למימוש, אך משמשת בעיקר להגדרת נתונים מראש של editor.md "מצב" לעיבוד תוכן זה ב- &#64;_.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### unload_package($pkg)
+ממיין טבלאות Markdown ב-$content לפי מפרט העמודה של כל טבלה.
+
+</div>
+<p class="card-text">
+
+ניתן למיין בדיוק עמודה אחת לכל טבלה, כאופציה מספרית `n`, בסדר יורד `v` או בסדר עולה `^` פקודה
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `fixup_code($prefix, $type, @_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+מסיר קידומת $ מכל ארגומנט ב- &#64;\_.
+
+</div>
+<p class="card-text">
+
+המטרה של `$type` הארגומנט הוא ספציפי למימוש, אך משמש בעיקר לשתילת editor.md "מצב" לעיבוד תוכן זה ב- &#64;_.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `unload_package($pkg)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 פורק באופן אגרסיבי חבילת Perl (עלה) `$pkg` טבלת הסמלים (STASH)
 
-#### purge_from_inc(&#64;נתיבים
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `purge_from_inc(@paths)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 מסיר `@paths` מאת `@INC`.
 
-#### מגע(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `touch(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 משנה את כל הקבצים ב- `@_`. אם לא הועברו ארגומנטים, שימושים `$_`.
 
-#### normalize_svn_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_svn_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 מנרמל את כל הנתיבים ב- `@_` לשימוש בטוח כארגומנטים גולמיים אל `SVN::Client` פקודות.
 
-#### sanitize_relative_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `sanitize_relative_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 מאבטח נתיבים ב- `@_` לשימוש כנתיבים יחסיים טהורים ב- `Dotiac::DTL` (תבנית Django) פקודות ספציפיות לנתיב.
 
-#### parse_filename($path)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `parse_filename($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים `$_` כמו שם הקובץ לפירוק.
 
-#### walk_content_tree($code)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-על תנאי הולך `./content` עץ הקופה של מערכת הבנייה, נרמול ראשון `$_` כנתיב המשנה הרשמי המושרש בתוכן, ולאחר מכן בהפעלה `$code->()` על כל פריט בהליכת העץ. עבור רוב המבנים, ההליכה לעולם לא מתרחשת. &mdash; במקום זאת, הבנייה מסתמכת על נתונים במטמון מבניות קודמות.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `walk_content_tree($code)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+על תנאי הולך `./content` עץ הקופה של מערכת הבנייה; נרמול ראשון `$_` כנתיב המשנה הרשמי המושרש בתוכן, ולאחר מכן בהפעלה `$code->()` על כל פריט בהליכת העץ.
+
+</div>
+<p class="text-body">
+
+עבור רוב המבנים, ההליכה לעולם לא מתרחשת. &mdash; במקום זאת, הבנייה מסתמכת על נתונים במטמון מבניות קודמות.
 
 הדרך היחידה לכפות הליכה היא על ידי הגדרת `$path::use_cache` לערך false במודולים שסופקו על ידי המשתמש. אחרת התנהגות זו מנוהלת במומחיות על ידי [טכנולוגיית בנייה מצטברת](https://iconoclasts.blog/joe/dependencies).
 
 מחזיר 1 אם ההליכה אכן התקדמה, במקום להסתמך על נתונים במטמון. אחרת, מחזיר ערך false.
 
-##### הועבר לארכיב($path)
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `archived($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 דגלים כל `Status: archived` `$path` (באופן טבעי) שימושים `$_` אם לא הועברו ויכוחים.
 
-העברת קבצים לארכיון היא דרך טבעית לספר לאוריון "הפסק לשים לב למיקום המקושר לקובץ זה ... אלא אם כן יעודכן שוב, ובמקרה זה ירוענן מיקום הארכיב. בפרט, קבצים שהועברו לארכיב אינם מופיעים ברשימת הספריות בתוך ה-CMS עצמו; עליך לנווט לדף החי עצמו כדי שתוכל לערוך אותו שוב באופן מקוון.
+</div>
+<p class="card-text">
 
-##### seed_file_deps($path)
+העברה לארכיון של קובצי Markdown היא דרך טבעית לספר לאוריון "הפסק לשים לב למיקום המקושר לקובץ זה ... אלא אם כן יעודכן שוב, ובמקרה זה ירוענן מיקום הארכיב. בפרט, קבצים שהועברו לארכיב אינם מופיעים ברשימת הספריות בתוך מערכת ניהול התוכן של אוריון עצמה; עליך לנווט לדף החי עצמו כדי שתוכל לערוך אותו שוב באופן מקוון.
 
-עדכונים מאובטחים `%path::dependencies` בשביל זה `$path`מבוסס על שלה `dependencies` גלוב(ים) כותרת. ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
+</p>
+</div>
+</div>
 
-##### seed_file_acl($path)
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-עדכונים בטוחים `@path::acl` בשביל זה `$path`מבוסס על שלה `acl` מפרט כותרת. ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
+##### `seed_file_deps($path)`
 
-#### טעינה
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+עדכונים מאובטחים `%path::dependencies` בשביל זה `$path`מבוסס על שלה `dependencies` גלוב(ים) כותרת.
+
+</div>
+<p class="card-text">
+
+ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
+
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `seed_file_acl($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+עדכונים בטוחים `@path::acl` בשביל זה `$path`מבוסס על שלה `acl` מפרט כותרת.
+
+</div>
+<p class="card-text">
+
+ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Load`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 זהה ל- `YAML::XS::Load`.
 
-#### הטלה
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Dump`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 זהה ל- `YAML::XS::Dump`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

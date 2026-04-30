@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =34647
+status: 驗證 =34675
 title: Orion API - 建置
 ---
 
@@ -427,7 +427,19 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫`lib/path.pm` 與`lib/view.pm`
 
-#### read_text_file ($file, $out, $content_lines) &mdash; Orion 的通用文字檔案處理器
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `read_text_file($file, $out, $content_lines)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Orion 的通用文字檔案處理器
+
+</div>
+<p class="card-text">
 
 剖析 UTF- 8 編碼檔案的 headers+content `$file` 並將結果儲存在 hashref 中`$out`. `$content_lines` 是要讀取的內容行數上限 (選擇性)。
 
@@ -435,78 +447,322 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 `$file` 可以是原始字串的參照，代表檔案的完整內容。結果`$out` 將會依然以 UTF-8 編碼。
 
-#### copy_if_newer ($src, $dest)
+</p>
+</div>
+</div>
 
-份數`$src` 至`$dest` 如果前者的修改時戳比後者的修改時戳新。在複製時，加上 gzip 壓縮`$dest` 檔案 (如果是文字檔) 並新增".gz" 名稱的副檔名。
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### get_lock ($lockfile)
+#### `copy_if_newer($src, $dest)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+份數`$src` 至`$dest` 如果前者的修改時戳比後者的修改時戳新。
+
+</div>
+<p class="card-text">
+
+在複製時，加上 gzip 壓縮`$dest` 檔案 (如果是文字檔) 並新增".gz" 名稱的副檔名。
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `get_lock($lockfile)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 獨佔 (f) 鎖定 (針對目前的 UNIX 處理作業) 於`$lockfile`.
 
-#### 打亂 (\\)&#64;版面)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `shuffle(\@deck)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 就地隨機 (漁船) 混亂`@deck`.
 
-#### sort_tables ($content)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。每一表格只能排序一個資料欄 (選擇性地為數字) `n`，遞減`v` 或遞增`^` 訂單。
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### fixup_code ($prefix, $type, &#64;_)
+#### `sort_tables($content)`
 
-刪除每一個參數的 $prefix &#64;\_. $type 引數的函數是實行特定的函數，但主要是用來植入 editor.md "模式" 處理此內容於&#64;_.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### unload_package ($pkg)
+根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。
+
+</div>
+<p class="card-text">
+
+每一表格只能排序一個資料欄 (選擇性地為數字) `n`，遞減`v` 或遞增`^` 訂單。
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `fixup_code($prefix, $type, @_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+刪除每一個參數的 $prefix &#64;\_.
+
+</div>
+<p class="card-text">
+
+目的：`$type` 引數是實行特定的，但主要是用來植入 editor.md "模式" 處理此內容於&#64;_.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `unload_package($pkg)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 積極卸載 Perl (分葉) 套裝程式`$pkg` 來自符號表 (STASH)。
 
-#### purge_from_inc(&#64;路徑)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `purge_from_inc(@paths)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 移除`@paths` 來自`@INC`.
 
-#### 中文 (繁體)&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `touch(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 觸碰所有檔案於`@_`。如果未傳送任何引數，則使用`$_`.
 
-#### normalize_svn_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_svn_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 將所有路徑標準化`@_` 以安全方式用作原始引數`SVN::Client` 指令。
 
-#### sanitize_relative_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `sanitize_relative_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 保護以下位置的路徑：`@_` 用作純相對路徑`Dotiac::DTL` (Django 樣板) 路徑特定命令。
 
-#### parse_filename (路徑)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `parse_filename($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 包裝函式四周`File::Basename::fileparse`。不含引數，使用`$_` 作為要剖析的檔案名稱。
 
-#### walk_content_tree ($code)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-有條件地步行`./content` 組建系統取出樹狀結構，先標準化`$_` 作為正式的內容根目錄子路徑，然後呼叫`$code->()` 在樹行道的每個項目上。對大多數的組建而言，一律不會執行 walk &mdash; 而是組建依賴先前組建的快取資料。
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `walk_content_tree($code)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+有條件地步行`./content` 組建系統取出樹狀結構；先標準化`$_` 作為正式的內容根目錄子路徑，然後呼叫`$code->()` 在樹行道的每個項目上。
+
+</div>
+<p class="text-body">
+
+對大多數的組建而言，一律不會執行 walk &mdash; 而是組建依賴先前組建的快取資料。
 
 強制散步的唯一方法是設定`$path::use_cache` 在使用者提供的模組中為 false 值。否則，此行為由下列項目由專家管理：[增量建置技術](https://iconoclasts.blog/joe/dependencies).
 
 如果實際繼續執行 walk，則傳回 1，而不是依賴快取的資料。否則會傳回假值。
 
-##### 已歸檔 ($path)
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `archived($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 每個旗標`Status: archived` `$path` (以自然語言特定的方式)。使用`$_` 如果未傳送任何引數。
 
-歸檔檔案是告訴 Orion 的自然方式"停止注意此檔案的永久連結位置 ... 除非再次更新，否則會重新整理存檔位置。特別是，封存的檔案不會出現在 CMS 本身的目錄列表中；您必須瀏覽至即時頁面本身，才能在線上再次進行編輯。
+</div>
+<p class="card-text">
 
-##### seed_file_deps (路徑)
+封存 Markdown 檔案是告訴 Orion 的自然方法"停止注意此檔案的永久連結位置 ... 除非再次更新，否則會重新整理存檔位置。特別是，封存的檔案不會出現在 Orion CMS 本身的目錄清單中；您必須瀏覽至即時頁面本身，才能在線上再次進行編輯。
 
-安全更新`%path::dependencies` 針對此`$path`，根據它`dependencies` 標頭 glob。預設使用`$_` 作為路徑，若未傳送任何引數。
+</p>
+</div>
+</div>
 
-##### seed_file_acl (路徑)
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-安全更新`@path::acl` 針對此`$path`，根據它`acl` 標頭規格預設使用`$_` 作為路徑，若未傳送任何引數。
+##### `seed_file_deps($path)`
 
-#### 載入
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+安全更新`%path::dependencies` 針對此`$path`，根據它`dependencies` 標頭 glob。
+
+</div>
+<p class="card-text">
+
+預設使用`$_` 作為路徑，若未傳送任何引數。
+
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `seed_file_acl($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+安全更新`@path::acl` 針對此`$path`，根據它`acl` 標頭規格
+
+</div>
+<p class="card-text">
+
+預設使用`$_` 作為路徑，若未傳送任何引數。
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Load`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 相同於`YAML::XS::Load`.
 
-#### 傾印
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Dump`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 相同於`YAML::XS::Dump`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

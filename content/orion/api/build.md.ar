@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 34647
+status: التحقق = 34675
 title: أوريون API - بناء
 ---
 
@@ -427,7 +427,19 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; مكتبة المرافق لـ `lib/path.pm` و `lib/view.pm`
 
-#### read_text_file($file, $out, $content_lines) &mdash; معالج الملفات النصية العالمية لـ Orion
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `read_text_file($file, $out, $content_lines)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+معالج الملفات النصية العالمية لـ Orion
+
+</div>
+<p class="card-text">
 
 تحليل الرؤوس + محتوى ملف UTF-8 المشفر `$file` ويخزن النتائج في hashref `$out`. `$content_lines` هو الحد الأقصى (اختياري) لعدد سطور المحتوى المطلوب قراءتها.
 
@@ -435,78 +447,322 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 `$file` قد يكون مرجعًا لسلسلة أولية، تمثل المحتويات الكاملة للملف.  النتائج في `$out` سيظل UTF-8 مشفرًا.
 
-#### copy_if_newer($src، $dest)
+</p>
+</div>
+</div>
 
-النُسخ `$src` لكي `$dest` إذا كان الطابع الزمني لتعديل الأول أحدث من الأخير. على نسخة، بالإضافة إلى ذلك gzip يضغط على `$dest` ملف إذا كان ملفًا نصيًا، ويضيف ".gz" امتداد للاسم.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### get_lock($lockfile)
+#### `copy_if_newer($src, $dest)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+النُسخ `$src` لكي `$dest` إذا كان الطابع الزمني لتعديل الأول أحدث من الأخير.
+
+</div>
+<p class="card-text">
+
+على نسخة، بالإضافة إلى ذلك gzip يضغط على `$dest` ملف إذا كان ملفًا نصيًا، ويضيف ".gz" امتداد للاسم.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `get_lock($lockfile)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 يأخذ (و) قفل حصري (لعملية UNIX الحالية) على `$lockfile`.
 
-#### تشويش(\\\)&#64;سطح السفينة)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `shuffle(\@deck)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 في مكان عشوائي (فيشر ييتس) shuffle من `@deck`.
 
-#### sort_tables($content)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-فرز جداول تخفيض السعر في $content وفقًا لمواصفات عمود كل جدول.  يمكن فرز عمود واحد فقط لكل جدول، اختياريًا رقميًا `n`، في أي تنازلي `v` أو تصاعدي `^` الطلب.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### fixup_code($prefix، $type، &#64;_)
+#### `sort_tables($content)`
 
-إزالة $prefix من كل وسيطة في &#64;\_. وظيفة وسيطة $type محددة للتنفيذ، ولكنها تستخدم بشكل أساسي لإدخال editor.md "الوضع" لمعالجة هذا المحتوى في &#64;_.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### unload_package($pkg)
+فرز جداول تخفيض السعر في $content وفقًا لمواصفات عمود كل جدول.
+
+</div>
+<p class="card-text">
+
+يمكن فرز عمود واحد فقط لكل جدول، اختياريًا رقميًا `n`، في أي تنازلي `v` أو تصاعدي `^` الطلب.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `fixup_code($prefix, $type, @_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+إزالة $prefix من كل وسيطة في &#64;\_.
+
+</div>
+<p class="card-text">
+
+الغرض من `$type` الوسيطة خاصة بالتنفيذ، ولكنها تستخدم بشكل أساسي لإدراج editor.md "الوضع" لمعالجة هذا المحتوى في &#64;_.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `unload_package($pkg)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 تفريغ حزمة Perl (ورقة) بقوة `$pkg` من جدول الرموز (STASH).
 
-#### purge_from_inc(&#64;المسارات)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `purge_from_inc(@paths)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 عمليات الإزالة `@paths` من `@INC`.
 
-#### اللمس(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `touch(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 يمسح كل الملفات في `@_`. في حالة عدم تمرير وسائط، يتم استخدام `$_`.
 
-#### normalize_svn_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_svn_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 تطبيع كل المسارات في `@_` للاستخدام الآمن كحجج خام `SVN::Client` الأوامر.
 
-#### sanitize_relative_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `sanitize_relative_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 تأمين المسارات في `@_` للاستخدام كمسارات نسبية نقية في `Dotiac::DTL` الأوامر الخاصة بمسار (Django Template).
 
-#### parse_filename(مسار$)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `parse_filename($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 مغلف حول `File::Basename::fileparse`. بدون وسائط، استخدامات `$_` مثل اسم الملف للتحليل اللغوي.
 
-#### walk_content_tree($code)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-مشياً مشروطاً `./content` شجرة الخروج من نظام البناء، أولا تطبيع `$_` كمسار فرعي جذر المحتوى الرسمي، ثم الاستدعاء `$code->()` على كل عنصر في ممر الشجرة. بالنسبة لمعظم المباني، لا يحدث المشي أبدًا &mdash; بدلاً من ذلك، تعتمد النسخة على البيانات المخزنة في الذاكرة المخبئية من عمليات الإنشاء السابقة.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `walk_content_tree($code)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+مشياً مشروطاً `./content` شجرة الخروج من نظام البناء؛ أولا تطبيع `$_` كمسار فرعي جذر المحتوى الرسمي، ثم الاستدعاء `$code->()` على كل عنصر في ممر الشجرة.
+
+</div>
+<p class="text-body">
+
+بالنسبة لمعظم المباني، لا يحدث المشي أبدًا &mdash; بدلاً من ذلك، تعتمد النسخة على البيانات المخزنة في الذاكرة المخبئية من عمليات الإنشاء السابقة.
 
 الطريقة الوحيدة لإجبار المشي هي عن طريق وضع `$path::use_cache` إلى قيمة false في الوحدات التي يوفرها المستخدم. وإلا يتم إدارة هذا السلوك بخبرة من قبل [تقنية البناء التزايدي](https://iconoclasts.blog/joe/dependencies).
 
 إرجاع 1 إذا كان المشي قد تم بالفعل، بدلاً من الاعتماد على البيانات المخزنة مؤقتاً. وإلا يتم إرجاع قيمة false.
 
-##### مؤرشف ($path)
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `archived($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 علامات لكل `Status: archived` `$path` (بشكل خاص باللغة الطبيعية). الاستخدامات `$_` إذا لم يتم تمرير وسائط.
 
-أرشفة الملفات هي طريقة طبيعية لإخبار أوريون "توقف عن الانتباه إلى موقع الرابط الثابت لهذا الملف ... ما لم يتم تحديثه مرة أخرى، وفي هذه الحالة سيتم تحديث موقع الأرشفة. على وجه الخصوص، لا تظهر الملفات المؤرشفة في قوائم الدليل داخل نظام إدارة المحتوى نفسه ؛ عليك الانتقال إلى الصفحة المباشرة نفسها لتكون قادرة على تحريرها مرة أخرى عبر الإنترنت.
+</div>
+<p class="card-text">
 
-##### seed_file_deps(مسار$)
+أرشفة ملفات Markdown هي طريقة طبيعية لإخبار Orion "توقف عن الانتباه إلى موقع الرابط الثابت لهذا الملف ... ما لم يتم تحديثه مرة أخرى، وفي هذه الحالة سيتم تحديث موقع الأرشفة. على وجه الخصوص، لا تظهر الملفات المؤرشفة في قوائم الدليل داخل Orion CMS نفسه ؛ عليك الانتقال إلى الصفحة المباشرة نفسها لتكون قادرة على تحريرها مرة أخرى عبر الإنترنت.
 
-التحديثات الآمنة `%path::dependencies` لهذا `$path`، بناءً على `dependencies` عناوين عامة. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
+</p>
+</div>
+</div>
 
-##### seed_file_acl(مسار$)
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-التحديثات الآمنة `@path::acl` لهذا `$path`، بناءً على `acl` مواصفات الرأس. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
+##### `seed_file_deps($path)`
 
-#### تحميل
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+التحديثات الآمنة `%path::dependencies` لهذا `$path`، بناءً على `dependencies` عناوين عامة.
+
+</div>
+<p class="card-text">
+
+الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
+
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `seed_file_acl($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+التحديثات الآمنة `@path::acl` لهذا `$path`، بناءً على `acl` مواصفات الرأس.
+
+</div>
+<p class="card-text">
+
+الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Load`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 مماثل لـ `YAML::XS::Load`.
 
-#### تفريغ
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Dump`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 مماثل لـ `YAML::XS::Dump`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

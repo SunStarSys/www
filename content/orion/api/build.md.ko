@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=34647
+status: 확인=34675
 title: Orion API - 빌드
 ---
 
@@ -427,7 +427,19 @@ next_view에서 빌드된 콘텐츠의 템플리트 지시어를 재처리합니
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 유틸리티 라이브러리 `lib/path.pm` 및 `lib/view.pm`
 
-#### read_text_file($file, $out, $content_lines) &mdash; Orion의 범용 텍스트 파일 프로세서
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `read_text_file($file, $out, $content_lines)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Orion의 범용 텍스트 파일 프로세서
+
+</div>
+<p class="card-text">
 
 UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결과를 해시 참조에 저장합니다. `$out`. `$content_lines` 읽을 콘텐츠 라인의 최대 개수(선택 사항)입니다.
 
@@ -435,78 +447,322 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
 
 `$file` 파일의 전체 내용을 나타내는 원시 문자열에 대한 참조일 수 있습니다.  결과는 `$out` UTF-8이 인코딩됩니다.
 
-#### copy_if_newer($src, $dest)
+</p>
+</div>
+</div>
 
-매수 `$src` 종료 `$dest` 이전 수정 타임스탬프가 후자의 수정 타임스탬프보다 최신인 경우. 복사본에서 gzip-compresses의 `$dest` 파일(텍스트 파일인 경우) ".gz" 이름을 확장합니다.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### get_lock($lockfile)
+#### `copy_if_newer($src, $dest)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+매수 `$src` 종료 `$dest` 이전 수정 타임스탬프가 후자의 수정 타임스탬프보다 최신인 경우.
+
+</div>
+<p class="card-text">
+
+복사본에서 gzip-compresses의 `$dest` 파일(텍스트 파일인 경우) ".gz" 이름을 확장합니다.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `get_lock($lockfile)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 현재 UNIX 프로세스의 경우 배타적(f)잠금을 `$lockfile`.
 
-#### 셔플(\\&#64;갑판)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `shuffle(\@deck)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 내장 무작위(어류) 셔플 `@deck`.
 
-#### sort_tables($content)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-각 테이블의 열 사양에 따라 $content에서 마크다운 테이블을 정렬합니다.  테이블당 정확히 하나의 열을 정렬할 수 있습니다(선택 사항). `n`, 내림차순 `v` 또는 오름차순 `^` 주문.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### fixup_code($prefix, $type, &#64;_)
+#### `sort_tables($content)`
 
-의 모든 인수에서 $prefix 스트립 &#64;\_. $type 인수의 함수는 구현에 따라 다르지만 주로 editor.md를 시드하는 데 사용됩니다. "모드" 이 콘텐츠를 처리하려면 &#64;_.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### unload_package($pkg)
+각 테이블의 열 사양에 따라 $content에서 마크다운 테이블을 정렬합니다.
+
+</div>
+<p class="card-text">
+
+테이블당 정확히 하나의 열을 정렬할 수 있습니다(선택 사항). `n`, 내림차순 `v` 또는 오름차순 `^` 주문.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `fixup_code($prefix, $type, @_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+의 모든 인수에서 $prefix 스트립 &#64;\_.
+
+</div>
+<p class="card-text">
+
+의 목적 The purpose of the `$type` 인수는 구현에 따라 다르지만 주로 editor.md를 시드하는 데 사용됩니다. "모드" 이 콘텐츠를 처리하려면 &#64;_.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `unload_package($pkg)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Perl(리프) 패키지를 적극적으로 언로드합니다. `$pkg` 기호 테이블(STASH)에서
 
-#### purge_from_inc(&#64;경로)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `purge_from_inc(@paths)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 제거 `@paths` 시작일 `@INC`.
 
-#### 터치(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `touch(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 모든 파일을 `@_`. 인수가 전달되지 않으면 `$_`.
 
-#### normalize_svn_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_svn_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 의 모든 경로를 정규화합니다. `@_` 원시 인수로 안전하게 사용 `SVN::Client` 명령
 
-#### sanitize_relative_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `sanitize_relative_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 경로 보안 `@_` 에서 순수한 상대 경로로 사용 `Dotiac::DTL` (장고 템플릿) 경로별 명령.
 
-#### parse_filename($path)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `parse_filename($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 주변 래퍼 `File::Basename::fileparse`. 인수가 없으면 `$_` 구문 분석할 파일 이름입니다.
 
-#### walk_content_tree($code)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-조건부로 걷기 `./content` 빌드 시스템 체크아웃의 트리, 먼저 정규화 `$_` 형식 컨텐트 루트 하위 경로로 변경한 다음 `$code->()` 트리워크의 각 항목에 대해 설명합니다. 대부분의 빌드에서는 걷기가 발생하지 않습니다. &mdash; 대신 빌드는 이전 빌드의 캐시에 저장된 데이터를 사용합니다.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `walk_content_tree($code)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+조건부로 걷기 `./content` 빌드 시스템 체크아웃의 트리; 먼저 정규화 `$_` 형식 컨텐트 루트 하위 경로로 변경한 다음 `$code->()` 트리워크의 각 항목에 대해 설명합니다.
+
+</div>
+<p class="text-body">
+
+대부분의 빌드에서는 걷기가 발생하지 않습니다. &mdash; 대신 빌드는 이전 빌드의 캐시에 저장된 데이터를 사용합니다.
 
 강제로 걷는 유일한 방법은 `$path::use_cache` 사용자가 제공한 모듈의 false 값 그렇지 않으면 이 동작은 [증분 빌드 기술](https://iconoclasts.blog/joe/dependencies).
 
 캐시에 저장된 데이터에 의존하지 않고 실제로 보행시선이 진행된 경우 1을 반환합니다. 그렇지 않으면 false 값을 반환합니다.
 
-##### 아카이브됨($path)
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `archived($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 각 플래그 `Status: archived` `$path` (자연어 특정 방식으로). 사용 `$_` 인수가 전달되지 않은 경우
 
-파일 아카이브는 Orion에게 알리는 자연스러운 방법입니다. "이 파일의 고유 링크 위치에 대한 주의 중지 ... 다시 업데이트되지 않으면 아카이브 위치가 새로 고쳐집니다. 특히 아카이브된 파일은 CMS 자체 내의 디렉토리 목록에 나타나지 않습니다. 온라인으로 다시 편집할 수 있으려면 라이브 페이지 자체로 이동해야 합니다.
+</div>
+<p class="card-text">
 
-##### seed_file_deps($path)
+마크다운 파일을 아카이브하는 것은 Orion에게 "이 파일의 고유 링크 위치에 대한 주의 중지 ... 다시 업데이트되지 않으면 아카이브 위치가 새로 고쳐집니다. 특히 아카이브된 파일은 Orion CMS 자체 내의 디렉토리 목록에 나타나지 않습니다. 온라인으로 다시 편집할 수 있으려면 라이브 페이지 자체로 이동해야 합니다.
 
-안전한 업데이트 `%path::dependencies` 대상 `$path`을 기반으로 `dependencies` 헤더 glob(s). 사용 기본값 `$_` 인수가 전달되지 않은 경우 경로로 지정됩니다.
+</p>
+</div>
+</div>
 
-##### seed_file_acl($path)
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-안전한 업데이트 `@path::acl` 대상 `$path`을 기반으로 `acl` 헤더 사양 사용 기본값 `$_` 인수가 전달되지 않은 경우 경로로 지정됩니다.
+##### `seed_file_deps($path)`
 
-#### 로드
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+안전한 업데이트 `%path::dependencies` 대상 `$path`을 기반으로 `dependencies` 헤더 glob(s).
+
+</div>
+<p class="card-text">
+
+사용 기본값 `$_` 인수가 전달되지 않은 경우 경로로 지정됩니다.
+
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `seed_file_acl($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+안전한 업데이트 `@path::acl` 대상 `$path`을 기반으로 `acl` 헤더 사양
+
+</div>
+<p class="card-text">
+
+사용 기본값 `$_` 인수가 전달되지 않은 경우 경로로 지정됩니다.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Load`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 같음 `YAML::XS::Load`.
 
-#### 덤프
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Dump`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 같음 `YAML::XS::Dump`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

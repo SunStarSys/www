@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=34647
+status: verificado=34675
 title: Orion API - Criação
 ---
 
@@ -427,7 +427,19 @@ Anexa `$args{lang}` para `$args{template}`.
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; biblioteca de utilitários para `lib/path.pm` e `lib/view.pm`
 
-#### read_text_file($file, $out, $content_lines) &mdash; Processador de arquivos de texto universal da Orion
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `read_text_file($file, $out, $content_lines)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Processador de arquivos de texto universal da Orion
+
+</div>
+<p class="card-text">
 
 Analisa cabeçalhos+conteúdo do arquivo codificado em UTF-8 `$file` e armazena resultados em hashref `$out`. `$content_lines` é o número máximo (opcional) de linhas de conteúdo a serem lidas.
 
@@ -435,78 +447,322 @@ Retorna o número real de linhas lidas (incluindo cabeçalhos).
 
 `$file` pode ser uma referência a uma string bruta, representando o conteúdo completo de um arquivo.  Os resultados em `$out` ainda será codificado em UTF-8.
 
-#### copy_if_newer($src, $dest)
+</p>
+</div>
+</div>
 
-Cópias `$src` para `$dest` se o timestamp de modificação do primeiro for mais recente que o do último. Na cópia, gzip-compacta o `$dest` se for um arquivo de texto e adiciona ".gz" extensão do nome.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### get_lock($lockfile)
+#### `copy_if_newer($src, $dest)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Cópias `$src` para `$dest` se o timestamp de modificação do primeiro for mais recente que o do último.
+
+</div>
+<p class="card-text">
+
+Na cópia, gzip-compacta o `$dest` se for um arquivo de texto e adiciona ".gz" extensão do nome.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `get_lock($lockfile)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Usa um (f)bloqueio exclusivo (para o processo UNIX atual) em `$lockfile`.
 
-#### shuffle(\\&#64;deck)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `shuffle(\@deck)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 No local aleatório (Fisher-Yates) embaralhamento de `@deck`.
 
-#### sort_tables($content)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-Classifica Tabelas de Markdown em $content de acordo com a especificação da coluna de cada tabela.  Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente `n`, em qualquer ordem decrescente `v` ou crescente `^` pedido.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### fixup_code($prefix, $type, &#64;_)
+#### `sort_tables($content)`
 
-Tira $prefix de cada arg em &#64;\_. A função do argumento $type é específica de implementação, mas é usada principalmente para pré-implantação do editor.md "modo" para processar este conteúdo em &#64;_.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### unload_package($pkg)
+Classifica Tabelas de Markdown em $content de acordo com a especificação da coluna de cada tabela.
+
+</div>
+<p class="card-text">
+
+Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente `n`, em qualquer ordem decrescente `v` ou crescente `^` pedido.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `fixup_code($prefix, $type, @_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Tira $prefix de cada arg em &#64;\_.
+
+</div>
+<p class="card-text">
+
+O propósito do `$type` o argumento é específico da implementação, mas é usado principalmente para pré-implantação do editor.md "modo" para processar este conteúdo em &#64;_.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `unload_package($pkg)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Descarrega agressivamente o pacote Perl (folha) `$pkg` da Tabela de Símbolos (STASH).
 
-#### purge_from_inc(&#64;caminhos)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `purge_from_inc(@paths)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Remoções `@paths` de `@INC`.
 
-#### toque(a)&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `touch(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Toca todos os arquivos em `@_`. Se nenhum argumento for passado, usa `$_`.
 
-#### normalize_svn_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_svn_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Normaliza todos os caminhos em `@_` para uso seguro como argumentos brutos para `SVN::Client` comandos.
 
-#### sanitize_relative_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `sanitize_relative_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Protege os caminhos em `@_` para uso como caminhos relativos puros em `Dotiac::DTL` Comandos específicos de caminho (Django Template).
 
-#### parse_filename($path)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `parse_filename($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Encapsulador ao redor `File::Basename::fileparse`. Sem argumentos, usa `$_` como o nome do arquivo a ser analisado.
 
-#### walk_content_tree($code)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-Condicionalmente anda o `./content` árvore do check-out do sistema de compilação, primeiro normalizando `$_` como o subcaminho formal enraizado no conteúdo e, em seguida, invocando `$code->()` em cada item na caminhada em árvore. Para a maioria das construções, a caminhada nunca acontece &mdash; em vez disso, a compilação depende dos dados armazenados em cache de compilações anteriores.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `walk_content_tree($code)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Condicionalmente anda o `./content` árvore do checkout do sistema de compilação; primeiro normalizando `$_` como o subcaminho formal enraizado no conteúdo e, em seguida, invocando `$code->()` em cada item na caminhada em árvore.
+
+</div>
+<p class="text-body">
+
+Para a maioria das construções, a caminhada nunca acontece &mdash; em vez disso, a compilação depende dos dados armazenados em cache de compilações anteriores.
 
 A única maneira de forçar uma caminhada é definindo `$path::use_cache` para um valor falso em seus módulos fornecidos pelo usuário. Caso contrário, esse comportamento é habilmente gerenciado pelo [tecnologia de criação incremental](https://iconoclasts.blog/joe/dependencies).
 
 Retorna 1 se a caminhada realmente tiver prosseguido, em vez de depender de dados armazenados em cache. Caso contrário, retornará um valor falso.
 
-##### arquivado($path)
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `archived($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Sinaliza cada `Status: archived` `$path` (de uma maneira específica da linguagem natural). Usos `$_` se nenhum argumento for passado.
 
-Arquivamento de arquivos é uma maneira natural de dizer Orion para "parar de prestar atenção ao local permalinked deste arquivo ... a menos que seja atualizado novamente, caso em que o local de arquivamento será atualizado. Em particular, os arquivos arquivados não aparecem nas listagens de diretórios dentro do próprio CMS; você precisa navegar até a própria página ativa para poder editá-la novamente on-line.
+</div>
+<p class="card-text">
 
-##### seed_file_deps($path)
+Arquivamento de arquivos Markdown é uma maneira natural de dizer Orion para "parar de prestar atenção ao local permalinked deste arquivo ... a menos que seja atualizado novamente, caso em que o local de arquivamento será atualizado. Em particular, os arquivos arquivados não aparecem nas listagens de diretórios dentro do próprio CMS do Orion; você precisa navegar até a própria página ao vivo para poder editá-la novamente on-line.
 
-Atualizações seguras `%path::dependencies` para isso `$path`Com base em sua `dependencies` glob(s) de cabeçalho Padrões para uso `$_` como o caminho se nenhum argumento for passado.
+</p>
+</div>
+</div>
 
-##### seed_file_acl($path)
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-Atualizações seguras `@path::acl` para isso `$path`Com base em sua `acl` especificação do cabeçalho. Padrões para uso `$_` como o caminho se nenhum argumento for passado.
+##### `seed_file_deps($path)`
 
-#### Carregar
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Atualizações seguras `%path::dependencies` para isso `$path`Com base em sua `dependencies` glob(s) de cabeçalho
+
+</div>
+<p class="card-text">
+
+Padrões para uso `$_` como o caminho se nenhum argumento for passado.
+
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `seed_file_acl($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Atualizações seguras `@path::acl` para isso `$path`Com base em sua `acl` especificação do cabeçalho.
+
+</div>
+<p class="card-text">
+
+Padrões para uso `$_` como o caminho se nenhum argumento for passado.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Load`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Igual a `YAML::XS::Load`.
 
-#### Despejo
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Dump`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Igual a `YAML::XS::Dump`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

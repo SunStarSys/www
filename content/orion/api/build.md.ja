@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=34647
+status: 確認済み=34675
 title: Orion API - ビルド
 ---
 
@@ -427,7 +427,19 @@ next_viewからビルドされたコンテンツのテンプレート・ディ�
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ユーティリティライブラリ`lib/path.pm` および`lib/view.pm`
 
-#### read_text_file($file、$out、$content_lines) &mdash; Orionの汎用テキスト・ファイル・プロセッサ
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `read_text_file($file, $out, $content_lines)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Orionの汎用テキスト・ファイル・プロセッサ
+
+</div>
+<p class="card-text">
 
 UTF-8でエンコードされたファイルのheaders+contentを解析します`$file` 結果をhashrefに格納します。`$out`. `$content_lines` は、読み取るコンテンツ行の最大数です(オプション)。
 
@@ -435,78 +447,322 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
 
 `$file` ファイルの完全な内容を表すraw文字列への参照である可能性があります。結果`$out` UTF-8がエンコードされます。
 
-#### copy_if_newer($src、$dest)
+</p>
+</div>
+</div>
 
-コピー数`$src` から`$dest` 前者の変更タイムスタンプが後者の変更タイムスタンプより新しい場合。コピー時に、さらにgzip-compress `$dest` file (テキストファイルの場合) ".gz" 名前の拡張。
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### get_lock($lockfile)
+#### `copy_if_newer($src, $dest)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+コピー数`$src` から`$dest` 前者の変更タイムスタンプが後者の変更タイムスタンプより新しい場合。
+
+</div>
+<p class="card-text">
+
+コピー時に、さらにgzip-compress `$dest` file (テキストファイルの場合) ".gz" 名前の拡張。
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `get_lock($lockfile)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 排他(f)ロック(現在のUNIXプロセスの場合)をオンにします。`$lockfile`.
 
-#### シャッフル(\\&#64;デッキ)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `shuffle(\@deck)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 インプレイスランダム(Fisher-Yates)シャッフル`@deck`.
 
-#### sort_tables($コンテンツ)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-各表の列仕様に従って、マークダウン表を$contentでソートします。表ごとに正確に1つの列をソートできます(オプション)。`n`降順`v` または昇順`^` オーダー
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### fixup_code($prefix、$type、&#64;_)
+#### `sort_tables($content)`
 
-各引数から$prefixを削除します。&#64;\_. $type引数の関数は実装固有ですが、主にeditor.mdのシードに使用されます。"モード" このコンテンツの処理対象&#64;_.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### unload_package($pkg)
+各表の列仕様に従って、マークダウン表を$contentでソートします。
+
+</div>
+<p class="card-text">
+
+表ごとに正確に1つの列をソートできます(オプション)。`n`降順`v` または昇順`^` オーダー
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `fixup_code($prefix, $type, @_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+各引数から$prefixを削除します。&#64;\_.
+
+</div>
+<p class="card-text">
+
+の目的`$type` 引数は実装固有ですが、主にeditor.mdのシードに使用されます。"モード" このコンテンツの処理対象&#64;_.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `unload_package($pkg)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Perl (leaf)パッケージの積極的なアンロード`$pkg` シンボルテーブル(STASH)
 
-#### purge_from_inc(&#64;パス)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `purge_from_inc(@paths)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 削除`@paths` 場所`@INC`.
 
-#### 触る&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `touch(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 すべてのファイルを`@_`。引数が渡されない場合、`$_`.
 
-#### normalize_svn_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_svn_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 すべてのパスを正規化します。`@_` RAW引数として安全に使用できます。`SVN::Client` コマンド
 
-#### sanitize_relative_path(&#64;_)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `sanitize_relative_path(@_)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 パスを保護する`@_` 純粋な相対パスとして使用`Dotiac::DTL` (Djangoテンプレート)パス固有のコマンド。
 
-#### parse_filename($path)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `parse_filename($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 ラッパー周り`File::Basename::fileparse`。引数を指定しない場合、`$_` 解析するファイル名を指定します。
 
-#### walk_content_tree($コード)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-条件付きで歩く`./content` ビルドシステムチェックアウトのツリー、最初に正規化`$_` 正式なコンテンツ・ルート・サブパスとして、`$code->()` ツリーウォークの各項目についてほとんどのビルドでは、ウォークは発生しません&mdash; かわりに、ビルドは以前のビルドからキャッシュされたデータに依存します。
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `walk_content_tree($code)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+条件付きで歩く`./content` ビルドシステムチェックアウトのツリー。最初の正規化`$_` 正式なコンテンツ・ルート・サブパスとして、`$code->()` ツリーウォークの各項目について
+
+</div>
+<p class="text-body">
+
+ほとんどのビルドでは、ウォークは発生しません&mdash; かわりに、ビルドは以前のビルドからキャッシュされたデータに依存します。
 
 歩行を強制する唯一の方法は、設定することです`$path::use_cache` ユーザー提供のモジュールのfalse値。それ以外の場合、この動作は、[増分ビルド技術](https://iconoclasts.blog/joe/dependencies).
 
 ウォークが実際に処理された場合は、キャッシュされたデータに依存するのではなく、1を返します。それ以外の場合は、false値を返します。
 
-##### アーカイブ済み($path)
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `archived($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 各フラグ`Status: archived` `$path` (自然言語による) 使用`$_` 引数が渡されない場合。
 
-ファイルをアーカイブすることは、Orionに伝える自然な方法です"このファイルのパーマリンクされた場所に注意を払うのをやめる ... 再度更新されないかぎり、アーカイブの場所はリフレッシュされます。特に、アーカイブされたファイルは、CMS自体内のディレクトリリストには表示されません。オンラインでの再編集を可能にするには、ライブページ自体に移動する必要があります。
+</div>
+<p class="card-text">
 
-##### seed_file_deps($path)
+Markdownファイルをアーカイブすることは、Orionに伝える自然な方法です。"このファイルのパーマリンクされた場所に注意を払うのをやめる ... 再度更新されないかぎり、アーカイブの場所はリフレッシュされます。特に、アーカイブされたファイルは、Orion CMS自体内のディレクトリリストには表示されません。オンラインでの再編集を可能にするには、ライブページ自体に移動する必要があります。
 
-安全な更新`%path::dependencies` この`$path`に基づいて、`dependencies` ヘッダーglob。使用するデフォルト`$_` 引数が渡されない場合のパス。
+</p>
+</div>
+</div>
 
-##### seed_file_acl($path)
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-安全な更新`@path::acl` この`$path`に基づいて、`acl` ヘッダー仕様使用するデフォルト`$_` 引数が渡されない場合のパス。
+##### `seed_file_deps($path)`
 
-#### ロード
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+安全な更新`%path::dependencies` この`$path`に基づいて、`dependencies` ヘッダーglob。
+
+</div>
+<p class="card-text">
+
+使用するデフォルト`$_` 引数が渡されない場合のパス。
+
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+##### `seed_file_acl($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+安全な更新`@path::acl` この`$path`に基づいて、`acl` ヘッダー仕様
+
+</div>
+<p class="card-text">
+
+使用するデフォルト`$_` 引数が渡されない場合のパス。
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Load`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 同じ`YAML::XS::Load`.
 
-#### ダンプ
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `Dump`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 同じ`YAML::XS::Dump`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->
