@@ -30,7 +30,7 @@ The latter's job is to provide invokable [`view`](#)-based methods for the match
 ... write UTF $content to target file with associated $mime_extension file-type
   }
 
-  copy($path, "$target_base/content$path") unless $matched;
+  copy_if_newer($path, "$target_base/content$path") unless $matched;
 
   ...
 #api
