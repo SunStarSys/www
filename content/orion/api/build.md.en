@@ -46,7 +46,7 @@ The latter's job is to provide invokable [`view`](#)-based methods for the match
 
 ### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for [`lib/view.pm`](#)
 
-#### single_narrative(%args) &mdash; the most common view
+#### single_narrative(%args) &mdash; the most popular (and sophisticated) view
 
 Mandatory Arguments:
 
