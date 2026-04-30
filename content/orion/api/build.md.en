@@ -81,7 +81,7 @@ Optional Arguments:
 
 #### asymptote(%args)
 
-Builds and Caches [`asymptote`](#) triple-backquoted-code blocks.
+Builds and Caches [`Asymptote`](https://asymptote.sourceforge.io/) triple-backquoted-code blocks for HTML-canvas-enabled vector graphics.
 
 Mandatory Arguments:
 
