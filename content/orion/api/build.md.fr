@@ -1,205 +1,235 @@
 ---
-archived: ~
 categories: ~
-dependencies: '*.md.fr '
-keywords: REPOS, API
-published: ~
+dependencies: '*.md.fr'
+keywords: REPOS,API
 status: projet
-title: API Orion - Création
+title: API Orion - Créer
 ---
 
-{# lede #}Ce document traite des API **système de création**{# lede #}
+{# lede #}Ce document traite des API **système de création**{# lede #}.
+
+Fondamentalement, le système de construction est régi par deux modules Perl fournis par l'utilisateur : [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) et [`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+
+Le travail du premier est de faire trois choses :
+
+0. chargement [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) et [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
+1. construction [`@path : :modèles`](#), et
+2. de manière opportuniste, [`contenu/`](#) arbre à ensemencer [`%path : :dépendances`](#) et [`@path : :acls`](#).
+
+Le travail de ce dernier est de fournir invokable [`vue`](#)-basé [`Méthode $`](#)'s pour les entrées correspondantes dans [`@path : :modèles`](#) (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée de tableau), appelé ainsi...
+
+```perl
+#api
+  ...
+
+my $path = "/content-rooted/path/to/source/file";
+
+for my $p (@path::patterns) {
+    my ($re, $method, $args) = @$p;
+    next unless $path =~ $re;
+    ++$matched;
+
+my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
+
+... write UTF $content to target file with associated $mime_extension file-type
+  }
+
+copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+
+...
+#api
+```
 
 [TOC]
 
 ----
 
-## Système de compilation
+## Créer un système
 
-### [SunStarSys : :Afficher](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+### [SunStarSys : :Voir](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe de base pour [`lib/view.pm`](#)
 
-#### single_narrative(%args).
+#### single_narrative(%args) &mdash; la vue la plus populaire (et sophistiquée)
 
 Arguments obligatoires :
 
 - [`modèle`](#)
 - [`chemin`](#)
-- [`langue`](#).
+- [`langue`](#)
 
 Argmuents facultatifs :
 
-- [`opérations`](#)
+- [`dépôts`](#)
 - [`quick_deps`](#)
 - [`prétraitement`](#)
-- [`archive_root`](#)
-- [`category_root`](#).
+- [`archive_root`](#) &mdash; fichiers dans "archivé" statut "copié" et suivi par sous-dossiers année/mois vers cet emplacement basé sur le contenu via `ssi`
+- [`category_root`](#) &mdash; éléments dans "catégories" en-tête "copié" dans les dossiers de catégories correctement nommés dans cet emplacement basé sur le contenu via `ssi`
 
-#### news_page(%args).
+#### news_page(%args) &mdash; pour les pages d'agrégation multi-narrations
 
-#### sitemap(%args).
+#### plan du site (%args) &mdash; pour la création de pages index.html et sitemap.html
 
-Index trié des dépendances propre aux paramètres régionaux.
+Index trié des dépendances propre à l'environnement linguistique.
 
 Arguments obligatoires :
 
 - [`chemin`](#)
-- [`langue`](#).
+- [`langue`](#)
 
 Arguments facultatifs :
 
 - [`quick_deps`](#)
 - [`imbriqué`](#)
-- [`prétraitement`](#).
+- [`prétraitement`](#)
 
-#### asymptote(%args).
+#### asymptote(%args)
 
-Builds et caches [`asymptote`](#).
+Bâtiments et caches [`asymptote`](#) blocs triple-backquoted-code.
 
 Arguments obligatoires :
 
-- [`afficher`](#)
+- [`vue`](#)
 - [`langue`](#)
-- [`chemin`](#).
+- [`chemin`](#)
 
-#### ignorer(%args).
+#### ignorer (%args)
 
-Ne les construisez pas du tout.  Créez plutôt les fichiers source générés associés (p. ex. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`
+Ne les construisez pas du tout.  Au lieu de cela, créez les fichiers source générés associés (par ex. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) à paramétrer sur une exécution secondaire du système de paramétrage.
 
-#### yml2ext(%args).
+#### yml2ext(%args)
 
-Convertir des fichiers YAML.
+Convertissez des fichiers YAML, généralement en JSON.
 
 Arguments facultatifs :
 
-- [`ext.`](#) valeur par défaut `json`
-- [`filtre`](#) valeur par défaut `json_raw`
--[`modèle`](#) remplacements `filtre`
+- [`ext.`](#) par défaut, `json`
+- [`filtre`](#) par défaut, `json_raw`
+-[`modèle`](#) remplacements `filtre` expression par défaut
 
-#### fetch_deps($path, $data, $quick).
+#### fetch_deps($path, $data, $quick)
 
 Arguments obligatoires :
 
 - [`chemin`](#)
-- [`données`](#) - magasins résultant anon-array de points
-- [`rapide`](#).
+- [`données`](#) - magasins résultant d'un anonarray de dépôts
+- [`rapide`](#) - Valeur par défaut : 2
 
-#### breadcrumbs($path).
+#### chemin de navigation ($path)
 
-Renvoie la liste HTML des chemins de navigation pour [Chemin $](#).
+Renvoie la liste des chemins de navigation HTML pour [$chemin](#).
 
-#### memoize(%args).
+#### mémoriser (%args)
 
-Met en mémoire cache le build, principalement utilisé avec fetch_deps et quick_deps > 2.
+Met le build en mémoire cache ; principalement utilisé avec fetch_deps et quick_deps > 2.
 
-#### compress(%args).
+#### commentaire(%args)
 
-Obsolète.
+Génère un fragment HTML inclus dans SSI pour un commentaire de page.
 
-#### next_view(%args).
+#### next_view(%args)
 
-Utilitaire de traitement de $args{view}.
+Utilitaire de traitement des $args{vue}.
 
-#### ssi(%args).
+#### ssi(%args)
 
-Evaluations récursives [ssi](#).
+Evaluations récursives [ssi](#) balises.
 
-#### offline(%args).
+#### hors ligne (%args)
 
 Exécute le fichier next_view en mode hors ligne.
 
-#### snippet(%args).
+#### fragment de code (%args)
 
 Traite les lignes de fragment de code.
 
-#### reconstruct(%args).
+#### reconstruire(%args)
 
-Traite à nouveau les directives de modèle dans le contenu créé à partir de next_view.
+Retraite les directives de modèle dans le contenu créé à partir de next_view.
 
-#### trim_local_links(%args).
+#### trim_local_links(%args)
 
-Extensions de fichiers Trims depuis les liens locaux.
+Trie les extensions de fichier à partir de liens locaux.
 
-#### normalize_links(%args).
+#### normalize_links(%args)
 
 Normalise les liens locaux (./ et ../).
 
 ----
 
-### [SunStarSys : :Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+### [SunStarSys : :Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; bibliothèque utilitaire pour [`lib/path.pm`](#) et [`lib/view.pm`](#)
 
-#### read_text_file($file, $out, $content_lines).
+#### read_text_file($file, $out, $content_lines) &mdash; Processeur de fichiers texte universel d'Orion
 
-Analyse les en-têtes + le contenu du fichier encodé UTF-8 [`Fichier $`](#) et stocke les résultats dans [`Montant`](#). [`$content_lines`](#) est le nombre maximum (facultatif) de lignes de contenu à lire.
+Analyse les en-têtes + le contenu du fichier encodé UTF-8 [`Fichier $`](#) et stocke les résultats dans [`$out`](#). [`$content_lines`](#) est le nombre maximum (facultatif) de lignes de contenu à lire.
+Renvoie le nombre réel de lignes lues (en-têtes compris).
 
+[`Fichier $`](#) peut être une référence à une chaîne brute, représentant le contenu complet d'un fichier.  Les résultats dans [`$out`](#) sera encodé en UTF-8.
 
-[`Fichier $`](#) Il peut s'agir d'une référence à une chaîne brute, représentant le contenu complet d'un fichier.  Les résultats dans [`Montant`](#).
+#### copy_if_newer($src, $dest)
 
-#### copy_if_newer($src, $dest).
+Copies [`Source $`](#) au [`$dest`](#) si l'horodatage de modification du premier est plus récent que celui du second. Sur la copie, gzip-comprend également le [`$dest`](#) fichier s'il s'agit d'un fichier texte et ajoute ".gz" extension du nom.
 
-Copies [`Source de $`](#) à [`$plus`](#) si l'horodatage de modification du premier est plus récent que celui du second. Sur copie, gzip-compresse en outre le [`$plus`](#).
+#### get_lock($lockfile)
 
-#### get_lock($lockfile).
+Prend un (f)verrou exclusif (pour le processus UNIX actuel) sur [`Fichier de verrouillage`](#).
 
-Active un (f)verrou exclusif (pour le processus UNIX actuel) sur [`Fichier de verrouillage`](#).
+#### shuffle(\\@deck)
 
-#### réorganisation(\\@deck).
+In-place aléatoire (Fisher-Yates) mélange de [`@deck`](#).
 
-Réorganisation aléatoire sur place (Pêche-Pêche) de [`@deck`](#).
+#### sort_tables($content)
 
-#### sort_tables($content).
+Trie les tables de démarque dans $content selon la spécification de colonne de chaque table.  Une colonne peut être triée par table, éventuellement numériquement [`n`](#), par ordre décroissant [`v`](#) ou ascendant [`^`](#) ordre.
 
-Trie les tables de démarque dans $content en fonction de la spécification de colonne de chaque table.  Une seule colonne peut être triée par table, éventuellement numériquement. [`n`](#), dans l'un ou l'autre ordre décroissant [`v`](#) ou croissant [`^`](#).
+#### fixup_code($prefix, $type, @\_)
 
-#### fixup_code($prefix, $type, @\_).
+Supprime le préfixe $ de chaque arg dans @\_. La fonction de l'argument $type est spécifique à l'implémentation, mais elle est principalement utilisée pour prédéfinir editor.md "mode" pour le traitement de ce contenu dans @\_.
 
-Supprime $prefix de chaque arg dans @\_. La fonction de l'argument $type est spécifique à l'implémentation, mais est principalement utilisée pour prédéfinir le "mode" editor.md pour le traitement de ce contenu dans @\_.
+#### unload_package($pkg)
 
-#### unload_package($pkg).
+Décharge de manière agressive le paquet Perl (feuille) [`$pkg`](#) dans la table des symboles (STASH).
 
-Décharge de manière agressive le package Perl [`$pkg`](#).
-
-#### purge_from_inc(@paths).
+#### purge_from_inc(@paths)
 
 Supprime [`@paths`](#) de [`@INC`](#).
 
-#### contact(@\_).
+#### touche(@\_)
 
-Touche tous les fichiers dans [`@_`](#). Si aucun argument n'est transmis, utilise [`$_`](#).
+Toucher tous les fichiers dans [`@_`](#). Si aucun argument n'est transmis, utilise [`$_`](#).
 
-#### normalize_svn_path(@\_).
+#### normalize_svn_path(@\_)
 
-Normalise tous les chemins dans [`@_`](#) pour une utilisation sûre en tant qu'arguments bruts [`SVN : :Client`](#).
+Normalise tous les chemins dans [`@_`](#) pour une utilisation sûre comme arguments bruts [`SVN : :Client`](#) commandes.
 
-#### sanitize_relative_path(@\_).
+#### sanitize_relative_path(@\_)
 
-Sécurise les chemins dans [`@_`](#) à utiliser comme chemins relatifs purs dans [`Dotiac : :DTL`](#).
+Sécurise les chemins dans [`@_`](#) à utiliser comme chemins relatifs purs dans [`Dotiac : :DTL`](#) Commandes spécifiques au chemin (Django Template).
 
-#### parse_filename($path).
+#### parse_filename($path)
 
-Enrouleur autour [`Fichier : :Nom de base : :fileparse`](#). Sans arguments, utilise [`$_`](#).
+Wrapper autour [`Fichier : :Basename : :fileparse`](#). sans arguments, utilise [`$_`](#) comme nom de fichier à analyser.
 
-#### walk_content_tree($code).
+#### walk_content_tree(code$)
 
-Promenade en condition [`./contenu`](#) arborescence de la validation du système de paramétrage, première normalisation [`$_`](#) comme sous-chemin formel, puis appelant [`Code $`](#).
+Marche conditionnellement le [`./contenu`](#) arbre de l'extraction du système de paramétrage, première normalisation [`$_`](#) comme sous-chemin formel, puis appel [`Code $`](#), sur chaque élément de la promenade.
 
-##### archived($path).
+##### archivé($path)
 
-Marque chaque [`Statut : archive`](#) [`Chemin $`](#). Utilisations [`$_`](#).
+Drapeaux chacun [`Statut : archive`](#) [`$chemin`](#). Utilisations [`$_`](#) si aucun argument n'est transmis.
 
-##### seed_file_deps($path).
+##### seed_file_deps($path)
 
-Mises à jour [`%path : :dépendances`](#) pour ceci [`Chemin $`](#)basé sur son [`Dépendances`](#) glob(s) d'en-tête Utilise par défaut [`$_`](#).
+Mises à jour sécurisées [`%path : :dépendances`](#) pour ceci [`$chemin`](#), basé sur son [`Dépendances`](#) glob d'en-tête. Utilisation par défaut [`$_`](#) comme chemin si aucun argument n'est transmis.
 
-##### seed_file_acl($path).
+##### seed_file_acl($path)
 
-Mises à jour [`@path : :acl`](#) pour cela [`Chemin $`](#)basé sur son [`Liste de contrôle d'accès`](#) spécification d'en-tête. Utilise par défaut [`$_`](#).
+Mises à jour en toute sécurité [`@path : :acl`](#) pour ceci [`$chemin`](#), basé sur son [`Liste de contrôle d'accès`](#) spécification d'en-tête Utilisation par défaut [`$_`](#) comme chemin si aucun argument n'est transmis.
 
-#### Chargement
+#### Charger
 
-Identique à [`YAML : :XS : :Charger`](#).
+Identique à [`YAML : :XS : :Chargement`](#).
 
-#### Vide
+#### Vidage
 
-Identique à [`YAML : :XS : :Dump`](#).
+Identique à [`YAML : :XS : :Vidage`](#).
 
 <!-- $Date$ $Author$ $Revision$ -->

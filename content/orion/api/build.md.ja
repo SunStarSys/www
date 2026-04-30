@@ -1,14 +1,44 @@
 ---
-archived: ~
 categories: ~
-dependencies: '*.md.ja '
+dependencies: '*.md.ja'
 keywords: 休憩、アピ
-published: ~
 status: 下書き
 title: Orion API - ビルド
 ---
 
 {# lede #}このドキュメントでは、**ビルド・システム** APIについて説明します{# lede #}.
+
+基本的に、ビルド・システムは2つのユーザー提供のPerlモジュールによって管理されます。[`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) および[`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+
+前者の仕事は三つのことをすることである。
+
+0. ロード[`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) および[`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
+1. 構成[`@path:: パターン`](#)および
+2. 便宜的に歩く[`コンテンツ/`](#) シードするツリー[`%path:: 依存関係`](#) および[`@path::acls`](#).
+
+後者の仕事は、invokableを提供することです。[`ビュー`](#)- ベース[`$メソッド`](#)で一致するエントリの's [`@path:: パターン`](#) (各配列エントリの2番目のスロットに文字列化されたメソッド名として)同様に呼び出されます。...
+
+```perl
+#api
+  ...
+
+my $path = "/content-rooted/path/to/source/file";
+
+for my $p (@path::patterns) {
+    my ($re, $method, $args) = @$p;
+    next unless $path =~ $re;
+    ++$matched;
+
+my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
+
+... write UTF $content to target file with associated $mime_extension file-type
+  }
+
+copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+
+...
+#api
+```
 
 [TOC]
 
@@ -16,42 +46,42 @@ title: Orion API - ビルド
 
 ## システム構築
 
-### [SunStarSys:: ビュー](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+### [SunStarSys:: ビュー](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス[`lib/view.pm`](#)
 
-#### single_narrative(%args).
+#### single_narrative(%args) &mdash; 最も人気のある(そして洗練された)ビュー
 
 必須引数:
 
 - [`型板`](#)
 - [`パス`](#)
-- [`注意して聞く`](#).
+- [`注意して聞く`](#)
 
 オプションの引数:
 
 - [`deps`](#)
 - [`quick_deps`](#)
 - [`前処理`](#)
-- [`archive_root`](#)
-- [`category_root`](#).
+- [`archive_root`](#) &mdash; ファイル"アーカイブ済" ステータス"コピーしました" そして、このコンテンツルートの場所への年/月のサブフォルダによって追跡`ssi`
+- [`category_root`](#) &mdash; の項目"カテゴリ" ヘッダー"コピーしました" このコンテンツ・ルート・ロケーション内の適切な名前付きカテゴリ・フォルダに`ssi`
 
-#### news_page(%args).
+#### news_page(%args) &mdash; 複数ナラティブ集計ページ用
 
-#### サイトマップ(%args).
+#### サイトマップ(%args) &mdash; index.htmlおよびsitemap.htmlページの作成用
 
 依存関係のロケール固有のソートされた索引。
 
 必須引数:
 
 - [`パス`](#)
-- [`注意して聞く`](#).
+- [`注意して聞く`](#)
 
 オプションの引数:
 
 - [`quick_deps`](#)
 - [`ネスト`](#)
-- [`前処理`](#).
+- [`前処理`](#)
 
-#### asymptote(%args).
+#### asymptote(%args)
 
 ビルドおよびキャッシュ[`漸近線`](#) トリプルバッククォートコードブロック。
 
@@ -59,15 +89,15 @@ title: Orion API - ビルド
 
 - [`ビュー`](#)
 - [`注意して聞く`](#)
-- [`パス`](#).
+- [`パス`](#)
 
-#### スキップ(%args).
+#### スキップ(%args)
 
-ドン'これらを全部作る。かわりに、関連する生成されたソース・ファイル(例: `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)は、セカンダリビルドシステムの実行に基づいて構築されます。
+これらを全く作ってはいけません。かわりに、関連する生成されたソース・ファイル(例: `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)は、セカンダリビルドシステムの実行に基づいて構築されます。
 
-#### yml2ext(%args).
+#### yml2ext(%args)
 
-YAMLファイルを変換します。
+通常、YAMLファイルをJSONに変換します。
 
 オプションの引数:
 
@@ -75,7 +105,7 @@ YAMLファイルを変換します。
 - [`フィルター`](#) デフォルト`json_raw`
 -[`型板`](#) 上書き`フィルター` デフォルト式
 
-#### fetch_deps($path、$data、$quick).
+#### fetch_deps($path、$data、$quick)
 
 必須引数:
 
@@ -83,116 +113,116 @@ YAMLファイルを変換します。
 - [`データ`](#) - depsのアノン配列の結果の店
 - [`速い`](#) - デフォルト値は2
 
-#### ブレッドクラム($path).
+#### ブレッドクラム($path)
 
 HTMLブレッドクラム・リストを返します。[パス](#).
 
-#### memoize(%args).
+#### memoize(%args)
 
 ビルドをキャッシュします。主にfetch_depsおよびquick_deps > 2で使用されます。
 
-#### compress(%args).
+#### comment(%args)
 
-非推奨。
+ページ・コメントのSSI除外可能HTMLフラグメントを生成します。
 
-#### next_view(%args).
+#### next_view(%args)
 
 $argsを処理するためのユーティリティ{ビュー}.
 
-#### ssi(%args).
+#### ssi(%args)
 
 再帰的評価[ssi](#) タグ
 
-#### offline(%args).
+#### offline(%args)
 
 next_viewをオフライン・モードで実行します。
 
-#### スニペット(%args).
+#### スニペット(%args)
 
 スニペット明細を処理します。
 
-#### 再構築(%args).
+#### 再構築(%args)
 
 next_viewからビルドされたコンテンツのテンプレート・ディレクティブを再処理します。
 
-#### trim_local_links(%args).
+#### trim_local_links(%args)
 
 ローカル・リンクからファイル拡張子を切り捨てます。
 
-#### normalize_links(%args).
+#### normalize_links(%args)
 
 ローカル・リンク(./および../)を正規化します。
 
 ----
 
-### [SunStarSys:: ユーティリティ](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+### [SunStarSys:: ユーティリティ](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ユーティリティライブラリ[`lib/path.pm`](#) および[`lib/view.pm`](#)
 
-#### read_text_file($file、$out、$content_lines).
+#### read_text_file($file、$out、$content_lines) &mdash; Orionの汎用テキスト・ファイル・プロセッサ
 
 UTF-8でエンコードされたファイルのheaders+contentを解析します[`$file`](#) 結果を格納する[`$out`](#). [`$content_lines`](#) は、読み取るコンテンツ行の最大数です(オプション)。
 実際に読み取られた行数(ヘッダーを含む)を返します。
 
 [`$file`](#) ファイルの完全な内容を表すraw文字列への参照である可能性があります。結果[`$out`](#) UTF-8がエンコードされます。
 
-#### copy_if_newer($src、$dest).
+#### copy_if_newer($src、$dest)
 
-コピー数[`$src`](#) から[`最低`](#) 前者の場合'変更タイムスタンプが後者より新しい's。コピー時に、さらにgzip-compress [`最低`](#) ファイルの場合'テキストファイルを追加し、".gz" 名前の拡張。
+コピー数[`$src`](#) から[`最低`](#) 前者の変更タイムスタンプが後者の変更タイムスタンプより新しい場合。コピー時に、さらにgzip-compress [`最低`](#) file (テキストファイルの場合) ".gz" 名前の拡張。
 
-#### get_lock($lockfile).
+#### get_lock($lockfile)
 
 排他(f)ロック(現在のUNIXプロセスの場合)をオンにします。[`$lockfile`](#).
 
-#### シャッフル(\\@deck).
+#### シャッフル(\\@deck)
 
 インプレイスランダム(Fisher-Yates)シャッフル[`@deck`](#).
 
-#### sort_tables($コンテンツ).
+#### sort_tables($コンテンツ)
 
-$content内の値下げ表を各表に従ってソートします'カラム仕様表ごとに正確に1つの列をソートできます(オプション)。[`n`](#)降順[`v`](#) または昇順[`^`](#) オーダー
+各表の列仕様に従って、マークダウン表を$contentでソートします。表ごとに正確に1つの列をソートできます(オプション)。[`n`](#)降順[`v`](#) または昇順[`^`](#) オーダー
 
-#### fixup_code($prefix、$type、@\_).
+#### fixup_code($prefix、$type、@\_)
 
 @\_のすべての引数から$prefixを削除します。$type引数の関数は実装固有ですが、主にeditor.mdのシードに使用されます。"モード" このコンテンツを@\_で処理するため。
 
-#### unload_package($pkg).
+#### unload_package($pkg)
 
-Perlパッケージを積極的にアンロード[`$pkg`](#) シンボルテーブル(STASH).
+Perl (leaf)パッケージの積極的なアンロード[`$pkg`](#) シンボルテーブル(STASH)
 
-#### purge_from_inc(@paths).
+#### purge_from_inc(@paths)
 
 削除[`@paths`](#) 場所[`@INC`](#).
 
-#### タッチ(@\_).
+#### タッチ(@\_)
 
 すべてのファイルを[`@_`](#)。引数が渡されない場合、[`$_`](#).
 
-#### normalize_svn_path(@\_).
+#### normalize_svn_path(@\_)
 
 すべてのパスを正規化します。[`@_`](#) RAW引数として安全に使用できます。[`SVN:: クライアント`](#) コマンド
 
-#### sanitize_relative_path(@\_).
+#### sanitize_relative_path(@\_)
 
 パスを保護する[`@_`](#) 純粋な相対パスとして使用[`ドチアク::DTL`](#) (Djangoテンプレート)パス固有のコマンド。
 
-#### parse_filename($path).
+#### parse_filename($path)
 
 ラッパー周り[`ファイル::Basename::fileparse`](#)。引数を指定しない場合、[`$_`](#) 解析するファイル名を指定します。
 
-#### walk_content_tree($コード).
+#### walk_content_tree($コード)
 
 条件付きで歩く[`./コンテンツ`](#) ビルドシステムチェックアウトのツリー、最初に正規化[`$_`](#) 正式なサブパスとして起動[`$code`](#)ツリーウォークの各項目
 
-##### アーカイブ済み($path).
+##### アーカイブ済み($path)
 
 各フラグ[`ステータス: アーカイブ`](#) [`パス`](#)。使用[`$_`](#) 引数が渡されない場合。
 
-##### seed_file_deps($path).
+##### seed_file_deps($path)
 
-更新[`%path:: 依存関係`](#) この[`パス`](#)に基づいて、[`依存関係`](#) ヘッダーglob。使用するデフォルト[`$_`](#) 引数が渡されない場合のパス。
+安全な更新[`%path:: 依存関係`](#) この[`パス`](#)に基づいて、[`依存関係`](#) ヘッダーglob。使用するデフォルト[`$_`](#) 引数が渡されない場合のパス。
 
-##### seed_file_acl($path).
+##### seed_file_acl($path)
 
-更新[`@path::acl`](#) この[`パス`](#)に基づいて、[`ACL`](#) ヘッダー仕様使用するデフォルト[`$_`](#) 引数が渡されない場合のパス。
+安全な更新[`@path::acl`](#) この[`パス`](#)に基づいて、[`ACL`](#) ヘッダー仕様使用するデフォルト[`$_`](#) 引数が渡されない場合のパス。
 
 #### ロード
 

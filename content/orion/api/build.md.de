@@ -1,205 +1,235 @@
 ---
-archived: ~
 categories: ~
-dependencies: '*.md.de '
+dependencies: '*.md.de'
 keywords: RUHE, API
-published: ~
 status: Entwurf
 title: Orion API - Erstellen
 ---
 
-{# lede #}In diesem Dokument werden die APIs für **Build System** behandelt{# lede #}
+{# lede #}Dieses Dokument behandelt die **Build-System**-APIs{# lede #}.
+
+Grundsätzlich wird das Build-System von zwei vom Benutzer bereitgestellten Perl-Modulen gesteuert: [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) und [`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+
+Die erste Aufgabe besteht darin, drei Dinge zu tun:
+
+0. laden [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) und [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
+1. erstellen [`@path::Muster`](#)und
+2. opportunistisch gehen [`Inhalt/`](#) Baum für Seed [`%path::Abhängigkeiten`](#) und [`@path::acls`](#).
+
+Letzterer hat die Aufgabe, unlösbar zu sein. [`Ansicht`](#)-basiert [`$Methode`](#)'s für die übereinstimmenden Einträge in [`@path::Muster`](#) (als String-Methodenname im zweiten Slot jedes Arrayeintrags), so aufgerufen...
+
+```perl
+#api
+  ...
+
+my $path = "/content-rooted/path/to/source/file";
+
+for my $p (@path::patterns) {
+    my ($re, $method, $args) = @$p;
+    next unless $path =~ $re;
+    ++$matched;
+
+my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
+
+... write UTF $content to target file with associated $mime_extension file-type
+  }
+
+copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+
+...
+#api
+```
 
 [TOC]
 
 ----
 
-## Build-System
+## System erstellen
 
-### [SunStarSys::Ansicht](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+### [SunStarSys::Anzeigen](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; Basisklasse für [`lib/view.pm`](#)
 
-#### single_narrative(%args).
+#### single_narrative(%args) &mdash; die beliebteste (und anspruchsvollste) Ansicht
 
 Erforderliche Argumente:
 
 - [`Vorlage`](#)
 - [`Pfad`](#)
-- [`lang`](#).
+- [`lang`](#)
 
 Optionale Argumente:
 
-- [`Deps`](#)
+- [`deps`](#)
 - [`quick_deps`](#)
 - [`Vorverarbeitung`](#)
-- [`archive_root`](#)
-- [`category_root`](#).
+- [`archive_root`](#) &mdash; Dateien in "archiviert" Status sind "kopiert" und nach Jahr/Monat-Unterordnern zu diesem inhaltlich verwalteten Standort über `Ssi`
+- [`category_root`](#) &mdash; Elemente in der "Kategorien" Header sind "kopiert" in entsprechend benannte Kategorienordner an dieser inhaltsverwalteten Stelle über `Ssi`
 
-#### news_page(%args).
+#### news_page(%args) &mdash; für Aggregationsseiten mit mehreren Beschreibungen
 
-#### sitemap(%args).
+#### Sitemap (%args) &mdash; zum Erstellen von Seiten index.html und sitemap.html
 
-Gebietsschemaspezifischer, sortierter Index der Abhängigkeiten.
+Gebietsschemaspezifischer, sortierter Abhängigkeitsindex.
 
 Erforderliche Argumente:
 
 - [`Pfad`](#)
-- [`lang`](#).
+- [`lang`](#)
 
 Optionale Argumente:
 
 - [`quick_deps`](#)
-- [`verschachtelt`](#)
-- [`Vorverarbeitung`](#).
+- [`Verschachtelt`](#)
+- [`Vorverarbeitung`](#)
 
-#### asymptote(%args).
+#### asymptote(%args)
 
-Builds und Caches [`asymptote`](#).
+Builds und Caches [`Asymptote`](#) dreifach mit Anführungszeichen versehene Codeblöcke.
 
 Erforderliche Argumente:
 
-- [`anzeigen`](#)
+- [`Ansicht`](#)
 - [`lang`](#)
-- [`Pfad`](#).
+- [`Pfad`](#)
 
-#### überspringen(%args).
+#### überspringen(%args)
 
-Bauen Sie diese überhaupt nicht.  Erstellen Sie stattdessen die zugehörigen generierten Quelldateien (z. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`
+Bauen Sie diese überhaupt nicht.  Erstellen Sie stattdessen die zugehörigen generierten Quelldateien (z. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) auf einer sekundären Build-Systemausführung basieren.
 
-#### yml2ext(%args).
+#### yml2ext(%args)
 
-Konvertieren Sie YAML-Dateien.
+Konvertieren Sie YAML-Dateien, in der Regel in JSON.
 
 Optionale Argumente:
 
-- [`Erweiterung`](#) Standard ist `json`
+- [`aus`](#) Standard ist `json`
 - [`Filter`](#) Standard ist `json_raw`
--[`Vorlage`](#) Überschreibungen `Filter`
+-[`Vorlage`](#) Überschreibungen `Filter` Standardausdruck
 
-#### fetch_deps($path, $data, $quick).
+#### fetch_deps($path, $data, $quick)
 
 Erforderliche Argumente:
 
 - [`Pfad`](#)
-- [`Daten`](#) - Läden, die ein Anonarray von Deps ergeben
-- [`schnell`](#).
+- [`Daten`](#) - Geschäfte, die zu einem Anon-Array von Deps führen
+- [`schnell`](#) - Standard ist 2
 
-#### breadcrumbs($path).
+#### Navigationspfade($path)
 
-Gibt HTML-Breadcrumbs-Liste zurück für [Pfad](#).
+Gibt die HTML-Navigationsleiste zurück für [$Pfad](#).
 
-#### memoize(%args).
+#### Vermerk(%args)
 
-Cacht den Build. Er wird hauptsächlich mit fetch_deps und quick_deps > 2 verwendet.
+Speichert den Build, der hauptsächlich mit fetch_deps und quick_deps > 2 verwendet wird.
 
-#### compress(%args).
+#### Kommentar(%args)
 
-Veraltet.
+Generiert ein SSI-integrierbares HTML-Fragment für einen Seitenkommentar.
 
-#### next_view(%args).
+#### next_view(%args)
 
-Dienstprogramm zur Verarbeitung von $args{view}.
+Dienstprogramm zur Verarbeitung von $args{Ansicht}.
 
-#### ssi(%args).
+#### Ssi(%args)
 
-Rekursive Auswertung [ssi](#).
+Rekursiv bewertet [Ssi](#) Tags.
 
-#### offline(%args).
+#### offline(%args)
 
 Führt next_view im Offlinemodus aus.
 
-#### snippet(%args).
+#### Snippet (%args)
 
 Verarbeitet Snippet-Positionen.
 
-#### reconstruct(%args).
+#### rekonstruieren(%args)
 
 Verarbeitet Vorlagenanweisungen in erstelltem Inhalt aus next_view erneut.
 
-#### trim_local_links(%args).
+#### trim_local_links(%args)
 
 Entfernt Dateierweiterungen von lokalen Links.
 
-#### normalize_links(%args).
+#### normalize_links(%args)
 
 Normalisiert lokale Links (./ und ../).
 
 ----
 
-### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+### [SunStarSys: Bis](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; Utilitybibliothek für [`lib/path.pm`](#) und [`lib/view.pm`](#)
 
-#### read_text_file($file, $out, $content_lines).
+#### read_text_file($file, $out, $content_lines) &mdash; Universeller Textdateiprozessor von Orion
 
-Parst Header+Inhalt der UTF-8-codierten Datei [`$Datei`](#) und speichert Ergebnisse in [`$out`](#). [`$content_lines`](#) ist die (optionale) maximale Anzahl der zu lesenden Inhaltszeilen.
+Parst Header+Inhalt der UTF-8-codierten Datei [`$Datei`](#) und speichert Ergebnisse in [`$aus`](#). [`$content_lines`](#) ist die (optionale) maximale Anzahl von Inhaltszeilen, die gelesen werden sollen.
+Gibt die tatsächliche Anzahl der gelesenen Zeilen (einschließlich Kopfzeilen) zurück.
 
+[`$Datei`](#) kann eine Referenz auf eine Raw-Zeichenfolge sein, die den vollständigen Inhalt einer Datei darstellt.  Die Ergebnisse in [`$aus`](#) wird weiterhin UTF-8-codiert sein.
 
-[`$Datei`](#) kann eine Referenz auf eine Raw-Zeichenfolge sein, die den vollständigen Inhalt einer Datei darstellt.  Die Ergebnisse in [`$out`](#).
+#### copy_if_newer($src, $dest)
 
-#### copy_if_newer($src, $dest).
+Kopien [`$Quelle`](#) bis [`$dest`](#) wenn der Änderungszeitstempel neuer ist als der des letzteren. Auf Kopie, zusätzlich gzip-komprimiert die [`$dest`](#) Datei, wenn es sich um eine Textdatei handelt, und fügt ".gz" Erweiterung des Namens.
 
-Kopien [`Quelle`](#) bis [`$dest`](#) wenn der Änderungszeitstempel des ersteren neuer ist als der des letzteren. Auf Kopie, zusätzlich gzip-komprimiert die [`$dest`](#).
+#### get_lock($lockfile)
 
-#### get_lock($lockfile).
+Aktiviert ein exklusives (f)Lock (für den aktuellen UNIX-Prozess) [`$lockdatei`](#).
 
-Nimmt eine exklusive (f) Sperre (für den aktuellen UNIX-Prozess) auf [`$Lock-Datei`](#).
+#### shuffle(\\@deck)
 
-#### shuffle(\\@deck).
+In-Place Zufalls-Shuffle (Fisher-Yates) von [`@deck`](#).
 
-Zufälliges (Fisher-Yates) Shuffle von [`@deck`](#).
+#### sort_tables($content)
 
-#### sort_tables($content).
+Sortiert Preisabschrifttabellen in $content gemäß der Spaltenspezifikation jeder Tabelle.  Pro Tabelle kann genau eine Spalte sortiert werden, optional numerisch [`n`](#)in absteigender Reihenfolge [`v`](#) oder aufsteigend [`^`](#) Bestellung.
 
-Sortiert Preisabschrifttabellen in $content entsprechend der Spaltenspezifikation der einzelnen Tabellen.  Genau eine Spalte kann pro Tabelle sortiert werden, optional numerisch [`n`](#), entweder absteigend [`v`](#) oder aufsteigend [`^`](#).
+#### fixup_code($prefix, $type, @\_)
 
-#### fixup_code($prefix, $type, @\_).
+Streicht $prefix aus jedem Argument in @\_. Die Funktion des $type-Arguments ist implementierungsspezifisch, wird jedoch hauptsächlich zum Vordefinieren von editor.md verwendet "Modus" für die Verarbeitung dieses Inhalts in @\_.
 
-Entfernt $prefix aus jedem Argument in @\_. Die Funktion des $type-Arguments ist implementierungsspezifisch, wird jedoch hauptsächlich zum Vordefinieren des editor.md-"Modus" für die Verarbeitung dieses Inhalts in @\_ verwendet.
+#### unload_package($pkg)
 
-#### unload_package($pkg).
+Aggressives Entladen des Perl-(Blatt-)Pakets [`$pkg`](#) aus der Symboltabelle (STASH).
 
-Entlädt das Perl-Package aggressiv [`Paket`](#).
+#### purge_from_inc(@paths)
 
-#### purge_from_inc(@paths).
+Entfernt [`@paths`](#) von [`@INC`](#).
 
-Entfernungen [`@paths`](#) von [`@INC`](#).
+#### berühren(@\_)
 
-#### Berührung(@\_).
+Entfernt alle Dateien in [`@_`](#). Wenn keine Argumente übergeben werden, verwendet [`$_`](#).
 
-Berührt alle Dateien in [`@_`](#). Wenn keine Argumente übergeben werden, wird [`$_`](#).
+#### normalize_svn_path(@\_)
 
-#### normalize_svn_path(@\_).
+Normalisiert alle Pfade in [`@_`](#) für die sichere Verwendung als RAW-Argumente [`SVN: Client`](#) Befehle.
 
-Normalisiert alle Pfade in [`@_`](#) zur sicheren Verwendung als rohe Argumente für [`SVN::Client`](#).
+#### sanitize_relative_path(@\_)
 
-#### sanitize_relative_path(@\_).
+Sichert Pfade in [`@_`](#) zur Verwendung als reine relative Pfade in [`Sternzeichen:DTL`](#) Pfadspezifische Befehle (Django-Vorlage).
 
-Sichert Pfade in [`@_`](#) zur Verwendung als reine relative Pfade in [`Dotiac::DTL`](#).
+#### parse_filename($path)
 
-#### parse_filename($path).
+Wrapper um [`Datei::Basename::fileparse`](#). Ohne Argumente, verwendet [`$_`](#) als zu parsender Dateiname.
 
-Wrapper herum [`Datei::Basename::Dateiparse`](#). Ohne Argumente, Verwendungen [`$_`](#).
+#### walk_content_tree($code)
 
-#### walk_content_tree($code).
+Bedingt geht die [`./Inhalt`](#) Baum des Build-System-Checkout, zuerst normalisieren [`$_`](#) als formaler Unterpfad und dann aufrufend [`$code`](#), für jedes Element im Treewalk.
 
-Bedingt geht der [`./Inhalt`](#) Baum des Build-System-Checkouts, erste Normalisierung [`$_`](#) als formalen Unterpfad und dann aufrufen [`$code`](#).
+##### archiviert($path)
 
-##### archived($path).
+Markiert jede [`Status: Archiv`](#) [`$Pfad`](#). Verwendungen [`$_`](#) wenn keine Argumente übergeben werden.
 
-Markiert jede [`Status: Archiv`](#) [`Pfad`](#). Verwendet [`$_`](#).
+##### seed_file_deps($path)
 
-##### seed_file_deps($path).
+Sichere Updates [`%path::Abhängigkeiten`](#) für diese [`$Pfad`](#), basierend auf [`Abhängigkeiten`](#) Header-Glob(s). Standard ist 'verwenden' [`$_`](#) als Pfad, wenn keine Argumente übergeben werden.
 
-Aktualisierungen [`%path::Abhängigkeiten`](#) für diesen [`Pfad`](#)basierend auf seiner [`Abhängigkeiten`](#) Header-Glob(s). Standardmäßig verwendet [`$_`](#).
+##### seed_file_acl($path)
 
-##### seed_file_acl($path).
-
-Aktualisierungen [`@path::acl`](#) für diesen [`Pfad`](#)basierend auf seiner [`ACL`](#) Headerspezifikation. Standardmäßig verwendet [`$_`](#).
+Sichere Updates [`@path::acl`](#) für diese [`$Pfad`](#), basierend auf [`ACL`](#) Headerspezifikation. Standard ist 'verwenden' [`$_`](#) als Pfad, wenn keine Argumente übergeben werden.
 
 #### Laden
 
-Entspricht [`YAML::XS::Laden`](#).
+Gleich wie [`YAML::XS::Laden`](#).
 
 #### Speicherabzug
 
-Entspricht [`YAML::XS::Dump`](#).
+Gleich wie [`YAML::XS::Dump`](#).
 
 <!-- $Date$ $Author$ $Revision$ -->

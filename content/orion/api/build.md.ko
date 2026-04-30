@@ -1,14 +1,44 @@
 ---
-archived: ~
 categories: ~
-dependencies: '*.md.ko '
+dependencies: '*.md.ko'
 keywords: REST, 아피
-published: ~
 status: 초안
 title: Orion API - 빌드
 ---
 
 {# lede #}이 문서에서는 **시스템 구축** API에 대해 다룹니다.{# lede #}.
+
+기본적으로 빌드 시스템은 사용자가 제공한 두 개의 Perl 모듈로 제어됩니다. [`라이브러리/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) 및 [`라이브러리/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+
+이전 작업은 다음 세 가지를 수행하는 것입니다.
+
+0. 로드 [`라이브러리/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) 및 [`라이브러리/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
+1. 생성 [`@path::패턴`](#)및
+2. 기회주의적으로 걷다 [`콘텐츠/`](#) 시드할 트리 [`%path::종속성`](#) 및 [`@path::acls`](#).
+
+후자의 임무는 호출을 제공하는 것입니다 [`보기`](#)- 기반 [`$방법`](#)에서 일치하는 항목의 경우 [`@path::패턴`](#) (각 배열 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), 다음과 같이 호출됩니다....
+
+```perl
+#api
+  ...
+
+my $path = "/content-rooted/path/to/source/file";
+
+for my $p (@path::patterns) {
+    my ($re, $method, $args) = @$p;
+    next unless $path =~ $re;
+    ++$matched;
+
+my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
+
+... write UTF $content to target file with associated $mime_extension file-type
+  }
+
+copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+
+...
+#api
+```
 
 [TOC]
 
@@ -16,42 +46,42 @@ title: Orion API - 빌드
 
 ## 빌드 시스템
 
-### [SunStarSys::보기](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+### [SunStarSys::보기](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 [`라이브러리/view.pm`](#)
 
-#### single_narrative(%args).
+#### single_narrative(%args) &mdash; 가장 인기있는 (그리고 정교한)보기
 
 필수 인수:
 
 - [`템플리트`](#)
 - [`경로`](#)
-- [`짧음`](#).
+- [`짧음`](#)
 
 선택적 인수:
 
 - [`삭제`](#)
 - [`quick_deps`](#)
 - [`선행 처리`](#)
-- [`archive_root`](#)
-- [`category_root`](#).
+- [`archive_root`](#) &mdash; 파일 위치 "아카이브됨" 상태: "복사됨" 이 콘텐츠 루트 위치에 대한 연도/월 하위 폴더별로 추적 `ssi`
+- [`category_root`](#) &mdash; 의 항목 "범주" 헤더 "복사됨" 이 컨텐츠 루트 위치에 있는 적절하게 명명된 범주 폴더로 `ssi`
 
-#### news_page(%args).
+#### news_page(%args) &mdash; 다중 설명 집계 페이지의 경우
 
-#### 사이트맵(%args).
+#### 사이트맵(%args) &mdash; index.html 및 sitemap.html 페이지 작성
 
 종속성의 로케일별 정렬된 인덱스입니다.
 
 필수 인수:
 
 - [`경로`](#)
-- [`짧음`](#).
+- [`짧음`](#)
 
 선택적 인수:
 
 - [`quick_deps`](#)
 - [`중첩됨`](#)
-- [`선행 처리`](#).
+- [`선행 처리`](#)
 
-#### asymptote(%args).
+#### asymptote(%args)
 
 빌드 및 캐시 [`asymptote`](#) 삼중 따옴표로 묶인 코드 블록.
 
@@ -59,15 +89,15 @@ title: Orion API - 빌드
 
 - [`보기`](#)
 - [`짧음`](#)
-- [`경로`](#).
+- [`경로`](#)
 
-#### 건너뛰기(%args).
+#### 건너뛰기(%args)
 
-Don'이 모든 것을 건설하라.  대신 연관된 생성된 소스 파일(예: `.bib\$ 언어` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)는 보조 빌드 시스템 실행에 빌드됩니다.
+이것들을 전혀 만들지 마십시오.  대신 연관된 생성된 소스 파일(예: `.bib\$ 언어` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)는 보조 빌드 시스템 실행에 빌드됩니다.
 
-#### yml2ext(%args).
+#### yml2ext(%args)
 
-YAML 파일을 변환합니다.
+YAML 파일을 일반적으로 JSON으로 변환합니다.
 
 선택적 인수:
 
@@ -75,7 +105,7 @@ YAML 파일을 변환합니다.
 - [`필터`](#) 기본값 `json_raw`
 -[`템플리트`](#) 재정의 `필터` 기본 표현식
 
-#### fetch_deps($path, $data, $quick).
+#### fetch_deps($path, $data, $quick)
 
 필수 인수:
 
@@ -83,116 +113,116 @@ YAML 파일을 변환합니다.
 - [`데이터`](#) - 점포의 결과 anon-array of deps
 - [`빠른`](#) - 기본값은 2입니다.
 
-#### 이동 경로($path).
+#### 이동 경로($path)
 
 다음에 대한 HTML 이동 경로 목록을 반환합니다. [$경로](#).
 
-#### 메모화(%args).
+#### 메모화(%args)
 
 빌드를 캐시에 저장합니다. 주로 fetch_deps 및 quick_deps > 2와 함께 사용됩니다.
 
-#### 압축(%args).
+#### 설명(%args)
 
-사용되지 않습니다.
+페이지 의견에 대한 SSI 포함 가능 HTML 부분을 생성합니다.
 
-#### next_view(%args).
+#### next_view(%args)
 
 $args 처리를 위한 유틸리티{보기}.
 
-#### ssi(%args).
+#### ssi(%args)
 
 반복적으로 평가 [ssi](#) 태그
 
-#### 오프라인(%args).
+#### 오프라인(%args)
 
 오프라인 모드에서 next_view를 실행합니다.
 
-#### 코드 조각(%args).
+#### 코드 조각(%args)
 
 코드 조각 라인을 처리합니다.
 
-#### 재구성(%args).
+#### 재구성(%args)
 
 next_view에서 빌드된 콘텐츠의 템플리트 지시어를 재처리합니다.
 
-#### trim_local_links(%args).
+#### trim_local_links(%args)
 
 로컬 링크에서 파일 확장자를 자릅니다.
 
-#### normalize_links(%args).
+#### normalize_links(%args)
 
 로컬 링크(./ 및 ../)를 정규화합니다.
 
 ----
 
-### [SunStarSys::까지](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+### [SunStarSys::까지](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 유틸리티 라이브러리 [`라이브러리/path.pm`](#) 및 [`라이브러리/view.pm`](#)
 
-#### read_text_file($file, $out, $content_lines).
+#### read_text_file($file, $out, $content_lines) &mdash; Orion의 범용 텍스트 파일 프로세서
 
 UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. [`$파일`](#) 결과 저장 위치 [`$out`](#). [`$content_lines`](#) 읽을 콘텐츠 라인의 최대 개수(선택 사항)입니다.
 읽은 실제 행 수(머리글 포함)를 반환합니다.
 
 [`$파일`](#) 파일의 전체 내용을 나타내는 원시 문자열에 대한 참조일 수 있습니다.  결과는 [`$out`](#) UTF-8이 인코딩됩니다.
 
-#### copy_if_newer($src, $dest).
+#### copy_if_newer($src, $dest)
 
-매수 [`$소스`](#) 종료 [`$일부`](#) 이전'수정 시간 기록이 후자보다 최신입니다.'s입니다. 복사본에서 gzip-compresses의 [`$일부`](#) 파일 if it'텍스트 파일로 저장하고 ".gz" 이름을 확장합니다.
+매수 [`$소스`](#) 종료 [`$일부`](#) 이전 수정 타임스탬프가 후자의 수정 타임스탬프보다 최신인 경우. 복사본에서 gzip-compresses의 [`$일부`](#) 파일(텍스트 파일인 경우) ".gz" 이름을 확장합니다.
 
-#### get_lock($lockfile).
+#### get_lock($lockfile)
 
 현재 UNIX 프로세스의 경우 배타적(f)잠금을 [`$lock파일`](#).
 
-#### 셔플(\\@deck).
+#### 셔플(\\@deck)
 
 내장 무작위(어류) 셔플 [`@deck`](#).
 
-#### sort_tables($content).
+#### sort_tables($content)
 
-각 테이블에 따라 $content로 매가인하 테이블을 정렬합니다.'s  열 사양  테이블당 정확히 하나의 열을 정렬할 수 있습니다(선택 사항). [`n개`](#), 내림차순 [`v`](#) 또는 오름차순 [`^`](#) 주문.
+각 테이블의 열 사양에 따라 $content에서 마크다운 테이블을 정렬합니다.  테이블당 정확히 하나의 열을 정렬할 수 있습니다(선택 사항). [`n개`](#), 내림차순 [`v`](#) 또는 오름차순 [`^`](#) 주문.
 
-#### fixup_code($prefix, $type, @\_).
+#### fixup_code($prefix, $type, @\_)
 
 @\_의 모든 인수에서 $prefix를 제거합니다. $type 인수의 함수는 구현에 따라 다르지만 주로 editor.md를 시드하는 데 사용됩니다. "모드" @\_에서 이 컨텐츠를 처리합니다.
 
-#### unload_package($pkg).
+#### unload_package($pkg)
 
-Perl 패키지를 적극 언로드합니다. [`$pkg`](#) 기호 테이블(STASH)에서
+Perl(리프) 패키지를 적극적으로 언로드합니다. [`$pkg`](#) 기호 테이블(STASH)에서
 
-#### purge_from_inc(@paths).
+#### purge_from_inc(@paths)
 
 제거 [`@paths`](#) 시작일 [`@INC`](#).
 
-#### 터치(@\_).
+#### 터치(@\_)
 
 모든 파일을 [`@_`](#). 인수가 전달되지 않으면 [`$_`](#).
 
-#### normalize_svn_path(@\_).
+#### normalize_svn_path(@\_)
 
 의 모든 경로를 정규화합니다. [`@_`](#) 원시 인수로 안전하게 사용 [`품질 관리`](#) 명령
 
-#### sanitize_relative_path(@\_).
+#### sanitize_relative_path(@\_)
 
 경로 보안 [`@_`](#) 에서 순수한 상대 경로로 사용 [`도티악::DTL`](#) (장고 템플릿) 경로별 명령.
 
-#### parse_filename($path).
+#### parse_filename($path)
 
 주변 래퍼 [`파일::Basename::fileparse`](#). 인수가 없으면 [`$_`](#) 구문 분석할 파일 이름입니다.
 
-#### walk_content_tree($code).
+#### walk_content_tree($code)
 
 조건부로 걷기 [`./콘텐츠`](#) 빌드 시스템 체크아웃의 트리, 먼저 정규화 [`$_`](#) 형식 서브 경로로 변경한 다음 [`$code`](#)는 보도의 각 항목에 적용됩니다.
 
-##### 아카이브됨($path).
+##### 아카이브됨($path)
 
 각 플래그 [`상태: 아카이브`](#) [`$경로`](#). 사용 [`$_`](#) 인수가 전달되지 않은 경우
 
-##### seed_file_deps($path).
+##### seed_file_deps($path)
 
-업데이트 [`%path::종속성`](#) 대상 [`$경로`](#)을 기반으로 [`종속성`](#) 헤더 glob(s). 사용 기본값 [`$_`](#) 인수가 전달되지 않은 경우 경로로 지정됩니다.
+안전한 업데이트 [`%path::종속성`](#) 대상 [`$경로`](#)을 기반으로 [`종속성`](#) 헤더 glob(s). 사용 기본값 [`$_`](#) 인수가 전달되지 않은 경우 경로로 지정됩니다.
 
-##### seed_file_acl($path).
+##### seed_file_acl($path)
 
-업데이트 [`@path::acl`](#) 대상 [`$경로`](#)을 기반으로 [`ACL`](#) 헤더 사양 사용 기본값 [`$_`](#) 인수가 전달되지 않은 경우 경로로 지정됩니다.
+안전한 업데이트 [`@path::acl`](#) 대상 [`$경로`](#)을 기반으로 [`ACL`](#) 헤더 사양 사용 기본값 [`$_`](#) 인수가 전달되지 않은 경우 경로로 지정됩니다.
 
 #### 로드
 

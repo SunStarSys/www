@@ -1,14 +1,44 @@
 ---
-archived: ~
 categories: ~
-dependencies: '*.md.pt-BR '
+dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-published: ~
 status: rascunho
 title: Orion API - Criação
 ---
 
 {# lede #}Este documento aborda as APIs do **Build System**{# lede #}.
+
+Basicamente, o sistema de compilação é regido por dois módulos Perl fornecidos pelo usuário: [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) e [`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+
+O trabalho do primeiro é fazer três coisas:
+
+0. carregar [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) e [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
+1. construir [`@path::padrões`](#), e
+2. caminhando oportunamente [`conteúdo/`](#) árvore para semente [`%path::dependências`](#) e [`@path::acls`](#).
+
+O trabalho deste último é fornecer invocável [`exibir`](#)com base em [`Método $`](#)'s para as entradas correspondentes no [`@path::padrões`](#) (como um nome de método stringificado no segundo slot de cada entrada de array), chamado assim...
+
+```perl
+#api
+  ...
+
+my $path = "/content-rooted/path/to/source/file";
+
+for my $p (@path::patterns) {
+    my ($re, $method, $args) = @$p;
+    next unless $path =~ $re;
+    ++$matched;
+
+my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
+
+... write UTF $content to target file with associated $mime_extension file-type
+  }
+
+copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+
+...
+#api
+```
 
 [TOC]
 
@@ -16,42 +46,42 @@ title: Orion API - Criação
 
 ## Sistema de Build
 
-### [SunStarSys::Visualizar](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+### [SunStarSys::Visualizar](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe base para [`lib/view.pm`](#)
 
-#### single_narrative(%args).
+#### single_narrative(%args) &mdash; a visão mais popular (e sofisticada)
 
 Argumentos Obrigatórios:
 
 - [`modelo`](#)
 - [`caminho`](#)
-- [`idioma`](#).
+- [`idioma`](#)
 
 Argumentos Opcionais:
 
 - [`deps`](#)
 - [`quick_deps`](#)
 - [`pré-processamento`](#)
-- [`archive_root`](#)
-- [`category_root`](#).
+- [`archive_root`](#) &mdash; arquivos em "arquivado" status são "copiado" e rastreado por subpastas ano/mês para este local raiz de conteúdo via `ssi`
+- [`category_root`](#) &mdash; itens no "categorias" cabeçalho são "copiado" em pastas de categorias nomeadas apropriadamente neste local raiz de conteúdo via `ssi`
 
-#### news_page(%args).
+#### news_page(%args) &mdash; para páginas de agregação multinarrativa
 
-#### mapa do site(%args).
+#### mapa do site(%args) &mdash; para criar páginas index.html e sitemap.html
 
 Índice de dependências classificado e específico de localidade.
 
 Argumentos Obrigatórios:
 
 - [`caminho`](#)
-- [`idioma`](#).
+- [`idioma`](#)
 
 Argumentos opcionais:
 
 - [`quick_deps`](#)
 - [`aninhado`](#)
-- [`pré-processamento`](#).
+- [`pré-processamento`](#)
 
-#### assíntota(%args).
+#### assíntota(%args)
 
 Builds e Caches [`assíntota`](#) blocos de código triplo-backquoted.
 
@@ -59,15 +89,15 @@ Argumentos Obrigatórios:
 
 - [`exibir`](#)
 - [`idioma`](#)
-- [`caminho`](#).
+- [`caminho`](#)
 
-#### skip(%args).
+#### skip(%args)
 
-Não'construí-los em tudo.  Em vez disso, crie os arquivos de origem gerados associados (por exemplo, `Português (BR)` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) para ser criado em uma execução de sistema de compilação secundária.
+Não construa isso de jeito nenhum.  Em vez disso, crie os arquivos de origem gerados associados (por exemplo, `Português (BR)` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) para ser criado em uma execução de sistema de compilação secundária.
 
-#### yml2ext(%args).
+#### yml2ext(%args)
 
-Converter arquivos YAML.
+Converta arquivos YAML, normalmente em JSON.
 
 Argumentos opcionais:
 
@@ -75,7 +105,7 @@ Argumentos opcionais:
 - [`filtro`](#) assume como padrão `json_raw`
 -[`modelo`](#) substituições `filtro` expressão padrão
 
-#### fetch_deps($path, $data, $quick).
+#### fetch_deps($path, $data, $quick)
 
 Argumentos Obrigatórios:
 
@@ -83,116 +113,116 @@ Argumentos Obrigatórios:
 - [`dados`](#) - lojas resultantes de anon-array de deps
 - [`rápido`](#) - assume 2 como padrão
 
-#### breadcrumbs($path).
+#### breadcrumbs($path)
 
 Retorna a lista de caminhos detalhados HTML para [$path](#).
 
-#### memoize(%args).
+#### memoize(%args)
 
 Coloca em cache a compilação; usada principalmente com fetch_deps e quick_deps > 2.
 
-#### compactar(%args).
+#### comentário(%args)
 
-Obsoleto.
+Gera fragmento HTML inclusivo do SSI para um comentário de página.
 
-#### next_view(%args).
+#### next_view(%args)
 
 Utilitário para processamento de $args{exibir}.
 
-#### ssi(%args).
+#### ssi(%args)
 
 Avalia recursivamente [ssi](#) etiquetas.
 
-#### off-line(%args).
+#### off-line(%args)
 
 Executa o next_view no modo off-line.
 
-#### snippet(%args).
+#### snippet(%args)
 
 Processa linhas de trecho de código.
 
-#### reconstruir(%args).
+#### reconstruir(%args)
 
 Reprocessa diretivas de Modelo no conteúdo criado de next_view.
 
-#### trim_local_links(%args).
+#### trim_local_links(%args)
 
 Reduz extensões de arquivo de links locais.
 
-#### normalize_links(%args).
+#### normalize_links(%args)
 
 Normaliza links locais (./ e ../).
 
 ----
 
-### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; biblioteca de utilitários para [`lib/path.pm`](#) e [`lib/view.pm`](#)
 
-#### read_text_file($file, $out, $content_lines).
+#### read_text_file($file, $out, $content_lines) &mdash; Processador de arquivos de texto universal da Orion
 
 Analisa cabeçalhos+conteúdo do arquivo codificado em UTF-8 [`$arquivo`](#) e armazena resultados em [`$out`](#). [`$content_lines`](#) é o número máximo (opcional) de linhas de conteúdo a serem lidas.
 Retorna o número real de linhas lidas (incluindo cabeçalhos).
 
 [`$arquivo`](#) pode ser uma referência a uma string bruta, representando o conteúdo completo de um arquivo.  Os resultados em [`$out`](#) ainda será codificado em UTF-8.
 
-#### copy_if_newer($src, $dest).
+#### copy_if_newer($src, $dest)
 
-Cópias [`$src`](#) para [`$destino`](#) Se o primeiro'O timestamp de modificação s é mais recente que o último's. Na cópia, gzip-compacta o [`$destino`](#) arquivo se ele'é um arquivo de texto e adiciona ".gz" extensão do nome.
+Cópias [`$src`](#) para [`$destino`](#) se o timestamp de modificação do primeiro for mais recente que o do último. Na cópia, gzip-compacta o [`$destino`](#) se for um arquivo de texto e adiciona ".gz" extensão do nome.
 
-#### get_lock($lockfile).
+#### get_lock($lockfile)
 
 Usa um (f)bloqueio exclusivo (para o processo UNIX atual) em [`$lockfile`](#).
 
-#### embaralhamento(\\@deck).
+#### embaralhamento(\\@deck)
 
 No local aleatório (Fisher-Yates) embaralhamento de [`@deck`](#).
 
-#### sort_tables($content).
+#### sort_tables($content)
 
-Classifica Tabelas de Markdown em $content de acordo com cada tabela's  especificação da coluna.  Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente [`n`](#), em qualquer ordem decrescente [`v`](#) ou crescente [`^`](#) pedido.
+Classifica Tabelas de Markdown em $content de acordo com a especificação da coluna de cada tabela.  Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente [`n`](#), em qualquer ordem decrescente [`v`](#) ou crescente [`^`](#) pedido.
 
-#### fixup_code($prefix, $type, @\_).
+#### fixup_code($prefix, $type, @\_)
 
 Remove $prefix de cada argumento em @\_. A função do argumento $type é específica de implementação, mas é usada principalmente para pré-implantação do editor.md "modo" para processar este conteúdo em @\_.
 
-#### unload_package($pkg).
+#### unload_package($pkg)
 
-Descarrega agressivamente o pacote Perl [`$pkg`](#) da Tabela de Símbolos (STASH).
+Descarrega agressivamente o pacote Perl (folha) [`$pkg`](#) da Tabela de Símbolos (STASH).
 
-#### purge_from_inc(@paths).
+#### purge_from_inc(@paths)
 
 Remoções [`@paths`](#) de [`@INC`](#).
 
-#### touch(@\_).
+#### touch(@\_)
 
 Toca todos os arquivos em [`@_`](#). Se nenhum argumento for passado, usa [`$_`](#).
 
-#### normalize_svn_path(@\_).
+#### normalize_svn_path(@\_)
 
 Normaliza todos os caminhos em [`@_`](#) para uso seguro como argumentos brutos para [`SVN::Cliente`](#) comandos.
 
-#### sanitize_relative_path(@\_).
+#### sanitize_relative_path(@\_)
 
 Protege os caminhos em [`@_`](#) para uso como caminhos relativos puros em [`Dotiac::DTL`](#) Comandos específicos de caminho (Django Template).
 
-#### parse_filename($path).
+#### parse_filename($path)
 
 Encapsulador ao redor [`Arquivo::Basename::fileparse`](#). Sem argumentos, usa [`$_`](#) como o nome do arquivo a ser analisado.
 
-#### walk_content_tree($code).
+#### walk_content_tree($code)
 
 Condicionalmente anda o [`./conteúdo`](#) árvore do check-out do sistema de compilação, primeiro normalizando [`$_`](#) como subcaminho formal e, em seguida, invocando [`Código $`](#), em cada item na caminhada.
 
-##### arquivado($path).
+##### arquivado($path)
 
 Sinaliza cada [`Status: arquivar`](#) [`$path`](#). Usos [`$_`](#) se nenhum argumento for passado.
 
-##### seed_file_deps($path).
+##### seed_file_deps($path)
 
-Atualizações [`%path::dependências`](#) para isso [`$path`](#)Com base em sua [`Dependências`](#) glob(s) de cabeçalho Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
+Atualizações seguras [`%path::dependências`](#) para isso [`$path`](#)Com base em sua [`Dependências`](#) glob(s) de cabeçalho Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
 
-##### seed_file_acl($path).
+##### seed_file_acl($path)
 
-Atualizações [`@path::acl`](#) para isso [`$path`](#)Com base em sua [`ACL`](#) especificação do cabeçalho. Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
+Atualizações seguras [`@path::acl`](#) para isso [`$path`](#)Com base em sua [`ACL`](#) especificação do cabeçalho. Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
 
 #### Carregar
 

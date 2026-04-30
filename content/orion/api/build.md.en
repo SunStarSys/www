@@ -59,12 +59,12 @@ Optional Argmuents:
 - [`deps`](#)
 - [`quick_deps`](#)
 - [`preprocess`](#)
-- [`archive_root`](#)
-- [`category_root`](#)
+- [`archive_root`](#) &mdash; files in "archived" status are "copied" and tracked by year/month subfolders to this content-rooted location via `ssi`
+- [`category_root`](#) &mdash; items in the "categories" header are "copied" over into appropriately named categories folders in this content-rooted location via `ssi`
 
-#### news_page(%args)
+#### news_page(%args) &mdash; for multi-narrative aggregation pages
 
-#### sitemap(%args)
+#### sitemap(%args) &mdash; for building index.html and sitemap.html pages
 
 Locale-specific, sorted index of dependencies.
 
@@ -95,7 +95,7 @@ Don't build these at all.  Instead, build the associated generated source files 
 
 #### yml2ext(%args)
 
-Convert YAML files.
+Convert YAML files, typically into JSON.
 
 Optional Arguments:
 
@@ -155,7 +155,7 @@ Normalizes local links (./ and ../).
 
 ### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; utility library for [`lib/path.pm`](#) and [`lib/view.pm`](#)
 
-#### read_text_file($file, $out, $content_lines)
+#### read_text_file($file, $out, $content_lines) &mdash; Orion's universal text file processor
 
 Parses headers+content of UTF-8 encoded file [`$file`](#) and stores results in [`$out`](#). [`$content_lines`](#) is the (optional) maximum number of content lines to read.
 Returns actual number of lines read (including headers).

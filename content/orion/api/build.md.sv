@@ -1,14 +1,44 @@
 ---
-archived: ~
 categories: ~
-dependencies: '*.md.sv '
-keywords: REST, API
-published: ~
+dependencies: '*.md.sv'
+keywords: VILA, API
 status: skiss
 title: Orion API - bygge
 ---
 
-{# lede #}Det här dokumentet beskriver API:erna för **Bygg system**{# lede #}
+{# lede #}Det här dokumentet täcker API:erna **Bygg system**{# lede #}.
+
+I grund och botten styrs byggsystemet av två Perl-moduler som tillhandahålls av användaren: [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) och [`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+
+Det första är att göra tre saker:
+
+0. ladda [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) och [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
+1. konstruera [`@path::mönster`](#)och
+2. opportunistiskt gå den [`innehåll/`](#) träd att fördefiniera [`%path::beroenden`](#) och [`@path::acls`](#).
+
+Den senares jobb är att tillhandahålla bokningsbara [`visa`](#)-baserad [`$metod`](#)s för matchande poster i [`@path::mönster`](#) (som ett strängat metodnamn i den andra rutan för varje matrispost), anropat som så...
+
+```perl
+#api
+  ...
+
+my $path = "/content-rooted/path/to/source/file";
+
+for my $p (@path::patterns) {
+    my ($re, $method, $args) = @$p;
+    next unless $path =~ $re;
+    ++$matched;
+
+my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
+
+... write UTF $content to target file with associated $mime_extension file-type
+  }
+
+copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+
+...
+#api
+```
 
 [TOC]
 
@@ -16,187 +46,187 @@ title: Orion API - bygge
 
 ## Byggsystem
 
-### [SunStarSys::Visa](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm).
+### [SunStarSys::Visa](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; basklass för [`lib/view.pm`](#)
 
-#### single_narrative(%args).
+#### single_narrative(%args) &mdash; den mest populära (och sofistikerade) vyn
 
 Obligatoriska argument:
 
 - [`mall`](#)
 - [`sökväg`](#)
-- [`språk`](#).
+- [`språk`](#)
 
 Valfria argument:
 
-- [`håna`](#)
+- [`dl`](#)
 - [`quick_deps`](#)
 - [`förbearbetning`](#)
-- [`archive_root`](#)
-- [`category_root`](#).
+- [`archive_root`](#) &mdash; filer i "arkiverad" status är "kopierad" och spåras per år/månad undermappar till denna innehållsrotade plats via `ssi`
+- [`category_root`](#) &mdash; artiklar i "kategorier" Huvudet är "kopierad" över till lämpligt namngivna kategorimappar på den här innehållsbaserade platsen via `ssi`
 
-#### news_page(%args).
+#### news_page(%args) &mdash; för aggregeringssidor med flera artiklar
 
-#### sitemap(%args).
+#### webbplatskarta (%args) &mdash; för att skapa sidor för index.html och sitemap.html
 
-Språkspecifikt, sorterat index över beroenden.
+Språkspecifikt, sorterat index för beroenden.
 
 Obligatoriska argument:
 
 - [`sökväg`](#)
-- [`språk`](#).
+- [`språk`](#)
 
 Valfria argument:
 
 - [`quick_deps`](#)
 - [`kapslad`](#)
-- [`förbearbetning`](#).
+- [`förbearbetning`](#)
 
-#### asymptote(%args).
+#### asymptot(%args)
 
-Byggnader och cacheminnen [`asymptot`](#).
+Byggnader och cacheminnen [`asymptot`](#) trippelciterade-kodblock.
 
 Obligatoriska argument:
 
 - [`visa`](#)
 - [`språk`](#)
-- [`sökväg`](#).
+- [`sökväg`](#)
 
-#### hoppa över(%args).
+#### hoppa över(%args)
 
-Bygg inte dessa alls.  Skapa i stället de associerade genererade källfilerna (t.ex. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`
+Bygg inte dessa alls.  Bygg i stället de associerade genererade källfilerna (t.ex. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) som ska byggas på en sekundär byggsystemkörning.
 
-#### yml2ext(%args).
+#### yml2ext(%args)
 
-Konvertera YAML-filer.
+Konvertera YAML-filer, vanligtvis till JSON.
 
 Valfria argument:
 
-- [`utrota`](#) standardinställs på `json`
-- [`filtrera`](#) standardinställs på `json_raw`
--[`mall`](#) åsidosätta `filtrera`
+- [`ext.`](#) standardvärdet är `json`
+- [`filtrera`](#) standardvärdet är `json_raw`
+-[`mall`](#) åsidosättningar `filtrera` standarduttryck
 
-#### fetch_deps($path, $data, $quick).
+#### fetch_deps($path, $data, $quick)
 
 Obligatoriska argument:
 
 - [`sökväg`](#)
 - [`data`](#) - butiker som resulterar anon-array av deps
-- [`snabb`](#).
+- [`snabb`](#) - standardvärdet är 2
 
-#### breadcrumbs($path).
+#### navigeringsspår($path)
 
 Returnerar HTML-spårlista för [$sökväg](#).
 
-#### memoize(%args).
+#### memoize(%args)
 
-Cachelagrar bygget. Används huvudsakligen med fetch_deps och quick_deps > 2.
+Cachelagrar bygget. Används främst med fetch_deps och quick_deps > 2.
 
-#### compress(%args).
+#### kommentar(%args)
 
-Inaktuell.
+Genererar SSI-inkluderingsbart HTML-fragment för en sidkommentar.
 
-#### next_view(%args).
+#### next_view(%args)
 
-Verktyg för bearbetning av $args{view}.
+Verktyg för bearbetning av $args{visa}.
 
-#### ssi(%args).
+#### ssi(%args)
 
-Utvärderar rekursivt [ssi](#).
+Utvärderar rekursivt [ssi](#) taggar.
 
-#### offline(%args).
+#### offline(%args)
 
 Kör next_view i offlineläge.
 
-#### snippet(%args).
+#### utdrag(%args)
 
-Bearbetar kodfragmentrader.
+Bearbetar fragmentrader.
 
-#### reconstruct(%args).
+#### rekonstruera (%args)
 
 Ombearbetar malldirektiv i inbyggt innehåll från next_view.
 
-#### trim_local_links(%args).
+#### trim_local_links(%args)
 
-Trimmar filändelser från lokala länkar.
+Trims filändelser från lokala länkar.
 
-#### normalize_links(%args).
+#### normalize_links(%args)
 
 Normaliserar lokala länkar (./ och ../).
 
 ----
 
-### [SunStarSys::Till](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm).
+### [SunStarSys::Tillfälle](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; verktygsbibliotek för [`lib/path.pm`](#) och [`lib/view.pm`](#)
 
-#### read_text_file($file, $out, $content_lines).
+#### read_text_file($file, $out, $content_lines) &mdash; Orions universella textfilprocessor
 
-Tolkar rubriker + innehåll i UTF-8-kodad fil [`$fil`](#) och lagrar resultat i [`$ut`](#). [`$content_lines`](#) är det (valfria) högsta antalet innehållsrader att läsa.
+Parsar rubriker+innehåll i den UTF-8-kodade filen [`$fil`](#) och lagrar resultat i [`$out`](#). [`$content_lines`](#) är det (valfritt) högsta antalet innehållsrader att läsa.
+Returnerar faktiskt antal lästa rader (inklusive huvuden).
 
+[`$fil`](#) kan vara en referens till en rå sträng som representerar hela innehållet i en fil.  Resultaten i [`$out`](#) Kommer fortfarande att vara UTF-8 kodad.
 
-[`$fil`](#) kan vara en referens till en rå sträng som representerar hela innehållet i en fil.  Resultaten i [`$ut`](#).
+#### copy_if_newer($src, $dest)
 
-#### copy_if_newer($src, $dest).
+Kopior [`$src`](#) till [`öre`](#) om den tidigare ändringens tidsstämpel är nyare än den senare. På kopia, dessutom gzip-komprimerar [`öre`](#) fil om det är en textfil och lägger till ".gz" Tillägg till namnet.
 
-Kopior [`$prognos`](#) till [`$dest`](#) om den förstnämnda ändringens tidsstämpel är nyare än den senare. På kopia, dessutom gzip-komprimerar [`$dest`](#).
+#### get_lock($lockfile)
 
-#### get_lock($lockfile).
+Tar ett exklusivt (f)lås (för aktuell UNIX-process) på [`$lockfil`](#).
 
-Tar ett exklusivt (f)lås (för den aktuella UNIX-processen) på [`$lockfile`](#).
+#### blanda(\\@deck)
 
-#### blandning(\\@deck).
+Slumpmässig blandning på plats (Fisher-Yates) av [`@deck`](#).
 
-På plats slumpmässig (Fisher-Yates) blandning av [`@deck`](#).
+#### sort_tables($content)
 
-#### sort_tables($content).
+Sorterar nedsättningstabeller i $content enligt varje tabells kolumnspecifikation.  Exakt en kolumn kan sorteras per tabell, alternativt numeriskt [`n`](#)i antingen fallande [`v`](#) eller stigande [`^`](#) beställning.
 
-Sorterar nedsättningstabeller i $content enligt varje tabells kolumnspecifikation.  Exakt en kolumn kan sorteras per tabell, valfritt numeriskt [`n`](#)i antingen fallande [`v`](#) eller stigande [`^`](#).
+#### fixup_code($prefix, $type, @\_)
 
-#### fixup_code($prefix, $type, @\_).
+Tar bort $prefix från varje argument i @\_. Funktionen för argumentet $type är implementeringsspecifik, men används huvudsakligen för att fördefiniera editor.md "läge" för att bearbeta detta innehåll i @\_.
 
-Tar bort $prefix från varje argument i @\_. Funktionen för argumentet $type är implementeringsspecifik, men används huvudsakligen för att fördefiniera "läget" för editor.md för bearbetning av innehållet i @\_.
+#### unload_package($pkg)
 
-#### unload_package($pkg).
+Aggressivt lossar Perl-paket (blad) [`kg`](#) från symboltabellen (STASH).
 
-Aggressivt lossar Perl-paketet [`$paket`](#).
-
-#### purge_from_inc(@paths).
+#### purge_from_inc(@paths)
 
 Tar bort [`@paths`](#) från [`@INC`](#).
 
-#### touch(@\_).
+#### tryck(@\_)
 
-Tar med alla filer i [`@_`](#). Om inga argument överförs används [`$_`](#).
+Berör alla filer i [`@_`](#). Om inga argument överförs används [`$_`](#).
 
-#### normalize_svn_path(@\_).
+#### normalize_svn_path(@\_)
 
-Normaliserar alla sökvägar i [`@_`](#) för säker användning som råa argument till [`SVN::Klient`](#).
+Normaliserar alla sökvägar i [`@_`](#) för säker användning som råa argument till [`SVN::Klient`](#) kommandon.
 
-#### sanitize_relative_path(@\_).
+#### sanitize_relative_path(@\_)
 
-Säkrar sökvägar i [`@_`](#) för användning som rena relativa vägar i [`Dotiac::DTL`](#).
+Säkrar sökvägar i [`@_`](#) för användning som rena relativa sökvägar i [`Dotiac::DTL`](#) (Django Template) sökvägsspecifika kommandon.
 
-#### parse_filename($path).
+#### parse_filename($path)
 
-Wrapper runt [`Fil::Basename::fileparse`](#). Utan argument, använder [`$_`](#).
+Wrapper runt [`Filparse::Basename::fileparse`](#). Utan argument används [`$_`](#) som filnamnet som ska tolkas.
 
-#### walk_content_tree($code).
+#### walk_content_tree($code)
 
-Villkorligt vandrar [`./innehåll`](#) trädet i utcheckningen av konfigurationssystemet, normaliserar först [`$_`](#) som den formella undervägen och sedan åberopa [`$kod`](#).
+Villkorligt vandrar [`./innehåll`](#) trädet i byggsystemet (kassa), först normalisering [`$_`](#) som den formella undersökvägen och sedan anropa [`$kod`](#), på varje objekt i treewalk.
 
-##### archived($path).
+##### arkiverad($path)
 
-Flaggor varje [`Status: arkiv`](#) [`$sökväg`](#). Användningar [`$_`](#).
+Flaggor varje [`Status: arkiv`](#) [`$sökväg`](#). Användningar [`$_`](#) om inga argument överförs.
 
-##### seed_file_deps($path).
+##### seed_file_deps($path)
 
-Uppdateringar [`%path::beroenden`](#) för detta [`$sökväg`](#), baserat på dess [`Beroenden`](#) global teckenbredd. Standardinställningen är att använda [`$_`](#).
+Säker uppdatering [`%path::beroenden`](#) för detta [`$sökväg`](#)baserat på dess [`Beroenden`](#) globala sidhuvuden. Används som standard [`$_`](#) som sökvägen om inga argument överförs.
 
-##### seed_file_acl($path).
+##### seed_file_acl($path)
 
-Uppdateringar [`@path::acl`](#) för detta [`$sökväg`](#), baserat på dess [`Åtkomstlista`](#) huvudspecifikation Standardinställningen är att använda [`$_`](#).
+Säkra uppdateringar [`@path::acl`](#) för detta [`$sökväg`](#)baserat på dess [`Åtkomstkontrollista`](#) huvudspec. Används som standard [`$_`](#) som sökvägen om inga argument överförs.
 
-#### Laddning
+#### Ladda
 
-Samma som [`YAML::XS::Ladda`](#).
+Samma som [`YAML::XS::Load`](#).
 
 #### Dumpa
 
