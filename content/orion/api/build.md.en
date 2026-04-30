@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=34627
+status: draft
 Dependencies: *.md.en
 
 {# lede #}This document covers the **Build System** APIs{# lede #}.
@@ -47,7 +47,21 @@ Many views are meant to be stacked as "filters" to preprocess aspects of the fil
 
 ### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for `lib/view.pm`
 
-#### single_narrative(%args) &mdash; the most popular (and sophisticated) view
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### single_narrative(%args)
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+The most popular (and sophisticated) view
+
+</div>
+
+<p class="card-text">
 
 This view incorporates automated processing of files located within the `$path`'s attachment directory. In other words, if `$path = "/foo.md.en"`, then the files stored within the  `/foo.page/` directory associated with the ".en" language extension will be incorporated into the template addressable arguments for that `$path` regardless of the `preprocess` argument's setting &mdash; which if true, would also make that material accessible by the **page's content itself**.
 
@@ -69,9 +83,44 @@ Optional Argmuents:
 
 - `category_root` &mdash; items in the "categories" header are "copied" over into appropriately named categories folders in this content-rooted location via `ssi`.
 
-#### news_page(%args) &mdash; for multi-narrative aggregation pages
+</p>
+  </div>
+</div>
 
-#### sitemap(%args) &mdash; for building index.html and sitemap.html pages
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### news_page(%args)
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+For (multi-narrative) aggregate pages
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### sitemap(%args)
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+For building index.html and sitemap.html pages
+
+</div>
+
+<p class="card-text">
 
 Locale-specific, sorted index of dependencies.
 
@@ -86,9 +135,24 @@ Optional Arguments:
 - `nested`
 - `preprocess`
 
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 #### asymptote(%args)
 
-Builds and Caches [`Asymptote`](https://asymptote.sourceforge.io/) triple-backquoted-code blocks for HTML5-WebGL-canvas-enabled vector graphics.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Builds and caches [`Asymptote`](https://asymptote.sourceforge.io/) triple-backquoted-code blocks for HTML5-WebGL-canvas-enabled vector graphics
+
+</div>
+<p class="card-text">
 
 Mandatory Arguments:
 
@@ -96,13 +160,43 @@ Mandatory Arguments:
 - `lang`
 - `path`
 
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 #### skip(%args)
 
-Don't build these at all.  Instead, build the associated generated source files (e.g. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) to be built on a secondary build system run.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Don't build these at all.
+
+</div>
+<p class="card-text">
+
+Instead, build the associated generated source files (e.g. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) to be built on a secondary build system run.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 #### yml2ext(%args)
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Convert YAML files, typically into JSON.
+
+</div>
+<p class="card-text">
 
 Optional Arguments:
 
@@ -110,9 +204,26 @@ Optional Arguments:
 - `filter` defaults to `json_raw`
 - `template` overrides `filter` default expression
 
+</p>
+</div>
+</div>
+
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 #### fetch_deps($path, $data, $quick)
 
-Refactors $data argument hashref as a timestamp ordered arrayref of 2-element arrayrefs. The first entry in each 2-element arrayref is the file path-name, second element is the resultant [`read_text_file`](#) hashref for that path-name.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Refactors $data argument hashref as a timestamp ordered arrayref of 2-element arrayrefs.
+
+</div>
+<p class="card-text">
+
+The first entry in each 2-element arrayref is the file path-name, second element is the resultant [`read_text_file`](#) hashref for that path-name.
 
 Returns a list of resulting new source files if [`$quick > 2`](#).
 
@@ -122,47 +233,199 @@ Mandatory Arguments:
 - `data` - input as hashref; stores resulting anon-array of deps upon return
 - `quick` - defaults to 2
 
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 #### breadcrumbs($path)
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Returns HTML breadcrumbs list for `$path`.
 
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 #### memoize(%args)
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Caches the build; mainly used with fetch_deps and quick_deps > 2.
 
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 #### comment(%args)
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Generates SSI-includable HTML fragment for a page comment.
 
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 #### next_view(%args)
 
-Utility for processing $args{view}.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Utility for sequentially processing `$args{view}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 #### ssi(%args)
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Recursively evaluates `ssi` tags.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 #### offline(%args)
 
-Runs the next_view in offline mode.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Runs the `next_view` in offline mode.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 #### snippet(%args)
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 [Processes external code](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [snippet lines](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), normally importing their source locations on GitHub into programming-language-specific fenced markdown blocks. [Example here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 #### reconstruct(%args)
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Reprocesses Template directives in built content from next_view.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 #### trim_local_links(%args)
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Trims file extensions from local links.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 #### normalize_links(%args)
 
-Normalizes local links (./ and ../).
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Normalizes local links (`./` and `../`).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### langify_template(%args)
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Appends `$args{lang}` to `$args{template}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 ----
+
 
 ### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; utility library for `lib/path.pm` and `lib/view.pm`
 
