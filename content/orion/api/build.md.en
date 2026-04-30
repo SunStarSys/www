@@ -208,7 +208,9 @@ Wrapper around [`File::Basename::fileparse`](#). Without arguments, uses [`$_`](
 
 #### walk_content_tree($code)
 
-Conditionally walks the [`./content`](#) tree of the build system checkout, first normalizing [`$_`](#) as the formal content-rooted subpath and then invoking [`$code`](#), on each item in the  the treewalk. For most builds, the walk never happens &mdash; instead the build relies on the cached data from prior builds.  The only way to force a walk is by setting [`$path::use_cache`](#) to a false value in your user-supplied modules. Otherwise this behavior is expertly-managed by the [incremental build technology](https://iconoclasts.blog/joe/dependencies).
+Conditionally walks the [`./content`](#) tree of the build system checkout, first normalizing [`$_`](#) as the formal content-rooted subpath, and then invoking [`$code->()`](#) on each item in the tree-walk. For most builds, the walk never happens &mdash; instead the build relies on the cached data from prior builds.
+
+The only way to force a walk is by setting [`$path::use_cache`](#) to a false value in your user-supplied modules. Otherwise this behavior is expertly-managed by the [incremental build technology](https://iconoclasts.blog/joe/dependencies).
 
 Returns 1 if the walk actually proceeded, instead of relying on cached data. Otherwise returns a false value.
 
