@@ -19,7 +19,7 @@ The latter's job is to provide invokable [`view`](#)-based methods for the match
 #api
   ...
 
-  my $path = "/path/to/source/file";
+  my $path = "/content-rooted/path/to/source/file";
 
   for my $p (@path::patterns) {
     my ($re, $method, $args) = @$p;
