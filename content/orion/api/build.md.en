@@ -86,9 +86,9 @@ Returns HTML breadcrumbs list for [$path](#).
 
 Caches the build; mainly used with fetch_deps and quick_deps > 2.
 
-#### compress(%args)
+#### comment(%args)
 
-Deprecated.
+Generates SSI-includable HTML fragment for a page comment.
 
 #### next_view(%args)
 
@@ -184,11 +184,11 @@ Flags each [`Status: archive`](#) [`$path`](#). Uses [`$_`](#) if no args are pa
 
 ##### seed_file_deps($path)
 
-Updates [`%path::dependencies`](#) for this [`$path`](#), based on its [`Dependencies`](#) header glob(s). Defaults to using [`$_`](#) as the path if no args are passed.
+Securely updates [`%path::dependencies`](#) for this [`$path`](#), based on its [`Dependencies`](#) header glob(s). Defaults to using [`$_`](#) as the path if no args are passed.
 
 ##### seed_file_acl($path)
 
-Updates [`@path::acl`](#) for this [`$path`](#), based on its [`ACL`](#) header spec. Defaults to using [`$_`](#) as the path if no args are passed.
+Safely updates [`@path::acl`](#) for this [`$path`](#), based on its [`ACL`](#) header spec. Defaults to using [`$_`](#) as the path if no args are passed.
 
 #### Load
 
