@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: טיוטה
+status: אומתה=34581
 title: API של אוריון - בנייה
 ---
 
@@ -14,9 +14,9 @@ title: API של אוריון - בנייה
 
 0. טעינה [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) וגם [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. בנייה [`@path::תבניות`](#), וגם
-2. הליכה אופורטוניסטית [`תוכן/`](#) עץ לזרע [`%path::תלות`](#) וגם [`@path::acls`](#).
+2. הליכה אופורטוניסטית [`תוכן/`](#) עץ לזרע [`%path::תלות`](#) וגם [`@path::acls`](#) מטאדטה של כותרת קובץ markdown/yaml.
 
-תפקידו של השני הוא לספק בלתי אפשרי. [`תצוגה`](#)מבוסס [`שיטה $`](#)'s לרשומות המתאימות ב- [`@path::תבניות`](#) (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל כך...
+תפקידו של השני הוא לספק בלתי אפשרי. [`תצוגה`](#)מבוסס [`שיטה $`](#)'s לרשומות המתאימות ב- [`@path::תבניות`](#) (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) כמו למטה ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- [`$path`](#) זה רומן, כמו קוד חיצוני. [`גזירים`](#) או [`אסימפטוטה`](#)גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; התצוגה הפופולרית ביותר (והמתוחכמת)
 
+תצוגה זו כוללת עיבוד אוטומטי של קבצים הנמצאים בתוך [`$path`]'s ספריית מסמכים מצורפים'. במילים אחרות, אם [`$path = "איפוס סיסמה"`], לאחר מכן הקבצים המאוחסנים בתוך  [`/foo.page/`] הספרייה המקושרת עם "איפוס סיסמה" הרחבת השפה תשולב בארגומנטים המכתבים של התבנית עבור [`$path`], ללא קשר [`קדם-תהליך`] הגדרת ארגומנט, שאם פצע אמיתי הופך את החומר לנגיש באמצעות התוכן של הדף עצמו**.
+
 ארגומנטי חובה:
 
 - [`תבנית`](#)
@@ -58,11 +62,15 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ארגומנטים אופציונליים:
 
-- [`דל`](#)
-- [`quick_deps`](#)
-- [`קדם-תהליך`](#)
-- [`archive_root`](#) &mdash; קבצים ב- "הועבר לארכיב" הסטטוס הוא "הועתק" ומעקב לפי תיקיות משנה של שנה/חודש למיקום מבוסס תוכן זה באמצעות `si`
-- [`category_root`](#) &mdash; פריטים ב- "קטגוריות" הכותרת היא "הועתק" מעבר לתיקיות קטגוריות בעלות שם מתאים במיקום מבוסס תוכן זה, דרך `si`
+- [`דל`](#) &mdash; דריסה רגילה [`fetch_deps`]() עיבוד
+
+- [`quick_deps`](#) &mdash; הגדרת אופטימיזציה של תהליך deps פנימי; שמאל מיטבי unset
+
+- [`קדם-תהליך`](#) &mdash; מאפשר עיבוד תבנית בתוך [`$path`](#) התוכן עצמו,
+
+- [`archive_root`](#) &mdash; קבצים ב- "הועבר לארכיב" הסטטוס הוא "הועתק" ומעקב לפי תיקיות משנה של שנה/חודש למיקום מבוסס תוכן זה באמצעות `si`,
+
+- [`category_root`](#) &mdash; פריטים ב- "קטגוריות" הכותרת היא "הועתק" מעבר לתיקיות קטגוריות בעלות שם מתאים במיקום מבוסס תוכן זה, דרך `si`.
 
 #### news_page(%args) &mdash; לדפי סכימה רב-שלבי
 
@@ -83,7 +91,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### אסימפטוטה(%args)
 
-בניות ומטמונים [`אסימפטוטה`](#) גושי קוד משולשים
+בניות ומטמונים [`אסימפטוטה`](https://asymptote.sourceforge.io/) בלוקים עם שלושה קודים במרכאות אחוריות עבור גרפיקה וקטורית התומכת ביריעה HTML5-WebGL.
 
 ארגומנטי חובה:
 
@@ -107,10 +115,14 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### fetch_deps($path, $data, $quick)
 
+מבצע refactors ל-hashref של ארגומנט נתונים $data כ-rayref מסודר בחותמת זמן של arrayrefs עם 2 רכיבים. הרשומה הראשונה בכל arrayref של 2 רכיבים היא שם הנתיב של הקובץ, האלמנט השני הוא התוצאה. [`read_text_file`](#) Hashref לשם נתיב זה.
+
+מחזיר רשימה של קובצי מקור חדשים שנוצרו אם [`$מהיר > 2`](#).
+
 ארגומנטי חובה:
 
 - [`נתיב`](#)
-- [`נתונים`](#) - חנויות וכתוצאה מכך anon-מערך של deps
+- [`נתונים`](#) - קלט כ-hashref; מאחסן anon-מערך וכתוצאה מכך של deps עם החזרה
 - [`מהיר`](#) - ברירת המחדל היא 2
 
 #### נתיב לחם
@@ -139,7 +151,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### גזיר(%args)
 
-מעבד שורות גזירים.
+[תהליכים](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [שורות גזיר](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### בנייה מחדש(%args)
 

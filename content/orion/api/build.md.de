@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: Entwurf
+status: überprüft=34581
 title: Orion API - Erstellen
 ---
 
@@ -14,9 +14,9 @@ Die erste Aufgabe besteht darin, drei Dinge zu tun:
 
 0. laden [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) und [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. erstellen [`@path::Muster`](#)und
-2. opportunistisch gehen [`Inhalt/`](#) Baum für Seed [`%path::Abhängigkeiten`](#) und [`@path::acls`](#).
+2. opportunistisch gehen [`Inhalt/`](#) Baum für Seed [`%path::Abhängigkeiten`](#) und [`@path::acls`](#) aus Headermetadaten der Markup-/YAML-Datei.
 
-Letzterer hat die Aufgabe, unlösbar zu sein. [`Ansicht`](#)-basiert [`$Methode`](#)'s für die übereinstimmenden Einträge in [`@path::Muster`](#) (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), so aufgerufen...
+Letzterer hat die Aufgabe, unlösbar zu sein. [`Ansicht`](#)-basiert [`$Methode`](#)'s für die übereinstimmenden Einträge in [`@path::Muster`](#) (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), der vom [Skripting erstellen](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) wie unten ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in [`$Pfad`](#) Das ist neu, wie externer Code [`Snippets`](#) oder [`Asymptote`](#)-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; die beliebteste (und anspruchsvollste) Ansicht
 
+Diese Ansicht beinhaltet die automatisierte Verarbeitung von Dateien, die sich innerhalb der [`$Pfad`]'s Anhangsverzeichnis. Mit anderen Worten, wenn [`$Pfad = "/foo.md.en"`], dann die Dateien, die in der  [`/foo.page/`] Verzeichnis, das mit dem ".de" Die Spracherweiterung wird in die adressierbaren Argumente für die Vorlage integriert. [`$Pfad`]unabhängig von der [`Vorverarbeitung`] Argumenteinstellung, die, falls wahr, das Material durch den **Seiteninhalt selbst** zugänglich macht.
+
 Erforderliche Argumente:
 
 - [`Vorlage`](#)
@@ -58,11 +62,15 @@ Erforderliche Argumente:
 
 Optionale Argumente:
 
-- [`deps`](#)
-- [`quick_deps`](#)
-- [`Vorverarbeitung`](#)
-- [`archive_root`](#) &mdash; Dateien in "archiviert" Status sind "kopiert" und nach Jahr/Monat-Unterordnern zu diesem inhaltlich verwalteten Standort über `Ssi`
-- [`category_root`](#) &mdash; Elemente in der "Kategorien" Header sind "kopiert" in entsprechend benannte Kategorienordner an dieser inhaltsverwalteten Stelle über `Ssi`
+- [`deps`](#) &mdash; überschreibt normal [`fetch_deps`]() Verarbeitung
+
+- [`quick_deps`](#) &mdash; Einstellung zur Optimierung der internen deps-Verarbeitung; am besten links nicht gesetzt
+
+- [`Vorverarbeitung`](#) &mdash; ermöglicht die Vorlagenverarbeitung innerhalb der [`$Pfad`](#) Inhalt selbst,
+
+- [`archive_root`](#) &mdash; Dateien in "archiviert" Status sind "kopiert" und nach Jahr/Monat-Unterordnern zu diesem inhaltlich verwalteten Standort über `Ssi`,
+
+- [`category_root`](#) &mdash; Elemente in der "Kategorien" Header sind "kopiert" in entsprechend benannte Kategorienordner an dieser inhaltsverwalteten Stelle über `Ssi`.
 
 #### news_page(%args) &mdash; für Aggregationsseiten mit mehreren Beschreibungen
 
@@ -83,7 +91,7 @@ Optionale Argumente:
 
 #### asymptote(%args)
 
-Builds und Caches [`Asymptote`](#) dreifach mit Anführungszeichen versehene Codeblöcke.
+Builds und Caches [`Asymptote`](https://asymptote.sourceforge.io/) dreifach mit Anführungszeichen versehene Codeblöcke für Vektorgrafiken mit HTML5-WebGL-Leinwand.
 
 Erforderliche Argumente:
 
@@ -107,10 +115,14 @@ Optionale Argumente:
 
 #### fetch_deps($path, $data, $quick)
 
+Refactors $data Argument hashref als zeitstempel geordneter arrayref von 2-element arrayrefs. Der erste Eintrag in jedem 2-Element-Arrayref ist der Dateipfadname, das zweite Element ist das Ergebnis. [`read_text_file`](#) hashref für diesen Pfadnamen.
+
+Gibt eine Liste der resultierenden neuen Quelldateien zurück, wenn [`$quick > 2`](#).
+
 Erforderliche Argumente:
 
 - [`Pfad`](#)
-- [`Daten`](#) - Geschäfte, die zu einem Anon-Array von Deps führen
+- [`Daten`](#) - Eingabe als Hashref; Läden, die bei Rückgabe zu einem Anon-Array von Deps führen
 - [`schnell`](#) - Standard ist 2
 
 #### Navigationspfade($path)
@@ -139,7 +151,7 @@ Führt next_view im Offlinemodus aus.
 
 #### Snippet (%args)
 
-Verarbeitet Snippet-Positionen.
+[Prozesse](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [Snippet-Zeilen](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### rekonstruieren(%args)
 

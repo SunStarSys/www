@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 下書き
+status: 確認済み=34581
 title: Orion API - ビルド
 ---
 
@@ -14,9 +14,9 @@ title: Orion API - ビルド
 
 0. ロード[`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) および[`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. 構成[`@path:: パターン`](#)および
-2. 便宜的に歩く[`コンテンツ/`](#) シードするツリー[`%path:: 依存関係`](#) および[`@path::acls`](#).
+2. 便宜的に歩く[`コンテンツ/`](#) シードするツリー[`%path:: 依存関係`](#) および[`@path::acls`](#) Markdown/yamlファイル・ヘッダー・メタデータ。
 
-後者の仕事は、invokableを提供することです。[`ビュー`](#)- ベース[`$メソッド`](#)で一致するエントリの's [`@path:: パターン`](#) (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として)そのように呼び出されます。...
+後者の仕事は、invokableを提供することです。[`ビュー`](#)- ベース[`$メソッド`](#)で一致するエントリの's [`@path:: パターン`](#) (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 以下 ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには[`パス`](#) 外部コードのように新しい[`スニペット`](#) または[`漸近線`](#)- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; 最も人気のある(そして洗練された)ビュー
 
+このビューには、内部にあるファイルの自動処理が組み込まれています。[`パス`]の添付ディレクトリ。言い換えれば、[`$path = "/foo.md.en"`]に保存されたファイル[`/foo.page/`] 関連するディレクトリ".en" 言語拡張は、そのテンプレートのアドレス可能な引数に組み込まれます[`パス`]関係なく[`前処理`] 引数設定。真傷の場合、**ページのコンテンツ自体**によってそのマテリアルにアクセスできるようになります。
+
 必須引数:
 
 - [`型板`](#)
@@ -58,11 +62,15 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 オプションの引数:
 
-- [`deps`](#)
-- [`quick_deps`](#)
-- [`前処理`](#)
-- [`archive_root`](#) &mdash; ファイル"アーカイブ済" ステータス"コピーしました" そして、このコンテンツルートの場所への年/月のサブフォルダによって追跡`ssi`
-- [`category_root`](#) &mdash; の項目"カテゴリ" ヘッダー"コピーしました" このコンテンツ・ルート・ロケーション内の適切な名前付きカテゴリ・フォルダに`ssi`
+- [`deps`](#) &mdash; 通常のオーバーライド[`fetch_deps`]()処理
+
+- [`quick_deps`](#) &mdash; 内部deps-processing最適化設定; 最もよく残された未設定
+
+- [`前処理`](#) &mdash; テンプレート処理を有効にします。[`パス`](#) 内容自体、
+
+- [`archive_root`](#) &mdash; ファイル"アーカイブ済" ステータス"コピーしました" そして、このコンテンツルートの場所への年/月のサブフォルダによって追跡`ssi`,
+
+- [`category_root`](#) &mdash; の項目"カテゴリ" ヘッダー"コピーしました" このコンテンツ・ルート・ロケーション内の適切な名前付きカテゴリ・フォルダに`ssi`.
 
 #### news_page(%args) &mdash; 複数ナラティブ集計ページ用
 
@@ -83,7 +91,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### asymptote(%args)
 
-ビルドおよびキャッシュ[`漸近線`](#) トリプルバッククォートコードブロック。
+ビルドおよびキャッシュ[`漸近線`](https://asymptote.sourceforge.io/) HTML5-WebGLキャンバス対応ベクトル・グラフィックスのトリプルバッククォート・コード・ブロック。
 
 必須引数:
 
@@ -107,10 +115,14 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### fetch_deps($path、$data、$quick)
 
+$data引数hashrefを、2要素arrayrefsのタイムスタンプ順序付けされたarrayrefとしてリファクタします。各2要素arrayrefの最初のエントリはファイルpath-nameで、2番目の要素は結果です[`read_text_file`](#) そのパス名のhashref。
+
+結果の新しいソース・ファイルのリストを返します。[`$quick > 2`](#).
+
 必須引数:
 
 - [`パス`](#)
-- [`データ`](#) - depsのアノン配列の結果の店
+- [`データ`](#) - hashrefとして入力。戻り時にdepsの結果のanon配列を格納します
 - [`速い`](#) - デフォルト値は2
 
 #### ブレッドクラム($path)
@@ -139,7 +151,7 @@ next_viewをオフライン・モードで実行します。
 
 #### スニペット(%args)
 
-スニペット明細を処理します。
+[プロセス](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [スニペット線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### 再構築(%args)
 

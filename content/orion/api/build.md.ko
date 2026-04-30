@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 초안
+status: 확인=34581
 title: Orion API - 빌드
 ---
 
@@ -14,9 +14,9 @@ title: Orion API - 빌드
 
 0. 로드 [`라이브러리/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) 및 [`라이브러리/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. 생성 [`@path::패턴`](#)및
-2. 기회주의적으로 걷다 [`콘텐츠/`](#) 시드할 트리 [`%path::종속성`](#) 및 [`@path::acls`](#).
+2. 기회주의적으로 걷다 [`콘텐츠/`](#) 시드할 트리 [`%path::종속성`](#) 및 [`@path::acls`](#) 마크다운/yaml 파일 헤더 메타데이터에서
 
-후자의 임무는 호출을 제공하는 것입니다 [`보기`](#)- 기반 [`$방법`](#)에서 일치하는 항목의 경우 [`@path::패턴`](#) (각 arrayref 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), 이렇게 호출됩니다....
+후자의 임무는 호출을 제공하는 것입니다 [`보기`](#)- 기반 [`$방법`](#)에서 일치하는 항목의 경우 [`@path::패턴`](#) (각 arrayref 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), [스크립트 작성](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 아래와 같이 ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+많은 뷰가 "필터" 파일의 측면을 미리 처리하려면 [`$경로`](#) 외부 코드와 마찬가지로 참신합니다. [`코드 조각`](#) 또는 [`asymptote`](#)-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; 가장 인기있는 (그리고 정교한)보기
 
+이 뷰에는 내부에 있는 파일의 자동 처리 기능이 포함되어 있습니다. [`$경로`]첨부 디렉토리입니다. 즉, [`$path = "한국어/조선말"`]에 저장된 파일이  [`/foo.page/`] 디렉토리: "한국어" 언어 확장이 템플리트 주소 지정 가능 인수에 통합됩니다. [`$경로`]에 관계없이 [`선행 처리`] 인수 설정 - 실제 상처가 발생할 경우 **페이지의 콘텐츠 자체**에서 해당 자료에 액세스할 수 있게 합니다.
+
 필수 인수:
 
 - [`템플리트`](#)
@@ -58,11 +62,15 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 선택적 인수:
 
-- [`삭제`](#)
-- [`quick_deps`](#)
-- [`선행 처리`](#)
-- [`archive_root`](#) &mdash; 파일 위치 "아카이브됨" 상태: "복사됨" 이 콘텐츠 루트 위치에 대한 연도/월 하위 폴더별로 추적 `ssi`
-- [`category_root`](#) &mdash; 의 항목 "범주" 헤더 "복사됨" 이 컨텐츠 루트 위치에 있는 적절하게 명명된 범주 폴더로 `ssi`
+- [`삭제`](#) &mdash; 법선 재지정 [`fetch_deps`]() 처리
+
+- [`quick_deps`](#) &mdash; 내부 deps-processing 최적화 설정, 최선 설정 해제
+
+- [`선행 처리`](#) &mdash; 템플리트가 [`$경로`](#) 내용 자체,
+
+- [`archive_root`](#) &mdash; 파일 위치 "아카이브됨" 상태: "복사됨" 이 콘텐츠 루트 위치에 대한 연도/월 하위 폴더별로 추적 `ssi`,
+
+- [`category_root`](#) &mdash; 의 항목 "범주" 헤더 "복사됨" 이 컨텐츠 루트 위치에 있는 적절하게 명명된 범주 폴더로 `ssi`.
 
 #### news_page(%args) &mdash; 다중 설명 집계 페이지의 경우
 
@@ -83,7 +91,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### asymptote(%args)
 
-빌드 및 캐시 [`asymptote`](#) 삼중 따옴표로 묶인 코드 블록.
+빌드 및 캐시 [`아심포테`](https://asymptote.sourceforge.io/) HTML5-WebGL 캔버스 사용 벡터 그래픽에 대한 삼중 백쿼트 코드 블록입니다.
 
 필수 인수:
 
@@ -107,10 +115,14 @@ YAML 파일을 일반적으로 JSON으로 변환합니다.
 
 #### fetch_deps($path, $data, $quick)
 
+$data 인수 hashref를 2-요소 arrayrefs의 시간 기록 정렬된 arrayref로 리팩터링합니다. 각 2 요소 arrayref의 첫 번째 항목은 파일 경로 이름입니다, 두 번째 요소는 결과입니다 [`read_text_file`](#) 해당 경로 이름에 대한 해시 참조입니다.
+
+다음과 같은 경우 결과 새 소스 파일 목록을 반환합니다. [`$quick > 2`](#).
+
 필수 인수:
 
 - [`경로`](#)
-- [`데이터`](#) - 점포의 결과 anon-array of deps
+- [`데이터`](#) - hashref로 입력; 반환시 deps의 결과 anon-array를 저장합니다
 - [`빠른`](#) - 기본값은 2입니다.
 
 #### 이동 경로($path)
@@ -139,7 +151,7 @@ $args 처리를 위한 유틸리티{보기}.
 
 #### 코드 조각(%args)
 
-코드 조각 라인을 처리합니다.
+[프로세스](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [코드 조각 행](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### 재구성(%args)
 

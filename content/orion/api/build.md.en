@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-Status: draft
+Status: verified=34581
 Dependencies: *.md.en
 
 {# lede #}This document covers the **Build System** APIs{# lede #}.
@@ -48,6 +48,8 @@ Many views are meant to be stacked as "filters" to preprocess aspects of the fil
 ### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for [`lib/view.pm`](#)
 
 #### single_narrative(%args) &mdash; the most popular (and sophisticated) view
+
+This view incorporates automated processing of files located within the [`$path`]'s attachment directory. In other words, if [`$path = "/foo.md.en"`], then the files stored within the  [`/foo.page/`] directory associated with the ".en" language extension will be incorporated into the template addressable arguments for that [`$path`], regardless of the [`preprocess`] argument setting, which if true wound make that material accessible by the **page's content itself**.
 
 Mandatory Arguments:
 

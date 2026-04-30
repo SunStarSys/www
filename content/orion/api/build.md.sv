@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: skiss
+status: verifierad=34581
 title: Orion API - bygge
 ---
 
@@ -14,9 +14,9 @@ Det första är att göra tre saker:
 
 0. ladda [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) och [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. konstruera [`@path::mönster`](#)och
-2. opportunistiskt gå den [`innehåll/`](#) träd att fördefiniera [`%path::beroenden`](#) och [`@path::acls`](#).
+2. opportunistiskt gå den [`innehåll/`](#) träd att fördefiniera [`%path::beroenden`](#) och [`@path::acls`](#) från metadata för filhuvud för nedsättning/yaml.
 
-Den senares jobb är att tillhandahålla bokningsbara [`visa`](#)-baserad [`$metod`](#)s för matchande poster i [`@path::mönster`](#) (som ett strängat metodnamn i den andra rutan för varje arrayref-post), anropas så...
+Den senares jobb är att tillhandahålla bokningsbara [`visa`](#)-baserad [`$metod`](#)s för matchande poster i [`@path::mönster`](#) (som ett strängifierat metodnamn i den andra rutan för varje arrayref-post), anropat av [skapa skript](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) enligt nedan ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i [`$sökväg`](#) som är nya, som extern kod [`kodfragment`](#) eller [`asymptot`](#)-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; den mest populära (och sofistikerade) vyn
 
+Den här vyn innehåller automatisk bearbetning av filer som finns i [`$sökväg`]bilagekatalog. Med andra ord, om [`$path = "/foo.md.en"`], sedan de filer som lagras i  [`/foo.page/`] katalog associerad med "och" språktillägg kommer att införlivas i mallens adresserbara argument för att [`$sökväg`]Oavsett om [`förbearbetning`] argumentinställning, som om sant sår gör det materialet tillgängligt för själva **sidans innehåll**.
+
 Obligatoriska argument:
 
 - [`mall`](#)
@@ -58,11 +62,15 @@ Obligatoriska argument:
 
 Valfria argument:
 
-- [`dl`](#)
-- [`quick_deps`](#)
-- [`förbearbetning`](#)
-- [`archive_root`](#) &mdash; filer i "arkiverad" status är "kopierad" och spåras per år/månad undermappar till denna innehållsrotade plats via `ssi`
-- [`category_root`](#) &mdash; artiklar i "kategorier" Huvudet är "kopierad" över till lämpligt namngivna kategorimappar på den här innehållsbaserade platsen via `ssi`
+- [`dl`](#) &mdash; åsidosätter normalt [`fetch_deps`]() bearbetning
+
+- [`quick_deps`](#) &mdash; intern optimeringsinställning för deps-processing; bäst lämnad ej inställd
+
+- [`förbearbetning`](#) &mdash; aktiverar mallbearbetning inom [`$sökväg`](#) Själva innehållet,
+
+- [`archive_root`](#) &mdash; filer i "arkiverad" status är "kopierad" och spåras per år/månad undermappar till denna innehållsrotade plats via `ssi`,
+
+- [`category_root`](#) &mdash; artiklar i "kategorier" Huvudet är "kopierad" över till lämpligt namngivna kategorimappar på den här innehållsbaserade platsen via `ssi`.
 
 #### news_page(%args) &mdash; för aggregeringssidor med flera artiklar
 
@@ -83,7 +91,7 @@ Valfria argument:
 
 #### asymptot(%args)
 
-Byggnader och cacheminnen [`asymptot`](#) trippelciterade-kodblock.
+Byggnader och cacheminnen [`Asymptot`](https://asymptote.sourceforge.io/) triple-backquoted-code block för HTML5-WebGL-canvas-aktiverad vektorgrafik.
 
 Obligatoriska argument:
 
@@ -107,10 +115,14 @@ Valfria argument:
 
 #### fetch_deps($path, $data, $quick)
 
+Refactors $data argument hashref som en tidsstämpel ordnade arrayref av 2-element arrayrefs. Den första posten i varje 2-element arrayref är filsökvägens namn, det andra elementet är resultatet [`read_text_file`](#) hashref för det sökvägsnamnet.
+
+Returnerar en lista över resulterande nya källfiler om [`$snabb > 2`](#).
+
 Obligatoriska argument:
 
 - [`sökväg`](#)
-- [`data`](#) - butiker som resulterar anon-array av deps
+- [`data`](#) - Inmatning som hashref; lagrar resulterande anon-array av deps vid retur
 - [`snabb`](#) - standardvärdet är 2
 
 #### navigeringsspår($path)
@@ -139,7 +151,7 @@ Kör next_view i offlineläge.
 
 #### utdrag(%args)
 
-Bearbetar fragmentrader.
+[Processer](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [utdragslinjer](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### rekonstruera (%args)
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: projet
+status: vérifié=34581
 title: API Orion - Créer
 ---
 
@@ -14,9 +14,9 @@ Le travail du premier est de faire trois choses :
 
 0. chargement [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) et [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. construction [`@path : :modèles`](#), et
-2. de manière opportuniste, [`contenu/`](#) arbre à ensemencer [`%path : :dépendances`](#) et [`@path : :acls`](#).
+2. de manière opportuniste, [`contenu/`](#) arbre à ensemencer [`%path : :dépendances`](#) et [`@path : :acls`](#) à partir des métadonnées d'en-tête de fichier markdown/yaml.
 
-Le travail de ce dernier est de fournir invokable [`vue`](#)-basé [`Méthode $`](#)'s pour les entrées correspondantes dans [`@path : :modèles`](#) (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée arrayref), appelé ainsi...
+Le travail de ce dernier est de fournir invokable [`vue`](#)-basé [`Méthode $`](#)'s pour les entrées correspondantes dans [`@path : :modèles`](#) (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée arrayref), appelé par le [génération de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) comme ci-dessous ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans [`$chemin`](#) qui sont nouveaux, comme le code externe [`fragments de code`](#) ou [`asymptote`](#)-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; la vue la plus populaire (et sophistiquée)
 
+Cette vue intègre le traitement automatisé des fichiers situés dans le [`$chemin`]répertoire des pièces jointes. Autrement dit, si [`$path = "/foo.md.fr"`], puis les fichiers stockés dans  [`/foo.page/`] répertoire associé au ".fr" l'extension de langue sera incorporée dans le modèle des arguments adressables pour [`$chemin`], indépendamment du [`prétraitement`] paramètre d'argument, qui, si la plaie est vraie, rend ce matériel accessible par le contenu de la **page elle-même**.
+
 Arguments obligatoires :
 
 - [`modèle`](#)
@@ -58,11 +62,15 @@ Arguments obligatoires :
 
 Argmuents facultatifs :
 
-- [`dépôts`](#)
-- [`quick_deps`](#)
-- [`prétraitement`](#)
-- [`archive_root`](#) &mdash; fichiers dans "archivé" statut "copié" et suivi par sous-dossiers année/mois vers cet emplacement basé sur le contenu via `ssi`
-- [`category_root`](#) &mdash; éléments dans "catégories" en-tête "copié" dans les dossiers de catégories correctement nommés dans cet emplacement basé sur le contenu via `ssi`
+- [`dépôts`](#) &mdash; remplace la normale [`fetch_deps`]traitement
+
+- [`quick_deps`](#) &mdash; paramètre d'optimisation du traitement des dépôts interne ; meilleure option à gauche non définie
+
+- [`prétraitement`](#) &mdash; active le traitement des modèles dans le [`$chemin`](#) contenu lui-même,
+
+- [`archive_root`](#) &mdash; fichiers dans "archivé" statut "copié" et suivi par sous-dossiers année/mois vers cet emplacement basé sur le contenu via `ssi`,
+
+- [`category_root`](#) &mdash; éléments dans "catégories" en-tête "copié" dans les dossiers de catégories correctement nommés dans cet emplacement basé sur le contenu via `ssi`.
 
 #### news_page(%args) &mdash; pour les pages d'agrégation multi-narrations
 
@@ -83,7 +91,7 @@ Arguments facultatifs :
 
 #### asymptote(%args)
 
-Bâtiments et caches [`asymptote`](#) blocs triple-backquoted-code.
+Bâtiments et caches [`Asymptote`](https://asymptote.sourceforge.io/) blocs triple-backquoted-code pour les graphiques vectoriels compatibles HTML5-WebGL-canvas.
 
 Arguments obligatoires :
 
@@ -107,10 +115,14 @@ Arguments facultatifs :
 
 #### fetch_deps($path, $data, $quick)
 
+Refactorise le hachref d'argument $data sous la forme d'une référence de tableau ordonnée d'horodatage de 2 éléments. La première entrée de chaque arrayref à 2 éléments est le chemin d'accès au fichier, le second élément est le résultat [`read_text_file`](#) hashref pour ce chemin d'accès.
+
+Renvoie la liste des nouveaux fichiers source résultants si [`$quick > 2`](#).
+
 Arguments obligatoires :
 
 - [`chemin`](#)
-- [`données`](#) - magasins résultant d'un anonarray de dépôts
+- [`données`](#) - entrée en tant que hashref ; stocke l'anon-array résultant des dépôts lors du retour
 - [`rapide`](#) - Valeur par défaut : 2
 
 #### chemin de navigation ($path)
@@ -139,7 +151,7 @@ Exécute le fichier next_view en mode hors ligne.
 
 #### fragment de code (%args)
 
-Traite les lignes de fragment de code.
+[Processus](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [lignes de fragment de code](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### reconstruire(%args)
 

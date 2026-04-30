@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: rascunho
+status: verificado=34581
 title: Orion API - Criação
 ---
 
@@ -14,9 +14,9 @@ O trabalho do primeiro é fazer três coisas:
 
 0. carregar [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) e [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. construir [`@path::padrões`](#), e
-2. caminhando oportunamente [`conteúdo/`](#) árvore para semente [`%path::dependências`](#) e [`@path::acls`](#).
+2. caminhando oportunamente [`conteúdo/`](#) árvore para semente [`%path::dependências`](#) e [`@path::acls`](#) de metadados de cabeçalho de arquivo de markdown/yaml.
 
-O trabalho deste último é fornecer invocável [`exibir`](#)com base em [`Método $`](#)'s para as entradas correspondentes no [`@path::padrões`](#) (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado assim...
+O trabalho deste último é fornecer invocável [`exibir`](#)com base em [`Método $`](#)'s para as entradas correspondentes no [`@path::padrões`](#) (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abaixo ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no [`$path`](#) que são novos, como o código externo [`trechos de código`](#) ou [`assíntota`](#)-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; a visão mais popular (e sofisticada)
 
+Esta visualização incorpora o processamento automatizado de arquivos localizados no [`$path`]diretório do anexo 's. Em outras palavras, se [`$path = "Português (Brasil)"`], depois os arquivos armazenados no  [`/foo.page/`] diretório associado ao "Português" a extensão do idioma será incorporada aos argumentos endereçáveis do modelo para que [`$path`], independentemente do [`pré-processamento`] definição de argumento, que se verdadeira ferida tornar esse material acessível pelo próprio conteúdo da **página**.
+
 Argumentos Obrigatórios:
 
 - [`modelo`](#)
@@ -58,11 +62,15 @@ Argumentos Obrigatórios:
 
 Argumentos Opcionais:
 
-- [`deps`](#)
-- [`quick_deps`](#)
-- [`pré-processamento`](#)
-- [`archive_root`](#) &mdash; arquivos em "arquivado" status são "copiado" e rastreado por subpastas ano/mês para este local raiz de conteúdo via `ssi`
-- [`category_root`](#) &mdash; itens no "categorias" cabeçalho são "copiado" em pastas de categorias nomeadas apropriadamente neste local raiz de conteúdo via `ssi`
+- [`deps`](#) &mdash; substituições normais [`fetch_deps`]() processamento
+
+- [`quick_deps`](#) &mdash; configuração de otimização de processamento interno deps; melhor não definido
+
+- [`pré-processamento`](#) &mdash; permite o processamento de modelos dentro do [`$path`](#) conteúdo em si,
+
+- [`archive_root`](#) &mdash; arquivos em "arquivado" status são "copiado" e rastreado por subpastas ano/mês para este local raiz de conteúdo via `ssi`,
+
+- [`category_root`](#) &mdash; itens no "categorias" cabeçalho são "copiado" em pastas de categorias nomeadas apropriadamente neste local raiz de conteúdo via `ssi`.
 
 #### news_page(%args) &mdash; para páginas de agregação multinarrativa
 
@@ -83,7 +91,7 @@ Argumentos opcionais:
 
 #### assíntota(%args)
 
-Builds e Caches [`assíntota`](#) blocos de código triplo-backquoted.
+Builds e Caches [`Apelido`](https://asymptote.sourceforge.io/) blocos triple-backquoted-code para gráficos vetoriais habilitados para HTML5-WebGL.
 
 Argumentos Obrigatórios:
 
@@ -107,10 +115,14 @@ Argumentos opcionais:
 
 #### fetch_deps($path, $data, $quick)
 
+Refatoradores $data argumento hashref como um timestamp ordenou arrayref de 2-element arrayrefs. A primeira entrada em cada arrayref de 2 elementos é o nome do caminho do arquivo, o segundo elemento é o resultado [`read_text_file`](#) hashref para esse nome de caminho.
+
+Retorna uma lista de novos arquivos de origem resultantes se [`$quick > 2`](#).
+
 Argumentos Obrigatórios:
 
 - [`caminho`](#)
-- [`dados`](#) - lojas resultantes de anon-array de deps
+- [`dados`](#) - entrada como hashref; armazena o anon-array resultante de deps no retorno
 - [`rápido`](#) - assume 2 como padrão
 
 #### breadcrumbs($path)
@@ -139,7 +151,7 @@ Executa o next_view no modo off-line.
 
 #### snippet(%args)
 
-Processa linhas de trecho de código.
+[Processos](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [linhas de snippet](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### reconstruir(%args)
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 草稿
+status: 驗證 =34581
 title: Orion API - 建置
 ---
 
@@ -14,9 +14,9 @@ title: Orion API - 建置
 
 0. 載入[`程式庫 /facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) 與[`程式庫 /acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. 建構[`@path：：樣式`](#)，和
-2. 當機行走[`內容 /`](#) 種樹[`%path::dependencies`](#) 與[`@path::acls`](#).
+2. 當機行走[`內容 /`](#) 種樹[`%path::dependencies`](#) 與[`@path::acls`](#) 來自 Markdown/yaml 檔案標頭描述資料。
 
-後者的工作是提供不可呼叫的工作[`檢視`](#)- 基底[`$ 方法`](#)」s，用於比對下列項目：[`@path：：樣式`](#) (作為每個 arrayref 項目之第二個槽位中的字串方法名稱) 以此類推呼叫...
+後者的工作是提供不可呼叫的工作[`檢視`](#)- 基底[`$ 方法`](#)」s，用於比對下列項目：[`@path：：樣式`](#) (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 下方 ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+許多視觀表的堆疊方式"篩選" 預先處理檔案的層面[`$path`](#) 新穎，如外部程式碼[`片段`](#) 或[`漸近體`](#)-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative (%args) &mdash; 最受歡迎 (和最複雜的) 檢視
 
+此檢視包含檔案自動處理 (位於[`$path`]的附件目錄。也就是說，如果[`$path = "繁體中文"`]，然後儲存於 中的檔案[`/foo.page/`] 與目錄關聯的目錄".en" 語言延伸將併入該範本可定址引數[`$path`]，不論[`前處理`] 引數設定，如果真的傷口，就會讓 **頁面的內容本身** 可以存取該材料。
+
 必要引數：
 
 - [`範本`](#)
@@ -58,11 +62,15 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 選擇性引數：
 
-- [`描述`](#)
-- [`quick_deps`](#)
-- [`前處理`](#)
-- [`archive_root`](#) &mdash; 檔案位於"已封存" 狀態為"已複製" 並透過下列方式依年 / 月子資料夾追蹤至此內容根目錄的位置：`ssi`
-- [`category_root`](#) &mdash; 項目在"分類" 標頭為"已複製" 覆寫為內容根目錄位置中適當命名的類別資料夾`ssi`
+- [`描述`](#) &mdash; 置換正常[`fetch_deps`]() 處理
+
+- [`quick_deps`](#) &mdash; 內部折舊處理最佳化設定；最佳剩餘取消設定
+
+- [`前處理`](#) &mdash; 啟用範本處理[`$path`](#) 內容本身，
+
+- [`archive_root`](#) &mdash; 檔案位於"已封存" 狀態為"已複製" 並透過下列方式依年 / 月子資料夾追蹤至此內容根目錄的位置：`ssi`,
+
+- [`category_root`](#) &mdash; 項目在"分類" 標頭為"已複製" 覆寫為內容根目錄位置中適當命名的類別資料夾`ssi`.
 
 #### news_page (%args) &mdash; 用於多敘述彙總頁面
 
@@ -83,7 +91,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### asymptote (%args)
 
-組建和快取[`漸近體`](#) 以三引號括住的程式碼區塊。
+組建和快取[`漸近線`](https://asymptote.sourceforge.io/) 適用於啟用 HTML5-WebGL 畫面之向量圖形的三重引號編碼區塊。
 
 必要引數：
 
@@ -107,10 +115,14 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### fetch_deps ($path, $data, $quick)
 
+將 $data 引數雜湊參照重製為 2 元素陣列參照的時間戳記排序陣列參照。每個 2- 元素 arrayref 中的第一個項目是檔案 path-name，第二個元素則是產生的[`read_text_file`](#) 該 path-name 的 hashref。
+
+傳回結果新來源檔案的清單，如果[`$quick > 2`](#).
+
 必要引數：
 
 - [`路徑`](#)
-- [`資料`](#) - 導致停滯的商店
+- [`資料`](#) - 輸入為雜湊參考；在退回時導致折舊陣列的商店
 - [`快速`](#) - 預設為 2
 
 #### 來源路徑 ($path)
@@ -139,7 +151,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### 程式碼片段 (%args)
 
-處理程式碼片段行。
+[處理](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [片段線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### 重新建構 (%args)
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: borrador
+status: verificado=34581
 title: API de Orion - Crear
 ---
 
@@ -14,9 +14,9 @@ El trabajo del primero es hacer tres cosas:
 
 0. carga [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) y [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. construcción [`@path::patrones`](#)y
-2. oportunista caminar [`contenido/`](#) árbol para sembrar [`%path::dependencias`](#) y [`@path::acls`](#).
+2. oportunista caminar [`contenido/`](#) árbol para sembrar [`%path::dependencias`](#) y [`@path::acls`](#) de los metadatos de cabecera del archivo markdown/yaml.
 
-El trabajo de este último es proporcionar invocable [`vista`](#)basado en [`Método $`](#)'s para las entradas coincidentes en [`@path::patrones`](#) (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), se llama así...
+El trabajo de este último es proporcionar invocable [`vista`](#)basado en [`Método $`](#)'s para las entradas coincidentes en [`@path::patrones`](#) (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), invocado por el [creación de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abajo ...
 
 ```perl
 #api
@@ -40,6 +40,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
+Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en [`$ruta`](#) que son novedosas, como el código externo [`fragmentos`](#) o [`asíntota`](#)-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+
 [TOC]
 
 ----
@@ -50,6 +52,8 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### single_narrative(%args) &mdash; La visión más popular (y sofisticada)
 
+Esta vista incorpora el procesamiento automatizado de archivos ubicados dentro de la [`$ruta`]directorio de anexos. Es decir, si [`$ruta = "/es.md.es"`], a continuación, los archivos almacenados en el  [`/foo.page/`] directorio asociado con el ".en" extensión lingüística se incorporará en la plantilla de argumentos direccionables para que [`$ruta`]independientemente de la [`preprocesamiento`] configuración de argumentos, que si es verdadera herida hacen que ese material sea accesible por el propio contenido de la **página**.
+
 Argumentos obligatorios:
 
 - [`plantilla`](#)
@@ -58,11 +62,15 @@ Argumentos obligatorios:
 
 Argumentos opcionales:
 
-- [`deps`](#)
-- [`quick_deps`](#)
-- [`preprocesamiento`](#)
-- [`archive_root`](#) &mdash; archivos en "archivado" estado son "copiado" y rastreado por subcarpetas de año/mes a esta ubicación de contenido a través de `ssi`
-- [`category_root`](#) &mdash; elementos en la "categorías" cabecera son "copiado" en carpetas de categorías con nombre adecuado en esta ubicación con raíz de contenido mediante `ssi`
+- [`deps`](#) &mdash; sustituye a normal [`fetch_deps`](a) procesamiento
+
+- [`quick_deps`](#) &mdash; configuración de optimización interna de proceso de deps; mejor dejar sin configurar
+
+- [`preprocesamiento`](#) &mdash; permite el procesamiento de plantillas en [`$ruta`](#) contenido en sí,
+
+- [`archive_root`](#) &mdash; archivos en "archivado" estado son "copiado" y rastreado por subcarpetas de año/mes a esta ubicación de contenido a través de `ssi`,
+
+- [`category_root`](#) &mdash; elementos en la "categorías" cabecera son "copiado" en carpetas de categorías con nombre adecuado en esta ubicación con raíz de contenido mediante `ssi`.
 
 #### news_page(%args) &mdash; para páginas de agregación de varias descripciones
 
@@ -83,7 +91,7 @@ Argumentos opcionales:
 
 #### asíntota(%args)
 
-Compilaciones y cachés [`asíntota`](#) bloques de código con comillas dobles.
+Compilaciones y cachés [`Asíntota`](https://asymptote.sourceforge.io/) bloques de código con comillas dobles para gráficos vectoriales activados para lienzo HTML5-WebGL.
 
 Argumentos obligatorios:
 
@@ -107,10 +115,14 @@ Argumentos opcionales:
 
 #### fetch_deps($path, $data, $quick)
 
+Refactores $data argumento hashref como una referencia de matriz ordenada de registro de hora de arrayrefs de 2 elementos. La primera entrada en cada arrayref de 2 elementos es el nombre de ruta de archivo, el segundo elemento es el resultado [`read_text_file`](#) hashref para ese nombre de ruta.
+
+Devuelve una lista de los nuevos archivos de origen resultantes si [`$quick > 2`](#).
+
 Argumentos obligatorios:
 
 - [`ruta`](#)
-- [`datos`](#) - almacena el anon-array resultante de deps
+- [`datos`](#) - entrada como hashref; almacena el anon-array resultante de deps a la vuelta
 - [`rápido`](#) - se define por defecto en 2
 
 #### rutas de navegación ($path)
@@ -139,7 +151,7 @@ Ejecuta next_view en modo fuera de línea.
 
 #### fragmento (%args)
 
-Procesa líneas de fragmento.
+[Procesos](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [líneas de fragmento](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
 
 #### reconstruir(%args)
 
