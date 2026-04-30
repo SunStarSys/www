@@ -218,6 +218,8 @@ Returns 1 if the walk actually proceeded, instead of relying on cached data. Oth
 
 Flags each [`Status: archived`](#) [`$path`](#) (in a natural-language-specific way). Uses [`$_`](#) if no args are passed.
 
+Archiving files is a natural way to tell Orion to "stop paying attention to this file's permalinked location ... unless it is updated again, in which case the archival location will be refreshed. In particular, archived files do not appear in directory listings within the CMS itself; you have to navigate to the live page itself to be able to edit it again online.
+
 ##### seed_file_deps($path)
 
 Securely updates [`%path::dependencies`](#) for this [`$path`](#), based on its [`Dependencies`](#) header glob(s). Defaults to using [`$_`](#) as the path if no args are passed.
