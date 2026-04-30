@@ -13,10 +13,10 @@ Grundsätzlich wird das Build-System von zwei vom Benutzer bereitgestellten Perl
 Die erste Aufgabe besteht darin, drei Dinge zu tun:
 
 0. laden [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) und [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. erstellen `@path::Muster`und
-2. opportunistisch gehen `Inhalt/` Baum für Seed `%path::Abhängigkeiten` und `@path::acls` aus Headermetadaten der Markup-/YAML-Datei.
+1. erstellen `@path::patterns`und
+2. opportunistisch gehen `content/` Baum für Seed `%path::dependencies` und `@path::acls` aus Headermetadaten der Markup-/YAML-Datei.
 
-Letzterer hat die Aufgabe, unlösbar zu sein. `Ansicht`-basiert `$Methode`s für die übereinstimmenden Einträge in `@path::Muster` (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), der vom [Skripting erstellen](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) wie unten ...
+Letzterer hat die Aufgabe, unlösbar zu sein. `view`-basiert `$method`s für die übereinstimmenden Einträge in `@path::patterns` (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), der vom [Skripting erstellen](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) wie unten ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in `$Pfad` Das ist neu, wie externer Code `Snippets` oder `Asymptote`-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in `$path` Das ist neu, wie externer Code `snippets` oder `asymptote`-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,12 +65,12 @@ Die beliebteste (und anspruchsvollste) Ansicht
 
 <p class="card-text">
 
-Diese Ansicht beinhaltet die automatisierte Verarbeitung von Dateien, die sich innerhalb der `$Pfad`'s Anhangsverzeichnis. Mit anderen Worten, wenn `$Pfad = "/foo.md.en"`, dann die Dateien, die in der  `/foo.page/` Verzeichnis, das mit dem ".de" Die Spracherweiterung wird in die adressierbaren Argumente für die Vorlage integriert. `$Pfad` unabhängig von der `Vorverarbeitung` Argumenteinstellung &mdash; die, wenn wahr, das Material auch für den Inhalt der **Seite selbst zugänglich machen würde**.
+Diese Ansicht beinhaltet die automatisierte Verarbeitung von Dateien, die sich innerhalb der `$path`'s Anhangsverzeichnis. Mit anderen Worten, wenn `$path = "/foo.md.en"`, dann die Dateien, die in der  `/foo.page/` Verzeichnis, das mit dem ".de" Die Spracherweiterung wird in die adressierbaren Argumente für die Vorlage integriert. `$path` unabhängig von der `preprocess` Argumenteinstellung &mdash; die, wenn wahr, das Material auch für den Inhalt der **Seite selbst zugänglich machen würde**.
 
 Erforderliche Argumente:
 
-- `Vorlage`
-- `Pfad`
+- `template`
+- `path`
 - `lang`
 
 Optionale Argumente:
@@ -79,11 +79,11 @@ Optionale Argumente:
 
 - `quick_deps` &mdash; Einstellung zur Optimierung der internen deps-Verarbeitung; am besten links nicht gesetzt
 
-- `Vorverarbeitung` &mdash; ermöglicht die Vorlagenverarbeitung innerhalb der `$Pfad` Inhalt selbst,
+- `preprocess` &mdash; ermöglicht die Vorlagenverarbeitung innerhalb der `$path` Inhalt selbst,
 
-- `archive_root` &mdash; Dateien in "archiviert" Status sind "kopiert" und nach Jahr/Monat-Unterordnern zu diesem inhaltlich verwalteten Standort über `Ssi`,
+- `archive_root` &mdash; Dateien in "archiviert" Status sind "kopiert" und nach Jahr/Monat-Unterordnern zu diesem inhaltlich verwalteten Standort über `ssi`,
 
-- `category_root` &mdash; Elemente in der "Kategorien" Header sind "kopiert" in entsprechend benannte Kategorienordner an dieser inhaltsverwalteten Stelle über `Ssi`.
+- `category_root` &mdash; Elemente in der "Kategorien" Header sind "kopiert" in entsprechend benannte Kategorienordner an dieser inhaltsverwalteten Stelle über `ssi`.
 
 </p>
   </div>
@@ -111,7 +111,7 @@ Für (mehrere) Aggregatseiten
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `Sitemap (%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ Gebietsschemaspezifischer, sortierter Abhängigkeitsindex.
 
 Erforderliche Argumente:
 
-- `Pfad`
+- `path`
 - `lang`
 
 Optionale Argumente:
 
 - `quick_deps`
-- `Verschachtelt`
-- `Vorverarbeitung`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -156,9 +156,9 @@ Builds und Caches [`Asymptote`](https://asymptote.sourceforge.io/) Triple-Backqu
 
 Erforderliche Argumente:
 
-- `Ansicht`
+- `view`
 - `lang`
-- `Pfad`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ Erforderliche Argumente:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `überspringen(%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -200,9 +200,9 @@ Konvertieren Sie YAML-Dateien, in der Regel in JSON.
 
 Optionale Argumente:
 
-- `aus` Standard ist `json`
-- `Filter` Standard ist `json_raw`
-- `Vorlage` Überschreibungen `Filter` Standardausdruck
+- `ext` Standard ist `json`
+- `filter` Standard ist `json_raw`
+- `template` Überschreibungen `filter` Standardausdruck
 
 </p>
 </div>
@@ -228,9 +228,9 @@ Gibt eine Liste der resultierenden neuen Quelldateien zurück, wenn [`$quick > 2
 
 Erforderliche Argumente:
 
-- `Pfad`
-- `Daten` - Eingabe als Hashref; Läden, die bei Rückgabe zu einem Anon-Array von Deps führen
-- `schnell` - Standard ist 2
+- `path`
+- `data` - Eingabe als Hashref; Läden, die bei Rückgabe zu einem Anon-Array von Deps führen
+- `quick` - Standard ist 2
 
 </p>
 </div>
@@ -239,13 +239,13 @@ Erforderliche Argumente:
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `Navigationspfade($path)`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Gibt die HTML-Navigationsleiste zurück für `$Pfad`.
+Gibt die HTML-Navigationsleiste zurück für `$path`.
 
 </div>
 <p class="card-text">
@@ -256,7 +256,7 @@ Gibt die HTML-Navigationsleiste zurück für `$Pfad`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `Vermerk(%args)`
+#### `memoize(%args)`
 
 </div>
   <div class="card-body">
@@ -273,7 +273,7 @@ Speichert den Build, der hauptsächlich mit fetch_deps und quick_deps > 2 verwen
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `Kommentar(%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -296,7 +296,7 @@ Generiert ein SSI-integrierbares HTML-Fragment für einen Seitenkommentar.
   <div class="card-body">
     <div class="card-title">
 
-Dienstprogramm zur sequenziellen Verarbeitung `$args{Ansicht}`.
+Dienstprogramm zur sequenziellen Verarbeitung `$args{view}`.
 
 </div>
 <p class="card-text">
@@ -307,13 +307,13 @@ Dienstprogramm zur sequenziellen Verarbeitung `$args{Ansicht}`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `Ssi(%args)`
+#### `ssi(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Rekursiv bewertet `Ssi` Tags.
+Rekursiv bewertet `ssi` Tags.
 
 </div>
 <p class="card-text">
@@ -341,7 +341,7 @@ Führt die `next_view` im Offlinemodus.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `Snippet (%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ Führt die `next_view` im Offlinemodus.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `rekonstruieren(%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ Normalisiert lokale Links (`./` und `../`).
   <div class="card-body">
     <div class="card-title">
 
-Anhänge `$args{lang}` bis `$args{Vorlage}`.
+Anhänge `$args{lang}` bis `$args{template}`.
 
 </div>
 <p class="card-text">
@@ -429,19 +429,19 @@ Anhänge `$args{lang}` bis `$args{Vorlage}`.
 
 #### read_text_file($file, $out, $content_lines) &mdash; Universeller Textdateiprozessor von Orion
 
-Parst Header+Inhalt der UTF-8-codierten Datei `$Datei` und speichert Ergebnisse in hashref `$aus`. `$content_lines` ist die (optionale) maximale Anzahl von Inhaltszeilen, die gelesen werden sollen.
+Parst Header+Inhalt der UTF-8-codierten Datei `$file` und speichert Ergebnisse in hashref `$out`. `$content_lines` ist die (optionale) maximale Anzahl von Inhaltszeilen, die gelesen werden sollen.
 
 Gibt die tatsächliche Anzahl der gelesenen Zeilen (einschließlich Kopfzeilen) zurück.
 
-`$Datei` kann eine Referenz auf eine Raw-Zeichenfolge sein, die den vollständigen Inhalt einer Datei darstellt.  Die Ergebnisse in `$aus` wird weiterhin UTF-8-codiert sein.
+`$file` kann eine Referenz auf eine Raw-Zeichenfolge sein, die den vollständigen Inhalt einer Datei darstellt.  Die Ergebnisse in `$out` wird weiterhin UTF-8-codiert sein.
 
 #### copy_if_newer($src, $dest)
 
-Kopien `$Quelle` bis `$dest` wenn der Änderungszeitstempel neuer ist als der des letzteren. Auf Kopie, zusätzlich gzip-komprimiert die `$dest` Datei, wenn es sich um eine Textdatei handelt, und fügt ".gz" Erweiterung des Namens.
+Kopien `$src` bis `$dest` wenn der Änderungszeitstempel neuer ist als der des letzteren. Auf Kopie, zusätzlich gzip-komprimiert die `$dest` Datei, wenn es sich um eine Textdatei handelt, und fügt ".gz" Erweiterung des Namens.
 
 #### get_lock($lockfile)
 
-Aktiviert ein exklusives (f)Lock (für den aktuellen UNIX-Prozess) `$lockdatei`.
+Aktiviert ein exklusives (f)Lock (für den aktuellen UNIX-Prozess) `$lockfile`.
 
 #### Mischen(\\&#64;Deck)
 
@@ -469,41 +469,41 @@ Entfernt alle Dateien in `@_`. Wenn keine Argumente übergeben werden, verwendet
 
 #### normalize_svn_path(&#64;_)
 
-Normalisiert alle Pfade in `@_` für die sichere Verwendung als RAW-Argumente `SVN: Client` Befehle.
+Normalisiert alle Pfade in `@_` für die sichere Verwendung als RAW-Argumente `SVN::Client` Befehle.
 
 #### sanitize_relative_path(&#64;_)
 
-Sichert Pfade in `@_` zur Verwendung als reine relative Pfade in `Sternzeichen:DTL` Pfadspezifische Befehle (Django-Vorlage).
+Sichert Pfade in `@_` zur Verwendung als reine relative Pfade in `Dotiac::DTL` Pfadspezifische Befehle (Django-Vorlage).
 
 #### parse_filename($path)
 
-Wrapper um `Datei::Basename::fileparse`. Ohne Argumente, verwendet `$_` als zu parsender Dateiname.
+Wrapper um `File::Basename::fileparse`. Ohne Argumente, verwendet `$_` als zu parsender Dateiname.
 
 #### walk_content_tree($code)
 
-Bedingt geht die `./Inhalt` Baum des Build-System-Checkout, zuerst normalisieren `$_` als formaler inhaltlich ausgerichteter Unterpfad, und dann `$code->()` auf jedem Element im Baumlauf. Für die meisten Gebäude passiert der Spaziergang nie &mdash; Stattdessen basiert der Build auf den zwischengespeicherten Daten aus früheren Builds.
+Bedingt geht die `./content` Baum des Build-System-Checkout, zuerst normalisieren `$_` als formaler inhaltlich ausgerichteter Unterpfad, und dann `$code->()` auf jedem Element im Baumlauf. Für die meisten Gebäude passiert der Spaziergang nie &mdash; Stattdessen basiert der Build auf den zwischengespeicherten Daten aus früheren Builds.
 
-Der einzige Weg, einen Spaziergang zu erzwingen, ist die Einstellung `$Pfad::use_cache` auf einen falschen Wert in Ihren vom Benutzer bereitgestellten Modulen. Andernfalls wird dieses Verhalten fachmännisch von der [Inkrementelle Build-Technologie](https://iconoclasts.blog/joe/dependencies).
+Der einzige Weg, einen Spaziergang zu erzwingen, ist die Einstellung `$path::use_cache` auf einen falschen Wert in Ihren vom Benutzer bereitgestellten Modulen. Andernfalls wird dieses Verhalten fachmännisch von der [Inkrementelle Build-Technologie](https://iconoclasts.blog/joe/dependencies).
 
 Gibt 1 zurück, wenn die Prüfung tatsächlich ausgeführt wurde, anstatt sich auf gecachte Daten zu verlassen. Andernfalls wird ein falscher Wert zurückgegeben.
 
 ##### archiviert($path)
 
-Markiert jede `Status: archiviert` `$Pfad` (in natürlicher Sprache). Verwendungen `$_` wenn keine Argumente übergeben werden.
+Markiert jede `Status: archived` `$path` (in natürlicher Sprache). Verwendungen `$_` wenn keine Argumente übergeben werden.
 
 Die Archivierung von Dateien ist eine natürliche Möglichkeit, Orion mitzuteilen, "Achten Sie nicht mehr auf den Permalink-Speicherort dieser Datei ... es sei denn, es wird erneut aktualisiert. In diesem Fall wird der Archivspeicherort aktualisiert. Insbesondere werden archivierte Dateien nicht in Verzeichnislisten innerhalb des CMS selbst angezeigt; Sie müssen zur Live-Seite selbst navigieren, um sie wieder online bearbeiten zu können.
 
 ##### seed_file_deps($path)
 
-Sichere Updates `%path::Abhängigkeiten` für diese `$Pfad`, basierend auf `Abhängigkeiten` Header-Glob(s). Standard ist 'verwenden' `$_` als Pfad, wenn keine Argumente übergeben werden.
+Sichere Updates `%path::dependencies` für diese `$path`, basierend auf `dependencies` Header-Glob(s). Standard ist 'verwenden' `$_` als Pfad, wenn keine Argumente übergeben werden.
 
 ##### seed_file_acl($path)
 
-Sichere Updates `@path::acl` für diese `$Pfad`, basierend auf `Acl` Headerspezifikation. Standard ist 'verwenden' `$_` als Pfad, wenn keine Argumente übergeben werden.
+Sichere Updates `@path::acl` für diese `$path`, basierend auf `acl` Headerspezifikation. Standard ist 'verwenden' `$_` als Pfad, wenn keine Argumente übergeben werden.
 
 #### Laden
 
-Gleich wie `YAML::XS::Laden`.
+Gleich wie `YAML::XS::Load`.
 
 #### Speicherabzug
 

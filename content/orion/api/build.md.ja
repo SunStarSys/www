@@ -13,10 +13,10 @@ title: Orion API - ビルド
 前者の仕事は三つのことをすることである。
 
 0. ロード[`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) および[`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. 構成`@path:: パターン`および
-2. 便宜的に歩く`コンテンツ/` シードするツリー`%path:: 依存関係` および`@path::acls` Markdown/yamlファイル・ヘッダー・メタデータ。
+1. 構成`@path::patterns`および
+2. 便宜的に歩く`content/` シードするツリー`%path::dependencies` および`@path::acls` Markdown/yamlファイル・ヘッダー・メタデータ。
 
-後者の仕事は、invokableを提供することです。`ビュー`- ベース`$メソッド`s: 一致するエントリ`@path:: パターン` (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 以下 ...
+後者の仕事は、invokableを提供することです。`view`- ベース`$method`s: 一致するエントリ`@path::patterns` (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 以下 ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには`パス` 外部コードのように新しい`スニペット` または`漸近線`- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには`$path` 外部コードのように新しい`snippets` または`asymptote`- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,13 +65,13 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 <p class="card-text">
 
-このビューには、内部にあるファイルの自動処理が組み込まれています。`パス`の添付ディレクトリ。言い換えれば、`$path = "/foo.md.en"`に保存されたファイル`/foo.page/` 関連するディレクトリ".en" 言語拡張は、そのテンプレートのアドレス可能な引数に組み込まれます`パス` 関係なく`前処理` 引数の設定&mdash; trueの場合、**ページのコンテンツ自体**がその資料にアクセスできるようにします。
+このビューには、内部にあるファイルの自動処理が組み込まれています。`$path`の添付ディレクトリ。言い換えれば、`$path = "/foo.md.en"`に保存されたファイル`/foo.page/` 関連するディレクトリ".en" 言語拡張は、そのテンプレートのアドレス可能な引数に組み込まれます`$path` 関係なく`preprocess` 引数の設定&mdash; trueの場合、**ページのコンテンツ自体**がその資料にアクセスできるようにします。
 
 必須引数:
 
-- `型板`
-- `パス`
-- `注意して聞く`
+- `template`
+- `path`
+- `lang`
 
 オプションの引数:
 
@@ -79,7 +79,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 - `quick_deps` &mdash; 内部deps-processing最適化設定; 最もよく残された未設定
 
-- `前処理` &mdash; テンプレート処理を有効にします。`パス` 内容自体、
+- `preprocess` &mdash; テンプレート処理を有効にします。`$path` 内容自体、
 
 - `archive_root` &mdash; ファイル"アーカイブ済" ステータス"コピーしました" そして、このコンテンツルートの場所への年/月のサブフォルダによって追跡`ssi`,
 
@@ -111,7 +111,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `サイトマップ(%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ index.htmlおよびsitemap.htmlページを構築する場合
 
 必須引数:
 
-- `パス`
-- `注意して聞く`
+- `path`
+- `lang`
 
 オプションの引数:
 
 - `quick_deps`
-- `ネスト`
-- `前処理`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -149,16 +149,16 @@ index.htmlおよびsitemap.htmlページを構築する場合
   <div class="card-body">
     <div class="card-title">
 
-ビルドとキャッシュ[`漸近線`](https://asymptote.sourceforge.io/) HTML5-WebGLキャンバス対応ベクトル・グラフィックスのトリプルバッククォート・コード・ブロック
+ビルドとキャッシュ[`Asymptote`](https://asymptote.sourceforge.io/) HTML5-WebGLキャンバス対応ベクトル・グラフィックスのトリプルバッククォート・コード・ブロック
 
 </div>
 <p class="card-text">
 
 必須引数:
 
-- `ビュー`
-- `注意して聞く`
-- `パス`
+- `view`
+- `lang`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ index.htmlおよびsitemap.htmlページを構築する場合
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `スキップ(%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -200,9 +200,9 @@ index.htmlおよびsitemap.htmlページを構築する場合
 
 オプションの引数:
 
-- `エクストリーム` デフォルト`json`
-- `フィルター` デフォルト`json_raw`
-- `型板` 上書き`フィルター` デフォルト式
+- `ext` デフォルト`json`
+- `filter` デフォルト`json_raw`
+- `template` 上書き`filter` デフォルト式
 
 </p>
 </div>
@@ -211,7 +211,7 @@ index.htmlおよびsitemap.htmlページを構築する場合
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `fetch_deps($path、$data、$quick)`
+#### `fetch_deps($path, $data, $quick)`
 
 </div>
   <div class="card-body">
@@ -228,9 +228,9 @@ $data引数hashrefを、2要素arrayrefsのタイムスタンプ順序付けさ�
 
 必須引数:
 
-- `パス`
-- `データ` - hashrefとして入力。戻り時にdepsの結果のanon配列を格納します
-- `速い` - デフォルト値は2
+- `path`
+- `data` - hashrefとして入力。戻り時にdepsの結果のanon配列を格納します
+- `quick` - デフォルト値は2
 
 </p>
 </div>
@@ -239,13 +239,13 @@ $data引数hashrefを、2要素arrayrefsのタイムスタンプ順序付けさ�
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `ブレッドクラム($path)`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-HTMLブレッドクラム・リストを返します。`パス`.
+HTMLブレッドクラム・リストを返します。`$path`.
 
 </div>
 <p class="card-text">
@@ -296,7 +296,7 @@ HTMLブレッドクラム・リストを返します。`パス`.
   <div class="card-body">
     <div class="card-title">
 
-順次処理のためのユーティリティ`$args{ビュー}`.
+順次処理のためのユーティリティ`$args{view}`.
 
 </div>
 <p class="card-text">
@@ -341,7 +341,7 @@ HTMLブレッドクラム・リストを返します。`パス`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `スニペット(%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ HTMLブレッドクラム・リストを返します。`パス`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `再構築(%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ next_viewからビルドされたコンテンツのテンプレート・ディ�
   <div class="card-body">
     <div class="card-title">
 
-追加`$args{注意して聞く}` から`$args{型板}`.
+追加`$args{lang}` から`$args{template}`.
 
 </div>
 <p class="card-text">
@@ -437,7 +437,7 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
 
 #### copy_if_newer($src、$dest)
 
-コピー数`$src` から`最低` 前者の変更タイムスタンプが後者の変更タイムスタンプより新しい場合。コピー時に、さらにgzip-compress `最低` file (テキストファイルの場合) ".gz" 名前の拡張。
+コピー数`$src` から`$dest` 前者の変更タイムスタンプが後者の変更タイムスタンプより新しい場合。コピー時に、さらにgzip-compress `$dest` file (テキストファイルの場合) ".gz" 名前の拡張。
 
 #### get_lock($lockfile)
 
@@ -469,19 +469,19 @@ Perl (leaf)パッケージの積極的なアンロード`$pkg` シンボルテ�
 
 #### normalize_svn_path(&#64;_)
 
-すべてのパスを正規化します。`@_` RAW引数として安全に使用できます。`SVN:: クライアント` コマンド
+すべてのパスを正規化します。`@_` RAW引数として安全に使用できます。`SVN::Client` コマンド
 
 #### sanitize_relative_path(&#64;_)
 
-パスを保護する`@_` 純粋な相対パスとして使用`ドチアク::DTL` (Djangoテンプレート)パス固有のコマンド。
+パスを保護する`@_` 純粋な相対パスとして使用`Dotiac::DTL` (Djangoテンプレート)パス固有のコマンド。
 
 #### parse_filename($path)
 
-ラッパー周り`ファイル::Basename::fileparse`。引数を指定しない場合、`$_` 解析するファイル名を指定します。
+ラッパー周り`File::Basename::fileparse`。引数を指定しない場合、`$_` 解析するファイル名を指定します。
 
 #### walk_content_tree($コード)
 
-条件付きで歩く`./コンテンツ` ビルドシステムチェックアウトのツリー、最初に正規化`$_` 正式なコンテンツ・ルート・サブパスとして、`$code->()` ツリーウォークの各項目についてほとんどのビルドでは、ウォークは発生しません&mdash; かわりに、ビルドは以前のビルドからキャッシュされたデータに依存します。
+条件付きで歩く`./content` ビルドシステムチェックアウトのツリー、最初に正規化`$_` 正式なコンテンツ・ルート・サブパスとして、`$code->()` ツリーウォークの各項目についてほとんどのビルドでは、ウォークは発生しません&mdash; かわりに、ビルドは以前のビルドからキャッシュされたデータに依存します。
 
 歩行を強制する唯一の方法は、設定することです`$path::use_cache` ユーザー提供のモジュールのfalse値。それ以外の場合、この動作は、[増分ビルド技術](https://iconoclasts.blog/joe/dependencies).
 
@@ -489,24 +489,24 @@ Perl (leaf)パッケージの積極的なアンロード`$pkg` シンボルテ�
 
 ##### アーカイブ済み($path)
 
-各フラグ`ステータス: アーカイブ済` `パス` (自然言語による) 使用`$_` 引数が渡されない場合。
+各フラグ`Status: archived` `$path` (自然言語による) 使用`$_` 引数が渡されない場合。
 
 ファイルをアーカイブすることは、Orionに伝える自然な方法です"このファイルのパーマリンクされた場所に注意を払うのをやめる ... 再度更新されないかぎり、アーカイブの場所はリフレッシュされます。特に、アーカイブされたファイルは、CMS自体内のディレクトリリストには表示されません。オンラインでの再編集を可能にするには、ライブページ自体に移動する必要があります。
 
 ##### seed_file_deps($path)
 
-安全な更新`%path:: 依存関係` この`パス`に基づいて、`依存関係` ヘッダーglob。使用するデフォルト`$_` 引数が渡されない場合のパス。
+安全な更新`%path::dependencies` この`$path`に基づいて、`dependencies` ヘッダーglob。使用するデフォルト`$_` 引数が渡されない場合のパス。
 
 ##### seed_file_acl($path)
 
-安全な更新`@path::acl` この`パス`に基づいて、`傾斜` ヘッダー仕様使用するデフォルト`$_` 引数が渡されない場合のパス。
+安全な更新`@path::acl` この`$path`に基づいて、`acl` ヘッダー仕様使用するデフォルト`$_` 引数が渡されない場合のパス。
 
 #### ロード
 
-同じ`YAML::XS:: ロード`.
+同じ`YAML::XS::Load`.
 
 #### ダンプ
 
-同じ`YAML::XS:: ダンプ`.
+同じ`YAML::XS::Dump`.
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -13,10 +13,10 @@ I grund och botten styrs byggsystemet av två Perl-moduler som tillhandahålls a
 Det första är att göra tre saker:
 
 0. ladda [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) och [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. konstruera `@path::mönster`och
-2. opportunistiskt gå den `innehåll/` träd att fördefiniera `%path::beroenden` och `@path::acls` från metadata för filhuvud för nedsättning/yaml.
+1. konstruera `@path::patterns`och
+2. opportunistiskt gå den `content/` träd att fördefiniera `%path::dependencies` och `@path::acls` från metadata för filhuvud för nedsättning/yaml.
 
-Den senares jobb är att tillhandahålla bokningsbara `visa`-baserad `$metod`s för matchande poster i `@path::mönster` (som ett strängifierat metodnamn i den andra rutan för varje arrayref-post), anropat av [skapa skript](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) enligt nedan ...
+Den senares jobb är att tillhandahålla bokningsbara `view`-baserad `$method`s för matchande poster i `@path::patterns` (som ett strängifierat metodnamn i den andra rutan för varje arrayref-post), anropat av [skapa skript](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) enligt nedan ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i `$sökväg` som är nya, som extern kod `kodfragment` eller `asymptot`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i `$path` som är nya, som extern kod `snippets` eller `asymptote`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,21 +65,21 @@ Den mest populära (och sofistikerade) vyn
 
 <p class="card-text">
 
-Den här vyn innehåller automatisk bearbetning av filer som finns i `$sökväg`bilagekatalog. Med andra ord, om `$path = "/foo.md.en"`, sedan de filer som lagras i  `/foo.page/` katalog associerad med "och" språktillägg kommer att införlivas i mallens adresserbara argument för att `$sökväg` Oavsett om `förbearbetning` argumentinställning &mdash; som, om det är sant, också skulle göra det materialet tillgängligt för själva **sidans innehåll**.
+Den här vyn innehåller automatisk bearbetning av filer som finns i `$path`bilagekatalog. Med andra ord, om `$path = "/foo.md.en"`, sedan de filer som lagras i  `/foo.page/` katalog associerad med "och" språktillägg kommer att införlivas i mallens adresserbara argument för att `$path` Oavsett om `preprocess` argumentinställning &mdash; som, om det är sant, också skulle göra det materialet tillgängligt för själva **sidans innehåll**.
 
 Obligatoriska argument:
 
-- `mall`
-- `sökväg`
-- `språk`
+- `template`
+- `path`
+- `lang`
 
 Valfria argument:
 
-- `dl` &mdash; åsidosätter normalt `fetch_deps` bearbetning
+- `deps` &mdash; åsidosätter normalt `fetch_deps` bearbetning
 
 - `quick_deps` &mdash; intern optimeringsinställning för deps-processing; bäst lämnad ej inställd
 
-- `förbearbetning` &mdash; aktiverar mallbearbetning inom `$sökväg` Själva innehållet,
+- `preprocess` &mdash; aktiverar mallbearbetning inom `$path` Själva innehållet,
 
 - `archive_root` &mdash; filer i "arkiverad" status är "kopierad" och spåras per år/månad undermappar till denna innehållsrotade plats via `ssi`,
 
@@ -111,7 +111,7 @@ För (flerberättande) aggregerade sidor
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `webbplatskarta (%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ Språkspecifikt, sorterat index för beroenden.
 
 Obligatoriska argument:
 
-- `sökväg`
-- `språk`
+- `path`
+- `lang`
 
 Valfria argument:
 
 - `quick_deps`
-- `kapslad`
-- `förbearbetning`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -143,22 +143,22 @@ Valfria argument:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `asymptot(%args)`
+#### `asymptote(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Byggen och cachar [`Asymptot`](https://asymptote.sourceforge.io/) triple-backquoted-code block för HTML5-WebGL-canvas-aktiverad vektorgrafik
+Byggen och cachar [`Asymptote`](https://asymptote.sourceforge.io/) triple-backquoted-code block för HTML5-WebGL-canvas-aktiverad vektorgrafik
 
 </div>
 <p class="card-text">
 
 Obligatoriska argument:
 
-- `visa`
-- `språk`
-- `sökväg`
+- `view`
+- `lang`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ Obligatoriska argument:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `hoppa över(%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -200,9 +200,9 @@ Konvertera YAML-filer, vanligtvis till JSON.
 
 Valfria argument:
 
-- `ext.` standardvärdet är `json`
-- `filtrera` standardvärdet är `json_raw`
-- `mall` åsidosättningar `filtrera` standarduttryck
+- `ext` standardvärdet är `json`
+- `filter` standardvärdet är `json_raw`
+- `template` åsidosättningar `filter` standarduttryck
 
 </p>
 </div>
@@ -224,13 +224,13 @@ Refactors $data argument hashref som en tidsstämpel ordnade arrayref av 2-eleme
 
 Den första posten i varje 2-element arrayref är filsökvägens namn, det andra elementet är resultatet [`read_text_file`](#) hashref för det sökvägsnamnet.
 
-Returnerar en lista över resulterande nya källfiler om [`$snabb > 2`](#).
+Returnerar en lista över resulterande nya källfiler om [`$quick > 2`](#).
 
 Obligatoriska argument:
 
-- `sökväg`
+- `path`
 - `data` - Inmatning som hashref; lagrar resulterande anon-array av deps vid retur
-- `snabb` - standardvärdet är 2
+- `quick` - standardvärdet är 2
 
 </p>
 </div>
@@ -239,13 +239,13 @@ Obligatoriska argument:
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `navigeringsspår($path)`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Returnerar HTML-spårlista för `$sökväg`.
+Returnerar HTML-spårlista för `$path`.
 
 </div>
 <p class="card-text">
@@ -273,7 +273,7 @@ Cachelagrar bygget. Används främst med fetch_deps och quick_deps > 2.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `kommentar(%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -296,7 +296,7 @@ Genererar SSI-inkluderingsbart HTML-fragment för en sidkommentar.
   <div class="card-body">
     <div class="card-title">
 
-Verktyg för sekventiell bearbetning `$arg{visa}`.
+Verktyg för sekventiell bearbetning `$args{view}`.
 
 </div>
 <p class="card-text">
@@ -341,7 +341,7 @@ Kör `next_view` i offlineläge.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `utdrag(%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ Kör `next_view` i offlineläge.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `rekonstruera (%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ Normaliserar lokala länkar (`./` och `../`).
   <div class="card-body">
     <div class="card-title">
 
-Tillägg `$arg{språk}` till `$arg{mall}`.
+Tillägg `$args{lang}` till `$args{template}`.
 
 </div>
 <p class="card-text">
@@ -429,19 +429,19 @@ Tillägg `$arg{språk}` till `$arg{mall}`.
 
 #### read_text_file($file, $out, $content_lines) &mdash; Orions universella textfilprocessor
 
-Parsar rubriker+innehåll i den UTF-8-kodade filen `$fil` och lagrar resultat i hashref `$out`. `$content_lines` är det (valfritt) högsta antalet innehållsrader att läsa.
+Parsar rubriker+innehåll i den UTF-8-kodade filen `$file` och lagrar resultat i hashref `$out`. `$content_lines` är det (valfritt) högsta antalet innehållsrader att läsa.
 
 Returnerar faktiskt antal lästa rader (inklusive huvuden).
 
-`$fil` kan vara en referens till en rå sträng som representerar hela innehållet i en fil.  Resultaten i `$out` Kommer fortfarande att vara UTF-8 kodad.
+`$file` kan vara en referens till en rå sträng som representerar hela innehållet i en fil.  Resultaten i `$out` Kommer fortfarande att vara UTF-8 kodad.
 
 #### copy_if_newer($src, $dest)
 
-Kopior `$src` till `öre` om den tidigare ändringens tidsstämpel är nyare än den senare. På kopia, dessutom gzip-komprimerar `öre` fil om det är en textfil och lägger till ".gz" Tillägg till namnet.
+Kopior `$src` till `$dest` om den tidigare ändringens tidsstämpel är nyare än den senare. På kopia, dessutom gzip-komprimerar `$dest` fil om det är en textfil och lägger till ".gz" Tillägg till namnet.
 
 #### get_lock($lockfile)
 
-Tar ett exklusivt (f)lås (för aktuell UNIX-process) på `$lockfil`.
+Tar ett exklusivt (f)lås (för aktuell UNIX-process) på `$lockfile`.
 
 #### blanda(\\&#64;däck)
 
@@ -457,7 +457,7 @@ Tar bort $prefix från varje argument i &#64;\_. Funktionen för argumentet $typ
 
 #### unload_package($pkg)
 
-Aggressivt lossar Perl-paket (blad) `kg` från symboltabellen (STASH).
+Aggressivt lossar Perl-paket (blad) `$pkg` från symboltabellen (STASH).
 
 #### purge_from_inc(&#64;sökväg)
 
@@ -469,7 +469,7 @@ Berör alla filer i `@_`. Om inga argument överförs används `$_`.
 
 #### normalize_svn_path(&#64;_)
 
-Normaliserar alla sökvägar i `@_` för säker användning som råa argument till `SVN::Klient` kommandon.
+Normaliserar alla sökvägar i `@_` för säker användning som råa argument till `SVN::Client` kommandon.
 
 #### sanitize_relative_path(&#64;_)
 
@@ -477,11 +477,11 @@ Säkrar sökvägar i `@_` för användning som rena relativa sökvägar i `Dotia
 
 #### parse_filename($path)
 
-Wrapper runt `Filparse::Basename::fileparse`. Utan argument används `$_` som filnamnet som ska tolkas.
+Wrapper runt `File::Basename::fileparse`. Utan argument används `$_` som filnamnet som ska tolkas.
 
 #### walk_content_tree($code)
 
-Villkorligt vandrar `./innehåll` trädet i byggsystemet (kassa), först normalisering `$_` som formell innehållsbaserad undersökväg, och sedan anropa `$code->()` på varje föremål i trädgången. För de flesta byggen händer aldrig promenaden &mdash; i stället bygger bygget på cachelagrade data från tidigare byggen.
+Villkorligt vandrar `./content` trädet i byggsystemet (kassa), först normalisering `$_` som formell innehållsbaserad undersökväg, och sedan anropa `$code->()` på varje föremål i trädgången. För de flesta byggen händer aldrig promenaden &mdash; i stället bygger bygget på cachelagrade data från tidigare byggen.
 
 Det enda sättet att tvinga en promenad är genom att ställa `$path::use_cache` till ett falskt värde i de moduler som användaren tillhandahåller. I annat fall hanteras detta beteende sakkunnigt av [inkrementell byggteknik](https://iconoclasts.blog/joe/dependencies).
 
@@ -489,17 +489,17 @@ Returnerar 1 om vandringen faktiskt fortsatte, i stället för att förlita sig 
 
 ##### arkiverad($path)
 
-Flaggor varje `Status: arkiverad` `$sökväg` (på ett naturligt språkligt sätt). Användningar `$_` om inga argument överförs.
+Flaggor varje `Status: archived` `$path` (på ett naturligt språkligt sätt). Användningar `$_` om inga argument överförs.
 
 Att arkivera filer är ett naturligt sätt att berätta för Orion att "sluta uppmärksamma den här filens permalänkade plats ... om den inte uppdateras igen, i vilket fall arkivplatsen kommer att uppdateras. I synnerhet visas inte arkiverade filer i kataloglistor i själva CMS-systemet. Du måste navigera till själva den aktiva sidan för att kunna redigera den igen online.
 
 ##### seed_file_deps($path)
 
-Säker uppdatering `%path::beroenden` för detta `$sökväg`baserat på dess `beroenden` globala sidhuvuden. Används som standard `$_` som sökvägen om inga argument överförs.
+Säker uppdatering `%path::dependencies` för detta `$path`baserat på dess `dependencies` globala sidhuvuden. Används som standard `$_` som sökvägen om inga argument överförs.
 
 ##### seed_file_acl($path)
 
-Säkra uppdateringar `@path::acl` för detta `$sökväg`baserat på dess `akl` huvudspec. Används som standard `$_` som sökvägen om inga argument överförs.
+Säkra uppdateringar `@path::acl` för detta `$path`baserat på dess `acl` huvudspec. Används som standard `$_` som sökvägen om inga argument överförs.
 
 #### Ladda
 

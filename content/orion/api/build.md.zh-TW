@@ -8,15 +8,15 @@ title: Orion API - 建置
 
 {# lede #}本文件涵蓋 **組建系統** API{# lede #}.
 
-基本上，建置系統由兩個使用者提供的 Perl 模組所管理：[`程式庫 /path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) 與[`程式庫 /view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+基本上，建置系統由兩個使用者提供的 Perl 模組所管理：[`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) 與[`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
 
 前的工作是做三件事：
 
-0. 載入[`程式庫 /facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) 與[`程式庫 /acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. 建構`@path：：樣式`，和
-2. 當機行走`內容 /` 種樹`%path::dependencies` 與`@path::acls` 來自 Markdown/yaml 檔案標頭描述資料。
+0. 載入[`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) 與[`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
+1. 建構`@path::patterns`，和
+2. 當機行走`content/` 種樹`%path::dependencies` 與`@path::acls` 來自 Markdown/yaml 檔案標頭描述資料。
 
-後者的工作是提供不可呼叫的工作`檢視`- 基底`$ 方法`s，用於比對下列項目：`@path：：樣式` (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 下方 ...
+後者的工作是提供不可呼叫的工作`view`- 基底`$method`s，用於比對下列項目：`@path::patterns` (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 下方 ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-許多視觀表的堆疊方式"篩選" 預先處理檔案的層面`$path` 新穎，如外部程式碼`片段` 或`漸近體`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+許多視觀表的堆疊方式"篩選" 預先處理檔案的層面`$path` 新穎，如外部程式碼`snippets` 或`asymptote`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -48,12 +48,12 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## 建立系統
 
-### [SunStarSys：：查看](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`程式庫 /view.pm`
+### [SunStarSys：：查看](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `single_narrative (%args)`
+#### `single_narrative(%args)`
 
 </div>
   <div class="card-body">
@@ -65,21 +65,21 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 <p class="card-text">
 
-此檢視包含檔案自動處理 (位於`$path`的附件目錄。也就是說，如果`$path = "繁體中文"`，然後儲存於 中的檔案`/foo.page/` 與目錄關聯的目錄".en" 語言延伸將併入該範本可定址引數`$path` 無論`前處理` 引數設定&mdash; 如果為 true，也會讓 **頁面的內容本身能夠存取該資料 **。
+此檢視包含檔案自動處理 (位於`$path`的附件目錄。也就是說，如果`$path = "/foo.md.en"`，然後儲存於 中的檔案`/foo.page/` 與目錄關聯的目錄".en" 語言延伸將併入該範本可定址引數`$path` 無論`preprocess` 引數設定&mdash; 如果為 true，也會讓 **頁面的內容本身能夠存取該資料 **。
 
 必要引數：
 
-- `範本`
-- `路徑`
-- `語言`
+- `template`
+- `path`
+- `lang`
 
 選擇性引數：
 
-- `描述` &mdash; 置換正常`fetch_deps` 處理
+- `deps` &mdash; 置換正常`fetch_deps` 處理
 
 - `quick_deps` &mdash; 內部折舊處理最佳化設定；最佳剩餘取消設定
 
-- `前處理` &mdash; 啟用範本處理`$path` 內容本身，
+- `preprocess` &mdash; 啟用範本處理`$path` 內容本身，
 
 - `archive_root` &mdash; 檔案位於"已封存" 狀態為"已複製" 並透過下列方式依年 / 月子資料夾追蹤至此內容根目錄的位置：`ssi`,
 
@@ -92,7 +92,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `news_page (%args)`
+#### `news_page(%args)`
 
 </div>
   <div class="card-body">
@@ -111,7 +111,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `網站地圖 (%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 必要引數：
 
-- `路徑`
-- `語言`
+- `path`
+- `lang`
 
 選擇性引數：
 
 - `quick_deps`
-- `巢套`
-- `前處理`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -143,22 +143,22 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `asymptote (%args)`
+#### `asymptote(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-組建和快取[`漸近線`](https://asymptote.sourceforge.io/) 適用於啟用 HTML5-WebGL 畫面之向量圖形的三重方括號編碼區塊
+組建和快取[`Asymptote`](https://asymptote.sourceforge.io/) 適用於啟用 HTML5-WebGL 畫面之向量圖形的三重方括號編碼區塊
 
 </div>
 <p class="card-text">
 
 必要引數：
 
-- `檢視`
-- `語言`
-- `路徑`
+- `view`
+- `lang`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `略過 (%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -178,7 +178,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 </div>
 <p class="card-text">
 
-改為建立關聯的產生來源檔案 (例如，`.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\ 語言`) 將建立在次要建構系統執行上。
+改為建立關聯的產生來源檔案 (例如，`.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) 將建立在次要建構系統執行上。
 
 </p>
 </div>
@@ -187,7 +187,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `yml2ext (%args)`
+#### `yml2ext(%args)`
 
 </div>
   <div class="card-body">
@@ -200,9 +200,9 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 選擇性引數：
 
-- `分機` 預設為`json`
-- `過濾器` 預設為`json_raw`
-- `範本` 覆寫`過濾器` 預設表示式
+- `ext` 預設為`json`
+- `filter` 預設為`json_raw`
+- `template` 覆寫`filter` 預設表示式
 
 </p>
 </div>
@@ -211,7 +211,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `fetch_deps ($path, $data, $quick)`
+#### `fetch_deps($path, $data, $quick)`
 
 </div>
   <div class="card-body">
@@ -228,9 +228,9 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 必要引數：
 
-- `路徑`
-- `資料` - 輸入為雜湊參考；在退回時導致折舊陣列的商店
-- `快速` - 預設為 2
+- `path`
+- `data` - 輸入為雜湊參考；在退回時導致折舊陣列的商店
+- `quick` - 預設為 2
 
 </p>
 </div>
@@ -239,7 +239,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `來源路徑 ($path)`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
@@ -256,7 +256,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `memoize (%args)`
+#### `memoize(%args)`
 
 </div>
   <div class="card-body">
@@ -273,7 +273,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `註解 (%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -290,13 +290,13 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `next_view (%args)`
+#### `next_view(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-循序處理的公用程式`$args{檢視}`.
+循序處理的公用程式`$args{view}`.
 
 </div>
 <p class="card-text">
@@ -307,7 +307,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `ssi (%args)`
+#### `ssi(%args)`
 
 </div>
   <div class="card-body">
@@ -324,7 +324,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `離線 (%args)`
+#### `offline(%args)`
 
 </div>
   <div class="card-body">
@@ -341,7 +341,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `程式碼片段 (%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `重新建構 (%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -375,7 +375,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `trim_local_links (%args)`
+#### `trim_local_links(%args)`
 
 </div>
   <div class="card-body">
@@ -392,7 +392,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `normalize_links (%args)`
+#### `normalize_links(%args)`
 
 </div>
   <div class="card-body">
@@ -409,13 +409,13 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `langify_template (%args)`
+#### `langify_template(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-附加`$args{語言}` 至`$args{範本}`.
+附加`$args{lang}` 至`$args{template}`.
 
 </div>
 <p class="card-text">
@@ -425,15 +425,15 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ----
 
-### [SunStarSys：：使用](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫`程式庫 /path.pm` 與`程式庫 /view.pm`
+### [SunStarSys：：使用](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫`lib/path.pm` 與`lib/view.pm`
 
 #### read_text_file ($file, $out, $content_lines) &mdash; Orion 的通用文字檔案處理器
 
-剖析 UTF- 8 編碼檔案的 headers+content `$ 檔案` 並將結果儲存在 hashref 中`折扣`. `$content_lines` 是要讀取的內容行數上限 (選擇性)。
+剖析 UTF- 8 編碼檔案的 headers+content `$file` 並將結果儲存在 hashref 中`$out`. `$content_lines` 是要讀取的內容行數上限 (選擇性)。
 
 傳回實際讀取的行數 (包含標頭) 。
 
-`$ 檔案` 可以是原始字串的參照，代表檔案的完整內容。結果`折扣` 將會依然以 UTF-8 編碼。
+`$file` 可以是原始字串的參照，代表檔案的完整內容。結果`$out` 將會依然以 UTF-8 編碼。
 
 #### copy_if_newer ($src, $dest)
 
@@ -449,7 +449,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### sort_tables ($content)
 
-根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。每一表格只能排序一個資料欄 (選擇性地為數字) `n 個`，遞減`垂直` 或遞增`^` 訂單。
+根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。每一表格只能排序一個資料欄 (選擇性地為數字) `n`，遞減`v` 或遞增`^` 訂單。
 
 #### fixup_code ($prefix, $type, &#64;_)
 
@@ -469,19 +469,19 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### normalize_svn_path(&#64;_)
 
-將所有路徑標準化`@_` 以安全方式用作原始引數`SVN：：客戶端` 指令。
+將所有路徑標準化`@_` 以安全方式用作原始引數`SVN::Client` 指令。
 
 #### sanitize_relative_path(&#64;_)
 
-保護以下位置的路徑：`@_` 用作純相對路徑`多蒂亞克：：DTL` (Django 樣板) 路徑特定命令。
+保護以下位置的路徑：`@_` 用作純相對路徑`Dotiac::DTL` (Django 樣板) 路徑特定命令。
 
 #### parse_filename (路徑)
 
-包裝函式四周`檔案：：Basename：：fileparse`。不含引數，使用`$_` 作為要剖析的檔案名稱。
+包裝函式四周`File::Basename::fileparse`。不含引數，使用`$_` 作為要剖析的檔案名稱。
 
 #### walk_content_tree ($code)
 
-有條件地步行`。/ 內容` 組建系統取出樹狀結構，先標準化`$_` 作為正式的內容根目錄子路徑，然後呼叫`中文 (繁體)` 在樹行道的每個項目上。對大多數的組建而言，一律不會執行 walk &mdash; 而是組建依賴先前組建的快取資料。
+有條件地步行`./content` 組建系統取出樹狀結構，先標準化`$_` 作為正式的內容根目錄子路徑，然後呼叫`$code->()` 在樹行道的每個項目上。對大多數的組建而言，一律不會執行 walk &mdash; 而是組建依賴先前組建的快取資料。
 
 強制散步的唯一方法是設定`$path::use_cache` 在使用者提供的模組中為 false 值。否則，此行為由下列項目由專家管理：[增量建置技術](https://iconoclasts.blog/joe/dependencies).
 
@@ -489,17 +489,17 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ##### 已歸檔 ($path)
 
-每個旗標`狀態：已存檔` `$path` (以自然語言特定的方式)。使用`$_` 如果未傳送任何引數。
+每個旗標`Status: archived` `$path` (以自然語言特定的方式)。使用`$_` 如果未傳送任何引數。
 
 歸檔檔案是告訴 Orion 的自然方式"停止注意此檔案的永久連結位置 ... 除非再次更新，否則會重新整理存檔位置。特別是，封存的檔案不會出現在 CMS 本身的目錄列表中；您必須瀏覽至即時頁面本身，才能在線上再次進行編輯。
 
 ##### seed_file_deps (路徑)
 
-安全更新`%path::dependencies` 針對此`$path`，根據它`相依性` 標頭 glob。預設使用`$_` 作為路徑，若未傳送任何引數。
+安全更新`%path::dependencies` 針對此`$path`，根據它`dependencies` 標頭 glob。預設使用`$_` 作為路徑，若未傳送任何引數。
 
 ##### seed_file_acl (路徑)
 
-安全更新`@path::acl` 針對此`$path`，根據它`公升` 標頭規格預設使用`$_` 作為路徑，若未傳送任何引數。
+安全更新`@path::acl` 針對此`$path`，根據它`acl` 標頭規格預設使用`$_` 作為路徑，若未傳送任何引數。
 
 #### 載入
 
@@ -507,6 +507,6 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### 傾印
 
-相同於`YAML：：XS：：傾印`.
+相同於`YAML::XS::Dump`.
 
 <!-- $Date$ $Author$ $Revision$ -->

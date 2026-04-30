@@ -13,10 +13,10 @@ Fondamentalement, le système de construction est régi par deux modules Perl fo
 Le travail du premier est de faire trois choses :
 
 0. chargement [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) et [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. construction `@path : :modèles`, et
-2. de manière opportuniste, `contenu/` arbre à ensemencer `%path : :dépendances` et `@path : :acls` à partir des métadonnées d'en-tête de fichier markdown/yaml.
+1. construction `@path::patterns`, et
+2. de manière opportuniste, `content/` arbre à ensemencer `%path::dependencies` et `@path::acls` à partir des métadonnées d'en-tête de fichier markdown/yaml.
 
-Le travail de ce dernier est de fournir invokable `vue`-basé `Méthode $`s pour les entrées correspondantes dans `@path : :modèles` (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée arrayref), appelé par le [génération de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) comme ci-dessous ...
+Le travail de ce dernier est de fournir invokable `view`-basé `$method`s pour les entrées correspondantes dans `@path::patterns` (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée arrayref), appelé par le [génération de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) comme ci-dessous ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans `$chemin` qui sont nouveaux, comme le code externe `fragments de code` ou `asymptote`-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans `$path` qui sont nouveaux, comme le code externe `snippets` ou `asymptote`-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,21 +65,21 @@ La vue la plus populaire (et sophistiquée)
 
 <p class="card-text">
 
-Cette vue intègre le traitement automatisé des fichiers situés dans le `$chemin`répertoire des pièces jointes. Autrement dit, si `$path = "/foo.md.fr"`, puis les fichiers stockés dans  `/foo.page/` répertoire associé au ".fr" l'extension de langue sera incorporée dans le modèle des arguments adressables pour `$chemin` indépendamment du `prétraitement` paramètre de l'argument &mdash; qui, si elle est vraie, rendrait également ce matériel accessible par le contenu de la **page elle-même**.
+Cette vue intègre le traitement automatisé des fichiers situés dans le `$path`répertoire des pièces jointes. Autrement dit, si `$path = "/foo.md.en"`, puis les fichiers stockés dans  `/foo.page/` répertoire associé au ".fr" l'extension de langue sera incorporée dans le modèle des arguments adressables pour `$path` indépendamment du `preprocess` paramètre de l'argument &mdash; qui, si elle est vraie, rendrait également ce matériel accessible par le contenu de la **page elle-même**.
 
 Arguments obligatoires :
 
-- `modèle`
-- `chemin`
-- `langue`
+- `template`
+- `path`
+- `lang`
 
 Argmuents facultatifs :
 
-- `dépôts` &mdash; remplace la normale `fetch_deps` traitement
+- `deps` &mdash; remplace la normale `fetch_deps` traitement
 
 - `quick_deps` &mdash; paramètre d'optimisation du traitement des dépôts interne ; meilleure option à gauche non définie
 
-- `prétraitement` &mdash; active le traitement des modèles dans le `$chemin` contenu lui-même,
+- `preprocess` &mdash; active le traitement des modèles dans le `$path` contenu lui-même,
 
 - `archive_root` &mdash; fichiers dans "archivé" statut "copié" et suivi par sous-dossiers année/mois vers cet emplacement basé sur le contenu via `ssi`,
 
@@ -111,7 +111,7 @@ Pour les pages d'agrégation (multi-narrative)
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `plan du site (%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ Index trié des dépendances propre à l'environnement linguistique.
 
 Arguments obligatoires :
 
-- `chemin`
-- `langue`
+- `path`
+- `lang`
 
 Arguments facultatifs :
 
 - `quick_deps`
-- `imbriqué`
-- `prétraitement`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -156,9 +156,9 @@ Builds et caches [`Asymptote`](https://asymptote.sourceforge.io/) blocs triple-b
 
 Arguments obligatoires :
 
-- `vue`
-- `langue`
-- `chemin`
+- `view`
+- `lang`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ Arguments obligatoires :
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `ignorer (%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -200,9 +200,9 @@ Convertissez des fichiers YAML, généralement en JSON.
 
 Arguments facultatifs :
 
-- `ext.` par défaut, `json`
-- `filtre` par défaut, `json_raw`
-- `modèle` remplacements `filtre` expression par défaut
+- `ext` par défaut, `json`
+- `filter` par défaut, `json_raw`
+- `template` remplacements `filter` expression par défaut
 
 </p>
 </div>
@@ -228,9 +228,9 @@ Renvoie la liste des nouveaux fichiers source résultants si [`$quick > 2`](#).
 
 Arguments obligatoires :
 
-- `chemin`
-- `données` - entrée en tant que hashref ; stocke l'anon-array résultant des dépôts lors du retour
-- `rapide` - Valeur par défaut : 2
+- `path`
+- `data` - entrée en tant que hashref ; stocke l'anon-array résultant des dépôts lors du retour
+- `quick` - Valeur par défaut : 2
 
 </p>
 </div>
@@ -239,13 +239,13 @@ Arguments obligatoires :
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `chemin de navigation ($path)`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Renvoie la liste des chemins de navigation HTML pour `$chemin`.
+Renvoie la liste des chemins de navigation HTML pour `$path`.
 
 </div>
 <p class="card-text">
@@ -256,7 +256,7 @@ Renvoie la liste des chemins de navigation HTML pour `$chemin`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `mémoriser (%args)`
+#### `memoize(%args)`
 
 </div>
   <div class="card-body">
@@ -273,7 +273,7 @@ Met le build en mémoire cache ; principalement utilisé avec fetch_deps et quic
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `commentaire(%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -296,7 +296,7 @@ Génère un fragment HTML inclus dans SSI pour un commentaire de page.
   <div class="card-body">
     <div class="card-title">
 
-Utilitaire de traitement séquentiel `$args{vue}`.
+Utilitaire de traitement séquentiel `$args{view}`.
 
 </div>
 <p class="card-text">
@@ -324,7 +324,7 @@ Evaluations récursives `ssi` balises.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `hors ligne (%args)`
+#### `offline(%args)`
 
 </div>
   <div class="card-body">
@@ -341,7 +341,7 @@ Exécute le `next_view` en mode hors ligne.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `fragment de code (%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ Exécute le `next_view` en mode hors ligne.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `reconstruire(%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ Normalisation des liens locaux (`./` et `../`).
   <div class="card-body">
     <div class="card-title">
 
-Ajouts `$args{langue}` au `$args{modèle}`.
+Ajouts `$args{lang}` au `$args{template}`.
 
 </div>
 <p class="card-text">
@@ -429,19 +429,19 @@ Ajouts `$args{langue}` au `$args{modèle}`.
 
 #### read_text_file($file, $out, $content_lines) &mdash; Processeur de fichiers texte universel d'Orion
 
-Analyse les en-têtes + le contenu du fichier encodé UTF-8 `Fichier $` et stocke les résultats dans le hashref `$out`. `$content_lines` est le nombre maximum (facultatif) de lignes de contenu à lire.
+Analyse les en-têtes + le contenu du fichier encodé UTF-8 `$file` et stocke les résultats dans le hashref `$out`. `$content_lines` est le nombre maximum (facultatif) de lignes de contenu à lire.
 
 Renvoie le nombre réel de lignes lues (en-têtes compris).
 
-`Fichier $` peut être une référence à une chaîne brute, représentant le contenu complet d'un fichier.  Les résultats dans `$out` sera encodé en UTF-8.
+`$file` peut être une référence à une chaîne brute, représentant le contenu complet d'un fichier.  Les résultats dans `$out` sera encodé en UTF-8.
 
 #### copy_if_newer($src, $dest)
 
-Copies `Source $` au `$dest` si l'horodatage de modification du premier est plus récent que celui du second. Sur la copie, gzip-comprend également le `$dest` fichier s'il s'agit d'un fichier texte et ajoute ".gz" extension du nom.
+Copies `$src` au `$dest` si l'horodatage de modification du premier est plus récent que celui du second. Sur la copie, gzip-comprend également le `$dest` fichier s'il s'agit d'un fichier texte et ajoute ".gz" extension du nom.
 
 #### get_lock($lockfile)
 
-Prend un (f)verrou exclusif (pour le processus UNIX actuel) sur `Fichier de verrouillage`.
+Prend un (f)verrou exclusif (pour le processus UNIX actuel) sur `$lockfile`.
 
 #### réorganiser(\\&#64;pont)
 
@@ -469,44 +469,44 @@ Toucher tous les fichiers dans `@_`. Si aucun argument n'est transmis, utilise `
 
 #### normalize_svn_path(&#64;_)
 
-Normalise tous les chemins dans `@_` pour une utilisation sûre comme arguments bruts `SVN : :Client` commandes.
+Normalise tous les chemins dans `@_` pour une utilisation sûre comme arguments bruts `SVN::Client` commandes.
 
 #### sanitize_relative_path(&#64;_)
 
-Sécurise les chemins dans `@_` à utiliser comme chemins relatifs purs dans `Dotiac : :DTL` Commandes spécifiques au chemin (Django Template).
+Sécurise les chemins dans `@_` à utiliser comme chemins relatifs purs dans `Dotiac::DTL` Commandes spécifiques au chemin (Django Template).
 
 #### parse_filename($path)
 
-Wrapper autour `Fichier : :Basename : :fileparse`. sans arguments, utilise `$_` comme nom de fichier à analyser.
+Wrapper autour `File::Basename::fileparse`. sans arguments, utilise `$_` comme nom de fichier à analyser.
 
 #### walk_content_tree(code$)
 
-Marche conditionnellement le `./contenu` arbre de l'extraction du système de paramétrage, première normalisation `$_` comme sous-chemin formel basé sur le contenu, puis l'appel `$code->()` sur chaque élément de l'arbre. Pour la plupart des constructions, la marche ne se fait jamais &mdash; à la place, le build s'appuie sur les données mises en cache des builds précédents.
+Marche conditionnellement le `./content` arbre de l'extraction du système de paramétrage, première normalisation `$_` comme sous-chemin formel basé sur le contenu, puis l'appel `$code->()` sur chaque élément de l'arbre. Pour la plupart des constructions, la marche ne se fait jamais &mdash; à la place, le build s'appuie sur les données mises en cache des builds précédents.
 
-La seule façon de forcer une promenade est de régler `$path : :use_cache` à une valeur fausse dans vos modules fournis par l'utilisateur. Sinon, ce comportement est géré de manière experte par le [technologie de construction incrémentielle](https://iconoclasts.blog/joe/dependencies).
+La seule façon de forcer une promenade est de régler `$path::use_cache` à une valeur fausse dans vos modules fournis par l'utilisateur. Sinon, ce comportement est géré de manière experte par le [technologie de construction incrémentielle](https://iconoclasts.blog/joe/dependencies).
 
 Renvoie 1 si la marche s'est réellement déroulée, au lieu de s'appuyer sur des données mises en cache. Sinon, renvoie une valeur False.
 
 ##### archivé($path)
 
-Drapeaux chacun `Statut : archivé` `$chemin` (d'une manière spécifique au langage naturel). Utilisations `$_` si aucun argument n'est transmis.
+Drapeaux chacun `Status: archived` `$path` (d'une manière spécifique au langage naturel). Utilisations `$_` si aucun argument n'est transmis.
 
 Archiver des fichiers est un moyen naturel de dire à Orion "cesser de prêter attention à l'emplacement permalien de ce fichier ... à moins qu'il ne soit mis à jour à nouveau, auquel cas l'emplacement d'archivage sera actualisé. En particulier, les fichiers archivés n'apparaissent pas dans les listes de répertoires au sein du CMS lui-même ; vous devez accéder à la page active elle-même pour pouvoir la modifier à nouveau en ligne.
 
 ##### seed_file_deps($path)
 
-Mises à jour sécurisées `%path : :dépendances` pour ceci `$chemin`, basé sur son `dépendances` glob d'en-tête. Utilisation par défaut `$_` comme chemin si aucun argument n'est transmis.
+Mises à jour sécurisées `%path::dependencies` pour ceci `$path`, basé sur son `dependencies` glob d'en-tête. Utilisation par défaut `$_` comme chemin si aucun argument n'est transmis.
 
 ##### seed_file_acl($path)
 
-Mises à jour en toute sécurité `@path : :acl` pour ceci `$chemin`, basé sur son `acl` spécification d'en-tête Utilisation par défaut `$_` comme chemin si aucun argument n'est transmis.
+Mises à jour en toute sécurité `@path::acl` pour ceci `$path`, basé sur son `acl` spécification d'en-tête Utilisation par défaut `$_` comme chemin si aucun argument n'est transmis.
 
 #### Charger
 
-Identique à `YAML : :XS : :Chargement`.
+Identique à `YAML::XS::Load`.
 
 #### Vidage
 
-Identique à `YAML : :XS : :Vidage`.
+Identique à `YAML::XS::Dump`.
 
 <!-- $Date$ $Author$ $Revision$ -->

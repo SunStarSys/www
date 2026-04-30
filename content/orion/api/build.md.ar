@@ -13,10 +13,10 @@ title: أوريون API - بناء
 المهمة الأولى هي القيام بثلاثة أشياء:
 
 0. حمل [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) و [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. بناء `@path::النماذج`، و
-2. انتهازية المشي `المحتوى/` يبذر الشجرة إلى البذور `%path::dependencies` و `@path::acls` من ميتاديتا رأس ملف markdown/yaml.
+1. بناء `@path::patterns`، و
+2. انتهازية المشي `content/` يبذر الشجرة إلى البذور `%path::dependencies` و `@path::acls` من ميتاديتا رأس ملف markdown/yaml.
 
-وظيفة الأخير هو توفير الاستدعاء `شاهد`على أساس `طريقة $`s للإدخالات المطابقة في `@path::النماذج` (باعتباره اسم أسلوب ذي سلسلة في الفتحة الثانية من كل إدخال arrayref)، يتم استدعاؤه بواسطة [يصنع النصوص البرمجية](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) أسفل ...
+وظيفة الأخير هو توفير الاستدعاء `view`على أساس `$method`s للإدخالات المطابقة في `@path::patterns` (باعتباره اسم أسلوب ذي سلسلة في الفتحة الثانية من كل إدخال arrayref)، يتم استدعاؤه بواسطة [يصنع النصوص البرمجية](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) أسفل ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة جوانب الملف مسبقًا في `مسار $` تلك رواية، مثل الكود الخارجي `المقتطفات` أو `مُقَارِبًا`قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة جوانب الملف مسبقًا في `$path` تلك رواية، مثل الكود الخارجي `snippets` أو `asymptote`قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,25 +65,25 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 <p class="card-text">
 
-يتضمن هذا العرض المعالجة الآلية للملفات الموجودة داخل `مسار $`'s دليل المرفق. وبعبارة أخرى، إذا `$path = "/foo.md.en"`، ثم الملفات المخزنة داخل  `/foo.page/` الدليل المقترن بـ "سن" سيتم دمج امتداد اللغة في الوسائط القابلة للعنونة لهذا القالب `مسار $` بغض النظر عن `يعالج` إعداد الوسيطة &mdash; والتي إذا كانت صحيحة، ستجعل هذه المادة متاحة أيضًا من خلال محتوى **الصفحة نفسها**.
+يتضمن هذا العرض المعالجة الآلية للملفات الموجودة داخل `$path`'s دليل المرفق. وبعبارة أخرى، إذا `$path = "/foo.md.en"`، ثم الملفات المخزنة داخل  `/foo.page/` الدليل المقترن بـ "سن" سيتم دمج امتداد اللغة في الوسائط القابلة للعنونة لهذا القالب `$path` بغض النظر عن `preprocess` إعداد الوسيطة &mdash; والتي إذا كانت صحيحة، ستجعل هذه المادة متاحة أيضًا من خلال محتوى **الصفحة نفسها**.
 
 الوسائط الإلزامية:
 
-- `القالب`
-- `مسار`
-- `جوف`
+- `template`
+- `path`
+- `lang`
 
 الوسائل الاختيارية:
 
-- `ردهة` &mdash; يتجاوز الوضع الطبيعي `fetch_deps` معالجة
+- `deps` &mdash; يتجاوز الوضع الطبيعي `fetch_deps` معالجة
 
 - `quick_deps` &mdash; إعداد تحسين المعالجة الداخلية لـ deps؛ أفضل وضع لليسار
 
-- `يعالج` &mdash; تمكين معالجة القالب في `مسار $` المحتوى نفسه،
+- `preprocess` &mdash; تمكين معالجة القالب في `$path` المحتوى نفسه،
 
-- `archive_root` &mdash; الملفات في "مؤرشف" الحالة هي "نُسخ" وتتبع حسب المجلدات الفرعية للسنة / الشهر إلى هذا الموقع المتأصل بالمحتوى عبر `تسي`,
+- `archive_root` &mdash; الملفات في "مؤرشف" الحالة هي "نُسخ" وتتبع حسب المجلدات الفرعية للسنة / الشهر إلى هذا الموقع المتأصل بالمحتوى عبر `ssi`,
 
-- `category_root` &mdash; العناصر في "الفئات" الرأس "نُسخ" الانتقال إلى مجلدات الفئات المسماة بشكل مناسب في هذا الموقع القائم على المحتوى عبر `تسي`.
+- `category_root` &mdash; العناصر في "الفئات" الرأس "نُسخ" الانتقال إلى مجلدات الفئات المسماة بشكل مناسب في هذا الموقع القائم على المحتوى عبر `ssi`.
 
 </p>
   </div>
@@ -111,7 +111,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `خريطة الموقع(%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 الوسائط الإلزامية:
 
-- `مسار`
-- `جوف`
+- `path`
+- `lang`
 
 الوسائط الاختيارية:
 
 - `quick_deps`
-- `متداخل`
-- `يعالج`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -143,22 +143,22 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `علامة(%args)`
+#### `asymptote(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-الإنشاءات وذاكرة التخزين المؤقت [`أسيمبتوت`](https://asymptote.sourceforge.io/) كتل التعليمات البرمجية ذات علامات الاقتباس الثلاثية لرسومات المتجه HTML5-WebGL التي تدعم السطح
+الإنشاءات وذاكرة التخزين المؤقت [`Asymptote`](https://asymptote.sourceforge.io/) كتل التعليمات البرمجية ذات علامات الاقتباس الثلاثية لرسومات المتجه HTML5-WebGL التي تدعم السطح
 
 </div>
 <p class="card-text">
 
 الوسائط الإلزامية:
 
-- `شاهد`
-- `جوف`
-- `مسار`
+- `view`
+- `lang`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `تخطي(%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -200,9 +200,9 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 الوسائط الاختيارية:
 
-- `خارج` افتراضيًا إلى `صيغة الجمع`
-- `مرشح` افتراضيًا إلى `json_raw`
-- `القالب` يتجاوز `مرشح` التعبير الافتراضي
+- `ext` افتراضيًا إلى `json`
+- `filter` افتراضيًا إلى `json_raw`
+- `template` يتجاوز `filter` التعبير الافتراضي
 
 </p>
 </div>
@@ -211,7 +211,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `fetch_deps($path، $data، $quick)`
+#### `fetch_deps($path, $data, $quick)`
 
 </div>
   <div class="card-body">
@@ -228,9 +228,9 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 الوسائط الإلزامية:
 
-- `مسار`
-- `البيانات` - المدخلات مثل hashref ؛ مخازن الناتجة عن صفيف من deps عند العودة
-- `سريع` - الافتراضي إلى 2
+- `path`
+- `data` - المدخلات مثل hashref ؛ مخازن الناتجة عن صفيف من deps عند العودة
+- `quick` - الافتراضي إلى 2
 
 </p>
 </div>
@@ -239,13 +239,13 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `علامات التتبع($path)`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-إرجاع قائمة علامات تتبع HTML لـ `مسار $`.
+إرجاع قائمة علامات تتبع HTML لـ `$path`.
 
 </div>
 <p class="card-text">
@@ -256,7 +256,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `حفظ(%args)`
+#### `memoize(%args)`
 
 </div>
   <div class="card-body">
@@ -273,7 +273,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `تعليق(%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -296,7 +296,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-الأداة المساعدة للمعالجة المتسلسلة `$args{شاهد}`.
+الأداة المساعدة للمعالجة المتسلسلة `$args{view}`.
 
 </div>
 <p class="card-text">
@@ -313,7 +313,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-التقييمات المتكررة `تسي` العلامات.
+التقييمات المتكررة `ssi` العلامات.
 
 </div>
 <p class="card-text">
@@ -324,7 +324,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `غير متصل(%args)`
+#### `offline(%args)`
 
 </div>
   <div class="card-body">
@@ -341,7 +341,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `قصاصة(%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `إعادة الإعمار(%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-إلحاق `$args{جوف}` لكي `$args{القالب}`.
+إلحاق `$args{lang}` لكي `$args{template}`.
 
 </div>
 <p class="card-text">
@@ -429,11 +429,11 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 #### read_text_file($file, $out, $content_lines) &mdash; معالج الملفات النصية العالمية لـ Orion
 
-تحليل الرؤوس + محتوى ملف UTF-8 المشفر `ملف $` ويخزن النتائج في hashref `$out`. `$content_lines` هو الحد الأقصى (اختياري) لعدد سطور المحتوى المطلوب قراءتها.
+تحليل الرؤوس + محتوى ملف UTF-8 المشفر `$file` ويخزن النتائج في hashref `$out`. `$content_lines` هو الحد الأقصى (اختياري) لعدد سطور المحتوى المطلوب قراءتها.
 
 إرجاع العدد الفعلي للسطور المقروءة (بما في ذلك الرؤوس).
 
-`ملف $` قد يكون مرجعًا لسلسلة أولية، تمثل المحتويات الكاملة للملف.  النتائج في `$out` سيظل UTF-8 مشفرًا.
+`$file` قد يكون مرجعًا لسلسلة أولية، تمثل المحتويات الكاملة للملف.  النتائج في `$out` سيظل UTF-8 مشفرًا.
 
 #### copy_if_newer($src، $dest)
 
@@ -449,7 +449,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 #### sort_tables($content)
 
-فرز جداول تخفيض السعر في $content وفقًا لمواصفات عمود كل جدول.  يمكن فرز عمود واحد فقط لكل جدول، اختياريًا رقميًا `لا`، في أي تنازلي `v` أو تصاعدي `^` الطلب.
+فرز جداول تخفيض السعر في $content وفقًا لمواصفات عمود كل جدول.  يمكن فرز عمود واحد فقط لكل جدول، اختياريًا رقميًا `n`، في أي تنازلي `v` أو تصاعدي `^` الطلب.
 
 #### fixup_code($prefix، $type، &#64;_)
 
@@ -457,7 +457,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 #### unload_package($pkg)
 
-تفريغ حزمة Perl (ورقة) بقوة `حزمة $` من جدول الرموز (STASH).
+تفريغ حزمة Perl (ورقة) بقوة `$pkg` من جدول الرموز (STASH).
 
 #### purge_from_inc(&#64;المسارات)
 
@@ -469,19 +469,19 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 #### normalize_svn_path(&#64;_)
 
-تطبيع كل المسارات في `@_` للاستخدام الآمن كحجج خام `SVN::العميل` الأوامر.
+تطبيع كل المسارات في `@_` للاستخدام الآمن كحجج خام `SVN::Client` الأوامر.
 
 #### sanitize_relative_path(&#64;_)
 
-تأمين المسارات في `@_` للاستخدام كمسارات نسبية نقية في `دوتياك::DTL` الأوامر الخاصة بمسار (Django Template).
+تأمين المسارات في `@_` للاستخدام كمسارات نسبية نقية في `Dotiac::DTL` الأوامر الخاصة بمسار (Django Template).
 
 #### parse_filename(مسار$)
 
-مغلف حول `ملف::اسم القاعدة::fileparse`. بدون وسائط، استخدامات `$_` مثل اسم الملف للتحليل اللغوي.
+مغلف حول `File::Basename::fileparse`. بدون وسائط، استخدامات `$_` مثل اسم الملف للتحليل اللغوي.
 
 #### walk_content_tree($code)
 
-مشياً مشروطاً `./المحتوى` شجرة الخروج من نظام البناء، أولا تطبيع `$_` كمسار فرعي جذر المحتوى الرسمي، ثم الاستدعاء `$code->()` على كل عنصر في ممر الشجرة. بالنسبة لمعظم المباني، لا يحدث المشي أبدًا &mdash; بدلاً من ذلك، تعتمد النسخة على البيانات المخزنة في الذاكرة المخبئية من عمليات الإنشاء السابقة.
+مشياً مشروطاً `./content` شجرة الخروج من نظام البناء، أولا تطبيع `$_` كمسار فرعي جذر المحتوى الرسمي، ثم الاستدعاء `$code->()` على كل عنصر في ممر الشجرة. بالنسبة لمعظم المباني، لا يحدث المشي أبدًا &mdash; بدلاً من ذلك، تعتمد النسخة على البيانات المخزنة في الذاكرة المخبئية من عمليات الإنشاء السابقة.
 
 الطريقة الوحيدة لإجبار المشي هي عن طريق وضع `$path::use_cache` إلى قيمة false في الوحدات التي يوفرها المستخدم. وإلا يتم إدارة هذا السلوك بخبرة من قبل [تقنية البناء التزايدي](https://iconoclasts.blog/joe/dependencies).
 
@@ -489,24 +489,24 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 ##### مؤرشف ($path)
 
-علامات لكل `الحالة: مؤرشف` `مسار $` (بشكل خاص باللغة الطبيعية). الاستخدامات `$_` إذا لم يتم تمرير وسائط.
+علامات لكل `Status: archived` `$path` (بشكل خاص باللغة الطبيعية). الاستخدامات `$_` إذا لم يتم تمرير وسائط.
 
 أرشفة الملفات هي طريقة طبيعية لإخبار أوريون "توقف عن الانتباه إلى موقع الرابط الثابت لهذا الملف ... ما لم يتم تحديثه مرة أخرى، وفي هذه الحالة سيتم تحديث موقع الأرشفة. على وجه الخصوص، لا تظهر الملفات المؤرشفة في قوائم الدليل داخل نظام إدارة المحتوى نفسه ؛ عليك الانتقال إلى الصفحة المباشرة نفسها لتكون قادرة على تحريرها مرة أخرى عبر الإنترنت.
 
 ##### seed_file_deps(مسار$)
 
-التحديثات الآمنة `%path::dependencies` لهذا `مسار $`، بناءً على `التبعيات` عناوين عامة. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
+التحديثات الآمنة `%path::dependencies` لهذا `$path`، بناءً على `dependencies` عناوين عامة. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
 
 ##### seed_file_acl(مسار$)
 
-التحديثات الآمنة `@path::acl` لهذا `مسار $`، بناءً على `شامل` مواصفات الرأس. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
+التحديثات الآمنة `@path::acl` لهذا `$path`، بناءً على `acl` مواصفات الرأس. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
 
 #### تحميل
 
-مماثل لـ `YAML::XS::تحميل`.
+مماثل لـ `YAML::XS::Load`.
 
 #### تفريغ
 
-مماثل لـ `YAML::XS:: تفريغ`.
+مماثل لـ `YAML::XS::Dump`.
 
 <!-- $Date$ $Author$ $Revision$ -->

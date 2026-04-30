@@ -13,10 +13,10 @@ title: API של אוריון - בנייה
 תפקידו של הראשון הוא לעשות שלושה דברים:
 
 0. טעינה [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) וגם [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. בנייה `@path::תבניות`, וגם
-2. הליכה אופורטוניסטית `תוכן/` עץ לזרע `%path::תלות` וגם `@path::acls` מטאדטה של כותרת קובץ markdown/yaml.
+1. בנייה `@path::patterns`, וגם
+2. הליכה אופורטוניסטית `content/` עץ לזרע `%path::dependencies` וגם `@path::acls` מטאדטה של כותרת קובץ markdown/yaml.
 
-תפקידו של השני הוא לספק בלתי אפשרי. `תצוגה`מבוסס `שיטה $`s לרשומות תואמות ב- `@path::תבניות` (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) כמו למטה ...
+תפקידו של השני הוא לספק בלתי אפשרי. `view`מבוסס `$method`s לרשומות תואמות ב- `@path::patterns` (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) כמו למטה ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- `$path` זה רומן, כמו קוד חיצוני. `גזירים` או `אסימפטוטה`גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- `$path` זה רומן, כמו קוד חיצוני. `snippets` או `asymptote`גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,25 +65,25 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 <p class="card-text">
 
-תצוגה זו כוללת עיבוד אוטומטי של קבצים הנמצאים בתוך `$path`'s ספריית מסמכים מצורפים'. במילים אחרות, אם `$path = "איפוס סיסמה"`, לאחר מכן הקבצים המאוחסנים בתוך  `/foo.page/` הספרייה המקושרת עם "איפוס סיסמה" הרחבת השפה תשולב בארגומנטים המכתבים של התבנית עבור `$path` ללא קשר ל `קדם-תהליך` הגדרת הארגומנט &mdash; אשר, אם כן, יהפוך את החומר הזה לנגיש על ידי התוכן של הדף עצמו**.
+תצוגה זו כוללת עיבוד אוטומטי של קבצים הנמצאים בתוך `$path`'s ספריית מסמכים מצורפים'. במילים אחרות, אם `$path = "/foo.md.en"`, לאחר מכן הקבצים המאוחסנים בתוך  `/foo.page/` הספרייה המקושרת עם "איפוס סיסמה" הרחבת השפה תשולב בארגומנטים המכתבים של התבנית עבור `$path` ללא קשר ל `preprocess` הגדרת הארגומנט &mdash; אשר, אם כן, יהפוך את החומר הזה לנגיש על ידי התוכן של הדף עצמו**.
 
 ארגומנטי חובה:
 
-- `תבנית`
-- `נתיב`
-- `שפה`
+- `template`
+- `path`
+- `lang`
 
 ארגומנטים אופציונליים:
 
-- `דל` &mdash; דריסה רגילה `fetch_deps` מעבד
+- `deps` &mdash; דריסה רגילה `fetch_deps` מעבד
 
 - `quick_deps` &mdash; הגדרת אופטימיזציה של תהליך deps פנימי; שמאל מיטבי unset
 
-- `קדם-תהליך` &mdash; מאפשר עיבוד תבנית בתוך `$path` התוכן עצמו,
+- `preprocess` &mdash; מאפשר עיבוד תבנית בתוך `$path` התוכן עצמו,
 
-- `archive_root` &mdash; קבצים ב- "הועבר לארכיב" הסטטוס הוא "הועתק" ומעקב לפי תיקיות משנה של שנה/חודש למיקום מבוסס תוכן זה באמצעות `si`,
+- `archive_root` &mdash; קבצים ב- "הועבר לארכיב" הסטטוס הוא "הועתק" ומעקב לפי תיקיות משנה של שנה/חודש למיקום מבוסס תוכן זה באמצעות `ssi`,
 
-- `category_root` &mdash; פריטים ב- "קטגוריות" הכותרת היא "הועתק" מעבר לתיקיות קטגוריות בעלות שם מתאים במיקום מבוסס תוכן זה, דרך `si`.
+- `category_root` &mdash; פריטים ב- "קטגוריות" הכותרת היא "הועתק" מעבר לתיקיות קטגוריות בעלות שם מתאים במיקום מבוסס תוכן זה, דרך `ssi`.
 
 </p>
   </div>
@@ -111,7 +111,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `מפת אתר(%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ארגומנטי חובה:
 
-- `נתיב`
-- `שפה`
+- `path`
+- `lang`
 
 ארגומנטים אופציונליים:
 
 - `quick_deps`
-- `מקונן`
-- `קדם-תהליך`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -143,22 +143,22 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `אסימפטוטה(%args)`
+#### `asymptote(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-בניות ומטמונים [`אסימפטוטה`](https://asymptote.sourceforge.io/) בלוקים עם שלושה קודים במרכאות אחוריות עבור גרפיקה וקטורית התומכת ביריעה HTML5-WebGL
+בניות ומטמונים [`Asymptote`](https://asymptote.sourceforge.io/) בלוקים עם שלושה קודים במרכאות אחוריות עבור גרפיקה וקטורית התומכת ביריעה HTML5-WebGL
 
 </div>
 <p class="card-text">
 
 ארגומנטי חובה:
 
-- `תצוגה`
-- `שפה`
-- `נתיב`
+- `view`
+- `lang`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `דילוג (%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -178,7 +178,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 </div>
 <p class="card-text">
 
-במקום זאת, בנה את קובצי המקור המשויכים שנוצרו (למשל. `.bib\$לנג` $$\mapsto$$ `\$base.page/bibliography.yml\$לנג`) כדי לבנות על ריצת מערכת בנייה משנית.
+במקום זאת, בנה את קובצי המקור המשויכים שנוצרו (למשל. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) כדי לבנות על ריצת מערכת בנייה משנית.
 
 </p>
 </div>
@@ -200,9 +200,9 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ארגומנטים אופציונליים:
 
-- `שלוחה` ברירת מחדל ל- `json`
-- `מסנן` ברירת מחדל ל- `json_raw`
-- `תבנית` דריסות `מסנן` ביטוי ברירת מחדל
+- `ext` ברירת מחדל ל- `json`
+- `filter` ברירת מחדל ל- `json_raw`
+- `template` דריסות `filter` ביטוי ברירת מחדל
 
 </p>
 </div>
@@ -224,13 +224,13 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 הרשומה הראשונה בכל arrayref של 2 רכיבים היא שם הנתיב של הקובץ, האלמנט השני הוא התוצאה. [`read_text_file`](#) Hashref לשם נתיב זה.
 
-מחזיר רשימה של קובצי מקור חדשים שנוצרו אם [`$מהיר > 2`](#).
+מחזיר רשימה של קובצי מקור חדשים שנוצרו אם [`$quick > 2`](#).
 
 ארגומנטי חובה:
 
-- `נתיב`
-- `נתונים` - קלט כ-hashref; מאחסן anon-מערך וכתוצאה מכך של deps עם החזרה
-- `מהיר` - ברירת המחדל היא 2
+- `path`
+- `data` - קלט כ-hashref; מאחסן anon-מערך וכתוצאה מכך של deps עם החזרה
+- `quick` - ברירת המחדל היא 2
 
 </p>
 </div>
@@ -239,7 +239,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `נתיב לחם`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
@@ -256,7 +256,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `הודעה (%args)`
+#### `memoize(%args)`
 
 </div>
   <div class="card-body">
@@ -273,7 +273,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `הערה(%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -296,7 +296,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
   <div class="card-body">
     <div class="card-title">
 
-כלי שירות לעיבוד רציף `חיובים{תצוגה}`.
+כלי שירות לעיבוד רציף `$args{view}`.
 
 </div>
 <p class="card-text">
@@ -313,7 +313,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
   <div class="card-body">
     <div class="card-title">
 
-הערכה רקורסיבית `si` תגיות.
+הערכה רקורסיבית `ssi` תגיות.
 
 </div>
 <p class="card-text">
@@ -324,7 +324,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `לא מקוון(%args)`
+#### `offline(%args)`
 
 </div>
   <div class="card-body">
@@ -341,7 +341,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `גזיר(%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `בנייה מחדש(%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
   <div class="card-body">
     <div class="card-title">
 
-צירופים `חיובים{שפה}` אל `חיובים{תבנית}`.
+צירופים `$args{lang}` אל `$args{template}`.
 
 </div>
 <p class="card-text">
@@ -429,15 +429,15 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### read_text_file($file, $out, $content_lines) &mdash; מעבד קבצי הטקסט האוניברסלי של אוריון
 
-מנתח כותרות + תוכן של קובץ מקודד UTF-8 `קובץ $` מאחסן תוצאות ב-hashref `$out`. `$content_lines` הוא המספר המרבי (אופציונלי) של שורות תוכן לקריאה.
+מנתח כותרות + תוכן של קובץ מקודד UTF-8 `$file` מאחסן תוצאות ב-hashref `$out`. `$content_lines` הוא המספר המרבי (אופציונלי) של שורות תוכן לקריאה.
 
 מחזיר את מספר השורות שנקראו בפועל (כולל כותרות).
 
-`קובץ $` עשויה להיות הפניה למחרוזת raw המייצגת את התוכן המלא של קובץ.  התוצאות ב `$out` זה יהיה UTF-8 מקודד.
+`$file` עשויה להיות הפניה למחרוזת raw המייצגת את התוכן המלא של קובץ.  התוצאות ב `$out` זה יהיה UTF-8 מקודד.
 
 #### copy_if_newer($src, $dest)
 
-עותקים `$src` אל `יעד $` אם חותמת הזמן של השינוי של הקודם היא חדשה יותר מזו של האחרון. על עותק, בנוסף gzip-דחיסת `יעד $` קובץ אם הוא קובץ טקסט, ומוסיף ".gz" הרחבה לשם.
+עותקים `$src` אל `$dest` אם חותמת הזמן של השינוי של הקודם היא חדשה יותר מזו של האחרון. על עותק, בנוסף gzip-דחיסת `$dest` קובץ אם הוא קובץ טקסט, ומוסיף ".gz" הרחבה לשם.
 
 #### get_lock($lockfile)
 
@@ -449,7 +449,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### sort_tables($content)
 
-ממיין טבלאות Markdown ב-$content לפי מפרט העמודה של כל טבלה.  ניתן למיין בדיוק עמודה אחת לכל טבלה, כאופציה מספרית `לא`, בסדר יורד `v` או בסדר עולה `^` פקודה
+ממיין טבלאות Markdown ב-$content לפי מפרט העמודה של כל טבלה.  ניתן למיין בדיוק עמודה אחת לכל טבלה, כאופציה מספרית `n`, בסדר יורד `v` או בסדר עולה `^` פקודה
 
 #### fixup_code($prefix, $type, &#64;_)
 
@@ -457,7 +457,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### unload_package($pkg)
 
-פורק באופן אגרסיבי חבילת Perl (עלה) `$ק"ג` טבלת הסמלים (STASH)
+פורק באופן אגרסיבי חבילת Perl (עלה) `$pkg` טבלת הסמלים (STASH)
 
 #### purge_from_inc(&#64;נתיבים
 
@@ -469,19 +469,19 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### normalize_svn_path(&#64;_)
 
-מנרמל את כל הנתיבים ב- `@_` לשימוש בטוח כארגומנטים גולמיים אל `SVN::לקוח` פקודות.
+מנרמל את כל הנתיבים ב- `@_` לשימוש בטוח כארגומנטים גולמיים אל `SVN::Client` פקודות.
 
 #### sanitize_relative_path(&#64;_)
 
-מאבטח נתיבים ב- `@_` לשימוש כנתיבים יחסיים טהורים ב- `דוטיאק::DTL` (תבנית Django) פקודות ספציפיות לנתיב.
+מאבטח נתיבים ב- `@_` לשימוש כנתיבים יחסיים טהורים ב- `Dotiac::DTL` (תבנית Django) פקודות ספציפיות לנתיב.
 
 #### parse_filename($path)
 
-Wrapper סביב `קובץ::Basename::fileparse`. ללא טענות, שימושים `$_` כמו שם הקובץ לפירוק.
+Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים `$_` כמו שם הקובץ לפירוק.
 
 #### walk_content_tree($code)
 
-על תנאי הולך `./תוכן` עץ הקופה של מערכת הבנייה, נרמול ראשון `$_` כנתיב המשנה הרשמי המושרש בתוכן, ולאחר מכן בהפעלה `$code->()` על כל פריט בהליכת העץ. עבור רוב המבנים, ההליכה לעולם לא מתרחשת. &mdash; במקום זאת, הבנייה מסתמכת על נתונים במטמון מבניות קודמות.
+על תנאי הולך `./content` עץ הקופה של מערכת הבנייה, נרמול ראשון `$_` כנתיב המשנה הרשמי המושרש בתוכן, ולאחר מכן בהפעלה `$code->()` על כל פריט בהליכת העץ. עבור רוב המבנים, ההליכה לעולם לא מתרחשת. &mdash; במקום זאת, הבנייה מסתמכת על נתונים במטמון מבניות קודמות.
 
 הדרך היחידה לכפות הליכה היא על ידי הגדרת `$path::use_cache` לערך false במודולים שסופקו על ידי המשתמש. אחרת התנהגות זו מנוהלת במומחיות על ידי [טכנולוגיית בנייה מצטברת](https://iconoclasts.blog/joe/dependencies).
 
@@ -489,17 +489,17 @@ Wrapper סביב `קובץ::Basename::fileparse`. ללא טענות, שימוש�
 
 ##### הועבר לארכיב($path)
 
-דגלים כל `סטטוס: הועבר לארכיב` `$path` (באופן טבעי) שימושים `$_` אם לא הועברו ויכוחים.
+דגלים כל `Status: archived` `$path` (באופן טבעי) שימושים `$_` אם לא הועברו ויכוחים.
 
 העברת קבצים לארכיון היא דרך טבעית לספר לאוריון "הפסק לשים לב למיקום המקושר לקובץ זה ... אלא אם כן יעודכן שוב, ובמקרה זה ירוענן מיקום הארכיב. בפרט, קבצים שהועברו לארכיב אינם מופיעים ברשימת הספריות בתוך ה-CMS עצמו; עליך לנווט לדף החי עצמו כדי שתוכל לערוך אותו שוב באופן מקוון.
 
 ##### seed_file_deps($path)
 
-עדכונים מאובטחים `%path::תלות` בשביל זה `$path`מבוסס על שלה `יחסי תלות` גלוב(ים) כותרת. ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
+עדכונים מאובטחים `%path::dependencies` בשביל זה `$path`מבוסס על שלה `dependencies` גלוב(ים) כותרת. ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
 
 ##### seed_file_acl($path)
 
-עדכונים בטוחים `@path::acl` בשביל זה `$path`מבוסס על שלה `תיבת תיוג` מפרט כותרת. ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
+עדכונים בטוחים `@path::acl` בשביל זה `$path`מבוסס על שלה `acl` מפרט כותרת. ברירות מחדל לשימוש `$_` כמו הנתיב אם לא הועברו ארגומנטים.
 
 #### טעינה
 

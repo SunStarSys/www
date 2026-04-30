@@ -13,10 +13,10 @@ Básicamente, el sistema de creación se rige por dos módulos Perl proporcionad
 El trabajo del primero es hacer tres cosas:
 
 0. carga [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) y [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. construcción `@path::patrones`y
-2. oportunista caminar `contenido/` árbol para sembrar `%path::dependencias` y `@path::acls` de los metadatos de cabecera del archivo markdown/yaml.
+1. construcción `@path::patterns`y
+2. oportunista caminar `content/` árbol para sembrar `%path::dependencies` y `@path::acls` de los metadatos de cabecera del archivo markdown/yaml.
 
-El trabajo de este último es proporcionar invocable `vista`basado en `Método $`s para las entradas coincidentes en `@path::patrones` (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), invocado por el [creación de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abajo ...
+El trabajo de este último es proporcionar invocable `view`basado en `$method`s para las entradas coincidentes en `@path::patterns` (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), invocado por el [creación de scripts](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abajo ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en `$ruta` que son novedosas, como el código externo `fragmentos` o `asíntota`-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en `$path` que son novedosas, como el código externo `snippets` o `asymptote`-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,12 +65,12 @@ La vista más popular (y sofisticada)
 
 <p class="card-text">
 
-Esta vista incorpora el procesamiento automatizado de archivos ubicados dentro de la `$ruta`directorio de anexos. Es decir, si `$ruta = "/es.md.es"`, a continuación, los archivos almacenados en el  `/foo.page/` directorio asociado con el ".en" extensión lingüística se incorporará en la plantilla de argumentos direccionables para que `$ruta` independientemente del `preprocesamiento` configuración del argumento &mdash; que, si es cierto, también haría que ese material fuera accesible por el propio contenido de la **página**.
+Esta vista incorpora el procesamiento automatizado de archivos ubicados dentro de la `$path`directorio de anexos. Es decir, si `$path = "/foo.md.en"`, a continuación, los archivos almacenados en el  `/foo.page/` directorio asociado con el ".en" extensión lingüística se incorporará en la plantilla de argumentos direccionables para que `$path` independientemente del `preprocess` configuración del argumento &mdash; que, si es cierto, también haría que ese material fuera accesible por el propio contenido de la **página**.
 
 Argumentos obligatorios:
 
-- `plantilla`
-- `ruta`
+- `template`
+- `path`
 - `lang`
 
 Argumentos opcionales:
@@ -79,7 +79,7 @@ Argumentos opcionales:
 
 - `quick_deps` &mdash; configuración de optimización interna de proceso de deps; mejor dejar sin configurar
 
-- `preprocesamiento` &mdash; permite el procesamiento de plantillas en `$ruta` contenido en sí,
+- `preprocess` &mdash; permite el procesamiento de plantillas en `$path` contenido en sí,
 
 - `archive_root` &mdash; archivos en "archivado" estado son "copiado" y rastreado por subcarpetas de año/mes a esta ubicación de contenido a través de `ssi`,
 
@@ -111,7 +111,7 @@ Para páginas de agregación (varias descripciones)
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `mapa del sitio (%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ Para crear las páginas index.html y sitemap.html
 
 Argumentos obligatorios:
 
-- `ruta`
+- `path`
 - `lang`
 
 Argumentos opcionales:
 
 - `quick_deps`
-- `anidado`
-- `preprocesamiento`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -143,22 +143,22 @@ Argumentos opcionales:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `asíntota(%args)`
+#### `asymptote(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Compilaciones y cachés [`Asíntota`](https://asymptote.sourceforge.io/) bloques de código con comillas dobles para gráficos vectoriales activados para lienzo HTML5-WebGL
+Compilaciones y cachés [`Asymptote`](https://asymptote.sourceforge.io/) bloques de código con comillas dobles para gráficos vectoriales activados para lienzo HTML5-WebGL
 
 </div>
 <p class="card-text">
 
 Argumentos obligatorios:
 
-- `vista`
+- `view`
 - `lang`
-- `ruta`
+- `path`
 
 </p>
 </div>
@@ -167,7 +167,7 @@ Argumentos obligatorios:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `omitir(%args)`
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -178,7 +178,7 @@ No los construyas en absoluto.
 </div>
 <p class="card-text">
 
-En su lugar, cree los archivos de origen generados asociados (por ejemplo, `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\Lang`) que se va a crear en una ejecución de sistema de creación secundaria.
+En su lugar, cree los archivos de origen generados asociados (por ejemplo, `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) que se va a crear en una ejecución de sistema de creación secundaria.
 
 </p>
 </div>
@@ -200,9 +200,9 @@ Convertir archivos YAML, normalmente en JSON.
 
 Argumentos opcionales:
 
-- `Extensión` valores por defecto para `json`
-- `filtro` valores por defecto para `json_raw`
-- `plantilla` sustituciones `filtro` expresión predeterminada
+- `ext` valores por defecto para `json`
+- `filter` valores por defecto para `json_raw`
+- `template` sustituciones `filter` expresión predeterminada
 
 </p>
 </div>
@@ -228,9 +228,9 @@ Devuelve una lista de los nuevos archivos de origen resultantes si [`$quick > 2`
 
 Argumentos obligatorios:
 
-- `ruta`
-- `datos` - entrada como hashref; almacena el anon-array resultante de deps a la vuelta
-- `rápido` - se define por defecto en 2
+- `path`
+- `data` - entrada como hashref; almacena el anon-array resultante de deps a la vuelta
+- `quick` - se define por defecto en 2
 
 </p>
 </div>
@@ -239,13 +239,13 @@ Argumentos obligatorios:
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### `rutas de navegación ($path)`
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Devuelve la lista de rutas de navegación HTML para `$ruta`.
+Devuelve la lista de rutas de navegación HTML para `$path`.
 
 </div>
 <p class="card-text">
@@ -256,7 +256,7 @@ Devuelve la lista de rutas de navegación HTML para `$ruta`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `memorizar(%args)`
+#### `memoize(%args)`
 
 </div>
   <div class="card-body">
@@ -273,7 +273,7 @@ Almacena en caché la creación; se utiliza principalmente con fetch_deps y quic
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `comentario(%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -296,7 +296,7 @@ Genera un fragmento HTML que no se puede incluir en la SSI para un comentario de
   <div class="card-body">
     <div class="card-title">
 
-Utilidad para el procesamiento secuencial `$args{vista}`.
+Utilidad para el procesamiento secuencial `$args{view}`.
 
 </div>
 <p class="card-text">
@@ -324,7 +324,7 @@ Evalúa recursivamente `ssi` etiquetas.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `fuera de línea(%args)`
+#### `offline(%args)`
 
 </div>
   <div class="card-body">
@@ -341,7 +341,7 @@ Ejecuta el `next_view` en modo fuera de línea.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `fragmento (%args)`
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ Ejecuta el `next_view` en modo fuera de línea.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `reconstruir(%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ Normaliza los enlaces locales (`./` y `../`).
   <div class="card-body">
     <div class="card-title">
 
-Anexos `$args{lang}` a `$args{plantilla}`.
+Anexos `$args{lang}` a `$args{template}`.
 
 </div>
 <p class="card-text">
@@ -429,19 +429,19 @@ Anexos `$args{lang}` a `$args{plantilla}`.
 
 #### read_text_file($file, $out, $content_lines) &mdash; Procesador de archivos de texto universal de Orion
 
-Analiza cabeceras+contenido de archivo codificado UTF-8 `$archivo` y almacena los resultados en hashref `$out`. `$content_lines` es el número máximo (opcional) de líneas de contenido que se van a leer.
+Analiza cabeceras+contenido de archivo codificado UTF-8 `$file` y almacena los resultados en hashref `$out`. `$content_lines` es el número máximo (opcional) de líneas de contenido que se van a leer.
 
 Devuelve el número real de líneas leídas (incluidas las cabeceras).
 
-`$archivo` puede ser una referencia a una cadena raw, que representa el contenido completo de un archivo.  Los resultados en `$out` seguirá siendo UTF-8 codificado.
+`$file` puede ser una referencia a una cadena raw, que representa el contenido completo de un archivo.  Los resultados en `$out` seguirá siendo UTF-8 codificado.
 
 #### copy_if_newer($src, $dest)
 
-Copias `$Src` a `$dest` si el registro de hora de modificación del primero es más reciente que el segundo. Al copiar, además, gzip-comprime el `$dest` archivo si es un archivo de texto y agrega ".gz" extensión del nombre.
+Copias `$src` a `$dest` si el registro de hora de modificación del primero es más reciente que el segundo. Al copiar, además, gzip-comprime el `$dest` archivo si es un archivo de texto y agrega ".gz" extensión del nombre.
 
 #### get_lock($lockfile)
 
-Toma un bloqueo exclusivo (f) (para el proceso UNIX actual) en `Archivo de bloqueo`.
+Toma un bloqueo exclusivo (f) (para el proceso UNIX actual) en `$lockfile`.
 
 #### aleatorio(\\&#64;cubierta)
 
@@ -457,7 +457,7 @@ Extrae $prefix de cada argumento en &#64;\_. La función del argumento $type es 
 
 #### unload_package($pkg)
 
-Descarga agresivamente el paquete Perl (hoja) `$paquete` de la tabla de símbolos (STASH).
+Descarga agresivamente el paquete Perl (hoja) `$pkg` de la tabla de símbolos (STASH).
 
 #### purge_from_inc(&#64;rutas)
 
@@ -469,7 +469,7 @@ Toca todos los archivos en `@_`. Si no se transfiere ningún argumento, utiliza 
 
 #### normalize_svn_path(&#64;_)
 
-Normaliza todas las rutas en `@_` para un uso seguro como argumentos crudos para `SVN::Cliente` comandos.
+Normaliza todas las rutas en `@_` para un uso seguro como argumentos crudos para `SVN::Client` comandos.
 
 #### sanitize_relative_path(&#64;_)
 
@@ -477,36 +477,36 @@ Asegura rutas en `@_` para su uso como caminos relativos puros en `Dotiac::DTL` 
 
 #### parse_filename(ruta de $)
 
-Envoltorio alrededor `Archivo::Basename::fileparse`. Sin argumentos, utiliza `$_` como nombre de archivo que se va a analizar.
+Envoltorio alrededor `File::Basename::fileparse`. Sin argumentos, utiliza `$_` como nombre de archivo que se va a analizar.
 
 #### walk_content_tree(código $)
 
-Camina condicionalmente el `./ Contenido` árbol de la salida del sistema de creación, primero normalizando `$_` como la subruta raíz de contenido formal y, a continuación, invocando `$code->()` en cada elemento del árbol-camino. Para la mayoría de las construcciones, el paseo nunca sucede &mdash; en su lugar, la compilación se basa en los datos almacenados en caché de compilaciones anteriores.
+Camina condicionalmente el `./content` árbol de la salida del sistema de creación, primero normalizando `$_` como la subruta raíz de contenido formal y, a continuación, invocando `$code->()` en cada elemento del árbol-camino. Para la mayoría de las construcciones, el paseo nunca sucede &mdash; en su lugar, la compilación se basa en los datos almacenados en caché de compilaciones anteriores.
 
-La única manera de forzar un paseo es estableciendo `$ruta::use_cache` a un valor falso en los módulos proporcionados por el usuario. De lo contrario, este comportamiento es gestionado por expertos por el [tecnología de compilación incremental](https://iconoclasts.blog/joe/dependencies).
+La única manera de forzar un paseo es estableciendo `$path::use_cache` a un valor falso en los módulos proporcionados por el usuario. De lo contrario, este comportamiento es gestionado por expertos por el [tecnología de compilación incremental](https://iconoclasts.blog/joe/dependencies).
 
 Devuelve 1 si el recorrido realmente se ha realizado, en lugar de depender de datos almacenados en caché. De lo contrario, devuelve un valor falso.
 
 ##### archivado($path)
 
-Marca cada `Estado: archivado` `$ruta` (de una manera específica del lenguaje natural). Usos `$_` si no se transfieren argumentos.
+Marca cada `Status: archived` `$path` (de una manera específica del lenguaje natural). Usos `$_` si no se transfieren argumentos.
 
 Archivar archivos es una forma natural de decirle a Orión "dejar de prestar atención a la ubicación de enlace permanente de este archivo ... a menos que se vuelva a actualizar, en cuyo caso se refrescará la ubicación de archivado. En particular, los archivos archivados no aparecen en los listados de directorios dentro del propio CMS; debe navegar a la página activa para poder editarla nuevamente en línea.
 
 ##### seed_file_deps(ruta de $)
 
-Actualizaciones seguras `%path::dependencias` para ello `$ruta`, basándose en su `dependencias` glob(es) de cabecera. Se utiliza de forma predeterminada `$_` como ruta si no se transfieren argumentos.
+Actualizaciones seguras `%path::dependencies` para ello `$path`, basándose en su `dependencies` glob(es) de cabecera. Se utiliza de forma predeterminada `$_` como ruta si no se transfieren argumentos.
 
 ##### seed_file_acl(ruta de $)
 
-Actualizaciones seguras `@path::acl` para ello `$ruta`, basándose en su `ACL` especificación de cabecera. Se utiliza de forma predeterminada `$_` como ruta si no se transfieren argumentos.
+Actualizaciones seguras `@path::acl` para ello `$path`, basándose en su `acl` especificación de cabecera. Se utiliza de forma predeterminada `$_` como ruta si no se transfieren argumentos.
 
 #### Cargar
 
-Igual que `YAML::XS::Cargar`.
+Igual que `YAML::XS::Load`.
 
 #### Volcado
 
-Igual que `YAML::XS::Volcado`.
+Igual que `YAML::XS::Dump`.
 
 <!-- $Date$ $Author$ $Revision$ -->

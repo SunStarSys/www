@@ -13,10 +13,10 @@ Basicamente, o sistema de compilação é regido por dois módulos Perl fornecid
 O trabalho do primeiro é fazer três coisas:
 
 0. carregar [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) e [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
-1. construir `@path::padrões`, e
-2. caminhando oportunamente `conteúdo/` árvore para semente `%path::dependências` e `@path::acls` de metadados de cabeçalho de arquivo de markdown/yaml.
+1. construir `@path::patterns`, e
+2. caminhando oportunamente `content/` árvore para semente `%path::dependencies` e `@path::acls` de metadados de cabeçalho de arquivo de markdown/yaml.
 
-O trabalho deste último é fornecer invocável `exibir`com base em `Método $`s para as entradas correspondentes em `@path::padrões` (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abaixo ...
+O trabalho deste último é fornecer invocável `view`com base em `$method`s para as entradas correspondentes em `@path::patterns` (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abaixo ...
 
 ```perl
 #api
@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no `$path` que são novos, como o código externo `trechos de código` ou `assíntota`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no `$path` que são novos, como o código externo `snippets` ou `asymptote`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
@@ -65,13 +65,13 @@ A vista mais popular (e sofisticada)
 
 <p class="card-text">
 
-Esta visualização incorpora o processamento automatizado de arquivos localizados no `$path`diretório do anexo 's. Em outras palavras, se `$path = "Português (Brasil)"`, depois os arquivos armazenados no  `/foo.page/` diretório associado ao "Português" a extensão do idioma será incorporada aos argumentos endereçáveis do modelo para que `$path` independentemente do `pré-processamento` definição do argumento &mdash; que, se verdadeiro, também tornaria esse material acessível pelo próprio conteúdo da **página**.
+Esta visualização incorpora o processamento automatizado de arquivos localizados no `$path`diretório do anexo 's. Em outras palavras, se `$path = "/foo.md.en"`, depois os arquivos armazenados no  `/foo.page/` diretório associado ao "Português" a extensão do idioma será incorporada aos argumentos endereçáveis do modelo para que `$path` independentemente do `preprocess` definição do argumento &mdash; que, se verdadeiro, também tornaria esse material acessível pelo próprio conteúdo da **página**.
 
 Argumentos Obrigatórios:
 
-- `modelo`
-- `caminho`
-- `idioma`
+- `template`
+- `path`
+- `lang`
 
 Argumentos Opcionais:
 
@@ -79,7 +79,7 @@ Argumentos Opcionais:
 
 - `quick_deps` &mdash; configuração de otimização de processamento interno deps; melhor não definido
 
-- `pré-processamento` &mdash; permite o processamento de modelos dentro do `$path` conteúdo em si,
+- `preprocess` &mdash; permite o processamento de modelos dentro do `$path` conteúdo em si,
 
 - `archive_root` &mdash; arquivos em "arquivado" status são "copiado" e rastreado por subpastas ano/mês para este local raiz de conteúdo via `ssi`,
 
@@ -111,7 +111,7 @@ Para páginas agregadas (multinarrativas)
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `mapa do site(%args)`
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -127,14 +127,14 @@ Para criar páginas index.html e sitemap.html
 
 Argumentos Obrigatórios:
 
-- `caminho`
-- `idioma`
+- `path`
+- `lang`
 
 Argumentos opcionais:
 
 - `quick_deps`
-- `aninhado`
-- `pré-processamento`
+- `nested`
+- `preprocess`
 
 </p>
 </div>
@@ -143,22 +143,22 @@ Argumentos opcionais:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `assíntota(%args)`
+#### `asymptote(%args)`
 
 </div>
   <div class="card-body">
     <div class="card-title">
 
-Compilações e caches [`Apelido`](https://asymptote.sourceforge.io/) blocos de código triplo-backquoted para gráficos vetoriais habilitados para tela HTML5-WebGL
+Compilações e caches [`Asymptote`](https://asymptote.sourceforge.io/) blocos de código triplo-backquoted para gráficos vetoriais habilitados para tela HTML5-WebGL
 
 </div>
 <p class="card-text">
 
 Argumentos Obrigatórios:
 
-- `exibir`
-- `idioma`
-- `caminho`
+- `view`
+- `lang`
+- `path`
 
 </p>
 </div>
@@ -178,7 +178,7 @@ Não construa isso de jeito nenhum.
 </div>
 <p class="card-text">
 
-Em vez disso, crie os arquivos de origem gerados associados (por exemplo, `Português (BR)` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) para ser criado em uma execução de sistema de compilação secundária.
+Em vez disso, crie os arquivos de origem gerados associados (por exemplo, `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) para ser criado em uma execução de sistema de compilação secundária.
 
 </p>
 </div>
@@ -200,9 +200,9 @@ Converta arquivos YAML, normalmente em JSON.
 
 Argumentos opcionais:
 
-- `ext.` assume como padrão `json`
-- `filtro` assume como padrão `json_raw`
-- `modelo` substituições `filtro` expressão padrão
+- `ext` assume como padrão `json`
+- `filter` assume como padrão `json_raw`
+- `template` substituições `filter` expressão padrão
 
 </p>
 </div>
@@ -228,9 +228,9 @@ Retorna uma lista de novos arquivos de origem resultantes se [`$quick > 2`](#).
 
 Argumentos Obrigatórios:
 
-- `caminho`
-- `dados` - entrada como hashref; armazena o anon-array resultante de deps no retorno
-- `rápido` - assume 2 como padrão
+- `path`
+- `data` - entrada como hashref; armazena o anon-array resultante de deps no retorno
+- `quick` - assume 2 como padrão
 
 </p>
 </div>
@@ -273,7 +273,7 @@ Coloca em cache a compilação; usada principalmente com fetch_deps e quick_deps
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `comentário(%args)`
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -296,7 +296,7 @@ Gera fragmento HTML inclusivo do SSI para um comentário de página.
   <div class="card-body">
     <div class="card-title">
 
-Utilitário para processamento sequencial `$args{exibir}`.
+Utilitário para processamento sequencial `$args{view}`.
 
 </div>
 <p class="card-text">
@@ -324,7 +324,7 @@ Avalia recursivamente `ssi` etiquetas.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `off-line(%args)`
+#### `offline(%args)`
 
 </div>
   <div class="card-body">
@@ -358,7 +358,7 @@ Executa o `next_view` no modo offline.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### `reconstruir(%args)`
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -415,7 +415,7 @@ Normaliza links locais (`./` e `../`).
   <div class="card-body">
     <div class="card-title">
 
-Anexa `$args{idioma}` para `$args{modelo}`.
+Anexa `$args{lang}` para `$args{template}`.
 
 </div>
 <p class="card-text">
@@ -429,15 +429,15 @@ Anexa `$args{idioma}` para `$args{modelo}`.
 
 #### read_text_file($file, $out, $content_lines) &mdash; Processador de arquivos de texto universal da Orion
 
-Analisa cabeçalhos+conteúdo do arquivo codificado em UTF-8 `$arquivo` e armazena resultados em hashref `$out`. `$content_lines` é o número máximo (opcional) de linhas de conteúdo a serem lidas.
+Analisa cabeçalhos+conteúdo do arquivo codificado em UTF-8 `$file` e armazena resultados em hashref `$out`. `$content_lines` é o número máximo (opcional) de linhas de conteúdo a serem lidas.
 
 Retorna o número real de linhas lidas (incluindo cabeçalhos).
 
-`$arquivo` pode ser uma referência a uma string bruta, representando o conteúdo completo de um arquivo.  Os resultados em `$out` ainda será codificado em UTF-8.
+`$file` pode ser uma referência a uma string bruta, representando o conteúdo completo de um arquivo.  Os resultados em `$out` ainda será codificado em UTF-8.
 
 #### copy_if_newer($src, $dest)
 
-Cópias `$src` para `$destino` se o timestamp de modificação do primeiro for mais recente que o do último. Na cópia, gzip-compacta o `$destino` se for um arquivo de texto e adiciona ".gz" extensão do nome.
+Cópias `$src` para `$dest` se o timestamp de modificação do primeiro for mais recente que o do último. Na cópia, gzip-compacta o `$dest` se for um arquivo de texto e adiciona ".gz" extensão do nome.
 
 #### get_lock($lockfile)
 
@@ -469,7 +469,7 @@ Toca todos os arquivos em `@_`. Se nenhum argumento for passado, usa `$_`.
 
 #### normalize_svn_path(&#64;_)
 
-Normaliza todos os caminhos em `@_` para uso seguro como argumentos brutos para `SVN::Cliente` comandos.
+Normaliza todos os caminhos em `@_` para uso seguro como argumentos brutos para `SVN::Client` comandos.
 
 #### sanitize_relative_path(&#64;_)
 
@@ -477,11 +477,11 @@ Protege os caminhos em `@_` para uso como caminhos relativos puros em `Dotiac::D
 
 #### parse_filename($path)
 
-Encapsulador ao redor `Arquivo::Basename::fileparse`. Sem argumentos, usa `$_` como o nome do arquivo a ser analisado.
+Encapsulador ao redor `File::Basename::fileparse`. Sem argumentos, usa `$_` como o nome do arquivo a ser analisado.
 
 #### walk_content_tree($code)
 
-Condicionalmente anda o `./conteúdo` árvore do check-out do sistema de compilação, primeiro normalizando `$_` como o subcaminho formal enraizado no conteúdo e, em seguida, invocando `$code->()` em cada item na caminhada em árvore. Para a maioria das construções, a caminhada nunca acontece &mdash; em vez disso, a compilação depende dos dados armazenados em cache de compilações anteriores.
+Condicionalmente anda o `./content` árvore do check-out do sistema de compilação, primeiro normalizando `$_` como o subcaminho formal enraizado no conteúdo e, em seguida, invocando `$code->()` em cada item na caminhada em árvore. Para a maioria das construções, a caminhada nunca acontece &mdash; em vez disso, a compilação depende dos dados armazenados em cache de compilações anteriores.
 
 A única maneira de forçar uma caminhada é definindo `$path::use_cache` para um valor falso em seus módulos fornecidos pelo usuário. Caso contrário, esse comportamento é habilmente gerenciado pelo [tecnologia de criação incremental](https://iconoclasts.blog/joe/dependencies).
 
@@ -489,13 +489,13 @@ Retorna 1 se a caminhada realmente tiver prosseguido, em vez de depender de dado
 
 ##### arquivado($path)
 
-Sinaliza cada `Status: arquivado` `$path` (de uma maneira específica da linguagem natural). Usos `$_` se nenhum argumento for passado.
+Sinaliza cada `Status: archived` `$path` (de uma maneira específica da linguagem natural). Usos `$_` se nenhum argumento for passado.
 
 Arquivamento de arquivos é uma maneira natural de dizer Orion para "parar de prestar atenção ao local permalinked deste arquivo ... a menos que seja atualizado novamente, caso em que o local de arquivamento será atualizado. Em particular, os arquivos arquivados não aparecem nas listagens de diretórios dentro do próprio CMS; você precisa navegar até a própria página ativa para poder editá-la novamente on-line.
 
 ##### seed_file_deps($path)
 
-Atualizações seguras `%path::dependências` para isso `$path`Com base em sua `dependências` glob(s) de cabeçalho Padrões para uso `$_` como o caminho se nenhum argumento for passado.
+Atualizações seguras `%path::dependencies` para isso `$path`Com base em sua `dependencies` glob(s) de cabeçalho Padrões para uso `$_` como o caminho se nenhum argumento for passado.
 
 ##### seed_file_acl($path)
 
@@ -503,7 +503,7 @@ Atualizações seguras `@path::acl` para isso `$path`Com base em sua `acl` espec
 
 #### Carregar
 
-Igual a `YAML::XS::Carregar`.
+Igual a `YAML::XS::Load`.
 
 #### Despejo
 
