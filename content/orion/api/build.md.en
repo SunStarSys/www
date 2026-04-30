@@ -5,7 +5,7 @@ Dependencies: *.md.en
 
 {# lede #}This document covers the **Build System** APIs{# lede #}.
 
-Basically, the build system is goverened by two user-supplied modules: [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) and [`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
+Basically, the build system is governed by two user-supplied modules: [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) and [`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
 
 The former's job is to do three things:
 
