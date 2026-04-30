@@ -43,7 +43,7 @@ The latter's job is to provide invokable [`view`](#)-based methods for the match
 
 ## Build System
 
-### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm)
+### [SunStarSys::View](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for [`lib/view.pm`](#)
 
 #### single_narrative(%args)
 
@@ -152,7 +152,7 @@ Normalizes local links (./ and ../).
 
 ----
 
-### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm)
+### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; utility library for [`lib/path.pm`](#) and [`lib/view.pm`](#)
 
 #### read_text_file($file, $out, $content_lines)
 
