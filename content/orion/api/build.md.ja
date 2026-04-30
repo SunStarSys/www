@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=34604
+status: 下書き
 title: Orion API - ビルド
 ---
 
@@ -50,147 +50,406 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ### [SunStarSys:: ビュー](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス`lib/view.pm`
 
-#### single_narrative(%args) &mdash; 最も人気のある(そして洗練された)ビュー
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `single_narrative(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+最も人気のある(洗練された)ビュー
+
+</div>
+
+<p class="card-text">
 
 このビューには、内部にあるファイルの自動処理が組み込まれています。`パス`の添付ディレクトリ。言い換えれば、`$path = "/foo.md.en"`に保存されたファイル`/foo.page/` 関連するディレクトリ".en" 言語拡張は、そのテンプレートのアドレス可能な引数に組み込まれます`パス` 関係なく`前処理` 引数の設定&mdash; trueの場合、**ページのコンテンツ自体**がその資料にアクセスできるようにします。
 
 必須引数:
 
-- [`型板`](#)
-- [`パス`](#)
-- [`注意して聞く`](#)
+- `型板`
+- `パス`
+- `注意して聞く`
 
 オプションの引数:
 
-- [`deps`](#) &mdash; 通常のオーバーライド[`fetch_deps`]()処理
+- `deps` &mdash; 通常のオーバーライド`fetch_deps` 処理中
 
-- [`quick_deps`](#) &mdash; 内部deps-processing最適化設定; 最もよく残された未設定
+- `quick_deps` &mdash; 内部deps-processing最適化設定; 最もよく残された未設定
 
-- [`前処理`](#) &mdash; テンプレート処理を有効にします。[`パス`](#) 内容自体、
+- `前処理` &mdash; テンプレート処理を有効にします。`パス` 内容自体、
 
-- [`archive_root`](#) &mdash; ファイル"アーカイブ済" ステータス"コピーしました" そして、このコンテンツルートの場所への年/月のサブフォルダによって追跡`ssi`,
+- `archive_root` &mdash; ファイル"アーカイブ済" ステータス"コピーしました" そして、このコンテンツルートの場所への年/月のサブフォルダによって追跡`ssi`,
 
-- [`category_root`](#) &mdash; の項目"カテゴリ" ヘッダー"コピーしました" このコンテンツ・ルート・ロケーション内の適切な名前付きカテゴリ・フォルダに`ssi`.
+- `category_root` &mdash; の項目"カテゴリ" ヘッダー"コピーしました" このコンテンツ・ルート・ロケーション内の適切な名前付きカテゴリ・フォルダに`ssi`.
 
-#### news_page(%args) &mdash; 複数ナラティブ集計ページ用
+</p>
+  </div>
+</div>
 
-#### サイトマップ(%args) &mdash; index.htmlおよびsitemap.htmlページの作成用
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `news_page(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+(複数ナレーティブ)集計ページ用
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `サイトマップ(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+index.htmlおよびsitemap.htmlページを構築する場合
+
+</div>
+
+<p class="card-text">
 
 依存関係のロケール固有のソートされた索引。
 
 必須引数:
 
-- [`パス`](#)
-- [`注意して聞く`](#)
+- `パス`
+- `注意して聞く`
 
 オプションの引数:
 
-- [`quick_deps`](#)
-- [`ネスト`](#)
-- [`前処理`](#)
+- `quick_deps`
+- `ネスト`
+- `前処理`
 
-#### asymptote(%args)
+</p>
+</div>
+</div>
 
-ビルドおよびキャッシュ[`漸近線`](https://asymptote.sourceforge.io/) HTML5-WebGLキャンバス対応ベクトル・グラフィックスのトリプルバッククォート・コード・ブロック。
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `asymptote(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+ビルドとキャッシュ[`漸近線`](https://asymptote.sourceforge.io/) HTML5-WebGLキャンバス対応ベクトル・グラフィックスのトリプルバッククォート・コード・ブロック
+
+</div>
+<p class="card-text">
 
 必須引数:
 
-- [`ビュー`](#)
-- [`注意して聞く`](#)
-- [`パス`](#)
+- `ビュー`
+- `注意して聞く`
+- `パス`
 
-#### スキップ(%args)
+</p>
+</div>
+</div>
 
-これらを全く作ってはいけません。かわりに、関連する生成されたソース・ファイル(例: `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)は、セカンダリビルドシステムの実行に基づいて構築されます。
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### yml2ext(%args)
+#### `スキップ(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+これらを全く作ってはいけません。
+
+</div>
+<p class="card-text">
+
+かわりに、関連する生成されたソース・ファイル(例: `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)は、セカンダリビルドシステムの実行に基づいて構築されます。
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `yml2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 通常、YAMLファイルをJSONに変換します。
 
+</div>
+<p class="card-text">
+
 オプションの引数:
 
-- [`エクストリーム`](#) デフォルト`json`
-- [`フィルター`](#) デフォルト`json_raw`
-- [`型板`](#) 上書き`フィルター` デフォルト式
+- `エクストリーム` デフォルト`json`
+- `フィルター` デフォルト`json_raw`
+- `型板` 上書き`フィルター` デフォルト式
 
-#### fetch_deps($path、$data、$quick)
+</p>
+</div>
+</div>
 
-$data引数hashrefを、2要素arrayrefsのタイムスタンプ順序付けされたarrayrefとしてリファクタします。各2要素arrayrefの最初のエントリはファイルpath-nameで、2番目の要素は結果です[`read_text_file`](#) そのパス名のhashref。
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+#### `fetch_deps($path、$data、$quick)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+$data引数hashrefを、2要素arrayrefsのタイムスタンプ順序付けされたarrayrefとしてリファクタします。
+
+</div>
+<p class="card-text">
+
+各2要素arrayrefの最初のエントリはファイルpath-nameで、2番目の要素は結果です[`read_text_file`](#) そのパス名のhashref。
 
 結果の新しいソース・ファイルのリストを返します。[`$quick > 2`](#).
 
 必須引数:
 
-- [`パス`](#)
-- [`データ`](#) - hashrefとして入力。戻り時にdepsの結果のanon配列を格納します
-- [`速い`](#) - デフォルト値は2
+- `パス`
+- `データ` - hashrefとして入力。戻り時にdepsの結果のanon配列を格納します
+- `速い` - デフォルト値は2
 
-#### ブレッドクラム($path)
+</p>
+</div>
+</div>
 
-HTMLブレッドクラム・リストを返します。[パス](#).
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### memoize(%args)
+#### `ブレッドクラム($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+HTMLブレッドクラム・リストを返します。`パス`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `memoize(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 ビルドをキャッシュします。主にfetch_depsおよびquick_deps > 2で使用されます。
 
-#### comment(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `comment(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 ページ・コメントのSSI除外可能HTMLフラグメントを生成します。
 
-#### next_view(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-$argsを処理するためのユーティリティ{ビュー}.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### ssi(%args)
+#### `next_view(%args)`
 
-再帰的評価[ssi](#) タグ
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### offline(%args)
+順次処理のためのユーティリティ`$args{ビュー}`.
 
-next_viewをオフライン・モードで実行します。
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-#### スニペット(%args)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `ssi(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+再帰的評価`ssi` タグ
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `offline(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+次を実行します。`next_view` オフライン・モード。
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `スニペット(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [外部コードを処理](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [スニペット線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)通常は、GitHub上のソースの場所をプログラミング言語固有のフェンス・マークダウン・ブロックにインポートします。[ここでの例](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
-#### 再構築(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `再構築(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 next_viewからビルドされたコンテンツのテンプレート・ディレクティブを再処理します。
 
-#### trim_local_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `trim_local_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 ローカル・リンクからファイル拡張子を切り捨てます。
 
-#### normalize_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-ローカル・リンク(./および../)を正規化します。
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+ローカル・リンクを正規化します(`./` および`../`).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `langify_template(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+追加`$args{注意して聞く}` から`$args{型板}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 ----
 
-### [SunStarSys:: ユーティリティ](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ユーティリティライブラリ[`lib/path.pm`](#) および[`lib/view.pm`](#)
+### [SunStarSys:: ユーティリティ](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ユーティリティライブラリ`lib/path.pm` および`lib/view.pm`
 
 #### read_text_file($file、$out、$content_lines) &mdash; Orionの汎用テキスト・ファイル・プロセッサ
 
-UTF-8でエンコードされたファイルのheaders+contentを解析します[`$file`](#) 結果を格納する[`$out`](#). [`$content_lines`](#) は、読み取るコンテンツ行の最大数です(オプション)。
+UTF-8でエンコードされたファイルのheaders+contentを解析します`$file` 結果をhashrefに格納します。`$out`. `$content_lines` は、読み取るコンテンツ行の最大数です(オプション)。
+
 実際に読み取られた行数(ヘッダーを含む)を返します。
 
-[`$file`](#) ファイルの完全な内容を表すraw文字列への参照である可能性があります。結果[`$out`](#) UTF-8がエンコードされます。
+`$file` ファイルの完全な内容を表すraw文字列への参照である可能性があります。結果`$out` UTF-8がエンコードされます。
 
 #### copy_if_newer($src、$dest)
 
-コピー数[`$src`](#) から[`最低`](#) 前者の変更タイムスタンプが後者の変更タイムスタンプより新しい場合。コピー時に、さらにgzip-compress [`最低`](#) file (テキストファイルの場合) ".gz" 名前の拡張。
+コピー数`$src` から`最低` 前者の変更タイムスタンプが後者の変更タイムスタンプより新しい場合。コピー時に、さらにgzip-compress `最低` file (テキストファイルの場合) ".gz" 名前の拡張。
 
 #### get_lock($lockfile)
 
-排他(f)ロック(現在のUNIXプロセスの場合)をオンにします。[`$lockfile`](#).
+排他(f)ロック(現在のUNIXプロセスの場合)をオンにします。`$lockfile`.
 
 #### シャッフル(\\&#64;デッキ)
 
-インプレイスランダム(Fisher-Yates)シャッフル[`@deck`](#).
+インプレイスランダム(Fisher-Yates)シャッフル`@deck`.
 
 #### sort_tables($コンテンツ)
 
-各表の列仕様に従って、マークダウン表を$contentでソートします。表ごとに正確に1つの列をソートできます(オプション)。[`n`](#)降順[`v`](#) または昇順[`^`](#) オーダー
+各表の列仕様に従って、マークダウン表を$contentでソートします。表ごとに正確に1つの列をソートできます(オプション)。`n`降順`v` または昇順`^` オーダー
 
 #### fixup_code($prefix、$type、&#64;_)
 
@@ -198,56 +457,56 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
 
 #### unload_package($pkg)
 
-Perl (leaf)パッケージの積極的なアンロード[`$pkg`](#) シンボルテーブル(STASH)
+Perl (leaf)パッケージの積極的なアンロード`$pkg` シンボルテーブル(STASH)
 
 #### purge_from_inc(&#64;パス)
 
-削除[`@paths`](#) 場所[`@INC`](#).
+削除`@paths` 場所`@INC`.
 
 #### 触る&#64;_)
 
-すべてのファイルを[`@_`](#)。引数が渡されない場合、[`$_`](#).
+すべてのファイルを`@_`。引数が渡されない場合、`$_`.
 
 #### normalize_svn_path(&#64;_)
 
-すべてのパスを正規化します。[`@_`](#) RAW引数として安全に使用できます。[`SVN:: クライアント`](#) コマンド
+すべてのパスを正規化します。`@_` RAW引数として安全に使用できます。`SVN:: クライアント` コマンド
 
 #### sanitize_relative_path(&#64;_)
 
-パスを保護する[`@_`](#) 純粋な相対パスとして使用[`ドチアク::DTL`](#) (Djangoテンプレート)パス固有のコマンド。
+パスを保護する`@_` 純粋な相対パスとして使用`ドチアク::DTL` (Djangoテンプレート)パス固有のコマンド。
 
 #### parse_filename($path)
 
-ラッパー周り[`ファイル::Basename::fileparse`](#)。引数を指定しない場合、[`$_`](#) 解析するファイル名を指定します。
+ラッパー周り`ファイル::Basename::fileparse`。引数を指定しない場合、`$_` 解析するファイル名を指定します。
 
 #### walk_content_tree($コード)
 
-条件付きで歩く[`./コンテンツ`](#) ビルドシステムチェックアウトのツリー、最初に正規化[`$_`](#) 正式なコンテンツ・ルート・サブパスとして、[`$code->()`](#) ツリーウォークの各項目についてほとんどのビルドでは、ウォークは発生しません&mdash; かわりに、ビルドは以前のビルドからキャッシュされたデータに依存します。
+条件付きで歩く`./コンテンツ` ビルドシステムチェックアウトのツリー、最初に正規化`$_` 正式なコンテンツ・ルート・サブパスとして、`$code->()` ツリーウォークの各項目についてほとんどのビルドでは、ウォークは発生しません&mdash; かわりに、ビルドは以前のビルドからキャッシュされたデータに依存します。
 
-歩行を強制する唯一の方法は、設定することです[`$path::use_cache`](#) ユーザー提供のモジュールのfalse値。それ以外の場合、この動作は、[増分ビルド技術](https://iconoclasts.blog/joe/dependencies).
+歩行を強制する唯一の方法は、設定することです`$path::use_cache` ユーザー提供のモジュールのfalse値。それ以外の場合、この動作は、[増分ビルド技術](https://iconoclasts.blog/joe/dependencies).
 
 ウォークが実際に処理された場合は、キャッシュされたデータに依存するのではなく、1を返します。それ以外の場合は、false値を返します。
 
 ##### アーカイブ済み($path)
 
-各フラグ[`ステータス: アーカイブ済`](#) [`パス`](#) (自然言語による) 使用[`$_`](#) 引数が渡されない場合。
+各フラグ`ステータス: アーカイブ済` `パス` (自然言語による) 使用`$_` 引数が渡されない場合。
 
 ファイルをアーカイブすることは、Orionに伝える自然な方法です"このファイルのパーマリンクされた場所に注意を払うのをやめる ... 再度更新されないかぎり、アーカイブの場所はリフレッシュされます。特に、アーカイブされたファイルは、CMS自体内のディレクトリリストには表示されません。オンラインでの再編集を可能にするには、ライブページ自体に移動する必要があります。
 
 ##### seed_file_deps($path)
 
-安全な更新[`%path:: 依存関係`](#) この[`パス`](#)に基づいて、[`依存関係`](#) ヘッダーglob。使用するデフォルト[`$_`](#) 引数が渡されない場合のパス。
+安全な更新`%path:: 依存関係` この`パス`に基づいて、`依存関係` ヘッダーglob。使用するデフォルト`$_` 引数が渡されない場合のパス。
 
 ##### seed_file_acl($path)
 
-安全な更新[`@path::acl`](#) この[`パス`](#)に基づいて、[`ACL`](#) ヘッダー仕様使用するデフォルト[`$_`](#) 引数が渡されない場合のパス。
+安全な更新`@path::acl` この`パス`に基づいて、`傾斜` ヘッダー仕様使用するデフォルト`$_` 引数が渡されない場合のパス。
 
 #### ロード
 
-同じ[`YAML::XS:: ロード`](#).
+同じ`YAML::XS:: ロード`.
 
 #### ダンプ
 
-同じ[`YAML::XS:: ダンプ`](#).
+同じ`YAML::XS:: ダンプ`.
 
 <!-- $Date$ $Author$ $Revision$ -->

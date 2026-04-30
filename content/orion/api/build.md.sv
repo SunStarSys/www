@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=34604
+status: skiss
 title: Orion API - bygge
 ---
 
@@ -50,147 +50,406 @@ Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av fi
 
 ### [SunStarSys::Visa](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; basklass för `lib/view.pm`
 
-#### single_narrative(%args) &mdash; den mest populära (och sofistikerade) vyn
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `single_narrative(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Den mest populära (och sofistikerade) vyn
+
+</div>
+
+<p class="card-text">
 
 Den här vyn innehåller automatisk bearbetning av filer som finns i `$sökväg`bilagekatalog. Med andra ord, om `$path = "/foo.md.en"`, sedan de filer som lagras i  `/foo.page/` katalog associerad med "och" språktillägg kommer att införlivas i mallens adresserbara argument för att `$sökväg` Oavsett om `förbearbetning` argumentinställning &mdash; som, om det är sant, också skulle göra det materialet tillgängligt för själva **sidans innehåll**.
 
 Obligatoriska argument:
 
-- [`mall`](#)
-- [`sökväg`](#)
-- [`språk`](#)
+- `mall`
+- `sökväg`
+- `språk`
 
 Valfria argument:
 
-- [`dl`](#) &mdash; åsidosätter normalt [`fetch_deps`]() bearbetning
+- `dl` &mdash; åsidosätter normalt `fetch_deps` bearbetning
 
-- [`quick_deps`](#) &mdash; intern optimeringsinställning för deps-processing; bäst lämnad ej inställd
+- `quick_deps` &mdash; intern optimeringsinställning för deps-processing; bäst lämnad ej inställd
 
-- [`förbearbetning`](#) &mdash; aktiverar mallbearbetning inom [`$sökväg`](#) Själva innehållet,
+- `förbearbetning` &mdash; aktiverar mallbearbetning inom `$sökväg` Själva innehållet,
 
-- [`archive_root`](#) &mdash; filer i "arkiverad" status är "kopierad" och spåras per år/månad undermappar till denna innehållsrotade plats via `ssi`,
+- `archive_root` &mdash; filer i "arkiverad" status är "kopierad" och spåras per år/månad undermappar till denna innehållsrotade plats via `ssi`,
 
-- [`category_root`](#) &mdash; artiklar i "kategorier" Huvudet är "kopierad" över till lämpligt namngivna kategorimappar på den här innehållsbaserade platsen via `ssi`.
+- `category_root` &mdash; artiklar i "kategorier" Huvudet är "kopierad" över till lämpligt namngivna kategorimappar på den här innehållsbaserade platsen via `ssi`.
 
-#### news_page(%args) &mdash; för aggregeringssidor med flera artiklar
+</p>
+  </div>
+</div>
 
-#### webbplatskarta (%args) &mdash; för att skapa sidor för index.html och sitemap.html
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `news_page(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+För (flerberättande) aggregerade sidor
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `webbplatskarta (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+För att skapa sidorna index.html och sitemap.html
+
+</div>
+
+<p class="card-text">
 
 Språkspecifikt, sorterat index för beroenden.
 
 Obligatoriska argument:
 
-- [`sökväg`](#)
-- [`språk`](#)
+- `sökväg`
+- `språk`
 
 Valfria argument:
 
-- [`quick_deps`](#)
-- [`kapslad`](#)
-- [`förbearbetning`](#)
+- `quick_deps`
+- `kapslad`
+- `förbearbetning`
 
-#### asymptot(%args)
+</p>
+</div>
+</div>
 
-Byggnader och cacheminnen [`Asymptot`](https://asymptote.sourceforge.io/) triple-backquoted-code block för HTML5-WebGL-canvas-aktiverad vektorgrafik.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `asymptot(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Byggen och cachar [`Asymptot`](https://asymptote.sourceforge.io/) triple-backquoted-code block för HTML5-WebGL-canvas-aktiverad vektorgrafik
+
+</div>
+<p class="card-text">
 
 Obligatoriska argument:
 
-- [`visa`](#)
-- [`språk`](#)
-- [`sökväg`](#)
+- `visa`
+- `språk`
+- `sökväg`
 
-#### hoppa över(%args)
+</p>
+</div>
+</div>
 
-Bygg inte dessa alls.  Bygg i stället de associerade genererade källfilerna (t.ex. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) som ska byggas på en sekundär byggsystemkörning.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### yml2ext(%args)
+#### `hoppa över(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Bygg inte dessa alls.
+
+</div>
+<p class="card-text">
+
+Bygg i stället de associerade genererade källfilerna (t.ex. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) som ska byggas på en sekundär byggsystemkörning.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `yml2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Konvertera YAML-filer, vanligtvis till JSON.
 
+</div>
+<p class="card-text">
+
 Valfria argument:
 
-- [`ext.`](#) standardvärdet är `json`
-- [`filtrera`](#) standardvärdet är `json_raw`
-- [`mall`](#) åsidosättningar `filtrera` standarduttryck
+- `ext.` standardvärdet är `json`
+- `filtrera` standardvärdet är `json_raw`
+- `mall` åsidosättningar `filtrera` standarduttryck
 
-#### fetch_deps($path, $data, $quick)
+</p>
+</div>
+</div>
 
-Refactors $data argument hashref som en tidsstämpel ordnade arrayref av 2-element arrayrefs. Den första posten i varje 2-element arrayref är filsökvägens namn, det andra elementet är resultatet [`read_text_file`](#) hashref för det sökvägsnamnet.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+#### `fetch_deps($path, $data, $quick)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Refactors $data argument hashref som en tidsstämpel ordnade arrayref av 2-element arrayrefs.
+
+</div>
+<p class="card-text">
+
+Den första posten i varje 2-element arrayref är filsökvägens namn, det andra elementet är resultatet [`read_text_file`](#) hashref för det sökvägsnamnet.
 
 Returnerar en lista över resulterande nya källfiler om [`$snabb > 2`](#).
 
 Obligatoriska argument:
 
-- [`sökväg`](#)
-- [`data`](#) - Inmatning som hashref; lagrar resulterande anon-array av deps vid retur
-- [`snabb`](#) - standardvärdet är 2
+- `sökväg`
+- `data` - Inmatning som hashref; lagrar resulterande anon-array av deps vid retur
+- `snabb` - standardvärdet är 2
 
-#### navigeringsspår($path)
+</p>
+</div>
+</div>
 
-Returnerar HTML-spårlista för [$sökväg](#).
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### memoize(%args)
+#### `navigeringsspår($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Returnerar HTML-spårlista för `$sökväg`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `memoize(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Cachelagrar bygget. Används främst med fetch_deps och quick_deps > 2.
 
-#### kommentar(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `kommentar(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Genererar SSI-inkluderingsbart HTML-fragment för en sidkommentar.
 
-#### next_view(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-Verktyg för bearbetning av $args{visa}.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### ssi(%args)
+#### `next_view(%args)`
 
-Utvärderar rekursivt [ssi](#) taggar.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### offline(%args)
+Verktyg för sekventiell bearbetning `$arg{visa}`.
 
-Kör next_view i offlineläge.
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-#### utdrag(%args)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `ssi(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Utvärderar rekursivt `ssi` taggar.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `offline(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Kör `next_view` i offlineläge.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `utdrag(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [Bearbetar extern kod](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [utdragslinjer](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), importerar vanligtvis sina källplatser på GitHub till programmeringsspråkiga avgränsade nedsättningsblock. [Exempel här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
-#### rekonstruera (%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `rekonstruera (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Ombearbetar malldirektiv i inbyggt innehåll från next_view.
 
-#### trim_local_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `trim_local_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Trims filändelser från lokala länkar.
 
-#### normalize_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-Normaliserar lokala länkar (./ och ../).
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Normaliserar lokala länkar (`./` och `../`).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `langify_template(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Tillägg `$arg{språk}` till `$arg{mall}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 ----
 
-### [SunStarSys::Tillfälle](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; verktygsbibliotek för [`lib/path.pm`](#) och [`lib/view.pm`](#)
+### [SunStarSys::Tillfälle](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; verktygsbibliotek för `lib/path.pm` och `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Orions universella textfilprocessor
 
-Parsar rubriker+innehåll i den UTF-8-kodade filen [`$fil`](#) och lagrar resultat i [`$out`](#). [`$content_lines`](#) är det (valfritt) högsta antalet innehållsrader att läsa.
+Parsar rubriker+innehåll i den UTF-8-kodade filen `$fil` och lagrar resultat i hashref `$out`. `$content_lines` är det (valfritt) högsta antalet innehållsrader att läsa.
+
 Returnerar faktiskt antal lästa rader (inklusive huvuden).
 
-[`$fil`](#) kan vara en referens till en rå sträng som representerar hela innehållet i en fil.  Resultaten i [`$out`](#) Kommer fortfarande att vara UTF-8 kodad.
+`$fil` kan vara en referens till en rå sträng som representerar hela innehållet i en fil.  Resultaten i `$out` Kommer fortfarande att vara UTF-8 kodad.
 
 #### copy_if_newer($src, $dest)
 
-Kopior [`$src`](#) till [`öre`](#) om den tidigare ändringens tidsstämpel är nyare än den senare. På kopia, dessutom gzip-komprimerar [`öre`](#) fil om det är en textfil och lägger till ".gz" Tillägg till namnet.
+Kopior `$src` till `öre` om den tidigare ändringens tidsstämpel är nyare än den senare. På kopia, dessutom gzip-komprimerar `öre` fil om det är en textfil och lägger till ".gz" Tillägg till namnet.
 
 #### get_lock($lockfile)
 
-Tar ett exklusivt (f)lås (för aktuell UNIX-process) på [`$lockfil`](#).
+Tar ett exklusivt (f)lås (för aktuell UNIX-process) på `$lockfil`.
 
 #### blanda(\\&#64;däck)
 
-Slumpmässig blandning på plats (Fisher-Yates) av [`@deck`](#).
+Slumpmässig blandning på plats (Fisher-Yates) av `@deck`.
 
 #### sort_tables($content)
 
-Sorterar nedsättningstabeller i $content enligt varje tabells kolumnspecifikation.  Exakt en kolumn kan sorteras per tabell, alternativt numeriskt [`n`](#)i antingen fallande [`v`](#) eller stigande [`^`](#) beställning.
+Sorterar nedsättningstabeller i $content enligt varje tabells kolumnspecifikation.  Exakt en kolumn kan sorteras per tabell, alternativt numeriskt `n`i antingen fallande `v` eller stigande `^` beställning.
 
 #### fixup_code($prefix, $type, &#64;_)
 
@@ -198,56 +457,56 @@ Tar bort $prefix från varje argument i &#64;\_. Funktionen för argumentet $typ
 
 #### unload_package($pkg)
 
-Aggressivt lossar Perl-paket (blad) [`kg`](#) från symboltabellen (STASH).
+Aggressivt lossar Perl-paket (blad) `kg` från symboltabellen (STASH).
 
 #### purge_from_inc(&#64;sökväg)
 
-Tar bort [`@paths`](#) från [`@INC`](#).
+Tar bort `@paths` från `@INC`.
 
 #### beröring(&#64;_)
 
-Berör alla filer i [`@_`](#). Om inga argument överförs används [`$_`](#).
+Berör alla filer i `@_`. Om inga argument överförs används `$_`.
 
 #### normalize_svn_path(&#64;_)
 
-Normaliserar alla sökvägar i [`@_`](#) för säker användning som råa argument till [`SVN::Klient`](#) kommandon.
+Normaliserar alla sökvägar i `@_` för säker användning som råa argument till `SVN::Klient` kommandon.
 
 #### sanitize_relative_path(&#64;_)
 
-Säkrar sökvägar i [`@_`](#) för användning som rena relativa sökvägar i [`Dotiac::DTL`](#) (Django Template) sökvägsspecifika kommandon.
+Säkrar sökvägar i `@_` för användning som rena relativa sökvägar i `Dotiac::DTL` (Django Template) sökvägsspecifika kommandon.
 
 #### parse_filename($path)
 
-Wrapper runt [`Filparse::Basename::fileparse`](#). Utan argument används [`$_`](#) som filnamnet som ska tolkas.
+Wrapper runt `Filparse::Basename::fileparse`. Utan argument används `$_` som filnamnet som ska tolkas.
 
 #### walk_content_tree($code)
 
-Villkorligt vandrar [`./innehåll`](#) trädet i byggsystemet (kassa), först normalisering [`$_`](#) som formell innehållsbaserad undersökväg, och sedan anropa [`$code->()`](#) på varje föremål i trädgången. För de flesta byggen händer aldrig promenaden &mdash; i stället bygger bygget på cachelagrade data från tidigare byggen.
+Villkorligt vandrar `./innehåll` trädet i byggsystemet (kassa), först normalisering `$_` som formell innehållsbaserad undersökväg, och sedan anropa `$code->()` på varje föremål i trädgången. För de flesta byggen händer aldrig promenaden &mdash; i stället bygger bygget på cachelagrade data från tidigare byggen.
 
-Det enda sättet att tvinga en promenad är genom att ställa [`$path::use_cache`](#) till ett falskt värde i de moduler som användaren tillhandahåller. I annat fall hanteras detta beteende sakkunnigt av [inkrementell byggteknik](https://iconoclasts.blog/joe/dependencies).
+Det enda sättet att tvinga en promenad är genom att ställa `$path::use_cache` till ett falskt värde i de moduler som användaren tillhandahåller. I annat fall hanteras detta beteende sakkunnigt av [inkrementell byggteknik](https://iconoclasts.blog/joe/dependencies).
 
 Returnerar 1 om vandringen faktiskt fortsatte, i stället för att förlita sig på cachelagrade data. Annars returneras ett falskt värde.
 
 ##### arkiverad($path)
 
-Flaggor varje [`Status: arkiverad`](#) [`$sökväg`](#) (på ett naturligt språkligt sätt). Användningar [`$_`](#) om inga argument överförs.
+Flaggor varje `Status: arkiverad` `$sökväg` (på ett naturligt språkligt sätt). Användningar `$_` om inga argument överförs.
 
 Att arkivera filer är ett naturligt sätt att berätta för Orion att "sluta uppmärksamma den här filens permalänkade plats ... om den inte uppdateras igen, i vilket fall arkivplatsen kommer att uppdateras. I synnerhet visas inte arkiverade filer i kataloglistor i själva CMS-systemet. Du måste navigera till själva den aktiva sidan för att kunna redigera den igen online.
 
 ##### seed_file_deps($path)
 
-Säker uppdatering [`%path::beroenden`](#) för detta [`$sökväg`](#)baserat på dess [`Beroenden`](#) globala sidhuvuden. Används som standard [`$_`](#) som sökvägen om inga argument överförs.
+Säker uppdatering `%path::beroenden` för detta `$sökväg`baserat på dess `beroenden` globala sidhuvuden. Används som standard `$_` som sökvägen om inga argument överförs.
 
 ##### seed_file_acl($path)
 
-Säkra uppdateringar [`@path::acl`](#) för detta [`$sökväg`](#)baserat på dess [`Åtkomstkontrollista`](#) huvudspec. Används som standard [`$_`](#) som sökvägen om inga argument överförs.
+Säkra uppdateringar `@path::acl` för detta `$sökväg`baserat på dess `akl` huvudspec. Används som standard `$_` som sökvägen om inga argument överförs.
 
 #### Ladda
 
-Samma som [`YAML::XS::Load`](#).
+Samma som `YAML::XS::Load`.
 
 #### Dumpa
 
-Samma som [`YAML::XS::Dump`](#).
+Samma som `YAML::XS::Dump`.
 
 <!-- $Date$ $Author$ $Revision$ -->

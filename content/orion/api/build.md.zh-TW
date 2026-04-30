@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =34604
+status: 草稿
 title: Orion API - 建置
 ---
 
@@ -50,147 +50,406 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ### [SunStarSys：：查看](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`程式庫 /view.pm`
 
-#### single_narrative (%args) &mdash; 最受歡迎 (和最複雜的) 檢視
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `single_narrative (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+最受歡迎 (和最複雜的) 檢視
+
+</div>
+
+<p class="card-text">
 
 此檢視包含檔案自動處理 (位於`$path`的附件目錄。也就是說，如果`$path = "繁體中文"`，然後儲存於 中的檔案`/foo.page/` 與目錄關聯的目錄".en" 語言延伸將併入該範本可定址引數`$path` 無論`前處理` 引數設定&mdash; 如果為 true，也會讓 **頁面的內容本身能夠存取該資料 **。
 
 必要引數：
 
-- [`範本`](#)
-- [`路徑`](#)
-- [`語言`](#)
+- `範本`
+- `路徑`
+- `語言`
 
 選擇性引數：
 
-- [`描述`](#) &mdash; 置換正常[`fetch_deps`]() 處理
+- `描述` &mdash; 置換正常`fetch_deps` 處理
 
-- [`quick_deps`](#) &mdash; 內部折舊處理最佳化設定；最佳剩餘取消設定
+- `quick_deps` &mdash; 內部折舊處理最佳化設定；最佳剩餘取消設定
 
-- [`前處理`](#) &mdash; 啟用範本處理[`$path`](#) 內容本身，
+- `前處理` &mdash; 啟用範本處理`$path` 內容本身，
 
-- [`archive_root`](#) &mdash; 檔案位於"已封存" 狀態為"已複製" 並透過下列方式依年 / 月子資料夾追蹤至此內容根目錄的位置：`ssi`,
+- `archive_root` &mdash; 檔案位於"已封存" 狀態為"已複製" 並透過下列方式依年 / 月子資料夾追蹤至此內容根目錄的位置：`ssi`,
 
-- [`category_root`](#) &mdash; 項目在"分類" 標頭為"已複製" 覆寫為內容根目錄位置中適當命名的類別資料夾`ssi`.
+- `category_root` &mdash; 項目在"分類" 標頭為"已複製" 覆寫為內容根目錄位置中適當命名的類別資料夾`ssi`.
 
-#### news_page (%args) &mdash; 用於多敘述彙總頁面
+</p>
+  </div>
+</div>
 
-#### 網站地圖 (%args) &mdash; 用於建立 index.html 和 sitemap.html 頁面
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `news_page (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+針對 (多敘述) 彙總頁面
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `網站地圖 (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+用於建立 index.html 和 sitemap.html 頁面
+
+</div>
+
+<p class="card-text">
 
 語言環境特定、已排序的相依性索引。
 
 必要引數：
 
-- [`路徑`](#)
-- [`語言`](#)
+- `路徑`
+- `語言`
 
 選擇性引數：
 
-- [`quick_deps`](#)
-- [`巢套`](#)
-- [`前處理`](#)
+- `quick_deps`
+- `巢套`
+- `前處理`
 
-#### asymptote (%args)
+</p>
+</div>
+</div>
 
-組建和快取[`漸近線`](https://asymptote.sourceforge.io/) 適用於啟用 HTML5-WebGL 畫面之向量圖形的三重引號編碼區塊。
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `asymptote (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+組建和快取[`漸近線`](https://asymptote.sourceforge.io/) 適用於啟用 HTML5-WebGL 畫面之向量圖形的三重方括號編碼區塊
+
+</div>
+<p class="card-text">
 
 必要引數：
 
-- [`檢視`](#)
-- [`語言`](#)
-- [`路徑`](#)
+- `檢視`
+- `語言`
+- `路徑`
 
-#### 略過 (%args)
+</p>
+</div>
+</div>
 
-根本不要建置這些元件。改為建立關聯的產生來源檔案 (例如，`.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\ 語言`) 將建立在次要建構系統執行上。
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### yml2ext (%args)
+#### `略過 (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+根本不要建置這些元件。
+
+</div>
+<p class="card-text">
+
+改為建立關聯的產生來源檔案 (例如，`.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\ 語言`) 將建立在次要建構系統執行上。
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `yml2ext (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 將 YAML 檔案轉換成 JSON。
 
+</div>
+<p class="card-text">
+
 選擇性引數：
 
-- [`分機`](#) 預設為`json`
-- [`過濾器`](#) 預設為`json_raw`
-- [`範本`](#) 覆寫`過濾器` 預設表示式
+- `分機` 預設為`json`
+- `過濾器` 預設為`json_raw`
+- `範本` 覆寫`過濾器` 預設表示式
 
-#### fetch_deps ($path, $data, $quick)
+</p>
+</div>
+</div>
 
-將 $data 引數雜湊參照重製為 2 元素陣列參照的時間戳記排序陣列參照。每個 2- 元素 arrayref 中的第一個項目是檔案 path-name，第二個元素則是產生的[`read_text_file`](#) 該 path-name 的 hashref。
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+#### `fetch_deps ($path, $data, $quick)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+將 $data 引數雜湊參照重製為 2 元素陣列參照的時間戳記排序陣列參照。
+
+</div>
+<p class="card-text">
+
+每個 2- 元素 arrayref 中的第一個項目是檔案 path-name，第二個元素則是產生的[`read_text_file`](#) 該 path-name 的 hashref。
 
 傳回結果新來源檔案的清單，如果[`$quick > 2`](#).
 
 必要引數：
 
-- [`路徑`](#)
-- [`資料`](#) - 輸入為雜湊參考；在退回時導致折舊陣列的商店
-- [`快速`](#) - 預設為 2
+- `路徑`
+- `資料` - 輸入為雜湊參考；在退回時導致折舊陣列的商店
+- `快速` - 預設為 2
 
-#### 來源路徑 ($path)
+</p>
+</div>
+</div>
 
-傳回下列項目的 HTML 來源路徑清單：[$path](#).
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### memoize (%args)
+#### `來源路徑 ($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+傳回下列項目的 HTML 來源路徑清單：`$path`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `memoize (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 快取建置；主要與 fetch_deps 和 quick_deps > 2 搭配使用。
 
-#### 註解 (%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `註解 (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 產生頁面註解的 SSI 引入的 HTML 片段。
 
-#### next_view (%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-處理 $args 的公用程式{檢視}.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### ssi (%args)
+#### `next_view (%args)`
 
-遞迴評估[ssi](#) 標籤。
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### 離線 (%args)
+循序處理的公用程式`$args{檢視}`.
 
-以離線模式執行 next_view。
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-#### 程式碼片段 (%args)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `ssi (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+遞迴評估`ssi` 標籤。
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `離線 (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+執行`next_view` 在離線模式。
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `程式碼片段 (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [處理外部代碼](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [片段線](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)，通常會將其 GitHub 上的來源位置匯入程式設計語言特定的圍欄標記區塊。[這裡範例](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
-#### 重新建構 (%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `重新建構 (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 從 next_view 重新處理內建內容中的樣板指令。
 
-#### trim_local_links (%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `trim_local_links (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 去除本機連結的副檔名。
 
-#### normalize_links (%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-正規化本地端連結 (. / 與 .. /) 。
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_links (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+標準化本機連結 (`./` 與`../`).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `langify_template (%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+附加`$args{語言}` 至`$args{範本}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 ----
 
-### [SunStarSys：：使用](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫[`程式庫 /path.pm`](#) 與[`程式庫 /view.pm`](#)
+### [SunStarSys：：使用](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫`程式庫 /path.pm` 與`程式庫 /view.pm`
 
 #### read_text_file ($file, $out, $content_lines) &mdash; Orion 的通用文字檔案處理器
 
-剖析 UTF- 8 編碼檔案的 headers+content [`$ 檔案`](#) 並將結果儲存於[`折扣`](#). [`$content_lines`](#) 是要讀取的內容行數上限 (選擇性)。
+剖析 UTF- 8 編碼檔案的 headers+content `$ 檔案` 並將結果儲存在 hashref 中`折扣`. `$content_lines` 是要讀取的內容行數上限 (選擇性)。
+
 傳回實際讀取的行數 (包含標頭) 。
 
-[`$ 檔案`](#) 可以是原始字串的參照，代表檔案的完整內容。結果[`折扣`](#) 將會依然以 UTF-8 編碼。
+`$ 檔案` 可以是原始字串的參照，代表檔案的完整內容。結果`折扣` 將會依然以 UTF-8 編碼。
 
 #### copy_if_newer ($src, $dest)
 
-份數[`$src`](#) 至[`$dest`](#) 如果前者的修改時戳比後者的修改時戳新。在複製時，加上 gzip 壓縮[`$dest`](#) 檔案 (如果是文字檔) 並新增".gz" 名稱的副檔名。
+份數`$src` 至`$dest` 如果前者的修改時戳比後者的修改時戳新。在複製時，加上 gzip 壓縮`$dest` 檔案 (如果是文字檔) 並新增".gz" 名稱的副檔名。
 
 #### get_lock ($lockfile)
 
-獨佔 (f) 鎖定 (針對目前的 UNIX 處理作業) 於[`$lockfile`](#).
+獨佔 (f) 鎖定 (針對目前的 UNIX 處理作業) 於`$lockfile`.
 
 #### 打亂 (\\)&#64;版面)
 
-就地隨機 (漁船) 混亂[`@deck`](#).
+就地隨機 (漁船) 混亂`@deck`.
 
 #### sort_tables ($content)
 
-根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。每一表格只能排序一個資料欄 (選擇性地為數字) [`n 個`](#)，遞減[`垂直`](#) 或遞增[`^`](#) 訂單。
+根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。每一表格只能排序一個資料欄 (選擇性地為數字) `n 個`，遞減`垂直` 或遞增`^` 訂單。
 
 #### fixup_code ($prefix, $type, &#64;_)
 
@@ -198,56 +457,56 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 #### unload_package ($pkg)
 
-積極卸載 Perl (分葉) 套裝程式[`$pkg`](#) 來自符號表 (STASH)。
+積極卸載 Perl (分葉) 套裝程式`$pkg` 來自符號表 (STASH)。
 
 #### purge_from_inc(&#64;路徑)
 
-移除[`@paths`](#) 來自[`@INC`](#).
+移除`@paths` 來自`@INC`.
 
 #### 中文 (繁體)&#64;_)
 
-觸碰所有檔案於[`@_`](#)。如果未傳送任何引數，則使用[`$_`](#).
+觸碰所有檔案於`@_`。如果未傳送任何引數，則使用`$_`.
 
 #### normalize_svn_path(&#64;_)
 
-將所有路徑標準化[`@_`](#) 以安全方式用作原始引數[`SVN：：客戶端`](#) 指令。
+將所有路徑標準化`@_` 以安全方式用作原始引數`SVN：：客戶端` 指令。
 
 #### sanitize_relative_path(&#64;_)
 
-保護以下位置的路徑：[`@_`](#) 用作純相對路徑[`多蒂亞克：：DTL`](#) (Django 樣板) 路徑特定命令。
+保護以下位置的路徑：`@_` 用作純相對路徑`多蒂亞克：：DTL` (Django 樣板) 路徑特定命令。
 
 #### parse_filename (路徑)
 
-包裝函式四周[`檔案：：Basename：：fileparse`](#)。不含引數，使用[`$_`](#) 作為要剖析的檔案名稱。
+包裝函式四周`檔案：：Basename：：fileparse`。不含引數，使用`$_` 作為要剖析的檔案名稱。
 
 #### walk_content_tree ($code)
 
-有條件地步行[`。/ 內容`](#) 組建系統取出樹狀結構，先標準化[`$_`](#) 作為正式的內容根目錄子路徑，然後呼叫[`中文 (繁體)`](#) 在樹行道的每個項目上。對大多數的組建而言，一律不會執行 walk &mdash; 而是組建依賴先前組建的快取資料。
+有條件地步行`。/ 內容` 組建系統取出樹狀結構，先標準化`$_` 作為正式的內容根目錄子路徑，然後呼叫`中文 (繁體)` 在樹行道的每個項目上。對大多數的組建而言，一律不會執行 walk &mdash; 而是組建依賴先前組建的快取資料。
 
-強制散步的唯一方法是設定[`$path::use_cache`](#) 在使用者提供的模組中為 false 值。否則，此行為由下列項目由專家管理：[增量建置技術](https://iconoclasts.blog/joe/dependencies).
+強制散步的唯一方法是設定`$path::use_cache` 在使用者提供的模組中為 false 值。否則，此行為由下列項目由專家管理：[增量建置技術](https://iconoclasts.blog/joe/dependencies).
 
 如果實際繼續執行 walk，則傳回 1，而不是依賴快取的資料。否則會傳回假值。
 
 ##### 已歸檔 ($path)
 
-每個旗標[`狀態：已存檔`](#) [`$path`](#) (以自然語言特定的方式)。使用[`$_`](#) 如果未傳送任何引數。
+每個旗標`狀態：已存檔` `$path` (以自然語言特定的方式)。使用`$_` 如果未傳送任何引數。
 
 歸檔檔案是告訴 Orion 的自然方式"停止注意此檔案的永久連結位置 ... 除非再次更新，否則會重新整理存檔位置。特別是，封存的檔案不會出現在 CMS 本身的目錄列表中；您必須瀏覽至即時頁面本身，才能在線上再次進行編輯。
 
 ##### seed_file_deps (路徑)
 
-安全更新[`%path::dependencies`](#) 針對此[`$path`](#)，根據它[`相依性`](#) 標頭 glob。預設使用[`$_`](#) 作為路徑，若未傳送任何引數。
+安全更新`%path::dependencies` 針對此`$path`，根據它`相依性` 標頭 glob。預設使用`$_` 作為路徑，若未傳送任何引數。
 
 ##### seed_file_acl (路徑)
 
-安全更新[`@path::acl`](#) 針對此[`$path`](#)，根據它[`存取控制清單`](#) 標頭規格預設使用[`$_`](#) 作為路徑，若未傳送任何引數。
+安全更新`@path::acl` 針對此`$path`，根據它`公升` 標頭規格預設使用`$_` 作為路徑，若未傳送任何引數。
 
 #### 載入
 
-相同於[`YAML::XS::Load`](#).
+相同於`YAML::XS::Load`.
 
 #### 傾印
 
-相同於[`YAML：：XS：：傾印`](#).
+相同於`YAML：：XS：：傾印`.
 
 <!-- $Date$ $Author$ $Revision$ -->

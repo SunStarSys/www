@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=34604
+status: 초안
 title: Orion API - 빌드
 ---
 
@@ -50,147 +50,406 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ### [SunStarSys::보기](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 `라이브러리/view.pm`
 
-#### single_narrative(%args) &mdash; 가장 인기있는 (그리고 정교한)보기
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `single_narrative(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+가장 인기있는 (그리고 정교한)보기
+
+</div>
+
+<p class="card-text">
 
 이 뷰에는 내부에 있는 파일의 자동 처리 기능이 포함되어 있습니다. `$경로`첨부 디렉토리입니다. 즉, `$path = "한국어/조선말"`에 저장된 파일이  `/foo.page/` 디렉토리: "한국어" 언어 확장이 템플리트 주소 지정 가능 인수에 통합됩니다. `$경로` 에 관계없이 `선행 처리` 인수의 설정 &mdash; true인 경우 **페이지의 콘텐츠 자체**에서 해당 자료에 액세스할 수 있게 됩니다.
 
 필수 인수:
 
-- [`템플리트`](#)
-- [`경로`](#)
-- [`짧음`](#)
+- `템플리트`
+- `경로`
+- `짧음`
 
 선택적 인수:
 
-- [`삭제`](#) &mdash; 법선 재지정 [`fetch_deps`]() 처리
+- `삭제` &mdash; 법선 재지정 `fetch_deps` 처리 중
 
-- [`quick_deps`](#) &mdash; 내부 deps-processing 최적화 설정, 최선 설정 해제
+- `quick_deps` &mdash; 내부 deps-processing 최적화 설정, 최선 설정 해제
 
-- [`선행 처리`](#) &mdash; 템플리트가 [`$경로`](#) 내용 자체,
+- `선행 처리` &mdash; 템플리트가 `$경로` 내용 자체,
 
-- [`archive_root`](#) &mdash; 파일 위치 "아카이브됨" 상태: "복사됨" 이 콘텐츠 루트 위치에 대한 연도/월 하위 폴더별로 추적 `ssi`,
+- `archive_root` &mdash; 파일 위치 "아카이브됨" 상태: "복사됨" 이 콘텐츠 루트 위치에 대한 연도/월 하위 폴더별로 추적 `ssi`,
 
-- [`category_root`](#) &mdash; 의 항목 "범주" 헤더 "복사됨" 이 컨텐츠 루트 위치에 있는 적절하게 명명된 범주 폴더로 `ssi`.
+- `category_root` &mdash; 의 항목 "범주" 헤더 "복사됨" 이 컨텐츠 루트 위치에 있는 적절하게 명명된 범주 폴더로 `ssi`.
 
-#### news_page(%args) &mdash; 다중 설명 집계 페이지의 경우
+</p>
+  </div>
+</div>
 
-#### 사이트맵(%args) &mdash; index.html 및 sitemap.html 페이지 작성
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `news_page(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+(다중 설명) 집계 페이지
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `사이트맵(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+index.html 및 sitemap.html 페이지 작성용
+
+</div>
+
+<p class="card-text">
 
 종속성의 로케일별 정렬된 인덱스입니다.
 
 필수 인수:
 
-- [`경로`](#)
-- [`짧음`](#)
+- `경로`
+- `짧음`
 
 선택적 인수:
 
-- [`quick_deps`](#)
-- [`중첩됨`](#)
-- [`선행 처리`](#)
+- `quick_deps`
+- `중첩됨`
+- `선행 처리`
 
-#### asymptote(%args)
+</p>
+</div>
+</div>
 
-빌드 및 캐시 [`아심포테`](https://asymptote.sourceforge.io/) HTML5-WebGL 캔버스 사용 벡터 그래픽에 대한 삼중 백쿼트 코드 블록입니다.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `asymptote(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+빌드 및 캐시 [`아심포테`](https://asymptote.sourceforge.io/) HTML5-WebGL 캔버스 사용 벡터 그래픽에 대한 삼중 백쿼트 코드 블록
+
+</div>
+<p class="card-text">
 
 필수 인수:
 
-- [`보기`](#)
-- [`짧음`](#)
-- [`경로`](#)
+- `보기`
+- `짧음`
+- `경로`
 
-#### 건너뛰기(%args)
+</p>
+</div>
+</div>
 
-이것들을 전혀 만들지 마십시오.  대신 연관된 생성된 소스 파일(예: `.bib\$ 언어` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)는 보조 빌드 시스템 실행에 빌드됩니다.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### yml2ext(%args)
+#### `건너뛰기(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+이것들을 전혀 만들지 마십시오.
+
+</div>
+<p class="card-text">
+
+대신 연관된 생성된 소스 파일(예: `.bib\$ 언어` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`)는 보조 빌드 시스템 실행에 빌드됩니다.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `yml2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 YAML 파일을 일반적으로 JSON으로 변환합니다.
 
+</div>
+<p class="card-text">
+
 선택적 인수:
 
-- [`확장`](#) 기본값 `JSON`
-- [`필터`](#) 기본값 `json_raw`
-- [`템플리트`](#) 재정의 `필터` 기본 표현식
+- `확장` 기본값 `JSON`
+- `필터` 기본값 `json_raw`
+- `템플리트` 재정의 `필터` 기본 표현식
 
-#### fetch_deps($path, $data, $quick)
+</p>
+</div>
+</div>
 
-$data 인수 hashref를 2-요소 arrayrefs의 시간 기록 정렬된 arrayref로 리팩터링합니다. 각 2 요소 arrayref의 첫 번째 항목은 파일 경로 이름입니다, 두 번째 요소는 결과입니다 [`read_text_file`](#) 해당 경로 이름에 대한 해시 참조입니다.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+#### `fetch_deps($path, $data, $quick)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+$data 인수 hashref를 2-요소 arrayrefs의 시간 기록 정렬된 arrayref로 리팩터링합니다.
+
+</div>
+<p class="card-text">
+
+각 2 요소 arrayref의 첫 번째 항목은 파일 경로 이름입니다, 두 번째 요소는 결과입니다 [`read_text_file`](#) 해당 경로 이름에 대한 해시 참조입니다.
 
 다음과 같은 경우 결과 새 소스 파일 목록을 반환합니다. [`$quick > 2`](#).
 
 필수 인수:
 
-- [`경로`](#)
-- [`데이터`](#) - hashref로 입력; 반환시 deps의 결과 anon-array를 저장합니다
-- [`빠른`](#) - 기본값은 2입니다.
+- `경로`
+- `데이터` - hashref로 입력; 반환시 deps의 결과 anon-array를 저장합니다
+- `빠른` - 기본값은 2입니다.
 
-#### 이동 경로($path)
+</p>
+</div>
+</div>
 
-다음에 대한 HTML 이동 경로 목록을 반환합니다. [$경로](#).
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### 메모화(%args)
+#### `이동 경로($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+다음에 대한 HTML 이동 경로 목록을 반환합니다. `$경로`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `메모화(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 빌드를 캐시에 저장합니다. 주로 fetch_deps 및 quick_deps > 2와 함께 사용됩니다.
 
-#### 설명(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `설명(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 페이지 의견에 대한 SSI 포함 가능 HTML 부분을 생성합니다.
 
-#### next_view(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-$args 처리를 위한 유틸리티{보기}.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### ssi(%args)
+#### `next_view(%args)`
 
-반복적으로 평가 [ssi](#) 태그
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### 오프라인(%args)
+순차적 처리를 위한 유틸리티 `$arg{보기}`.
 
-오프라인 모드에서 next_view를 실행합니다.
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-#### 코드 조각(%args)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `ssi(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+반복적으로 평가 `ssi` 태그
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `오프라인(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+다음을 실행합니다. `next_view` 오프라인 모드
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `코드 조각(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [외부 코드 처리](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [코드 조각 행](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)일반적으로 GitHub의 소스 위치를 프로그래밍 언어별 보호된 마크다운 블록으로 가져옵니다. [예제](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
-#### 재구성(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `재구성(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 next_view에서 빌드된 콘텐츠의 템플리트 지시어를 재처리합니다.
 
-#### trim_local_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `trim_local_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 로컬 링크에서 파일 확장자를 자릅니다.
 
-#### normalize_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-로컬 링크(./ 및 ../)를 정규화합니다.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+로컬 링크 정규화(`./` 및 `../`).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `langify_template(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+추가 `$arg{짧음}` 종료 `$arg{템플리트}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 ----
 
-### [SunStarSys::까지](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 유틸리티 라이브러리 [`라이브러리/path.pm`](#) 및 [`라이브러리/view.pm`](#)
+### [SunStarSys::까지](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 유틸리티 라이브러리 `라이브러리/path.pm` 및 `라이브러리/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Orion의 범용 텍스트 파일 프로세서
 
-UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. [`$파일`](#) 결과 저장 위치 [`$out`](#). [`$content_lines`](#) 읽을 콘텐츠 라인의 최대 개수(선택 사항)입니다.
+UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$파일` 결과를 해시 참조에 저장합니다. `$out`. `$content_lines` 읽을 콘텐츠 라인의 최대 개수(선택 사항)입니다.
+
 읽은 실제 행 수(머리글 포함)를 반환합니다.
 
-[`$파일`](#) 파일의 전체 내용을 나타내는 원시 문자열에 대한 참조일 수 있습니다.  결과는 [`$out`](#) UTF-8이 인코딩됩니다.
+`$파일` 파일의 전체 내용을 나타내는 원시 문자열에 대한 참조일 수 있습니다.  결과는 `$out` UTF-8이 인코딩됩니다.
 
 #### copy_if_newer($src, $dest)
 
-매수 [`$소스`](#) 종료 [`$일부`](#) 이전 수정 타임스탬프가 후자의 수정 타임스탬프보다 최신인 경우. 복사본에서 gzip-compresses의 [`$일부`](#) 파일(텍스트 파일인 경우) ".gz" 이름을 확장합니다.
+매수 `$소스` 종료 `$일부` 이전 수정 타임스탬프가 후자의 수정 타임스탬프보다 최신인 경우. 복사본에서 gzip-compresses의 `$일부` 파일(텍스트 파일인 경우) ".gz" 이름을 확장합니다.
 
 #### get_lock($lockfile)
 
-현재 UNIX 프로세스의 경우 배타적(f)잠금을 [`$lock파일`](#).
+현재 UNIX 프로세스의 경우 배타적(f)잠금을 `$lock파일`.
 
 #### 셔플(\\&#64;갑판)
 
-내장 무작위(어류) 셔플 [`@deck`](#).
+내장 무작위(어류) 셔플 `@deck`.
 
 #### sort_tables($content)
 
-각 테이블의 열 사양에 따라 $content에서 마크다운 테이블을 정렬합니다.  테이블당 정확히 하나의 열을 정렬할 수 있습니다(선택 사항). [`n개`](#), 내림차순 [`v`](#) 또는 오름차순 [`^`](#) 주문.
+각 테이블의 열 사양에 따라 $content에서 마크다운 테이블을 정렬합니다.  테이블당 정확히 하나의 열을 정렬할 수 있습니다(선택 사항). `n개`, 내림차순 `v` 또는 오름차순 `^` 주문.
 
 #### fixup_code($prefix, $type, &#64;_)
 
@@ -198,56 +457,56 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. [`$파일`](#
 
 #### unload_package($pkg)
 
-Perl(리프) 패키지를 적극적으로 언로드합니다. [`$pkg`](#) 기호 테이블(STASH)에서
+Perl(리프) 패키지를 적극적으로 언로드합니다. `$pkg` 기호 테이블(STASH)에서
 
 #### purge_from_inc(&#64;경로)
 
-제거 [`@paths`](#) 시작일 [`@INC`](#).
+제거 `@paths` 시작일 `@INC`.
 
 #### 터치(&#64;_)
 
-모든 파일을 [`@_`](#). 인수가 전달되지 않으면 [`$_`](#).
+모든 파일을 `@_`. 인수가 전달되지 않으면 `$_`.
 
 #### normalize_svn_path(&#64;_)
 
-의 모든 경로를 정규화합니다. [`@_`](#) 원시 인수로 안전하게 사용 [`품질 관리`](#) 명령
+의 모든 경로를 정규화합니다. `@_` 원시 인수로 안전하게 사용 `품질 관리` 명령
 
 #### sanitize_relative_path(&#64;_)
 
-경로 보안 [`@_`](#) 에서 순수한 상대 경로로 사용 [`도티악::DTL`](#) (장고 템플릿) 경로별 명령.
+경로 보안 `@_` 에서 순수한 상대 경로로 사용 `도티악::DTL` (장고 템플릿) 경로별 명령.
 
 #### parse_filename($path)
 
-주변 래퍼 [`파일::Basename::fileparse`](#). 인수가 없으면 [`$_`](#) 구문 분석할 파일 이름입니다.
+주변 래퍼 `파일::Basename::fileparse`. 인수가 없으면 `$_` 구문 분석할 파일 이름입니다.
 
 #### walk_content_tree($code)
 
-조건부로 걷기 [`./콘텐츠`](#) 빌드 시스템 체크아웃의 트리, 먼저 정규화 [`$_`](#) 형식 컨텐트 루트 하위 경로로 변경한 다음 [`$code->()`](#) 트리워크의 각 항목에 대해 설명합니다. 대부분의 빌드에서는 걷기가 발생하지 않습니다. &mdash; 대신 빌드는 이전 빌드의 캐시에 저장된 데이터를 사용합니다.
+조건부로 걷기 `./콘텐츠` 빌드 시스템 체크아웃의 트리, 먼저 정규화 `$_` 형식 컨텐트 루트 하위 경로로 변경한 다음 `$code->()` 트리워크의 각 항목에 대해 설명합니다. 대부분의 빌드에서는 걷기가 발생하지 않습니다. &mdash; 대신 빌드는 이전 빌드의 캐시에 저장된 데이터를 사용합니다.
 
-강제로 걷는 유일한 방법은 [`$path::use_cache`](#) 사용자가 제공한 모듈의 false 값 그렇지 않으면 이 동작은 [증분 빌드 기술](https://iconoclasts.blog/joe/dependencies).
+강제로 걷는 유일한 방법은 `$path::use_cache` 사용자가 제공한 모듈의 false 값 그렇지 않으면 이 동작은 [증분 빌드 기술](https://iconoclasts.blog/joe/dependencies).
 
 캐시에 저장된 데이터에 의존하지 않고 실제로 보행시선이 진행된 경우 1을 반환합니다. 그렇지 않으면 false 값을 반환합니다.
 
 ##### 아카이브됨($path)
 
-각 플래그 [`상태: 아카이브됨`](#) [`$경로`](#) (자연어 특정 방식으로). 사용 [`$_`](#) 인수가 전달되지 않은 경우
+각 플래그 `상태: 아카이브됨` `$경로` (자연어 특정 방식으로). 사용 `$_` 인수가 전달되지 않은 경우
 
 파일 아카이브는 Orion에게 알리는 자연스러운 방법입니다. "이 파일의 고유 링크 위치에 대한 주의 중지 ... 다시 업데이트되지 않으면 아카이브 위치가 새로 고쳐집니다. 특히 아카이브된 파일은 CMS 자체 내의 디렉토리 목록에 나타나지 않습니다. 온라인으로 다시 편집할 수 있으려면 라이브 페이지 자체로 이동해야 합니다.
 
 ##### seed_file_deps($path)
 
-안전한 업데이트 [`%path::종속성`](#) 대상 [`$경로`](#)을 기반으로 [`종속성`](#) 헤더 glob(s). 사용 기본값 [`$_`](#) 인수가 전달되지 않은 경우 경로로 지정됩니다.
+안전한 업데이트 `%path::종속성` 대상 `$경로`을 기반으로 `종속성` 헤더 glob(s). 사용 기본값 `$_` 인수가 전달되지 않은 경우 경로로 지정됩니다.
 
 ##### seed_file_acl($path)
 
-안전한 업데이트 [`@path::acl`](#) 대상 [`$경로`](#)을 기반으로 [`ACL`](#) 헤더 사양 사용 기본값 [`$_`](#) 인수가 전달되지 않은 경우 경로로 지정됩니다.
+안전한 업데이트 `@path::acl` 대상 `$경로`을 기반으로 `하위` 헤더 사양 사용 기본값 `$_` 인수가 전달되지 않은 경우 경로로 지정됩니다.
 
 #### 로드
 
-같음 [`YAML::XS:: 짐`](#).
+같음 `YAML::XS:: 짐`.
 
 #### 덤프
 
-같음 [`YAML::XS::덤프`](#).
+같음 `YAML::XS::덤프`.
 
 <!-- $Date$ $Author$ $Revision$ -->

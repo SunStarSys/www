@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 34604
+status: مُسَوَّدَة
 title: أوريون API - بناء
 ---
 
@@ -50,147 +50,406 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ### [SunStarSys::عرض](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; الفئة الأساسية لـ `lib/view.pm`
 
-#### single_narrative(%args) &mdash; العرض الأكثر شعبية (والمتطورة)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `single_narrative(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+العرض الأكثر شيوعًا (والمتطور)
+
+</div>
+
+<p class="card-text">
 
 يتضمن هذا العرض المعالجة الآلية للملفات الموجودة داخل `مسار $`'s دليل المرفق. وبعبارة أخرى، إذا `$path = "/foo.md.en"`، ثم الملفات المخزنة داخل  `/foo.page/` الدليل المقترن بـ "سن" سيتم دمج امتداد اللغة في الوسائط القابلة للعنونة لهذا القالب `مسار $` بغض النظر عن `يعالج` إعداد الوسيطة &mdash; والتي إذا كانت صحيحة، ستجعل هذه المادة متاحة أيضًا من خلال محتوى **الصفحة نفسها**.
 
 الوسائط الإلزامية:
 
-- [`القالب`](#)
-- [`مسار`](#)
-- [`جوف`](#)
+- `القالب`
+- `مسار`
+- `جوف`
 
 الوسائل الاختيارية:
 
-- [`ردهة`](#) &mdash; يتجاوز الوضع الطبيعي [`fetch_deps`]معالجة ()
+- `ردهة` &mdash; يتجاوز الوضع الطبيعي `fetch_deps` معالجة
 
-- [`quick_deps`](#) &mdash; إعداد تحسين المعالجة الداخلية لـ deps؛ أفضل وضع لليسار
+- `quick_deps` &mdash; إعداد تحسين المعالجة الداخلية لـ deps؛ أفضل وضع لليسار
 
-- [`يعالج`](#) &mdash; تمكين معالجة القالب في [`مسار $`](#) المحتوى نفسه،
+- `يعالج` &mdash; تمكين معالجة القالب في `مسار $` المحتوى نفسه،
 
-- [`archive_root`](#) &mdash; الملفات في "مؤرشف" الحالة هي "نُسخ" وتتبع حسب المجلدات الفرعية للسنة / الشهر إلى هذا الموقع المتأصل بالمحتوى عبر `تسي`,
+- `archive_root` &mdash; الملفات في "مؤرشف" الحالة هي "نُسخ" وتتبع حسب المجلدات الفرعية للسنة / الشهر إلى هذا الموقع المتأصل بالمحتوى عبر `تسي`,
 
-- [`category_root`](#) &mdash; العناصر في "الفئات" الرأس "نُسخ" الانتقال إلى مجلدات الفئات المسماة بشكل مناسب في هذا الموقع القائم على المحتوى عبر `تسي`.
+- `category_root` &mdash; العناصر في "الفئات" الرأس "نُسخ" الانتقال إلى مجلدات الفئات المسماة بشكل مناسب في هذا الموقع القائم على المحتوى عبر `تسي`.
 
-#### news_page(%args) &mdash; لصفحات التجميع متعددة السرد
+</p>
+  </div>
+</div>
 
-#### خريطة الموقع(%args) &mdash; لبناء صفحات index.html و sitemap.html
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `news_page(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+لصفحات التجميع (متعددة السرد)
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `خريطة الموقع(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+لبناء صفحات index.html و sitemap.html
+
+</div>
+
+<p class="card-text">
 
 الفهرس المفروز للتبعيات الخاص بالمنطقة اللغوية.
 
 الوسائط الإلزامية:
 
-- [`مسار`](#)
-- [`جوف`](#)
+- `مسار`
+- `جوف`
 
 الوسائط الاختيارية:
 
-- [`quick_deps`](#)
-- [`متداخل`](#)
-- [`يعالج`](#)
+- `quick_deps`
+- `متداخل`
+- `يعالج`
 
-#### علامة(%args)
+</p>
+</div>
+</div>
 
-الإنشاءات والذاكرة المخبئية [`أسيمبتوت`](https://asymptote.sourceforge.io/) كتل التعليمات البرمجية الثلاثية ذات علامات الاقتباس الخلفية لرسومات المتجه HTML5-WebGL التي تدعم السطح.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `علامة(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+الإنشاءات وذاكرة التخزين المؤقت [`أسيمبتوت`](https://asymptote.sourceforge.io/) كتل التعليمات البرمجية ذات علامات الاقتباس الثلاثية لرسومات المتجه HTML5-WebGL التي تدعم السطح
+
+</div>
+<p class="card-text">
 
 الوسائط الإلزامية:
 
-- [`شاهد`](#)
-- [`جوف`](#)
-- [`مسار`](#)
+- `شاهد`
+- `جوف`
+- `مسار`
 
-#### تخطي(%args)
+</p>
+</div>
+</div>
 
-لا تبني هذه على الإطلاق.  بدلاً من ذلك، قم بإنشاء ملفات المصدر المرتبطة (على سبيل المثال. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) ليتم بناؤها على تشغيل نظام بناء ثانوي.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### yml2ext(%args)
+#### `تخطي(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+لا تبني هذه على الإطلاق.
+
+</div>
+<p class="card-text">
+
+بدلاً من ذلك، قم بإنشاء ملفات المصدر المرتبطة (على سبيل المثال. `.bib\$lang` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) ليتم بناؤها على تشغيل نظام بناء ثانوي.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `yml2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 تحويل ملفات YAML، عادة إلى JSON.
 
+</div>
+<p class="card-text">
+
 الوسائط الاختيارية:
 
-- [`خارج`](#) افتراضيًا إلى `صيغة الجمع`
-- [`مرشح`](#) افتراضيًا إلى `json_raw`
-- [`القالب`](#) يتجاوز `مرشح` التعبير الافتراضي
+- `خارج` افتراضيًا إلى `صيغة الجمع`
+- `مرشح` افتراضيًا إلى `json_raw`
+- `القالب` يتجاوز `مرشح` التعبير الافتراضي
 
-#### fetch_deps($path، $data، $quick)
+</p>
+</div>
+</div>
 
-Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب لمصفوفات المصفوفات ثنائية العناصر. الإدخال الأول في كل arrayref مكون من عنصرين هو اسم مسار الملف، والعنصر الثاني هو الناتج [`read_text_file`](#) hashref لاسم المسار هذا.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+#### `fetch_deps($path، $data، $quick)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب لمصفوفات المصفوفات ثنائية العناصر.
+
+</div>
+<p class="card-text">
+
+الإدخال الأول في كل arrayref مكون من عنصرين هو اسم مسار الملف، والعنصر الثاني هو الناتج [`read_text_file`](#) hashref لاسم المسار هذا.
 
 إرجاع قائمة بالملفات المصدر الجديدة الناتجة إذا [`$quick > 2`](#).
 
 الوسائط الإلزامية:
 
-- [`مسار`](#)
-- [`البيانات`](#) - المدخلات مثل hashref ؛ مخازن الناتجة عن صفيف من deps عند العودة
-- [`سريع`](#) - الافتراضي إلى 2
+- `مسار`
+- `البيانات` - المدخلات مثل hashref ؛ مخازن الناتجة عن صفيف من deps عند العودة
+- `سريع` - الافتراضي إلى 2
 
-#### علامات التتبع($path)
+</p>
+</div>
+</div>
 
-إرجاع قائمة علامات تتبع HTML لـ [مسار $](#).
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### حفظ(%args)
+#### `علامات التتبع($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+إرجاع قائمة علامات تتبع HTML لـ `مسار $`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `حفظ(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 تخزين البناء تخزينًا مؤقتًا؛ يتم استخدامه بشكل أساسي مع fetch_deps وquick_deps > 2.
 
-#### تعليق(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `تعليق(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 تكوين مقطع HTML المضمن في SSI لتعليق صفحة.
 
-#### next_view(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-الأداة المساعدة لمعالجة $args{شاهد}.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### ssi(%args)
+#### `next_view(%args)`
 
-التقييمات المتكررة [تسي](#) العلامات.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### غير متصل(%args)
+الأداة المساعدة للمعالجة المتسلسلة `$args{شاهد}`.
 
-تشغيل next_view في وضع عدم الاتصال.
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-#### قصاصة(%args)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `ssi(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+التقييمات المتكررة `تسي` العلامات.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `غير متصل(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+تشغيل `next_view` في وضع عدم الاتصال.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `قصاصة(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [معالجة التعليمات البرمجية الخارجية](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [خطوط القصاصة](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806)، عادة ما تستورد مواقعها المصدر على GitHub في كتل تخفيض السعر المسيجة الخاصة بلغة البرمجة. [مثال هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
-#### إعادة الإعمار(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `إعادة الإعمار(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 إعادة معالجة توجيهات القالب في المحتوى المضمن من next_view.
 
-#### trim_local_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `trim_local_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 إزالة امتدادات الملفات من الارتباطات المحلية.
 
-#### normalize_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-تطبيع الارتباطات المحلية (./ و../).
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+تطبيع الارتباطات المحلية (`./` و `../`).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `langify_template(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+إلحاق `$args{جوف}` لكي `$args{القالب}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 ----
 
-### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; مكتبة المرافق لـ [`lib/path.pm`](#) و [`lib/view.pm`](#)
+### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; مكتبة المرافق لـ `lib/path.pm` و `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; معالج الملفات النصية العالمية لـ Orion
 
-تحليل الرؤوس + محتوى ملف UTF-8 المشفر [`ملف $`](#) ويخزن النتائج في [`$out`](#). [`$content_lines`](#) هو الحد الأقصى (اختياري) لعدد سطور المحتوى المطلوب قراءتها.
+تحليل الرؤوس + محتوى ملف UTF-8 المشفر `ملف $` ويخزن النتائج في hashref `$out`. `$content_lines` هو الحد الأقصى (اختياري) لعدد سطور المحتوى المطلوب قراءتها.
+
 إرجاع العدد الفعلي للسطور المقروءة (بما في ذلك الرؤوس).
 
-[`ملف $`](#) قد يكون مرجعًا لسلسلة أولية، تمثل المحتويات الكاملة للملف.  النتائج في [`$out`](#) سيظل UTF-8 مشفرًا.
+`ملف $` قد يكون مرجعًا لسلسلة أولية، تمثل المحتويات الكاملة للملف.  النتائج في `$out` سيظل UTF-8 مشفرًا.
 
 #### copy_if_newer($src، $dest)
 
-النُسخ [`$src`](#) لكي [`$dest`](#) إذا كان الطابع الزمني لتعديل الأول أحدث من الأخير. على نسخة، بالإضافة إلى ذلك gzip يضغط على [`$dest`](#) ملف إذا كان ملفًا نصيًا، ويضيف ".gz" امتداد للاسم.
+النُسخ `$src` لكي `$dest` إذا كان الطابع الزمني لتعديل الأول أحدث من الأخير. على نسخة، بالإضافة إلى ذلك gzip يضغط على `$dest` ملف إذا كان ملفًا نصيًا، ويضيف ".gz" امتداد للاسم.
 
 #### get_lock($lockfile)
 
-يأخذ (و) قفل حصري (لعملية UNIX الحالية) على [`$lockfile`](#).
+يأخذ (و) قفل حصري (لعملية UNIX الحالية) على `$lockfile`.
 
 #### تشويش(\\\)&#64;سطح السفينة)
 
-في مكان عشوائي (فيشر ييتس) shuffle من [`@deck`](#).
+في مكان عشوائي (فيشر ييتس) shuffle من `@deck`.
 
 #### sort_tables($content)
 
-فرز جداول تخفيض السعر في $content وفقًا لمواصفات عمود كل جدول.  يمكن فرز عمود واحد فقط لكل جدول، اختياريًا رقميًا [`لا`](#)، في أي تنازلي [`v`](#) أو تصاعدي [`^`](#) الطلب.
+فرز جداول تخفيض السعر في $content وفقًا لمواصفات عمود كل جدول.  يمكن فرز عمود واحد فقط لكل جدول، اختياريًا رقميًا `لا`، في أي تنازلي `v` أو تصاعدي `^` الطلب.
 
 #### fixup_code($prefix، $type، &#64;_)
 
@@ -198,56 +457,56 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 
 #### unload_package($pkg)
 
-تفريغ حزمة Perl (ورقة) بقوة [`حزمة $`](#) من جدول الرموز (STASH).
+تفريغ حزمة Perl (ورقة) بقوة `حزمة $` من جدول الرموز (STASH).
 
 #### purge_from_inc(&#64;المسارات)
 
-عمليات الإزالة [`@paths`](#) من [`@INC`](#).
+عمليات الإزالة `@paths` من `@INC`.
 
 #### اللمس(&#64;_)
 
-يمسح كل الملفات في [`@_`](#). في حالة عدم تمرير وسائط، يتم استخدام [`$_`](#).
+يمسح كل الملفات في `@_`. في حالة عدم تمرير وسائط، يتم استخدام `$_`.
 
 #### normalize_svn_path(&#64;_)
 
-تطبيع كل المسارات في [`@_`](#) للاستخدام الآمن كحجج خام [`SVN::العميل`](#) الأوامر.
+تطبيع كل المسارات في `@_` للاستخدام الآمن كحجج خام `SVN::العميل` الأوامر.
 
 #### sanitize_relative_path(&#64;_)
 
-تأمين المسارات في [`@_`](#) للاستخدام كمسارات نسبية نقية في [`دوتياك::DTL`](#) الأوامر الخاصة بمسار (Django Template).
+تأمين المسارات في `@_` للاستخدام كمسارات نسبية نقية في `دوتياك::DTL` الأوامر الخاصة بمسار (Django Template).
 
 #### parse_filename(مسار$)
 
-مغلف حول [`ملف::اسم القاعدة::fileparse`](#). بدون وسائط، استخدامات [`$_`](#) مثل اسم الملف للتحليل اللغوي.
+مغلف حول `ملف::اسم القاعدة::fileparse`. بدون وسائط، استخدامات `$_` مثل اسم الملف للتحليل اللغوي.
 
 #### walk_content_tree($code)
 
-مشياً مشروطاً [`./المحتوى`](#) شجرة الخروج من نظام البناء، أولا تطبيع [`$_`](#) كمسار فرعي جذر المحتوى الرسمي، ثم الاستدعاء [`$code->()`](#) على كل عنصر في ممر الشجرة. بالنسبة لمعظم المباني، لا يحدث المشي أبدًا &mdash; بدلاً من ذلك، تعتمد النسخة على البيانات المخزنة في الذاكرة المخبئية من عمليات الإنشاء السابقة.
+مشياً مشروطاً `./المحتوى` شجرة الخروج من نظام البناء، أولا تطبيع `$_` كمسار فرعي جذر المحتوى الرسمي، ثم الاستدعاء `$code->()` على كل عنصر في ممر الشجرة. بالنسبة لمعظم المباني، لا يحدث المشي أبدًا &mdash; بدلاً من ذلك، تعتمد النسخة على البيانات المخزنة في الذاكرة المخبئية من عمليات الإنشاء السابقة.
 
-الطريقة الوحيدة لإجبار المشي هي عن طريق وضع [`$path::use_cache`](#) إلى قيمة false في الوحدات التي يوفرها المستخدم. وإلا يتم إدارة هذا السلوك بخبرة من قبل [تقنية البناء التزايدي](https://iconoclasts.blog/joe/dependencies).
+الطريقة الوحيدة لإجبار المشي هي عن طريق وضع `$path::use_cache` إلى قيمة false في الوحدات التي يوفرها المستخدم. وإلا يتم إدارة هذا السلوك بخبرة من قبل [تقنية البناء التزايدي](https://iconoclasts.blog/joe/dependencies).
 
 إرجاع 1 إذا كان المشي قد تم بالفعل، بدلاً من الاعتماد على البيانات المخزنة مؤقتاً. وإلا يتم إرجاع قيمة false.
 
 ##### مؤرشف ($path)
 
-علامات لكل [`الحالة: مؤرشف`](#) [`مسار $`](#) (بشكل خاص باللغة الطبيعية). الاستخدامات [`$_`](#) إذا لم يتم تمرير وسائط.
+علامات لكل `الحالة: مؤرشف` `مسار $` (بشكل خاص باللغة الطبيعية). الاستخدامات `$_` إذا لم يتم تمرير وسائط.
 
 أرشفة الملفات هي طريقة طبيعية لإخبار أوريون "توقف عن الانتباه إلى موقع الرابط الثابت لهذا الملف ... ما لم يتم تحديثه مرة أخرى، وفي هذه الحالة سيتم تحديث موقع الأرشفة. على وجه الخصوص، لا تظهر الملفات المؤرشفة في قوائم الدليل داخل نظام إدارة المحتوى نفسه ؛ عليك الانتقال إلى الصفحة المباشرة نفسها لتكون قادرة على تحريرها مرة أخرى عبر الإنترنت.
 
 ##### seed_file_deps(مسار$)
 
-التحديثات الآمنة [`%path::dependencies`](#) لهذا [`مسار $`](#)، بناءً على [`التبعيات`](#) عناوين عامة. الإعدادات الافتراضية المطلوب استخدامها [`$_`](#) كالمسار في حالة عدم تمرير وسائط.
+التحديثات الآمنة `%path::dependencies` لهذا `مسار $`، بناءً على `التبعيات` عناوين عامة. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
 
 ##### seed_file_acl(مسار$)
 
-التحديثات الآمنة [`@path::acl`](#) لهذا [`مسار $`](#)، بناءً على [`قائمة التحكم بالوصول`](#) مواصفات الرأس. الإعدادات الافتراضية المطلوب استخدامها [`$_`](#) كالمسار في حالة عدم تمرير وسائط.
+التحديثات الآمنة `@path::acl` لهذا `مسار $`، بناءً على `شامل` مواصفات الرأس. الإعدادات الافتراضية المطلوب استخدامها `$_` كالمسار في حالة عدم تمرير وسائط.
 
 #### تحميل
 
-مماثل لـ [`YAML::XS::تحميل`](#).
+مماثل لـ `YAML::XS::تحميل`.
 
 #### تفريغ
 
-مماثل لـ [`YAML::XS:: تفريغ`](#).
+مماثل لـ `YAML::XS:: تفريغ`.
 
 <!-- $Date$ $Author$ $Revision$ -->

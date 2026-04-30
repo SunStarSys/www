@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=34604
+status: rascunho
 title: Orion API - Criação
 ---
 
@@ -50,147 +50,406 @@ Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do
 
 ### [SunStarSys::Visualizar](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe base para `lib/view.pm`
 
-#### single_narrative(%args) &mdash; a visão mais popular (e sofisticada)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `single_narrative(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+A vista mais popular (e sofisticada)
+
+</div>
+
+<p class="card-text">
 
 Esta visualização incorpora o processamento automatizado de arquivos localizados no `$path`diretório do anexo 's. Em outras palavras, se `$path = "Português (Brasil)"`, depois os arquivos armazenados no  `/foo.page/` diretório associado ao "Português" a extensão do idioma será incorporada aos argumentos endereçáveis do modelo para que `$path` independentemente do `pré-processamento` definição do argumento &mdash; que, se verdadeiro, também tornaria esse material acessível pelo próprio conteúdo da **página**.
 
 Argumentos Obrigatórios:
 
-- [`modelo`](#)
-- [`caminho`](#)
-- [`idioma`](#)
+- `modelo`
+- `caminho`
+- `idioma`
 
 Argumentos Opcionais:
 
-- [`deps`](#) &mdash; substituições normais [`fetch_deps`]() processamento
+- `deps` &mdash; substituições normais `fetch_deps` processando
 
-- [`quick_deps`](#) &mdash; configuração de otimização de processamento interno deps; melhor não definido
+- `quick_deps` &mdash; configuração de otimização de processamento interno deps; melhor não definido
 
-- [`pré-processamento`](#) &mdash; permite o processamento de modelos dentro do [`$path`](#) conteúdo em si,
+- `pré-processamento` &mdash; permite o processamento de modelos dentro do `$path` conteúdo em si,
 
-- [`archive_root`](#) &mdash; arquivos em "arquivado" status são "copiado" e rastreado por subpastas ano/mês para este local raiz de conteúdo via `ssi`,
+- `archive_root` &mdash; arquivos em "arquivado" status são "copiado" e rastreado por subpastas ano/mês para este local raiz de conteúdo via `ssi`,
 
-- [`category_root`](#) &mdash; itens no "categorias" cabeçalho são "copiado" em pastas de categorias nomeadas apropriadamente neste local raiz de conteúdo via `ssi`.
+- `category_root` &mdash; itens no "categorias" cabeçalho são "copiado" em pastas de categorias nomeadas apropriadamente neste local raiz de conteúdo via `ssi`.
 
-#### news_page(%args) &mdash; para páginas de agregação multinarrativa
+</p>
+  </div>
+</div>
 
-#### mapa do site(%args) &mdash; para criar páginas index.html e sitemap.html
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `news_page(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Para páginas agregadas (multinarrativas)
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `mapa do site(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Para criar páginas index.html e sitemap.html
+
+</div>
+
+<p class="card-text">
 
 Índice de dependências classificado e específico de localidade.
 
 Argumentos Obrigatórios:
 
-- [`caminho`](#)
-- [`idioma`](#)
+- `caminho`
+- `idioma`
 
 Argumentos opcionais:
 
-- [`quick_deps`](#)
-- [`aninhado`](#)
-- [`pré-processamento`](#)
+- `quick_deps`
+- `aninhado`
+- `pré-processamento`
 
-#### assíntota(%args)
+</p>
+</div>
+</div>
 
-Builds e Caches [`Apelido`](https://asymptote.sourceforge.io/) blocos triple-backquoted-code para gráficos vetoriais habilitados para HTML5-WebGL.
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `assíntota(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Compilações e caches [`Apelido`](https://asymptote.sourceforge.io/) blocos de código triplo-backquoted para gráficos vetoriais habilitados para tela HTML5-WebGL
+
+</div>
+<p class="card-text">
 
 Argumentos Obrigatórios:
 
-- [`exibir`](#)
-- [`idioma`](#)
-- [`caminho`](#)
+- `exibir`
+- `idioma`
+- `caminho`
 
-#### skip(%args)
+</p>
+</div>
+</div>
 
-Não construa isso de jeito nenhum.  Em vez disso, crie os arquivos de origem gerados associados (por exemplo, `Português (BR)` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) para ser criado em uma execução de sistema de compilação secundária.
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
-#### yml2ext(%args)
+#### `skip(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Não construa isso de jeito nenhum.
+
+</div>
+<p class="card-text">
+
+Em vez disso, crie os arquivos de origem gerados associados (por exemplo, `Português (BR)` $$\mapsto$$ `\$base.page/bibliography.yml\$lang`) para ser criado em uma execução de sistema de compilação secundária.
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `yml2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Converta arquivos YAML, normalmente em JSON.
 
+</div>
+<p class="card-text">
+
 Argumentos opcionais:
 
-- [`ext.`](#) assume como padrão `json`
-- [`filtro`](#) assume como padrão `json_raw`
-- [`modelo`](#) substituições `filtro` expressão padrão
+- `ext.` assume como padrão `json`
+- `filtro` assume como padrão `json_raw`
+- `modelo` substituições `filtro` expressão padrão
 
-#### fetch_deps($path, $data, $quick)
+</p>
+</div>
+</div>
 
-Refatoradores $data argumento hashref como um timestamp ordenou arrayref de 2-element arrayrefs. A primeira entrada em cada arrayref de 2 elementos é o nome do caminho do arquivo, o segundo elemento é o resultado [`read_text_file`](#) hashref para esse nome de caminho.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
+#### `fetch_deps($path, $data, $quick)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Refatoradores $data argumento hashref como um timestamp ordenou arrayref de 2-element arrayrefs.
+
+</div>
+<p class="card-text">
+
+A primeira entrada em cada arrayref de 2 elementos é o nome do caminho do arquivo, o segundo elemento é o resultado [`read_text_file`](#) hashref para esse nome de caminho.
 
 Retorna uma lista de novos arquivos de origem resultantes se [`$quick > 2`](#).
 
 Argumentos Obrigatórios:
 
-- [`caminho`](#)
-- [`dados`](#) - entrada como hashref; armazena o anon-array resultante de deps no retorno
-- [`rápido`](#) - assume 2 como padrão
+- `caminho`
+- `dados` - entrada como hashref; armazena o anon-array resultante de deps no retorno
+- `rápido` - assume 2 como padrão
 
-#### breadcrumbs($path)
+</p>
+</div>
+</div>
 
-Retorna a lista de caminhos detalhados HTML para [$path](#).
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### memoize(%args)
+#### `breadcrumbs($path)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Retorna a lista de caminhos detalhados HTML para `$path`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `memoize(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Coloca em cache a compilação; usada principalmente com fetch_deps e quick_deps > 2.
 
-#### comentário(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `comentário(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Gera fragmento HTML inclusivo do SSI para um comentário de página.
 
-#### next_view(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-Utilitário para processamento de $args{exibir}.
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
-#### ssi(%args)
+#### `next_view(%args)`
 
-Avalia recursivamente [ssi](#) etiquetas.
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
-#### off-line(%args)
+Utilitário para processamento sequencial `$args{exibir}`.
 
-Executa o next_view no modo off-line.
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-#### snippet(%args)
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `ssi(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Avalia recursivamente `ssi` etiquetas.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `off-line(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Executa o `next_view` no modo offline.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `snippet(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [Processa código externo](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [linhas de snippet](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), normalmente importando seus locais de origem no GitHub para blocos de markdown cercados específicos de linguagem de programação. [Exemplo aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/joe/perl7-sealed-lexicals.md.en#L135).
 
-#### reconstruir(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `reconstruir(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Reprocessa diretivas de Modelo no conteúdo criado de next_view.
 
-#### trim_local_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `trim_local_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Reduz extensões de arquivo de links locais.
 
-#### normalize_links(%args)
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
-Normaliza links locais (./ e ../).
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `normalize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Normaliza links locais (`./` e `../`).
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `langify_template(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Anexa `$args{idioma}` para `$args{modelo}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
 
 ----
 
-### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; biblioteca de utilitários para [`lib/path.pm`](#) e [`lib/view.pm`](#)
+### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; biblioteca de utilitários para `lib/path.pm` e `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Processador de arquivos de texto universal da Orion
 
-Analisa cabeçalhos+conteúdo do arquivo codificado em UTF-8 [`$arquivo`](#) e armazena resultados em [`$out`](#). [`$content_lines`](#) é o número máximo (opcional) de linhas de conteúdo a serem lidas.
+Analisa cabeçalhos+conteúdo do arquivo codificado em UTF-8 `$arquivo` e armazena resultados em hashref `$out`. `$content_lines` é o número máximo (opcional) de linhas de conteúdo a serem lidas.
+
 Retorna o número real de linhas lidas (incluindo cabeçalhos).
 
-[`$arquivo`](#) pode ser uma referência a uma string bruta, representando o conteúdo completo de um arquivo.  Os resultados em [`$out`](#) ainda será codificado em UTF-8.
+`$arquivo` pode ser uma referência a uma string bruta, representando o conteúdo completo de um arquivo.  Os resultados em `$out` ainda será codificado em UTF-8.
 
 #### copy_if_newer($src, $dest)
 
-Cópias [`$src`](#) para [`$destino`](#) se o timestamp de modificação do primeiro for mais recente que o do último. Na cópia, gzip-compacta o [`$destino`](#) se for um arquivo de texto e adiciona ".gz" extensão do nome.
+Cópias `$src` para `$destino` se o timestamp de modificação do primeiro for mais recente que o do último. Na cópia, gzip-compacta o `$destino` se for um arquivo de texto e adiciona ".gz" extensão do nome.
 
 #### get_lock($lockfile)
 
-Usa um (f)bloqueio exclusivo (para o processo UNIX atual) em [`$lockfile`](#).
+Usa um (f)bloqueio exclusivo (para o processo UNIX atual) em `$lockfile`.
 
 #### shuffle(\\&#64;deck)
 
-No local aleatório (Fisher-Yates) embaralhamento de [`@deck`](#).
+No local aleatório (Fisher-Yates) embaralhamento de `@deck`.
 
 #### sort_tables($content)
 
-Classifica Tabelas de Markdown em $content de acordo com a especificação da coluna de cada tabela.  Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente [`n`](#), em qualquer ordem decrescente [`v`](#) ou crescente [`^`](#) pedido.
+Classifica Tabelas de Markdown em $content de acordo com a especificação da coluna de cada tabela.  Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente `n`, em qualquer ordem decrescente `v` ou crescente `^` pedido.
 
 #### fixup_code($prefix, $type, &#64;_)
 
@@ -198,56 +457,56 @@ Tira $prefix de cada arg em &#64;\_. A função do argumento $type é específic
 
 #### unload_package($pkg)
 
-Descarrega agressivamente o pacote Perl (folha) [`$pkg`](#) da Tabela de Símbolos (STASH).
+Descarrega agressivamente o pacote Perl (folha) `$pkg` da Tabela de Símbolos (STASH).
 
 #### purge_from_inc(&#64;caminhos)
 
-Remoções [`@paths`](#) de [`@INC`](#).
+Remoções `@paths` de `@INC`.
 
 #### toque(a)&#64;_)
 
-Toca todos os arquivos em [`@_`](#). Se nenhum argumento for passado, usa [`$_`](#).
+Toca todos os arquivos em `@_`. Se nenhum argumento for passado, usa `$_`.
 
 #### normalize_svn_path(&#64;_)
 
-Normaliza todos os caminhos em [`@_`](#) para uso seguro como argumentos brutos para [`SVN::Cliente`](#) comandos.
+Normaliza todos os caminhos em `@_` para uso seguro como argumentos brutos para `SVN::Cliente` comandos.
 
 #### sanitize_relative_path(&#64;_)
 
-Protege os caminhos em [`@_`](#) para uso como caminhos relativos puros em [`Dotiac::DTL`](#) Comandos específicos de caminho (Django Template).
+Protege os caminhos em `@_` para uso como caminhos relativos puros em `Dotiac::DTL` Comandos específicos de caminho (Django Template).
 
 #### parse_filename($path)
 
-Encapsulador ao redor [`Arquivo::Basename::fileparse`](#). Sem argumentos, usa [`$_`](#) como o nome do arquivo a ser analisado.
+Encapsulador ao redor `Arquivo::Basename::fileparse`. Sem argumentos, usa `$_` como o nome do arquivo a ser analisado.
 
 #### walk_content_tree($code)
 
-Condicionalmente anda o [`./conteúdo`](#) árvore do check-out do sistema de compilação, primeiro normalizando [`$_`](#) como o subcaminho formal enraizado no conteúdo e, em seguida, invocando [`$code->()`](#) em cada item na caminhada em árvore. Para a maioria das construções, a caminhada nunca acontece &mdash; em vez disso, a compilação depende dos dados armazenados em cache de compilações anteriores.
+Condicionalmente anda o `./conteúdo` árvore do check-out do sistema de compilação, primeiro normalizando `$_` como o subcaminho formal enraizado no conteúdo e, em seguida, invocando `$code->()` em cada item na caminhada em árvore. Para a maioria das construções, a caminhada nunca acontece &mdash; em vez disso, a compilação depende dos dados armazenados em cache de compilações anteriores.
 
-A única maneira de forçar uma caminhada é definindo [`$path::use_cache`](#) para um valor falso em seus módulos fornecidos pelo usuário. Caso contrário, esse comportamento é habilmente gerenciado pelo [tecnologia de criação incremental](https://iconoclasts.blog/joe/dependencies).
+A única maneira de forçar uma caminhada é definindo `$path::use_cache` para um valor falso em seus módulos fornecidos pelo usuário. Caso contrário, esse comportamento é habilmente gerenciado pelo [tecnologia de criação incremental](https://iconoclasts.blog/joe/dependencies).
 
 Retorna 1 se a caminhada realmente tiver prosseguido, em vez de depender de dados armazenados em cache. Caso contrário, retornará um valor falso.
 
 ##### arquivado($path)
 
-Sinaliza cada [`Status: arquivado`](#) [`$path`](#) (de uma maneira específica da linguagem natural). Usos [`$_`](#) se nenhum argumento for passado.
+Sinaliza cada `Status: arquivado` `$path` (de uma maneira específica da linguagem natural). Usos `$_` se nenhum argumento for passado.
 
 Arquivamento de arquivos é uma maneira natural de dizer Orion para "parar de prestar atenção ao local permalinked deste arquivo ... a menos que seja atualizado novamente, caso em que o local de arquivamento será atualizado. Em particular, os arquivos arquivados não aparecem nas listagens de diretórios dentro do próprio CMS; você precisa navegar até a própria página ativa para poder editá-la novamente on-line.
 
 ##### seed_file_deps($path)
 
-Atualizações seguras [`%path::dependências`](#) para isso [`$path`](#)Com base em sua [`Dependências`](#) glob(s) de cabeçalho Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
+Atualizações seguras `%path::dependências` para isso `$path`Com base em sua `dependências` glob(s) de cabeçalho Padrões para uso `$_` como o caminho se nenhum argumento for passado.
 
 ##### seed_file_acl($path)
 
-Atualizações seguras [`@path::acl`](#) para isso [`$path`](#)Com base em sua [`ACL`](#) especificação do cabeçalho. Padrões para uso [`$_`](#) como o caminho se nenhum argumento for passado.
+Atualizações seguras `@path::acl` para isso `$path`Com base em sua `acl` especificação do cabeçalho. Padrões para uso `$_` como o caminho se nenhum argumento for passado.
 
 #### Carregar
 
-Igual a [`YAML::XS::Carregar`](#).
+Igual a `YAML::XS::Carregar`.
 
 #### Despejo
 
-Igual a [`YAML::XS::Dump`](#).
+Igual a `YAML::XS::Dump`.
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -51,7 +51,7 @@ Many views are meant to be stacked as "filters" to preprocess aspects of the fil
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### single_narrative(%args)
+#### `single_narrative(%args)`
 
 </div>
   <div class="card-body">
@@ -91,7 +91,7 @@ Optional Argmuents:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### news_page(%args)
+#### `news_page(%args)`
 
 </div>
   <div class="card-body">
@@ -110,7 +110,7 @@ For (multi-narrative) aggregate pages
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### sitemap(%args)
+#### `sitemap(%args)`
 
 </div>
   <div class="card-body">
@@ -143,7 +143,7 @@ Optional Arguments:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### asymptote(%args)
+#### `asymptote(%args)`
 
 </div>
   <div class="card-body">
@@ -167,7 +167,7 @@ Mandatory Arguments:
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### skip(%args)
+#### `skip(%args)`
 
 </div>
   <div class="card-body">
@@ -187,7 +187,7 @@ Instead, build the associated generated source files (e.g. `.bib\$lang` $$\mapst
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### yml2ext(%args)
+#### `yml2ext(%args)`
 
 </div>
   <div class="card-body">
@@ -212,7 +212,7 @@ Optional Arguments:
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### fetch_deps($path, $data, $quick)
+#### `fetch_deps($path, $data, $quick)`
 
 </div>
   <div class="card-body">
@@ -240,7 +240,7 @@ Mandatory Arguments:
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### breadcrumbs($path)
+#### `breadcrumbs($path)`
 
 </div>
   <div class="card-body">
@@ -257,7 +257,7 @@ Returns HTML breadcrumbs list for `$path`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### memoize(%args)
+#### `memoize(%args)`
 
 </div>
   <div class="card-body">
@@ -274,7 +274,7 @@ Caches the build; mainly used with fetch_deps and quick_deps > 2.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### comment(%args)
+#### `comment(%args)`
 
 </div>
   <div class="card-body">
@@ -291,7 +291,7 @@ Generates SSI-includable HTML fragment for a page comment.
 <div class="card border-secondary mb-3">
   <div class="card-header">
 
-#### next_view(%args)
+#### `next_view(%args)`
 
 </div>
   <div class="card-body">
@@ -308,7 +308,7 @@ Utility for sequentially processing `$args{view}`.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### ssi(%args)
+#### `ssi(%args)`
 
 </div>
   <div class="card-body">
@@ -325,7 +325,7 @@ Recursively evaluates `ssi` tags.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### offline(%args)
+#### `offline(%args)`
 
 </div>
   <div class="card-body">
@@ -342,7 +342,7 @@ Runs the `next_view` in offline mode.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### snippet(%args)
+#### `snippet(%args)`
 
 </div>
   <div class="card-body">
@@ -359,7 +359,7 @@ Runs the `next_view` in offline mode.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### reconstruct(%args)
+#### `reconstruct(%args)`
 
 </div>
   <div class="card-body">
@@ -376,7 +376,7 @@ Reprocesses Template directives in built content from next_view.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### trim_local_links(%args)
+#### `trim_local_links(%args)`
 
 </div>
   <div class="card-body">
@@ -393,7 +393,7 @@ Trims file extensions from local links.
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### normalize_links(%args)
+#### `normalize_links(%args)`
 
 </div>
   <div class="card-body">
@@ -410,7 +410,7 @@ Normalizes local links (`./` and `../`).
 <div class="card border-primary mb-3">
   <div class="card-header">
 
-#### langify_template(%args)
+#### `langify_template(%args)`
 
 </div>
   <div class="card-body">
