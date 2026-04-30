@@ -16,7 +16,7 @@ Det första är att göra tre saker:
 1. konstruera [`@path::mönster`](#)och
 2. opportunistiskt gå den [`innehåll/`](#) träd att fördefiniera [`%path::beroenden`](#) och [`@path::acls`](#).
 
-Den senares jobb är att tillhandahålla bokningsbara [`visa`](#)-baserad [`$metod`](#)s för matchande poster i [`@path::mönster`](#) (som ett strängat metodnamn i den andra rutan för varje matrispost), anropat som så...
+Den senares jobb är att tillhandahålla bokningsbara [`visa`](#)-baserad [`$metod`](#)s för matchande poster i [`@path::mönster`](#) (som ett strängat metodnamn i den andra rutan för varje arrayref-post), anropas så...
 
 ```perl
 #api
@@ -31,10 +31,10 @@ for my $p (@path::patterns) {
 
 my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
-copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ...
 #api
@@ -103,7 +103,7 @@ Valfria argument:
 
 - [`ext.`](#) standardvärdet är `json`
 - [`filtrera`](#) standardvärdet är `json_raw`
--[`mall`](#) åsidosättningar `filtrera` standarduttryck
+- [`mall`](#) åsidosättningar `filtrera` standarduttryck
 
 #### fetch_deps($path, $data, $quick)
 
@@ -172,7 +172,7 @@ Kopior [`$src`](#) till [`öre`](#) om den tidigare ändringens tidsstämpel är
 
 Tar ett exklusivt (f)lås (för aktuell UNIX-process) på [`$lockfil`](#).
 
-#### blanda(\\@deck)
+#### blanda(\\&#64;däck)
 
 Slumpmässig blandning på plats (Fisher-Yates) av [`@deck`](#).
 
@@ -180,27 +180,27 @@ Slumpmässig blandning på plats (Fisher-Yates) av [`@deck`](#).
 
 Sorterar nedsättningstabeller i $content enligt varje tabells kolumnspecifikation.  Exakt en kolumn kan sorteras per tabell, alternativt numeriskt [`n`](#)i antingen fallande [`v`](#) eller stigande [`^`](#) beställning.
 
-#### fixup_code($prefix, $type, @\_)
+#### fixup_code($prefix, $type, &#64;_)
 
-Tar bort $prefix från varje argument i @\_. Funktionen för argumentet $type är implementeringsspecifik, men används huvudsakligen för att fördefiniera editor.md "läge" för att bearbeta detta innehåll i @\_.
+Tar bort $prefix från varje argument i &#64;\_. Funktionen för argumentet $type är implementeringsspecifik, men används huvudsakligen för att fördefiniera editor.md "läge" för bearbetning av innehållet i &#64;_.
 
 #### unload_package($pkg)
 
 Aggressivt lossar Perl-paket (blad) [`kg`](#) från symboltabellen (STASH).
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;sökväg)
 
 Tar bort [`@paths`](#) från [`@INC`](#).
 
-#### tryck(@\_)
+#### beröring(&#64;_)
 
 Berör alla filer i [`@_`](#). Om inga argument överförs används [`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 Normaliserar alla sökvägar i [`@_`](#) för säker användning som råa argument till [`SVN::Klient`](#) kommandon.
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 Säkrar sökvägar i [`@_`](#) för användning som rena relativa sökvägar i [`Dotiac::DTL`](#) (Django Template) sökvägsspecifika kommandon.
 
@@ -210,11 +210,17 @@ Wrapper runt [`Filparse::Basename::fileparse`](#). Utan argument används [`$_`]
 
 #### walk_content_tree($code)
 
-Villkorligt vandrar [`./innehåll`](#) trädet i byggsystemet (kassa), först normalisering [`$_`](#) som den formella undersökvägen och sedan anropa [`$kod`](#), på varje objekt i treewalk.
+Villkorligt vandrar [`./innehåll`](#) trädet i byggsystemet (kassa), först normalisering [`$_`](#) som formell innehållsbaserad undersökväg, och sedan anropa [`$code->()`](#) på varje föremål i trädgången. För de flesta byggen händer aldrig promenaden &mdash; i stället bygger bygget på cachelagrade data från tidigare byggen.
+
+Det enda sättet att tvinga en promenad är genom att ställa [`$path::use_cache`](#) till ett falskt värde i de moduler som användaren tillhandahåller. I annat fall hanteras detta beteende sakkunnigt av [inkrementell byggteknik](https://iconoclasts.blog/joe/dependencies).
+
+Returnerar 1 om vandringen faktiskt fortsatte, i stället för att förlita sig på cachelagrade data. Annars returneras ett falskt värde.
 
 ##### arkiverad($path)
 
-Flaggor varje [`Status: arkiv`](#) [`$sökväg`](#). Användningar [`$_`](#) om inga argument överförs.
+Flaggor varje [`Status: arkiverad`](#) [`$sökväg`](#) (på ett naturligt språkligt sätt). Användningar [`$_`](#) om inga argument överförs.
+
+Att arkivera filer är ett naturligt sätt att berätta för Orion att "sluta uppmärksamma den här filens permalänkade plats ... om den inte uppdateras igen, i vilket fall arkivplatsen kommer att uppdateras. I synnerhet visas inte arkiverade filer i kataloglistor i själva CMS-systemet. Du måste navigera till själva den aktiva sidan för att kunna redigera den igen online.
 
 ##### seed_file_deps($path)
 

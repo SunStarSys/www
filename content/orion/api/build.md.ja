@@ -16,7 +16,7 @@ title: Orion API - ビルド
 1. 構成[`@path:: パターン`](#)および
 2. 便宜的に歩く[`コンテンツ/`](#) シードするツリー[`%path:: 依存関係`](#) および[`@path::acls`](#).
 
-後者の仕事は、invokableを提供することです。[`ビュー`](#)- ベース[`$メソッド`](#)で一致するエントリの's [`@path:: パターン`](#) (各配列エントリの2番目のスロットに文字列化されたメソッド名として)同様に呼び出されます。...
+後者の仕事は、invokableを提供することです。[`ビュー`](#)- ベース[`$メソッド`](#)で一致するエントリの's [`@path:: パターン`](#) (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として)そのように呼び出されます。...
 
 ```perl
 #api
@@ -31,10 +31,10 @@ for my $p (@path::patterns) {
 
 my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
-copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ...
 #api
@@ -103,7 +103,7 @@ copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
 
 - [`エクストリーム`](#) デフォルト`json`
 - [`フィルター`](#) デフォルト`json_raw`
--[`型板`](#) 上書き`フィルター` デフォルト式
+- [`型板`](#) 上書き`フィルター` デフォルト式
 
 #### fetch_deps($path、$data、$quick)
 
@@ -172,7 +172,7 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
 
 排他(f)ロック(現在のUNIXプロセスの場合)をオンにします。[`$lockfile`](#).
 
-#### シャッフル(\\@deck)
+#### シャッフル(\\&#64;デッキ)
 
 インプレイスランダム(Fisher-Yates)シャッフル[`@deck`](#).
 
@@ -180,27 +180,27 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
 
 各表の列仕様に従って、マークダウン表を$contentでソートします。表ごとに正確に1つの列をソートできます(オプション)。[`n`](#)降順[`v`](#) または昇順[`^`](#) オーダー
 
-#### fixup_code($prefix、$type、@\_)
+#### fixup_code($prefix、$type、&#64;_)
 
-@\_のすべての引数から$prefixを削除します。$type引数の関数は実装固有ですが、主にeditor.mdのシードに使用されます。"モード" このコンテンツを@\_で処理するため。
+各引数から$prefixを削除します。&#64;\_. $type引数の関数は実装固有ですが、主にeditor.mdのシードに使用されます。"モード" このコンテンツの処理対象&#64;_.
 
 #### unload_package($pkg)
 
 Perl (leaf)パッケージの積極的なアンロード[`$pkg`](#) シンボルテーブル(STASH)
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;パス)
 
 削除[`@paths`](#) 場所[`@INC`](#).
 
-#### タッチ(@\_)
+#### 触る&#64;_)
 
 すべてのファイルを[`@_`](#)。引数が渡されない場合、[`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 すべてのパスを正規化します。[`@_`](#) RAW引数として安全に使用できます。[`SVN:: クライアント`](#) コマンド
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 パスを保護する[`@_`](#) 純粋な相対パスとして使用[`ドチアク::DTL`](#) (Djangoテンプレート)パス固有のコマンド。
 
@@ -210,11 +210,17 @@ Perl (leaf)パッケージの積極的なアンロード[`$pkg`](#) シンボル
 
 #### walk_content_tree($コード)
 
-条件付きで歩く[`./コンテンツ`](#) ビルドシステムチェックアウトのツリー、最初に正規化[`$_`](#) 正式なサブパスとして起動[`$code`](#)ツリーウォークの各項目
+条件付きで歩く[`./コンテンツ`](#) ビルドシステムチェックアウトのツリー、最初に正規化[`$_`](#) 正式なコンテンツ・ルート・サブパスとして、[`$code->()`](#) ツリーウォークの各項目についてほとんどのビルドでは、ウォークは発生しません&mdash; かわりに、ビルドは以前のビルドからキャッシュされたデータに依存します。
+
+歩行を強制する唯一の方法は、設定することです[`$path::use_cache`](#) ユーザー提供のモジュールのfalse値。それ以外の場合、この動作は、[増分ビルド技術](https://iconoclasts.blog/joe/dependencies).
+
+ウォークが実際に処理された場合は、キャッシュされたデータに依存するのではなく、1を返します。それ以外の場合は、false値を返します。
 
 ##### アーカイブ済み($path)
 
-各フラグ[`ステータス: アーカイブ`](#) [`パス`](#)。使用[`$_`](#) 引数が渡されない場合。
+各フラグ[`ステータス: アーカイブ済`](#) [`パス`](#) (自然言語による) 使用[`$_`](#) 引数が渡されない場合。
+
+ファイルをアーカイブすることは、Orionに伝える自然な方法です"このファイルのパーマリンクされた場所に注意を払うのをやめる ... 再度更新されないかぎり、アーカイブの場所はリフレッシュされます。特に、アーカイブされたファイルは、CMS自体内のディレクトリリストには表示されません。オンラインでの再編集を可能にするには、ライブページ自体に移動する必要があります。
 
 ##### seed_file_deps($path)
 

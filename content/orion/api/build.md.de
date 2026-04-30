@@ -16,7 +16,7 @@ Die erste Aufgabe besteht darin, drei Dinge zu tun:
 1. erstellen [`@path::Muster`](#)und
 2. opportunistisch gehen [`Inhalt/`](#) Baum für Seed [`%path::Abhängigkeiten`](#) und [`@path::acls`](#).
 
-Letzterer hat die Aufgabe, unlösbar zu sein. [`Ansicht`](#)-basiert [`$Methode`](#)'s für die übereinstimmenden Einträge in [`@path::Muster`](#) (als String-Methodenname im zweiten Slot jedes Arrayeintrags), so aufgerufen...
+Letzterer hat die Aufgabe, unlösbar zu sein. [`Ansicht`](#)-basiert [`$Methode`](#)'s für die übereinstimmenden Einträge in [`@path::Muster`](#) (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), so aufgerufen...
 
 ```perl
 #api
@@ -31,10 +31,10 @@ for my $p (@path::patterns) {
 
 my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
-copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ...
 #api
@@ -103,7 +103,7 @@ Optionale Argumente:
 
 - [`aus`](#) Standard ist `json`
 - [`Filter`](#) Standard ist `json_raw`
--[`Vorlage`](#) Überschreibungen `Filter` Standardausdruck
+- [`Vorlage`](#) Überschreibungen `Filter` Standardausdruck
 
 #### fetch_deps($path, $data, $quick)
 
@@ -172,7 +172,7 @@ Kopien [`$Quelle`](#) bis [`$dest`](#) wenn der Änderungszeitstempel neuer ist 
 
 Aktiviert ein exklusives (f)Lock (für den aktuellen UNIX-Prozess) [`$lockdatei`](#).
 
-#### shuffle(\\@deck)
+#### Mischen(\\&#64;Deck)
 
 In-Place Zufalls-Shuffle (Fisher-Yates) von [`@deck`](#).
 
@@ -180,27 +180,27 @@ In-Place Zufalls-Shuffle (Fisher-Yates) von [`@deck`](#).
 
 Sortiert Preisabschrifttabellen in $content gemäß der Spaltenspezifikation jeder Tabelle.  Pro Tabelle kann genau eine Spalte sortiert werden, optional numerisch [`n`](#)in absteigender Reihenfolge [`v`](#) oder aufsteigend [`^`](#) Bestellung.
 
-#### fixup_code($prefix, $type, @\_)
+#### fixup_code($prefix, $type, &#64;_)
 
-Streicht $prefix aus jedem Argument in @\_. Die Funktion des $type-Arguments ist implementierungsspezifisch, wird jedoch hauptsächlich zum Vordefinieren von editor.md verwendet "Modus" für die Verarbeitung dieses Inhalts in @\_.
+Streicht $prefix aus jedem Argument in &#64;\_. Die Funktion des $type-Arguments ist implementierungsspezifisch, wird jedoch hauptsächlich zum Vordefinieren von editor.md verwendet "Modus" für die Verarbeitung dieser Inhalte in &#64;_.
 
 #### unload_package($pkg)
 
 Aggressives Entladen des Perl-(Blatt-)Pakets [`$pkg`](#) aus der Symboltabelle (STASH).
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;Pfade)
 
 Entfernt [`@paths`](#) von [`@INC`](#).
 
-#### berühren(@\_)
+#### berühren(&#64;_)
 
 Entfernt alle Dateien in [`@_`](#). Wenn keine Argumente übergeben werden, verwendet [`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 Normalisiert alle Pfade in [`@_`](#) für die sichere Verwendung als RAW-Argumente [`SVN: Client`](#) Befehle.
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 Sichert Pfade in [`@_`](#) zur Verwendung als reine relative Pfade in [`Sternzeichen:DTL`](#) Pfadspezifische Befehle (Django-Vorlage).
 
@@ -210,11 +210,17 @@ Wrapper um [`Datei::Basename::fileparse`](#). Ohne Argumente, verwendet [`$_`](#
 
 #### walk_content_tree($code)
 
-Bedingt geht die [`./Inhalt`](#) Baum des Build-System-Checkout, zuerst normalisieren [`$_`](#) als formaler Unterpfad und dann aufrufend [`$code`](#), für jedes Element im Treewalk.
+Bedingt geht die [`./Inhalt`](#) Baum des Build-System-Checkout, zuerst normalisieren [`$_`](#) als formaler inhaltlich ausgerichteter Unterpfad, und dann [`$code->()`](#) auf jedem Element im Baumlauf. Für die meisten Gebäude passiert der Spaziergang nie &mdash; Stattdessen basiert der Build auf den zwischengespeicherten Daten aus früheren Builds.
+
+Der einzige Weg, einen Spaziergang zu erzwingen, ist die Einstellung [`$Pfad::use_cache`](#) auf einen falschen Wert in Ihren vom Benutzer bereitgestellten Modulen. Andernfalls wird dieses Verhalten fachmännisch von der [Inkrementelle Build-Technologie](https://iconoclasts.blog/joe/dependencies).
+
+Gibt 1 zurück, wenn die Prüfung tatsächlich ausgeführt wurde, anstatt sich auf gecachte Daten zu verlassen. Andernfalls wird ein falscher Wert zurückgegeben.
 
 ##### archiviert($path)
 
-Markiert jede [`Status: Archiv`](#) [`$Pfad`](#). Verwendungen [`$_`](#) wenn keine Argumente übergeben werden.
+Markiert jede [`Status: archiviert`](#) [`$Pfad`](#) (in natürlicher Sprache). Verwendungen [`$_`](#) wenn keine Argumente übergeben werden.
+
+Die Archivierung von Dateien ist eine natürliche Möglichkeit, Orion mitzuteilen, "Achten Sie nicht mehr auf den Permalink-Speicherort dieser Datei ... es sei denn, es wird erneut aktualisiert. In diesem Fall wird der Archivspeicherort aktualisiert. Insbesondere werden archivierte Dateien nicht in Verzeichnislisten innerhalb des CMS selbst angezeigt; Sie müssen zur Live-Seite selbst navigieren, um sie wieder online bearbeiten zu können.
 
 ##### seed_file_deps($path)
 

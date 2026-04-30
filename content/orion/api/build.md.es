@@ -16,7 +16,7 @@ El trabajo del primero es hacer tres cosas:
 1. construcción [`@path::patrones`](#)y
 2. oportunista caminar [`contenido/`](#) árbol para sembrar [`%path::dependencias`](#) y [`@path::acls`](#).
 
-El trabajo de este último es proporcionar invocable [`vista`](#)basado en [`Método $`](#)'s para las entradas coincidentes en [`@path::patrones`](#) (como un nombre de método de cadena en la segunda ranura de cada entrada de matriz), se llama así...
+El trabajo de este último es proporcionar invocable [`vista`](#)basado en [`Método $`](#)'s para las entradas coincidentes en [`@path::patrones`](#) (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), se llama así...
 
 ```perl
 #api
@@ -31,10 +31,10 @@ for my $p (@path::patterns) {
 
 my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
-copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ...
 #api
@@ -103,7 +103,7 @@ Argumentos opcionales:
 
 - [`Extensión`](#) valores por defecto para `json`
 - [`filtro`](#) valores por defecto para `json_raw`
--[`plantilla`](#) sustituciones `filtro` expresión predeterminada
+- [`plantilla`](#) sustituciones `filtro` expresión predeterminada
 
 #### fetch_deps($path, $data, $quick)
 
@@ -172,7 +172,7 @@ Copias [`$Src`](#) a [`$dest`](#) si el registro de hora de modificación del pr
 
 Toma un bloqueo exclusivo (f) (para el proceso UNIX actual) en [`Archivo de bloqueo`](#).
 
-#### aleatorio(\\@deck)
+#### aleatorio(\\&#64;cubierta)
 
 aleatorio in situ (Fisher-Yates) de [`@deck`](#).
 
@@ -180,27 +180,27 @@ aleatorio in situ (Fisher-Yates) de [`@deck`](#).
 
 Ordena las tablas de rebaja en $content según la especificación de columna de cada tabla.  Se puede ordenar exactamente una columna por tabla, opcionalmente numéricamente [`n`](#), ya sea descendente [`v`](#) o ascendente [`^`](#) orden.
 
-#### fixup_code($prefix, $type, @\_)
+#### fixup_code($prefix, $type, &#64;_)
 
-Extrae $prefix de cada argumento en @\_. La función del argumento $type es específica de la implantación, pero se utiliza principalmente para rellenar editor.md "modo" para procesar este contenido en @\_.
+Extrae $prefix de cada argumento en &#64;\_. La función del argumento $type es específica de la implantación, pero se utiliza principalmente para rellenar editor.md "modo" para procesar este contenido en &#64;_.
 
 #### unload_package($pkg)
 
 Descarga agresivamente el paquete Perl (hoja) [`$paquete`](#) de la tabla de símbolos (STASH).
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;rutas)
 
 Elimina [`@paths`](#) desde [`@INC`](#).
 
-#### toque(@\_)
+#### toque(&#64;_)
 
 Toca todos los archivos en [`@_`](#). Si no se transfiere ningún argumento, utiliza [`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 Normaliza todas las rutas en [`@_`](#) para un uso seguro como argumentos crudos para [`SVN::Cliente`](#) comandos.
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 Asegura rutas en [`@_`](#) para su uso como caminos relativos puros en [`Dotiac::DTL`](#) (Django Template) comandos específicos de la ruta.
 
@@ -210,11 +210,17 @@ Envoltorio alrededor [`Archivo::Basename::fileparse`](#). Sin argumentos, utiliz
 
 #### walk_content_tree(código $)
 
-Camina condicionalmente el [`./ Contenido`](#) árbol de la salida del sistema de creación, primero normalizando [`$_`](#) como subruta formal y luego invocar [`Código $`](#), en cada elemento de la  caminata de Treewalk.
+Camina condicionalmente el [`./ Contenido`](#) árbol de la salida del sistema de creación, primero normalizando [`$_`](#) como la subruta raíz de contenido formal y, a continuación, invocando [`$code->()`](#) en cada elemento del árbol-camino. Para la mayoría de las construcciones, el paseo nunca sucede &mdash; en su lugar, la compilación se basa en los datos almacenados en caché de compilaciones anteriores.
+
+La única manera de forzar un paseo es estableciendo [`$ruta::use_cache`](#) a un valor falso en los módulos proporcionados por el usuario. De lo contrario, este comportamiento es gestionado por expertos por el [tecnología de compilación incremental](https://iconoclasts.blog/joe/dependencies).
+
+Devuelve 1 si el recorrido realmente se ha realizado, en lugar de depender de datos almacenados en caché. De lo contrario, devuelve un valor falso.
 
 ##### archivado($path)
 
-Marca cada [`Estado: archivar`](#) [`$ruta`](#). Usos [`$_`](#) si no se transfieren argumentos.
+Marca cada [`Estado: archivado`](#) [`$ruta`](#) (de una manera específica del lenguaje natural). Usos [`$_`](#) si no se transfieren argumentos.
+
+Archivar archivos es una forma natural de decirle a Orión "dejar de prestar atención a la ubicación de enlace permanente de este archivo ... a menos que se vuelva a actualizar, en cuyo caso se refrescará la ubicación de archivado. En particular, los archivos archivados no aparecen en los listados de directorios dentro del propio CMS; debe navegar a la página activa para poder editarla nuevamente en línea.
 
 ##### seed_file_deps(ruta de $)
 

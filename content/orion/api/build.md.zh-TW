@@ -16,7 +16,7 @@ title: Orion API - 建置
 1. 建構[`@path：：樣式`](#)，和
 2. 當機行走[`內容 /`](#) 種樹[`%path::dependencies`](#) 與[`@path::acls`](#).
 
-後者的工作是提供不可呼叫的工作[`檢視`](#)- 基底[`$ 方法`](#)」s，用於比對下列項目：[`@path：：樣式`](#) (作為每個陣列項目第二個槽位的字串化方法名稱)，依此類推呼叫...
+後者的工作是提供不可呼叫的工作[`檢視`](#)- 基底[`$ 方法`](#)」s，用於比對下列項目：[`@path：：樣式`](#) (作為每個 arrayref 項目之第二個槽位中的字串方法名稱) 以此類推呼叫...
 
 ```perl
 #api
@@ -31,10 +31,10 @@ for my $p (@path::patterns) {
 
 my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
-copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ...
 #api
@@ -103,7 +103,7 @@ copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
 
 - [`分機`](#) 預設為`json`
 - [`過濾器`](#) 預設為`json_raw`
--[`範本`](#) 覆寫`過濾器` 預設表示式
+- [`範本`](#) 覆寫`過濾器` 預設表示式
 
 #### fetch_deps ($path, $data, $quick)
 
@@ -172,7 +172,7 @@ copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
 
 獨佔 (f) 鎖定 (針對目前的 UNIX 處理作業) 於[`$lockfile`](#).
 
-#### 隨機 (\\@deck)
+#### 打亂 (\\)&#64;版面)
 
 就地隨機 (漁船) 混亂[`@deck`](#).
 
@@ -180,27 +180,27 @@ copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
 
 根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。每一表格只能排序一個資料欄 (選擇性地為數字) [`n 個`](#)，遞減[`垂直`](#) 或遞增[`^`](#) 訂單。
 
-#### fixup_code ($prefix, $type, @\_)
+#### fixup_code ($prefix, $type, &#64;_)
 
-從 @\_ 中的每個引數去除 $prefix。$type 引數的函數是實行特定的函數，但主要是用來植入 editor.md "模式" 以在 @\_ 中處理此內容。
+刪除每一個參數的 $prefix &#64;\_. $type 引數的函數是實行特定的函數，但主要是用來植入 editor.md "模式" 處理此內容於&#64;_.
 
 #### unload_package ($pkg)
 
 積極卸載 Perl (分葉) 套裝程式[`$pkg`](#) 來自符號表 (STASH)。
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;路徑)
 
 移除[`@paths`](#) 來自[`@INC`](#).
 
-#### 接觸 (@\_)
+#### 中文 (繁體)&#64;_)
 
 觸碰所有檔案於[`@_`](#)。如果未傳送任何引數，則使用[`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 將所有路徑標準化[`@_`](#) 以安全方式用作原始引數[`SVN：：客戶端`](#) 指令。
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 保護以下位置的路徑：[`@_`](#) 用作純相對路徑[`多蒂亞克：：DTL`](#) (Django 樣板) 路徑特定命令。
 
@@ -210,11 +210,17 @@ copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
 
 #### walk_content_tree ($code)
 
-有條件地步行[`。/ 內容`](#) 組建系統取出樹狀結構，先標準化[`$_`](#) 作為正式子路徑，然後呼叫[`$code`](#)，在樹狀圖中的每個項目上。
+有條件地步行[`。/ 內容`](#) 組建系統取出樹狀結構，先標準化[`$_`](#) 作為正式的內容根目錄子路徑，然後呼叫[`中文 (繁體)`](#) 在樹行道的每個項目上。對大多數的組建而言，一律不會執行 walk &mdash; 而是組建依賴先前組建的快取資料。
+
+強制散步的唯一方法是設定[`$path::use_cache`](#) 在使用者提供的模組中為 false 值。否則，此行為由下列項目由專家管理：[增量建置技術](https://iconoclasts.blog/joe/dependencies).
+
+如果實際繼續執行 walk，則傳回 1，而不是依賴快取的資料。否則會傳回假值。
 
 ##### 已歸檔 ($path)
 
-每個旗標[`狀態：存檔`](#) [`$path`](#)。使用[`$_`](#) 如果未傳送任何引數。
+每個旗標[`狀態：已存檔`](#) [`$path`](#) (以自然語言特定的方式)。使用[`$_`](#) 如果未傳送任何引數。
+
+歸檔檔案是告訴 Orion 的自然方式"停止注意此檔案的永久連結位置 ... 除非再次更新，否則會重新整理存檔位置。特別是，封存的檔案不會出現在 CMS 本身的目錄列表中；您必須瀏覽至即時頁面本身，才能在線上再次進行編輯。
 
 ##### seed_file_deps (路徑)
 

@@ -16,7 +16,7 @@ Le travail du premier est de faire trois choses :
 1. construction [`@path : :modèles`](#), et
 2. de manière opportuniste, [`contenu/`](#) arbre à ensemencer [`%path : :dépendances`](#) et [`@path : :acls`](#).
 
-Le travail de ce dernier est de fournir invokable [`vue`](#)-basé [`Méthode $`](#)'s pour les entrées correspondantes dans [`@path : :modèles`](#) (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée de tableau), appelé ainsi...
+Le travail de ce dernier est de fournir invokable [`vue`](#)-basé [`Méthode $`](#)'s pour les entrées correspondantes dans [`@path : :modèles`](#) (en tant que nom de méthode à chaîne dans le deuxième emplacement de chaque entrée arrayref), appelé ainsi...
 
 ```perl
 #api
@@ -31,10 +31,10 @@ for my $p (@path::patterns) {
 
 my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
-copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ...
 #api
@@ -103,7 +103,7 @@ Arguments facultatifs :
 
 - [`ext.`](#) par défaut, `json`
 - [`filtre`](#) par défaut, `json_raw`
--[`modèle`](#) remplacements `filtre` expression par défaut
+- [`modèle`](#) remplacements `filtre` expression par défaut
 
 #### fetch_deps($path, $data, $quick)
 
@@ -172,7 +172,7 @@ Copies [`Source $`](#) au [`$dest`](#) si l'horodatage de modification du premie
 
 Prend un (f)verrou exclusif (pour le processus UNIX actuel) sur [`Fichier de verrouillage`](#).
 
-#### shuffle(\\@deck)
+#### réorganiser(\\&#64;pont)
 
 In-place aléatoire (Fisher-Yates) mélange de [`@deck`](#).
 
@@ -180,27 +180,27 @@ In-place aléatoire (Fisher-Yates) mélange de [`@deck`](#).
 
 Trie les tables de démarque dans $content selon la spécification de colonne de chaque table.  Une colonne peut être triée par table, éventuellement numériquement [`n`](#), par ordre décroissant [`v`](#) ou ascendant [`^`](#) ordre.
 
-#### fixup_code($prefix, $type, @\_)
+#### fixup_code($prefix, $type, &#64;_)
 
-Supprime le préfixe $ de chaque arg dans @\_. La fonction de l'argument $type est spécifique à l'implémentation, mais elle est principalement utilisée pour prédéfinir editor.md "mode" pour le traitement de ce contenu dans @\_.
+Supprime le préfixe $ de chaque argument dans &#64;\_. La fonction de l'argument $type est spécifique à l'implémentation, mais elle est principalement utilisée pour prédéfinir editor.md "mode" pour traiter ce contenu dans &#64;_.
 
 #### unload_package($pkg)
 
 Décharge de manière agressive le paquet Perl (feuille) [`$pkg`](#) dans la table des symboles (STASH).
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;chemins)
 
 Supprime [`@paths`](#) de [`@INC`](#).
 
-#### touche(@\_)
+#### touche(&#64;_)
 
 Toucher tous les fichiers dans [`@_`](#). Si aucun argument n'est transmis, utilise [`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 Normalise tous les chemins dans [`@_`](#) pour une utilisation sûre comme arguments bruts [`SVN : :Client`](#) commandes.
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 Sécurise les chemins dans [`@_`](#) à utiliser comme chemins relatifs purs dans [`Dotiac : :DTL`](#) Commandes spécifiques au chemin (Django Template).
 
@@ -210,11 +210,17 @@ Wrapper autour [`Fichier : :Basename : :fileparse`](#). sans arguments, utilise 
 
 #### walk_content_tree(code$)
 
-Marche conditionnellement le [`./contenu`](#) arbre de l'extraction du système de paramétrage, première normalisation [`$_`](#) comme sous-chemin formel, puis appel [`Code $`](#), sur chaque élément de la promenade.
+Marche conditionnellement le [`./contenu`](#) arbre de l'extraction du système de paramétrage, première normalisation [`$_`](#) comme sous-chemin formel basé sur le contenu, puis l'appel [`$code->()`](#) sur chaque élément de l'arbre. Pour la plupart des constructions, la marche ne se fait jamais &mdash; à la place, le build s'appuie sur les données mises en cache des builds précédents.
+
+La seule façon de forcer une promenade est de régler [`$path : :use_cache`](#) à une valeur fausse dans vos modules fournis par l'utilisateur. Sinon, ce comportement est géré de manière experte par le [technologie de construction incrémentielle](https://iconoclasts.blog/joe/dependencies).
+
+Renvoie 1 si la marche s'est réellement déroulée, au lieu de s'appuyer sur des données mises en cache. Sinon, renvoie une valeur False.
 
 ##### archivé($path)
 
-Drapeaux chacun [`Statut : archive`](#) [`$chemin`](#). Utilisations [`$_`](#) si aucun argument n'est transmis.
+Drapeaux chacun [`Statut : archivé`](#) [`$chemin`](#) (d'une manière spécifique au langage naturel). Utilisations [`$_`](#) si aucun argument n'est transmis.
+
+Archiver des fichiers est un moyen naturel de dire à Orion "cesser de prêter attention à l'emplacement permalien de ce fichier ... à moins qu'il ne soit mis à jour à nouveau, auquel cas l'emplacement d'archivage sera actualisé. En particulier, les fichiers archivés n'apparaissent pas dans les listes de répertoires au sein du CMS lui-même ; vous devez accéder à la page active elle-même pour pouvoir la modifier à nouveau en ligne.
 
 ##### seed_file_deps($path)
 

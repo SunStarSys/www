@@ -16,7 +16,7 @@ O trabalho do primeiro é fazer três coisas:
 1. construir [`@path::padrões`](#), e
 2. caminhando oportunamente [`conteúdo/`](#) árvore para semente [`%path::dependências`](#) e [`@path::acls`](#).
 
-O trabalho deste último é fornecer invocável [`exibir`](#)com base em [`Método $`](#)'s para as entradas correspondentes no [`@path::padrões`](#) (como um nome de método stringificado no segundo slot de cada entrada de array), chamado assim...
+O trabalho deste último é fornecer invocável [`exibir`](#)com base em [`Método $`](#)'s para as entradas correspondentes no [`@path::padrões`](#) (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado assim...
 
 ```perl
 #api
@@ -31,10 +31,10 @@ for my $p (@path::patterns) {
 
 my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
-copy_if_newer($path, "$ENV{TARGET}/content$path") unless $matched;
+copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ...
 #api
@@ -103,7 +103,7 @@ Argumentos opcionais:
 
 - [`ext.`](#) assume como padrão `json`
 - [`filtro`](#) assume como padrão `json_raw`
--[`modelo`](#) substituições `filtro` expressão padrão
+- [`modelo`](#) substituições `filtro` expressão padrão
 
 #### fetch_deps($path, $data, $quick)
 
@@ -172,7 +172,7 @@ Cópias [`$src`](#) para [`$destino`](#) se o timestamp de modificação do prim
 
 Usa um (f)bloqueio exclusivo (para o processo UNIX atual) em [`$lockfile`](#).
 
-#### embaralhamento(\\@deck)
+#### shuffle(\\&#64;deck)
 
 No local aleatório (Fisher-Yates) embaralhamento de [`@deck`](#).
 
@@ -180,27 +180,27 @@ No local aleatório (Fisher-Yates) embaralhamento de [`@deck`](#).
 
 Classifica Tabelas de Markdown em $content de acordo com a especificação da coluna de cada tabela.  Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericamente [`n`](#), em qualquer ordem decrescente [`v`](#) ou crescente [`^`](#) pedido.
 
-#### fixup_code($prefix, $type, @\_)
+#### fixup_code($prefix, $type, &#64;_)
 
-Remove $prefix de cada argumento em @\_. A função do argumento $type é específica de implementação, mas é usada principalmente para pré-implantação do editor.md "modo" para processar este conteúdo em @\_.
+Tira $prefix de cada arg em &#64;\_. A função do argumento $type é específica de implementação, mas é usada principalmente para pré-implantação do editor.md "modo" para processar este conteúdo em &#64;_.
 
 #### unload_package($pkg)
 
 Descarrega agressivamente o pacote Perl (folha) [`$pkg`](#) da Tabela de Símbolos (STASH).
 
-#### purge_from_inc(@paths)
+#### purge_from_inc(&#64;caminhos)
 
 Remoções [`@paths`](#) de [`@INC`](#).
 
-#### touch(@\_)
+#### toque(a)&#64;_)
 
 Toca todos os arquivos em [`@_`](#). Se nenhum argumento for passado, usa [`$_`](#).
 
-#### normalize_svn_path(@\_)
+#### normalize_svn_path(&#64;_)
 
 Normaliza todos os caminhos em [`@_`](#) para uso seguro como argumentos brutos para [`SVN::Cliente`](#) comandos.
 
-#### sanitize_relative_path(@\_)
+#### sanitize_relative_path(&#64;_)
 
 Protege os caminhos em [`@_`](#) para uso como caminhos relativos puros em [`Dotiac::DTL`](#) Comandos específicos de caminho (Django Template).
 
@@ -210,11 +210,17 @@ Encapsulador ao redor [`Arquivo::Basename::fileparse`](#). Sem argumentos, usa [
 
 #### walk_content_tree($code)
 
-Condicionalmente anda o [`./conteúdo`](#) árvore do check-out do sistema de compilação, primeiro normalizando [`$_`](#) como subcaminho formal e, em seguida, invocando [`Código $`](#), em cada item na caminhada.
+Condicionalmente anda o [`./conteúdo`](#) árvore do check-out do sistema de compilação, primeiro normalizando [`$_`](#) como o subcaminho formal enraizado no conteúdo e, em seguida, invocando [`$code->()`](#) em cada item na caminhada em árvore. Para a maioria das construções, a caminhada nunca acontece &mdash; em vez disso, a compilação depende dos dados armazenados em cache de compilações anteriores.
+
+A única maneira de forçar uma caminhada é definindo [`$path::use_cache`](#) para um valor falso em seus módulos fornecidos pelo usuário. Caso contrário, esse comportamento é habilmente gerenciado pelo [tecnologia de criação incremental](https://iconoclasts.blog/joe/dependencies).
+
+Retorna 1 se a caminhada realmente tiver prosseguido, em vez de depender de dados armazenados em cache. Caso contrário, retornará um valor falso.
 
 ##### arquivado($path)
 
-Sinaliza cada [`Status: arquivar`](#) [`$path`](#). Usos [`$_`](#) se nenhum argumento for passado.
+Sinaliza cada [`Status: arquivado`](#) [`$path`](#) (de uma maneira específica da linguagem natural). Usos [`$_`](#) se nenhum argumento for passado.
+
+Arquivamento de arquivos é uma maneira natural de dizer Orion para "parar de prestar atenção ao local permalinked deste arquivo ... a menos que seja atualizado novamente, caso em que o local de arquivamento será atualizado. Em particular, os arquivos arquivados não aparecem nas listagens de diretórios dentro do próprio CMS; você precisa navegar até a própria página ativa para poder editá-la novamente on-line.
 
 ##### seed_file_deps($path)
 
