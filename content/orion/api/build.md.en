@@ -57,11 +57,15 @@ Mandatory Arguments:
 
 Optional Argmuents:
 
-- [`deps`](#)
-- [`quick_deps`](#)
-- [`preprocess`](#)
-- [`archive_root`](#) &mdash; files in "archived" status are "copied" and tracked by year/month subfolders to this content-rooted location via `ssi`
-- [`category_root`](#) &mdash; items in the "categories" header are "copied" over into appropriately named categories folders in this content-rooted location via `ssi`
+- [`deps`](#) &mdash; overrides normal [`fetch_deps`]() processing
+
+- [`quick_deps`](#) &mdash; internal deps-processing optimization setting; best left unset
+
+- [`preprocess`](#) &mdash; enables template processing within the [`$path`](#) content itself,
+
+- [`archive_root`](#) &mdash; files in "archived" status are "copied" and tracked by year/month subfolders to this content-rooted location via `ssi`,
+
+- [`category_root`](#) &mdash; items in the "categories" header are "copied" over into appropriately named categories folders in this content-rooted location via `ssi`.
 
 #### news_page(%args) &mdash; for multi-narrative aggregation pages
 
@@ -106,10 +110,14 @@ Optional Arguments:
 
 #### fetch_deps($path, $data, $quick)
 
+Refactors $data argument hashref as a timestamp ordered arrayref of 2-element arrayrefs. The first entry in each 2-element arrayref is the file path-name, second element is the resultant [`read_text_file`](#) hashref for that path-name.
+
+Returns a list of resulting new source files if [`$quick > 2`](#).
+
 Mandatory Arguments:
 
 - [`path`](#)
-- [`data`](#) - stores resulting anon-array of deps
+- [`data`](#) - input as hashref; stores resulting anon-array of deps upon return
 - [`quick`](#) - defaults to 2
 
 #### breadcrumbs($path)
