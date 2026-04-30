@@ -11,7 +11,7 @@ The former's job is to do three things:
 
 0. load [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) and [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. construct [`@path::patterns`](#), and
-2. walk the [`content/`](#) tree to seed [`%path::dependencies`](#) and [`@path::acls`](#).
+2. opportunistically walk the [`content/`](#) tree to seed [`%path::dependencies`](#) and [`@path::acls`](#).
 
 The latter's job is to provide invokable [`view`](#)-based methods for the matching entries in [`@path::patterns`](#), invoked as so...
 
