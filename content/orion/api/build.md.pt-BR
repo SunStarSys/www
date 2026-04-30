@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no [`$path`](#) que são novos, como o código externo [`trechos de código`](#) ou [`assíntota`](#)-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no [`$path`](#) que são novos, como o código externo [`trechos de código`](#) ou [`assíntota`](#)-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 

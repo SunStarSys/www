@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには[`パス`](#) 外部コードのように新しい[`スニペット`](#) または[`漸近線`](#)- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには[`パス`](#) 外部コードのように新しい[`スニペット`](#) または[`漸近線`](#)- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 

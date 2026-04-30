@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en [`$ruta`](#) que son novedosas, como el código externo [`fragmentos`](#) o [`asíntota`](#)-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en [`$ruta`](#) que son novedosas, como el código externo [`fragmentos`](#) o [`asíntota`](#)-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 

@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans [`$chemin`](#) qui sont nouveaux, comme le code externe [`fragments de code`](#) ou [`asymptote`](#)-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans [`$chemin`](#) qui sont nouveaux, comme le code externe [`fragments de code`](#) ou [`asymptote`](#)-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 

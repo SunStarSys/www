@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i [`$sökväg`](#) som är nya, som extern kod [`kodfragment`](#) eller [`asymptot`](#)-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i [`$sökväg`](#) som är nya, som extern kod [`kodfragment`](#) eller [`asymptot`](#)-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 

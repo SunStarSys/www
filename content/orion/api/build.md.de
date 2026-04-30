@@ -40,7 +40,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 #api
 ```
 
-Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in [`$Pfad`](#) Das ist neu, wie externer Code [`Snippets`](#) oder [`Asymptote`](#)-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in [`$Pfad`](#) Das ist neu, wie externer Code [`Snippets`](#) oder [`Asymptote`](#)-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 

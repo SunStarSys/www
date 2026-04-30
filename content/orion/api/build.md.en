@@ -37,7 +37,7 @@ The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for 
 #api
 ```
 
-Many views are meant to be stacked as "filters" to preprocess aspects of the file in [`$path`](#) that are novel, like external code [`snippets`](#) or [`asymptote`](#)-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
+Many views are meant to be stacked as "filters" to preprocess aspects of the file in [`$path`](#) that are novel, like external code [`snippets`](#) or [`asymptote`](#)-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
