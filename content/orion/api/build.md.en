@@ -216,7 +216,7 @@ Returns 1 if the walk actually proceeded, instead of relying on cached data. Oth
 
 ##### archived($path)
 
-Flags each [`Status: archive`](#) [`$path`](#). Uses [`$_`](#) if no args are passed.
+Flags each [`Status: archived`](#) [`$path`](#) (in a natural-language-specific way). Uses [`$_`](#) if no args are passed.
 
 ##### seed_file_deps($path)
 
