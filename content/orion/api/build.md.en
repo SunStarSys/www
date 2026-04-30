@@ -13,7 +13,7 @@ The former's job is to do three things:
 1. construct [`@path::patterns`](#), and
 2. opportunistically walk the [`content/`](#) tree to seed [`%path::dependencies`](#) and [`@path::acls`](#) from markdown/yaml file header metadata.
 
-The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for the matching entries in [`@path::patterns`](#) (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) as so...
+The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for the matching entries in [`@path::patterns`](#) (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) as below ...
 
 ```perl
 #api
@@ -37,6 +37,7 @@ The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for 
 #api
 ```
 
+Many views are meant to be stacked as "filters" to preprocess aspects of the file in [`$path`](#) that are novel, like external code [`snippets`](#) or [`asymptote`](#)-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm#L53).
 
 [TOC]
 
