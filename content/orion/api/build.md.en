@@ -5,6 +5,15 @@ Dependencies: *.md.en
 
 {# lede #}This document covers the **Build System** APIs{# lede #}.
 
+Basically, the build system is goverened by two user-supplied modules: [`lib/path.pm`](#) and [`lib/view.pm`](#).
+
+The former's job is to do two things:
+
+1. construct [`@path::patterns`](#), and
+2. walk the [`content/`](#) tree to seed [`%path::dependencies`](#) and [`@path::acls`](#).
+
+The latter's job is to provide invokable [`view`](#)-based methods for the matching entries in [`@path::patterns`](#), invoked as so...
+
 ```perl
 #api
   ...
