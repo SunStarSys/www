@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-Status: verified=34581
+status: draft
 Dependencies: *.md.en
 
 {# lede #}This document covers the **Build System** APIs{# lede #}.
@@ -148,7 +148,7 @@ Runs the next_view in offline mode.
 
 #### snippet(%args)
 
-[Processes](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [snippet lines](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806).
+[Processes external code](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Value/Snippet.pm#L12-L13) [snippet lines](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm#L806), normally importing their source locations on GitHub into programming-language-specific fenced markdown blocks.
 
 #### reconstruct(%args)
 
