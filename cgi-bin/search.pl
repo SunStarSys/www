@@ -730,6 +730,10 @@ my %title = (
   ".he" => "תוצאות חיפוש עבור $markdown ",
   ".sv" => "Sökresultat för $markdown ",
   ".zh-TW" => "$markdown 的搜尋結果",
+  ".ar" => "Search Results for $markdown ",
+  ".ko" => "Search Results for $markdown ",
+  ".ja" => "Search Results for $markdown ",
+  ".pt-BR" => "Search Results for $markdown ",
 );
 
 unless (@weblog) {
