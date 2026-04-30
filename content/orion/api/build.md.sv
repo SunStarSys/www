@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: skiss
+status: verifierad=34647
 title: Orion API - bygge
 ---
 
@@ -48,7 +48,7 @@ Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av fi
 
 ## Byggsystem
 
-### [SunStarSys::Visa](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; basklass för `lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; basklass för `lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ Tillägg `$args{lang}` till `$args{template}`.
 
 ----
 
-### [SunStarSys::Tillfälle](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; verktygsbibliotek för `lib/path.pm` och `lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; verktygsbibliotek för `lib/path.pm` och `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Orions universella textfilprocessor
 

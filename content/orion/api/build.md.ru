@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: черновик
+status: проверено=34647
 title: API Orion – сборка
 ---
 
@@ -48,7 +48,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## Система сборки
 
-### [SunStarSys::Просмотр](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; базовый класс для `lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; базовый класс для `lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ----
 
-### [SunStarSys::Использование](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; библиотека служебных программ для `lib/path.pm` и `lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; библиотека служебных программ для `lib/path.pm` и `lib/view.pm`
 
 #### read_text_file(файл $, $out, $content_lines) &mdash; Универсальный текстовый процессор Orion
 

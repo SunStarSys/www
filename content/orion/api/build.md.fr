@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: projet
+status: vérifié=34647
 title: API Orion - Créer
 ---
 
@@ -48,7 +48,7 @@ Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétra
 
 ## Créer un système
 
-### [SunStarSys : :Voir](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe de base pour `lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe de base pour `lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ Ajouts `$args{lang}` au `$args{template}`.
 
 ----
 
-### [SunStarSys : :Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; bibliothèque utilitaire pour `lib/path.pm` et `lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; bibliothèque utilitaire pour `lib/path.pm` et `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Processeur de fichiers texte universel d'Orion
 

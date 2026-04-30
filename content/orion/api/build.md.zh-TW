@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 草稿
+status: 驗證 =34647
 title: Orion API - 建置
 ---
 
@@ -48,7 +48,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## 建立系統
 
-### [SunStarSys：：查看](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ----
 
-### [SunStarSys：：使用](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫`lib/path.pm` 與`lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫`lib/path.pm` 與`lib/view.pm`
 
 #### read_text_file ($file, $out, $content_lines) &mdash; Orion 的通用文字檔案處理器
 

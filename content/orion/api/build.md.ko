@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 초안
+status: 확인=34647
 title: Orion API - 빌드
 ---
 
@@ -48,7 +48,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## 빌드 시스템
 
-### [SunStarSys::보기](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 `lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 `lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ next_view에서 빌드된 콘텐츠의 템플리트 지시어를 재처리합니
 
 ----
 
-### [SunStarSys::까지](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 유틸리티 라이브러리 `lib/path.pm` 및 `lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 유틸리티 라이브러리 `lib/path.pm` 및 `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Orion의 범용 텍스트 파일 프로세서
 

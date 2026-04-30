@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: טיוטה
+status: אומתו 34647
 title: API של אוריון - בנייה
 ---
 
@@ -48,7 +48,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## מערכת בנייה
 
-### [SunStarSys::הצגה](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; סיווג בסיס של `lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; סיווג בסיס של `lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ----
 
-### [SunStarSys::כלי שירות](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ספריית תוכניות שירות של `lib/path.pm` וגם `lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ספריית תוכניות שירות של `lib/path.pm` וגם `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; מעבד קבצי הטקסט האוניברסלי של אוריון
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 下書き
+status: 確認済み=34647
 title: Orion API - ビルド
 ---
 
@@ -48,7 +48,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 
 ## システム構築
 
-### [SunStarSys:: ビュー](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス`lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス`lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ next_viewからビルドされたコンテンツのテンプレート・ディ�
 
 ----
 
-### [SunStarSys:: ユーティリティ](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ユーティリティライブラリ`lib/path.pm` および`lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ユーティリティライブラリ`lib/path.pm` および`lib/view.pm`
 
 #### read_text_file($file、$out、$content_lines) &mdash; Orionの汎用テキスト・ファイル・プロセッサ
 

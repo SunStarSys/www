@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: borrador
+status: verificado=34647
 title: API de Orion - Crear
 ---
 
@@ -48,7 +48,7 @@ Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar a
 
 ## Sistema de creación
 
-### [SunStarSys::Ver](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; clase base para `lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; clase base para `lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ Anexos `$args{lang}` a `$args{template}`.
 
 ----
 
-### [SunStarSys::Util](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; biblioteca de utilidades para `lib/path.pm` y `lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; biblioteca de utilidades para `lib/path.pm` y `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Procesador de archivos de texto universal de Orion
 

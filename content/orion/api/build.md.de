@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: Entwurf
+status: überprüft=34647
 title: Orion API - Erstellen
 ---
 
@@ -48,7 +48,7 @@ Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in `$p
 
 ## System erstellen
 
-### [SunStarSys::Anzeigen](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; Basisklasse für `lib/view.pm`
+### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; Basisklasse für `lib/view.pm`
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -425,7 +425,7 @@ Anhänge `$args{lang}` bis `$args{template}`.
 
 ----
 
-### [SunStarSys: Bis](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; Utilitybibliothek für `lib/path.pm` und `lib/view.pm`
+### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; Utilitybibliothek für `lib/path.pm` und `lib/view.pm`
 
 #### read_text_file($file, $out, $content_lines) &mdash; Universeller Textdateiprozessor von Orion
 
