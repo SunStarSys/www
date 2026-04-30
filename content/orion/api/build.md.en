@@ -7,8 +7,9 @@ Dependencies: *.md.en
 
 Basically, the build system is goverened by two user-supplied modules: [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm) and [`lib/view.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/view.pm).
 
-The former's job is to do two things:
+The former's job is to do three things:
 
+0. load [`lib/facts.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml) and [`lib/acl.yml`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml),
 1. construct [`@path::patterns`](#), and
 2. walk the [`content/`](#) tree to seed [`%path::dependencies`](#) and [`@path::acls`](#).
 
