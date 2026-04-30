@@ -28,7 +28,7 @@ The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for 
 
     my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
 
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type
+... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
   }
 
   copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
