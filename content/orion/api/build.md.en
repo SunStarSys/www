@@ -101,7 +101,7 @@ Optional Arguments:
 
 - [`ext`](#) defaults to `json`
 - [`filter`](#) defaults to `json_raw`
--[`template`](#) overrides `filter` default expression
+- [`template`](#) overrides `filter` default expression
 
 #### fetch_deps($path, $data, $quick)
 
