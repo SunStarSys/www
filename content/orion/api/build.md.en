@@ -210,6 +210,7 @@ Wrapper around [`File::Basename::fileparse`](#). Without arguments, uses [`$_`](
 
 Conditionally walks the [`./content`](#) tree of the build system checkout, first normalizing [`$_`](#) as the formal subpath and then invoking [`$code`](#), on each item in the  the treewalk.
 
+Returns true if the walk actually proceeded, instead of relying on cached data from a prior build.
 
 ##### archived($path)
 
