@@ -13,7 +13,7 @@ The former's job is to do three things:
 1. construct [`@path::patterns`](#), and
 2. opportunistically walk the [`content/`](#) tree to seed [`%path::dependencies`](#) and [`@path::acls`](#).
 
-The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for the matching entries in [`@path::patterns`](#) (as a stringified method name in the second slot of each arrayref entry), invoked as so...
+The latter's job is to provide invokable [`view`](#)-based [`$method`](#)'s for the matching entries in [`@path::patterns`](#) (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](https://github.com/SunStarSys/orion/blog/trunk/build_site.pl) as so...
 
 ```perl
 #api
