@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=34744
+status: draft
 Dependencies: *.md.en
 
 <div class="right">
@@ -21,29 +21,9 @@ The former's job is to do three things:
 1. construct `@path::patterns`, and
 2. opportunistically walk the `content/` tree to seed `%path::dependencies` and `@path::acls` from markdown/yaml file header metadata.
 
-The latter's job is to provide invokable `view`-based `$method`s for the matching entries in `@path::patterns` (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) as below ...
+The latter's job is to provide invokable `view`-based `$method`s for the matching entries in `@path::patterns` (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](#):
 
-```perl
-#api
-  ...
-
-  my $path = "/content-rooted/path/to/source/file";
-
-  for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-    my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-  copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-  ...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api]
 
 Many views are meant to be stacked as "filters" to preprocess aspects of the file in `$path` that are novel, like external code `snippets` or `asymptote`-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
