@@ -774,9 +774,10 @@ Same as `YAML::XS::Dump`.
 <script async="" type="module">
   var ctx = document.getElementById("myChart").getContext("2d");
   const response = await fetch("/dynamic/search?regex=build=;lang={{lang}}", {
-   method: 'GET',
+    method: 'GET',
     headers: {
         'Accept': 'application/json'
+    }
   });
   if (response.ok) {
     const data = await response.json().duration;
