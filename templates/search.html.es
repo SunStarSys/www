@@ -8,8 +8,7 @@
 <link href="/editor.md/lib/codemirror/theme/solarized.css" rel="stylesheet" media="screen">
 {% endblock %}
 {% block content %}
-<h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{%
-  otro %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
+<h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{% else %}{{regex}}{% endif %}<span class="text-danger">/gi</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
   <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
@@ -30,8 +29,7 @@
       <small><em> activado {{ meta|vcs_date:lang }} a las {{meta|vcs_time:lang}}</em></small>
 	</div>
     <div class="card-body">
-      <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{
-      revisión }};lang={{lang}};markdown_search={{markdown_search}}">Log</a></h3>
+      <h3 class="card-title"><a href="/dynamic/search{{path|dirname|append:"/"}}?regex=log={{ revision }};lang={{lang}};markdown_search={{markdown_search}}">Registro</a></h3>
       <pre>{{ log|safe }}</pre>
   </div>
 
@@ -188,7 +186,7 @@
   {% if diff %}
   {% filter markdown %}
 
-## [Diferencia](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}}).
+## [Diferencia](./?regex=diff={{revision}};lang={{lang}};markdown_search={{markdown_search}})
 
 {% endfilter %}
 
@@ -222,7 +220,7 @@ Ancho de banda (KB): total = {{ tbw }}, Media = {{meanbw}}, StdDev = {{stdbw}}, 
       </div>
     </div>
 {% for w in weblog %}
-<input type="hidden" name="lines" value="{{w|removetags:"span"|safe}}">
+<input type="hidden" name="lines" value='{{w|removetags:"span"|safe}}'>
 {% endfor %}
   </form>
 {% for w in weblog %}{{ w|safe }}<br>
