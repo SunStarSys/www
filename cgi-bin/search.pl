@@ -349,6 +349,8 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
         $1 == 4 ? $e4xx++ : $e5xx++;q/ <span class="text-/ . ($1 == 4 ? q/warning">/ : q/danger">/)."$1$2</span> "
       }e for @weblog;
 
+    s!"(https://.*?)"!"<span class="text-secondary">$1</span>"!g for @weblog;
+
     $tdur = sum @duration;
     $meandur = $tdur / (@duration || 1);
     $maxdur = max @duration;
