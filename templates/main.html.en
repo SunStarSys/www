@@ -179,7 +179,7 @@
         }
         $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
-        $("body").find("code").attr("class", "cm-s-midnight");
+        $("body").find("code").attr("class", "cm-s-pastel-on-dark");
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
