@@ -27,28 +27,28 @@ title: SunStar Orion för system
 
 [**okrossbar**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-:fa-tåg:
+:fa-train:
 
 </li>
   <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
 
 **Mobilvänligt**
 
-:fa-mobil:
+:fa-mobile:
 
 </li>
   <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
 
 [**toppprestanda**](features)
 
-:fa-plan:
+:fa-plane:
 
 </li>
   <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
 
 **Samordnad**
 
-:fa-stad:
+:fa-city:
   </li>
 </ul>
 
@@ -212,4 +212,4 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $Författare: joe $ $Revision$ -->

@@ -27,7 +27,7 @@ title: SunStar Орион систем
 
 [**неразрывной**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-:fa-поезд:
+:fa-train:
 
 </li>
   <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
@@ -41,7 +41,7 @@ title: SunStar Орион систем
 
 [**пиковая производительность**](features)
 
-:fa-плоскость:
+:fa-plane:
 
 </li>
   <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
@@ -212,4 +212,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Автор: Джо $Пересмотр: 34799 $ -->

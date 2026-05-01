@@ -27,14 +27,14 @@ title: SunStar Orión de los Sistemas
 
 [**inquebrantable**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-:fa-tren:
+:fa-train:
 
 </li>
   <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
 
 **móvil amigable**
 
-:fa-móvil:
+:fa-mobile:
 
 </li>
   <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
@@ -48,7 +48,7 @@ title: SunStar Orión de los Sistemas
 
 **federados**
 
-:fa-ciudad:
+:fa-city:
   </li>
 </ul>
 
@@ -212,4 +212,4 @@ La forma más rápida de ponerse en marcha es jugar con la versión de @SunStarS
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 34799 $ -->
