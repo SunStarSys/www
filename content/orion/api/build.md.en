@@ -773,7 +773,7 @@ Same as `YAML::XS::Dump`.
 
 <script async="" type="module">
   var ctx = document.getElementById("myChart").getContext("2d");
-  const response = await fetch("/dynamic/search/?regex=build=;lang={{lang}};as_json=1");
+  const response = await fetch("/dynamic/search/?regex=build=;lang={{lang}};as_json=1;markdown_search=1");
   if (response.ok) {
     const data = await response.json().duration;
     const values = data.map(x => x[1]);
