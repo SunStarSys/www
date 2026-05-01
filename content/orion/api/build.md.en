@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=35082
+status: draft
 Dependencies: *.md.en
 
 <div class="right">
@@ -808,7 +808,7 @@ Same as `YAML::XS::Dump`.
                   if (elts) {
                       const idx = elts[0].index;
                       const revision = labels[idx].split(/:/)[0];
-                      document.location = "/dynamic/search/?regex=build=" + revision + ";lang=.en;markdown_search=1";
+                      document.location = "/dynamic/search/?regex=build=" + revision + ";lang={{lang}};markdown_search=1";
                   }
               },
           },
