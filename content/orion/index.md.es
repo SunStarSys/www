@@ -139,6 +139,10 @@ Ver nuestra [Planes de Orion](plans) para las ofertas actuales.
 </div>
 </div>
 
+&nbsp;
+
+<center>
+
 <div class="card border-success" style="max-width:25rem;background-color:transparent">
 <div class="card-header">Introducción</div>
 <div class="card-body text-white">
@@ -147,6 +151,7 @@ La forma más rápida de ponerse en marcha es jugar con la versión de @SunStarS
 
 </div>
 </div>
+</center>
 
 &nbsp;
 

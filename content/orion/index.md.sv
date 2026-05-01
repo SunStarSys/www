@@ -139,6 +139,10 @@ Se våra [Orionplaner](plans) för de aktuella avtalen.
 </div>
 </div>
 
+&nbsp;
+
+<center>
+
 <div class="card border-success" style="max-width:25rem;background-color:transparent">
 <div class="card-header">Komma igång</div>
 <div class="card-body text-white">
@@ -147,6 +151,7 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 
 </div>
 </div>
+</center>
 
 &nbsp;
 
