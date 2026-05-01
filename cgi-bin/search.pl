@@ -385,134 +385,133 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
   }
 }
 elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
-  if (exists $pw{$svnuser}) {
-    if ($re =~ /^build=/i) {
-      no warnings 'uninitialized';
-      ($revision) = $re =~ /(\d+)$/;
-      if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
-        read $fh, $blog, -s $fh;
-        $diff = $svn->diff($dirname, 1, $revision);
-      }
-      else {
-        open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-duration-log" or die "can't open build-duration-log: $!";
-          @dlog = map {chomp; [split /:/]} <$fh>;
-      }
-    }
-    elsif ($re =~ /^(acl|deps)=/i) {
-      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.$1") {
-        read $fh, $yaml, -s $fh;
-      }
-    }
-    elsif ($re =~ /^translation=/i) {
-      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.translation-log") {
-        read $fh, $translation, -s $fh;
-      }
-    }
-    elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^svnauthz=/i) {
-      if (open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/authz-svn.conf") {
-        read $fh, $blog, -s $fh;
-      }
-    }
-    elsif ($re =~ /^diff=/i) {
-      ($revision) = $re =~ /(\d+)$/;
-      if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
-        read $fh, $blog, -s $fh;
-        $diff = $svn->diff($dirname, 1, $revision);
-        $log = $svn->log($dirname, $revision)->[-1];
-        my @d_fmt = split /\D/, $$log[4];
-        $d_fmt[0] -= 1900;
-        $d_fmt[1] -= 1;
-        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime timegm reverse @d_fmt[0..5];
-        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
-        $author = $$log[3];
-        $log = $$log[2];
-      }
-    }
-    elsif ($re =~ /^log=/i) {
-      ($revision) = $re =~ /(\d+)$/;
-      $log = $svn->log($dirname, $revision);
-      for (@$log) {
-        my @d_fmt = split /\D/, $$_[4];
-        $d_fmt[0] -= 1900;
-        $d_fmt[1] -= 1;
-        setlocale LC_TIME, "$LANG{$lang}.UTF-8";
-        my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime timegm reverse @d_fmt[0..5];
-        setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
-        splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
-      }
+  if ($re =~ /^build=/i) {
+    no warnings 'uninitialized';
+    ($revision) = $re =~ /(\d+)$/;
+    if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+      read $fh, $blog, -s $fh;
+      $diff = $svn->diff($dirname, 1, $revision);
     }
     else {
-      open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
-      local $_;
-      my %group;
-      while (<$fh>) {
-        /(^[\w.@-]+)\s+=\s+(.*)$/ or next;
-        $group{'@'.$1} = $2;
-      }
-      my %seen;
-      my (undef, $groups, $comment, $data) = split /:/, $pw{$svnuser};
+      open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-duration-log" or die "can't open build-duration-log: $!";
+        @dlog = map {chomp; [split /:/]} <$fh>;
+    }
+  }
+  elsif ($re =~ /^(acl|deps)=/i) {
+    if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.$1") {
+      read $fh, $yaml, -s $fh;
+    }
+  }
+  elsif ($re =~ /^translation=/i) {
+    if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.translation-log") {
+      read $fh, $translation, -s $fh;
+    }
+  }
+  elsif ($pw{$svnuser} =~ /\bsvnadmin\b/ and $re =~ /^svnauthz=/i) {
+    if (open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/authz-svn.conf") {
+      read $fh, $blog, -s $fh;
+    }
+  }
+  elsif ($re =~ /^diff=/i) {
+    ($revision) = $re =~ /(\d+)$/;
+    if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
+      read $fh, $blog, -s $fh;
+      $diff = $svn->diff($dirname, 1, $revision);
+      $log = $svn->log($dirname, $revision)->[-1];
+      my @d_fmt = split /\D/, $$log[4];
+      $d_fmt[0] -= 1900;
+      $d_fmt[1] -= 1;
+      setlocale LC_TIME, "$LANG{$lang}.UTF-8";
+      ($date) = grep utf8::decode($_), strftime "%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)", localtime timegm reverse @d_fmt[0..5];
+      setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+      $author = $$log[3];
+      $log = $$log[2];
+    }
+  }
+  elsif ($re =~ /^log=/i) {
+    ($revision) = $re =~ /(\d+)$/;
+    $log = $svn->log($dirname, $revision);
+    for (@$log) {
+      my @d_fmt = split /\D/, $$_[4];
+      $d_fmt[0] -= 1900;
+      $d_fmt[1] -= 1;
+      setlocale LC_TIME, "$LANG{$lang}.UTF-8";
+      my ($date) = grep utf8::decode($_), strftime '%Y-%m-%d %H:%M:%S %z (%a, %d %b %Y)', localtime timegm reverse @d_fmt[0..5];
+      setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
+      splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
+    }
+  }
+  else {
+    open my $fh, "<:encoding(UTF-8)", "/x1/repos/svn-auth/$repos/group-svn.conf";
+    local $_;
+    my %group;
+    while (<$fh>) {
+      /(^[\w.@-]+)\s+=\s+(.*)$/ or next;
+      $group{'@'.$1} = $2;
+    }
+    my %seen;
+    my (undef, $groups, $comment, $data) = split /:/, $pw{$svnuser};
 
-      for (map '@'.$_, sort split /,/, $groups) {
-        push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text => "$_=", displayText => "$_: $c"}} grep !$seen{$_}++, split /,/, $group{$_};
-        $seen{$_}++;
-      }
+    for (map '@'.$_, sort split /,/, $groups) {
+      push @friends, {text => "$_=", displayText=>$_}, map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text => "$_=", displayText => "$_: $c"}} grep !$seen{$_}++, split /,/, $group{$_};
+      $seen{$_}++;
+    }
 
-      for (grep $_->{text} !~ /^@/, @friends) {
-        push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/, (split /:/, $pw{substr $_->{text}, 0, -1})[1];
-        push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>[map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} @gm]}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
-      }
+    for (grep $_->{text} !~ /^@/, @friends) {
+      push @friends, map {{text => "$_=", displayText=>$_}} grep !$seen{$_}++, map '@'.$_, split /,/, (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+      push @{$_->{groups}}, map {my @gm = grep !$seen{$_}++, split /,/, $group{$_}; {text => "$_=", displayText=>$_, members=>[map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} @gm]}} map '@'.$_, split ',', (split /:/, $pw{substr $_->{text}, 0, -1})[1];
+    }
 
-      for (grep $_->{text} =~ /^@/, @friends) {
-        push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2] // "";  $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c;my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text => "$_=", displayText=> "$_: $c"}} split /,/, $group{substr($_->{text}, 0, -1)};
-      }
+    for (grep $_->{text} =~ /^@/, @friends) {
+      push @{$_->{members}}, map {my $c = (split /:/, $pw{$_})[2] // "";  $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c;my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text => "$_=", displayText=> "$_: $c"}} split /,/, $group{substr($_->{text}, 0, -1)};
+    }
 
-      @friends = sort {$a->{text} cmp $b->{text}} @friends;
+    @friends = sort {$a->{text} cmp $b->{text}} @friends;
 
-      if ($re =~ /^friends=$/i) {
-        $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=green,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\",tooltip=\"$comment\"];\n";
-        my %seen = ($svnuser => 1);
-        for (@friends) {
-          no warnings 'uninitialized';
-          my $dt = substr $_->{text}, 0, -1;
-          next if $dt eq $svnuser;
-          my $displayText = $$_{displayText};
-          $displayText =~ s/^.*?: <img [^>]+> //;
-          if ($$_{members}) {
-            $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=red,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
-            $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
-            for my $m (@{$$_{members}}) {
+    if ($re =~ /^friends=$/i) {
+      $graphviz="\"$svnuser\" [name=\"$svnuser\",fontcolor=green,URL=\"./?regex=$svnuser=;lang=$lang;markdown_search=1\",tooltip=\"$comment\"];\n";
+      my %seen = ($svnuser => 1);
+      for (@friends) {
+        no warnings 'uninitialized';
+        my $dt = substr $_->{text}, 0, -1;
+        next if $dt eq $svnuser;
+        my $displayText = $$_{displayText};
+        $displayText =~ s/^.*?: <img [^>]+> //;
+        if ($$_{members}) {
+          $graphviz .= "\"$dt\" [name=\"$dt\",fontcolor=red,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
+          $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
+          for my $m (@{$$_{members}}) {
+            my $mdt = substr $m->{text}, 0 , -1;
+            my $displayText = $$m{displayText};
+            $displayText =~ s/^.*?: <img [^>]+> //;
+            $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$mdt}++;
+            $graphviz .= "\"$dt\" -> \"$mdt\" [color=red];\n";
+          }
+        }
+        elsif ($$_{groups}) {
+          $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
+          $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
+          for my $g (@{$$_{groups}}) {
+            my $gdt = substr $g->{text}, 0, -1;
+            my $displayText = $$g{displayText};
+            $displayText =~ s/^.*?: <img [^>]+> //;
+            $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$gdt}++;
+            $graphviz .= "\"$dt\" -> \"$gdt\" [color=black];\n";
+            for my $m (@{$$g{members}}) {
               my $mdt = substr $m->{text}, 0 , -1;
               my $displayText = $$m{displayText};
               $displayText =~ s/^.*?: <img [^>]+> //;
               $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$mdt}++;
-              $graphviz .= "\"$dt\" -> \"$mdt\" [color=red];\n";
-            }
-          }
-          elsif ($$_{groups}) {
-            $graphviz .= "\$dt\" [name=\"$dt\",fontcolor=blue,URL=\"./?regex=$_->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$dt}++;
-            $graphviz .= "\"$svnuser\" -> \"$dt\" [color=green];\n";
-            for my $g (@{$$_{groups}}) {
-              my $gdt = substr $g->{text}, 0, -1;
-              my $displayText = $$g{displayText};
-              $displayText =~ s/^.*?: <img [^>]+> //;
-              $graphviz .= "\"$gdt\" [name=\"$gdt\",fontcolor=blue,URL=\"?regex=$g->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$gdt}++;
-              $graphviz .= "\"$dt\" -> \"$gdt\" [color=black];\n";
-              for my $m (@{$$g{members}}) {
-                my $mdt = substr $m->{text}, 0 , -1;
-                my $displayText = $$m{displayText};
-                $displayText =~ s/^.*?: <img [^>]+> //;
-                $graphviz .= "\"$mdt\" [name=\"$mdt\",fontcolor=blue,URL=\"?regex=$m->{text};lang=$lang;markdown_search=1\",tooltip=\"$displayText\"];\n" unless $seen{$mdt}++;
-                $graphviz .= "\"$dt\" -> \"$mdt\";\n";
-              }
+              $graphviz .= "\"$dt\" -> \"$mdt\";\n";
             }
           }
         }
-        $graphviz = escape_html $graphviz;
-        $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
       }
+      $graphviz = escape_html $graphviz;
+      $graphviz = "<div class=\"graphviz\">digraph {\n$graphviz};\n</div>";
     }
-    if ($re !~ $specials_re) {
+  }
+  if ($re !~ $specials_re) {
       my @rv;
       for (map [split /=/], split /\b[;,]+\b/, $re) {
         my %seen;
@@ -531,8 +530,8 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         }
       }
       @friends = @rv;
-    }
-    elsif ($re =~ /watch=|notify=/i) {
+  }
+  elsif ($re =~ /watch=|notify=/i) {
       my $url;
       my ($base, $prefix) = $dirname =~ m!^(.*?)(/content.*)/$!;
       $svn->info(substr($dirname, 0 , -1), sub {$url = $_[1]->URL});
@@ -568,8 +567,8 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         $watch[-1]{watchers} = [map {my $c = (split /:/, $pw{$_})[2] // ""; $c =~ s/</&lt;/g, $c =~ s/>/&gt;/g if $c; my $d = (split /:/, $pw{$_})[3] // ""; $c = qq(<img src="data:$d" alt="picture of $_"> $c) if $d; {text=>"$_=",displayText=>"$_: $c"}} sort keys %$v] if push @watch, -f "$base$prefix$k" ? {name=>$k, type=>"file"} : -d "$base$prefix$k" ? {name=>"$k/", type=>"directory"} : ();
       }
       @friends = ();
-    }
-    if ($re =~ /^notify=/i) {
+  }
+  if ($re =~ /^notify=/i) {
       my (%file_seen, %dir_seen);
       undef @file_seen{map $_->{name}, grep $$_{type} eq "file", @watch};
       undef @dir_seen{map $_->{name}, grep $$_{type} eq "directory", @watch};
@@ -631,7 +630,6 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         setlocale LC_TIME, "$LANG{'.en'}.UTF-8";
         splice @$_, 3, $#$_, "\$Author: $$_[3] \$ \$Date: $date \$";
       }
-    }
   }
 }
 
