@@ -23,7 +23,7 @@ The former's job is to do three things:
 
 The latter's job is to provide invokable `view`-based `$method`s for the matching entries in `@path::patterns` (as a stringified method name in the second slot of each arrayref entry), invoked by the [build scripting](#):
 
-[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api]
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 Many views are meant to be stacked as "filters" to preprocess aspects of the file in `$path` that are novel, like external code `snippets` or `asymptote`-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
