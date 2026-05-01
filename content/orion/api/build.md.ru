@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=34903
+status: проверено=35082
 title: API Orion – сборка
 ---
 
@@ -761,4 +761,52 @@ title: API Orion – сборка
 </div>
 </div>
 
-<!-- $Date$Автор: Джо $Пересмотр: 34903 $ -->
+<script src="/editor.md/js/chart.umd.js"></script>
+<canvas id="myChart" width="100%" height="800px"></canvas>
+
+<script async="" type="module">
+  var ctx = document.getElementById("myChart").getContext("2d");
+  const response = await fetch("/dynamic/search/?regex=build%3D;lang={{lang}};as_json=1;markdown_search=1");
+  if (response.ok) {
+    const json = await response.json();
+	const data = json.duration;
+    const values = data.map(x => x[1]);
+    var total = 0;
+    for (var i=0; i < values.length; ++i)
+        total += +values[i];
+
+const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" + x[4]);
+    var myChart = new Chart(
+      ctx,
+      {
+          type: "bar",
+          data: {
+              labels: labels.reverse(),
+              datasets: [{
+                  label: "Build Duration (s)",
+                  data: values.reverse(),
+                  backgroundColor: "#8f99fb",
+
+}],
+          },
+          options: {
+              indexAxis: "y",
+              plugins: {
+                  title: {
+                      display: true,
+                      text: (total / 60).toFixed(0) + " build minutes this month (average build duration is " + (total / values.length).toFixed(0) + " s)",
+                  }
+              },
+              onClick: (e, elts, chart) => {
+                  if (elts) {
+                      const idx = elts[0].index;
+                      const revision = labels[idx].split(/:/)[0];
+                      document.location = "/dynamic/search/?regex=build=" + revision + ";lang=.en;markdown_search=1";
+                  }
+              },
+          },
+      });
+  }
+</script>
+
+<!-- $Date$Автор: Джо $Пересмотр: 35082 $ -->
