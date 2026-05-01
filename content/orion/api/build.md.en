@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=34738
+status: verified=34741
 Dependencies: *.md.en
 
 <div class="right">
@@ -49,10 +49,15 @@ Many views are meant to be stacked as "filters" to preprocess aspects of the fil
 
 [TOC]
 
+&nbsp;
+
 ----
+
+&nbsp;
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for `lib/view.pm`
 
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -430,11 +435,14 @@ Appends `$args{lang}` to `$args{template}`.
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; utility library for `lib/path.pm` and `lib/view.pm`
 
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
