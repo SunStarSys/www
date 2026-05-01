@@ -14,7 +14,6 @@ title: SunStar Орион систем
 </p>
 <span class="text-white">SunStar Орион систем</span> &nbsp; является
 <p>
-
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
@@ -52,6 +51,9 @@ title: SunStar Орион систем
 
 </li>
 </ul>
+</p>
+
+&nbsp;
 
 {# lede #}<span class="text-white">Корпоративная платформа Jamstack Wiki</span>&nbsp; для <b>создания, управления и доставки</b> статические веб-страницы с использованием технологии Jamstack для динамических функций в них{# lede #}. Для получения информации о ценах см. наш [Планы Ориона](plans).
 
@@ -213,4 +215,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$Автор: Джо $Пересмотр: 34799 $ -->
+<!-- $Date$Автор: Джо $Пересмотр: 34844 $ -->

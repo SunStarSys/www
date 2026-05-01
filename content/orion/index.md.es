@@ -14,7 +14,6 @@ title: SunStar Orión de los Sistemas
 </p>
 <span class="text-white">SunStar Orión de los Sistemas</span> &nbsp; es un
 <p>
-
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
@@ -52,6 +51,9 @@ title: SunStar Orión de los Sistemas
 
 </li>
 </ul>
+</p>
+
+&nbsp;
 
 {# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología Jamstack para las funciones dinámicas de las mismas{# lede #}. Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
 
@@ -213,4 +215,4 @@ La forma más rápida de ponerse en marcha es jugar con la versión de @SunStarS
 }
 </style>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 34799 $ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 34844 $ -->

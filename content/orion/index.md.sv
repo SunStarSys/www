@@ -14,7 +14,6 @@ title: SunStar Orion för system
 </p>
 <span class="text-white">SunStar Orion för system</span> &nbsp; är en
 <p>
-
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
@@ -52,6 +51,9 @@ title: SunStar Orion för system
 
 </li>
 </ul>
+</p>
+
+&nbsp;
 
 {# lede #}<span class="text-white">Wiki-plattformen Enterprise Jamstack</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder Jamstack-teknik för dynamiska funktioner däri{# lede #}. För prisinformation, se vår [Orionplaner](plans).
 
