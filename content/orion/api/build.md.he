@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: טיוטה
+status: אומתו = 34903
 title: API של אוריון - בנייה
 ---
 
@@ -209,19 +209,19 @@ title: API של אוריון - בנייה
   <div class="card-body">
     <div class="card-title">
 
-מבצע refactors ל-hashref של ארגומנט נתונים $data כ-rayref מסודר בחותמת זמן של arrayrefs עם 2 רכיבים.
+פקטורים `$data` hashref של ארגומנט כ-rayref מסודר בחותמת זמן של arrayrefs של 2 רכיבים.
 
 </div>
 <p class="card-text">
 
 הרשומה הראשונה בכל arrayref של 2 רכיבים היא שם הנתיב של הקובץ, האלמנט השני הוא התוצאה. [`read_text_file`](#) Hashref לשם נתיב זה.
 
-מחזיר רשימה של קובצי מקור חדשים שנוצרו אם [`$quick > 2`](#).
+מחזיר רשימה של קובצי מקור חדשים שנוצרו אם `$quick > 2`.
 
 ארגומנטי חובה:
 
 - `path`
-- `data` - קלט כ-hashref; מאחסן anon-מערך וכתוצאה מכך של deps עם החזרה
+- `data` - קלט כ-hashref; מאחסן את ה-rayref המתקבל בתמורה
 - `quick` - ברירת המחדל היא 2
 
 </p>
@@ -254,7 +254,7 @@ title: API של אוריון - בנייה
   <div class="card-body">
     <div class="card-title">
 
-מעביר למטמון את הבנייה; משמש בעיקר עם fetch_deps ו-quick_deps > 2.
+מעביר למטמון את הבנייה; משמש בעיקר עם `fetch_deps` וגם `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ title: API של אוריון - בנייה
   <div class="card-body">
     <div class="card-title">
 
-יצירת מקטע HTML ניתן להכללה ב- SSI להערת עמוד.
+מפיק `SSI`-ניתן להכללה `HTML5` מקטע להערת דף.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ title: API של אוריון - בנייה
   <div class="card-body">
     <div class="card-title">
 
-מעבד מחדש הנחיות תבנית בתוכן מובנה מ-next_view.
+עיבוד מחדש `Template` הנחיות בתוכן מובנה מ- `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ title: API של אוריון - בנייה
   <div class="card-body">
     <div class="card-title">
 
-ממיין טבלאות Markdown ב-$content לפי מפרט העמודה של כל טבלה.
+ממיין טבלאות Markdown ב- `$content` בהתאם למפרט העמודה של כל טבלה.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ title: API של אוריון - בנייה
   <div class="card-body">
     <div class="card-title">
 
-מסיר קידומת $ מכל ארגומנט ב- &#64;\_.
+רצועות `$prefix` מכל ויכוח ב &#64;\_.
 
 </div>
 <p class="card-text">
 
-המטרה של `$type` הארגומנט הוא ספציפי למימוש, אך משמש בעיקר לשתילת editor.md "מצב" לעיבוד תוכן זה ב- &#64;_.
+המטרה של `$type` הארגומנט הוא ספציפי ליישום, אך משמש בעיקר לשתילתו `editor.md "mode"` לעיבוד תוכן זה ב- &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ title: API של אוריון - בנייה
   <div class="card-body">
     <div class="card-title">
 
-פורק באופן אגרסיבי חבילת Perl (עלה) `$pkg` טבלת הסמלים (STASH)
+פריקה אגרסיבית `Perl` חבילה (עלה) `$pkg` מתוך טבלת הסמלים (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים 
   <div class="card-body">
     <div class="card-title">
 
-עדכונים מאובטחים `%path::dependencies` בשביל זה `$path`מבוסס על שלה `dependencies` גלוב(ים) כותרת.
+עדכונים מאובטחים `%path::dependencies` בשביל זה `$path`מבוסס על שלה `dependencies` כותרת `glob(s)`.
 
 </div>
 <p class="card-text">
@@ -761,4 +761,4 @@ Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים 
 </div>
 </div>
 
-<!-- $Date$מחבר: ג'ו $ $מהדורה: 34889 $ -->
+<!-- $Date$מחבר: ג'ו $ $מהדורה: 34903 $ -->

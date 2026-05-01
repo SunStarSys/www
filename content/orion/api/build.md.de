@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: Entwurf
+status: überprüft=34903
 title: Orion API - Erstellen
 ---
 
@@ -209,19 +209,19 @@ Optionale Argumente:
   <div class="card-body">
     <div class="card-title">
 
-Refactors $data Argument hashref als zeitstempel geordneter arrayref von 2-element arrayrefs.
+Refactors `$data` Argument hashref als zeitstempel geordneter arrayref von 2-element arrayrefs.
 
 </div>
 <p class="card-text">
 
 Der erste Eintrag in jedem 2-Element-Arrayref ist der Dateipfadname, das zweite Element ist das Ergebnis. [`read_text_file`](#) hashref für diesen Pfadnamen.
 
-Gibt eine Liste der resultierenden neuen Quelldateien zurück, wenn [`$quick > 2`](#).
+Gibt eine Liste der resultierenden neuen Quelldateien zurück, wenn `$quick > 2`.
 
 Erforderliche Argumente:
 
 - `path`
-- `data` - Eingabe als Hashref; Läden, die bei Rückgabe zu einem Anon-Array von Deps führen
+- `data` - Eingabe als Hashref; speichert resultierende Arrayref von deps bei Rückgabe
 - `quick` - Standard ist 2
 
 </p>
@@ -254,7 +254,7 @@ Gibt die HTML-Navigationsleiste zurück für `$path`.
   <div class="card-body">
     <div class="card-title">
 
-Speichert den Build, der hauptsächlich mit fetch_deps und quick_deps > 2 verwendet wird.
+Speichert den Build; hauptsächlich verwendet mit `fetch_deps` und `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ Speichert den Build, der hauptsächlich mit fetch_deps und quick_deps > 2 verwen
   <div class="card-body">
     <div class="card-title">
 
-Generiert ein SSI-integrierbares HTML-Fragment für einen Seitenkommentar.
+Generiert `SSI`-einschließbar `HTML5` Fragment für einen Seitenkommentar.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ Führt die `next_view` im Offlinemodus.
   <div class="card-body">
     <div class="card-title">
 
-Verarbeitet Vorlagenanweisungen in erstelltem Inhalt aus next_view erneut.
+Erneut verarbeiten `Template` Anweisungen in erstellten Inhalten aus `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ In-Place Zufalls-Shuffle (Fisher-Yates) von `@deck`.
   <div class="card-body">
     <div class="card-title">
 
-Sortiert Preisabschrifttabellen in $content gemäß der Spaltenspezifikation jeder Tabelle.
+Sortiert Preisabschrifttabellen in `$content` entsprechend der Spaltenspezifikation jeder Tabelle.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ Pro Tabelle kann genau eine Spalte sortiert werden, optional numerisch `n`in abs
   <div class="card-body">
     <div class="card-title">
 
-Streicht $prefix aus jedem Argument in &#64;\_.
+Streifen `$prefix` von jedem Argument in &#64;\_.
 
 </div>
 <p class="card-text">
 
-Der Zweck der `$type` Argument ist implementierungsspezifisch, wird aber hauptsächlich zum Vordefinieren der editor.md verwendet "Modus" für die Verarbeitung dieser Inhalte in &#64;_.
+Der Zweck der `$type` Argument ist implementierungsspezifisch, wird aber hauptsächlich verwendet, um die `editor.md "mode"` für die Verarbeitung dieser Inhalte in &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ Der Zweck der `$type` Argument ist implementierungsspezifisch, wird aber haupts�
   <div class="card-body">
     <div class="card-title">
 
-Aggressives Entladen des Perl-(Blatt-)Pakets `$pkg` aus der Symboltabelle (STASH).
+Aggressive Entladung `Perl` (Blatt) Paket `$pkg` aus der Symboltabelle (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Die Archivierung von Markdown-Dateien ist eine natürliche Möglichkeit, Orion m
   <div class="card-body">
     <div class="card-title">
 
-Sichere Updates `%path::dependencies` für diese `$path`, basierend auf `dependencies` Header-Glob(s).
+Sichere Updates `%path::dependencies` für diese `$path`, basierend auf `dependencies` Kopfzeile `glob(s)`.
 
 </div>
 <p class="card-text">

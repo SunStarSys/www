@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 초안
+status: 확인=34903
 title: Orion API - 빌드
 ---
 
@@ -209,19 +209,19 @@ YAML 파일을 일반적으로 JSON으로 변환합니다.
   <div class="card-body">
     <div class="card-title">
 
-$data 인수 hashref를 2-요소 arrayrefs의 시간 기록 정렬된 arrayref로 리팩터링합니다.
+리팩터 `$data` 인수 hashref는 2-요소 arrayrefs의 시간 기록 정렬된 arrayref입니다.
 
 </div>
 <p class="card-text">
 
 각 2 요소 arrayref의 첫 번째 항목은 파일 경로 이름입니다, 두 번째 요소는 결과입니다 [`read_text_file`](#) 해당 경로 이름에 대한 해시 참조입니다.
 
-다음과 같은 경우 결과 새 소스 파일 목록을 반환합니다. [`$quick > 2`](#).
+다음과 같은 경우 결과 새 소스 파일 목록을 반환합니다. `$quick > 2`.
 
 필수 인수:
 
 - `path`
-- `data` - hashref로 입력; 반환시 deps의 결과 anon-array를 저장합니다
+- `data` - 해시 참조로 입력; 반환 시 결과 배열 참조를 저장합니다.
 - `quick` - 기본값은 2입니다.
 
 </p>
@@ -254,7 +254,7 @@ $data 인수 hashref를 2-요소 arrayrefs의 시간 기록 정렬된 arrayref�
   <div class="card-body">
     <div class="card-title">
 
-빌드를 캐시에 저장합니다. 주로 fetch_deps 및 quick_deps > 2와 함께 사용됩니다.
+빌드를 캐시에 저장합니다. 주로 `fetch_deps` 및 `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ $data 인수 hashref를 2-요소 arrayrefs의 시간 기록 정렬된 arrayref�
   <div class="card-body">
     <div class="card-title">
 
-페이지 의견에 대한 SSI 포함 가능 HTML 부분을 생성합니다.
+생성 `SSI`-포함가능 `HTML5` 페이지 주석에 대한 부분입니다.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ $data 인수 hashref를 2-요소 arrayrefs의 시간 기록 정렬된 arrayref�
   <div class="card-body">
     <div class="card-title">
 
-next_view에서 빌드된 콘텐츠의 템플리트 지시어를 재처리합니다.
+재처리 `Template` 내장 컨텐트의 지시어 `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
   <div class="card-body">
     <div class="card-title">
 
-각 테이블의 열 사양에 따라 $content에서 마크다운 테이블을 정렬합니다.
+마크다운 테이블 정렬 위치 `$content` 각 테이블의  열 사양에 따라 다릅니다.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
   <div class="card-body">
     <div class="card-title">
 
-의 모든 인수에서 $prefix 스트립 &#64;\_.
+스트립 `$prefix` 모든 인수에서 &#64;\_.
 
 </div>
 <p class="card-text">
 
-의 목적 The purpose of the `$type` 인수는 구현에 따라 다르지만 주로 editor.md를 시드하는 데 사용됩니다. "모드" 이 콘텐츠를 처리하려면 &#64;_.
+의 목적 The purpose of the `$type` 인수는 구현에 따라 다르지만 주로 초기 설정에 사용됩니다. `editor.md "mode"` 이 콘텐츠를 처리하려면 &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
   <div class="card-body">
     <div class="card-title">
 
-Perl(리프) 패키지를 적극적으로 언로드합니다. `$pkg` 기호 테이블(STASH)에서
+적극적인 언로드 `Perl` (리프) 패키지 `$pkg` 기호 테이블(`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Perl(리프) 패키지를 적극적으로 언로드합니다. `$pkg` 기호 테�
   <div class="card-body">
     <div class="card-title">
 
-안전한 업데이트 `%path::dependencies` 대상 `$path`을 기반으로 `dependencies` 헤더 glob(s).
+안전한 업데이트 `%path::dependencies` 대상 `$path`을 기반으로 `dependencies` 헤더 `glob(s)`.
 
 </div>
 <p class="card-text">
@@ -761,4 +761,4 @@ Perl(리프) 패키지를 적극적으로 언로드합니다. `$pkg` 기호 테�
 </div>
 </div>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 34889 $ -->
+<!-- $Date$ 저자 : 조 $ 개정 : 34903 $ -->

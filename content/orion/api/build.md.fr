@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: projet
+status: vérifié=34903
 title: API Orion - Créer
 ---
 
@@ -209,19 +209,19 @@ Arguments facultatifs :
   <div class="card-body">
     <div class="card-title">
 
-Refactorise le hachref d'argument $data sous la forme d'une référence de tableau ordonnée d'horodatage de 2 éléments.
+Refactorations `$data` argument hashref en tant que tableauréf ordonné horodatage de 2 éléments arrayrefs.
 
 </div>
 <p class="card-text">
 
 La première entrée de chaque arrayref à 2 éléments est le chemin d'accès au fichier, le second élément est le résultat [`read_text_file`](#) hashref pour ce chemin d'accès.
 
-Renvoie la liste des nouveaux fichiers source résultants si [`$quick > 2`](#).
+Renvoie la liste des nouveaux fichiers source résultants si `$quick > 2`.
 
 Arguments obligatoires :
 
 - `path`
-- `data` - entrée en tant que hashref ; stocke l'anon-array résultant des dépôts lors du retour
+- `data` - entrée en tant que hashref ; stocke la arrayref résultante des dépôts lors du retour
 - `quick` - Valeur par défaut : 2
 
 </p>
@@ -254,7 +254,7 @@ Renvoie la liste des chemins de navigation HTML pour `$path`.
   <div class="card-body">
     <div class="card-title">
 
-Met le build en mémoire cache ; principalement utilisé avec fetch_deps et quick_deps > 2.
+Cache la construction ; principalement utilisé avec `fetch_deps` et `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ Met le build en mémoire cache ; principalement utilisé avec fetch_deps et quic
   <div class="card-body">
     <div class="card-title">
 
-Génère un fragment HTML inclus dans SSI pour un commentaire de page.
+Génère `SSI`-inclus `HTML5` fragment pour un commentaire de page.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ Exécute le `next_view` en mode hors ligne.
   <div class="card-body">
     <div class="card-title">
 
-Retraite les directives de modèle dans le contenu créé à partir de next_view.
+Retraitements `Template` directives dans le contenu construit à partir de `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ In-place aléatoire (Fisher-Yates) mélange de `@deck`.
   <div class="card-body">
     <div class="card-title">
 
-Trie les tables de démarque dans $content selon la spécification de colonne de chaque table.
+Trie les tables de démarque dans `$content` selon la spécification de colonne de chaque table.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ Une colonne peut être triée par table, éventuellement numériquement `n`, par
   <div class="card-body">
     <div class="card-title">
 
-Supprime le préfixe $ de chaque argument dans &#64;\_.
+Bandes `$prefix` de chaque arg dans &#64;\_.
 
 </div>
 <p class="card-text">
 
-Le but de la `$type` l'argument est spécifique à l'implémentation, mais il est principalement utilisé pour prédéfinir le fichier editor.md "mode" pour traiter ce contenu dans &#64;_.
+Le but de la `$type` l'argument est spécifique à la mise en œuvre, mais est principalement utilisé pour `editor.md "mode"` pour traiter ce contenu dans &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ Le but de la `$type` l'argument est spécifique à l'implémentation, mais il es
   <div class="card-body">
     <div class="card-title">
 
-Décharge de manière agressive le paquet Perl (feuille) `$pkg` dans la table des symboles (STASH).
+Déchargements agressifs `Perl` paquet (feuille) `$pkg` de la table des symboles (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Archiver des fichiers Markdown est un moyen naturel de dire à Orion de "cesser 
   <div class="card-body">
     <div class="card-title">
 
-Mises à jour sécurisées `%path::dependencies` pour ceci `$path`, basé sur son `dependencies` glob d'en-tête.
+Mises à jour sécurisées `%path::dependencies` pour ceci `$path`, basé sur son `dependencies` en-tête `glob(s)`.
 
 </div>
 <p class="card-text">
@@ -761,4 +761,4 @@ Identique à `YAML::XS::Dump`.
 </div>
 </div>
 
-<!-- $Date$Auteur : joe $Révision : 34889 $ -->
+<!-- $Date$Auteur : joe $Révision : 34903 $ -->

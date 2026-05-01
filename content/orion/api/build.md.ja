@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 下書き
+status: 確認済み=34903
 title: Orion API - ビルド
 ---
 
@@ -209,19 +209,19 @@ index.htmlおよびsitemap.htmlページを構築する場合
   <div class="card-body">
     <div class="card-title">
 
-$data引数hashrefを、2要素arrayrefsのタイムスタンプ順序付けされたarrayrefとしてリファクタします。
+リファクタ`$data` 引数hashrefは、2要素arrayrefsのタイムスタンプ順のarrayrefとして指定します。
 
 </div>
 <p class="card-text">
 
 各2要素arrayrefの最初のエントリはファイルpath-nameで、2番目の要素は結果です[`read_text_file`](#) そのパス名のhashref。
 
-結果の新しいソース・ファイルのリストを返します。[`$quick > 2`](#).
+結果の新しいソース・ファイルのリストを返します。`$quick > 2`.
 
 必須引数:
 
 - `path`
-- `data` - hashrefとして入力。戻り時にdepsの結果のanon配列を格納します
+- `data` - 入力をhashrefとして; 戻り時にdepの結果のarrayrefを格納する
 - `quick` - デフォルト値は2
 
 </p>
@@ -254,7 +254,7 @@ HTMLブレッドクラム・リストを返します。`$path`.
   <div class="card-body">
     <div class="card-title">
 
-ビルドをキャッシュします。主にfetch_depsおよびquick_deps > 2で使用されます。
+ビルドをキャッシュします。主に次で使用されます。`fetch_deps` および`quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ HTMLブレッドクラム・リストを返します。`$path`.
   <div class="card-body">
     <div class="card-title">
 
-ページ・コメントのSSI除外可能HTMLフラグメントを生成します。
+生成`SSI`- 除外可能`HTML5` ページ・コメントのフラグメント。
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ HTMLブレッドクラム・リストを返します。`$path`.
   <div class="card-body">
     <div class="card-title">
 
-next_viewからビルドされたコンテンツのテンプレート・ディレクティブを再処理します。
+再処理`Template` ビルドされたコンテンツのディレクティブ`next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
   <div class="card-body">
     <div class="card-title">
 
-各表の列仕様に従って、マークダウン表を$contentでソートします。
+マークダウン表をソート`$content` 各テーブルの列スペックに従って。
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
   <div class="card-body">
     <div class="card-title">
 
-各引数から$prefixを削除します。&#64;\_.
+ストリップ`$prefix` 全てにおいて、&#64;\_.
 
 </div>
 <p class="card-text">
 
-の目的`$type` 引数は実装固有ですが、主にeditor.mdのシードに使用されます。"モード" このコンテンツの処理対象&#64;_.
+の目的`$type` 引数は実装固有ですが、主にシードに使用されます。`editor.md "mode"` このコンテンツの処理対象&#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
   <div class="card-body">
     <div class="card-title">
 
-Perl (leaf)パッケージの積極的なアンロード`$pkg` シンボルテーブル(STASH)
+積極的なアンロード`Perl` (リーフ)パッケージ`$pkg` Symbol Table(シンボルテーブル)`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Markdownファイルをアーカイブすることは、Orionに伝える自然�
   <div class="card-body">
     <div class="card-title">
 
-安全な更新`%path::dependencies` この`$path`に基づいて、`dependencies` ヘッダーglob。
+安全な更新`%path::dependencies` この`$path`に基づいて、`dependencies` ヘッダー`glob(s)`.
 
 </div>
 <p class="card-text">

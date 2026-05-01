@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: rascunho
+status: verificado=34903
 title: Orion API - Criação
 ---
 
@@ -209,19 +209,19 @@ Argumentos opcionais:
   <div class="card-body">
     <div class="card-title">
 
-Refatoradores $data argumento hashref como um timestamp ordenou arrayref de 2-element arrayrefs.
+Refatores `$data` hashref de argumento como um arrayref ordenado de timestamp de arrayrefs de 2 elementos.
 
 </div>
 <p class="card-text">
 
 A primeira entrada em cada arrayref de 2 elementos é o nome do caminho do arquivo, o segundo elemento é o resultado [`read_text_file`](#) hashref para esse nome de caminho.
 
-Retorna uma lista de novos arquivos de origem resultantes se [`$quick > 2`](#).
+Retorna uma lista de novos arquivos de origem resultantes se `$quick > 2`.
 
 Argumentos Obrigatórios:
 
 - `path`
-- `data` - entrada como hashref; armazena o anon-array resultante de deps no retorno
+- `data` - entrada como hashref; armazena arrayref resultante de deps no retorno
 - `quick` - assume 2 como padrão
 
 </p>
@@ -254,7 +254,7 @@ Retorna a lista de caminhos detalhados HTML para `$path`.
   <div class="card-body">
     <div class="card-title">
 
-Coloca em cache a compilação; usada principalmente com fetch_deps e quick_deps > 2.
+Coloca em cache a construção; usado principalmente com `fetch_deps` e `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ Coloca em cache a compilação; usada principalmente com fetch_deps e quick_deps
   <div class="card-body">
     <div class="card-title">
 
-Gera fragmento HTML inclusivo do SSI para um comentário de página.
+Gera `SSI`-incluível `HTML5` fragmento para um comentário de página.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ Executa o `next_view` no modo offline.
   <div class="card-body">
     <div class="card-title">
 
-Reprocessa diretivas de Modelo no conteúdo criado de next_view.
+Reprocessos `Template` diretivas em conteúdo criado de `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ No local aleatório (Fisher-Yates) embaralhamento de `@deck`.
   <div class="card-body">
     <div class="card-title">
 
-Classifica Tabelas de Markdown em $content de acordo com a especificação da coluna de cada tabela.
+Classifica Tabelas de Markdown em `$content` de acordo com a especificação da coluna de cada tabela.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ Exatamente uma coluna pode ser classificada por tabela, opcionalmente numericame
   <div class="card-body">
     <div class="card-title">
 
-Tira $prefix de cada arg em &#64;\_.
+Tiras `$prefix` de cada arg em &#64;\_.
 
 </div>
 <p class="card-text">
 
-O propósito do `$type` o argumento é específico da implementação, mas é usado principalmente para pré-implantação do editor.md "modo" para processar este conteúdo em &#64;_.
+O propósito do `$type` o argumento é específico da implementação, mas é usado principalmente para `editor.md "mode"` para processar este conteúdo em &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ O propósito do `$type` o argumento é específico da implementação, mas é us
   <div class="card-body">
     <div class="card-title">
 
-Descarrega agressivamente o pacote Perl (folha) `$pkg` da Tabela de Símbolos (STASH).
+Descargas agressivas `Perl` pacote (folha) `$pkg` da tabela de símbolos (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Arquivamento de arquivos Markdown é uma maneira natural de dizer Orion para "pa
   <div class="card-body">
     <div class="card-title">
 
-Atualizações seguras `%path::dependencies` para isso `$path`Com base em sua `dependencies` glob(s) de cabeçalho
+Atualizações seguras `%path::dependencies` para isso `$path`Com base em sua `dependencies` cabeçalho `glob(s)`.
 
 </div>
 <p class="card-text">
@@ -761,4 +761,4 @@ Igual a `YAML::XS::Dump`.
 </div>
 </div>
 
-<!-- $Date$Autor: joe $Revisão: 34889 $ -->
+<!-- $Date$Autor: joe $Revisão: 34903 $ -->

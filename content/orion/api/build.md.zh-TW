@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 草稿
+status: 驗證 =34903
 title: Orion API - 建置
 ---
 
@@ -209,19 +209,19 @@ title: Orion API - 建置
   <div class="card-body">
     <div class="card-title">
 
-將 $data 引數雜湊參照重製為 2 元素陣列參照的時間戳記排序陣列參照。
+重構`$data` 引數 hashref 做為 2-element arrayrefs 的時戳排序 arrayref。
 
 </div>
 <p class="card-text">
 
 每個 2- 元素 arrayref 中的第一個項目是檔案 path-name，第二個元素則是產生的[`read_text_file`](#) 該 path-name 的 hashref。
 
-傳回結果新來源檔案的清單，如果[`$quick > 2`](#).
+傳回結果新來源檔案的清單，如果`$quick > 2`.
 
 必要引數：
 
 - `path`
-- `data` - 輸入為雜湊參考；在退回時導致折舊陣列的商店
+- `data` - 輸入為 hashref；儲存傳回時產生的 dep 陣列參考資料
 - `quick` - 預設為 2
 
 </p>
@@ -254,7 +254,7 @@ title: Orion API - 建置
   <div class="card-body">
     <div class="card-title">
 
-快取建置；主要與 fetch_deps 和 quick_deps > 2 搭配使用。
+快取建置；主要與`fetch_deps` 與`quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ title: Orion API - 建置
   <div class="card-body">
     <div class="card-title">
 
-產生頁面註解的 SSI 引入的 HTML 片段。
+產生`SSI`- 包含`HTML5` 頁面註解的片段。
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ title: Orion API - 建置
   <div class="card-body">
     <div class="card-title">
 
-從 next_view 重新處理內建內容中的樣板指令。
+重新處理`Template` 內建內容的指令來源`next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ Orion 的通用文字檔案處理器
   <div class="card-body">
     <div class="card-title">
 
-根據每個表格的資料欄規格，在 $content 中排序 Markdown 表格。
+排序減價表格`$content` 根據每個表格的資料欄規格。
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ Orion 的通用文字檔案處理器
   <div class="card-body">
     <div class="card-title">
 
-刪除每一個參數的 $prefix &#64;\_.
+分割`$prefix` 來自每個引數&#64;\_.
 
 </div>
 <p class="card-text">
 
-目的：`$type` 引數是實行特定的，但主要是用來植入 editor.md "模式" 處理此內容於&#64;_.
+目的：`$type` 引數是實行特定的，但主要是用來植入`editor.md "mode"` 處理此內容於&#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ Orion 的通用文字檔案處理器
   <div class="card-body">
     <div class="card-title">
 
-積極卸載 Perl (分葉) 套裝程式`$pkg` 來自符號表 (STASH)。
+積極卸載`Perl` (分葉) 封裝`$pkg` 來自符號表 (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Orion 的通用文字檔案處理器
   <div class="card-body">
     <div class="card-title">
 
-安全更新`%path::dependencies` 針對此`$path`，根據它`dependencies` 標頭 glob。
+安全更新`%path::dependencies` 針對此`$path`，根據它`dependencies` 標頭`glob(s)`.
 
 </div>
 <p class="card-text">
@@ -761,4 +761,4 @@ Orion 的通用文字檔案處理器
 </div>
 </div>
 
-<!-- $Date$ $$ 作者：joe $ $ 版次：34889 $ -->
+<!-- $Date$ $$ 作者：joe $ $ 版次：34903 $ -->

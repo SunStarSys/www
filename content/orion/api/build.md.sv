@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: skiss
+status: verifierad=34903
 title: Orion API - bygge
 ---
 
@@ -209,19 +209,19 @@ Valfria argument:
   <div class="card-body">
     <div class="card-title">
 
-Refactors $data argument hashref som en tidsstämpel ordnade arrayref av 2-element arrayrefs.
+Refaktorer `$data` argument hashref som en tidsstämpel ordnad arrayref av 2-element arrayrefs.
 
 </div>
 <p class="card-text">
 
 Den första posten i varje 2-element arrayref är filsökvägens namn, det andra elementet är resultatet [`read_text_file`](#) hashref för det sökvägsnamnet.
 
-Returnerar en lista över resulterande nya källfiler om [`$quick > 2`](#).
+Returnerar en lista över resulterande nya källfiler om `$quick > 2`.
 
 Obligatoriska argument:
 
 - `path`
-- `data` - Inmatning som hashref; lagrar resulterande anon-array av deps vid retur
+- `data` - indata som hashref; lagrar resulterande arrayref av deps vid retur
 - `quick` - standardvärdet är 2
 
 </p>
@@ -254,7 +254,7 @@ Returnerar HTML-spårlista för `$path`.
   <div class="card-body">
     <div class="card-title">
 
-Cachelagrar bygget. Används främst med fetch_deps och quick_deps > 2.
+Cachar byggnaden; används främst med `fetch_deps` och `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ Cachelagrar bygget. Används främst med fetch_deps och quick_deps > 2.
   <div class="card-body">
     <div class="card-title">
 
-Genererar SSI-inkluderingsbart HTML-fragment för en sidkommentar.
+Genererar `SSI`-inkluderingsbar `HTML5` fragment för en sidkommentar.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ Kör `next_view` i offlineläge.
   <div class="card-body">
     <div class="card-title">
 
-Ombearbetar malldirektiv i inbyggt innehåll från next_view.
+Ombearbetningar `Template` direktiv i inbyggt innehåll från `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ Slumpmässig blandning på plats (Fisher-Yates) av `@deck`.
   <div class="card-body">
     <div class="card-title">
 
-Sorterar nedsättningstabeller i $content enligt varje tabells kolumnspecifikation.
+Sorterar nedsättningstabeller i `$content` enligt varje tabells kolumnspecifikation.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ Exakt en kolumn kan sorteras per tabell, alternativt numeriskt `n`i antingen fal
   <div class="card-body">
     <div class="card-title">
 
-Tar bort $prefix från varje argument i &#64;\_.
+Remsor `$prefix` från varje arg i &#64;\_.
 
 </div>
 <p class="card-text">
 
-Syftet med `$type` argumentet är implementeringsspecifikt, men används huvudsakligen för att fördefiniera editor.md "läge" för bearbetning av innehållet i &#64;_.
+Syftet med `$type` argumentet är implementeringsspecifikt, men används huvudsakligen för att fördefiniera `editor.md "mode"` för bearbetning av innehållet i &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ Syftet med `$type` argumentet är implementeringsspecifikt, men används huvudsa
   <div class="card-body">
     <div class="card-title">
 
-Aggressivt lossar Perl-paket (blad) `$pkg` från symboltabellen (STASH).
+Aggressivt avlastade `Perl` (blad) förpackning `$pkg` från symboltabellen (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Arkivering Markdown-filer är ett naturligt sätt att berätta för Orion att "s
   <div class="card-body">
     <div class="card-title">
 
-Säker uppdatering `%path::dependencies` för detta `$path`baserat på dess `dependencies` globala sidhuvuden.
+Säker uppdatering `%path::dependencies` för detta `$path`baserat på dess `dependencies` sidhuvud `glob(s)`.
 
 </div>
 <p class="card-text">

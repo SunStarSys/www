@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: borrador
+status: verificado=34903
 title: API de Orion - Crear
 ---
 
@@ -209,19 +209,19 @@ Argumentos opcionales:
   <div class="card-body">
     <div class="card-title">
 
-Refactores $data argumento hashref como una referencia de matriz ordenada de registro de hora de arrayrefs de 2 elementos.
+Refactores `$data` argumento hashref como una referencia de matriz ordenada de registro de hora de arrayrefs de 2 elementos.
 
 </div>
 <p class="card-text">
 
 La primera entrada en cada arrayref de 2 elementos es el nombre de ruta de archivo, el segundo elemento es el resultado [`read_text_file`](#) hashref para ese nombre de ruta.
 
-Devuelve una lista de los nuevos archivos de origen resultantes si [`$quick > 2`](#).
+Devuelve una lista de los nuevos archivos de origen resultantes si `$quick > 2`.
 
 Argumentos obligatorios:
 
 - `path`
-- `data` - entrada como hashref; almacena el anon-array resultante de deps a la vuelta
+- `data` - entrada como hashref; almacena arrayref resultante de deps al devolver
 - `quick` - se define por defecto en 2
 
 </p>
@@ -254,7 +254,7 @@ Devuelve la lista de rutas de navegación HTML para `$path`.
   <div class="card-body">
     <div class="card-title">
 
-Almacena en caché la creación; se utiliza principalmente con fetch_deps y quick_deps > 2.
+Guarda la construcción; se utiliza principalmente con `fetch_deps` y `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ Almacena en caché la creación; se utiliza principalmente con fetch_deps y quic
   <div class="card-body">
     <div class="card-title">
 
-Genera un fragmento HTML que no se puede incluir en la SSI para un comentario de página.
+Genera `SSI`-includable `HTML5` fragmento para un comentario de página.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ Ejecuta el `next_view` en modo fuera de línea.
   <div class="card-body">
     <div class="card-title">
 
-Vuelve a procesar las directivas de plantilla en contenido creado a partir de next_view.
+Reprocesos `Template` directivas en el contenido incorporado de `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ aleatorio in situ (Fisher-Yates) de `@deck`.
   <div class="card-body">
     <div class="card-title">
 
-Ordena las tablas de rebaja en $content según la especificación de columna de cada tabla.
+Ordena las tablas de rebaja en `$content` según la especificación de columna de cada tabla.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ Se puede ordenar exactamente una columna por tabla, opcionalmente numéricamente
   <div class="card-body">
     <div class="card-title">
 
-Extrae $prefix de cada argumento en &#64;\_.
+Tiras `$prefix` de cada arg en &#64;\_.
 
 </div>
 <p class="card-text">
 
-La finalidad del `$type` el argumento es específico de la implementación, pero se utiliza principalmente para iniciar editor.md "modo" para procesar este contenido en &#64;_.
+La finalidad del `$type` argumento es específico de la implementación, pero se utiliza principalmente para sembrar la `editor.md "mode"` para procesar este contenido en &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ La finalidad del `$type` el argumento es específico de la implementación, pero
   <div class="card-body">
     <div class="card-title">
 
-Descarga agresivamente el paquete Perl (hoja) `$pkg` de la tabla de símbolos (STASH).
+Descargas agresivas `Perl` Paquete (hoja) `$pkg` de la tabla de símbolos (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Archivar archivos de Markdown es una forma natural de decirle a Orion "dejar de 
   <div class="card-body">
     <div class="card-title">
 
-Actualizaciones seguras `%path::dependencies` para ello `$path`, basándose en su `dependencies` glob(es) de cabecera.
+Actualizaciones seguras `%path::dependencies` para ello `$path`, basándose en su `dependencies` cabecera `glob(s)`.
 
 </div>
 <p class="card-text">
@@ -761,4 +761,4 @@ Igual que `YAML::XS::Dump`.
 </div>
 </div>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 34889 $ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 34903 $ -->

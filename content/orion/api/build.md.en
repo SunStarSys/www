@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: draft
+status: verified=34903
 Dependencies: *.md.en
 
 <div class="right">
@@ -209,19 +209,19 @@ Optional Arguments:
   <div class="card-body">
     <div class="card-title">
 
-Refactors $data argument hashref as a timestamp ordered arrayref of 2-element arrayrefs.
+Refactors `$data` argument hashref as a timestamp ordered arrayref of 2-element arrayrefs.
 
 </div>
 <p class="card-text">
 
 The first entry in each 2-element arrayref is the file path-name, second element is the resultant [`read_text_file`](#) hashref for that path-name.
 
-Returns a list of resulting new source files if [`$quick > 2`](#).
+Returns a list of resulting new source files if `$quick > 2`.
 
 Mandatory Arguments:
 
 - `path`
-- `data` - input as hashref; stores resulting anon-array of deps upon return
+- `data` - input as hashref; stores resulting arrayref of deps upon return
 - `quick` - defaults to 2
 
 </p>
@@ -254,7 +254,7 @@ Returns HTML breadcrumbs list for `$path`.
   <div class="card-body">
     <div class="card-title">
 
-Caches the build; mainly used with fetch_deps and quick_deps > 2.
+Caches the build; mainly used with `fetch_deps` and `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ Caches the build; mainly used with fetch_deps and quick_deps > 2.
   <div class="card-body">
     <div class="card-title">
 
-Generates SSI-includable HTML fragment for a page comment.
+Generates `SSI`-includable `HTML5` fragment for a page comment.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ Runs the `next_view` in offline mode.
   <div class="card-body">
     <div class="card-title">
 
-Reprocesses Template directives in built content from next_view.
+Reprocesses `Template` directives in built content from `next_view`.
 
 </div>
 <p class="card-text">
@@ -512,8 +512,7 @@ In-place random (Fisher-Yates) shuffle of `@deck`.
   <div class="card-body">
     <div class="card-title">
 
-Sorts Markdown Tables in $content according to each table's  column spec.
-
+Sorts Markdown Tables in `$content` according to each table's  column spec.
 
 </div>
 <p class="card-text">
@@ -533,12 +532,12 @@ Exactly one column may be sorted per table, optionally numerically `n`, in eithe
   <div class="card-body">
     <div class="card-title">
 
-Strips $prefix from every arg in &#64;\_.
+Strips `$prefix` from every arg in &#64;\_.
 
 </div>
 <p class="card-text">
 
-The purpose of the `$type` argument is implementation specific, but is mainly used to seed the editor.md "mode" for processing this content in &#64;_.
+The purpose of the `$type` argument is implementation specific, but is mainly used to seed the `editor.md "mode"` for processing this content in &#64;_.
 
 </p>
 </div>
@@ -554,7 +553,7 @@ The purpose of the `$type` argument is implementation specific, but is mainly us
   <div class="card-body">
     <div class="card-title">
 
-Aggressively unloads Perl (leaf) package `$pkg` from the Symbol Table (STASH).
+Aggressively unloads `Perl` (leaf) package `$pkg` from the Symbol Table (`STASH`).
 
 </div>
 <p class="card-text">
@@ -702,7 +701,7 @@ Archiving Markdown files is a natural way to tell Orion to "stop paying attentio
   <div class="card-body">
     <div class="card-title">
 
-Securely updates `%path::dependencies` for this `$path`, based on its `dependencies` header glob(s).
+Securely updates `%path::dependencies` for this `$path`, based on its `dependencies` header `glob(s)`.
 
 
 </div>

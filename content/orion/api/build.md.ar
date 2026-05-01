@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: مُسَوَّدَة
+status: التحقق = 34903
 title: أوريون API - بناء
 ---
 
@@ -209,19 +209,19 @@ title: أوريون API - بناء
   <div class="card-body">
     <div class="card-title">
 
-Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب لمصفوفات المصفوفات ثنائية العناصر.
+إعادة بناء العوامل `$data` hashref للوسيطة كملف arrayref مرتب لطابع زمني لصفيفات ثنائية العناصر.
 
 </div>
 <p class="card-text">
 
 الإدخال الأول في كل arrayref مكون من عنصرين هو اسم مسار الملف، والعنصر الثاني هو الناتج [`read_text_file`](#) hashref لاسم المسار هذا.
 
-إرجاع قائمة بالملفات المصدر الجديدة الناتجة إذا [`$quick > 2`](#).
+إرجاع قائمة بالملفات المصدر الجديدة الناتجة إذا `$quick > 2`.
 
 الوسائط الإلزامية:
 
 - `path`
-- `data` - المدخلات مثل hashref ؛ مخازن الناتجة عن صفيف من deps عند العودة
+- `data` - المدخلات مثل hashref؛ يخزن الناتج arrayref ديبس عند العودة
 - `quick` - الافتراضي إلى 2
 
 </p>
@@ -254,7 +254,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-تخزين البناء تخزينًا مؤقتًا؛ يتم استخدامه بشكل أساسي مع fetch_deps وquick_deps > 2.
+التخزين المؤقت للبناء ؛ تستخدم أساسا مع `fetch_deps` و `quick_deps > 2`.
 
 </div>
 <p class="card-text">
@@ -271,7 +271,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-تكوين مقطع HTML المضمن في SSI لتعليق صفحة.
+تكوينات `SSI`شامل `HTML5` جزء لتعليق على صفحة.
 
 </div>
 <p class="card-text">
@@ -356,7 +356,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-إعادة معالجة توجيهات القالب في المحتوى المضمن من next_view.
+عمليات إعادة المعالجة `Template` توجيهات المحتوى المدمج من `next_view`.
 
 </div>
 <p class="card-text">
@@ -510,7 +510,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-فرز جداول تخفيض السعر في $content وفقًا لمواصفات عمود كل جدول.
+فرز جداول تخفيض السعر في `$content` وفقًا لمواصفات كل عمود جدول.
 
 </div>
 <p class="card-text">
@@ -530,12 +530,12 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-إزالة $prefix من كل وسيطة في &#64;\_.
+شرائط `$prefix` من كل حجة في &#64;\_.
 
 </div>
 <p class="card-text">
 
-الغرض من `$type` الوسيطة خاصة بالتنفيذ، ولكنها تستخدم بشكل أساسي لإدراج editor.md "الوضع" لمعالجة هذا المحتوى في &#64;_.
+الغرض من `$type` الحجة محددة للتنفيذ، ولكنها تستخدم بشكل رئيسي في البذور `editor.md "mode"` لمعالجة هذا المحتوى في &#64;_.
 
 </p>
 </div>
@@ -550,7 +550,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-تفريغ حزمة Perl (ورقة) بقوة `$pkg` من جدول الرموز (STASH).
+التفريغ المكثف `Perl` حزمة (ورقة) `$pkg` من جدول الرموز (`STASH`).
 
 </div>
 <p class="card-text">
@@ -696,7 +696,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
   <div class="card-body">
     <div class="card-title">
 
-التحديثات الآمنة `%path::dependencies` لهذا `$path`، بناءً على `dependencies` عناوين عامة.
+التحديثات الآمنة `%path::dependencies` لهذا `$path`، بناءً على `dependencies` ترويسة `glob(s)`.
 
 </div>
 <p class="card-text">
@@ -761,4 +761,4 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 </div>
 </div>
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 34889 $ -->
+<!-- $Date$ $المؤلف: جو $المراجعة: 34903 $ -->
