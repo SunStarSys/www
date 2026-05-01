@@ -191,7 +191,7 @@ gantt
     Eine Aufgabe           :a1, 2014-01-01, 30d
     Weitere Aufgabe     :after a1  , 20d
     section Another
-    Aufgabe in Sekunden      :(2014)-01-12  , 12d
+    Aufgabe in Sekunden      :2014-01-12  , 12d
     weitere Aufgabe      : 24d
 ```
 ----
