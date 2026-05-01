@@ -14,26 +14,43 @@ title: SunStar System-Orion
 </p>
 <span class="text-white">SunStar System-Orion</span> &nbsp; ist ein
 <p>
-	<ul>
-	<li><p>
 
-[**nicht verbindbar**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**nicht verbindbar**](security)
 
-[**unzerbrechlich**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa-lock:
 
-</p></li>
-	<li><p>mobilfreundlich,</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[** Spitzenleistung**](features),
+[**unzerbrechlich**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>föderiert</p></li>
-	</ul>
-</p>
+:fa-Zug:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**Mobilfreundlich**
+
+:fa-mobile:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[** Spitzenleistung**](features)
+
+:fa-plane:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**föderiert**
+
+:fa-Stadt:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">Enterprise Jamstack Wiki-Plattform</span>&nbsp; für <b>Erstellen, Verwalten und Bereitstellen</b> statische Webseiten mit Jamstack Technology für dynamische Features{# lede #}. Preisinformationen finden Sie unter [Orionpläne](plans).
 
@@ -130,6 +147,8 @@ Der schnellste Weg, um loszulegen, ist das Spielen mit @SunStarSys/orions Build 
 
 </div>
 </div>
+
+&nbsp;
 
 ### Funktionsvergleichsraster
 

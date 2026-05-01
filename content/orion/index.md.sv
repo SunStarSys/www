@@ -14,26 +14,43 @@ title: SunStar Orion för system
 </p>
 <span class="text-white">SunStar Orion för system</span> &nbsp; är en
 <p>
-	<ul>
-	<li><p>
 
-[**ej staplingsbar**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**ej staplingsbar**](security)
 
-[**okrossbar**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa-lock:
 
-</p></li>
-	<li><p>Mobilvänligt,</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**toppprestanda**](features),
+[**okrossbar**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>samordnad</p></li>
-	</ul>
-</p>
+:fa-tåg:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**Mobilvänligt**
+
+:fa-mobil:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**toppprestanda**](features)
+
+:fa-plan:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**Samordnad**
+
+:fa-stad:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">Wiki-plattformen Enterprise Jamstack</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder Jamstack-teknik för dynamiska funktioner däri{# lede #}. För prisinformation, se vår [Orionplaner](plans).
 
@@ -99,7 +116,7 @@ div#lightning img {width:100%}
 
 </style>
 
-Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`300 Mbyte/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa dem:
+Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`300 MB/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa dem:
 
 <span class="text-success"><em>Vi bygger bara det du behöver.</em></span>&trade;
 
@@ -126,10 +143,12 @@ Se våra [Orionplaner](plans) för de aktuella avtalen.
 <div class="card-header">Komma igång</div>
 <div class="card-body text-white">
 
-Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka källorna i bagageutrymmet/innehållet.  ~90 % av stylinganpassningarna finns i [`bål/innehåll/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
+Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka källorna i bagageutrymmet/innehållet.  ~90 % av stylinganpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
 
 </div>
 </div>
+
+&nbsp;
 
 ### Funktionsjämförelserutnät
 

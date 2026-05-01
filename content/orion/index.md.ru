@@ -14,26 +14,43 @@ title: SunStar Орион систем
 </p>
 <span class="text-white">SunStar Орион систем</span> &nbsp; является
 <p>
-	<ul>
-	<li><p>
 
-[**невзломный**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**невзломный**](security)
 
-[**неразрывной**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa-lock:
 
-</p></li>
-	<li><p>мобильный дружелюбный,</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**пиковая производительность**](features),
+[**неразрывной**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>федеративный</p></li>
-	</ul>
-</p>
+:fa-поезд:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**мобильный**
+
+:fa-mobile:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**пиковая производительность**](features)
+
+:fa-плоскость:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**федеративный**
+
+:fa-city:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">Корпоративная платформа Jamstack Wiki</span>&nbsp; для <b>создания, управления и доставки</b> статические веб-страницы с использованием технологии Jamstack для динамических функций в них{# lede #}. Для получения информации о ценах см. наш [Планы Ориона](plans).
 
@@ -99,7 +116,7 @@ div#lightning img {width:100%}
 
 </style>
 
-Многогигабайтные исходные деревья просто не соответствуют им &mdash; Полная продолжительность сборки сайта измеряется в *секундах*, а не часах и минутах.  Система легко поддерживает [`300 МБ/с`](features) при обработке ваших источников для полной сборки сайта, но учитывая его <span class="text-white">уникальное, запатентованное управление зависимостью</span> функциональность, к ней практически никогда не нужно прибегать:
+Многогигабайтные исходные деревья просто не соответствуют им &mdash; Полная продолжительность сборки сайта измеряется в *секундах*, а не часах и минутах.  Система легко поддерживает [`300 MB/s`](features) при обработке ваших источников для полной сборки сайта, но учитывая его <span class="text-white">уникальное, запатентованное управление зависимостью</span> функциональность, к ней практически никогда не нужно прибегать:
 
 <span class="text-success"><em>Мы строим только то, что вам нужно.</em></span>&trade;
 
@@ -126,10 +143,12 @@ div#lightning img {width:100%}
 <div class="card-header">Начало работы</div>
 <div class="card-body text-white">
 
-Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить источники в багажнике/контенте. ~90% настроек стиля в [`багажник/содержимое/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
+Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить источники в багажнике/контенте. ~90% настроек стиля в [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
 
 </div>
 </div>
+
+&nbsp;
 
 ### Сетка сравнения характеристик
 

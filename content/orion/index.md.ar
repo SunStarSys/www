@@ -14,26 +14,43 @@ title: SunStar أوريون الأنظمة
 </p>
 <span class="text-white">SunStar أوريون الأنظمة</span> &nbsp; هو
 <p>
-	<ul>
-	<li><p>
 
-[**غير قابل للاختراق**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**غير قابل للاختراق**](security)
 
-[**غير قابل للكسر**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa قفل:
 
-</p></li>
-	<li><p>المحمول ودية،</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**أداء الذروة**](features),
+[**غير قابل للكسر**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>موحد</p></li>
-	</ul>
-</p>
+:fa القطار:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**موبايل**
+
+:فا-موبايل:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**أداء الذروة**](features)
+
+:طائرة فا:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**موحد**
+
+:fa المدينة:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">منصة ويكي Enterprise Jamstack</span>&nbsp; <b>لإنشاء وإدارة وتقديم</b> صفحات ويب ثابتة باستخدام تقنية Jamstack للحصول على ميزات ديناميكية فيها{# lede #}. للحصول على معلومات التسعير، راجع [خطط أوريون](plans).
 
@@ -99,7 +116,7 @@ div#lightning img {width:100%}
 
 </style>
 
-أشجار مصدر متعددة جيجابايت ببساطة لا تتطابق معها &mdash; يتم قياس فترات بناء الموقع بالكامل بالثواني* وليس بالساعات والدقائق.  النظام يدعم بسهولة [`300 ميجابايت/ثانية`](features) أثناء معالجة مصادرك لإنشاء موقع كامل، ولكن بالنظر إلى <span class="text-white">إدارة التبعية الفريدة والمعلقة لبراءات الاختراع</span> وظيفة، فإنه لا يحتاج أبدا تقريبا إلى اللجوء إليها:
+أشجار مصدر متعددة جيجابايت ببساطة لا تتطابق معها &mdash; يتم قياس فترات بناء الموقع بالكامل بالثواني* وليس بالساعات والدقائق.  النظام يدعم بسهولة [`300 MB/s`](features) أثناء معالجة مصادرك لإنشاء موقع كامل، ولكن بالنظر إلى <span class="text-white">إدارة التبعية الفريدة والمعلقة لبراءات الاختراع</span> وظيفة، فإنه لا يحتاج أبدا تقريبا إلى اللجوء إليها:
 
 <span class="text-success"><em>نحن نبني ما تحتاجه فقط.</em></span>&trade;
 
@@ -126,10 +143,12 @@ div#lightning img {width:100%}
 <div class="card-header">البدء</div>
 <div class="card-body text-white">
 
-أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء المصادر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`جذع/محتوى/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
+أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء المصادر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
 
 </div>
 </div>
+
+&nbsp;
 
 ### شبكة مقارنة الميزات
 

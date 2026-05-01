@@ -14,26 +14,43 @@ title: SunStar 시스템스 오리온
 </p>
 <span class="text-white">SunStar 시스템스 오리온</span> &nbsp; 다음과 같음
 <p>
-	<ul>
-	<li><p>
 
-[**해킹할 수 없음**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**해킹할 수 없음**](security)
 
-[**발병 불가**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa-lock:
 
-</p></li>
-	<li><p>모바일 친화적,</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**최고 성능**](features),
+[**발병 불가**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>통합</p></li>
-	</ul>
-</p>
+:fa 기차:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**모바일 친화적**
+
+:fa-모바일:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**최고 성능**](features)
+
+:fa 비행기:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**통합**
+
+:fa 도시:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">Enterprise Jamstack 위키 플랫폼</span>&nbsp; <b>만들기, 관리 및 제공</b> 정적 웹페이지는 Jamstack 기술을 사용하여 동적 기능을 제공합니다.{# lede #}. 가격 정보는 [오리온 계획](plans).
 
@@ -99,7 +116,7 @@ div#lightning img {width:100%}
 
 </style>
 
-다중 기가바이트 소스 트리는 단순히 일치하지 않습니다. &mdash; 전체 사이트 빌드 기간은 시간 및 분이 아닌 *초*로 측정됩니다.  시스템이 쉽게 유지됨 [`300MB/s`](features) 전체 사이트 빌드에 대한 소스를 처리하는 동안 <span class="text-white">특허 출원 중인 고유 종속성 관리</span> 기능, 거의 그들에게 의존 할 필요가 없습니다 :
+다중 기가바이트 소스 트리는 단순히 일치하지 않습니다. &mdash; 전체 사이트 빌드 기간은 시간 및 분이 아닌 *초*로 측정됩니다.  시스템이 쉽게 유지됨 [`300 MB/s`](features) 전체 사이트 빌드에 대한 소스를 처리하는 동안 <span class="text-white">특허 출원 중인 고유 종속성 관리</span> 기능, 거의 그들에게 의존 할 필요가 없습니다 :
 
 <span class="text-success"><em>우리는 당신이 만들어야 할 것만 만듭니다.</em></span>&trade;
 
@@ -126,10 +143,12 @@ div#lightning img {width:100%}
 <div class="card-header">시작하기</div>
 <div class="card-body text-white">
 
-가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 소스를 숨깁니다. 스타일 지정 사용자 정의의 90%가 [`트렁크/콘텐츠/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
+가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 소스를 숨깁니다. 스타일 지정 사용자 정의의 90%가 [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
 
 </div>
 </div>
+
+&nbsp;
 
 ### 기능 비교 그리드
 

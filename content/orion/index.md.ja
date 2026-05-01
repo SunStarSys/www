@@ -14,26 +14,43 @@ title: SunStarシステムのOrion
 </p>
 <span class="text-white">SunStarシステムのOrion</span> &nbsp; は
 <p>
-	<ul>
-	<li><p>
 
-[**ハッキング不可**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**ハッキング不可**](security)
 
-[**破損なし**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+: ファロック:
 
-</p></li>
-	<li><p>モバイルフレンドリー、</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**ピーク・パフォーマンス**](features),
+[**破損なし**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>フェデレート</p></li>
-	</ul>
-</p>
+: ファトレイン:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**モバイルフレンドリー**
+
+:faモバイル:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**ピーク・パフォーマンス**](features)
+
+:fa-plane:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**フェデレーテッド**
+
+: ファシティ:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">エンタープライズJamstack Wikiプラットフォーム</span>&nbsp; <b>作成、管理および配信</b> Jamstackテクノロジを使用した静的Webページ{# lede #}。価格については、[Orionプラン](plans).
 
@@ -99,7 +116,7 @@ div#lightning img {width:100%}
 
 </style>
 
-マルチギガバイトのソース・ツリーは一致しません&mdash; サイトのフル・ビルド期間は、時間および分ではなく*秒*で測定されます。システムは容易に維持します[`300Mバイト/秒`](features) 完全なサイト構築のためにソースを処理中に、<span class="text-white">独自の特許出願中の依存関係管理</span> 機能性、ほとんどそれらに頼る必要がありません:
+マルチギガバイトのソース・ツリーは一致しません&mdash; サイトのフル・ビルド期間は、時間および分ではなく*秒*で測定されます。システムは容易に維持します[`300 MB/s`](features) 完全なサイト構築のためにソースを処理中に、<span class="text-white">独自の特許出願中の依存関係管理</span> 機能性、ほとんどそれらに頼る必要がありません:
 
 <span class="text-success"><em>必要なものだけを作る。</em></span>&trade;
 
@@ -126,10 +143,12 @@ div#lightning img {width:100%}
 <div class="card-header">はじめに</div>
 <div class="card-body text-white">
 
-最速の方法は、@SunStarSys/orionのビルドでプレイすることです。<https://iconoclasts.blog> そしてトランク/内容の源を空けて下さい。様式のカスタマイズの~90%はあります[`トランク/コンテンツ/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
+最速の方法は、@SunStarSys/orionのビルドでプレイすることです。<https://iconoclasts.blog> そしてトランク/内容の源を空けて下さい。様式のカスタマイズの~90%はあります[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
 
 </div>
 </div>
+
+&nbsp;
 
 ### 機能比較グリッド
 

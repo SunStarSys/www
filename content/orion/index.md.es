@@ -14,26 +14,43 @@ title: SunStar Orión de los Sistemas
 </p>
 <span class="text-white">SunStar Orión de los Sistemas</span> &nbsp; es un
 <p>
-	<ul>
-	<li><p>
 
-[**No hackeable**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**No hackeable**](security)
 
-[**inquebrantable**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa-lock:
 
-</p></li>
-	<li><p>amigable móvil,</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**rendimiento máximo**](features),
+[**inquebrantable**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>federado</p></li>
-	</ul>
-</p>
+:fa-tren:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**móvil amigable**
+
+:fa-móvil:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**rendimiento máximo**](features)
+
+:fa-plane:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**federados**
+
+:fa-ciudad:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología Jamstack para las funciones dinámicas de las mismas{# lede #}. Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
 
@@ -126,10 +143,12 @@ Ver nuestra [Planes de Orion](plans) para las ofertas actuales.
 <div class="card-header">Introducción</div>
 <div class="card-body text-white">
 
-La forma más rápida de ponerse en marcha es jugar con la versión de @SunStarSys/orion de <https://iconoclasts.blog> y vacíe los orígenes en el tronco/contenido. Aproximadamente el 90 % de las personalizaciones de estilo están en [`tronco/contenido/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; ¡Adáptate al gusto!
+La forma más rápida de ponerse en marcha es jugar con la versión de @SunStarSys/orion de <https://iconoclasts.blog> y vacíe los orígenes en el tronco/contenido. Aproximadamente el 90 % de las personalizaciones de estilo están en [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; ¡Adáptate al gusto!
 
 </div>
 </div>
+
+&nbsp;
 
 ### Cuadrícula de comparación de funciones
 

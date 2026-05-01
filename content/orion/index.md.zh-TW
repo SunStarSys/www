@@ -14,26 +14,43 @@ title: SunStar 系統的 Orion
 </p>
 <span class="text-white">SunStar 系統的 Orion</span> &nbsp; 是一個
 <p>
-	<ul>
-	<li><p>
 
-[** 無法劫持 **](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[** 無法劫持 **](security)
 
-[** 無法中斷 **](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa-lock:
 
-</p></li>
-	<li><p>行動友善，</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[** 高效能 **](features),
+[** 無法中斷 **](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>同盟</p></li>
-	</ul>
-</p>
+:fa-train:
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**行動友善 **
+
+：fa- 行動電話：
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[** 高效能 **](features)
+
+:fa-plane
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**同盟 **
+
+：fa- 城市：
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">企業 Jamstack Wiki 平台</span>&nbsp; 用於<b>建立、管理和提供</b> 使用 Jamstack Technology 靜態網頁，提供動態功能{# lede #}。如需價格資訊，請參閱我們的[Orion 計畫](plans).
 
@@ -99,7 +116,7 @@ div#lightning img {width:100%}
 
 </style>
 
-多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 *秒* (而非小時和分鐘) 計算。系統容易維持於[`300 MB/ 秒`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新思考：
+多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 *秒* (而非小時和分鐘) 計算。系統容易維持於[`300 MB/s`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新思考：
 
 <span class="text-success"><em>我們只建立您需要的建置項目。</em></span>&trade;
 
@@ -126,10 +143,12 @@ div#lightning img {width:100%}
 <div class="card-header">入門</div>
 <div class="card-body text-white">
 
-最快的方法是與 @SunStarSys/orion 的建置版本一起玩<https://iconoclasts.blog> 並清除中繼器 / 內容中的來源。約 90% 的樣式自訂項目位於[`中繼器 / 內容 /css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
+最快的方法是與 @SunStarSys/orion 的建置版本一起玩<https://iconoclasts.blog> 並清除中繼器 / 內容中的來源。約 90% 的樣式自訂項目位於[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
 
 </div>
 </div>
+
+&nbsp;
 
 ### 功能比較方格
 

@@ -11,26 +11,44 @@ acl: @staff=rw, *=r
 </p>
 <span class="text-white">SunStar Systems' Orion</span> &nbsp; is an
 <p>
-	<ul>
-	<li><p>
 
-[**unhackable**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**unhackable**](security)
 
-[**unbreakable**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+:fa-lock:
 
-</p></li>
-	<li><p>mobile friendly,</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**peak performance**](features),
+[**unbreakable**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>federated</p></li>
-	</ul>
-</p>
+:fa-train:
+
+  </li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**mobile friendly**
+
+:fa-mobile:
+
+  </li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**peak performance**](features)
+
+:fa-plane:
+
+  </li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**federated**
+
+:fa-city:
+  </li>
+</ul>
+
 
 {# lede #}<span class="text-white">Enterprise Jamstack Wiki Platform</span>&nbsp; for <b>creating, managing, and delivering</b> static webpages using Jamstack Technology for dynamic features therein{# lede #}. For pricing information, see our [Orion Plans](plans).
 

@@ -14,26 +14,43 @@ title: SunStar אוריון מערכות
 </p>
 <span class="text-white">SunStar אוריון מערכות</span> &nbsp; הוא
 <p>
-	<ul>
-	<li><p>
 
-[**לא ניתן לפיצוח**](security),
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-</p></li>
-<li><p>
+[**לא ניתן לפיצוח**](security)
 
-[**לא ניתן לשבירה**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years),
+מנעול :fa-lock
 
-</p></li>
-	<li><p>נייד ידידותי,</p></li>
-	<li><p>
+</li>
+  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
 
-[**ביצועי שיא**](features),
+[**לא ניתן לשבירה**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
 
-</p></li>
-	<li><p>מאוחד</p></li>
-	</ul>
-</p>
+:רכבת
+
+</li>
+  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
+
+**נייד ידידותי**
+
+:fa-mobile:
+
+</li>
+  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
+
+[**ביצועי שיא**](features)
+
+:מטוס נתונים:
+
+</li>
+  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
+
+**מאוחד**
+
+:עיר-פה:
+  </li>
+</ul>
 
 {# lede #}<span class="text-white">פלטפורמת Jamstack Wiki של Enterprise</span>&nbsp; עבור <b>יצירה, ניהול ומסירה</b> דפי אינטרנט סטטיים המשתמשים בטכנולוגיית Jamstack לקבלת תכונות דינמיות{# lede #}. לקבלת מידע על תמחור, ראה שלנו [תוכניות אוריון](plans).
 
@@ -126,10 +143,12 @@ div#lightning img {width:100%}
 <div class="card-header">צעדים ראשונים</div>
 <div class="card-body text-white">
 
-הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's build של <https://iconoclasts.blog> וחלול את המקורות בתא המטען/תוכן.  כ-90% מהתאמות הסגנון נמצאות ב- [`תא מטען/תוכן/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
+הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's build של <https://iconoclasts.blog> וחלול את המקורות בתא המטען/תוכן.  כ-90% מהתאמות הסגנון נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
 
 </div>
 </div>
+
+&nbsp;
 
 ### רשת השוואת מאפיינים
 
