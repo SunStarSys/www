@@ -50,9 +50,10 @@ boolean (0 or 1)
 - `like=` (WIP)
 - `diff=$revision`
 - `log=$revision`
-- `@@$group=`
-- `@$user=`
+- `@$group=`
+- `$user=`
 - `build=`
+
 ###### svnadmin group
 
 - `acl=`
