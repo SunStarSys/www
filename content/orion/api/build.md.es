@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado=34675
+status: verificado=34715
 title: API de Orion - Crear
 ---
+
+<div class="right">
+
+![Sistemas SunStar](/images/sunstarstaronly)
+
+</div>
+
+## Sistema de creación
 
 {# lede #}En este documento se tratan las API **Crear sistema**{# lede #}.
 
@@ -45,8 +53,6 @@ Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar a
 [TOC]
 
 ----
-
-## Sistema de creación
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; clase base para `lib/view.pm`
 

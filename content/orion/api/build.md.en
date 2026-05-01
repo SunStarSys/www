@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=34689
+status: verified=34715
 Dependencies: *.md.en
 
 <div class="right">
@@ -9,6 +9,7 @@ Dependencies: *.md.en
 
 </div>
 
+## Build System
 
 {# lede #}This document covers the **Build System** APIs{# lede #}.
 
@@ -49,8 +50,6 @@ Many views are meant to be stacked as "filters" to preprocess aspects of the fil
 [TOC]
 
 ----
-
-## Build System
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; base class for `lib/view.pm`
 

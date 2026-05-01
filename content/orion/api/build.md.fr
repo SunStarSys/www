@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: vérifié=34675
+status: vérifié=34715
 title: API Orion - Créer
 ---
+
+<div class="right">
+
+![SunStar Systèmes](/images/sunstarstaronly)
+
+</div>
+
+## Créer un système
 
 {# lede #}Ce document traite des API **système de création**{# lede #}.
 
@@ -45,8 +53,6 @@ Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétra
 [TOC]
 
 ----
-
-## Créer un système
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe de base pour `lib/view.pm`
 

@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=34675
+status: 確認済み=34715
 title: Orion API - ビルド
 ---
+
+<div class="right">
+
+![SunStarシステム](/images/sunstarstaronly)
+
+</div>
+
+## システム構築
 
 {# lede #}このドキュメントでは、**ビルド・システム** APIについて説明します{# lede #}.
 
@@ -45,8 +53,6 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 [TOC]
 
 ----
-
-## システム構築
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス`lib/view.pm`
 

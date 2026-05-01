@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: überprüft=34675
+status: überprüft=34715
 title: Orion API - Erstellen
 ---
+
+<div class="right">
+
+![SunStar Systeme](/images/sunstarstaronly)
+
+</div>
+
+## System erstellen
 
 {# lede #}Dieses Dokument behandelt die **Build-System**-APIs{# lede #}.
 
@@ -45,8 +53,6 @@ Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in `$p
 [TOC]
 
 ----
-
-## System erstellen
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; Basisklasse für `lib/view.pm`
 

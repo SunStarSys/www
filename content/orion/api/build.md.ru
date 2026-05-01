@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=34675
+status: проверено=34715
 title: API Orion – сборка
 ---
+
+<div class="right">
+
+![SunStar Системы](/images/sunstarstaronly)
+
+</div>
+
+## Система сборки
 
 {# lede #}Этот документ охватывает API **Build System**{# lede #}.
 
@@ -45,8 +53,6 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 [TOC]
 
 ----
-
-## Система сборки
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; базовый класс для `lib/view.pm`
 

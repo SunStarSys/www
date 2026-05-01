@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =34675
+status: 驗證 =34715
 title: Orion API - 建置
 ---
+
+<div class="right">
+
+![SunStar 系統](/images/sunstarstaronly)
+
+</div>
+
+## 建立系統
 
 {# lede #}本文件涵蓋 **組建系統** API{# lede #}.
 
@@ -45,8 +53,6 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 [TOC]
 
 ----
-
-## 建立系統
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`lib/view.pm`
 

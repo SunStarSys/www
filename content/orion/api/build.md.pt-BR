@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=34675
+status: verificado=34715
 title: Orion API - Criação
 ---
+
+<div class="right">
+
+![SunStar Sistemas](/images/sunstarstaronly)
+
+</div>
+
+## Sistema de Build
 
 {# lede #}Este documento aborda as APIs do **Build System**{# lede #}.
 
@@ -45,8 +53,6 @@ Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do
 [TOC]
 
 ----
-
-## Sistema de Build
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe base para `lib/view.pm`
 

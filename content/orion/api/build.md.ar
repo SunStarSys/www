@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 34675
+status: التحقق = 34715
 title: أوريون API - بناء
 ---
+
+<div class="right">
+
+![SunStar الأنظمة](/images/sunstarstaronly)
+
+</div>
+
+## نظام الإنشاء
 
 {# lede #}يغطي هذا المستند **واجهات برمجة تطبيقات نظام الإنشاء**{# lede #}.
 
@@ -45,8 +53,6 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 [TOC]
 
 ----
-
-## نظام الإنشاء
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; الفئة الأساسية لـ `lib/view.pm`
 

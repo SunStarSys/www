@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=34675
+status: verifierad=34715
 title: Orion API - bygge
 ---
+
+<div class="right">
+
+![SunStar System](/images/sunstarstaronly)
+
+</div>
+
+## Byggsystem
 
 {# lede #}Det här dokumentet täcker API:erna **Bygg system**{# lede #}.
 
@@ -45,8 +53,6 @@ Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av fi
 [TOC]
 
 ----
-
-## Byggsystem
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; basklass för `lib/view.pm`
 

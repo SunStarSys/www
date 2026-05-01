@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: אומתו = 34675
+status: אומתו = 34715
 title: API של אוריון - בנייה
 ---
+
+<div class="right">
+
+![SunStar מערכות](/images/sunstarstaronly)
+
+</div>
+
+## מערכת בנייה
 
 {# lede #}מסמך זה מכסה את **ממשקי API של מערכת הבנייה**{# lede #}.
 
@@ -45,8 +53,6 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 [TOC]
 
 ----
-
-## מערכת בנייה
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; סיווג בסיס של `lib/view.pm`
 

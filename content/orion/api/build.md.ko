@@ -2,9 +2,17 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=34675
+status: 확인=34715
 title: Orion API - 빌드
 ---
+
+<div class="right">
+
+![SunStar 시스템](/images/sunstarstaronly)
+
+</div>
+
+## 빌드 시스템
 
 {# lede #}이 문서에서는 **시스템 구축** API에 대해 다룹니다.{# lede #}.
 
@@ -45,8 +53,6 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 [TOC]
 
 ----
-
-## 빌드 시스템
 
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 `lib/view.pm`
 
