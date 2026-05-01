@@ -46,7 +46,7 @@
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
 	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz'Imagen de Wikipedia original: CC-BySA v4.0 -->
+          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
           <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
@@ -179,6 +179,7 @@ mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
         }
         $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
+        $("body").find("code").attr("class", "cm-s-pastel-on-dark");
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {

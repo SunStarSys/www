@@ -46,7 +46,7 @@
         <div class="navbar-brand">
 	{% ifequal path|dirname "/orion" %}
 	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz'原創維基百科影像：CC-BySA v4.0 -->
+          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
 	{% else %}
           <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
         {% endifequal %}
@@ -62,7 +62,7 @@
           <li class="nav-item{% ifequal path "/contact.html"|append:lang %} active
              {% endifequal %}"><a class="nav-link" href="/contact">聯絡人</a></li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">產品 ... <span class="caret"></span></a>
+            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">產品介紹... <span class="caret"></span></a>
             <ul class="dropdown-menu {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu">
               <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
                 {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">奧里昂&trade; Jamstack Wiki 平台</a></li>
@@ -103,7 +103,7 @@
           </li>
 
 <li class="nav-item{% ifequal path "/powered-by.html"|append:lang %} active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">技術支持</a>
+            {% endifequal %}"><a class="nav-link" href="/powered-by">技術支持...</a>
           </li>
         </ul>
       </div>
@@ -179,6 +179,7 @@ mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
         }
         $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
+        $("body").find("code").attr("class", "cm-s-pastel-on-dark");
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
