@@ -49,7 +49,8 @@ title: SunStar Orión de los Sistemas
 **federados**
 
 :fa-city:
-  </li>
+
+</li>
 </ul>
 
 {# lede #}<span class="text-white">Plataforma Wiki Enterprise Jamstack</span>&nbsp; para <b>crear, gestionar y entregar</b> páginas web estáticas que utilizan la tecnología Jamstack para las funciones dinámicas de las mismas{# lede #}. Para obtener información sobre los precios, consulte nuestro [Planes de Orion](plans).
