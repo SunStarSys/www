@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=34741
+status: verified=34744
 Dependencies: *.md.en
 
 <div class="right">
@@ -707,7 +707,7 @@ Flags each `Status: archived` `$path` (in a natural-language-specific way). Uses
 </div>
 <p class="card-text">
 
-Archiving Markdown files is a natural way to tell Orion to "stop paying attention to this file's permalinked location ... unless it is updated again, in which case the archival location will be refreshed. In particular, archived files do not appear in directory listings within the Orion CMS itself; you have to navigate to the live page itself to be able to edit it again online.
+Archiving Markdown files is a natural way to tell Orion to "stop paying attention to this file's permalinked location", unless it is updated again, in which case the archival location will be refreshed. In particular, archived files do not appear in directory listings within the Orion CMS itself; you have to navigate to the live page itself to be able to edit it again online.
 
 </p>
 </div>
