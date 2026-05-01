@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: אומתו = 34715
+status: טיוטה
 title: API של אוריון - בנייה
 ---
 
 <div class="right">
 
-![SunStar מערכות](/images/sunstarstaronly)
+![SunStar מערכות](../../images/sunstarstaronly)
 
 </div>
 
@@ -24,37 +24,23 @@ title: API של אוריון - בנייה
 1. בנייה `@path::patterns`, וגם
 2. הליכה אופורטוניסטית `content/` עץ לזרע `%path::dependencies` וגם `@path::acls` מטאדטה של כותרת קובץ markdown/yaml.
 
-תפקידו של השני הוא לספק בלתי אפשרי. `view`מבוסס `$method`s לרשומות תואמות ב- `@path::patterns` (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) כמו למטה ...
+תפקידו של השני הוא לספק בלתי אפשרי. `view`מבוסס `$method`s לרשומות תואמות ב- `@path::patterns` (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים]({{snippetA.pretty_uri}}):
 
-```perl
-#api
-  ...
-
-my $path = "/content-rooted/path/to/source/file";
-
-for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- `$path` זה רומן, כמו קוד חיצוני. `snippets` או `asymptote`גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
+&nbsp;
+
 ----
 
+&nbsp;
+
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; סיווג בסיס של `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -429,9 +415,13 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ספריית תוכניות שירות של `lib/path.pm` וגם `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -691,7 +681,7 @@ Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים 
 </div>
 <p class="card-text">
 
-העברה לארכיון של קובצי Markdown היא דרך טבעית לספר לאוריון "הפסק לשים לב למיקום המקושר לקובץ זה ... אלא אם כן יעודכן שוב, ובמקרה זה ירוענן מיקום הארכיב. בפרט, קבצים שהועברו לארכיב אינם מופיעים ברשימת הספריות בתוך מערכת ניהול התוכן של אוריון עצמה; עליך לנווט לדף החי עצמו כדי שתוכל לערוך אותו שוב באופן מקוון.
+העברה לארכיון של קובצי Markdown היא דרך טבעית לספר לאוריון "הפסק לשים לב למיקום המקושר לקובץ זה", אלא אם כן יעודכן שוב, ובמקרה זה ירוענן מיקום הארכיב. בפרט, קבצים שהועברו לארכיב אינם מופיעים ברשימת הספריות בתוך מערכת ניהול התוכן של אוריון עצמה; עליך לנווט לדף החי עצמו כדי שתוכל לערוך אותו שוב באופן מקוון.
 
 </p>
 </div>
@@ -771,4 +761,4 @@ Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים 
 </div>
 </div>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$מחבר: ג'ו $ $מהדורה: 34889 $ -->

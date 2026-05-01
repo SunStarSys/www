@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =34715
+status: 草稿
 title: Orion API - 建置
 ---
 
 <div class="right">
 
-![SunStar 系統](/images/sunstarstaronly)
+![SunStar 系統](../../images/sunstarstaronly)
 
 </div>
 
@@ -24,37 +24,23 @@ title: Orion API - 建置
 1. 建構`@path::patterns`，和
 2. 當機行走`content/` 種樹`%path::dependencies` 與`@path::acls` 來自 Markdown/yaml 檔案標頭描述資料。
 
-後者的工作是提供不可呼叫的工作`view`- 基底`$method`s，用於比對下列項目：`@path::patterns` (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 下方 ...
+後者的工作是提供不可呼叫的工作`view`- 基底`$method`s，用於比對下列項目：`@path::patterns` (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔]({{snippetA.pretty_uri}}):
 
-```perl
-#api
-  ...
-
-my $path = "/content-rooted/path/to/source/file";
-
-for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 許多視觀表的堆疊方式"篩選" 預先處理檔案的層面`$path` 新穎，如外部程式碼`snippets` 或`asymptote`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
+&nbsp;
+
 ----
 
+&nbsp;
+
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基本類別`lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -429,9 +415,13 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 公用程式程式庫`lib/path.pm` 與`lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -691,7 +681,7 @@ Orion 的通用文字檔案處理器
 </div>
 <p class="card-text">
 
-封存 Markdown 檔案是告訴 Orion 的自然方法"停止注意此檔案的永久連結位置 ... 除非再次更新，否則會重新整理存檔位置。特別是，封存的檔案不會出現在 Orion CMS 本身的目錄清單中；您必須瀏覽至即時頁面本身，才能在線上再次進行編輯。
+封存 Markdown 檔案是告訴 Orion 的自然方法"停止注意此檔案的永久連結位置"，除非再次更新，否則會重新整理存檔位置。特別是，封存的檔案不會出現在 Orion CMS 本身的目錄清單中；您必須瀏覽至即時頁面本身，才能在線上再次進行編輯。
 
 </p>
 </div>
@@ -771,4 +761,4 @@ Orion 的通用文字檔案處理器
 </div>
 </div>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $$ 作者：joe $ $ 版次：34889 $ -->

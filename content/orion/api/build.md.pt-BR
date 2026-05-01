@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=34715
+status: rascunho
 title: Orion API - Criação
 ---
 
 <div class="right">
 
-![SunStar Sistemas](/images/sunstarstaronly)
+![SunStar Sistemas](../../images/sunstarstaronly)
 
 </div>
 
@@ -24,37 +24,23 @@ O trabalho do primeiro é fazer três coisas:
 1. construir `@path::patterns`, e
 2. caminhando oportunamente `content/` árvore para semente `%path::dependencies` e `@path::acls` de metadados de cabeçalho de arquivo de markdown/yaml.
 
-O trabalho deste último é fornecer invocável `view`com base em `$method`s para as entradas correspondentes em `@path::patterns` (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) como abaixo ...
+O trabalho deste último é fornecer invocável `view`com base em `$method`s para as entradas correspondentes em `@path::patterns` (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script]({{snippetA.pretty_uri}}):
 
-```perl
-#api
-  ...
-
-my $path = "/content-rooted/path/to/source/file";
-
-for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no `$path` que são novos, como o código externo `snippets` ou `asymptote`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
+&nbsp;
+
 ----
 
+&nbsp;
+
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; classe base para `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -429,9 +415,13 @@ Anexa `$args{lang}` para `$args{template}`.
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; biblioteca de utilitários para `lib/path.pm` e `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -691,7 +681,7 @@ Sinaliza cada `Status: archived` `$path` (de uma maneira específica da linguage
 </div>
 <p class="card-text">
 
-Arquivamento de arquivos Markdown é uma maneira natural de dizer Orion para "parar de prestar atenção ao local permalinked deste arquivo ... a menos que seja atualizado novamente, caso em que o local de arquivamento será atualizado. Em particular, os arquivos arquivados não aparecem nas listagens de diretórios dentro do próprio CMS do Orion; você precisa navegar até a própria página ao vivo para poder editá-la novamente on-line.
+Arquivamento de arquivos Markdown é uma maneira natural de dizer Orion para "parar de prestar atenção ao local permalinked deste arquivo", a menos que seja atualizado novamente, caso em que o local de arquivamento será atualizado. Em particular, os arquivos arquivados não aparecem nas listagens de diretórios dentro do próprio CMS do Orion; você precisa navegar até a própria página ao vivo para poder editá-la novamente on-line.
 
 </p>
 </div>
@@ -771,4 +761,4 @@ Igual a `YAML::XS::Dump`.
 </div>
 </div>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Autor: joe $Revisão: 34889 $ -->

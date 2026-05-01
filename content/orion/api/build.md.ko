@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=34715
+status: 초안
 title: Orion API - 빌드
 ---
 
 <div class="right">
 
-![SunStar 시스템](/images/sunstarstaronly)
+![SunStar 시스템](../../images/sunstarstaronly)
 
 </div>
 
@@ -24,37 +24,23 @@ title: Orion API - 빌드
 1. 생성 `@path::patterns`및
 2. 기회주의적으로 걷다 `content/` 시드할 트리 `%path::dependencies` 및 `@path::acls` 마크다운/yaml 파일 헤더 메타데이터에서
 
-후자의 임무는 호출을 제공하는 것입니다 `view`- 기반 `$method`s - 일치하는 항목의 경우 `@path::patterns` (각 arrayref 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), [스크립트 작성](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 아래와 같이 ...
+후자의 임무는 호출을 제공하는 것입니다 `view`- 기반 `$method`s - 일치하는 항목의 경우 `@path::patterns` (각 arrayref 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), [스크립트 작성]({{snippetA.pretty_uri}}):
 
-```perl
-#api
-  ...
-
-my $path = "/content-rooted/path/to/source/file";
-
-for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 많은 뷰가 "필터" 파일의 측면을 미리 처리하려면 `$path` 외부 코드와 마찬가지로 참신합니다. `snippets` 또는 `asymptote`-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
+&nbsp;
+
 ----
 
+&nbsp;
+
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 기본 클래스 `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -429,9 +415,13 @@ next_view에서 빌드된 콘텐츠의 템플리트 지시어를 재처리합니
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; 유틸리티 라이브러리 `lib/path.pm` 및 `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -691,7 +681,7 @@ Perl(리프) 패키지를 적극적으로 언로드합니다. `$pkg` 기호 테�
 </div>
 <p class="card-text">
 
-마크다운 파일을 아카이브하는 것은 Orion에게 "이 파일의 고유 링크 위치에 대한 주의 중지 ... 다시 업데이트되지 않으면 아카이브 위치가 새로 고쳐집니다. 특히 아카이브된 파일은 Orion CMS 자체 내의 디렉토리 목록에 나타나지 않습니다. 온라인으로 다시 편집할 수 있으려면 라이브 페이지 자체로 이동해야 합니다.
+마크다운 파일을 아카이브하는 것은 Orion에게 "이 파일의 고유 링크 위치에 대한 주의 중지"다시 업데이트되지 않으면 아카이브 위치가 새로 고쳐집니다. 특히 아카이브된 파일은 Orion CMS 자체 내의 디렉토리 목록에 나타나지 않습니다. 온라인으로 다시 편집할 수 있으려면 라이브 페이지 자체로 이동해야 합니다.
 
 </p>
 </div>
@@ -771,4 +761,4 @@ Perl(리프) 패키지를 적극적으로 언로드합니다. `$pkg` 기호 테�
 </div>
 </div>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ 저자 : 조 $ 개정 : 34889 $ -->

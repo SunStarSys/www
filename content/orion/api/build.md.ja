@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=34715
+status: 下書き
 title: Orion API - ビルド
 ---
 
 <div class="right">
 
-![SunStarシステム](/images/sunstarstaronly)
+![SunStarシステム](../../images/sunstarstaronly)
 
 </div>
 
@@ -24,37 +24,23 @@ title: Orion API - ビルド
 1. 構成`@path::patterns`および
 2. 便宜的に歩く`content/` シードするツリー`%path::dependencies` および`@path::acls` Markdown/yamlファイル・ヘッダー・メタデータ。
 
-後者の仕事は、invokableを提供することです。`view`- ベース`$method`s: 一致するエントリ`@path::patterns` (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) 以下 ...
+後者の仕事は、invokableを提供することです。`view`- ベース`$method`s: 一致するエントリ`@path::patterns` (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト]({{snippetA.pretty_uri}}):
 
-```perl
-#api
-  ...
-
-my $path = "/content-rooted/path/to/source/file";
-
-for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには`$path` 外部コードのように新しい`snippets` または`asymptote`- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
+&nbsp;
+
 ----
 
+&nbsp;
+
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; 基底クラス`lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -429,9 +415,13 @@ next_viewからビルドされたコンテンツのテンプレート・ディ�
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; ユーティリティライブラリ`lib/path.pm` および`lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -691,7 +681,7 @@ Perl (leaf)パッケージの積極的なアンロード`$pkg` シンボルテ�
 </div>
 <p class="card-text">
 
-Markdownファイルをアーカイブすることは、Orionに伝える自然な方法です。"このファイルのパーマリンクされた場所に注意を払うのをやめる ... 再度更新されないかぎり、アーカイブの場所はリフレッシュされます。特に、アーカイブされたファイルは、Orion CMS自体内のディレクトリリストには表示されません。オンラインでの再編集を可能にするには、ライブページ自体に移動する必要があります。
+Markdownファイルをアーカイブすることは、Orionに伝える自然な方法です。"このファイルのパーマリンクされた場所に注意を払うのをやめる"再度更新されない限り、アーカイブの場所がリフレッシュされます。特に、アーカイブされたファイルは、Orion CMS自体内のディレクトリリストには表示されません。オンラインでの再編集を可能にするには、ライブページ自体に移動する必要があります。
 
 </p>
 </div>
@@ -771,4 +761,4 @@ Markdownファイルをアーカイブすることは、Orionに伝える自然�
 </div>
 </div>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Author: joe $$Revision$ -->

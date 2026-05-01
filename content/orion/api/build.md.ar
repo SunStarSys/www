@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 34715
+status: مُسَوَّدَة
 title: أوريون API - بناء
 ---
 
 <div class="right">
 
-![SunStar الأنظمة](/images/sunstarstaronly)
+![SunStar الأنظمة](../../images/sunstarstaronly)
 
 </div>
 
@@ -24,37 +24,23 @@ title: أوريون API - بناء
 1. بناء `@path::patterns`، و
 2. انتهازية المشي `content/` يبذر الشجرة إلى البذور `%path::dependencies` و `@path::acls` من ميتاديتا رأس ملف markdown/yaml.
 
-وظيفة الأخير هو توفير الاستدعاء `view`على أساس `$method`s للإدخالات المطابقة في `@path::patterns` (باعتباره اسم أسلوب ذي سلسلة في الفتحة الثانية من كل إدخال arrayref)، يتم استدعاؤه بواسطة [يصنع النصوص البرمجية](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) أسفل ...
+وظيفة الأخير هو توفير الاستدعاء `view`على أساس `$method`s للإدخالات المطابقة في `@path::patterns` (باعتباره اسم أسلوب ذي سلسلة في الفتحة الثانية من كل إدخال arrayref)، يتم استدعاؤه بواسطة [يصنع النصوص البرمجية]({{snippetA.pretty_uri}}):
 
-```perl
-#api
-  ...
-
-my $path = "/content-rooted/path/to/source/file";
-
-for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة جوانب الملف مسبقًا في `$path` تلك رواية، مثل الكود الخارجي `snippets` أو `asymptote`قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
+&nbsp;
+
 ----
 
+&nbsp;
+
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; الفئة الأساسية لـ `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -429,9 +415,13 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; مكتبة المرافق لـ `lib/path.pm` و `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -691,7 +681,7 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 </div>
 <p class="card-text">
 
-أرشفة ملفات Markdown هي طريقة طبيعية لإخبار Orion "توقف عن الانتباه إلى موقع الرابط الثابت لهذا الملف ... ما لم يتم تحديثه مرة أخرى، وفي هذه الحالة سيتم تحديث موقع الأرشفة. على وجه الخصوص، لا تظهر الملفات المؤرشفة في قوائم الدليل داخل Orion CMS نفسه ؛ عليك الانتقال إلى الصفحة المباشرة نفسها لتكون قادرة على تحريرها مرة أخرى عبر الإنترنت.
+أرشفة ملفات Markdown هي طريقة طبيعية لإخبار Orion "توقف عن الانتباه إلى موقع الرابط الثابت لهذا الملف"، إلا إذا تم تحديثها مرة أخرى، وفي هذه الحالة سيتم تجديد موقع الأرشفة. على وجه الخصوص، لا تظهر الملفات المؤرشفة في قوائم الدليل داخل Orion CMS نفسه ؛ عليك الانتقال إلى الصفحة المباشرة نفسها لتكون قادرة على تحريرها مرة أخرى عبر الإنترنت.
 
 </p>
 </div>
@@ -771,4 +761,4 @@ Refactors $data الوسيطة hashref كطابع زمني arrayref مرتب ل�
 </div>
 </div>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $المؤلف: جو $المراجعة: 34889 $ -->

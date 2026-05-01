@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=34715
+status: черновик
 title: API Orion – сборка
 ---
 
 <div class="right">
 
-![SunStar Системы](/images/sunstarstaronly)
+![SunStar Системы](../../images/sunstarstaronly)
 
 </div>
 
@@ -24,37 +24,23 @@ title: API Orion – сборка
 1. изготавливать `@path::patterns`, и
 2. условно ходить `content/` дерево для семян `%path::dependencies` и `@path::acls` из метаданных заголовка файла разметки/ямла.
 
-Задача последнего состоит в том, чтобы обеспечить вызываемый `view`на основе `$method`s для соответствующих записей в `@path::patterns` (в качестве строкового имени метода во втором слоте каждой записи ссылки массива), вызываемого [создание сценариев](https://github.com/SunStarSys/orion/blob/master/build_site.pl#L219-L258) как показано ниже ...
+Задача последнего состоит в том, чтобы обеспечить вызываемый `view`на основе `$method`s для соответствующих записей в `@path::patterns` (в качестве строкового имени метода во втором слоте каждой записи ссылки массива), вызываемого [создание сценариев]({{snippetA.pretty_uri}}):
 
-```perl
-#api
-  ...
-
-my $path = "/content-rooted/path/to/source/file";
-
-for my $p (@path::patterns) {
-    my ($re, $method, $args) = @$p;
-    next unless $path =~ $re;
-    ++$matched;
-
-my ($content, $mime_extension, $final_args, @new_sources) = view->can($method)->(path => $path, lang => $lang, %$args);
-
-... write UTF-8 decoded $content to target file with associated $mime_extension file-type, and feed @new_sources back into the build.
-  }
-
-copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
-
-...
-#api
-```
+[snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
 
 Многие виды должны быть сложены как "фильтры" для предварительной обработки аспектов файла в `$path` Это новый, как внешний код. `snippets` или `asymptote`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
 [TOC]
 
+&nbsp;
+
 ----
 
+&nbsp;
+
 ### [`SunStarSys::View`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/View.pm) &mdash; базовый класс для `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -429,9 +415,13 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 </div>
 </div>
 
+&nbsp;
+
 ----
 
 ### [`SunStarSys::Util`](https://github.com/SunStarSys/orion/blob/master/lib/SunStarSys/Util.pm) &mdash; библиотека служебных программ для `lib/path.pm` и `lib/view.pm`
+
+&nbsp;
 
 <div class="card border-primary mb-3">
   <div class="card-header">
@@ -691,7 +681,7 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 </div>
 <p class="card-text">
 
-Архивирование файлов Markdown – это естественный способ рассказать Orion "перестать обращать внимание на постоянное расположение этого файла ... если он не будет обновлен повторно, в этом случае местоположение архива будет обновлено. В частности, архивные файлы не появляются в списках каталогов в самой CMS Orion; вам нужно перейти к самой активной странице, чтобы снова редактировать ее в Интернете.
+Архивирование файлов Markdown – это естественный способ рассказать Orion "перестать обращать внимание на постоянное расположение этого файла", если он не будет обновлен повторно, в этом случае местоположение архива будет обновлено. В частности, архивные файлы не появляются в списках каталогов в самой CMS Orion; вам нужно перейти к самой активной странице, чтобы снова редактировать ее в Интернете.
 
 </p>
 </div>
@@ -771,4 +761,4 @@ copy_if_newer("content$path", "$ENV{TARGET}/content$path") unless $matched;
 </div>
 </div>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Автор: Джо $Пересмотр: 34889 $ -->
