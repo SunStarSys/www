@@ -21,10 +21,18 @@ Dependencies: *.md.en
 
 #### lang
 
-- [`.en`](#)
-- [`.es`](#)
-- [`.fr`](#)
-- [`.de`](#)
+- `.en`
+- `.es`
+- `.fr`
+- `.de`
+- `.sv`
+- `.pt-BR`
+- `.he`
+- `.ar`
+- `.ru`
+- `.zh-TW`
+- `.ko`
+- `.ja`
 
 #### markdown_search
 
@@ -36,21 +44,21 @@ boolean (0 or 1)
 
 ###### all accounts
 
-- [`friends=`](#)
-- [`watch=`](#)
-- [`notify=$revision`](#)
-- [`like=`](#) (WIP)
-- [`diff=$revision`](#)
-- [`log=$revision`](#)
-- [`@$group=`](#)
-- [`$user=`](#)
-
+- `friends=`
+- `watch=`
+- `notify=$revision`
+- `like=` (WIP)
+- `diff=$revision`
+- `log=$revision`
+- `@@$group=`
+- `@$user=`
+- `build=`
 ###### svnadmin group
 
-- [`build=`](#)
-- [`acl=`](#)
-- [`deps=`](#)
-- [`svnauthz=`](#)
+- `acl=`
+- `deps=`
+- `svnauthz=`
+- `weblog=`
 
 ##### compatibility modes
 
@@ -67,28 +75,28 @@ Stateful, iterated PCRE filter on matching files.
 
 ### Generic JSON Response Fields
 
-- [`path`](#)
-- [`title`](#)
-- [`markdown_search`](#)
-- [`matches`](#)
-- [`lang`](#)
-- [`regex`](#)
-- [`breadcrumbs`](#)
-- [`keywords`](#)
-- [`friends`](#)
-- [`watch`](#)
-- [`graphviz`](#)
-- [`duration`](#)
-- [`log`](#)
-- [`blog`](#)
-- [`diff`](#)
-- [`meta`](#)
-- [`log`](#)
-- [`yaml`](#)
-- [`repos`](#)
-- [`website`](#)
-- [`hash`](#)
-- [`filter`](#)
-- [`specials`](#)
+- `path`
+- `title`
+- `markdown_search`
+- `matches`
+- `lang`
+- `regex`
+- `breadcrumbs`
+- `keywords`
+- `friends`
+- `watch`
+- `graphviz`
+- `duration`
+- `log`
+- `blog`
+- `diff`
+- `meta`
+- `log`
+- `yaml`
+- `repos`
+- `website`
+- `hash`
+- `filter`
+- `specials`
 
 <!-- $Date$ $Author$ $Revision$ -->
