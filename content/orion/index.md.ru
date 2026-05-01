@@ -41,7 +41,7 @@ title: SunStar Орион систем
 
 [**пиковая производительность**](features)
 
-:fa-plane:
+:fa-rocket:
 
 </li>
   <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
