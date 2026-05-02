@@ -278,8 +278,7 @@ $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($r
 $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0 or index($filter, "#") == 0;
 s/^"(.*)"$/\\Q$1\\E/ for $re;
 
-my @unzip = $markdown ? (qw/--markdown --yaml/) : "--unzip";
-s/#([\w.@-]+)/Keywords\\b.*\\K$1/g for $re, $filter;
+my @unzip = qw/--markdown --yaml/;
 
 my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx, $hits);
 
@@ -654,12 +653,10 @@ if ($re !~ $specials_re) {
 
   if ($sha1->hexdigest ne $hash) {
     undef $filter;
-    $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --html/, @unzip, qw/-- -P -e/], $re;
+    $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --markdown --yaml -- -P -e/], $re;
   }
   else {
-    my $grep = $unzip[0] eq "--markdown --yaml" ? "grep" : "xzgrep";
-    my @files = map $grep eq "grep" ? $_ : "$_.gz", $apreq->body("files");
-    $pffxg = run_shell_command "cd $d && timeout 30 $grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, @files;
+    $pffxg = run_shell_command "cd $d && timeout 30 grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, $apreq->body("files");
   }
 
   if ($? > 0 && $? < 256) {
