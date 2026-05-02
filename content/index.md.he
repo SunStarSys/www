@@ -5,8 +5,8 @@ status: פורסם
 title: בית
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">חדשות</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">בלוגים חינם!</a></h2>
@@ -55,7 +55,7 @@ title: בית
 
 מחפש Wiki טוב יותר, בטוח יותר, מהיר יותר, **מאושר** Enterprise?
 
-הוצאת פריט  [אוריון](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM עם native [מפת חשיבה בתולת ים](/orion/features) אינטגרציה!
+הוצאת פריט  [אוריון](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM עם native [מפת חשיבה בתולת ים](/orion/features) אינטגרציה!
 
 מאחורי הקלעים <span class="text-white">סקירה טכנית</span> תיאור של הטכנולוגיה הממתינה לפטנט שלנו, ראה שלנו [ניהול תלות של תוכן חכם](/essays/dependencies)&trade; אסאי
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$מחבר: ג'ו $ $ מהדורה: 35457 $ -->

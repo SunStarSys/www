@@ -5,8 +5,8 @@ status: опубликовано
 title: Главная
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">Новости</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Бесплатные блоги!</a></h2>
@@ -55,7 +55,7 @@ title: Главная
 
 Ищете лучшую, безопасную и быструю версию** Enterprise Wiki?
 
-Изъять  [Орион](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
+Изъять  [Орион](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
 
 За кулисами <span class="text-white">документ</span> описание нашей технологии патентования, см. [Управление зависимостями интеллектуального контента](/essays/dependencies)&trade; Эссе.
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Автор: Джо $Пересмотр: 35457 $ -->

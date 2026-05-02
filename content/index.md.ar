@@ -5,8 +5,8 @@ status: منشور
 title: الصفحة الرئيسية
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">الأخبار</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">مدونات مجانية!</a></h2>
@@ -32,7 +32,7 @@ title: الصفحة الرئيسية
 
 <h2>
 
-[خوارزمية::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) أطلق سراحه إلى CPAN!
+[الخوارزمية::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) أطلق سراحه إلى CPAN!
 
 </h2>
 
@@ -55,7 +55,7 @@ title: الصفحة الرئيسية
 
 هل تبحث عن أفضل وأمان وأسرع **موحد** Enterprise Wiki؟
 
-تسجيل الخروج  [أوريون](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade; &mdash; Orion هو منتج المؤسسة الوحيد المستند إلى إدارة سلسلة التوريد مع منتج أصلي [خريطة عقول حورية البحر](/orion/features) التكامل!
+تسجيل الخروج  [أوريون](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade; &mdash; Orion هو منتج المؤسسة الوحيد المستند إلى إدارة سلسلة التوريد مع منتج أصلي [خريطة عقول حورية البحر](/orion/features) التكامل!
 
 ل وراء الكواليس <span class="text-white">مستند</span> وصف تقنيتنا المعلقة لبراءات الاختراع، راجع [إدارة تبعية المحتوى الذكي](/essays/dependencies)&trade; مقال.
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $المؤلف: جو $المراجعة: 35457 $ -->

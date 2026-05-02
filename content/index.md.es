@@ -5,8 +5,8 @@ status: publicado
 title: Inicio
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">Noticias</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Blogs gratis!</a></h2>
@@ -55,7 +55,7 @@ title: Inicio
 
 Buscando un mejor, más seguro, más rápido, **federado** Enterprise Wiki?
 
-Bloquear  [Orión](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
+Bloquear  [Orión](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
 
 Para un detrás de escena <span class="text-white">documento técnico</span> descripción de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 35457 $ -->

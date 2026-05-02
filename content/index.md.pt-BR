@@ -5,8 +5,8 @@ status: publicado
 title: Início
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">Notícias</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Blogs grátis!</a></h2>
@@ -55,7 +55,7 @@ agora com suporte para LAUNCH_APACHE2!
 
 Procurando uma Wiki Enterprise **federated** melhor, mais segura e mais rápida?
 
-Check-out  [Orion](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade; &mdash; O Orion é o único produto empresarial baseado em SCM com [sereia-mentemap](/orion/features) integração!
+Check-out  [Orion](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade; &mdash; O Orion é o único produto empresarial baseado em SCM com [sereia-mentemap](/orion/features) integração!
 
 Para os bastidores <span class="text-white">whitepaper</span> descrição de nossa tecnologia de patente pendente, veja nosso [Gerenciamento de Dependência de Conteúdo Inteligente](/essays/dependencies)&trade; ensaio.
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Autor: joe $Revisão: 35457 $ -->

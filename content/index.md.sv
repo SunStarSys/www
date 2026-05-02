@@ -5,8 +5,8 @@ status: publicerad
 title: Hem
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">Nyheter</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Gratis bloggar!</a></h2>
@@ -55,7 +55,7 @@ Nu med LAUNCH_APACHE2 support!
 
 Letar du efter en bättre, säkrare, snabbare, **förenad** Enterprise Wiki?
 
-Checka ut  [Orion](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
+Checka ut  [Orion](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
 
 För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av vår patentsökta teknik, se vår [Beroendehantering för smart innehåll](/essays/dependencies)&trade; uppsats.
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $Författare: joe $ $Revision$ -->

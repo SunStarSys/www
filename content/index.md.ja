@@ -5,8 +5,8 @@ status: 公開済み
 title: ホーム
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">ニュース</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">無料ブログ!</a></h2>
@@ -55,7 +55,7 @@ LAUNCH_APACHE2サポートあり!
 
 より良く、より安全で、より速く、**連邦**エンタープライズWikiをお探しですか?
 
-チェックアウト[オリオン](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade; &mdash; Orionは、独自のSCMベースのエンタープライズ製品です。[マーメイドマインドマップ](/orion/features) 統合!
+チェックアウト[オリオン](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade; &mdash; Orionは、独自のSCMベースのエンタープライズ製品です。[マーメイドマインドマップ](/orion/features) 統合!
 
 舞台裏で<span class="text-white">ホワイトペーパー</span> 私達の特許出願中の技術の記述は、私達を見ます[スマート・コンテンツ依存性管理](/essays/dependencies)&trade; エッセイ
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Author: joe $$Revision$ -->

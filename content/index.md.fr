@@ -5,8 +5,8 @@ status: publié
 title: Accueil
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">Actualités</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Blogs gratuits !</a></h2>
@@ -32,7 +32,7 @@ Avec le support LAUNCH_APACHE2 !
 
 <h2>
 
-[Algorithme : :LCS : :XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) Libéré au CPAN !
+[Algorithme ::LCS: :XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) Libéré au CPAN !
 
 </h2>
 
@@ -55,7 +55,7 @@ Avec le support LAUNCH_APACHE2 !
 
 Vous recherchez un wiki d'entreprise meilleur, plus sûr, plus rapide et **fédéré** ?
 
-Départ  [Orion](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade; &mdash; Orion est le seul produit d'entreprise basé sur SCM avec natif [mermaid-mindmap](/orion/features) intégration !
+Départ  [Orion](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade; &mdash; Orion est le seul produit d'entreprise basé sur SCM avec natif [mermaid-mindmap](/orion/features) intégration !
 
 Pour les coulisses <span class="text-white">livre blanc</span> description de notre technologie en instance de brevet, voir notre [Gestion intelligente des dépendances de contenu](/essays/dependencies)&trade; Essai.
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Auteur : joe $Révision : 35457 $ -->

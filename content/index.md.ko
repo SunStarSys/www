@@ -5,8 +5,8 @@ status: 공개됨
 title: 홈 페이지
 ---
 
-<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
-	<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="lg right">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
 		<div class="card-header">뉴스</div>
         <div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">무료 블로그!</a></h2>
@@ -32,7 +32,7 @@ title: 홈 페이지
 
 <h2>
 
-[알고리즘::LCS::XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) CPAN 출시!
+[알고리즘::LCS:: XS {{facts.releases.Algorithm_LCS_XS.tag}}]({{facts.releases.Algorithm_LCS_XS.url}}) CPAN 출시!
 
 </h2>
 
@@ -55,7 +55,7 @@ title: 홈 페이지
 
 더 좋고, 안전하고, 빠르고, **연합된** Enterprise Wiki를 찾고 계십니까?
 
-체크아웃  [오리온](/orion/features)<span class="text-success"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; Orion은 고유의 SCM 기반 엔터프라이즈 제품입니다. [인어-마인드맵](/orion/features) 통합!
+체크아웃  [오리온](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; Orion은 고유의 SCM 기반 엔터프라이즈 제품입니다. [인어-마인드맵](/orion/features) 통합!
 
 백그라운드 A Behind Scenes <span class="text-white">백서</span> 우리의 특허 출원 기술에 대한 설명, 우리의 [스마트 콘텐츠 종속성 관리](/essays/dependencies)&trade; 에세이
 
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ 저자 : 조 $ 개정 : 35457 $ -->
