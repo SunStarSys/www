@@ -260,7 +260,8 @@ Bandwidth (KB): Total = {{ tbw }}, Mean = {{meanbw}}, StdDev = {{stdbw}}, Median
 
 {% block footer %}
 <script type="text/javascript">
-  document.cookie = "can_search=1; path=/; max-age=" + (86400 * 30);
+  if (! "{{regex}}".match(/^build=/))
+    document.cookie = "can_search=1; path=/; max-age=" + (86400 * 30);
 </script>
 {% if duration %}
 <script async="" type="text/javascript">
