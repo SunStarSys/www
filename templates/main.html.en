@@ -28,8 +28,8 @@
     <link href="/editor.md/lib/codemirror/theme/midnight.css" rel="stylesheet" media="screen">
     <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
-	<script src="/js/bootstrap.min.js"></script>
     <script src="/editor.md/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
     <script type="text/javascript">
 	var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
     $.fn.bootstrapBtn = bootstrapButton; // give $().bootstrapBtn the Bootstrap functionality
