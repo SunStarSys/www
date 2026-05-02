@@ -8,13 +8,11 @@ Dependencies: *.md.en
 ![SunStar Systems](../../images/sunstarstaronly)
 
 </div>
-
+<div class="row">
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-Documentation
-</button>
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Documentation</button>
     </h2>
     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
       <div class="accordion-body">
@@ -760,7 +758,6 @@ Same as `YAML::XS::Load`.
 </div>
 </div>
 
-
 <div class="card border-primary mb-3">
   <div class="card-header">
 
@@ -782,17 +779,16 @@ Same as `YAML::XS::Dump`.
   </div>
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingTwo">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-Monthly Statistics
-</button>
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Monthly Statistics</button>
     </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
       <div class="accordion-body">
 <script src="/editor.md/js/chart.umd.js"></script>
 <canvas id="myChart" width="100%" height="800px"></canvas>
       </div>
     </div>
   </div>
+</div>
 </div>
 <script async="" type="module">
   var ctx = document.getElementById("myChart").getContext("2d");
@@ -804,7 +800,6 @@ Monthly Statistics
     var total = 0;
     for (var i=0; i < values.length; ++i)
         total += +values[i];
-
     const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" + x[4]);
     var myChart = new Chart(
       ctx,
