@@ -30,7 +30,11 @@
     <link href="/favicon.png" rel="icon">
 	<script src="/js/bootstrap.min.js"></script>
     <script src="/editor.md/js/jquery.min.js"></script>
-    {% block header %}{% endblock %}
+    <script type="text/javascript">
+	var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
+    $.fn.bootstrapBtn = bootstrapButton; // give $().bootstrapBtn the Bootstrap functionality
+	</script>
+	{% block header %}{% endblock %}
     {% block analytics %}
     {% include "analytics.html" %}
     {% endblock %}
