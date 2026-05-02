@@ -13,13 +13,13 @@ div.jumbotron {
 	color: black;
 }
 
-input::placeholder {color: #839496}
+input::placeholder {color: #839496 !important}
 
 ::-webkit-input-placeholder { /* Chrome, Safari, Opera */
-  color: #839496;
+  color: #839496 !important;
 }
 ::-ms-input-placeholder { /* Edge */
-  color: #839496;
+  color: #839496 !important;
 }
 
 .accordion {overflow-x: hidden; background-color: #073642 }
