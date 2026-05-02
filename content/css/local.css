@@ -15,6 +15,13 @@ div.jumbotron {
 
 input::placeholder {color: #839496}
 
+::-webkit-input-placeholder { /* Chrome, Safari, Opera */
+  color: #839496;
+}
+::-ms-input-placeholder { /* Edge */
+  color: #839496;
+}
+
 .accordion {overflow-x: hidden; background-color: #073642 }
 
 div.jumbotron a, #index a { color:#114056 }
