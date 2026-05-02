@@ -10,7 +10,7 @@ title: SunStar أوريون الأنظمة
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade;
+	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade;
 </p>
 <span class="text-white">SunStar أوريون الأنظمة</span> &nbsp; هو
 <p>
@@ -67,7 +67,7 @@ title: SunStar أوريون الأنظمة
 
 تم بناء أوريون للقادة الذين يرفضون الاستقرار:
 
-** قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-success">العلوم المفتوحة</span> منصة.
+** قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-primary">العلوم المفتوحة</span> منصة.
 
 - **الحكومة &amp; صناع القرار في مجال تكنولوجيا المعلومات الدفاعية** &mdash; تلبية متطلبات الثقة الصفرية لـ NIST 800-207 والبنية الأساسية FedRAMP وعناصر التحكم في الوصول الدقيقة في مستودع التحكم في الإصدار &mdash; كل ذلك مع أمان متوافق مع FIPS 140-3 وقابل للتثبيت داخل VPN لشركتك.
 
@@ -121,7 +121,7 @@ div#lightning img {width:100%}
 
 أشجار مصدر متعددة جيجابايت ببساطة لا تتطابق معها &mdash; يتم قياس فترات بناء الموقع بالكامل بالثواني* وليس بالساعات والدقائق.  النظام يدعم بسهولة [`300 MB/s`](features) أثناء معالجة مصادرك لإنشاء موقع كامل، ولكن بالنظر إلى <span class="text-white">إدارة التبعية الفريدة والمعلقة لبراءات الاختراع</span> وظيفة، فإنه لا يحتاج أبدا تقريبا إلى اللجوء إليها:
 
-<span class="text-success"><em>نحن نبني ما تحتاجه فقط.</em></span>&trade;
+<span class="text-primary"><em>نحن نبني ما تحتاجه فقط.</em></span>&trade;
 
 هذا [التكنولوجيا](https://iconoclasts.blog/joe/apache-cms) تم اختراعه لأول مرة في أواخر عام 2010 بواسطة [بول كيرنا](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)دانيال شهاب، ديف فيشر، و [جو شايفر](https://iconoclasts.blog/joe/) كأعضاء في فريق البنية التحتية لأباتشي. العبارة "JAMstack" تم صياغته بعد سنوات (2015)، من قبل مجموعة غير مدركة لفننا السابق في هذا المجال.  لكن [سجل عام](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) هذا العرض الجديد من SunStar Systems هو شهادة على هذا الإرث الأصلي وأصوله الحقيقية مفتوحة المصدر.
 
@@ -164,7 +164,7 @@ div#lightning img {width:100%}
 
 | الميزة     |   Orion       | الفكرة | التأثير |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

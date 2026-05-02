@@ -10,7 +10,7 @@ title: SunStar 系統的 Orion
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 平台。</em></span>&trade;
+	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 平台。</em></span>&trade;
 </p>
 <span class="text-white">SunStar 系統的 Orion</span> &nbsp; 是一個
 <p>
@@ -67,7 +67,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 Orion 專為拒絕解決的領導者而打造：
 
-- **大學領袖** &mdash; 透過由版本控制的文件共用、策展和線上發布，消除校園困擾，並強化安全、開放存取的協作。將您的學術知識管理轉變為現代化且可稽核的<span class="text-success">開放科學</span> 平台。
+- **大學領袖** &mdash; 透過由版本控制的文件共用、策展和線上發布，消除校園困擾，並強化安全、開放存取的協作。將您的學術知識管理轉變為現代化且可稽核的<span class="text-primary">開放科學</span> 平台。
 
 - **政府&amp; 防禦 IT 決策者** &mdash; 符合 FedRAMP 基礎架構、NIST 800-207 零信任需求，以及在版本控制儲存區域上微點存取控制&mdash; 符合 FIPS 140-3 規範的安全性，且可在企業 VPN 中安裝。
 
@@ -121,7 +121,7 @@ div#lightning img {width:100%}
 
 多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 *秒* (而非小時和分鐘) 計算。系統容易維持於[`300 MB/s`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新思考：
 
-<span class="text-success"><em>我們只建立您需要的建置項目。</em></span>&trade;
+<span class="text-primary"><em>我們只建立您需要的建置項目。</em></span>&trade;
 
 這是[技術](https://iconoclasts.blog/joe/apache-cms) 於 2010 年底首次發明者[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/),Daniel Shahaf,Dave Fisher, [Joe Schaefer](https://iconoclasts.blog/joe/) 作為 Apache 基礎架構小組的成員。片語"JAMstack" 多年後 (2015 年)，由一個團體不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
 
@@ -164,7 +164,7 @@ div#lightning img {width:100%}
 
 | 功能     |   Orion        | 概念 | 影響力 |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} | <span class="text-success">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> | <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} | <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> | <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

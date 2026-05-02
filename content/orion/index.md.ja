@@ -10,7 +10,7 @@ title: SunStarシステムのOrion
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade;
+	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade;
 </p>
 <span class="text-white">SunStarシステムのOrion</span> &nbsp; は
 <p>
@@ -67,7 +67,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 Orionは、解決を拒否するリーダー向けに構築されています。
 
-**大学のリーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-success">オープンサイエンス</span> プラットフォーム
+**大学のリーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-primary">オープンサイエンス</span> プラットフォーム
 
 - **政府&amp; 防衛ITの意思決定者** &mdash; FedRAMPインフラストラクチャ、NIST 800-207のゼロトラスト要件、およびバージョン管理リポジトリのきめ細かいアクセス制御に対応&mdash; FIPS 140-3準拠のセキュリティと企業VPN内のインストールが可能です。
 
@@ -121,7 +121,7 @@ div#lightning img {width:100%}
 
 マルチギガバイトのソース・ツリーは一致しません&mdash; サイトのフル・ビルド期間は、時間および分ではなく*秒*で測定されます。システムは容易に維持します[`300 MB/s`](features) 完全なサイト構築のためにソースを処理中に、<span class="text-white">独自の特許出願中の依存関係管理</span> 機能性、ほとんどそれらに頼る必要がありません:
 
-<span class="text-success"><em>必要なものだけを作る。</em></span>&trade;
+<span class="text-primary"><em>必要なものだけを作る。</em></span>&trade;
 
 この[工業技術](https://iconoclasts.blog/joe/apache-cms) 最初に発明されたのは2010年後半。[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)ダニエル・シャハフ、デイヴ・フィッシャー、[Joe Schaefer](https://iconoclasts.blog/joe/) Apache Infrastructure Teamのメンバー。フレーズ"JAMstack" 数年後(2015年)、この宇宙における私たちの以前の芸術を知らないグループによって造られました。しかし、[公開レコード](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systemsによるこの新しいサービスは、そのオリジナルのレガシーと真のオープンソースの起源に対する証言です。
 
@@ -164,7 +164,7 @@ div#lightning img {width:100%}
 
 |機能     |   Orion       |概念|影響|
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} | <span class="text-success">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> | <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} | <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> | <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

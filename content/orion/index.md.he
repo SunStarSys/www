@@ -10,7 +10,7 @@ title: SunStar אוריון מערכות
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade;
+	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade;
 </p>
 <span class="text-white">SunStar אוריון מערכות</span> &nbsp; הוא
 <p>
@@ -67,7 +67,7 @@ title: SunStar אוריון מערכות
 
 אוריון בנוי למנהיגים שמסרבים להתיישב:
 
-מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, <span class="text-success">מדע פתוח</span> פלטפורמה.
+מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, <span class="text-primary">מדע פתוח</span> פלטפורמה.
 
 - **ממשלה &amp; הגנה על מקבלי החלטות בתחום ה-IT** &mdash; עמוד בדרישות של FedRAMP , NIST 800-207 עם אפס אמון ובקרות גישה מפורטות במאגר בקרת הגרסאות שלך &mdash; הכול עם אבטחה תואמת FIPS 140-3 וניתנת להתקנה בתוך ה-VPN הארגוני שלך.
 
@@ -121,7 +121,7 @@ div#lightning img {width:100%}
 
 עצי מקור מרובי ג'יגה-בתים פשוט אינם תואמים לזה &mdash; משכי הבנייה המלאים של האתר נמדדים בשניות* ולא בשעות ובדקות.  המערכת מתקיימת בקלות [`300 MB/s`](features) בעת עיבוד המקורות שלך לבניית אתרים מלאים, אך בהינתן <span class="text-white">ניהול תלות ייחודי הממתין לפטנט</span> פונקציונליות, זה כמעט אף פעם לא צריך לפנות אליהם:
 
-<span class="text-success"><em>אנחנו בונים רק את מה שאתם צריכים.</em></span>&trade;
+<span class="text-primary"><em>אנחנו בונים רק את מה שאתם צריכים.</em></span>&trade;
 
 זה [טכנולוגיה](https://iconoclasts.blog/joe/apache-cms) הומצא לראשונה בסוף 2010 על ידי [פול קרנה](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)דניאל שחף, דייב פישר [ג'ו שפר](https://iconoclasts.blog/joe/) חברי צוות התשתיות של אפאצ'י. הביטוי "JAMstack" נטבע שנים מאוחר יותר (2015), על ידי קבוצה שלא ידעה על האמנות הקודמת שלנו במרחב זה.  אבל [רשומה ציבורית](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ברור לחלוטין, והיצע חדש זה של SunStar Systems הוא עדות למורשת המקורית ולמקור הקוד הפתוח האמיתי שלה.
 
@@ -164,7 +164,7 @@ div#lightning img {width:100%}
 
 | תכונה     |   אוריון       | רעיון | השפעה |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

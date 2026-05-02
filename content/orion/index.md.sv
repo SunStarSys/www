@@ -10,7 +10,7 @@ title: SunStar Orion för system
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-success"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade;
+	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orion för system</span> &nbsp; är en
 <p>
@@ -67,7 +67,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 Orion är byggd för ledare som vägrar att bosätta sig:
 
-- **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-success">Öppen vetenskap</span> plattform.
+- **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary">Öppen vetenskap</span> plattform.
 
 - **Regering &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 med nolltillit och detaljerade åtkomstkontroller i ditt versionskontrolldatalager &mdash; Allt med FIPS 140-3-kompatibel säkerhet och kan installeras i ditt företags VPN.
 
@@ -121,7 +121,7 @@ div#lightning img {width:100%}
 
 Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`300 MB/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa dem:
 
-<span class="text-success"><em>Vi bygger bara det du behöver.</em></span>&trade;
+<span class="text-primary"><em>Vi bygger bara det du behöver.</em></span>&trade;
 
 Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
 
@@ -164,7 +164,7 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 
 | Funktion     |   Orion       | Begrepp | Påverkan |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-success">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
