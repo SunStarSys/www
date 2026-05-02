@@ -145,7 +145,10 @@ div.breadcrumbs {
 
 @media only screen and (max-width: 1000px) {
   #meta, #filter { display: none; }
-  #logo { background-image: url("/images/sunstarstaronly") !important; }
+  #logo {
+	background-image: url("/images/sunstarstaronly") !important;
+    background-size: 100% auto !important;
+  }
 }
 
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
