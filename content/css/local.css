@@ -14,6 +14,7 @@ div.jumbotron {
 }
 
 .accordion {overflow-x: hidden }
+.accordion h2 {font-size: 18px }
 
 div.jumbotron a, #index a { color:#114056 }
 
