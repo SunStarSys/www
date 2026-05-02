@@ -54,7 +54,7 @@
   {% else %}
       background-image: url("/images/sunstarlinear.png");
   {% endif %}
-      background-size: auto 100%;
+      background-size: 100% auto;
   }
 </style>
   <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
