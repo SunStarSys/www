@@ -37,12 +37,14 @@
 
 <body>
 <header style="border-bottom:solid #aaa 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid">
+<div class="container-fluid">
 	<a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/sunstarlinear" alt="SunStar Systems"></a>
     <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="navbar-header">
+</div>
+<div class="container">
+  <div class="navbar-header">
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -117,6 +119,7 @@
         placeholder="PCRE Recursive Search" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	</form>
   </div>
+</div>
 </header>
 
 {% block alert %}
