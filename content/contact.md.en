@@ -2,7 +2,7 @@ Title: Contact Us
 Keywords: South Florida, System Administration, DevOps, DevSecOps, SRE, GitOps
 Status: draft
 
-<div class="float-lg-right">
+<div class="lg right">
 {% include "enquiry_get.html"|append:lang %}
 </div>
 

@@ -7,7 +7,7 @@ status: skiss
 title: Kontakta oss
 ---
 
-<div class="float-lg-right">
+<div class="lg right">
 {% include "enquiry_get.html"|append:lang %}
 </div>
 

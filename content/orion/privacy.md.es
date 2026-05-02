@@ -8,7 +8,7 @@ status: borrador
 title: Política de privacidad de Orion
 ---
 
-<div class="float-lg-right">
+<div class="lg right">
 	<img src="../images/sunstarstaronly.png"></img>
 </div>
 

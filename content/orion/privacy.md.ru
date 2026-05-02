@@ -8,7 +8,7 @@ status: черновик
 title: Политика конфиденциальности Orion
 ---
 
-<div class="float-lg-right">
+<div class="lg right">
 	<img src="../images/sunstarstaronly.png"></img>
 </div>
 

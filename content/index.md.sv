@@ -5,7 +5,7 @@ status: publicerad
 title: Hem
 ---
 
-<div class="float-lg-right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
+<div class="lg right"{% ifequal lang ".he" %} style="float:left !important"{% endifequal %}{% ifequal lang ".ar" %} style="float:left !important"{% endifequal %}>
 	<div class="card border-success" style="max-width:25rem;background-color:transparent">
 		<div class="card-header">Nyheter</div>
         <div class="card-body">

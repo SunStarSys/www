@@ -7,7 +7,7 @@ status: 초안
 title: 연락처
 ---
 
-<div class="float-lg-right">
+<div class="lg right">
 {% include "enquiry_get.html"|append:lang %}
 </div>
 

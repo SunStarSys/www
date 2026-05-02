@@ -6,7 +6,7 @@ status: skiss
 title: Orionreferens
 ---
 
-<div class="float-lg-right">
+<div class="lg right">
 	<img src="../images/sunstarstaronly.png">
 </div>
 
