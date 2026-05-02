@@ -28,7 +28,7 @@
     <link href="/editor.md/lib/codemirror/theme/midnight.css" rel="stylesheet" media="screen">
     <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
-<!--    <script src="/editor.md/js/jquery.min.js"></script> -->
+    <script src="/editor.md/js/jquery.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
 <!--    <script type="text/javascript">
 	var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
@@ -144,10 +144,10 @@
 
   <footer>{% block footer %}{% endblock footer %}</footer>
 
-  <script src="/editor.md/js/raphael.min.js"></script>
+<!--  <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
-  <!-- <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
+  <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
   <script src="/editor.md/js/sequence-diagram.min.js"></script>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
