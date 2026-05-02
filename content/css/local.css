@@ -44,7 +44,7 @@ div.essay {
 	border-radius:8px;
 }
 
-div.essay .nav-tabs, .nav-item {
+div.essay .nav-tabs, .nav-tabs .nav-link {
    border-color: #A9BDBD !important;
 }
 
