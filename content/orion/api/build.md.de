@@ -783,7 +783,7 @@ Gleich wie `YAML::XS::Dump`.
 
 <script async="" type="module">
   var ctx = document.getElementById("myChart").getContext("2d");
-  const response = await fetch("/dynamic/search/?regex=build%3D;lang={{lang}};as_json=1;markdown_search=1");
+  const response = await fetch("/dynamic/search.pl/?regex=build%3D;lang={{lang}};as_json=1;markdown_search=1");
   if (response.ok) {
     const json = await response.json();
 	const data = json.duration;
@@ -816,7 +816,7 @@ Gleich wie `YAML::XS::Dump`.
                   if (elts) {
                       const idx = elts[0].index;
                       const revision = labels[idx].split(/:/)[0];
-                      document.location = "/dynamic/search/?regex=build=" + revision + ";lang={{lang}};markdown_search=1";
+                      document.location = "/dynamic/search.pl/?regex=build=" + revision + ";lang={{lang}};markdown_search=1";
                   }
               },
           },

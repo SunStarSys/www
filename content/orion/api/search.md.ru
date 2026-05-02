@@ -14,7 +14,7 @@ title: Orion API – поиск
 
 ----
 
-## Dynamic Search (/dynamic/search/...).
+## Dynamic Search (/dynamic/search.pl/...).
 
 Аргументы строки запроса ###
 

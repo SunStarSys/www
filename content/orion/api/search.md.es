@@ -14,7 +14,7 @@ title: API de Orion - Buscar
 
 ----
 
-## Dynamic Search (/dynamic/search/...).
+## Dynamic Search (/dynamic/search.pl/...).
 
 ### Argumentos de cadena de consulta
 
