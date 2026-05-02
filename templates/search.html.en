@@ -212,7 +212,7 @@
    <div id="meta"><pre>Hits = {{hits}}. Errors: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Duration (μs):  Total = {{tdur}}, Mean = {{meandur}}, StdDev = {{stddur}}, Median = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
 Bandwidth (KB): Total = {{ tbw }}, Mean = {{meanbw}}, StdDev = {{stdbw}}, Median = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
-    <div class="right" id="filter">
+    <div class="right text-dark" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -234,7 +234,7 @@ Bandwidth (KB): Total = {{ tbw }}, Mean = {{meanbw}}, StdDev = {{stdbw}}, Median
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>Total Matches = {{ count }}, Total Documents = {{ file_count }}. Ordered by Match Count &amp; Document Revision.</pre></div>
-	  <div class="right" id="filter">
+	  <div class="right text-dark" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

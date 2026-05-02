@@ -211,7 +211,7 @@
    <div id="meta"><pre>命中數 = {{hits}}。錯誤：4xx = {{e4xx}}, 5xx = {{e5xx}}.
 持續時間 (μs)：總計 = {{tdur}}，平均 = {{meandur}}, StdDev = {{stddur}}，中位數 = {{meddur}}，最大 = {{maxdur}}，最小 = {{mindur }}.
 頻寬 (KB)：總計 = {{ tbw }}，平均 = {{meanbw}}, StdDev = {{stdbw}}，中位數 = {{medbw}}，最大 = {{maxbw}}，最小 = {{minbw}}.</pre></div>
-    <div class="right" id="filter">
+    <div class="right text-dark" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>比對總計 = {{ count }}，文件總數 = {{ file_count }}。依比對次數排序&amp; 文件版次。</pre></div>
-	  <div class="right" id="filter">
+	  <div class="right text-dark" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

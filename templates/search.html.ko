@@ -211,7 +211,7 @@
    <div id="meta"><pre>조회수 = {{hits}}. 오류: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 기간(μs):  합계 = {{tdur}}, 평균 = {{meandur}}, StdDev = {{stddur}}, 중앙값 = {{meddur}}, 최대 = {{maxdur}}, 최소 = {{mindur }}.
 대역폭(KB): 합계 = {{ tbw }}, 평균 = {{meanbw}}, StdDev = {{stdbw}}, 중앙값 = {{medbw}}, 최대 = {{maxbw}}, 최소 = {{minbw}}.</pre></div>
-    <div class="right" id="filter">
+    <div class="right text-dark" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>총 대응 = {{ count }}, 총 문서 = {{ file_count }}. 대응 수별 정렬 &amp; 문서 개정입니다.</pre></div>
-	  <div class="right" id="filter">
+	  <div class="right text-dark" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

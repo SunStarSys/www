@@ -211,7 +211,7 @@
    <div id="meta"><pre>Aciertos = {{hits}}. Errores: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Duración (μs):  Total = {{tdur}}, Media = {{meandur}}, StdDev = {{stddur}}, Mediana = {{meddur}}, Max = {{maxdur}}, Mín = {{mindur }}.
 Ancho de banda (KB): total = {{ tbw }}, Media = {{meanbw}}, StdDev = {{stdbw}}, Mediana = {{medbw}}, Max = {{maxbw}}, Mín = {{minbw}}.</pre></div>
-    <div class="right" id="filter">
+    <div class="right text-dark" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@ Ancho de banda (KB): total = {{ tbw }}, Media = {{meanbw}}, StdDev = {{stdbw}}, 
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>Coincidencias totales = {{ count }}, Total de documentos = {{ file_count }}. Ordenado por recuento de coincidencias &amp; Revisión del documento.</pre></div>
-	  <div class="right" id="filter">
+	  <div class="right text-dark" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

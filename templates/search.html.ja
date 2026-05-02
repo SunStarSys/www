@@ -211,7 +211,7 @@
    <div id="meta"><pre>ヒット= {{hits}}。エラー: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 期間(μs): 合計= {{tdur}}平均= {{meandur}}, StdDev = {{stddur}}中央値= {{meddur}}、最大= {{maxdur}}最小= {{mindur }}.
 帯域幅(KB): 合計= {{ tbw }}平均= {{meanbw}}, StdDev = {{stdbw}}中央値= {{medbw}}、最大= {{maxbw}}最小= {{minbw}}.</pre></div>
-    <div class="right" id="filter">
+    <div class="right text-dark" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>合計一致= {{ count }}、文書合計= {{ file_count }}。照合件数によるソート&amp; 文書改訂</pre></div>
-	  <div class="right" id="filter">
+	  <div class="right text-dark" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

@@ -115,7 +115,7 @@
           </li>
         </ul>
 	</div>
-    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-dark" method=>
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="markdown_search" value="1" />
       <input class="form-control me-2" type="text" name="regex"

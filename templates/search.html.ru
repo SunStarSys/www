@@ -211,7 +211,7 @@
    <div id="meta"><pre>Попадания = {{hits}}. Ошибки: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Длительность (мкс):  Всего = {{tdur}}, среднее значение = {{meandur}}, StdDev = {{stddur}}, медиана = {{meddur}}, Макс = {{maxdur}}, мин. = {{mindur }}.
 Пропускная способность (КБ): Итого = {{ tbw }}, среднее значение = {{meanbw}}, StdDev = {{stdbw}}, медиана = {{medbw}}, Макс = {{maxbw}}, мин. = {{minbw}}.</pre></div>
-    <div class="right" id="filter">
+    <div class="right text-dark" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>Всего соответствий = {{ count }}, Всего документов = {{ file_count }}. Заказано по числу совпадений &amp; Версия документа.</pre></div>
-	  <div class="right" id="filter">
+	  <div class="right text-dark" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

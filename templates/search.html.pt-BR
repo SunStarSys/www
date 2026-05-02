@@ -211,7 +211,7 @@
    <div id="meta"><pre>Ocorrências = {{hits}}. Erros: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Duração (μs):  Total = {{tdur}}, Média = {{meandur}}, StdDev = {{stddur}}, Mediana = {{meddur}}, Máximo = {{maxdur}}, Mín = {{mindur }}.
 Largura de banda (KB): Total = {{ tbw }}, Média = {{meanbw}}, StdDev = {{stdbw}}, Mediana = {{medbw}}, Máximo = {{maxbw}}, Mín = {{minbw}}.</pre></div>
-    <div class="right" id="filter">
+    <div class="right text-dark" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@ Largura de banda (KB): Total = {{ tbw }}, Média = {{meanbw}}, StdDev = {{stdbw}
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>Total de Correspondências = {{ count }}, Total de Documentos = {{ file_count }}. Ordenado por Contagem de Correspondências &amp; Revisão do Documento.</pre></div>
-	  <div class="right" id="filter">
+	  <div class="right text-dark" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"
