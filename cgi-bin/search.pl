@@ -658,7 +658,7 @@ if ($re !~ $specials_re) {
     $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --markdown --yaml -- -P -e/], $re;
   }
   else {
-    $pffxg = run_shell_command "timeout 30 grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, $apreq->body("files");
+    $pffxg = run_shell_command "cd $d && timeout 30 grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, $apreq->body("files");
   }
 
   if ($? > 0 && $? < 256) {
