@@ -131,8 +131,9 @@ h8 {font-size: 10px}
 div.breadcrumbs {
 	z-index: 1000;
 	text-align: right;
-        float: right;
-        direction: ltr;
+    float: right;
+    direction: ltr;
+    color: black;
 }
 
 #search, #filter {
