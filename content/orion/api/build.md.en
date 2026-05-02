@@ -8,7 +8,6 @@ Dependencies: *.md.en
 ![SunStar Systems](../../images/sunstarstaronly)
 
 </div>
-<div class="row">
 <div class="accordion" id="accordionExample">
   <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -788,7 +787,6 @@ Same as `YAML::XS::Dump`.
       </div>
     </div>
   </div>
-</div>
 </div>
 <script async="" type="module">
   var ctx = document.getElementById("myChart").getContext("2d");
