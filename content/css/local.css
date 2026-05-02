@@ -147,7 +147,7 @@ div.breadcrumbs {
   #meta, #filter { display: none; }
   #logo {
 	background-image: url("/images/sunstarstaronly") !important;
-    background-size: 100% auto !important;
+    width: 37px !important;
   }
 }
 
