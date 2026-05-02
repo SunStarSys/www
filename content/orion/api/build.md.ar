@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 35082
+status: التحقق = 35135
 title: أوريون API - بناء
 ---
 
@@ -11,6 +11,19 @@ title: أوريون API - بناء
 ![SunStar الأنظمة](../../images/sunstarstaronly)
 
 </div>
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">الإحصائيات</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-toggle="tab" href="#docs" aria-selected="true" role="tab">الوثائق</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
+&nbsp;
 
 ## نظام الإنشاء
 
@@ -760,9 +773,13 @@ title: أوريون API - بناء
 </p>
 </div>
 </div>
+  </div>
 
-<script src="/editor.md/js/chart.umd.js"></script>
-<canvas id="myChart" width="100%" height="800px"></canvas>
+<div class="tab-pane fade" id="stats" role="tabpanel">
+    <script src="/editor.md/js/chart.umd.js"></script>
+    <canvas id="myChart" width="100%" height="800px"></canvas>
+</div>
+</div>
 
 <script async="" type="module">
   var ctx = document.getElementById("myChart").getContext("2d");
@@ -774,8 +791,7 @@ title: أوريون API - بناء
     var total = 0;
     for (var i=0; i < values.length; ++i)
         total += +values[i];
-
-const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" + x[4]);
+    const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" + x[4]);
     var myChart = new Chart(
       ctx,
       {
@@ -786,8 +802,7 @@ const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" + x[4]);
                   label: "Build Duration (s)",
                   data: values.reverse(),
                   backgroundColor: "#8f99fb",
-
-}],
+              }],
           },
           options: {
               indexAxis: "y",
@@ -801,7 +816,7 @@ const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" + x[4]);
                   if (elts) {
                       const idx = elts[0].index;
                       const revision = labels[idx].split(/:/)[0];
-                      document.location = "/dynamic/search/?regex=build=" + revision + ";lang=.en;markdown_search=1";
+                      document.location = "/dynamic/search/?regex=build=" + revision + ";lang={{lang}};markdown_search=1";
                   }
               },
           },
@@ -809,4 +824,4 @@ const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" + x[4]);
   }
 </script>
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 35082 $ -->
+<!-- $Date$ $المؤلف: جو $المراجعة: 35135 $ -->
