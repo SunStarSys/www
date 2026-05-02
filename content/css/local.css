@@ -1,7 +1,7 @@
 /* local overrides */
 .ltr {
     direction: ltr;
-    text-align: left;
+    text-align: left !important;
 }
 
 .rtl {
