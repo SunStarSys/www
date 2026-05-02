@@ -13,6 +13,8 @@ div.jumbotron {
 	color: black;
 }
 
+div.jumbotron a { color:#114056 }
+
 div.jumbotron img {
 	width: 200px;
 }
