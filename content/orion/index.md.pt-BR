@@ -10,9 +10,12 @@ title: SunStar Orion dos Sistemas
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;Nbsp<em>A Plataforma Wiki Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orion dos Sistemas</span> &nbsp; é uma
+
+&nbsp;
+
 <p>
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
@@ -57,6 +60,8 @@ title: SunStar Orion dos Sistemas
 
 {# lede #}<span class="text-white">Plataforma Wiki do Enterprise Jamstack</span>&nbsp; para <b>criação, gerenciamento e fornecimento</b> webpages estáticas usando Jamstack Technology para recursos dinâmicos nele{# lede #}. Para obter informações sobre preços, consulte nosso [Planos Orion](plans).
 
+&nbsp;
+
 ### Aqui está o passo, tomador de decisão executivo...
 
 <span class="text-white">Por que escolher o Orion? O Jamstack Wiki Plataforma Que Supera &mdash; Custos muito menores</span>
@@ -67,7 +72,7 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 Orion é construído para líderes que se recusam a se estabelecer:
 
-- **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary">Ciência aberta</span> plataforma.
+- **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary-emphasis">Ciência aberta</span> plataforma.
 
 - **Governo &amp; tomadores de decisão de TI de defesa** &mdash; Atenda à infraestrutura FedRAMP, aos requisitos de confiança zero do NIST 800-207 e aos controles de acesso refinados em seu repositório de controle de versão &mdash; tudo com segurança compatível com FIPS 140-3 e instalável dentro de sua VPN corporativa.
 
@@ -94,8 +99,8 @@ Isso não é marketing spin &mdash; É uma herança de engenharia aberta verific
 </div>
 
 <div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div class="embed-responsive embed-responsive-16by9 right">
+	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -121,7 +126,7 @@ div#lightning img {width:100%}
 
 Árvores de origem de vários gigabytes simplesmente não são correspondentes para ele &mdash; durações completas de compilação do site são medidas em *segundos*, não em horas e minutos.  O sistema sustenta facilmente [`300 MB/s`](features) ao processar suas fontes para compilações completas do site, mas dada a sua <span class="text-white">gerenciamento exclusivo de dependência pendente de patente</span> funcionalidade, quase nunca precisa recorrer a eles:
 
-<span class="text-primary"><em>Nós só construímos o que você precisa construído.</em></span>&trade;
+<span class="text-primary-emphasis"><em>Nós só construímos o que você precisa construído.</em></span>&trade;
 
 Esta [tecnologia](https://iconoclasts.blog/joe/apache-cms) foi inventado no final de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher, e [Joe Schaefer](https://iconoclasts.blog/joe/) como membros da equipe de infraestrutura da Apache. A frase "JAMstack" foi cunhado anos depois (2015), por um grupo inconsciente da nossa arte anterior neste espaço.  Mas o [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) é cristalino, e esta nova oferta da SunStar Systems é testemunho desse legado original e de suas verdadeiras origens de código aberto.
 
@@ -146,11 +151,11 @@ Veja nosso [Planos Orion](plans) para os acordos atuais.
 
 <center>
 
-<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
 <div class="card-header">Conceitos Básicos</div>
 <div class="card-body text-white">
 
-A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <https://iconoclasts.blog> e esvaziar as fontes em tronco/conteúdo.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
+A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <https://iconoclasts.blog> e esvaziar as origens de markdown em tronco/conteúdo.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
 
 </div>
 </div>
@@ -164,7 +169,7 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 
 | Recurso     |   Orion       | Noção | Confluência |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
@@ -215,4 +220,4 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 }
 </style>
 
-<!-- $Date$Autor: joe $Revisão: 34844 $ -->
+<!-- $Date$Autor: joe $Revisão: 35409 $ -->

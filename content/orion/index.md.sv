@@ -10,9 +10,12 @@ title: SunStar Orion för system
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Wiki-plattformen Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orion för system</span> &nbsp; är en
+
+&nbsp;
+
 <p>
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
@@ -57,6 +60,8 @@ title: SunStar Orion för system
 
 {# lede #}<span class="text-white">Wiki-plattformen Enterprise Jamstack</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder Jamstack-teknik för dynamiska funktioner däri{# lede #}. För prisinformation, se vår [Orionplaner](plans).
 
+&nbsp;
+
 ### Här är platsen, beslutsfattare för ledningen...
 
 <span class="text-white">Varför välja Orion? Jamstack Wiki-plattformen som överträffar &mdash; och kostar betydligt mindre</span>
@@ -67,7 +72,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 Orion är byggd för ledare som vägrar att bosätta sig:
 
-- **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary">Öppen vetenskap</span> plattform.
+- **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
 
 - **Regering &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 med nolltillit och detaljerade åtkomstkontroller i ditt versionskontrolldatalager &mdash; Allt med FIPS 140-3-kompatibel säkerhet och kan installeras i ditt företags VPN.
 
@@ -94,8 +99,8 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 </div>
 
 <div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div class="embed-responsive embed-responsive-16by9 right">
+	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -121,7 +126,7 @@ div#lightning img {width:100%}
 
 Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`300 MB/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa dem:
 
-<span class="text-primary"><em>Vi bygger bara det du behöver.</em></span>&trade;
+<span class="text-primary-emphasis"><em>Vi bygger bara det du behöver.</em></span>&trade;
 
 Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
 
@@ -146,11 +151,11 @@ Se våra [Orionplaner](plans) för de aktuella avtalen.
 
 <center>
 
-<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
 <div class="card-header">Komma igång</div>
 <div class="card-body text-white">
 
-Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka källorna i bagageutrymmet/innehållet.  ~90 % av stylinganpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
+Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka nedsättningskällorna i bagageutrymmet/innehållet.  ~90 % av formatanpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
 
 </div>
 </div>
@@ -164,7 +169,7 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 
 | Funktion     |   Orion       | Begrepp | Påverkan |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

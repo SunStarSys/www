@@ -10,9 +10,12 @@ title: SunStar 시스템스 오리온
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Jamstack Wiki 플랫폼</em></span>&trade;
 </p>
 <span class="text-white">SunStar 시스템스 오리온</span> &nbsp; 다음과 같음
+
+&nbsp;
+
 <p>
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
@@ -57,6 +60,8 @@ title: SunStar 시스템스 오리온
 
 {# lede #}<span class="text-white">Enterprise Jamstack 위키 플랫폼</span>&nbsp; <b>만들기, 관리 및 제공</b> 정적 웹페이지는 Jamstack 기술을 사용하여 동적 기능을 제공합니다.{# lede #}. 가격 정보는 [오리온 계획](plans).
 
+&nbsp;
+
 ### 피치(Pitch), Executive Decision Maker...
 
 <span class="text-white">왜 Orion을 선택해야합니까? 성능이 뛰어난 Jamstack Wiki 플랫폼 &mdash; 비용 절감</span>
@@ -67,7 +72,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 오리온은 정착을 거부하는 지도자들을 위해 지어졌다:
 
-- **대학 리더** &mdash; 버전 제어 문서 공유, 큐레이션 및 온라인 게시를 통해 캠퍼스 표절을 없애고 안전한 개방형 협업을 지원합니다. 학업 지식 관리를 감사 가능한 최신 상태로 변환합니다. <span class="text-primary">과학 열기</span> 플랫폼.
+- **대학 리더** &mdash; 버전 제어 문서 공유, 큐레이션 및 온라인 게시를 통해 캠퍼스 표절을 없애고 안전한 개방형 협업을 지원합니다. 학업 지식 관리를 감사 가능한 최신 상태로 변환합니다. <span class="text-primary-emphasis">과학 열기</span> 플랫폼.
 
 - **정부 &amp; 국방 IT 의사 결정자** &mdash; FedRAMP 인프라, NIST 800-207 제로 트러스트 요구 사항 및 버전 제어 저장소의 세분화된 액세스 제어 충족 &mdash; FIPS 140-3 호환 보안 및 기업 VPN 내부에 설치할 수 있습니다.
 
@@ -94,8 +99,8 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 </div>
 
 <div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div class="embed-responsive embed-responsive-16by9 right">
+	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -121,7 +126,7 @@ div#lightning img {width:100%}
 
 다중 기가바이트 소스 트리는 단순히 일치하지 않습니다. &mdash; 전체 사이트 빌드 기간은 시간 및 분이 아닌 *초*로 측정됩니다.  시스템이 쉽게 유지됨 [`300 MB/s`](features) 전체 사이트 빌드에 대한 소스를 처리하는 동안 <span class="text-white">특허 출원 중인 고유 종속성 관리</span> 기능, 거의 그들에게 의존 할 필요가 없습니다 :
 
-<span class="text-primary"><em>우리는 당신이 만들어야 할 것만 만듭니다.</em></span>&trade;
+<span class="text-primary-emphasis"><em>우리는 당신이 만들어야 할 것만 만듭니다.</em></span>&trade;
 
 여기 [기술](https://iconoclasts.blog/joe/apache-cms) 2010년 말에 처음 발명된 [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)다니엘 샤하프, 데이브 피셔, 그리고 [Joe Schaefer](https://iconoclasts.blog/joe/) 아파치 인프라 팀의 일원으로. 구문 "JAMstack" 몇 년 후 (2015),이 공간에서 우리의 이전 예술을 모르는 그룹에 의해 만들어졌습니다.  그러나 [공개 레코드](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systems의 새로운 오퍼링은 원래 레거시와 진정한 오픈 소스 기원에 대한 간증입니다.
 
@@ -146,11 +151,11 @@ div#lightning img {width:100%}
 
 <center>
 
-<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
 <div class="card-header">시작하기</div>
 <div class="card-body text-white">
 
-가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 소스를 숨깁니다. 스타일 지정 사용자 정의의 90%가 [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
+가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 매가인하 출처를 숨깁니다. 스타일 지정 사용자정의의 약 90%가 다음에 있습니다. [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
 
 </div>
 </div>
@@ -164,7 +169,7 @@ div#lightning img {width:100%}
 
 | 기능     |   오리온       | 개념 | 영향 |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
@@ -215,4 +220,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 34844 $ -->
+<!-- $Date$ 저자 : 조 $ 개정 : 35409 $ -->

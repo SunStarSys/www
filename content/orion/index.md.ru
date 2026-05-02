@@ -10,9 +10,12 @@ title: SunStar Орион систем
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Платформа Jamstack Wiki.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Орион систем</span> &nbsp; является
+
+&nbsp;
+
 <p>
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
@@ -57,6 +60,8 @@ title: SunStar Орион систем
 
 {# lede #}<span class="text-white">Корпоративная платформа Jamstack Wiki</span>&nbsp; для <b>создания, управления и доставки</b> статические веб-страницы с использованием технологии Jamstack для динамических функций в них{# lede #}. Для получения информации о ценах см. наш [Планы Ориона](plans).
 
+&nbsp;
+
 ### Вот шаг, ответственный за принятие решений...
 
 <span class="text-white">Почему выбирают Орион? Платформа Jamstack Wiki, которая превосходит &mdash; и затраты намного меньше</span>
@@ -67,7 +72,7 @@ title: SunStar Орион систем
 
 Орион построен для лидеров, которые отказываются поселиться:
 
-- **Лидеры университетов** &mdash; Устраните плагиат в кампусе и обеспечьте безопасную совместную работу с открытым доступом с помощью совместного использования документов, курирования и онлайн-публикации с контролем версий. Превратите управление академическими знаниями в современное, доступное для аудита, <span class="text-primary">Открытая наука</span> Платформа.
+- **Лидеры университетов** &mdash; Устраните плагиат в кампусе и обеспечьте безопасную совместную работу с открытым доступом с помощью совместного использования документов, курирования и онлайн-публикации с контролем версий. Превратите управление академическими знаниями в современное, доступное для аудита, <span class="text-primary-emphasis">Открытая наука</span> Платформа.
 
 - **Правительство &amp; лица, принимающие решения в области ИТ** &mdash; Соблюдайте требования к инфраструктуре FedRAMP, NIST 800-207, требующие нулевого доверия, и детализированные средства контроля доступа в репозитории управления версиями &mdash; все с безопасностью, совместимой с FIPS 140-3, и возможностью установки внутри вашего корпоративного VPN.
 
@@ -94,8 +99,8 @@ title: SunStar Орион систем
 </div>
 
 <div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div class="embed-responsive embed-responsive-16by9 right">
+	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -121,7 +126,7 @@ div#lightning img {width:100%}
 
 Многогигабайтные исходные деревья просто не соответствуют им &mdash; Полная продолжительность сборки сайта измеряется в *секундах*, а не часах и минутах.  Система легко поддерживает [`300 MB/s`](features) при обработке ваших источников для полной сборки сайта, но учитывая его <span class="text-white">уникальное, запатентованное управление зависимостью</span> функциональность, к ней практически никогда не нужно прибегать:
 
-<span class="text-primary"><em>Мы строим только то, что вам нужно.</em></span>&trade;
+<span class="text-primary-emphasis"><em>Мы строим только то, что вам нужно.</em></span>&trade;
 
 Это [технология](https://iconoclasts.blog/joe/apache-cms) был впервые изобретен в конце 2010 года [Пол Керна](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Даниэль Шахаф, Дейв Фишер, и [Джо Шефер](https://iconoclasts.blog/joe/) как члены команды инфраструктуры Apache. Фраза "JAMstack" был изобретен много лет спустя (2015), группой, не знавшей о нашем предыдущем искусстве в этом пространстве.  Но [общественная запись](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) кристально ясно, и это новое предложение от SunStar Systems является свидетельством этого оригинального наследия и его истинного происхождения с открытым исходным кодом.
 
@@ -146,11 +151,11 @@ div#lightning img {width:100%}
 
 <center>
 
-<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
 <div class="card-header">Начало работы</div>
 <div class="card-body text-white">
 
-Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить источники в багажнике/контенте. ~90% настроек стиля в [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
+Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить из источников разметки в багажнике/контенте. ~90% настроек стиля находятся в [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
 
 </div>
 </div>
@@ -164,7 +169,7 @@ div#lightning img {width:100%}
 
 | Особенность     |   Орион       | Понятие | Слияние |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
@@ -215,4 +220,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$Автор: Джо $Пересмотр: 34844 $ -->
+<!-- $Date$Автор: Джо $Пересмотр: 35409 $ -->

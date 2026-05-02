@@ -10,9 +10,12 @@ title: SunStar أوريون الأنظمة
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>منصة ويكي جامستاك.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>منصة ويكي جامستاك.</em></span>&trade;
 </p>
 <span class="text-white">SunStar أوريون الأنظمة</span> &nbsp; هو
+
+&nbsp;
+
 <p>
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
@@ -57,6 +60,8 @@ title: SunStar أوريون الأنظمة
 
 {# lede #}<span class="text-white">منصة ويكي Enterprise Jamstack</span>&nbsp; <b>لإنشاء وإدارة وتقديم</b> صفحات ويب ثابتة باستخدام تقنية Jamstack للحصول على ميزات ديناميكية فيها{# lede #}. للحصول على معلومات التسعير، راجع [خطط أوريون](plans).
 
+&nbsp;
+
 ### هنا هو الملعب، صانع القرار التنفيذي...
 
 <span class="text-white">لماذا تختار أوريون؟ منصة ويكي جامستاك التي تتفوق على الأداء &mdash; والتكاليف أقل بكثير</span>
@@ -67,7 +72,7 @@ title: SunStar أوريون الأنظمة
 
 تم بناء أوريون للقادة الذين يرفضون الاستقرار:
 
-** قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-primary">العلوم المفتوحة</span> منصة.
+** قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-primary-emphasis">العلوم المفتوحة</span> منصة.
 
 - **الحكومة &amp; صناع القرار في مجال تكنولوجيا المعلومات الدفاعية** &mdash; تلبية متطلبات الثقة الصفرية لـ NIST 800-207 والبنية الأساسية FedRAMP وعناصر التحكم في الوصول الدقيقة في مستودع التحكم في الإصدار &mdash; كل ذلك مع أمان متوافق مع FIPS 140-3 وقابل للتثبيت داخل VPN لشركتك.
 
@@ -94,8 +99,8 @@ title: SunStar أوريون الأنظمة
 </div>
 
 <div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9">
-	 	<iframe class="embed-responsive-item" style="max-width:560;max-height:315" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	<div class="embed-responsive embed-responsive-16by9 right">
+	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
@@ -121,7 +126,7 @@ div#lightning img {width:100%}
 
 أشجار مصدر متعددة جيجابايت ببساطة لا تتطابق معها &mdash; يتم قياس فترات بناء الموقع بالكامل بالثواني* وليس بالساعات والدقائق.  النظام يدعم بسهولة [`300 MB/s`](features) أثناء معالجة مصادرك لإنشاء موقع كامل، ولكن بالنظر إلى <span class="text-white">إدارة التبعية الفريدة والمعلقة لبراءات الاختراع</span> وظيفة، فإنه لا يحتاج أبدا تقريبا إلى اللجوء إليها:
 
-<span class="text-primary"><em>نحن نبني ما تحتاجه فقط.</em></span>&trade;
+<span class="text-primary-emphasis"><em>نحن نبني ما تحتاجه فقط.</em></span>&trade;
 
 هذا [التكنولوجيا](https://iconoclasts.blog/joe/apache-cms) تم اختراعه لأول مرة في أواخر عام 2010 بواسطة [بول كيرنا](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)دانيال شهاب، ديف فيشر، و [جو شايفر](https://iconoclasts.blog/joe/) كأعضاء في فريق البنية التحتية لأباتشي. العبارة "JAMstack" تم صياغته بعد سنوات (2015)، من قبل مجموعة غير مدركة لفننا السابق في هذا المجال.  لكن [سجل عام](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) هذا العرض الجديد من SunStar Systems هو شهادة على هذا الإرث الأصلي وأصوله الحقيقية مفتوحة المصدر.
 
@@ -146,11 +151,11 @@ div#lightning img {width:100%}
 
 <center>
 
-<div class="card border-success" style="max-width:25rem;background-color:transparent">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
 <div class="card-header">البدء</div>
 <div class="card-body text-white">
 
-أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء المصادر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
+أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء مصادر تخفيض السعر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
 
 </div>
 </div>
@@ -164,7 +169,7 @@ div#lightning img {width:100%}
 
 | الميزة     |   Orion       | الفكرة | التأثير |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
@@ -215,4 +220,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 34844 $ -->
+<!-- $Date$ $المؤلف: جو $المراجعة: 35409 $ -->
