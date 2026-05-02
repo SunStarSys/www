@@ -259,7 +259,9 @@ Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdb
 
 {% block footer %}
 <script type="text/javascript">
-  document.cookie = "can_search=1; path=/; max-age=" + (86400 *30);
+  var regex="{{regex}}";
+  if (! regex.match(/^build=/) && ! regex.match(/^[@\w.-]+=/))
+    document.cookie = "can_search=1; path=/; max-age=" + (86400 *30);
 </script>
 {% if duration %}
 <script async="" type="text/javascript">
