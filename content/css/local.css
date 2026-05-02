@@ -9,6 +9,10 @@
     text-align: right !important;
 }
 
+div.jumbotron {
+	color: black;
+}
+
 div.jumbotron img {
 	width: 200px;
 }
