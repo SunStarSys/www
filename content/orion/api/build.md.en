@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: draft
+status: verified=35132
 Dependencies: *.md.en
 
 <div class="right">
@@ -8,13 +8,12 @@ Dependencies: *.md.en
 ![SunStar Systems](../../images/sunstarstaronly)
 
 </div>
-<div class="bs">
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-bs-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Statistics</a>
+    <a class="nav-link" data-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Statistics</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentation</a>
+    <a class="nav-link active" data-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentation</a>
   </li>
 </ul>
 </div>
