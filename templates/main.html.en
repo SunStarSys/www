@@ -41,7 +41,7 @@
 </head>
 
 <body>
-<header style="border-bottom:solid #aaa 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
+<header style="border-bottom:solid #A9BDBD 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
 <a class="navbar-brand" href="/index.html{{lang}}">
 	{% if path|starts_with:"/orion/" %}
