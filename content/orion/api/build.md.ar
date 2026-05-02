@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 35135
+status: التحقق = 35322
 title: أوريون API - بناء
 ---
 
@@ -13,10 +13,10 @@ title: أوريون API - بناء
 </div>
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">الإحصائيات</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">الإحصائيات</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" data-toggle="tab" href="#docs" aria-selected="true" role="tab">الوثائق</a>
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">الوثائق</a>
   </li>
 </ul>
 </div>
@@ -824,4 +824,4 @@ title: أوريون API - بناء
   }
 </script>
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 35135 $ -->
+<!-- $Date$ $المؤلف: جو $المراجعة: 35322 $ -->

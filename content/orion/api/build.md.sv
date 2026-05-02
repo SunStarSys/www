@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=35135
+status: verifierad=35322
 title: Orion API - bygge
 ---
 
@@ -13,10 +13,10 @@ title: Orion API - bygge
 </div>
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Statistik</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Statistik</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" data-toggle="tab" href="#docs" aria-selected="true" role="tab">Dokumentation</a>
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Dokumentation</a>
   </li>
 </ul>
 </div>

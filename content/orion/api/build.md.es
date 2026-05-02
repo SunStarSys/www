@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado=35135
+status: verificado=35322
 title: API de Orion - Crear
 ---
 
@@ -13,10 +13,10 @@ title: API de Orion - Crear
 </div>
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Estadísticas</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Estadísticas</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" data-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentación</a>
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentación</a>
   </li>
 </ul>
 </div>
@@ -824,4 +824,4 @@ Igual que `YAML::XS::Dump`.
   }
 </script>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 35135 $ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 35322 $ -->

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=35135
+status: проверено=35322
 title: API Orion – сборка
 ---
 
@@ -13,10 +13,10 @@ title: API Orion – сборка
 </div>
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Статистика</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#stats" aria-selected="false" role="tab" tabindex="-1">Статистика</a>
   </li>
   <li class="nav-item" role="presentation">
-    <a class="nav-link active" data-toggle="tab" href="#docs" aria-selected="true" role="tab">Документация</a>
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Документация</a>
   </li>
 </ul>
 </div>
@@ -824,4 +824,4 @@ title: API Orion – сборка
   }
 </script>
 
-<!-- $Date$Автор: Джо $Пересмотр: 35135 $ -->
+<!-- $Date$Автор: Джо $Пересмотр: 35322 $ -->
