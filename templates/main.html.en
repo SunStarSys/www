@@ -28,6 +28,7 @@
     <link href="/editor.md/lib/codemirror/theme/midnight.css" rel="stylesheet" media="screen">
     <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
+	<script src="/js/bootstrap.min.js"></script>
     <script src="/editor.md/js/jquery.min.js"></script>
     {% block header %}{% endblock %}
     {% block analytics %}
@@ -139,7 +140,6 @@
 
   <footer>{% block footer %}{% endblock footer %}</footer>
 
-  <script src="/js/bootstrap.min.js"></script>
   <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
