@@ -131,7 +131,7 @@ div.breadcrumbs {
 
 #watch, #unwatch { display: none }
 
-#search button, #filter button { height: 37px }
+#search button, #filter button { height: 37px; background-color: #A9BDBD; border: 1px solid rgba(0,0,0,0.15);}
 
 #search input, #filter input { max-width: 13em }
 @media only screen and (max-width: 1000px) {
