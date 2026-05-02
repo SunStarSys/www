@@ -811,7 +811,6 @@ Same as `YAML::XS::Dump`.
                   label: "Build Duration (s)",
                   data: values.reverse(),
                   backgroundColor: "#8f99fb",
-
               }],
           },
           options: {
