@@ -47,7 +47,7 @@
 <style type="text/css">
   #logo {
      display: block;
-     height: 39px;
+     height: 37px;
 	 width: 100px;
   {% if path|starts_with:"/orion/" %}
      background-image: url("/images/sunstar-orion-symbol-linear.png");
