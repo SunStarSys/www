@@ -211,7 +211,7 @@
    <div id="meta"><pre>Accès réussis = {{hits}}. Erreurs : 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Durée (µs) : Total = {{tdur}}, Moyenne = {{meandur}}, StdDev = {{stddur}}, Médiane = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
 Bande passante (ko) : Total = {{ tbw }}, Moyenne = {{meanbw}}, StdDev = {{stdbw}}, Médiane = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
-    <div class="right text-dark" id="filter">
+    <div class="right text-light" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@ Bande passante (ko) : Total = {{ tbw }}, Moyenne = {{meanbw}}, StdDev = {{stdbw}
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>Nombre total de correspondances = {{ count }}, Total des documents = {{ file_count }}. Trié par nombre de correspondances &amp; Révision du document.</pre></div>
-	  <div class="right text-dark" id="filter">
+	  <div class="right text-light" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

@@ -211,7 +211,7 @@
    <div id="meta"><pre>الإصابات = {{hits}}. الأخطاء: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 المدة (μs):  الإجمالي = {{tdur}}، الوسط = {{meandur}}, StdDev = {{stddur}}، الوسيط = {{meddur}}، الحد الأقصى = {{maxdur}}، الحد الأدنى = {{mindur }}.
 عرض النطاق الترددي (بالكيلوبايت): الإجمالي = {{ tbw }}، الوسط = {{meanbw}}, StdDev = {{stdbw}}، الوسيط = {{medbw}}، الحد الأقصى = {{maxbw}}، الحد الأدنى = {{minbw}}.</pre></div>
-    <div class="right text-dark" id="filter">
+    <div class="right text-light" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>إجمالي حالات المطابقة = {{ count }}، إجمالي المستندات = {{ file_count }}. عدد الطلبات حسب المطابقة &amp; مراجعة المستند.</pre></div>
-	  <div class="right text-dark" id="filter">
+	  <div class="right text-light" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

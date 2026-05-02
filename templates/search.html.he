@@ -211,7 +211,7 @@
    <div id="meta"><pre>פגיעות = {{hits}}. שגיאות: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 משך (μs):  סך הכל = {{tdur}}, ממוצע = {{meandur}}, StdDev = {{stddur}}, חציון = {{meddur}}, מרבי = {{maxdur}}, מזערי = {{mindur }}.
 רוחב פס (KB): סה"כ = {{ tbw }}, ממוצע = {{meanbw}}, StdDev = {{stdbw}}, חציון = {{medbw}}, מרבי = {{maxbw}}, מזערי = {{minbw}}.</pre></div>
-    <div class="right text-dark" id="filter">
+    <div class="right text-light" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>סה"כ התאמות = {{ count }}, סה"כ מסמכים = {{ file_count }}. הוזמן לפי ספירת התאמות &amp; מהדורת מסמך.</pre></div>
-	  <div class="right text-dark" id="filter">
+	  <div class="right text-light" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"

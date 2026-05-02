@@ -211,7 +211,7 @@
    <div id="meta"><pre>Träffar = {{hits}}. Fel: 4xx = {{e4xx}}, 5xx = {{e5xx}}.
 Varaktighet (μs): Totalt = {{tdur}}, medelvärde = {{meandur}}, StdDev = {{stddur}}, Median = {{meddur}}, Max = {{maxdur}}, Min = {{mindur }}.
 Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdbw}}, Median = {{medbw}}, Max = {{maxbw}}, Min = {{minbw}}.</pre></div>
-    <div class="right text-dark" id="filter">
+    <div class="right text-light" id="filter">
       <div class="d-flex float-end">
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
@@ -233,7 +233,7 @@ Bandbredd (kbyte): Totalt = {{ tbw }}, medelvärde = {{meanbw}}, StdDev = {{stdb
   <form method="POST" class="form-inline row">
       {% if matches.0 %}
 	  <div id="meta"><pre>Totalt antal matchningar = {{ count }}, Totalt antal dokument = {{ file_count }}. Antal sorterade per matchning &amp; Dokumentrevision</pre></div>
-	  <div class="right text-dark" id="filter">
+	  <div class="right text-light" id="filter">
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"
