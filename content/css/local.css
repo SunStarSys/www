@@ -13,6 +13,8 @@ div.jumbotron {
 	color: black;
 }
 
+input::placeholder {color: #839496}
+
 .accordion {overflow-x: hidden; background-color: #073642 }
 
 div.jumbotron a, #index a { color:#114056 }
