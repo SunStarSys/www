@@ -27,7 +27,7 @@
   <input name="subject" id="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
 <input type="hidden" name="lang" value="{{ lang }}" />
-  <button name="submit" class="btn btn-outline-success" value=1 >送信</button>
+  <button name="submit" class="btn btn-outline-success-emphasis" value=1 >送信</button>
 
 <br><br>
 

@@ -19,7 +19,7 @@
 </p>
 
 {% for c in headers.categories %}
-<button type="button" class="btn btn-success">
+<button type="button" class="btn btn-success-emphasis">
   <a style="color:#fff" href="{{category_root|default_if_none:".."}}/{{c}}">{{c}}</a></button>
 &nbsp;
 {% endfor %}

@@ -11,7 +11,7 @@
 <h1>{{title|safe}}<span class="text-danger">/</span>{% if filter %}{{filter}}{% else %}{{regex}}{% endif %}<span class="text-danger">/ги</span></h1><div class="breadcrumbs">{{ breadcrumbs|safe }}</div>
 <div class="container">
   {% for k in specials_re|admit:"a-z=|"|split:"\\|"|dictsort %}
-  <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success text-white">{{k}}</span></a>
+  <a href="./?regex={{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-success-emphasis text-white">{{k}}</span></a>
   &nbsp;
   {% endfor %}
   {% for k in keywords %}
@@ -24,7 +24,7 @@
   <canvas id="myChart" width="100%" height="800px"></canvas>
   {% endif %}
   {% ifequal specials "diff=" %}
-  <div class="card text-dark border-success mb-3">
+  <div class="card text-dark border-success-emphasis mb-3">
     <div class="card-header">{{meta|vcs_author:r.path_info}}
       <small><em> включено {{ meta|vcs_date:lang }} в {{meta|vcs_time:lang}}</em></small>
 	</div>
@@ -39,7 +39,7 @@
 </div>
 {% else %}
 {% ifequal specials "log=" %}
-<div class="card text-dark border-success mb-3">
+<div class="card text-dark border-success-emphasis mb-3">
   <div class="card-header text-dark">Последние изменения
   </div>
   <div class="card-body">
@@ -74,7 +74,7 @@
 {% endifequal %}
 
 {% ifequal specials "notify=" %}
-<div class="card text-dark border-success mb-3">
+<div class="card text-dark border-success-emphasis mb-3">
   <div class="card-header">Последние изменения</div>
   <div class="card-body">
     <dl>
@@ -122,7 +122,7 @@
   <br>
   {% for f in friends %}
   {% if f.members %}
-  <div class="card text-dark border-success mb-3">
+  <div class="card text-dark border-success-emphasis mb-3">
     <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText|safe }}</a></div>
     <div class="card-body">
       <ul>
@@ -133,7 +133,7 @@
     </div>
   </div>
   {% else %}
-  <div class="card text-dark border-success mb-3">
+  <div class="card text-dark border-success-emphasis mb-3">
     <div class="card-header"><a href="./?regex={{f.text}};lang={{lang}};markdown_search={{markdown_search}}">{{ f.displayText|safe }}</a></div>
     <div class="card-body">
       <ul>
