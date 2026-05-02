@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}"{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
+<html lang="{{ lang|cut:"." }}"{% ifequal lang ".he" %} dir="rtl"{% endifequal %}{% ifequal lang ".ar" %} dir="rtl"{% endifequal %}>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +8,11 @@
     <meta name="author" content="Joe Schaefer">
     <meta name="keywords" content="{%for k in headers.keywords%}{{k}},{%endfor%}{{ facts.keywords }}">
     <meta name="theme-color" content="black">
-        {% ifequal path|dirname "/orion" %}
+        {% if path|starts_with:"/orion/" %}
 	<meta property="og:image" content="/images/sunstar-orion-symbol-linear.png">
 	{% else %}
 	<meta property="og:image" content="/images/sunstarstaronly.png">
-	{% endifequal %}
+	{% endif %}
     <title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 	{% if permalink %}
 	<link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
@@ -29,99 +29,98 @@
     <link href="/css/local.css" rel="stylesheet" media="screen">
     <link href="/favicon.png" rel="icon">
     <script src="/editor.md/js/jquery.min.js"></script>
-    {% block header %}{% endblock %}
+	<script src="/js/bootstrap.min.js"></script>
+<!--    <script type="text/javascript">
+	var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
+    $.fn.bootstrapBtn = bootstrapButton; // give $().bootstrapBtn the Bootstrap functionality
+	</script> -->
+	{% block header %}{% endblock %}
     {% block analytics %}
     {% include "analytics.html" %}
     {% endblock %}
 </head>
 
 <body>
-<header>
-  <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-brand">
-	{% ifequal path|dirname "/orion" %}
-	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
-	{% else %}
-          <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
-        {% endifequal %}
-        </div>
-      </div>
-
-<div class="navbar-collapse collapse" id="navbarResponsive">
+<header style="border-bottom:solid #A9BDBD 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
+<div class="container-fluid">
+<a class="navbar-brand" href="/index.html{{lang}}" id="logo">&nbsp;</a>
+<style type="text/css">
+  #logo {
+     display: block;
+     height: 37px;
+	 width: 100px;
+  {% if path|starts_with:"/orion/" %}
+     background-image: url("/images/sunstar-orion-symbol-linear.png");
+  {% else %}
+     background-image: url("/images/sunstarlinear.png");
+  {% endif %}
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+  }
+</style>
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
-          <li class="nav-item{% ifequal path "/index.html"|append:lang %} active
-            {% endifequal %}"><a class="nav-link text" href="/">Главная</a></li>
-          <li class="nav-item{% ifequal path "/about.html"|append:lang %} active
-            {% endifequal %}"><a class="nav-link text" href="/about">О нас</a></li>
-          <li class="nav-item{% ifequal path "/contact.html"|append:lang %} active
-             {% endifequal %}"><a class="nav-link" href="/contact">Контакт</a></li>
+          <li class="nav-item{% if path|starts_with:"/index.md" %}
+            активный
+            {% endif %}"><a class="nav-link text" href="/index.html{{lang}}">Главная</a></li>
+          <li class="nav-item{% if path|starts_with:"/about.md" %}
+            активный
+            {% endif %}"><a class="nav-link text" href="/about.html{{lang}}">О нас</a></li>
+			<li class="nav-item{% if path|starts_with:"/contact.md" %}
+             активный
+             {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Контакт</a></li>
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown">Продукты... <span class="caret"></span></a>
-            <ul class="dropdown-menu {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu">
-              <li class="dropdown-item{% ifequal path "/orion/index.html"|append:lang %} active
-                {% endifequal %}"><a class="nav-link text-white" href="/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
-              <li class="dropdown-item{% ifequal path "/orion/plans.html"|append:lang %} active
-                {% endifequal %}"><a class="nav-link text-white"
+            <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Продукты... <span class="caret"></span></a>
+
+<ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
+			aria-labelledby="продукты">
+              <li class="dropdown-item"><a class="nav-link text-dark" href="/orion/index.html{{ lang }}">Орион&trade; Платформа Jamstack Wiki</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark"
                 href="/orion/plans.html{{ lang }}">Ценовые планы Orion</a></li>
             </ul>
           </li>
-          <li class="nav-item{% ifequal path "/open-source.html"|append:lang %} active
-																{% endifequal %}"><a class="nav-link" href="/open-source">Открытый исходный код</a></li>
-
-<li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown">Подробнее... <span class="caret"></span></a>
-            <ul class="dropdown-menu {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu">
-			<li class="dropdown-item">
-                <a class="nav-link text-white" href="https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/">Источник отделения</a>
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Больше... <span class="caret"></span></a>
+            <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
+			aria-labelledby="больше">
+              <li class="dropdown-item">
+                <a class="nav-link text-dark" href="https://github.com/SunStarSys/www">Источник отделения</a>
               </li>
               <li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">i18n</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Британские единицы</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Испанский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">немецкий</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Французский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Португальский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Русский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Китайский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Корейский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Японский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Арабский</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Иврит</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">шведский</a></li>
-
-<li class="dropdown-item divider"></li>
-              <li class="dropdown-header text-white">Взаимодействия</li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Клиенты</a></li>
-              <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Эссе</a></li>
+              <li class="dropdown-header text-dark">i18n</li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.en">Британские единицы</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.es">Испанский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.de">немецкий</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Французский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Русский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Китайский</a></li>
+            <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Корейский</a></li>
+             <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Японский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Иврит</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Арабский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">шведский</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Португальский</a></li>
+              <li class="dropdown-item divider"></li>
+            <li class="dropdown-header text-white">Взаимодействия</li>
+            <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Клиенты</a></li>
+            <li class="dropdown-item"><a class="nav-link text-white" href="https://www.iconoclasts.blog/joe/">Эссе</a></li>
             </ul>
           </li>
-
-<li class="nav-item{% ifequal path "/powered-by.html"|append:lang %} active
-            {% endifequal %}"><a class="nav-link" href="/powered-by">Создано...</a>
+          <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
+            активный
+            {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Создано...</a>
           </li>
         </ul>
-      </div>
-      <div class="row right" id='search'>
-        <form action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="form-inline right" method="GET">
-          <input type="hidden" name="lang" value="{{ lang }}" />
-          <input class="form-control" type="text" name="regex"
-               placeholder="ПОДРОБНЕЕ
- Рекурсивный поиск" значение="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">
-	    Поиск
-          </button>&nbsp;
-          <input class="form-control form-check-input" type="checkbox" name="markdown_search" id="markdown-search" value="1" checked /><label for="markdown-search">
-			<small>
-			Снижение цен
-			</small></label>
-        </form>
-      </div>
-    </div>
+	</div>
+    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right" method="GET">
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="markdown_search" value="1" />
+      <input class="form-control me-2" type="text" name="regex"
+        placeholder="Рекурсивный поиск PCRE" значение="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+	</form>
   </div>
 </header>
 
@@ -135,7 +134,7 @@
 {% endblock %}
 
 <style type="text/css">
-{% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% endifequal %}
+{% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% else %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% else %}.right {text-align: left !important}{% endifequal %}{% endifequal %}
 {% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
 </style>
 
@@ -147,16 +146,15 @@
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>
-  <div class="jumbotron">{{ content|markdown }}</div>
+  <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
 <footer>{% block footer %}{% endblock footer %}</footer>
 
-<script src="/editor.md/js/bootstrap.bundle.min.js"></script>
-  <script src="/editor.md/js/raphael.min.js"></script>
+<!--  <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
-  <!-- <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
+  <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
   <script src="/editor.md/js/sequence-diagram.min.js"></script>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
