@@ -138,8 +138,12 @@
 
 ## Index
 
+<div id="index">
+
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0|urlencode}}) &mdash; {{d.1.content|ssi|lede}} ... <small><em>{{d.1.content|ssi|vcs_date}}</em></small>
 {% endfor %}
 {% endfilter %}
 {% endif %}
+
+</div>
