@@ -134,7 +134,7 @@
 {% endblock %}
 
 <style type="text/css">
-{% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% endifequal %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% endifequal %}
+{% ifequal lang ".he" %} .right {float:left !important; text-align: right !important}{% else %}{% ifequal lang ".ar" %}.right {float:left !important; text-align: right !important}{% else %}.right {text-align: left !important}{% endifequal %}{% endifequal %}
 {% ifequal lang ".he" %} div.breadcrumbs {float:left}{% endifequal %}{% ifequal lang ".ar" %}div.breadcrumbs {float:left}{% endifequal %}
 </style>
 
