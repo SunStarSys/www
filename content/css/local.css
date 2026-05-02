@@ -30,7 +30,7 @@ div.essay {
     background-color: black;
 	padding-top:10px;
 	margin-top:10px;
-	width:100%;
+	border-radius:3px;
 }
 
 div.essay p {
