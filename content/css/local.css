@@ -13,11 +13,19 @@ div.jumbotron {
 	color: black;
 }
 
+div.jumbotron a:link {
+  color:#114056;
+}
+
 div.jumbotron img {
 	width: 200px;
 }
 div.right img {
 	width: 200px;
+}
+
+.breadcrumbs a:link {
+  color:#114056;
 }
 
 div.essay {
