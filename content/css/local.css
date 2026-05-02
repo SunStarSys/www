@@ -13,7 +13,7 @@ div.jumbotron {
 	color: black;
 }
 
-div.jumbotron a { color:#114056 }
+div.jumbotron a, #index a { color:#114056 }
 
 div.jumbotron img {
 	width: 200px;
