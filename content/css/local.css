@@ -35,6 +35,10 @@ div.essay {
 	border-radius:8px;
 }
 
+div.essay .nav-tabs {
+   border-color: #A9BDBD;
+}
+
 div.essay p {
 	line-height: 30px;
 }
