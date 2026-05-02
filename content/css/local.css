@@ -144,7 +144,8 @@ div.breadcrumbs {
 #search input, #filter input { max-width: 13em;  background-color: #A9BDBD; border: 1px solid rgba(0,0,0,0.15); }
 
 @media only screen and (max-width: 1000px) {
-   #meta, #filter, #search button { display: none; }
+  #meta, #filter { display: none; }
+  #logo { background-image: url("/images/sunstarstaronly"); }
 }
 
 div.markdown-body :is(h1,h2,h3,h4,h5,h6,h7,h8) {
