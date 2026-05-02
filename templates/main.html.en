@@ -36,7 +36,12 @@
 </head>
 
 <body>
-<header>
+<header style="border-bottom:solid #aaa 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+	<a class="navbar-brand" href="https://{{website}}/index.html{{lang}}"><img src="/images/sunstarlinear" alt="SunStar Systems"></a>
+      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
   <div class="navbar navbar-expand-lg fixed-top bg-light navbar-light">
     <div class="container">
       <div class="navbar-header">
@@ -115,6 +120,7 @@
 	  </form>
     </div>
   </div>
+</div>
 </header>
 
 {% block alert %}
@@ -139,7 +145,7 @@
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>
-  <div class="jumbotron">{{ content|markdown }}</div>
+  <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
   <footer>{% block footer %}{% endblock footer %}</footer>
