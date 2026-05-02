@@ -43,17 +43,21 @@
 <body>
 <header style="border-bottom:solid #A9BDBD 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<a class="navbar-brand" href="/index.html{{lang}}">
-	{% if path|starts_with:"/orion/" %}
-	  <img src="/images/sunstar-orion-symbol-linear.png" alt="SunStar Orion Symbol Linear">
-          <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
-	{% else %}
-          <img src="/images/sunstarlinear.png" alt="SunStar Linear"/>
-    {% endif %}
-</a>
-    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<a class="navbar-brand" href="/index.html{{lang}}" id="logo"></a>
+<style type="text/css">
+  #logo {
+     display: block;
+     height: 37px;
+  {% if path|starts_with:"/orion/" %}
+     background: url("/images/sunstar-orion-symbol-linear.png"); <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
+  {% else %}
+      background: url("/images/sunstarlinear.png");
+  {% endif %}
+  }
+</style>
+  <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-    </button>
+  </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/index.md" %}
