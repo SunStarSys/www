@@ -43,15 +43,16 @@
 <body>
 <header style="border-bottom:solid #A9BDBD 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
-<a class="navbar-brand" href="/index.html{{lang}}" id="logo"></a>
+<a class="navbar-brand" href="/index.html{{lang}}" id="logo">&nbsp;</a>
 <style type="text/css">
   #logo {
      display: block;
      height: 37px;
+	 width: 100%;
   {% if path|starts_with:"/orion/" %}
-     background: url("/images/sunstar-orion-symbol-linear.png"); <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
+     background-image: url("/images/sunstar-orion-symbol-linear.png"); <!-- Derived work from Dennis Moskowitz's original wikipedia image: CC-BySA v4.0 -->
   {% else %}
-      background: url("/images/sunstarlinear.png");
+      background-image: url("/images/sunstarlinear.png");
   {% endif %}
   }
 </style>
