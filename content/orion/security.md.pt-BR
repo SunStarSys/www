@@ -105,29 +105,29 @@ Nenhuma senha fixa armazenada nos discos. Esta automação sem cabeça *limits* 
 
 ### Execução em sandbox para builds e scripts CGI
 
-Nós implantamos "nada compartilhado" builds de zona, cujo padrão é zero disponibilidade de rede. Isso significa que as únicas coisas que um cliente pode acessar ou modificar são seus próprios ativos, não aqueles de qualquer outro cliente, ou quaisquer outros caminhos do sistema na própria zona (além de [`/tmp`](#)).  Além disso, somente clientes corporativos e corporativos têm acesso à internet durante suas compilações, porque estão usando suas próprias zonas *unique* Solaris, que podem ser adaptadas exatamente para os requisitos de compilação.
+Nós implantamos "nada compartilhado" builds de zona, cujo padrão é zero disponibilidade de rede. Isso significa que as únicas coisas que um cliente pode acessar ou modificar são seus próprios ativos, não aqueles de qualquer outro cliente, ou quaisquer outros caminhos do sistema na própria zona (além de `/tmp`. Além disso, somente clientes corporativos e corporativos têm acesso à internet durante suas compilações, porque estão usando suas próprias zonas *unique* Solaris, que podem ser adaptadas exatamente para os requisitos de compilação.
 
-Ditto para scripts CGI, que são totalmente bloqueados em termos de acesso de gravação a qualquer outra coisa que não seja [`/tmp`](#).
+Ditto para scripts CGI, que são totalmente bloqueados em termos de acesso de gravação a qualquer outra coisa que não seja `/tmp`.
 
 ### Criptografia de ponta a ponta
 
 - OpenSSL v4+ TLS 1.3 (+FS) AES(256) SHA(256) para conexões HTTPS FIPS 140-3
 
-- OpenSSH v10+ ED25519 FIPS 140-3 com chaves compatíveis pós-quantum KexAlgorithm / NIST para host cruzado [`lo`](#) encaminhamento de porta inversa
+- OpenSSH v10+ ED25519 FIPS 140-3 com chaves compatíveis pós-quantum KexAlgorithm / NIST para host cruzado `lo` encaminhamento de porta inversa
 
-- IPsec/IKEv2/PFS AES(256) para VPN entre regiões
+- IPsec/IKEv2/PFS AES(256) FIPS 140-2 para VPN entre regiões
 
 - AES(256) para criptografia ZFS
 
 ### Aspectos do Zero Trust
 
-A premissa básica de [arquitetura de confiança zero](https://csrc.nist.gov/publications/detail/sp/800-207/final) é evitar projetar sua segurança de rede em torno da fisiologia do clam: duro no exterior, mas macio e solto uma vez que você está dentro.  Portanto, não fazemos isso; cada porta de rede privilegiada significativa dentro das várias LANs do Ponto de Presença (POP) só é exposta à interface do dispositivo loopback da máquina bare-metal [`lo0`](#), e só é significativo no contexto de uma conexão SSH encaminhada por porta (reversa) *para ela*.
+A premissa básica de [arquitetura de confiança zero](https://csrc.nist.gov/publications/detail/sp/800-207/final) é evitar projetar sua segurança de rede em torno da fisiologia do clam: duro no exterior, mas macio e solto uma vez que você está dentro.  Portanto, não fazemos isso; cada porta de rede privilegiada significativa dentro das várias LANs do Ponto de Presença (POP) só é exposta à interface do dispositivo loopback da máquina bare-metal `lo0`, e só é significativo no contexto de uma conexão SSH encaminhada por porta (reversa) *para ela*.
 
 Usamos proxies TCP, não proxies HTTP, e nenhum backends MSA, **então o único host que vê seu tráfego web TLS não criptografado é o host que o decriptografa**. As mesmas regras se aplicam ao tráfego do Subversion &mdash; somente o tráfego direto e de ponta a ponta criptografado TLS para o **ponto final de serviço** vê seus dados não criptografados na conexão.
 
 Boa sorte com as camadas **MSA e camadas de exposição de dados privados** com outros fornecedores. O inimigo de "engenharia não funcional" é complexidade. É muito mais fácil fornecer promessas de segurança significativas quando seu produto é um **monólito federado em vez de um enorme campo minado MSA**, que é outro diferenciador contrário entre a Orion e seu campo de concorrentes.
 
-Esta infraestrutura é totalmente automatizada quando uma região é colocada on-line, mas isso é tudo o que podemos compartilhar publicamente sobre a arquitetura (equilibrando a transparência hobbsiana com o mantra militar). "Lábios soltos afundam navios" mais arte do que ciência).  Restante &mdash; além de quebrar o antispoofing [`lo0`](#) dentro do próprio filtro de pacotes do Solaris 11 (BSD), não há meio significativo de obter acesso a esses serviços, mesmo para contas de clientes.
+Esta infraestrutura é totalmente automatizada quando uma região é colocada on-line, mas isso é tudo o que podemos compartilhar publicamente sobre a arquitetura (equilibrando a transparência hobbsiana com o mantra militar). "Lábios soltos afundam navios" mais arte do que ciência).  Restante &mdash; além de quebrar o antispoofing `lo0` dentro do próprio filtro de pacotes do Solaris 11 (BSD), não há meio significativo de obter acesso a esses serviços, mesmo para contas de clientes.
 
 Mesmo que a conta de controle principal da OCI seja comprometida, a **confidencialidade** e a **integridade** de todos os ativos do cliente permanecem invioláveis.  Tudo o que um black-hat pode fazer é fazer uma bagunça com o site do cliente **disponibilidade**. Em particular, eles não podem acessar os registros de dados do serviço Subversion.  Podemos reconstruir toda a infraestrutura da OCI do zero em 48 a 72 horas depois que o acesso à OCI da má Apple tiver sido encerrado.
 
@@ -139,7 +139,7 @@ Incentivamos os clientes da Enterprise a criar uma conta Splunk e forneceremos w
 
 Monitoramos a disponibilidade do serviço de todos os nossos POPs da OCI em todo o mundo e acionamos eventos de failover de HA (Domínio de Disponibilidade) ou regionais se uma interrupção do servidor durar mais de 30 segundos.
 
-A auditoria da ACL pode ser realizada simplesmente construindo o Subversion HEAD de um site usando o Apache Licenciado [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) e examinando o build resultante no [`www/.acl`](#) em seu diretório de check-out, a qualquer momento que desejar.  Normalmente, o processo de construção levará menos de 10 a 15 segundos no hardware moderno.
+A auditoria da ACL pode ser realizada simplesmente construindo o Subversion HEAD de um site usando o Apache Licenciado [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) e examinando o build resultante no `www/.acl` em seu diretório de check-out, a qualquer momento que desejar.  Normalmente, o processo de construção levará menos de 10 a 15 segundos no hardware moderno.
 
 Subversion Server-Side Commit Hooks também são personalizáveis para suas preocupações de supervisão. Desde um simples mailer de commit até o acesso seguro ao nosso daemon svnpubsub, há várias configurações personalizadas disponíveis.
 
@@ -162,7 +162,7 @@ digraph {
 
 O modelo de segurança do Orion é gerenciado centralmente pelas configurações contidas no [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) como constrangido em [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Os arquivos de configuração do servidor offshoot são gerados dinamicamente em cada alteração criada.
 
-Se você entender o modelo de segurança do sistema de arquivos POSIX, estará em casa com a Orion's [mod_dav_svn]() modelo de autorização e os controles .htaccess do servidor web Apache HTTPd, gerados automaticamente a partir do seu site [lib/acl.yml](#) Configuração YAML.
+Se você entender o modelo de segurança do sistema de arquivos POSIX, estará em casa com a Orion's [mod_dav_svn]() modelo de autorização e os controles .htaccess do servidor web Apache HTTPd, gerados automaticamente a partir do seu site `lib/acl.yml` Configuração YAML.
 
 ### OpenIDC Segurança do SSO
 
@@ -176,7 +176,7 @@ Número ajustável de rodadas (atualmente o padrão é 5).
 
 ### Proteções de dados contaminadas
 
-Todos os nossos tempos de execução Perl têm verificações de mancha obrigatórias habilitadas com o sinalizador -T; uma poderosa e exclusiva proteção Perl contra o Remote Shell Exploits.
+Todos os nossos tempos de execução Perl têm verificações de mancha obrigatórias habilitadas com o sinalizador -T; uma poderosa e exclusiva proteção Perl contra [Explorações de Shell Remoto](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/).
 
 ### Problemas do Wiki
 
@@ -194,7 +194,7 @@ Nós nos aprofundamos nessas questões como eles se relacionam com Orion abaixo.
 
 #### Editor On-line
 
-O editor on-line suporta uma interface de usuário JSON simplesmente definindo o cabeçalho Accept do seu agente de usuário para preferir o [`aplicativo/json`](#) MIME-type, portanto, os controles de segurança são os mesmos para a UI e a API.
+O editor on-line suporta uma interface de usuário JSON simplesmente definindo o cabeçalho Accept do seu agente de usuário para preferir o `application/json` MIME-type, portanto, os controles de segurança são os mesmos para a UI e a API.
 
 **Não há IU/API administrativa** fora do acesso direto ao Subversion.
 
@@ -238,29 +238,29 @@ Este código impõe as regras a seguir nesta seção.
 
 ###### incluir e estender tags
 
-Todos os arquivos de destino estão em uma subpasta do [`/modelos/`](#) e deve ser referenciado como caminhos absolutos com raiz nessa pasta.
+Todos os arquivos de destino estão em uma subpasta do `/templates/` e deve ser referenciado como caminhos absolutos com raiz nessa pasta.
 
 ###### tag ssi
 
-Todos os arquivos de destino estão em uma subpasta do [`/conteúdo`](#) e deve ser referenciado como caminhos absolutos com raiz nessa pasta.
+Todos os arquivos de destino estão em uma subpasta do `/content/` e deve ser referenciado como caminhos absolutos com raiz nessa pasta.
 
-Se o caminho de destino não estiver configurado no [`@path::padrões`](#) com uma configuração correspondente que permite que o caminho de destino em questão seja arquivado ou categorizado, ou que o último autor alterado do arquivo de origem simplesmente não esteja autorizado a exibir o caminho de destino, o [`ssi`](#) operação falhará.
+Se o caminho de destino não estiver configurado no `@path::patterns` com uma configuração correspondente que permite que o caminho de destino em questão seja arquivado ou categorizado, ou que o último autor alterado do arquivo de origem simplesmente não esteja autorizado a exibir o caminho de destino, o `ssi` operação falhará.
 
-Isso porque [`ssi`](#) o suporte é um pré-requisito para esses conjuntos de recursos, para preservar os *permalinks*. do alvo do seu site
+Isso porque `ssi` o suporte é um pré-requisito para esses conjuntos de recursos, para preservar os *permalinks*. do alvo do seu site
 
 #### Controles de Injeção de Dependência/ACL
 
-Controlado por [`lib/path.pm`](#) importações.
+Controlado por `lib/path.pm` importações.
 
 ##### lib/{caminho,view}ACLs do Subversion do .pm
 
 É aconselhável controlar o acesso de gravação a esses recursos, limitando-os a pessoas competentes na base de código e autorizadas a implementar controles de segurança para todo o conjunto de ativos sob controle de versão (também conhecido como *tudo*).
 
-Também é uma boa ideia incluir o [`@svnadmin`](#) grupo entre aqueles com acesso de leitura-gravação, mas não é estritamente necessário, mesmo que você precise redefinir manualmente suas ACLs do Subversion.
+Também é uma boa ideia incluir o `@svnadmin` grupo entre aqueles com acesso de leitura-gravação, mas não é estritamente necessário, mesmo que você precise redefinir manualmente suas ACLs do Subversion.
 
 ##### Regras Geradas Dinamicamente via &#64;caminho::acl
 
-O sistema de compilação toma nota de sua [`lib/path.pm`](#) as importações de um (ou ambos) de seed_file_deps() e seed_file_acl(), e levar essa escolha adiante em seu processamento interno de alterações de commit do Subversion que dão origem a uma criação incremental.
+O sistema de compilação toma nota de sua `lib/path.pm` as importações de um (ou ambos) de seed_file_deps() e seed_file_acl(), e levar essa escolha adiante em seu processamento interno de alterações de commit do Subversion que dão origem a uma criação incremental.
 
 ##### Rastreamento de Migração de Conteúdo Controlado
 
@@ -272,9 +272,9 @@ A lógica de rastreamento move/delete do Orion CMS lida com isso perfeitamente.
 
 ##### Controles Personalizados no uso de seed_file_deps() e  seed_file_acl() na lib/path.pm
 
-Além da importação desses símbolos para [`lib/path.pm`](#), há também uma opção de como e a quais arquivos você deseja aplicá-los durante uma execução de bloco de código walk_content_tree ().  Afinal, não é apenas um arquivo de configuração, mas uma base de código, com todos os recursos completos do Turing. [`Perl`](#) Nós viemos a conhecer e apreciar!
+Além da importação desses símbolos para `lib/path.pm`, há também uma opção de como e a quais arquivos você deseja aplicá-los durante uma execução de bloco de código walk_content_tree ().  Afinal, não é apenas um arquivo de configuração, mas uma base de código, com todos os recursos completos do Turing. `Perl` Nós viemos a conhecer e apreciar!
 
-#### Os arquivos .htaccss do site criado e os arquivos de autorização do Subversion são sincronizados com &#64;path::acl instantaneamente após commit
+#### Os arquivos .htaccess do site e os arquivos de autorização do Subversion são sincronizados com `@path::acl` instantaneamente mediante commit
 
 Proteção ACL automática para builds de ramificações efêmeras. Configuração adicional zero necessária.
 
@@ -332,4 +332,4 @@ Dependências notavelmente breves e testadas no tempo; cujos principais componen
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$Autor: joe $Revisão: 35747 $ -->

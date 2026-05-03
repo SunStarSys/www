@@ -105,29 +105,29 @@ vcs==vpn==>A8==ssh/vpn==>B8
 
 ### 組建和 CGI 命令檔的封閉測試環境執行
 
-我們部署"無共享" 區域建置時，預設為零網路可用性。這表示客戶建置可以存取或修改的唯一項目是自己的資產，而非任何其他客戶或區域本身的任何其他系統路徑 (除了[`/tmp`](#)). 此外，唯有企業和企業客戶能夠在建置期間存取網際網路，因為他們正在使用自己的 *unique* Solaris 區域，而這些區域可以完全根據其建置需求量身打造。
+我們部署"無共享" 區域建置時，預設為零網路可用性。這表示客戶建置可以存取或修改的唯一項目是自己的資產，而非任何其他客戶或區域本身的任何其他系統路徑 (除了`/tmp`。此外，唯有企業和企業客戶能夠在建置期間存取網際網路，因為他們正在使用自己的 *unique* Solaris 區域，而這些區域可以完全根據其建置需求量身打造。
 
-CGI 文稿的 Ditto，在寫入存取時被完全鎖定 。[`/tmp`](#).
+CGI 文稿的 Ditto，在寫入存取時被完全鎖定 。`/tmp`.
 
 ### 端到端加密
 
 - OpenSSL v4+ HTTPS FIPS 140-3 連線適用的 TLS 1.3 (+FS) AES (256) SHA (256)
 
-- OpenSSH v10+ ED25519 FIPS 140-3，搭配跨主機適用的 Post-Quantum KexAlgorithm / NIST 相容金鑰[`迴圈`](#) 反向埠轉送
+- OpenSSH v10+ ED25519 FIPS 140-3，搭配跨主機適用的 Post-Quantum KexAlgorithm / NIST 相容金鑰`lo` 反向埠轉送
 
-- 跨區域 VPN 的 IPsec/IKEv2/PFS AES (256)
+- IPsec/IKEv2/PFS AES (256) FIPS 140-2 適用於跨區域 VPN
 
 - AES (256) 加密 ZFS
 
 ### 零信任層面
 
-基本處所[零信任架構](https://csrc.nist.gov/publications/detail/sp/800-207/final) 是為了避免在垃圾的生理上設計您的網絡安全：在外面硬化，但一旦你進入，軟和鬆散。因此，我們不會這麼做；在各種出席點 (POP) 區域網路內，每個有意義的授權網路連接埠都只公開在裸機機器的回送裝置介面上。[`lo0`](#)，且僅在 (反向) 連接埠轉送 SSH 連線至其 *的相關資訊環境中有意義。
+基本處所[零信任架構](https://csrc.nist.gov/publications/detail/sp/800-207/final) 是為了避免在垃圾的生理上設計您的網絡安全：在外面硬化，但一旦你進入，軟和鬆散。因此，我們不會這麼做；在各種出席點 (POP) 區域網路內，每個有意義的授權網路連接埠都只公開在裸機機器的回送裝置介面上。`lo0`，且僅在 (反向) 連接埠轉送 SSH 連線至其 *的相關資訊環境中有意義。
 
 我們使用 TCP 代理主機，而非 HTTP 代理主機，也沒有 MSA 後端 ** 因此，唯一可以看到未加密之 TLS Web 流量的主機 **。Subversion 流量適用相同規則&mdash; 只會將端對端 TLS 加密流量直接導向 **服務端點 **，即可在纜線上看到未加密的資料。
 
 **MSA 層和多層私人資料曝光 **等其他廠商都很幸運。敵人的"非功能工程" 複雜性。當您的產品是** 聯合貨幣，而不是大規模的 MSA 礦場 **時，提供有意義的安全承諾會變得更加簡單，這是 Orion 與其競爭對手領域之間的另一個差異化因素。
 
-一旦一個區域在網路上被帶入，這項資訊就會完全自動化，但我們都可以公開分享有關該架構的資訊 (平衡霍布斯與軍人手的透明度)。"鬆嘴唇沉船" 比科學更藝術。放心&mdash; 超越防偽[`lo0`](#) 在 Solaris 11 (BSD) 封包篩選器本身當中保護，即使是客戶帳戶，也無法透過有意義的方式存取這些服務。
+一旦一個區域在網路上被帶入，這項資訊就會完全自動化，但我們都可以公開分享有關該架構的資訊 (平衡霍布斯與軍人手的透明度)。"鬆嘴唇沉船" 比科學更藝術。放心&mdash; 超越防偽`lo0` 在 Solaris 11 (BSD) 封包篩選器本身當中保護，即使是客戶帳戶，也無法透過有意義的方式存取這些服務。
 
 即使主要 OCI 控制帳戶受到危害，所有客戶資產的** 機密性 **和** 完整性 **仍保持違規。所有的黑帽子都可與客戶網站** 可用性 **一起訊息。特別是，他們無法存取 Subversion 服務資料記錄。蘋果的 OCI 存取終止後，我們可以在 48-72 小時內從頭重新建構整個 OCI 基礎架構。
 
@@ -139,7 +139,7 @@ CGI 文稿的 Ditto，在寫入存取時被完全鎖定 。[`/tmp`](#).
 
 我們會監控全球所有 OCI POP 的服務可用性，如果伺服器停機持續超過 30 秒，則會觸發 HA (可用性網域) 或區域容錯移轉事件。
 
-只需使用 Apache 授權的建置網站的 Subversion HEAD，即可執行 ACL 稽核[Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) 指令碼並檢查產生的組建[`www/.acl`](#) 您可以隨時在結帳目錄中的檔案。一般而言，現代硬體上的建置程序將花費不到 10-15 秒的時間。
+只需使用 Apache 授權的建置網站的 Subversion HEAD，即可執行 ACL 稽核[Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) 指令碼並檢查產生的組建`www/.acl` 您可以隨時在結帳目錄中的檔案。一般而言，現代硬體上的建置程序將花費不到 10-15 秒的時間。
 
 Subversion 伺服器端確認鉤點也可根據您的監督問題自訂。從簡單的確認郵件程式到安全存取我們的 svnpubsub 常駐程式，都有許多可用的自訂配置。
 
@@ -160,9 +160,9 @@ digraph {
 
 &nbsp;
 
-Orion 的安全模型由包含的設定集中管理[`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) 施作於[`程式庫 /path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm)。Offshoot 伺服器配置檔案會在每個建立的變更上動態產生。
+Orion 的安全模型由包含的設定集中管理[`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) 施作於[`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm)。Offshoot 伺服器配置檔案會在每個建立的變更上動態產生。
 
-如果您瞭解 POSIX 檔案系統安全性模型，您就可以前往 Orion 的家。[mod_dav_svn]() 授權模型和 Apache HTTPd Web 伺服器的 .htaccess 控制項，會自動從您的網站產生[程式庫 /acl.yml](#) YAML 組態。
+如果您瞭解 POSIX 檔案系統安全性模型，您就可以前往 Orion 的家。[mod_dav_svn]() 授權模型和 Apache HTTPd Web 伺服器的 .htaccess 控制項，會自動從您的網站產生`lib/acl.yml` YAML 組態。
 
 ### OpenIDC SSO 安全性
 
@@ -176,7 +176,7 @@ Orion 的安全模型由包含的設定集中管理[`@path::acl`](https://github
 
 ### 隱匿的資料保護
 
-我們的所有 Perl 程式實際執行都啟用了 -T 旗標的強制性 taint 檢查；這是針對 Remote Shell Exploits 的強大、唯一 Perl 保護項目。
+我們所有的 Perl 程式實際執行都啟用了 -T 旗標的強制性 taint 檢查；這是一項功能強大且唯一的 Perl 防護措施[遠端 Shell 爆炸](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/).
 
 ### Wiki 問題
 
@@ -194,7 +194,7 @@ Wiki 安全涉及數個因素：
 
 #### 線上編輯器
 
-線上編輯器支援 JSON UI，只要將使用者代理程式的 Accept 標頭設為偏好即可[`應用程式 /json`](#) MIME 類型，因此 UI 和 API 的安全控制相同。
+線上編輯器支援 JSON UI，只要將使用者代理程式的 Accept 標頭設為偏好即可`application/json` MIME 類型，因此 UI 和 API 的安全控制相同。
 
 **直接 Subversion 存取之外沒有管理 UI/API**。
 
@@ -212,7 +212,7 @@ Wiki 安全涉及數個因素：
 
 雖然我們可以提供符合您需求的指引和支援，但您確實可以決定如何在 Orion 支援的 Wiki 中平衡組織的受管理資產規模。
 
-請參閱下方的章節：[相依性 /ACL 射出控制](#h4-dependency-acl-injection-controls) 如需詳細資訊，請參閱此即時範例，瞭解如何集中設定 ACL 的方式[`程式庫 /acl.yml`]({{snippetA.pretty_uri}}):
+請參閱下方的章節：[相依性 /ACL 射出控制](#h4-dependency-acl-injection-controls) 如需詳細資訊，請參閱此即時範例，瞭解如何集中設定 ACL 的方式[`lib/acl.yml`]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/www:path=lib/acl.yml:branch=trunk:token=#acl:lang=yaml]
 
@@ -238,29 +238,29 @@ Wiki 安全涉及數個因素：
 
 ###### 包含和延伸標籤
 
-所有目標檔案都位於子資料夾中[`繁體中文`](#) 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
+所有目標檔案都位於子資料夾中`/templates/` 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
 
 ###### ssi 標籤
 
-所有目標檔案都位於子資料夾中[`/ 內容 /`](#) 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
+所有目標檔案都位於子資料夾中`/content/` 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
 
-若未在其中設定目標路徑[`@path：：樣式`](#) 具有可允許將有問題之目標路徑存檔或分類的比對設定，或來源檔案的最後變更作者未獲授權檢視目標路徑，[`ssi`](#) 作業將會失敗。
+若未在其中設定目標路徑`@path::patterns` 具有可允許將有問題之目標路徑存檔或分類的比對設定，或來源檔案的最後變更作者未獲授權檢視目標路徑，`ssi` 作業將會失敗。
 
-這是因為[`ssi`](#) 支援是這些功能集的先決條件，以保留您網站的目標 *permalinks*。
+這是因為`ssi` 支援是這些功能集的先決條件，以保留您網站的目標 *permalinks*。
 
 #### 相依性 /ACL 射出控制
 
-控制者[`程式庫 /path.pm`](#) 匯入。
+控制者`lib/path.pm` 匯入。
 
 ##### 程式庫 /{路徑，檢視}.pm Subversion ACL
 
 我們明智地控制對這些資源的寫入存取權，方法是將它們限制在程式碼庫中的人員，並授權在版本控制 (亦即 *所有項目 *) 下對整組資產實施安全控制。
 
-它也是包含的一個好主意[`@svnadmin`](#) 在具有讀寫存取權的群組中，但即使您需要手動重設 Subversion ACL，也不需要嚴格執行。
+它也是包含的一個好主意`@svnadmin` 在具有讀寫存取權的群組中，但即使您需要手動重設 Subversion ACL，也不需要嚴格執行。
 
 ##### 動態產生的規則，透過&#64;路徑：：acl
 
-建構系統會記下您的[`程式庫 /path.pm`](#) 匯入 seed_file_deps() 和 seed_file_acl (或兩者) 的任一項目，然後在產生增量建置的 Subversion 確認變更的內部處理中，將該選項向前進行。
+建構系統會記下您的`lib/path.pm` 匯入 seed_file_deps() 和 seed_file_acl (或兩者) 的任一項目，然後在產生增量建置的 Subversion 確認變更的內部處理中，將該選項向前進行。
 
 ##### 控制的內容移轉追蹤
 
@@ -272,9 +272,9 @@ Orion CMS 的移動 / 刪除追蹤邏輯可順暢地處理。
 
 ##### 自訂 lib/path.pm 中 seed_file_deps() 和 seed_file_acl() 用法的控制項
 
-除了將這些符號匯入至[`程式庫 /path.pm`](#)，在執行 walk_content_tree () 程式碼區塊時，您也可以選擇要套用這些檔案的方式和目標檔案。畢竟，它不只是一個配置檔案，而是一個代碼庫，具備所有杜林的完整功能[`佩爾`](#) 我們想知道，感謝您！
+除了將這些符號匯入至`lib/path.pm`，在執行 walk_content_tree () 程式碼區塊時，您也可以選擇要套用這些檔案的方式和目標檔案。畢竟，它不只是一個配置檔案，而是一個代碼庫，具備所有杜林的完整功能`Perl` 我們想知道，感謝您！
 
-#### 建立的網站 .htaccss 檔案和 Subversion 授權檔案會與&#64;路徑：：acl 在確認時立即
+#### 建立的網站 .htaccess 檔案和 Subversion 授權檔案會與`@path::acl` 確認時立即
 
 臨時分支組建的自動 ACL 保護。需要零其他組態。
 
@@ -332,4 +332,4 @@ CSS 必須由我們的伺服器提供。
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $ 作者：joe $ $ 版次：35747 $ -->

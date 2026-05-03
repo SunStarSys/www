@@ -105,29 +105,29 @@ No hay contraseñas fijas almacenadas en los discos. Esto *limita* la automatiza
 
 ### Ejecución en sandbox para compilaciones y scripts CGI
 
-Desplegamos "nada compartido" compilaciones de zonas, con un valor predeterminado de cero disponibilidad de red. Esto significa que las únicas cosas a las que un cliente puede acceder o modificar son sus propios activos, no los de cualquier otro cliente, o cualquier otra ruta del sistema en la propia zona (además de [`/tmp`](#)).  Además, solo los clientes empresariales y empresariales tienen acceso a Internet durante sus compilaciones, ya que están utilizando sus propias zonas Solaris *únicas* que se pueden adaptar exactamente a sus requisitos de compilación.
+Desplegamos "nada compartido" compilaciones de zonas, con un valor predeterminado de cero disponibilidad de red. Esto significa que las únicas cosas a las que un cliente puede acceder o modificar son sus propios activos, no los de cualquier otro cliente, o cualquier otra ruta del sistema en la propia zona (además de `/tmp`. Además, solo los clientes empresariales y empresariales tienen acceso a Internet durante sus compilaciones, ya que están utilizando sus propias zonas Solaris *únicas* que se pueden adaptar exactamente a sus requisitos de compilación.
 
-Ditto para scripts CGI, que están completamente bloqueados en términos de acceso de escritura a cualquier otra cosa que no sea [`/tmp`](#).
+Ditto para scripts CGI, que están completamente bloqueados en términos de acceso de escritura a cualquier otra cosa que no sea `/tmp`.
 
 ### Cifrado completo
 
 - OpenSSL v4+ TLS 1.3 (+FS) AES(256) SHA(256) para conexiones HTTPS FIPS 140-3
 
-- OpenSSH v10+ ED25519 FIPS 140-3 con claves compatibles con Post-Quantum KexAlgorithm / NIST para host cruzado [`Lote`](#) reenvío de puerto inverso
+- OpenSSH v10+ ED25519 FIPS 140-3 con claves compatibles con Post-Quantum KexAlgorithm / NIST para host cruzado `lo` reenvío de puerto inverso
 
-- IPsec/IKEv2/PFS AES(256) para VPN interregional
+- IPsec/IKEv2/PFS AES(256) FIPS 140-2 para VPN interregional
 
 - AES(256) para cifrado ZFS
 
 ### Aspectos de confianza cero
 
-La premisa básica de [arquitectura de confianza cero](https://csrc.nist.gov/publications/detail/sp/800-207/final) es evitar diseñar la seguridad de su red en torno a la fisiología de la almeja: duro en el exterior, pero suave y suelto una vez que esté en.  Así que no hacemos eso; cada puerto de red privilegiado significativo dentro de las diversas LAN de Punto de Presencia (POP) solo está expuesto a la interfaz de dispositivo de bucle de retorno de la máquina bare-metal. [`lo0`](#), y solo es significativo en el contexto de un puerto (inverso) reenviado a la conexión SSH *a ella*.
+La premisa básica de [arquitectura de confianza cero](https://csrc.nist.gov/publications/detail/sp/800-207/final) es evitar diseñar la seguridad de su red en torno a la fisiología de la almeja: duro en el exterior, pero suave y suelto una vez que esté en.  Así que no hacemos eso; cada puerto de red privilegiado significativo dentro de las diversas LAN de Punto de Presencia (POP) solo está expuesto a la interfaz de dispositivo de bucle de retorno de la máquina bare-metal. `lo0`, y solo es significativo en el contexto de un puerto (inverso) reenviado a la conexión SSH *a ella*.
 
 Utilizamos proxies TCP, no proxies HTTP y no backends de MSA, **por lo que el único host que ve el tráfico web de TLS no cifrado es el host que lo descifra**. Se aplican las mismas reglas al tráfico de Subversion &mdash; solo el tráfico cifrado de TLS directo de extremo a extremo al **punto final de servicio** ve los datos no cifrados en la transferencia.
 
 Buena suerte con las **capas de MSA y capas de exposición de datos privados** con otros proveedores. El enemigo de "ingeniería no funcional" es la complejidad. Es mucho más fácil proporcionar promesas de seguridad significativas cuando su producto es un **monolito federado en lugar de un campo minado masivo MSA**, que es otro diferenciador contrario entre Orion y su campo de competidores.
 
-Esta infraestructura está totalmente automatizada una vez que una región se pone en línea, pero eso es todo lo que podemos compartir públicamente sobre la arquitectura (equilibrando la transparencia hobbsiana con el mantra militar) "barcos de fregadero de labios sueltos" Es más arte que ciencia).  Permanecer tranquilo &mdash; más allá de romper el antispoof [`lo0`](#) protección dentro del propio filtro de paquetes (BSD) de Solaris 11, no hay medios significativos para obtener acceso a estos servicios, incluso para las cuentas de clientes.
+Esta infraestructura está totalmente automatizada una vez que una región se pone en línea, pero eso es todo lo que podemos compartir públicamente sobre la arquitectura (equilibrando la transparencia hobbsiana con el mantra militar) "barcos de fregadero de labios sueltos" Es más arte que ciencia).  Permanecer tranquilo &mdash; más allá de romper el antispoof `lo0` protección dentro del propio filtro de paquetes (BSD) de Solaris 11, no hay medios significativos para obtener acceso a estos servicios, incluso para las cuentas de clientes.
 
 Incluso si la cuenta de control maestra de OCI se ve comprometida, la **confidencialidad** y la **integridad** de todos los activos de cliente siguen siendo inviolables.  Todo lo que un sombrero negro puede hacer es hacer un lío con el sitio web del cliente **disponibilidad**. En particular, no pueden acceder a los registros de datos del servicio Subversion.  Podemos reconstruir toda la infraestructura de OCI desde cero en 48-72 horas una vez que se haya terminado el acceso a OCI de la manzana defectuosa.
 
@@ -139,7 +139,7 @@ Animamos a los clientes de Enterprise a crear una cuenta de Splunk, y entregarem
 
 Supervisamos la disponibilidad del servicio desde todos nuestros POP de OCI en todo el mundo y activamos eventos de alta disponibilidad (dominio de disponibilidad) o de failover regional si la interrupción del servidor dura más de 30 segundos.
 
-La auditoría de ACL se puede realizar simplemente creando la cabecera de subversión de un sitio web con la licencia Apache [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) script y examinando la creación resultante en la [`www/.acl`](#) archivo en su directorio de finalización de compra, en cualquier momento que desee.  Normalmente, el proceso de creación tardará menos de 10-15 segundos en hardware moderno.
+La auditoría de ACL se puede realizar simplemente creando la cabecera de subversión de un sitio web con la licencia Apache [Orion SSG](https://github.com/SunStarSys/orion/blob/master/test.sh) script y examinando la creación resultante en la `www/.acl` archivo en su directorio de finalización de compra, en cualquier momento que desee.  Normalmente, el proceso de creación tardará menos de 10-15 segundos en hardware moderno.
 
 Los ganchos de confirmación del lado del servidor de Subversion también se pueden personalizar para sus preocupaciones de supervisión. Desde una simple aplicación de correo de confirmación hasta un acceso seguro a nuestro daemon svnpubsub, hay cualquier cantidad de configuraciones personalizadas disponibles.
 
@@ -162,7 +162,7 @@ digraph {
 
 El modelo de seguridad de Orion se gestiona de forma centralizada mediante la configuración contenida en [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) como se constata en [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Los archivos de configuración del servidor de desconexión se generan dinámicamente en cada cambio creado.
 
-Si entiende el modelo de seguridad del sistema de archivos POSIX, estará en casa con Orion's. [mod_dav_svn]() el modelo de autorización y los controles .htaccess del servidor web de Apache HTTPd, generados automáticamente desde el sitio web [lib/acl.yml](#) Configuración de YAML.
+Si entiende el modelo de seguridad del sistema de archivos POSIX, estará en casa con Orion's. [mod_dav_svn]() el modelo de autorización y los controles .htaccess del servidor web de Apache HTTPd, generados automáticamente desde el sitio web `lib/acl.yml` Configuración de YAML.
 
 ### OpenIDC Seguridad de SSO
 
@@ -176,7 +176,7 @@ Número ajustable de rondas (el valor por defecto actual es 5).
 
 ### Protecciones de datos contaminados
 
-Todos nuestros tiempos de ejecución de Perl tienen verificaciones obligatorias de pintura habilitadas con la bandera -T; una poderosa y única protección de Perl contra exploits de shell remoto.
+Todos nuestros tiempos de ejecución de Perl tienen verificaciones obligatorias de manchas habilitadas con la bandera -T; un poderoso y único protector de Perl contra [Explotaciones de shell remoto](https://github.blog/security/securing-the-git-push-pipeline-responding-to-a-critical-remote-code-execution-vulnerability/).
 
 ### Problemas de wiki
 
@@ -194,7 +194,7 @@ A continuación profundizamos en estos temas relacionados con Orión.
 
 #### Editor en línea
 
-El editor en línea admite una interfaz de usuario de JSON simplemente configurando la cabecera Accept de su usuario-agente para que prefiera la [`aplicación/json`](#) Tipo MIME, por lo que los controles de seguridad son los mismos para la interfaz de usuario y la API.
+El editor en línea admite una interfaz de usuario de JSON simplemente configurando la cabecera Accept de su usuario-agente para que prefiera la `application/json` Tipo MIME, por lo que los controles de seguridad son los mismos para la interfaz de usuario y la API.
 
 **No hay ninguna interfaz de usuario/API** administrativa fuera del acceso directo a Subversion.
 
@@ -238,29 +238,29 @@ Este código aplica las reglas que se indican a continuación en esta sección.
 
 ###### incluir y ampliar etiquetas
 
-Todos los archivos de destino están en una subcarpeta de la [`/plantillas/`](#) carpeta, y se debe hacer referencia a ella como rutas de acceso absolutas con raíz en esa carpeta.
+Todos los archivos de destino están en una subcarpeta de la `/templates/` carpeta, y se debe hacer referencia a ella como rutas de acceso absolutas con raíz en esa carpeta.
 
 ###### etiqueta ssi
 
-Todos los archivos de destino están en una subcarpeta de la [`/contenido/`](#) carpeta, y se debe hacer referencia a ella como rutas de acceso absolutas con raíz en esa carpeta.
+Todos los archivos de destino están en una subcarpeta de la `/content/` carpeta, y se debe hacer referencia a ella como rutas de acceso absolutas con raíz en esa carpeta.
 
-Si la ruta de destino no está configurada en [`@path::patrones`](#) con una configuración coincidente que permite archivar o categorizar la ruta de destino en cuestión, o el último autor cambiado del archivo de origen simplemente no está autorizado a ver la ruta de destino, la [`ssi`](#) la operación fallará.
+Si la ruta de destino no está configurada en `@path::patterns` con una configuración coincidente que permite archivar o categorizar la ruta de destino en cuestión, o el último autor cambiado del archivo de origen simplemente no está autorizado a ver la ruta de destino, la `ssi` la operación fallará.
 
-Esto se debe a [`ssi`](#) el soporte es un requisito previo para esos conjuntos de funciones, para preservar los *permalinks* de destino de su sitio.
+Esto se debe a `ssi` el soporte es un requisito previo para esos conjuntos de funciones, para preservar los *permalinks* de destino de su sitio.
 
 #### Controles de inyección de dependencia/ACL
 
-Controlado por [`lib/path.pm`](#) importaciones.
+Controlado por `lib/path.pm` importaciones.
 
 ##### lib/{ruta,ver}ACL de subversión .pm
 
 Es aconsejable controlar el acceso de escritura a estos recursos, limitándolos a personas tanto competentes en la base de código como autorizadas para implementar controles de seguridad para todo el conjunto de activos bajo control de versiones (también conocido como *todo*).
 
-También es una buena idea incluir la [`@svnadmin`](#) grupo entre aquellos con acceso de lectura y escritura, pero no es estrictamente necesario incluso si necesita que restablezcamos manualmente las ACL de Subversion.
+También es una buena idea incluir la `@svnadmin` grupo entre aquellos con acceso de lectura y escritura, pero no es estrictamente necesario incluso si necesita que restablezcamos manualmente las ACL de Subversion.
 
 ##### Reglas generadas dinámicamente mediante &#64;ruta::acl
 
-El sistema de creación toma nota de su [`lib/path.pm`](#) las importaciones (o ambas) de seed_file_deps() y seed_file_acl(), y trasladar esa opción en su procesamiento interno de los cambios de confirmación de Subversion que dan lugar a una creación incremental.
+El sistema de creación toma nota de su `lib/path.pm` las importaciones (o ambas) de seed_file_deps() y seed_file_acl(), y trasladar esa opción en su procesamiento interno de los cambios de confirmación de Subversion que dan lugar a una creación incremental.
 
 ##### Seguimiento de migración de contenido controlado
 
@@ -272,9 +272,9 @@ La lógica de seguimiento de movimiento/supresión del CMS de Orion lo maneja si
 
 ##### Controles personalizados en el uso de seed_file_deps() y seed_file_acl() en lib/path.pm
 
-Más allá de la importancia de estos símbolos para [`lib/path.pm`](#), también hay una opción sobre cómo y a qué archivos desea aplicarlos durante la ejecución de un bloque de código walk_content_tree ().  Después de todo, no es solo un archivo de configuración, sino una base de código, con todas las características completas de Turing. [`Perl`](#) ¡Hemos llegado a conocer y apreciar!
+Más allá de la importancia de estos símbolos para `lib/path.pm`, también hay una opción sobre cómo y a qué archivos desea aplicarlos durante la ejecución de un bloque de código walk_content_tree ().  Después de todo, no es solo un archivo de configuración, sino una base de código, con todas las características completas de Turing. `Perl` ¡Hemos llegado a conocer y apreciar!
 
-#### Los archivos .htaccss del sitio web construido y los archivos de autorización de Subversion se sincronizan con &#64;path::acl instantáneamente al confirmar
+#### Los archivos .htaccess del sitio web y los archivos de autorización de Subversion se sincronizan con `@path::acl` inmediatamente después de comprometerse
 
 Protección automática de ACL para compilaciones de ramas efímeras. Se requiere ninguna configuración adicional.
 
@@ -332,4 +332,4 @@ Dependencias notablemente breves y probadas en el tiempo; cuyos componentes prin
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 35747 $ -->
