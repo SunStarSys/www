@@ -10,7 +10,7 @@ title: SunStar Орион систем
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Платформа Jamstack Wiki.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Орион систем</span> &nbsp; является
 

@@ -10,7 +10,7 @@ title: SunStar Orión de los Sistemas
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>La plataforma Wiki de Jamstack.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orión de los Sistemas</span> &nbsp; es un
 
