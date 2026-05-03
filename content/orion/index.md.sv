@@ -104,7 +104,7 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>Här är varför, ung akademisk / fullstack utvecklare / offentlig bloggare...</h3>
+<h3>Här är&nbsp;Varför,&nbsp;Unga&nbsp;Akademisk / Fullstack-utvecklare / Public Blogger...</h3>
 
 Vill du ha en webbplats som är **secure-by-standard**? Lätt att uppdatera och hantera, samtidigt som du döljer komplexiteten hos ett underliggande versionskontrollsystem, men ändå ger dig full kraft när du verkligen behöver det?  Omedelbar publicering när du vill ha det; smidiga, mellanlagrade grenbyggen och anpassningsbara detaljerade kampanjer till din produktionswebbplats eftersom det passar ditt teams föredragna arbetsflöde.
 

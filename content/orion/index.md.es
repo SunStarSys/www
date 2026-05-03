@@ -104,7 +104,7 @@ Esto no es marketing spin &mdash; Es un patrimonio de ingeniería verificable y 
 	</div>
 	<p style="height:20px">&nbsp;</p>
 
-<h3>He aquí por qué, joven académico / desarrollador de pila completa / blogger público...</h3>
+<h3>Aquí está&nbsp;Por qué,&nbsp;Joven&nbsp;Desarrollador Académico / Full Stack / Blogger Público...</h3>
 
 ¿Desea un sitio web que sea **seguro por defecto**? Fácil de actualizar y administrar, al tiempo que oculta la complejidad de un sistema de control de versiones subyacente, pero que le da toda su potencia cuando realmente lo necesita?  Publicación instantánea cuando lo desee; creación de sucursales sin problemas y en etapas y promociones granulares personalizables para su sitio de producción según se adapte al flujo de trabajo preferido de su equipo.
 
@@ -220,4 +220,4 @@ La forma más rápida de ponerse en marcha es jugar con la versión de @SunStarS
 }
 </style>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 35409 $ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 35724 $ -->
