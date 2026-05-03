@@ -102,15 +102,15 @@ No fixed passwords stored on disks. This *limits* headless automation of sudo / 
 
 ### Sandboxed execution for builds and CGI scripts
 
-We deploy "shared-nothing" zone builds, defaulting to zero network availability. This means the only things a customer build can access or modify are their own assets, not those any other customer, or any other system paths on the zone itself (besides [`/tmp`](#)).  Furthermore, only  Business and Enterprise customers have internet access during their builds, because they are using their own *unique* Solaris zones that can be tailored exactly to their build requirements.
+We deploy "shared-nothing" zone builds, defaulting to zero network availability. This means the only things a customer build can access or modify are their own assets, not those any other customer, or any other system paths on the zone itself (besides `/tmp`.  Furthermore, only  Business and Enterprise customers have internet access during their builds, because they are using their own *unique* Solaris zones that can be tailored exactly to their build requirements.
 
-Ditto for CGI scripts, which are fully locked down in terms of write access to anything other than [`/tmp`](#).
+Ditto for CGI scripts, which are fully locked down in terms of write access to anything other than `/tmp`.
 
 ### End to end encryption
 
 - OpenSSL v4+ TLS 1.3 (+FS) AES(256) SHA(256) for HTTPS FIPS 140-3 connections
 
-- OpenSSH v10+ ED25519 FIPS 140-3 with Post-Quantum KexAlgorithm / NIST compliant keys for cross-host [`lo`](#) reverse-port-forwarding
+- OpenSSH v10+ ED25519 FIPS 140-3 with Post-Quantum KexAlgorithm / NIST compliant keys for cross-host `lo` reverse-port-forwarding
 
 - IPsec/IKEv2/PFS AES(256) FIPS 140-2 for cross-regional VPN
 
@@ -118,7 +118,7 @@ Ditto for CGI scripts, which are fully locked down in terms of write access to a
 
 ### Zero Trust aspects
 
-The basic premise of [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various Point of Presence (POP) LANs is only exposed to the bare-metal machine's loopback device interface [`lo0`](#), and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
+The basic premise of [zero trust architecture](https://csrc.nist.gov/publications/detail/sp/800-207/final) is to avoid designing your network security around the physiology of clam: hard on the outside, but soft and loose once you are in.  So we don't do that; every meaningful privileged network port inside the various Point of Presence (POP) LANs is only exposed to the bare-metal machine's loopback device interface `lo`, and is only meaningful in the context of a (reverse) port forwarded SSH connection *to it*.
 
 We use TCP proxies, not HTTP proxies, and no MSA backends, **so the only host that sees your unencrypted TLS web traffic is the host that decrypts it**. Same rules apply to Subversion traffic &mdash; only direct, end-to-end TLS encrypted traffic to the **service endpoint** sees your unencrypted data on the wire.
 
