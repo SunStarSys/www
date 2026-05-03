@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=35322
+status: draft
 Dependencies: *.md.en
 
 <div class="right">
@@ -475,7 +475,7 @@ Copies `$src` to `$dest` if the former's modification timestamp is newer than th
 </div>
 <p class="card-text">
 
-On copy, additionally gzip-compresses the `$dest` file if it's a text file, and adds ".gz" extension to the name.
+On copy, additionally gzip-compresses the `$dest` file if it's a text file, and adds ".gz" extension to the name.  `GZIP` compression can be disabled by setting `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
