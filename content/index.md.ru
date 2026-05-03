@@ -13,14 +13,14 @@ title: Главная
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Новый</span> SunStar Технология CI Linter для систем GitLab {{facts.releases.linter.tag}} сейчас доступно в <a href="https://hub.docker.com/r/schaefj/linter/">Центр Docker</a> и <a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">Новый</span> SunStar Орион систем&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash;
+Теперь с поддержкой LAUNCH_APACHE2!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Орион систем&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash;
-Теперь с поддержкой LAUNCH_APACHE2!
-</h2>
+<h2 class="card-title">SunStar Технология CI Linter для систем GitLab {{facts.releases.linter.tag}} сейчас доступно в <a href="https://hub.docker.com/r/schaefj/linter/">Центр Docker</a> и <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

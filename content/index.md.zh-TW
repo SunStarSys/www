@@ -13,14 +13,14 @@ title: 首頁
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">新建</span> SunStar 系統的 GitLab CI Linter 技術{{facts.releases.linter.tag}} 現在提供：<a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> 與<a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">新建</span> SunStar 系統的 Orion&trade; <a href="{{facts.releases.orion.url}}">靜態網站產生器</a> {{facts.releases.orion.tag}} 已釋出&mdash;
+現在提供 LAUNCH_APACHE2 支援！
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar 系統的 Orion&trade; <a href="{{facts.releases.orion.url}}">靜態網站產生器</a> {{facts.releases.orion.tag}} 已釋出&mdash;
-現在提供 LAUNCH_APACHE2 支援！
-</h2>
+<h2 class="card-title">SunStar 系統的 GitLab CI Linter 技術{{facts.releases.linter.tag}} 現在提供：<a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> 與<a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

@@ -13,14 +13,14 @@ title: 홈 페이지
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">신규</span> SunStar Systems의 GitLab CI Linter 기술 {{facts.releases.linter.tag}} 현재 사용 가능 위치 <a href="https://hub.docker.com/r/schaefj/linter/">도커 허브</a> 및 <a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">신규</span> SunStar 시스템스 오리온&trade; <a href="{{facts.releases.orion.url}}">정적 사이트 생성기</a> {{facts.releases.orion.tag}} 해제됨 &mdash;
+이제 LAUNCH_APACHE2 지원!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar 시스템스 오리온&trade; <a href="{{facts.releases.orion.url}}">정적 사이트 생성기</a> {{facts.releases.orion.tag}} 해제됨 &mdash;
-이제 LAUNCH_APACHE2 지원!
-</h2>
+<h2 class="card-title">SunStar Systems의 GitLab CI Linter 기술 {{facts.releases.linter.tag}} 현재 사용 가능 위치 <a href="https://hub.docker.com/r/schaefj/linter/">도커 허브</a> 및 <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

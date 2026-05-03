@@ -13,14 +13,14 @@ title: ホーム
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">新規</span> SunStarシステムのGitLab CI Linter Technology {{facts.releases.linter.tag}} 現在利用可能<a href="https://hub.docker.com/r/schaefj/linter/">ドッカーハブ</a> および<a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">新規</span> SunStarシステムのOrion&trade; <a href="{{facts.releases.orion.url}}">静的サイトジェネレータ</a> {{facts.releases.orion.tag}} リリース済&mdash;
+LAUNCH_APACHE2サポートあり!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStarシステムのOrion&trade; <a href="{{facts.releases.orion.url}}">静的サイトジェネレータ</a> {{facts.releases.orion.tag}} リリース済&mdash;
-LAUNCH_APACHE2サポートあり!
-</h2>
+<h2 class="card-title">SunStarシステムのGitLab CI Linter Technology {{facts.releases.linter.tag}} 現在利用可能<a href="https://hub.docker.com/r/schaefj/linter/">ドッカーハブ</a> および<a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

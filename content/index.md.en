@@ -10,14 +10,14 @@ Status: published
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">New</span> SunStar Systems' GitLab CI Linter Technology {{facts.releases.linter.tag}} now available at <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> and <a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">New</span> SunStar Systems' Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} released &mdash;
+now with LAUNCH_APACHE2 support!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Systems' Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} released &mdash;
-now with LAUNCH_APACHE2 support!
-</h2>
+<h2 class="card-title">SunStar Systems' GitLab CI Linter Technology {{facts.releases.linter.tag}} now available at <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> and <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

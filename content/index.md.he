@@ -13,14 +13,14 @@ title: בית
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar מערכות' GitLab CI Linter טכנולוגיה {{facts.releases.linter.tag}} זמין כעת ב- <a href="https://hub.docker.com/r/schaefj/linter/">רכזת דוקר</a> וגם <a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתר סטטי</a> {{facts.releases.orion.tag}} שוחרר &mdash;
+עכשיו עם תמיכה LAUNCH_APACHE2!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתר סטטי</a> {{facts.releases.orion.tag}} שוחרר &mdash;
-עכשיו עם תמיכה LAUNCH_APACHE2!
-</h2>
+<h2 class="card-title">SunStar מערכות' GitLab CI Linter טכנולוגיה {{facts.releases.linter.tag}} זמין כעת ב- <a href="https://hub.docker.com/r/schaefj/linter/">רכזת דוקר</a> וגם <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

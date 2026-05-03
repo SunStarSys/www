@@ -13,14 +13,14 @@ title: Startseite
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Neu</span> SunStar Systems' GitLab CI Linter Technologie {{facts.releases.linter.tag}} jetzt verfügbar unter <a href="https://hub.docker.com/r/schaefj/linter/">Docker-Hub</a> und <a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">Neu</span> SunStar System-Orion&trade; <a href="{{facts.releases.orion.url}}">Statischer Standortgenerator</a> {{facts.releases.orion.tag}} freigegeben &mdash;
+Jetzt mit LAUNCH_APACHE2 Unterstützung!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar System-Orion&trade; <a href="{{facts.releases.orion.url}}">Statischer Standortgenerator</a> {{facts.releases.orion.tag}} freigegeben &mdash;
-Jetzt mit LAUNCH_APACHE2 Unterstützung!
-</h2>
+<h2 class="card-title">SunStar Systems' GitLab CI Linter Technologie {{facts.releases.linter.tag}} jetzt verfügbar unter <a href="https://hub.docker.com/r/schaefj/linter/">Docker-Hub</a> und <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

@@ -13,14 +13,14 @@ title: Hem
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar Systems GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Dockningsnav</a> och <a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash;
+Nu med LAUNCH_APACHE2 support!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash;
-Nu med LAUNCH_APACHE2 support!
-</h2>
+<h2 class="card-title">SunStar Systems GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Dockningsnav</a> och <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 

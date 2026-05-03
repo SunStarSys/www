@@ -13,14 +13,14 @@ title: الصفحة الرئيسية
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">جديد</span> SunStar تقنية GitLab CI Linter الخاصة بالأنظمة {{facts.releases.linter.tag}} متوفر الآن في <a href="https://hub.docker.com/r/schaefj/linter/">مركز الإرساء</a> و <a href="{{facts.releases.linter.url}}"
->GitHub</a>.</h2>
+<h2 class="card-title"><span class="badge bg-success">جديد</span> SunStar أوريون الأنظمة&trade; <a href="{{facts.releases.orion.url}}">منشئ الموقع الثابت</a> {{facts.releases.orion.tag}} صدر &mdash;
+الآن مع دعم LAUNCH_APACHE2!
+</h2>
 
 <br>
 
-<h2 class="card-title">SunStar أوريون الأنظمة&trade; <a href="{{facts.releases.orion.url}}">منشئ الموقع الثابت</a> {{facts.releases.orion.tag}} صدر &mdash;
-الآن مع دعم LAUNCH_APACHE2!
-</h2>
+<h2 class="card-title">SunStar تقنية GitLab CI Linter الخاصة بالأنظمة {{facts.releases.linter.tag}} متوفر الآن في <a href="https://hub.docker.com/r/schaefj/linter/">مركز الإرساء</a> و <a href="{{facts.releases.linter.url}}"
+>GitHub</a>.</h2>
 
 <br>
 
