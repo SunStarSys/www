@@ -26,6 +26,8 @@ input::placeholder {color: #839496 !important}
 
 div.jumbotron a, #index a { color:#114056 }
 
+#index { color:black }
+
 div.jumbotron img {
 	width: 200px;
 }
