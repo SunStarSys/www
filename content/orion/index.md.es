@@ -1,6 +1,5 @@
 ---
 acl: '@staff=rw, *=r'
-categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
 status: finalizado
