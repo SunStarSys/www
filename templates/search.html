@@ -16,7 +16,7 @@
   &nbsp;
   {% endfor %}
   {% for k in keywords %}
-  <a href="./?regex=%23{{k}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
+  <a href="./?regex=%23{{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
   &nbsp;
   {% endfor %}
   {% if duration %}
