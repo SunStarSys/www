@@ -275,10 +275,12 @@ for ($d) {
 # convenience preprocessing for the PCRE fearful
 
 $re =~ s/\s+/|/g unless index($re, "|") >= 0 or index($re, '"') >= 0 or index($re, "\\") >= 0 or index($re, '=') >= 0 or index($re, "#") == 0;
-$re=~ s/^#(.*)$/^keywords:.*\\K\\Q$1\\E\\b/;
+$re =~ s/^#(.*)$/^keywords:.*\\K\\Q$1\\E/;
+s/^"(.*)"$/\\Q$1\\E/ for $re;
 
 $filter =~ s/\s+/|/g unless index($filter, "|") >= 0 or index($filter, '"') >= 0 or index($filter, "\\") >= 0 or index($filter, '=') >= 0 or index($filter, "#") == 0;
-s/^"(.*)"$/\\Q$1\\E/ for $re;
+$filter =~ s/^#(.*)$/^keywords:.*\\K\\Q$1\\E/;
+s/^"(.*)"$/\\Q$1\\E/ for $filter;
 
 my @unzip = qw/--markdown --yaml/;
 
