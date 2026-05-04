@@ -53,8 +53,8 @@ var IN_GLOBAL_SCOPE=true;
       editor_content = editormd("editor-content", {
           toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
-	  height: "400px",
-      width: "100%",
+	  height: "400px",{% if path|starts_with:"/orion" %}{% else %}
+      width: "400px",{% endif %}
 	  name: "content",
           mode: "gfm+django+stex",
           path : "/editor.md/lib/",
