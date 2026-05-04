@@ -27,7 +27,7 @@
   <input name="subject" id="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
 <input type="hidden" name="lang" value="{{ lang }}" />
-  <button name="submit" class="btn btn-outline-primary" value=1 >تقديم</button>
+  <button name="submit" class="btn btn-outline-secondary" value=1 >تقديم</button>
 
 <br><br>
 
@@ -54,6 +54,7 @@ var IN_GLOBAL_SCOPE=true;
           toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
 	  height: "400px",
+      width: "100%",
 	  name: "content",
           mode: "gfm+django+stex",
           path : "/editor.md/lib/",
@@ -63,8 +64,8 @@ var IN_GLOBAL_SCOPE=true;
           emoji: true,
  	  tocm : true,                  // Using [TOCM]
           tex : true,                   // 开启科学公式TeX语言支持，默认关闭
-	  flowChart : true,             // 开启流程图支持，默认关闭
-          sequenceDiagram: true,
+	  flowChart : false,             // 开启流程图支持，默认关闭
+          sequenceDiagram: false,
           mermaid: true,
           graphviz: true,
 	  htmlDecode : true,

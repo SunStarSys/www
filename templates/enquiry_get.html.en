@@ -54,6 +54,7 @@ var IN_GLOBAL_SCOPE=true;
           toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
 	  height: "400px",
+      width: "100%",
 	  name: "content",
           mode: "gfm+django+stex",
           path : "/editor.md/lib/",

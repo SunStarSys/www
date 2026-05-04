@@ -1,33 +1,33 @@
-<h3>Orion säljförfrågningar</h3>
+<h3>Orion: Försäljningsförfrågningar</h3>
 <br>
-<form action="/dynamic/enquiry" class="form" method="POST">
+<form method="POST" action="/dynamic/enquiry" class="form">
 
 <label for="name">Ditt namn</label>
-  <input class="form-control" id="name" name="name" required />
+  <input name="name" id="name" class="form-control" required />
 
 <label for="email">Din e-postadress</label>
-  <input class="form-control" id="email" name="email" required type="email" />
+  <input type="email" name="email" id="email" class="form-control" required />
 
-<label for="username">Önskat användarnamn</label>
-  <input class="form-control" id="username" name="username" pattern="^\w+$" required />
+<label for="username">Tilltalsnamn</label>
+  <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 >
   <label for="site">Målwebbplats</label>
-  <input class="form-control" id="site" name="site" type="url" />
+  <input name="site" id="site" type="url" class="form-control" />
 
-<input checked id="confluence" name="confluence" type="checkbox" /> &nbsp; <label for="confluence">Krävs inflytandemigrering?</label>
+<input type="checkbox" id="confluence" name="confluence" checked /> &nbsp; <label for="confluence">Krävs influensamigrering?</label>
 
 <label>Önskad Orion-plan</label>
-  <input id="planFB" name="plan" type="radio" value="Free Blog" /> &nbsp; <label for="planFB">Gratis blogg</label>
-  <input checked id="planPP" name="plan" type="radio" value="Professional" /> &nbsp; <label for="planPP">Vårdpersonalplan</label>
-  <input id="planBP" name="plan" type="radio" value="Business" /> &nbsp; <label for="planBP">Affärsplan</label>
-  <input id="planEP" name="plan" type="radio" value="Enterprise" /> &nbsp; <label for="planEP">Företagsplan</label>
-  <input id="planSI" name="plan" type="radio" value="Server" /> &nbsp; <label for="planSI">Installera Orion-server</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" /> &nbsp; <label for="planFB">Gratis blogg</label>
+  <input type="radio" id="planPP" name="plan" value="Professional" checked /> &nbsp; <label for="planPP">Vårdpersonalplan</label>
+  <input type="radio" id="planBP" name="plan" value="Business" /> &nbsp; <label for="planBP">Affärsplan</label>
+  <input type="radio" id="planEP" name="plan" value="Enterprise" /> &nbsp; <label for="planEP">Företagsplan</label>
+  <input type="radio" id="planSI" name="plan" value="Server" /> &nbsp; <label for="planSI">Installera Orion-server</label>
 
-<label for="subject">Ärende</label>
-  <input class="form-control" id="subject" name="subject" pattern="Orion.*" required value="Orion " />
+<label for="subject">Ämne</label>
+  <input name="subject" id="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
-<input name="lang" type="hidden" value="{{ lang }}" />
-  <button class="btn btn-outline-primary" name="submit" value="1">Skicka</button>
+<input type="hidden" name="lang" value="{{ lang }}" />
+  <button name="submit" class="btn btn-outline-secondary" value=1 >Skicka</button>
 
 <br><br>
 
@@ -54,6 +54,7 @@ var IN_GLOBAL_SCOPE=true;
           toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
 	  height: "400px",
+      width: "100%",
 	  name: "content",
           mode: "gfm+django+stex",
           path : "/editor.md/lib/",
@@ -63,8 +64,8 @@ var IN_GLOBAL_SCOPE=true;
           emoji: true,
  	  tocm : true,                  // Using [TOCM]
           tex : true,                   // 开启科学公式TeX语言支持，默认关闭
-	  flowChart : true,             // 开启流程图支持，默认关闭
-          sequenceDiagram: true,
+	  flowChart : false,             // 开启流程图支持，默认关闭
+          sequenceDiagram: false,
           mermaid: true,
           graphviz: true,
 	  htmlDecode : true,

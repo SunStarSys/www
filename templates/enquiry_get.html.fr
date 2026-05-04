@@ -1,33 +1,33 @@
 <h3>Demandes de renseignements sur les ventes Orion</h3>
 <br>
-<form action="/dynamic/enquiry" class="form" method="POST">
+<form method="POST" action="/dynamic/enquiry" class="form">
 
 <label for="name">Votre nom</label>
-  <input class="form-control" id="name" name="name" required />
+  <input name="name" id="name" class="form-control" required />
 
 <label for="email">Votre adresse électronique</label>
-  <input class="form-control" id="email" name="email" required type="email" />
+  <input type="email" name="email" id="email" class="form-control" required />
 
 <label for="username">Nom d'utilisateur préféré</label>
-  <input class="form-control" id="username" name="username" pattern="^\w+$" required />
+  <input pattern="^\w+$" name="username" id="username" class="form-control" required />
 >
   <label for="site">Site Web cible</label>
-  <input class="form-control" id="site" name="site" type="url" />
+  <input name="site" id="site" type="url" class="form-control" />
 
-<input checked id="confluence" name="confluence" type="checkbox" /> &nbsp; <label for="confluence">Migration de confluence requise ?</label>
+<input type="checkbox" id="confluence" name="confluence" checked /> &nbsp; <label for="confluence">Migration de confluence requise ?</label>
 
 <label>Plan Orion préféré</label>
-  <input id="planFB" name="plan" type="radio" value="Free Blog" /> &nbsp; <label for="planFB">Blog gratuit</label>
-  <input checked id="planPP" name="plan" type="radio" value="Professional" /> &nbsp; <label for="planPP">Plan professionnel</label>
-  <input id="planBP" name="plan" type="radio" value="Business" /> &nbsp; <label for="planBP">Plan commercial</label>
-  <input id="planEP" name="plan" type="radio" value="Enterprise" /> &nbsp; <label for="planEP">Plan d'entreprise</label>
-  <input id="planSI" name="plan" type="radio" value="Server" /> &nbsp; <label for="planSI">Installation du serveur Orion</label>
+  <input type="radio" id="planFB" name="plan" value="Free Blog" /> &nbsp; <label for="planFB">Blog gratuit</label>
+  <input type="radio" id="planPP" name="plan" value="Professional" checked /> &nbsp; <label for="planPP">Plan professionnel</label>
+  <input type="radio" id="planBP" name="plan" value="Business" /> &nbsp; <label for="planBP">Plan commercial</label>
+  <input type="radio" id="planEP" name="plan" value="Enterprise" /> &nbsp; <label for="planEP">Plan d'entreprise</label>
+  <input type="radio" id="planSI" name="plan" value="Server" /> &nbsp; <label for="planSI">Installation d'Orion Server</label>
 
 <label for="subject">Objet</label>
-  <input class="form-control" id="subject" name="subject" pattern="Orion.*" required value="Orion " />
+  <input name="subject" id="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
-<input name="lang" type="hidden" value="{{ lang }}" />
-  <button class="btn btn-outline-primary" name="submit" value="1">Soumettre</button>
+<input type="hidden" name="lang" value="{{ lang }}" />
+  <button name="submit" class="btn btn-outline-secondary" value=1 >Soumettre</button>
 
 <br><br>
 
@@ -54,6 +54,7 @@ var IN_GLOBAL_SCOPE=true;
           toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
 	  height: "400px",
+      width: "100%",
 	  name: "content",
           mode: "gfm+django+stex",
           path : "/editor.md/lib/",
@@ -63,8 +64,8 @@ var IN_GLOBAL_SCOPE=true;
           emoji: true,
  	  tocm : true,                  // Using [TOCM]
           tex : true,                   // 开启科学公式TeX语言支持，默认关闭
-	  flowChart : true,             // 开启流程图支持，默认关闭
-          sequenceDiagram: true,
+	  flowChart : false,             // 开启流程图支持，默认关闭
+          sequenceDiagram: false,
           mermaid: true,
           graphviz: true,
 	  htmlDecode : true,
