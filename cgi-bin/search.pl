@@ -242,7 +242,7 @@ sub get_client_lang  (AR $r) {
 }
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
-my ($re)     = ($apreq->param("regex"))[-1] // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
+my ($re)     = eval{($apreq->param("regex"))[-1]} // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $filter   = $apreq->param("filter") // "";
 my Digest::SHA1 $hash = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
