@@ -63,8 +63,8 @@ var IN_GLOBAL_SCOPE=true;
           emoji: true,
  	  tocm : true,                  // Using [TOCM]
           tex : true,                   // 开启科学公式TeX语言支持，默认关闭
-	  flowChart : true,             // 开启流程图支持，默认关闭
-          sequenceDiagram: true,
+	  flowChart : false,             // 开启流程图支持，默认关闭
+          sequenceDiagram: false,
           mermaid: true,
           graphviz: true,
 	  htmlDecode : true,
