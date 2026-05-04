@@ -15,7 +15,7 @@ div.jumbotron {
 
 input::placeholder {color: #839496 !important}
 
-line-numbers { color:  #8f99fb !important; }
+.line-numbers { color:  #8f99fb !important; }
 
 ::-webkit-input-placeholder { /* Chrome, Safari, Opera */
   color: #839496 !important;
