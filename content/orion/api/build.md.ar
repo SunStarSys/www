@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 35322
+status: التحقق = 36004
 title: أوريون API - بناء
 ---
 
@@ -40,6 +40,8 @@ title: أوريون API - بناء
 وظيفة الأخير هو توفير الاستدعاء `view`على أساس `$method`s للإدخالات المطابقة في `@path::patterns` (باعتباره اسم أسلوب ذي سلسلة في الفتحة الثانية من كل إدخال arrayref)، يتم استدعاؤه بواسطة [يصنع النصوص البرمجية]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة جوانب الملف مسبقًا في `$path` تلك رواية، مثل الكود الخارجي `snippets` أو `asymptote`قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ title: أوريون API - بناء
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+إضافة سلسلة عنوان لارتباطات تخفيض السعر. عادة يجب أن تستخدم تحت `offline` لتجنب سحب العناوين من المواقع البعيدة.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ title: أوريون API - بناء
 </div>
 <p class="card-text">
 
-على نسخة، بالإضافة إلى ذلك gzip يضغط على `$dest` ملف إذا كان ملفًا نصيًا، ويضيف ".gz" امتداد للاسم.
+على نسخة، بالإضافة إلى ذلك gzip يضغط على `$dest` ملف إذا كان ملفًا نصيًا، ويضيف ".gz" امتداد للاسم.  `GZIP` يمكن تعطيل الضغط من خلال الإعداد `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
@@ -824,4 +843,4 @@ title: أوريون API - بناء
   }
 </script>
 
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ $المؤلف: جو $المراجعة: 36004 $ -->

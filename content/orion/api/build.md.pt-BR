@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=35322
+status: verificado=36004
 title: Orion API - Criação
 ---
 
@@ -40,6 +40,8 @@ O trabalho do primeiro é fazer três coisas:
 O trabalho deste último é fornecer invocável `view`com base em `$method`s para as entradas correspondentes em `@path::patterns` (como um nome de método stringificado no segundo slot de cada entrada arrayref), chamado pelo [criando script]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no `$path` que são novos, como o código externo `snippets` ou `asymptote`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ Anexa `$args{lang}` para `$args{template}`.
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Adiciona uma string de título a links de markdown. Normalmente deve ser usado sob o `offline` para evitar puxar títulos de sites remotos.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ Cópias `$src` para `$dest` se o timestamp de modificação do primeiro for mais
 </div>
 <p class="card-text">
 
-Na cópia, gzip-compacta o `$dest` se for um arquivo de texto e adiciona ".gz" extensão do nome.
+Na cópia, gzip-compacta o `$dest` se for um arquivo de texto e adiciona ".gz" extensão do nome.  `GZIP` a compactação pode ser desativada por definição `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
@@ -824,4 +843,4 @@ Igual a `YAML::XS::Dump`.
   }
 </script>
 
-<!-- $Date$Autor: joe $Revisão: 35322 $ -->
+<!-- $Date$Autor: joe $Revisão: 36004 $ -->

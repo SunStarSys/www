@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=35322
+status: 確認済み=36004
 title: Orion API - ビルド
 ---
 
@@ -40,6 +40,8 @@ title: Orion API - ビルド
 後者の仕事は、invokableを提供することです。`view`- ベース`$method`s: 一致するエントリ`@path::patterns` (各arrayrefエントリの2番目のスロット内の文字列化されたメソッド名として) [ビルドスクリプト]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには`$path` 外部コードのように新しい`snippets` または`asymptote`- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ HTMLブレッドクラム・リストを返します。`$path`.
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+マークダウン・リンクにタイトル文字列を追加します。通常は、`offline` リモート・サイトからのタイトルのプルを回避するためのビュー。
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ UTF-8でエンコードされたファイルのheaders+contentを解析します
 </div>
 <p class="card-text">
 
-コピー時に、さらにgzip-compress `$dest` file (テキストファイルの場合) ".gz" 名前の拡張。
+コピー時に、さらにgzip-compress `$dest` file (テキストファイルの場合) ".gz" 名前の拡張。`GZIP` 設定することで圧縮を無効にできます。`$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>

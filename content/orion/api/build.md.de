@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: überprüft=35322
+status: überprüft=36004
 title: Orion API - Erstellen
 ---
 
@@ -40,6 +40,8 @@ Die erste Aufgabe besteht darin, drei Dinge zu tun:
 Letzterer hat die Aufgabe, unlösbar zu sein. `view`-basiert `$method`s für die übereinstimmenden Einträge in `@path::patterns` (als String-Methodenname im zweiten Slot jedes arrayref-Eintrags), der vom [Skripting erstellen]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 Viele Ansichten sollen gestapelt werden als "Filter" um Aspekte der Datei in `$path` Das ist neu, wie externer Code `snippets` oder `asymptote`-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ Anhänge `$args{lang}` bis `$args{template}`.
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Fügt Markdown-Links eine Titelzeichenfolge hinzu. Normalerweise sollte man unter `offline` Ansicht, um das Abrufen von Titeln von Remote-Sites zu vermeiden.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ Kopien `$src` bis `$dest` wenn der Änderungszeitstempel neuer ist als der des l
 </div>
 <p class="card-text">
 
-Auf Kopie, zusätzlich gzip-komprimiert die `$dest` Datei, wenn es sich um eine Textdatei handelt, und fügt ".gz" Erweiterung des Namens.
+Auf Kopie, zusätzlich gzip-komprimiert die `$dest` Datei, wenn es sich um eine Textdatei handelt, und fügt ".gz" Erweiterung des Namens.  `GZIP` Komprimierung kann durch Einstellung deaktiviert werden `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>

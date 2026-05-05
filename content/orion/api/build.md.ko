@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=35322
+status: 확인=36004
 title: Orion API - 빌드
 ---
 
@@ -40,6 +40,8 @@ title: Orion API - 빌드
 후자의 임무는 호출을 제공하는 것입니다 `view`- 기반 `$method`s - 일치하는 항목의 경우 `@path::patterns` (각 arrayref 항목의 두번째 슬롯에 있는 문자열화된 메소드 이름으로), [스크립트 작성]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 많은 뷰가 "필터" 파일의 측면을 미리 처리하려면 `$path` 외부 코드와 마찬가지로 참신합니다. `snippets` 또는 `asymptote`-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ YAML 파일을 일반적으로 JSON으로 변환합니다.
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+마크다운 링크에 제목 문자열을 추가합니다. 일반적으로는 `offline` 원격 사이트에서 제목을 가져오지 않도록 합니다.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
 </div>
 <p class="card-text">
 
-복사본에서 gzip-compresses의 `$dest` 파일(텍스트 파일인 경우) ".gz" 이름을 확장합니다.
+복사본에서 gzip-compresses의 `$dest` 파일(텍스트 파일인 경우) ".gz" 이름을 확장합니다.  `GZIP` 압축은 다음 설정을 통해 비활성화할 수 있습니다. `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
@@ -824,4 +843,4 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
   }
 </script>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 35322 $ -->
+<!-- $Date$ 저자 : 조 $ 개정 : 36004 $ -->

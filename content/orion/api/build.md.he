@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: אומתה=35322
+status: אומתה=36004
 title: API של אוריון - בנייה
 ---
 
@@ -40,6 +40,8 @@ title: API של אוריון - בנייה
 תפקידו של השני הוא לספק בלתי אפשרי. `view`מבוסס `$method`s לרשומות תואמות ב- `@path::patterns` (כשם שיטה מחרוזת בחריץ השני של כל רשומת arrayref), הופעל על-ידי [בניית תסריטים]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- `$path` זה רומן, כמו קוד חיצוני. `snippets` או `asymptote`גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ title: API של אוריון - בנייה
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+מוסיף מחרוזת כותרת לקישורי סימון. בדרך כלל יש להשתמש תחת `offline` תצוגה כדי למנוע משיכה בכותרות מאתרים מרוחקים.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ title: API של אוריון - בנייה
 </div>
 <p class="card-text">
 
-על עותק, בנוסף gzip-דחיסת `$dest` קובץ אם הוא קובץ טקסט, ומוסיף ".gz" הרחבה לשם.
+על עותק, בנוסף gzip-דחיסת `$dest` קובץ אם הוא קובץ טקסט, ומוסיף ".gz" הרחבה לשם.  `GZIP` ניתן להשבית את הדחיסה על־ידי הגדרה `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
@@ -824,4 +843,4 @@ Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים 
   }
 </script>
 
-<!-- $Date$מחבר: ג'ו $ $מהדורה: 35322 $ -->
+<!-- $Date$מחבר: ג'ו $ $ מהדורה: 36004 $ -->

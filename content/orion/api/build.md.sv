@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=35322
+status: verifierad=36004
 title: Orion API - bygge
 ---
 
@@ -40,6 +40,8 @@ Det första är att göra tre saker:
 Den senares jobb är att tillhandahålla bokningsbara `view`-baserad `$method`s för matchande poster i `@path::patterns` (som ett strängifierat metodnamn i den andra rutan för varje arrayref-post), anropat av [skapa skript]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i `$path` som är nya, som extern kod `snippets` eller `asymptote`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ Tillägg `$args{lang}` till `$args{template}`.
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Lägger till en rubriksträng i nedsättningslänkar. Normalt bör användas under `offline` för att undvika att dra in titlar från fjärrplatser.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ Kopior `$src` till `$dest` om den tidigare ändringens tidsstämpel är nyare ä
 </div>
 <p class="card-text">
 
-På kopia, dessutom gzip-komprimerar `$dest` fil om det är en textfil och lägger till ".gz" Tillägg till namnet.
+På kopia, dessutom gzip-komprimerar `$dest` fil om det är en textfil och lägger till ".gz" Tillägg till namnet.  `GZIP` komprimering kan inaktiveras genom inställning `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>

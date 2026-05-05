@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado=35322
+status: verificado=36004
 title: API de Orion - Crear
 ---
 
@@ -40,6 +40,8 @@ El trabajo del primero es hacer tres cosas:
 El trabajo de este último es proporcionar invocable `view`basado en `$method`s para las entradas coincidentes en `@path::patterns` (como un nombre de método de cadena en la segunda ranura de cada entrada arrayref), invocado por el [creación de scripts]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en `$path` que son novedosas, como el código externo `snippets` o `asymptote`-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ Anexos `$args{lang}` a `$args{template}`.
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Agrega una cadena de título a los enlaces de rebaja. Normalmente se debe utilizar bajo el `offline` para evitar extraer títulos de sitios remotos.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ Copias `$src` a `$dest` si el registro de hora de modificación del primero es m
 </div>
 <p class="card-text">
 
-Al copiar, además, gzip-comprime el `$dest` archivo si es un archivo de texto y agrega ".gz" extensión del nombre.
+Al copiar, además, gzip-comprime el `$dest` archivo si es un archivo de texto y agrega ".gz" extensión del nombre.  `GZIP` la compresión se puede desactivar estableciendo `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
@@ -824,4 +843,4 @@ Igual que `YAML::XS::Dump`.
   }
 </script>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 35322 $ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 36004 $ -->

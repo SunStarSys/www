@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =35322
+status: 驗證 =36004
 title: Orion API - 建置
 ---
 
@@ -40,6 +40,8 @@ title: Orion API - 建置
 後者的工作是提供不可呼叫的工作`view`- 基底`$method`s，用於比對下列項目：`@path::patterns` (作為每個 arrayref 項目的第二個槽位中的字串方法名稱)，由[建置命令檔]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 許多視觀表的堆疊方式"篩選" 預先處理檔案的層面`$path` 新穎，如外部程式碼`snippets` 或`asymptote`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ title: Orion API - 建置
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+新增標題字串至 Markdown 連結。一般使用於`offline` 檢視以避免從遠端網站提取標題。
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ Orion 的通用文字檔案處理器
 </div>
 <p class="card-text">
 
-在複製時，加上 gzip 壓縮`$dest` 檔案 (如果是文字檔) 並新增".gz" 名稱的副檔名。
+在複製時，加上 gzip 壓縮`$dest` 檔案 (如果是文字檔) 並新增".gz" 名稱的副檔名。`GZIP` 設定可停用壓縮`$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
@@ -824,4 +843,4 @@ Orion 的通用文字檔案處理器
   }
 </script>
 
-<!-- $Date$ $$ 作者：joe $ $ 版次：35322 $ -->
+<!-- $Date$ $ 作者：joe $ $ 版次：36004 $ -->

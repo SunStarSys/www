@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=35322
+status: проверено=36004
 title: API Orion – сборка
 ---
 
@@ -40,6 +40,8 @@ title: API Orion – сборка
 Задача последнего состоит в том, чтобы обеспечить вызываемый `view`на основе `$method`s для соответствующих записей в `@path::patterns` (в качестве строкового имени метода во втором слоте каждой записи ссылки массива), вызываемого [создание сценариев]({{snippetA.pretty_uri}}):
 
 [snippet:repo=SunStarSys/orion:path=build_site.pl:token=#api:lang=perl]
+
+&nbsp;
 
 Многие виды должны быть сложены как "фильтры" для предварительной обработки аспектов файла в `$path` Это новый, как внешний код. `snippets` или `asymptote`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
 
@@ -428,6 +430,23 @@ title: API Orion – сборка
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Добавляет строку заголовка для ссылок разметки. Обычно используется при `offline` просмотр, чтобы избежать получения заголовков с удаленных сайтов.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
 &nbsp;
 
 ----
@@ -474,7 +493,7 @@ title: API Orion – сборка
 </div>
 <p class="card-text">
 
-При копировании дополнительно gzip-сжатие `$dest` файл, если это текстовый файл, и добавляет ".gz" Расширение имени.
+При копировании дополнительно gzip-сжатие `$dest` файл, если это текстовый файл, и добавляет ".gz" Расширение имени.  `GZIP` сжатие можно отключить, установив `$ENV{NO_COPY_COMPRESS}=1`.
 
 </p>
 </div>
@@ -824,4 +843,4 @@ title: API Orion – сборка
   }
 </script>
 
-<!-- $Date$Автор: Джо $Пересмотр: 35322 $ -->
+<!-- $Date$Автор: Джо $Пересмотр: 36004 $ -->
