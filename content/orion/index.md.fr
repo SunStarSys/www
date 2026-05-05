@@ -1,10 +1,9 @@
 ---
 acl: '@staff=rw, *=r'
-categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
 status: terminé
-title: SunStar Orion de Systems
+title: Orion de SunStar Systems
 ---
 
 <div class="row">
@@ -12,7 +11,7 @@ title: SunStar Orion de Systems
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade;
 </p>
-<span class="text-white">SunStar Orion de Systems</span> &nbsp; est une
+<span class="text-white">Orion de SunStar Systems</span> &nbsp; est une
 
 &nbsp;
 
@@ -221,3 +220,5 @@ Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://i
 </style>
 
 <!-- $Date$Auteur : joe $Révision : 35724 $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->
