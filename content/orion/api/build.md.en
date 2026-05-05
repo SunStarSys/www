@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=36004
+status: verified=36018
 Dependencies: *.md.en
 
 <div class="right">
@@ -229,7 +229,7 @@ Refactors `$data` argument hashref as a timestamp ordered arrayref of 2-element 
 </div>
 <p class="card-text">
 
-The first entry in each 2-element arrayref is the file path-name, second element is the resultant [`read_text_file`](#) hashref for that path-name.
+The first entry in each 2-element arrayref is the file path-name, second element is the resultant `read_text_file` hashref for that path-name.
 
 Returns a list of resulting new source files if `$quick > 2`.
 
