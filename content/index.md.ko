@@ -57,7 +57,7 @@ title: 홈 페이지
 
 체크아웃  [오리온](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade; &mdash; Orion은 고유의 SCM 기반 엔터프라이즈 제품입니다. [인어-마인드맵](/orion/features) 통합!
 
-백그라운드 A Behind Scenes <span class="text-white">백서</span> 우리의 특허 출원 기술에 대한 설명, 우리의 [스마트 콘텐츠 종속성 관리](/essays/dependencies)&trade; 에세이
+백그라운드 A Behind Scenes <span class="text-white">백서</span> 우리의 특허 출원 기술에 대한 설명, 우리의 [스마트 콘텐츠 종속성 관리](https://iconoclasts.blog/joe/dependencies)&trade; 에세이
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ title: 홈 페이지
 
 &nbsp;
 
-- <span class="badge bg-success">신규</span> [지식 관리 시스템 위키](/essays/wikis) &mdash; Orion이 2026년 빅 픽처에 어떻게 부합하는지에 대한 입문서입니다.
+- <span class="badge bg-success">신규</span> [지식 관리 시스템 위키](https://iconoclasts.blog/joe/wikis) &mdash; Orion이 2026년 빅 픽처에 어떻게 부합하는지에 대한 입문서입니다.
 
-- [애플리케이션 성능](/essays/performance) &mdash; 작업 예제: 관찰 가능한 병목 현상부터 효과적인 해결까지.
+- [애플리케이션 성능](https://iconoclasts.blog/joe/performance) &mdash; 작업 예제: 관찰 가능한 병목 현상부터 효과적인 해결까지.
 
-- [정보 보안](/essays/infosec) &mdash; 기본 개념의 추상화는 광범위한 실제 적용성과 명확성을 제공합니다.
+- [정보 보안](https://iconoclasts.blog/joe/infosec) &mdash; 기본 개념의 추상화는 광범위한 실제 적용성과 명확성을 제공합니다.
 
-- [펄 7에 대한 봉인된 렉시칼](/essays/perl7-sealed-lexicals) &mdash; 추가 <span class="text-info">:봉인됨</span> 함수 정의 및 모든 형식 렉시칼에 대한 컴파일 타임 메소드 조회의 추가 속도를 즐길 수 있습니다.
+- [펄 7에 대한 봉인된 렉시칼](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; 추가 <span class="text-info">:봉인됨</span> 함수 정의 및 모든 형식 렉시칼에 대한 컴파일 타임 메소드 조회의 추가 속도를 즐길 수 있습니다.
 
-- [DevOps 이동](/essays/devops) &mdash; 이 문서에서 누락된 세부 정보를 입력했습니다.
+- [DevOps 이동](https://iconoclasts.blog/joe/devops) &mdash; 이 문서에서 누락된 세부 정보를 입력했습니다.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 35457 $ -->
+<!-- $Date$ 저자 : 조 $ 개정 : 35952 $ -->

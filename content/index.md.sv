@@ -57,7 +57,7 @@ Letar du efter en bättre, säkrare, snabbare, **förenad** Enterprise Wiki?
 
 Checka ut  [Orion](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade; &mdash; Orion är den enda SCM-baserade företagsprodukten med inbyggd [sjöjungfru-mindmap](/orion/features) integration!
 
-För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av vår patentsökta teknik, se vår [Beroendehantering för smart innehåll](/essays/dependencies)&trade; uppsats.
+För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av vår patentsökta teknik, se vår [Beroendehantering för smart innehåll](https://iconoclasts.blog/joe/dependencies)&trade; uppsats.
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av v
 
 &nbsp;
 
-- <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](/essays/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
+- <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](https://iconoclasts.blog/joe/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
 
-- [Applikationsprestanda](/essays/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
+- [Applikationsprestanda](https://iconoclasts.blog/joe/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
 
-- [Informationssäkerhet](/essays/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet.
+- [Informationssäkerhet](https://iconoclasts.blog/joe/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet.
 
-- [Förseglade Lexicals för Perl 7](/essays/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njut av den extra hastigheten av kompileringstidsmetoduppslagningar för alla dess typangivna lexikaler.
+- [Förseglade Lexicals för Perl 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njut av den extra hastigheten av kompileringstidsmetoduppslagningar för alla dess typangivna lexikaler.
 
-- [DevOps-rörelsen](/essays/devops) &mdash; Fyll i de uppgifter som saknas i denna artikel.
+- [DevOps-rörelsen](https://iconoclasts.blog/joe/devops) &mdash; Fyll i de uppgifter som saknas i denna artikel.
 
 <style type="text/css">
 h2 { font-size: 18px }

@@ -57,7 +57,7 @@ Procurando uma Wiki Enterprise **federated** melhor, mais segura e mais rápida?
 
 Check-out  [Orion](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade; &mdash; O Orion é o único produto empresarial baseado em SCM com [sereia-mentemap](/orion/features) integração!
 
-Para os bastidores <span class="text-white">whitepaper</span> descrição de nossa tecnologia de patente pendente, veja nosso [Gerenciamento de Dependência de Conteúdo Inteligente](/essays/dependencies)&trade; ensaio.
+Para os bastidores <span class="text-white">whitepaper</span> descrição de nossa tecnologia de patente pendente, veja nosso [Gerenciamento de Dependência de Conteúdo Inteligente](https://iconoclasts.blog/joe/dependencies)&trade; ensaio.
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ Para os bastidores <span class="text-white">whitepaper</span> descrição de nos
 
 &nbsp;
 
-- <span class="badge bg-success">Novo</span> [Wikis em Sistemas de Gestão do Conhecimento](/essays/wikis) &mdash; uma cartilha sobre como Orion se encaixa na Visão Geral de 2026.
+- <span class="badge bg-success">Novo</span> [Wikis em Sistemas de Gestão do Conhecimento](https://iconoclasts.blog/joe/wikis) &mdash; uma cartilha sobre como Orion se encaixa na Visão Geral de 2026.
 
-- [Desempenho do Aplicativo](/essays/performance) &mdash; um exemplo de trabalho: de um gargalo observável a uma resolução eficaz.
+- [Desempenho do Aplicativo](https://iconoclasts.blog/joe/performance) &mdash; um exemplo de trabalho: de um gargalo observável a uma resolução eficaz.
 
-- [Segurança da Informação](/essays/infosec) &mdash; A abstração dos conceitos básicos leva a ampla aplicabilidade e clareza do mundo real.
+- [Segurança da Informação](https://iconoclasts.blog/joe/infosec) &mdash; A abstração dos conceitos básicos leva a ampla aplicabilidade e clareza do mundo real.
 
-- [Léxicos Selados para Perl 7](/essays/perl7-sealed-lexicals) &mdash; adicionar <span class="text-info">:selado</span> para uma definição de função e desfrutar da velocidade extra de compile-time método lookups para todos os seus léxicos tipados.
+- [Léxicos Selados para Perl 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; adicionar <span class="text-info">:selado</span> para uma definição de função e desfrutar da velocidade extra de compile-time método lookups para todos os seus léxicos tipados.
 
-- [O Movimento DevOps](/essays/devops) &mdash; preencha os detalhes ausentes neste artigo.
+- [O Movimento DevOps](https://iconoclasts.blog/joe/devops) &mdash; preencha os detalhes ausentes neste artigo.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$Autor: joe $Revisão: 35457 $ -->
+<!-- $Date$Autor: joe $Revisão: 35952 $ -->

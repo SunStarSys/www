@@ -57,7 +57,7 @@ title: בית
 
 הוצאת פריט  [אוריון](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>אתר Jamstack Wiki.</em></span>&trade; &mdash; אוריון הוא המוצר הארגוני היחיד המבוסס על SCM עם native [מפת חשיבה בתולת ים](/orion/features) אינטגרציה!
 
-מאחורי הקלעים <span class="text-white">סקירה טכנית</span> תיאור של הטכנולוגיה הממתינה לפטנט שלנו, ראה שלנו [ניהול תלות של תוכן חכם](/essays/dependencies)&trade; אסאי
+מאחורי הקלעים <span class="text-white">סקירה טכנית</span> תיאור של הטכנולוגיה הממתינה לפטנט שלנו, ראה שלנו [ניהול תלות של תוכן חכם](https://iconoclasts.blog/joe/dependencies)&trade; אסאי
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ title: בית
 
 &nbsp;
 
-- <span class="badge bg-success">חדש</span> [ויקי במערכות ניהול ידע](/essays/wikis) &mdash; ספר על איך אוריון נכנס לתמונה הגדולה של 2026.
+- <span class="badge bg-success">חדש</span> [ויקי במערכות ניהול ידע](https://iconoclasts.blog/joe/wikis) &mdash; ספר על איך אוריון נכנס לתמונה הגדולה של 2026.
 
-- [ביצועי יישום](/essays/performance) &mdash; דוגמה עובדת: מצוואר בקבוק נצפה לפתרון יעיל.
+- [ביצועי יישום](https://iconoclasts.blog/joe/performance) &mdash; דוגמה עובדת: מצוואר בקבוק נצפה לפתרון יעיל.
 
-- [אבטחת מידע](/essays/infosec) &mdash; הפשטה של המושגים הבסיסיים מובילה לישימות רחבה בעולם האמיתי ובהירות.
+- [אבטחת מידע](https://iconoclasts.blog/joe/infosec) &mdash; הפשטה של המושגים הבסיסיים מובילה לישימות רחבה בעולם האמיתי ובהירות.
 
-- [לקסיקלים אטומים לפרל 7](/essays/perl7-sealed-lexicals) &mdash; הוסף <span class="text-info">:חסום</span> להגדרת פונקציה וליהנות מהמהירות הנוספת של קודי שיטת זמן הידור עבור כל הלקסיקלים המוקלדים שלה.
+- [לקסיקלים אטומים לפרל 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; הוסף <span class="text-info">:חסום</span> להגדרת פונקציה וליהנות מהמהירות הנוספת של קודי שיטת זמן הידור עבור כל הלקסיקלים המוקלדים שלה.
 
-- [תנועת DevOps](/essays/devops) &mdash; מלא את הפרטים החסרים במאמר זה.
+- [תנועת DevOps](https://iconoclasts.blog/joe/devops) &mdash; מלא את הפרטים החסרים במאמר זה.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$מחבר: ג'ו $ $ מהדורה: 35457 $ -->
+<!-- $Date$מחבר: ג'ו $ $ מהדורה: 35952 $ -->

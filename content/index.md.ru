@@ -57,7 +57,7 @@ title: Главная
 
 Изъять  [Орион](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade; &mdash; Orion – единственный корпоративный продукт на основе SCM с нативными средствами [русалка](/orion/features) интеграция!
 
-За кулисами <span class="text-white">документ</span> описание нашей технологии патентования, см. [Управление зависимостями интеллектуального контента](/essays/dependencies)&trade; Эссе.
+За кулисами <span class="text-white">документ</span> описание нашей технологии патентования, см. [Управление зависимостями интеллектуального контента](https://iconoclasts.blog/joe/dependencies)&trade; Эссе.
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ title: Главная
 
 &nbsp;
 
-- <span class="badge bg-success">Новый</span> [Википедия:Системы управления знаниями](/essays/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
+- <span class="badge bg-success">Новый</span> [Википедия:Системы управления знаниями](https://iconoclasts.blog/joe/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
 
-- [Производительность приложения](/essays/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения.
+- [Производительность приложения](https://iconoclasts.blog/joe/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения.
 
-- [Информационная безопасность](/essays/infosec) &mdash; Абстракция основных понятий приводит к широкой реальной применимости и ясности.
+- [Информационная безопасность](https://iconoclasts.blog/joe/infosec) &mdash; Абстракция основных понятий приводит к широкой реальной применимости и ясности.
 
-- [Герметичные лексикалы для перла 7](/essays/perl7-sealed-lexicals) &mdash; прибавить <span class="text-info">:запечатанный</span> для определения функции и наслаждайтесь дополнительной скоростью поиска метода компиляции времени для всех его типизированных лексикалов.
+- [Герметичные лексикалы для перла 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; прибавить <span class="text-info">:запечатанный</span> для определения функции и наслаждайтесь дополнительной скоростью поиска метода компиляции времени для всех его типизированных лексикалов.
 
-- [Движение DevOps](/essays/devops) &mdash; Заполнить недостающие детали в этой статье.
+- [Движение DevOps](https://iconoclasts.blog/joe/devops) &mdash; Заполнить недостающие детали в этой статье.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$Автор: Джо $Пересмотр: 35457 $ -->
+<!-- $Date$Автор: Джо $Пересмотр: 35952 $ -->

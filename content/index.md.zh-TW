@@ -57,7 +57,7 @@ title: 首頁
 
 查看更多[奧里昂](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wiki 平台。</em></span>&trade; &mdash; Orion 是唯一具備原生功能的 SCM 企業產品[美人魚陣圖](/orion/features) 整合！
 
-適合幕後活動<span class="text-white">白皮書</span> 我們的專利申請技術描述，請參閱我們的[智慧內容相依性管理](/essays/dependencies)&trade; 繁體中文
+適合幕後活動<span class="text-white">白皮書</span> 我們的專利申請技術描述，請參閱我們的[智慧內容相依性管理](https://iconoclasts.blog/joe/dependencies)&trade; 繁體中文
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ title: 首頁
 
 &nbsp;
 
-- <span class="badge bg-success">新建</span> [知識管理系統中的 Wiki](/essays/wikis) &mdash; Orion 如何融入 2026 年大局的首要任務。
+- <span class="badge bg-success">新建</span> [知識管理系統中的 Wiki](https://iconoclasts.blog/joe/wikis) &mdash; Orion 如何融入 2026 年大局的首要任務。
 
-- [應用程式效能](/essays/performance) &mdash; 工作範例：從可觀察的瓶頸到有效的解析度。
+- [應用程式效能](https://iconoclasts.blog/joe/performance) &mdash; 工作範例：從可觀察的瓶頸到有效的解析度。
 
-- [資訊安全](/essays/infosec) &mdash; 基本概念的抽象使得現實世界的適用性和清晰度更廣。
+- [資訊安全](https://iconoclasts.blog/joe/infosec) &mdash; 基本概念的抽象使得現實世界的適用性和清晰度更廣。
 
-- [Perl 7 的密封語彙](/essays/perl7-sealed-lexicals) &mdash; 新增<span class="text-info">：已密封</span> 至函數定義，並享受編譯階段方法查詢的額外速度，以處理其所有類型的詞彙。
+- [Perl 7 的密封語彙](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; 新增<span class="text-info">：已密封</span> 至函數定義，並享受編譯階段方法查詢的額外速度，以處理其所有類型的詞彙。
 
-- [DevOps 移動](/essays/devops) &mdash; 請填寫此文章中遺漏的詳細資料。
+- [DevOps 移動](https://iconoclasts.blog/joe/devops) &mdash; 請填寫此文章中遺漏的詳細資料。
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $$ 作者：joe $ $ 版次：35457 $ -->
+<!-- $Date$ $$ 作者：joe $ $ 版次：35952 $ -->

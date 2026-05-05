@@ -57,7 +57,7 @@ LAUNCH_APACHE2サポートあり!
 
 チェックアウト[オリオン](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>Jamstack Wikiプラットフォーム</em></span>&trade; &mdash; Orionは、独自のSCMベースのエンタープライズ製品です。[マーメイドマインドマップ](/orion/features) 統合!
 
-舞台裏で<span class="text-white">ホワイトペーパー</span> 私達の特許出願中の技術の記述は、私達を見ます[スマート・コンテンツ依存性管理](/essays/dependencies)&trade; エッセイ
+舞台裏で<span class="text-white">ホワイトペーパー</span> 私達の特許出願中の技術の記述は、私達を見ます[スマート・コンテンツ依存性管理](https://iconoclasts.blog/joe/dependencies)&trade; エッセイ
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ LAUNCH_APACHE2サポートあり!
 
 &nbsp;
 
-- <span class="badge bg-success">新規</span> [ナレッジマネジメントシステム(Knowledge Management Systems)](/essays/wikis) &mdash; オリオンが2026年の全体像にどのように適合するかについての原始者。
+- <span class="badge bg-success">新規</span> [ナレッジマネジメントシステム(Knowledge Management Systems)](https://iconoclasts.blog/joe/wikis) &mdash; オリオンが2026年の全体像にどのように適合するかについての原始者。
 
-- [アプリケーション・パフォーマンス](/essays/performance) &mdash; 実用的な例: 観察可能なボトルネックから効果的な解決まで。
+- [アプリケーション・パフォーマンス](https://iconoclasts.blog/joe/performance) &mdash; 実用的な例: 観察可能なボトルネックから効果的な解決まで。
 
-- [情報セキュリティ](/essays/infosec) &mdash; 基本的な概念を抽象化することで、現実世界での適用性と明確さが広がります。
+- [情報セキュリティ](https://iconoclasts.blog/joe/infosec) &mdash; 基本的な概念を抽象化することで、現実世界での適用性と明確さが広がります。
 
-- [Perl 7のための密封された字句](/essays/perl7-sealed-lexicals) &mdash; 追加<span class="text-info">: 密封</span> 関数定義に対して、その型付きのすべての字句に対するコンパイル時メソッド検索の速度を向上させます。
+- [Perl 7のための密封された字句](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; 追加<span class="text-info">: 密封</span> 関数定義に対して、その型付きのすべての字句に対するコンパイル時メソッド検索の速度を向上させます。
 
-- [DevOps移動](/essays/devops) &mdash; この記事の欠けている詳細を記入しました。
+- [DevOps移動](https://iconoclasts.blog/joe/devops) &mdash; この記事の欠けている詳細を記入しました。
 
 <style type="text/css">
 h2 { font-size: 18px }

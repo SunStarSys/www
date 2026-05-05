@@ -57,7 +57,7 @@ Buscando un mejor, más seguro, más rápido, **federado** Enterprise Wiki?
 
 Bloquear  [Orión](/orion/features)<span class="text-primary-emphasis"><img alt="Orion logo" style="width:60px" src="images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 --> &nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade; &mdash; Orion es el único producto empresarial basado en SCM con tecnología nativa [mapa de mente de sirena](/orion/features) integración!
 
-Para un detrás de escena <span class="text-white">documento técnico</span> descripción de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](/essays/dependencies)&trade; ensayo.
+Para un detrás de escena <span class="text-white">documento técnico</span> descripción de nuestra tecnología pendiente de patente, consulte nuestra [Gestión de dependencias de contenido inteligente](https://iconoclasts.blog/joe/dependencies)&trade; ensayo.
 
 &nbsp;
 <img src="images/github-mark.png" {% ifequal lang ".ar" %}style="width:64px;padding-left:15px;float:right"{% else %}{% ifequal lang ".he" %}style="width:64px;padding-left:15px;float:right"{% else %}style="width:64px;padding-right:15px;float:left"{% endifequal %}{% endifequal %}  alt="GitHub Mark" />
@@ -80,15 +80,15 @@ Para un detrás de escena <span class="text-white">documento técnico</span> des
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](/essays/wikis) &mdash; Una guía sobre cómo Orion encaja en el panorama general de 2026.
+- <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](https://iconoclasts.blog/joe/wikis) &mdash; Una guía sobre cómo Orion encaja en el panorama general de 2026.
 
-- [Rendimiento de aplicaciones](/essays/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución efectiva.
+- [Rendimiento de aplicaciones](https://iconoclasts.blog/joe/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución efectiva.
 
-- [Seguridad de la información](/essays/infosec) &mdash; La abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real.
+- [Seguridad de la información](https://iconoclasts.blog/joe/infosec) &mdash; La abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real.
 
-- [Léxico sellado para Perl 7](/essays/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos sus léxicos mecanografiados.
+- [Léxico sellado para Perl 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos sus léxicos mecanografiados.
 
-- [El movimiento DevOps](/essays/devops) &mdash; completar los detalles que faltan en este artículo.
+- [El movimiento DevOps](https://iconoclasts.blog/joe/devops) &mdash; completar los detalles que faltan en este artículo.
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +120,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 35457 $ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 35952 $ -->
