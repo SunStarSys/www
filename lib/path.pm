@@ -3,6 +3,7 @@ package path;
 use SunStarSys::Util qw/walk_content_tree seed_file_deps seed_file_acl archived Load/;
 use strict;
 use warnings;
+use v5.38;
 
 open my $fh, "<:encoding(UTF-8)", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
 my $facts = Load join "", <$fh>;
@@ -75,9 +76,9 @@ walk_content_tree {
   return if -d "content/$_";
 
   seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)[^\/]*$/;
-
+  state $count = 0;
   for my $lang (qw/en es de ru sv he zh-TW fr ar ko jp pt-BR/) {
-
+    delete $dependencies{"/sitemap.html.$lang"} while ++$count <= 12;
     if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
     }
