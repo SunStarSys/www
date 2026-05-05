@@ -1,10 +1,9 @@
 ---
 acl: '@staff=rw, *=r'
-categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
 status: concluído
-title: SunStar Orion dos Sistemas
+title: Orion dos SunStar Sistemas
 ---
 
 <div class="row">
@@ -12,7 +11,7 @@ title: SunStar Orion dos Sistemas
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade;
 </p>
-<span class="text-white">SunStar Orion dos Sistemas</span> &nbsp; é uma
+<span class="text-white">Orion dos SunStar Sistemas</span> &nbsp; é uma
 
 &nbsp;
 
@@ -221,3 +220,5 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 </style>
 
 <!-- $Date$Autor: joe $Revisão: 35724 $ -->
+
+<!-- $Date$ $Author$ $Revision$ -->
