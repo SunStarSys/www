@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado
+status: verificado=36101
 title: API de Orion - Crear
 ---
 
@@ -844,5 +844,3 @@ Igual que `YAML::XS::Dump`.
 </script>
 
 <!-- $Date$ Autor: joe $ $ Revisión: 36101 $ -->
-
-<!-- $Date$ $Author$ $Revision$ -->
