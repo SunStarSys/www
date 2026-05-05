@@ -79,7 +79,7 @@ walk_content_tree {
   state $count = 0;
   for my $lang (qw/en es de ru sv he zh-TW fr ar ko jp pt-BR/) {
     delete $dependencies{"/sitemap.html.$lang"} while ++$count <= 12;
-    if (/\.md\.$lang$/ or m!/index\.html\.$lang$! or m!/files/|/slides/|/bin/!) {
+    if (/\.md\.$lang$/ or m!/index\.html\.$lang$!) {
       push @{$dependencies{"/sitemap.html.$lang"}}, $_ if !archived;
     }
 
