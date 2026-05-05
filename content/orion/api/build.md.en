@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=35854
+status: verified=35989
 Dependencies: *.md.en
 
 <div class="right">
@@ -423,6 +423,23 @@ Normalizes local links (`./` and `../`).
     <div class="card-title">
 
 Appends `$args{lang}` to `$args{template}`.
+
+</div>
+<p class="card-text">
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `titleize_links(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Adds a title string to markdown links. Normally should be used under the `offline` view to avoid pulling in titles from remote sites.
 
 </div>
 <p class="card-text">
