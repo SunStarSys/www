@@ -11,7 +11,7 @@ title: Orión de los SunStar Sistemas
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>La plataforma Wiki de Jamstack.</em></span>&trade;
 </p>
-<span class="text-white">SunStar Orión de los Sistemas</span> &nbsp; es un
+<span class="text-white">Orión de los SunStar Sistemas</span> &nbsp; es un
 
 &nbsp;
 
