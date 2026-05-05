@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
 status: finalizado
-title: SunStar Orión de los Sistemas
+title: Orión de los SunStar Sistemas
 ---
 
 <div class="row">
