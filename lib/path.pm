@@ -101,7 +101,9 @@ walk_content_tree {
     }
 
     open my $fh, "<:encoding(UTF-8)", "lib/acl.yml" or die "Can't open acl.yml: $!";
-    push @acl, @{Load join "", <$fh>};
+    unshift @acl, @{Load join "", <$fh>};
+    my %seen;
+    @acl = grep !$seen{$_->{path}}++, @acl;
   };
 #snippet
 
