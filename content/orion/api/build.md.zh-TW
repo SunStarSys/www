@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =36004
+status: 驗證 =36101
 title: Orion API - 建置
 ---
 
@@ -229,7 +229,7 @@ title: Orion API - 建置
 </div>
 <p class="card-text">
 
-每個 2- 元素 arrayref 中的第一個項目是檔案 path-name，第二個元素則是產生的[`read_text_file`](#) 該 path-name 的 hashref。
+每個 2- 元素 arrayref 中的第一個項目是檔案 path-name，第二個元素則是產生的`read_text_file` 該 path-name 的 hashref。
 
 傳回結果新來源檔案的清單，如果`$quick > 2`.
 
@@ -439,7 +439,7 @@ title: Orion API - 建置
   <div class="card-body">
     <div class="card-title">
 
-新增標題字串至 Markdown 連結。一般使用於`offline` 檢視以避免從遠端網站提取標題。
+新增標題字串至 Markdown 連結。一般使用於`offline` 檢視以避免從遠端網站提取標題，這會大幅拖放頁面建置時間。
 
 </div>
 <p class="card-text">
@@ -843,4 +843,4 @@ Orion 的通用文字檔案處理器
   }
 </script>
 
-<!-- $Date$ $ 作者：joe $ $ 版次：36004 $ -->
+<!-- $Date$ $ 作者：joe $ $ 版次：36101 $ -->

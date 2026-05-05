@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: überprüft=36004
+status: überprüft=36101
 title: Orion API - Erstellen
 ---
 
@@ -229,7 +229,7 @@ Refactors `$data` Argument hashref als zeitstempel geordneter arrayref von 2-ele
 </div>
 <p class="card-text">
 
-Der erste Eintrag in jedem 2-Element-Arrayref ist der Dateipfadname, das zweite Element ist das Ergebnis. [`read_text_file`](#) hashref für diesen Pfadnamen.
+Der erste Eintrag in jedem 2-Element-Arrayref ist der Dateipfadname, das zweite Element ist das Ergebnis. `read_text_file` hashref für diesen Pfadnamen.
 
 Gibt eine Liste der resultierenden neuen Quelldateien zurück, wenn `$quick > 2`.
 
@@ -439,7 +439,7 @@ Anhänge `$args{lang}` bis `$args{template}`.
   <div class="card-body">
     <div class="card-title">
 
-Fügt Markdown-Links eine Titelzeichenfolge hinzu. Normalerweise sollte man unter `offline` Ansicht, um das Abrufen von Titeln von Remote-Sites zu vermeiden.
+Fügt Markdown-Links eine Titelzeichenfolge hinzu. Normalerweise sollte man unter `offline` Ansicht, um das Abrufen von Titeln von Remote-Sites zu vermeiden, was zu erheblichen Verzögerungen bei der Seitenerstellung führen kann.
 
 </div>
 <p class="card-text">

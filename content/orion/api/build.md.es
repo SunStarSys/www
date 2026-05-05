@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado
+status: verificado=36101
 title: API de Orion - Crear
 ---
 
@@ -229,7 +229,7 @@ Refactores `$data` argumento hashref como una referencia de matriz ordenada de r
 </div>
 <p class="card-text">
 
-La primera entrada en cada arrayref de 2 elementos es el nombre de ruta de archivo, el segundo elemento es el resultado [`read_text_file`](#) hashref para ese nombre de ruta.
+La primera entrada en cada arrayref de 2 elementos es el nombre de ruta de archivo, el segundo elemento es el resultado `read_text_file` hashref para ese nombre de ruta.
 
 Devuelve una lista de los nuevos archivos de origen resultantes si `$quick > 2`.
 
@@ -439,7 +439,7 @@ Anexos `$args{lang}` a `$args{template}`.
   <div class="card-body">
     <div class="card-title">
 
-Agrega una cadena de título a los enlaces de rebaja. Normalmente se debe utilizar bajo el `offline` para evitar extraer títulos de sitios remotos.
+Agrega una cadena de título a los enlaces de rebaja. Normalmente se debe utilizar bajo el `offline` para evitar tirar de títulos de sitios remotos, lo que puede poner un arrastre significativo en los tiempos de creación de página.
 
 </div>
 <p class="card-text">
@@ -843,6 +843,4 @@ Igual que `YAML::XS::Dump`.
   }
 </script>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 36004 $ -->
-
-<!-- $Date$ $Author$ $Revision$ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 36101 $ -->

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=36004
+status: verifierad=36101
 title: Orion API - bygge
 ---
 
@@ -229,7 +229,7 @@ Refaktorer `$data` argument hashref som en tidsstämpel ordnad arrayref av 2-ele
 </div>
 <p class="card-text">
 
-Den första posten i varje 2-element arrayref är filsökvägens namn, det andra elementet är resultatet [`read_text_file`](#) hashref för det sökvägsnamnet.
+Den första posten i varje 2-element arrayref är filsökvägens namn, det andra elementet är resultatet `read_text_file` hashref för det sökvägsnamnet.
 
 Returnerar en lista över resulterande nya källfiler om `$quick > 2`.
 
@@ -439,7 +439,7 @@ Tillägg `$args{lang}` till `$args{template}`.
   <div class="card-body">
     <div class="card-title">
 
-Lägger till en rubriksträng i nedsättningslänkar. Normalt bör användas under `offline` för att undvika att dra in titlar från fjärrplatser.
+Lägger till en rubriksträng i nedsättningslänkar. Normalt bör användas under `offline` för att undvika att dra in titlar från fjärrplatser, vilket kan sätta en betydande dra på sidan byggtider.
 
 </div>
 <p class="card-text">

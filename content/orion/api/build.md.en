@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=36077
+status: verified=36101
 Dependencies: *.md.en
 
 <div class="right">
@@ -439,7 +439,7 @@ Appends `$args{lang}` to `$args{template}`.
   <div class="card-body">
     <div class="card-title">
 
-Adds a title string to markdown links. Normally should be used under the `offline` view to avoid pulling in titles from remote sites.
+Adds a title string to markdown links. Normally should be used under the `offline` view to avoid pulling in titles from remote sites, which can put a significant drag on page build times.
 
 </div>
 <p class="card-text">

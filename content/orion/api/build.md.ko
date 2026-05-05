@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=36004
+status: 확인=36101
 title: Orion API - 빌드
 ---
 
@@ -229,7 +229,7 @@ YAML 파일을 일반적으로 JSON으로 변환합니다.
 </div>
 <p class="card-text">
 
-각 2 요소 arrayref의 첫 번째 항목은 파일 경로 이름입니다, 두 번째 요소는 결과입니다 [`read_text_file`](#) 해당 경로 이름에 대한 해시 참조입니다.
+각 2 요소 arrayref의 첫 번째 항목은 파일 경로 이름입니다, 두 번째 요소는 결과입니다 `read_text_file` 해당 경로 이름에 대한 해시 참조입니다.
 
 다음과 같은 경우 결과 새 소스 파일 목록을 반환합니다. `$quick > 2`.
 
@@ -439,7 +439,7 @@ YAML 파일을 일반적으로 JSON으로 변환합니다.
   <div class="card-body">
     <div class="card-title">
 
-마크다운 링크에 제목 문자열을 추가합니다. 일반적으로는 `offline` 원격 사이트에서 제목을 가져오지 않도록 합니다.
+마크다운 링크에 제목 문자열을 추가합니다. 일반적으로는 `offline` 보기는 페이지 빌드 시간에 상당한 드래그를 넣을 수 있는 원격 사이트에서 제목을 가져오지 않도록 합니다.
 
 </div>
 <p class="card-text">
@@ -843,4 +843,4 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
   }
 </script>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 36004 $ -->
+<!-- $Date$ 저자 : 조 $ 개정 : 36101 $ -->

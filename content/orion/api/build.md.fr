@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: vérifié=36004
+status: vérifié=36101
 title: API Orion - Créer
 ---
 
@@ -229,7 +229,7 @@ Refactorations `$data` argument hashref en tant que tableauréf ordonné horodat
 </div>
 <p class="card-text">
 
-La première entrée de chaque arrayref à 2 éléments est le chemin d'accès au fichier, le second élément est le résultat [`read_text_file`](#) hashref pour ce chemin d'accès.
+La première entrée de chaque arrayref à 2 éléments est le chemin d'accès au fichier, le second élément est le résultat `read_text_file` hashref pour ce chemin d'accès.
 
 Renvoie la liste des nouveaux fichiers source résultants si `$quick > 2`.
 
@@ -439,7 +439,7 @@ Ajouts `$args{lang}` au `$args{template}`.
   <div class="card-body">
     <div class="card-title">
 
-Ajoute une chaîne de titre aux liens Markdown. Normalement, il doit être utilisé sous `offline` pour éviter d'extraire des titres de sites distants.
+Ajoute une chaîne de titre aux liens Markdown. Normalement, il doit être utilisé sous `offline` vue pour éviter d'extraire des titres de sites distants, ce qui peut faire un glisser-déposer significatif sur les temps de création de page.
 
 </div>
 <p class="card-text">
@@ -843,4 +843,4 @@ Identique à `YAML::XS::Dump`.
   }
 </script>
 
-<!-- $Date$Auteur : joe $Révision : 36004 $ -->
+<!-- $Date$Auteur : joe $Révision : 36101 $ -->

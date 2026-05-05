@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=36004
+status: 確認済み=36101
 title: Orion API - ビルド
 ---
 
@@ -229,7 +229,7 @@ index.htmlおよびsitemap.htmlページを構築する場合
 </div>
 <p class="card-text">
 
-各2要素arrayrefの最初のエントリはファイルpath-nameで、2番目の要素は結果です[`read_text_file`](#) そのパス名のhashref。
+各2要素arrayrefの最初のエントリはファイルpath-nameで、2番目の要素は結果です`read_text_file` そのパス名のhashref。
 
 結果の新しいソース・ファイルのリストを返します。`$quick > 2`.
 
@@ -439,7 +439,7 @@ HTMLブレッドクラム・リストを返します。`$path`.
   <div class="card-body">
     <div class="card-title">
 
-マークダウン・リンクにタイトル文字列を追加します。通常は、`offline` リモート・サイトからのタイトルのプルを回避するためのビュー。
+マークダウン・リンクにタイトル文字列を追加します。通常は、`offline` ページ構築時間を大幅に短縮できるリモート・サイトからのタイトルのプルを回避するためのビュー。
 
 </div>
 <p class="card-text">

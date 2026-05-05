@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=36004
+status: verificado=36101
 title: Orion API - Criação
 ---
 
@@ -229,7 +229,7 @@ Refatores `$data` hashref de argumento como um arrayref ordenado de timestamp de
 </div>
 <p class="card-text">
 
-A primeira entrada em cada arrayref de 2 elementos é o nome do caminho do arquivo, o segundo elemento é o resultado [`read_text_file`](#) hashref para esse nome de caminho.
+A primeira entrada em cada arrayref de 2 elementos é o nome do caminho do arquivo, o segundo elemento é o resultado `read_text_file` hashref para esse nome de caminho.
 
 Retorna uma lista de novos arquivos de origem resultantes se `$quick > 2`.
 
@@ -439,7 +439,7 @@ Anexa `$args{lang}` para `$args{template}`.
   <div class="card-body">
     <div class="card-title">
 
-Adiciona uma string de título a links de markdown. Normalmente deve ser usado sob o `offline` para evitar puxar títulos de sites remotos.
+Adiciona uma string de título a links de markdown. Normalmente deve ser usado sob o `offline` para evitar puxar títulos de sites remotos, o que pode colocar um arrasto significativo nos tempos de compilação da página.
 
 </div>
 <p class="card-text">
@@ -843,4 +843,4 @@ Igual a `YAML::XS::Dump`.
   }
 </script>
 
-<!-- $Date$Autor: joe $Revisão: 36004 $ -->
+<!-- $Date$Autor: joe $Revisão: 36101 $ -->
