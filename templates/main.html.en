@@ -30,10 +30,6 @@
     <link href="/favicon.png" rel="icon">
     <script src="/editor.md/js/jquery.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
-<!--    <script type="text/javascript">
-	var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
-    $.fn.bootstrapBtn = bootstrapButton; // give $().bootstrapBtn the Bootstrap functionality
-	</script> -->
 	{% block header %}{% endblock %}
     {% block analytics %}
     {% include "analytics.html" %}
@@ -167,7 +163,12 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
   <script blocking="render" async type="text/javascript">
-    if (typeof(editormd) === "undefined") {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+
+      if (typeof(editormd) === "undefined") {
 
         mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
         $(".sequence-diagram").sequenceDiagram();
