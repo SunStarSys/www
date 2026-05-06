@@ -149,7 +149,7 @@
   <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-  <footer>{% block footer %}{% endblock footer %}</footer>
+  <footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer>
 
 <!--  <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
