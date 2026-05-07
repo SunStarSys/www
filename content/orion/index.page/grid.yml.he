@@ -21,6 +21,8 @@ title: נתוני טבלה לסורג השוואת מאפיינים
   Orion: "התקנת שרת"
 - Feature: "מסד נתונים של עובדות גלובליות"
   Orion: "&check;"
+- Feature: "אימות קישור פנימי/חיצוני"
+  Orion: "&check;"
 
 - Feature: "תהליך עבודה בדפדפן (ידידותי לנייד)"
   Orion: "&check;"
@@ -71,7 +73,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 
 - Feature: "מושבים ללא הגבלה"
   Orion: "ארגוני &amp; התקנת שרת"
-- Feature: "היסטוריית בקרת גרסאות ללא הגבלה"
+- Feature: "היסטוריית בקרת גרסאות לא מוגבלת ועקבית"
   Orion: "&check;"
 - Feature: "מעקב משולב אחר שינוי כתובת URL"
   Orion: "&check;"
@@ -94,7 +96,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 - Feature: "סטטוס מסמך ניתן לחיפוש"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'סמן מטה <span class="editormd-tex">\leftrightarrow \LaTeX</span> אוטומציה'
+- Feature: 'סמן מטה' <span class="editormd-tex">\leftrightarrow \LaTeX</span> אוטומציה'
   Orion: "&check;"
 - Feature: "תרגום אוטומטי של AI NLP"
   Orion: "&check;"

@@ -21,6 +21,8 @@ title: 기능 비교 그리드에 대한 테이블 데이터
   Orion: "서버 설치"
 - Feature: "글로벌 팩트 데이터베이스"
   Orion: "&check;"
+- Feature: "내부/외부 링크 검증"
+  Orion: "&check;"
 
 - Feature: "브라우저 내 워크플로우(모바일 친화적)"
   Orion: "&check;"
@@ -71,7 +73,7 @@ title: 기능 비교 그리드에 대한 테이블 데이터
 
 - Feature: "무제한 좌석"
   Orion: "기업 &amp; 서버 설치"
-- Feature: "무제한 버전 제어 내역"
+- Feature: "무제한, 일관된 버전 관리 기록"
   Orion: "&check;"
 - Feature: "통합 URL 변경 추적"
   Orion: "&check;"
@@ -94,7 +96,7 @@ title: 기능 비교 그리드에 대한 테이블 데이터
 - Feature: "검색 가능 문서 상태"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: '마크다운 <span class="editormd-tex">\leftrightarrow \LaTeX</span> 자동화'
+- Feature: '마크다운 <span class="editormd-tex">\leftrightarrow \LaTeX</span> 자동화
   Orion: "&check;"
 - Feature: "AI NLP 자동 번역"
   Orion: "&check;"
