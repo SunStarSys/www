@@ -14,7 +14,7 @@
 	<meta property="og:image" content="/images/sunstarstaronly.png">
 	{% endif %}
     <meta property="og:title" content="{{ headers.title|safe }} - {{ facts.title|safe }}">
-    <meta property="og:description" content="{{content|lede|markdown|striptags}}">
+    <meta property="og:description" content="{{description}}">
 	<title>{% block title %}{{ facts.title|safe }} - {{ headers.title|safe }}{% endblock %}</title>
 	{% if permalink %}
 	<link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
