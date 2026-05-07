@@ -48,7 +48,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Multilingüe (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Se puede buscar/sustituir completamente <span class="editormd-tex">\KaTeX</span>Expresiones /PCRE"
+- Feature: 'Se puede buscar/sustituir completamente <span class="editormd-tex">\KaTeX</span>Expresiones /PCRE'
   Orion: "&check;"
 - Feature: "Federado"
   Orion: "&check;"
@@ -61,7 +61,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Funciona sin conexión"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "Flujo de trabajo de colaborador de "solicitud de extracción" de 3ª parte sencilla"
+- Feature: 'Flujo de trabajo de colaborador de "solicitud de extracción" de 3ª parte sencilla'
   Orion: "&check;"
 - Feature: "[GitHub Integración](https://youtu.be/FRc4qZkxVaI) con IDE &amp; Soporte de acciones"
   Orion: "&check;"
