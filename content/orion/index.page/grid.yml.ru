@@ -96,7 +96,7 @@ title: Данные таблицы для сетки сравнения хара
 - Feature: "Статус документа с возможностью поиска"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Снижение цен <span class="editormd-tex">\leftrightarrow \LaTeX</span> Автоматизация
+- Feature: 'Снижение цен <span class="editormd-tex">\leftrightarrow \LaTeX</span> Автоматизация'
   Orion: "&check;"
 - Feature: "ИИ: автоматический перевод NLP"
   Orion: "&check;"

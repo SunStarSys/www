@@ -48,7 +48,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Flerspråkig (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: Fullständigt sökbar/utbytbar <span class="editormd-tex">\KaTeX</span>/PCRE-uttryck"
+- Feature: 'Fullständigt sökbar/utbytbar <span class="editormd-tex">\KaTeX</span>/PCRE-uttryck'
   Orion: "&check;"
 - Feature: "Samordnad"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Sökbar dokumentstatus"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering
+- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering'
   Orion: "&check;"
 - Feature: "Automatisk översättning av AI NLP"
   Orion: "&check;"
