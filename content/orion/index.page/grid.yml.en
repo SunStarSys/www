@@ -18,6 +18,8 @@ status: draft
   Orion: "Server Install"
 - Feature: "Global Fact Database"
   Orion: "&check;"
+- Feature: "Internal/External Link Validation"
+  Orion: "&check;"
 
 - Feature: "In-Browser Workflow (Mobile Friendly)"
   Orion: "&check;"
