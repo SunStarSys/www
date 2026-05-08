@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,знание,блоги,orion,jamstack,perl,f/oss
-status: опубликовано
+status: проверено=36357
 title: Главная
 ---
 
@@ -80,15 +80,47 @@ title: Главная
 
 &nbsp;
 
-- <span class="badge bg-success">Новый</span> [Википедия:Системы управления знаниями](https://iconoclasts.blog/joe/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
+- &nbsp; <span class="badge bg-success">Новый</span> [Википедия:Системы управления знаниями](https://iconoclasts.blog/joe/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
 
-- [Производительность приложения](https://iconoclasts.blog/joe/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения.
+- &nbsp; [Производительность приложения](https://iconoclasts.blog/joe/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения.
 
-- [Информационная безопасность](https://iconoclasts.blog/joe/infosec) &mdash; Абстракция основных понятий приводит к широкой реальной применимости и ясности.
+- &nbsp; [Информационная безопасность](https://iconoclasts.blog/joe/infosec) &mdash; Абстракция основных понятий приводит к широкой реальной применимости и ясности.
 
-- [Герметичные лексикалы для перла 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; прибавить <span class="text-info">:запечатанный</span> для определения функции и наслаждайтесь дополнительной скоростью поиска метода компиляции времени для всех его типизированных лексикалов.
+- &nbsp; [Герметичные лексикалы для перла 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; прибавить <span class="text-info">:запечатанный</span> для определения функции и наслаждайтесь дополнительной скоростью поиска метода компиляции времени для всех его типизированных лексикалов.
 
-- [Движение DevOps](https://iconoclasts.blog/joe/devops) &mdash; Заполнить недостающие детали в этой статье.
+- &nbsp; [Движение DevOps](https://iconoclasts.blog/joe/devops) &mdash; Заполнить недостающие детали в этой статье.
+
+&nbsp;
+
+-----
+
+&nbsp;
+
+## Карты сайтов
+
+- [Британские единицы](sitemap.html.en)
+
+- [Испанский](sitemap.html.es)
+
+- [немецкий](sitemap.html.de)
+
+- [Французский](sitemap.html.fr)
+
+- [шведский](sitemap.html.de)
+
+- [Португальский (Бразилия)](sitemap.html.pt-BR)
+
+- [Русский](sitemap.html.ru)
+
+- [Иврит](sitemap.html.he)
+
+- [Арабский](sitemap.html.ar)
+
+- [Китайский](sitemap.html.zh-TW)
+
+- [Корейский](sitemap.html.ko)
+
+- [Японский](sitemap.html.ja)
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +152,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$Автор: Джо $Пересмотр: 35952 $ -->
+<!-- $Date$Автор: Джо $Пересмотр: 36357 $ -->

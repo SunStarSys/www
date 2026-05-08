@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,conocimiento,blogs,orion,jamstack,perl,f/oss
-status: publicado
+status: verificado=36357
 title: Inicio
 ---
 
@@ -80,15 +80,47 @@ Para un detrás de escena <span class="text-white">documento técnico</span> des
 
 &nbsp;
 
-- <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](https://iconoclasts.blog/joe/wikis) &mdash; Una guía sobre cómo Orion encaja en el panorama general de 2026.
+- &nbsp; <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](https://iconoclasts.blog/joe/wikis) &mdash; Una guía sobre cómo Orion encaja en el panorama general de 2026.
 
-- [Rendimiento de aplicaciones](https://iconoclasts.blog/joe/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución efectiva.
+- &nbsp; [Rendimiento de aplicaciones](https://iconoclasts.blog/joe/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución efectiva.
 
-- [Seguridad de la información](https://iconoclasts.blog/joe/infosec) &mdash; La abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real.
+- &nbsp; [Seguridad de la información](https://iconoclasts.blog/joe/infosec) &mdash; La abstracción de los conceptos básicos conduce a una amplia aplicabilidad y claridad en el mundo real.
 
-- [Léxico sellado para Perl 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos sus léxicos mecanografiados.
+- &nbsp; [Léxico sellado para Perl 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; agregar <span class="text-info">:sellado</span> a una definición de función y disfrute de la velocidad adicional de las consultas de método de tiempo de compilación para todos sus léxicos mecanografiados.
 
-- [El movimiento DevOps](https://iconoclasts.blog/joe/devops) &mdash; completar los detalles que faltan en este artículo.
+- &nbsp; [El movimiento DevOps](https://iconoclasts.blog/joe/devops) &mdash; completar los detalles que faltan en este artículo.
+
+&nbsp;
+
+-----
+
+&nbsp;
+
+## Mapas de sitio
+
+- [Inglés](sitemap.html.en)
+
+- [Español](sitemap.html.es)
+
+- [Alemán](sitemap.html.de)
+
+- [Francés](sitemap.html.fr)
+
+- [Sueco](sitemap.html.de)
+
+- [Portugués brasileño](sitemap.html.pt-BR)
+
+- [Ruso](sitemap.html.ru)
+
+- [Hebreo](sitemap.html.he)
+
+- [Árabe](sitemap.html.ar)
+
+- [Chino](sitemap.html.zh-TW)
+
+- [Coreano](sitemap.html.ko)
+
+- [Japonés](sitemap.html.ja)
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +152,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 35952 $ -->
+<!-- $Date$ Autor: joe $ $ Revisión: 36357 $ -->

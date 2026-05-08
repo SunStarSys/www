@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki，知識，部落格，orion，jamstack，perl，f/oss
-status: 已發布
+status: 驗證 =36357
 title: 首頁
 ---
 
@@ -80,15 +80,47 @@ title: 首頁
 
 &nbsp;
 
-- <span class="badge bg-success">新建</span> [知識管理系統中的 Wiki](https://iconoclasts.blog/joe/wikis) &mdash; Orion 如何融入 2026 年大局的首要任務。
+- &nbsp; <span class="badge bg-success">新建</span> [知識管理系統中的 Wiki](https://iconoclasts.blog/joe/wikis) &mdash; Orion 如何融入 2026 年大局的首要任務。
 
-- [應用程式效能](https://iconoclasts.blog/joe/performance) &mdash; 工作範例：從可觀察的瓶頸到有效的解析度。
+- &nbsp; [應用程式效能](https://iconoclasts.blog/joe/performance) &mdash; 工作範例：從可觀察的瓶頸到有效的解析度。
 
-- [資訊安全](https://iconoclasts.blog/joe/infosec) &mdash; 基本概念的抽象使得現實世界的適用性和清晰度更廣。
+- &nbsp; [資訊安全](https://iconoclasts.blog/joe/infosec) &mdash; 基本概念的抽象使得現實世界的適用性和清晰度更廣。
 
-- [Perl 7 的密封語彙](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; 新增<span class="text-info">：已密封</span> 至函數定義，並享受編譯階段方法查詢的額外速度，以處理其所有類型的詞彙。
+- &nbsp; [Perl 7 的密封語彙](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; 新增<span class="text-info">：已密封</span> 至函數定義，並享受編譯階段方法查詢的額外速度，以處理其所有類型的詞彙。
 
-- [DevOps 移動](https://iconoclasts.blog/joe/devops) &mdash; 請填寫此文章中遺漏的詳細資料。
+- &nbsp; [DevOps 移動](https://iconoclasts.blog/joe/devops) &mdash; 請填寫此文章中遺漏的詳細資料。
+
+&nbsp;
+
+-----
+
+&nbsp;
+
+## 網站地圖
+
+- [英文](sitemap.html.en)
+
+- [西班牙文](sitemap.html.es)
+
+- [德文](sitemap.html.de)
+
+- [法文](sitemap.html.fr)
+
+- [瑞典文](sitemap.html.de)
+
+- [巴西葡萄牙文](sitemap.html.pt-BR)
+
+- [俄文](sitemap.html.ru)
+
+- [希伯來語](sitemap.html.he)
+
+- [阿拉伯文](sitemap.html.ar)
+
+- [中文 English](sitemap.html.zh-TW)
+
+- [韓文](sitemap.html.ko)
+
+- [日文](sitemap.html.ja)
 
 <style type="text/css">
 h2 { font-size: 18px }
@@ -120,4 +152,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $$ 作者：joe $ $ 版次：35952 $ -->
+<!-- $Date$ $ 作者：joe $ $ 版次：36357 $ -->

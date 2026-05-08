@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,kunskap, bloggar,orion,jamstack,perl,f/oss
-status: publicerad
+status: verifierad=36357
 title: Hem
 ---
 
@@ -80,15 +80,47 @@ För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av v
 
 &nbsp;
 
-- <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](https://iconoclasts.blog/joe/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
+- &nbsp; <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](https://iconoclasts.blog/joe/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
 
-- [Applikationsprestanda](https://iconoclasts.blog/joe/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
+- &nbsp; [Applikationsprestanda](https://iconoclasts.blog/joe/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
 
-- [Informationssäkerhet](https://iconoclasts.blog/joe/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet.
+- &nbsp; [Informationssäkerhet](https://iconoclasts.blog/joe/infosec) &mdash; abstraktion av de grundläggande begreppen leder till bred verklig tillämplighet och klarhet.
 
-- [Förseglade Lexicals för Perl 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njut av den extra hastigheten av kompileringstidsmetoduppslagningar för alla dess typangivna lexikaler.
+- &nbsp; [Förseglade Lexicals för Perl 7](https://iconoclasts.blog/joe/perl7-sealed-lexicals) &mdash; summera <span class="text-info">:förseglad</span> till en funktionsdefinition och njut av den extra hastigheten av kompileringstidsmetoduppslagningar för alla dess typangivna lexikaler.
 
-- [DevOps-rörelsen](https://iconoclasts.blog/joe/devops) &mdash; Fyll i de uppgifter som saknas i denna artikel.
+- &nbsp; [DevOps-rörelsen](https://iconoclasts.blog/joe/devops) &mdash; Fyll i de uppgifter som saknas i denna artikel.
+
+&nbsp;
+
+-----
+
+&nbsp;
+
+## Webbplatsmappningar
+
+- [Engelska](sitemap.html.en)
+
+- [Spanska](sitemap.html.es)
+
+- [Tyska](sitemap.html.de)
+
+- [Franska](sitemap.html.fr)
+
+- [Svenska](sitemap.html.de)
+
+- [Brasiliansk portugisiska](sitemap.html.pt-BR)
+
+- [Ryska](sitemap.html.ru)
+
+- [Hebreiska](sitemap.html.he)
+
+- [arabiska](sitemap.html.ar)
+
+- [kinesiska](sitemap.html.zh-TW)
+
+- [Koreanska](sitemap.html.ko)
+
+- [Japanska](sitemap.html.ja)
 
 <style type="text/css">
 h2 { font-size: 18px }
