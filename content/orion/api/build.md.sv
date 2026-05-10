@@ -43,7 +43,7 @@ Den senares jobb är att tillhandahålla bokningsbara `view`-baserad `$method`s 
 
 &nbsp;
 
-Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i `$path` som är nya, som extern kod `snippets` eller `asymptote`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i `$path` som är nya, som extern kod `snippets` eller `asymptote`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
 
 [TOC]
 

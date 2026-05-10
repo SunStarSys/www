@@ -43,7 +43,7 @@ title: API Orion – сборка
 
 &nbsp;
 
-Многие виды должны быть сложены как "фильтры" для предварительной обработки аспектов файла в `$path` Это новый, как внешний код. `snippets` или `asymptote`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Многие виды должны быть сложены как "фильтры" для предварительной обработки аспектов файла в `$path` Это новый, как внешний код. `snippets` или `asymptote`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
 
 [TOC]
 

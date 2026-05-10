@@ -43,7 +43,7 @@ O trabalho deste último é fornecer invocável `view`com base em `$method`s par
 
 &nbsp;
 
-Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no `$path` que são novos, como o código externo `snippets` ou `asymptote`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Muitas views devem ser empilhadas como "filtros" para pré-processar aspectos do arquivo no `$path` que são novos, como o código externo `snippets` ou `asymptote`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
 
 [TOC]
 

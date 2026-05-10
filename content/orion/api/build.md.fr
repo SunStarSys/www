@@ -43,7 +43,7 @@ Le travail de ce dernier est de fournir invokable `view`-basé `$method`s pour l
 
 &nbsp;
 
-Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans `$path` qui sont nouveaux, comme le code externe `snippets` ou `asymptote`-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L53).
+Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter les aspects du fichier dans `$path` qui sont nouveaux, comme le code externe `snippets` ou `asymptote`-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
 
 [TOC]
 
