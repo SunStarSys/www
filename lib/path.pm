@@ -5,7 +5,7 @@ use strict;
 use warnings;
 use v5.38;
 
-open my $fh, "<:encoding(UTF-8)", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
+open my $fh, "<:utf8", "lib/facts.yml" or die "Can't locate facts.yml data: $!";
 my $facts = Load join "", <$fh>;
 close $fh;
 
@@ -101,7 +101,7 @@ walk_content_tree {
       push @{$dependencies{$k}}, grep $k ne $_, grep s/^content// && !archived, map glob("'content'$_"), ref $v ? @$v : split /[;,]?\s+/, $v;
     }
 
-    open my $fh, "<:encoding(UTF-8)", "lib/acl.yml" or die "Can't open acl.yml: $!";
+    open my $fh, "<:utf8", "lib/acl.yml" or die "Can't open acl.yml: $!";
     unshift @acl, @{Load join "", <$fh>};
     my %seen;
     @acl = grep !$seen{$_->{path}}++, @acl;
