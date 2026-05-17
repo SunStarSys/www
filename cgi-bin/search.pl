@@ -243,6 +243,7 @@ sub get_client_lang  (AR $r) {
 
 my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
 my ($re)     = eval{($apreq->param("regex"))[-1]} // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
+my $q = $re;
 my $filter   = $apreq->param("filter") // "";
 my Digest::SHA1 $hash = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
@@ -669,6 +670,24 @@ if ($re !~ $specials_re) {
   }
 
   parser $pffxg, $dirname, undef, \ my %matches;
+
+  s!/content/.*$!! for my $lucy_index = $dirname;
+  $lucy_index .= "/.lucy$lang";
+  if (-d $lucy_index) {
+    require Lucy::Search::IndexSearcher;
+    my $searcher = Lucy::Search::IndexSearcher->new(index => $lucy_index);
+
+    my $hits = $searcher->hits(    # returns a Hits object, not a hit count
+      query      => $q,
+      offfset     => $apreq->param("offset") // 0,
+      num_wanted => $apreq->param("wanted") // 100,
+    );
+    my $hit_count = $hits->total_hits;
+    while (my $hit = $hits->next) {
+	   s/^\Q$path_info// or next for my $path = $hit->{path};
+       push @{$matches{$path}}, {count => $hit->get_score, match => Template("{{content|truncatewords:10}}")->render($hits), pre => [], words => [], end => []};
+    }
+  }
 
   while (my ($k, $v) = each %matches) {
     my $link = $path_info . $k;
