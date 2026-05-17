@@ -682,7 +682,7 @@ if ($re !~ $specials_re) {
       offset     => $apreq->param("offset") // 0,
       num_wanted => $apreq->param("wanted") // 100,
     );
-    my $hit_count = $hits->total_hits;
+    warn my $hit_count = $hits->total_hits;
     while (my $hit = $hits->next) {
 	   s/^\Q$path_info// or next for my $path = $hit->{path};
        push @{$matches{$path}}, {count => $hit->get_score, match => Template("{{content|truncatewords:10}}")->render($hits), pre => [], words => [], end => []};
