@@ -673,10 +673,8 @@ if ($re !~ $specials_re) {
 
   s!/content/.*$!! for my $lucy_index = $dirname;
   $lucy_index .= "/.lucy$lang";
-  if (-d $lucy_index) {
-    require Lucy::Search::IndexSearcher;
+  if (-d $lucy_index and eval{require Lucy::Search::IndexSearcher}) {
     my $searcher = Lucy::Search::IndexSearcher->new(index => $lucy_index);
-
     my $hits = $searcher->hits(    # returns a Hits object, not a hit count
       query      => $q,
       offset     => $apreq->param("offset") // 0,
