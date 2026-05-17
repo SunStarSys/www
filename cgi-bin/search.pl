@@ -685,7 +685,7 @@ if ($re !~ $specials_re) {
     warn my $hit_count = $hits->total_hits;
     while (my $hit = $hits->next) {
 	   s/^\Q$path_info// or next for my $path = $hit->{path};
-       unshift @{$matches{$path}}, {count => 1000 * $hit->get_score, match => Template("{{content|lede|truncatewords:10|safe}}")->render({content => $hit->{content}}) || Template("{{content|truncatewords:10|safe}}")->render({content => $hit->{content}}), pre => [], words => [], end => []};
+       unshift @{$matches{$path}}, {count => 100 * $hit->get_score, match => Template("{{content|lede|truncatewords:10|safe}}")->render({content => $hit->{content}}) || Template("{{content|truncatewords:10|safe}}")->render({content => $hit->{content}}), pre => [], words => [], end => []};
     }
   }
 
