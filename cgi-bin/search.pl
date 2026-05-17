@@ -679,7 +679,7 @@ if ($re !~ $specials_re) {
 
     my $hits = $searcher->hits(    # returns a Hits object, not a hit count
       query      => $q,
-      offfset     => $apreq->param("offset") // 0,
+      offset     => $apreq->param("offset") // 0,
       num_wanted => $apreq->param("wanted") // 100,
     );
     my $hit_count = $hits->total_hits;
