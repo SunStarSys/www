@@ -45,7 +45,7 @@ status: draft
 - Feature: "Multilingual (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Fully Searchable/Replaceable <span class="editormd-tex">\KaTeX</span>/PCRE Expressions'
+- Feature: 'Fully Searchable/Replaceable <span class="editormd-tex">\KaTeX</span>/PCRE/Lucene Expressions'
   Orion: "&check;"
 - Feature: "Federated"
   Orion: "&check;"
