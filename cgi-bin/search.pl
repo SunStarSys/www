@@ -34,6 +34,7 @@ use BerkeleyDB;
 use POSIX qw/:fcntl_h strftime :locale_h/;
 use Digest::SHA1;
 use Time::timegm 'timegm';
+use Lucy::Search::IndexSearcher;
 use Safe;
 use base 'sealed';
 use sealed;
