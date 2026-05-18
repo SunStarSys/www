@@ -15,15 +15,39 @@ Dependencies: *.md.en
 
 ##### `title`
 
+Mandatory document title
+
 ##### `status`
+
+Mandatory document status:
+
+- draft
+
+Default state.
+
+- verified
+
+Indicates that content has been validated by the author.  Will roll back to draft state if document is subsequently altered without revalidation.
+
+- archived
+
+Indicates document is finalized and ignorable for future work in the `Orion CMS`.  Will not appear in future directory listings outside of its archived location.  Archived location will track future content modifications.
 
 ##### `acl`
 
+Optional `SVN` security authorization controls on this document. With autocomplete support and group validation in the `Orion CMS` editor.
+
 ##### `dependencies`
+
+Optional comma-separated list of `file globs` that this document's built output relies upon.
 
 ##### `keywords`
 
+Optional `SEO`-friendly comma-separated list of searchable tags.
+
 ##### `categories`
+
+Optional comma-separated list of classification categories that should reference this permalinked document.  Additive in nature (removing categories will not cause those ex-categories to delist this document).
 
 #### Data Artifacts
 
@@ -35,9 +59,15 @@ n/a
 
 ##### `title`
 
+See markdown section above.
+
 ##### `status`
 
+See markdown section above.
+
 ##### `acl`
+
+See markdown section above.
 
 #### Data Artifacts
 
@@ -51,21 +81,27 @@ n/a
 
 ##### `title`
 
+See markdown section above.
+
 ##### `status`
+
+See markdown section above.
 
 ##### `acl`
 
+See markdown section above.
+
 ##### `column_ids`
 
-Comma-separated list of Column Ids for `PDL`
+Optional comma-separated list of Column Ids for `PDL`
 
 ##### `datetime`
 
-[`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) format for `PDL` processing
+Optional [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) format for `PDL` processing
 
 ##### `type`
 
-Declared `PDL` column data types
+Optional declared `PDL` column data types
 
 #### Data Artifacts
 
