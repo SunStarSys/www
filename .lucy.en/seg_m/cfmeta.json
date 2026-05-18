@@ -1,0 +1,105 @@
+{
+  "files": {
+    "documents.dat": {
+      "length": "15483",
+      "offset": "0"
+    },
+    "documents.ix": {
+      "length": "104",
+      "offset": "15488"
+    },
+    "highlight.dat": {
+      "length": "11",
+      "offset": "15592"
+    },
+    "highlight.ix": {
+      "length": "104",
+      "offset": "15608"
+    },
+    "lexicon-1.dat": {
+      "length": "28",
+      "offset": "15712"
+    },
+    "lexicon-1.ix": {
+      "length": "4",
+      "offset": "15744"
+    },
+    "lexicon-1.ixix": {
+      "length": "8",
+      "offset": "15752"
+    },
+    "lexicon-3.dat": {
+      "length": "245",
+      "offset": "15760"
+    },
+    "lexicon-3.ix": {
+      "length": "4",
+      "offset": "16008"
+    },
+    "lexicon-3.ixix": {
+      "length": "8",
+      "offset": "16016"
+    },
+    "lexicon-4.dat": {
+      "length": "220",
+      "offset": "16024"
+    },
+    "lexicon-4.ix": {
+      "length": "4",
+      "offset": "16248"
+    },
+    "lexicon-4.ixix": {
+      "length": "8",
+      "offset": "16256"
+    },
+    "lexicon-6.dat": {
+      "length": "6266",
+      "offset": "16264"
+    },
+    "lexicon-6.ix": {
+      "length": "74",
+      "offset": "22536"
+    },
+    "lexicon-6.ixix": {
+      "length": "56",
+      "offset": "22616"
+    },
+    "lexicon-8.dat": {
+      "length": "450",
+      "offset": "22672"
+    },
+    "lexicon-8.ix": {
+      "length": "4",
+      "offset": "23128"
+    },
+    "lexicon-8.ixix": {
+      "length": "8",
+      "offset": "23136"
+    },
+    "postings-1.dat": {
+      "length": "18",
+      "offset": "23144"
+    },
+    "postings-3.dat": {
+      "length": "84",
+      "offset": "23168"
+    },
+    "postings-4.dat": {
+      "length": "60",
+      "offset": "23256"
+    },
+    "postings-6.dat": {
+      "length": "5362",
+      "offset": "23320"
+    },
+    "postings-8.dat": {
+      "length": "178",
+      "offset": "28688"
+    },
+    "postings.skip": {
+      "length": "0",
+      "offset": "28872"
+    }
+  },
+  "format": "2"
+}

@@ -7,17 +7,15 @@
   },
   "lexicon": {
     "counts": {
-      "acl": "3",
-      "content": "2514",
-      "keywords": "76",
-      "path": "30",
-      "status": "7",
-      "title": "47"
+      "content": "844",
+      "keywords": "51",
+      "path": "16",
+      "status": "3",
+      "title": "28"
     },
     "format": "3",
     "index_counts": {
-      "acl": "1",
-      "content": "20",
+      "content": "7",
       "keywords": "1",
       "path": "1",
       "status": "1",
@@ -28,7 +26,7 @@
     "format": "1"
   },
   "segmeta": {
-    "count": "25",
+    "count": "11",
     "field_names": [
       "",
       "status",
@@ -41,6 +39,6 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_l"
+    "name": "seg_m"
   }
 }
