@@ -5,8 +5,7 @@ Dependencies: *.md.en
 
 ## Text Document Format (Markdown, YAML, CSV)
 
-{# lede #}This page documents the Header fields and resulting Data Artifacts{# lede #} produced by the [Build API](build) when processing 
-such text files via the `single_narrative` view.
+{# lede #}This page documents the Header fields and resulting Data Artifacts{# lede #} produced by the [Build API](build) when processing  such text files via its [`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) view.
 
 [TOC]
 
