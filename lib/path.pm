@@ -75,7 +75,7 @@ walk_content_tree {
 
   return if -d "content/$_";
 
-  seed_file_deps, seed_file_acl if /\.(?:md|ya?ml)[^\/]*$/;
+  seed_file_deps, seed_file_acl if /\.(?:md|ya?ml|csv)[^\/]*$/;
   state $count = 0;
   for my $lang (qw/en es de ru sv he zh-TW fr ar ko jp pt-BR/) {
     delete $dependencies{"/sitemap.html.$lang"} if ++$count <= 12;
