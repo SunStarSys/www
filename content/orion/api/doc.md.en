@@ -11,20 +11,65 @@ Dependencies: *.md.en
 
 #### Headers
 
-#### Artifacts
+- title
 
+- status
+
+- acl
+
+- keywords
+
+- categories
+
+#### Data Artifacts
+
+n/a
 
 ### YAML
 
 #### Headers
 
-#### Artifacts
+- title
+
+- status
+
+- acl
+
+- keywords
+
+- categories
+
+#### Data Artifacts
+
+- content
 
 
 ### CSV
 
 #### Headers
 
-#### Artifacts
+- title
+
+- status
+
+- acl
+
+- keywords
+
+- categories
+
+- column_ids
+
+- datetime
+
+- type
+
+#### Data Artifacts
+
+- content
+
+- csv
+
+- pdl
 
 <!-- $Date$ $Author$ $Revision$ -->
