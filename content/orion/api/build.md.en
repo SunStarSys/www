@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=36659
+status: verified=36922
 Dependencies: *.md.en
 
 <div class="right">
@@ -216,6 +216,29 @@ Optional Arguments:
 </div>
 </div>
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Convert CSV files, typically into JSON.
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
+
+- `ext` defaults to `json`
+- `filter` defaults to `json_raw`
+- `template` overrides `filter` default expression
+
+</p>
+</div>
+</div>
 
 <div class="card border-secondary mb-3">
   <div class="card-header">
