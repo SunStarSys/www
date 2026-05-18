@@ -13,15 +13,15 @@ Dependencies: *.md.en
 
 #### Headers
 
-- title
+##### title
 
-- status
+##### status
 
-- acl
+##### acl
 
-- keywords
+##### keywords
 
-- categories
+##### categories
 
 #### Data Artifacts
 
@@ -31,47 +31,46 @@ n/a
 
 #### Headers
 
-- title
+##### title
 
-- status
+##### status
 
-- acl
+##### acl
 
-- keywords
+##### keywords
 
-- categories
+##### categories
 
 #### Data Artifacts
 
-- content
-
+##### content
 
 ### CSV
 
 #### Headers
 
-- title
+##### title
 
-- status
+##### status
 
-- acl
+##### acl
 
-- keywords
+##### keywords
 
-- categories
+##### categories
 
-- column_ids
+##### column_ids
 
-- datetime
+##### datetime
 
-- type
+##### type
 
 #### Data Artifacts
 
-- content
+##### content
 
-- csv
+##### csv
 
-- pdl
+##### pdl
 
 <!-- $Date$ $Author$ $Revision$ -->
