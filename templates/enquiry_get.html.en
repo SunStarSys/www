@@ -26,7 +26,10 @@
   <label for="subject">Subject</label>
   <input name="subject" id="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
+  <input name="demo" id="demo" type="checkbox" /> &nbsp; <label for="demo">Schedule a Demo</label>
+
   <input type="hidden" name="lang" value="{{ lang }}" />
+
   <button name="submit" class="btn btn-outline-secondary" value=1 >Submit</button>
 
   <br><br>
