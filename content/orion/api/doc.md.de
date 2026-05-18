@@ -1,0 +1,127 @@
+---
+categories: ~
+dependencies: '*.md.de'
+keywords: Preisabschrift, CSV, YAML
+status: überprüft=37873
+title: Orion API - Textdokumentformat
+---
+
+## Textdokumentformat (`markdown`, `YAML`, `CSV`)
+
+{# lede #}Auf dieser Seite werden die Headerfelder und resultierende Datenartefakte dokumentiert{# lede #} produziert von der [Build-API](build) bei der Verarbeitung solcher Textdateien (als Seitenanhänge) über [`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) Ansicht.
+
+[TOC]
+
+### `Markdown`
+
+#### Kopfzeilen
+
+##### `title`
+
+Obligatorischer Dokumenttitel
+
+##### `status`
+
+Erforderlicher Dokumentstatus:
+
+###### Entwurf
+
+Standardstatus.
+
+###### bestätigt
+
+Gibt an, dass der Inhalt vom Autor validiert wurde.  Rollback in Entwurfsstatus, wenn das Dokument anschließend ohne erneute Validierung geändert wird.
+
+###### archiviert
+
+Gibt an, dass das Dokument abgeschlossen ist und für zukünftige Arbeiten in der `Orion CMS`. Wird nicht in zukünftigen Verzeichnislisten außerhalb des archivierten Speicherorts angezeigt.  Der archivierte Speicherort verfolgt zukünftige Inhaltsänderungen.
+
+##### `acl`
+
+Optional `SVN` Sicherheitsautorisierungskontrollen für dieses Dokument. Mit Autocomplete-Unterstützung und Gruppenvalidierung im `Orion CMS` Editor.
+
+##### `dependencies`
+
+Optionale durch Komma getrennte Liste mit `file globs` Die erstellte Ausgabe dieses Dokuments beruht darauf.
+
+##### `keywords`
+
+Optional `SEO`-freundliche durch Komma getrennte Liste durchsuchbarer Tags.
+
+##### `categories`
+
+Optionale durch Komma getrennte Liste mit Klassifizierungskategorien, die auf dieses permalinkierte Dokument verweisen sollen.  Additiv in der Natur (das Entfernen von Kategorien führt nicht dazu, dass diese Ex-Kategorien dieses Dokument auflösen).
+
+#### Datenartefakte
+
+n. v.
+
+### `YAML`
+
+#### Kopfzeilen
+
+##### `title`
+
+Siehe Markdown-Abschnitt oben.
+
+##### `status`
+
+Siehe Markdown-Abschnitt oben.
+
+##### `acl`
+
+Siehe Markdown-Abschnitt oben.
+
+#### Datenartefakte
+
+##### `content`
+
+`YAML::XS::Load` Geparste Datenstruktur
+
+### `CSV`
+
+#### Kopfzeilen
+
+##### `title`
+
+Siehe Markdown-Abschnitt oben.
+
+##### `status`
+
+Siehe Markdown-Abschnitt oben.
+
+##### `acl`
+
+Siehe Markdown-Abschnitt oben.
+
+##### `headers`
+
+Gibt an, dass dieses Dokument einen `CSV` Kopfzeile oben im Inhalt.
+
+##### `column_ids`
+
+Optionale durch Komma getrennte Liste der Spalten-IDs für `PDL`
+
+##### `datetime`
+
+Optional [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) Format für `PDL` Verarbeitung
+
+##### `type`
+
+Optional deklariert `PDL` Spaltendatentypen
+
+#### Datenartefakte
+
+##### `content`
+
+`arrayref` oder `arrayrefs` (Nein `csv` Kopfzeilen), oder `hashrefs` (`csv` Kopfzeilen)
+
+##### `csv`
+
+[`Text::CSV` ](https://metacpan.org/pod/Text::CSV) Objekt, das oben erzeugt wird
+
+##### `pdl`
+
+Vollständig [`PDL`](https://metacpan.org/pod/PDL) Von Headerkonfiguration generiertes Objekt
+
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,0 +1,127 @@
+---
+categories: ~
+dependencies: '*.md.zh-TW'
+keywords: markdown,csv,yaml
+status: 驗證 =37873
+title: Orion API - 文字文件格式
+---
+
+## 文字文件格式 (`markdown`, `YAML`, `CSV`)
+
+{# lede #}此頁面記錄「標頭」欄位和產生的資料使用者自建物件{# lede #} 製作者：[建置 API](build) 透過其處理此類文字檔 (作為頁面附件) 時[`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) 檢視。
+
+[TOC]
+
+### `Markdown`
+
+#### 標頭
+
+##### `title`
+
+必要文件標題
+
+##### `status`
+
+必要文件狀態：
+
+###### 草稿
+
+預設狀態。
+
+###### 已驗證
+
+表示內容已由作者驗證。如果隨後變更文件而不重新驗證，將會回復為草稿狀態。
+
+###### 已封存
+
+表示文件已完成且可忽略以供未來工作使用`Orion CMS`。將不會出現在其封存位置以外的未來目錄清單中。封存位置將追蹤未來的內容修改。
+
+##### `acl`
+
+選擇性`SVN` 此文件的安全授權控制。具備自動完成支援和群組驗證功能`Orion CMS` 編輯器。
+
+##### `dependencies`
+
+選擇性以逗號分隔的清單`file globs` 此文件的建立輸出取決於 。
+
+##### `keywords`
+
+選擇性`SEO`- 使用逗號區隔的可搜尋標記清單。
+
+##### `categories`
+
+應參考此永久連結文件之分類類目的選擇性清單 (以逗號分隔)。添加物性質 (移除品類不會導致這些前品類刪除此文件)。
+
+#### 資料物件
+
+不適用
+
+### `YAML`
+
+#### 標頭
+
+##### `title`
+
+請參閱上方的 Markdown 小節。
+
+##### `status`
+
+請參閱上方的 Markdown 小節。
+
+##### `acl`
+
+請參閱上方的 Markdown 小節。
+
+#### 資料物件
+
+##### `content`
+
+`YAML::XS::Load` 剖析資料結構
+
+### `CSV`
+
+#### 標頭
+
+##### `title`
+
+請參閱上方的 Markdown 小節。
+
+##### `status`
+
+請參閱上方的 Markdown 小節。
+
+##### `acl`
+
+請參閱上方的 Markdown 小節。
+
+##### `headers`
+
+表示此文件具有`CSV` 表頭明細行位於其內容頂端。
+
+##### `column_ids`
+
+選擇性以逗號區隔的資料欄 ID 清單`PDL`
+
+##### `datetime`
+
+選擇性[`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) 格式`PDL` 處理
+
+##### `type`
+
+宣告選擇性`PDL` 欄資料類型
+
+#### 資料物件
+
+##### `content`
+
+`arrayref` 其中之一`arrayrefs` (否) `csv` 標頭)，或`hashrefs` (`csv` 標頭)
+
+##### `csv`
+
+[`Text::CSV` ](https://metacpan.org/pod/Text::CSV) 用於產生上面的物件
+
+##### `pdl`
+
+完整[`PDL`](https://metacpan.org/pod/PDL) 標頭組態產生的物件
+
+<!-- $Date$ $Author$ $Revision$ -->

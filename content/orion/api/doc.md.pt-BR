@@ -1,0 +1,127 @@
+---
+categories: ~
+dependencies: '*.md.pt-BR'
+keywords: markdown,csv,yaml
+status: verificado=37873
+title: Orion API - Formato de Documento de Texto
+---
+
+## Formato do documento de texto (`markdown`, `YAML`, `CSV`)
+
+{# lede #}Esta página documenta os campos de Cabeçalho e os Artefatos de Dados resultantes{# lede #} produzido pela [API de Criação](build) ao processar esses arquivos de texto (como anexos de página) por meio do [`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) vista.
+
+[TOC]
+
+### `Markdown`
+
+#### Cabeçalhos
+
+##### `title`
+
+Título do documento obrigatório
+
+##### `status`
+
+Status do documento obrigatório:
+
+###### rascunho
+
+Estado padrão.
+
+###### verificado
+
+Indica que o conteúdo foi validado pelo autor.  Será revertido para o estado preliminar se o documento for subsequentemente alterado sem revalidação.
+
+###### arquivado
+
+Indica que o documento foi finalizado e ignorado para trabalho futuro no `Orion CMS`. Não aparecerá em futuras listagens de diretórios fora de seu local arquivado.  O local arquivado rastreará futuras modificações de conteúdo.
+
+##### `acl`
+
+Opcional `SVN` controles de autorização de segurança neste documento. Com suporte ao preenchimento automático e validação de grupo no `Orion CMS` editor.
+
+##### `dependencies`
+
+Lista opcional separada por vírgulas de `file globs` que a saída construída deste documento depende.
+
+##### `keywords`
+
+Opcional `SEO`-friendly lista separada por vírgulas de tags pesquisáveis.
+
+##### `categories`
+
+Lista opcional separada por vírgulas de categorias de classificação que devem fazer referência a este documento permalinked.  Aditivo por natureza (a remoção de categorias não fará com que essas ex-categorias retirem este documento da lista).
+
+#### Artefatos de Dados
+
+n/d
+
+### `YAML`
+
+#### Cabeçalhos
+
+##### `title`
+
+Consulte a seção de markdown acima.
+
+##### `status`
+
+Consulte a seção de markdown acima.
+
+##### `acl`
+
+Consulte a seção de markdown acima.
+
+#### Artefatos de Dados
+
+##### `content`
+
+`YAML::XS::Load` estrutura de dados analisados
+
+### `CSV`
+
+#### Cabeçalhos
+
+##### `title`
+
+Consulte a seção de markdown acima.
+
+##### `status`
+
+Consulte a seção de markdown acima.
+
+##### `acl`
+
+Consulte a seção de markdown acima.
+
+##### `headers`
+
+Indica que este documento tem um `CSV` linha de cabeçalho na parte superior de seu conteúdo.
+
+##### `column_ids`
+
+Lista opcional separada por vírgulas de IDs de coluna para `PDL`
+
+##### `datetime`
+
+Opcional [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) formato para `PDL` processando
+
+##### `type`
+
+Opcional declarado `PDL` tipos de dados de coluna
+
+#### Artefatos de Dados
+
+##### `content`
+
+`arrayref` de qualquer um dos `arrayrefs` não `csv` cabeçalhos), ou `hashrefs` (`csv` cabeçalhos)
+
+##### `csv`
+
+[`Text::CSV` ](https://metacpan.org/pod/Text::CSV) objeto usado para produzir acima
+
+##### `pdl`
+
+Completo [`PDL`](https://metacpan.org/pod/PDL) objeto gerado pela configuração do cabeçalho
+
+<!-- $Date$ $Author$ $Revision$ -->

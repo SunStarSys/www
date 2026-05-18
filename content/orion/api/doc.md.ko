@@ -1,0 +1,127 @@
+---
+categories: ~
+dependencies: '*.md.ko'
+keywords: 마크다운,csv,yaml
+status: 확인=37873
+title: Orion API - 텍스트 문서 형식
+---
+
+## 텍스트 문서 형식(`markdown`, `YAML`, `CSV`)
+
+{# lede #}이 페이지에서는 머리글 필드 및 결과 데이터 아티팩트를 문서화합니다.{# lede #} 제작사 : [API 빌드](build) 해당 텍스트 파일을 페이지 첨부 파일로 처리할 때 [`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) 보기.
+
+[TOC]
+
+### `Markdown`
+
+#### 헤더
+
+##### `title`
+
+필수 문서 제목
+
+##### `status`
+
+필수 문서 상태:
+
+###### 초안
+
+기본 상태입니다.
+
+###### 검증됨
+
+작성자가 콘텐츠를 검증했음을 나타냅니다.  문서가 이후에 재검증 없이 변경되는 경우 초안 상태로 롤백됩니다.
+
+###### 아카이브됨
+
+문서가 완료되었으며 향후 작업에서 무시됨을 나타냅니다. `Orion CMS`. 이후 디렉토리 목록에 아카이브된 위치 외부에 나타나지 않습니다.  아카이브된 위치는 향후 콘텐츠 수정 사항을 추적합니다.
+
+##### `acl`
+
+선택 사항 `SVN` 이 문서에 대한 보안 승인 제어입니다. 자동 완성 지원 및 그룹 검증을 통해 `Orion CMS` 편집자.
+
+##### `dependencies`
+
+콤마로 구분된 선택적 목록 `file globs` 이 문서의 작성된 출력에 따라 달라집니다.
+
+##### `keywords`
+
+선택 사항 `SEO`검색 가능한 태그의 친숙한 콤마로 구분된 목록입니다.
+
+##### `categories`
+
+이 영구 링크 문서를 참조해야 하는 분류 범주의 선택적 쉼표로 구분된 목록입니다.  추가적인 특성(범주를 제거해도 해당 이전 범주가 이 문서를 구분하지 않습니다.)
+
+#### 데이터 아티팩트
+
+해당 사항 없음
+
+### `YAML`
+
+#### 헤더
+
+##### `title`
+
+위의 마크다운 섹션을 참조하십시오.
+
+##### `status`
+
+위의 마크다운 섹션을 참조하십시오.
+
+##### `acl`
+
+위의 마크다운 섹션을 참조하십시오.
+
+#### 데이터 아티팩트
+
+##### `content`
+
+`YAML::XS::Load` 구문 분석된 데이터 구조
+
+### `CSV`
+
+#### 헤더
+
+##### `title`
+
+위의 마크다운 섹션을 참조하십시오.
+
+##### `status`
+
+위의 마크다운 섹션을 참조하십시오.
+
+##### `acl`
+
+위의 마크다운 섹션을 참조하십시오.
+
+##### `headers`
+
+이 문서에 다음이 있음을 나타냅니다. `CSV` 콘텐츠 상단의 헤더 라인입니다.
+
+##### `column_ids`
+
+콤마로 구분된 열 ID 목록(선택사항) `PDL`
+
+##### `datetime`
+
+선택 사항 [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) 형식 `PDL` 처리 중
+
+##### `type`
+
+선택적 선언 `PDL` 열 데이터 유형
+
+#### 데이터 아티팩트
+
+##### `content`
+
+`arrayref` 또는 `arrayrefs` (아니오) `csv` 헤더) 또는 `hashrefs` (`csv` 헤더)
+
+##### `csv`
+
+[`Text::CSV` ](https://metacpan.org/pod/Text::CSV) 위에서 생성하는 객체
+
+##### `pdl`
+
+전체 [`PDL`](https://metacpan.org/pod/PDL) 헤더 구성으로 생성된 객체
+
+<!-- $Date$ $Author$ $Revision$ -->
