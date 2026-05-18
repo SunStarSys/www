@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=37907
+status: verified=37911
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -19,7 +19,7 @@ Mandatory document title
 
 ##### `status`
 
-Mandatory document status:
+Mandatory free-text document status.  Three such special status labels are explained below:
 
 ###### draft
 
