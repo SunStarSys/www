@@ -93,6 +93,6 @@ Grab the first HTML5/Markdown image from the filtered content.
 
 #### `pdl_*`
 
-Full [`PDL`](https://metacpan.org/pod/PDL) API.
+Full [`PDL`](https://metacpan.org/pod/PDL) API.  Passing this filter an arrayref as argument will cause the arrayref to be derefenced so its elements can be passed directly to the `pdl_` prefixed method this filter invokes.
 
 <!-- $Date$ $Author$ $Revision$ -->
