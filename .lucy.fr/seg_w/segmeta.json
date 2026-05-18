@@ -1,0 +1,56 @@
+{
+  "documents": {
+    "format": "2"
+  },
+  "highlight": {
+    "format": "1"
+  },
+  "lexicon": {
+    "counts": {
+      "acl": "3",
+      "content": "2778",
+      "keywords": "82",
+      "path": "25",
+      "status": "7",
+      "title": "51"
+    },
+    "format": "3",
+    "index_counts": {
+      "acl": "1",
+      "content": "22",
+      "keywords": "1",
+      "path": "1",
+      "status": "1",
+      "title": "1"
+    }
+  },
+  "postings": {
+    "format": "1"
+  },
+  "segmeta": {
+    "count": "25",
+    "field_names": [
+      "",
+      "status",
+      "categories",
+      "title",
+      "path",
+      "acl",
+      "content",
+      "type",
+      "keywords"
+    ],
+    "format": "1",
+    "name": "seg_w"
+  },
+  "sort": {
+    "counts": {
+      "path": "25"
+    },
+    "format": "3",
+    "null_ords": {},
+    "ord_widths": {
+      "path": "8"
+    }
+  }
+}

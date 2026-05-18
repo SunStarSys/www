@@ -1,0 +1,44 @@
+{
+  "_class": "Lucy::Plan::Schema",
+  "analyzers": [
+    null,
+    {
+      "_class": "Lucy::Analysis::EasyAnalyzer",
+      "language": "de"
+    }
+  ],
+  "fields": {
+    "acl": {
+      "analyzer": "1",
+      "type": "fulltext"
+    },
+    "categories": {
+      "analyzer": "1",
+      "type": "fulltext"
+    },
+    "content": {
+      "analyzer": "1",
+      "type": "fulltext"
+    },
+    "keywords": {
+      "analyzer": "1",
+      "type": "fulltext"
+    },
+    "path": {
+      "sortable": true,
+      "type": "string"
+    },
+    "status": {
+      "analyzer": "1",
+      "type": "fulltext"
+    },
+    "title": {
+      "analyzer": "1",
+      "type": "fulltext"
+    },
+    "type": {
+      "analyzer": "1",
+      "type": "fulltext"
+    }
+  }
+}
