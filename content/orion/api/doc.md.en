@@ -91,6 +91,10 @@ See markdown section above.
 
 See markdown section above.
 
+##### `headers`
+
+Indicates that this document has a `CSV` header line at the top of its content.
+
 ##### `column_ids`
 
 Optional comma-separated list of Column Ids for `PDL`
