@@ -21,15 +21,15 @@ Mandatory document title
 
 Mandatory document status:
 
-- draft
+###### draft
 
 Default state.
 
-- verified
+###### verified
 
 Indicates that content has been validated by the author.  Will roll back to draft state if document is subsequently altered without revalidation.
 
-- archived
+###### archived
 
 Indicates document is finalized and ignorable for future work in the `Orion CMS`.  Will not appear in future directory listings outside of its archived location.  Archived location will track future content modifications.
 
