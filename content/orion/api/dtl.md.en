@@ -45,7 +45,7 @@ Returns the traditional `UNIX dirname` of the path in the filtered input string.
 
 #### `parse_filename`
 
-Interface for [`SunStarSys::Util::parse_filename`](build#-code-parse_filename-path-code-).  Key difference is that the first two return values of that subroutine are swapped, and the path extensions are all broken out (with [`.`](#) prefixed) into individual arguments, allowing this filter to take an argument string representing a list of indexes into the resulting array. As a special case, an argument ending in `..` will join *all* parsed extensions to the end of the resulting string.
+Interface for [`SunStarSys::Util::parse_filename`](build#-code-parse_filename-path-code-).  Key difference is that the first two return values of that subroutine are swapped, and the path extensions are all broken out (with `.` prefixed) into individual arguments, allowing this filter to take an argument string representing a list of indexes into the resulting array. As a special case, an argument ending in `..` will join *all* parsed extensions to the end of the resulting string.
 
 #### `basename`
 
@@ -61,11 +61,11 @@ Production-quality inverse transformation of `tex2md`.
 
 #### `vcs_date`
 
-Takes a [`lang`](#) argument to provide a locale-specific representation of the day, month, and year of the most recent change presented by the [`$Date`](#) Subversion keyword in the filtered input string (which is typically the full [`content`](#) of the current resource).
+Takes a `lang` argument to provide a locale-specific representation of the day, month, and year of the most recent change presented by the `$Date` Subversion keyword in the filtered input string (which is typically the full `content` of the current resource).
 
 #### `vcs_time`
 
-Represents the numerical hour, minute, seconds, and timezone offset of the most recent change presented by the [`$Date`](#) Subversion keyword in the filtered input string.
+Represents the numerical hour, minute, seconds, and timezone offset of the most recent change presented by the `$Date` Subversion keyword in the filtered input string.
 
 #### `vcs_author`
 
