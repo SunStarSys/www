@@ -61,7 +61,7 @@ Comma-separated list of Column Ids for `PDL`
 
 ##### `datetime`
 
-strptime(1) format for `PDL` processing
+[`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) format for `PDL` processing
 
 ##### `type`
 
