@@ -5,6 +5,9 @@ Dependencies: *.md.en
 
 ## Text Document Format (Markdown, YAML, CSV)
 
+{# lede #}This page documents the Header fields and resulting Data Artifacts{# lede #} produced by the [Build API](build) when processing 
+such text files via the `single_narrative` view.
+
 [TOC]
 
 ### Markdown
