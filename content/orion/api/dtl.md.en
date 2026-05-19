@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API
-Status: verified=37939
+Status: verified=37971
 Dependencies: *.md.en
 
 <div class="right">
@@ -19,77 +19,115 @@ Dependencies: *.md.en
 
 ### Django 1.0 Filter Extensions ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
+----
+
 #### `append`
 
 Takes a single argument and appends its value to the filtered input.  The argument can be a varname or a quoted string; this filter will be smart about `/` characters being joined together on the `append`.
+
+----
 
 #### `cuts`
 
 Like `cut`, but the argument is taken as a *substring* to elide, instead of a list of characters.
 
+----
+
 #### `lede`
 
 Extracts the text between the &#123;# `lede` #&#125; blocks in the filtered input string.
+
+----
 
 #### `ssi`
 
 Recursively evaluates all Django `ssi` tags in the filtered input string.
 
+----
+
 #### `starts_with`
 
 Tests for prefix match.
+
+----
 
 #### `dirname`
 
 Returns the traditional `UNIX dirname` of the path in the filtered input string.
 
+----
+
 #### `parse_filename`
 
 Interface for [`SunStarSys::Util::parse_filename`](build#-code-parse_filename-path-code-).  Key difference is that the first two return values of that subroutine are swapped, and the path extensions are all broken out (with `.` prefixed) into individual arguments, allowing this filter to take an argument string representing a list of indexes into the resulting array. As a special case, an argument ending in `..` will join *all* parsed extensions to the end of the resulting string.
+
+----
 
 #### `basename`
 
 Returns the traditional `UNIX basename` of the path in the filtered input string. Passing an argument of `0` to this filter will cause it to strip all file extensions from the resulting string.
 
+----
+
 #### `tex2md`
 
 Transforms $$\LaTeX$$ sources into Markdown+$$\KaTeX$$ sources. Experimental.
+
+----
 
 #### `md2tex`
 
 Production-quality inverse transformation of `tex2md`.
 
+----
+
 #### `vcs_date`
 
 Takes a `lang` argument to provide a locale-specific representation of the day, month, and year of the most recent change presented by the `$Date` Subversion keyword in the filtered input string (which is typically the full `content` of the current resource).
+
+----
 
 #### `vcs_time`
 
 Represents the numerical hour, minute, seconds, and timezone offset of the most recent change presented by the `$Date` Subversion keyword in the filtered input string.
 
+----
+
 #### `vcs_author`
 
 Presents a `safe` `HTML` representation of the user who updated the content most recently, as recorded by the Subversion keyword `$Author` keyword in the filtered input string.  Takes an optional `lang` argument for a locale-specific representation.
+
+----
 
 #### `vcs_revision`
 
 Presents the numerical revision number of the most recent change to the content, as recorded by the `$Revision` keyword in the filtered input string.
 
+----
+
 #### `strip_prefix`
 
 Strips the (path) prefix, passed as an argument to this filter, from the filtered input string (path). The prefix defaults to the regex `\S+/content/` otherwise.
+
+----
 
 #### `selectattr`
 
 Looks for the first matching html tag attribute, with the attribute name passed as an argument to this filter.
 
+----
+
 #### `shuffle`
 
 Shuffle the array.
 
+----
+
 #### `img`
 
 Grab the first HTML5/Markdown image from the filtered content.
+
+----
 
 #### `pdl_*`
 
