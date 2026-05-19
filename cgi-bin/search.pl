@@ -242,7 +242,7 @@ sub get_client_lang  (AR $r) {
   return encode($lang);
 }
 
-my $markdown = $apreq->args("markdown_search") ? "Markdown" : "";
+my $markdown = "Markdown";
 my ($re)     = eval{($apreq->param("regex"))[-1]} // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 my $q = $re;
 my $filter   = $apreq->param("filter") // "";
@@ -265,7 +265,7 @@ else {
   $dirname = "/x1/httpd/websites/$host/content" . $r->path_info;
 }
 
-my $path_info = (parse_filename($r->path_info))[1];
+my $path_info = (parse_filename($r->path_info))[1] or ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 
 my $d = (parse_filename($dirname))[1];
 for ($d) {
