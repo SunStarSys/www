@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: markdown,csv,yaml
-status: verificado=37873
+status: verificado=38102
 title: Orion API - Formato de Documento de Texto
 ---
 
 ## Formato do documento de texto (`markdown`, `YAML`, `CSV`)
 
-{# lede #}Esta página documenta os campos de Cabeçalho e os Artefatos de Dados resultantes{# lede #} produzido pela [API de Criação](build) ao processar esses arquivos de texto (como anexos de página) por meio do [`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) vista.
+{# lede #}Esta página documenta os campos de Cabeçalho e os Artefatos de Dados resultantes{# lede #} produzido pela [API de Criação](build) ao processar esses arquivos de texto (como anexos de página) por meio do [`single_narrative`](build#-code-single_narrative-args-code-) vista.
 
 [TOC]
 
@@ -16,41 +16,128 @@ title: Orion API - Formato de Documento de Texto
 
 #### Cabeçalhos
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
-Título do documento obrigatório
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Título do documento obrigatório.
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
-Status do documento obrigatório:
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Status do documento de texto livre obrigatório.
+
+</div>
+
+<p class="card-text">
+
+Três desses rótulos de status especiais são explicados abaixo:
 
 ###### rascunho
 
 Estado padrão.
 
+-----
+
 ###### verificado
 
 Indica que o conteúdo foi validado pelo autor.  Será revertido para o estado preliminar se o documento for subsequentemente alterado sem revalidação.
+
+-----
 
 ###### arquivado
 
 Indica que o documento foi finalizado e ignorado para trabalho futuro no `Orion CMS`. Não aparecerá em futuras listagens de diretórios fora de seu local arquivado.  O local arquivado rastreará futuras modificações de conteúdo.
 
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `acl`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Opcional `SVN` controles de autorização de segurança neste documento. Com suporte ao preenchimento automático e validação de grupo no `Orion CMS` editor.
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `dependencies`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Lista opcional separada por vírgulas de `file globs` que a saída construída deste documento depende.
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `keywords`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
 Opcional `SEO`-friendly lista separada por vírgulas de tags pesquisáveis.
+
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `categories`
 
-Lista opcional separada por vírgulas de categorias de classificação que devem fazer referência a este documento permalinked.  Aditivo por natureza (a remoção de categorias não fará com que essas ex-categorias retirem este documento da lista).
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Lista opcional separada por vírgulas de categorias de classificação que devem fazer referência a este documento permalinked.
+
+</div>
+<p class="card-text">
+
+Aditivo por natureza (a remoção de categorias não fará com que essas ex-categorias retirem este documento da lista).
+
+</p>
+</div>
+</div>
 
 #### Artefatos de Dados
 
@@ -60,68 +147,222 @@ n/d
 
 #### Cabeçalhos
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Consulte a seção de markdown acima.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Consulte a seção de markdown acima.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Consulte a seção de markdown acima.
+
+</div>
+</div>
+</div>
 
 #### Artefatos de Dados
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 `YAML::XS::Load` estrutura de dados analisados
+
+</div>
+</div>
+</div>
 
 ### `CSV`
 
 #### Cabeçalhos
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Consulte a seção de markdown acima.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Consulte a seção de markdown acima.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Consulte a seção de markdown acima.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `headers`
 
-Indica que este documento tem um `CSV` linha de cabeçalho na parte superior de seu conteúdo.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Opcional; o valor verdadeiro indica que este documento tem um `CSV` linha de cabeçalho na parte superior de seu conteúdo.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `column_ids`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Lista opcional separada por vírgulas de IDs de coluna para `PDL`
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `datetime`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Opcional [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) formato para `PDL` processando
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `type`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Opcional declarado `PDL` tipos de dados de coluna
+
+</div>
+</div>
+</div>
 
 #### Artefatos de Dados
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 `arrayref` de qualquer um dos `arrayrefs` não `csv` cabeçalhos), ou `hashrefs` (`csv` cabeçalhos)
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `csv`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) objeto usado para produzir acima
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `pdl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Completo [`PDL`](https://metacpan.org/pod/PDL) objeto gerado pela configuração do cabeçalho
+
+</div>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

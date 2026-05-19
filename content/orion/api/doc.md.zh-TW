@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: markdown,csv,yaml
-status: 驗證 =37873
+status: 驗證 =38102
 title: Orion API - 文字文件格式
 ---
 
 ## 文字文件格式 (`markdown`, `YAML`, `CSV`)
 
-{# lede #}此頁面記錄「標頭」欄位和產生的資料使用者自建物件{# lede #} 製作者：[建置 API](build) 透過其處理此類文字檔 (作為頁面附件) 時[`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) 檢視。
+{# lede #}此頁面記錄「標頭」欄位和產生的資料使用者自建物件{# lede #} 製作者：[建置 API](build) 透過其處理此類文字檔 (作為頁面附件) 時[`single_narrative`](build#-code-single_narrative-args-code-) 檢視。
 
 [TOC]
 
@@ -16,41 +16,128 @@ title: Orion API - 文字文件格式
 
 #### 標頭
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
-必要文件標題
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+必要文件標題。
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
-必要文件狀態：
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+必要的任意文字文件狀態。
+
+</div>
+
+<p class="card-text">
+
+以下說明三種特殊狀態標籤：
 
 ###### 草稿
 
 預設狀態。
 
+-----
+
 ###### 已驗證
 
 表示內容已由作者驗證。如果隨後變更文件而不重新驗證，將會回復為草稿狀態。
+
+-----
 
 ###### 已封存
 
 表示文件已完成且可忽略以供未來工作使用`Orion CMS`。將不會出現在其封存位置以外的未來目錄清單中。封存位置將追蹤未來的內容修改。
 
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `acl`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 選擇性`SVN` 此文件的安全授權控制。具備自動完成支援和群組驗證功能`Orion CMS` 編輯器。
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `dependencies`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 選擇性以逗號分隔的清單`file globs` 此文件的建立輸出取決於 。
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `keywords`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
 選擇性`SEO`- 使用逗號區隔的可搜尋標記清單。
+
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `categories`
 
-應參考此永久連結文件之分類類目的選擇性清單 (以逗號分隔)。添加物性質 (移除品類不會導致這些前品類刪除此文件)。
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+應參考此永久連結文件之分類類目的選擇性清單 (以逗號分隔)。
+
+</div>
+<p class="card-text">
+
+添加物性質 (移除品類不會導致這些前品類刪除此文件)。
+
+</p>
+</div>
+</div>
 
 #### 資料物件
 
@@ -60,68 +147,222 @@ title: Orion API - 文字文件格式
 
 #### 標頭
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 請參閱上方的 Markdown 小節。
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 請參閱上方的 Markdown 小節。
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 請參閱上方的 Markdown 小節。
+
+</div>
+</div>
+</div>
 
 #### 資料物件
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 `YAML::XS::Load` 剖析資料結構
+
+</div>
+</div>
+</div>
 
 ### `CSV`
 
 #### 標頭
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 請參閱上方的 Markdown 小節。
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 請參閱上方的 Markdown 小節。
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 請參閱上方的 Markdown 小節。
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `headers`
 
-表示此文件具有`CSV` 表頭明細行位於其內容頂端。
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+選擇性；true 值表示此文件有`CSV` 表頭明細行位於其內容頂端。
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `column_ids`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 選擇性以逗號區隔的資料欄 ID 清單`PDL`
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `datetime`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 選擇性[`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) 格式`PDL` 處理
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `type`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 宣告選擇性`PDL` 欄資料類型
+
+</div>
+</div>
+</div>
 
 #### 資料物件
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 `arrayref` 其中之一`arrayrefs` (否) `csv` 標頭)，或`hashrefs` (`csv` 標頭)
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `csv`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) 用於產生上面的物件
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `pdl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 完整[`PDL`](https://metacpan.org/pod/PDL) 標頭組態產生的物件
+
+</div>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

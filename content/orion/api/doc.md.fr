@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: Markdown, CSV, YAML
-status: vérifié=37873
+status: vérifié=38102
 title: API Orion - Format de document texte
 ---
 
 ## Format du document de texte (`markdown`, `YAML`, `CSV`)
 
-{# lede #}Cette page documente les champs d'en-tête et les artefacts de données résultants{# lede #} produit par [API de création](build) lors du traitement de ces fichiers texte (en tant que pièces jointes de page) via son [`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) vue.
+{# lede #}Cette page documente les champs d'en-tête et les artefacts de données résultants{# lede #} produit par [API de création](build) lors du traitement de ces fichiers texte (en tant que pièces jointes de page) via son [`single_narrative`](build#-code-single_narrative-args-code-) vue.
 
 [TOC]
 
@@ -16,41 +16,128 @@ title: API Orion - Format de document texte
 
 #### En-têtes
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
-Titre du document obligatoire
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Titre de document obligatoire.
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
-Statut du document obligatoire :
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Statut du document en texte libre obligatoire.
+
+</div>
+
+<p class="card-text">
+
+Trois de ces étiquettes d'état spéciales sont expliquées ci-dessous :
 
 ###### projet
 
 Etat par défaut.
 
+-----
+
 ###### vérifié
 
 Indique que le contenu a été validé par l'auteur.  Rétablit l'état Brouillon si le document est modifié ultérieurement sans revalidation.
+
+-----
 
 ###### archivé
 
 Indique que le document est finalisé et ignorable pour les travaux futurs dans `Orion CMS`. N'apparaîtra pas dans les listes de répertoires futures en dehors de son emplacement archivé.  L'emplacement archivé permet de suivre les modifications futures du contenu.
 
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `acl`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Facultatif `SVN` contrôles d'autorisation de sécurité sur ce document. Avec la prise en charge de la saisie semi-automatique et la validation de groupe dans `Orion CMS` éditeur.
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `dependencies`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 Liste facultative de valeurs séparées par des virgules `file globs` sur lequel repose la sortie générée par ce document.
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `keywords`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
 Facultatif `SEO`-liste conviviale des balises pouvant faire l'objet d'une recherche, séparées par des virgules.
+
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `categories`
 
-Liste facultative de catégories de classification séparées par des virgules qui doivent référencer ce document avec lien permanent.  De nature additive (la suppression des catégories n'entraînera pas la radiation de ces ex-catégories du présent document).
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Liste facultative de catégories de classification séparées par des virgules qui doivent référencer ce document avec lien permanent.
+
+</div>
+<p class="card-text">
+
+De nature additive (la suppression des catégories n'entraînera pas la radiation de ces ex-catégories du présent document).
+
+</p>
+</div>
+</div>
 
 #### Artefacts de données
 
@@ -60,68 +147,222 @@ S/O
 
 #### En-têtes
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Voir la section Markdown ci-dessus.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Voir la section Markdown ci-dessus.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Voir la section Markdown ci-dessus.
+
+</div>
+</div>
+</div>
 
 #### Artefacts de données
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 `YAML::XS::Load` structure de données analysée
+
+</div>
+</div>
+</div>
 
 ### `CSV`
 
 #### En-têtes
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Voir la section Markdown ci-dessus.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Voir la section Markdown ci-dessus.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Voir la section Markdown ci-dessus.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `headers`
 
-Indique que ce document a une `CSV` ligne d'en-tête en haut de son contenu.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Facultatif ; la valeur true indique que ce document a `CSV` ligne d'en-tête en haut de son contenu.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `column_ids`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Liste facultative d'ID de colonne séparés par des virgules pour `PDL`
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `datetime`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Facultatif [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) format pour `PDL` traitement
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `type`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Facultatif déclaré `PDL` types de données de colonne
+
+</div>
+</div>
+</div>
 
 #### Artefacts de données
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 `arrayref` de l'un ou de l'autre `arrayrefs` (non `csv` en-têtes), ou `hashrefs` (`csv` en-têtes)
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `csv`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) objet utilisé pour produire ci-dessus
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `pdl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Complet [`PDL`](https://metacpan.org/pod/PDL) objet généré par la configuration d'en-tête
+
+</div>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -2,13 +2,13 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: تخفيض السعر، csv، yaml
-status: التحقق = 37873
+status: التحقق = 38102
 title: واجهة برمجة تطبيقات Orion - تنسيق مستند النص
 ---
 
 ## تنسيق المستند النصي (`markdown`, `YAML`, `CSV`)
 
-{# lede #}تقوم هذه الصفحة بتوثيق حقول العنوان والبيانات الاصطناعية الناتجة{# lede #} التي تنتجها [إنشاء واجهة برمجة التطبيقات](build) عند معالجة مثل هذه الملفات النصية (مثل مرفقات الصفحة) من خلال [`single_narrative`](https://www.sunstarsys.com/orion/api/build#-code-single_narrative-args-code-) عرض.
+{# lede #}تقوم هذه الصفحة بتوثيق حقول العنوان والبيانات الاصطناعية الناتجة{# lede #} التي تنتجها [إنشاء واجهة برمجة التطبيقات](build) عند معالجة مثل هذه الملفات النصية (مثل مرفقات الصفحة) من خلال [`single_narrative`](build#-code-single_narrative-args-code-) عرض.
 
 [TOC]
 
@@ -16,41 +16,128 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
 
 #### الرؤوس
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
-عنوان المستند الإلزامي
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+عنوان المستند الإلزامي.
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
-موقف المستند الإلزامي:
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+موقف مستند النص الحر الإلزامي.
+
+</div>
+
+<p class="card-text">
+
+وترد أدناه ثلاث تسميات خاصة من هذا القبيل:
 
 ###### مُسَوَّدَة
 
 الحالة الافتراضية.
 
+-----
+
 ###### مؤكّد
 
 يشير إلى أنه تمت مراجعة المحتوى بواسطة المؤلف.  سيتم إلغاء التعديلات إلى الحالة "مسودة" إذا تم تبديل المستند لاحقًا دون إعادة المراجعة.
+
+-----
 
 ###### مؤرشف
 
 يشير إلى أنه تم إنهاء المستند وقابل للتجاهل للعمل المستقبلي في `Orion CMS`. لن يظهر في قوائم الدليل المستقبلية خارج موقعه المحفوظ.  سيتتبع الموقع المحفوظ تعديلات المحتوى المستقبلية.
 
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `acl`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 اختياري `SVN` عناصر التحكم في اعتماد الأمان في هذا المستند. مع الإكمال التلقائي للدعم والتحقق من المجموعة في `Orion CMS` المحرر.
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `dependencies`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 قائمة اختيارية مفصولة بفاصلة `file globs` التي تعتمد عليها مخرجات هذا المستند المبنية.
 
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `keywords`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
 اختياري `SEO`قائمة ملائمة مفصولة بفاصلة للعلامات القابلة للبحث.
+
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `categories`
 
-قائمة اختيارية مفصولة بفواصل لفئات التصنيف التي يجب أن تشير إلى مستند الارتباط الدائم هذا.  مادة مضافة بطبيعتها (لن تؤدي إزالة الفئات السابقة إلى إزالة هذه الفئات من هذه الوثيقة).
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+قائمة اختيارية مفصولة بفواصل لفئات التصنيف التي يجب أن تشير إلى مستند الارتباط الدائم هذا.
+
+</div>
+<p class="card-text">
+
+مادة مضافة بطبيعتها (لن تؤدي إزالة الفئات السابقة إلى إزالة هذه الفئات من هذه الوثيقة).
+
+</p>
+</div>
+</div>
 
 #### البيانات الاصطناعية للبيانات
 
@@ -60,68 +147,222 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
 
 #### الرؤوس
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 انظر قسم تخفيض السعر أعلاه.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 انظر قسم تخفيض السعر أعلاه.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 انظر قسم تخفيض السعر أعلاه.
+
+</div>
+</div>
+</div>
 
 #### البيانات الاصطناعية للبيانات
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 `YAML::XS::Load` هيكل البيانات المحلل لغويًا
+
+</div>
+</div>
+</div>
 
 ### `CSV`
 
 #### الرؤوس
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 انظر قسم تخفيض السعر أعلاه.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 انظر قسم تخفيض السعر أعلاه.
+
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 انظر قسم تخفيض السعر أعلاه.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `headers`
 
-يشير إلى أن هذا المستند يحتوي على `CSV` سطر العنوان في أعلى محتواه.
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+اختياري؛ تشير القيمة الحقيقية إلى أن هذا المستند يحتوي على `CSV` سطر العنوان في أعلى محتواه.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `column_ids`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 قائمة اختيارية مفصولة بفاصلة بمعرفات الأعمدة لـ `PDL`
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `datetime`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 اختياري [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) صيغة `PDL` معالجة
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `type`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 تم الإعلان عن الخيار `PDL` أنواع بيانات العمود
+
+</div>
+</div>
+</div>
 
 #### البيانات الاصطناعية للبيانات
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 `arrayref` من أي `arrayrefs` (لا) `csv` الترويسات)، أو `hashrefs` (`csv` العناوين)
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `csv`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) الكائن المستخدم في الإنتاج أعلاه
 
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `pdl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 كامل [`PDL`](https://metacpan.org/pod/PDL) تم إنشاء الكائن بواسطة تكوين العنوان
+
+</div>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->
