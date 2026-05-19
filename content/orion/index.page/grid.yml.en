@@ -84,7 +84,7 @@ status: draft
   Orion: "&check;"
 - Feature: "300 MB/s Full Site Builds"
   Orion: "&check;"
-- Feature: "16-1024 Way Concurrent Builds"
+- Feature: "16-256 Way Concurrent Builds"
   Orion: "&check;"
 - Feature: "TCO &lt; $10000/yr for Enterprise"
   Orion: "&check;"
