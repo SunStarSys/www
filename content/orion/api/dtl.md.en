@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API
-Status: verified=37971
+Status: verified=38074
 Dependencies: *.md.en
 
 <div class="right">
@@ -13,121 +13,195 @@ Dependencies: *.md.en
 
 [TOC]
 
-----
-
 ## DTL (Django 1.0 Template Library)
 
 ### Django 1.0 Filter Extensions ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `append`
 
 Takes a single argument and appends its value to the filtered input.  The argument can be a varname or a quoted string; this filter will be smart about `/` characters being joined together on the `append`.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `cuts`
 
 Like `cut`, but the argument is taken as a *substring* to elide, instead of a list of characters.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `lede`
 
 Extracts the text between the &#123;# `lede` #&#125; blocks in the filtered input string.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `ssi`
 
 Recursively evaluates all Django `ssi` tags in the filtered input string.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `starts_with`
 
 Tests for prefix match.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `dirname`
 
 Returns the traditional `UNIX dirname` of the path in the filtered input string.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `parse_filename`
 
 Interface for [`SunStarSys::Util::parse_filename`](build#-code-parse_filename-path-code-).  Key difference is that the first two return values of that subroutine are swapped, and the path extensions are all broken out (with `.` prefixed) into individual arguments, allowing this filter to take an argument string representing a list of indexes into the resulting array. As a special case, an argument ending in `..` will join *all* parsed extensions to the end of the resulting string.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `basename`
 
 Returns the traditional `UNIX basename` of the path in the filtered input string. Passing an argument of `0` to this filter will cause it to strip all file extensions from the resulting string.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `tex2md`
 
 Transforms $$\LaTeX$$ sources into Markdown+$$\KaTeX$$ sources. Experimental.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `md2tex`
 
 Production-quality inverse transformation of `tex2md`.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `vcs_date`
 
 Takes a `lang` argument to provide a locale-specific representation of the day, month, and year of the most recent change presented by the `$Date` Subversion keyword in the filtered input string (which is typically the full `content` of the current resource).
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `vcs_time`
 
 Represents the numerical hour, minute, seconds, and timezone offset of the most recent change presented by the `$Date` Subversion keyword in the filtered input string.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `vcs_author`
 
 Presents a `safe` `HTML` representation of the user who updated the content most recently, as recorded by the Subversion keyword `$Author` keyword in the filtered input string.  Takes an optional `lang` argument for a locale-specific representation.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `vcs_revision`
 
 Presents the numerical revision number of the most recent change to the content, as recorded by the `$Revision` keyword in the filtered input string.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `strip_prefix`
 
 Strips the (path) prefix, passed as an argument to this filter, from the filtered input string (path). The prefix defaults to the regex `\S+/content/` otherwise.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `selectattr`
 
 Looks for the first matching html tag attribute, with the attribute name passed as an argument to this filter.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `shuffle`
 
 Shuffle the array.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `img`
 
 Grab the first HTML5/Markdown image from the filtered content.
 
-----
+&nbsp;
+
+-----
+
+&nbsp;
 
 #### `pdl_*`
 
