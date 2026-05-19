@@ -197,3 +197,12 @@ pre {
 }
 
 .asy-fixme { height: 800px !important; }
+
+/*.custom-tooltip {opacity: 1 !important}*/
+.custom-tooltip .tooltip-inner {
+    background-color: #A9BDBD;
+}
+.custom-tooltip .tooltip-arrow::before {
+    border-top-color: #A9BDBD !important;
+    border-bottom-color: #A9BDBD !important;
+}
