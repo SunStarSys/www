@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=38102
+status: draft
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -110,6 +110,7 @@ Optional comma-separated list of `file globs` that this document's built output 
 </div>
   <div class="card-body">
     <div class="card-title">
+
 Optional `SEO`-friendly comma-separated list of searchable tags.
 
 </div>
