@@ -661,10 +661,11 @@ if ($re !~ $specials_re) {
   unless ($no_pcre) {
     if ($sha1->hexdigest ne $hash) {
       undef $filter;
-      $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --markdown --yaml -- -P -e/], $re;
+      $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --markdown --yaml --csv -- -P -e/], $re;
     }
     else {
-      $pffxg = run_shell_command "cd $d && timeout 30 grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, $apreq->body("files");
+     warn "USING FILTERED FILES";
+     $pffxg = run_shell_command "cd $d && timeout 30 grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, $apreq->body("files");
     }
     if ($? > 0 && $? < 256) {
       ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
