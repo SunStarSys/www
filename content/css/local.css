@@ -17,7 +17,7 @@ input::placeholder {color: #839496 !important}
 
 .line-numbers { color: #A9BDBD !important; }
 
-hr {border-color: #A9BDBD !important }
+hr {border-color: #A9BDBD !important; opacity: .5 !important }
 
 ::-webkit-input-placeholder { /* Chrome, Safari, Opera */
   color: #839496 !important;
