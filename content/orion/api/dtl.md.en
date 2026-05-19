@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API
-Status: verified=38078
+status: draft
 Dependencies: *.md.en
 
 <div class="right">
@@ -17,21 +17,13 @@ Dependencies: *.md.en
 
 ### Django 1.0 Filter Extensions ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
-&nbsp;
-
 -----
-
-&nbsp;
 
 #### `append`
 
 Takes a single argument and appends its value to the filtered input.  The argument can be a varname or a quoted string; this filter will be smart about `/` characters being joined together on the `append`.
 
-&nbsp;
-
 -----
-
-&nbsp;
 
 #### `cuts`
 
