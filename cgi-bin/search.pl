@@ -676,14 +676,14 @@ if ($re !~ $specials_re) {
   unless ($filter) {
     s!/content/.*$!! for my $lucy_index = $dirname;
     $lucy_index .= "/.lucy$lang";
-    if (-d $lucy_index and eval{require Lucy::Search::IndexSearcher}) {
+    if (-d $lucy_index) {
       my $searcher = Lucy::Search::IndexSearcher->new(index => $lucy_index);
       my $hits = $searcher->hits(    # returns a Hits object, not a hit count
         query      => $q,
         offset     => $apreq->param("offset") // 0,
         num_wanted => $apreq->param("wanted") // 100,
       );
-      warn my $hit_count = $hits->total_hits;
+      warn "LUCY HITS=", my $hit_count = $hits->total_hits;
       while (my $hit = $hits->next) {
        s/^\Q$path_info// or next for my $path = $hit->{path};
        unshift @{$matches{$path}}, {count => 100 * $hit->get_score, match => Template("{{content|lede|truncatewords:10|safe}}")->render({content => $hit->{content}}) || Template("{{content|truncatewords:10|safe}}")->render({content => $hit->{content}}), pre => [], words => [], end => []};
