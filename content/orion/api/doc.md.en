@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=37911
+status: verified=37915
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -17,41 +17,61 @@ Dependencies: *.md.en
 
 Mandatory document title
 
+-----
+
 ##### `status`
 
 Mandatory free-text document status.  Three such special status labels are explained below:
+
+-----
 
 ###### draft
 
 Default state.
 
+-----
+
 ###### verified
 
 Indicates that content has been validated by the author.  Will roll back to draft state if document is subsequently altered without revalidation.
+
+-----
 
 ###### archived
 
 Indicates document is finalized and ignorable for future work in the `Orion CMS`.  Will not appear in future directory listings outside of its archived location.  Archived location will track future content modifications.
 
+-----
+
 ##### `acl`
 
 Optional `SVN` security authorization controls on this document. With autocomplete support and group validation in the `Orion CMS` editor.
+
+-----
 
 ##### `dependencies`
 
 Optional comma-separated list of `file globs` that this document's built output relies upon.
 
+-----
+
 ##### `keywords`
 
 Optional `SEO`-friendly comma-separated list of searchable tags.
+
+-----
 
 ##### `categories`
 
 Optional comma-separated list of classification categories that should reference this permalinked document.  Additive in nature (removing categories will not cause those ex-categories to delist this document).
 
+-----
+
 #### Data Artifacts
 
 n/a
+
+-----
 
 ### `YAML`
 
@@ -61,19 +81,27 @@ n/a
 
 See markdown section above.
 
+-----
+
 ##### `status`
 
 See markdown section above.
 
+-----
+
 ##### `acl`
 
 See markdown section above.
+
+-----
 
 #### Data Artifacts
 
 ##### `content`
 
 `YAML::XS::Load` parsed data structure
+
+-----
 
 ### `CSV`
 
@@ -83,29 +111,43 @@ See markdown section above.
 
 See markdown section above.
 
+-----
+
 ##### `status`
 
 See markdown section above.
+
+-----
 
 ##### `acl`
 
 See markdown section above.
 
+-----
+
 ##### `headers`
 
-Indicates that this document has a `CSV` header line at the top of its content.
+Optional; true value indicates that this document has a `CSV` header line at the top of its content.
+
+-----
 
 ##### `column_ids`
 
 Optional comma-separated list of Column Ids for `PDL`
 
+-----
+
 ##### `datetime`
 
 Optional [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) format for `PDL` processing
 
+-----
+
 ##### `type`
 
 Optional declared `PDL` column data types
+
+-----
 
 #### Data Artifacts
 
@@ -113,9 +155,13 @@ Optional declared `PDL` column data types
 
 `arrayref` of either `arrayrefs` (no `csv` headers), or `hashrefs` (`csv` headers)
 
+-----
+
 ##### `csv`
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) object used to produce above
+
+-----
 
 ##### `pdl`
 
