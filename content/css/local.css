@@ -9,6 +9,9 @@
     text-align: right !important;
 }
 
+a {text-decoration:none}
+a:hover {text-decoration: underline}
+
 div.jumbotron {
 	color: black;
 }
