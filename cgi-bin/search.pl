@@ -265,7 +265,7 @@ else {
   $dirname = "/x1/httpd/websites/$host/content" . $r->path_info;
 }
 
-my $path_info = (parse_filename($r->path_info))[1] or ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
+my $path_info = eval {(parse_filename($r->path_info))[1]} or ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
 
 my $d = (parse_filename($dirname))[1];
 for ($d) {
