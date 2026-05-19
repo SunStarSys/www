@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=37915
+status: verified=38086
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -13,17 +13,42 @@ Dependencies: *.md.en
 
 #### Headers
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `title`
 
-Mandatory document title
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
------
+Mandatory document title.
+
+</div>
+
+<p class="card-text">
+
+</p>
+</div>
+</div>
+
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
-Mandatory free-text document status.  Three such special status labels are explained below:
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
------
+Mandatory free-text document status.
+
+</div>
+
+<p class="card-text">
+
+Three such special status labels are explained below:
 
 ###### draft
 
@@ -41,130 +66,301 @@ Indicates that content has been validated by the author.  Will roll back to draf
 
 Indicates document is finalized and ignorable for future work in the `Orion CMS`.  Will not appear in future directory listings outside of its archived location.  Archived location will track future content modifications.
 
------
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Optional `SVN` security authorization controls on this document. With autocomplete support and group validation in the `Orion CMS` editor.
 
------
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `dependencies`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Optional comma-separated list of `file globs` that this document's built output relies upon.
 
------
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `keywords`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
 Optional `SEO`-friendly comma-separated list of searchable tags.
 
------
+</div>
+<p class="card-text"></p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `categories`
 
-Optional comma-separated list of classification categories that should reference this permalinked document.  Additive in nature (removing categories will not cause those ex-categories to delist this document).
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
------
+Optional comma-separated list of classification categories that should reference this permalinked document.
+
+</div>
+<p class="card-text">
+
+Additive in nature (removing categories will not cause those ex-categories to delist this document).
+
+</p>
+</div>
+</div>
 
 #### Data Artifacts
 
 n/a
 
------
-
 ### `YAML`
 
 #### Headers
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 See markdown section above.
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 See markdown section above.
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 See markdown section above.
 
------
+</div>
+</div>
+</div>
 
 #### Data Artifacts
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 `YAML::XS::Load` parsed data structure
 
------
+</div>
+</div>
+</div>
 
 ### `CSV`
 
 #### Headers
 
+<div class="card border-secondary mb-3">
+  <div class="card-header">
+
 ##### `title`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 See markdown section above.
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `status`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 See markdown section above.
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-secondary mb-3">
+  <div class="card-header">
 
 ##### `acl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 See markdown section above.
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `headers`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Optional; true value indicates that this document has a `CSV` header line at the top of its content.
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `column_ids`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Optional comma-separated list of Column Ids for `PDL`
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `datetime`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Optional [`strptime(3)`](https://www.man7.org/linux/man-pages/man3/strptime.3.html) format for `PDL` processing
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `type`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Optional declared `PDL` column data types
 
------
+</div>
+</div>
+</div>
 
 #### Data Artifacts
 
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 ##### `content`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
 
 `arrayref` of either `arrayrefs` (no `csv` headers), or `hashrefs` (`csv` headers)
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `csv`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) object used to produce above
 
------
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
 
 ##### `pdl`
 
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
 Full [`PDL`](https://metacpan.org/pod/PDL) object generated by header configuration
+
+</div>
+</div>
+</div>
 
 <!-- $Date$ $Author$ $Revision$ -->
