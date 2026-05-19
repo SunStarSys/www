@@ -1,89 +1,137 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.fr'
-keywords: REPOS, API
-published: ~
-status: projet
+keywords: REPOS,API
+status: vérifié=38098
 title: API Orion - Bibliothèque de modèles Django
 ---
 
-{# lede #}Ce document couvre les API **Django Template Library (DTL)**{# lede #}
+<div class="right">
+
+![SunStar Systèmes](../../images/sunstarstaronly)
+
+</div>
+
+{# lede #}Ce document traite des API de filtre **Django Template Library (DTL)**{# lede #}.
 
 [TOC]
 
-----
+## DTL (Bibliothèque de modèles Django 1.0)
 
-## DTL (Bibliothèque de modèles Django 1.0).
+### Extensions de filtre Django 1.0 ([Dotiac ::DTL: :Filtre](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
-### Extensions de filtres Django 1.0 ([Dotiac : :DTL : :Filtre](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm).
+-----
 
-#### ajouter
+#### `append`
 
-Prend un seul argument et ajoute sa valeur à l'entrée filtrée.  L'argument peut être un nom de variable ou une chaîne entre guillemets ; ce filtre sera intelligent à propos de `/` les personnages étant réunis sur [`ajouter`](#).
+Prend un seul argument et ajoute sa valeur à l'entrée filtrée.  L'argument peut être un nom de variable ou une chaîne entre guillemets ; ce filtre sera intelligent `/` personnages réunis sur `append`.
 
-#### segments
+-----
 
-J'aime [`couper`](#).
+#### `cuts`
 
-#### lede
+Comme `cut`, mais l'argument est pris comme une *substring* à elide, au lieu d'une liste de caractères.
 
-Extrait le texte entre les &#123;# [`lede`](#) #&#125;
+-----
 
-#### ssi
+#### `lede`
 
-Evalue de manière récursive tous les Django [`ssi`](#).
+Extrait le texte entre les &#123;# `lede` #&#125; blocs dans la chaîne d'entrée filtrée.
 
-#### starts_with
+-----
+
+#### `ssi`
+
+Évalue de façon récursive tous les Django `ssi` balises dans la chaîne d'entrée filtrée.
+
+-----
+
+#### `starts_with`
 
 Tests de correspondance de préfixe.
 
-#### nom de répertoire
+-----
 
-Renvoie la commande UNIX traditionnelle [`nom de répertoire`](#).
+#### `dirname`
 
-#### parse_filename
+Retourne le traditionnel `UNIX dirname` du chemin dans la chaîne d'entrée filtrée.
 
-Interface pour [`SunStarSys : :Util : :parse_filename`](#). La principale différence est que les deux premières valeurs de retour de ce sous-programme sont permutées et que les extensions de chemin sont toutes décomposées (avec [`.`](#) préfixé) en arguments individuels, ce qui permet à ce filtre de prendre une chaîne d'arguments représentant une liste d'index dans le tableau résultant. Dans un cas particulier, un argument se terminant par [`..`](#).
+-----
 
-#### nom de base
+#### `parse_filename`
 
-Renvoie la commande UNIX traditionnelle [`nom de base`](#) du chemin dans la chaîne d'entrée filtrée. Passage d'un argument de [`0`](#).
+Interface pour [`SunStarSys::Util::parse_filename`](build#-code-parse_filename-path-code-). La différence clé est que les deux premières valeurs de retour de cette sous-routine sont échangées et que les extensions de chemin sont toutes ventilées (avec `.` préfixé) en arguments individuels, permettant à ce filtre de prendre une chaîne d'argument représentant une liste d'index dans le tableau résultant. Dans un cas particulier, un argument se terminant par `..` rejoindra *toutes* les extensions analysées à la fin de la chaîne résultante.
 
-#### tex2md
+-----
 
-Transformations $$\LaTeX$$ sources dans Markdown+$$\KaTeX$$
+#### `basename`
 
-#### md2tex
+Retourne le traditionnel `UNIX basename` du chemin dans la chaîne d'entrée filtrée. Passer un argument de `0` pour ce filtre, il supprimera toutes les extensions de fichier de la chaîne résultante.
 
-La transformation inverse de `tex2md`
+-----
 
-#### vcs_date
+#### `tex2md`
 
-Prend une [`langue`](#) argument permettant de fournir une représentation spécifique des paramètres régionaux du jour, du mois et de l'année de la modification la plus récente présentée par [`Date du $`](#) Mot-clé Subversion dans la chaîne d'entrée filtrée (qui est généralement le plein) [`contenu`](#).
+Transformations $$\LaTeX$$ sources dans Markdown+$$\KaTeX$$ sources. Expérimental.
 
-#### vcs_time
+-----
 
-Représente l'heure numérique, les minutes, les secondes et le décalage horaire de la modification la plus récente présentée par le [`Date du $`](#).
+#### `md2tex`
 
-#### vcs_author
+Transformation inverse de la qualité de la production `tex2md`.
 
-Présente un [`sécurité`](#) Représentation HTML de l'utilisateur qui a mis à jour le contenu le plus récemment, tel qu'enregistré par le mot-clé Subversion [`$Auteur`](#) mot-clé dans la chaîne d'entrée filtrée.  Prend une option [`langue`](#).
+-----
 
-#### vcs_revision
+#### `vcs_date`
 
-Présente le numéro de révision numérique de la modification la plus récente du contenu, tel qu'enregistré par le [`$Révision`](#).
+Prend une `lang` argument pour fournir une représentation locale du jour, du mois et de l'année de la modification la plus récente présentée par le `$Date` Mot-clé Subversion dans la chaîne d'entrée filtrée (qui est généralement la chaîne complète) `content` de la ressource actuelle).
 
-#### strip_prefix
+-----
 
-Supprime le préfixe (chemin), transmis en tant qu'argument à ce filtre, de la chaîne d'entrée filtrée (chemin). Par défaut, le préfixe est l'expression régulière. [`\S+/content/`](#).
+#### `vcs_time`
 
-#### réorganisation
+Représente le décalage numérique de l'heure, des minutes, des secondes et du fuseau horaire de la dernière modification présentée par le `$Date` Mot-clé Subversion dans la chaîne d'entrée filtrée.
+
+-----
+
+#### `vcs_author`
+
+Présente un `safe` `HTML` représentation de l'utilisateur qui a mis à jour le contenu le plus récemment, tel qu'enregistré par le mot-clé Subversion `$Author` mot-clé dans la chaîne d'entrée filtrée.  Prend une option `lang` argument pour une représentation propre à l'environnement linguistique.
+
+-----
+
+#### `vcs_revision`
+
+Présente le numéro de révision numérique de la modification la plus récente du contenu, tel qu'enregistré par le `$Revision` mot-clé dans la chaîne d'entrée filtrée.
+
+-----
+
+#### `strip_prefix`
+
+Supprime le préfixe (chemin) transmis en tant qu'argument à ce filtre de la chaîne d'entrée filtrée (chemin). Le préfixe est par défaut l'expression régulière `\S+/content/` autrement.
+
+-----
+
+#### `selectattr`
+
+Recherche le premier attribut de balise HTML correspondant, avec le nom d'attribut transmis comme argument à ce filtre.
+
+-----
+
+#### `shuffle`
 
 Réorganisez le tableau.
 
-#### im.
+-----
 
-Récupérez la première image HTML5/de démarque à partir du contenu filtré.
+#### `img`
+
+Récupérez la première image HTML5/Markdown du contenu filtré.
+
+-----
+
+#### `pdl_*`
+
+Complet [`PDL`](https://metacpan.org/pod/PDL) API.  En transmettant ce filtre, un arrayref comme argument entraînera la déréférencement du arrayref afin que ses éléments puissent être transmis directement à `pdl_` méthode préfixée appelée par ce filtre.
 
 <!-- $Date$ $Author$ $Revision$ -->

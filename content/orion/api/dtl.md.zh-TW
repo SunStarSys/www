@@ -1,89 +1,137 @@
 ---
-archived: ~
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-published: ~
-status: 草稿
-title: Orion API - Django 範本庫
+status: 驗證 =38098
+title: Orion API - Django 樣板程式庫
 ---
 
-{# lede #}本文件涵蓋 **Django 範本程式庫 (DTL) ** API{# lede #}
+<div class="right">
+
+![SunStar 系統](../../images/sunstarstaronly)
+
+</div>
+
+{# lede #}本文件涵蓋 **Django 樣板程式庫 (DTL) **篩選 API{# lede #}.
 
 [TOC]
 
-----
+## DTL (Django 1.0 範本程式庫)
 
-## DTL (Django 1.0 範本庫).
+### Django 1.0 過濾器延伸 ([Dotiac::DTL:：過濾](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
-### Django 1.0 過濾器延伸 ([Dotiac：：DTL：：過濾](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm).
+-----
 
-#### 附加
+#### `append`
 
-採用單一引數，並將其值附加至篩選的輸入。引數可以是 varname 或引號字串；此過濾器將會更聰明`/` 結合在一起的字元[`附加`](#).
+採用單一引數，並將其值附加至篩選的輸入。引數可以是 varname 或引號中的字串；此篩選將很聰明`/` 結合的字元`append`.
 
-#### 個剪下
+-----
 
-類似[`切割`](#).
+#### `cuts`
 
-#### LED
+類似`cut`，但引數會被當作 *substring* 來隱藏，而不是字元清單。
 
-擷取介於之間的文字&#123;# [`鉛`](#) #&#125;
+-----
 
-#### ssi
+#### `lede`
 
-遞迴評估所有 Django [`ssi`](#).
+擷取介於&#123;# `lede` #&#125; 篩選輸入字串中的區塊。
 
-#### starts_with
+-----
 
-前置碼比對的測試。
+#### `ssi`
 
-#### 目錄名稱
+遞迴評估所有的 Django `ssi` 篩選輸入字串中的標記。
 
-傳回傳統 UNIX [`目錄名稱`](#).
+-----
 
-#### parse_filename
+#### `starts_with`
 
-介面[`SunStarSys::Util::parse_filename`](#)繁體中文關鍵差別在於該次常式的前兩個傳回值已交換，且路徑延伸全部中斷 (含) [`.`](#) prefixed) 進入個別引數，讓此篩選將代表索引清單的引數字串帶入產生的陣列中。作為特殊情況，引數的結尾是[`..`](#).
+字首相符的測試。
 
-#### 基礎名稱
+-----
 
-傳回傳統 UNIX [`基本名稱`](#) 篩選輸入字串中的路徑。傳送以下項目的引數[`0`](#).
+#### `dirname`
 
-#### tex2md
+返回傳統`UNIX dirname` 篩選輸入字串中的路徑。
 
-轉換$$\LaTeX$$ 進入 Markdown+$$\KaTeX$$
+-----
 
-#### md2tex
+#### `parse_filename`
 
-逆變換`tex2md`
+介面[`SunStarSys::Util::parse_filename`](build#-code-parse_filename-path-code-)。關鍵差別在於該次常式的前兩個傳回值已交換，且路徑延伸全部中斷 (含) `.` prefixed) 至個別引數中，允許此篩選將代表索引清單的引數字串帶入產生的陣列中。以特殊案例為結尾的引數`..` 將在結果字串的結尾結合 *all* 剖析的副檔名。
 
-#### vcs_date
+-----
 
-接受[`仰光`](#) 提供地區設定特定表示法的引數，該引數代表最近所呈現的變更之日、月及年[`$Date`](#) 篩選輸入字串中的 Subversion 關鍵字 (通常是完整的) [`內容`](#).
+#### `basename`
 
-#### vcs_time
+返回傳統`UNIX basename` 篩選輸入字串中的路徑。傳送引數`0` 對此過濾器會使它刪除結果字串中所有的副檔名 。
 
-代表最近所呈現變更的小時、分鐘、秒以及時區位移[`$Date`](#).
+-----
 
-#### vcs_author
+#### `tex2md`
 
-顯示[`安全`](#) 以 HTML 表示最近更新內容的使用者，如 Subversion 關鍵字所記錄[`$ 作者`](#) 篩選輸入字串中的關鍵字。選擇性[`仰光`](#).
+轉換$$\LaTeX$$ 進入 Markdown+$$\KaTeX$$ 來源。實驗中。
 
-#### vcs_revision
+-----
 
-顯示最近對內容所做變更的數值修訂版本編號，由此記錄[`$ 修訂`](#).
+#### `md2tex`
 
-#### strip_prefix
+生產品質反轉轉換`tex2md`.
 
-從篩選的輸入字串 (路徑) 中去除 (path) 前置碼 (作為此篩選的引數)。前置碼預設為正規表示式[`\S+/content/`](#).
+-----
 
-#### 打亂
+#### `vcs_date`
 
-打亂陣列 。
+參加`lang` 引數，提供最近變更所呈現之日期、月份和年份的地區設定特定表示法`$Date` 篩選輸入字串中的 Subversion 關鍵字 (通常是完整的) `content` (目前資源)。
 
-#### img
+-----
 
-從篩選的內容擷取第一個 HTML5/Markdown 影像。
+#### `vcs_time`
+
+代表所呈現之最近變更的數值小時、分鐘、秒和時區偏移量`$Date` 篩選輸入字串中的 Subversion 關鍵字。
+
+-----
+
+#### `vcs_author`
+
+展示 a `safe` `HTML` 更新最近內容的使用者表示法，如 Subversion 關鍵字所記錄`$Author` 篩選輸入字串中的關鍵字。選擇性`lang` 語言環境特定表示法的引數。
+
+-----
+
+#### `vcs_revision`
+
+顯示內容最近變更的數值修訂版本編號，由下列項目記錄`$Revision` 篩選輸入字串中的關鍵字。
+
+-----
+
+#### `strip_prefix`
+
+從篩選的輸入字串 (路徑) 中去除作為此篩選引數傳送的 (路徑) 前置碼。前置碼預設為正規表示式`\S+/content/` 其他。
+
+-----
+
+#### `selectattr`
+
+尋找第一個符合的 html 標籤屬性，屬性名稱以此過濾器的參數傳送 。
+
+-----
+
+#### `shuffle`
+
+打亂陣列。
+
+-----
+
+#### `img`
+
+從篩選的內容中擷取第一個 HTML5/Markdown 影像。
+
+-----
+
+#### `pdl_*`
+
+完整[`PDL`](https://metacpan.org/pod/PDL) API。以 arrayref 作為引數傳送此篩選，將會造成 arrayref 被取消參照，使其元素可以直接傳送到`pdl_` 此篩選所呼叫的前置碼方法。
 
 <!-- $Date$ $Author$ $Revision$ -->
