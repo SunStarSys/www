@@ -244,7 +244,8 @@ sub get_client_lang  (AR $r) {
 
 my $markdown = "Markdown";
 my ($re)     = eval{($apreq->param("regex"))[-1]} // ($r->status(Apache2::Const::HTTP_BAD_REQUEST) && return -1);
-my $q = $re;
+my $q        = $re;
+my $no_pcre  = $apreq->param("no_pcre");
 my $filter   = $apreq->param("filter") // "";
 my Digest::SHA1 $hash = $apreq->body("hash") // "";
 my $host     = $r->headers_in->{host};
@@ -657,20 +658,20 @@ if ($re !~ $specials_re) {
   };
   $r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
 
-  if ($sha1->hexdigest ne $hash) {
-    undef $filter;
-    $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --markdown --yaml -- -P -e/], $re;
+  unless ($no_pcre) {
+    if ($sha1->hexdigest ne $hash) {
+      undef $filter;
+      $pffxg = run_shell_command "cd $d && timeout 30 pffxg.sh" => [qw/--no-exclusions --no-cache --args 100 --markdown --yaml -- -P -e/], $re;
+    }
+    else {
+      $pffxg = run_shell_command "cd $d && timeout 30 grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, $apreq->body("files");
+    }
+    if ($? > 0 && $? < 256) {
+      ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
+      die "status=$?:$pffxg";
+    }
   }
-  else {
-    $pffxg = run_shell_command "cd $d && timeout 30 grep" => [qw/--color=always --with-filename --line-number --ignore-case -P -e/], $filter, $apreq->body("files");
-  }
-
-  if ($? > 0 && $? < 256) {
-    ($? == 124 or index($pffxg, "Terminated") == 0) and sleep 60;
-    die "status=$?:$pffxg";
-  }
-
-  parser $pffxg, $dirname, undef, \ my %matches;
+  parser $pffxg // "", $dirname, undef, \ my %matches;
 
   s!/content/.*$!! for my $lucy_index = $dirname;
   $lucy_index .= "/.lucy$lang";
