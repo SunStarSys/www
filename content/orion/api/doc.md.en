@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=38140
+status: verified=38148
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -357,6 +357,23 @@ Optional declared `PDL` column data types
 
 <div class="card border-primary mb-3">
   <div class="card-header">
+
+##### `csv_headers`
+
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` of original (unmunged) headers
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
 
 ##### `pdl`
 
