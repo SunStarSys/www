@@ -1,6 +1,6 @@
 Title: Home
 Keywords: wiki,knowledge,blogs,orion,jamstack,perl,f/oss
-Status: verified=37366
+Status: verified=37722
 
 <div class="lg right">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
@@ -10,8 +10,8 @@ Status: verified=37366
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">New</span> SunStar Systems' Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} released &mdash;
-now with LAUNCH_APACHE2 support!
+<h2 class="card-title"><span class="badge bg-success">New</span> SunStar Systems' Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} released &mdash; now with LAUNCH_APACHE2 and CSV/PDL support!
+
 </h2>
 
 <br>
