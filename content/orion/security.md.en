@@ -335,7 +335,7 @@ Remarkably brief and time-tested dependencies; the major components of which are
 
 </div>
 <div class="tab-pane fade active" id="sbom" role="tabpanel">
-{{sbom|safe}}
+{{sbom.content|safe}}
 </div>
 </div>
 
