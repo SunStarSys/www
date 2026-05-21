@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: überprüft=38098
+status: überprüft=38132
 title: Orion API - Django-Vorlagenbibliothek
 ---
 
@@ -133,5 +133,17 @@ Greifen Sie auf das erste HTML5/Markdown-Bild aus dem gefilterten Inhalt zu.
 #### `pdl_*`
 
 Vollständig [`PDL`](https://metacpan.org/pod/PDL) API.  Durch das Übergeben dieses Filters an arrayref als Argument wird die arrayref abgegrenzt, so dass ihre Elemente direkt an die `pdl_` Methode mit Präfix, die dieser Filter aufruft.
+
+-----
+
+#### `grep`
+
+Entspricht dem vertrauten UNIX/Perl-Utility. Sie übergeben einen regulären Ausdruck als Argument und filtern das Nicht-`PCRE`- übereinstimmende Quellen.
+
+-----
+
+#### `code`
+
+Ruft ein Array von `GFM` eingezäunter Code blockiert die Quelle; Sie übergeben ihm den Namen/Typ der Codeblöcke, die Sie wünschen.
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API
-status: verified=38098
+status: verified=38132
 Dependencies: *.md.en
 
 <div class="right">
@@ -130,5 +130,18 @@ Grab the first HTML5/Markdown image from the filtered content.
 #### `pdl_*`
 
 Full [`PDL`](https://metacpan.org/pod/PDL) API.  Passing this filter an arrayref as argument will cause the arrayref to be derefenced so its elements can be passed directly to the `pdl_` prefixed method this filter invokes.
+
+-----
+
+#### `grep`
+
+Same as familiar UNIX/Perl utility; you pass it a regular expression as argument and it filters out the non-`PCRE`-matching sources.
+
+-----
+
+#### `code`
+
+Pulls an array of `GFM` fenced code blocks out of the source; you pass it the name/type of the code blocks you desire.
+
 
 <!-- $Date$ $Author$ $Revision$ -->

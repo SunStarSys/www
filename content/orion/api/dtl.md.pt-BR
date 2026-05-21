@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=38098
+status: verificado=38132
 title: API do Orion - Biblioteca de Modelos do Django
 ---
 
@@ -133,5 +133,17 @@ Obtenha a primeira imagem HTML5/Markdown do conteúdo filtrado.
 #### `pdl_*`
 
 Completo [`PDL`](https://metacpan.org/pod/PDL) API.  Passar este filtro um arrayref como argumento fará com que o arrayref seja desconsiderado para que seus elementos possam ser passados diretamente para o `pdl_` método prefixado que este filtro chama.
+
+-----
+
+#### `grep`
+
+O mesmo que o utilitário UNIX/Perl familiar; você passa uma expressão regular como argumento e filtra os não-`PCRE`-fontes correspondentes.
+
+-----
+
+#### `code`
+
+Extrai uma matriz de `GFM` bloqueios de código cercados para fora da fonte; você passa-lhe o nome / tipo dos blocos de código que você deseja.
 
 <!-- $Date$ $Author$ $Revision$ -->

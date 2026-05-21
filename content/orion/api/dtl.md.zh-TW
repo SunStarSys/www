@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =38098
+status: 驗證 =38132
 title: Orion API - Django 樣板程式庫
 ---
 
@@ -133,5 +133,17 @@ title: Orion API - Django 樣板程式庫
 #### `pdl_*`
 
 完整[`PDL`](https://metacpan.org/pod/PDL) API。以 arrayref 作為引數傳送此篩選，將會造成 arrayref 被取消參照，使其元素可以直接傳送到`pdl_` 此篩選所呼叫的前置碼方法。
+
+-----
+
+#### `grep`
+
+與熟悉的 UNIX/Perl 公用程式相同；您會將正規表示式當作引數傳送，並篩選出非正規表示式。`PCRE`-matching 來源。
+
+-----
+
+#### `code`
+
+拉引陣列`GFM` fenced 程式碼區塊不在來源；您傳遞需要的程式碼區塊的名稱 / 類型。
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: vérifié=38098
+status: vérifié=38132
 title: API Orion - Bibliothèque de modèles Django
 ---
 
@@ -133,5 +133,17 @@ Récupérez la première image HTML5/Markdown du contenu filtré.
 #### `pdl_*`
 
 Complet [`PDL`](https://metacpan.org/pod/PDL) API.  En transmettant ce filtre, un arrayref comme argument entraînera la déréférencement du arrayref afin que ses éléments puissent être transmis directement à `pdl_` méthode préfixée appelée par ce filtre.
+
+-----
+
+#### `grep`
+
+Identique à l'utilitaire UNIX/Perl habituel ; vous lui transmettez une expression régulière en tant qu'argument et il filtre le non-`PCRE`- Correspondance des sources.
+
+-----
+
+#### `code`
+
+Extrait un tableau de `GFM` blocs de code clôturés hors de la source ; vous lui transmettez le nom/type des blocs de code que vous souhaitez.
 
 <!-- $Date$ $Author$ $Revision$ -->

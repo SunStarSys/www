@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=38098
+status: 確認済み=38132
 title: Orion API - Djangoテンプレートライブラリ
 ---
 
@@ -133,5 +133,17 @@ Aを提示`safe` `HTML` Subversionキーワードによって記録された、�
 #### `pdl_*`
 
 完全[`PDL`](https://metacpan.org/pod/PDL) API。このフィルタを引数として渡すと、arrayrefが導出され、その要素が直接渡されます。`pdl_` このフィルタが起動する接頭辞付きメソッド。
+
+-----
+
+#### `grep`
+
+使い慣れたUNIX/Perlユーティリティと同じで、引数として正規表現を渡すと、`PCRE`- 一致ソース。
+
+-----
+
+#### `code`
+
+配列のプル`GFM` fencedコードはソースからブロックし、必要なコードブロックの名前/タイプを渡します。
 
 <!-- $Date$ $Author$ $Revision$ -->

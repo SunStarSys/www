@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=38098
+status: 확인=38132
 title: Orion API - Django 템플릿 라이브러리
 ---
 
@@ -133,5 +133,17 @@ a를 나타냅니다. `safe` `HTML` Subversion 키워드로 기록된 대로 가
 #### `pdl_*`
 
 전체 [`PDL`](https://metacpan.org/pod/PDL) API입니다.  이 필터를 인수로 arrayref로 전달하면 arrayref의 요소가 해당 요소에 직접 전달될 수 있도록 arrayref의 참조가 해제됩니다. `pdl_` 이 필터가 호출하는 접두어가 붙은 메소드입니다.
+
+-----
+
+#### `grep`
+
+익숙한 UNIX/Perl 유틸리티와 동일하며 정규 표현식을 인수로 전달하고`PCRE`-일치하는 소스입니다.
+
+-----
+
+#### `code`
+
+배열을 당깁니다. `GFM` fenced code blocks out of the source; 원하는 코드 블록의 이름/유형을 전달합니다.
 
 <!-- $Date$ $Author$ $Revision$ -->

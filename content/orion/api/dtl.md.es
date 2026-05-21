@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado=38098
+status: verificado=38132
 title: Orion API - Biblioteca de plantillas de Django
 ---
 
@@ -133,5 +133,17 @@ Tome la primera imagen HTML5/Markdown del contenido filtrado.
 #### `pdl_*`
 
 Completo [`PDL`](https://metacpan.org/pod/PDL) API.  Al transferir este filtro, una referencia de matriz como argumento provocará que se anule la referencia de matriz para que sus elementos se puedan transferir directamente a la `pdl_` método con prefijo que invoca este filtro.
+
+-----
+
+#### `grep`
+
+Igual que la conocida utilidad UNIX/Perl; se transfiere una expresión regular como argumento y se filtra el no`PCRE`-coincidencia de orígenes.
+
+-----
+
+#### `code`
+
+Extrae una matriz de `GFM` código vallado bloquea fuera de la fuente; se le pasa el nombre / tipo de los bloques de código que desea.
 
 <!-- $Date$ $Author$ $Revision$ -->

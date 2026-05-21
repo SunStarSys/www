@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=38098
+status: verifierad=38132
 title: Orion API - Django mallbibliotek
 ---
 
@@ -133,5 +133,17 @@ Hämta den första HTML5/Markdown-bilden från det filtrerade innehållet.
 #### `pdl_*`
 
 Fullständig [`PDL`](https://metacpan.org/pod/PDL) API.  Om du överför det här filtret en arrayref som argument avrefereras arrayen så att dess element kan överföras direkt till `pdl_` metod med prefix som detta filter anropar.
+
+-----
+
+#### `grep`
+
+Samma som det välkända verktyget UNIX/Perl; du skickar det ett reguljärt uttryck som argument och det filtrerar ut det icke-`PCRE`-matcha källor.
+
+-----
+
+#### `code`
+
+Hämtar en matris med `GFM` inhägnad kod blockerar ur källan; du skickar det namnet / typen av kodblock du önskar.
 
 <!-- $Date$ $Author$ $Revision$ -->
