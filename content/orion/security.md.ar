@@ -13,6 +13,18 @@ title: أوريون الأمن
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">الشجرة الفرعية</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">الوثائق</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"الأمن من خلال الغموض ليس الكثير من الأمن على الإطلاق."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 تتم إدارة نموذج أمان Orion مركزيًا بواسطة الإعدادات الواردة في [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) كما يحجم في [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). يتم إنشاء ملفات تكوين خادم Offshoot ديناميكيًا في كل تغيير تم إنشاؤه.
 
-إذا كنت تفهم نموذج أمان نظام ملفات POSIX، فستكون على حق في المنزل مع Orion's [mod_dav_svn]() نموذج التفويض وعناصر التحكم في الوصول إلى .htaccess الخاصة بخادم ويب Apache HTTPd، والتي يتم إنشاؤها تلقائيًا من موقع الويب الخاص بك `lib/acl.yml` تكوين YAML.
+إذا كنت تفهم نموذج أمان نظام ملفات POSIX، فستكون على حق في المنزل مع Orion's [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) نموذج التفويض وعناصر التحكم في الوصول إلى .htaccess الخاصة بخادم ويب Apache HTTPd، والتي يتم إنشاؤها تلقائيًا من موقع الويب الخاص بك `lib/acl.yml` تكوين YAML.
 
 ### OpenIDC تأمين تسجيل الدخول الموحد
 
@@ -180,7 +192,7 @@ digraph {
 
 ### قضايا ويكي
 
-يتضمن أمن ويكي عدة عوامل:
+Wiki security involves several factors:
 
 1. تأمين واجهة المستخدم/واجهة برمجة التطبيقات
 
@@ -280,7 +292,7 @@ digraph {
 
 #### التحكم المدمج في محرك بحث PCRE
 
-نفس موقف واجهة المستخدم للأغراض العامة: يتم إجراء فحوصات متقاطعة مقابل خادم Subversion من واجهة المستخدم.
+Same situation as the general-purpose UI: يقوم بفحص متقاطع مقابل خادم Subversion من واجهة المستخدم.
 
 في الموقع المباشر، سيعمل محرك البحث بنفس الطريقة عند تمكين عمليات البحث عن تخفيض السعر (شجرة المصدر). خلاف ذلك، سيتم تشغيل طلبات httpd الفرعية إلى موقعك المباشر لاختبار ما إذا كان المستخدم مصرحًا له بالوصول إلى هذا الملف المباشر (على افتراض أن لديك محرك بحث محمي بكلمة مرور بحيث يكون لديه بيانات مستخدم للعمل معه).
 
@@ -324,6 +336,12 @@ digraph {
 
 [اتصل بنا](/contact) لمزيد من التفاصيل.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## الفهرس
@@ -332,4 +350,4 @@ digraph {
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 35747 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -13,6 +13,18 @@ title: Segurança Orion
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SBOM</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentação</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"A segurança através da obscuridade não é muita segurança."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 O modelo de segurança do Orion é gerenciado centralmente pelas configurações contidas no [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) como constrangido em [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Os arquivos de configuração do servidor offshoot são gerados dinamicamente em cada alteração criada.
 
-Se você entender o modelo de segurança do sistema de arquivos POSIX, estará em casa com a Orion's [mod_dav_svn]() modelo de autorização e os controles .htaccess do servidor web Apache HTTPd, gerados automaticamente a partir do seu site `lib/acl.yml` Configuração YAML.
+Se você entender o modelo de segurança do sistema de arquivos POSIX, estará em casa com a Orion's [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) o modelo de autorização e os controles .htaccess do servidor web Apache HTTPd, gerados automaticamente a partir do seu site `lib/acl.yml` Configuração YAML.
 
 ### OpenIDC Segurança do SSO
 
@@ -180,7 +192,7 @@ Todos os nossos tempos de execução Perl têm verificações de mancha obrigat�
 
 ### Problemas do Wiki
 
-Segurança Wiki envolve vários fatores:
+Wiki security involves several factors:
 
 1. Segurança de UI/API
 
@@ -280,7 +292,7 @@ Proteção ACL automática para builds de ramificações efêmeras. Configuraç�
 
 #### Controles Integrados do Mecanismo de Pesquisa PCRE
 
-A mesma situação que a IU de uso geral: ela faz verificações cruzadas no servidor Subversion da IU.
+Same situation as the general-purpose UI: ele faz verificações cruzadas no servidor Subversion da IU.
 
 No site ao vivo, o mecanismo de pesquisa fará o mesmo quando você ativar pesquisas de markdown (árvore de origem). Caso contrário, ele executará sub-solicitações httpd para o seu site ao vivo para testar se o usuário está autorizado a acessar esse arquivo ao vivo (supondo que você tenha protegido por senha seu mecanismo de pesquisa para que ele tenha dados do usuário para trabalhar).
 
@@ -324,6 +336,12 @@ Dependências notavelmente breves e testadas no tempo; cujos principais componen
 
 [Fale Conosco](/contact) para mais detalhes.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## Índice
@@ -332,4 +350,4 @@ Dependências notavelmente breves e testadas no tempo; cujos principais componen
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$Autor: joe $Revisão: 35747 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

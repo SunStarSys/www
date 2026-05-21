@@ -13,6 +13,18 @@ title: Orion-Sicherheit
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">Stückliste</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Dokumentation</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"Sicherheit durch Dunkelheit ist überhaupt nicht viel Sicherheit."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 Das Sicherheitsmodell von Orion wird zentral von den Einstellungen verwaltet, die in [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) als verstopft in [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Offshoot-Serverkonfigurationsdateien werden bei jeder erstellten Änderung dynamisch generiert.
 
-Wenn Sie das Sicherheitsmodell des POSIX-Dateisystems verstehen, sind Sie mit Orion zu Hause. [mod_dav_svn]() Autorisierungsmodell und die .htaccess-Steuerelemente des Apache HTTPd-Webservers, die automatisch von der `lib/acl.yml` YAML-Konfiguration.
+Wenn Sie das Sicherheitsmodell des POSIX-Dateisystems verstehen, sind Sie mit Orion zu Hause. [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) Autorisierungsmodell und die .htaccess-Steuerelemente des Apache HTTPd-Webservers, die automatisch von der `lib/acl.yml` YAML-Konfiguration.
 
 ### OpenIDC SSO-Sicherheit
 
@@ -180,7 +192,7 @@ Alle unsere Perl-Laufzeiten haben obligatorische Taint-Prüfungen mit der -T-Fla
 
 ### Wiki-Probleme
 
-Wiki-Sicherheit umfasst mehrere Faktoren:
+Wiki security involves several factors:
 
 1. UI-/API-Sicherheit
 
@@ -280,7 +292,7 @@ Automatischer ACL-Schutz für ephemere Zweig-Builds. Keine zusätzliche Konfigur
 
 #### Integrierte Steuerelemente für PCRE-Suchmaschine
 
-Gleiche Situation wie die allgemeine Benutzeroberfläche: sie prüft den Subversion-Server über die Benutzeroberfläche.
+Same situation as the general-purpose UI: Es prüft über die Benutzeroberfläche gegen den Subversion-Server.
 
 Auf der Live-Website wird die Suchmaschine dasselbe tun, wenn Sie Markdown-Suchen (Quellbaum) aktivieren. Andernfalls führt es httpd-Unteranfragen auf Ihrer Live-Site aus, um zu testen, ob der Benutzer autorisiert ist, auf diese Live-Datei zuzugreifen (vorausgesetzt, Sie haben Ihre Suchmaschine passwortgeschützt, damit sie mit Benutzerdaten arbeiten kann).
 
@@ -324,6 +336,12 @@ Bemerkenswert kurze und bewährte Abhängigkeiten, deren Hauptbestandteile auf d
 
 [Kontakt](/contact) für weitere Details.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## Index
@@ -332,4 +350,4 @@ Bemerkenswert kurze und bewährte Abhängigkeiten, deren Hauptbestandteile auf d
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ $Autor: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

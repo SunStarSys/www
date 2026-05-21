@@ -13,6 +13,18 @@ title: Orion 보안
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">사이트맵</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">설명서</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"어리석음을 통한 보안은 전혀 안전하지 않습니다."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 Orion의 보안 모델은 다음에 포함된 설정에 의해 중앙에서 관리됩니다. [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) as constucted공제 in [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). 오프슈트 서버 구성 파일은 작성된 모든 변경 사항에 대해 동적으로 생성됩니다.
 
-POSIX 파일 시스템 보안 모델을 이해하면 Orion's와 함께 집에서 바로 사용할 수 있습니다. [mod_dav_svn]() 권한 부여 모델 및 아파치 HTTPd 웹서버의 .htaccess 컨트롤, 웹 사이트의 `lib/acl.yml` YAML 구성입니다.
+POSIX 파일 시스템 보안 모델을 이해하면 Orion's와 함께 집에서 바로 사용할 수 있습니다. [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) 권한 부여 모델 및 아파치 HTTPd 웹서버의 .htaccess 컨트롤은 웹 사이트의 `lib/acl.yml` YAML 구성입니다.
 
 ### OpenIDC SSO 보안
 
@@ -180,7 +192,7 @@ POSIX 파일 시스템 보안 모델을 이해하면 Orion's와 함께 집에서
 
 ### 위키 문제
 
-Wiki 보안에는 다음과 같은 여러 요소가 포함됩니다.
+Wiki security involves several factors:
 
 1. UI/API 보안
 
@@ -280,7 +292,7 @@ Orion CMS의 이동/삭제 추적 논리는 이를 원활하게 처리합니다.
 
 #### PCRE 검색 엔진 내장 컨트롤
 
-범용 UI와 동일한 상황: UI에서 Subversion 서버와 상호 확인합니다.
+Same situation as the general-purpose UI: UI에서 Subversion 서버와 상호 확인합니다.
 
 라이브 사이트에서 마크다운(소스 트리) 검색을 사용으로 설정하면 검색 엔진이 똑같이 수행합니다. 그렇지 않으면 라이브 사이트에 httpd 하위 요청을 실행하여 사용자가 해당 라이브 파일에 액세스할 수 있는 권한이 있는지 테스트합니다(작업할 사용자 데이터가 있도록 검색 엔진에 암호로 보호된 것으로 가정).
 
@@ -324,6 +336,12 @@ CSS는 서버에서 제공되어야 합니다.
 
 [연락처](/contact) 를 참조하십시오.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## 인덱스
@@ -332,4 +350,4 @@ CSS는 서버에서 제공되어야 합니다.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ 저자 : 조 $ 개정 : 35747 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

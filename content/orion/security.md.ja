@@ -13,6 +13,18 @@ title: Orionのセキュリティ
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SBOM</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">ドキュメント</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"不明瞭さによるセキュリティは、あまりセキュリティではありません。"{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 Orionのセキュリティモデルは、以下の設定により一元管理されます。[`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) に構成される[`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm)。オフシュート・サーバー構成ファイルは、構築される変更ごとに動的に生成されます。
 
-POSIXファイルシステムのセキュリティモデルを理解すれば、Orionの[mod_dav_svn]()認可モデルとApache HTTPd Webサーバーの.htaccessコントロール。Webサイトから自動的に生成されます。`lib/acl.yml` YAML構成。
+POSIXファイルシステムのセキュリティモデルを理解すれば、Orionの[`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) 認可モデルとApache HTTPd Webサーバーの.htaccessコントロール。Webサイトから自動的に生成されます。`lib/acl.yml` YAML構成。
 
 ### OpenIDC SSOセキュリティ
 
@@ -180,7 +192,7 @@ POSIXファイルシステムのセキュリティモデルを理解すれば、
 
 ### Wikiの問題
 
-Wikiセキュリティにはいくつかの要因があります。
+Wiki security involves several factors:
 
 1. UI/APIセキュリティ
 
@@ -280,7 +292,7 @@ Orion CMSの移動/削除追跡ロジックは、これをシームレスに処�
 
 #### PCRE検索エンジン内蔵コントロール
 
-汎用UIと同じ状況: UIからSubversionサーバーに対してクロスチェックします。
+Same situation as the general-purpose UI: これは、UIからSubversionサーバーに対してクロスチェックします。
 
 ライブ・サイトでは、マークダウン(ソース・ツリー)検索を有効にすると、検索エンジンはまったく同じことを行います。それ以外の場合は、ライブ・サイトにhttpdサブリクエストを実行して、ユーザーがそのライブ・ファイルにアクセスする権限があるかどうかをテストします(使用するユーザー・データがあるように、検索エンジンにパスワードで保護されている場合)。
 
@@ -324,6 +336,12 @@ CSSはサーバーからの提供が必要です。
 
 [お問い合わせ](/contact) 詳細はこちら
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## インデックス
@@ -332,4 +350,4 @@ CSSはサーバーからの提供が必要です。
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$Author: joe $$Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

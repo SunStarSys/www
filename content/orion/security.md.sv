@@ -13,6 +13,18 @@ title: Orion-säkerhet
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SBOM</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Dokumentation</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"Säkerhet genom dunkelhet är inte mycket säkerhet alls."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 Orions säkerhetsmodell styrs centralt av inställningarna i [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) som konstueras i [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Konfigurationsfiler för offshoot-servrar genereras dynamiskt vid varje skapad ändring.
 
-Om du förstår säkerhetsmodellen för POSIX-filsystemet kommer du att vara hemma hos Orion [mod_dav_svn]() behörighetsmodell och Apache HTTPd-webbserverns .htaccess-kontroller, som genereras automatiskt från webbplatsens `lib/acl.yml` YAML-konfiguration.
+Om du förstår säkerhetsmodellen för POSIX-filsystemet kommer du att vara hemma hos Orion [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) behörighetsmodell och Apache HTTPd-webbserverns .htaccess-kontroller, som genereras automatiskt från webbplatsens `lib/acl.yml` YAML-konfiguration.
 
 ### OpenIDC Säkerhet för enkel inloggning
 
@@ -180,7 +192,7 @@ Alla våra Perl-körtider har obligatoriska taint-kontroller aktiverade med -T-f
 
 ### Wiki-problem
 
-Wikisäkerhet innefattar flera faktorer:
+Wiki security involves several factors:
 
 1. Gränssnitts-/API-säkerhet
 
@@ -280,7 +292,7 @@ Automatiskt åtkomstkontrollista-skydd för efemära grenbyggen. Ingen ytterliga
 
 #### Inbyggda kontroller för sökmotorn i PCRE
 
-Samma situation som det allmänna användargränssnittet: det korsar kontroller mot Subversion-servern från användargränssnittet.
+Same situation as the general-purpose UI: den korsar kontroller mot Subversion-servern från användargränssnittet.
 
 På den aktiva webbplatsen gör sökmotorn exakt samma sak när du aktiverar sökningar med nedsättningar (källträd). Annars kommer det att köra httpd-delbegäranden till din aktiva webbplats för att testa om användaren har behörighet att komma åt den aktiva filen (förutsatt att du har lösenordsskyddad din sökmotor så att den har användardata att arbeta med).
 
@@ -324,6 +336,12 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 
 [Kontakta oss](/contact) för mer information.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## Index
@@ -332,4 +350,4 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ $Författare: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -13,6 +13,18 @@ title: אוריון אבטחה
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">חדר עבודה</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">תיעוד</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"ביטחון באמצעות ערפול הוא לא הרבה ביטחון בכלל."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 מודל האבטחה של אוריון מנוהל באופן מרכזי על ידי ההגדרות הכלולות ב [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) כפי שהתפרש ב [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). קובצי תצורה של שרת Offshoot נוצרים באופן דינמי על כל שינוי מובנה.
 
-אם אתה מבין את מודל האבטחה של מערכת הקבצים POSIX, אתה תהיה ממש בבית עם אוריון של [mod_dav_svn]() מודל ההרשאה ופקדי ה- .htaccess של שרת האינטרנט של Apache HTTPd, שנוצרו באופן אוטומטי מהאתר שלך `lib/acl.yml` תצורת YAML.
+אם אתה מבין את מודל האבטחה של מערכת הקבצים POSIX, אתה תהיה ממש בבית עם אוריון של [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) מודל ההרשאה ופקדי  .htaccess של שרת האינטרנט Apache HTTPd, שנוצרו באופן אוטומטי מהאתר שלך `lib/acl.yml` תצורת YAML.
 
 ### OpenIDC אבטחת SSO
 
@@ -180,7 +192,7 @@ digraph {
 
 ### ויקיפדיה: סוגיות
 
-אבטחת Wiki כוללת מספר גורמים:
+Wiki security involves several factors:
 
 1. אבטחת ממשק משתמש/API
 
@@ -280,7 +292,7 @@ digraph {
 
 #### בקרות מובנות במנוע חיפוש PCRE
 
-מצב זהה לזה של ממשק המשתמש למטרות כלליות: הוא מבצע בדיקה צולבת מול שרת ה-Subversion מממשק המשתמש.
+Same situation as the general-purpose UI: הוא מבצע בדיקה צולבת מול שרת ה-Subversion מממשק המשתמש.
 
 באתר החי, מנוע החיפוש יעשה את אותו הדבר כאשר אתה מפעיל חיפושים markdown (עץ מקור). אחרת, היא תריץ תת-בקשות httpd לאתר החי שלך כדי לבדוק אם המשתמש מורשה לגשת לקובץ חי זה (בהנחה שיש לך הגנה באמצעות סיסמה על מנוע החיפוש שלך כך שיש לו נתוני משתמש לעבוד איתם).
 
@@ -324,6 +336,12 @@ digraph {
 
 [צור קשר](/contact) לפרטים נוספים.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## אינדקס
@@ -332,4 +350,4 @@ digraph {
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$מחבר: ג'ו $ $ מהדורה: 35747 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -13,6 +13,18 @@ title: Orion 安全
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">繁體中文</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">文件</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"穿透隱密的安全性根本不太安全。"{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 Orion 的安全模型由包含的設定集中管理[`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) 施作於[`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm)。Offshoot 伺服器配置檔案會在每個建立的變更上動態產生。
 
-如果您瞭解 POSIX 檔案系統安全性模型，您就可以前往 Orion 的家。[mod_dav_svn]() 授權模型和 Apache HTTPd Web 伺服器的 .htaccess 控制項，會自動從您的網站產生`lib/acl.yml` YAML 組態。
+如果您瞭解 POSIX 檔案系統安全性模型，您就可以前往 Orion 的家。[`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) 授權模型和 Apache HTTPd Web 伺服器的 .htaccess 控制項，會從您網站的自動產生`lib/acl.yml` YAML 組態。
 
 ### OpenIDC SSO 安全性
 
@@ -180,7 +192,7 @@ Orion 的安全模型由包含的設定集中管理[`@path::acl`](https://github
 
 ### Wiki 問題
 
-Wiki 安全涉及數個因素：
+Wiki security involves several factors:
 
 1. UI/API 安全
 
@@ -280,7 +292,7 @@ Orion CMS 的移動 / 刪除追蹤邏輯可順暢地處理。
 
 #### PCRE 搜尋引擎內建控制
 
-與一般用途 UI 相同的情況：它會對照 UI 中的 Subversion 伺服器進行交叉檢查。
+Same situation as the general-purpose UI: 它會對照 UI 中的 Subversion 伺服器進行交叉檢查。
 
 在即時網站上，搜尋引擎會在您啟用減價 (來源樹狀結構) 搜尋時執行完全相同。否則，它會對您的即時網站執行 httpd 子要求，以測試使用者是否獲授權存取該即時檔案 (假設您有受密碼保護的搜尋引擎，讓使用者資料能夠使用)。
 
@@ -324,6 +336,12 @@ CSS 必須由我們的伺服器提供。
 
 [聯絡我們](/contact) 以取得詳細資訊。
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## 索引
@@ -332,4 +350,4 @@ CSS 必須由我們的伺服器提供。
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$ $ 作者：joe $ $ 版次：35747 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

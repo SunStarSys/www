@@ -13,6 +13,18 @@ title: Sécurité d'Orion
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SOS</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentation</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"La sécurité par l'obscurité n'est pas du tout une sécurité."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 Le modèle de sécurité d'Orion est géré de manière centralisée par les paramètres contenus dans [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) comme contraint dans [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Les fichiers de configuration du serveur de déconnexion sont générés dynamiquement à chaque modification créée.
 
-Si vous comprenez le modèle de sécurité du système de fichiers POSIX, vous serez chez vous avec Orion's [mod_dav_svn]() le modèle d'autorisation et les contrôles .htaccess du serveur Web Apache HTTPd, générés automatiquement à partir de votre site Web `lib/acl.yml` Configuration YAML.
+Si vous comprenez le modèle de sécurité du système de fichiers POSIX, vous serez chez vous avec Orion's [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) modèle d'autorisation et les contrôles .htaccess du serveur web Apache HTTPd, générés automatiquement à partir de votre site web `lib/acl.yml` Configuration YAML.
 
 ### OpenIDC Sécurité SSO
 
@@ -180,7 +192,7 @@ Toutes nos runtimes Perl ont des contrôles de tache obligatoires activés avec 
 
 ### Problèmes wiki
 
-La sécurité du wiki implique plusieurs facteurs :
+Wiki security involves several factors:
 
 1. Sécurité IU/API
 
@@ -280,7 +292,7 @@ Protection automatique de l'ACL pour les constructions de branches éphémères.
 
 #### Contrôles intégrés du moteur de recherche PCRE
 
-Même situation que l'interface utilisateur à usage général : elle effectue des vérifications croisées sur le serveur Subversion à partir de l'interface utilisateur.
+Same situation as the general-purpose UI: il effectue des vérifications croisées sur le serveur Subversion à partir de l'interface utilisateur.
 
 Sur le site en direct, le moteur de recherche fera exactement la même chose lorsque vous activerez les recherches Markdown (arborescence source). Sinon, il exécutera des sous-demandes httpd sur votre site live pour vérifier si l'utilisateur est autorisé à accéder à ce fichier live (en supposant que vous ayez protégé votre moteur de recherche par mot de passe afin qu'il dispose de données utilisateur pour fonctionner).
 
@@ -324,6 +336,12 @@ Dépendances remarquablement brèves et éprouvées, dont les principales compos
 
 [Nous contacter](/contact) pour plus de détails.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## Index
@@ -332,4 +350,4 @@ Dépendances remarquablement brèves et éprouvées, dont les principales compos
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$Auteur : joe $Révision : 35747 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

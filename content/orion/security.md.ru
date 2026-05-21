@@ -13,6 +13,18 @@ title: Безопасность Orion
 
 </div>
 
+<ul class="nav nav-tabs" role="tablist">
+  <li class="nav-item" role="presentation">
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">СП</a>
+  </li>
+  <li class="nav-item" role="presentation">
+    <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Документация</a>
+  </li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane fade active show" id="docs" role="tabpanel">
+
 [TOC]
 
 ## {# lede #}"Безопасность через неясность – это совсем не безопасность."{# lede #}
@@ -162,7 +174,7 @@ digraph {
 
 Модель безопасности Orion централизованно управляется настройками, содержащимися в [`@path::acl`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/acl.yml) как в [`lib/path.pm`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm). Файлы конфигурации сервера Offshoot динамически генерируются при каждом созданном изменении.
 
-Если вы понимаете модель безопасности файловой системы POSIX, вы будете дома с Orion's [mod_dav_svn]Модель авторизации () и элементы управления .htaccess веб-сервера Apache HTTPd, автоматически сгенерированные на вашем сайте `lib/acl.yml` Конфигурация YAML.
+Если вы понимаете модель безопасности файловой системы POSIX, вы будете дома с Orion's [`mod_dav_svn`](https://svnbook.red-bean.com/en/1.7/svn.ref.mod_dav_svn.conf.html) модель авторизации и элементы управления .htaccess веб-сервера Apache HTTPd, автоматически генерируемые на вашем веб-сайте `lib/acl.yml` Конфигурация YAML.
 
 ### OpenIDC Защита единого входа
 
@@ -180,7 +192,7 @@ digraph {
 
 ### Вопросы Wiki
 
-Безопасность Wiki включает в себя несколько факторов:
+Wiki security involves several factors:
 
 1. Защита ИП/API
 
@@ -280,7 +292,7 @@ digraph {
 
 #### Встроенные средства управления поисковой системой PCRE
 
-Такая же ситуация, как и универсальный пользовательский интерфейс: он перекрестно проверяет сервер Subversion из пользовательского интерфейса.
+Same situation as the general-purpose UI: он перекрестно проверяет сервер Subversion из пользовательского интерфейса.
 
 На действующем сайте поисковая система будет делать то же самое, когда вы включаете поиск по разметке (дерево источника). В противном случае он будет запускать подзапросы httpd на ваш действующий сайт, чтобы проверить, разрешен ли пользователю доступ к этому активному файлу (при условии, что вы защитили свою поисковую систему паролем, чтобы у нее были данные пользователей для работы).
 
@@ -324,6 +336,12 @@ CSS должен быть доставлен с наших серверов.
 
 [Контакты](/contact) для более подробной информации.
 
+</div>
+<div class="tab-pane fade active" id="sbom" role="tabpanel">
+{{sbom|safe}}
+</div>
+</div>
+
 --------
 
 ## Индекс
@@ -332,4 +350,4 @@ CSS должен быть доставлен с наших серверов.
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}...
 {% endfor %}
 
-<!-- $Date$Автор: Джо $Пересмотр: 35747 $ -->
+<!-- $Date$ $Author$ $Revision$ -->
