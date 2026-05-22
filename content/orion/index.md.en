@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=39236
+status: verified=39240
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -83,7 +83,9 @@ Orion is built for leaders who refuse to settle:
 
 Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markdown and standard Version Control workflows. No proprietary formats. No migration nightmares.
 
-Want transparency? See for yourself:
+&nbsp;
+
+<span class="text-white">Want transparency? See for yourself:</span>
 
 Our entire build-system logic for this very website: fewer than 100 lines of code, complete with sophisticated, memoized dependency management that auto-generates multilingual sitemaps, directory indexes, and more.
 
@@ -98,6 +100,8 @@ This isn't marketing spin &mdash; it's verifiable, open engineering heritage dat
 <div class="col-lg-6">
 
 <img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>Here's&nbsp;Why,&nbsp;Young&nbsp;Academic / Full Stack Developer / Public Blogger...</h3>
 
