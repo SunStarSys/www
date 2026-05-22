@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.he'
-keywords: מנוחה,אפי
-status: אומתו 39381
+keywords: REST,API,ג'נגו
+status: אומתה=39442
 title: אוריון API - ספריית תבניות ג'אנגו
 ---
 
@@ -12,7 +12,7 @@ title: אוריון API - ספריית תבניות ג'אנגו
 
 </div>
 
-{# lede #}מסמך זה מכסה את **Django Template Library (DTL)** Filter APIs{# lede #}.
+{# lede #}מסמך זה מכסה את **Django Template Library (DTL)** Tag, Plugin, and Filter APIs{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: אוריון API - ספריית תבניות ג'אנגו
 
 -----
 
-## מסנן Django 1.0
+## תוספים טעונים של Django
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## API מסנן Django 1.0
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## הרחבות מסנן אוריון ג'נגו
+## תוספות API למסנן אוריון
 
 #### `append`
 

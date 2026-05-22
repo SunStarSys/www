@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.de'
-keywords: RUHE, API
-status: überprüft=39381
+keywords: REST,API,Django
+status: überprüft=39442
 title: Orion API - Django-Vorlagenbibliothek
 ---
 
@@ -12,7 +12,7 @@ title: Orion API - Django-Vorlagenbibliothek
 
 </div>
 
-{# lede #}Dieses Dokument behandelt die **Django-Vorlagenbibliothek (DTL)** Filter-APIs{# lede #}.
+{# lede #}In diesem Dokument werden die Tag-, Plug-in- und Filter-APIs der **Django Template Library (DTL)** beschrieben{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API - Django-Vorlagenbibliothek
 
 -----
 
-## Django 1.0 Filter
+## Django Geladene Plugins
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django 1.0 Filter-API
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Orion Django Filtererweiterungen
+## API-Ergänzungen für Orion-Filter
 
 #### `append`
 

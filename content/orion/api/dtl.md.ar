@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.ar'
-keywords: ريست، أبي
-status: التحقق = 39381
+keywords: REST، API، Django
+status: التحقق = 39442
 title: Orion API - مكتبة قوالب Django
 ---
 
@@ -12,7 +12,7 @@ title: Orion API - مكتبة قوالب Django
 
 </div>
 
-{# lede #}يغطي هذا المستند **واجهات برمجة تطبيقات مرشح مكتبة قوالب Django (DTL)**{# lede #}.
+{# lede #}يغطي هذا المستند **مكتبة قوالب Django (DTL)** واجهات برمجة تطبيقات العلامات والمكونات الإضافية والمرشحات{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API - مكتبة قوالب Django
 
 -----
 
-## مرشح Django 1.0
+## Django تحميل الإضافات
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django 1.0 تصفية API
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## ملحقات مرشح Orion Django
+## إضافات API لمرشح أوريون
 
 #### `append`
 

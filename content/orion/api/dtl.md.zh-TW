@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.zh-TW'
-keywords: 休息，API
-status: 驗證 =39381
+keywords: REST、API、Django
+status: 驗證 =39442
 title: Orion API - Django 樣板程式庫
 ---
 
@@ -12,7 +12,7 @@ title: Orion API - Django 樣板程式庫
 
 </div>
 
-{# lede #}本文件涵蓋 **Django 樣板程式庫 (DTL) **篩選 API{# lede #}.
+{# lede #}本文件涵蓋 **Django 樣板程式庫 (DTL) **標記、Plugin 以及篩選 API{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API - Django 樣板程式庫
 
 -----
 
-## Django 1. 0 過濾器 Comment
+## Django 載入的外掛程式 Name
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django 1.0 過濾器 API
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Orion Django 過濾器延伸
+## Orion 篩選 API 新增項目
 
 #### `append`
 

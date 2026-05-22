@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.es'
-keywords: DESCANSO, APIO
-status: verificado=39381
+keywords: REST,API,Django
+status: verificado=39442
 title: Orion API - Biblioteca de plantillas de Django
 ---
 
@@ -12,7 +12,7 @@ title: Orion API - Biblioteca de plantillas de Django
 
 </div>
 
-{# lede #}En este documento se tratan las API de filtro de **biblioteca de plantillas de Django (DTL)**{# lede #}.
+{# lede #}En este documento se tratan las API de etiqueta, plugin y filtro de la **biblioteca de plantillas de Django (DTL)**{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API - Biblioteca de plantillas de Django
 
 -----
 
-## Filtro Django 1.0
+## Plugins cargados de Django
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## API de filtro de Django 1.0
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Extensiones de filtro de Orion Django
+## Adiciones de API de filtro de Orion
 
 #### `append`
 

@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.fr'
-keywords: REPOS,API
-status: vérifié=39381
+keywords: REST,API,Django
+status: vérifié=39442
 title: API Orion - Bibliothèque de modèles Django
 ---
 
@@ -12,7 +12,7 @@ title: API Orion - Bibliothèque de modèles Django
 
 </div>
 
-{# lede #}Ce document traite des API de filtre **Django Template Library (DTL)**{# lede #}.
+{# lede #}Ce document traite des API de balise, de module d'extension et de filtre **Django Template Library (DTL)**{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: API Orion - Bibliothèque de modèles Django
 
 -----
 
-## Filtre Django 1.0
+## Plugins Django chargés
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## API de filtre Django 1.0
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Extensions de filtre Orion Django
+## Ajouts à l'API Orion Filter
 
 #### `append`
 

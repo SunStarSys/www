@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.ru'
-keywords: ОТДЫХ,АПИ
-status: проверено=39381
+keywords: REST,API,Джанго
+status: проверено=39442
 title: Orion API – библиотека шаблонов Django
 ---
 
@@ -12,7 +12,7 @@ title: Orion API – библиотека шаблонов Django
 
 </div>
 
-{# lede #}Этот документ охватывает API-интерфейсы фильтра **библиотека шаблонов Django (DTL)**{# lede #}.
+{# lede #}В этом документе рассматриваются теги **Django Template Library (DTL)**, подключаемые модули и API фильтров{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API – библиотека шаблонов Django
 
 -----
 
-## Фильтр Django 1.0
+## Загруженные подключаемые модули Django
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## API фильтра Django 1.0
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Расширения фильтра Orion Django
+## Добавление API фильтра Orion
 
 #### `append`
 

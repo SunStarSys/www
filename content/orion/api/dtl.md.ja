@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.ja'
-keywords: 休憩、アピ
-status: 確認済み=39381
+keywords: REST、API、ジャンゴ
+status: 確認済み=39442
 title: Orion API - Djangoテンプレートライブラリ
 ---
 
@@ -12,7 +12,7 @@ title: Orion API - Djangoテンプレートライブラリ
 
 </div>
 
-{# lede #}**Django Template Library (DTL)**フィルタAPI{# lede #}.
+{# lede #}このドキュメントでは、**Django Template Library (DTL)**タグ、プラグインおよびフィルタAPIについて説明します{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API - Djangoテンプレートライブラリ
 
 -----
 
-## Django 1.0フィルタ
+## Djangoロードされたプラグイン
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django 1.0フィルタAPI
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Orion Djangoフィルター拡張機能
+## OrionフィルタAPIの追加
 
 #### `append`
 

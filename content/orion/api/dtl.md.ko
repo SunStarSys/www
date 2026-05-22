@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.ko'
-keywords: REST, 아피
-status: 확인=39381
+keywords: REST, API, 장고
+status: 확인=39442
 title: Orion API - Django 템플릿 라이브러리
 ---
 
@@ -12,7 +12,7 @@ title: Orion API - Django 템플릿 라이브러리
 
 </div>
 
-{# lede #}이 문서에서는 **DTL(Django Template Library)** 필터 API에 대해 다룹니다.{# lede #}.
+{# lede #}이 문서에서는 **DTL(Django Template Library)** 태그, 플러그인 및 필터 API를 다룹니다.{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API - Django 템플릿 라이브러리
 
 -----
 
-## Django 1.0 필터
+## Django 로드된 플러그인
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django 1.0 필터 API
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Orion Django 필터 확장
+## 오리온 필터 API 추가
 
 #### `append`
 

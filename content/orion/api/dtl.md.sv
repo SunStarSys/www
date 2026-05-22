@@ -1,8 +1,8 @@
 ---
 categories: ~
 dependencies: '*.md.sv'
-keywords: VILA, API
-status: verifierad=39381
+keywords: REST,API,Django
+status: verifierad=39442
 title: Orion API - Django mallbibliotek
 ---
 
@@ -12,7 +12,7 @@ title: Orion API - Django mallbibliotek
 
 </div>
 
-{# lede #}Det här dokumentet täcker **Django Template Library (DTL)** filter-API:er{# lede #}.
+{# lede #}Det här dokumentet täcker tagg-, insticksprograms- och filter-API:erna **Django Template Library (DTL)**{# lede #}.
 
 [TOC]
 
@@ -146,13 +146,26 @@ title: Orion API - Django mallbibliotek
 
 -----
 
-## Django 1.0 Filter
+## Django Laddade Plugins
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django 1.0 Filter API
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
 
-## Orion Django Filter Tillägg
+## API-tillägg för Orion-filter
 
 #### `append`
 
