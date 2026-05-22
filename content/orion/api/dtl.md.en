@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API
-status: verified=39358
+status: verified=39373
 Dependencies: *.md.en
 
 <div class="right">
@@ -143,9 +143,13 @@ Dependencies: *.md.en
 
 -----
 
-## Django 1.0 Filter Extensions ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Django 1.0 Filter
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Orion Django Filter Extensions
 
 #### `append`
 
