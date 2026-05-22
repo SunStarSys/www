@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: vérifié=39358
+status: vérifié=39381
 title: API Orion - Bibliothèque de modèles Django
 ---
 
@@ -146,9 +146,13 @@ title: API Orion - Bibliothèque de modèles Django
 
 -----
 
-## Extensions de filtre Django 1.0 ([Dotiac ::DTL: :Filtre](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Filtre Django 1.0
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Extensions de filtre Orion Django
 
 #### `append`
 

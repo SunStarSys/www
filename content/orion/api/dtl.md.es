@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado=39358
+status: verificado=39381
 title: Orion API - Biblioteca de plantillas de Django
 ---
 
@@ -146,9 +146,13 @@ title: Orion API - Biblioteca de plantillas de Django
 
 -----
 
-## Extensiones de filtro Django 1.0 ([Dotiac::DTL::Filtro](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Filtro Django 1.0
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Extensiones de filtro de Orion Django
 
 #### `append`
 

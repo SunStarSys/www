@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=39358
+status: verificado=39381
 title: API do Orion - Biblioteca de Modelos do Django
 ---
 
@@ -146,9 +146,13 @@ title: API do Orion - Biblioteca de Modelos do Django
 
 -----
 
-## Extensões de filtro do Django 1.0 ([Dotíaco::DTL::Filtro](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Filtro Django 1.0
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Extensões de filtro do Orion Django
 
 #### `append`
 

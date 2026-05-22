@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=39358
+status: проверено=39381
 title: Orion API – библиотека шаблонов Django
 ---
 
@@ -146,9 +146,13 @@ title: Orion API – библиотека шаблонов Django
 
 -----
 
-## Расширения фильтра Django 1.0 ([Тотиак::DTL::Фильтр](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Фильтр Django 1.0
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Расширения фильтра Orion Django
 
 #### `append`
 

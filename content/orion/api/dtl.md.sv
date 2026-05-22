@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=39358
+status: verifierad=39381
 title: Orion API - Django mallbibliotek
 ---
 
@@ -146,9 +146,13 @@ title: Orion API - Django mallbibliotek
 
 -----
 
-## Django 1.0 Filterförlängningar ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Django 1.0 Filter
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Orion Django Filter Tillägg
 
 #### `append`
 

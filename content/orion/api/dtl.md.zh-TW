@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =39358
+status: 驗證 =39381
 title: Orion API - Django 樣板程式庫
 ---
 
@@ -146,9 +146,13 @@ title: Orion API - Django 樣板程式庫
 
 -----
 
-## Django 1.0 過濾器延伸 ([Dotiac::DTL:：過濾](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Django 1. 0 過濾器 Comment
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Orion Django 過濾器延伸
 
 #### `append`
 

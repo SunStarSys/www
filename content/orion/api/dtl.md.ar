@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 39358
+status: التحقق = 39381
 title: Orion API - مكتبة قوالب Django
 ---
 
@@ -146,9 +146,13 @@ title: Orion API - مكتبة قوالب Django
 
 -----
 
-## امتدادات تصفية Django 1.0 ([دوتياك::DTL::مرشح](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## مرشح Django 1.0
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## ملحقات مرشح Orion Django
 
 #### `append`
 

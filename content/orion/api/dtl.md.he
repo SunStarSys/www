@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: אומתה=39358
+status: אומתו 39381
 title: אוריון API - ספריית תבניות ג'אנגו
 ---
 
@@ -146,9 +146,13 @@ title: אוריון API - ספריית תבניות ג'אנגו
 
 -----
 
-## הרחבות מסנן של Django 1.0  ([דוטיאק::DTL::מסנן](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## מסנן Django 1.0
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## הרחבות מסנן אוריון ג'נגו
 
 #### `append`
 

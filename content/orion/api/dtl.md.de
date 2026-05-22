@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: überprüft=39358
+status: überprüft=39381
 title: Orion API - Django-Vorlagenbibliothek
 ---
 
@@ -146,9 +146,13 @@ title: Orion API - Django-Vorlagenbibliothek
 
 -----
 
-## Django 1.0 Filtererweiterungen ([Sternzeichen::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Django 1.0 Filter
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Orion Django Filtererweiterungen
 
 #### `append`
 

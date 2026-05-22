@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=39358
+status: 확인=39381
 title: Orion API - Django 템플릿 라이브러리
 ---
 
@@ -146,9 +146,13 @@ title: Orion API - Django 템플릿 라이브러리
 
 -----
 
-## Django 1.0 필터 확장 ([도티악::DTL::필터](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Django 1.0 필터
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Orion Django 필터 확장
 
 #### `append`
 

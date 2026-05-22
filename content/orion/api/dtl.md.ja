@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=39358
+status: 確認済み=39381
 title: Orion API - Djangoテンプレートライブラリ
 ---
 
@@ -146,9 +146,13 @@ title: Orion API - Djangoテンプレートライブラリ
 
 -----
 
-## Django 1.0フィルター拡張機能([ドチアク::DTL:: フィルタ](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+## Django 1.0フィルタ
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Filter.pm:token==head1,=cut:lang=perl]
 
 -----
+
+## Orion Djangoフィルター拡張機能
 
 #### `append`
 
