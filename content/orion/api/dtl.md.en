@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API
-status: verified=38132
+status: verified=39076
 Dependencies: *.md.en
 
 <div class="right">
@@ -13,9 +13,97 @@ Dependencies: *.md.en
 
 [TOC]
 
-## DTL (Django 1.0 Template Library)
+## Django 1.0 Tags
 
-### Django 1.0 Filter Extensions ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+-----
+
+### autoescape
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/autoescape.pm:lines=145-219:lang=perl]
+
+-----
+
+### block
+
+-----
+
+### comment
+
+-----
+
+### debug
+
+-----
+
+### extends
+
+-----
+
+### filter
+
+-----
+
+### firstof
+
+-----
+
+### for
+
+-----
+
+### ifchanged
+
+-----
+
+### ifequal
+
+-----
+
+### ifnotequal
+
+-----
+
+### if
+
+-----
+
+### include
+
+-----
+
+### load
+
+-----
+
+### now
+
+-----
+
+### regroup
+
+-----
+
+### spaceless
+
+-----
+
+### ssi
+
+-----
+
+### templatetag
+
+-----
+
+### url
+
+-----
+
+### widthratio
+
+
+
+## Django 1.0 Filter Extensions ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
 -----
 
