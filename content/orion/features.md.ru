@@ -135,7 +135,7 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x x] Родной @mermaid-js/mermaid v10.7.0 с поддержкой карты ума:
+- [x x] Родной @mermaid-js/mermaid v11.15.0 с поддержкой карты ума:
 
 ```mermaid
 graph TD

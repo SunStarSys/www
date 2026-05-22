@@ -135,7 +135,7 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x] Nativo @mermaid-js/mermaid v10.7.0 con soporte de mindmap:
+- [x] Nativo @mermaid-js/mermaid v11.15.0 con soporte de mindmap:
 
 ```mermaid
 graph TD
