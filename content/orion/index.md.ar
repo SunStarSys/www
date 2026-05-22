@@ -3,14 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: منتهي
+status: التحقق = 39268
 title: SunStar أوريون الأنظمة
 ---
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>منصة ويكي جامستاك.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>منصة ويكي جامستاك.</em></span>&trade;
 </p>
 <span class="text-white">SunStar أوريون الأنظمة</span> &nbsp; هو
 
@@ -70,7 +70,7 @@ title: SunStar أوريون الأنظمة
 
 يتيح لنا هذا تشغيل تكاليف تشغيل منخفضة للغاية مع توفير عناصر تحكم تحريرية فائقة وأمان من فئة المؤسسات وميزات رائدة لا يمكن أن تتطابق مع wiki القديم. نوفر لك هذه المدخرات الضخمة مباشرة. توقع تكاليف إضافية متواضعة وشفافة فقط لموارد السحابة الدقيقة التي تستخدمها &mdash; لا توجد مستويات تسعير متضخمة أو رسوم خفية.
 
-تم بناء أوريون للقادة الذين يرفضون الاستقرار:
+Orion is built for leaders who refuse to settle:
 
 ** قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-primary-emphasis">العلوم المفتوحة</span> منصة.
 
@@ -86,23 +86,37 @@ title: SunStar أوريون الأنظمة
 
 عدم التقيّد بالمورد &mdash; *نحن نثبت ذلك*. يعيش المحتوى الخاص بك في عمليات سير عمل Markdown نظيفة والتحكم في الإصدار القياسي. لا توجد تنسيقات ملكية. لا كوابيس الهجرة
 
-هل تريد الشفافية؟ انظر لنفسك:
+&nbsp;
 
-منطقتنا الكاملة لنظام البناء لهذا الموقع: أقل من 100 سطر من التعليمات البرمجية، كاملة مع إدارة التبعية المتطورة والمذكرة التي تقوم تلقائيًا بإنشاء خرائط مواقع متعددة اللغات وفهارس الدليل والمزيد.
+<span class="text-white">هل تريد الشفافية؟ انظر لنفسك:</span>
 
-اعرض المصدر: [مصدر شجرة lib](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)، أو [<i class="fa fa-github fa-emoji" title="Github"></i> مرآة GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: أقل من 100 سطر من التعليمات البرمجية، كاملة مع إدارة تبعية متطورة ومحفوظة تقوم تلقائيًا بإنشاء خرائط مواقع متعددة اللغات وفهارس الدليل والمزيد.
 
-مولد الموقع الثابت الأساسي: مفتوح المصدر على GitHub بموجب رخصة أباتشي 2.0 → @SunStarSys/orion
+View the source: [لدينا مصدر خاص شجرة lib](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)، أو عامة الجمهور [<i class="fa fa-github fa-emoji" title="Github"></i> مرآة GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: مفتوح المصدر على GitHub بموجب ترخيص أباتشي 2.0 → @SunStarSys/orion
 
 هذا ليس دوران التسويق &mdash; إنه تراث هندسي مفتوح يمكن التحقق منه يعود إلى ابتكارات F/OSS التي كانت رائدة في عام 2011. هل أنت مستعد لتجربة wiki التي توفر الوقت والمال والصداع بالفعل؟ [اتصل بنا أو أرسل لنا ملاحظة](/contact) اليوم.
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">البدء</div>
+<div class="card-body text-white">
+
+أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء مصادر تخفيض السعر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>هنا&nbsp;لماذا،&nbsp;الشباب&nbsp;أكاديمي / مطور مكدس كامل / مدون عام...</h3>
 
@@ -142,24 +156,11 @@ div#lightning img {width:100%}
 
 بالإضافة إلى ذلك، فإن جميع العملاء لديهم واجهات مجانية أو قابلة للتخصيص أو تدعم جافا سكريبت لمحرك بحث PCRE القوي والمملوك.
 
-اطلع على [خطط أوريون](plans) للصفقات الحالية.
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">البدء</div>
-<div class="card-body text-white">
-
-أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء مصادر تخفيض السعر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -180,10 +181,10 @@ div#lightning img {width:100%}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>عدد قليل من لقطات الشاشة التمثيلية:</h2>
-<br />
+<br/>
 <h3>عرض IDE مع الألمانية والفرنسية والعبرية والروسية (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -195,10 +196,10 @@ div#lightning img {width:100%}
 <br/>
 <h3>إنشاء موقع IDE بالكامل.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>إنشاء موقع نموذجي لـ IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">بحث IDE</a> <small>(هذه الروابط في <span style="color:#e83e8c">وردي حار</span> سيتم إسقاطك مباشرة في شاشة محرر، مع وضع المؤشر بالضبط وفقا للنص المطابق)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -220,4 +221,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 35724 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

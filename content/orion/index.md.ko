@@ -3,14 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 완료
+status: 확인=39268
 title: SunStar 시스템스 오리온
 ---
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>Jamstack Wiki 플랫폼</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Jamstack Wiki 플랫폼</em></span>&trade;
 </p>
 <span class="text-white">SunStar 시스템스 오리온</span> &nbsp; 다음과 같음
 
@@ -70,7 +70,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 이를 통해 매우 낮은 운영 비용을 실행하는 동시에 탁월한 편집 제어, 엔터프라이즈급 보안 및 레거시 위키와 비교할 수 없는 획기적인 기능을 제공할 수 있습니다. 우리는 그 엄청난 비용을 당신에게 직접 전달합니다. 사용하는 정확한 클라우드 리소스에 대해 겸손하고 투명한 업그레이드만 기대 &mdash; 가격 계층이나 숨겨진 수수료가 없습니다.
 
-오리온은 정착을 거부하는 지도자들을 위해 지어졌다:
+Orion is built for leaders who refuse to settle:
 
 - **대학 리더** &mdash; 버전 제어 문서 공유, 큐레이션 및 온라인 게시를 통해 캠퍼스 표절을 없애고 안전한 개방형 협업을 지원합니다. 학업 지식 관리를 감사 가능한 최신 상태로 변환합니다. <span class="text-primary-emphasis">과학 열기</span> 플랫폼.
 
@@ -86,23 +86,37 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 제로 벤더 종속 &mdash; 그리고 *우리는 그것을 증명합니다. 콘텐츠는 깨끗한 마크다운 및 표준 버전 제어 워크플로에 있습니다. 고유 형식이 없습니다. 마이그레이션의 악몽은 없습니다.
 
-투명성을 원하십니까? 직접 보기:
+&nbsp;
 
-이 웹 사이트에 대한 전체 빌드 시스템 논리: 다국어 사이트 맵, 디렉토리 인덱스 등을 자동으로 생성하는 정교하고 기억된 종속성 관리 기능이 포함된 100개 미만의 코드 행.
+<span class="text-white">투명성을 원하십니까? 직접 보기:</span>
 
-소스 보기: [출처 lib tree](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)또는 [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 미러](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: 다국어 사이트맵, 디렉토리 인덱스 등을 자동으로 생성하는 정교하고 기억된 종속성 관리 기능을 갖춘 100개 미만의 코드 행입니다.
 
-기본 정적 사이트 생성기: 아파치 라이센스 2.0 → @SunStarSys/orion에 따라 GitHub에 오픈 소스
+View the source: [개인 소스 lib 트리](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)또는 공용 [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 미러](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에 오픈소스 → @SunStarSys/orion
 
 마케팅 스핀이 아님 &mdash; 2011년에 개척된 F/OSS 혁신으로 거슬러 올라가는 검증 가능한 개방형 엔지니어링 유산입니다. 실제로 시간, 돈 및 두통을 절약하는 위키를 경험할 준비가 되셨습니까? [우리에게 전화를하거나 우리에게 메모를 드롭](/contact) 오늘.
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">시작하기</div>
+<div class="card-body text-white">
+
+가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 매가인하 출처를 숨깁니다. 스타일 지정 사용자정의의 약 90%가 다음에 있습니다. [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>여기&nbsp;이유,&nbsp;젊은&nbsp;Academic / Full Stack 개발자 / 공개 블로거...</h3>
 
@@ -142,24 +156,11 @@ div#lightning img {width:100%}
 
 또한 모든 고객은 강력하고 독점적인 PCRE 검색 엔진에 대한 무료 템플릿 사용자 정의 또는 자바 스크립트 지원 인터페이스를 갖추고 있습니다.
 
-자세히 보기 [오리온 계획](plans) 현재 거래의 경우
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">시작하기</div>
-<div class="card-body text-white">
-
-가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 매가인하 출처를 숨깁니다. 스타일 지정 사용자정의의 약 90%가 다음에 있습니다. [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -180,10 +181,10 @@ div#lightning img {width:100%}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>대표 스크린샷 몇 개:</h2>
-<br />
+<br/>
 <h3>독일어, 프랑스어, 히브리어 및 러시아어(UTF-8)가 포함된 IDE 뷰입니다.</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -195,10 +196,10 @@ div#lightning img {width:100%}
 <br/>
 <h3>IDE 전체 사이트 빌드.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>IDE 일반 사이트 빌드.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE 검색</a> <small>(이 링크는 <span style="color:#e83e8c">핫 핑크</span> 커서가 일치하는 텍스트에 따라 정확하게 배치되어 편집기 화면으로 바로 놓입니다.)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -220,4 +221,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 35724 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

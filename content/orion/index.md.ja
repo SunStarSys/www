@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 終了
+status: 確認済み=39268
 title: SunStarシステムのOrion
 ---
 
@@ -70,7 +70,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 これにより、超低コストの運用コストを実現しながら、優れた編集コントロール、エンタープライズ・グレードのセキュリティ、従来のWikiでは対応できない画期的な機能を提供できるようになりました。こうした大きな貯金を、直接お渡しします。使用する正確なクラウド・リソースに対して、控えめで透明性の高い追加料金のみを期待&mdash; 膨大な価格階層や隠れた料金はありません。
 
-Orionは、解決を拒否するリーダー向けに構築されています。
+Orion is built for leaders who refuse to settle:
 
 **大学のリーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-primary-emphasis">オープンサイエンス</span> プラットフォーム
 
@@ -86,23 +86,37 @@ Orionは、解決を拒否するリーダー向けに構築されています。
 
 ベンダーのロックインが不要&mdash; 『We Prove It』コンテンツはクリーン・マークダウンおよび標準バージョン管理ワークフローに存在します。独自のフォーマットはありません。移行の悪夢はありません。
 
-透明性が必要ですか? ご自身でご覧ください:
+&nbsp;
 
-このWebサイトのビルド・システム・ロジック全体: 100行未満のコードで、多言語サイトマップ、ディレクトリ索引などを自動生成する、洗練された記憶された依存関係管理を備えています。
+<span class="text-white">透明性が必要ですか? ご自身でご覧ください:</span>
 
-ソースを表示します。[ソースlibツリー](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)または[<i class="fa fa-github fa-emoji" title="Github"></i> GitHubミラー](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: 100行未満のコードで、多言語サイトマップ、ディレクトリインデックスなどを自動生成する、洗練された記憶された依存関係管理を実現します。
 
-基盤となる静的サイト・ジェネレータ: Apacheライセンス2.0のGitHubでオープンソース→@SunStarSys/orion
+View the source: [プライベートソースlibツリー](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)またはそのパブリック[<i class="fa fa-github fa-emoji" title="Github"></i> GitHubミラー](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: GitHubにApache License 2.0でオープンソース→@SunStarSys/orion
 
 これはマーケティング・スピンではありません&mdash; 2011年に開拓されたF/OSSイノベーションにさかのぼる検証可能なオープン・エンジニアリングの遺産です。実際に時間、お金、頭痛を節約するWikiを体験する準備はできていますか? [私たちに電話をかけるか、メモをください](/contact) 本日。
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">はじめに</div>
+<div class="card-body text-white">
+
+最速の方法は、@SunStarSys/orionのビルドでプレイすることです。<https://iconoclasts.blog> トランク/コンテンツ内のマークダウン・ソースを空にします。スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>こちら&nbsp;なぜ、&nbsp;若い&nbsp;アカデミック/フルスタック開発者/パブリックブロガー...</h3>
 
@@ -142,24 +156,11 @@ div#lightning img {width:100%}
 
 さらに、すべてのクライアントには、強力な独自のPCRE検索エンジンへの、テンプレートでカスタマイズ可能な、またはjavascript対応の無料インタフェースがあります。
 
-私たちについて[Orionプラン](plans) 現在の取引について。
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">はじめに</div>
-<div class="card-body text-white">
-
-最速の方法は、@SunStarSys/orionのビルドでプレイすることです。<https://iconoclasts.blog> トランク/コンテンツ内のマークダウン・ソースを空にします。スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -180,10 +181,10 @@ div#lightning img {width:100%}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>少数の代表的なスクリーンショット:</h2>
-<br />
+<br/>
 <h3>ドイツ語、フランス語、ヘブライ語、およびロシア語(UTF-8)のIDEビュー。</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -195,10 +196,10 @@ div#lightning img {width:100%}
 <br/>
 <h3>IDEフル・サイト・ビルド。</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>IDEの一般的なサイト・ビルド。</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE検索</a> <small>(リンク先) <span style="color:#e83e8c">ホットピンク</span> エディタ画面に直接ドロップし、一致するテキストに従ってカーソルを置きます)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -220,4 +221,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$Author: joe $$Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,17 +1,18 @@
 ---
 acl: '@staff=rw, *=r'
+categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-status: terminé
-title: Orion de SunStar Systems
+status: vérifié=39268
+title: SunStar Orion de Systems
 ---
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>La plateforme Wiki de Jamstack.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>La plateforme Wiki de Jamstack.</em></span>&trade;
 </p>
-<span class="text-white">Orion de SunStar Systems</span> &nbsp; est une
+<span class="text-white">SunStar Orion de Systems</span> &nbsp; est une
 
 &nbsp;
 
@@ -69,7 +70,7 @@ Ce qui distingue vraiment Orion n'est pas seulement une autre plateforme wiki &m
 
 Cela nous permet d'exécuter des coûts d'exploitation ultra-faibles tout en offrant des contrôles éditoriaux supérieurs, une sécurité de niveau entreprise et des fonctionnalités révolutionnaires qu'aucun wiki hérité ne peut égaler. Nous vous transmettons ces énormes économies directement. S'attendre à des frais supplémentaires modestes et transparents pour les ressources cloud exactes que vous utilisez &mdash; pas de niveaux de prix bloqués ou de frais cachés.
 
-Orion est construit pour les dirigeants qui refusent de s'installer :
+Orion is built for leaders who refuse to settle:
 
 - **Directeurs universitaires** &mdash; Eliminer le plagiat sur les campus et favoriser une collaboration sécurisée et en libre accès grâce au partage de documents avec contrôle des versions, à la conservation et à la publication en ligne. Transformez votre gestion des connaissances académiques en moderne, auditable, <span class="text-primary-emphasis">Science ouverte</span> plateforme.
 
@@ -85,23 +86,37 @@ Orion est construit pour les dirigeants qui refusent de s'installer :
 
 Aucun verrouillage de fournisseur &mdash; et *nous le prouvons* Votre contenu réside dans des flux de travail Markdown et Version Control standard. Aucun format propriétaire. Pas de cauchemar de migration.
 
-Vous voulez de la transparence ? Voyez par vous-même :
+&nbsp;
 
-Toute la logique de notre système de construction pour ce site : moins de 100 lignes de code, avec une gestion des dépendances sophistiquée et mémorisée qui génère automatiquement des sitemaps multilingues, des index d'annuaire, etc.
+<span class="text-white">Vous voulez de la transparence ? Voyez par vous-même :</span>
 
-Affichez la source : [notre source lib tree](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)ou [<i class="fa fa-github fa-emoji" title="Github"></i> Miroir GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: moins de 100 lignes de code, avec une gestion sophistiquée et mémorisée des dépendances qui génère automatiquement des sitemaps multilingues, des index d'annuaire, etc.
 
-Le générateur de site statique sous-jacent : open-sourced sur GitHub sous Apache License 2.0 → @SunStarSys/orion
+View the source: [notre source privée lib tree](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)ou son public [<i class="fa fa-github fa-emoji" title="Github"></i> Miroir GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: open-sourced sur GitHub sous Apache License 2.0 → @SunStarSys/orion
 
 Ce n'est pas du marketing spin &mdash; C'est un patrimoine d'ingénierie vérifiable et ouvert qui remonte aux innovations F/OSS lancées en 2011. Prêt à découvrir un wiki qui permet d'économiser du temps, de l'argent et des maux de tête ? [Appelez-nous ou envoyez-nous une note](/contact) aujourd'hui.
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">Mise en route</div>
+<div class="card-body text-white">
+
+Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://iconoclasts.blog> et creusez les sources de démarque dans le coffre/le contenu.  ~90 % des personnalisations de style sont dans [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Adaptez-vous au goût !
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>Voici&nbsp;Pourquoi,&nbsp;Jeune&nbsp;Académique / Développeur de pile complète / Blogueur public...</h3>
 
@@ -141,24 +156,11 @@ Allez à votre rythme, utilisez autant d'employés / de prévisualisations / de 
 
 En outre, tous les clients disposent d'interfaces gratuites, personnalisables par modèle ou compatibles javascript vers notre puissant moteur de recherche propriétaire PCRE.
 
-Voir notre [Plans Orion](plans) pour les opérations actuelles.
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">Mise en route</div>
-<div class="card-body text-white">
-
-Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://iconoclasts.blog> et creusez les sources de démarque dans le coffre/le contenu.  ~90 % des personnalisations de style sont dans [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Adaptez-vous au goût !
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -179,10 +181,10 @@ Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://i
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>Quelques captures d'écran représentatives :</h2>
-<br />
+<br/>
 <h3>Vue IDE avec l'allemand, le français, l'hébreu et le russe (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -194,10 +196,10 @@ Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://i
 <br/>
 <h3>Paramétrage complet du site IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>Paramétrage de sites standard IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> <small>(les liens dans <span style="color:#e83e8c">rose chaud</span> vous déposera directement dans un écran d'éditeur, avec le curseur placé exactement selon le texte correspondant)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -218,7 +220,5 @@ Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://i
 	-webkit-animation-iteration-count: 1;
 }
 </style>
-
-<!-- $Date$Auteur : joe $Révision : 35724 $ -->
 
 <!-- $Date$ $Author$ $Revision$ -->

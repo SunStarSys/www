@@ -1,17 +1,18 @@
 ---
 acl: '@staff=rw, *=r'
+categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: concluído
-title: Orion dos SunStar Sistemas
+status: verificado=39268
+title: SunStar Orion dos Sistemas
 ---
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>A Plataforma Wiki Jamstack.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;Nbsp<em>A Plataforma Wiki Jamstack.</em></span>&trade;
 </p>
-<span class="text-white">Orion dos SunStar Sistemas</span> &nbsp; é uma
+<span class="text-white">SunStar Orion dos Sistemas</span> &nbsp; é uma
 
 &nbsp;
 
@@ -69,7 +70,7 @@ O que realmente diferencia o Orion não é apenas mais uma plataforma wiki &mdas
 
 Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles editoriais superiores, segurança de nível empresarial e recursos inovadores que nenhuma wiki legada pode igualar. Nós passamos essas economias massivas diretamente para você. Espere apenas cobranças modestas e transparentes para os recursos exatos da nuvem que você usa &mdash; sem níveis de preços inchados ou taxas ocultas.
 
-Orion é construído para líderes que se recusam a se estabelecer:
+Orion is built for leaders who refuse to settle:
 
 - **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary-emphasis">Ciência aberta</span> plataforma.
 
@@ -85,23 +86,37 @@ Orion é construído para líderes que se recusam a se estabelecer:
 
 Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive em workflows de Markdown limpo e Controle de Versão padrão. Nenhum formato proprietário. Sem pesadelos migratórios.
 
-Quer transparência? Veja por si mesmo:
+&nbsp;
 
-Toda a nossa lógica de sistema de compilação para este site: menos de 100 linhas de código, completo com gerenciamento de dependência sofisticado e memorizado que gera automaticamente sitemaps multilíngues, índices de diretório e muito mais.
+<span class="text-white">Quer transparência? Veja por si mesmo:</span>
 
-Ver a fonte: [nossa árvore lib de origem](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/), ou seu [<i class="fa fa-github fa-emoji" title="Github"></i> Espelho GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: menos de 100 linhas de código, completo com gerenciamento de dependência sofisticado e memorizado que gera automaticamente sitemaps multilíngues, índices de diretório e muito mais.
 
-O Gerador de Sites Estáticos subjacente: open-sourced em GitHub sob a Licença Apache 2.0 → @SunStarSys/orion
+View the source: [nossa árvore lib de fonte privada](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)ou seu público [<i class="fa fa-github fa-emoji" title="Github"></i> Espelho GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → @SunStarSys/orion
 
 Isso não é marketing spin &mdash; É uma herança de engenharia aberta verificável que remonta às inovações da F/OSS pioneiras em 2011. Pronto para experimentar uma wiki que realmente economiza tempo, dinheiro e dores de cabeça? [Entre em contato conosco ou envie uma mensagem](/contact) hoje.
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">Conceitos Básicos</div>
+<div class="card-body text-white">
+
+A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <https://iconoclasts.blog> e esvaziar as origens de markdown em tronco/conteúdo.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>Aqui está&nbsp;Por que,&nbsp;Jovem&nbsp;Desenvolvedor Acadêmico / Full Stack / Blog Público...</h3>
 
@@ -141,24 +156,11 @@ Vá no seu próprio ritmo, use quantos funcionários / visualizações / ediçõ
 
 Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habilitadas para javascript para o nosso poderoso e proprietário mecanismo de pesquisa PCRE.
 
-Veja nosso [Planos Orion](plans) para os acordos atuais.
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">Conceitos Básicos</div>
-<div class="card-body text-white">
-
-A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <https://iconoclasts.blog> e esvaziar as origens de markdown em tronco/conteúdo.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -179,10 +181,10 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>Algumas capturas de tela representativas:</h2>
-<br />
+<br/>
 <h3>IDE View com alemão, francês, hebraico e russo (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -194,10 +196,10 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 <br/>
 <h3>Build de site completo do IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>Criação típica de site do IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Pesquisa IDE</a> <small>(Esses links em <span style="color:#e83e8c">rosa quente</span> irá soltá-lo diretamente em uma tela do editor, com o cursor posicionado exatamente de acordo com o texto correspondente)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -218,7 +220,5 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 	-webkit-animation-iteration-count: 1;
 }
 </style>
-
-<!-- $Date$Autor: joe $Revisão: 35724 $ -->
 
 <!-- $Date$ $Author$ $Revision$ -->

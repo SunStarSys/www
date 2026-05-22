@@ -3,14 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: הסתיים
+status: אומתו 39268
 title: SunStar אוריון מערכות
 ---
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>אתר Jamstack Wiki.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>אתר Jamstack Wiki.</em></span>&trade;
 </p>
 <span class="text-white">SunStar אוריון מערכות</span> &nbsp; הוא
 
@@ -70,7 +70,7 @@ title: SunStar אוריון מערכות
 
 זה מאפשר לנו להריץ עלויות תפעול נמוכות במיוחד תוך מתן בקרות עריכה מעולות, אבטחה ברמה ארגונית ותכונות פורצות דרך שאף וויקי מדור קודם לא יכול להתאים. אנו מעבירים את החיסכון העצום הזה ישירות אליכם. המערכת ציפתה לתשלומים צנועים ושקופים בלבד עבור משאבי הענן המדויקים שבהם אתה משתמש &mdash; ללא רמות תמחור נפוחות או עמלות נסתרות.
 
-אוריון בנוי למנהיגים שמסרבים להתיישב:
+Orion is built for leaders who refuse to settle:
 
 מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, <span class="text-primary-emphasis">מדע פתוח</span> פלטפורמה.
 
@@ -86,23 +86,37 @@ title: SunStar אוריון מערכות
 
 נעילת ספק אפס &mdash; *אנו מוכיחים זאת. התוכן חי בתהליכי עבודה נקיים של Markdown ו-version Control. אין תבניות קנייניות. אין סיוטים בהגירה.
 
-רוצים שקיפות? ראה בעצמך:
+&nbsp;
 
-כל לוגיקת מערכת הבנייה שלנו עבור אתר זה מאוד: פחות מ -100 שורות קוד, להשלים עם ניהול תלות מתוחכם, ממוזכר שיוצר באופן אוטומטי מפות אתרים רב לשוניות, אינדקסים ספריות, ועוד.
+<span class="text-white">רוצים שקיפות? ראה בעצמך:</span>
 
-הצגת המקור: [עץ lib המקור](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)או שלה [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub ראי](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: פחות מ-100 שורות קוד, כולל ניהול תלות מתוחכם עם זיכרון, היוצר באופן אוטומטי מפות אתרים רב-לשוניות, אינדקסים של ספריות ועוד.
 
-מחולל האתר הסטטי הבסיסי: במיקור פתוח באתר GitHub תחת רישיון אפאצ'י 2.0 → @SunStarSys/orion
+View the source: [עץ lib המקור הפרטי שלנו](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)או הציבור שלה [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub ראי](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0 → @SunStarSys/orion
 
 זה לא ספין שיווקי &mdash; מורשת הנדסית פתוחה וניתנת לאימות החל מחידושי F/OSS החלוצים בשנת 2011. מוכנים לחוות ויקי שבאמת חוסך זמן, כסף וכאבי ראש? [שלחו לנו הודעה או שלחו לנו הודעה](/contact) היום.
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">צעדים ראשונים</div>
+<div class="card-body text-white">
+
+הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's build של <https://iconoclasts.blog> וחלול את מקורות ה-markdown בתא המטען/תוכן.  כ-90% מההתאמות האישיות של העיצוב נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>הנה&nbsp;למה,&nbsp;צעיר&nbsp;אקדמי / מפתח מחסנית מלאה / Blogger ציבורי...</h3>
 
@@ -142,24 +156,11 @@ div#lightning img {width:100%}
 
 בנוסף, לכל הלקוחות יש ממשקים חינמיים, הניתנים להתאמה אישית על-ידי התבנית או התומכים ב-javascript למנוע החיפוש הקנייני שלנו PCRE.
 
-ראו גם [תוכניות אוריון](plans) על העסקאות הנוכחיות.
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">צעדים ראשונים</div>
-<div class="card-body text-white">
-
-הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's build של <https://iconoclasts.blog> וחלול את מקורות ה-markdown בתא המטען/תוכן.  כ-90% מההתאמות האישיות של העיצוב נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -180,10 +181,10 @@ div#lightning img {width:100%}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>מספר צילומי מסך ייצוגיים:</h2>
-<br />
+<br/>
 <h3>מבט IDE עם גרמנית, צרפתית, עברית ורוסית (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -195,10 +196,10 @@ div#lightning img {width:100%}
 <br/>
 <h3>בניית אתר מלא של IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>בניית אתר אופיינית של IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">חיפוש IDE</a> <small>(הקישורים ב- <span style="color:#e83e8c">ורוד חם</span> ישחרר אותך ישירות לתוך מסך עורך, כאשר הסמן ממוקם בדיוק בהתאם לטקסט המתאים)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -220,4 +221,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$מחבר: ג'ו $ $ מהדורה: 35724 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

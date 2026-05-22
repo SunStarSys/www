@@ -3,14 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: avslutad
+status: verifierad=39268
 title: SunStar Orion för system
 ---
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Wiki-plattformen Jamstack.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Orion för system</span> &nbsp; är en
 
@@ -70,7 +70,7 @@ Vad som verkligen sätter Orion isär är inte bara en annan wiki-plattform &mda
 
 Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjuder överlägsna redaktionella kontroller, säkerhet i företagsklass och banbrytande funktioner som ingen äldre wiki kan matcha. Vi skickar dessa enorma besparingar direkt till dig. Förvänta dig endast blygsamma, transparenta tilläggsavgifter för exakt de molnresurser du använder &mdash; inga uppsvällda prisnivåer eller dolda avgifter.
 
-Orion är byggd för ledare som vägrar att bosätta sig:
+Orion is built for leaders who refuse to settle:
 
 - **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
 
@@ -86,23 +86,37 @@ Orion är byggd för ledare som vägrar att bosätta sig:
 
 Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns i rena arbetsflöden för Markdown och standardversionskontroll. Inga proprietära format. Inga mardrömmar om migration.
 
-Vill du ha transparens? Se själv:
+&nbsp;
 
-Hela vår byggsystemlogik för just denna webbplats: färre än 100 rader kod, komplett med sofistikerad, memorerad beroendehantering som automatiskt genererar flerspråkiga webbplatskartor, katalogindex och mer.
+<span class="text-white">Vill du ha transparens? Se själv:</span>
 
-Visa källan: [Vårt källbiblioteksträd](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)eller dess [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub spegel](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: färre än 100 rader med kod, komplett med sofistikerad, uppdelad beroendehantering som automatiskt genererar flerspråkiga webbplatskartor, katalogindex med mera.
 
-Den underliggande statiska webbplatsgeneratorn: öppen på GitHub under Apache-licens 2.0 → @SunStarSys/orion
+View the source: [vårt privata källbiblioteksträd](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)eller dess offentliga [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub spegel](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: öppen källkod på GitHub under Apache License 2.0 → @SunStarSys/orion
 
 Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ingenjörsarv som går tillbaka till F/OSS-innovationer som lanserades 2011. Redo att uppleva en wiki som faktiskt sparar tid, pengar och huvudvärk? [Ring eller skicka ett meddelande till oss](/contact) idag.
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">Komma igång</div>
+<div class="card-body text-white">
+
+Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka nedsättningskällorna i bagageutrymmet/innehållet.  ~90 % av formatanpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>Här är&nbsp;Varför,&nbsp;Unga&nbsp;Akademisk / Fullstack-utvecklare / Public Blogger...</h3>
 
@@ -142,24 +156,11 @@ Gå i din egen takt, använd så många anställda / förhandsvisningar / redige
 
 Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade gränssnitt till vår kraftfulla, egenutvecklade PCRE-sökmotor.
 
-Se våra [Orionplaner](plans) för de aktuella avtalen.
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">Komma igång</div>
-<div class="card-body text-white">
-
-Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka nedsättningskällorna i bagageutrymmet/innehållet.  ~90 % av formatanpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -180,10 +181,10 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>Några representativa skärmdumpar:</h2>
-<br />
+<br/>
 <h3>IDE-vy med tyska, franska, hebreiska och ryska (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -195,10 +196,10 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 <br/>
 <h3>IDE: Skapa fullständig webbplats.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>IDE: Skapa typisk plats.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Sök efter integrerad utvecklingsmiljö</a> <small>(Dessa länkar i <span style="color:#e83e8c">skär</span> kommer att släppa dig direkt i en editor skärm, med markören placerad exakt enligt den matchande texten)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -220,4 +221,4 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 }
 </style>
 
-<!-- $Date$ $Författare: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

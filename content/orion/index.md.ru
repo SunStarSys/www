@@ -3,14 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: завершено
+status: проверено=39268
 title: SunStar Орион систем
 ---
 
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>Платформа Jamstack Wiki.</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Платформа Jamstack Wiki.</em></span>&trade;
 </p>
 <span class="text-white">SunStar Орион систем</span> &nbsp; является
 
@@ -70,7 +70,7 @@ title: SunStar Орион систем
 
 Это позволяет нам выполнять сверхнизкие операционные расходы, предлагая превосходные средства контроля редакций, безопасность корпоративного уровня и новаторские функции, которые не могут соответствовать устаревшим вики-ресурсам. Мы передаем эту огромную экономию непосредственно вам. Ожидайте только скромные, прозрачные сборы за точные облачные ресурсы, которые вы используете &mdash; нет раздутых ценовых уровней или скрытых сборов.
 
-Орион построен для лидеров, которые отказываются поселиться:
+Orion is built for leaders who refuse to settle:
 
 - **Лидеры университетов** &mdash; Устраните плагиат в кампусе и обеспечьте безопасную совместную работу с открытым доступом с помощью совместного использования документов, курирования и онлайн-публикации с контролем версий. Превратите управление академическими знаниями в современное, доступное для аудита, <span class="text-primary-emphasis">Открытая наука</span> Платформа.
 
@@ -86,23 +86,37 @@ title: SunStar Орион систем
 
 Отсутствие привязки к поставщику &mdash; И мы докажем это*. Ваш контент живет в чистых Markdown и стандартных рабочих процессах управления версиями. Нет фирменных форматов. Никаких миграционных кошмаров.
 
-Хотите прозрачности? Убедитесь сами:
+&nbsp;
 
-Вся логика сборки для этого веб-сайта: менее 100 строк кода, в комплекте со сложным, запоминаемым управлением зависимостями, которое автоматически генерирует многоязычные карты сайта, индексы каталогов и многое другое.
+<span class="text-white">Хотите прозрачности? Убедитесь сами:</span>
 
-Посмотреть исходник: [наше дерево исходного библиотеки](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)или его [<i class="fa fa-github fa-emoji" title="Github"></i> зеркало GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+Our entire build-system logic for this very website: менее 100 строк кода, в комплекте со сложным, запоминаемым управлением зависимостями, которое автоматически генерирует многоязычные карты сайта, индексы каталогов и многое другое.
 
-Базовый генератор статических сайтов: открытый источник на GitHub под лицензией Apache 2.0 → @SunStarSys/orion
+View the source: [наше дерево библиотеки источников](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)или общественность [<i class="fa fa-github fa-emoji" title="Github"></i> зеркало GitHub](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: с открытым исходным кодом на GitHub под лицензией Apache 2.0 → @SunStarSys/orion
 
 Это не маркетинговый спин &mdash; Это проверенное, открытое инженерное наследие, начиная с инноваций F/OSS, впервые появившихся в 2011 году. Готовы испытать вики, которая на самом деле экономит время, деньги и головные боли? [Позвоните нам или напишите нам](/contact) сегодня.
 
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">Начало работы</div>
+<div class="card-body text-white">
+
+Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить из источников разметки в багажнике/контенте. ~90% настроек стиля находятся в [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
+
+</div>
+</div>
+</center>
 </div>
 
-<div class="col-lg-7">
-	<div class="embed-responsive embed-responsive-16by9 right">
-	 	<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/ylFF7PDniZw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-	</div>
-	<p style="height:20px">&nbsp;</p>
+<div class="col-lg-6">
+
+<img src="index.page/ad-top" style="width: 100%">
+
+&nbsp;
 
 <h3>Вот&nbsp;Почему,&nbsp;Молодые&nbsp;Академический / Full Stack разработчик / Публичный блоггер...</h3>
 
@@ -142,24 +156,11 @@ div#lightning img {width:100%}
 
 Кроме того, все клиенты имеют бесплатные, настраиваемые шаблонами или поддерживаемые JavaScript интерфейсы для нашей мощной, проприетарной поисковой системы PCRE.
 
-Смотреть [Планы Ориона](plans) для текущих сделок.
-
+<a href="plans">
+<img id="ad1" style="width:100%" src="index.page/ad1">
+</a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">Начало работы</div>
-<div class="card-body text-white">
-
-Самый быстрый способ добраться – это играть с сборкой @SunStarSys/orion <https://iconoclasts.blog> и выдолбить из источников разметки в багажнике/контенте. ~90% настроек стиля находятся в [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
@@ -180,10 +181,10 @@ div#lightning img {width:100%}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr />
-<br />
+<hr/>
+<br/>
 <h2>Несколько репрезентативных снимков экрана:</h2>
-<br />
+<br/>
 <h3>IDE View с немецким, французским, ивритом и русским языком (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
 <br/>
@@ -195,10 +196,10 @@ div#lightning img {width:100%}
 <br/>
 <h3>Полная сборка сайта IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3>Типичная сборка сайта IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br />
+<br/>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Поиск среды IDE</a> <small>(эти ссылки в <span style="color:#e83e8c">розовый</span> будет перетащить вас прямо на экран редактора, с курсором, размещенным точно в соответствии с соответствующим текстом)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
@@ -220,4 +221,4 @@ div#lightning img {width:100%}
 }
 </style>
 
-<!-- $Date$Автор: Джо $Пересмотр: 35724 $ -->
+<!-- $Date$ $Author$ $Revision$ -->
