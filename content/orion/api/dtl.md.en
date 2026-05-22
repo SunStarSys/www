@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API
-status: draft
+status: verified=39076
 Dependencies: *.md.en
 
 <div class="right">
@@ -19,7 +19,7 @@ Dependencies: *.md.en
 
 ### autoescape
 
-[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/autoescape.pm:lines=145-182:lang=perl]
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/autoescape.pm:lines=145-219:lang=perl]
 
 -----
 
