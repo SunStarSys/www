@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=37708
+status: draft
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -141,7 +141,8 @@ In addition, all clients have free, template-customizable or javascript-enabled 
 
 See our [Orion Plans](plans) for the current deals.
 
-![Ad1](index.page/ad1)
+<img id="ad1" width="100%" src="index.page/ad1">
+
 
 </div>
 </div>
