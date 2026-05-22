@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=39240
+status: verified=39244
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -95,6 +95,19 @@ The underlying Static Site Generator: open-sourced on GitHub under Apache Licens
 
 This isn't marketing spin &mdash; it's verifiable, open engineering heritage dating back to F/OSS innovations pioneered in 2011. Ready to experience a wiki that actually saves time, money, and headaches? [Give us a call or drop us a note](/contact) today.
 
+
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card-header">Getting Started</div>
+<div class="card-body text-white">
+
+The quickest way to get going is to play with @SunStarSys/orion's build of <https://iconoclasts.blog> and hollow out the markdown sources in trunk/content.  ~90% of the styling customizations are in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; adjust to taste!
+
+</div>
+</div>
+</center>
 </div>
 
 <div class="col-lg-6">
@@ -146,20 +159,6 @@ In addition, all clients have free, template-customizable or javascript-enabled 
 </a>
 </div>
 </div>
-
-&nbsp;
-
-<center>
-
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
-<div class="card-header">Getting Started</div>
-<div class="card-body text-white">
-
-The quickest way to get going is to play with @SunStarSys/orion's build of <https://iconoclasts.blog> and hollow out the markdown sources in trunk/content.  ~90% of the styling customizations are in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; adjust to taste!
-
-</div>
-</div>
-</center>
 
 &nbsp;
 
