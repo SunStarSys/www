@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API,Django
-status: verified=39420
+status: verified=39430
 Dependencies: *.md.en
 
 <div class="right">
@@ -9,7 +9,7 @@ Dependencies: *.md.en
 
 </div>
 
-{# lede #}This document covers the **Django Template Library (DTL)** Tag and Filter APIs{# lede #}.
+{# lede #}This document covers the **Django Template Library (DTL)** Tag, Plugin, and Filter APIs{# lede #}.
 
 [TOC]
 
@@ -140,6 +140,19 @@ Dependencies: *.md.en
 ### `widthratio`
 
 [snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/widthratio.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django Loaded Plugins
+
+### `markup`
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/markup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `json`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/json.pm:token==head1,=cut:lang=perl]
 
 -----
 
