@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API,Django
-status: verified=39430
+status: verified=39434
 Dependencies: *.md.en
 
 <div class="right">
@@ -152,7 +152,7 @@ Dependencies: *.md.en
 
 ### `json`
 
-[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/json.pm:token==head1,=cut:lang=perl]
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Addon/json.pm:token==head1,=cut:lang=perl]
 
 -----
 
