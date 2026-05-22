@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
-Keywords: REST,API
-status: verified=39381
+Keywords: REST,API,Django
+status: verified=39396
 Dependencies: *.md.en
 
 <div class="right">
@@ -9,7 +9,7 @@ Dependencies: *.md.en
 
 </div>
 
-{# lede #}This document covers the **Django Template Library (DTL)** Filter APIs{# lede #}.
+{# lede #}This document covers the **Django Template Library (DTL)** Tag and Filter APIs{# lede #}.
 
 [TOC]
 
