@@ -41,14 +41,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_3f"
+    "name": "seg_3g"
   },
   "sort": {
     "counts": {
-      "path": "1"
+      "path": "2"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "1"
+    },
     "ord_widths": {
       "path": "1"
     }
