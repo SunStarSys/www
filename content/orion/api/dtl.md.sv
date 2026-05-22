@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=38132
+status: verifierad=39358
 title: Orion API - Django mallbibliotek
 ---
 
@@ -16,9 +16,137 @@ title: Orion API - Django mallbibliotek
 
 [TOC]
 
-## DTL (Django 1.0-mallbibliotek)
+## Django 1.0 Taggar
 
-### Django 1.0 Filterförlängningar ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
+-----
+
+### `autoescape`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/autoescape.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `block`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/block.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `comment`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/comment.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `debug`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/debug.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `extends`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/extends.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `filter`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/filter.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `firstof`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/firstof.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `for`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/for.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `ifchanged`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/ifchanged.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `ifequal`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/ifequal.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `ifnotequal`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/ifnotequal.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `if`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/if.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `include`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/include.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `load`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/load.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `now`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/now.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `regroup`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/regroup.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `spaceless`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/spaceless.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `ssi`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/ssi.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `templatetag`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/templatetag.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `url`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/url.pm:token==head1,=cut:lang=perl]
+
+-----
+
+### `widthratio`
+
+[snippet:repo=SunStarsys/orion:path=lib/Dotiac/DTL/Tag/widthratio.pm:token==head1,=cut:lang=perl]
+
+-----
+
+## Django 1.0 Filterförlängningar ([Dotiac::DTL::Filter](https://github.com/SunStarSys/orion/blob/master/lib/Dotiac/DTL/Filter.pm))
 
 -----
 
