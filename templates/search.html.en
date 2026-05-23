@@ -271,7 +271,8 @@ Bandwidth (KB): Total = {{ tbw }}, Mean = {{meanbw}}, StdDev = {{stdbw}}, Median
   const values = data.map(x => x[1]);
   var total = 0;
   for (var i=0; i < values.length; ++i)
-      total += +values[i];
+      if (values[i] <= 300)
+          total += +values[i];
 
   const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
   x[4]);
