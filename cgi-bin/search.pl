@@ -338,10 +338,10 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
       /^$host/i and !/"HEAD / and /"[^" ]+ ([^" ]+) HTTP/ and $1 =~ /^\Q$prefix/ or next;
       /$filter/i or next if length $filter;
       /$prefilter/i or next if length $prefilter;
-      push @weblog, $_;
+      unshift @weblog, $_;
       /HTTP.{5} \d+ (\d+) .* \([\d-]+%\) (\d+)$/ or next;
-      push @duration, $2;
-      push @bandwidth, $1;
+      unshift @duration, $2;
+      unshift @bandwidth, $1;
     }
     chomp @weblog;
 
