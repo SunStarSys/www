@@ -6,24 +6,22 @@ status: פורסם
 title: תוכניות אוריון
 ---
 
-## פרטי תוכנית
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">תוכנית מקצועית</div>
         <div class="card-body">
 			אידיאלי עבור בלוגרים עצמאיים
 <hr />
 <p>
 
-$25 / חודש / אתר מנוהל
+$25 / חודש / אתר מנוהל. שווי השוק הטוב ביותר עבור צוותים קטנים או אנשי מקצוע בודדים.
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>משאבים חודשיים (לפי אתר אינטרנט):
 <p>
@@ -39,7 +37,7 @@ $25 / חודש / אתר מנוהל
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>תעריפי משאבים חודשיים נוספים (לפי אתר אינטרנט):
 <p>
 <ol>
@@ -56,7 +54,7 @@ $25 / חודש / אתר מנוהל
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">תוכנית עסקית</div>
       <div class="card-body">
 			מצוין עבור עסקים קטנים ובינוניים
@@ -69,7 +67,7 @@ $ 100 / חודש / אתר מנוהל, ~ 50% הנחה על כל דגמי תמחו
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>משאבים חודשיים (לפי אתר אינטרנט):
 <p>
 <ol>
@@ -85,7 +83,7 @@ $ 100 / חודש / אתר מנוהל, ~ 50% הנחה על כל דגמי תמחו
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>תעריפי משאבים חודשיים נוספים (לפי אתר אינטרנט):
 <p>
 <ol>
@@ -102,10 +100,10 @@ $ 100 / חודש / אתר מנוהל, ~ 50% הנחה על כל דגמי תמחו
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">תוכנית ארגונית</div>
     <div class="card-body">
-מגזר ציבורי, ארגונים לא ממשלתיים ומותגים מוכרים
+יותר מ-500 מושבים
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ $1000 / חודש, ~67% הנחה על כל דגמי המחירים המתחרים
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>משאבים חודשיים כלולים:  &nbsp;
+<ul style="min-height:500px">
+<li>משאבים חודשיים כלולים:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ $1000 / חודש, ~67% הנחה על כל דגמי המחירים המתחרים
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>תעריפי משאבים חודשיים נוספים:
 
 &nbsp;
@@ -178,13 +176,15 @@ $1000 / חודש, ~67% הנחה על כל דגמי המחירים המתחרים
 
 ### בניית דקות ורמות תוכנית: מדריך קשה
 
-*אומדן סביר לקצה הגבוה למשך הבנייה הממוצע לכל התחייבות הוא 10 שניות.*
+*הערכה סבירה גבוהה עבור משך הבנייה הממוצע לכל התחייבות היא [10 שניות](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - אנשי מקצוע עם פחות מ -20 התחייבויות ביום צריכים להיות בסדר עם 100 דקות הבנייה הכלולות בתוכנית.
 
 - עסקים עם פחות מ -100 התחייבויות ביום צריכים להיות בסדר עם 500 דקות הבנייה הכלולות בתוכנית.
 
 - ארגונים עם פחות מ-1000 התחייבויות ליום צריכים להיות בסדר עם 5000 דקות הבנייה הכלולות בתוכנית.
+
+- Builds that exceed a five minute duration are on the house: אנו רואים באירועים אלה טעויות מערכת.
 
 ------------
 

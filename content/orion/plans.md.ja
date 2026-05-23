@@ -6,24 +6,22 @@ status: 公開済み
 title: Orionプラン
 ---
 
-## プラン詳細
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">専門家プラン</div>
         <div class="card-body">
 			独立系ブロガーに最適
 <hr />
 <p>
 
-$25 /月/管理対象サイト
+$25 /月/管理対象サイト。小さなチームや個々の専門家のための最高の市場価値。
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>月次リソースを含む(Webサイトごと):
 <p>
@@ -39,7 +37,7 @@ $25 /月/管理対象サイト
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>追加の月間リソースレート(ウェブサイトごと):
 <p>
 <ol>
@@ -56,7 +54,7 @@ $25 /月/管理対象サイト
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">ビジネス・プラン</div>
       <div class="card-body">
 			SMBに最適
@@ -69,7 +67,7 @@ $ 100 /月/マネージドサイト、すべての競合他社の価格モデル
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>月次リソースを含む(Webサイトごと):
 <p>
 <ol>
@@ -85,7 +83,7 @@ $ 100 /月/マネージドサイト、すべての競合他社の価格モデル
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>追加の月間リソースレート(ウェブサイトごと):
 <p>
 <ol>
@@ -102,10 +100,10 @@ $ 100 /月/マネージドサイト、すべての競合他社の価格モデル
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">エンタープライズ・プラン</div>
     <div class="card-body">
-公共部門、NGO、認定ブランド
+500席以上
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ $1000 /月、すべての競合他社の価格モデルから最大67%オフ!
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>含まれる月次リソース: &nbsp;
+<ul style="min-height:500px">
+<li>含まれる月次リソース:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ $1000 /月、すべての競合他社の価格モデルから最大67%オフ!
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>追加の月次リソース・レート:
 
 &nbsp;
@@ -178,13 +176,15 @@ $1000 /月、すべての競合他社の価格モデルから最大67%オフ!
 
 ### ビルド分数とプランレベル: ラフガイド
 
-*コミット当たりの平均ビルド時間の妥当なハイエンド見積りは10秒です。*
+*コミット当たりの平均ビルド期間の妥当なハイエンド見積りは、[10秒](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - 1日に20コミット未満の専門家は、計画に含まれる100ビルド分で問題ありません。
 
 - 1日に100コミット未満の企業は、計画に含まれる500ビルド分で問題ありません。
 
 - 1日に1000コミット未満の企業は、計画に含まれる5000ビルド分で問題ありません。
+
+- Builds that exceed a five minute duration are on the house: 我々はこれらの事件をシステムエラーと見なしている。
 
 ------------
 

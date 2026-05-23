@@ -6,24 +6,22 @@ status: publicado
 title: Planes de Orion
 ---
 
-## Detalles del plan
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">Plan profesional</div>
         <div class="card-body">
 			Ideal para bloggers independientes
 <hr />
 <p>
 
-$25/mes/sitio gestionado
+$25/mes/sitio gestionado. Mejor valor de mercado para equipos pequeños o profesionales individuales.
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>Recursos mensuales incluidos (por sitio web):
 <p>
@@ -39,7 +37,7 @@ $25/mes/sitio gestionado
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Tarifas Mensuales Adicionales de Recursos (por sitio web):
 <p>
 <ol>
@@ -56,7 +54,7 @@ $25/mes/sitio gestionado
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">Plan de negocio</div>
       <div class="card-body">
 			Ideal para pymes
@@ -69,7 +67,7 @@ $100 / mes / sitio administrado, ~50% de descuento en todos los modelos de preci
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>Recursos mensuales incluidos (por sitio web):
 <p>
 <ol>
@@ -85,7 +83,7 @@ $100 / mes / sitio administrado, ~50% de descuento en todos los modelos de preci
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Tarifas Mensuales Adicionales de Recursos (por sitio web):
 <p>
 <ol>
@@ -102,10 +100,10 @@ $100 / mes / sitio administrado, ~50% de descuento en todos los modelos de preci
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">Plan de empresa</div>
     <div class="card-body">
-Sector público, ONG y marcas reconocidas
+Más de 500 asientos
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>Recursos mensuales incluidos:  &nbsp;
+<ul style="min-height:500px">
+<li>Recursos mensuales incluidos:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Cuotas de recursos mensuales adicionales:
 
 &nbsp;
@@ -178,13 +176,15 @@ $1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia
 
 ### Build Minutes and Plan Levels: a Rough Guide (Crear minutos y niveles de plan: una guía aproximada)
 
-*Una estimación razonable de gama alta para la duración media de compilación por confirmación es de 10 segundos.*
+*Una estimación razonable de gama alta para la duración media de compilación por confirmación es [10 segundos](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - Los profesionales con menos de 20 compromisos al día deben estar bien con los 100 minutos de construcción incluidos en el plan.
 
 - Las empresas con menos de 100 confirmaciones al día deben estar bien con los 500 minutos de construcción incluidos en el plan.
 
 - Las empresas con menos de 1000 confirmaciones al día deben estar bien con los 5000 minutos de construcción incluidos en el plan.
+
+- Builds that exceed a five minute duration are on the house: Consideramos estos incidentes como errores del sistema.
 
 ------------
 

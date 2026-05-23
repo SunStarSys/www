@@ -6,24 +6,22 @@ status: 공개됨
 title: 오리온 계획
 ---
 
-## 계획 세부정보
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">전문 계획</div>
         <div class="card-body">
 			독립 블로거에게 이상적
 <hr />
 <p>
 
-매월 $25 / 관리 사이트
+$25 / 월 / 관리 사이트. 소규모 팀 또는 개별 전문가를위한 최고의 시장 가치.
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>포함된 월간 리소스(웹 사이트당):
 <p>
@@ -39,7 +37,7 @@ title: 오리온 계획
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>추가 월별 자원 단가(웹 사이트당):
 <p>
 <ol>
@@ -56,7 +54,7 @@ title: 오리온 계획
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">비즈니스 계획</div>
       <div class="card-body">
 			SMB에 적합
@@ -69,7 +67,7 @@ title: 오리온 계획
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>포함된 월간 리소스(웹 사이트당):
 <p>
 <ol>
@@ -85,7 +83,7 @@ title: 오리온 계획
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>추가 월별 자원 단가(웹 사이트당):
 <p>
 <ol>
@@ -102,10 +100,10 @@ title: 오리온 계획
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">기업 계획</div>
     <div class="card-body">
-공공 부문, NGO 및 인정 브랜드
+500석 이상
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ title: 오리온 계획
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>포함된 월별 리소스:  &nbsp;
+<ul style="min-height:500px">
+<li>포함된 월별 리소스:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ title: 오리온 계획
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>추가 월별 자원 단가:
 
 &nbsp;
@@ -178,13 +176,15 @@ title: 오리온 계획
 
 ### Build Minutes and Plan Levels: A Rough Guide(시간 및 계획 레벨 구축: 거친 가이드)
 
-*커밋당 평균 빌드 기간에 대한 합당한 고급 예측은 10초입니다.*
+*커밋당 평균 빌드 기간에 대한 합당한 고급 예측은 다음과 같습니다. [10초](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - 하루에 20분 미만의 커밋을 가진 전문가는 계획에 포함된 100 빌드 분 동안 괜찮아야 합니다.
 
 - 하루에 100분 미만의 커밋을 가진 기업은 계획에 포함된 500 빌드 분에 만족해야 합니다.
 
 - 하루에 1000회 미만의 커밋을 수행하는 기업은 계획에 포함된 5000 빌드 분 동안 괜찮아야 합니다.
+
+- Builds that exceed a five minute duration are on the house: 우리는 이러한 사고를 시스템 오류로 간주합니다.
 
 ------------
 

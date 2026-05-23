@@ -6,24 +6,22 @@ status: publicerad
 title: Orionplaner
 ---
 
-## Plandetaljer
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">Vårdpersonalplan</div>
         <div class="card-body">
 			Perfekt för oberoende bloggare
 <hr />
 <p>
 
-$25/månad/hanterad webbplats
+$ 25 / månad / hanterad webbplats. Bästa marknadsvärdet för små team eller enskilda proffs.
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>Inkluderade månadsresurser (per webbplats):
 <p>
@@ -39,7 +37,7 @@ $25/månad/hanterad webbplats
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Ytterligare månatliga resurspriser (per webbplats):
 <p>
 <ol>
@@ -56,7 +54,7 @@ $25/månad/hanterad webbplats
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">Affärsplan</div>
       <div class="card-body">
 			Bra för SMB
@@ -69,7 +67,7 @@ $ 100 / månad / hanterad webbplats, ~ 50 % rabatt på alla konkurrent prismodel
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>Inkluderade månadsresurser (per webbplats):
 <p>
 <ol>
@@ -85,7 +83,7 @@ $ 100 / månad / hanterad webbplats, ~ 50 % rabatt på alla konkurrent prismodel
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Ytterligare månatliga resurspriser (per webbplats):
 <p>
 <ol>
@@ -102,10 +100,10 @@ $ 100 / månad / hanterad webbplats, ~ 50 % rabatt på alla konkurrent prismodel
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">Företagsplan</div>
     <div class="card-body">
-Offentlig sektor, icke-statliga organisationer och erkända varumärken
+Mer än 500 platser
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>Inkluderade månadsresurser:  &nbsp;
+<ul style="min-height:500px">
+<li>Inkluderade månadsresurser:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Ytterligare månatliga resurskostnader:
 
 &nbsp;
@@ -178,13 +176,15 @@ $ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
 
 ### Bygg minuter och plannivåer: en grov guide
 
-*En rimlig high-end uppskattning för den genomsnittliga byggtiden per åtagande är 10 sekunder.*
+*En rimlig uppskattning för den genomsnittliga byggtiden per åtagande är [10 sekunder](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - Professionella med mindre än 20 åtaganden per dag bör vara bra med de 100 byggminuter som ingår i planen.
 
 - Företag med mindre än 100 åtaganden per dag bör vara bra med de 500 byggminuter som ingår i planen.
 
 - Företag med mindre än 1000 åtaganden per dag bör vara bra med de 5000 byggminuter som ingår i planen.
+
+- Builds that exceed a five minute duration are on the house: Vi betraktar dessa händelser som systemfel.
 
 ------------
 

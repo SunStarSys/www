@@ -6,24 +6,22 @@ status: publicado
 title: Planos Orion
 ---
 
-## Detalhes do Plano
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">Plano Profissional</div>
         <div class="card-body">
 			Ideal para blogueiros independentes
 <hr />
 <p>
 
-$25 / mês / site gerenciado
+$25 / mês / site gerenciado. Melhor valor de mercado para pequenas equipes ou profissionais individuais.
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>Recursos mensais incluídos (por site):
 <p>
@@ -39,7 +37,7 @@ $25 / mês / site gerenciado
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Taxas mensais adicionais de recursos (por site):
 <p>
 <ol>
@@ -56,7 +54,7 @@ $25 / mês / site gerenciado
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">Plano de negócios</div>
       <div class="card-body">
 			Ótimo para SMB
@@ -69,7 +67,7 @@ $100 / mês / site gerenciado, ~50% de desconto em todos os modelos de preços d
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>Recursos mensais incluídos (por site):
 <p>
 <ol>
@@ -85,7 +83,7 @@ $100 / mês / site gerenciado, ~50% de desconto em todos os modelos de preços d
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Taxas mensais adicionais de recursos (por site):
 <p>
 <ol>
@@ -102,10 +100,10 @@ $100 / mês / site gerenciado, ~50% de desconto em todos os modelos de preços d
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">Plano Empresarial</div>
     <div class="card-body">
-Setor Público, ONG e Marcas Reconhecidas
+Mais de 500 lugares
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ $1000 / mês, ~67% de desconto em todos os modelos de preços do concorrente!
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>Recursos mensais incluídos:  &nbsp;
+<ul style="min-height:500px">
+<li>Recursos mensais incluídos:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ $1000 / mês, ~67% de desconto em todos os modelos de preços do concorrente!
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Taxas de Recursos Mensais Adicionais:
 
 &nbsp;
@@ -178,13 +176,15 @@ Parcerias tecnológicas são muito bem-vindas para agências e revendedores terc
 
 ### Criar Minutos e Níveis de Plano: um Guia Rough
 
-*Uma estimativa high-end razoável para a duração média do build por commit é de 10 segundos.*
+*Uma estimativa high-end razoável para a duração média de build por commit é [10 segundos](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - Profissionais com menos de 20 commits por dia devem estar bem com os 100 minutos de compilação incluídos no plano.
 
 - Empresas com menos de 100 commits por dia devem estar bem com os 500 minutos de compilação incluídos no plano.
 
 - Empresas com menos de 1000 commits por dia devem ficar bem com os 5000 minutos de compilação incluídos no plano.
+
+- Builds that exceed a five minute duration are on the house: Consideramos esses incidentes como erros do sistema.
 
 ------------
 

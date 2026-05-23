@@ -6,24 +6,22 @@ status: опубликовано
 title: Планы Ориона
 ---
 
-## Сведения о плане
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">Профессиональный план</div>
         <div class="card-body">
 			Идеально подходит для независимых блоггеров
 <hr />
 <p>
 
-$25 / месяц / управляемый сайт
+$25 в месяц / управляемый сайт. Лучшая рыночная стоимость для небольших команд или отдельных специалистов.
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>Включенные ежемесячные ресурсы (на веб-сайт):
 <p>
@@ -39,7 +37,7 @@ $25 / месяц / управляемый сайт
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Дополнительные ежемесячные тарифы на ресурсы (на веб-сайт):
 <p>
 <ol>
@@ -56,7 +54,7 @@ $25 / месяц / управляемый сайт
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">Бизнес-план</div>
       <div class="card-body">
 			Отлично подходит для малого и среднего бизнеса
@@ -69,7 +67,7 @@ $100 / месяц / управляемый сайт, ~50% от всех моде
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>Включенные ежемесячные ресурсы (на веб-сайт):
 <p>
 <ol>
@@ -85,7 +83,7 @@ $100 / месяц / управляемый сайт, ~50% от всех моде
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Дополнительные ежемесячные тарифы на ресурсы (на веб-сайт):
 <p>
 <ol>
@@ -102,10 +100,10 @@ $100 / месяц / управляемый сайт, ~50% от всех моде
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">План предприятия</div>
     <div class="card-body">
-Государственный сектор, НПО и признанные бренды
+Более 500 мест
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ $1000 / месяц, ~67% от всех моделей ценообразован
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>Включенные ежемесячные ресурсы:  &nbsp;
+<ul style="min-height:500px">
+<li>Включенные ежемесячные ресурсы:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ $1000 / месяц, ~67% от всех моделей ценообразован
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Дополнительные ежемесячные ставки за ресурсы:
 
 &nbsp;
@@ -178,13 +176,15 @@ $1000 / месяц, ~67% от всех моделей ценообразован
 
 ### Создание минут и уровней плана: грубое руководство
 
-*Разумная оценка высокого уровня для средней продолжительности сборки на фиксацию составляет 10 секунд.*
+*Разумная оценка высокого уровня для средней продолжительности сборки на фиксацию: [10 секунд](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - Профессионалы с менее чем 20 фиксациями в день должны быть в порядке с 100 минут сборки, включенных в план.
 
 - Компании с менее чем 100 фиксациями в день должны быть в порядке с 500 минут сборки, включенных в план.
 
 - Предприятия, имеющие менее 1000 фиксаций в день, должны быть в порядке с 5000 минут сборки, включенных в план.
+
+- Builds that exceed a five minute duration are on the house: Мы рассматриваем эти инциденты как системные ошибки.
 
 ------------
 

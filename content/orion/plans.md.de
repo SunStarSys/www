@@ -6,24 +6,22 @@ status: veröffentlicht
 title: Orionpläne
 ---
 
-## Plandetails
-
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1000px">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
       <div class="card-header">Berufsplan</div>
         <div class="card-body">
 			Ideal für unabhängige Blogger
 <hr />
 <p>
 
-$25 / Monat / verwaltete Website
+$25 / Monat / verwaltete Website. Bester Marktwert für kleine Teams oder einzelne Profis.
 
 </p>
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 
 <li>Enthaltene monatliche Ressourcen (pro Website):
 <p>
@@ -39,7 +37,7 @@ $25 / Monat / verwaltete Website
 </li>
 </ul>
 
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Zusätzliche monatliche Ressourcensätze (pro Website):
 <p>
 <ol>
@@ -56,7 +54,7 @@ $25 / Monat / verwaltete Website
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1000px">
+  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
     <div class="card-header">Geschäftsplan</div>
       <div class="card-body">
 			Großartig für KMU
@@ -69,7 +67,7 @@ $100 / Monat / Managed Site, ~50% Rabatt auf alle Wettbewerber Preismodelle!
 
 &nbsp;
 
-<ul style="min-height:400px">
+<ul style="min-height:500px">
 <li>Enthaltene monatliche Ressourcen (pro Website):
 <p>
 <ol>
@@ -85,7 +83,7 @@ $100 / Monat / Managed Site, ~50% Rabatt auf alle Wettbewerber Preismodelle!
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Zusätzliche monatliche Ressourcensätze (pro Website):
 <p>
 <ol>
@@ -102,10 +100,10 @@ $100 / Monat / Managed Site, ~50% Rabatt auf alle Wettbewerber Preismodelle!
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1000px">
+<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">Unternehmensplan</div>
     <div class="card-body">
-Öffentlicher Sektor, NGO und anerkannte Marken
+Mehr als 500 Plätze
 <hr />
 <p>
 
@@ -115,10 +113,10 @@ $1000 / Monat, ~67% Rabatt auf alle Wettbewerber Preismodelle!
 
 &nbsp;
 
-<ul style="min-height:400px">
-<li>Monatliche Ressourcen enthalten:  &nbsp;
+<ul style="min-height:500px">
+<li>Monatliche Ressourcen enthalten:
 
-&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;
 
 <p>
 <ol>
@@ -135,7 +133,7 @@ $1000 / Monat, ~67% Rabatt auf alle Wettbewerber Preismodelle!
 </p>
 </li>
 </ul>
-<ul style="min-height:200px">
+<ul style="min-height:300px">
 <li>Zusätzliche monatliche Ressourcensätze:
 
 &nbsp;
@@ -178,13 +176,15 @@ $1000 / Monat, ~67% Rabatt auf alle Wettbewerber Preismodelle!
 
 ### Erstellen von Minuten und Planebenen: ein grober Leitfaden
 
-*Eine angemessene High-End-Schätzung für die durchschnittliche Build-Dauer pro Commit beträgt 10 Sekunden.*
+*Eine angemessene High-End-Schätzung für die durchschnittliche Build-Dauer pro Commit ist [10 Sekunden](/dynamic/search/?regex=build=;lang={{lang}};markdown_search=1).*
 
 - Professionals mit weniger als 20 Commits pro Tag sollten mit den 100 Build-Minuten in dem Plan in Ordnung sein.
 
 - Unternehmen mit weniger als 100 Commits pro Tag sollten mit den 500 Build-Minuten in dem Plan in Ordnung sein.
 
 Unternehmen mit weniger als 1000 Commits pro Tag sollten mit den 5000 Build-Minuten, die im Plan enthalten sind, in Ordnung sein.
+
+- Builds that exceed a five minute duration are on the house: Wir betrachten diese Vorfälle als Systemfehler.
 
 ------------
 
