@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: ויקי,ידע,בלוגים,אוריון,jamstack,perl,f/oss
-status: אומתה=36357
+status: אומתה=38366
 title: בית
 ---
 
@@ -13,8 +13,8 @@ title: בית
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתר סטטי</a> {{facts.releases.orion.tag}} שוחרר &mdash;
-עכשיו עם תמיכה LAUNCH_APACHE2!
+<h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתר סטטי</a> {{facts.releases.orion.tag}} שוחרר &mdash; עכשיו עם LAUNCH_APACHE2 ו CSV / PDL תמיכה!
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ title: בית
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">חדש</span> [ויקי במערכות ניהול ידע](https://iconoclasts.blog/joe/wikis) &mdash; ספר על איך אוריון נכנס לתמונה הגדולה של 2026.
+- &nbsp; <span class="badge bg-success">חדש</span> [Markdown אינו $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; דיון טכני חשוב על איך אסימוני מתמטיקה מוטבעים שולבו :fa-github: GitHub סימון בטעם (GFM).
+
+- [ויקי במערכות ניהול ידע](https://iconoclasts.blog/joe/wikis) &mdash; ספר על איך אוריון נכנס לתמונה הגדולה של 2026.
 
 - &nbsp; [ביצועי יישום](https://iconoclasts.blog/joe/performance) &mdash; דוגמה עובדת: מצוואר בקבוק נצפה לפתרון יעיל.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$מחבר: ג'ו $ $מהדורה: 36357 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

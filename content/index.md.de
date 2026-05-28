@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,wissen,blogs,orion,jamstack,perl,f/oss
-status: überprüft=36357
+status: überprüft=38366
 title: Startseite
 ---
 
@@ -13,8 +13,8 @@ title: Startseite
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Neu</span> SunStar System-Orion&trade; <a href="{{facts.releases.orion.url}}">Statischer Standortgenerator</a> {{facts.releases.orion.tag}} freigegeben &mdash;
-Jetzt mit LAUNCH_APACHE2 Unterstützung!
+<h2 class="card-title"><span class="badge bg-success">Neu</span> SunStar System-Orion&trade; <a href="{{facts.releases.orion.url}}">Statischer Standortgenerator</a> {{facts.releases.orion.tag}} freigegeben &mdash; jetzt mit LAUNCH_APACHE2 und CSV/PDL Unterstützung!
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ Hinter den Kulissen <span class="text-white">Whitepaper</span> Beschreibung unse
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">Neu</span> [Wikis in Wissensmanagementsysteme](https://iconoclasts.blog/joe/wikis) &mdash; Eine Einführung, wie Orion in das Big Picture von 2026 passt.
+- &nbsp; <span class="badge bg-success">Neu</span> [Preisabschrift ist nicht $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; wichtige technische Diskussion darüber, wie Inline-Mathezeichen in :fa-github: GitHub Aromatisierter Preisabschrift (GFM).
+
+- [Wikis in Wissensmanagementsysteme](https://iconoclasts.blog/joe/wikis) &mdash; Eine Einführung, wie Orion in das Big Picture von 2026 passt.
 
 - &nbsp; [Anwendungsperformance](https://iconoclasts.blog/joe/performance) &mdash; ein Arbeitsbeispiel: von einem beobachtbaren Engpass bis hin zu einer effektiven Lösung.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Autor: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: ويكي، المعرفة، المدونات، أوريون، جامستاك، بيرل، ف / لوس
-status: التحقق = 36357
+status: التحقق = 38366
 title: الصفحة الرئيسية
 ---
 
@@ -13,8 +13,8 @@ title: الصفحة الرئيسية
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">جديد</span> SunStar أوريون الأنظمة&trade; <a href="{{facts.releases.orion.url}}">منشئ الموقع الثابت</a> {{facts.releases.orion.tag}} صدر &mdash;
-الآن مع دعم LAUNCH_APACHE2!
+<h2 class="card-title"><span class="badge bg-success">جديد</span> SunStar أوريون الأنظمة&trade; <a href="{{facts.releases.orion.url}}">منشئ الموقع الثابت</a> {{facts.releases.orion.tag}} صدر &mdash; الآن مع دعم LAUNCH_APACHE2 و CSV / PDL!
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ title: الصفحة الرئيسية
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">جديد</span> [ويكي في أنظمة إدارة المعرفة](https://iconoclasts.blog/joe/wikis) &mdash; مقدمة حول كيفية ملاءمة أوريون للنظرة العامة لعام 2026.
+- &nbsp; <span class="badge bg-success">جديد</span> [تخفيض السعر ليس $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; مناقشة فنية مهمة حول كيفية دمج الرموز المميزة للرياضيات المضمنة في :fa-github: GitHub تخفيض السعر بالنكهة (GFM).
+
+- [ويكي في أنظمة إدارة المعرفة](https://iconoclasts.blog/joe/wikis) &mdash; مقدمة حول كيفية ملاءمة أوريون للنظرة العامة لعام 2026.
 
 - &nbsp; [أداء التطبيق](https://iconoclasts.blog/joe/performance) &mdash; مثال عملي: من عنق الزجاجة الملحوظ إلى حل فعال.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 36357 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

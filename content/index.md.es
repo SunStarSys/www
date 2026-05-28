@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,conocimiento,blogs,orion,jamstack,perl,f/oss
-status: verificado=36357
+status: verificado=38366
 title: Inicio
 ---
 
@@ -13,8 +13,8 @@ title: Inicio
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nuevo</span> SunStar Orión de los Sistemas&trade; <a href="{{facts.releases.orion.url}}">Generador de sitios estáticos</a> {{facts.releases.orion.tag}} liberado &mdash;
-¡Ahora con soporte LAUNCH_APACHE2!
+<h2 class="card-title"><span class="badge bg-success">Nuevo</span> SunStar Orión de los Sistemas&trade; <a href="{{facts.releases.orion.url}}">Generador de sitios estáticos</a> {{facts.releases.orion.tag}} liberado &mdash; ahora con soporte LAUNCH_APACHE2 y CSV/PDL.
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ Para un detrás de escena <span class="text-white">documento técnico</span> des
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">Nuevo</span> [Wikis en Sistemas de Gestión del Conocimiento](https://iconoclasts.blog/joe/wikis) &mdash; Una guía sobre cómo Orion encaja en el panorama general de 2026.
+- &nbsp; <span class="badge bg-success">Nuevo</span> [La rebaja no es $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; importante discusión técnica sobre cómo se han incorporado los tokens matemáticos en línea en :fa-github: GitHub Rebaja con sabor (GFM).
+
+- [Wikis en Sistemas de Gestión del Conocimiento](https://iconoclasts.blog/joe/wikis) &mdash; Una guía sobre cómo Orion encaja en el panorama general de 2026.
 
 - &nbsp; [Rendimiento de aplicaciones](https://iconoclasts.blog/joe/performance) &mdash; un ejemplo práctico: desde un cuello de botella observable hasta una resolución efectiva.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ Autor: joe $ $ Revisión: 36357 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

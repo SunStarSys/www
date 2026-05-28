@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki，知識，部落格，orion，jamstack，perl，f/oss
-status: 驗證 =36357
+status: 驗證 =38366
 title: 首頁
 ---
 
@@ -13,8 +13,8 @@ title: 首頁
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">新建</span> SunStar 系統的 Orion&trade; <a href="{{facts.releases.orion.url}}">靜態網站產生器</a> {{facts.releases.orion.tag}} 已釋出&mdash;
-現在提供 LAUNCH_APACHE2 支援！
+<h2 class="card-title"><span class="badge bg-success">新建</span> SunStar 系統的 Orion&trade; <a href="{{facts.releases.orion.url}}">靜態網站產生器</a> {{facts.releases.orion.tag}} 已釋出&mdash; 現在提供 LAUNCH_APACHE2 和 CSV/PDL 支援！
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ title: 首頁
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">新建</span> [知識管理系統中的 Wiki](https://iconoclasts.blog/joe/wikis) &mdash; Orion 如何融入 2026 年大局的首要任務。
+- &nbsp; <span class="badge bg-success">新建</span> [減價不是$$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; 有關內置數學記號如何被納入的重要技術討論:fa-github: GitHub 調味料減價 (GFM)。
+
+- [知識管理系統中的 Wiki](https://iconoclasts.blog/joe/wikis) &mdash; Orion 如何融入 2026 年大局的首要任務。
 
 - &nbsp; [應用程式效能](https://iconoclasts.blog/joe/performance) &mdash; 工作範例：從可觀察的瓶頸到有效的解析度。
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $ 作者：joe $ $ 版次：36357 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

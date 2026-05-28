@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,знание,блоги,orion,jamstack,perl,f/oss
-status: проверено=36357
+status: проверено=38366
 title: Главная
 ---
 
@@ -13,8 +13,8 @@ title: Главная
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Новый</span> SunStar Орион систем&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash;
-Теперь с поддержкой LAUNCH_APACHE2!
+<h2 class="card-title"><span class="badge bg-success">Новый</span> SunStar Орион систем&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash; теперь с поддержкой LAUNCH_APACHE2 и CSV/PDL!
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ title: Главная
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">Новый</span> [Википедия:Системы управления знаниями](https://iconoclasts.blog/joe/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
+- &nbsp; <span class="badge bg-success">Новый</span> [Снижение цен – нет $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; важное техническое обсуждение того, как встроенные математические токены были включены в :fa-github: GitHub Ароматизированное снижение цен (GFM).
+
+- [Википедия:Системы управления знаниями](https://iconoclasts.blog/joe/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
 
 - &nbsp; [Производительность приложения](https://iconoclasts.blog/joe/performance) &mdash; рабочий пример: от наблюдаемого узкого места до эффективного разрешения.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$Автор: Джо $Пересмотр: 36357 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

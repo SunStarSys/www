@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki、知識、ブログ、orion、jamstack、perl、f/oss
-status: 確認済み=36357
+status: 確認済み=38366
 title: ホーム
 ---
 
@@ -13,8 +13,8 @@ title: ホーム
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">新規</span> SunStarシステムのOrion&trade; <a href="{{facts.releases.orion.url}}">静的サイトジェネレータ</a> {{facts.releases.orion.tag}} リリース済&mdash;
-LAUNCH_APACHE2サポートあり!
+<h2 class="card-title"><span class="badge bg-success">新規</span> SunStarシステムのOrion&trade; <a href="{{facts.releases.orion.url}}">静的サイトジェネレータ</a> {{facts.releases.orion.tag}} リリース済&mdash; LAUNCH_APACHE2とCSV/PDLをサポート!
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ LAUNCH_APACHE2サポートあり!
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">新規</span> [ナレッジマネジメントシステム(Knowledge Management Systems)](https://iconoclasts.blog/joe/wikis) &mdash; オリオンが2026年の全体像にどのように適合するかについての原始者。
+- &nbsp; <span class="badge bg-success">新規</span> [値下げなし$$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; インライン数学トークンがどのように組み込まれているかに関する重要な技術的議論:fa-github: GitHubフレーバー値下げ(GFM)。
+
+- [ナレッジマネジメントシステム(Knowledge Management Systems)](https://iconoclasts.blog/joe/wikis) &mdash; オリオンが2026年の全体像にどのように適合するかについての原始者。
 
 - &nbsp; [アプリケーション・パフォーマンス](https://iconoclasts.blog/joe/performance) &mdash; 実用的な例: 観察可能なボトルネックから効果的な解決まで。
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$Author: joe $$Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

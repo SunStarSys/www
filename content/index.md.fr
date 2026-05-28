@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki, connaissance, blogs, orion, pile de james, perl, f/oss
-status: vérifié=36357
+status: vérifié=38366
 title: Accueil
 ---
 
@@ -13,8 +13,8 @@ title: Accueil
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nouveau</span> SunStar Orion de Systems&trade; <a href="{{facts.releases.orion.url}}">Générateur de site statique</a> {{facts.releases.orion.tag}} publié &mdash;
-Avec le support LAUNCH_APACHE2 !
+<h2 class="card-title"><span class="badge bg-success">Nouveau</span> SunStar Orion de Systems&trade; <a href="{{facts.releases.orion.url}}">Générateur de site statique</a> {{facts.releases.orion.tag}} publié &mdash; Avec la prise en charge de LAUNCH_APACHE2 et CSV/PDL !
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ Pour les coulisses <span class="text-white">livre blanc</span> description de no
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">Nouveau</span> [Wikis dans les systèmes de gestion des connaissances](https://iconoclasts.blog/joe/wikis) &mdash; une introduction sur la façon dont Orion s'intègre dans la vue d'ensemble de 2026.
+- &nbsp; <span class="badge bg-success">Nouveau</span> [Démarque non $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; discussion technique importante sur la façon dont les jetons mathématiques en ligne ont été incorporés dans :fa-github: GitHub Démarque aromatisée (GFM).
+
+- [Wikis dans les systèmes de gestion des connaissances](https://iconoclasts.blog/joe/wikis) &mdash; une introduction sur la façon dont Orion s'intègre dans la vue d'ensemble de 2026.
 
 - &nbsp; [Performances des applications](https://iconoclasts.blog/joe/performance) &mdash; un exemple de travail : d'un goulet d'étranglement observable à une résolution efficace.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$Auteur : joe $Révision : 36357 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

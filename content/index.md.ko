@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: 위키,지식,블로그,오리온,잼스택,perl,f/oss
-status: 확인=36357
+status: 확인=38366
 title: 홈 페이지
 ---
 
@@ -13,8 +13,8 @@ title: 홈 페이지
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">신규</span> SunStar 시스템스 오리온&trade; <a href="{{facts.releases.orion.url}}">정적 사이트 생성기</a> {{facts.releases.orion.tag}} 해제됨 &mdash;
-이제 LAUNCH_APACHE2 지원!
+<h2 class="card-title"><span class="badge bg-success">신규</span> SunStar 시스템스 오리온&trade; <a href="{{facts.releases.orion.url}}">정적 사이트 생성기</a> {{facts.releases.orion.tag}} 해제됨 &mdash; 이제 LAUNCH_APACHE2 및 CSV / PDL 지원!
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ title: 홈 페이지
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">신규</span> [지식 관리 시스템 위키](https://iconoclasts.blog/joe/wikis) &mdash; Orion이 2026년 빅 픽처에 어떻게 부합하는지에 대한 입문서입니다.
+- &nbsp; <span class="badge bg-success">신규</span> [매가인하가 아님 $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; 인라인 수학 토큰이 어떻게 통합되었는지에 대한 중요한 기술 토론 :fa-github: GitHub 맛 있는 매가인하(GFM).
+
+- [지식 관리 시스템 위키](https://iconoclasts.blog/joe/wikis) &mdash; Orion이 2026년 빅 픽처에 어떻게 부합하는지에 대한 입문서입니다.
 
 - &nbsp; [애플리케이션 성능](https://iconoclasts.blog/joe/performance) &mdash; 작업 예제: 관찰 가능한 병목 현상부터 효과적인 해결까지.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 36357 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

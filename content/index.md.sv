@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,kunskap, bloggar,orion,jamstack,perl,f/oss
-status: verifierad=36357
+status: verifierad=38366
 title: Hem
 ---
 
@@ -13,8 +13,8 @@ title: Hem
 
 <br>
 
-<h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash;
-Nu med LAUNCH_APACHE2 support!
+<h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash; Nu med stöd för LAUNCH_APACHE2 och CSV/PDL!
+
 </h2>
 
 <br>
@@ -80,7 +80,9 @@ För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av v
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">Nytt</span> [Wikis i kunskapshanteringssystem](https://iconoclasts.blog/joe/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
+- &nbsp; <span class="badge bg-success">Nytt</span> [Nedsättning är inte $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; viktig teknisk diskussion om hur inline matte tokens har införlivats i :fa-github: GitHub Smaksatt nedsättning (GFM).
+
+- [Wikis i kunskapshanteringssystem](https://iconoclasts.blog/joe/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
 
 - &nbsp; [Applikationsprestanda](https://iconoclasts.blog/joe/performance) &mdash; Ett fungerande exempel: från en observerbar flaskhals till en effektiv lösning.
 
@@ -152,4 +154,4 @@ div.jumbotron ul {
 }
 </style>
 
-<!-- $Date$ $Författare: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->
