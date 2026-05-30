@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,kunskap, bloggar,orion,jamstack,perl,f/oss
-status: verifierad=38366
+status: verifierad=40518
 title: Hem
 ---
 
@@ -80,7 +80,7 @@ För en bakom kulisserna <span class="text-white">vitbok</span> beskrivning av v
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">Nytt</span> [Nedsättning är inte $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; viktig teknisk diskussion om hur inline matte tokens har införlivats i :fa-github: GitHub Smaksatt nedsättning (GFM).
+- <span class="badge bg-success">Nytt</span> [Nedsättning är inte $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; viktig teknisk diskussion om hur inline matte tokens har införlivats i :fa-github: GitHub Smaksatt nedsättning (GFM).
 
 - [Wikis i kunskapshanteringssystem](https://iconoclasts.blog/joe/wikis) &mdash; En primer om hur Orion passar in i den stora bilden av 2026.
 

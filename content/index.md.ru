@@ -1,7 +1,7 @@
 ---
 categories: ~
 keywords: wiki,знание,блоги,orion,jamstack,perl,f/oss
-status: проверено=38366
+status: проверено=40518
 title: Главная
 ---
 
@@ -80,7 +80,7 @@ title: Главная
 
 &nbsp;
 
-- &nbsp; <span class="badge bg-success">Новый</span> [Снижение цен – нет $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; важное техническое обсуждение того, как встроенные математические токены были включены в :fa-github: GitHub Ароматизированное снижение цен (GFM).
+- <span class="badge bg-success">Новый</span> [Снижение цен – нет $$\LaTeX$$](https://iconoclasts.blog/joe/markdown-is-not-latex) &mdash; важное техническое обсуждение того, как встроенные математические токены были включены в :fa-github: GitHub Ароматизированное снижение цен (GFM).
 
 - [Википедия:Системы управления знаниями](https://iconoclasts.blog/joe/wikis) &mdash; Оригинальное название: Orion: The Big Picture 2026
 
