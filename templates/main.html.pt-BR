@@ -153,7 +153,7 @@
   <script src="/editor.md/js/underscore.min.js"></script>
   <script src="/editor.md/js/flowchart.min.js"></script>
   <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
-  <script src="/editor.md/js/sequence-diagram.min.js"></script>
+  <!-- -->
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
@@ -173,7 +173,7 @@
 if (typeof(editormd) === "undefined") {
 
 mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        $(".sequence-diagram").sequenceDiagram();
+        /**/
         for (const e of $("body").find(".graphviz").toArray()) {
             d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
             e.innerHTML = ""
