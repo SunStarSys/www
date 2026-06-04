@@ -338,7 +338,7 @@ Dependencias notablemente breves y probadas en el tiempo; cuyos componentes prin
 
 </div>
 <div class="tab-pane fade active" id="sbom" role="tabpanel">
-{{sbom|safe}}
+{{sbom.content|safe}}
 </div>
 </div>
 

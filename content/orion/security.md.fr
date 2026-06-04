@@ -338,7 +338,7 @@ Dépendances remarquablement brèves et éprouvées, dont les principales compos
 
 </div>
 <div class="tab-pane fade active" id="sbom" role="tabpanel">
-{{sbom|safe}}
+{{sbom.content|safe}}
 </div>
 </div>
 

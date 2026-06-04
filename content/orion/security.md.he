@@ -338,7 +338,7 @@ Same situation as the general-purpose UI: הוא מבצע בדיקה צולבת 
 
 </div>
 <div class="tab-pane fade active" id="sbom" role="tabpanel">
-{{sbom|safe}}
+{{sbom.content|safe}}
 </div>
 </div>
 

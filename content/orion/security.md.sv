@@ -338,7 +338,7 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 
 </div>
 <div class="tab-pane fade active" id="sbom" role="tabpanel">
-{{sbom|safe}}
+{{sbom.content|safe}}
 </div>
 </div>
 
