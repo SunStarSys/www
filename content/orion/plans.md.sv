@@ -13,10 +13,8 @@ title: Orionplaner
         <div class="card-body">
 			Perfekt för oberoende bloggare
 <hr />
-<p>
-
-$ 25 / månad / hanterad webbplats. Bästa marknadsvärdet för små team eller enskilda proffs.
-
+<p style="min-height:100px">
+$ 25 / månad / värd webbplats. Bästa marknadsvärdet för små team eller enskilda proffs.
 </p>
 
 &nbsp;
@@ -59,10 +57,8 @@ $ 25 / månad / hanterad webbplats. Bästa marknadsvärdet för små team eller 
       <div class="card-body">
 			Bra för SMB
 <hr />
-<p>
-
-$ 100 / månad / hanterad webbplats, ~ 50 % rabatt på alla konkurrent prismodeller!
-
+<p style="min-height:100px">
+$ 100 / månad / värd webbplats, ~ 50 % rabatt på alla konkurrent prismodeller!
 </p>
 
 &nbsp;
@@ -103,12 +99,10 @@ $ 100 / månad / hanterad webbplats, ~ 50 % rabatt på alla konkurrent prismodel
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">Företagsplan</div>
     <div class="card-body">
-Mer än 500 platser
+Fast pris för fler än 1000 platser
 <hr />
-<p>
-
-$ 1000 / månad, ~ 67 % rabatt på alla konkurrent prismodeller!
-
+<p style="min-height:100px">
+$2500/månad
 </p>
 
 &nbsp;

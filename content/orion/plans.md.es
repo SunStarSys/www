@@ -13,10 +13,8 @@ title: Planes de Orion
         <div class="card-body">
 			Ideal para bloggers independientes
 <hr />
-<p>
-
-$25/mes/sitio gestionado. Mejor valor de mercado para equipos pequeños o profesionales individuales.
-
+<p style="min-height:100px">
+$25/mes/sitio alojado. Mejor valor de mercado para equipos pequeños o profesionales individuales.
 </p>
 
 &nbsp;
@@ -59,10 +57,8 @@ $25/mes/sitio gestionado. Mejor valor de mercado para equipos pequeños o profes
       <div class="card-body">
 			Ideal para pymes
 <hr />
-<p>
-
-$100 / mes / sitio administrado, ~50% de descuento en todos los modelos de precios de la competencia!
-
+<p style="min-height:100px">
+$100 / mes / sitio alojado, ~50% de descuento en todos los modelos de precios de la competencia!
 </p>
 
 &nbsp;
@@ -103,12 +99,10 @@ $100 / mes / sitio administrado, ~50% de descuento en todos los modelos de preci
 <div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
   <div class="card-header">Plan de empresa</div>
     <div class="card-body">
-Más de 500 asientos
+Tarifa plana para más de 1000 asientos
 <hr />
-<p>
-
-$1000 / mes, ~67% de descuento en todos los modelos de precios de la competencia!
-
+<p style="min-height:100px">
+$2500/mes
 </p>
 
 &nbsp;
