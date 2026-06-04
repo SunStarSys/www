@@ -167,7 +167,7 @@ In (noSQL) Orion, we take editing and rendering as two separate concerns that sh
 Consequently, the editing experience is a little less quick, and a lot less dirty, because we validate and build the modified content, along with the corpus of dependent pages, *at edit-time, not at render time*.
 
 In reality, the cost is a few seconds more of exposure to the build machinery before being able to view published changes on the live site.
-And the benefit? You will **never see your website get hacked again** through zero-day vulnerabilities in the rendering webserver's software stack.
+And the benefit? You will **never see your website get hacked again** through zero-day or unpatched vulnerabilities in the rendering webserver's software stack.
 
 ### ACL Management
 
