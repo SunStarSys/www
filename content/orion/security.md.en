@@ -334,7 +334,7 @@ Remarkably brief and time-tested dependencies; the major components of which are
 [Contact Us](/contact) for more details.
 
 </div>
-<div class="tab-pane fade active" id="sbom" role="tabpanel">
+<div class="tab-pane fade" id="sbom" role="tabpanel">
 {{sbom.content|safe}}
 </div>
 </div>
