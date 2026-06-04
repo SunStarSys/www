@@ -15,7 +15,7 @@ title: Orion-säkerhet
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SBOM</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">Perl SBOM</a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Dokumentation</a>
@@ -160,6 +160,17 @@ Subversion Server-Side Commit Hooks är också anpassningsbara för dina tillsyn
 ## Orion-applikationssäkerhet
 
 ### [SSR är en lukt](https://queue.acm.org/detail.cfm?id=2721993)
+
+#### Separation av Concens och Engineering Tradeoffs
+
+I ett nötskal är hur alla andra wiki-plattformar fungerar som en SQL [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app som gör det snabbt och enkelt att ändra innehåll, för vilket resultaten måste rekonstrueras i realtid (eller från en webbsidescache) varje gång någon behöver visa det innehållet online.
+
+I (noSQL) Orion tar vi redigering och rendering som två separata problem som ska hanteras av två oberoende programvarustackar; där mycket mer process, design, validering och beroendehantering investeras i redigeringsgränssnittet. Detta är så att vi kan begränsa programvaran på renderingsstacken till att vara en barebones SSI-aktiverad Apache-filserver med bog-standard webbautentisering och åtkomstkontroller inblandade, och optimistiskt förväntar vi oss att innehållet ses en storleksordning oftare än den redigerades.
+
+Följaktligen är redigeringsupplevelsen lite mindre snabb och mycket mindre smutsig, eftersom vi validerar och bygger det modifierade innehållet, tillsammans med korpus av beroende sidor, *vid redigeringstid, inte vid renderingstid *.
+
+I själva verket är kostnaden några sekunder mer av exponering för byggmaskineriet innan man kan se publicerade förändringar på den levande webbplatsen.
+Och förmånen? Du kommer **aldrig se din webbplats bli hackad igen** genom nolldagssårbarheter i den renderande webbserverns programvarustack.
 
 ### Hantering av åtkomstkontrollista
 
@@ -332,7 +343,7 @@ För närvarande endast PDF.
 
 Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna omfattas av [Orionteknik](technology) sida.
 
-#### Stycklista för programvara tillgänglig på begäran
+#### Fullständiga stycklistor för programvara (SBOM) tillgängliga på begäran
 
 [Kontakta oss](/contact) för mer information.
 

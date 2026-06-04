@@ -15,7 +15,7 @@ title: Seguridad de Orion
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SBOM</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">Perl SBOM</a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentación</a>
@@ -160,6 +160,17 @@ Los ganchos de confirmación del lado del servidor de Subversion también se pue
 ## Seguridad de la aplicación Orion
 
 ### [La SSR pública es un olor](https://queue.acm.org/detail.cfm?id=2721993)
+
+#### Separación de Concenos e Ingeniería Tradeoffs
+
+En pocas palabras, la forma en que funciona cualquier otra plataforma wiki es como SQL. [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) aplicación que hace que sea rápido y fácil modificar el contenido, para lo cual los resultados tienen que ser reconstruidos en tiempo real (o desde una caché de página web) cada vez que alguien necesita ver ese contenido en línea.
+
+En (noSQL) Orion, tomamos la edición y la representación como dos preocupaciones separadas que deben ser manejadas por dos pilas de software independientes; donde se invierte mucho más en la interfaz de edición, diseño, validación y gestión de dependencias. Esto es para que podamos limitar el software en la pila de presentación a ser un servidor de archivos Apache habilitado para SSI con autenticación web estándar de bog y controles de acceso involucrados, y de manera optimista esperamos que el contenido se vea en un orden de magnitud más a menudo de lo que editó.
+
+En consecuencia, la experiencia de edición es un poco menos rápida, y mucho menos sucia, porque validamos y creamos el contenido modificado, junto con el corpus de páginas dependientes, *en tiempo de edición, no en tiempo de render*.
+
+En realidad, el costo es unos segundos más de exposición a la maquinaria de construcción antes de poder ver los cambios publicados en el sitio en vivo.
+¿Y el beneficio? **Nunca volverás a ver tu sitio web hackeado** a través de vulnerabilidades de día cero en la pila de software del servidor web de renderizado.
 
 ### Gestión de ACL
 
@@ -332,7 +343,7 @@ Actualmente sólo PDF.
 
 Dependencias notablemente breves y probadas en el tiempo; cuyos componentes principales están cubiertos por la [Tecnología de Orion](technology) página.
 
-#### Lista de materiales de software (SBOM) disponible previa solicitud
+#### Lista de materiales de software completo (SBOM) disponible a petición
 
 [Contáctenos](/contact) para más detalles.
 

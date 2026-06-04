@@ -15,7 +15,7 @@ title: Sécurité d'Orion
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SOS</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">Perl SBOM</a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">Documentation</a>
@@ -160,6 +160,17 @@ Les crochets de validation côté serveur Subversion sont également personnalis
 ## Sécurité applicative Orion
 
 ### [La SSR publique est une odeur](https://queue.acm.org/detail.cfm?id=2721993)
+
+#### Séparation des concens et compromis d'ingénierie
+
+En un mot, la façon dont toutes les autres plates-formes wiki fonctionnent est comme un SQL. [CRU](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) application qui permet de modifier rapidement et facilement le contenu, pour lequel les résultats doivent être reconstruits en temps réel (ou à partir d'un cache de page Web) chaque fois que quelqu'un a besoin de voir ce contenu en ligne.
+
+Dans (noSQL) Orion, nous considérons l'édition et le rendu comme deux préoccupations distinctes qui devraient être traitées par deux piles de logiciels indépendantes ; où beaucoup plus de processus, de conception, de validation et de gestion des dépendances est investi dans l'interface d'édition. Cela nous permet de limiter le logiciel de la pile de rendu à un serveur de fichiers Apache compatible SSI Barebones avec authentification Web standard et contrôles d'accès impliqués, et de manière optimiste, nous prévoyons que le contenu est vu un ordre de grandeur plus souvent qu'il ne l'a modifié.
+
+Par conséquent, l'expérience d'édition est un peu moins rapide, et beaucoup moins sale, parce que nous validons et construisons le contenu modifié, ainsi que le corpus de pages dépendantes, *au moment de l'édition, pas au moment du rendu*.
+
+En réalité, le coût est de quelques secondes de plus d'exposition aux machines de construction avant de pouvoir visualiser les changements publiés sur le site en direct.
+Et l'avantage ? Vous **ne verrez jamais votre site Web être piraté** par des vulnérabilités de jour zéro dans la pile logicielle du serveur Web de rendu.
 
 ### Gestion des listes de contrôle d'accès
 
@@ -332,7 +343,7 @@ Actuellement PDF uniquement.
 
 Dépendances remarquablement brèves et éprouvées, dont les principales composantes sont [Technologie Orion](technology) page.
 
-#### Nomenclature logicielle (SBOM) disponible sur demande
+#### Nomenclature logicielle complète (SBOM) disponible sur demande
 
 [Nous contacter](/contact) pour plus de détails.
 

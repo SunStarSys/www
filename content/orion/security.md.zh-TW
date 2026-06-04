@@ -15,7 +15,7 @@ title: Orion 安全
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">繁體中文</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">Perl SBOM</a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">文件</a>
@@ -160,6 +160,17 @@ Subversion 伺服器端確認鉤點也可根據您的監督問題自訂。從簡
 ## Orion 應用程式安全
 
 ### [公用 SSR 是氣味](https://queue.acm.org/detail.cfm?id=2721993)
+
+#### 關連與工程權衡劃分
+
+簡而言之，其他 Wiki 平台的運作方式就是 SQL [克魯德](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 此應用程式可讓您快速輕鬆地修改內容，每當有人需要在線上檢視該內容時，就必須即時 (或從網頁快取中) 重新建構結果。
+
+在 (noSQL) Orion 中，我們會將編輯和轉譯視為兩個獨立軟體堆疊應處理的個別問題；其中更多的程序、設計、驗證和相依性管理都投資於編輯介面。這樣一來，我們就可以將彩現堆疊上的軟體限制為支援 SSI 的裸機 Apache 檔案伺服器，其中包含標準 Web 認證和存取控制，而且我們以最佳方式預期檢視內容的頻率比編輯的還要高。
+
+因此，由於我們驗證並建置修改過的內容，以及相依頁面的語料庫 (在編輯時間，而不是彩現時間 *)，因此編輯體驗的速度會稍微少一點。
+
+實際上，在能夠在現場檢視已發布的變更之前，成本會比建築機械多出幾秒鐘的時間。
+還有什麼好處？您 **在呈現 Web 伺服器的軟體堆疊中，永遠不會再見到您的網站** 漏洞。
 
 ### ACL 管理
 
@@ -332,7 +343,7 @@ CSS 必須由我們的伺服器提供。
 
 極為簡短且經過時間測試的相依性；其主要元件涵蓋在[奧里昂科技](technology) 頁面。
 
-#### 軟體用料表 (SBOM) 可依要求提供
+#### 完整軟體用料表 (SBOM) 可依要求提供
 
 [聯絡我們](/contact) 以取得詳細資訊。
 

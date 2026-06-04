@@ -15,7 +15,7 @@ title: Orionのセキュリティ
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">SBOM</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">Perl SBOM</a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">ドキュメント</a>
@@ -160,6 +160,17 @@ Subversionサーバー側のコミット・フックも、監視上の懸念に�
 ## Orionアプリケーションのセキュリティ
 
 ### [Public SSRは臭い](https://queue.acm.org/detail.cfm?id=2721993)
+
+#### コンセンとエンジニアリングのトレードオフの分離
+
+簡単に言えば、他のすべてのWikiプラットフォームの仕組みはSQLです。[ログイン](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) コンテンツをすばやく簡単に変更できるようにするアプリ。そのために、誰かがオンラインでそのコンテンツを表示する必要があるたびに、リアルタイム(またはWebページ・キャッシュ)で結果を再構築する必要があります。
+
+(noSQL) Orionでは、編集とレンダリングを、2つの独立したソフトウェア・スタックで処理する必要がある2つの個別の問題として受け取ります。編集インタフェースには、より多くのプロセス、設計、検証および依存性管理が投資されます。これは、レンダリング・スタック上のソフトウェアを、bog-standard Web認証およびアクセス制御が関与するベアボーンSSI対応のApacheファイル・サーバーに制限できるようにするためであり、コンテンツが編集したよりも頻繁に表示されることを楽観的に期待しています。
+
+その結果、編集エクスペリエンスは少し短く、汚れも少なくなります。これは、変更されたコンテンツを検証して構築し、依存ページのコーパス(*編集時、レンダリング時ではなく*)とともに構築するためです。
+
+実際、コストは、ライブサイトで公開された変更を表示する前に、構築機械にさらされる数秒です。
+利益は? レンダリングWebサーバーのソフトウェア・スタックのゼロデイ脆弱性によって、Webサイトが再びハッキングされることはありません**。
 
 ### ACL管理
 
@@ -332,7 +343,7 @@ CSSはサーバーからの提供が必要です。
 
 非常に簡潔で時間テスト済の依存関係。主なコンポーネントについては、[Orionテクノロジー](technology) ページ。
 
-#### 要求時に利用可能なソフトウェア部品表(SBOM)
+#### 要求時に利用可能なフル・ソフトウェア部品表(SBOM)
 
 [お問い合わせ](/contact) 詳細はこちら
 

@@ -15,7 +15,7 @@ title: Orion 보안
 
 <ul class="nav nav-tabs" role="tablist">
   <li class="nav-item" role="presentation">
-    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">사이트맵</a>
+    <a class="nav-link" data-bs-toggle="tab" href="#sbom" aria-selected="false" role="tab" tabindex="-1">펄 SBOM</a>
   </li>
   <li class="nav-item" role="presentation">
     <a class="nav-link active" data-bs-toggle="tab" href="#docs" aria-selected="true" role="tab">설명서</a>
@@ -160,6 +160,17 @@ Subversion Server-Side Commit Hook도 감독 문제에 맞게 사용자 정의�
 ## Orion 애플리케이션 보안
 
 ### [공공 SSR 냄새](https://queue.acm.org/detail.cfm?id=2721993)
+
+#### 협의 및 엔지니어링 상충 분리
+
+간단히 말해서 다른 모든 위키 플랫폼의 작동 방식은 SQL입니다. [크라우드](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 콘텐츠를 빠르고 쉽게 수정할 수 있는 앱으로, 온라인에서 해당 콘텐츠를 볼 때마다 결과를 실시간으로 또는 웹 페이지 캐시에서 재구성해야 합니다.
+
+(noSQL) Orion에서는 두 개의 독립 소프트웨어 스택에서 처리해야 하는 두 가지 개별적인 문제로 편집 및 렌더링을 수행합니다. 편집 인터페이스에 훨씬 더 많은 프로세스, 설계, 검증 및 종속성 관리가 투자됩니다. 따라서 렌더링 스택의 소프트웨어를 보그 표준 웹 인증 및 액세스 제어가 포함된 베어본 SSI 지원 아파치 파일 서버로 제한할 수 있으며, 최적으로는 콘텐츠가 편집된 것보다 더 자주 볼 것으로 예상합니다.
+
+결과적으로, 편집 환경은 조금 덜 빠르며, 수정 된 콘텐츠를 검증하고 제작하기 때문에 렌더링 시간이 아닌 *편집 시 *의 종속 페이지와 함께 수정 된 콘텐츠를 검증하고 제작합니다.
+
+실제로, 비용은 라이브 사이트에서 게시 된 변경 사항을 볼 수 있기 전에 건설 기계에 노출되는 몇 초 정도입니다.
+그리고 혜택? 렌더링 웹 서버의 소프트웨어 스택에서 제로데이 취약점을 통해 **웹사이트가 다시 해킹되는 것을 볼 수 없습니다**.
 
 ### ACL 관리
 
@@ -332,7 +343,7 @@ CSS는 서버에서 제공되어야 합니다.
 
 매우 짧고 시간 테스트를 거친 종속성; 주요 구성 요소는 [오리온 기술](technology) 페이지.
 
-#### 요청 시 사용 가능한 소프트웨어 자재 명세서(SBOM)
+#### 요청 시 전체 소프트웨어 자재 명세서(SBOM) 사용 가능
 
 [연락처](/contact) 를 참조하십시오.
 
