@@ -8,16 +8,16 @@
   "lexicon": {
     "counts": {
       "acl": "3",
-      "content": "998",
-      "keywords": "13",
-      "path": "2",
-      "status": "1",
-      "title": "3"
+      "content": "1293",
+      "keywords": "15",
+      "path": "3",
+      "status": "3",
+      "title": "5"
     },
     "format": "3",
     "index_counts": {
       "acl": "1",
-      "content": "8",
+      "content": "11",
       "keywords": "1",
       "path": "1",
       "status": "1",
@@ -28,7 +28,7 @@
     "format": "1"
   },
   "segmeta": {
-    "count": "2",
+    "count": "3",
     "field_names": [
       "",
       "status",
@@ -41,15 +41,15 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_50"
+    "name": "seg_51"
   },
   "sort": {
     "counts": {
-      "path": "3"
+      "path": "4"
     },
     "format": "3",
     "null_ords": {
-      "path": "2"
+      "path": "3"
     },
     "ord_widths": {
       "path": "2"
