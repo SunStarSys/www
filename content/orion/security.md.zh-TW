@@ -337,7 +337,7 @@ CSS 必須由我們的伺服器提供。
 [聯絡我們](/contact) 以取得詳細資訊。
 
 </div>
-<div class="tab-pane fade active" id="sbom" role="tabpanel">
+<div class="tab-pane fade" id="sbom" role="tabpanel">
 {{sbom.content|safe}}
 </div>
 </div>

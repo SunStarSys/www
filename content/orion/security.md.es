@@ -337,7 +337,7 @@ Dependencias notablemente breves y probadas en el tiempo; cuyos componentes prin
 [Contáctenos](/contact) para más detalles.
 
 </div>
-<div class="tab-pane fade active" id="sbom" role="tabpanel">
+<div class="tab-pane fade" id="sbom" role="tabpanel">
 {{sbom.content|safe}}
 </div>
 </div>

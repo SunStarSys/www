@@ -337,7 +337,7 @@ Dependências notavelmente breves e testadas no tempo; cujos principais componen
 [Fale Conosco](/contact) para mais detalhes.
 
 </div>
-<div class="tab-pane fade active" id="sbom" role="tabpanel">
+<div class="tab-pane fade" id="sbom" role="tabpanel">
 {{sbom.content|safe}}
 </div>
 </div>

@@ -337,7 +337,7 @@ Bemerkenswert kurze und bewährte Abhängigkeiten, deren Hauptbestandteile auf d
 [Kontakt](/contact) für weitere Details.
 
 </div>
-<div class="tab-pane fade active" id="sbom" role="tabpanel">
+<div class="tab-pane fade" id="sbom" role="tabpanel">
 {{sbom.content|safe}}
 </div>
 </div>

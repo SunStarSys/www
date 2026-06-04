@@ -337,7 +337,7 @@ Same situation as the general-purpose UI: הוא מבצע בדיקה צולבת 
 [צור קשר](/contact) לפרטים נוספים.
 
 </div>
-<div class="tab-pane fade active" id="sbom" role="tabpanel">
+<div class="tab-pane fade" id="sbom" role="tabpanel">
 {{sbom.content|safe}}
 </div>
 </div>

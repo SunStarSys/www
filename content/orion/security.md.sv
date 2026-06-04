@@ -337,7 +337,7 @@ Anmärkningsvärt korta och beprövade beroenden; de viktigaste komponenterna om
 [Kontakta oss](/contact) för mer information.
 
 </div>
-<div class="tab-pane fade active" id="sbom" role="tabpanel">
+<div class="tab-pane fade" id="sbom" role="tabpanel">
 {{sbom.content|safe}}
 </div>
 </div>
