@@ -161,16 +161,17 @@ Subversion Server-Side Commit Hooks também são personalizáveis para suas preo
 
 ### [SSR público é um cheiro](https://queue.acm.org/detail.cfm?id=2721993)
 
-#### Separação de Concens e Tradeoffs de Engenharia
+#### Separação de preocupações e compensações de engenharia
 
 Resumindo, a forma como cada outra plataforma wiki funciona é como um SQL [CRUDO](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) aplicativo que torna rápido e fácil modificar o conteúdo, para o qual os resultados devem ser reconstruídos em tempo real (ou a partir de um cache de página da Web) toda vez que alguém precisa visualizar esse conteúdo on-line.
 
-Em (noSQL) Orion, tomamos edição e renderização como duas preocupações separadas que devem ser tratadas por duas pilhas de software independentes; onde muito mais processo, design, validação e gerenciamento de dependência são investidos na interface de edição. Isso é para que possamos limitar o software na pilha de renderização a ser um servidor de arquivos Apache habilitado para SSI barebones com autenticação da web padrão bog e controles de acesso envolvidos, e otimisticamente esperamos que o conteúdo seja visto em uma ordem de magnitude com mais frequência do que editado.
+Em (noSQL) Orion, tomamos edição e renderização como duas preocupações separadas que devem ser tratadas por duas pilhas de software independentes; onde muito mais processo, design, validação e gerenciamento de dependência são investidos na interface de edição. Isso é para que possamos limitar o software na pilha de renderização para ser um servidor de arquivos Apache habilitado para SSI barebones com autenticação da web padrão e controles de acesso envolvidos, e otimisticamente esperamos que o conteúdo seja visualizado em uma ordem de magnitude com mais frequência do que é editado.
 
 Consequentemente, a experiência de edição é um pouco menos rápida, e muito menos suja, porque validamos e construímos o conteúdo modificado, juntamente com o corpus de páginas dependentes, *em tempo de edição, não no tempo de renderização*.
 
-Na realidade, o custo é de alguns segundos a mais de exposição à maquinaria de construção antes de ser capaz de ver as mudanças publicadas no site ao vivo.
-E o benefício? Você **nunca verá seu site ser hackeado novamente** por meio de vulnerabilidades de dia zero na pilha de software do servidor web de renderização.
+Na realidade, o custo é de alguns segundos a mais de exposição ao maquinário de construção antes de ser capaz de ver mudanças comprometidas e publicadas no site ao vivo.
+
+E o benefício? Você **nunca verá seu site ser hackeado novamente** por meio de vulnerabilidades de dia zero ou sem patch na pilha de software do servidor web de renderização.
 
 ### Gerenciamento de ACL
 

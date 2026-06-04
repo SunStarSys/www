@@ -158,15 +158,16 @@ Subversion Server-Side Commit Hooks are also customizable to your oversight conc
 
 ### [Public SSR is a smell](https://queue.acm.org/detail.cfm?id=2721993)
 
-#### Separation of Concens and Engineering Tradeoffs
+#### Separation of Concerns and Engineering Tradeoffs
 
 In a nutshell, the way every other wiki platform works is as an SQL [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app that makes it quick and easy to modify content, for which the results have to be reconstructed in real-time (or from a webpage cache) every time someone needs to view that content online.
 
-In (noSQL) Orion, we take editing and rendering as two separate concerns that should be handled by two independent software stacks; where much more process, design, validation, and dependency management is invested in the editing interface. This is so that we can limit the software on the rendering stack to be a barebones SSI-enabled Apache file server with bog-standard web authentication and access controls involved, and optimistically we expect that the content is viewed an order of magnitude more often than it it edited.
+In (noSQL) Orion, we take editing and rendering as two separate concerns that should be handled by two independent software stacks; where much more process, design, validation, and dependency management is invested in the editing interface. This is so that we can limit the software on the rendering stack to be a barebones SSI-enabled Apache file server with bog-standard web authentication and access controls involved, and optimistically we expect that the content is viewed an order of magnitude more often than it is edited.
 
 Consequently, the editing experience is a little less quick, and a lot less dirty, because we validate and build the modified content, along with the corpus of dependent pages, *at edit-time, not at render time*.
 
-In reality, the cost is a few seconds more of exposure to the build machinery before being able to view published changes on the live site.
+In reality, the cost is a few seconds more of exposure to the build machinery before being able to view committed, published changes on the live site.
+
 And the benefit? You will **never see your website get hacked again** through zero-day or unpatched vulnerabilities in the rendering webserver's software stack.
 
 ### ACL Management

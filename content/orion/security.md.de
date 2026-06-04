@@ -161,16 +161,17 @@ Subversion Server-seitige Commit-Hooks sind auch an Ihre Aufsichtsprobleme anpas
 
 ### [Öffentliche SSR ist ein Geruch](https://queue.acm.org/detail.cfm?id=2721993)
 
-#### Trennung von Concens und Engineering Tradeoffs
+#### Trennung von Bedenken und technischen Kompromissen
 
 Kurz gesagt: Jede andere Wiki-Plattform funktioniert als SQL [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) App, die es schnell und einfach macht, Inhalte zu ändern, für die die Ergebnisse in Echtzeit (oder aus einem Webseiten-Cache) jedes Mal neu erstellt werden müssen, wenn jemand diesen Inhalt online ansehen muss.
 
-In (noSQL) Orion nehmen wir das Bearbeiten und Rendering als zwei separate Bedenken an, die von zwei unabhängigen Software-Stacks behandelt werden sollten; wobei viel mehr Prozess-, Design-, Validierungs- und Abhängigkeitsmanagement in die Bearbeitungsoberfläche investiert wird. Dies ist so, dass wir die Software auf dem Rendering-Stack auf einen Barebones SSI-fähigen Apache-Dateiserver mit moorstandardmäßiger Webauthentifizierung und Zugriffskontrolle beschränken können, und optimistisch erwarten wir, dass der Inhalt öfter in einer Größenordnung angezeigt wird, als er bearbeitet wurde.
+In (noSQL) Orion nehmen wir das Bearbeiten und Rendering als zwei separate Bedenken an, die von zwei unabhängigen Software-Stacks behandelt werden sollten; wobei viel mehr Prozess-, Design-, Validierungs- und Abhängigkeitsmanagement in die Bearbeitungsoberfläche investiert wird. Dies ist so, dass wir die Software auf dem Rendering-Stack auf einen Barebones SSI-fähigen Apache-Dateiserver mit moorstandardmäßiger Webauthentifizierung und Zugriffskontrolle beschränken können, und optimistisch erwarten wir, dass der Inhalt öfter in einer Größenordnung angezeigt wird, als er bearbeitet wird.
 
 Folglich ist die Bearbeitungserfahrung etwas weniger schnell und viel weniger schmutzig, da wir den geänderten Inhalt zusammen mit dem Korpus abhängiger Seiten, *zur Bearbeitungszeit, nicht zur Renderzeit* validieren und erstellen.
 
-In Wirklichkeit sind die Kosten ein paar Sekunden mehr der Exposition gegenüber den Baumaschinen, bevor sie in der Lage sind, veröffentlichte Änderungen auf der Live-Website anzuzeigen.
-Und der Nutzen? Sie **werden nie sehen, dass Ihre Website erneut gehackt wird** durch Zero-Day-Schwachstellen im Software-Stack des Rendering-Webservers.
+In Wirklichkeit sind die Kosten ein paar Sekunden mehr der Exposition gegenüber den Baumaschinen, bevor sie in der Lage sind, festgeschriebene, veröffentlichte Änderungen auf der Live-Site anzuzeigen.
+
+Und der Nutzen? Sie werden **nie wieder sehen, dass Ihre Website durch Zero-Day- oder ungepatchte Schwachstellen im Software-Stack des Rendering-Webservers gehackt wird**.
 
 ### ACL-Verwaltung
 
