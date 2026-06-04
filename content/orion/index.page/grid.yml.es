@@ -89,7 +89,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "Compilaciones Simultáneas de 16-256 Direcciones"
   Orion: "&check;"
-- Feature: "Costo total &lt; $10000/año para empresas"
+- Feature: "Costo total &lt; $25000/año para empresas"
   Orion: "&check;"
 - Feature: "SLA integral del 99,99 %"
   Orion: "Empresa &amp; Instalación del servidor"
