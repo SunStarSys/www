@@ -169,9 +169,13 @@ Dans (noSQL) Orion, nous considérons l'édition et le rendu comme deux préoccu
 
 Par conséquent, l'expérience d'édition se produit sur une pile web indépendante impossible-à-accéder-sans-une-valid-login, est un peu moins rapide une fois les modifications téléchargées, et est beaucoup moins sale ; parce que nous validons et construisons le contenu modifié, avec le corpus de pages dépendantes, *au moment de l'édition, pas au moment du rendu*. Le build se produit dans une zone d'environnement restreint et renforcée séparément. Les journaux de construction sont publiés dans la session d'édition en temps réel et enregistrés dans le contrôle des versions pour la postérité et la responsabilité des entreprises.
 
-En réalité, le coût est de quelques secondes de plus d'exposition aux machines techniques et au processus de déploiement de la construction avant de pouvoir visualiser les changements publiés et engagés sur le site en direct.
+En réalité, le coût est de quelques secondes de plus d'exposition aux machines techniques de la construction et au processus de déploiement de fichiers statiques avant de pouvoir visualiser les modifications validées et publiées sur le site en direct.
 
 Et l'avantage ? Vous **ne verrez jamais votre site Web être piraté** par des vulnérabilités zero-day ou non corrigées dans la pile logicielle du serveur Web de rendu.
+
+Un truc cool, non ?
+
+Mais il repose de façon critique sur ce **compromis** qui est viable pour l'expérience du rédacteur en chef. Et sans l'application de notre brevet en attente [Gestion intelligente des dépendances de contenu&trade;](https://iconoclasts.blog/joe/dependencies) peut ne pas valoir le coût pour de nombreuses entreprises.
 
 ### Gestion des listes de contrôle d'accès
 

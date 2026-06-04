@@ -164,11 +164,15 @@ In a nutshell, the way every other wiki platform works is as an SQL [CRUD](https
 
 In (noSQL) Orion, we take editing and rendering as two separate concerns that should be handled by two independent software stacks; where much more process, design, validation, and dependency management is invested in the editing interface. This is so that we can limit the software on the rendering stack to be a barebones SSI-enabled Apache file server with bog-standard web authentication and access controls involved, and optimistically we expect that the content is viewed an order of magnitude more often than it is edited.
 
-Consequently, the editing experience happens on an impossible-to access-without-a-valid-login independent web stack, is a little less quick once the changes are uploaded, and is a lot less dirty; because we validate and build the modified content, along with the corpus of dependent pages, *at edit-time, not at render time*. The build happens in a separately hardened, sandboxed Solaris Zone. The build logs are published to the editing session in real time, and saved in version control for posterity and business accountability.
+Consequently, the editing experience happens on an impossible-to-access-without-a-valid-login independent web stack, is a little less quick once the changes are uploaded, and is a lot less dirty; because we validate and build the modified content, along with the corpus of dependent pages, *at edit-time, not at render time*. The build happens in a separately hardened, sandboxed Solaris Zone. The build logs are published to the editing session in real time, and saved in version control for posterity and business accountability.
 
-In reality, the cost is a few seconds more of exposure to the build's technical machinery and deployment process before being able to view committed, published changes on the live site.
+In reality, the cost is a few seconds more of exposure to the build's technical machinery and static file deployment process before being able to view committed, published changes on the live site.
 
 And the benefit? You will **never see your website get hacked again** through zero-day or unpatched vulnerabilities in the rendering webserver's software stack.
+
+Neat trick, ain't it?
+
+But it critically hinges on that **tradeoff** being viable to the editor experience. And without application of our patent-pending [Smart Content Dependency Management&trade;](https://iconoclasts.blog/joe/dependencies) framework, may not be worth the cost for many businesses.
 
 ### ACL Management
 

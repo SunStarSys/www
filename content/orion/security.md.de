@@ -169,9 +169,13 @@ In (noSQL) Orion nehmen wir das Bearbeiten und Rendering als zwei separate Beden
 
 Folglich erfolgt die Bearbeitung auf einem unzugänglich-ohne-valid-login unabhängigen Web-Stack, ist etwas weniger schnell, sobald die Änderungen hochgeladen werden, und ist viel weniger schmutzig; weil wir den geänderten Inhalt zusammen mit dem Korpus abhängiger Seiten validieren und erstellen, *zur Bearbeitungszeit, nicht zur Renderzeit*. Der Build erfolgt in einer separat gehärteten, sandboxed Solaris Zone. Die Build-Logs werden in Echtzeit in der Bearbeitungssession veröffentlicht und in der Versionskontrolle gespeichert, um die Nachwelt und die geschäftliche Verantwortung zu gewährleisten.
 
-In Wirklichkeit sind die Kosten ein paar Sekunden mehr der Exposition gegenüber dem technischen Maschinen- und Bereitstellungsprozess des Builds, bevor sie in der Lage sind, festgeschriebene, veröffentlichte Änderungen auf der Live-Site anzuzeigen.
+In Wirklichkeit sind die Kosten ein paar Sekunden mehr der Exposition gegenüber dem technischen Maschinen- und statischen Dateibereitstellungsprozess des Builds, bevor sie festgeschriebene, veröffentlichte Änderungen auf der Live-Site anzeigen können.
 
 Und der Nutzen? Sie werden **nie wieder sehen, dass Ihre Website durch Zero-Day- oder ungepatchte Schwachstellen im Software-Stack des Rendering-Webservers gehackt wird**.
+
+Toller Trick, nicht wahr?
+
+Aber es hängt entscheidend davon ab, dass **Tradeoff** für die Editor-Erfahrung tragfähig ist. Und ohne Anmeldung unserer Patentanmeldung [Smart Content-Abhängigkeitsmanagement&trade;](https://iconoclasts.blog/joe/dependencies) Die Kosten für viele Unternehmen sind vielleicht nicht wert.
 
 ### ACL-Verwaltung
 

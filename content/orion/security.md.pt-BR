@@ -167,11 +167,15 @@ Resumindo, a forma como cada outra plataforma wiki funciona é como um SQL [CRUD
 
 Em (noSQL) Orion, tomamos edição e renderização como duas preocupações separadas que devem ser tratadas por duas pilhas de software independentes; onde muito mais processo, design, validação e gerenciamento de dependência são investidos na interface de edição. Isso é para que possamos limitar o software na pilha de renderização para ser um servidor de arquivos Apache habilitado para SSI barebones com autenticação da web padrão e controles de acesso envolvidos, e otimisticamente esperamos que o conteúdo seja visualizado em uma ordem de magnitude com mais frequência do que é editado.
 
-Consequentemente, a experiência de edição acontece em uma pilha web independente de acesso impossível sem logins válidos, é um pouco menos rápida quando as alterações são carregadas e é muito menos suja; porque validamos e construímos o conteúdo modificado, juntamente com o corpus de páginas dependentes, *em tempo de edição, não no tempo de renderização*. O build acontece em uma Zona de Solaris sandbox protegida e protegida separadamente. Os logs de build são publicados na sessão de edição em tempo real e salvos no controle de versão para posteridade e responsabilidade comercial.
+Consequentemente, a experiência de edição acontece em uma pilha web independente de acesso impossível sem log-in válido, é um pouco menos rápida quando as alterações são carregadas e é muito menos suja; porque validamos e construímos o conteúdo modificado, juntamente com o corpus de páginas dependentes, *em tempo de edição, não no tempo de renderização*. O build acontece em uma Zona de Solaris sandbox protegida e protegida separadamente. Os logs de build são publicados na sessão de edição em tempo real e salvos no controle de versão para posteridade e responsabilidade comercial.
 
-Na realidade, o custo é de alguns segundos a mais de exposição à maquinaria técnica da construção e ao processo de implantação antes de ser capaz de ver mudanças comprometidas e publicadas no site ao vivo.
+Na realidade, o custo é de alguns segundos a mais de exposição ao maquinário técnico da construção e ao processo de implantação de arquivos estáticos antes de poder ver alterações confirmadas e publicadas no site ao vivo.
 
 E o benefício? Você **nunca verá seu site ser hackeado novamente** por meio de vulnerabilidades de dia zero ou sem patch na pilha de software do servidor web de renderização.
+
+Truque legal, não é?
+
+Mas depende criticamente que o **tradeoff** seja viável para a experiência do editor. E sem aplicação da nossa patente pendente [Gerenciamento de Dependência de Conteúdo Inteligente&trade;](https://iconoclasts.blog/joe/dependencies) pode não valer o custo para muitas empresas.
 
 ### Gerenciamento de ACL
 
