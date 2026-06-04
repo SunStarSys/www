@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=39316
+status: verified=39513
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -212,7 +212,7 @@ In addition, all clients have free, template-customizable or javascript-enabled 
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
