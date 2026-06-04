@@ -167,9 +167,9 @@ En un mot, la façon dont toutes les autres plates-formes wiki fonctionnent est 
 
 Dans (noSQL) Orion, nous considérons l'édition et le rendu comme deux préoccupations distinctes qui devraient être traitées par deux piles de logiciels indépendantes ; où beaucoup plus de processus, de conception, de validation et de gestion des dépendances est investi dans l'interface d'édition. Cela nous permet de limiter le logiciel de la pile de rendu à un serveur de fichiers Apache compatible SSI Barebones avec authentification Web standard et contrôles d'accès impliqués, et de manière optimale, nous prévoyons que le contenu est vu plus souvent qu'il n'est modifié.
 
-Par conséquent, l'expérience d'édition est un peu moins rapide, et beaucoup moins sale, parce que nous validons et construisons le contenu modifié, ainsi que le corpus de pages dépendantes, *au moment de l'édition, pas au moment du rendu*.
+Par conséquent, l'expérience d'édition se produit sur une pile web indépendante impossible-à-accéder-sans-une-valid-login, est un peu moins rapide une fois les modifications téléchargées, et est beaucoup moins sale ; parce que nous validons et construisons le contenu modifié, avec le corpus de pages dépendantes, *au moment de l'édition, pas au moment du rendu*. Le build se produit dans une zone d'environnement restreint et renforcée séparément. Les journaux de construction sont publiés dans la session d'édition en temps réel et enregistrés dans le contrôle des versions pour la postérité et la responsabilité des entreprises.
 
-En réalité, le coût est de quelques secondes de plus d'exposition à la machinerie de construction avant de pouvoir voir les changements engagés et publiés sur le site en direct.
+En réalité, le coût est de quelques secondes de plus d'exposition aux machines techniques et au processus de déploiement de la construction avant de pouvoir visualiser les changements publiés et engagés sur le site en direct.
 
 Et l'avantage ? Vous **ne verrez jamais votre site Web être piraté** par des vulnérabilités zero-day ou non corrigées dans la pile logicielle du serveur Web de rendu.
 

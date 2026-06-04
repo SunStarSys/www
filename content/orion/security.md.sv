@@ -167,9 +167,9 @@ I ett nötskal är hur alla andra wiki-plattformar fungerar som en SQL [CRUD](ht
 
 I (noSQL) Orion tar vi redigering och rendering som två separata problem som ska hanteras av två oberoende programvarustackar; där mycket mer process, design, validering och beroendehantering investeras i redigeringsgränssnittet. Detta är så att vi kan begränsa programvaran på renderingsstacken till att vara en barebones SSI-aktiverad Apache-filserver med bog-standard webbautentisering och åtkomstkontroller inblandade, och optimistiskt förväntar vi oss att innehållet ses en storleksordning oftare än den redigeras.
 
-Följaktligen är redigeringsupplevelsen lite mindre snabb och mycket mindre smutsig, eftersom vi validerar och bygger det modifierade innehållet, tillsammans med korpus av beroende sidor, *vid redigeringstid, inte vid renderingstid *.
+Följaktligen sker redigeringsupplevelsen på en omöjlig åtkomst-utan-en-valid-login oberoende webbstack, är lite mindre snabb när ändringarna har laddats upp, och är mycket mindre smutsig; eftersom vi validerar och bygger det modifierade innehållet, tillsammans med korpus av beroende sidor, *vid redigeringstid, inte vid renderingstid*. Byggnaden sker i en separat härdad, sandlådad Solaris Zone. Byggloggarna publiceras till redigeringssessionen i realtid och sparas i versionskontroll för eftervärlden och affärsansvar.
 
-I själva verket är kostnaden några sekunder mer av exponering för byggmaskineriet innan man kan se engagerade, publicerade förändringar på den levande webbplatsen.
+I själva verket är kostnaden några sekunder mer av exponering för byggets tekniska maskiner och driftsättningsprocess innan man kan se bekräftade, publicerade ändringar på den levande webbplatsen.
 
 Och förmånen? Du kommer **aldrig att se din webbplats bli hackad igen** genom nolldags- eller icke-korrigerade sårbarheter i den renderande webbserverns programvarustack.
 

@@ -167,9 +167,9 @@ En pocas palabras, la forma en que funciona cualquier otra plataforma wiki es co
 
 En (noSQL) Orion, tomamos la edición y la representación como dos preocupaciones separadas que deben ser manejadas por dos pilas de software independientes; donde se invierte mucho más en la interfaz de edición, diseño, validación y gestión de dependencias. Esto es para que podamos limitar el software en la pila de presentación a ser un servidor de archivos Apache habilitado para SSI con autenticación web estándar de bog y controles de acceso involucrados, y de manera optimista esperamos que el contenido se vea en un orden de magnitud más a menudo de lo que se edita.
 
-En consecuencia, la experiencia de edición es un poco menos rápida, y mucho menos sucia, porque validamos y creamos el contenido modificado, junto con el corpus de páginas dependientes, *en tiempo de edición, no en tiempo de render*.
+En consecuencia, la experiencia de edición se produce en una pila web independiente de imposible acceso sin un inicio de sesión válido, es un poco menos rápida una vez que se cargan los cambios, y es mucho menos sucia; porque validamos y construimos el contenido modificado, junto con el corpus de páginas dependientes, *en tiempo de edición, no en tiempo de presentación*. La creación se lleva a cabo en una zona sandboxed Solaris protegida por separado. Los registros de compilación se publican en la sesión de edición en tiempo real y se guardan en el control de versiones para la posteridad y la responsabilidad empresarial.
 
-En realidad, el costo es unos segundos más de exposición a la maquinaria de construcción antes de poder ver los cambios publicados y comprometidos en el sitio en vivo.
+En realidad, el costo es unos segundos más de exposición a la maquinaria técnica y al proceso de despliegue de la construcción antes de poder ver los cambios publicados y comprometidos en el sitio en vivo.
 
 ¿Y el beneficio? **Nunca volverás a ver tu sitio web hackeado** a través de vulnerabilidades de día cero o sin parches en la pila de software del servidor web de presentación.
 
