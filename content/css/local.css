@@ -34,7 +34,9 @@ hr {border-color: #A9BDBD !important; opacity: .5 !important }
 .accordion {overflow-x: hidden; background-color: #073642 }
 
 div.jumbotron a, #index a { color:#114056 }
+
 footer a { color: white }
+footer img {width:100px}
 
 #index { color:black }
 
