@@ -135,8 +135,8 @@ EOT
   }
 
   render $r, "enquiry_post.html",
-    content => "## Thank You!\n\nOur Sales Team will get back to you shortly.\n",
-    headers => { title => "Sales Enquiry" };
+    content => "## Thank You!\n\nOur Team will get back to you shortly.\n",
+    headers => { title => "Form Enquiry" };
 }
 
 render $r, "enquiry_get.html.en", nonce => rand;
