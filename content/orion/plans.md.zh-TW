@@ -7,9 +7,9 @@ title: Orion 計畫
 ---
 
 <div class="row">
-  <div class="col-lg-4">
-    <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-      <div class="card-header">專業計畫</div>
+  <div class="col-lg-4 plans">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+      <div class="card-header text-white">專業計畫</div>
         <div class="card-body">
 			適合獨立部落客
 <hr />
@@ -51,9 +51,9 @@ title: Orion 計畫
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-  <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-    <div class="card-header">業務計畫</div>
+<div class="col-lg-4 plans">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card-header text-white">業務計畫</div>
       <div class="card-body">
 			適合 SMB
 <hr />
@@ -95,9 +95,9 @@ $100 / 月 / 代管網站，比所有競爭對手定價模式高出 50%！
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-<div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-  <div class="card-header">企業計畫</div>
+<div class="col-lg-4 plans">
+<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card-header text-white">企業計畫</div>
     <div class="card-body">
 超過 1000 個座位的均一費率
 <hr />
@@ -224,6 +224,33 @@ $2500 / 每月
 
 <style type="text/css">
 h4 { font-size:14px }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes plans {
+  0% {
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+.plans {
+	animation: plans;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

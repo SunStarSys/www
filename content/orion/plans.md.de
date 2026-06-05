@@ -7,9 +7,9 @@ title: Orionpläne
 ---
 
 <div class="row">
-  <div class="col-lg-4">
-    <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-      <div class="card-header">Berufsplan</div>
+  <div class="col-lg-4 plans">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+      <div class="card-header text-white">Berufsplan</div>
         <div class="card-body">
 			Ideal für unabhängige Blogger
 <hr />
@@ -51,9 +51,9 @@ $25 / Monat / gehostete Website. Bester Marktwert für kleine Teams oder einzeln
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-  <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-    <div class="card-header">Geschäftsplan</div>
+<div class="col-lg-4 plans">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card-header text-white">Geschäftsplan</div>
       <div class="card-body">
 			Großartig für KMU
 <hr />
@@ -95,9 +95,9 @@ $100 / Monat / gehostete Website, ~50% Rabatt auf alle Wettbewerber Preismodelle
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-<div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-  <div class="card-header">Unternehmensplan</div>
+<div class="col-lg-4 plans">
+<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card-header text-white">Unternehmensplan</div>
     <div class="card-body">
 Pauschale für mehr als 1000 Plätze
 <hr />
@@ -224,6 +224,33 @@ Phoenix, AZ
 
 <style type="text/css">
 h4 { font-size:14px }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes plans {
+  0% {
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+.plans {
+	animation: plans;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

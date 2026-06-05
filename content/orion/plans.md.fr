@@ -7,9 +7,9 @@ title: Plans Orion
 ---
 
 <div class="row">
-  <div class="col-lg-4">
-    <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-      <div class="card-header">Plan professionnel</div>
+  <div class="col-lg-4 plans">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+      <div class="card-header text-white">Plan professionnel</div>
         <div class="card-body">
 			Idéal pour les blogueurs indépendants
 <hr />
@@ -51,9 +51,9 @@ $25 / mois / site hébergé. Meilleure valeur marchande pour les petites équipe
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-  <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-    <div class="card-header">Plan commercial</div>
+<div class="col-lg-4 plans">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card-header text-white">Plan commercial</div>
       <div class="card-body">
 			Parfait pour les PME
 <hr />
@@ -95,9 +95,9 @@ $100 / mois / site hébergé, ~50% sur tous les modèles de tarification concurr
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-<div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-  <div class="card-header">Plan d'entreprise</div>
+<div class="col-lg-4 plans">
+<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card-header text-white">Plan d'entreprise</div>
     <div class="card-body">
 Tarif forfaitaire pour plus de 1000 sièges
 <hr />
@@ -224,6 +224,33 @@ $2500 / mois
 
 <style type="text/css">
 h4 { font-size:14px }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes plans {
+  0% {
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+.plans {
+	animation: plans;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

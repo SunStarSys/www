@@ -7,9 +7,9 @@ title: Планы Ориона
 ---
 
 <div class="row">
-  <div class="col-lg-4">
-    <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-      <div class="card-header">Профессиональный план</div>
+  <div class="col-lg-4 plans">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+      <div class="card-header text-white">Профессиональный план</div>
         <div class="card-body">
 			Идеально подходит для независимых блоггеров
 <hr />
@@ -51,9 +51,9 @@ $25 в месяц / размещенный сайт. Лучшая рыночна
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-  <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-    <div class="card-header">Бизнес-план</div>
+<div class="col-lg-4 plans">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card-header text-white">Бизнес-план</div>
       <div class="card-body">
 			Отлично подходит для малого и среднего бизнеса
 <hr />
@@ -95,9 +95,9 @@ $100 / месяц / размещенный сайт, ~50% от всех моде
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-<div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-  <div class="card-header">План предприятия</div>
+<div class="col-lg-4 plans">
+<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card-header text-white">План предприятия</div>
     <div class="card-body">
 Фиксированная ставка для более чем 1000 мест
 <hr />
@@ -224,6 +224,33 @@ $2500 / месяц
 
 <style type="text/css">
 h4 { font-size:14px }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes plans {
+  0% {
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+.plans {
+	animation: plans;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

@@ -7,9 +7,9 @@ title: Orionplaner
 ---
 
 <div class="row">
-  <div class="col-lg-4">
-    <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-      <div class="card-header">Vårdpersonalplan</div>
+  <div class="col-lg-4 plans">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+      <div class="card-header text-white">Vårdpersonalplan</div>
         <div class="card-body">
 			Perfekt för oberoende bloggare
 <hr />
@@ -51,9 +51,9 @@ $ 25 / månad / värd webbplats. Bästa marknadsvärdet för små team eller ens
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-  <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-    <div class="card-header">Affärsplan</div>
+<div class="col-lg-4 plans">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card-header text-white">Affärsplan</div>
       <div class="card-body">
 			Bra för SMB
 <hr />
@@ -95,9 +95,9 @@ $ 100 / månad / värd webbplats, ~ 50 % rabatt på alla konkurrent prismodeller
 </div>
 </div>
 </div>
-<div class="col-lg-4">
-<div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-  <div class="card-header">Företagsplan</div>
+<div class="col-lg-4 plans">
+<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card-header text-white">Företagsplan</div>
     <div class="card-body">
 Fast pris för fler än 1000 platser
 <hr />
@@ -224,6 +224,33 @@ $2500/månad
 
 <style type="text/css">
 h4 { font-size:14px }
+@-webkit-keyframes FADEY {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes plans {
+  0% {
+	top: 1000px;
+	position:relative;
+  }
+
+100% {top: 5px;position:relative}
+
+}
+
+.plans {
+	animation: plans;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
 </style>
 
 <!-- $Date$ $Author$ $Revision$ -->

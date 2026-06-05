@@ -226,6 +226,13 @@ h4 { font-size:14px }
   100% { opacity: 1; }
 }
 
+.theme-showcase {
+	-webkit-animation-name: FADEY;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+}
+
 @keyframes plans {
   0% {
 	top: 1000px;
