@@ -164,11 +164,11 @@ In a nutshell, the way every other wiki platform works is as an SQL [CRUD](https
 
 In (noSQL) Orion, we take editing and rendering as two separate concerns that should be handled by two independent software stacks; where much more process, design, validation, and dependency management is invested in the editing interface. This is so that we can limit the software on the rendering stack to be a barebones SSI-enabled Apache file server with bog-standard web authentication and access controls involved, and optimistically we expect that the content is viewed an order of magnitude more often than it is edited.
 
-Consequently, the editing experience happens on an impossible-to-access-without-a-valid-login independent web stack, is a little less quick once the changes are uploaded, and is a lot less dirty; because we validate and build the modified content, along with the corpus of dependent pages, *at edit-time, not at render time*. The build happens in a separately hardened, sandboxed Solaris Zone. The build logs are published to the editing session in real time, and saved in version control for posterity and business accountability.
+Consequently, the editing experience happens on an impossible-to-access-without-a-valid-login independent web stack, is a little less quick once the changes are uploaded, and is a lot less dirty; because we validate and build the modified content, along with the entire corpus of dependent pages, *at edit-time, not at render time*. The build happens in a separately hardened, sandboxed Solaris Zone. The build logs are published to the editing session in real time, and saved in version control for posterity and business accountability.
 
-In reality, the cost is a few seconds more of exposure to the build's technical machinery and static file deployment process before being able to view committed, published changes on the live site.
+In reality, the cost is a few seconds more of exposure to the build's technical machinery and static file deployment process before being able to view committed, published changes on the live production website.
 
-And the benefit? You will **never see your website get hacked again** through zero-day or unpatched vulnerabilities in the rendering webserver's software stack.
+And the benefit? You will **never see your live website get hacked again** through zero-day or unpatched vulnerabilities in the rendering webserver's software stack. Moreover, the editing site is **invulnerable to anonymous hacking efforts**, so you are in a much better security-architectural position with us than with any other wiki vendor on Earth, regardless of the additional protections implemented in the remainder of this document.
 
 Neat trick, ain't it?
 
