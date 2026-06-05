@@ -6,7 +6,7 @@ Status: published
 <div class="row">
   <div class="col-lg-4">
     <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
-      <div class="card-header text-white">Professional Plan</div>
+      <div class="card-header text-white plans">Professional Plan</div>
         <div class="card-body">
 			Ideal for Independent Bloggers
 <hr />
@@ -222,5 +222,14 @@ $2500 / month
 <style type="text/css">
 h4 { font-size:14px }
 </style>
+
+<style type="text/css">
+.plans {
+	animation: news;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+</style>
+
 
 <!-- $Date$ $Author$ $Revision$ -->
