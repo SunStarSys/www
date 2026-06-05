@@ -96,7 +96,6 @@ if ($r->method eq "POST") {
 
   my %vars = %$body;
   my $content = delete $vars{content};
-  defined $content or return;
   s/[\r\n]//g for values %vars;
 
   my ($cn, $srs_sender) = @vars{qw/name email/};
