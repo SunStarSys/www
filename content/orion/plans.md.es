@@ -8,7 +8,7 @@ title: Planes de Orion
 
 <div class="row">
   <div class="col-lg-4">
-    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;min-height:1200px">
+    <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
       <div class="card-header">Plan profesional</div>
         <div class="card-body">
 			Ideal para bloggers independientes
@@ -52,7 +52,7 @@ $25/mes/sitio alojado. Mejor valor de mercado para equipos pequeños o profesion
 </div>
 </div>
 <div class="col-lg-4">
-  <div class="card text-white bg-success mb-3" style="max-width: 20rem;min-height:1200px">
+  <div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
     <div class="card-header">Plan de negocio</div>
       <div class="card-body">
 			Ideal para pymes
@@ -96,7 +96,7 @@ $100 / mes / sitio alojado, ~50% de descuento en todos los modelos de precios de
 </div>
 </div>
 <div class="col-lg-4">
-<div class="card text-white bg-info mb-3" style="max-width: 20rem;min-height:1200px">
+<div class="card text-white mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
   <div class="card-header">Plan de empresa</div>
     <div class="card-body">
 Tarifa plana para más de 1000 asientos
