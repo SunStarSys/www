@@ -60,7 +60,7 @@ var IN_GLOBAL_SCOPE=true;
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
 	  height: "400px",{% if path|starts_with:"/orion" %}{% else %}
       width: "400px",{% endif %}
-      focus: false,
+      autoFocus: false,
       name: "content",
           mode: "gfm+django+stex",
           path : "/editor.md/lib/",
