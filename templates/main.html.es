@@ -38,7 +38,7 @@
     {% endblock %}
 </head>
 
-<body>
+<body role="document" id="top">
 <header style="border-bottom:solid #A9BDBD 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
 <a class="navbar-brand" href="/index.html{{lang}}" id="logo">&nbsp;</a>
@@ -62,28 +62,28 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           <li class="nav-item{% if path|starts_with:"/index.md" %}
-            activo
+            active
             {% endif %}"><a class="nav-link text" href="/index.html{{lang}}">Inicio</a></li>
           <li class="nav-item{% if path|starts_with:"/about.md" %}
-            activo
+            active
             {% endif %}"><a class="nav-link text" href="/about.html{{lang}}">Acerca de</a></li>
 			<li class="nav-item{% if path|starts_with:"/contact.md" %}
-             activo
+             active
              {% endif %}"><a class="nav-link" href="/contact.html{{lang}}">Contacto</a></li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="products" data-bs-toggle="dropdown" role="button">Productos... <span class="caret"></span></a>
 
 <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
-			aria-labelledby="productos">
+			aria-labelledby="products">
               <li class="dropdown-item"><a class="nav-link text-dark" href="/orion/index.html{{ lang }}">Orión&trade; Plataforma Wiki de Jamstack</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark"
-                href="/orion/plans.html{{ lang }}">Planes de precios de pedidos</a></li>
+                href="/orion/plans.html{{ lang }}">Planes de precios de Orion</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
             <a href="#" class="nav-link dropdown-toggle" id="more" role="button" data-bs-toggle="dropdown">Más... <span class="caret"></span></a>
             <ul class="dropdown-menu me-auto mb-2 mb-lg-0 {% ifequal lang ".he" %}dropdown-menu-left right{% else %}{% ifequal lang ".ar" %}dropdown-menu-left right{% endifequal %}{% endifequal %}" role="menu"
-			aria-labelledby="más">
+			aria-labelledby="more">
               <li class="dropdown-item">
                 <a class="nav-link text-dark" href="https://github.com/SunStarSys/www">Origen de sitio</a>
               </li>
@@ -95,8 +95,8 @@
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">Francés</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Ruso</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Chino</a></li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Coreano</a></li>
-             <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Japonés</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Coreano</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Japonés</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebreo</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Árabe</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Sueco</a></li>
@@ -108,16 +108,16 @@
             </ul>
           </li>
           <li class="nav-item{% if path|starts_with:"/powered-by.md" %}
-            activo
+            active
             {% endif %}"><a class="nav-link" href="/powered-by.html{{lang}}">Desarrollado por...</a>
           </li>
         </ul>
 	</div>
-    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method=>
+    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="GET">
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="markdown_search" value="1" />
       <input class="form-control me-2" type="text" name="regex"
-        placeholder="Búsqueda recursiva PCRE" valor="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
+        placeholder="PCRE Recursive Search" value="{{ regex }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-search"></i></button>
 	</form>
   </div>
 </header>
@@ -147,13 +147,18 @@
   <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer>
-
-<!--  <script src="/editor.md/js/raphael.min.js"></script>
-  <script src="/editor.md/js/underscore.min.js"></script>
-  <script src="/editor.md/js/flowchart.min.js"></script>
-  <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
-  <!-- -->
+<footer>
+<hr>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">Ir al principio</a>&nbsp;|&nbsp;<a href="/about">Acerca de</a>&nbsp;|&nbsp;<a href="/contact">Contacto</a>
+<form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Mailing List" />
+      <input class="form-control me-2" type="email" name="email"
+        placeholder="Orion Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">Suscribirse</button>
+</form>
+{% block footer %}{{footer|safe}}{% endblock footer %}
+</footer>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
@@ -165,6 +170,7 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
 <script blocking="render" async type="text/javascript">
+    document.cookie = "nonce={{nonce}} path=/;";
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
