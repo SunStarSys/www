@@ -1,5 +1,6 @@
 #!/usr/local/bin/perl -T -I /x1/cms/build/lib
 use APR::Error;
+use APR::Table;
 use Apache2::RequestRec;
 use Apache2::RequestUtil;
 use Apache2::RequestIO;
@@ -18,13 +19,14 @@ use Apache2::Const -compile => qw/HTTP_OK OK HTTP_BAD_REQUEST/;
 
 my Apache2::RequestRec $r = shift;
 
-my $DOMAIN = q/sunstarsys.com/;
-our $date   = gmtime;
-our ($host) = map /^([\w.-]+)$/, $r->headers_in->get("Host");
+my $DOMAIN                = q/sunstarsys.com/;
+our $date                 = gmtime;
+my APR::Table $hdr_in     = $r->headers_in;
+our ($host, $referer)     = map $hdr_in->get($_) =~ /^(\S+)$/, qw/Host Referer/;
 
-our $to = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
-our $validator = $r->dir_config->get("validator") // "orion";
-our $lang = get_client_lang($r);
+our $to                   = $r->dir_config->get("to") // q/sales@sunstarsys.com/;
+our $validator            = $r->dir_config->get("validator") // "orion";
+our $lang                 = get_client_lang($r);
 
 our %LANG = (
   ".de" => "de_DE",
@@ -125,6 +127,7 @@ Content-Type: text/plain; charset="utf-8"
 $vars{content}
 
 ---
+Referer: $referer
 
 EOT
     while (my ($k, $v) = each %vars) {
