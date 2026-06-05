@@ -149,7 +149,7 @@
 
 <footer>
 <hr>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">Go To Top</a>&nsbp;|&nbsp;<a href="/about">About</a>&nbsp;|&nbsp;<a href="/contact">Contact</a>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">Go To Top</a>&nbsp;|&nbsp;<a href="/about">About</a>&nbsp;|&nbsp;<a href="/contact">Contact</a>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion" />
