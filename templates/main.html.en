@@ -147,7 +147,7 @@
   <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer>
+<footer class="container">
 {% block footer %}{{footer|safe}}{% endblock footer %}
 <hr>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
