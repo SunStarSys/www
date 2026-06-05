@@ -38,7 +38,7 @@
     {% endblock %}
 </head>
 
-<body>
+<body role="document" id="top">
 <header style="border-bottom:solid #A9BDBD 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
 <a class="navbar-brand" href="/index.html{{lang}}" id="logo">&nbsp;</a>
@@ -148,6 +148,8 @@
   {% endblock %}
 
 <footer>
+<hr>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">Go To Top</a>&nsbp;|&nbsp;<a href="/about">About</a>&nbsp;|&nbsp;<a href="/contact">Contact</a>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion" />
@@ -156,12 +158,6 @@
 </form>
 {% block footer %}{{footer|safe}}{% endblock footer %}
 </footer>
-
-<!--  <script src="/editor.md/js/raphael.min.js"></script>
-  <script src="/editor.md/js/underscore.min.js"></script>
-  <script src="/editor.md/js/flowchart.min.js"></script>
-  <script src="/editor.md/js/jquery.flowchart.min.js"></script> -->
-  <!-- -->
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
   <script src="/editor.md/js/d3-graphviz.js"></script>
