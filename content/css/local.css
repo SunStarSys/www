@@ -12,6 +12,8 @@
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
+code {color: #d33682}
+
 div.jumbotron {
 	color: black;
 }
