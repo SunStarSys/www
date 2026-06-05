@@ -1,34 +1,34 @@
 ---
 categories: ~
 keywords: wiki,kunskap, bloggar,orion,jamstack,perl,f/oss
-status: verifierad=40518
+status: skiss
 title: Hem
 ---
 
 <div class="lg right">
-	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:black !important;">
 		<div class="card-header">Nyheter</div>
-        <div class="card-body">
+<div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Gratis bloggar!</a></h2>
 
-<br>
+<hr>
 
 <h2 class="card-title"><span class="badge bg-success">Nytt</span> SunStar Orion för system&trade; <a href="{{facts.releases.orion.url}}">Statisk webbplatsgenerator</a> {{facts.releases.orion.tag}} frisläppt &mdash; Nu med stöd för LAUNCH_APACHE2 och CSV/PDL!
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systems GitLab CI Linter-teknik {{facts.releases.linter.tag}} nu tillgänglig på <a href="https://hub.docker.com/r/schaefj/linter/">Dockningsnav</a> och <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">
 <a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> Släppt till CPAN!
 </h2>
 
-<br>
+<hr>
 
 <h2>
 
@@ -36,11 +36,11 @@ title: Hem
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar System <a href="{{facts.releases.orthrus.url}}">brunst {{facts.releases.orthrus.tag}}</a> Släppt!</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systemtyper {{facts.releases.pty.tag}} Släppt!</h2>
 

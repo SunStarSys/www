@@ -1,34 +1,34 @@
 ---
 categories: ~
 keywords: 위키,지식,블로그,오리온,잼스택,perl,f/oss
-status: 확인=40518
+status: 초안
 title: 홈 페이지
 ---
 
 <div class="lg right">
-	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:black !important;">
 		<div class="card-header">뉴스</div>
-        <div class="card-body">
+<div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">무료 블로그!</a></h2>
 
-<br>
+<hr>
 
 <h2 class="card-title"><span class="badge bg-success">신규</span> SunStar 시스템스 오리온&trade; <a href="{{facts.releases.orion.url}}">정적 사이트 생성기</a> {{facts.releases.orion.tag}} 해제됨 &mdash; 이제 LAUNCH_APACHE2 및 CSV / PDL 지원!
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systems의 GitLab CI Linter 기술 {{facts.releases.linter.tag}} 현재 사용 가능 위치 <a href="https://hub.docker.com/r/schaefj/linter/">도커 허브</a> 및 <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">
 <a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> CPAN 출시!
 </h2>
 
-<br>
+<hr>
 
 <h2>
 
@@ -36,11 +36,11 @@ title: 홈 페이지
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar 시스템 <a href="{{facts.releases.orthrus.url}}">오르가즘 {{facts.releases.orthrus.tag}}</a> 공개!</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar 시스템 pty {{facts.releases.pty.tag}} 공개!</h2>
 

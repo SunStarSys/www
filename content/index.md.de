@@ -1,34 +1,34 @@
 ---
 categories: ~
 keywords: wiki,wissen,blogs,orion,jamstack,perl,f/oss
-status: überprüft=40518
+status: Entwurf
 title: Startseite
 ---
 
 <div class="lg right">
-	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:black !important;">
 		<div class="card-header">Nachrichten</div>
-        <div class="card-body">
+<div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Kostenlose Blogs!</a></h2>
 
-<br>
+<hr>
 
 <h2 class="card-title"><span class="badge bg-success">Neu</span> SunStar System-Orion&trade; <a href="{{facts.releases.orion.url}}">Statischer Standortgenerator</a> {{facts.releases.orion.tag}} freigegeben &mdash; jetzt mit LAUNCH_APACHE2 und CSV/PDL Unterstützung!
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systems' GitLab CI Linter Technologie {{facts.releases.linter.tag}} jetzt verfügbar unter <a href="https://hub.docker.com/r/schaefj/linter/">Docker-Hub</a> und <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">
 <a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> Veröffentlicht in CPAN!
 </h2>
 
-<br>
+<hr>
 
 <h2>
 
@@ -36,11 +36,11 @@ title: Startseite
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systeme <a href="{{facts.releases.orthrus.url}}">Atrus {{facts.releases.orthrus.tag}}</a> freigegeben!</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systeme pty {{facts.releases.pty.tag}} freigegeben!</h2>
 

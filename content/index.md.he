@@ -1,34 +1,34 @@
 ---
 categories: ~
 keywords: ויקי,ידע,בלוגים,אוריון,jamstack,perl,f/oss
-status: אומתו 40518
+status: טיוטה
 title: בית
 ---
 
 <div class="lg right">
-	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:black !important;">
 		<div class="card-header">חדשות</div>
-        <div class="card-body">
+<div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">בלוגים חינם!</a></h2>
 
-<br>
+<hr>
 
 <h2 class="card-title"><span class="badge bg-success">חדש</span> SunStar אוריון מערכות&trade; <a href="{{facts.releases.orion.url}}">מחולל אתר סטטי</a> {{facts.releases.orion.tag}} שוחרר &mdash; עכשיו עם LAUNCH_APACHE2 ו CSV / PDL תמיכה!
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar מערכות' GitLab CI Linter טכנולוגיה {{facts.releases.linter.tag}} זמין כעת ב- <a href="https://hub.docker.com/r/schaefj/linter/">רכזת דוקר</a> וגם <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">
 <a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> שוחרר ל-CPAN!
 </h2>
 
-<br>
+<hr>
 
 <h2>
 
@@ -36,11 +36,11 @@ title: בית
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar מערכות <a href="{{facts.releases.orthrus.url}}">אורתרוס {{facts.releases.orthrus.tag}}</a> שוחרר!</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar שטח מערכות {{facts.releases.pty.tag}} שוחרר!</h2>
 

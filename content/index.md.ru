@@ -1,34 +1,34 @@
 ---
 categories: ~
 keywords: wiki,знание,блоги,orion,jamstack,perl,f/oss
-status: проверено=40518
+status: черновик
 title: Главная
 ---
 
 <div class="lg right">
-	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:#A9BDBD !important;">
+	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:black !important;">
 		<div class="card-header">Новости</div>
-        <div class="card-body">
+<div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Бесплатные блоги!</a></h2>
 
-<br>
+<hr>
 
 <h2 class="card-title"><span class="badge bg-success">Новый</span> SunStar Орион систем&trade; <a href="{{facts.releases.orion.url}}">Генератор статических сайтов</a> {{facts.releases.orion.tag}} выпущено &mdash; теперь с поддержкой LAUNCH_APACHE2 и CSV/PDL!
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Технология CI Linter для систем GitLab {{facts.releases.linter.tag}} сейчас доступно в <a href="https://hub.docker.com/r/schaefj/linter/">Центр Docker</a> и <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">
 <a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> Выпущен в CPAN!
 </h2>
 
-<br>
+<hr>
 
 <h2>
 
@@ -36,11 +36,11 @@ title: Главная
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Системы <a href="{{facts.releases.orthrus.url}}">орфрус {{facts.releases.orthrus.tag}}</a> освобожден!</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Системы pty {{facts.releases.pty.tag}} освобожден!</h2>
 
