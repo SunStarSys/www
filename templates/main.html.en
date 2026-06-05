@@ -95,8 +95,8 @@
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.fr">French</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ru">Russian</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.zh-TW">Chinese</a></li>
-            <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Korean</a></li>
-             <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Japanese</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ko">Korean</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ja">Japanese</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebrew</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Arabic</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Swedish</a></li>
@@ -147,7 +147,15 @@
   <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-  <footer>{% block footer %}{{footer|safe}}{% endblock footer %}</footer>
+<footer>
+<form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion" />
+      <input class="form-control me-2" type="email" name="email"
+        placeholder="Subscribe to Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">Subscribe</button>
+</form>
+{% block footer %}{{footer|safe}}{% endblock footer %}
+</footer>
 
 <!--  <script src="/editor.md/js/raphael.min.js"></script>
   <script src="/editor.md/js/underscore.min.js"></script>
