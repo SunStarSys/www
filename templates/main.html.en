@@ -113,7 +113,7 @@
           </li>
         </ul>
 	</div>
-    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method=>
+    <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="GET">
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="markdown_search" value="1" />
       <input class="form-control me-2" type="text" name="regex"
@@ -151,6 +151,7 @@
 <hr>
 <a id="go-to-top" onClick="$('base').remove()" href="#top">Go To Top</a>&nbsp;|&nbsp;<a href="/about">About</a>&nbsp;|&nbsp;<a href="/contact">Contact</a>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion" />
       <input class="form-control me-2" type="email" name="email"
@@ -169,6 +170,7 @@
   <script defer src="/editor.md/lib/copy-tex.js"></script>
 
   <script blocking="render" async type="text/javascript">
+    document.cookie = "nonce={{nonce}} path=/;";
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
       return new bootstrap.Tooltip(tooltipTriggerEl)
