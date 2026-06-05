@@ -5,27 +5,27 @@ status: draft
 <div class="lg right">
 	<div class="card border-success" style="max-width:25rem;background-color:transparent;color:black;border-color:black !important;">
 		<div class="card-header">News</div>
-        <div class="card-body">
+<div class="card-body">
 <h2 class="card-title"><a href="https://www.iconoclasts.blog/">Free Blogs!</a></h2>
 
-<br>
+<hr>
 
 <h2 class="card-title"><span class="badge bg-success">New</span> SunStar Systems' Orion&trade; <a href="{{facts.releases.orion.url}}">Static Site Generator</a> {{facts.releases.orion.tag}} released &mdash; now with LAUNCH_APACHE2 and CSV/PDL support!
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systems' GitLab CI Linter Technology {{facts.releases.linter.tag}} now available at <a href="https://hub.docker.com/r/schaefj/linter/">Docker Hub</a> and <a href="{{facts.releases.linter.url}}"
 >GitHub</a>.</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">
 <a href="{{facts.releases.sealed.url}}">sealed.pm {{facts.releases.sealed.tag}}</a> released to CPAN!
 </h2>
 
-<br>
+<hr>
 
 <h2>
 
@@ -33,11 +33,11 @@ status: draft
 
 </h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systems <a href="{{facts.releases.orthrus.url}}">orthrus {{facts.releases.orthrus.tag}}</a> released!</h2>
 
-<br>
+<hr>
 
 <h2 class="card-title">SunStar Systems pty {{facts.releases.pty.tag}} released!</h2>
 
