@@ -149,7 +149,8 @@
 
 <footer>
 <hr>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">맨 위로 이동</a>&nbsp;|&nbsp;<a href="/about">정보</a>&nbsp;|&nbsp;<a href="/contact">담당자</a>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">맨 위로 이동</a>&nbsp;|&nbsp;<a href="/about">정보</a>&nbsp;|&nbsp;<a href="/contact">담당자</a><center><a href="/">&copy;2026년&nbsp;<img src="/images/sunstarlinear.png"</a>&nsbp;모든 권리 보유.</center>
+
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
