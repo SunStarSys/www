@@ -149,7 +149,7 @@
 
 <footer>
 <hr>
-	<a id="go-to-top" onClick="$('base').remove()" href="#top">Ir al principio</a>&nbsp;|&nbsp;<a href="/about">Acerca de</a>&nbsp;|&nbsp;<a href="/contact">Contacto</a><center><a href="/">&copy;2026&nbsp;<img src="/images/sunstarlinear.png">&nsbp;Todos los derechos reservados.</a></center>
+	<a id="go-to-top" onClick="$('base').remove()" href="#top">Ir al principio</a>&nbsp;|&nbsp;<a href="/about">Acerca de</a>&nbsp;|&nbsp;<a href="/contact">Contacto</a><center><a href="/">&copy;2026&nbsp;<img src="/images/sunstarlinear.png">&nbsp;Todos los derechos reservados.</a></center>
 
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
       <input type="hidden" name="nonce" value="{{ nonce }}" />
