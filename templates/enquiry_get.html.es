@@ -10,8 +10,8 @@
 
 <label for="username">Nombre de usuario preferido</label>
   <input pattern="^\w+$" name="username" id="username" class="form-control" required />
->
-  <label for="site">Sitio web de destino</label>
+
+<label for="site">Sitio web de destino</label>
   <input name="site" id="site" type="url" class="form-control" />
 
 <input type="checkbox" id="confluence" name="confluence" checked /> &nbsp; <label for="confluence">¿Se requiere migración de confianza?</label>
@@ -26,8 +26,13 @@
 <label for="subject">Asunto</label>
   <input name="subject" id="subject" class="form-control" value="Orion " pattern="Orion.*" required />
 
+<input name="demo" id="demo" type="checkbox" /> &nbsp; <label for="demo">Programar una demostración</label>
+
 <input type="hidden" name="lang" value="{{ lang }}" />
-  <button name="submit" class="btn btn-outline-secondary" value=1 >Enviar</button>
+
+<input type="hidden" name="nonce" value="{{ nonce }}" />
+
+<button name="submit" class="btn btn-outline-secondary" value=1 >Enviar</button>
 
 <br><br>
 
@@ -53,8 +58,8 @@ var IN_GLOBAL_SCOPE=true;
       editor_content = editormd("editor-content", {
           toolbarIcons: icon_class,
           watch: {% ifequal path|dirname "/orion" %}true,{% else %}false,{% endifequal %}
-	  height: "400px",
-      width: "100%",
+	  height: "400px",{% if path|starts_with:"/orion" %}{% else %}
+      width: "400px",{% endif %}
 	  name: "content",
           mode: "gfm+django+stex",
           path : "/editor.md/lib/",
