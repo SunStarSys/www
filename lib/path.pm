@@ -45,7 +45,7 @@ our @patterns = (
   [qr!\.ya?ml\b[^/]*$!, yml2ext => { }],
 
   [qr!/(api|clients)/.*\.md(?:text)?!, memoize => {
-    view            => [qw/set_template_from_capture snippet titleize_links single_narrative/],
+    view            => [qw/set_template_from_capture snippet offline titleize_links single_narrative/],
     facts           => $facts,
     markdown_search => 1, # search markdown instead of built html
     permalink       => 1,
