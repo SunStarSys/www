@@ -17,6 +17,10 @@ title: Contáctenos
 
 <img src="/images/autumn-and-i.jpg" width="200px"> &nbsp; [Joe Schaefer, Ph.D. &lt;joe@sunstarsys.com&gt;](mailto://Joe%20Schaefer,%20Ph.D.%20&lt;joe@sunstarsys.com&gt;) &mdash; Presidente y propietario
 
+### Twitter:
+
+[:fa-twitter: Sunstarsys](https://x.com/sunstarsys)
+
 ### Teléfono:
 
 - [+1 ‪(305) 859-1630‬](tel://1.305.859.1630/)
