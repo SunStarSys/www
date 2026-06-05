@@ -156,7 +156,7 @@
       <input class="form-control me-2" type="email" name="email"
         placeholder="Orion Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">Prenumerera</button>
 </form>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">Gå till början</a>&nbsp;|&nbsp;<a href="/about">Om</a>&nbsp;|&nbsp;<a href="/contact">Kontakt</a>&nbsp;|&nbsp;<a href="/">&copy;2026&nbsp;<img src="/images/sunstarlinear.png">&nbsp;Med ensamrätt.</a>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">Gå till början</a>&nbsp;|&nbsp;<a href="/about">Om</a>&nbsp;|&nbsp;<a href="/contact">Kontakt</a>&nbsp;|&nbsp;&copy;2026&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;Alla&nbsp;rättigheter&nbsp;reserverad.
 {% block footer %}{{footer|safe}}{% endblock footer %}
 </footer>
   <script src="/editor.md/js/d3.min.js"></script>

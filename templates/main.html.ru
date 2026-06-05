@@ -156,7 +156,7 @@
       <input class="form-control me-2" type="email" name="email"
         placeholder="Orion Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger">Подписаться</button>
 </form>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">Перейти в начало</a>&nbsp;|&nbsp;<a href="/about">О нас</a>&nbsp;|&nbsp;<a href="/contact">Контакт</a>&nbsp;|&nbsp;<a href="/">&copy;2026 год&nbsp;<img src="/images/sunstarlinear.png">&nbsp;Все права защищены.</a>
+<a id="go-to-top" onClick="$('base').remove()" href="#top">Перейти в начало</a>&nbsp;|&nbsp;<a href="/about">О нас</a>&nbsp;|&nbsp;<a href="/contact">Контакт</a>&nbsp;|&nbsp;&copy;2026 год&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;Все&nbsp;права&nbsp;Зарезервировано.
 {% block footer %}{{footer|safe}}{% endblock footer %}
 </footer>
   <script src="/editor.md/js/d3.min.js"></script>
