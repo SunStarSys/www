@@ -152,6 +152,7 @@
 {% block footer %}{{footer|safe}}{% endblock footer %}
 <hr>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Mailing List" />
