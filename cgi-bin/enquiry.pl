@@ -137,7 +137,9 @@ EOT
     print $sendmail $msg;
     close $sendmail or die "sendmail failed: " . ($! || $? >> 8) . "\n";
   }
-
+  else {
+    warn "$validator:NONCE Validation Failed!";
+  }
   render $r, "enquiry_post.html",
     content => "## Thank You!\n\nOur Team will get back to you shortly.\n",
     headers => { title => "Form Enquiry" };
