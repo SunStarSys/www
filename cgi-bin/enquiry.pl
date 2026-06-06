@@ -96,6 +96,8 @@ if ($r->method eq "POST") {
   my APR::Request::Param::Table $body = $apreq->body;
   my APR::Request::Cookie::Table $jar = $apreq->jar;
 
+  no warnings 'uninitialized';
+
   my %vars = %$body;
   my $content = delete $vars{content};
   s/[\r\n]//g for values %vars;
