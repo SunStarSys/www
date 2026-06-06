@@ -7,10 +7,10 @@
   },
   "lexicon": {
     "counts": {
-      "content": "154",
+      "content": "160",
       "path": "1",
       "status": "1",
-      "title": "7"
+      "title": "8"
     },
     "format": "3",
     "index_counts": {
@@ -37,14 +37,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_6d"
+    "name": "seg_6e"
   },
   "sort": {
     "counts": {
-      "path": "1"
+      "path": "2"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "1"
+    },
     "ord_widths": {
       "path": "1"
     }
