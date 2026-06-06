@@ -109,12 +109,13 @@ if ($r->method eq "POST") {
     }
   }
 
-  if ($vars{subject} =~ /$validator/i and defined $jar->get("nonce") and $jar->get("nonce") eq $body->get("nonce")) {
+  if ($vars{subject} =~ /$validator/i and ((defined $jar->get("nonce") and $jar->get("nonce") eq $body->get("nonce"))
+  or (defined $jar->get("nonce2") and $jar->get("nonce2") eq $body->get("nonce")))) {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
     $srs_sender =~ /^(.*)$/ and length $1 or die "BAD EMAIL: $vars{email}";
     %ENV = ();
 
-    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -f/, "$1\@$DOMAIN";
+    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
 
     my $msg =<<EOT;
 To: $to
