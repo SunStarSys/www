@@ -114,6 +114,7 @@
         </ul>
 	</div>
     <form id="search" action="/dynamic/search{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="GET">
+      <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="markdown_search" value="1" />
       <input class="form-control me-2" type="text" name="regex"
@@ -147,7 +148,7 @@
   <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
 
-<footer>
+<footer class="container">
 {% block footer %}{{footer|safe}}{% endblock footer %}
 <hr>
 <form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
@@ -157,7 +158,7 @@
       <input class="form-control me-2" type="email" name="email"
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
-<a id="go-to-top" onClick="$('base').remove()" href="#top">Gå till början</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="/about">Om</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="/contact">Kontakt</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;<span class="sep">|</span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep">|</span>&nbsp;&copy;2026&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;Alla&nbsp;rättigheter&nbsp;reserverad.
+	<a id="go-to-top" onClick="$('base').remove()" href="#top">Gå till början</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="/about">Om</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="/contact">Kontakt</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;<span class="sep">|</span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep">|</span>&nbsp;&copy;2026&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;Alla&nbsp;rättigheter&nbsp;reserverad.
 </footer>
   <script src="/editor.md/js/d3.min.js"></script>
   <script src="/editor.md/js/wasm/index.min.js"></script>
