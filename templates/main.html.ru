@@ -155,7 +155,7 @@
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Mailing List" />
-      <input class="form-control me-2" type="email" name="email"
+      <input class="form-control me-2" type="email" name="email" required
         placeholder="Join Mailing List" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 	<a id="go-to-top" onClick="$('base').remove()" href="#top">Перейти в начало</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="/about">О нас</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="/contact">Контакт</a>&nbsp;<span class="sep">|</span>&nbsp;<a href="https://x.com/sunstarsys"><i class="fa fa-twitter"></i></a>&nbsp;<span class="sep">|</span>&nbsp;<a href="https://www.youtube.com/@joeschaefer6982"><i class="fa fa-youtube"></i></a>&nbsp;<span class="sep">|</span>&nbsp;&copy;2026 год&nbsp;<a href="/"><img src="/images/sunstarlinear.png"></a>&nbsp;Все&nbsp;права&nbsp;Зарезервировано.
