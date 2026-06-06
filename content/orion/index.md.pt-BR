@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=39268
+status: verificado=41616
 title: SunStar Orion dos Sistemas
 ---
 
@@ -20,7 +20,7 @@ title: SunStar Orion dos Sistemas
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**Não Hackable**](security)
+[**Não Hackable**](security#separation-of-concerns-and-engineering-tradeoffs)
 
 :fa-lock:
 
@@ -114,7 +114,7 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 
 <div class="col-lg-6">
 
-<img src="index.page/ad-top" style="width: 100%">
+[<img src="index.page/ad-top" style="width: 100%">](features)
 
 &nbsp;
 
@@ -156,9 +156,8 @@ Vá no seu próprio ritmo, use quantos funcionários / visualizações / ediçõ
 
 Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habilitadas para javascript para o nosso poderoso e proprietário mecanismo de pesquisa PCRE.
 
-<a href="plans">
-<img id="ad1" style="width:100%" src="index.page/ad1">
-</a>
+[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+
 </div>
 </div>
 
@@ -215,7 +214,7 @@ Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habi
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }

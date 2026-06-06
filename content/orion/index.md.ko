@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=39268
+status: 확인=41616
 title: SunStar 시스템스 오리온
 ---
 
@@ -20,7 +20,7 @@ title: SunStar 시스템스 오리온
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**해킹할 수 없음**](security)
+[**해킹할 수 없음**](security#separation-of-concerns-and-engineering-tradeoffs)
 
 :fa-lock:
 
@@ -114,7 +114,7 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 <div class="col-lg-6">
 
-<img src="index.page/ad-top" style="width: 100%">
+[<img src="index.page/ad-top" style="width: 100%">](features)
 
 &nbsp;
 
@@ -156,9 +156,8 @@ div#lightning img {width:100%}
 
 또한 모든 고객은 강력하고 독점적인 PCRE 검색 엔진에 대한 무료 템플릿 사용자 정의 또는 자바 스크립트 지원 인터페이스를 갖추고 있습니다.
 
-<a href="plans">
-<img id="ad1" style="width:100%" src="index.page/ad1">
-</a>
+[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+
 </div>
 </div>
 
@@ -215,7 +214,7 @@ div#lightning img {width:100%}
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }

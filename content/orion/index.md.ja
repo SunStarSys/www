@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=39268
+status: 確認済み=41616
 title: SunStarシステムのOrion
 ---
 
@@ -20,7 +20,7 @@ title: SunStarシステムのOrion
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**ハッキング不可**](security)
+[**ハッキング不可**](security#separation-of-concerns-and-engineering-tradeoffs)
 
 :fa-lock:
 
@@ -114,7 +114,7 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 <div class="col-lg-6">
 
-<img src="index.page/ad-top" style="width: 100%">
+[<img src="index.page/ad-top" style="width: 100%">](features)
 
 &nbsp;
 
@@ -156,9 +156,8 @@ div#lightning img {width:100%}
 
 さらに、すべてのクライアントには、強力な独自のPCRE検索エンジンへの、テンプレートでカスタマイズ可能な、またはjavascript対応の無料インタフェースがあります。
 
-<a href="plans">
-<img id="ad1" style="width:100%" src="index.page/ad1">
-</a>
+[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+
 </div>
 </div>
 
@@ -215,7 +214,7 @@ div#lightning img {width:100%}
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }

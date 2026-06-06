@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-status: vérifié=39268
+status: vérifié=41616
 title: SunStar Orion de Systems
 ---
 
@@ -20,7 +20,7 @@ title: SunStar Orion de Systems
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**non piratable**](security)
+[**non piratable**](security#separation-of-concerns-and-engineering-tradeoffs)
 
 :fa-lock:
 
@@ -114,7 +114,7 @@ Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://i
 
 <div class="col-lg-6">
 
-<img src="index.page/ad-top" style="width: 100%">
+[<img src="index.page/ad-top" style="width: 100%">](features)
 
 &nbsp;
 
@@ -156,9 +156,8 @@ Allez à votre rythme, utilisez autant d'employés / de prévisualisations / de 
 
 En outre, tous les clients disposent d'interfaces gratuites, personnalisables par modèle ou compatibles javascript vers notre puissant moteur de recherche propriétaire PCRE.
 
-<a href="plans">
-<img id="ad1" style="width:100%" src="index.page/ad1">
-</a>
+[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+
 </div>
 </div>
 
@@ -215,7 +214,7 @@ En outre, tous les clients disposent d'interfaces gratuites, personnalisables pa
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }

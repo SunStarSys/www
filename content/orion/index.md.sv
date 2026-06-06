@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=39268
+status: verifierad=41616
 title: SunStar Orion för system
 ---
 
@@ -20,7 +20,7 @@ title: SunStar Orion för system
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**ej staplingsbar**](security)
+[**ej staplingsbar**](security#separation-of-concerns-and-engineering-tradeoffs)
 
 :fa-lock:
 
@@ -114,7 +114,7 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 
 <div class="col-lg-6">
 
-<img src="index.page/ad-top" style="width: 100%">
+[<img src="index.page/ad-top" style="width: 100%">](features)
 
 &nbsp;
 
@@ -156,9 +156,8 @@ Gå i din egen takt, använd så många anställda / förhandsvisningar / redige
 
 Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade gränssnitt till vår kraftfulla, egenutvecklade PCRE-sökmotor.
 
-<a href="plans">
-<img id="ad1" style="width:100%" src="index.page/ad1">
-</a>
+[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+
 </div>
 </div>
 
@@ -215,7 +214,7 @@ Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }

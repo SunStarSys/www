@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=39268
+status: проверено=41616
 title: SunStar Орион систем
 ---
 
@@ -20,7 +20,7 @@ title: SunStar Орион систем
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**невзломный**](security)
+[**невзломный**](security#separation-of-concerns-and-engineering-tradeoffs)
 
 :fa-lock:
 
@@ -114,7 +114,7 @@ The underlying Static Site Generator: с открытым исходным ко�
 
 <div class="col-lg-6">
 
-<img src="index.page/ad-top" style="width: 100%">
+[<img src="index.page/ad-top" style="width: 100%">](features)
 
 &nbsp;
 
@@ -156,9 +156,8 @@ div#lightning img {width:100%}
 
 Кроме того, все клиенты имеют бесплатные, настраиваемые шаблонами или поддерживаемые JavaScript интерфейсы для нашей мощной, проприетарной поисковой системы PCRE.
 
-<a href="plans">
-<img id="ad1" style="width:100%" src="index.page/ad1">
-</a>
+[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+
 </div>
 </div>
 
@@ -215,7 +214,7 @@ div#lightning img {width:100%}
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
-	-webkit-animation-duration: 1s;
+	-webkit-animation-duration: 2s;
 	-webkit-animation-timing-function: ease-in-out;
 	-webkit-animation-iteration-count: 1;
 }
