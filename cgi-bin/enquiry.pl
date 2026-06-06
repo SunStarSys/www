@@ -145,6 +145,8 @@ EOT
   }
   else {
     warn "$validator:NONCE Validation Failed!";
+     $r->status(Apache2::Const::HTTP_BAD_REQUEST);
+     exit Apache2::Const::OK;
   }
   render $r, "enquiry_post.html",
     content => "## Thank You!\n\nOur Team will get back to you shortly.\n",
