@@ -101,7 +101,7 @@ var IN_GLOBAL_SCOPE=true;
 
 }, editormd);
   });
-  document.cookie = "nonce={{nonce}} path=/;";
+  document.cookie = "nonce2={{nonce}} path=/;";
 </script>
 <script type="module" src="/editor.md/languages/{{ lang|cut:"." }}.js"></script>
 
