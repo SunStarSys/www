@@ -21,7 +21,7 @@ title: 功能比較方格表的表格資料
   Orion: "伺服器安裝"
 - Feature: "全域事實資料庫"
   Orion: "&check;"
-- Feature: "內部 / 外部連結驗證"
+- Feature: "<span class='badge bg-success'>新建</span> 內部 / 外部連結驗證"
   Orion: "&check;"
 
 - Feature: "瀏覽器內部工作流程 (適用於行動裝置)"
@@ -48,7 +48,7 @@ title: 功能比較方格表的表格資料
 - Feature: "多語言 (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: '可完全搜尋 / 可取代」<span class="editormd-tex">\KaTeX</span>/PCRE 表示式'
+- Feature: "可完全搜尋 / 可取代<span class='editormd-tex'>\\KaTeX</span>/PCRE/Lucene 表示式"
   Orion: "&check;"
 - Feature: "同盟"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: 功能比較方格表的表格資料
 
 - Feature: "無限座位"
   Orion: "企業簡介&amp; 伺服器安裝"
-- Feature: "無限制且一致的版本控制歷史記錄"
+- Feature: "無限制, 一致的版本控制歷史記錄"
   Orion: "&check;"
 - Feature: "整合式 URL 變更追蹤"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: 功能比較方格表的表格資料
 - Feature: "可搜尋文件狀態"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: '減價 <span class="editormd-tex">\leftrightarrow \LaTeX</span> 自動化'
+- Feature: "減價<span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [自動化](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "AI NLP 自動翻譯"
   Orion: "&check;"

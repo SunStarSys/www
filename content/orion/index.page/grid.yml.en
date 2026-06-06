@@ -45,7 +45,7 @@ status: draft
 - Feature: "Multilingual (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Fully Searchable/Replaceable <span class="editormd-tex">\KaTeX</span>/PCRE/Lucene Expressions'
+- Feature: "Fully Searchable/Replaceable <span class='editormd-tex'>\\KaTeX</span>/PCRE/Lucene Expressions"
   Orion: "&check;"
 - Feature: "Federated"
   Orion: "&check;"
@@ -93,7 +93,7 @@ status: draft
 - Feature: "Searchable Document Status"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Markdown <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automation'
+- Feature: "Markdown <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [Automation](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "AI NLP Automatic Translation"
   Orion: "&check;"

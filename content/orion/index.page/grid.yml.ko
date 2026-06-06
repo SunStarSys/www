@@ -21,7 +21,7 @@ title: 기능 비교 그리드에 대한 테이블 데이터
   Orion: "서버 설치"
 - Feature: "글로벌 팩트 데이터베이스"
   Orion: "&check;"
-- Feature: "내부/외부 링크 검증"
+- Feature: "<span class='badge bg-success'>신규</span> 내부/외부 링크 검증"
   Orion: "&check;"
 
 - Feature: "브라우저 내 워크플로우(모바일 친화적)"
@@ -48,7 +48,7 @@ title: 기능 비교 그리드에 대한 테이블 데이터
 - Feature: "다국어(i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: '전체 검색 가능/교체 가능 <span class="editormd-tex">\KaTeX</span>/PCRE 표현식'
+- Feature: "전체 검색 가능/교체 가능 <span class='editormd-tex'>\\KaTeX</span>/PCRE/Lucene 표현식"
   Orion: "&check;"
 - Feature: "통합"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: 기능 비교 그리드에 대한 테이블 데이터
 
 - Feature: "무제한 좌석"
   Orion: "기업 &amp; 서버 설치"
-- Feature: "무제한, 일관된 버전 관리 기록"
+- Feature: "무제한, 일관된 버전 제어 기록"
   Orion: "&check;"
 - Feature: "통합 URL 변경 추적"
   Orion: "&check;"
@@ -89,14 +89,14 @@ title: 기능 비교 그리드에 대한 테이블 데이터
   Orion: "&check;"
 - Feature: "16-256 방법 동시 건축"
   Orion: "&check;"
-- Feature: "TCO &lt; 엔터프라이즈당 연간 $25000"
+- Feature: "TCO &lt; 엔터프라이즈의 경우 연간 $25000"
   Orion: "&check;"
 - Feature: "종합적인 99.99% SLA"
   Orion: "기업 &amp; 서버 설치"
 - Feature: "검색 가능 문서 상태"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: '마크다운 <span class="editormd-tex">\leftrightarrow \LaTeX</span> 자동화'
+- Feature: "매가인하 <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [자동화](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "AI NLP 자동 번역"
   Orion: "&check;"

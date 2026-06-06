@@ -21,7 +21,7 @@ title: Tabellendaten für Funktionsvergleichsraster
   Orion: "Serverinstallation"
 - Feature: "Globale Faktendatenbank"
   Orion: "&check;"
-- Feature: "Validierung interner/externer Links"
+- Feature: "<span class='badge bg-success'>Neu</span> Validierung interner/externer Links"
   Orion: "&check;"
 
 - Feature: "Browserinterner Workflow (mobilfreundlich)"
@@ -48,7 +48,7 @@ title: Tabellendaten für Funktionsvergleichsraster
 - Feature: "Mehrsprachig (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Vollständig durchsuchbar/ersetzbar <span class="editormd-tex">\KaTeX</span>/PCRE-Ausdrücke'
+- Feature: "Vollständig durchsuchbar/ersetzbar <span class='editormd-tex'>\\KaTeX</span>/PCRE/Lucene-Ausdrücke"
   Orion: "&check;"
 - Feature: "Föderiert"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: Tabellendaten für Funktionsvergleichsraster
 
 - Feature: "Unbegrenzte Plätze"
   Orion: "Unternehmen &amp; Serverinstallation"
-- Feature: "Unbegrenzte, konsistente Versionskontrollhistorie"
+- Feature: "Unbegrenzt, Konsistente Versionskontrollhistorie"
   Orion: "&check;"
 - Feature: "Integrierte URL-Änderungsverfolgung"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: Tabellendaten für Funktionsvergleichsraster
 - Feature: "Durchsuchbarer Dokumentstatus"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Preisabschrift <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisierung'
+- Feature: "Preisabschrift <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [Automatisierung](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "AI NLP Automatische Übersetzung"
   Orion: "&check;"

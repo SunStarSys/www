@@ -21,7 +21,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
   Orion: "התקנת שרת"
 - Feature: "מסד נתונים של עובדות גלובליות"
   Orion: "&check;"
-- Feature: "אימות קישור פנימי/חיצוני"
+- Feature: "<span class='badge bg-success'>חדש</span> אימות קישור פנימי/חיצוני"
   Orion: "&check;"
 
 - Feature: "תהליך עבודה בדפדפן (ידידותי לנייד)"
@@ -48,7 +48,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 - Feature: "רב-לשוני (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'ניתן לחיפוש מלא/ניתן להחלפה <span class="editormd-tex">\KaTeX</span>/ביטויי PCRE'
+- Feature: "ניתן לחיפוש מלא/ניתן להחלפה <span class='editormd-tex'>\\KaTeX</span>/PCRE/Lucene ביטויים"
   Orion: "&check;"
 - Feature: "מאוחד"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 
 - Feature: "מושבים ללא הגבלה"
   Orion: "ארגוני &amp; התקנת שרת"
-- Feature: "היסטוריית בקרת גרסאות לא מוגבלת ועקבית"
+- Feature: "ללא הגבלה, היסטוריית בקרת גרסאות עקבית"
   Orion: "&check;"
 - Feature: "מעקב משולב אחר שינוי כתובת URL"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
 - Feature: "סטטוס מסמך ניתן לחיפוש"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'סמן מטה <span class="editormd-tex">\leftrightarrow \LaTeX</span> אוטומציה'
+- Feature: "הוזלה <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [אוטומציה](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "תרגום אוטומטי של AI NLP"
   Orion: "&check;"

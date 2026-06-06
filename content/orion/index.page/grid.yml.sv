@@ -21,7 +21,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Orion: "Serverinstallation"
 - Feature: "Global faktadata"
   Orion: "&check;"
-- Feature: "Validering av intern/extern länk"
+- Feature: "<span class='badge bg-success'>Nytt</span> Validering av intern/extern länk"
   Orion: "&check;"
 
 - Feature: "Arbetsflöde i webbläsare (mobilvänligt)"
@@ -48,7 +48,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Flerspråkig (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Fullständigt sökbar/utbytbar <span class="editormd-tex">\KaTeX</span>/PCRE-uttryck'
+- Feature: "Helt sökbar/utbytbar <span class='editormd-tex'>\\KaTeX</span>/PCRE/Lucene Uttryck"
   Orion: "&check;"
 - Feature: "Samordnad"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 
 - Feature: "Obegränsade platser"
   Orion: "Företag &amp; Serverinstallation"
-- Feature: "Obegränsad, konsekvent versionskontrollhistorik"
+- Feature: "Obegränsad, Konsekvent versionskontrollhistorik"
   Orion: "&check;"
 - Feature: "Integrerad spårning av URL-ändring"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
 - Feature: "Sökbar dokumentstatus"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Nedsättning <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatisering'
+- Feature: "Nedsättning <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [Automatisering](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "Automatisk översättning av AI NLP"
   Orion: "&check;"

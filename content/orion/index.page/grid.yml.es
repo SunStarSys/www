@@ -21,7 +21,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "Instalación del servidor"
 - Feature: "Base de datos de hechos globales"
   Orion: "&check;"
-- Feature: "Validación de enlace interno/externo"
+- Feature: "<span class='badge bg-success'>Nuevo</span> Validación de enlace interno/externo"
   Orion: "&check;"
 
 - Feature: "Flujo de trabajo dentro del navegador (amigable para dispositivos móviles)"
@@ -48,7 +48,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Multilingüe (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Se puede buscar/sustituir completamente <span class="editormd-tex">\KaTeX</span>Expresiones /PCRE'
+- Feature: "Búsqueda/sustitución completa <span class='editormd-tex'>\\KaTeX</span>Expresiones /PCRE/Lucene"
   Orion: "&check;"
 - Feature: "Federado"
   Orion: "&check;"
@@ -61,7 +61,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Funciona sin conexión"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Flujo de trabajo de colaborador de "solicitud de extracción" de 3ª parte sencilla'
+- Feature: "Flujo de trabajo de colaborador de "solicitud de extracción" de 3ª parte sencilla"
   Orion: "&check;"
 - Feature: "[GitHub Integración](https://youtu.be/FRc4qZkxVaI) con IDE &amp; Soporte de acciones"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 
 - Feature: "Asientos ilimitados"
   Orion: "Empresa &amp; Instalación del servidor"
-- Feature: "Historial de control de versiones coherente e ilimitado"
+- Feature: "Ilimitado, Historial de control de versiones consistente"
   Orion: "&check;"
 - Feature: "Seguimiento integrado de cambios de URL"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Estado de documento apto para búsqueda"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Rebaja <span class="editormd-tex">\leftrightarrow \LaTeX</span> Automatización'
+- Feature: "Rebaja <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [Automatización](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "Traducción automática de NLP de IA"
   Orion: "&check;"

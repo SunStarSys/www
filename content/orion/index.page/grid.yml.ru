@@ -21,7 +21,7 @@ title: Данные таблицы для сетки сравнения хара
   Orion: "Установка сервера"
 - Feature: "Глобальная база данных фактов"
   Orion: "&check;"
-- Feature: "Проверка внутренней/внешней ссылки"
+- Feature: "<span class='badge bg-success'>Новый</span> Проверка внутренней/внешней ссылки"
   Orion: "&check;"
 
 - Feature: "Поток операций в браузере (для мобильных устройств)"
@@ -48,7 +48,7 @@ title: Данные таблицы для сетки сравнения хара
 - Feature: "Многоязычный (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'Полностью доступный для поиска/заменяемый <span class="editormd-tex">\KaTeX</span>/Выражения PCRE'
+- Feature: "Полностью поиск/замена <span class='editormd-tex'>\\KaTeX</span>Выражения /PCRE/Lucene"
   Orion: "&check;"
 - Feature: "Федеративный"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: Данные таблицы для сетки сравнения хара
 
 - Feature: "Неограниченное количество мест"
   Orion: "Предприятие &amp; Установка сервера"
-- Feature: "Неограниченная, согласованная история управления версиями"
+- Feature: "Без ограничений, Согласованная история контроля версий"
   Orion: "&check;"
 - Feature: "Интегрированное отслеживание изменений URL-адресов"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: Данные таблицы для сетки сравнения хара
 - Feature: "Статус документа с возможностью поиска"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'Снижение цен <span class="editormd-tex">\leftrightarrow \LaTeX</span> Автоматизация'
+- Feature: "Снижение цен <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [Автоматизация](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "ИИ: автоматический перевод NLP"
   Orion: "&check;"

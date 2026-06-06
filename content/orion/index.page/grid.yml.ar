@@ -21,7 +21,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
   Orion: "تثبيت الخادم"
 - Feature: "قاعدة بيانات الحقائق العامة"
   Orion: "&check;"
-- Feature: "مراجعة الارتباط الداخلي/الخارجي"
+- Feature: "<span class='badge bg-success'>جديد</span> مراجعة الارتباط الداخلي/الخارجي"
   Orion: "&check;"
 
 - Feature: "سير عمل المتصفح (ملائم للأجهزة المحمولة)"
@@ -48,7 +48,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
 - Feature: "متعدد اللغات (i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'قابل للبحث بالكامل/قابل للاستبدال <span class="editormd-tex">\KaTeX</span>/PCRE التعبيرات'
+- Feature: "قابل للبحث بالكامل/قابل للاستبدال <span class='editormd-tex'>\\KaTeX</span>تعبيرات /PCRE/Lucene"
   Orion: "&check;"
 - Feature: "موحد"
   Orion: "&check;"
@@ -61,7 +61,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
 - Feature: "يعمل دون اتصال"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: 'سير عمل مساهم "سحب طلب" من جهة خارجية سهلة'
+- Feature: "سير عمل مساهم "سحب طلب" من جهة خارجية سهلة"
   Orion: "&check;"
 - Feature: "[GitHub التكامل](https://youtu.be/FRc4qZkxVaI) w/ IDE &amp; دعم الإجراءات"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
 
 - Feature: "مقاعد غير محدودة"
   Orion: "المؤسسة &amp; تثبيت الخادم"
-- Feature: "محفوظات التحكم في الإصدارات غير المحدودة والمتسقة"
+- Feature: "غير محدود, تاريخ التحكم في الإصدار المتسق"
   Orion: "&check;"
 - Feature: "تتبع تغيير عنوان URL المتكامل"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
 - Feature: "موقف المستند القابل للبحث"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'تعليم <span class="editormd-tex">\leftrightarrow \LaTeX</span> الأتمتة'
+- Feature: "تخفيض السعر <span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [الأتمتة](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "الترجمة الآلية لمعالجة اللغة الطبيعية بالذكاء الاصطناعي"
   Orion: "&check;"

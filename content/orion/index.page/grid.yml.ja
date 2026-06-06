@@ -21,7 +21,7 @@ title: 機能比較グリッドの表データ
   Orion: "サーバーインストール"
 - Feature: "グローバルファクトデータベース"
   Orion: "&check;"
-- Feature: "内部/外部リンク検証"
+- Feature: "<span class='badge bg-success'>新規</span> 内部/外部リンク検証"
   Orion: "&check;"
 
 - Feature: "ブラウザ内ワークフロー(モバイル対応)"
@@ -48,7 +48,7 @@ title: 機能比較グリッドの表データ
 - Feature: "多言語(i18n)"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: '完全検索可能/置換可能<span class="editormd-tex">\KaTeX</span>/PCRE式'
+- Feature: "完全に検索可能/置換可能<span class='editormd-tex'>\\KaTeX</span>/PCRE/Lucene式"
   Orion: "&check;"
 - Feature: "フェデレーテッド"
   Orion: "&check;"
@@ -73,7 +73,7 @@ title: 機能比較グリッドの表データ
 
 - Feature: "無制限の席"
   Orion: "企業&amp; サーバーインストール"
-- Feature: "無制限の一貫したバージョン管理履歴"
+- Feature: "無制限, 一貫したバージョン管理履歴"
   Orion: "&check;"
 - Feature: "統合URL変更トラッキング"
   Orion: "&check;"
@@ -96,7 +96,7 @@ title: 機能比較グリッドの表データ
 - Feature: "検索可能な文書ステータス"
   Orion: "&check;"
   Slab: "&check;"
-- Feature: 'マークダウン<span class="editormd-tex">\leftrightarrow \LaTeX</span> 自動化'
+- Feature: "値下げ<span class='editormd-tex'>\\leftrightarrow \\LaTeX</span> [自動化](https://www.youtube.com/watch?v=4JxfXTBe4g8)"
   Orion: "&check;"
 - Feature: "AI NLP自動翻訳"
   Orion: "&check;"
