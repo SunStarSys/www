@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=41666
+Status: verified=41670
 
 <div class="right">
 
@@ -313,7 +313,7 @@ On the live site, the search engine will do the exact same when you enable markd
 
 - [x] Analytics Restrictions
 
-Google and/or LinkedIn.
+Google, X, and/or LinkedIn.
 
 - [x] Data Restrictions
 
