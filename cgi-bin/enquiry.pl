@@ -121,7 +121,7 @@ if ($r->method eq "POST") {
     };
 
     %ENV = ();
-    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -odq -f/, "$1\@$DOMAIN";
+    open my $sendmail, "|-", "/usr/sbin/sendmail", qw/-t -oi -f/, "$1\@$DOMAIN";
 
     my $msg =<<EOT;
 To: $to
