@@ -24,7 +24,7 @@ $25/mes/sitio alojado. Mejor valor de mercado para equipos pequeños o profesion
 <li>Recursos mensuales incluidos (por sitio web):
 <p>
 <ol>
-  <li>Alojamiento de subversión privada</li>
+  <li>Alojamiento privado de Subversion con espejo GitHub</li>
   <li>250 MB de espacio de almacenamiento<sup>1</sup></li>
   <li>Transferencia de datos de 100 GB</li>
   <li>Uso ilimitado de IDE para 10 asientos</li>

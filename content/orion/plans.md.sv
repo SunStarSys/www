@@ -24,7 +24,7 @@ $ 25 / månad / värd webbplats. Bästa marknadsvärdet för små team eller ens
 <li>Inkluderade månadsresurser (per webbplats):
 <p>
 <ol>
-  <li>Privat subversion hosting</li>
+  <li>Privat Subversion hosting med GitHub spegel</li>
   <li>250 MB lagringsutrymme<sup>1</sup></li>
   <li>100 Gbyte dataöverföring</li>
   <li>Obegränsad IDE-användning för 10 platser</li>
