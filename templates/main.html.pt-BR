@@ -22,7 +22,7 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="/css/code.css" rel="stylesheet" media="screen">
     <link href="/css/katex.min.css" rel="stylesheet" media="screen">
-    <link href="/css/mermaid.min.css" rel="stylesheet" media="screen">
+    <!-- -->
     <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
     <link href="/editor.md/css/editormd.min.css" rel="stylesheet" media="screen">
     <link href="/editor.md/lib/codemirror/codemirror.min.css" rel="stylesheet" media="screen">
