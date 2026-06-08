@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API,Django
-status: verified=39457
+status: verified=42793
 Dependencies: *.md.en
 
 <div class="right">
@@ -268,7 +268,7 @@ Shuffle the array.
 
 #### `split`
 
-Splits the imput string into an array based on the pattern passed as argument.
+Splits the input string into an array based on the pattern passed as argument.
 
 -----
 
