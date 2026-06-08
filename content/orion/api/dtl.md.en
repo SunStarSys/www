@@ -1,6 +1,6 @@
 Title: Orion API - Django Template Library
 Keywords: REST,API,Django
-status: verified=39442
+status: verified=39457
 Dependencies: *.md.en
 
 <div class="right">
@@ -263,6 +263,12 @@ Looks for the first matching html tag attribute, with the attribute name passed 
 #### `shuffle`
 
 Shuffle the array.
+
+-----
+
+#### `split`
+
+Splits the imput string into an array based on the pattern passed as argument.
 
 -----
 

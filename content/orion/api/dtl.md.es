@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: REST,API,Django
-status: verificado=39442
+status: verificado=39457
 title: Orion API - Biblioteca de plantillas de Django
 ---
 
@@ -266,6 +266,12 @@ Busca el primer atributo de etiqueta html coincidente, con el nombre de atributo
 #### `shuffle`
 
 Mezcle la matriz.
+
+-----
+
+#### `split`
+
+Divide la cadena imput en una matriz basada en el patrón transferido como argumento.
 
 -----
 

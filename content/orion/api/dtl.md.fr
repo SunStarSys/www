@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REST,API,Django
-status: vérifié=39442
+status: vérifié=39457
 title: API Orion - Bibliothèque de modèles Django
 ---
 
@@ -266,6 +266,12 @@ Recherche le premier attribut de balise HTML correspondant, avec le nom d'attrib
 #### `shuffle`
 
 Réorganisez le tableau.
+
+-----
+
+#### `split`
+
+Divise la chaîne d'entrée en un tableau basé sur le modèle transmis en tant qu'argument.
 
 -----
 

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: REST,API,Django
-status: überprüft=39442
+status: überprüft=39457
 title: Orion API - Django-Vorlagenbibliothek
 ---
 
@@ -266,6 +266,12 @@ Sucht nach dem ersten übereinstimmenden HTML-Tagattribut, wobei der Attributnam
 #### `shuffle`
 
 Mischen Sie das Array.
+
+-----
+
+#### `split`
+
+Teilt die Imput-Zeichenfolge basierend auf dem als Argument übergebenen Muster in ein Array auf.
 
 -----
 

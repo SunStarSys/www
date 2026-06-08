@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: REST، API، Django
-status: التحقق = 39442
+status: التحقق = 39457
 title: Orion API - مكتبة قوالب Django
 ---
 
@@ -266,6 +266,12 @@ title: Orion API - مكتبة قوالب Django
 #### `shuffle`
 
 تبديل الصفيف.
+
+-----
+
+#### `split`
+
+تقسيم سلسلة الضبط إلى مصفوفة تبعًا للنمط الذي تم تمريره كوسيطة.
 
 -----
 
