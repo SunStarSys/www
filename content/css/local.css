@@ -216,6 +216,7 @@ pre {
 /*.custom-tooltip {opacity: 1 !important}*/
 .custom-tooltip .tooltip-inner {
     background-color: #A9BDBD;
+    color: #392806;
 }
 .custom-tooltip .tooltip-arrow::before {
     border-top-color: #A9BDBD !important;
