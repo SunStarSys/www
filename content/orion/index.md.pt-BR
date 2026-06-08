@@ -3,15 +3,16 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=41616
+status: verificado=43011
 title: SunStar Orion dos Sistemas
 ---
 
 <div class="row">
-<div class="col-lg-5"  style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;Nbsp<em>A Plataforma Wiki Jamstack.</em></span>&trade;
 </p>
+<br>
 <span class="text-white">SunStar Orion dos Sistemas</span> &nbsp; é uma
 
 &nbsp;
@@ -66,23 +67,41 @@ title: SunStar Orion dos Sistemas
 
 <span class="text-white">Por que escolher o Orion? O Jamstack Wiki Plataforma Que Supera &mdash; Custos muito menores</span>
 
+&nbsp;
+
 O que realmente diferencia o Orion não é apenas mais uma plataforma wiki &mdash; É a nossa tecnologia Orion proprietária, uma abordagem testada em batalha, com patente pendente que oferece uma experiência de usuário elegante com eficiência incomparável.
+
+&nbsp;
 
 Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles editoriais superiores, segurança de nível empresarial e recursos inovadores que nenhuma wiki legada pode igualar. Nós passamos essas economias massivas diretamente para você. Espere apenas cobranças modestas e transparentes para os recursos exatos da nuvem que você usa &mdash; sem níveis de preços inchados ou taxas ocultas.
 
-Orion is built for leaders who refuse to settle:
+&nbsp;
+
+<span class="text-white">Orion é construído para líderes que se recusam a se estabelecer:</span>
 
 - **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary-emphasis">Ciência aberta</span> plataforma.
 
+&nbsp;
+
 - **Governo &amp; tomadores de decisão de TI de defesa** &mdash; Atenda à infraestrutura FedRAMP, aos requisitos de confiança zero do NIST 800-207 e aos controles de acesso refinados em seu repositório de controle de versão &mdash; tudo com segurança compatível com FIPS 140-3 e instalável dentro de sua VPN corporativa.
+
+&nbsp;
 
 - **Executivos de marketing** &mdash; Execute uma plataforma empresarial rápida, global e inovadora para ativos de sites corporativos. Use o Orion como um poderoso CMS sem cabeça &mdash; seguro, eficiente e totalmente dissociado da entrega frontend.
 
+&nbsp;
+
 **Empresas de tecnologia &amp; Agências web** &mdash; Substitua wikis comerciais inseguros, montanhas de documentação de produtos, sites de clientes e até mesmo downloads binários. Organize tudo com confiança, velocidade e histórico de versões ironclad.
+
+&nbsp;
 
 - **Arquitetos de alta disponibilidade &amp; Engenheiros principistas** &mdash; Fuja dos pontos únicos de falha incorporados às pilhas LAMP baseadas em SQL. Adote a verdadeira escalabilidade do Jamstack: compilações simultâneas, atualizações incrementais, cobertura global de POP e desempenho máximo medido em milissegundos.
 
+&nbsp;
+
 - **Qualquer negócio cansado da economia wiki** &mdash; Livre-se de assinaturas caras do SaaS, ferramentas gratuitas frágeis que drenam o tempo da equipe e sistemas desatualizados que atrasam sua equipe. A Orion oferece poder empresarial a uma fração do custo total de propriedade (muitas vezes inferior a US$ 10.000/ano para uso empresarial completo).
+
+&nbsp;
 
 Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive em workflows de Markdown limpo e Controle de Versão padrão. Nenhum formato proprietário. Sem pesadelos migratórios.
 
@@ -114,15 +133,21 @@ A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <ht
 
 <div class="col-lg-6">
 
-[<img src="index.page/ad-top" style="width: 100%">](features)
+[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
 <h3>Aqui está&nbsp;Por que,&nbsp;Jovem&nbsp;Desenvolvedor Acadêmico / Full Stack / Blog Público...</h3>
 
+&nbsp;
+
 Quer um site que seja **seguro por padrão**? Fácil de atualizar e gerenciar, enquanto esconde a complexidade de um sistema de controle de versão subjacente, ainda lhe dando todo o seu poder quando você realmente precisa dele?  Publicação instantânea quando você quiser; criações de ramificações suaves e preparadas e promoções granulares personalizáveis para o seu site de produção, conforme adequado ao fluxo de trabalho preferido da sua equipe.
 
+&nbsp;
+
 Se você está cansado das opções de licenciamento por assento e por ciclo de CPU que o pesam sempre que precisar corrigir um erro de digitação, [chegar até nós](/contact). Se você é responsável pela curadoria de conteúdo e está ansioso por um banco de dados de fatos personalizável para gerenciar seus links externos, ou se você é um domador de leão equipado com regex para décadas de conteúdo HTML legado acumulado, ou apenas alguém insatisfeito com as outras opções do mercado e como elas funcionam em escala, temos algo realmente especial para oferecer a você.
+
+&nbsp;
 
 Nunca ter que lidar diretamente com um sistema de controle de versão, ou mesmo um gerador de site estático, em seu próprio computador pessoal é com você. O IDE on-line foi projetado e está pronto para seu **workflow somente para navegador** sempre que você estiver.  Em uma pitada, até mesmo a interface móvel (navegador) fará isso, *instantemente*.
 
@@ -138,11 +163,17 @@ div#lightning img {width:100%}
 
 </style>
 
+&nbsp;
+
 Árvores de origem de vários gigabytes simplesmente não são correspondentes para ele &mdash; durações completas de compilação do site são medidas em *segundos*, não em horas e minutos.  O sistema sustenta facilmente [`300 MB/s`](features) ao processar suas fontes para compilações completas do site, mas dada a sua <span class="text-white">gerenciamento exclusivo de dependência pendente de patente</span> funcionalidade, quase nunca precisa recorrer a eles:
+
+&nbsp;
 
 <span class="text-primary-emphasis"><em>Nós só construímos o que você precisa construído.</em></span>&trade;
 
 Esta [tecnologia](https://iconoclasts.blog/joe/apache-cms) foi inventado no final de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher, e [Joe Schaefer](https://iconoclasts.blog/joe/) como membros da equipe de infraestrutura da Apache. A frase "JAMstack" foi cunhado anos depois (2015), por um grupo inconsciente da nossa arte anterior neste espaço.  Mas o [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) é cristalino, e esta nova oferta da SunStar Systems é testemunho desse legado original e de suas verdadeiras origens de código aberto.
+
+&nbsp;
 
 <h4>Quer dar uma volta rápida para ver o quão rápido e fácil é?</h4>
 
@@ -150,13 +181,17 @@ Este site é auto-hospedado em Orion; todos aqueles quadrados de lápis cor-de-r
 
 Nossa rede global de Ponto de Presença (POP) garante conexões de baixa latência para ambos Orion &trade; e os sites de entrega final que hospedamos.  Estamos atualmente em quatro continentes e temos uma presença bicoastal dentro dos EUA.  E estamos nos expandindo rapidamente – a próxima África e Ásia Oriental!
 
+&nbsp;
+
 <h3>É hora de uma mudança radical na forma como você gerencia e entrega seu site ao seu público-alvo.</h3>
+
+&nbsp;
 
 Vá no seu próprio ritmo, use quantos funcionários / visualizações / edições / commits / filiais quiser e pague apenas pelo que você *realmente usa* em nossa infraestrutura. Basta trazer seu próprio framework css/javascript aprimorado por IA, scripts perl e modelos Django, e nós cuidaremos do resto de sua configuração sem custo adicional. Recomendamos **Bootstrap 5** para styling css/js, pois é o que usamos internamente; mas isso depende inteiramente de você.
 
 Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habilitadas para javascript para o nosso poderoso e proprietário mecanismo de pesquisa PCRE.
 
-[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
 
 </div>
 </div>
@@ -180,25 +215,25 @@ Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habi
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr/>
-<br/>
+<hr>
+<br><br><br>
 <h2>Algumas capturas de tela representativas:</h2>
-<br/>
+<br>
 <h3>IDE View com alemão, francês, hebraico e russo (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>View do Editor IDE.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Visualização do editor IDE (espanhol).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Build de site completo do IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Criação típica de site do IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/>
+<br/><br><br>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Pesquisa IDE</a> <small>(Esses links em <span style="color:#e83e8c">rosa quente</span> irá soltá-lo diretamente em uma tela do editor, com o cursor posicionado exatamente de acordo com o texto correspondente)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>

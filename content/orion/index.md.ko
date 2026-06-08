@@ -3,15 +3,16 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=41616
+status: 확인=43011
 title: SunStar 시스템스 오리온
 ---
 
 <div class="row">
-<div class="col-lg-5"  style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Jamstack Wiki 플랫폼</em></span>&trade;
 </p>
+<br>
 <span class="text-white">SunStar 시스템스 오리온</span> &nbsp; 다음과 같음
 
 &nbsp;
@@ -66,23 +67,41 @@ title: SunStar 시스템스 오리온
 
 <span class="text-white">왜 Orion을 선택해야합니까? 성능이 뛰어난 Jamstack Wiki 플랫폼 &mdash; 비용 절감</span>
 
+&nbsp;
+
 Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash; Oracle의 독자적인 Orion Technology는 탁월한 효율성을 자랑하는 우아한 사용자 경험을 제공하는 특허 출원 중인 전투 테스트 접근 방식입니다.
+
+&nbsp;
 
 이를 통해 매우 낮은 운영 비용을 실행하는 동시에 탁월한 편집 제어, 엔터프라이즈급 보안 및 레거시 위키와 비교할 수 없는 획기적인 기능을 제공할 수 있습니다. 우리는 그 엄청난 비용을 당신에게 직접 전달합니다. 사용하는 정확한 클라우드 리소스에 대해 겸손하고 투명한 업그레이드만 기대 &mdash; 가격 계층이나 숨겨진 수수료가 없습니다.
 
-Orion is built for leaders who refuse to settle:
+&nbsp;
+
+<span class="text-white">오리온은 정착을 거부하는 지도자들을 위해 지어졌다:</span>
 
 - **대학 리더** &mdash; 버전 제어 문서 공유, 큐레이션 및 온라인 게시를 통해 캠퍼스 표절을 없애고 안전한 개방형 협업을 지원합니다. 학업 지식 관리를 감사 가능한 최신 상태로 변환합니다. <span class="text-primary-emphasis">과학 열기</span> 플랫폼.
 
+&nbsp;
+
 - **정부 &amp; 국방 IT 의사 결정자** &mdash; FedRAMP 인프라, NIST 800-207 제로 트러스트 요구 사항 및 버전 제어 저장소의 세분화된 액세스 제어 충족 &mdash; FIPS 140-3 호환 보안 및 기업 VPN 내부에 설치할 수 있습니다.
+
+&nbsp;
 
 - **마케팅 임원** &mdash; 기업 웹 사이트 자산을 위한 빠르고 혁신적인 글로벌 엔터프라이즈 플랫폼을 실행합니다. 강력한 헤드리스 CMS로 Orion 사용 &mdash; 안전하고 성능이 뛰어나며 프런트엔드 제공에서 완전히 분리됩니다.
 
+&nbsp;
+
 - **기술 회사 &amp; 웹 사이트** &mdash; 안전하지 않은 상업용 위키를 교체하고 제품 문서, 고객 사이트 및 바이너리 다운로드를 방해합니다. 자신감, 속도 및 ironclad 버전 기록으로 모든 것을 큐레이션합니다.
+
+&nbsp;
 
 - **고가용성 설계자 &amp; 원리 엔지니어** &mdash; SQL 기반 LAMP 스택에 적용된 단일 실패 지점을 이스케이프합니다. 진정한 Jamstack 확장성 수용: 동시 빌드, 증분 업데이트, 글로벌 POP 적용 범위, 밀리초 단위로 측정된 최고 성능.
 
+&nbsp;
+
 - **위키 경제에 지친 모든 비즈니스** &mdash; 값비싼 SaaS 구독, 직원 시간을 소모하는 취약한 무료 도구, 팀 운영 속도를 늦추는 구식 시스템 등을 제공합니다. Orion은 TCO(총소유비용)의 일부분에 엔터프라이즈급 성능을 제공합니다(전체 엔터프라이즈 사용을 위해 연간 10,000달러 미만).
+
+&nbsp;
 
 제로 벤더 종속 &mdash; 그리고 *우리는 그것을 증명합니다. 콘텐츠는 깨끗한 마크다운 및 표준 버전 제어 워크플로에 있습니다. 고유 형식이 없습니다. 마이그레이션의 악몽은 없습니다.
 
@@ -114,15 +133,21 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 <div class="col-lg-6">
 
-[<img src="index.page/ad-top" style="width: 100%">](features)
+[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
 <h3>여기&nbsp;이유,&nbsp;젊은&nbsp;Academic / Full Stack 개발자 / 공개 블로거...</h3>
 
+&nbsp;
+
 **기본 보안** 웹 사이트를 원하십니까? 기본 버전 제어 시스템의 복잡성을 숨기면서 업데이트 및 관리가 용이하지만 실제로 필요할 때 전력을 공급합니까?  원할 때 즉시 게시할 수 있습니다. 매끄럽고 스테이징된 브랜치 빌드 및 사용자 정의 가능한 세분화된 프로모션을 팀의 선호 워크플로우에 맞게 프로덕션 사이트에 적용할 수 있습니다.
 
+&nbsp;
+
 오타를 고쳐야 할 때마다 좌석별 라이센스 및 CPU 주기별 선택에 지쳤다면, [연락하기](/contact). 콘텐츠 큐레이션을 담당하고 있으며 외부 링크를 관리하기 위해 사용자 정의 가능한 팩트 데이터베이스에 대해 파이닝하는 경우 또는 정규식으로 제공되는 사자 테이머인 경우 수십 년 동안 축적 된 레거시 HTML 콘텐츠, 또는 시장에서 다른 옵션에 불만족 한 사람 및 그들이 어떻게 대규모로 작동하는지, 우리는 당신에게 제공하는 특별한 것을 가지고 있습니다.
+
+&nbsp;
 
 자체 개인용 컴퓨터에서 버전 제어 시스템이나 정적 사이트 생성기를 직접 다루지 않아도됩니다. 온라인 IDE는 언제든 **브라우저 전용 워크플로우**에 맞게 설계되고 준비됩니다.  핀치에서 모바일 (브라우저) 인터페이스조차도 *즉시 *완료됩니다.
 
@@ -138,11 +163,17 @@ div#lightning img {width:100%}
 
 </style>
 
+&nbsp;
+
 다중 기가바이트 소스 트리는 단순히 일치하지 않습니다. &mdash; 전체 사이트 빌드 기간은 시간 및 분이 아닌 *초*로 측정됩니다.  시스템이 쉽게 유지됨 [`300 MB/s`](features) 전체 사이트 빌드에 대한 소스를 처리하는 동안 <span class="text-white">특허 출원 중인 고유 종속성 관리</span> 기능, 거의 그들에게 의존 할 필요가 없습니다 :
+
+&nbsp;
 
 <span class="text-primary-emphasis"><em>우리는 당신이 만들어야 할 것만 만듭니다.</em></span>&trade;
 
 여기 [기술](https://iconoclasts.blog/joe/apache-cms) 2010년 말에 처음 발명된 [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)다니엘 샤하프, 데이브 피셔, 그리고 [Joe Schaefer](https://iconoclasts.blog/joe/) 아파치 인프라 팀의 일원으로. 구문 "JAMstack" 몇 년 후 (2015),이 공간에서 우리의 이전 예술을 모르는 그룹에 의해 만들어졌습니다.  그러나 [공개 레코드](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systems의 새로운 오퍼링은 원래 레거시와 진정한 오픈 소스 기원에 대한 간증입니다.
+
+&nbsp;
 
 <h4>빠른 스핀을 제공하여 얼마나 빠르고 쉬운지 확인하고 싶습니까?</h4>
 
@@ -150,13 +181,17 @@ div#lightning img {width:100%}
 
 오라클의 글로벌 POP(Point of Presence) 네트워크는 두 Orion에 대한 대기 시간이 짧은 연결을 보장합니다. &trade; 그리고 우리가 호스팅하는 최종 배달 웹 사이트.  우리는 현재 네 대륙에 있으며 미국 내에서 바이코아스탈 입지를 가지고 있습니다.  그리고 우리는 아프리카와 동아시아를 빠르게 확장하고 있습니다!
 
+&nbsp;
+
 <h3>이제 대상 고객을 대상으로 사이트를 관리하고 제공하는 방식이 크게 바뀌어야 할 때입니다.</h3>
+
+&nbsp;
 
 원하는 만큼의 직원/미리보기/편집/커밋/분기를 사용하고 인프라에서 실제로 사용하는 것에 대해서만 비용을 지불합니다. 자체 AI 고급 CSS/자바스크립트 프레임워크, 펄 스크립트 및 장고 템플릿을 가져오면 추가 비용 없이 나머지 설정을 관리할 수 있습니다. css/js 스타일링의 경우 **Bootstrap 5**를 사용하는 것이 내부적으로 사용되지만 이는 전적으로 귀하에게 달려 있습니다.
 
 또한 모든 고객은 강력하고 독점적인 PCRE 검색 엔진에 대한 무료 템플릿 사용자 정의 또는 자바 스크립트 지원 인터페이스를 갖추고 있습니다.
 
-[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
 
 </div>
 </div>
@@ -180,25 +215,25 @@ div#lightning img {width:100%}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr/>
-<br/>
+<hr>
+<br><br><br>
 <h2>대표 스크린샷 몇 개:</h2>
-<br/>
+<br>
 <h3>독일어, 프랑스어, 히브리어 및 러시아어(UTF-8)가 포함된 IDE 뷰입니다.</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE 편집기 뷰.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE 편집기 뷰(스페인어)</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE 전체 사이트 빌드.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE 일반 사이트 빌드.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/>
+<br/><br><br>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE 검색</a> <small>(이 링크는 <span style="color:#e83e8c">핫 핑크</span> 커서가 일치하는 텍스트에 따라 정확하게 배치되어 편집기 화면으로 바로 놓입니다.)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>

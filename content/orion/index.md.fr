@@ -3,15 +3,16 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-status: vérifié=41616
+status: vérifié=43011
 title: SunStar Orion de Systems
 ---
 
 <div class="row">
-<div class="col-lg-5"  style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>La plateforme Wiki de Jamstack.</em></span>&trade;
 </p>
+<br>
 <span class="text-white">SunStar Orion de Systems</span> &nbsp; est une
 
 &nbsp;
@@ -66,23 +67,41 @@ title: SunStar Orion de Systems
 
 <span class="text-white">Pourquoi choisir Orion ? La plateforme Wiki Jamstack qui surpasse &mdash; et coûte beaucoup moins</span>
 
+&nbsp;
+
 Ce qui distingue vraiment Orion n'est pas seulement une autre plateforme wiki &mdash; C'est notre technologie exclusive Orion, une approche éprouvée et en attente de brevet qui offre une expérience utilisateur élégante avec une efficacité inégalée.
+
+&nbsp;
 
 Cela nous permet d'exécuter des coûts d'exploitation ultra-faibles tout en offrant des contrôles éditoriaux supérieurs, une sécurité de niveau entreprise et des fonctionnalités révolutionnaires qu'aucun wiki hérité ne peut égaler. Nous vous transmettons ces énormes économies directement. S'attendre à des frais supplémentaires modestes et transparents pour les ressources cloud exactes que vous utilisez &mdash; pas de niveaux de prix bloqués ou de frais cachés.
 
-Orion is built for leaders who refuse to settle:
+&nbsp;
+
+<span class="text-white">Orion est construit pour les dirigeants qui refusent de s'installer :</span>
 
 - **Directeurs universitaires** &mdash; Eliminer le plagiat sur les campus et favoriser une collaboration sécurisée et en libre accès grâce au partage de documents avec contrôle des versions, à la conservation et à la publication en ligne. Transformez votre gestion des connaissances académiques en moderne, auditable, <span class="text-primary-emphasis">Science ouverte</span> plateforme.
 
+&nbsp;
+
 - **Gouvernement &amp; décideurs informatiques de la défense** &mdash; Répondez à l'infrastructure FedRAMP, aux exigences de confiance zéro du NIST 800-207 et aux contrôles d'accès de niveau fin sur votre référentiel de contrôle de version &mdash; le tout avec une sécurité conforme à la norme FIPS 140-3 et pouvant être installé dans votre VPN d'entreprise.
+
+&nbsp;
 
 - **Cadres marketing** &mdash; Exécutez une plate-forme d'entreprise rapide, globale et innovante pour les ressources de sites Web d'entreprise. Utilisez Orion comme un puissant CMS sans tête &mdash; sécurisé, performant et entièrement découplé de la livraison frontale.
 
+&nbsp;
+
 - **Entreprises technologiques &amp; agences web** &mdash; Remplacez les wikis commerciaux non sécurisés, apprivoiser les montagnes de documentation produit, les sites client et même les téléchargements binaires. Organisez tout avec confiance, rapidité et historique des versions.
+
+&nbsp;
 
 - **Architectes haute disponibilité &amp; ingénieurs principaux** &mdash; Evitez les points d'échec uniques cuits dans des piles LAMP basées sur SQL. Adoptez une véritable évolutivité Jamstack : builds simultanés, mises à jour incrémentielles, couverture globale des POP et performances maximales mesurées en millisecondes.
 
+&nbsp;
+
 - **Toute entreprise fatiguée de l'économie wiki** &mdash; Débarrassez-vous des abonnements SaaS coûteux, des outils gratuits fragiles qui épuisent le temps du personnel et des systèmes obsolètes qui ralentissent votre équipe. Orion vous donne de l'énergie à l'entreprise à une fraction du coût total de possession (souvent moins de 10 000 $/an pour un usage professionnel complet).
+
+&nbsp;
 
 Aucun verrouillage de fournisseur &mdash; et *nous le prouvons* Votre contenu réside dans des flux de travail Markdown et Version Control standard. Aucun format propriétaire. Pas de cauchemar de migration.
 
@@ -114,15 +133,21 @@ Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://i
 
 <div class="col-lg-6">
 
-[<img src="index.page/ad-top" style="width: 100%">](features)
+[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
 <h3>Voici&nbsp;Pourquoi,&nbsp;Jeune&nbsp;Académique / Développeur de pile complète / Blogueur public...</h3>
 
+&nbsp;
+
 Vous voulez un site Web **sécurisé par défaut** ? Facile à mettre à jour et à gérer, tout en cachant la complexité d'un système de contrôle de version sous-jacent, tout en vous donnant toute sa puissance lorsque vous en avez vraiment besoin ?  Publication instantanée lorsque vous le souhaitez ; créations de succursales lisses et préparées et promotions granulaires personnalisables sur votre site de production selon le flux de travail préféré de votre équipe.
 
+&nbsp;
+
 Si vous êtes fatigué des licences par siège et des choix par cycle CPU qui vous pèsent chaque fois que vous avez besoin de corriger une faute de frappe, [contactez-nous](/contact). Si vous êtes en charge de la curation du contenu et que vous recherchez une base de données de faits personnalisable pour gérer vos liens externes, ou si vous êtes un joueur de lion équipé d'une expression régulière pour Des décennies de contenu HTML historique accumulé, ou juste quelqu'un qui n'est pas satisfait des autres options sur le marché et de leur fonctionnement à grande échelle, nous avons quelque chose de vraiment spécial à vous offrir.
+
+&nbsp;
 
 Ne jamais avoir à traiter directement avec un système de contrôle de version, ou même un générateur de site statique, sur votre propre ordinateur personnel est à vous. L'IDE en ligne est conçu et prêt pour votre **workflow de navigation uniquement** chaque fois que vous le souhaitez.  Dans un pincement, même l'interface mobile (navigateur) le fera, *instantanément*.
 
@@ -138,11 +163,17 @@ div#lightning img {width:100%}
 
 </style>
 
+&nbsp;
+
 Les arbres sources multi-gigaoctets ne correspondent tout simplement pas &mdash; Les durées de construction du site complet sont mesurées en *secondes*, et non en heures et minutes.  Le système se maintient facilement [`300 MB/s`](features) lors du traitement de vos sources pour des builds de site complets, mais étant donné <span class="text-white">gestion de la dépendance unique et en attente de brevet</span> fonctionnalité, il n'a presque jamais besoin de recourir à eux :
+
+&nbsp;
 
 <span class="text-primary-emphasis"><em>Nous ne construisons que ce dont vous avez besoin.</em></span>&trade;
 
 Ce [technologie](https://iconoclasts.blog/joe/apache-cms) a été inventé fin 2010 par [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher, et [Joe Schaefer](https://iconoclasts.blog/joe/) en tant que membres de l'équipe d'infrastructure Apache. La phrase "JAMstack" a été inventé des années plus tard (2015), par un groupe ignorant notre art antérieur dans cet espace.  Mais le [dossier public](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) est limpide, et cette nouvelle offre de SunStar Systems témoigne de cet héritage original et de ses véritables origines open source.
+
+&nbsp;
 
 <h4>Vous voulez lui donner un tour rapide pour voir à quel point il est rapide et facile ?</h4>
 
@@ -150,13 +181,17 @@ Ce site web est auto-hébergé sur Orion ; tous ces carrés de crayon rose chaud
 
 Notre réseau mondial de points de présence (POP) assure des connexions à faible latence avec Orion &trade; et les sites Web de livraison finale que nous hébergeons.  Nous sommes actuellement sur quatre continents et avons une présence bicoastale aux États-Unis.  Et nous sommes en expansion rapide - prochain Afrique et Asie de l'Est !
 
+&nbsp;
+
 <h3>Il est temps de changer la façon dont vous gérez et offrez votre site à votre public cible.</h3>
+
+&nbsp;
 
 Allez à votre rythme, utilisez autant d'employés / de prévisualisations / de modifications / de validations / de succursales que vous le souhaitez, et ne payez que ce que vous *utilisez réellement* sur notre infrastructure. Apportez simplement votre propre framework css/javascript amélioré par l'IA, vos scripts perl et vos modèles Django, et nous prendrons soin du reste de votre configuration sans frais supplémentaires. Nous recommandons **Bootstrap 5** pour le style css/js, car c'est ce que nous utilisons en interne, mais c'est entièrement à vous de décider.
 
 En outre, tous les clients disposent d'interfaces gratuites, personnalisables par modèle ou compatibles javascript vers notre puissant moteur de recherche propriétaire PCRE.
 
-[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
 
 </div>
 </div>
@@ -180,25 +215,25 @@ En outre, tous les clients disposent d'interfaces gratuites, personnalisables pa
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr/>
-<br/>
+<hr>
+<br><br><br>
 <h2>Quelques captures d'écran représentatives :</h2>
-<br/>
+<br>
 <h3>Vue IDE avec l'allemand, le français, l'hébreu et le russe (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Vue Editeur IDE.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Vue Editeur IDE (espagnol).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Paramétrage complet du site IDE.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Paramétrage de sites standard IDE.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/>
+<br/><br><br>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Recherche IDE</a> <small>(les liens dans <span style="color:#e83e8c">rose chaud</span> vous déposera directement dans un écran d'éditeur, avec le curseur placé exactement selon le texte correspondant)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>

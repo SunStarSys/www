@@ -3,15 +3,16 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=41616
+status: verifierad=43011
 title: SunStar Orion för system
 ---
 
 <div class="row">
-<div class="col-lg-5"  style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Wiki-plattformen Jamstack.</em></span>&trade;
 </p>
+<br>
 <span class="text-white">SunStar Orion för system</span> &nbsp; är en
 
 &nbsp;
@@ -66,23 +67,41 @@ title: SunStar Orion för system
 
 <span class="text-white">Varför välja Orion? Jamstack Wiki-plattformen som överträffar &mdash; och kostar betydligt mindre</span>
 
+&nbsp;
+
 Vad som verkligen sätter Orion isär är inte bara en annan wiki-plattform &mdash; Det är vår egenutvecklade Orion Technology, ett patentsökt tillvägagångssätt som ger en elegant användarupplevelse med oöverträffad effektivitet.
+
+&nbsp;
 
 Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjuder överlägsna redaktionella kontroller, säkerhet i företagsklass och banbrytande funktioner som ingen äldre wiki kan matcha. Vi skickar dessa enorma besparingar direkt till dig. Förvänta dig endast blygsamma, transparenta tilläggsavgifter för exakt de molnresurser du använder &mdash; inga uppsvällda prisnivåer eller dolda avgifter.
 
-Orion is built for leaders who refuse to settle:
+&nbsp;
+
+<span class="text-white">Orion är byggd för ledare som vägrar att bosätta sig:</span>
 
 - **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
 
+&nbsp;
+
 - **Regering &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 med nolltillit och detaljerade åtkomstkontroller i ditt versionskontrolldatalager &mdash; Allt med FIPS 140-3-kompatibel säkerhet och kan installeras i ditt företags VPN.
+
+&nbsp;
 
 - **Marknadsföringschefer** &mdash; Kör en snabb, global, innovativ företagsplattform för företagets webbplatsresurser. Använd Orion som kraftfull huvudlös CMS &mdash; säker, högpresterande och helt frikopplad från leverans på klientsidan.
 
+&nbsp;
+
 - **Teknikföretag &amp; Webbplatsbyråer** &mdash; Ersätt osäkra kommersiella wikier, tama berg av produktdokumentation, kundwebbplatser och till och med binära nedladdningar. Curate allt med förtroende, hastighet och ironclad versionshistorik.
+
+&nbsp;
 
 - **Arkitekter med hög tillgänglighet &amp; principiella ingenjörer &mdash; Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
 
+&nbsp;
+
 -** Alla företag trött på wiki ekonomi** &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 10 000 dollar per år för full företagsanvändning).
+
+&nbsp;
 
 Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns i rena arbetsflöden för Markdown och standardversionskontroll. Inga proprietära format. Inga mardrömmar om migration.
 
@@ -114,15 +133,21 @@ Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions bygg
 
 <div class="col-lg-6">
 
-[<img src="index.page/ad-top" style="width: 100%">](features)
+[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
 <h3>Här är&nbsp;Varför,&nbsp;Unga&nbsp;Akademisk / Fullstack-utvecklare / Public Blogger...</h3>
 
+&nbsp;
+
 Vill du ha en webbplats som är **secure-by-standard**? Lätt att uppdatera och hantera, samtidigt som du döljer komplexiteten hos ett underliggande versionskontrollsystem, men ändå ger dig full kraft när du verkligen behöver det?  Omedelbar publicering när du vill ha det; smidiga, mellanlagrade grenbyggen och anpassningsbara detaljerade kampanjer till din produktionswebbplats eftersom det passar ditt teams föredragna arbetsflöde.
 
+&nbsp;
+
 Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
+
+&nbsp;
 
 Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. IDE online är utformad och redo för ditt **arbetsflöde endast för webbläsare** när du är det.  I en nypa kommer även det mobila (webbläsargränssnittet) att få det gjort, *direkt*.
 
@@ -138,11 +163,17 @@ div#lightning img {width:100%}
 
 </style>
 
+&nbsp;
+
 Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total byggtid mäts i *sekunder*, inte timmar och minuter.  Systemet håller sig enkelt över [`300 MB/s`](features) när du bearbetar dina källor för fullständiga webbplatsbyggen, men med tanke på dess <span class="text-white">unik, patentsökt beroendehantering</span> funktionalitet, det behöver nästan aldrig tillgripa dem:
+
+&nbsp;
 
 <span class="text-primary-emphasis"><em>Vi bygger bara det du behöver.</em></span>&trade;
 
 Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
+
+&nbsp;
 
 <h4>Vill du ge det en snabb snurr för att se hur snabbt och enkelt det är?</h4>
 
@@ -150,13 +181,17 @@ Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i
 
 Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi är för närvarande på fyra kontinenter och har en bicoastal närvaro inom USA.  Och vi expanderar snabbt - nästa upp Afrika och Östasien!
 
+&nbsp;
+
 <h3>Det är dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp.</h3>
+
+&nbsp;
 
 Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du *faktiskt använder* på vår infrastruktur. Ta bara med ditt eget AI-förbättrade css/javascript-ramverk, perl-skript och Django-mallar, så tar vi hand om resten av din installation utan extra kostnad. Vi rekommenderar **Bootstrap 5** för css/js styling, eftersom det är vad vi använder internt; men det är helt upp till dig.
 
 Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade gränssnitt till vår kraftfulla, egenutvecklade PCRE-sökmotor.
 
-[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
 
 </div>
 </div>
@@ -180,25 +215,25 @@ Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr/>
-<br/>
+<hr>
+<br><br><br>
 <h2>Några representativa skärmdumpar:</h2>
-<br/>
+<br>
 <h3>IDE-vy med tyska, franska, hebreiska och ryska (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Vy över IDE-redigerare.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>Redigeringsvy för integrerad utvecklingsmiljö (spanska).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE: Skapa fullständig webbplats.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE: Skapa typisk plats.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/>
+<br/><br><br>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Sök efter integrerad utvecklingsmiljö</a> <small>(Dessa länkar i <span style="color:#e83e8c">skär</span> kommer att släppa dig direkt i en editor skärm, med markören placerad exakt enligt den matchande texten)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>

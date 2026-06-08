@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=42971
+status: verified=43011
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -182,11 +182,13 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 
 <h3>It's time for a sea change in how you manage and deliver your site to your target audience.</h3>
 
+&nbsp;
+
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure. Just bring your own AI enhanced css/javascript framework, perl scripts, and Django Templates, and we will take care of the rest of your setup at no additional charge. We recommend **Bootstrap 5** for css/js styling, as it is what we use internally; but that is entirely up to you.
 
 In addition, all clients have free, template-customizable or javascript-enabled interfaces to our powerful, proprietary PCRE search engine.
 
-[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
 
 </div>
 </div>

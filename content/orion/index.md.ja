@@ -3,15 +3,16 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=41616
+status: 確認済み=43011
 title: SunStarシステムのOrion
 ---
 
 <div class="row">
-<div class="col-lg-5"  style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->nbsp(&amp;N)<em>Jamstack Wikiプラットフォーム</em></span>&trade;
 </p>
+<br>
 <span class="text-white">SunStarシステムのOrion</span> &nbsp; は
 
 &nbsp;
@@ -66,23 +67,41 @@ title: SunStarシステムのOrion
 
 <span class="text-white">なぜオリオンを選ぶのか? ジャムスタックWikiプラットフォーム&mdash; コスト削減</span>
 
+&nbsp;
+
 Orionを本当に切り離すものは、単なるWikiプラットフォームではありません。&mdash; オラクル独自のOrion Technologyは、比類のない効率でエレガントなユーザーエクスペリエンスを提供する、バトルテスト済みの特許出願中のアプローチです。
+
+&nbsp;
 
 これにより、超低コストの運用コストを実現しながら、優れた編集コントロール、エンタープライズ・グレードのセキュリティ、従来のWikiでは対応できない画期的な機能を提供できるようになりました。こうした大きな貯金を、直接お渡しします。使用する正確なクラウド・リソースに対して、控えめで透明性の高い追加料金のみを期待&mdash; 膨大な価格階層や隠れた料金はありません。
 
-Orion is built for leaders who refuse to settle:
+&nbsp;
+
+<span class="text-white">Orionは、解決を拒否するリーダー向けに構築されています。</span>
 
 **大学のリーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-primary-emphasis">オープンサイエンス</span> プラットフォーム
 
+&nbsp;
+
 - **政府&amp; 防衛ITの意思決定者** &mdash; FedRAMPインフラストラクチャ、NIST 800-207のゼロトラスト要件、およびバージョン管理リポジトリのきめ細かいアクセス制御に対応&mdash; FIPS 140-3準拠のセキュリティと企業VPN内のインストールが可能です。
+
+&nbsp;
 
 - **マーケティング・エグゼクティブ** &mdash; 企業のWebサイト資産用に、迅速でグローバルな革新的なエンタープライズ・プラットフォームを実行します。強力なヘッドレスCMSとしてOrionを使用&mdash; 安全かつ高性能で、フロントエンドの配送から完全に切り離されています。
 
+&nbsp;
+
 - **テクノロジー企業&amp; ウェブサイト代理店** &mdash; 安全でない商用Wikiを置き換え、製品ドキュメント、クライアント・サイト、さらにはバイナリ・ダウンロードの山を改良します。すべてを自信を持ってキュレーションし、スピードとアイロンクラッドのバージョン履歴を提供します。
+
+&nbsp;
 
 **高可用性アーキテクト&amp; 原則エンジニア** &mdash; SQLベースのLAMPスタックにベイクされた単一障害点をエスケープします。真のJamstackスケーラビリティを採用: 同時ビルド、増分更新、グローバルPOPカバレッジ、およびミリ秒単位のピーク・パフォーマンス。
 
+&nbsp;
+
 **ウィキ経済に飽きているビジネス** &mdash; 高価なSaaSサブスクリプション、スタッフの時間を浪費する脆弱なフリー・ツール、チームの時間を短縮する時代遅れのシステムを捨てます。Orionは、総所有コストのほんの一部で企業の力を供給します(企業全体で使用する場合、通常は年間10,000ドル未満)。
+
+&nbsp;
 
 ベンダーのロックインが不要&mdash; 『We Prove It』コンテンツはクリーン・マークダウンおよび標準バージョン管理ワークフローに存在します。独自のフォーマットはありません。移行の悪夢はありません。
 
@@ -114,15 +133,21 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 <div class="col-lg-6">
 
-[<img src="index.page/ad-top" style="width: 100%">](features)
+[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
 <h3>こちら&nbsp;なぜ、&nbsp;若い&nbsp;アカデミック/フルスタック開発者/パブリックブロガー...</h3>
 
+&nbsp;
+
 **secure-by-default**のWebサイトが必要ですか。更新と管理が容易で、ベースとなるバージョン管理システムの複雑さを隠しつつ、本当に必要なときにフルパワーを提供しますか? 必要なときに即座に公開できます。スムーズで段階的なブランチを構築し、チームの好みのワークフローに応じて、プロダクション・サイトに詳細なプロモーションをカスタマイズできます。
 
+&nbsp;
+
 座席ごとのライセンスとCPUごとの選択に飽きている場合は、タイポを修正する必要があるたびに体重が減少します。[お問い合わせ](/contact)。コンテンツのキュレーションを担当し、外部リンクを管理するためのカスタマイズ可能なファクト・データベース、またはレジェックス装備のライオン・タマーの場合蓄積されたレガシーHTMLコンテンツの数十年、または市場の他のオプションに不満を抱いている人、そして彼らがどのように大規模に機能するか、私たちには本当に特別なものがあります。
+
+&nbsp;
 
 あなた自身のパーソナルコンピュータ上で、バージョン管理システムや静的サイトジェネレータに直接対処する必要はありません。オンラインIDEは、いつでも**ブラウザのみのワークフロー**用に設計および準備できます。ピンチでは、モバイル(ブラウザ)インターフェースでも、*すぐに*完了します。
 
@@ -138,11 +163,17 @@ div#lightning img {width:100%}
 
 </style>
 
+&nbsp;
+
 マルチギガバイトのソース・ツリーは一致しません&mdash; サイトのフル・ビルド期間は、時間および分ではなく*秒*で測定されます。システムは容易に維持します[`300 MB/s`](features) 完全なサイト構築のためにソースを処理中に、<span class="text-white">独自の特許出願中の依存関係管理</span> 機能性、ほとんどそれらに頼る必要がありません:
+
+&nbsp;
 
 <span class="text-primary-emphasis"><em>必要なものだけを作る。</em></span>&trade;
 
 この[工業技術](https://iconoclasts.blog/joe/apache-cms) 最初に発明されたのは2010年後半。[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)ダニエル・シャハフ、デイヴ・フィッシャー、[Joe Schaefer](https://iconoclasts.blog/joe/) Apache Infrastructure Teamのメンバー。フレーズ"JAMstack" 数年後(2015年)、この宇宙における私たちの以前の芸術を知らないグループによって造られました。しかし、[公開レコード](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systemsによるこの新しいサービスは、そのオリジナルのレガシーと真のオープンソースの起源に対する証言です。
+
+&nbsp;
 
 <h4>それがどれだけ速く、容易であるか見るために速い回転を与えることを望みますか。</h4>
 
@@ -150,13 +181,17 @@ div#lightning img {width:100%}
 
 当社のグローバルPoint of Presence (POP)ネットワークは、両方のOrionへの低レイテンシ接続を保証します&trade; 当社が主催する最終配信サイト。我々は現在四大陸にいて、米国内に巨大な存在を有している。アフリカと東アジアを急成長させています!
 
+&nbsp;
+
 <h3>今こそ、サイトを管理し、ターゲット・オーディエンスに配信する方法を変える時です。</h3>
+
+&nbsp;
 
 自分のペースで進み、必要な数の従業員/プレビュー/編集/コミット/ブランチを使用し、インフラストラクチャ上で実際に使用した分だけ支払います。独自のAI拡張css/javascriptフレームワーク、perlスクリプト、およびDjango Templatesを導入するだけで、追加料金なしで残りのセットアップを処理します。css/jsスタイリングには**Bootstrap 5**をお勧めします。これは内部的に使用するものです。しかし、それはあなた次第です。
 
 さらに、すべてのクライアントには、強力な独自のPCRE検索エンジンへの、テンプレートでカスタマイズ可能な、またはjavascript対応の無料インタフェースがあります。
 
-[<img id="ad1" style="width:100%" src="index.page/ad1">](features)
+[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
 
 </div>
 </div>
@@ -180,25 +215,25 @@ div#lightning img {width:100%}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr/>
-<br/>
+<hr>
+<br><br><br>
 <h2>少数の代表的なスクリーンショット:</h2>
-<br/>
+<br>
 <h3>ドイツ語、フランス語、ヘブライ語、およびロシア語(UTF-8)のIDEビュー。</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDEエディタ・ビュー。</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDEエディタ・ビュー(スペイン語)。</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDEフル・サイト・ビルド。</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDEの一般的なサイト・ビルド。</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/>
+<br/><br><br>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE検索</a> <small>(リンク先) <span style="color:#e83e8c">ホットピンク</span> エディタ画面に直接ドロップし、一致するテキストに従ってカーソルを置きます)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
