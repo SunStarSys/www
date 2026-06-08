@@ -78,24 +78,29 @@
 
 <hr>
 <div class="card border-dark">
-  <div class="card-header">
-    <h3 class="card-title">Attachments &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/;action=add">Manage</a></button></h3>
-  </div>
-  <div class="card-body">
-    <ul>
-      {% for a in attachments %}
-      <li><a href="{{a}}">{{a|basename:0}}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div class="card-header">
-    <h3 class="card-title">Links &nbsp;
-    <button type="button" class="btn btn-sm btn-outline-dark"><a href="https://cms.sunstarsys.com/redirect?uri=https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}};action=add">Manage</a></button></h3>
-  </div>
-  <div class="card-body">
-    {{ links.content|markdown }}
-  </div>
+  <form action="https://cms.sunstarsys.com/redirect" id="form" method="GET">
+    <input type="hidden" id="action" name="action" value="add">
+    <input type="hidden" name="lang" value="{{lang|cut:"."}}">
+    <div class="card-header">
+      <h3 class="card-title">Attachments &nbsp;
+      <button type="button" class="btn btn-sm btn-outline-dark" name="uri" value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/">Manage</a></button></h3>
+    </div>
+    <div class="card-body">
+      <ul>
+        {% for a in attachments %}
+        <li><a href="{{a}}">{{a|basename:0}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="card-header">
+      <h3 class="card-title">Links &nbsp;
+      <button type="button" class="btn btn-sm btn-outline-dark" name="uri" value="https://{{website}}{{path|dirname}}/{{path|basename:0}}.page/links.md{{lang}}">Manage</a></button></h3>
+
+    </div>
+    <div class="card-body">
+      {{ links.content|markdown }}
+    </div>
+  </form>
 </div>
 
 <script type="text/javascript">
