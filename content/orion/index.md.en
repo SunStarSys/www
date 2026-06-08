@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=41616
+status: verified=42483
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -178,25 +178,25 @@ In addition, all clients have free, template-customizable or javascript-enabled 
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr/>
-<br/>
+<hr>
+<br><br><br>
 <h2>A Few Representative Screen Shots:</h2>
-<br/>
+<br>
 <h3>IDE View with German, French, Hebrew, and Russian (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE Editor View.</h3>
 <center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE Editor View (Spanish).</h3>
 <center><img src="../images/ide-es.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE Full Site Build.</h3>
 <center><img src="../images/ide-build.png" style="width:800px"></center>
-<br/>
+<br><br><br>
 <h3>IDE Typical Site Build.</h3>
 <center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/>
+<br/><br><br>
 <h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE Search</a> <small>(those links in <span style="color:#e83e8c">hot pink</span> will drop you directly into an editor screen, with the cursor placed exactly according to the matching text)</small>.</h3>
 <center><img src="../images/ide-search.png" style="width:800px"></center>
 </div>
