@@ -1,11 +1,11 @@
 title: SunStar Systems' Orion
-status: verified=42963
+status: verified=42967
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
 
 <div class="row">
-<div class="col-lg-5" style="border-right: solid 1px">
+<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp<em>The Jamstack Wiki Platform.</em></span>&trade;
 </p>
