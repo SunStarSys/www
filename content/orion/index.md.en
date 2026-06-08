@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=42483
+status: verified=42955
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -9,6 +9,7 @@ acl: @staff=rw, *=r
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp<em>The Jamstack Wiki Platform.</em></span>&trade;
 </p>
+<br><br>
 <span class="text-white">SunStar Systems' Orion</span> &nbsp; is an
 
 &nbsp;
@@ -63,23 +64,41 @@ acl: @staff=rw, *=r
 
 <span class="text-white">Why Choose Orion? The Jamstack Wiki Platform That Outperforms &mdash; and Costs Far Less</span>
 
+&nbsp;
+
 What truly sets Orion apart isn't just another wiki platform &mdash; it's our proprietary Orion Technology, a battle-tested, patent-pending approach that delivers an elegant user experience with unmatched efficiency.
+
+&nbsp;
 
 This lets us run ultra-low operating costs while offering superior editorial controls, enterprise-grade security, and groundbreaking features no legacy wiki can match. We pass those massive savings directly to you. Expect only modest, transparent upcharges for the exact cloud resources you use &mdash; no bloated pricing tiers or hidden fees.
 
-Orion is built for leaders who refuse to settle:
+&nbsp;
+
+<span class="text-white">Orion is built for leaders who refuse to settle:</span>
 
 - **University leaders** &mdash; Eliminate campus plagiarism and empower secure, open-access collaboration with version-controlled document sharing, curation, and online publishing. Transform your academic knowledge management into a modern, auditable, <span class="text-primary-emphasis">Open Science</span> platform.
 
+&nbsp;
+
 - **Government &amp; defense IT decision-makers** &mdash; Meet FedRAMP infrastructure, NIST 800-207 zero-trust requirements, and fine-grained access controls on your version-control repository &mdash; all with FIPS 140-3 compliant security and installable inside your corporate VPN.
+
+&nbsp;
 
 - **Marketing executives** &mdash; Run a fast, global, innovative enterprise platform for corporate website assets. Use Orion as a powerful headless CMS &mdash; secure, performant, and fully decoupled from frontend delivery.
 
+&nbsp;
+
 - **Technology companies &amp; website agencies** &mdash; Replace insecure commercial wikis, tame mountains of product documentation, client sites, and even binary downloads. Curate everything with confidence, speed, and ironclad version history.
+
+&nbsp;
 
 - **High-availability architects &amp; principled engineers** &mdash; Escape the single points of failure baked into SQL-based LAMP stacks. Embrace true Jamstack scalability: concurrent builds, incremental updates, global POP coverage, and peak performance measured in milliseconds.
 
+&nbsp;
+
 - **Any business tired of wiki economics** &mdash; Ditch expensive SaaS subscriptions, fragile free tools that drain staff time, and outdated systems that slow your team down. Orion gives you enterprise power at a fraction of the total cost of ownership (often under $10,000/year for full enterprise use).
+
+&nbsp;
 
 Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markdown and standard Version Control workflows. No proprietary formats. No migration nightmares.
 
@@ -94,7 +113,6 @@ View the source: [our private source lib tree](https://vcs.sunstarsys.com/repos/
 The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → @SunStarSys/orion
 
 This isn't marketing spin &mdash; it's verifiable, open engineering heritage dating back to F/OSS innovations pioneered in 2011. Ready to experience a wiki that actually saves time, money, and headaches? [Give us a call or drop us a note](/contact) today.
-
 
 &nbsp;
 
@@ -118,9 +136,15 @@ The quickest way to get going is to play with @SunStarSys/orion's build of <http
 
 <h3>Here's&nbsp;Why,&nbsp;Young&nbsp;Academic / Full Stack Developer / Public Blogger...</h3>
 
+&nbsp;
+
 Want a website that's **secure-by-default**? Easy to update and manage, while hiding the complexity of an underlying version control system, yet giving you its full power when you truly need it?  Instant publication when you want it; smooth, staged branch builds and customizable granular promotions to your production site as it suits your team's preferred workflow.
 
+&nbsp;
+
 If you are tired of the per-seat licensing and per-CPU-cycle choices weighing you down whenever you need to fix a typo, [reach out to us](/contact). If you are in charge of content curation and are pining for a customizable facts database to manage your external links, or if you are a regex-equipped lion tamer for decades of accumulated legacy HTML content, or just someone dissatisfied with the other options on the market and how they function at scale, we have something really special to offer you.
+
+&nbsp;
 
 Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
 
@@ -136,17 +160,25 @@ div#lightning img {width:100%}
 
 </style>
 
+&nbsp;
+
 Multi-gigabyte source trees are simply no match for it &mdash; full site build durations are measured in *seconds*, not hours and minutes.  The system easily sustains over [`300 MB/s`](features) while processing your sources for full site builds, but given its <span class="text-white">unique, patent-pending dependency management</span> functionality, it almost never needs to resort to them:
+
+&nbsp;
 
 <span class="text-primary-emphasis"><em>We only build what you need built.</em></span>&trade;
 
 This [technology](https://iconoclasts.blog/joe/apache-cms) was first invented in late 2010 by [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Dave Fisher, and [Joe Schaefer](https://iconoclasts.blog/joe/) as members of the Apache Infrastructure Team. The phrase "JAMstack" was coined years later (2015), by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
+
+&nbsp;
 
 <h4>Want to give it a quick spin to see how fast and easy it is?</h4>
 
 This website is self-hosted on Orion; all those hot-pink pencil squares [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
 
 Our global Point of Presence (POP) network ensures low-latency connections to both Orion &trade; and the end-delivery websites we host.  We are currently on four continents and have a bicoastal presence within the US.  And we're expanding rapidly- next up Africa and East Asia!
+
+&nbsp;
 
 <h3>It's time for a sea change in how you manage and deliver your site to your target audience.</h3>
 
