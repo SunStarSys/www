@@ -293,7 +293,7 @@ Identique à l'utilitaire UNIX/Perl habituel ; vous lui transmettez une expressi
 
 -----
 
-#### `code`
+#### `fenced`
 
 Extrait un tableau de `GFM` blocs de code clôturés hors de la source ; vous lui transmettez le nom/type des blocs de code que vous souhaitez.
 

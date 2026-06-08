@@ -293,7 +293,7 @@ Igual que la conocida utilidad UNIX/Perl; se transfiere una expresión regular c
 
 -----
 
-#### `code`
+#### `fenced`
 
 Extrae una matriz de `GFM` código vallado bloquea fuera de la fuente; se le pasa el nombre / tipo de los bloques de código que desea.
 

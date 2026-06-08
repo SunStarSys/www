@@ -287,7 +287,7 @@ O mesmo que o utilitário UNIX/Perl familiar; você passa uma expressão regular
 
 -----
 
-#### `code`
+#### `fenced`
 
 Extrai uma matriz de `GFM` bloqueios de código cercados para fora da fonte; você passa-lhe o nome / tipo dos blocos de código que você deseja.
 

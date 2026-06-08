@@ -293,7 +293,7 @@ Entspricht dem vertrauten UNIX/Perl-Utility. Sie übergeben einen regulären Aus
 
 -----
 
-#### `code`
+#### `fenced`
 
 Ruft ein Array von `GFM` eingezäunter Code blockiert die Quelle; Sie übergeben ihm den Namen/Typ der Codeblöcke, die Sie wünschen.
 

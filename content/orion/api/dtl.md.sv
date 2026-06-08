@@ -287,7 +287,7 @@ Samma som det välkända verktyget UNIX/Perl; du skickar det ett reguljärt uttr
 
 -----
 
-#### `code`
+#### `fenced`
 
 Hämtar en matris med `GFM` inhägnad kod blockerar ur källan; du skickar det namnet / typen av kodblock du önskar.
 
