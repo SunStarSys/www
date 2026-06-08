@@ -8,7 +8,7 @@ title: SunStar Орион систем
 ---
 
 <div class="row">
-<div class="col-lg-5">
+<div class="col-lg-5"  style="border-right: solid #A9BDBD 1px">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Платформа Jamstack Wiki.</em></span>&trade;
 </p>
