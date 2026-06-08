@@ -103,7 +103,7 @@ body { padding-top: 90px; background-color: #8f99fb; }
 
 .navbar img {height: 38px;}
 
-.dropdown-menu { background-color: #392806 !important }
+.dropdown-menu, .card { background-color: #392806 }
 
 div.jumbotron input.form-control, textarea.form-control {
    	width: 25em;
