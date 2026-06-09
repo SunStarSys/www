@@ -209,7 +209,7 @@ sub breadcrumbs {
         $relpath ||= './';
         push @rv, qq(<a href="$relpath?regex=$regex;lang=$lang;markdown_search=$markdown">) . (escape_html("\u$_") || "Home") . q(</a>);
       }
-    return join "&nbsp;<span class='sep'>&raquo;</span>&nbsp;", @rv, escape_html("\u$tail") || "Home";
+    return join "&nbsp;<span class='sep'></span>&nbsp;", @rv, escape_html("\u$tail") || "Home";
 }
 
 sub negotiate_file  (AR $r, $file1, $file2) {
