@@ -52,7 +52,6 @@ div.right img {
 	width: 200px;
 }
 
-.breadcrumbs { color: white }
 .breadcrumbs a {
   color:#114056;
 }
@@ -165,7 +164,7 @@ div.breadcrumbs {
 	text-align: right;
     float: right;
     direction: ltr;
-    color: #A9BDBD;
+    color: white;
 }
 
 #search, #filter {
