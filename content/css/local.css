@@ -44,7 +44,7 @@ footer { color: #002B36 }
 
 .sep {color: #A9BDBD }
 
-.breadcrumbs .sep::before {content:"&raquo;"}
+.breadcrumbs .sep::before {content:"»"}
 footer .sep::before {content: "|"}
 
 #index { color:black }
