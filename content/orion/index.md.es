@@ -51,7 +51,7 @@ title: SunStar Orión de los Sistemas
 
 **federados**
 
-:fa-city:
+:fa-hexagon-nodes-bolt:
 
 </li>
 </ul>

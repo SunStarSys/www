@@ -51,7 +51,7 @@ title: SunStar Орион систем
 
 **федеративный**
 
-:fa-city:
+:fa-hexagon-nodes-bolt:
 
 </li>
 </ul>

@@ -51,7 +51,7 @@ title: SunStar Orion för system
 
 **Samordnad**
 
-:fa-city:
+:fa-hexagon-nodes-bolt:
 
 </li>
 </ul>
