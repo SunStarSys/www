@@ -279,24 +279,32 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
   $(function() {
 
 $('a').click(function() {
-	  $(this).blur();
+          $(this).blur();
       });
-
-var footer = $("#footer");
-
-$(window).scroll(function(){
-	  var top = $(this).scrollTop();
-
-if (top > 180) {
-	      footer.fadeIn(1500);
-	  } else {
-	      footer.fadeOut(1500);
-	  }
+  });
+  // Select the target element
+  var target = document.querySelector('#footer');
+  target.style.opacity = 0.01;
+  // Create an IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting && target.style.opacity < 1) {
+              target.style.display = "none";
+              target.style.opacity = 1;
+              $(target).fadeIn(2000); // Visual feedback
+          }
+          else {
+              target.style.opacity = 0.01;
+          }
       });
-
-});
+  }, {
+      root: null, // viewport
+      threshold: 0.01 // Trigger when at least 1% is visible
+  });
+  // Start observing
+  observer.observe(target);
 </script>
-  {% block javascript %}{% endblock %}
+{% block javascript %}{% endblock %}
 </div>
 </body>
 </html>
