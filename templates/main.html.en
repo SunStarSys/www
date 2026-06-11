@@ -306,7 +306,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
       if (entry.isIntersecting) {
         footer.fadeIn(1500); // Visual feedback
       } else {
-        entry.style.opacity=0;
+        target.style.opacity=0;
       }
     });
   }, {
