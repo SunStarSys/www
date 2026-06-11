@@ -281,7 +281,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
       $('a').click(function() {
 	  $(this).blur();
       });
-
+/*
       var footer = $("#footer");
 
       $(window).scroll(function(){
@@ -293,10 +293,31 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 	      footer.fadeOut(1500);
 	  }
       });
-
+*/
   });
 </script>
-  {% block javascript %}{% endblock %}
+<script>
+  // Select the target element
+  const target = document.querySelector('#footer');
+  var footer = $(target);
+  // Create an IntersectionObserver
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        footer.fadeIn(1500); // Visual feedback
+      } else {
+        footer.fadeOut(1500);
+      }
+    });
+  }, {
+    root: null, // viewport
+    threshold: 0.01 // Trigger when at least 1% is visible
+  });
+
+  // Start observing
+  observer.observe(target);
+</script>
+{% block javascript %}{% endblock %}
 </div>
 </body>
 </html>
