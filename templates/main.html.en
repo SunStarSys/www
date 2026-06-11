@@ -288,9 +288,9 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 	  var top = $(this).scrollTop();
 
 	  if (top > 180) {
-	      footer.fadeIn();
+	      footer.fadeIn(1500);
 	  } else {
-	      footer.fadeOut();
+	      footer.fadeOut(1500);
 	  }
       });
 
