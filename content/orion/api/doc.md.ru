@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: разметка,csv,yaml
-status: проверено=38102
+status: проверено=44038
 title: Orion API – формат текстового документа
 ---
 
@@ -11,6 +11,8 @@ title: Orion API – формат текстового документа
 {# lede #}На этой странице содержатся документы полей заголовка и результирующих артефактов данных{# lede #} произведенный [Создание API](build) при обработке таких текстовых файлов (как вложений страницы) через [`single_narrative`](build#-code-single_narrative-args-code-) просмотр.
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ title: Orion API – формат текстового документа
 
 <p class="card-text">
 
-Три таких специальных метки статуса описаны ниже:
+Three such special status labels are explained below:
 
 ###### черновик
 
@@ -112,6 +114,7 @@ title: Orion API – формат текстового документа
 </div>
   <div class="card-body">
     <div class="card-title">
+
 Дополнительной `SEO`-дружественный список тегов с возможностью поиска через запятую.
 
 </div>
@@ -142,6 +145,94 @@ title: Orion API – формат текстового документа
 #### Артефакты данных
 
 н/д
+
+#### :editormd-logo: Расширения GFM
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Автоматическая таблица контекстов (необязательно) `id=sidebar` на корпусе `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` обеспечивает динамическое поведение в левой боковой панели для экранов с шириной более 1900 пикселей.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Автоматические сноски.
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Двунаправленные связи между ссылочными сносками и их описаниями.
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+Схемы разметки @mermaidjs/русалки.
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+Асимптотная векторная графика `iframe` рендерер.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Загружайте и внедряйте фрагменты кода из общедоступных репозиториев git, таких как GitHub.
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ title: Orion API – формат текстового документа
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ title: Orion API – формат текстового документа
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) объект, используемый для производства выше
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` оригинальных (без боеприпасов) заголовков
 
 </div>
 </div>

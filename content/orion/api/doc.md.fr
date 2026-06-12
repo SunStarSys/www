@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: Markdown, CSV, YAML
-status: vérifié=38102
+status: vérifié=44038
 title: API Orion - Format de document texte
 ---
 
@@ -11,6 +11,8 @@ title: API Orion - Format de document texte
 {# lede #}Cette page documente les champs d'en-tête et les artefacts de données résultants{# lede #} produit par [API de création](build) lors du traitement de ces fichiers texte (en tant que pièces jointes de page) via son [`single_narrative`](build#-code-single_narrative-args-code-) vue.
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ Statut du document en texte libre obligatoire.
 
 <p class="card-text">
 
-Trois de ces étiquettes d'état spéciales sont expliquées ci-dessous :
+Three such special status labels are explained below:
 
 ###### projet
 
@@ -112,6 +114,7 @@ Liste facultative de valeurs séparées par des virgules `file globs` sur lequel
 </div>
   <div class="card-body">
     <div class="card-title">
+
 Facultatif `SEO`-liste conviviale des balises pouvant faire l'objet d'une recherche, séparées par des virgules.
 
 </div>
@@ -142,6 +145,94 @@ De nature additive (la suppression des catégories n'entraînera pas la radiatio
 #### Artefacts de données
 
 S/O
+
+#### :editormd-logo: Extensions GFM
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Tableau automatique des contextes avec option `id=sidebar` sur l'enceinte `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` active un comportement dynamique dans la barre latérale gauche pour les écrans ayant une largeur supérieure à 1900 px.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Notes de bas de page automatiques.
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Liens bidirectionnels entre les notes de bas de page référencées et leurs descriptions.
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+Diagrammes Markdown @mermaidjs/mermaid.
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+Asymptote Vector Graphics `iframe` Rendu.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Téléchargez et injectez des fragments de code à partir des référentiels git publics tels que GitHub.
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ Voir la section Markdown ci-dessus.
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ Facultatif déclaré `PDL` types de données de colonne
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) objet utilisé pour produire ci-dessus
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` des en-têtes originaux (non moulés)
 
 </div>
 </div>

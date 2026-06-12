@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: تخفيض السعر، csv، yaml
-status: التحقق = 38102
+status: التحقق = 44038
 title: واجهة برمجة تطبيقات Orion - تنسيق مستند النص
 ---
 
@@ -11,6 +11,8 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
 {# lede #}تقوم هذه الصفحة بتوثيق حقول العنوان والبيانات الاصطناعية الناتجة{# lede #} التي تنتجها [إنشاء واجهة برمجة التطبيقات](build) عند معالجة مثل هذه الملفات النصية (مثل مرفقات الصفحة) من خلال [`single_narrative`](build#-code-single_narrative-args-code-) عرض.
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
 
 <p class="card-text">
 
-وترد أدناه ثلاث تسميات خاصة من هذا القبيل:
+Three such special status labels are explained below:
 
 ###### مُسَوَّدَة
 
@@ -112,6 +114,7 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
 </div>
   <div class="card-body">
     <div class="card-title">
+
 اختياري `SEO`قائمة ملائمة مفصولة بفاصلة للعلامات القابلة للبحث.
 
 </div>
@@ -142,6 +145,94 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
 #### البيانات الاصطناعية للبيانات
 
 غ/م
+
+#### :editormd-logo: امتدادات GFM
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+جدول السياقات التلقائي مع اختياري `id=sidebar` يتضمن `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` يتيح السلوك الديناميكي في الشريط الجانبي الأيسر للشاشات التي تحتوي على أكثر من عرض 1900 بكسل.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+الحواشي السفلية التلقائية.
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+روابط ثنائية الاتجاه بين الحواشي السفلية المشار إليها وأوصافها.
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+الرسوم البيانية Markdown @mermaidjs/mermaid.
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+الرسومات المتجهات Asymptote `iframe` المعروض.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+قم بتنزيل مقتطفات التعليمات البرمجية وإدخالها من مخازن git العامة مثل GitHub.
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ title: واجهة برمجة تطبيقات Orion - تنسيق مستند الن
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) الكائن المستخدم في الإنتاج أعلاه
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` من الرؤوس الأصلية (غير المعلقة)
 
 </div>
 </div>

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: Markdown、csv、yaml
-status: 確認済み=38102
+status: 確認済み=44038
 title: Orion API - テキスト文書形式
 ---
 
@@ -11,6 +11,8 @@ title: Orion API - テキスト文書形式
 {# lede #}このページでは、ヘッダー・フィールドと結果のデータ・アーティファクトについて説明します{# lede #} プロデュース: [APIの作成](build) このようなテキスト・ファイルを(ページ添付として)処理する場合[`single_narrative`](build#-code-single_narrative-args-code-) 表示。
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ title: Orion API - テキスト文書形式
 
 <p class="card-text">
 
-このような特殊なステータスラベルを3つ説明します。
+Three such special status labels are explained below:
 
 ###### 下書き
 
@@ -112,6 +114,7 @@ title: Orion API - テキスト文書形式
 </div>
   <div class="card-body">
     <div class="card-title">
+
 オプション`SEO`検索可能なタグのカンマ区切りリスト。
 
 </div>
@@ -142,6 +145,94 @@ title: Orion API - テキスト文書形式
 #### データ・アーティファクト
 
 該当なし
+
+#### :editormd-logo: GFM拡張
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+オプションのコンテキストの自動表`id=sidebar` エンクロージャ`<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` 幅が1900pxを超える画面では、左側のサイドバーで動的な動作を有効にします。
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+自動脚注。
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+参照される脚注とその説明の間の双方向リンク。
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+Markdown @mermaidjs/人魚図。
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+アシンプトートベクターグラフィックス`iframe` レンダラ。
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+GitHubなどのpublic gitリポジトリからコード・スニペットをダウンロードして注入します。
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ title: Orion API - テキスト文書形式
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ title: Orion API - テキスト文書形式
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) 上の生成に使用されるオブジェクト
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` オリジナル(アンマング)ヘッダー
 
 </div>
 </div>

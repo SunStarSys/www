@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: markdown,csv,yaml
-status: verifierad=38102
+status: verifierad=44038
 title: Orion API - textdokumentformat
 ---
 
@@ -11,6 +11,8 @@ title: Orion API - textdokumentformat
 {# lede #}Den här sidan dokumenterar huvudfälten och resulterande dataartefakter{# lede #} producerad av [Bygg API](build) vid bearbetning av sådana textfiler (som sidbilagor) via dess [`single_narrative`](build#-code-single_narrative-args-code-) vy.
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ Obligatorisk dokumentstatus i fritext.
 
 <p class="card-text">
 
-Tre sådana särskilda statusetiketter förklaras nedan:
+Three such special status labels are explained below:
 
 ###### skiss
 
@@ -112,6 +114,7 @@ Valfri kommaavgränsad lista över `file globs` att dokumentets skapade utdata �
 </div>
   <div class="card-body">
     <div class="card-title">
+
 Valfritt `SEO`-vänlig kommaavgränsad lista över sökbara taggar.
 
 </div>
@@ -142,6 +145,94 @@ Additiv till sin natur (om du tar bort kategorier tas inte dessa tidigare katego
 #### Dataartefakter
 
 Saknas
+
+#### :editormd-logo: GFM-tillägg
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Automatisk kontexttabell med valfritt alternativ `id=sidebar` i omslutningen `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` möjliggör dynamiskt beteende i det vänstra sidofältet för skärmar som har mer än 1900px bredd.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Automatiska fotnoter
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Dubbelriktade länkar mellan refererade fotnoter och deras beskrivningar.
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+Nedsättning @mermaidjs/mermaid diagram.
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+Asymptote vektorgrafik `iframe` renderare.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Ladda ner och injicera kodfragment från offentliga git-datalager som GitHub.
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ Se avsnittet Markdown ovan.
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ Valfritt deklarerat `PDL` kolumndatatyper
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) objekt som används för att producera ovan
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` av ursprungliga (oblandade) rubriker
 
 </div>
 </div>

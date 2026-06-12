@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: markdown,csv,yaml
-status: אומתה=38102
+status: אומתו = 44038
 title: API של אוריון - פורמט מסמך טקסט
 ---
 
@@ -11,6 +11,8 @@ title: API של אוריון - פורמט מסמך טקסט
 {# lede #}דף זה מתעד את שדות הכותרת וארטיפקטי הנתונים המתקבלים{# lede #} מיוצר על ידי [בנה API](build) בעת עיבוד קובצי טקסט כאלה (כמסמכים מצורפים לדף) באמצעותם [`single_narrative`](build#-code-single_narrative-args-code-) תצוגה.
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ title: API של אוריון - פורמט מסמך טקסט
 
 <p class="card-text">
 
-שלוש תוויות מצב מיוחדות כאלה מוסברות להלן:
+Three such special status labels are explained below:
 
 ###### טיוטה
 
@@ -112,6 +114,7 @@ title: API של אוריון - פורמט מסמך טקסט
 </div>
   <div class="card-body">
     <div class="card-title">
+
 אופציונלי `SEO`-רשימה ידידותית מופרדת בפסיקים של תגים ניתנים לחיפוש.
 
 </div>
@@ -142,6 +145,94 @@ title: API של אוריון - פורמט מסמך טקסט
 #### ארטיפקטים של נתונים
 
 לא זמין
+
+#### :editormd-logo: הרחבות GFM
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+טבלת הקשרים אוטומטית עם אופציה `id=sidebar` על התוחם `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` מאפשר התנהגות דינמית בסרגל הצד השמאלי למסכים בעלי רוחב של יותר מ- 1900 פיקסלים.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+הערות שוליים אוטומטיות.
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+קישורים דו-כיווניים בין הערות השוליים המאוזכרות לבין התיאורים שלהן.
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+Markdown @mermaidjs/דיאגרמות בתולת ים.
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+גרפיקת וקטור אסימפטוטה `iframe` מעבד.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+הורד והזרק קטעי קוד מ-git repos ציבורי כמו GitHub.
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ title: API של אוריון - פורמט מסמך טקסט
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ title: API של אוריון - פורמט מסמך טקסט
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) אובייקט המשמש לייצור למעלה
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` של כותרות מקוריות (לא מאוישות)
 
 </div>
 </div>

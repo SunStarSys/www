@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: 마크다운,csv,yaml
-status: 확인=38102
+status: 확인=44038
 title: Orion API - 텍스트 문서 형식
 ---
 
@@ -11,6 +11,8 @@ title: Orion API - 텍스트 문서 형식
 {# lede #}이 페이지에서는 머리글 필드 및 결과 데이터 아티팩트를 문서화합니다.{# lede #} 제작사 : [API 빌드](build) 해당 텍스트 파일을 페이지 첨부 파일로 처리할 때 [`single_narrative`](build#-code-single_narrative-args-code-) 보기.
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ title: Orion API - 텍스트 문서 형식
 
 <p class="card-text">
 
-다음과 같은 세 가지 특수 상태 레이블이 설명되어 있습니다.
+Three such special status labels are explained below:
 
 ###### 초안
 
@@ -112,6 +114,7 @@ title: Orion API - 텍스트 문서 형식
 </div>
   <div class="card-body">
     <div class="card-title">
+
 선택 사항 `SEO`검색 가능한 태그의 친숙한 콤마로 구분된 목록입니다.
 
 </div>
@@ -142,6 +145,94 @@ title: Orion API - 텍스트 문서 형식
 #### 데이터 아티팩트
 
 해당 사항 없음
+
+#### :editormd-logo: GFM 확장
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+선택적 컨텍스트의 자동 테이블 `id=sidebar` 포함에서 `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` 1900px 너비를 초과하는 화면의 경우 왼쪽 사이드바에서 동적 동작을 사용으로 설정합니다.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+자동 각주입니다.
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+참조된 각주와 해당 설명 간의 양방향 링크
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+마크다운 @mermaidjs/mermaid 도표.
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+Asymptote 벡터 그래픽 `iframe` 렌더러
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+GitHub와 같은 퍼블릭 Git 저장소에서 코드 조각을 다운로드하고 주입합니다.
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ title: Orion API - 텍스트 문서 형식
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ title: Orion API - 텍스트 문서 형식
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) 위에서 생성하는 객체
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` 원래(폐쇄되지 않은) 헤더
 
 </div>
 </div>

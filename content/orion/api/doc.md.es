@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: rebaja,csv,yaml
-status: verificado=38102
+status: verificado=44038
 title: API de Orion - Formato de documento de texto
 ---
 
@@ -11,6 +11,8 @@ title: API de Orion - Formato de documento de texto
 {# lede #}Esta página documenta los campos Cabecera y los artefactos de datos resultantes{# lede #} producido por el [API de creación](build) al procesar dichos archivos de texto (como anexos de página) a través de su [`single_narrative`](build#-code-single_narrative-args-code-) vista.
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ Estado de documento de texto libre obligatorio.
 
 <p class="card-text">
 
-A continuación se explican tres de estas etiquetas de estado especiales:
+Three such special status labels are explained below:
 
 ###### borrador
 
@@ -112,6 +114,7 @@ Lista separada por comas opcional de `file globs` que se basa en la salida cread
 </div>
   <div class="card-body">
     <div class="card-title">
+
 Opcional `SEO`-lista fácil de separar por comas de etiquetas aptas para búsqueda.
 
 </div>
@@ -142,6 +145,94 @@ Aditivo por naturaleza (eliminar categorías no hará que esas ex-categorías el
 #### Artefactos de datos
 
 n/d
+
+#### :editormd-logo: Extensiones de GFM
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Tabla automática de contextos con opciones opcionales `id=sidebar` sobre el cierre `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` Permite un comportamiento dinámico en la barra lateral izquierda para pantallas que tienen más de 1900 px de ancho.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Notas al pie automáticas.
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Enlaces bidireccionales entre las notas a pie de página referenciadas y sus descripciones.
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+Markdown @mermaidjs/maid diagramas.
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+Gráficos vectoriales de asíntota `iframe` representador.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Descargue e inyecte fragmentos de código de repositorios git públicos como GitHub.
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ Consulte la sección de rebajas anterior.
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ Opcional declarado `PDL` tipos de dato de columna
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) objeto utilizado para producir
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` de encabezados originales (no mezclados)
 
 </div>
 </div>

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: markdown,csv,yaml
-status: 驗證 =38102
+status: 驗證 =44038
 title: Orion API - 文字文件格式
 ---
 
@@ -11,6 +11,8 @@ title: Orion API - 文字文件格式
 {# lede #}此頁面記錄「標頭」欄位和產生的資料使用者自建物件{# lede #} 製作者：[建置 API](build) 透過其處理此類文字檔 (作為頁面附件) 時[`single_narrative`](build#-code-single_narrative-args-code-) 檢視。
 
 [TOC]
+
+-----
 
 ### `Markdown`
 
@@ -50,7 +52,7 @@ title: Orion API - 文字文件格式
 
 <p class="card-text">
 
-以下說明三種特殊狀態標籤：
+Three such special status labels are explained below:
 
 ###### 草稿
 
@@ -112,6 +114,7 @@ title: Orion API - 文字文件格式
 </div>
   <div class="card-body">
     <div class="card-title">
+
 選擇性`SEO`- 使用逗號區隔的可搜尋標記清單。
 
 </div>
@@ -142,6 +145,94 @@ title: Orion API - 文字文件格式
 #### 資料物件
 
 不適用
+
+#### :editormd-logo: GFM 延伸
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+相關資訊環境的自動表格 (選擇性) `id=sidebar` 在附件上`<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` 針對寬度超過 1900px 的畫面，在左側邊欄啟用動態行為。
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+自動註腳 。
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+參考註腳與其描述之間的雙向連結。
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+減價 @mermaidjs/mermaid 圖表。
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+Asymptote 向量圖形`iframe` 轉換器。
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### [`snippet`&#58;...]
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+從公用 git 儲存區域 (例如 GitHub) 下載並插入程式碼片段。
+
+</div>
+</div>
+</div>
+
+-----
 
 ### `YAML`
 
@@ -208,6 +299,8 @@ title: Orion API - 文字文件格式
 </div>
 </div>
 </div>
+
+-----
 
 ### `CSV`
 
@@ -345,6 +438,21 @@ title: Orion API - 文字文件格式
     <div class="card-title">
 
 [`Text::CSV` ](https://metacpan.org/pod/Text::CSV) 用於產生上面的物件
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `csv_headers`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`arrayref` 的原始標頭 (未管理)
 
 </div>
 </div>
