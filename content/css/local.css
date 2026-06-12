@@ -243,4 +243,5 @@ pre {
 @media only screen and (max-width: 1900px) {
 	#sidebar {position:relative !important; top:0 !important; left:0 !important; width:100% !important; color: white !important}
 	#sidebar li {display:list-item !important}
+    #sidebar a {color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important;}
 }
