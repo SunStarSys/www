@@ -19,11 +19,11 @@
   &nbsp;
   {% endfor %}
   {% if dep_dot %}
-{% filter markdown %}
+  {% filter markdown %}
 ```dot
 {{dep_dot|safe}}
 ```
-{% endfilter %}
+  {% endfilter %}
   {% endif %}
   {% if duration %}
   <script src="/editor.md/js/chart.umd.js"></script>
