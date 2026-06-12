@@ -310,7 +310,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
       });
   });
   // Select the target element
-  const targets = document.querySelectorAll(".orion-fade");
+  const targets = document.querySelectorAll(".fade");
   if (targets) {
    targets.forEach((target) => {
       target.style.opacity = 0.01;
