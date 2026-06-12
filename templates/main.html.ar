@@ -186,10 +186,17 @@
 if (typeof(editormd) === "undefined") {
 
 mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
-        /**/
-        for (const e of $("body").find(".graphviz").toArray()) {
-            d3.select(e).graphviz({useWorker: false}).renderDot($(e).text());
-            e.innerHTML = ""
+
+for (const e of $("body").find(".graphviz").toArray()) {
+            const graphContainer = d3.select(e);
+            const width = graphContainer.node().clientWidth;
+            const height = graphContainer.node().clientHeight;
+            graphContainer.graphviz({useWorker:false})
+              .width(width)
+//              .height(height)
+              .fit(true)
+              .renderDot($(e).text());
+			e.innerHTML = ""
         }
         $("body").find("pre").parent().addClass("editormd-preview-theme-dark");
         CodeMirror.colorize();
@@ -303,7 +310,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
       });
   });
   // Select the target element
-  const targets = document.querySelectorAll(".fade");
+  const targets = document.querySelectorAll(".orion-fade");
   if (targets) {
    targets.forEach((target) => {
       target.style.opacity = 0.01;
