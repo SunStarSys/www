@@ -287,7 +287,7 @@ s/^"(.*)"$/\\Q$1\\E/ for $filter;
 
 my @unzip = qw/--markdown --yaml/;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx, $hits);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx, $hits, $dep_dot);
 
 tie my %pw, 'BerkeleyDB::Hash', -Filename => "/x1/repos/svn-auth/$repos/user+group", -Flags => DB_RDONLY or die "Can't open $repos database: $!";
 my $svnuser = $r->pnotes("svnuser");
@@ -406,6 +406,42 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
   elsif ($re =~ /^(acl|deps)=/i) {
     if (open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.$1") {
       read $fh, $yaml, -s $fh;
+      if ($1 eq "deps") {
+        local $_ = $yaml;
+        utf8::encode $_ if utf8::is_utf8 $_;
+        my $yaml_deps = Load $_;
+        my $nn = 0;
+        my @language = qw/English Spanish German French Russian Swedish Brazilian-Portugese Arabic Chinese Korean Japanese Hebrew/;
+        my @lang = qw/.en .es .de .fr .ru .sv .pt-BR .ar .zh-TW .ko .ja .he/;
+        my ($idx) = grep $lang[$_] eq $lang, 0 .. $#lang;
+        if (my ($root) = grep s!^.*/trunk/content!!, </x1/cms/wcbuild/$repos/$host/trunk/content/sitemap.*$lang>) {
+          my @dep_nodes = $root;
+          my %dot;
+          while (my $node = shift @dep_nodes) {
+            next unless exists $yaml_deps->{$node};
+            $dot{$node} = {
+              deps => $yaml_deps->{$node};
+              id   => $nn++,
+              name => "\"$node\""
+            };
+            push @dep_nodes, @{$dot{$node}{deps}};
+            delete $yaml_deps->{node}
+          }
+          open my $fh, ">", \$dep_dot;
+          print $fh "strict digraph \"$language[$idx] Dependencies\" {\n";
+          my $red_edge_re = $svnuser;
+          for (sort {$a->{id} <=> $b->{id}} values %dot) {
+            print $fh "$_->{name} [name=$_->{name}];\n";
+            for my $value (map $dot{$_} || $_, @{$_->{deps}}) {
+              $value = $dot{$value} = { deps => $$yaml_deps{$value}, id => $nn++, name=>"\"$value\""} unless ref $value;
+              my $color = "";
+              $color=" [color=red]" if defined $red_edge_re and $value->{name} =~ $red_edge_re;
+              print $fh "$_->{name} -> $value->{name}$color;\n";
+            }
+          }
+          print $fh "}\n";
+        }
+      }
     }
   }
   elsif ($re =~ /^translation=/i) {
@@ -808,6 +844,7 @@ my $args = {
   hash        => $hash->hexdigest,
   filter      => $filter,
   specials    => $re =~ $specials_re && $1,
+  dep_dot     => $dep_dot,
   specials_re => grep s/^.*?(\w+=)/$1/, $specials_re
 };
 
