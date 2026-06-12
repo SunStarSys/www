@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: sécurité,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: vérifié=44121
+status: vérifié=44141
 title: Sécurité d'Orion
 ---
 
@@ -226,7 +226,9 @@ Nous explorons ces questions en relation avec Orion ci-dessous.
 
 L'éditeur en ligne prend en charge une interface utilisateur JSON en définissant simplement l'en-tête Accept de votre agent utilisateur pour préférer la `application/json` Type MIME, les contrôles de sécurité sont donc les mêmes pour l'interface utilisateur et l'API.
 
-**Aucune interface utilisateur/API d'administration** n'est disponible en dehors de l'accès Subversion direct.
+**Aucune interface utilisateur/API d'administration** n'est disponible en dehors de l'accès Subversion direct. Au lieu de cela, nous proposons certaines **vues** de données dans le moteur de recherche gratuit qui peuvent être utilisées pour créer des tableaux de bord contrôlés par accès sur le site Web hébergé.
+
+Sinon, chaque site Web est gouverné par les fichiers de configuration dans la base du site Web. `lib/` répertoire des matériaux source dans Subversion.
 
 ##### Les ACL Subversion régissent l'accès en lecture aux copies de travail côté serveur
 

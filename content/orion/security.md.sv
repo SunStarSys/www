@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: säkerhet,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: verifierad=44121
+status: verifierad=44141
 title: Orion-säkerhet
 ---
 
@@ -226,7 +226,9 @@ Vi gräver i dessa frågor som de relaterar till Orion nedan.
 
 Online-redigeraren stöder ett JSON-gränssnitt genom att helt enkelt ställa in användaragentens Accept-rubrik för att föredra `application/json` MIME-typ, så säkerhetskontrollerna är samma för både användargränssnittet och API:t.
 
-**Det finns inget administrativt användargränssnitt/API** utanför direkt Subversion-åtkomst.
+**Det finns inget administrativt användargränssnitt/API** utanför direkt Subversion-åtkomst. I stället erbjuder vi vissa data **vyer** i den kostnadsfria sökmotorn som kan användas för att konstruera åtkomstkontrollerade infopaneler på den värdbaserade webbplatsen.
+
+Annars styrs varje webbplats av konfigurationsfilerna i webbplatsens bas `lib/` katalog över källmaterial i Subversion.
 
 ##### Subversion-åtkomstlistor styr läsbehörighet för arbetskopia på serversidan
 

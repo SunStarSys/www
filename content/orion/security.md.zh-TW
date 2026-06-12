@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: security，安全性，infosec，appsec，ipsec，devsecops，it，acl，svnauthz，zerotrust
-status: 驗證 =44121
+status: 驗證 =44141
 title: Orion 安全
 ---
 
@@ -226,7 +226,9 @@ Wiki security involves several factors:
 
 線上編輯器支援 JSON UI，只要將使用者代理程式的 Accept 標頭設為偏好即可`application/json` MIME 類型，因此 UI 和 API 的安全控制相同。
 
-**直接 Subversion 存取之外沒有管理 UI/API**。
+**直接 Subversion 存取之外沒有管理 UI/API**。相反地，我們會在免費搜尋引擎中提供特定資料 **檢視 **，這些資料可用來建構代管網站內的存取控制儀表板。
+
+否則，每個網站都由網站基礎中的組態檔管理。`lib/` Subversion 中來源材料的目錄。
 
 ##### Subversion ACL 管理伺服器端工作複本讀取存取權
 

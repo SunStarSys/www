@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: セキュリティ、infosec、appsec、ipsec、devsecops、it、acl、svnauthz、zerotrust
-status: 確認済み=44121
+status: 確認済み=44141
 title: Orionのセキュリティ
 ---
 
@@ -226,7 +226,9 @@ Wiki security involves several factors:
 
 オンライン・エディタでは、ユーザー・エージェントのAcceptヘッダーを優先するように設定するだけで、JSON UIがサポートされます。`application/json` MIMEタイプであるため、セキュリティ制御はUIとAPIの両方で同じです。
 
-**Subversionの直接アクセス以外に、管理UI/API**はありません。
+**Subversionの直接アクセス以外に、管理UI/API**はありません。かわりに、ホストされたWebサイト内でアクセス制御されたダッシュボードを構築するために使用できる、無料検索エンジンで特定のデータ**ビュー**を提供します。
+
+それ以外の場合、各Webサイトは、Webサイトのベースの構成ファイルによって管理されます`lib/` Subversionのソース・マテリアルのディレクトリ。
 
 ##### Subversion ACLは、サーバー側の作業用コピーの読取りアクセスを制御します。
 

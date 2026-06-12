@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: Sicherheit,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: überprüft=44121
+status: überprüft=44141
 title: Orion-Sicherheit
 ---
 
@@ -226,7 +226,9 @@ Wir befassen uns mit diesen Themen, wie sie sich unten auf Orion beziehen.
 
 Der Online-Editor unterstützt eine JSON-UI, indem Sie einfach den Accept-Header Ihres Benutzer-Agent so einstellen, dass er die `application/json` MIME-Typ, sodass die Sicherheitskontrollen sowohl für die UI als auch für die API identisch sind.
 
-**Außerhalb des direkten Subversion-Zugriffs ist keine administrative UI/API** vorhanden.
+**Außerhalb des direkten Subversion-Zugriffs ist keine administrative UI/API** vorhanden. Stattdessen bieten wir bestimmte Daten **views** in der kostenlosen Suchmaschine an, die verwendet werden können, um zugriffsgesteuerte Dashboards innerhalb der gehosteten Website zu erstellen.
+
+Andernfalls wird jede Website von den Konfigurationsdateien in der Basis der Website gesteuert `lib/` Verzeichnis der Quellmaterialien in Subversion.
 
 ##### Subversion-ACLs steuern den serverseitigen Lesezugriff auf Arbeitskopien
 

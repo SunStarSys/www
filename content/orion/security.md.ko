@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 보안,infosec, appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: 확인=44121
+status: 확인=44141
 title: Orion 보안
 ---
 
@@ -226,7 +226,9 @@ Wiki security involves several factors:
 
 온라인 편집기는 단순히 사용자 에이전트의 Accept 헤더를 선호하도록 설정하여 JSON UI를 지원합니다. `application/json` MIME 형식이므로 UI와 API 모두에 대해 보안 컨트롤이 동일합니다.
 
-**직접 Subversion 액세스 외부에는 관리 UI/API**가 없습니다.
+**직접 Subversion 액세스 외부에는 관리 UI/API**가 없습니다. 대신, 우리는 호스팅 된 웹 사이트 내에서 액세스 제어 대시 보드를 구성하는 데 사용할 수있는 무료 검색 엔진에서 특정 데이터 **보기**를 제공합니다.
+
+그렇지 않으면 각 웹 사이트는 웹 사이트의 기본에 있는 구성 파일에 의해 관리됩니다. `lib/` Subversion에서 소스 재질의 디렉토리입니다.
 
 ##### Subversion ACL은 서버측 작업 복사본 읽기 액세스를 제어합니다.
 

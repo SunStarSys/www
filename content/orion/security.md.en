@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=44121
+Status: verified=44141
 
 <div class="right">
 
@@ -223,7 +223,9 @@ We delve into these issues as they relate to Orion below.
 
 The online editor supports a JSON UI by simply setting your user-agent's Accept header to prefer the `application/json` MIME-type, so the security controls are the same for both the UI and API.
 
-**There is no administrative UI/API** outside of direct Subversion access.
+**There is no administrative UI/API** outside of direct Subversion access. Instead, we offer certain data **views** in the free search engine that may be used to construct access-controlled dashboards within the hosted website.
+
+Otherwise, each website is goverend by the configuation files in the website's base `lib/` directory of the source materials in Subversion.
 
 ##### Subversion ACLs govern server-side working copy read access
 
