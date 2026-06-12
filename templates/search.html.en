@@ -20,8 +20,9 @@
   {% endfor %}
   {% if dep_dot %}
   {% filter markdown %}
-```dot
-{{dep_dot|safe}}
+<div class="graphviz">
+{{dep_dot}}
+</div>
 ```
   {% endfilter %}
   {% endif %}
