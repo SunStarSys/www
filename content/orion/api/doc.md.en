@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=38148
+status: verified=38370
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -143,6 +143,52 @@ Additive in nature (removing categories will not cause those ex-categories to de
 #### Data Artifacts
 
 n/a
+
+
+#### :editormd-logo: GFM Extensions
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[TOC]#sidebar`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Automatic Table of Contexts with optional `id=sidebar` on the wrapping `<div>`.
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`#sidebar` enables dynamic behavior in the left sidebar for screens possessing more than 1900 pixel width.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[^name] Footnotes`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Automatic Footnotes.
+
+</div>
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Bidirectional links between referenced footnotes and their descriptions.
+
+</div>
+</div>
+</div>
 
 -----
 
