@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=42733
+Status: verified=42737
 
 <div class="right">
 
@@ -24,9 +24,7 @@ Status: verified=42733
 
 &nbsp;
 
-## Table of Contents
-
-[TOC]
+[TOC]#sidebar
 
 ## {# lede #}"Security through obscurity is not much security at all."{# lede #}
 
