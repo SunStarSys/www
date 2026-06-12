@@ -2023,6 +2023,7 @@
             if (settings.autoHeight && !state.fullscreen && !state.preview)
             {
                 editor.css("height", "auto");
+		if (codeMirror)
                 codeMirror.css("height", "auto");
             }
             else
@@ -2037,19 +2038,19 @@
                     editor.height($(editormd.window).height());
                 }
 
-                if (settings.toolbar && !settings.readOnly)
+                if (codeMirror && settings.toolbar && !settings.readOnly)
                 {
                     codeMirror.css("margin-top", toolbar.height() + 1).height(editor.height() - toolbar.height());
                 }
-                else
-
+                else if (codeMirror)
                 {
-                    codeMirror.css("margin-top", 0).height(editor.height());
+		    codeMirror.css("margin-top", 0).height(editor.height());
                 }
             }
 
             if(settings.watch)
             {
+                if (codeMirror)
                 codeMirror.width(editor.width() / 2);
                 preview.width((!state.preview) ? editor.width() / 2 : editor.width());
 
@@ -2079,6 +2080,7 @@
             }
             else
             {
+  	        if (codeMirror)
                 codeMirror.width(editor.width());
                 preview.hide();
             }
@@ -2556,7 +2558,8 @@
                 icon.removeClass(watchIcon).addClass(unWatchIcon);
             }
 
-            this.codeMirror.css("border-right", "none").width(this.editor.width());
+	    if (this.codeMirror)
+                this.codeMirror.css("border-right", "none").width(this.editor.width());
 
             this.resize();
 
@@ -3609,7 +3612,7 @@
                         }
                         else if (camelemojiMatchs)
                         {
-                            for (var t = 0, len3 = camelemojiMatchs.length; t < len3; t++)
+                            for (var t = 0, len3 = camelemojiMatchs.length; t < sluglen3; t++)
                             {
                                 var twe = camelemojiMatchs[t].replace(/:/g, "");
                                 return "<img src=\"" + editormd.camel_emoji.path + twe + editormd.camel_emoji.ext + "\" title=\"camel-emoji-" + twe + "\" alt=\"camel-emoji-" + twe + "\" class=\"emoji camel-emoji\" />";
@@ -3759,9 +3762,9 @@
             }
 
             text = trim(text);
-            var escapedText = text.toLowerCase().replace(/[^\w]+/g, "-");
+            var escapedText = text.toLowerCase().replace(/[^\w\p{L}\p{N}]+/ug, "-");
             var isChinese = /^[\u4e00-\u9fa5]+$/.test(text);
-            var id        = (isChinese) ? escape(text).replace(/\%/g, "") : text.toLowerCase().replace(/[^\w]+/g, "-");
+            var id        = text.toLowerCase().replace(/[^\w\p{L}\p{N}]+/ug, "-");
 
             text = text.replace(/\$\$(.*?)\$\$/g, ($full, $1) => {return "<span class=\"" + editormd.classNames.tex +"\">"+$1+"</span>"});
             linkText = linkText.replace(/\$\$(.*?)\$\$/g, ($full, $1) => {return "<span class=\"" + editormd.classNames.tex +"\">"+$1+"</span>"});
@@ -3798,7 +3801,8 @@
             var isTeXInline     = /\$\$(.*?)\$\$/g.test(text);
             var isTeXLine       = /^\$\$(.*?)\$\$$/.test(text);
             var isTeXAddClass   = (isTeXLine)     ? " class=\"" + editormd.classNames.tex + "\"" : "";
-            var isToC           = (settings.tocm) ? /^(\[TOC\]|\[TOCM\])$/.test(text) : /^\[TOC\]$/.test(text);
+            var isToC           = (settings.tocm) ? text.match(/^\[TOCM?\]\#?([\w-]+)?$/) : text.match(/^\[TOC\]\#?([\w-]+)?$/);
+	    var ToCid           = isToC ? isToC[1] : "ToC";
             var isToCMenu       = /^\[TOCM\]$/.test(text);
 
             if (!isTeXLine && isTeXInline)
@@ -3807,12 +3811,20 @@
                     return "<span class=\"" + editormd.classNames.tex + "\">" + $2 + "</span>";
                 });
             }
-            else
+            else if (isTeXLine)
             {
-                text = (isTeXLine) ? text.replace(/\$/g, "") : text;
-            }
+                text = text.replace(/\$/g, "");
 
-            var tocHTML = "<div class=\"markdown-toc editormd-markdown-toc\">" + text + "</div>";
+	    }
+	    // footnotes
+	    text = text.replace(/^\[\^([^\[\]]+)\]/, ($1, $2) => {
+		return "<b><a id='" + $2 + "' href='#fn-" + $2 + "'>" + $2 + "</a></b>";
+	    });
+	    text = text.replace(/\[\^([^\[\]]+)\](,(?=\[\^))?/g, ($1, $2, $3) => {
+		return "<sup><a name='fn-" + $2 + "' href='#" + $2 + "'>" + $2 + "</a>" + ($3 ? $3 : "") + "</sup>";
+	    });
+
+            var tocHTML = "<div id=\"" + ToCid + "\" class=\"markdown-toc editormd-markdown-toc\">" + text + "</div>";
 
             return (isToC) ? ( (isToCMenu) ? "<div class=\"editormd-toc-menu\">" + tocHTML + "</div><br/>" : tocHTML )
                            : ( (pageBreakReg.test(text)) ? this.pageBreak(text) : "<p" + isTeXAddClass + ">" + this.atLink(this.emoji(text)) + "</p>\n" );
@@ -3917,7 +3929,7 @@
                 html += "</ul></li>";
             }
 
-            html += "<li><a class=\"toc-level-" + level + "\" href=\"#" + slug + "\" level=\"" + level + "\">" + text + "</a><ul>";
+            html += "<li><a class=\"toc-level-" + level + "\" href=\"#" + slug + "\" level=\"" + level + "\">" + editormd.markedRenderer([],{emoji:true}).emoji(text) + "</a><ul>";
             lastLevel = level;
         }
 
