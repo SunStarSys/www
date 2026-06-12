@@ -417,7 +417,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         if (my ($root) = grep s!^.*/trunk/content!!, </x1/cms/wcbuild/$repos/$host/trunk/content/sitemap.*$lang>) {
           my @dep_nodes = $root;
           my %dot;
-          while (my $node = shift @dep_nodes) {
+          while (defined(my $node = shift @dep_nodes)) {
             next unless exists $yaml_deps->{$node};
             $dot{$node} = {
               deps => $yaml_deps->{$node},
