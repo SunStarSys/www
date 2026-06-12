@@ -193,7 +193,7 @@
             const height = graphContainer.node().clientHeight;
             graphContainer.graphviz({useWorker:false})
               .width(width)
-              .height(height)
+//              .height(height)
               .fit(true)
               .renderDot($(e).text());
 			e.innerHTML = ""
