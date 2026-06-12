@@ -285,12 +285,13 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
       });
   });
   // Select the target element
-  const targets = document.getElementsByClassName("fade");
-  targets.forEach((target) => {
-    target.style.opacity = 0.01;
-    // Create an IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
+  const targets = document.querySelectorAll(".fade");
+  if (targets) {
+   targets.forEach((target) => {
+      target.style.opacity = 0.01;
+      // Create an IntersectionObserver
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
           if (entry.isIntersecting && target.style.opacity < 1) {
               target.style.display = "none";
               target.style.opacity = 1;
@@ -298,14 +299,15 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
           } else {
              target.style.opacity = 0.01;
 		  }
-       });
-      }, {
+        });
+        }, {
         root: null, // viewport
         threshold: 0.01 // Trigger when at least 1% is visible
+      });
+      // Start observing
+      observer.observe(target);
     });
-  // Start observing
-    observer.observe(target);
-  });
+  }
 </script>
 
 {% block javascript %}{% endblock %}
