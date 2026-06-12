@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=38370
+status: verified=44006
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -156,13 +156,13 @@ n/a
   <div class="card-body">
     <div class="card-title">
 
-Automatic Table of Contexts with optional `id=sidebar` on the wrapping `<div>`.
+Automatic Table of Contexts with optional `id=sidebar` on the enclosing `<div>`.
 </div>
 </div>
   <div class="card-body">
     <div class="card-title">
 
-`#sidebar` enables dynamic behavior in the left sidebar for screens possessing more than 1900 pixel width.
+`#sidebar` enables dynamic behavior in the left sidebar for screens possessing more than 1900px width.
 
 </div>
 </div>
@@ -185,6 +185,48 @@ Automatic Footnotes.
     <div class="card-title">
 
 Bidirectional links between referenced footnotes and their descriptions.
+
+</div>
+</div>
+</div>
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `fenced block extensions`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+`mermaid`
+
+</div>
+
+Markdown @mermaidjs/mermaid diagrams.
+
+
+<div class="card-title">
+
+`asy`
+
+</div>
+
+Asymptote Vector Graphics `iframe` renderer.
+
+</div>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `[snippet:...]`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Download and inject code snippets from public git repos like GitHub.
 
 </div>
 </div>
