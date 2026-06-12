@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: الأمن،infosec،appsec،ipsec،devsecops،it،acl،svnauthz،zerotrust
-status: منشور
+status: التحقق = 44121
 title: أوريون الأمن
 ---
 
@@ -25,13 +25,15 @@ title: أوريون الأمن
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"الأمن من خلال الغموض ليس الكثير من الأمن على الإطلاق."{# lede #}
 
 إعادة صياغة شعبية للأقفال الأمريكية [ألفرد تشارلز هوبز](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) في عام 1851، اختار بسهولة أقفال كريستال بالاس خلال معرض لندن في ذلك العام.  نتفق تمامًا، وهذا هو السبب في أن مخططاتنا لمحرك أتمتة Oracle Cloud Infrastructure (OCI) لدينا هي [متاح على GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## أمان البنية الأساسية لـ Orion
+## أمان البنية الأساسية لـ Orion :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Ditto لبرامج CGI النصية، والتي يتم تأمينها بالك�
 
 -----
 
-## تأمين تطبيق Orion
+## تأمين تطبيق Orion :fa-lock:
 
 ### [SSR العام هو رائحة](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Same situation as the general-purpose UI: يقوم بفحص متقاطع مقا�
 
 - [س] قيود التحليلات
 
-جوجل و/أو LinkedIn.
+جوجل، X، و/أو LinkedIn.
 
 - [س] قيود البيانات
 

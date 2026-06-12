@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=42737
+Status: verified=44121
 
 <div class="right">
 
@@ -30,7 +30,7 @@ Status: verified=42737
 
 Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) in 1851, who easily picked the Crystal Palace locks during a London exhibition that year.  We fully agree, which is why our blueprints for our Oracle Cloud Infrastructure (OCI) automation engine are [available on GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Orion Infrastructure Security
+## Orion Infrastructure Security :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -156,7 +156,7 @@ Subversion Server-Side Commit Hooks are also customizable to your oversight conc
 
 -----
 
-## Orion Application Security
+## Orion Application Security :fa-lock:
 
 ### [Public SSR is a smell](https://queue.acm.org/detail.cfm?id=2721993)
 

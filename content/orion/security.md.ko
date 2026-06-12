@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 보안,infosec, appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: 공개됨
+status: 확인=44121
 title: Orion 보안
 ---
 
@@ -25,13 +25,15 @@ title: Orion 보안
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"어리석음을 통한 보안은 전혀 안전하지 않습니다."{# lede #}
 
 American Locksmith의 발음을 American Locksmith [en] [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851년에 런던 전시회에서 크리스탈 팰리스 자물쇠를 쉽게 골랐습니다.  Oracle Cloud Infrastructure(OCI) 자동화 엔진에 대한 우리의 청사진이 바로 이러한 이유에 전적으로 동의합니다. [GitHub에서 사용 가능](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Orion Infrastructure 보안
+## Orion Infrastructure 보안 :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Subversion Server-Side Commit Hook도 감독 문제에 맞게 사용자 정의�
 
 -----
 
-## Orion 애플리케이션 보안
+## Orion 애플리케이션 보안 :fa-lock:
 
 ### [공공 SSR 냄새](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Same situation as the general-purpose UI: UI에서 Subversion 서버와 상호 �
 
 - [x] 분석 제한 사항
 
-구글 및/또는 LinkedIn
+구글, X 및/또는 LinkedIn.
 
 - [x] 데이터 제한 사항
 

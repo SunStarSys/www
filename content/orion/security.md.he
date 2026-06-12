@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: אבטחה,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: פורסם
+status: אומתו 44121
 title: אוריון אבטחה
 ---
 
@@ -25,13 +25,15 @@ title: אוריון אבטחה
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"ביטחון באמצעות ערפול הוא לא הרבה ביטחון בכלל."{# lede #}
 
 פרפינג פופולרי של מסגר אמריקאי [אלפרד צ'ארלס הובס](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) בשנת 1851, אשר בקלות בחרו את מנעולי קריסטל פאלאס במהלך תערוכה בלונדון באותה שנה.  אנו מסכימים לחלוטין, וזו הסיבה שהתוכניות שלנו עבור מנוע האוטומציה של Oracle Cloud Infrastructure (OCI) הן [זמין בכתובת GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## אבטחת תשתיות אוריון
+## אבטחת תשתיות אוריון :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Subversion Server-Side Commit Hooks ניתנים גם להתאמה אישית ל
 
 -----
 
-## אבטחת יישום של אוריון
+## אבטחת יישום של אוריון :fa-lock:
 
 ### [SSR ציבורי הוא ריח](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Same situation as the general-purpose UI: הוא מבצע בדיקה צולבת 
 
 - [x] הגבלות Analytics
 
-גוגל ו/או LinkedIn
+גוגל, X ו/או LinkedIn.
 
 - [x] הגבלות נתונים
 

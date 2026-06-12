@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: sécurité,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: publié
+status: vérifié=44121
 title: Sécurité d'Orion
 ---
 
@@ -25,13 +25,15 @@ title: Sécurité d'Orion
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"La sécurité par l'obscurité n'est pas du tout une sécurité."{# lede #}
 
 Paraphrase populaire de serrurier américain [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) En 1851, il choisit facilement les serrures du Crystal Palace lors d'une exposition londonienne cette année-là.  Nous sommes tout à fait d'accord. C'est pourquoi nos plans pour notre moteur d'automatisation Oracle Cloud Infrastructure (OCI) sont [disponible sur GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Sécurité de l'infrastructure Orion
+## Sécurité de l'infrastructure Orion :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Les crochets de validation côté serveur Subversion sont également personnalis
 
 -----
 
-## Sécurité applicative Orion
+## Sécurité applicative Orion :fa-lock:
 
 ### [La SSR publique est une odeur](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Sur le site en direct, le moteur de recherche fera exactement la même chose lor
 
 - [x] Restrictions d'analyse
 
-Google et/ou LinkedIn.
+Google, X et/ou LinkedIn.
 
 - [x] Restrictions de données
 

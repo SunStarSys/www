@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: Sicherheit,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: veröffentlicht
+status: überprüft=44121
 title: Orion-Sicherheit
 ---
 
@@ -25,13 +25,15 @@ title: Orion-Sicherheit
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"Sicherheit durch Dunkelheit ist überhaupt nicht viel Sicherheit."{# lede #}
 
 Beliebte Paraphierung des amerikanischen Schlossers [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851, der während einer Londoner Ausstellung in diesem Jahr leicht die Crystal Palace Schlösser auswählte.  Wir sind uns voll und ganz einig, weshalb unsere Blueprints für unsere Oracle Cloud Infrastructure-(OCI-)Automatisierungs-Engine [verfügbar auf GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Sicherheit der Orion-Infrastruktur
+## Sicherheit der Orion-Infrastruktur :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Subversion Server-seitige Commit-Hooks sind auch an Ihre Aufsichtsprobleme anpas
 
 -----
 
-## Orion-Anwendungssicherheit
+## Orion-Anwendungssicherheit :fa-lock:
 
 ### [Öffentliche SSR ist ein Geruch](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Auf der Live-Website wird die Suchmaschine dasselbe tun, wenn Sie Markdown-Suche
 
 - [x] Analyseeinschränkungen
 
-Google und/oder LinkedIn.
+Google, X und/oder LinkedIn.
 
 - [x] Dateneinschränkungen
 

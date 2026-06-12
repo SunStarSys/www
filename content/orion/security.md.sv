@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: säkerhet,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: publicerad
+status: verifierad=44121
 title: Orion-säkerhet
 ---
 
@@ -25,13 +25,15 @@ title: Orion-säkerhet
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"Säkerhet genom dunkelhet är inte mycket säkerhet alls."{# lede #}
 
 Populär parafrasering av amerikansk låssmed [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851, som lätt plockade Crystal Palace lås under en London utställning det året.  Vi instämmer helt och hållet, och det är därför våra kopior av vår OCI-automatiseringsmotor för Oracle Cloud Infrastructure är [tillgänglig på GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Orion-infrastruktursäkerhet
+## Orion-infrastruktursäkerhet :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Subversion Server-Side Commit Hooks är också anpassningsbara för dina tillsyn
 
 -----
 
-## Orion-applikationssäkerhet
+## Orion-applikationssäkerhet :fa-lock:
 
 ### [SSR är en lukt](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ På den aktiva webbplatsen gör sökmotorn exakt samma sak när du aktiverar sö
 
 - [x] Analysbegränsningar
 
-Googla och/eller LinkedIn.
+Google, X och/eller LinkedIn.
 
 - [x] Databegränsningar
 

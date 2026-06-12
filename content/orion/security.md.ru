@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: безопасность,инфосек,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: опубликовано
+status: проверено=44121
 title: Безопасность Orion
 ---
 
@@ -25,13 +25,15 @@ title: Безопасность Orion
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"Безопасность через неясность – это совсем не безопасность."{# lede #}
 
 Популярный парафазинг американского слесаря [Альфред Чарльз Хоббс](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) в 1851 году, который легко выбрал замки Хрустального дворца во время лондонской выставки в том году.  Мы полностью согласны с этим, и именно поэтому мы разработали концепцию для нашего механизма автоматизации Oracle Cloud Infrastructure (OCI). [доступно на GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Безопасность инфраструктуры Orion
+## Безопасность инфраструктуры Orion :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Ditto для сценариев CGI, которые полностью забл�
 
 -----
 
-## Защита приложения Orion
+## Защита приложения Orion :fa-lock:
 
 ### [Общественный SSR – это запах](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Same situation as the general-purpose UI: он перекрестно прове
 
 - [x x] Ограничения аналитики
 
-Google и/или LinkedIn.
+Google, X и/или LinkedIn.
 
 - [x x] Ограничения данных
 

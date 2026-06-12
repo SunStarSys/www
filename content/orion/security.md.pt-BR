@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: segurança,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: publicado
+status: verificado=44121
 title: Segurança Orion
 ---
 
@@ -25,13 +25,15 @@ title: Segurança Orion
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"A segurança através da obscuridade não é muita segurança."{# lede #}
 
 Paráfase popular do serralheiro americano [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) Em 1851, que facilmente pegou as fechaduras do Palácio de Cristal durante uma exposição em Londres naquele ano.  Concordamos plenamente, e é por isso que nossos planos para nosso mecanismo de automação da Oracle Cloud Infrastructure (OCI) são [disponível em GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Segurança da Infraestrutura Orion
+## Segurança da Infraestrutura Orion :fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Subversion Server-Side Commit Hooks também são personalizáveis para suas preo
 
 -----
 
-## Segurança do Aplicativo Orion
+## Segurança do Aplicativo Orion :fa-lock:
 
 ### [SSR público é um cheiro](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ No site ao vivo, o mecanismo de pesquisa fará o mesmo quando você ativar pesqu
 
 - [x] Restrições de análise
 
-Google e/ou LinkedIn.
+Google, X e/ou LinkedIn.
 
 - [x] Restrições de Dados
 

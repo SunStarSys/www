@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: セキュリティ、infosec、appsec、ipsec、devsecops、it、acl、svnauthz、zerotrust
-status: 公開済み
+status: 確認済み=44121
 title: Orionのセキュリティ
 ---
 
@@ -25,13 +25,15 @@ title: Orionのセキュリティ
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"不明瞭さによるセキュリティは、あまりセキュリティではありません。"{# lede #}
 
 American locksmithの発音を[Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851年、ロンドンの展覧会でクリスタル・パレス・ロックを容易に選んだ。Oracle Cloud Infrastructure(OCI)自動化エンジンのブループリントは、[GitHubで入手できます。](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Orion Infrastructureのセキュリティ
+## Orion Infrastructureのセキュリティ:fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Subversionサーバー側のコミット・フックも、監視上の懸念に�
 
 -----
 
-## Orionアプリケーションのセキュリティ
+## Orionアプリケーションのセキュリティ:fa-lock:
 
 ### [Public SSRは臭い](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Same situation as the general-purpose UI: これは、UIからSubversionサー�
 
 - [x] 分析の制限
 
-Googleおよび/またはLinkedIn。
+Google、X、および/またはLinkedIn。
 
 - [x] データ制限
 

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: security，安全性，infosec，appsec，ipsec，devsecops，it，acl，svnauthz，zerotrust
-status: 已發布
+status: 驗證 =44121
 title: Orion 安全
 ---
 
@@ -25,13 +25,15 @@ title: Orion 安全
 <div class="tab-content">
 <div class="tab-pane fade active show" id="docs" role="tabpanel">
 
-[TOC]
+&nbsp;
+
+[TOC]#sidebar
 
 ## {# lede #}"穿透隱密的安全性根本不太安全。"{# lede #}
 
 美國 locksmith 的熱門繪圖[Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851 年，當年在倫敦的一場展覽中輕易地拿到水晶宮鎖。我們完全同意，這就是我們的 Oracle Cloud Infrastructure (OCI) 自動化引擎藍圖的原因[可從 GitHub 取得](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
-## Orion Infrastructure 安全
+## Orion Infrastructure 安全:fa-lock:
 
 ```mermaid
 flowchart TB
@@ -157,7 +159,7 @@ Subversion 伺服器端確認鉤點也可根據您的監督問題自訂。從簡
 
 -----
 
-## Orion 應用程式安全
+## Orion 應用程式安全:fa-lock:
 
 ### [公用 SSR 是氣味](https://queue.acm.org/detail.cfm?id=2721993)
 
@@ -316,7 +318,7 @@ Same situation as the general-purpose UI: 它會對照 UI 中的 Subversion 伺�
 
 - [X 軸] 分析限制
 
-Google 和 / 或 LinkedIn。
+Google、X 和 (或) LinkedIn。
 
 - [X 軸] 資料限制
 
