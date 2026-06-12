@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=44141
+Status: verified=44366
 
 <div class="right">
 
@@ -31,6 +31,8 @@ Status: verified=44141
 Popular paraphasing of American locksmith [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) in 1851, who easily picked the Crystal Palace locks during a London exhibition that year.  We fully agree, which is why our blueprints for our Oracle Cloud Infrastructure (OCI) automation engine are [available on GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Orion Infrastructure Security :fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -98,6 +100,9 @@ vcs==vpn==>A6==ssh/vpn==>B6
 vcs==vpn==>A7==ssh/vpn==>B7
 vcs==vpn==>A8==ssh/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 FIPS 140-3 compliant w/MFA triple-encryption for reverse-port-forwarded services (HTTPS/SSH/IPsec).  Belt, suspenders, and stirrups!
