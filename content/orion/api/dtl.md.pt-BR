@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: REST,API, Django
-status: verificado=39442
+status: verificado=42929
 title: API do Orion - Biblioteca de Modelos do Django
 ---
 
@@ -14,7 +14,7 @@ title: API do Orion - Biblioteca de Modelos do Django
 
 {# lede #}Este documento aborda as APIs de Tag, Plug-in e Filtro da **Biblioteca de Modelos do Django (DTL)**{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 Tags
 
@@ -266,6 +266,12 @@ Procura o primeiro atributo de tag html correspondente, com o nome do atributo i
 #### `shuffle`
 
 Embaralhar o array.
+
+-----
+
+#### `split`
+
+Divide a string de entrada em um array com base no padrão passado como argumento.
 
 -----
 

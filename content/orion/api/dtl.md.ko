@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, API, 장고
-status: 확인=39442
+status: 확인=42929
 title: Orion API - Django 템플릿 라이브러리
 ---
 
@@ -14,7 +14,7 @@ title: Orion API - Django 템플릿 라이브러리
 
 {# lede #}이 문서에서는 **DTL(Django Template Library)** 태그, 플러그인 및 필터 API를 다룹니다.{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 태그
 
@@ -266,6 +266,12 @@ a를 나타냅니다. `safe` `HTML` Subversion 키워드로 기록된 대로 가
 #### `shuffle`
 
 배열을 섞습니다.
+
+-----
+
+#### `split`
+
+인수로 전달된 패턴을 기반으로 입력 문자열을 배열로 분할합니다.
 
 -----
 

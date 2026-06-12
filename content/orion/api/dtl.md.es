@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: REST,API,Django
-status: verificado=39457
+status: verificado=42929
 title: Orion API - Biblioteca de plantillas de Django
 ---
 
@@ -14,7 +14,7 @@ title: Orion API - Biblioteca de plantillas de Django
 
 {# lede #}En este documento se tratan las API de etiqueta, plugin y filtro de la **biblioteca de plantillas de Django (DTL)**{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 Etiquetas
 
@@ -271,7 +271,7 @@ Mezcle la matriz.
 
 #### `split`
 
-Divide la cadena imput en una matriz basada en el patrón transferido como argumento.
+Divide la cadena de entrada en una matriz según el patrón transferido como argumento.
 
 -----
 

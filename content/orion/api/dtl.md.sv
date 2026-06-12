@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: REST,API,Django
-status: verifierad=39442
+status: verifierad=42929
 title: Orion API - Django mallbibliotek
 ---
 
@@ -14,7 +14,7 @@ title: Orion API - Django mallbibliotek
 
 {# lede #}Det här dokumentet täcker tagg-, insticksprograms- och filter-API:erna **Django Template Library (DTL)**{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 Taggar
 
@@ -266,6 +266,12 @@ Söker efter det första matchande html-taggattributet, med attributnamnet som e
 #### `shuffle`
 
 Blanda matrisen.
+
+-----
+
+#### `split`
+
+Delar indatasträngen i en uppställning baserat på det mönster som skickas som argument.
 
 -----
 

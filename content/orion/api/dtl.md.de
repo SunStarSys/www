@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: REST,API,Django
-status: überprüft=39457
+status: überprüft=42929
 title: Orion API - Django-Vorlagenbibliothek
 ---
 
@@ -14,7 +14,7 @@ title: Orion API - Django-Vorlagenbibliothek
 
 {# lede #}In diesem Dokument werden die Tag-, Plug-in- und Filter-APIs der **Django Template Library (DTL)** beschrieben{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 Schlagwörter
 
@@ -271,7 +271,7 @@ Mischen Sie das Array.
 
 #### `split`
 
-Teilt die Imput-Zeichenfolge basierend auf dem als Argument übergebenen Muster in ein Array auf.
+Teilt die Eingabezeichenfolge basierend auf dem als Argument übergebenen Muster in ein Array auf.
 
 -----
 

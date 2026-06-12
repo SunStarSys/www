@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: REST,API,Джанго
-status: проверено=39442
+status: проверено=42929
 title: Orion API – библиотека шаблонов Django
 ---
 
@@ -14,7 +14,7 @@ title: Orion API – библиотека шаблонов Django
 
 {# lede #}В этом документе рассматриваются теги **Django Template Library (DTL)**, подключаемые модули и API фильтров{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 Теги
 
@@ -266,6 +266,12 @@ title: Orion API – библиотека шаблонов Django
 #### `shuffle`
 
 Перемешайте массив.
+
+-----
+
+#### `split`
+
+Разбивает входную строку на массив на основе шаблона, переданного в качестве аргумента.
 
 -----
 

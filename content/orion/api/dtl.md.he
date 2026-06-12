@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: REST,API,ג'נגו
-status: אומתה=39457
+status: אומתו 42929
 title: אוריון API - ספריית תבניות ג'אנגו
 ---
 
@@ -14,7 +14,7 @@ title: אוריון API - ספריית תבניות ג'אנגו
 
 {# lede #}מסמך זה מכסה את **Django Template Library (DTL)** Tag, Plugin, and Filter APIs{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## תגיות Django 1.0
 
@@ -271,7 +271,7 @@ title: אוריון API - ספריית תבניות ג'אנגו
 
 #### `split`
 
-מפצל את מחרוזת המימוש למערך בהתבסס על התבנית שהועברה כארגומנט.
+מפצל את מחרוזת הקלט למערך בהתבסס על התבנית שהועברה כארגומנט.
 
 -----
 

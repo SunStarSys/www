@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: REST、API、ジャンゴ
-status: 確認済み=39442
+status: 確認済み=42929
 title: Orion API - Djangoテンプレートライブラリ
 ---
 
@@ -14,7 +14,7 @@ title: Orion API - Djangoテンプレートライブラリ
 
 {# lede #}このドキュメントでは、**Django Template Library (DTL)**タグ、プラグインおよびフィルタAPIについて説明します{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## ジャンゴ1.0タグ
 
@@ -266,6 +266,12 @@ Aを提示`safe` `HTML` Subversionキーワードによって記録された、�
 #### `shuffle`
 
 配列をシャッフルします。
+
+-----
+
+#### `split`
+
+引数として渡されるパターンに基づいて、入力文字列を配列に分割します。
 
 -----
 

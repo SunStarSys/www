@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REST,API,Django
-status: vérifié=39457
+status: vérifié=42929
 title: API Orion - Bibliothèque de modèles Django
 ---
 
@@ -14,7 +14,7 @@ title: API Orion - Bibliothèque de modèles Django
 
 {# lede #}Ce document traite des API de balise, de module d'extension et de filtre **Django Template Library (DTL)**{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Étiquettes Django 1.0
 
@@ -271,7 +271,7 @@ Réorganisez le tableau.
 
 #### `split`
 
-Divise la chaîne d'entrée en un tableau basé sur le modèle transmis en tant qu'argument.
+Divise la chaîne d'entrée en un tableau en fonction du modèle transmis en tant qu'argument.
 
 -----
 

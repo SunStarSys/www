@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: REST، API، Django
-status: التحقق = 39457
+status: التحقق = 42929
 title: Orion API - مكتبة قوالب Django
 ---
 
@@ -14,7 +14,7 @@ title: Orion API - مكتبة قوالب Django
 
 {# lede #}يغطي هذا المستند **مكتبة قوالب Django (DTL)** واجهات برمجة تطبيقات العلامات والمكونات الإضافية والمرشحات{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 الكلمات
 
@@ -271,7 +271,7 @@ title: Orion API - مكتبة قوالب Django
 
 #### `split`
 
-تقسيم سلسلة الضبط إلى مصفوفة تبعًا للنمط الذي تم تمريره كوسيطة.
+تقسيم سلسلة المدخلات إلى مصفوفة تبعًا للنمط الذي تم تمريره كوسيطة.
 
 -----
 

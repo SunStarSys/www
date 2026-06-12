@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: REST、API、Django
-status: 驗證 =39442
+status: 驗證 =42929
 title: Orion API - Django 樣板程式庫
 ---
 
@@ -14,7 +14,7 @@ title: Orion API - Django 樣板程式庫
 
 {# lede #}本文件涵蓋 **Django 樣板程式庫 (DTL) **標記、Plugin 以及篩選 API{# lede #}.
 
-[TOC]
+[TOC]#sidebar
 
 ## Django 1.0 標籤
 
@@ -266,6 +266,12 @@ title: Orion API - Django 樣板程式庫
 #### `shuffle`
 
 打亂陣列。
+
+-----
+
+#### `split`
+
+根據作為引數傳送的樣式，將輸入字串分割成陣列。
 
 -----
 
