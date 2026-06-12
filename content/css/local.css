@@ -226,3 +226,21 @@ pre {
     border-top-color: #A9BDBD !important;
     border-bottom-color: #A9BDBD !important;
 }
+
+#sidebar {width: 256px; position: fixed; top:100px; left:6px; right: 0px; z-index: 1020; font-size: .875em}
+
+#sidebar a {color: #392806}
+
+#sidebar li.active > a,
+#sidebar li:hover > a {
+   color: green;
+}
+
+#sidebar li:not(.active) > ul > li { display: none }
+
+#sidebar li:active {color:green;}
+
+@media only screen and (max-width: 1900px) {
+	#sidebar {position:relative !important; top:0 !important; left:0 !important; width:100% !important}
+	#sidebar li {display:list-item !important}
+}
