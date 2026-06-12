@@ -6,7 +6,7 @@ title: Данные таблицы для сетки сравнения хара
 ---
 
 
-- Feature: "[à la carte (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[à la carte (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-à-la-carte-approach17)"
   Orion: "&check;"
 - Feature: "SSO: Kerberos / Активный каталог / Интеграция OpenID"
   Orion: "&check;"

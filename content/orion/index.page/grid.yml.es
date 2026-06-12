@@ -6,7 +6,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 ---
 
 
-- Feature: "[A la carta (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-la-carte-approach)"
+- Feature: "[A la carta (BYOAI)AI](https://iconoclasts.blog/joe/wikis#the-à-la-carte-approach17)"
   Orion: "&check;"
 - Feature: "SSO: Integración de Kerberos/Directorio activo/OpenID"
   Orion: "&check;"
@@ -61,7 +61,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
 - Feature: "Funciona sin conexión"
   Orion: "&check;"
   Notion: "&check;"
-- Feature: "Flujo de trabajo de colaborador de \"solicitud de extracción\" de 3ª parte sencilla"
+- Feature: "Flujo de trabajo de colaborador de "solicitud de extracción" de 3ª parte sencilla"
   Orion: "&check;"
 - Feature: "[GitHub Integración](https://youtu.be/FRc4qZkxVaI) con IDE &amp; Soporte de acciones"
   Orion: "&check;"
