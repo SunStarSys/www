@@ -1,0 +1,58 @@
+{
+  "documents": {
+    "format": "2"
+  },
+  "highlight": {
+    "format": "1"
+  },
+  "lexicon": {
+    "counts": {
+      "acl": "3",
+      "content": "934",
+      "keywords": "9",
+      "path": "1",
+      "status": "2",
+      "title": "3"
+    },
+    "format": "3",
+    "index_counts": {
+      "acl": "1",
+      "content": "8",
+      "keywords": "1",
+      "path": "1",
+      "status": "1",
+      "title": "1"
+    }
+  },
+  "postings": {
+    "format": "1"
+  },
+  "segmeta": {
+    "count": "1",
+    "field_names": [
+      "",
+      "status",
+      "categories",
+      "title",
+      "path",
+      "acl",
+      "content",
+      "type",
+      "keywords"
+    ],
+    "format": "1",
+    "name": "seg_az"
+  },
+  "sort": {
+    "counts": {
+      "path": "2"
+    },
+    "format": "3",
+    "null_ords": {
+      "path": "1"
+    },
+    "ord_widths": {
+      "path": "1"
+    }
+  }
+}
