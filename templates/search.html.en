@@ -23,7 +23,6 @@
 <div class="graphviz">
 {{dep_dot}}
 </div>
-```
   {% endfilter %}
   {% endif %}
   {% if duration %}
