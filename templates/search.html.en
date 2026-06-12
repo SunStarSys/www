@@ -18,8 +18,13 @@
   <a href="./?regex=%23{{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
   &nbsp;
   {% endfor %}
-
-
+  {% if deps_dot %}
+  {% filter markdown %}
+```dot
+{{deps_dot|safe}}
+```
+  {% endfilter %}
+  {% endif %}
   {% if duration %}
   <script src="/editor.md/js/chart.umd.js"></script>
   <canvas id="myChart" width="100%" height="800px"></canvas>
