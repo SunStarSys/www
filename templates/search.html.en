@@ -20,9 +20,9 @@
   {% endfor %}
   {% if deps_dot %}
   {% filter markdown %}
-<pre><code>
+```dot
 {{deps_dot|safe}}
-</code></pre>
+```
   {% endfilter %}
   {% endif %}
   {% if duration %}
