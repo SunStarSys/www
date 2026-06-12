@@ -227,7 +227,7 @@ pre {
     border-bottom-color: #A9BDBD !important;
 }
 
-#sidebar {width: 256px; position: fixed; top:100px; left:6px; right: 0px; z-index: 1020; font-size: .875em}
+#sidebar {width: 256px; position: fixed; top:100px; left:6px; right: 0px; z-index: 1020; font-size: .875em; color: black}
 
 #sidebar a {color: #392806}
 
