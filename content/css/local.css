@@ -242,3 +242,4 @@ pre {
 	#sidebar {position:relative !important; top:0 !important; left:0 !important; width:100% !important; color: white !important}
 	#sidebar li {display:list-item !important}
 }
+#sidebar a {color: var(--bs-primary-text-emphasis) }
