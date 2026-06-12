@@ -38,7 +38,7 @@
     {% endblock %}
 </head>
 
-<body role="document" id="top">
+<body role="document">
 <header style="border-bottom:solid #A9BDBD 1px; background-color: #8f99fb;" class="container-xxl navbar navbar-expand-lg fixed-top">
 <div class="container-fluid">
 <a class="navbar-brand" href="/index.html{{lang}}" id="logo">&nbsp;</a>
@@ -123,6 +123,7 @@
   </div>
 </header>
 
+<main>
 {% block alert %}
   {% if alert %}
   <div class="alert alert-dismissible alert-info container">
@@ -147,11 +148,13 @@
   <h1>{{ headers.title|safe }}</h1>
   <div class="container jumbotron">{{ content|markdown }}</div>
   {% endblock %}
+</div>
+</main>
 
-<footer class="container">
+<footer class="container fade">
 {% block footer %}{{footer|safe}}{% endblock footer %}
 <hr>
-<form id="search" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
+<form id="join" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline right text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
@@ -277,34 +280,33 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
 
 <script type="text/javascript">
   $(function() {
-
       $('a').click(function() {
-          $(this).blur();
+	  $(this).blur();
       });
   });
   // Select the target element
-  var target = document.querySelector('#footer');
-  target.style.opacity = 0.01;
-  // Create an IntersectionObserver
-  const observer = new IntersectionObserver((entries) => {
+  document.getElementsByClassName("fade").foreach((target) => {
+    target.style.opacity = 0.01;
+    // Create an IntersectionObserver
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
           if (entry.isIntersecting && target.style.opacity < 1) {
               target.style.display = "none";
               target.style.opacity = 1;
-              $(target).fadeIn(2000); // Visual feedback
-          }
-          else {
-              target.style.opacity = 0.01;
-          }
-      });
-  }, {
-      root: null, // viewport
-      threshold: 0.01 // Trigger when at least 1% is visible
-  });
+              $(target).fadeIn(); // Visual feedback
+          } else {
+             target.style.opacity = 0.01;
+		  }
+       });
+      }, {
+        root: null, // viewport
+        threshold: 0.01 // Trigger when at least 1% is visible
+    });
   // Start observing
-  observer.observe(target);
+    observer.observe(target);
+  });
 </script>
+
 {% block javascript %}{% endblock %}
-</div>
 </body>
 </html>
