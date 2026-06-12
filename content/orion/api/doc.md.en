@@ -1,13 +1,13 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=44053
+status: verified=44113
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
 
 {# lede #}This page documents the Header fields and resulting Data Artifacts{# lede #} produced by the [Build API](build) when processing  such text files (as page attachments) via its [`single_narrative`](build#-code-single_narrative-args-code-) view.
 
-[TOC]
+[TOC]#sidebar
 
 -----
 
