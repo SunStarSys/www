@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=39465
+status: 확인=44187
 title: Orion API - 빌드
 ---
 
@@ -46,10 +46,6 @@ title: Orion API - 빌드
 &nbsp;
 
 많은 뷰가 "필터" 파일의 측면을 사전 처리(또는 사후 처리) `$path` 외부 코드와 마찬가지로 참신합니다. `snippets` 또는 `asymptote`-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## 목차
-
-[TOC]
 
 &nbsp;
 

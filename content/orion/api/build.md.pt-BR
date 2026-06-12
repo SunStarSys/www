@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.pt-BR'
 keywords: DESCANSO,API
-status: verificado=39465
+status: verificado=44187
 title: Orion API - Criação
 ---
 
@@ -46,10 +46,6 @@ O trabalho deste último é fornecer invocável `view`com base em `$method`s par
 &nbsp;
 
 Muitas views devem ser empilhadas como "filtros" para pré-processar (ou pós-processar) aspectos do arquivo no `$path` que são novos, como o código externo `snippets` ou `asymptote`-blocos de markdown cercados. Você pode ver um exemplo disso [aqui](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## Sumário
-
-[TOC]
 
 &nbsp;
 

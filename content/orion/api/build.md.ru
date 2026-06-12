@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=39465
+status: проверено=44187
 title: API Orion – сборка
 ---
 
@@ -46,10 +46,6 @@ title: API Orion – сборка
 &nbsp;
 
 Многие виды должны быть сложены как "фильтры" для предварительной обработки (или заключительной обработки) аспектов файла в `$path` Это новый, как внешний код. `snippets` или `asymptote`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## Содержание
-
-[TOC]
 
 &nbsp;
 

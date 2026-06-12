@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =39465
+status: 驗證 =44187
 title: Orion API - 建置
 ---
 
@@ -46,10 +46,6 @@ title: Orion API - 建置
 &nbsp;
 
 許多視觀表的堆疊方式"篩選" 以預先處理 (或後續處理) 檔案的層面`$path` 新穎，如外部程式碼`snippets` 或`asymptote`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## 目錄
-
-[TOC]
 
 &nbsp;
 

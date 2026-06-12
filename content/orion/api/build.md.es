@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado=39465
+status: verificado=44187
 title: API de Orion - Crear
 ---
 
@@ -46,10 +46,6 @@ El trabajo de este último es proporcionar invocable `view`basado en `$method`s 
 &nbsp;
 
 Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar (o posprocesar) aspectos del archivo en `$path` que son novedosas, como el código externo `snippets` o `asymptote`-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## Tabla de contenido
-
-[TOC]
 
 &nbsp;
 

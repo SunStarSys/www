@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.de'
 keywords: RUHE, API
-status: überprüft=39465
+status: überprüft=44187
 title: Orion API - Erstellen
 ---
 
@@ -46,10 +46,6 @@ Letzterer hat die Aufgabe, unlösbar zu sein. `view`-basiert `$method`s für die
 &nbsp;
 
 Viele Ansichten sollen gestapelt werden als "Filter" zur Vorverarbeitung (oder Nachbearbeitung) von Aspekten der Datei in `$path` Das ist neu, wie externer Code `snippets` oder `asymptote`-abgegrenzte Markdown-Blöcke. Sie können ein Beispiel dafür sehen [hier](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## Inhaltsverzeichnis
-
-[TOC]
 
 &nbsp;
 

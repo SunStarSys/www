@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=39465
+status: verifierad=44187
 title: Orion API - bygge
 ---
 
@@ -46,10 +46,6 @@ Den senares jobb är att tillhandahålla bokningsbara `view`-baserad `$method`s 
 &nbsp;
 
 Många åsikter är avsedda att staplas som "filter" Förbearbeta (eller efterbearbeta) aspekter av filen i `$path` som är nya, som extern kod `snippets` eller `asymptote`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## Innehållsförteckning
-
-[TOC]
 
 &nbsp;
 

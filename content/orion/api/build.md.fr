@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.fr'
 keywords: REPOS,API
-status: vérifié=39465
+status: vérifié=44187
 title: API Orion - Créer
 ---
 
@@ -46,10 +46,6 @@ Le travail de ce dernier est de fournir invokable `view`-basé `$method`s pour l
 &nbsp;
 
 Beaucoup de vues sont destinées à être empilées comme "filtres" pour prétraiter (ou post-traiter) les aspects du fichier dans `$path` qui sont nouveaux, comme le code externe `snippets` ou `asymptote`-blocs de démarque clôturés. Vous pouvez voir un exemple de cela [ici](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## Table des matières
-
-[TOC]
 
 &nbsp;
 

@@ -1,6 +1,6 @@
 Title: Orion API - Build
 Keywords: REST,API
-status: verified=39465
+status: verified=44187
 Dependencies: *.md.en
 
 <div class="right">
@@ -43,10 +43,6 @@ The latter's job is to provide invokable `view`-based `$method`s for the matchin
 &nbsp;
 
 Many views are meant to be stacked as "filters" to preprocess (or postprocess) aspects of the file in `$path` that are novel, like external code `snippets` or `asymptote`-fenced markdown blocks. You can see an example of that [here](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
-
-## Table of Contents
-
-[TOC]
 
 &nbsp;
 
