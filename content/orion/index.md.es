@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=43011
+status: verificado=43942
 title: SunStar Orión de los Sistemas
 ---
 
@@ -79,27 +79,51 @@ Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece con
 
 <span class="text-white">Orión está construido para los líderes que se niegan a establecerse:</span>
 
+<div class="fade">
+
 - **Líderes universitarios** &mdash; Elimine el plagio del campus y potencie una colaboración segura y de acceso abierto con uso compartido de documentos, selección y publicación en línea con control de versiones. Transforme su gestión del conocimiento académico en una moderna, auditable, <span class="text-primary-emphasis">Ciencia abierta</span> plataforma.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 **Gobierno &amp; responsables de la toma de decisiones de TI de defensa** &mdash; Cumpla con la infraestructura FedRAMP, los requisitos de confianza cero del NIST 800-207 y los controles de acceso detallados en su repositorio de control de versiones &mdash; Todo ello con seguridad compatible con FIPS 140-3 e instalable dentro de su VPN corporativa.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Ejecutivos de marketing** &mdash; Ejecute una plataforma empresarial rápida, global e innovadora para activos de sitios web corporativos. Utiliza Orion como un potente CMS sin cabeza &mdash; seguro, eficaz y totalmente desacoplado de la entrega frontend.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 **Empresas de tecnología &amp; agencias del sitio web** &mdash; Reemplace wikis comerciales inseguros, montañas domesticadas de documentación de productos, sitios de clientes e incluso descargas binarias. Cura todo con confianza, velocidad e historia de versiones revestidas de hierro.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 **Arquitectos de alta disponibilidad &amp; ingenieros de principios** &mdash; Escape de los puntos únicos de fallo agrupados en pilas de LAMP basadas en SQL. Adopte la verdadera escalabilidad de Jamstack: compilaciones simultáneas, actualizaciones incrementales, cobertura POP global y rendimiento máximo medido en milisegundos.
 
+</div>
+
 &nbsp;
 
-- **Cualquier negocio cansado de la economía wiki** &mdash; Elimina las costosas suscripciones a SaaS, las frágiles herramientas gratuitas que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 10.000 / año para el uso completo de la empresa).
+<div class="fade">
+
+- **Cualquier negocio cansado de la economía wiki** &mdash; Elimina las costosas suscripciones a SaaS, las frágiles herramientas gratuitas que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 25.000 / año para el uso completo de la empresa).
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ Esto no es marketing spin &mdash; Es un patrimonio de ingeniería verificable y 
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Introducción</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 La forma más rápida de ponerse en marcha es jugar con la versión de @SunStarSys/orion de <https://iconoclasts.blog> y vacíe los orígenes de rebaja en el tronco/contenido. Aproximadamente el 90 % de las personalizaciones de estilo están en [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; ¡Adáptate al gusto!
 
@@ -191,8 +217,7 @@ Vaya a su propio ritmo, utilice tantos empleados, previsualizaciones, ediciones,
 
 Además, todos los clientes tienen interfaces gratuitas, personalizables por plantillas o habilitadas para javascript a nuestro potente motor de búsqueda PCRE.
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 

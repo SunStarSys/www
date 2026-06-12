@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-status: vérifié=43011
+status: vérifié=43942
 title: SunStar Orion de Systems
 ---
 
@@ -79,27 +79,51 @@ Cela nous permet d'exécuter des coûts d'exploitation ultra-faibles tout en off
 
 <span class="text-white">Orion est construit pour les dirigeants qui refusent de s'installer :</span>
 
+<div class="fade">
+
 - **Directeurs universitaires** &mdash; Eliminer le plagiat sur les campus et favoriser une collaboration sécurisée et en libre accès grâce au partage de documents avec contrôle des versions, à la conservation et à la publication en ligne. Transformez votre gestion des connaissances académiques en moderne, auditable, <span class="text-primary-emphasis">Science ouverte</span> plateforme.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Gouvernement &amp; décideurs informatiques de la défense** &mdash; Répondez à l'infrastructure FedRAMP, aux exigences de confiance zéro du NIST 800-207 et aux contrôles d'accès de niveau fin sur votre référentiel de contrôle de version &mdash; le tout avec une sécurité conforme à la norme FIPS 140-3 et pouvant être installé dans votre VPN d'entreprise.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Cadres marketing** &mdash; Exécutez une plate-forme d'entreprise rapide, globale et innovante pour les ressources de sites Web d'entreprise. Utilisez Orion comme un puissant CMS sans tête &mdash; sécurisé, performant et entièrement découplé de la livraison frontale.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Entreprises technologiques &amp; agences web** &mdash; Remplacez les wikis commerciaux non sécurisés, apprivoiser les montagnes de documentation produit, les sites client et même les téléchargements binaires. Organisez tout avec confiance, rapidité et historique des versions.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Architectes haute disponibilité &amp; ingénieurs principaux** &mdash; Evitez les points d'échec uniques cuits dans des piles LAMP basées sur SQL. Adoptez une véritable évolutivité Jamstack : builds simultanés, mises à jour incrémentielles, couverture globale des POP et performances maximales mesurées en millisecondes.
 
+</div>
+
 &nbsp;
 
-- **Toute entreprise fatiguée de l'économie wiki** &mdash; Débarrassez-vous des abonnements SaaS coûteux, des outils gratuits fragiles qui épuisent le temps du personnel et des systèmes obsolètes qui ralentissent votre équipe. Orion vous donne de l'énergie à l'entreprise à une fraction du coût total de possession (souvent moins de 10 000 $/an pour un usage professionnel complet).
+<div class="fade">
+
+- **Toute entreprise fatiguée de l'économie wiki** &mdash; Débarrassez-vous des abonnements SaaS coûteux, des outils gratuits fragiles qui épuisent le temps du personnel et des systèmes obsolètes qui ralentissent votre équipe. Orion vous donne de l'énergie à l'entreprise à une fraction du coût total de possession (souvent moins de 25 000 $ par an pour une utilisation professionnelle complète).
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ Ce n'est pas du marketing spin &mdash; C'est un patrimoine d'ingénierie vérifi
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Mise en route</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 Le moyen le plus rapide d'y aller est de jouer avec @SunStarSys/orion <https://iconoclasts.blog> et creusez les sources de démarque dans le coffre/le contenu.  ~90 % des personnalisations de style sont dans [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Adaptez-vous au goût !
 
@@ -191,8 +217,7 @@ Allez à votre rythme, utilisez autant d'employés / de prévisualisations / de 
 
 En outre, tous les clients disposent d'interfaces gratuites, personnalisables par modèle ou compatibles javascript vers notre puissant moteur de recherche propriétaire PCRE.
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 

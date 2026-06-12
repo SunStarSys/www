@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=43011
+status: 確認済み=43942
 title: SunStarシステムのOrion
 ---
 
@@ -79,27 +79,51 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 <span class="text-white">Orionは、解決を拒否するリーダー向けに構築されています。</span>
 
+<div class="fade">
+
 **大学のリーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-primary-emphasis">オープンサイエンス</span> プラットフォーム
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **政府&amp; 防衛ITの意思決定者** &mdash; FedRAMPインフラストラクチャ、NIST 800-207のゼロトラスト要件、およびバージョン管理リポジトリのきめ細かいアクセス制御に対応&mdash; FIPS 140-3準拠のセキュリティと企業VPN内のインストールが可能です。
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **マーケティング・エグゼクティブ** &mdash; 企業のWebサイト資産用に、迅速でグローバルな革新的なエンタープライズ・プラットフォームを実行します。強力なヘッドレスCMSとしてOrionを使用&mdash; 安全かつ高性能で、フロントエンドの配送から完全に切り離されています。
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **テクノロジー企業&amp; ウェブサイト代理店** &mdash; 安全でない商用Wikiを置き換え、製品ドキュメント、クライアント・サイト、さらにはバイナリ・ダウンロードの山を改良します。すべてを自信を持ってキュレーションし、スピードとアイロンクラッドのバージョン履歴を提供します。
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 **高可用性アーキテクト&amp; 原則エンジニア** &mdash; SQLベースのLAMPスタックにベイクされた単一障害点をエスケープします。真のJamstackスケーラビリティを採用: 同時ビルド、増分更新、グローバルPOPカバレッジ、およびミリ秒単位のピーク・パフォーマンス。
 
+</div>
+
 &nbsp;
 
-**ウィキ経済に飽きているビジネス** &mdash; 高価なSaaSサブスクリプション、スタッフの時間を浪費する脆弱なフリー・ツール、チームの時間を短縮する時代遅れのシステムを捨てます。Orionは、総所有コストのほんの一部で企業の力を供給します(企業全体で使用する場合、通常は年間10,000ドル未満)。
+<div class="fade">
+
+**ウィキ経済に飽きているビジネス** &mdash; 高価なSaaSサブスクリプション、スタッフの時間を浪費する脆弱なフリー・ツール、チームの時間を短縮する時代遅れのシステムを捨てます。Orionは、総所有コストのほんの一部で企業力を供給します(企業全体で使用する場合、年間25,000ドル未満であることが多い)。
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">はじめに</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 最速の方法は、@SunStarSys/orionのビルドでプレイすることです。<https://iconoclasts.blog> トランク/コンテンツ内のマークダウン・ソースを空にします。スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
 
@@ -191,8 +217,7 @@ div#lightning img {width:100%}
 
 さらに、すべてのクライアントには、強力な独自のPCRE検索エンジンへの、テンプレートでカスタマイズ可能な、またはjavascript対応の無料インタフェースがあります。
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: wiki,jamstack,blog,sicher,sicher
-status: überprüft=43011
+status: überprüft=43942
 title: SunStar System-Orion
 ---
 
@@ -79,27 +79,51 @@ Auf diese Weise können wir extrem niedrige Betriebskosten verursachen und gleic
 
 <span class="text-white">Orion ist für Führer gebaut, die sich weigern, sich niederzulassen:</span>
 
+<div class="fade">
+
 - **Hochschulleiter** &mdash; Beseitigen Sie Campusplagiate und ermöglichen Sie eine sichere, Open-Access-Zusammenarbeit mit versionsgesteuerter Dokumentfreigabe, Kuratierung und Online-Veröffentlichung. Verwandeln Sie Ihr akademisches Wissensmanagement in ein modernes, überprüfbares <span class="text-primary-emphasis">Open Science</span> Plattform.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Regierung &amp; IT-Entscheider im Verteidigungsbereich** &mdash; Erfüllen Sie die FedRAMP-Infrastruktur, die Zero-Trust-Anforderungen von NIST 800-207 und die feingranulierten Zugriffskontrollen in Ihrem Versionskontroll-Repository &mdash; Alles mit FIPS 140-3-konformer Sicherheit und installierbar in Ihrem Unternehmens-VPN.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Marketingmanager** &mdash; Führen Sie eine schnelle, globale, innovative Unternehmensplattform für Unternehmenswebsite-Assets aus. Verwenden Sie Orion als leistungsstarkes Headless CMS &mdash; sicher, leistungsfähig und vollständig von der Frontend-Lieferung entkoppelt.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Technologieunternehmen &amp; Website-Agenturen** &mdash; Ersetzen Sie unsichere kommerzielle Wikis, zahme Berge von Produktdokumentation, Kundenseiten und sogar binäre Downloads. Kuratieren Sie alles mit Zuversicht, Geschwindigkeit und ironclad Versionsgeschichte.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Hochverfügbare Architekten &amp; prinzipielle Ingenieure** &mdash; Entfliehen Sie den Single Points of Failure, die in SQL-basierte LAMP-Stacks gebacken wurden. Nutzen Sie echte Jamstack-Skalierbarkeit: gleichzeitige Builds, inkrementelle Updates, globale POP-Abdeckung und Spitzenleistung, gemessen in Millisekunden.
 
+</div>
+
 &nbsp;
 
-- **Jedes Unternehmen, das die Wiki-Ökonomie satt hat** &mdash; Verlassen Sie teure SaaS-Abonnements, fragile kostenlose Tools, die Zeit für das Personal sparen, und veraltete Systeme, die Ihr Team verlangsamen. Orion gibt Ihnen Unternehmensmacht zu einem Bruchteil der Gesamtbetriebskosten (oft unter 10.000 US-Dollar pro Jahr für die vollständige Nutzung des Unternehmens).
+<div class="fade">
+
+- **Jedes Unternehmen, das die Wiki-Ökonomie satt hat** &mdash; Verlassen Sie teure SaaS-Abonnements, fragile kostenlose Tools, die Zeit für das Personal sparen, und veraltete Systeme, die Ihr Team verlangsamen. Orion gibt Ihnen Unternehmensmacht zu einem Bruchteil der Gesamtbetriebskosten (oft unter 25.000 US-Dollar pro Jahr für die vollständige Nutzung des Unternehmens).
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ Das ist kein Marketing-Spin &mdash; Es ist ein nachweisbares, offenes technische
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Erste Schritte</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 Der schnellste Weg, um loszulegen, ist das Spielen mit @SunStarSys/orions Build von <https://iconoclasts.blog> und die Markdown-Quellen in Trunk/Inhalt aushöhlen. ~90% der Stylinganpassungen sind in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassung an den Geschmack!
 
@@ -191,8 +217,7 @@ Gehen Sie in Ihrem eigenen Tempo, verwenden Sie so viele Mitarbeiter / Vorschaue
 
 Darüber hinaus verfügen alle Kunden über kostenlose, anpassbare oder javascript-fähige Schnittstellen zu unserer leistungsstarken, proprietären PCRE-Suchmaschine.
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 

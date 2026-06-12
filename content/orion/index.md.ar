@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: التحقق = 43011
+status: التحقق = 43942
 title: SunStar أوريون الأنظمة
 ---
 
@@ -79,27 +79,51 @@ title: SunStar أوريون الأنظمة
 
 <span class="text-white">تم بناء أوريون للقادة الذين يرفضون الاستقرار:</span>
 
+<div class="fade">
+
 ** قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-primary-emphasis">العلوم المفتوحة</span> منصة.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **الحكومة &amp; صناع القرار في مجال تكنولوجيا المعلومات الدفاعية** &mdash; تلبية متطلبات الثقة الصفرية لـ NIST 800-207 والبنية الأساسية FedRAMP وعناصر التحكم في الوصول الدقيقة في مستودع التحكم في الإصدار &mdash; كل ذلك مع أمان متوافق مع FIPS 140-3 وقابل للتثبيت داخل VPN لشركتك.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **المسؤولون التنفيذيون للتسويق** &mdash; قم بتشغيل نظام أساسي مؤسسي سريع وعالمي ومبتكر لأصول موقع الويب الخاص بالشركة. استخدام أوريون كـ CMS قوي بدون رأس &mdash; آمنة، أداء، وفصل تماما من التسليم الأمامي.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **شركات التكنولوجيا &amp; وكالات الموقع** &mdash; استبدل مواقع wikis التجارية غير الآمنة وجبال ترويض وثائق المنتجات ومواقع العملاء وحتى التنزيلات الثنائية. قم بتدقيق كل شيء بثقة وسرعة وتاريخ إصدار مكثف.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **المهندسين المعماريين عالية التوافر &amp; مهندسون مبدعون** &mdash; تخطى نقاط الفشل المفردة الموجودة في مجموعات LAMP القائمة على SQL. تبني قابلية توسع حقيقية لـ Jamstack: عمليات الإنشاء المتزامنة والتحديثات التزايدية وتغطية POP العالمية وأعلى أداء يتم قياسه بالمللي ثانية.
 
+</div>
+
 &nbsp;
 
-- **أي عمل سئم من اقتصاد ويكي** &mdash; Ditch اشتراكات SaaS باهظة الثمن، وأدوات مجانية هشة تستنزف وقت الموظفين، والأنظمة القديمة التي تبطئ فريقك. تمنحك Orion قوة المؤسسة بجزء صغير من التكلفة الإجمالية للملكية (غالبًا ما تكون أقل من 10000 دولار سنويًا للاستخدام الكامل للمؤسسة).
+<div class="fade">
+
+- **أي عمل سئم من اقتصاد ويكي** &mdash; Ditch اشتراكات SaaS باهظة الثمن، وأدوات مجانية هشة تستنزف وقت الموظفين، والأنظمة القديمة التي تبطئ فريقك. تمنحك Orion قوة المؤسسة بجزء صغير من التكلفة الإجمالية للملكية (غالبًا ما تكون أقل من 25000 دولار سنويًا للاستخدام الكامل للمؤسسة).
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">البدء</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء مصادر تخفيض السعر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
 
@@ -191,8 +217,7 @@ div#lightning img {width:100%}
 
 بالإضافة إلى ذلك، فإن جميع العملاء لديهم واجهات مجانية أو قابلة للتخصيص أو تدعم جافا سكريبت لمحرك بحث PCRE القوي والمملوك.
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 

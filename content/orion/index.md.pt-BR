@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=43011
+status: verificado=43942
 title: SunStar Orion dos Sistemas
 ---
 
@@ -79,27 +79,51 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 <span class="text-white">Orion é construído para líderes que se recusam a se estabelecer:</span>
 
+<div class="fade">
+
 - **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary-emphasis">Ciência aberta</span> plataforma.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Governo &amp; tomadores de decisão de TI de defesa** &mdash; Atenda à infraestrutura FedRAMP, aos requisitos de confiança zero do NIST 800-207 e aos controles de acesso refinados em seu repositório de controle de versão &mdash; tudo com segurança compatível com FIPS 140-3 e instalável dentro de sua VPN corporativa.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Executivos de marketing** &mdash; Execute uma plataforma empresarial rápida, global e inovadora para ativos de sites corporativos. Use o Orion como um poderoso CMS sem cabeça &mdash; seguro, eficiente e totalmente dissociado da entrega frontend.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 **Empresas de tecnologia &amp; Agências web** &mdash; Substitua wikis comerciais inseguros, montanhas de documentação de produtos, sites de clientes e até mesmo downloads binários. Organize tudo com confiança, velocidade e histórico de versões ironclad.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Arquitetos de alta disponibilidade &amp; Engenheiros principistas** &mdash; Fuja dos pontos únicos de falha incorporados às pilhas LAMP baseadas em SQL. Adote a verdadeira escalabilidade do Jamstack: compilações simultâneas, atualizações incrementais, cobertura global de POP e desempenho máximo medido em milissegundos.
 
+</div>
+
 &nbsp;
 
-- **Qualquer negócio cansado da economia wiki** &mdash; Livre-se de assinaturas caras do SaaS, ferramentas gratuitas frágeis que drenam o tempo da equipe e sistemas desatualizados que atrasam sua equipe. A Orion oferece poder empresarial a uma fração do custo total de propriedade (muitas vezes inferior a US$ 10.000/ano para uso empresarial completo).
+<div class="fade">
+
+- **Qualquer negócio cansado da economia wiki** &mdash; Livre-se de assinaturas caras do SaaS, ferramentas gratuitas frágeis que drenam o tempo da equipe e sistemas desatualizados que atrasam sua equipe. A Orion oferece poder empresarial a uma fração do custo total de propriedade (muitas vezes inferior a US$ 25.000/ano para uso empresarial completo).
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ Isso não é marketing spin &mdash; É uma herança de engenharia aberta verific
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Conceitos Básicos</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <https://iconoclasts.blog> e esvaziar as origens de markdown em tronco/conteúdo.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
 
@@ -191,8 +217,7 @@ Vá no seu próprio ritmo, use quantos funcionários / visualizações / ediçõ
 
 Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habilitadas para javascript para o nosso poderoso e proprietário mecanismo de pesquisa PCRE.
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 

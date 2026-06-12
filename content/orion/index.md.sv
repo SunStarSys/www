@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=43011
+status: verifierad=43942
 title: SunStar Orion för system
 ---
 
@@ -79,27 +79,51 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <span class="text-white">Orion är byggd för ledare som vägrar att bosätta sig:</span>
 
+<div class="fade">
+
 - **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Regering &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 med nolltillit och detaljerade åtkomstkontroller i ditt versionskontrolldatalager &mdash; Allt med FIPS 140-3-kompatibel säkerhet och kan installeras i ditt företags VPN.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Marknadsföringschefer** &mdash; Kör en snabb, global, innovativ företagsplattform för företagets webbplatsresurser. Använd Orion som kraftfull huvudlös CMS &mdash; säker, högpresterande och helt frikopplad från leverans på klientsidan.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Teknikföretag &amp; Webbplatsbyråer** &mdash; Ersätt osäkra kommersiella wikier, tama berg av produktdokumentation, kundwebbplatser och till och med binära nedladdningar. Curate allt med förtroende, hastighet och ironclad versionshistorik.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **Arkitekter med hög tillgänglighet &amp; principiella ingenjörer &mdash; Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
 
+</div>
+
 &nbsp;
 
--** Alla företag trött på wiki ekonomi** &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 10 000 dollar per år för full företagsanvändning).
+<div class="fade">
+
+-** Alla företag trött på wiki ekonomi** &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 25 000 dollar per år för full företagsanvändning).
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Komma igång</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka nedsättningskällorna i bagageutrymmet/innehållet.  ~90 % av formatanpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
 
@@ -191,8 +217,7 @@ Gå i din egen takt, använd så många anställda / förhandsvisningar / redige
 
 Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade gränssnitt till vår kraftfulla, egenutvecklade PCRE-sökmotor.
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 

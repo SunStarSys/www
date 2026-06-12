@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 43011
+status: אומתו 43942
 title: SunStar אוריון מערכות
 ---
 
@@ -79,27 +79,51 @@ title: SunStar אוריון מערכות
 
 <span class="text-white">אוריון בנוי למנהיגים שמסרבים להתיישב:</span>
 
+<div class="fade">
+
 מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, <span class="text-primary-emphasis">מדע פתוח</span> פלטפורמה.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **ממשלה &amp; הגנה על מקבלי החלטות בתחום ה-IT** &mdash; עמוד בדרישות של FedRAMP , NIST 800-207 עם אפס אמון ובקרות גישה מפורטות במאגר בקרת הגרסאות שלך &mdash; הכול עם אבטחה תואמת FIPS 140-3 וניתנת להתקנה בתוך ה-VPN הארגוני שלך.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **מנהלי שיווק** &mdash; הפעל פלטפורמה ארגונית מהירה, גלובלית וחדשנית לנכסי אתרי אינטרנט ארגוניים. השתמש אוריון כמו CMS רב עוצמה חסר ראש &mdash; מאובטחים, בעלי ביצועים ומנותקים לגמרי מהמשלוח בחזית.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 **חברות טכנולוגיה &amp; סוכנויות אינטרנט** &mdash; החלף אתרי wiki מסחריים לא מאובטחים, אילוף הרים של תיעוד מוצר, אתרי לקוח ואפילו הורדות בינאריות. צרו הכול בביטחון, מהירות והיסטוריית גרסאות של ironclad.
 
+</div>
+
 &nbsp;
+
+<div class="fade">
 
 - **אדריכלים בעלי זמינות גבוהה &amp; מהנדס ראשי &mdash; הבריחה מנקודות הכשל היחידות שנאפו במחסניות LAMP מבוססות SQL. אמצו מדרגיות אמיתית של Jamstack: גרסאות מקביליות, עדכונים תוספתיים, כיסוי POP גלובלי וביצועי שיא שנמדדו במילישניות.
 
+</div>
+
 &nbsp;
 
-כל עסק עייף מכלכלת ויקי &mdash; התעלה על מנויים יקרים של SaaS, כלים חינמיים שבירים המנקזים את זמן הצוות ומערכות מיושנות שמאטות את הצוות שלך. אוריון מעניקה לכם את הכוח הארגוני בשבריר מעלות הבעלות הכוללת (לעתים קרובות פחות מ-10,000 דולר לשנה לשימוש ארגוני מלא).
+<div class="fade">
+
+כל עסק עייף מכלכלת ויקי &mdash; התעלה על מנויים יקרים של SaaS, כלים חינמיים שבירים המנקזים את זמן הצוות ומערכות מיושנות שמאטות את הצוות שלך. אוריון מעניקה לכם את הכוח הארגוני בשבריר מעלות הבעלות הכוללת (לעתים קרובות פחות מ-25,000 דולר לשנה לשימוש ארגוני מלא).
+
+</div>
 
 &nbsp;
 
@@ -119,10 +143,12 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 
 &nbsp;
 
+&nbsp;
+
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:black">
+<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">צעדים ראשונים</div>
-<div class="card-body text-white">
+<div class="card-body">
 
 הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's build של <https://iconoclasts.blog> וחלול את מקורות ה-markdown בתא המטען/תוכן.  כ-90% מההתאמות האישיות של העיצוב נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
 
@@ -191,8 +217,7 @@ div#lightning img {width:100%}
 
 בנוסף, לכל הלקוחות יש ממשקים חינמיים, הניתנים להתאמה אישית על-ידי התבנית או התומכים ב-javascript למנוע החיפוש הקנייני שלנו PCRE.
 
-[<img id="ad1" style="width:100%;margin-bottom:4px" src="index.page/ad1">](features)
-
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 </div>
 </div>
 
