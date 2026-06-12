@@ -79,7 +79,7 @@ Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece con
 
 <span class="text-white">Orión está construido para los líderes que se niegan a establecerse:</span>
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Líderes universitarios** &mdash; Elimine el plagio del campus y potencie una colaboración segura y de acceso abierto con uso compartido de documentos, selección y publicación en línea con control de versiones. Transforme su gestión del conocimiento académico en una moderna, auditable, <span class="text-primary-emphasis">Ciencia abierta</span> plataforma.
 
@@ -87,7 +87,7 @@ Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece con
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 **Gobierno &amp; responsables de la toma de decisiones de TI de defensa** &mdash; Cumpla con la infraestructura FedRAMP, los requisitos de confianza cero del NIST 800-207 y los controles de acceso detallados en su repositorio de control de versiones &mdash; Todo ello con seguridad compatible con FIPS 140-3 e instalable dentro de su VPN corporativa.
 
@@ -95,7 +95,7 @@ Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece con
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Ejecutivos de marketing** &mdash; Ejecute una plataforma empresarial rápida, global e innovadora para activos de sitios web corporativos. Utiliza Orion como un potente CMS sin cabeza &mdash; seguro, eficaz y totalmente desacoplado de la entrega frontend.
 
@@ -103,7 +103,7 @@ Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece con
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 **Empresas de tecnología &amp; agencias del sitio web** &mdash; Reemplace wikis comerciales inseguros, montañas domesticadas de documentación de productos, sitios de clientes e incluso descargas binarias. Cura todo con confianza, velocidad e historia de versiones revestidas de hierro.
 
@@ -111,7 +111,7 @@ Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece con
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 **Arquitectos de alta disponibilidad &amp; ingenieros de principios** &mdash; Escape de los puntos únicos de fallo agrupados en pilas de LAMP basadas en SQL. Adopte la verdadera escalabilidad de Jamstack: compilaciones simultáneas, actualizaciones incrementales, cobertura POP global y rendimiento máximo medido en milisegundos.
 
@@ -119,7 +119,7 @@ Esto nos permite ejecutar costos operativos ultra bajos al tiempo que ofrece con
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Cualquier negocio cansado de la economía wiki** &mdash; Elimina las costosas suscripciones a SaaS, las frágiles herramientas gratuitas que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 25.000 / año para el uso completo de la empresa).
 

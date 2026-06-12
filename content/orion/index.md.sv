@@ -79,7 +79,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <span class="text-white">Orion är byggd för ledare som vägrar att bosätta sig:</span>
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
 
@@ -87,7 +87,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Regering &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 med nolltillit och detaljerade åtkomstkontroller i ditt versionskontrolldatalager &mdash; Allt med FIPS 140-3-kompatibel säkerhet och kan installeras i ditt företags VPN.
 
@@ -95,7 +95,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Marknadsföringschefer** &mdash; Kör en snabb, global, innovativ företagsplattform för företagets webbplatsresurser. Använd Orion som kraftfull huvudlös CMS &mdash; säker, högpresterande och helt frikopplad från leverans på klientsidan.
 
@@ -103,7 +103,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Teknikföretag &amp; Webbplatsbyråer** &mdash; Ersätt osäkra kommersiella wikier, tama berg av produktdokumentation, kundwebbplatser och till och med binära nedladdningar. Curate allt med förtroende, hastighet och ironclad versionshistorik.
 
@@ -111,7 +111,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 - **Arkitekter med hög tillgänglighet &amp; principiella ingenjörer &mdash; Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
 
@@ -119,7 +119,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 &nbsp;
 
-<div class="fade">
+<div class="orion-fade">
 
 -** Alla företag trött på wiki ekonomi** &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 25 000 dollar per år för full företagsanvändning).
 
