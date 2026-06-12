@@ -1,0 +1,117 @@
+{
+  "files": {
+    "documents.dat": {
+      "length": "17185",
+      "offset": "0"
+    },
+    "documents.ix": {
+      "length": "24",
+      "offset": "17192"
+    },
+    "highlight.dat": {
+      "length": "1",
+      "offset": "17216"
+    },
+    "highlight.ix": {
+      "length": "24",
+      "offset": "17224"
+    },
+    "lexicon-1.dat": {
+      "length": "25",
+      "offset": "17248"
+    },
+    "lexicon-1.ix": {
+      "length": "4",
+      "offset": "17280"
+    },
+    "lexicon-1.ixix": {
+      "length": "8",
+      "offset": "17288"
+    },
+    "lexicon-3.dat": {
+      "length": "30",
+      "offset": "17296"
+    },
+    "lexicon-3.ix": {
+      "length": "4",
+      "offset": "17328"
+    },
+    "lexicon-3.ixix": {
+      "length": "8",
+      "offset": "17336"
+    },
+    "lexicon-4.dat": {
+      "length": "26",
+      "offset": "17344"
+    },
+    "lexicon-4.ix": {
+      "length": "4",
+      "offset": "17376"
+    },
+    "lexicon-4.ixix": {
+      "length": "8",
+      "offset": "17384"
+    },
+    "lexicon-6.dat": {
+      "length": "6285",
+      "offset": "17392"
+    },
+    "lexicon-6.ix": {
+      "length": "65",
+      "offset": "23680"
+    },
+    "lexicon-6.ixix": {
+      "length": "40",
+      "offset": "23752"
+    },
+    "lexicon-8.dat": {
+      "length": "17",
+      "offset": "23792"
+    },
+    "lexicon-8.ix": {
+      "length": "4",
+      "offset": "23816"
+    },
+    "lexicon-8.ixix": {
+      "length": "8",
+      "offset": "23824"
+    },
+    "postings-1.dat": {
+      "length": "6",
+      "offset": "23832"
+    },
+    "postings-3.dat": {
+      "length": "9",
+      "offset": "23840"
+    },
+    "postings-4.dat": {
+      "length": "3",
+      "offset": "23856"
+    },
+    "postings-6.dat": {
+      "length": "3478",
+      "offset": "23864"
+    },
+    "postings-8.dat": {
+      "length": "6",
+      "offset": "27344"
+    },
+    "postings.skip": {
+      "length": "0",
+      "offset": "27352"
+    },
+    "sort-4.dat": {
+      "length": "22",
+      "offset": "27352"
+    },
+    "sort-4.ix": {
+      "length": "16",
+      "offset": "27376"
+    },
+    "sort-4.ord": {
+      "length": "1",
+      "offset": "27392"
+    }
+  },
+  "format": "2"
+}
