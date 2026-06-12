@@ -23,7 +23,7 @@ use Cpanel::JSON::XS;
 use Dotiac::DTL qw/Template *TEMPLATE_DIRS/;
 use Dotiac::DTL::Addon::markup;
 use Dotiac::DTL::Addon::json;
-use SunStarSys::Util qw/read_text_file parse_filename/;
+use SunStarSys::Util qw/read_text_file parse_filename Load/;
 use SunStarSys::SVN::Client;
 use SVN::Repos;
 use File::Basename;
@@ -420,14 +420,14 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
           while (my $node = shift @dep_nodes) {
             next unless exists $yaml_deps->{$node};
             $dot{$node} = {
-              deps => $yaml_deps->{$node};
+              deps => $yaml_deps->{$node},
               id   => $nn++,
               name => "\"$node\""
             };
             push @dep_nodes, @{$dot{$node}{deps}};
             delete $yaml_deps->{node}
           }
-          open my $fh, ">", \$dep_dot;
+          open my $fh, ">", \$dep_dot or die "Can't open scalarref for writing: $!";
           print $fh "strict digraph \"$language[$idx] Dependencies\" {\n";
           my $red_edge_re = $svnuser;
           for (sort {$a->{id} <=> $b->{id}} values %dot) {
