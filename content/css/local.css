@@ -90,7 +90,12 @@ p.editormd-tex {
 	max-width: 100%;
 }
 
-div.flowchart, div.sequence-diagram, div.graphviz, div.mermaid {
+div.graphviz {
+   margin: auto;
+   max-width: 800px;
+}
+
+div.mermaid {
 	text-align: center;
 	max-width: 100%;
 }
