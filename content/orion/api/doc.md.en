@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=44038
+status: verified=44053
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -204,7 +204,6 @@ Bidirectional links between referenced footnotes and their descriptions.
 
 Markdown @mermaidjs/mermaid diagrams.
 
-
 <div class="card-title">
 
 `asy`
@@ -213,8 +212,15 @@ Markdown @mermaidjs/mermaid diagrams.
 
 Asymptote Vector Graphics `iframe` renderer.
 
+<div class="card-title">
+
+`dot`
+
 </div>
-</div>
+
+`d3-graphviz dot` renderer.
+
+</div></div>
 </div>
 
 <div class="card border-primary mb-3">
