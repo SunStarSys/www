@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.zh-TW'
 keywords: 休息，API
-status: 驗證 =36101
+status: 驗證 =39465
 title: Orion API - 建置
 ---
 
@@ -25,6 +25,8 @@ title: Orion API - 建置
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## 建立系統
 
 {# lede #}本文件涵蓋 **組建系統** API{# lede #}.
@@ -43,7 +45,9 @@ title: Orion API - 建置
 
 &nbsp;
 
-許多視觀表的堆疊方式"篩選" 預先處理檔案的層面`$path` 新穎，如外部程式碼`snippets` 或`asymptote`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+許多視觀表的堆疊方式"篩選" 以預先處理 (或後續處理) 檔案的層面`$path` 新穎，如外部程式碼`snippets` 或`asymptote`-fenced markdown 區塊。您可以看到以下範例：[這裡](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## 目錄
 
 [TOC]
 
@@ -74,13 +78,13 @@ title: Orion API - 建置
 
 此檢視包含檔案自動處理 (位於`$path`的附件目錄。也就是說，如果`$path = "/foo.md.en"`，然後儲存於 中的檔案`/foo.page/` 與目錄關聯的目錄".en" 語言延伸將併入該範本可定址引數`$path` 無論`preprocess` 引數設定&mdash; 如果為 true，也會讓 **頁面的內容本身能夠存取該資料 **。
 
-必要引數：
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-選擇性引數：
+Optional Argmuents:
 
 - `deps` &mdash; 置換正常`fetch_deps` 處理
 
@@ -132,12 +136,12 @@ title: Orion API - 建置
 
 語言環境特定、已排序的相依性索引。
 
-必要引數：
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-選擇性引數：
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ title: Orion API - 建置
 </div>
 <p class="card-text">
 
-必要引數：
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ title: Orion API - 建置
 </div>
 <p class="card-text">
 
-選擇性引數：
+Optional Arguments:
+
+- `ext` 預設為`json`
+- `filter` 預設為`json_raw`
+- `template` 覆寫`filter` 預設表示式
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+將 CSV 檔案轉換成 JSON。
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` 預設為`json`
 - `filter` 預設為`json_raw`
@@ -233,7 +261,7 @@ title: Orion API - 建置
 
 傳回結果新來源檔案的清單，如果`$quick > 2`.
 
-必要引數：
+Mandatory Arguments:
 
 - `path`
 - `data` - 輸入為 hashref；儲存傳回時產生的 dep 陣列參考資料
@@ -843,4 +871,4 @@ Orion 的通用文字檔案處理器
   }
 </script>
 
-<!-- $Date$ $ 作者：joe $ $ 版次：36101 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

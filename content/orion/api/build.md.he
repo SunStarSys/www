@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.he'
 keywords: מנוחה,אפי
-status: אומתה=36101
+status: אומתה=39465
 title: API של אוריון - בנייה
 ---
 
@@ -25,6 +25,8 @@ title: API של אוריון - בנייה
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## מערכת בנייה
 
 {# lede #}מסמך זה מכסה את **ממשקי API של מערכת הבנייה**{# lede #}.
@@ -43,7 +45,9 @@ title: API של אוריון - בנייה
 
 &nbsp;
 
-דעות רבות נועדו להיות מוערמות כמו "מסננים" כדי לעבד מראש היבטים של הקובץ ב- `$path` זה רומן, כמו קוד חיצוני. `snippets` או `asymptote`גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+דעות רבות נועדו להיות מוערמות כמו "מסננים" להיבטי קדם-תהליך (או לאחר-תהליך) של הקובץ ב- `$path` זה רומן, כמו קוד חיצוני. `snippets` או `asymptote`גושי סימון מגודרים. אתה יכול לראות דוגמה לכך. [כאן](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## תוכן עניינים
 
 [TOC]
 
@@ -74,13 +78,13 @@ title: API של אוריון - בנייה
 
 תצוגה זו כוללת עיבוד אוטומטי של קבצים הנמצאים בתוך `$path`'s ספריית מסמכים מצורפים'. במילים אחרות, אם `$path = "/foo.md.en"`, לאחר מכן הקבצים המאוחסנים בתוך  `/foo.page/` הספרייה המקושרת עם "איפוס סיסמה" הרחבת השפה תשולב בארגומנטים המכתבים של התבנית עבור `$path` ללא קשר ל `preprocess` הגדרת הארגומנט &mdash; אשר, אם כן, יהפוך את החומר הזה לנגיש על ידי התוכן של הדף עצמו**.
 
-ארגומנטי חובה:
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-ארגומנטים אופציונליים:
+Optional Argmuents:
 
 - `deps` &mdash; דריסה רגילה `fetch_deps` מעבד
 
@@ -132,12 +136,12 @@ title: API של אוריון - בנייה
 
 אינדקס יחסי תלות ספציפיים לאזור, ממוינים.
 
-ארגומנטי חובה:
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-ארגומנטים אופציונליים:
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ title: API של אוריון - בנייה
 </div>
 <p class="card-text">
 
-ארגומנטי חובה:
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ title: API של אוריון - בנייה
 </div>
 <p class="card-text">
 
-ארגומנטים אופציונליים:
+Optional Arguments:
+
+- `ext` ברירת מחדל ל- `json`
+- `filter` ברירת מחדל ל- `json_raw`
+- `template` דריסות `filter` ביטוי ברירת מחדל
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+המרת קובצי CSV, בדרך כלל ל־JSON.
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` ברירת מחדל ל- `json`
 - `filter` ברירת מחדל ל- `json_raw`
@@ -233,7 +261,7 @@ title: API של אוריון - בנייה
 
 מחזיר רשימה של קובצי מקור חדשים שנוצרו אם `$quick > 2`.
 
-ארגומנטי חובה:
+Mandatory Arguments:
 
 - `path`
 - `data` - קלט כ-hashref; מאחסן את ה-rayref המתקבל בתמורה
@@ -843,4 +871,4 @@ Wrapper סביב `File::Basename::fileparse`. ללא טענות, שימושים 
   }
 </script>
 
-<!-- $Date$מחבר: ג'ו $ $ מהדורה: 36101 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

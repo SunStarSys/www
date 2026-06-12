@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ru'
 keywords: ОТДЫХ,АПИ
-status: проверено=36101
+status: проверено=39465
 title: API Orion – сборка
 ---
 
@@ -25,6 +25,8 @@ title: API Orion – сборка
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## Система сборки
 
 {# lede #}Этот документ охватывает API **Build System**{# lede #}.
@@ -43,7 +45,9 @@ title: API Orion – сборка
 
 &nbsp;
 
-Многие виды должны быть сложены как "фильтры" для предварительной обработки аспектов файла в `$path` Это новый, как внешний код. `snippets` или `asymptote`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+Многие виды должны быть сложены как "фильтры" для предварительной обработки (или заключительной обработки) аспектов файла в `$path` Это новый, как внешний код. `snippets` или `asymptote`-огороженные блоки разметки. Вы можете увидеть пример этого [здесь](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## Содержание
 
 [TOC]
 
@@ -74,13 +78,13 @@ title: API Orion – сборка
 
 Это представление включает автоматическую обработку файлов, расположенных внутри `$path`каталог вложений. Другими словами, если `$path = "/foo.md.en"`, затем файлы, хранящиеся в  `/foo.page/` каталог, связанный с ".ru" расширение языка будет включено в шаблон адресных аргументов для этого `$path` независимо от `preprocess` параметр аргумента &mdash; который, если это правда, также сделает этот материал доступным по самому содержанию **страницы**.
 
-Обязательные аргументы:
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-Дополнительные аргументы:
+Optional Argmuents:
 
 - `deps` &mdash; переопределяет обычный `fetch_deps` переработка
 
@@ -132,12 +136,12 @@ title: API Orion – сборка
 
 Индекс зависимостей, зависящий от локали.
 
-Обязательные аргументы:
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-Дополнительные аргументы:
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ title: API Orion – сборка
 </div>
 <p class="card-text">
 
-Обязательные аргументы:
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ title: API Orion – сборка
 </div>
 <p class="card-text">
 
-Дополнительные аргументы:
+Optional Arguments:
+
+- `ext` по умолчанию `json`
+- `filter` по умолчанию `json_raw`
+- `template` переопределения `filter` выражение по умолчанию
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Преобразование файлов CSV, как правило, в JSON.
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` по умолчанию `json`
 - `filter` по умолчанию `json_raw`
@@ -233,7 +261,7 @@ title: API Orion – сборка
 
 Возвращает список полученных новых исходных файлов, если `$quick > 2`.
 
-Обязательные аргументы:
+Mandatory Arguments:
 
 - `path`
 - `data` - вход в виде хэшрефа; хранит результирующий массив значений по возврату
@@ -843,4 +871,4 @@ title: API Orion – сборка
   }
 </script>
 
-<!-- $Date$Автор: Джо $Пересмотр: 36101 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

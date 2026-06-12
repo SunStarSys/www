@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ar'
 keywords: ريست، أبي
-status: التحقق = 36101
+status: التحقق = 39465
 title: أوريون API - بناء
 ---
 
@@ -25,6 +25,8 @@ title: أوريون API - بناء
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## نظام الإنشاء
 
 {# lede #}يغطي هذا المستند **واجهات برمجة تطبيقات نظام الإنشاء**{# lede #}.
@@ -43,7 +45,9 @@ title: أوريون API - بناء
 
 &nbsp;
 
-من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة جوانب الملف مسبقًا في `$path` تلك رواية، مثل الكود الخارجي `snippets` أو `asymptote`قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+من المفترض أن يتم تكديس العديد من طرق العرض على أنها "المرشحات" لمعالجة (أو ما بعد المعالجة) جوانب الملف في `$path` تلك رواية، مثل الكود الخارجي `snippets` أو `asymptote`قطع تخفيض السعر المسيجة. يمكنك أن ترى مثالا على ذلك [هنا](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## جدول المحتويات
 
 [TOC]
 
@@ -74,13 +78,13 @@ title: أوريون API - بناء
 
 يتضمن هذا العرض المعالجة الآلية للملفات الموجودة داخل `$path`'s دليل المرفق. وبعبارة أخرى، إذا `$path = "/foo.md.en"`، ثم الملفات المخزنة داخل  `/foo.page/` الدليل المقترن بـ "سن" سيتم دمج امتداد اللغة في الوسائط القابلة للعنونة لهذا القالب `$path` بغض النظر عن `preprocess` إعداد الوسيطة &mdash; والتي إذا كانت صحيحة، ستجعل هذه المادة متاحة أيضًا من خلال محتوى **الصفحة نفسها**.
 
-الوسائط الإلزامية:
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-الوسائل الاختيارية:
+Optional Argmuents:
 
 - `deps` &mdash; يتجاوز الوضع الطبيعي `fetch_deps` معالجة
 
@@ -132,12 +136,12 @@ title: أوريون API - بناء
 
 الفهرس المفروز للتبعيات الخاص بالمنطقة اللغوية.
 
-الوسائط الإلزامية:
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-الوسائط الاختيارية:
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ title: أوريون API - بناء
 </div>
 <p class="card-text">
 
-الوسائط الإلزامية:
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ title: أوريون API - بناء
 </div>
 <p class="card-text">
 
-الوسائط الاختيارية:
+Optional Arguments:
+
+- `ext` افتراضيًا إلى `json`
+- `filter` افتراضيًا إلى `json_raw`
+- `template` يتجاوز `filter` التعبير الافتراضي
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+تحويل ملفات CSV، عادةً إلى JSON.
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` افتراضيًا إلى `json`
 - `filter` افتراضيًا إلى `json_raw`
@@ -233,7 +261,7 @@ title: أوريون API - بناء
 
 إرجاع قائمة بالملفات المصدر الجديدة الناتجة إذا `$quick > 2`.
 
-الوسائط الإلزامية:
+Mandatory Arguments:
 
 - `path`
 - `data` - المدخلات مثل hashref؛ يخزن الناتج arrayref ديبس عند العودة
@@ -843,4 +871,4 @@ title: أوريون API - بناء
   }
 </script>
 
-<!-- $Date$ $المؤلف: جو $المراجعة: 36101 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

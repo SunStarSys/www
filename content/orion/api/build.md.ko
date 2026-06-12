@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ko'
 keywords: REST, 아피
-status: 확인=36101
+status: 확인=39465
 title: Orion API - 빌드
 ---
 
@@ -25,6 +25,8 @@ title: Orion API - 빌드
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## 빌드 시스템
 
 {# lede #}이 문서에서는 **시스템 구축** API에 대해 다룹니다.{# lede #}.
@@ -43,7 +45,9 @@ title: Orion API - 빌드
 
 &nbsp;
 
-많은 뷰가 "필터" 파일의 측면을 미리 처리하려면 `$path` 외부 코드와 마찬가지로 참신합니다. `snippets` 또는 `asymptote`-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+많은 뷰가 "필터" 파일의 측면을 사전 처리(또는 사후 처리) `$path` 외부 코드와 마찬가지로 참신합니다. `snippets` 또는 `asymptote`-fenced 마크다운 블록. 예를 들면 다음과 같습니다. [여기](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## 목차
 
 [TOC]
 
@@ -74,13 +78,13 @@ title: Orion API - 빌드
 
 이 뷰에는 내부에 있는 파일의 자동 처리 기능이 포함되어 있습니다. `$path`첨부 디렉토리입니다. 즉, `$path = "/foo.md.en"`에 저장된 파일이  `/foo.page/` 디렉토리: "한국어" 언어 확장이 템플리트 주소 지정 가능 인수에 통합됩니다. `$path` 에 관계없이 `preprocess` 인수의 설정 &mdash; true인 경우 **페이지의 콘텐츠 자체**에서 해당 자료에 액세스할 수 있게 됩니다.
 
-필수 인수:
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-선택적 인수:
+Optional Argmuents:
 
 - `deps` &mdash; 법선 재지정 `fetch_deps` 처리 중
 
@@ -132,12 +136,12 @@ index.html 및 sitemap.html 페이지 작성용
 
 종속성의 로케일별 정렬된 인덱스입니다.
 
-필수 인수:
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-선택적 인수:
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ index.html 및 sitemap.html 페이지 작성용
 </div>
 <p class="card-text">
 
-필수 인수:
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ YAML 파일을 일반적으로 JSON으로 변환합니다.
 </div>
 <p class="card-text">
 
-선택적 인수:
+Optional Arguments:
+
+- `ext` 기본값 `json`
+- `filter` 기본값 `json_raw`
+- `template` 재정의 `filter` 기본 표현식
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+CSV 파일을 일반적으로 JSON으로 변환합니다.
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` 기본값 `json`
 - `filter` 기본값 `json_raw`
@@ -233,7 +261,7 @@ YAML 파일을 일반적으로 JSON으로 변환합니다.
 
 다음과 같은 경우 결과 새 소스 파일 목록을 반환합니다. `$quick > 2`.
 
-필수 인수:
+Mandatory Arguments:
 
 - `path`
 - `data` - 해시 참조로 입력; 반환 시 결과 배열 참조를 저장합니다.
@@ -843,4 +871,4 @@ UTF-8 인코딩 파일의 헤더+내용을 구문 분석합니다. `$file` 결�
   }
 </script>
 
-<!-- $Date$ 저자 : 조 $ 개정 : 36101 $ -->
+<!-- $Date$ $Author$ $Revision$ -->

@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.es'
 keywords: DESCANSO, APIO
-status: verificado
+status: verificado=39465
 title: API de Orion - Crear
 ---
 
@@ -25,6 +25,8 @@ title: API de Orion - Crear
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## Sistema de creación
 
 {# lede #}En este documento se tratan las API **Crear sistema**{# lede #}.
@@ -43,7 +45,9 @@ El trabajo de este último es proporcionar invocable `view`basado en `$method`s 
 
 &nbsp;
 
-Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar aspectos del archivo en `$path` que son novedosas, como el código externo `snippets` o `asymptote`-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+Muchas vistas están destinadas a ser apiladas como "filtros" para preprocesar (o posprocesar) aspectos del archivo en `$path` que son novedosas, como el código externo `snippets` o `asymptote`-bloques de rebaja vallados. Se puede ver un ejemplo de ello [aquí](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## Tabla de contenido
 
 [TOC]
 
@@ -74,13 +78,13 @@ La vista más popular (y sofisticada)
 
 Esta vista incorpora el procesamiento automatizado de archivos ubicados dentro de la `$path`directorio de anexos. Es decir, si `$path = "/foo.md.en"`, a continuación, los archivos almacenados en el  `/foo.page/` directorio asociado con el ".en" extensión lingüística se incorporará en la plantilla de argumentos direccionables para que `$path` independientemente del `preprocess` configuración del argumento &mdash; que, si es cierto, también haría que ese material fuera accesible por el propio contenido de la **página**.
 
-Argumentos obligatorios:
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-Argumentos opcionales:
+Optional Argmuents:
 
 - `deps` &mdash; sustituye a normal `fetch_deps` proceso
 
@@ -132,12 +136,12 @@ Para crear las páginas index.html y sitemap.html
 
 Índice de dependencias ordenado y específico de la configuración regional.
 
-Argumentos obligatorios:
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-Argumentos opcionales:
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ Compilaciones y cachés [`Asymptote`](https://asymptote.sourceforge.io/) bloques
 </div>
 <p class="card-text">
 
-Argumentos obligatorios:
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ Convertir archivos YAML, normalmente en JSON.
 </div>
 <p class="card-text">
 
-Argumentos opcionales:
+Optional Arguments:
+
+- `ext` valores por defecto para `json`
+- `filter` valores por defecto para `json_raw`
+- `template` sustituciones `filter` expresión predeterminada
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Convierte archivos CSV, normalmente en JSON.
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` valores por defecto para `json`
 - `filter` valores por defecto para `json_raw`
@@ -233,7 +261,7 @@ La primera entrada en cada arrayref de 2 elementos es el nombre de ruta de archi
 
 Devuelve una lista de los nuevos archivos de origen resultantes si `$quick > 2`.
 
-Argumentos obligatorios:
+Mandatory Arguments:
 
 - `path`
 - `data` - entrada como hashref; almacena arrayref resultante de deps al devolver
@@ -842,7 +870,5 @@ Igual que `YAML::XS::Dump`.
       });
   }
 </script>
-
-<!-- $Date$ Autor: joe $ $ Revisión: 36101 $ -->
 
 <!-- $Date$ $Author$ $Revision$ -->

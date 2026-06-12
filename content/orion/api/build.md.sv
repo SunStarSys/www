@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.sv'
 keywords: VILA, API
-status: verifierad=36101
+status: verifierad=39465
 title: Orion API - bygge
 ---
 
@@ -25,6 +25,8 @@ title: Orion API - bygge
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## Byggsystem
 
 {# lede #}Det här dokumentet täcker API:erna **Bygg system**{# lede #}.
@@ -43,7 +45,9 @@ Den senares jobb är att tillhandahålla bokningsbara `view`-baserad `$method`s 
 
 &nbsp;
 
-Många åsikter är avsedda att staplas som "filter" förbearbeta aspekter av filen i `$path` som är nya, som extern kod `snippets` eller `asymptote`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+Många åsikter är avsedda att staplas som "filter" Förbearbeta (eller efterbearbeta) aspekter av filen i `$path` som är nya, som extern kod `snippets` eller `asymptote`-hindrade nedsättningsblock. Du kan se ett exempel på detta [här](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## Innehållsförteckning
 
 [TOC]
 
@@ -74,13 +78,13 @@ Den mest populära (och sofistikerade) vyn
 
 Den här vyn innehåller automatisk bearbetning av filer som finns i `$path`bilagekatalog. Med andra ord, om `$path = "/foo.md.en"`, sedan de filer som lagras i  `/foo.page/` katalog associerad med "och" språktillägg kommer att införlivas i mallens adresserbara argument för att `$path` Oavsett om `preprocess` argumentinställning &mdash; som, om det är sant, också skulle göra det materialet tillgängligt för själva **sidans innehåll**.
 
-Obligatoriska argument:
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-Valfria argument:
+Optional Argmuents:
 
 - `deps` &mdash; åsidosätter normalt `fetch_deps` bearbetning
 
@@ -132,12 +136,12 @@ För att skapa sidorna index.html och sitemap.html
 
 Språkspecifikt, sorterat index för beroenden.
 
-Obligatoriska argument:
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-Valfria argument:
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ Byggen och cachar [`Asymptote`](https://asymptote.sourceforge.io/) triple-backqu
 </div>
 <p class="card-text">
 
-Obligatoriska argument:
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ Konvertera YAML-filer, vanligtvis till JSON.
 </div>
 <p class="card-text">
 
-Valfria argument:
+Optional Arguments:
+
+- `ext` standardvärdet är `json`
+- `filter` standardvärdet är `json_raw`
+- `template` åsidosättningar `filter` standarduttryck
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+Konvertera CSV-filer, vanligtvis till JSON.
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` standardvärdet är `json`
 - `filter` standardvärdet är `json_raw`
@@ -233,7 +261,7 @@ Den första posten i varje 2-element arrayref är filsökvägens namn, det andra
 
 Returnerar en lista över resulterande nya källfiler om `$quick > 2`.
 
-Obligatoriska argument:
+Mandatory Arguments:
 
 - `path`
 - `data` - indata som hashref; lagrar resulterande arrayref av deps vid retur
@@ -843,4 +871,4 @@ Samma som `YAML::XS::Dump`.
   }
 </script>
 
-<!-- $Date$ $Författare: joe $ $Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->

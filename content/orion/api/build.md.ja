@@ -2,7 +2,7 @@
 categories: ~
 dependencies: '*.md.ja'
 keywords: 休憩、アピ
-status: 確認済み=36101
+status: 確認済み=39465
 title: Orion API - ビルド
 ---
 
@@ -25,6 +25,8 @@ title: Orion API - ビルド
 
 &nbsp;
 
+[TOC]#sidebar
+
 ## システム構築
 
 {# lede #}このドキュメントでは、**ビルド・システム** APIについて説明します{# lede #}.
@@ -43,7 +45,9 @@ title: Orion API - ビルド
 
 &nbsp;
 
-多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理するには`$path` 外部コードのように新しい`snippets` または`asymptote`- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+多くのビューは次のように積み重ねられます。"フィルタ" ファイルの側面を前処理(または後処理)するには`$path` 外部コードのように新しい`snippets` または`asymptote`- フェンス・マークダウン・ブロック。次の例を参照してください。[こちら](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/path.pm#L52).
+
+## 目次
 
 [TOC]
 
@@ -74,13 +78,13 @@ title: Orion API - ビルド
 
 このビューには、内部にあるファイルの自動処理が組み込まれています。`$path`の添付ディレクトリ。言い換えれば、`$path = "/foo.md.en"`に保存されたファイル`/foo.page/` 関連するディレクトリ".en" 言語拡張は、そのテンプレートのアドレス可能な引数に組み込まれます`$path` 関係なく`preprocess` 引数の設定&mdash; trueの場合、**ページのコンテンツ自体**がその資料にアクセスできるようにします。
 
-必須引数:
+Mandatory Arguments:
 
 - `template`
 - `path`
 - `lang`
 
-オプションの引数:
+Optional Argmuents:
 
 - `deps` &mdash; 通常のオーバーライド`fetch_deps` 処理中
 
@@ -132,12 +136,12 @@ index.htmlおよびsitemap.htmlページを構築する場合
 
 依存関係のロケール固有のソートされた索引。
 
-必須引数:
+Mandatory Arguments:
 
 - `path`
 - `lang`
 
-オプションの引数:
+Optional Arguments:
 
 - `quick_deps`
 - `nested`
@@ -161,7 +165,7 @@ index.htmlおよびsitemap.htmlページを構築する場合
 </div>
 <p class="card-text">
 
-必須引数:
+Mandatory Arguments:
 
 - `view`
 - `lang`
@@ -205,7 +209,31 @@ index.htmlおよびsitemap.htmlページを構築する場合
 </div>
 <p class="card-text">
 
-オプションの引数:
+Optional Arguments:
+
+- `ext` デフォルト`json`
+- `filter` デフォルト`json_raw`
+- `template` 上書き`filter` デフォルト式
+
+</p>
+</div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+#### `csv2ext(%args)`
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+CSVファイルを、通常はJSONに変換します。
+
+</div>
+<p class="card-text">
+
+Optional Arguments:
 
 - `ext` デフォルト`json`
 - `filter` デフォルト`json_raw`
@@ -233,7 +261,7 @@ index.htmlおよびsitemap.htmlページを構築する場合
 
 結果の新しいソース・ファイルのリストを返します。`$quick > 2`.
 
-必須引数:
+Mandatory Arguments:
 
 - `path`
 - `data` - 入力をhashrefとして; 戻り時にdepの結果のarrayrefを格納する
@@ -843,4 +871,4 @@ Markdownファイルをアーカイブすることは、Orionに伝える自然�
   }
 </script>
 
-<!-- $Date$Author: joe $$Revision$ -->
+<!-- $Date$ $Author$ $Revision$ -->
