@@ -415,9 +415,9 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
         my @lang = qw/.en .es .de .fr .ru .sv .pt-BR .ar .zh-TW .ko .ja .he/;
         my ($idx) = grep $lang[$_] eq $lang, 0 .. $#lang;
         if (my ($root) = grep s!^.*/trunk/content!!, </x1/cms/wcbuild/$repos/$host/trunk/content/sitemap.*$lang>) {
-          my @dep_nodes = $root;
+          my @dep_nodes = ($root);
           my %dot;
-          while (defined(my $node = shift @dep_nodes)) {
+          while (@dep_nodes and (my $node = shift @dep_nodes)) {
             next unless exists $yaml_deps->{$node};
             $dot{$node} = {
               deps => $yaml_deps->{$node},
@@ -425,7 +425,7 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
               name => "\"$node\""
             };
             push @dep_nodes, @{$dot{$node}{deps}};
-            delete $yaml_deps->{node}
+            delete $yaml_deps->{$node};
           }
           open my $fh, ">", \$dep_dot or die "Can't open scalarref for writing: $!";
           print $fh "strict digraph \"$language[$idx] Dependencies\" {\n";
