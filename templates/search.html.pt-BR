@@ -18,8 +18,14 @@
   <a href="./?regex=%23{{k|urlencode}};lang={{lang}};markdown_search={{markdown_search}}"><span class="badge bg-danger text-white">#{{k}}</span></a>
   &nbsp;
   {% endfor %}
-
-{% if duration %}
+  {% if dep_dot %}
+  {% filter markdown %}
+<div class="graphviz">
+{{dep_dot}}
+</div>
+  {% endfilter %}
+  {% endif %}
+  {% if duration %}
   <script src="/editor.md/js/chart.umd.js"></script>
   <canvas id="myChart" width="100%" height="800px"></canvas>
   {% endif %}
@@ -216,7 +222,7 @@ Largura de banda (KB): Total = {{ tbw }}, Média = {{meanbw}}, StdDev = {{stdbw}
        <input type="hidden" name="regex" value="{{regex}}">
        <input type="hidden" name="hash" value="{{hash}}">
        <input class="form-control me-2" type="text" name="filter"
-             placeholder="Pesquisa Recursiva PCRE" valor="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
+             placeholder="PCRE Recursive Search" value="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
       </div>
     </div>
 {% for w in weblog %}
@@ -237,7 +243,7 @@ Largura de banda (KB): Total = {{ tbw }}, Média = {{meanbw}}, StdDev = {{stdbw}
 	    <div class="d-flex float-end">
     		<input type="hidden" name="hash" value="{{hash}}">
 	    	<input class="form-control me-2" type="text" name="filter"
-             placeholder="Pesquisa Recursiva PCRE" valor="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
+             placeholder="PCRE Recursive Search" value="{{ filter }}" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-filter fa-emoji" title="Filter"></i></button>
         </div>
 	  </div>
       <div>
@@ -270,7 +276,8 @@ Largura de banda (KB): Total = {{ tbw }}, Média = {{meanbw}}, StdDev = {{stdbw}
   const values = data.map(x => x[1]);
   var total = 0;
   for (var i=0; i < values.length; ++i)
-      total += +values[i];
+      if (values[i] <= 300)
+          total += +values[i];
 
 const labels = data.map(x => "r" + x[0] + ":" + x[2] + ":" + x[3] + ":" +
   x[4]);
