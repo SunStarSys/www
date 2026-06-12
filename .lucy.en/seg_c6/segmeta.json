@@ -39,14 +39,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_c5"
+    "name": "seg_c6"
   },
   "sort": {
     "counts": {
-      "path": "1"
+      "path": "2"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "1"
+    },
     "ord_widths": {
       "path": "1"
     }
