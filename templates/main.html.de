@@ -285,7 +285,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
       });
   });
   // Select the target element
-  document.getElementsByClassName("fade").foreach((target) => {
+  document.getElementsByClassName("fade").forEach((target) => {
     target.style.opacity = 0.01;
     // Create an IntersectionObserver
     const observer = new IntersectionObserver((entries) => {
