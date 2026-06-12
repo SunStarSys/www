@@ -6,7 +6,7 @@ status: منشور
 title: خطط أوريون
 ---
 
-<div class="row">
+<div class="row fade">
   <div class="col-lg-4 plans">
     <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
       <div class="card-header text-white">الخطة المهنية</div>
@@ -87,7 +87,7 @@ $ 100 / شهر / موقع مستضاف، ~ 50 ٪ من جميع نماذج الت
   <li>$20 / 100 GB نقل البيانات</li>
   <li>$10 / مقعد</li>
   <li>$10 / 100 بناء دقائق</li>
-  <li>$.40 / صفحة AI NLP الترجمات</li>
+  <li>$0.40 / صفحة AI NLP الترجمات</li>
 </ol>
 </p>
 </li>

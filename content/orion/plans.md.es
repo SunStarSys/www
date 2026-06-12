@@ -6,7 +6,7 @@ status: publicado
 title: Planes de Orion
 ---
 
-<div class="row">
+<div class="row fade">
   <div class="col-lg-4 plans">
     <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
       <div class="card-header text-white">Plan profesional</div>
@@ -87,7 +87,7 @@ $100 / mes / sitio alojado, ~50% de descuento en todos los modelos de precios de
   <li>Transferencia de datos de $20/100 GB</li>
   <li>$10/asiento</li>
   <li>$10 / 100 minutos de compilación</li>
-  <li>$.40 / página AI NLP traducciones</li>
+  <li>$0.40 / página AI NLP traducciones</li>
 </ol>
 </p>
 </li>

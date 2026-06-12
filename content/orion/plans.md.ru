@@ -6,7 +6,7 @@ status: опубликовано
 title: Планы Ориона
 ---
 
-<div class="row">
+<div class="row fade">
   <div class="col-lg-4 plans">
     <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
       <div class="card-header text-white">Профессиональный план</div>
@@ -87,7 +87,7 @@ $100 / месяц / размещенный сайт, ~50% от всех моде
   <li>$20 / 100 ГБ передачи данных</li>
   <li>$10 / место</li>
   <li>$10 / 100 минут сборки</li>
-  <li>$.40 / страница AI NLP переводы</li>
+  <li>$0,40 / страница AI NLP переводы</li>
 </ol>
 </p>
 </li>
