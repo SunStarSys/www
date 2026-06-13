@@ -391,7 +391,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $stdbw = sqrt($stdbw);
   }
 }
-elsif ($re =~/^recent=(\S*)$/i) {
+elsif ($re =~/^recent=(.*)$/i) {
     my $uri = $1;
     if (my APR::Request::Cookie::Table $jar = $apreq->jar) {
       $jar->cookie_class("SunStarSys::Orion::Cookie");
