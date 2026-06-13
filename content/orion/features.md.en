@@ -64,7 +64,7 @@ Status: draft
 
 	- TLS 1.3
 
-	- Custom [`SVN::Client`](#) module w/ ithread support for per-request pools
+	- Custom `SVN::Client` module w/ ithread support for per-request pools
 
 ## Multilingual
 
@@ -114,7 +114,7 @@ Status: draft
 
 - Bootstrap 4+ styling for easy CSS semantic styling and quick onboarding.
 
-- Editor.md is amazing: by using relative [`src`](#) urls, your linked images will render in the editor preview pane.
+- Editor.md is amazing: by using relative `src` urls, your linked images will render in the editor preview pane.
 
 ## Consistent GitHub-Flavored Markdown (GFM) rendering with Editor.md :editormd-logo-1x: and Django Templating
 
