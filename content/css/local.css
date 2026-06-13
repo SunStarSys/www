@@ -232,7 +232,7 @@ pre {
 
 #sidebar li.active > a,
 #sidebar li:hover > a {
-   color: green;
+   color: rgba(var(--bs-info-emphasis-rgb), var(--bs-text-opacity)) !important;
 }
 
 #sidebar li:not(.active) > ul > li { display: none }
