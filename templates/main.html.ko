@@ -313,7 +313,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
   const targets = document.querySelectorAll(".fade");
   if (targets) {
    targets.forEach((target) => {
-      target.style.opacity = 0.01;
+      // target.style.opacity = 0.01;
       // Create an IntersectionObserver
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -322,7 +322,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
               target.style.opacity = 1;
               $(target).fadeIn(); // Visual feedback
           } else {
-             target.style.opacity = 0.01;
+             // target.style.opacity = 0.01;
 		  }
         });
         }, {
