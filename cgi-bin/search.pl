@@ -395,12 +395,13 @@ elsif ($re =~/^recent=(.*)$/i) {
     my $uri = $1;
     if (my APR::Request::Cookie::Table $jar = $apreq->jar) {
       $jar->cookie_class("SunStarSys::Orion::Cookie");
-
-      @recent = $uri // ();
+	  my $revision;
+      $svn->info("dirname$uri", sub {$revision = $_[1]->rev}) if $uri;
+      @recent = $uri ? "$uri:$revision" : ();
       if (my SunStarSys::Orion::Cookie $c = $jar->get("recent")) {
         push @recent, map @{$_->{recent}}, $c->thaw;
         my %seen;
-        @recent = grep !$seen{$_}++, @recent;
+        @recent = grep {my ($x) = split /:/;!$seen{$x}++} @recent;
         $#recent = 19 if @recent > 20;
       }
       my SunStarSys::Orion::Cookie $cookie;
@@ -414,10 +415,12 @@ elsif ($re =~/^recent=(.*)$/i) {
       }
     }
     for (@recent) {
-       my $filename = "$dirname$_";
-       read_text_file "$dirname$_", \ my %data;
-	   s/[.]md([^\/]*)$/.html$1/ or next;
-       $_ = { url => $_, %{$data{headers}} };
+      my ($x, $rev) = split /:/;
+      my $filename = "$dirname$x";
+      $svn->info($filename, sub {$revision = $_[1]->rev});
+	  read_text_file $filename, \ my %data;
+	  $x =~ s/[.]md([^\/]*)$/.html$1/ or next;
+      $_ = { url => $x, rev => $revision, ($revision > $rev ? (new => 1) : ()), %{$data{headers}} };
     }
 }
 
