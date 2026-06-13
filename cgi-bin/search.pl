@@ -391,8 +391,7 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $stdbw = sqrt($stdbw);
   }
 }
-elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
-  if ($re =~/^recent=(\S*)$/i) {
+elsif ($re =~/^recent=(\S*)$/i) {
     my $uri = $1;
     if (my APR::Request::Cookie::Table $jar = $apreq->jar) {
       $jar->cookie_class("SunStarSys::Orion::Cookie");
@@ -420,8 +419,11 @@ elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
 	   s/[.]md([^\/]*)$/.html$1/ or next;
        $_ = { url => $_, %{$data{headers}} };
     }
-  }
-  elsif ($re =~ /^build=/i) {
+}
+
+elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
+
+  if ($re =~ /^build=/i) {
     no warnings 'uninitialized';
     ($revision) = $re =~ /(\d+)$/;
     if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
