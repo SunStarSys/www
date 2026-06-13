@@ -418,8 +418,8 @@ elsif ($re =~/^recent=(.*)$/i) {
       my ($x, $rev) = split /:/;
       my $filename = "$dirname$x";
 	  read_text_file $filename, \ my %data;
-     ($revision) = $data{content} =~ /\$Revision: (\d+) \$/;
-     $x =~ s/[.]md([^\/]*)$/.html$1/ or next;
+      ($revision) = $data{content} =~ /\$Revision: (\d+) \$/;
+      $x =~ s/[.]md([^\/]*)$/.html$1/ or next;
       $_ = { url => $x, rev => $revision, ($revision > $rev ? (new => 1) : ()), %{$data{headers}} };
     }
 }
