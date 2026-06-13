@@ -1,8 +1,10 @@
 title: SunStar Systems' Orion
-status: verified=44398
+status: verified=44417
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
+
+[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
@@ -160,7 +162,7 @@ The quickest way to get going is to play with @SunStarSys/orion's build of <http
 
 &nbsp;
 
-<h3>Here's&nbsp;Why,&nbsp;Young&nbsp;Academic :fa-orcid: / Full Stack Developer :fa-stackoverflow: / Public Blogger :fa-blog: ...</h3>
+### Here's&nbsp;Why,&nbsp;Young&nbsp;Academic :fa-orcid: / Full Stack Developer :fa-stackoverflow: / Public Blogger :fa-blog: ...
 
 &nbsp;
 
