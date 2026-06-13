@@ -417,7 +417,7 @@ elsif ($re =~/^recent=(.*)$/i) {
        my $filename = "$dirname$_";
        read_text_file "$dirname$_", \ my %data;
 	   s/[.]md([^\/]*)$/.html$1/ or next;
-       $_ = { url => $_, %{$data{headers}} };
+       $_ = { url => encode($_), %{$data{headers}} };
     }
 }
 
