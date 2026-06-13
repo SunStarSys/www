@@ -40,7 +40,7 @@ hr {border-color: #A9BDBD !important; opacity: .5 !important }
 div.jumbotron a, #index a { color:#114056 }
 
 footer a, .nav-item a { color: #392806 }
-footer card a {color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important}
+footer .card a {color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1)) !important}
 footer img {width:100px}
 footer form input { margin-bottom: 5px }
 footer { color: #002B36 }
