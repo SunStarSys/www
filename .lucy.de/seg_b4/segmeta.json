@@ -7,18 +7,14 @@
   },
   "lexicon": {
     "counts": {
-      "acl": "3",
-      "content": "660",
-      "keywords": "5",
-      "path": "2",
-      "status": "3",
-      "title": "9"
+      "content": "137",
+      "path": "1",
+      "status": "1",
+      "title": "3"
     },
     "format": "3",
     "index_counts": {
-      "acl": "1",
-      "content": "6",
-      "keywords": "1",
+      "content": "2",
       "path": "1",
       "status": "1",
       "title": "1"
@@ -28,7 +24,7 @@
     "format": "1"
   },
   "segmeta": {
-    "count": "2",
+    "count": "1",
     "field_names": [
       "",
       "status",
@@ -41,18 +37,18 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_cn"
+    "name": "seg_b4"
   },
   "sort": {
     "counts": {
-      "path": "3"
+      "path": "2"
     },
     "format": "3",
     "null_ords": {
-      "path": "2"
+      "path": "1"
     },
     "ord_widths": {
-      "path": "2"
+      "path": "1"
     }
   }
 }
