@@ -417,9 +417,9 @@ elsif ($re =~/^recent=(.*)$/i) {
     for (@recent) {
       my ($x, $rev) = split /:/;
       my $filename = "$dirname$x";
-      $svn->info($filename, sub {$revision = $_[1]->rev});
 	  read_text_file $filename, \ my %data;
-	  $x =~ s/[.]md([^\/]*)$/.html$1/ or next;
+     ($revision) = $data{content} =~ /\$Revision: (\d+) \$/;
+     $x =~ s/[.]md([^\/]*)$/.html$1/ or next;
       $_ = { url => $x, rev => $revision, ($revision > $rev ? (new => 1) : ()), %{$data{headers}} };
     }
 }
