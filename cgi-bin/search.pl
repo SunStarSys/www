@@ -396,7 +396,7 @@ elsif ($re =~/^recent=(.*)$/i) {
     if (my APR::Request::Cookie::Table $jar = $apreq->jar) {
       $jar->cookie_class("SunStarSys::Orion::Cookie");
 	  my $revision;
-      $svn->info("$dirname$uri", sub {$revision = $_[1]->rev}) if $uri;
+      $svn->info("$dirname$uri", sub {$revision = $_[1]->last_changed_rev}) if $uri;
       @recent = $uri ? "$uri:$revision" : ();
       if (my SunStarSys::Orion::Cookie $c = $jar->get("recent")) {
         push @recent, map @{$_->{recent}}, $c->thaw;
