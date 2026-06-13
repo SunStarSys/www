@@ -13,7 +13,7 @@ a {text-decoration:none}
 a:hover {text-decoration: underline}
 
 div.essay code {color: #29942c}
-div.jumbotron code {color: #002B36}
+div.jumbotron code {color: rgba(var(--bs-info-rgb), var(--bs-text-opacity)) !important;}
 
 div.jumbotron {
 	color: black;
