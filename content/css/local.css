@@ -12,7 +12,8 @@
 a {text-decoration:none}
 a:hover {text-decoration: underline}
 
-code {color: #29942c}
+div.essay code {color: #29942c}
+div.jumbotron code {color: #002B36}
 
 div.jumbotron {
 	color: black;
