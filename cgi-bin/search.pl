@@ -1,4 +1,4 @@
-#!/usr/local/bin/perl -T -I /x1/cms/build/lib
+#!/usr/local/bin/perl -T -I /x1/cms/build/lib -I/x1/cms/webgui/lib
 # Copyright 2023 SunStar Systems, Inc.  All rights reserved.
 use v5.38;
 use utf8;
@@ -25,6 +25,7 @@ use Dotiac::DTL::Addon::markup;
 use Dotiac::DTL::Addon::json;
 use SunStarSys::Util qw/read_text_file parse_filename Load/;
 use SunStarSys::SVN::Client;
+use SunStarSys::Orion::Cookie;
 use SVN::Repos;
 use File::Basename;
 use FreezeThaw qw/freeze thaw/;
@@ -78,7 +79,7 @@ $apreq = $apreq->handle($r);
 my SVN $svn;
 $svn = $svn->new($r);
 
-my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|translation=|acl=|deps=|svnauthz=|weblog=)/i;
+my $specials_re = qr/^(friends=|watch=|like=|diff=|log=|notify=|build=|translation=|acl=|deps=|svnauthz=|weblog=|recent=)/i;
 
 local our $lang = get_client_lang($r);
 
@@ -287,7 +288,7 @@ s/^"(.*)"$/\\Q$1\\E/ for $filter;
 
 my @unzip = qw/--markdown --yaml/;
 
-my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx, $hits, $dep_dot);
+my (@friends, @dlog, $revision, $yaml, $blog, $translation, @weblog, $diff, $author, $date, $log, $graphviz, @watch, @matches, @keywords, %title_cache, %keyword_cache, @bandwidth, @duration, $tbw, $maxbw, $minbw, $medbw, $meanbw, $stdbw, $tdur, $maxdur, $mindur, $meddur, $meandur, $stddur, $e4xx, $e5xx, $hits, $dep_dot, @recent);
 
 tie my %pw, 'BerkeleyDB::Hash', -Filename => "/x1/repos/svn-auth/$repos/user+group", -Flags => DB_RDONLY or die "Can't open $repos database: $!";
 my $svnuser = $r->pnotes("svnuser");
@@ -391,7 +392,36 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
   }
 }
 elsif ($repos and $re =~ /^([@\w.-]+=[@\w. -]*)$/i) {
-  if ($re =~ /^build=/i) {
+  if ($re =~/^recent=(\S*)$/i) {
+    my $uri = $1;
+    if (my APR::Request::Cookie::Table $jar = $apreq->jar) {
+      $jar->cookie_class("SunStarSys::Orion::Cookie");
+
+      @recent = $uri // ();
+      if (my SunStarSys::Orion::Cookie $c = $jar->get("recent")) {
+        push @recent, map @{$_->{recent}}, $c->thaw;
+        my %seen;
+        @recent = grep !$seen{$_}++, @recent;
+        $#recent = 19 if @recent > 20;
+      }
+      my SunStarSys::Orion::Cookie $cookie;
+      if ($uri) {
+        $cookie = $cookie->new(
+          $r,
+          name => "recent",
+          value => {recent => \@recent},
+        );
+        $cookie->bake($r);
+      }
+    }
+    for (@recent) {
+       my $filename = "$dirname$_";
+       read_text_file "$dirname$_", \ my %data;
+	   s/[.]md([^\/]*)$/.html$1/ or next;
+       $_ = { url => $_, %{$data{headers}} };
+    }
+  }
+  elsif ($re =~ /^build=/i) {
     no warnings 'uninitialized';
     ($revision) = $re =~ /(\d+)$/;
     if ($revision and open my $fh, "<:encoding(UTF-8)", "/x1/httpd/websites/$host/.build-log/$revision.log") {
@@ -840,6 +870,7 @@ my $args = {
   r           => $r,
   revision    => $revision,
   repos       => $repos,
+  recent      => \@recent,
   website     => $host,
   hash        => $hash->hexdigest,
   filter      => $filter,
