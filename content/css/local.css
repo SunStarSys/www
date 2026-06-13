@@ -14,7 +14,7 @@ a:hover {text-decoration: underline}
 
 div.essay code {color: #29942c}
 div.jumbotron code {color: rgba(var(--bs-info-rgb), var(--bs-text-opacity,1))}
-a > code {color:inherit}
+a > code {color:inherit !important}
 
 div.jumbotron {
 	color: black;
