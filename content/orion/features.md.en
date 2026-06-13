@@ -131,9 +131,6 @@ a -> b;
 a -> c [color=red];
 }
 ```
-&nbsp;
-----
-&nbsp;
 
 - [x] Native @mermaid-js/mermaid v11.15.0 with mindmap+wardley-beta support:
 
@@ -373,7 +370,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 &nbsp;
 
-----
+[===========]
 
 &nbsp;
 
@@ -406,8 +403,6 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
       \pdv{(\rho e)}{t}+\vec{\nabla}\cdot(\rho e+p)\vec{u} &= \vec{\nabla}\cdot(\bar{\bar{\tau}}\cdot\vec{u})+\rho\vec{f}\cdot\vec{u}+\vec{\nabla}\cdot\vec{\dot{q}}+r
 \end{aligned}
 ```
-
-----
 
 - [x] Electric!
 
