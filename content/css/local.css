@@ -183,7 +183,7 @@ div.breadcrumbs {
 
 #search button, #filter button { height: 37px; }
 
-#search input, #filter input; #join input { max-width: 13em;  background-color: #A9BDBD; border: 1px solid rgba(0,0,0,0.15); }
+#search input, #filter input; #join input { max-width: 13em;  background-color: #A9BDBD !important; border: 1px solid rgba(0,0,0,0.15); }
 
 @media only screen and (max-width: 1000px) {
   #meta, #filter { display: none; }
