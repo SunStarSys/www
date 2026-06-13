@@ -181,7 +181,7 @@ $2500 / month
 
 #### Footnotes
 
-1.  Storage Utilization calculated based on size of two working copy checkouts of each site: one source tree and one resulting production build tree.
+1.  Storage Utilization calculated based on size of one working copy checkout of each site, but this isn't rigidly enforced on the margins. Being 1-5% over is not something to worry about. Over 5%? Talk to us.
 
 2. Storage Utilization calculated based on total size of SunStar Systems-hosted Subversion repository for Enterprise customers, not individual checkouts, which is  a *comparatively smaller number* (about the size of a single source-tree checkout).
 
