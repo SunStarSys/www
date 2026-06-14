@@ -80,7 +80,7 @@ status: draft
   Orion: "&check;"
 - Feature: "[3D Vector Graphics](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integration"
   Orion: "&check;"
-- Feature: "SSI / CGI / mod_perl / mod_wasm support"
+- Feature: "SSI / CGI / mod_perl registry support"
   Orion: "&check;"
 - Feature: "Fine-Grained Repo/.htaccess synced ACLs"
   Orion: "&check;"
