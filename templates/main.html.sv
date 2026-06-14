@@ -124,6 +124,23 @@
 </header>
 
 <main>
+<div id="recent-div" class="position-fixed end-0" style="writing-mode: vertical-rl; top:110px">
+  <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
+    Nyligen besökta
+  </a>
+</div>
+<div class="offcanvas offcanvas-end border-primary" tabindex="-1" id="recentVisits" aria-labelledby="recentVisits">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Nyligen besökta</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      <ul id="recent">
+      </ul>
+    </div>
+  </div>
+</div>
 {% block alert %}
   {% if alert %}
   <div class="alert alert-dismissible alert-info container">
@@ -184,8 +201,8 @@
     })
 
 if (typeof(editormd) === "undefined") {
-
-mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
+        $(".mermaid").addClass("fade");
+        mermaid.initialize({theme: "dark", startOnLoad: true, securityLevel: "loose"});
 
 for (const e of $("body").find(".graphviz").toArray()) {
             const graphContainer = d3.select(e);
@@ -243,6 +260,33 @@ for (const e of $("body").find(".graphviz").toArray()) {
               $("#unwatch").css("display", "inline");
           else
               $("#watch").css("display", "inline");
+      }
+      catch (e) {
+          alert(e);
+      }
+  }
+</script>
+
+<script async="" type="module">
+  if (document.cookie.indexOf("can_search") >= 0) {
+      const response = await fetch("/dynamic/search/?regex=recent={{path|urlencode}};lang={{lang}};markdown_search=1;as_json=1",
+                                   {credentials: 'same-origin'});
+      try {
+          const json = await response.json();
+          const recent = document.querySelector("#recent");
+          const btn = document.querySelector("#recent-div a");
+          for (const e of json.recent) {
+             const li = document.createElement("li");
+             if (e.new) {
+                li.innerHTML = "<a href='/dynamic/search/?regex=diff=" + e.rev + ";lang={{lang}};markdown_search=1;'><span class='text-success'><i class='fa fa-code-compare'></i></span></a>&nbsp;<a href='" + escape(e.url) + "'>" + e.title + "</a><br/>&nbsp;";
+                btn.classList.remove("btn-primary");
+				if (!btn.classList.contains("btn-success"))
+		  		  btn.classList.add("btn-success");
+             }
+             else
+                li.innerHTML = "<a href='" + escape(e.url) + "'>" + e.title + "</a><br/>&nbsp;";
+             recent.appendChild(li);
+          }
       }
       catch (e) {
           alert(e);
@@ -322,7 +366,7 @@ if (sidebar) {var spy=new Gumshoe('#sidebar a',{nested:true, offset:200})}
               target.style.opacity = 1;
               $(target).fadeIn(); // Visual feedback
           } else {
-             // target.style.opacity = 0.01;
+             //target.style.opacity = 0.01;
 		  }
         });
         }, {
