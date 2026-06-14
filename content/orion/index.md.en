@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=44429
+status: verified=44477
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -195,7 +195,7 @@ Multi-gigabyte source trees are simply no match for it &mdash; full site build d
 &nbsp;
 
 <center>
-<span class="text-primary-emphasis"><em>We only build what you need built.</em></span>&trade;
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>We only build what you need built.</em></span>&trade;
 </center>
 
 &nbsp;
