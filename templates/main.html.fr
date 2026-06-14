@@ -124,7 +124,7 @@
 </header>
 
 <main>
-<div id="recent-div" class="position-fixed end-0" style="writing-mode: vertical-rl; top:110px">
+<div id="recent-div" class="position-fixed" style="writing-mode: vertical-rl; top:110px; {% if lang|starts_with:".ar" or lang|starts_with:".he" %}left:0{% else %}right:0{% endif %}">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     Visités récemment
   </a>
