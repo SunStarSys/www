@@ -173,7 +173,7 @@ $2500 / month
 
 - Businesses with less than 100 commits a day should be fine with the 500 build minutes included in the plan.
 
-- Enterprises with less than 1000 commits a day should be fine with the 5000 build minutes included in the plan.
+- Enterprises with less than 1000 commits a day (approaching one commit per minute) should be fine with the 5000 build minutes included in the plan.
 
 - Builds that exceed a five minute duration are on the house: we consider those incidents as system errors.
 
