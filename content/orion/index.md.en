@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=44477
+status: verified=45285
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -245,7 +245,9 @@ In addition, all clients have free, template-customizable or javascript-enabled 
 
 <hr>
 <br><br><br>
-<h2>A Few Representative Screen Shots:</h2>
+
+## A Few Representative Screen Shots
+
 <br>
 <h3>IDE View with German, French, Hebrew, and Russian (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
