@@ -1,16 +1,4 @@
 {
-  "lexicon": {
-    "counts": {
-      "none": "0"
-    },
-    "format": "3",
-    "index_counts": {
-      "none": "0"
-    }
-  },
-  "postings": {
-    "format": "1"
-  },
   "segmeta": {
     "count": "0",
     "field_names": [
@@ -25,6 +13,6 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_a"
+    "name": "seg_b"
   }
 }
