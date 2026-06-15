@@ -19,7 +19,7 @@
 	{% if permalink %}
 	<link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
 	{% endif %}
-	{% if lang:starts_with:".ar" or lang:starts_with:".he" %}
+	{% if lang|grep:"[.](he|ar)" %}
 	<link href="/css/bootstrap.rtl.min.css" rel="stylesheet" media="screen">
 	{% else %}
 	<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -128,7 +128,7 @@
 </header>
 
 <main>
-<div id="recent-div" class="position-fixed" style="writing-mode: vertical-rl; top:110px; {% if lang|starts_with:".ar" or lang|starts_with:".he" %}left:0{% else %}right:0{% endif %}">
+<div id="recent-div" class="position-fixed" style="writing-mode: vertical-rl; top:110px; {% if lang|grep:"[.](he|ar)" %}left:0{% else %}right:0{% endif %}">
   <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#recentVisits" role="button" aria-controls="recentVisits">
     Visités récemment
   </a>
