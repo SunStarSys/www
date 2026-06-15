@@ -323,11 +323,11 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $s->permit_only(@opcodes);
     eval {
       $s->reval(q{/\Q$prefix\E/}) if $prefix;
-      die $@ if $@;
+      die "PREFIX=$prefix:$@" if $@;
       $s->reval(q{/$prefilter/}) if $prefilter;
-      die $@ if $@;
+      die "PREFILTER=$prefilter:$@" if $@;
       $s->reval(q{/$filter/}) if $filter;
-      die $@ if $@;
+      die "FILTER=$filter:$@" if $@;
     };
 
     warn($@), $r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
