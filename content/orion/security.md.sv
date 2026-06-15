@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: säkerhet,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: verifierad=44141
+status: verifierad=44370
 title: Orion-säkerhet
 ---
 
@@ -34,6 +34,8 @@ title: Orion-säkerhet
 Populär parafrasering av amerikansk låssmed [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851, som lätt plockade Crystal Palace lås under en London utställning det året.  Vi instämmer helt och hållet, och det är därför våra kopior av vår OCI-automatiseringsmotor för Oracle Cloud Infrastructure är [tillgänglig på GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Orion-infrastruktursäkerhet :fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==VPN==>A6==SSH/vpn==>B6
 vcs==VPN==>A7==SSH/vpn==>B7
 vcs==VPN==>A8==SSH/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 FIPS 140-3-kompatibel med MFA-trippelkryptering för tjänster som körs bakåt i porten (HTTPS/SSH/IPsec).  Bälte, hängslen och stigbyglar!
@@ -279,6 +284,12 @@ Alla målfiler finns i en undermapp i `/content/` och måste refereras som absol
 Om målsökvägen inte har konfigurerats i `@path::patterns` med en matchande inställning som gör att målsökvägen i fråga antingen kan arkiveras eller kategoriseras, eller så är den senast ändrade författaren av källfilen helt enkelt inte behörig att visa målsökvägen, `ssi` Åtgärden kommer att misslyckas.
 
 Detta beror på att `ssi` support är en förutsättning för dessa funktionsuppsättningar, för att bevara webbplatsens mål *permalinks*.
+
+###### Filtrera säkerhet med reguljära uttryck som överförts som stränglitteraler
+
+`Dotiac::DTL` internt urlenkodar alla stränglitteraler innan de exponeras för `eval` av säkerhetsskäl.  Det lämnar dem sedan kodade när de skickas som filterargument, vilket är frustrerande när man arbetar med PCRE stränglitteraler.
+
+I denna situation, vår gaffel av `Dotiac::DTL` urldecodes strängen och gör en sanity check i en `Safe::reval` sandlåda innan de exponeras för `perl`s regex-motor. Uppsidan är att stränglitteralerna du skriver i ett filterargument som stöds kommer att exponeras ordagrant för `perl` &mdash; **du behöver inte dubbla fly dina bakslag!**
 
 #### Beroende-/ACL-injektionskontroller
 

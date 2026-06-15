@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: security，安全性，infosec，appsec，ipsec，devsecops，it，acl，svnauthz，zerotrust
-status: 驗證 =44141
+status: 驗證 =44370
 title: Orion 安全
 ---
 
@@ -34,6 +34,8 @@ title: Orion 安全
 美國 locksmith 的熱門繪圖[Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851 年，當年在倫敦的一場展覽中輕易地拿到水晶宮鎖。我們完全同意，這就是我們的 Oracle Cloud Infrastructure (OCI) 自動化引擎藍圖的原因[可從 GitHub 取得](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Orion Infrastructure 安全:fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==vpn==>A6==ssh/vpn==>B6
 vcs==vpn==>A7==ssh/vpn==>B7
 vcs==vpn==>A8==ssh/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 適用於逆向連接埠轉送服務 (HTTPS/SSH/IPsec) 的 FIPS 140-3 相容搭配 MFA 三重加密。皮帶，吊帶和攪拌！
@@ -279,6 +284,12 @@ Wiki security involves several factors:
 若未在其中設定目標路徑`@path::patterns` 具有可允許將有問題之目標路徑存檔或分類的比對設定，或來源檔案的最後變更作者未獲授權檢視目標路徑，`ssi` 作業將會失敗。
 
 這是因為`ssi` 支援是這些功能集的先決條件，以保留您網站的目標 *permalinks*。
+
+###### 涉及以字串常值形式傳送之正規表示式的篩選安全性
+
+`Dotiac::DTL` 對所有字串文字進行內部 URL 編碼後，再將其公開`eval` 基於安全理由。然後，當以篩選引數傳送時，它會保留編碼，這在使用 PCRE 字串文字時會令人失望。
+
+在這種情況下，我們的叉子`Dotiac::DTL` urldecodes 對字串進行完整性檢查`Safe::reval` 先將封閉測試環境公開給`perl`的 regex 引擎。上方是，您在支援的篩選引數中鍵入的字串文字將會公開動詞`perl` &mdash; **您不需要重複跳脫您的反斜線！**
 
 #### 相依性 /ACL 射出控制
 

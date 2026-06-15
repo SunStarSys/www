@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: segurança,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: verificado=44141
+status: verificado=44370
 title: Segurança Orion
 ---
 
@@ -34,6 +34,8 @@ title: Segurança Orion
 Paráfase popular do serralheiro americano [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) Em 1851, que facilmente pegou as fechaduras do Palácio de Cristal durante uma exposição em Londres naquele ano.  Concordamos plenamente, e é por isso que nossos planos para nosso mecanismo de automação da Oracle Cloud Infrastructure (OCI) são [disponível em GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Segurança da Infraestrutura Orion :fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==vpn==>A6==ssh/vpn==>B6
 vcs==vpn==>A7==ssh/vpn==>B7
 vcs==vpn==>A8==ssh/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 Compatível com FIPS 140-3 com tripla criptografia MFA para serviços de encaminhamento de porta reversa (HTTPS/SSH/IPsec).  Cinto, suspensórios e estribos!
@@ -279,6 +284,12 @@ Todos os arquivos de destino estão em uma subpasta do `/content/` e deve ser re
 Se o caminho de destino não estiver configurado no `@path::patterns` com uma configuração correspondente que permite que o caminho de destino em questão seja arquivado ou categorizado, ou que o último autor alterado do arquivo de origem simplesmente não esteja autorizado a exibir o caminho de destino, o `ssi` operação falhará.
 
 Isso porque `ssi` o suporte é um pré-requisito para esses conjuntos de recursos, para preservar os *permalinks*. do alvo do seu site
+
+###### Filtrar Segurança Envolvendo Expressões Regulares Passadas como Literais de String
+
+`Dotiac::DTL` urlencodes internamente todos os literais de string antes de expô-los a `eval` por razões de segurança.  Em seguida, deixa-os codificados quando passados como argumentos de filtro, o que é frustrante ao trabalhar com literais de string PCRE.
+
+Nessa situação, nosso garfo de `Dotiac::DTL` urldecodes a string e faz uma verificação de sanidade em um `Safe::reval` sandbox antes de expô-los a `perl`motor regex. A vantagem é que as literais de string que você digitar em um argumento de filtro suportado serão expostas literalmente a `perl` &mdash; **você não precisa escovar duas vezes suas barras traseiras!**
 
 #### Controles de Injeção de Dependência/ACL
 
