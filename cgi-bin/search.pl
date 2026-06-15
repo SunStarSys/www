@@ -296,7 +296,7 @@ my $svnuser = $r->pnotes("svnuser");
 state @opcodes = qw/
     const padany lineseq rv2gv rv2sv gvsv concat multiconcat match leaveeval
     null stub scalar pushmark wantarray const defined undef
-    rv2sv sassign padsv_store list quotemeta
+    rv2sv sassign padsv_store list quotemeta qr
     cond_expr flip flop andassign orassign dorassign and or dor xor helemexistsor
     preinc i_preinc predec i_predec postinc i_postinc
     postdec i_postdec int hex oct abs pow multiply i_multiply
@@ -322,11 +322,11 @@ if ($repos and $re =~ /^weblog=(.*)/i) {
     $s = $s->new;
     $s->permit_only(@opcodes);
     eval {
-      $s->reval(q{m{\Q$prefix\E}}) if $prefix;
+      $s->reval(q{qr{\Q$prefix\E}}) if $prefix;
       die "PREFIX=$prefix:$@" if $@;
-      $s->reval(q{m{$prefilter}}) if $prefilter;
+      $s->reval(q{qr{$prefilter}}) if $prefilter;
       die "PREFILTER=$prefilter:$@" if $@;
-      $s->reval(q{m{$filter}}) if $filter;
+      $s->reval(q{qr{$filter}}) if $filter;
       die "FILTER=$filter:$@" if $@;
     };
 
@@ -722,9 +722,9 @@ if ($re !~ $specials_re) {
   $s = $s->new;
   $s->permit_only(@opcodes);
   eval {
-    $s->reval(q{m{$re}}) if $re;
+    $s->reval(q{qr{$re}}) if $re;
     die $@ if $@;
-    $s->reval(q{m{$filter}}) if $filter;
+    $s->reval(q{qr{$filter}}) if $filter;
     die $@ if $@;
   };
   $r->status(Apache2::Const::HTTP_BAD_REQUEST), return Apache2::Const::HTTP_BAD_REQUEST if $@;
