@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: セキュリティ、infosec、appsec、ipsec、devsecops、it、acl、svnauthz、zerotrust
-status: 確認済み=44141
+status: 確認済み=44370
 title: Orionのセキュリティ
 ---
 
@@ -34,6 +34,8 @@ title: Orionのセキュリティ
 American locksmithの発音を[Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851年、ロンドンの展覧会でクリスタル・パレス・ロックを容易に選んだ。Oracle Cloud Infrastructure(OCI)自動化エンジンのブループリントは、[GitHubで入手できます。](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Orion Infrastructureのセキュリティ:fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==vpn==>A6==ssh/vpn==>B6
 vcs==vpn==>A7==ssh/vpn==>B7
 vcs==vpn==>A8==ssh/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 リバース・ポート転送サービス(HTTPS/SSH/IPsec)用のFIPS 140-3準拠のMFAトリプル暗号化。ベルト、サスペンダー、撹拌!
@@ -279,6 +284,12 @@ UIを介して使用可能な各作業コピー・リソースは、ユーザー
 ターゲット・パスが構成されていない場合`@path::patterns` 対象のターゲット・パスをアーカイブまたは分類できる一致設定、またはソース・ファイルの最終変更作成者が単にターゲット・パスを表示する権限がない`ssi` 操作が失敗します。
 
 これは、`ssi` サポートは、サイトのターゲット*permalinks*を保持するために、これらの機能セットに対する前提条件です。
+
+###### 文字列リテラルとして渡される正規表現を含むフィルタ・セキュリティ
+
+`Dotiac::DTL` 内部では、すべての文字列リテラルをURLエンコードしてから公開します。`eval` セキュリティ上の理由から。次に、フィルタ引数として渡されるとエンコードされたままになります。これは、PCRE文字列リテラルを操作するときにイライラします。
+
+この状況では、私たちのフォーク`Dotiac::DTL` urldは文字列をコード化し、正常性チェックを行います。`Safe::reval` サンドボックスを公開する前に`perl`regex engineとは逆に言えば、サポートされているフィルタ引数に入力した文字列リテラルは、`perl` &mdash; **バックスラッシュを二重にエスケープする必要はありません。**
 
 #### 依存性/ACLインジェクション制御
 

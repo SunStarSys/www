@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 보안,infosec, appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: 확인=44141
+status: 확인=44370
 title: Orion 보안
 ---
 
@@ -34,6 +34,8 @@ title: Orion 보안
 American Locksmith의 발음을 American Locksmith [en] [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851년에 런던 전시회에서 크리스탈 팰리스 자물쇠를 쉽게 골랐습니다.  Oracle Cloud Infrastructure(OCI) 자동화 엔진에 대한 우리의 청사진이 바로 이러한 이유에 전적으로 동의합니다. [GitHub에서 사용 가능](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Orion Infrastructure 보안 :fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==VPN==>A6==SSH/vpn==>B6
 vcs==VPN==>A7==SSH/vpn==>B7
 vcs==VPN==>A8==SSH/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 역방향 포트 전달 서비스(HTTPS/SSH/IPsec)에 대한 FIPS 140-3 호환(MFA 삼중 암호화 포함)입니다.  벨트, 서스펜더 및 스트럽!
@@ -279,6 +284,12 @@ UI를 통해 사용할 수 있는 각 작업 복사본 리소스는 사용자에
 대상 경로가 구성되지 않은 경우 `@path::patterns` 해당 대상 경로를 아카이브 또는 범주화할 수 있는 일치 설정 또는 소스 파일의 마지막 변경된 작성자가 단순히 대상 경로를 볼 수 있는 권한이 없는 경우 `ssi` 작업이 실패합니다.
 
 그 이유는 `ssi` 지원은 사이트의 대상 *permalinks*를 보존하기 위해 해당 기능 세트에 대한 전제 조건입니다.
+
+###### 문자열 리터럴로 전달된 정규 표현식을 포함하는 필터 보안
+
+`Dotiac::DTL` 모든 문자열 리터럴을 노출하기 전에 내부적으로 urlencodes `eval` 보안상의 이유로  그런 다음 필터 인수로 전달될 때 인코딩된 상태로 둡니다. 이 인수는 PCRE 문자열 리터럴로 작업할 때 문제가 됩니다.
+
+그 상황에서, 우리의 포크는 `Dotiac::DTL` urld는 문자열을 코딩하고 온전성 검사를 수행합니다. `Safe::reval` 샌드박스에 노출되기 전 `perl`Regex 엔진 단점은 지원되는 필터 인수에 입력하는 문자열 리터럴이 `perl` &mdash; **백슬래시를 두 번 이스케이프할 필요가 없습니다!**
 
 #### 종속성/ACL 주입 통제
 

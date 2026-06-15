@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: Sicherheit,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: überprüft=44141
+status: überprüft=44370
 title: Orion-Sicherheit
 ---
 
@@ -34,6 +34,8 @@ title: Orion-Sicherheit
 Beliebte Paraphierung des amerikanischen Schlossers [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) 1851, der während einer Londoner Ausstellung in diesem Jahr leicht die Crystal Palace Schlösser auswählte.  Wir sind uns voll und ganz einig, weshalb unsere Blueprints für unsere Oracle Cloud Infrastructure-(OCI-)Automatisierungs-Engine [verfügbar auf GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Sicherheit der Orion-Infrastruktur :fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==VPN==>A6==SSH/vpn==>B6
 vcs==VPN==>A7==SSH/vpn==>B7
 vcs==VPN==>A8==SSH/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 FIPS 140-3-konform mit MFA-Dreifachverschlüsselung für Reverse-Port-Weiterleitungsservices (HTTPS/SSH/IPsec).  Gürtel, Hosenträger und Steigbügel!
@@ -279,6 +284,12 @@ Alle Zieldateien befinden sich in einem Unterordner der `/content/` Ordner und m
 Wenn der Zielpfad nicht konfiguriert ist in `@path::patterns` mit einer übereinstimmenden Einstellung, mit der der betreffende Zielpfad entweder archiviert oder kategorisiert werden kann, oder der zuletzt geänderte Autor der Quelldatei einfach nicht autorisiert ist, den Zielpfad anzuzeigen, `ssi` Vorgang nicht erfolgreich.
 
 Das liegt daran, `ssi` Unterstützung ist eine Voraussetzung für diese Featuresets, um das Ziel Ihrer Site *permalinks* beizubehalten.
+
+###### Filtersicherheit für reguläre Ausdrücke, die als Zeichenfolgenliterale übergeben werden
+
+`Dotiac::DTL` intern urlenkodiert alle Zeichenfolgenliterale, bevor sie `eval` aus Sicherheitsgründen.  Es lässt sie dann codiert, wenn sie als Filterargumente übergeben werden, was bei der Arbeit mit PCRE-Zeichenfolgenliteralen frustrierend ist.
+
+In dieser Situation, unsere Gabel von `Dotiac::DTL` urldecodiert die Zeichenfolge und führt eine Integritätsprüfung durch `Safe::reval` Sandbox, bevor sie ausgesetzt werden `perl`Regex-Engine. Der Vorteil ist, dass die Zeichenfolgenliterale, die Sie in ein unterstütztes Filterargument eingeben, wörtlich angegeben werden. `perl` &mdash; **Sie brauchen Ihre umgekehrten Schrägstriche nicht zu verdoppeln!**
 
 #### Abhängigkeits-/ACL-Injection-Steuerelemente
 

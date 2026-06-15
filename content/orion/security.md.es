@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: seguridad,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,cerotrust
-status: verificado=44141
+status: verificado=44370
 title: Seguridad de Orion
 ---
 
@@ -34,6 +34,8 @@ title: Seguridad de Orion
 Popular paraphasing de cerrajero americano [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) en 1851, que eligió fácilmente las cerraduras del Palacio de Cristal durante una exposición de Londres ese año.  Estamos totalmente de acuerdo, por lo que nuestros planes detallados para nuestro motor de automatización de Oracle Cloud Infrastructure (OCI) son [disponible en GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Seguridad de infraestructura de Orion :fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==NPP==>A6==ssh/vpn==>B6
 vcs==NPP==>A7==ssh/vpn==>B7
 vcs==NPP==>A8==ssh/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 Cifrado triple compatible con FIPS 140-3 con MFA para servicios reenviados por puerto inverso (HTTPS/SSH/IPsec).  Cinturón, tirantes y estribos!
@@ -279,6 +284,12 @@ Todos los archivos de destino están en una subcarpeta de la `/content/` carpeta
 Si la ruta de destino no está configurada en `@path::patterns` con una configuración coincidente que permite archivar o categorizar la ruta de destino en cuestión, o el último autor cambiado del archivo de origen simplemente no está autorizado a ver la ruta de destino, la `ssi` la operación fallará.
 
 Esto se debe a `ssi` el soporte es un requisito previo para esos conjuntos de funciones, para preservar los *permalinks* de destino de su sitio.
+
+###### Filtrar seguridad que implica expresiones regulares transferidas como literales de cadena
+
+`Dotiac::DTL` codifica internamente todos los literales de cadena antes de exponerlos a `eval` por razones de seguridad.  A continuación, los deja codificados cuando se pasan como argumentos de filtro, lo que es frustrante cuando se trabaja con literales de cadena PCRE.
+
+En esta situación, nuestro tenedor de `Dotiac::DTL` urldecodifica la cadena y realiza una comprobación de cordura en una `Safe::reval` sandbox antes de exponerlos a `perl`el motor de la regex. La ventaja es que los literales de cadena que escriba en un argumento de filtro soportado se expondrán literalmente a `perl` &mdash; **¡No es necesario que deje escapar las barras invertidas!**
 
 #### Controles de inyección de dependencia/ACL
 

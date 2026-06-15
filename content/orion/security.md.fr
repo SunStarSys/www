@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: sécurité,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: vérifié=44141
+status: vérifié=44370
 title: Sécurité d'Orion
 ---
 
@@ -34,6 +34,8 @@ title: Sécurité d'Orion
 Paraphrase populaire de serrurier américain [Alfred Charles Hobbs](https://en.wikipedia.org/wiki/Alfred_Charles_Hobbs) En 1851, il choisit facilement les serrures du Crystal Palace lors d'une exposition londonienne cette année-là.  Nous sommes tout à fait d'accord. C'est pourquoi nos plans pour notre moteur d'automatisation Oracle Cloud Infrastructure (OCI) sont [disponible sur GitHub](https://github.com/joesuf4/home/blob/wsl/.ocirc).
 
 ## Sécurité de l'infrastructure Orion :fa-lock:
+
+<div class="fade">
 
 ```mermaid
 flowchart TB
@@ -101,6 +103,9 @@ vcs==vpn==>A6==ssh/vpn==>B6
 vcs==vpn==>A7==ssh/vpn==>B7
 vcs==vpn==>A8==ssh/vpn==>B8
 ```
+
+</div>
+
 &nbsp;
 
 Fonctionnalité FIPS 140-3 avec triple chiffrement MFA pour les services transférés vers le port inverse (HTTPS/SSH/IPsec).  Ceinture, bretelles et étriers !
@@ -279,6 +284,12 @@ Tous les fichiers cible se trouvent dans un sous-dossier de `/content/` et doit 
 Si le chemin cible n'est pas configuré dans `@path::patterns` avec un paramètre de correspondance qui permet d'archiver ou de catégoriser le chemin cible en question, ou le dernier auteur modifié du fichier source n'est tout simplement pas autorisé à afficher le chemin cible, le `ssi` l'opération échouera.
 
 C'est parce que `ssi` Le support est un prérequis pour ces jeux de fonctionnalités, afin de préserver la cible de votre site *permalinks*.
+
+###### Sécurité des filtres impliquant des expressions régulières transmises en tant que littéraux de type chaîne
+
+`Dotiac::DTL` urlencode en interne tous les littéraux de type chaîne avant de les exposer à `eval` pour des raisons de sécurité.  Il les laisse ensuite codés lorsqu'ils sont transmis en tant qu'arguments de filtre, ce qui est frustrant lorsque vous travaillez avec des littéraux de chaîne PCRE.
+
+Dans cette situation, notre fourche de `Dotiac::DTL` urldécode la chaîne et effectue un contrôle d'intégrité dans un `Safe::reval` Sandbox avant de les exposer à `perl`Le moteur d'expression régulière. L'avantage est que les littéraux de type chaîne que vous saisissez dans un argument de filtre pris en charge seront exposés mot pour mot à mot à `perl` &mdash; **vous n'avez pas besoin d'échapper deux fois vos barres obliques inverses.**
 
 #### Contrôles d'injection de dépendance/ACL
 

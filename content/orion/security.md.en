@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=44366
+Status: verified=44370
 
 <div class="right">
 
@@ -281,6 +281,12 @@ All target files are in a subfolder of the `/content/` folder, and must be refer
 If the target path is not configured in `@path::patterns` with a matching setting that allows the target path in question to either be archived or categorized, or the last changed author of the source file is simply not authorized to view the target path, the `ssi` operation will fail.
 
 This is because `ssi` support is a pre-requisite for those feature-sets, to preserve your site's target *permalinks*.
+
+###### Filter Security Involving Regular Expressions Passed as String Literals
+
+`Dotiac::DTL` internally urlencodes all string literals before exposing them to `eval` for security reasons.  It then leaves them encoded when passed as filter arguments, which is frustrating when working with PCRE string literals.
+
+In that situation, our fork of `Dotiac::DTL` urldecodes the string and does a sanity check in a `Safe::reval` sandbox before exposing them to `perl`'s regex engine. The upside is that the string literals you type into a supported filter argument will be exposed verbatim to `perl` &mdash; **you do not need to double-escape your backslashes!**
 
 #### Dependency/ACL Injection Controls
 
