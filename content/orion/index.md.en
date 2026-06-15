@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=45289
+status: draft
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -155,8 +155,7 @@ The quickest way to get going is to play with @SunStarSys/orion's build of <http
 </div>
 </center>
 </div>
-<div style="border-right: solid #A9BDBD 1px;height:100%">&nbsp;</div>
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
