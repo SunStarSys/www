@@ -149,11 +149,13 @@ This isn't marketing spin &mdash; it's verifiable, open engineering heritage dat
 <div class="card-header">Getting Started</div>
 <div class="card-body">
 
-The quickest way to get going is to play with @SunStarSys/orion's build of <https://iconoclasts.blog> and hollow out the markdown sources in trunk/content.  ~90% of the styling customizations are in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; adjust to taste!
+The quickest way to get going is to play with @SunStarSys/orion's default build of <https://iconoclasts.blog> and hollow out the markdown sources in `trunk/content`.  ~90% of the styling customizations are in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; adjust to taste!
 
-The other 10% involves choosing an appropriate bootstrap 5 CSS theme; we recommend <https://bootswatch.com> for ideas.
+The other 10% involves choosing an appropriate bootstrap 5 CSS theme to replace the corresponding files in `content/css/bootstrap.*`; we recommend <https://bootswatch.com> for ideas.
 
 The final step is to rejigger the topmatter navigation menus in `templates/main.html.*`.  Our AI translator will keep everything in sync on demand.
+
+Need help customizing the `Perl` build system in `lib/` and other Django templates in `templates/` to fit your use case?  We are at your service!
 
 </div>
 </div>
