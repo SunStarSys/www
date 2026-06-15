@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=45835
+Status: verified=45845
 
 <div class="right">
 
@@ -264,7 +264,7 @@ The build system is all-seeing and all-knowing, but we can ensure that your buil
 
 The build system will reveal the list of file names it built through the browser IDE upon a commit, but that list is only based on an user's read-access to the resources dependent on the user's add, update, or delete content actions in the commit.
 
-##### Template Traversal Controls
+#### Template Traversal Controls
 
 See [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
@@ -272,11 +272,11 @@ See [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 This code enforces the rules which follow below in this section.
 
-###### include and extends tags
+##### include and extends tags
 
 All target files are in a subfolder of the `/templates/` folder, and must be referenced as absolute paths rooted at that folder.
 
-###### ssi tag
+##### ssi tag
 
 All target files are in a subfolder of the `/content/` folder, and must be referenced as absolute paths rooted at that folder.
 
@@ -284,7 +284,7 @@ If the target path is not configured in `@path::patterns` with a matching settin
 
 This is because `ssi` support is a pre-requisite for those feature-sets, to preserve your site's target *permalinks*.
 
-###### Filter Security Involving Regular Expressions Passed as String Literals
+##### Filter Security Involving Regular Expressions Passed as String Literals
 
 `Dotiac::DTL` internally urlencodes all string literals before exposing them to `eval` for security reasons.  It then leaves them encoded when passed as filter arguments, which is frustrating when working with PCRE string literals.
 
