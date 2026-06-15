@@ -3,12 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=43942
+status: verificado=45754
 title: SunStar Orion dos Sistemas
 ---
 
+[TOC]#sidebar
+
 <div class="row">
-<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;Nbsp<em>A Plataforma Wiki Jamstack.</em></span>&trade;
 </p>
@@ -21,7 +23,7 @@ title: SunStar Orion dos Sistemas
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**Não Hackable**](security#separation-of-concerns-and-engineering-tradeoffs)
+[**Não Hackable**](security#separation-of-concerns-and-engineering-tradeoffs10)
 
 :fa-lock:
 
@@ -81,7 +83,7 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 <div class="fade">
 
-- **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary-emphasis">Ciência aberta</span> plataforma.
+- :fa-school-flag: **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary-emphasis">Ciência aberta</span> plataforma.
 
 </div>
 
@@ -89,7 +91,7 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 <div class="fade">
 
-- **Governo &amp; tomadores de decisão de TI de defesa** &mdash; Atenda à infraestrutura FedRAMP, aos requisitos de confiança zero do NIST 800-207 e aos controles de acesso refinados em seu repositório de controle de versão &mdash; tudo com segurança compatível com FIPS 140-3 e instalável dentro de sua VPN corporativa.
+- :fa-city: **Saúde, Governo &amp; tomadores de decisão de TI de defesa** &mdash; Atenda aos requisitos de infraestrutura FedRAMP, NIST 800-207 de confiança zero e HIPPA. Desfrute de controles de acesso refinados em seu repositório de controle de versão &mdash; tudo com segurança compatível com FIPS 140-3 e instalável dentro de sua VPN.
 
 </div>
 
@@ -97,7 +99,7 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 <div class="fade">
 
-- **Executivos de marketing** &mdash; Execute uma plataforma empresarial rápida, global e inovadora para ativos de sites corporativos. Use o Orion como um poderoso CMS sem cabeça &mdash; seguro, eficiente e totalmente dissociado da entrega frontend.
+- :fa-cart-arrow-down: **Executivos de marketing** &mdash; Execute uma plataforma empresarial rápida, global e inovadora para ativos de sites corporativos. Use o Orion como um poderoso CMS sem cabeça &mdash; seguro, eficiente e totalmente dissociado da entrega frontend.
 
 </div>
 
@@ -105,7 +107,7 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 <div class="fade">
 
-**Empresas de tecnologia &amp; Agências web** &mdash; Substitua wikis comerciais inseguros, montanhas de documentação de produtos, sites de clientes e até mesmo downloads binários. Organize tudo com confiança, velocidade e histórico de versões ironclad.
+- :fa-computer: **Empresas de tecnologia &amp; Agências web** &mdash; Substitua wikis comerciais inseguros, montanhas de documentação de produtos, sites de clientes e até mesmo downloads binários. Organize tudo com confiança, velocidade e histórico de versões ironclad.
 
 </div>
 
@@ -113,7 +115,7 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 <div class="fade">
 
-- **Arquitetos de alta disponibilidade &amp; Engenheiros principistas** &mdash; Fuja dos pontos únicos de falha incorporados às pilhas LAMP baseadas em SQL. Adote a verdadeira escalabilidade do Jamstack: compilações simultâneas, atualizações incrementais, cobertura global de POP e desempenho máximo medido em milissegundos.
+- :fa-compass-drafting: **Arquitetos de alta disponibilidade &amp; Engenheiros principistas** &mdash; Fuja dos pontos únicos de falha incorporados às pilhas LAMP baseadas em SQL. Adote a verdadeira escalabilidade do Jamstack: compilações simultâneas, atualizações incrementais, cobertura global de POP e desempenho máximo medido em milissegundos.
 
 </div>
 
@@ -121,7 +123,7 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 <div class="fade">
 
-- **Qualquer negócio cansado da economia wiki** &mdash; Livre-se de assinaturas caras do SaaS, ferramentas gratuitas frágeis que drenam o tempo da equipe e sistemas desatualizados que atrasam sua equipe. A Orion oferece poder empresarial a uma fração do custo total de propriedade (muitas vezes inferior a US$ 25.000/ano para uso empresarial completo).
+- :fa-business-time: **Qualquer negócio cansado da economia wiki** &mdash; Livre-se de assinaturas caras do SaaS, ferramentas gratuitas frágeis que drenam o tempo da equipe e sistemas desatualizados que atrasam sua equipe. A Orion oferece poder empresarial a uma fração do custo total de propriedade (muitas vezes inferior a US$ 25.000/ano para uso empresarial completo).
 
 </div>
 
@@ -150,20 +152,25 @@ Isso não é marketing spin &mdash; É uma herança de engenharia aberta verific
 <div class="card-header">Conceitos Básicos</div>
 <div class="card-body">
 
-A maneira mais rápida de começar é jogar com o build do @SunStarSys/orion <https://iconoclasts.blog> e esvaziar as origens de markdown em tronco/conteúdo.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
+A maneira mais rápida de começar é jogar com o build padrão do @SunStarSys/orion de <https://iconoclasts.blog> e esvaziar as fontes de markdown em `trunk/content`.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
+
+O outro 10% envolve a escolha de um tema CSS bootstrap 5 apropriado para substituir os arquivos correspondentes em `content/css/bootstrap.*`; recomendamos <https://bootswatch.com> para ideias.
+
+O passo final é rejigger os menus de navegação topmatter em `templates/main.html.*`. Nosso tradutor de IA manterá tudo sincronizado sob demanda.
+
+Precisa de ajuda para personalizar o `Perl` sistema de compilação em `lib/` e outros modelos Django em `templates/` para se adequar ao seu caso de uso?  Estamos ao seu serviço!
 
 </div>
 </div>
 </center>
 </div>
-
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
-<h3>Aqui está&nbsp;Por que,&nbsp;Jovem&nbsp;Desenvolvedor Acadêmico / Full Stack / Blog Público...</h3>
+### Aqui está&nbsp;Por que,&nbsp;Jovem&nbsp;Acadêmico&nbsp;:fa-orcid: / Completo&nbsp;Pilha&nbsp;Desenvolvedor&nbsp;:fa-stack-overflow: / Público&nbsp;Blogger&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -195,7 +202,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-primary-emphasis"><em>Nós só construímos o que você precisa construído.</em></span>&trade;
+<center>
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>Nós só construímos o que você precisa construído.</em></span>&trade;
+</center>
+
+&nbsp;
 
 Esta [tecnologia](https://iconoclasts.blog/joe/apache-cms) foi inventado no final de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher, e [Joe Schaefer](https://iconoclasts.blog/joe/) como membros da equipe de infraestrutura da Apache. A frase "JAMstack" foi cunhado anos depois (2015), por um grupo inconsciente da nossa arte anterior neste espaço.  Mas o [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) é cristalino, e esta nova oferta da SunStar Systems é testemunho desse legado original e de suas verdadeiras origens de código aberto.
 
@@ -242,7 +253,9 @@ Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habi
 
 <hr>
 <br><br><br>
-<h2>Algumas capturas de tela representativas:</h2>
+
+## Algumas capturas de tela representativas
+
 <br>
 <h3>IDE View com alemão, francês, hebraico e russo (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>

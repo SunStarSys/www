@@ -3,12 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =43942
+status: 驗證 =45754
 title: SunStar 系統的 Orion
 ---
 
+[TOC]#sidebar
+
 <div class="row">
-<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Jamstack Wiki 平台。</em></span>&trade;
 </p>
@@ -21,7 +23,7 @@ title: SunStar 系統的 Orion
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[** 無法劫持 **](security#separation-of-concerns-and-engineering-tradeoffs)
+[** 無法劫持 **](security#separation-of-concerns-and-engineering-tradeoffs10)
 
 :fa-lock:
 
@@ -81,7 +83,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- **大學領袖** &mdash; 透過由版本控制的文件共用、策展和線上發布，消除校園困擾，並強化安全、開放存取的協作。將您的學術知識管理轉變為現代化且可稽核的<span class="text-primary-emphasis">開放科學</span> 平台。
+- :fa-school-flag: **大學領袖** &mdash; 透過由版本控制的文件共用、策展和線上發布，消除校園困擾，並強化安全、開放存取的協作。將您的學術知識管理轉變為現代化且可稽核的<span class="text-primary-emphasis">開放科學</span> 平台。
 
 </div>
 
@@ -89,7 +91,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- **政府&amp; 防禦 IT 決策者** &mdash; 符合 FedRAMP 基礎架構、NIST 800-207 零信任需求，以及在版本控制儲存區域上微點存取控制&mdash; 符合 FIPS 140-3 規範的安全性，且可在企業 VPN 中安裝。
+- :fa-city: **健康照護，政府&amp; 防禦 IT 決策者** &mdash; 符合 FedRAMP 基礎架構、NIST 800-207 零信任和 HIPPA 需求。在版本控制儲存區域上享受微點存取控制&mdash; 符合 FIPS 140-3 標準的安全性，可在您的 VPN 中安裝。
 
 </div>
 
@@ -97,7 +99,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- **行銷主管** &mdash; 為企業網站資產執行快速、全球創新的企業平台。使用 Orion 作為強大的無頭 CMS &mdash; 安全、高效能且與前端交付完全脫鉤。
+- :fa-cart-arrow-down: **行銷主管** &mdash; 為企業網站資產執行快速、全球創新的企業平台。使用 Orion 作為強大的無頭 CMS &mdash; 安全、高效能且與前端交付完全脫鉤。
 
 </div>
 
@@ -105,7 +107,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- **科技公司&amp; 網站代理機構** &mdash; 取代不安全的商業 Wiki、大量產品文件、從屬端網站，甚至是二進位檔案下載。透過自信、速度和 ironclad 版本歷史記錄策劃一切。
+- :fa-computer: **科技公司&amp; 網站代理機構** &mdash; 取代不安全的商業 Wiki、大量產品文件、從屬端網站，甚至是二進位檔案下載。透過自信、速度和 ironclad 版本歷史記錄策劃一切。
 
 </div>
 
@@ -113,7 +115,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- **高可用性架構師&amp; 主要工程師** &mdash; 將洩漏到 SQL 型 LAMP 堆疊中的單一失敗點遁離。擁抱真正的 Jamstack 可擴展性：並行建置、增量更新、全球 POP 涵蓋範圍和尖峰效能 (毫秒)。
+- :fa-compass-drafting: **高可用性架構師&amp; 主要工程師** &mdash; 將洩漏到 SQL 型 LAMP 堆疊中的單一失敗點遁離。擁抱真正的 Jamstack 可擴展性：並行建置、增量更新、全球 POP 涵蓋範圍和尖峰效能 (毫秒)。
 
 </div>
 
@@ -121,7 +123,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- **任何商務疲累的維基經濟體** &mdash; 消除昂貴的 SaaS 訂閱、可減少員工時間的脆弱免費工具，以及拖慢團隊運作的過時系統。Orion 讓您以部分總體擁有成本擁有企業電力 (通常不到 25,000 美元，適用於整個企業使用)。
+- :fa-business-time: **任何商務疲累的維基經濟體** &mdash; 消除昂貴的 SaaS 訂閱、可減少員工時間的脆弱免費工具，以及拖慢團隊運作的過時系統。Orion 讓您以部分總體擁有成本擁有企業電力 (通常不到 25,000 美元，適用於整個企業使用)。
 
 </div>
 
@@ -150,20 +152,25 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 <div class="card-header">入門</div>
 <div class="card-body">
 
-最快的方法是與 @SunStarSys/orion 的建置版本一起玩<https://iconoclasts.blog> 並清除中繼器 / 內容中的減價來源。約 90% 的樣式自訂項目位於[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
+最快的方法是使用 @SunStarSys/orion 的預設建置版本來播放<https://iconoclasts.blog> 並清除以下的 Markdown 來源：`trunk/content`。   約 90% 的樣式自訂項目位於[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
+
+其他 10% 涉及選擇適當的啟動安裝 5 CSS 主題來取代下列位置的對應檔案：`content/css/bootstrap.*`我們建議<https://bootswatch.com> 意見。
+
+最後一個步驟是重新觸發頂端內容導覽功能表，位於`templates/main.html.*`。我們的 AI 翻譯人員將隨時隨地保持同步。
+
+需要自訂說明`Perl` 建立系統於`lib/` 與其他 Django 範本位於`templates/` 符合您的使用案例？我們為您服務！
 
 </div>
 </div>
 </center>
 </div>
-
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
-<h3>以下是&nbsp;原因：&nbsp;年輕&nbsp;學術 / Full Stack Developer / 公共博客...</h3>
+### 以下是&nbsp;原因：&nbsp;年輕&nbsp;學術&nbsp;:fa-orcid: / 全部&nbsp;堆疊&nbsp;開發人員&nbsp;:fa-stack-overflow: / 公共&nbsp;部落格&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -195,7 +202,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-primary-emphasis"><em>我們只建立您需要的建置項目。</em></span>&trade;
+<center>
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>我們只建立您需要的建置項目。</em></span>&trade;
+</center>
+
+&nbsp;
 
 這是[技術](https://iconoclasts.blog/joe/apache-cms) 於 2010 年底首次發明者[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/),Daniel Shahaf,Dave Fisher, [Joe Schaefer](https://iconoclasts.blog/joe/) 作為 Apache 基礎架構小組的成員。片語"JAMstack" 多年後 (2015 年)，由一個團體不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
 
@@ -242,7 +253,9 @@ div#lightning img {width:100%}
 
 <hr>
 <br><br><br>
-<h2>少數代表畫面擷圖：</h2>
+
+## 少數代表畫面擷圖
+
 <br>
 <h3>IDE View - 德文、法文、希伯來文和俄文 (UTF-8)。</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>

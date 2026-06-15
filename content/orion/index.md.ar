@@ -3,12 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: التحقق = 43942
+status: التحقق = 45754
 title: SunStar أوريون الأنظمة
 ---
 
+[TOC]#sidebar
+
 <div class="row">
-<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>منصة ويكي جامستاك.</em></span>&trade;
 </p>
@@ -21,7 +23,7 @@ title: SunStar أوريون الأنظمة
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**غير قابل للاختراق**](security#separation-of-concerns-and-engineering-tradeoffs)
+[**غير قابل للاختراق**](security#separation-of-concerns-and-engineering-tradeoffs10)
 
 :fa-lock:
 
@@ -81,7 +83,7 @@ title: SunStar أوريون الأنظمة
 
 <div class="fade">
 
-** قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-primary-emphasis">العلوم المفتوحة</span> منصة.
+- :fa-school-flag: **قادة الجامعة** &mdash; تخلص من الانتحال في الحرم الجامعي وقم بتمكين تعاون آمن ومفتوح الوصول من خلال مشاركة المستندات التي يتحكم فيها الإصدار والمعالجة والنشر عبر الإنترنت. تحويل إدارة المعرفة الأكاديمية الخاصة بك إلى حديثة، قابلة للتدقيق، <span class="text-primary-emphasis">العلوم المفتوحة</span> منصة.
 
 </div>
 
@@ -89,7 +91,7 @@ title: SunStar أوريون الأنظمة
 
 <div class="fade">
 
-- **الحكومة &amp; صناع القرار في مجال تكنولوجيا المعلومات الدفاعية** &mdash; تلبية متطلبات الثقة الصفرية لـ NIST 800-207 والبنية الأساسية FedRAMP وعناصر التحكم في الوصول الدقيقة في مستودع التحكم في الإصدار &mdash; كل ذلك مع أمان متوافق مع FIPS 140-3 وقابل للتثبيت داخل VPN لشركتك.
+- :fa-city: **الرعاية الصحية، الحكومة &amp; صناع القرار في مجال تكنولوجيا المعلومات الدفاعية** &mdash; تلبية متطلبات البنية التحتية FedRAMP، NIST 800-207 الثقة الصفرية وHIPPA. تمتع بعناصر تحكم دقيقة في الوصول إلى مستودع التحكم في الإصدار &mdash; كل ذلك مع أمان متوافق مع FIPS 140-3 وقابل للتثبيت داخل VPN الخاص بك.
 
 </div>
 
@@ -97,7 +99,7 @@ title: SunStar أوريون الأنظمة
 
 <div class="fade">
 
-- **المسؤولون التنفيذيون للتسويق** &mdash; قم بتشغيل نظام أساسي مؤسسي سريع وعالمي ومبتكر لأصول موقع الويب الخاص بالشركة. استخدام أوريون كـ CMS قوي بدون رأس &mdash; آمنة، أداء، وفصل تماما من التسليم الأمامي.
+- :fa-cart-arrow-down: **المسؤولون التنفيذيون للتسويق** &mdash; قم بتشغيل نظام أساسي مؤسسي سريع وعالمي ومبتكر لأصول موقع الويب الخاص بالشركة. استخدام أوريون كـ CMS قوي بدون رأس &mdash; آمنة، أداء، وفصل تماما من التسليم الأمامي.
 
 </div>
 
@@ -105,7 +107,7 @@ title: SunStar أوريون الأنظمة
 
 <div class="fade">
 
-- **شركات التكنولوجيا &amp; وكالات الموقع** &mdash; استبدل مواقع wikis التجارية غير الآمنة وجبال ترويض وثائق المنتجات ومواقع العملاء وحتى التنزيلات الثنائية. قم بتدقيق كل شيء بثقة وسرعة وتاريخ إصدار مكثف.
+- :fa-computer: **شركات التكنولوجيا &amp; وكالات الموقع** &mdash; استبدل مواقع wikis التجارية غير الآمنة وجبال ترويض وثائق المنتجات ومواقع العملاء وحتى التنزيلات الثنائية. قم بتدقيق كل شيء بثقة وسرعة وتاريخ إصدار مكثف.
 
 </div>
 
@@ -113,7 +115,7 @@ title: SunStar أوريون الأنظمة
 
 <div class="fade">
 
-- **المهندسين المعماريين عالية التوافر &amp; مهندسون مبدعون** &mdash; تخطى نقاط الفشل المفردة الموجودة في مجموعات LAMP القائمة على SQL. تبني قابلية توسع حقيقية لـ Jamstack: عمليات الإنشاء المتزامنة والتحديثات التزايدية وتغطية POP العالمية وأعلى أداء يتم قياسه بالمللي ثانية.
+- :fa-compass-drafting: **مهندسون معماريون عاليو التوفر &amp; مهندسون مبدعون** &mdash; تخطى نقاط الفشل المفردة الموجودة في مجموعات LAMP القائمة على SQL. تبني قابلية توسع حقيقية لـ Jamstack: عمليات الإنشاء المتزامنة والتحديثات التزايدية وتغطية POP العالمية وأعلى أداء يتم قياسه بالمللي ثانية.
 
 </div>
 
@@ -121,7 +123,7 @@ title: SunStar أوريون الأنظمة
 
 <div class="fade">
 
-- **أي عمل سئم من اقتصاد ويكي** &mdash; Ditch اشتراكات SaaS باهظة الثمن، وأدوات مجانية هشة تستنزف وقت الموظفين، والأنظمة القديمة التي تبطئ فريقك. تمنحك Orion قوة المؤسسة بجزء صغير من التكلفة الإجمالية للملكية (غالبًا ما تكون أقل من 25000 دولار سنويًا للاستخدام الكامل للمؤسسة).
+- :fa-business-time: **أي عمل سئم من اقتصاديات ويكي** &mdash; Ditch اشتراكات SaaS باهظة الثمن، وأدوات مجانية هشة تستنزف وقت الموظفين، والأنظمة القديمة التي تبطئ فريقك. تمنحك Orion قوة المؤسسة بجزء صغير من التكلفة الإجمالية للملكية (غالبًا ما تكون أقل من 25000 دولار سنويًا للاستخدام الكامل للمؤسسة).
 
 </div>
 
@@ -150,20 +152,25 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 <div class="card-header">البدء</div>
 <div class="card-body">
 
-أسرع طريقة للذهاب هي اللعب مع بناء @SunStarSys/orion من <https://iconoclasts.blog> وإخفاء مصادر تخفيض السعر في الجذع/المحتوى. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
+أسرع طريقة للحصول على الذهاب هو اللعب مع بناء @SunStarSys/orion الافتراضي من <https://iconoclasts.blog> وأفرغ مصادر تخفيض السعر في `trunk/content`. يوجد حوالي 90% من تخصيصات التصميم في [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; التكيف مع الذوق!
+
+10٪ الأخرى تنطوي على اختيار التمهيد المناسب 5 موضوع CSS لاستبدال الملفات المقابلة في `content/css/bootstrap.*`؛ نوصي <https://bootswatch.com> للأفكار.
+
+الخطوة الأخيرة هي إعادة ترتيب قوائم التنقل Topmatter في `templates/main.html.*`. سيحافظ مترجم الذكاء الاصطناعي على مزامنة كل شيء عند الطلب.
+
+تحتاج إلى مساعدة في تخصيص `Perl` يبني النظام في `lib/` وغيرها من قوالب جانغو في `templates/` لتناسب حالة الاستخدام الخاصة بك؟  نحن في خدمتكم!
 
 </div>
 </div>
 </center>
 </div>
-
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
-<h3>هنا&nbsp;لماذا،&nbsp;الشباب&nbsp;أكاديمي / مطور مكدس كامل / مدون عام...</h3>
+### هنا&nbsp;لماذا،&nbsp;الشباب&nbsp;أكاديمي&nbsp;:fa-orcid: / كامل&nbsp;المكدس&nbsp;مطوّر&nbsp;:fa-stack-overflow: / عام&nbsp;مدون&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -195,7 +202,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-primary-emphasis"><em>نحن نبني ما تحتاجه فقط.</em></span>&trade;
+<center>
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>نحن نبني ما تحتاجه فقط.</em></span>&trade;
+</center>
+
+&nbsp;
 
 هذا [التكنولوجيا](https://iconoclasts.blog/joe/apache-cms) تم اختراعه لأول مرة في أواخر عام 2010 بواسطة [بول كيرنا](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)دانيال شهاب، ديف فيشر، و [جو شايفر](https://iconoclasts.blog/joe/) كأعضاء في فريق البنية التحتية لأباتشي. العبارة "JAMstack" تم صياغته بعد سنوات (2015)، من قبل مجموعة غير مدركة لفننا السابق في هذا المجال.  لكن [سجل عام](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) هذا العرض الجديد من SunStar Systems هو شهادة على هذا الإرث الأصلي وأصوله الحقيقية مفتوحة المصدر.
 
@@ -242,7 +253,9 @@ div#lightning img {width:100%}
 
 <hr>
 <br><br><br>
-<h2>عدد قليل من لقطات الشاشة التمثيلية:</h2>
+
+## عدد قليل من لقطات الشاشة التمثيلية
+
 <br>
 <h3>عرض IDE مع الألمانية والفرنسية والعبرية والروسية (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>

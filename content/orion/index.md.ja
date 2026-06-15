@@ -3,12 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=43942
+status: 確認済み=45754
 title: SunStarシステムのOrion
 ---
 
+[TOC]#sidebar
+
 <div class="row">
-<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->nbsp(&amp;N)<em>Jamstack Wikiプラットフォーム</em></span>&trade;
 </p>
@@ -21,7 +23,7 @@ title: SunStarシステムのOrion
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**ハッキング不可**](security#separation-of-concerns-and-engineering-tradeoffs)
+[**ハッキング不可**](security#separation-of-concerns-and-engineering-tradeoffs10)
 
 :fa-lock:
 
@@ -81,7 +83,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 <div class="fade">
 
-**大学のリーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-primary-emphasis">オープンサイエンス</span> プラットフォーム
+- :fa-school-flag: **大学リーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-primary-emphasis">オープンサイエンス</span> プラットフォーム
 
 </div>
 
@@ -89,7 +91,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 <div class="fade">
 
-- **政府&amp; 防衛ITの意思決定者** &mdash; FedRAMPインフラストラクチャ、NIST 800-207のゼロトラスト要件、およびバージョン管理リポジトリのきめ細かいアクセス制御に対応&mdash; FIPS 140-3準拠のセキュリティと企業VPN内のインストールが可能です。
+- :fa-city: **医療、行政&amp; 防衛ITの意思決定者** &mdash; FedRAMPインフラストラクチャ、NIST 800-207ゼロトラストおよびHIPPAの要件を満たします。バージョン管理リポジトリできめ細かいアクセス制御をお楽しみください&mdash; FIPS 140-3準拠のセキュリティとVPN内のインストールが可能です。
 
 </div>
 
@@ -97,7 +99,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 <div class="fade">
 
-- **マーケティング・エグゼクティブ** &mdash; 企業のWebサイト資産用に、迅速でグローバルな革新的なエンタープライズ・プラットフォームを実行します。強力なヘッドレスCMSとしてOrionを使用&mdash; 安全かつ高性能で、フロントエンドの配送から完全に切り離されています。
+- :fa-cart-arrow-down: **マーケティング・エグゼクティブ** &mdash; 企業のWebサイト資産用に、迅速でグローバルな革新的なエンタープライズ・プラットフォームを実行します。強力なヘッドレスCMSとしてOrionを使用&mdash; 安全かつ高性能で、フロントエンドの配送から完全に切り離されています。
 
 </div>
 
@@ -105,7 +107,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 <div class="fade">
 
-- **テクノロジー企業&amp; ウェブサイト代理店** &mdash; 安全でない商用Wikiを置き換え、製品ドキュメント、クライアント・サイト、さらにはバイナリ・ダウンロードの山を改良します。すべてを自信を持ってキュレーションし、スピードとアイロンクラッドのバージョン履歴を提供します。
+- :fa-computer: **テクノロジー企業&amp; ウェブサイト代理店** &mdash; 安全でない商用Wikiを置き換え、製品ドキュメント、クライアント・サイト、さらにはバイナリ・ダウンロードの山を改良します。すべてを自信を持ってキュレーションし、スピードとアイロンクラッドのバージョン履歴を提供します。
 
 </div>
 
@@ -113,7 +115,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 <div class="fade">
 
-**高可用性アーキテクト&amp; 原則エンジニア** &mdash; SQLベースのLAMPスタックにベイクされた単一障害点をエスケープします。真のJamstackスケーラビリティを採用: 同時ビルド、増分更新、グローバルPOPカバレッジ、およびミリ秒単位のピーク・パフォーマンス。
+- :fa-compass-drafting: **高可用性アーキテクト&amp; 原則エンジニア** &mdash; SQLベースのLAMPスタックにベイクされた単一障害点をエスケープします。真のJamstackスケーラビリティを採用: 同時ビルド、増分更新、グローバルPOPカバレッジ、およびミリ秒単位のピーク・パフォーマンス。
 
 </div>
 
@@ -121,7 +123,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 <div class="fade">
 
-**ウィキ経済に飽きているビジネス** &mdash; 高価なSaaSサブスクリプション、スタッフの時間を浪費する脆弱なフリー・ツール、チームの時間を短縮する時代遅れのシステムを捨てます。Orionは、総所有コストのほんの一部で企業力を供給します(企業全体で使用する場合、年間25,000ドル未満であることが多い)。
+- :fa-business-time: **ウィキ経済に飽きているビジネス** &mdash; 高価なSaaSサブスクリプション、スタッフの時間を浪費する脆弱なフリー・ツール、チームの時間を短縮する時代遅れのシステムを捨てます。Orionは、総所有コストのほんの一部で企業力を供給します(企業全体で使用する場合、年間25,000ドル未満であることが多い)。
 
 </div>
 
@@ -150,20 +152,25 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 <div class="card-header">はじめに</div>
 <div class="card-body">
 
-最速の方法は、@SunStarSys/orionのビルドでプレイすることです。<https://iconoclasts.blog> トランク/コンテンツ内のマークダウン・ソースを空にします。スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
+最も簡単な方法は、@SunStarSys/orionのデフォルトのビルドで再生することです。<https://iconoclasts.blog> でマークダウンソースを空にする`trunk/content`.  スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
+
+他の10%は、対応するファイルを置き換えるために適切なブートストラップ5 CSSテーマを選択することを含みます`content/css/bootstrap.*`; 推奨<https://bootswatch.com> アイデア
+
+最後のステップは、トマッタのナビゲーション・メニューを再トリガーすることです。`templates/main.html.*`。AI翻訳者は、すべてをオンデマンドで同期します。
+
+カスタマイズに関するサポートが必要`Perl` システム構築`lib/` その他のDjangoテンプレート`templates/` ユースケースに合うか? 私たちはあなたのサービスにいます!
 
 </div>
 </div>
 </center>
 </div>
-
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
-<h3>こちら&nbsp;なぜ、&nbsp;若い&nbsp;アカデミック/フルスタック開発者/パブリックブロガー...</h3>
+### こちら&nbsp;なぜ、&nbsp;若い&nbsp;学業&nbsp;:fa-orcid: /フル&nbsp;スタック&nbsp;開発者&nbsp;:fa-stack-overflow: /パブリック&nbsp;ブロガー&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -195,7 +202,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-primary-emphasis"><em>必要なものだけを作る。</em></span>&trade;
+<center>
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>必要なものだけを作る。</em></span>&trade;
+</center>
+
+&nbsp;
 
 この[工業技術](https://iconoclasts.blog/joe/apache-cms) 最初に発明されたのは2010年後半。[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)ダニエル・シャハフ、デイヴ・フィッシャー、[Joe Schaefer](https://iconoclasts.blog/joe/) Apache Infrastructure Teamのメンバー。フレーズ"JAMstack" 数年後(2015年)、この宇宙における私たちの以前の芸術を知らないグループによって造られました。しかし、[公開レコード](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systemsによるこの新しいサービスは、そのオリジナルのレガシーと真のオープンソースの起源に対する証言です。
 
@@ -242,7 +253,9 @@ div#lightning img {width:100%}
 
 <hr>
 <br><br><br>
-<h2>少数の代表的なスクリーンショット:</h2>
+
+## 少数の代表的なスクリーンショット
+
 <br>
 <h3>ドイツ語、フランス語、ヘブライ語、およびロシア語(UTF-8)のIDEビュー。</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>

@@ -3,12 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=43942
+status: 확인=45754
 title: SunStar 시스템스 오리온
 ---
 
+[TOC]#sidebar
+
 <div class="row">
-<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Jamstack Wiki 플랫폼</em></span>&trade;
 </p>
@@ -21,7 +23,7 @@ title: SunStar 시스템스 오리온
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**해킹할 수 없음**](security#separation-of-concerns-and-engineering-tradeoffs)
+[**해킹할 수 없음**](security#separation-of-concerns-and-engineering-tradeoffs10)
 
 :fa-lock:
 
@@ -81,7 +83,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 <div class="fade">
 
-- **대학 리더** &mdash; 버전 제어 문서 공유, 큐레이션 및 온라인 게시를 통해 캠퍼스 표절을 없애고 안전한 개방형 협업을 지원합니다. 학업 지식 관리를 감사 가능한 최신 상태로 변환합니다. <span class="text-primary-emphasis">과학 열기</span> 플랫폼.
+- :fa-school-flag: **대학 리더 **&mdash; 버전 제어 문서 공유, 큐레이션 및 온라인 게시를 통해 캠퍼스 표절을 없애고 안전한 개방형 협업을 지원합니다. 학업 지식 관리를 감사 가능한 최신 상태로 변환합니다. <span class="text-primary-emphasis">과학 열기</span> 플랫폼.
 
 </div>
 
@@ -89,7 +91,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 <div class="fade">
 
-- **정부 &amp; 국방 IT 의사 결정자** &mdash; FedRAMP 인프라, NIST 800-207 제로 트러스트 요구 사항 및 버전 제어 저장소의 세분화된 액세스 제어 충족 &mdash; FIPS 140-3 호환 보안 및 기업 VPN 내부에 설치할 수 있습니다.
+- :fa-city:** 건강 관리, 정부 &amp; 국방 IT 의사 결정자** &mdash; FedRAMP 인프라, NIST 800-207 제로 트러스트 및 HIPPA 요구 사항을 충족합니다. 버전 제어 저장소에서 세분화된 액세스 제어 활용 &mdash; 모든 FIPS 140-3 호환 보안 및 VPN 내부 설치 가능.
 
 </div>
 
@@ -97,7 +99,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 <div class="fade">
 
-- **마케팅 임원** &mdash; 기업 웹 사이트 자산을 위한 빠르고 혁신적인 글로벌 엔터프라이즈 플랫폼을 실행합니다. 강력한 헤드리스 CMS로 Orion 사용 &mdash; 안전하고 성능이 뛰어나며 프런트엔드 제공에서 완전히 분리됩니다.
+- :fa-cart-arrow-down: **마케팅 임원** &mdash; 기업 웹 사이트 자산을 위한 빠르고 혁신적인 글로벌 엔터프라이즈 플랫폼을 실행합니다. 강력한 헤드리스 CMS로 Orion 사용 &mdash; 안전하고 성능이 뛰어나며 프런트엔드 제공에서 완전히 분리됩니다.
 
 </div>
 
@@ -105,7 +107,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 <div class="fade">
 
-- **기술 회사 &amp; 웹 사이트** &mdash; 안전하지 않은 상업용 위키를 교체하고 제품 문서, 고객 사이트 및 바이너리 다운로드를 방해합니다. 자신감, 속도 및 ironclad 버전 기록으로 모든 것을 큐레이션합니다.
+- :fa-computer: **기술 회사 &amp; 웹 사이트** &mdash; 안전하지 않은 상업용 위키를 교체하고 제품 문서, 고객 사이트 및 바이너리 다운로드를 방해합니다. 자신감, 속도 및 ironclad 버전 기록으로 모든 것을 큐레이션합니다.
 
 </div>
 
@@ -113,7 +115,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 <div class="fade">
 
-- **고가용성 설계자 &amp; 원리 엔지니어** &mdash; SQL 기반 LAMP 스택에 적용된 단일 실패 지점을 이스케이프합니다. 진정한 Jamstack 확장성 수용: 동시 빌드, 증분 업데이트, 글로벌 POP 적용 범위, 밀리초 단위로 측정된 최고 성능.
+- :fa-compass-drafting: **고가용성 설계자 &amp; 원리 엔지니어** &mdash; SQL 기반 LAMP 스택에 적용된 단일 실패 지점을 이스케이프합니다. 진정한 Jamstack 확장성 수용: 동시 빌드, 증분 업데이트, 글로벌 POP 적용 범위, 밀리초 단위로 측정된 최고 성능.
 
 </div>
 
@@ -121,7 +123,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 <div class="fade">
 
-- **위키 경제에 지친 모든 비즈니스** &mdash; 값비싼 SaaS 구독, 직원 시간을 소모하는 취약한 무료 도구, 팀 운영 속도를 늦추는 구식 시스템 등을 제공합니다. Orion은 TCO(총소유비용)의 일부분에 엔터프라이즈급 성능을 제공합니다(전체 엔터프라이즈 사용을 위해 연간 25,000달러 미만).
+- :fa-business-time: **위키 경제에 지친 모든 비즈니스** &mdash; 값비싼 SaaS 구독, 직원 시간을 소모하는 취약한 무료 도구, 팀 운영 속도를 늦추는 구식 시스템 등을 제공합니다. Orion은 TCO(총소유비용)의 일부분에 엔터프라이즈급 성능을 제공합니다(전체 엔터프라이즈 사용을 위해 연간 25,000달러 미만).
 
 </div>
 
@@ -150,20 +152,25 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 <div class="card-header">시작하기</div>
 <div class="card-body">
 
-가장 빠른 방법은 @SunStarSys/orion의 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 트렁크/콘텐츠의 매가인하 출처를 숨깁니다. 스타일 지정 사용자정의의 약 90%가 다음에 있습니다. [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
+가장 빠른 방법은 @SunStarSys/orion의 기본 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 다음에서 마크다운 출처를 비웁니다. `trunk/content`. 스타일 지정 사용자 정의의 최대 90%가 [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
+
+다른 10 %는 적절한 부트스트랩 5 CSS 테마를 선택하여 해당 파일을 대체하는 것을 포함합니다. `content/css/bootstrap.*`; 추천합니다. <https://bootswatch.com> 아이디어를 위해
+
+마지막 단계는 topmatter 탐색 메뉴를 다시 트리거하는 것입니다. `templates/main.html.*`. 오라클의 AI 번역기는 필요에 따라 모든 것을 동기화합니다.
+
+사용자 정의에 도움이 필요합니다. `Perl` 시스템 구축 위치 `lib/` 기타 Django 템플릿 `templates/` 사용 사례에 적합합니까?  우리는 당신의 서비스에 있습니다!
 
 </div>
 </div>
 </center>
 </div>
-
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
-<h3>여기&nbsp;이유,&nbsp;젊은&nbsp;Academic / Full Stack 개발자 / 공개 블로거...</h3>
+### 여기&nbsp;이유,&nbsp;젊은&nbsp;학업&nbsp;:fa-orcid: / 전체&nbsp;스택&nbsp;개발자&nbsp;:fa-stack-overflow: / 공개&nbsp;블로거&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -195,7 +202,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-primary-emphasis"><em>우리는 당신이 만들어야 할 것만 만듭니다.</em></span>&trade;
+<center>
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>우리는 당신이 만들어야 할 것만 만듭니다.</em></span>&trade;
+</center>
+
+&nbsp;
 
 여기 [기술](https://iconoclasts.blog/joe/apache-cms) 2010년 말에 처음 발명된 [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)다니엘 샤하프, 데이브 피셔, 그리고 [Joe Schaefer](https://iconoclasts.blog/joe/) 아파치 인프라 팀의 일원으로. 구문 "JAMstack" 몇 년 후 (2015),이 공간에서 우리의 이전 예술을 모르는 그룹에 의해 만들어졌습니다.  그러나 [공개 레코드](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systems의 새로운 오퍼링은 원래 레거시와 진정한 오픈 소스 기원에 대한 간증입니다.
 
@@ -242,7 +253,9 @@ div#lightning img {width:100%}
 
 <hr>
 <br><br><br>
-<h2>대표 스크린샷 몇 개:</h2>
+
+## 대표 스크린샷이 거의 없음
+
 <br>
 <h3>독일어, 프랑스어, 히브리어 및 러시아어(UTF-8)가 포함된 IDE 뷰입니다.</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>

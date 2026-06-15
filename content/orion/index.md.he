@@ -3,12 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 43942
+status: אומתה=45754
 title: SunStar אוריון מערכות
 ---
 
+[TOC]#sidebar
+
 <div class="row">
-<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>אתר Jamstack Wiki.</em></span>&trade;
 </p>
@@ -21,7 +23,7 @@ title: SunStar אוריון מערכות
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**לא ניתן לפיצוח**](security#separation-of-concerns-and-engineering-tradeoffs)
+[**לא ניתן לפיצוח**](security#separation-of-concerns-and-engineering-tradeoffs10)
 
 :fa-lock:
 
@@ -81,7 +83,7 @@ title: SunStar אוריון מערכות
 
 <div class="fade">
 
-מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, <span class="text-primary-emphasis">מדע פתוח</span> פלטפורמה.
+- :fa-school-flag: מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, <span class="text-primary-emphasis">מדע פתוח</span> פלטפורמה.
 
 </div>
 
@@ -89,7 +91,7 @@ title: SunStar אוריון מערכות
 
 <div class="fade">
 
-- **ממשלה &amp; הגנה על מקבלי החלטות בתחום ה-IT** &mdash; עמוד בדרישות של FedRAMP , NIST 800-207 עם אפס אמון ובקרות גישה מפורטות במאגר בקרת הגרסאות שלך &mdash; הכול עם אבטחה תואמת FIPS 140-3 וניתנת להתקנה בתוך ה-VPN הארגוני שלך.
+- :fa-city: **שירותי בריאות, ממשלה &amp; הגנה על מקבלי החלטות בתחום ה-IT** &mdash; עמדו בדרישות התשתית FedRAMP,  NIST 800-207 עם אפס אמון ו-HIPPA. תוכל ליהנות מבקרות גישה מפורטות במאגר בקרת הגרסאות שלך &mdash; הכול עם אבטחה תואמת FIPS 140-3 וניתנת להתקנה בתוך ה-VPN שלך.
 
 </div>
 
@@ -97,7 +99,7 @@ title: SunStar אוריון מערכות
 
 <div class="fade">
 
-- **מנהלי שיווק** &mdash; הפעל פלטפורמה ארגונית מהירה, גלובלית וחדשנית לנכסי אתרי אינטרנט ארגוניים. השתמש אוריון כמו CMS רב עוצמה חסר ראש &mdash; מאובטחים, בעלי ביצועים ומנותקים לגמרי מהמשלוח בחזית.
+- :fa-cart-arrow-down: **מנהלי שיווק** &mdash; הפעל פלטפורמה ארגונית מהירה, גלובלית וחדשנית לנכסי אתרי אינטרנט ארגוניים. השתמש אוריון כמו CMS רב עוצמה חסר ראש &mdash; מאובטחים, בעלי ביצועים ומנותקים לגמרי מהמשלוח בחזית.
 
 </div>
 
@@ -105,7 +107,7 @@ title: SunStar אוריון מערכות
 
 <div class="fade">
 
-**חברות טכנולוגיה &amp; סוכנויות אינטרנט** &mdash; החלף אתרי wiki מסחריים לא מאובטחים, אילוף הרים של תיעוד מוצר, אתרי לקוח ואפילו הורדות בינאריות. צרו הכול בביטחון, מהירות והיסטוריית גרסאות של ironclad.
+- :fa-computer: **חברות טכנולוגיה &amp; סוכנויות אינטרנט** &mdash; החלף אתרי wiki מסחריים לא מאובטחים, אילוף הרים של תיעוד מוצר, אתרי לקוח ואפילו הורדות בינאריות. צרו הכול בביטחון, מהירות והיסטוריית גרסאות של ironclad.
 
 </div>
 
@@ -113,7 +115,7 @@ title: SunStar אוריון מערכות
 
 <div class="fade">
 
-- **אדריכלים בעלי זמינות גבוהה &amp; מהנדס ראשי &mdash; הבריחה מנקודות הכשל היחידות שנאפו במחסניות LAMP מבוססות SQL. אמצו מדרגיות אמיתית של Jamstack: גרסאות מקביליות, עדכונים תוספתיים, כיסוי POP גלובלי וביצועי שיא שנמדדו במילישניות.
+- :fa-compass-drafting: **אדריכלים בעלי זמינות גבוהה &amp; מהנדס ראשי &mdash; הבריחה מנקודות הכשל היחידות שנאפו במחסניות LAMP מבוססות SQL. אמצו מדרגיות אמיתית של Jamstack: גרסאות מקביליות, עדכונים תוספתיים, כיסוי POP גלובלי וביצועי שיא שנמדדו במילישניות.
 
 </div>
 
@@ -121,7 +123,7 @@ title: SunStar אוריון מערכות
 
 <div class="fade">
 
-כל עסק עייף מכלכלת ויקי &mdash; התעלה על מנויים יקרים של SaaS, כלים חינמיים שבירים המנקזים את זמן הצוות ומערכות מיושנות שמאטות את הצוות שלך. אוריון מעניקה לכם את הכוח הארגוני בשבריר מעלות הבעלות הכוללת (לעתים קרובות פחות מ-25,000 דולר לשנה לשימוש ארגוני מלא).
+- :fa-business-time: "כל עסק עייף מכלכלת ויקי" &mdash; התעלה על מנויים יקרים של SaaS, כלים חינמיים שבירים המנקזים את זמן הצוות ומערכות מיושנות שמאטות את הצוות שלך. אוריון מעניקה לכם את הכוח הארגוני בשבריר מעלות הבעלות הכוללת (לעתים קרובות פחות מ-25,000 דולר לשנה לשימוש ארגוני מלא).
 
 </div>
 
@@ -150,20 +152,25 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 <div class="card-header">צעדים ראשונים</div>
 <div class="card-body">
 
-הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's build של <https://iconoclasts.blog> וחלול את מקורות ה-markdown בתא המטען/תוכן.  כ-90% מההתאמות האישיות של העיצוב נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
+הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's default build של <https://iconoclasts.blog> ולחלול את מקורות markdown ב `trunk/content`.  כ-90% מההתאמות האישיות של העיצוב נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
+
+10% האחרים כוללים בחירת ערכת bootstrap 5 CSS מתאימה כדי להחליף את הקבצים המתאימים ב `content/css/bootstrap.*`; אנו ממליצים <https://bootswatch.com> לרעיונות.
+
+השלב האחרון הוא לחדש את תפריטי הניווט העליון ב `templates/main.html.*`. מתרגם הבינה המלאכותית שלנו ישמור הכל מסונכרן לפי דרישה.
+
+זקוק לעזרה בהתאמה אישית `Perl` בניית מערכת ב- `lib/` ותבניות ג'אנגו אחרות ב `templates/` כדי להתאים למקרה השימוש שלך?  אנחנו לשירותכם!
 
 </div>
 </div>
 </center>
 </div>
-
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
-<h3>הנה&nbsp;למה,&nbsp;צעיר&nbsp;אקדמי / מפתח מחסנית מלאה / Blogger ציבורי...</h3>
+### הנה&nbsp;למה,&nbsp;צעיר&nbsp;אקדמי&nbsp;:fa-orcid: / מלא&nbsp;מחסנית&nbsp;מפתח&nbsp;:fa-stack-overflow: / ציבורי&nbsp;בלוגר&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -195,7 +202,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-primary-emphasis"><em>אנחנו בונים רק את מה שאתם צריכים.</em></span>&trade;
+<center>
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>אנחנו בונים רק את מה שאתם צריכים.</em></span>&trade;
+</center>
+
+&nbsp;
 
 זה [טכנולוגיה](https://iconoclasts.blog/joe/apache-cms) הומצא לראשונה בסוף 2010 על ידי [פול קרנה](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)דניאל שחף, דייב פישר [ג'ו שפר](https://iconoclasts.blog/joe/) חברי צוות התשתיות של אפאצ'י. הביטוי "JAMstack" נטבע שנים מאוחר יותר (2015), על ידי קבוצה שלא ידעה על האמנות הקודמת שלנו במרחב זה.  אבל [רשומה ציבורית](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ברור לחלוטין, והיצע חדש זה של SunStar Systems הוא עדות למורשת המקורית ולמקור הקוד הפתוח האמיתי שלה.
 
@@ -242,7 +253,9 @@ div#lightning img {width:100%}
 
 <hr>
 <br><br><br>
-<h2>מספר צילומי מסך ייצוגיים:</h2>
+
+## כמה צילומי מסך ייצוגיים
+
 <br>
 <h3>מבט IDE עם גרמנית, צרפתית, עברית ורוסית (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>

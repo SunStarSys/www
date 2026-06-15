@@ -3,12 +3,14 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=43942
+status: verifierad=45754
 title: SunStar Orion för system
 ---
 
+[TOC]#sidebar
+
 <div class="row">
-<div class="col-lg-5" style="border-right: solid #A9BDBD 1px">
+<div class="col-lg-5">
 <p>
 	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Wiki-plattformen Jamstack.</em></span>&trade;
 </p>
@@ -21,7 +23,7 @@ title: SunStar Orion för system
 <ul class="list-group">
   <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
 
-[**ej staplingsbar**](security#separation-of-concerns-and-engineering-tradeoffs)
+[**ej staplingsbar**](security#separation-of-concerns-and-engineering-tradeoffs10)
 
 :fa-lock:
 
@@ -81,7 +83,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <div class="fade">
 
-- **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
+- :fa-school-flag: **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
 
 </div>
 
@@ -89,7 +91,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <div class="fade">
 
-- **Regering &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 med nolltillit och detaljerade åtkomstkontroller i ditt versionskontrolldatalager &mdash; Allt med FIPS 140-3-kompatibel säkerhet och kan installeras i ditt företags VPN.
+- :fa-city: **Hälsovård, regeringen &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 zero-trust och HIPPA. Njut av detaljerade åtkomstkontroller i din versionskontrolldatabas &mdash; Allt med FIPS 140-3-kompatibel säkerhet och installationsbar inuti din VPN.
 
 </div>
 
@@ -97,7 +99,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <div class="fade">
 
-- **Marknadsföringschefer** &mdash; Kör en snabb, global, innovativ företagsplattform för företagets webbplatsresurser. Använd Orion som kraftfull huvudlös CMS &mdash; säker, högpresterande och helt frikopplad från leverans på klientsidan.
+- :fa-cart-arrow-down: **Marknadsföringsansvariga** &mdash; Kör en snabb, global, innovativ företagsplattform för företagets webbplatsresurser. Använd Orion som kraftfull huvudlös CMS &mdash; säker, högpresterande och helt frikopplad från leverans på klientsidan.
 
 </div>
 
@@ -105,7 +107,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <div class="fade">
 
-- **Teknikföretag &amp; Webbplatsbyråer** &mdash; Ersätt osäkra kommersiella wikier, tama berg av produktdokumentation, kundwebbplatser och till och med binära nedladdningar. Curate allt med förtroende, hastighet och ironclad versionshistorik.
+- :fa-computer: **Teknikföretag &amp; Webbplatsbyråer** &mdash; Ersätt osäkra kommersiella wikier, tama berg av produktdokumentation, kundwebbplatser och till och med binära nedladdningar. Curate allt med förtroende, hastighet och ironclad versionshistorik.
 
 </div>
 
@@ -113,7 +115,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <div class="fade">
 
-- **Arkitekter med hög tillgänglighet &amp; principiella ingenjörer &mdash; Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
+- :fa-compass-drafting: **Arkitekter med hög tillgänglighet &amp; principiella ingenjörer &mdash; Undvik de enskilda felpunkterna som bakas i SQL-baserade LAMP-stackar. Omfamna sann Jamstack-skalbarhet: samtidiga byggen, inkrementella uppdateringar, global POP-täckning och topprestanda mätt i millisekunder.
 
 </div>
 
@@ -121,7 +123,7 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 <div class="fade">
 
--** Alla företag trött på wiki ekonomi** &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 25 000 dollar per år för full företagsanvändning).
+- :fa-business-time: Alla företag trött på wiki-ekonomi &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 25 000 dollar per år för full företagsanvändning).
 
 </div>
 
@@ -150,20 +152,25 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 <div class="card-header">Komma igång</div>
 <div class="card-body">
 
-Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions byggnation av <https://iconoclasts.blog> och urholka nedsättningskällorna i bagageutrymmet/innehållet.  ~90 % av formatanpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
+Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions standardversion av <https://iconoclasts.blog> och urholka nedsättningskällorna i `trunk/content`. ~90 % av stylinganpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
+
+De andra 10 % innebär att välja en lämplig bootstrap 5 CSS tema för att ersätta motsvarande filer i `content/css/bootstrap.*`Vi rekommenderar <https://bootswatch.com> för idéer.
+
+Det sista steget är att avlyssna navigeringsmenyerna i `templates/main.html.*`. Vår AI-översättare håller allt synkroniserat på begäran.
+
+Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-mallar i `templates/` för att passa ditt användningsfall?  Vi står till din tjänst!
 
 </div>
 </div>
 </center>
 </div>
-
-<div class="col-lg-6">
+<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
 &nbsp;
 
-<h3>Här är&nbsp;Varför,&nbsp;Unga&nbsp;Akademisk / Fullstack-utvecklare / Public Blogger...</h3>
+### Här är&nbsp;Varför,&nbsp;Unga&nbsp;Akademisk&nbsp;:fa-orcid: / Fullständig&nbsp;Stack&nbsp;Utvecklare&nbsp;:fa-stack-overflow: / Allmänt&nbsp;Bloggare&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -195,7 +202,11 @@ Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total
 
 &nbsp;
 
-<span class="text-primary-emphasis"><em>Vi bygger bara det du behöver.</em></span>&trade;
+<center>
+<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>Vi bygger bara det du behöver.</em></span>&trade;
+</center>
+
+&nbsp;
 
 Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
 
@@ -242,7 +253,9 @@ Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade
 
 <hr>
 <br><br><br>
-<h2>Några representativa skärmdumpar:</h2>
+
+## Några representativa skärmdumpar
+
 <br>
 <h3>IDE-vy med tyska, franska, hebreiska och ryska (UTF-8).</h3>
 <center><img src="../images/ide-fa.png" style="width:800px"></center>
