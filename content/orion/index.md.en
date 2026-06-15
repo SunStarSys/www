@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=45769
+status: verified=45792
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -145,7 +145,7 @@ This isn't marketing spin &mdash; it's verifiable, open engineering heritage dat
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Getting Started</div>
 <div class="card-body">
 
