@@ -296,7 +296,7 @@ my $svnuser = $r->pnotes("svnuser");
 state @opcodes = qw/
     const padany lineseq rv2gv rv2sv gvsv concat multiconcat match leaveeval
     null stub scalar pushmark wantarray const defined undef
-    rv2sv sassign padsv_store list
+    rv2sv sassign padsv_store list quotemeta
     cond_expr flip flop andassign orassign dorassign and or dor xor helemexistsor
     preinc i_preinc predec i_predec postinc i_postinc
     postdec i_postdec int hex oct abs pow multiply i_multiply
