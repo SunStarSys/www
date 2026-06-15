@@ -104,7 +104,7 @@
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.he">Hebräisch</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.ar">Arabisch</a></li>
               <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.sv">Schwedisch</a></li>
-              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Deutsch</a></li>
+              <li class="dropdown-item"><a class="nav-link text-dark" href="{{path|dirname|append:"/"}}{{path|basename:0}}.html.pt-BR">Portugiesisch</a></li>
               <li class="dropdown-item divider"></li>
             <li class="dropdown-header text-white">Projekte</li>
             <li class="dropdown-item"><a class="nav-link text-white" href="/clients">Kunden</a></li>
