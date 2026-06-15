@@ -23,6 +23,8 @@ title: بيانات الجدول لشبكة مقارنة الميزات
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>جديد</span> مراجعة الارتباط الداخلي/الخارجي"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> اللسان المُزار مؤخرًا"
+  Orion: "&check;"
 
 - Feature: "سير عمل المتصفح (ملائم للأجهزة المحمولة)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: بيانات الجدول لشبكة مقارنة الميزات
   Orion: "&check;"
 - Feature: "[3D رسومات المتجهات](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) التكامل"
   Orion: "&check;"
-- Feature: "دعم SSI / CGI / mod_perl / mod_wasm"
+- Feature: "دعم سجل SSI / CGI / mod_perl"
   Orion: "&check;"
 - Feature: "قوائم التحكم بالوصول المتزامنة الخاصة باتفاقية إعادة الشراء/الوصول الدقيق"
   Orion: "&check;"

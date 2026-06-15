@@ -23,6 +23,8 @@ title: Данные таблицы для сетки сравнения хара
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>Новый</span> Проверка внутренней/внешней ссылки"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> Недавно посещенная вкладка"
+  Orion: "&check;"
 
 - Feature: "Поток операций в браузере (для мобильных устройств)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: Данные таблицы для сетки сравнения хара
   Orion: "&check;"
 - Feature: "[3D Векторная графика](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Интеграция"
   Orion: "&check;"
-- Feature: "Поддержка SSI / CGI / mod_perl / mod_wasm"
+- Feature: "Поддержка реестра SSI / CGI / mod_perl"
   Orion: "&check;"
 - Feature: "Точные списки управления доступом для репозитория/синхронизированные списки управления доступом.htaccess"
   Orion: "&check;"

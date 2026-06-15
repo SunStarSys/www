@@ -23,6 +23,8 @@ title: 機能比較グリッドの表データ
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>新規</span> 内部/外部リンク検証"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> 最近表示したタブ"
+  Orion: "&check;"
 
 - Feature: "ブラウザ内ワークフロー(モバイル対応)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: 機能比較グリッドの表データ
   Orion: "&check;"
 - Feature: "[3Dベクトルグラフィックス](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) 統合"
   Orion: "&check;"
-- Feature: "SSI / CGI / mod_perl / mod_wasmのサポート"
+- Feature: "SSI / CGI / mod_perlレジストリのサポート"
   Orion: "&check;"
 - Feature: "ファイングレインリポジトリ/.htaccess同期ACL"
   Orion: "&check;"

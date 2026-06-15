@@ -23,6 +23,8 @@ title: Dados da Tabela para Grade de Comparação de Recursos
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>Novo</span> Validação de Link Interno/Externo"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> Aba visitada recentemente"
+  Orion: "&check;"
 
 - Feature: "Fluxo de trabalho no navegador (amigável para dispositivos móveis)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: Dados da Tabela para Grade de Comparação de Recursos
   Orion: "&check;"
 - Feature: "[3D Gráficos de Vetor](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integração"
   Orion: "&check;"
-- Feature: "Suporte a SSI/CGI/mod_perl/mod_wasm"
+- Feature: "Suporte ao registro SSI / CGI / mod_perl"
   Orion: "&check;"
 - Feature: "ACLs sincronizadas de Repositório/.htaccess Detalhado"
   Orion: "&check;"

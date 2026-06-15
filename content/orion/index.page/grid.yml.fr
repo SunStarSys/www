@@ -23,6 +23,8 @@ title: Données de table pour la grille de comparaison des caractéristiques
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>Nouveau</span> Validation de lien interne/externe"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> Onglet Récemment visité"
+  Orion: "&check;"
 
 - Feature: "Workflow intégré au navigateur (portable)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: Données de table pour la grille de comparaison des caractéristiques
   Orion: "&check;"
 - Feature: "[3D Graphique vectoriel](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Intégration"
   Orion: "&check;"
-- Feature: "Support SSI / CGI / mod_perl / mod_wasm"
+- Feature: "Prise en charge du registre SSI / CGI / mod_perl"
   Orion: "&check;"
 - Feature: "ACL synchronisées Fine-Grained Repo/.htaccess"
   Orion: "&check;"

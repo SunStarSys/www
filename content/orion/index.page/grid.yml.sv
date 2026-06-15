@@ -23,6 +23,8 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>Nytt</span> Validering av intern/extern länk"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> Fliken Nyligen besökta"
+  Orion: "&check;"
 
 - Feature: "Arbetsflöde i webbläsare (mobilvänligt)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Orion: "&check;"
 - Feature: "[3D Vektorgrafik](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integrering"
   Orion: "&check;"
-- Feature: "Stöd för SSI/CGI/mod_perl/mod_wasm"
+- Feature: "Registerstöd för SSI/CGI/mod_perl"
   Orion: "&check;"
 - Feature: "Detaljerad datalager-/.htaccess synkroniserade åtkomstkontrollistor"
   Orion: "&check;"

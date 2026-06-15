@@ -23,6 +23,8 @@ title: Tabellendaten für Funktionsvergleichsraster
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>Neu</span> Validierung interner/externer Links"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> Zuletzt besuchter Tab"
+  Orion: "&check;"
 
 - Feature: "Browserinterner Workflow (mobilfreundlich)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: Tabellendaten für Funktionsvergleichsraster
   Orion: "&check;"
 - Feature: "[3D Vektorgrafiken](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integration"
   Orion: "&check;"
-- Feature: "Unterstützung für SSI/CGI/mod_perl/mod_wasm"
+- Feature: "SSI / CGI / mod_perl Registry-Unterstützung"
   Orion: "&check;"
 - Feature: "Fine-Grained Repo/.htaccess synchronisierte ACLs"
   Orion: "&check;"

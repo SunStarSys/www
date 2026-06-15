@@ -23,6 +23,8 @@ title: נתוני טבלה לסורג השוואת מאפיינים
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>חדש</span> אימות קישור פנימי/חיצוני"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> לשונית שביקרת בה לאחרונה"
+  Orion: "&check;"
 
 - Feature: "תהליך עבודה בדפדפן (ידידותי לנייד)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: נתוני טבלה לסורג השוואת מאפיינים
   Orion: "&check;"
 - Feature: "[3D גרפיקה וקטורית](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) אינטגרציה"
   Orion: "&check;"
-- Feature: "תמיכה ב-SSI / CGI / mod_perl / mod_wasm"
+- Feature: "תמיכה ברישום SSI / CGI / mod_perl"
   Orion: "&check;"
 - Feature: "רשימות בקרת גישה מסונכרנות עם הסכם רכש חוזר מפורט / גישה עדינה"
   Orion: "&check;"

@@ -23,6 +23,8 @@ title: 기능 비교 그리드에 대한 테이블 데이터
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>신규</span> 내부/외부 링크 검증"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> 최근에 방문한 탭"
+  Orion: "&check;"
 
 - Feature: "브라우저 내 워크플로우(모바일 친화적)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: 기능 비교 그리드에 대한 테이블 데이터
   Orion: "&check;"
 - Feature: "[3D 벡터 그래픽](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) 통합"
   Orion: "&check;"
-- Feature: "SSI/CGI/mod_perl/mod_wasm 지원"
+- Feature: "SSI / CGI / mod_perl 레지스트리 지원"
   Orion: "&check;"
 - Feature: "Fine-Grained Repo/.htaccess로 동기화된 ACL"
   Orion: "&check;"

@@ -23,6 +23,8 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "<span class='badge bg-success'>Nuevo</span> Validación de enlace interno/externo"
   Orion: "&check;"
+- Feature: "<span class='badge bg-success'><i class='fa fa-code-compare'></i></span> Pestaña visitada recientemente"
+  Orion: "&check;"
 
 - Feature: "Flujo de trabajo dentro del navegador (amigable para dispositivos móviles)"
   Orion: "&check;"
@@ -81,7 +83,7 @@ title: Datos de tabla para cuadrícula de comparación de funciones
   Orion: "&check;"
 - Feature: "[3D Gráficos vectoriales](features#h2-interactive-mathematical-vector-graphics-with-vectorgraphics-asymptote) Integración"
   Orion: "&check;"
-- Feature: "SSI / CGI / mod_perl / mod_wasm soporte"
+- Feature: "SSI / CGI / mod_perl soporte de registro"
   Orion: "&check;"
 - Feature: "ACL sincronizadas de repositorio/.htaccess detallado"
   Orion: "&check;"
