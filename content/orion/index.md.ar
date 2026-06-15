@@ -1,6 +1,5 @@
 ---
 acl: '@staff=rw, *=r'
-categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
 status: التحقق = 45754
@@ -164,7 +163,7 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 </div>
 </center>
 </div>
-<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD ">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
