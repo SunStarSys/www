@@ -19,8 +19,12 @@
 	{% if permalink %}
 	<link rel="bookmark" href="https://{{website}}{{path|dirname|append:"/"}}{{path|basename:0}}.html{{lang}}">
 	{% endif %}
-    <link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="/css/code.css" rel="stylesheet" media="screen">
+	{% if lang:starts_with:".ar" or lang:starts_with:".he" %}
+	<link href="/css/bootstrap.rtl.min.css" rel="stylesheet" media="screen">
+	{% else %}
+	<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    {% endif %}
+	<link href="/css/code.css" rel="stylesheet" media="screen">
     <link href="/css/katex.min.css" rel="stylesheet" media="screen">
     <!-- -->
     <link href="/fontawesome/css/all.min.css" rel="stylesheet" media="screen">
