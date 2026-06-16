@@ -187,7 +187,7 @@ div.breadcrumbs {
 #search input, #filter input, #join input { max-width: 13em;  background-color: #A9BDBD !important; border: 1px solid rgba(0,0,0,0.15); }
 
 @media only screen and (max-width: 1000px) {
-  #meta, #filter { display: none; }
+  #meta, #filter, #recent { display: none; }
   #logo {
 	background-image: url("/images/sunstarstaronly") !important;
     width: 37px !important;
