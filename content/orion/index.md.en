@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=45881
+status: verified=45921
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -206,6 +206,10 @@ Multi-gigabyte source trees are simply no match for it &mdash; full site build d
 &nbsp;
 
 Taking architectural cues from [David Wheeler's](https://justatheory.com) famous [Bricolage CMS](https://bricolagecms.org/), this [technology](https://iconoclasts.blog/joe/apache-cms) was first invented in late 2010 by [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Dave Fisher, and [Joe Schaefer](https://iconoclasts.blog/joe/) as members of the Apache Infrastructure Team. The phrase "JAMstack" was coined years later (2015), by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
+
+&nbsp;
+
+When Apache software project communities were presented with a free choice between using Confluence-backed sites, or using Orion's roots as the Apache CMS, they overwhelmingly chose the Apache CMS. We think you will too, with its vastly improved Orion!
 
 &nbsp;
 
