@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=45921
+status: verified=45933
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -86,7 +86,7 @@ This lets us run ultra-low operating costs while offering superior editorial con
 
 &nbsp;
 
-<div class="fade">
+<div class="fade" style="background: linear-gradient(rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.01)), url('index.page/hipaa'); background-size: cover; background-position: center;">
 
 - :fa-city: **Health Care, Government &amp; defense IT decision-makers** &mdash; Meet FedRAMP infrastructure, NIST 800-207 zero-trust and HIPPA requirements. Enjoy fine-grained access controls on your version-control repository &mdash; all with FIPS 140-3 compliant security and installable inside your VPN.
 
