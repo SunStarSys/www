@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=45845
+Status: verified=45849
 
 <div class="right">
 
@@ -204,7 +204,7 @@ All cookie credential storage is additionally AES-256 encrypted beneath an HMAC 
 
 ### Bcrypt for Subversion passwords
 
-Adjustable number of rounds (currently defaults to 5).
+Adjustable number of rounds (currently defaults to 5). Here's a [blog entry](https://www.iconoclasts.blog/joe/wishful-thinking) that explains the relevance.
 
 ### Tainted Data Protections
 
