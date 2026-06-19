@@ -102,7 +102,7 @@ $100 / mês / site hospedado, ~50% de desconto em todos os modelos de preços do
 Taxa fixa para mais de 1000 lugares
 <hr />
 <p style="min-height:100px">
-$2500 / mês
+Fale Conosco
 </p>
 
 &nbsp;
@@ -176,7 +176,7 @@ Parcerias tecnológicas são muito bem-vindas para agências e revendedores terc
 
 - Empresas com menos de 100 commits por dia devem estar bem com os 500 minutos de compilação incluídos no plano.
 
-- Empresas com menos de 1000 commits por dia devem ficar bem com os 5000 minutos de compilação incluídos no plano.
+- Empresas com menos de 1000 commits por dia (aproximando-se de um commit por minuto) devem ficar bem com os 5000 minutos de build incluídos no plano.
 
 - Builds that exceed a five minute duration are on the house: Consideramos esses incidentes como erros do sistema.
 
@@ -184,9 +184,9 @@ Parcerias tecnológicas são muito bem-vindas para agências e revendedores terc
 
 #### Rodapés
 
-1.  Utilização de Armazenamento calculada com base no tamanho de dois check-outs de cópia de trabalho de cada site: uma árvore de origem e uma árvore de compilação de produção resultante.
+1.  Utilização de Armazenamento calculada com base no tamanho de uma cópia de trabalho de checkout de cada site, mas isso não é rigidamente aplicado nas margens. Estar 1-5% acima não é algo para se preocupar. Mais de 5%? Fale conosco.
 
-2. Utilização de Armazenamento calculada com base no tamanho total do repositório do Subversion hospedado pelos Sistemas SunStar para clientes Corporativos, e não check-outs individuais, que é um número *comparativamente menor* (sobre o tamanho de um check-out de árvore de origem única).
+2. Utilização de Armazenamento calculada com base no tamanho total do repositório Subversion hospedado pelos Sistemas SunStar para clientes Corporativos, não check-outs individuais.
 
 3. O SLA abrange os ativos do site *e* o Orion IDE on-line *e* a disponibilidade do sistema de compilação, mas exclui o sistema de controle de versão do Subversion, que esperamos permanecer competitivo com as métricas de disponibilidade geral do GitHub.
 

@@ -102,7 +102,7 @@ $ 100 / månad / värd webbplats, ~ 50 % rabatt på alla konkurrent prismodeller
 Fast pris för fler än 1000 platser
 <hr />
 <p style="min-height:100px">
-$2500/månad
+Kontakta oss
 </p>
 
 &nbsp;
@@ -176,7 +176,7 @@ $2500/månad
 
 - Företag med mindre än 100 åtaganden per dag bör vara bra med de 500 byggminuter som ingår i planen.
 
-- Företag med mindre än 1000 åtaganden per dag bör vara bra med de 5000 byggminuter som ingår i planen.
+- Företag med mindre än 1000 åtaganden per dag (nästan en bekräftelse per minut) bör vara bra med de 5000 byggminuter som ingår i planen.
 
 - Builds that exceed a five minute duration are on the house: Vi betraktar dessa händelser som systemfel.
 
@@ -184,9 +184,9 @@ $2500/månad
 
 #### Fotnoter
 
-1.  Lagringsutnyttjande beräknat baserat på storleken på två kassabetalningar med arbetskopia av varje plats: ett källträd och ett resulterande produktionsträd.
+1.  Lagringsutnyttjande beräknat baserat på storleken på en arbetskopia av varje webbplats, men detta tillämpas inte strikt på marginalerna. Att vara 1-5 % över är inte något att oroa sig för. Över 5 %? Tala med oss.
 
-2. Lagringsutnyttjande beräknat baserat på den totala storleken på SunStar Systembaserat Subversion-datalager för företagskunder, inte enskilda kassabetalningar, vilket är ett *jämfört mindre antal* (ungefär storleken på en enstaka utcheckning med källträd).
+2. Lagringsutnyttjande beräknat baserat på den totala storleken på SunStar Systembaserat Subversion-datalager för företagskunder, inte enskilda kassabetalningar.
 
 3. SLA täcker webbplatsens tillgångar *och* Orion online IDE *och* bygga systemtillgänglighet, men utesluter Subversion versionskontrollsystem, som vi förväntar oss att förbli konkurrenskraftiga med GitHubs allmänna tillgänglighetsmått.
 

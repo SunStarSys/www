@@ -102,7 +102,7 @@ $100 / mes / sitio alojado, ~50% de descuento en todos los modelos de precios de
 Tarifa plana para más de 1000 asientos
 <hr />
 <p style="min-height:100px">
-$2500/mes
+Contáctenos
 </p>
 
 &nbsp;
@@ -176,7 +176,7 @@ $2500/mes
 
 - Las empresas con menos de 100 confirmaciones al día deben estar bien con los 500 minutos de construcción incluidos en el plan.
 
-- Las empresas con menos de 1000 confirmaciones al día deben estar bien con los 5000 minutos de construcción incluidos en el plan.
+- Las empresas con menos de 1000 compromisos al día (aproximadamente un compromiso por minuto) deben estar bien con los 5000 minutos de compilación incluidos en el plan.
 
 - Builds that exceed a five minute duration are on the house: Consideramos estos incidentes como errores del sistema.
 
@@ -184,9 +184,9 @@ $2500/mes
 
 #### Notas al pie
 
-1.  Utilización de almacenamiento calculada en función del tamaño de dos desprotecciones de copia de trabajo de cada sitio: un árbol de origen y un árbol de creación de producción resultante.
+1.  Utilización de almacenamiento calculada en función del tamaño de una confirmación de orden de copia de trabajo de cada sitio, pero esto no se aplica rígidamente en los márgenes. Estar entre un 1 y un 5% más no es algo de lo que preocuparse. ¿Más del 5%? Hable con nosotros.
 
-2. Utilización de almacenamiento calculada en función del tamaño total del repositorio de Subversion alojado por sistemas SunStar para clientes de Enterprise, no para desprotecciones individuales, que es un *número comparativamente menor* (aproximadamente el tamaño de una única desprotección de árbol de origen).
+2. Utilización de almacenamiento calculada en función del tamaño total del repositorio de Subversion alojado por sistemas SunStar para clientes empresariales, no para desprotecciones individuales.
 
 3. SLA cubre los activos del sitio web *y* el IDE en línea de Orion *y* la disponibilidad del sistema de compilación, pero excluye el sistema de control de versiones de Subversion, que esperamos que siga siendo competitivo con las métricas de disponibilidad general de GitHub.
 

@@ -102,7 +102,7 @@ $100 / mois / site hébergé, ~50% sur tous les modèles de tarification concurr
 Tarif forfaitaire pour plus de 1000 sièges
 <hr />
 <p style="min-height:100px">
-$2500 / mois
+Nous contacter
 </p>
 
 &nbsp;
@@ -176,7 +176,7 @@ $2500 / mois
 
 - Les entreprises avec moins de 100 engagements par jour devraient être bien avec les 500 minutes de construction incluses dans le plan.
 
-- Les entreprises avec moins de 1000 engagements par jour devraient être bien avec les 5000 minutes de construction incluses dans le plan.
+- Les entreprises avec moins de 1000 engagements par jour (approchant un engagement par minute) devraient être bien avec les 5000 minutes de construction incluses dans le plan.
 
 - Builds that exceed a five minute duration are on the house: Nous considérons ces incidents comme des erreurs système.
 
@@ -184,9 +184,9 @@ $2500 / mois
 
 #### Notes de bas de page
 
-1.  Utilisation du stockage calculée en fonction de la taille de deux extractions de copie de travail de chaque site : une arborescence source et une arborescence de création de production résultante.
+1.  Utilisation du stockage calculée en fonction de la taille d'une caisse de copie de travail de chaque site, mais cela n'est pas strictement appliqué sur les marges. Être 1-5% plus n'est pas quelque chose à craindre. Plus de 5 % ? Parlez-nous.
 
-2. Utilisation du stockage calculée sur la base de la taille totale du référentiel Subversion hébergé par les systèmes SunStar pour les clients Enterprise, et non des extractions individuelles, qui est un nombre *comparativement plus petit* (environ la taille d'une extraction d'arborescence source unique).
+2. Utilisation du stockage calculée sur la base de la taille totale du référentiel Subversion hébergé par les systèmes SunStar pour les clients Enterprise, et non des extractions individuelles.
 
 3. Le contrat de niveau de service couvre les ressources du site Web *et* l'IDE en ligne d'Orion *et* la disponibilité du système, mais exclut le système de contrôle de version Subversion, qui devrait rester concurrentiel avec les indicateurs de disponibilité générale de GitHub.
 

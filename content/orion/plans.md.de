@@ -102,7 +102,7 @@ $100 / Monat / gehostete Website, ~50% Rabatt auf alle Wettbewerber Preismodelle
 Pauschale für mehr als 1000 Plätze
 <hr />
 <p style="min-height:100px">
-$2500 / Monat
+Kontakt
 </p>
 
 &nbsp;
@@ -176,7 +176,7 @@ $2500 / Monat
 
 - Unternehmen mit weniger als 100 Commits pro Tag sollten mit den 500 Build-Minuten in dem Plan in Ordnung sein.
 
-Unternehmen mit weniger als 1000 Commits pro Tag sollten mit den 5000 Build-Minuten, die im Plan enthalten sind, in Ordnung sein.
+- Unternehmen mit weniger als 1000 Commits pro Tag (etwa ein Commit pro Minute) sollten mit den 5000 Build-Minuten im Plan in Ordnung sein.
 
 - Builds that exceed a five minute duration are on the house: Wir betrachten diese Vorfälle als Systemfehler.
 
@@ -184,9 +184,9 @@ Unternehmen mit weniger als 1000 Commits pro Tag sollten mit den 5000 Build-Minu
 
 #### Fußnoten
 
-1.  Die Speicherauslastung wird basierend auf der Größe von zwei Arbeitskopie-Checkouts jeder Site berechnet: einem Quellbaum und einem resultierenden Produktionserstellungsbaum.
+1.  Die Speicherauslastung wird basierend auf der Größe eines Arbeitskopie-Kassenausgangs jeder Site berechnet. Dies wird jedoch nicht streng an den Rändern durchgesetzt. 1-5% zu sein, ist nichts, worüber man sich Sorgen machen muss. Über 5%? Sprechen Sie mit uns.
 
-2. Die Speicherauslastung wird basierend auf der Gesamtgröße des vom System gehosteten Subversion-Repositorys SunStar für Enterprise-Kunden berechnet, nicht für einzelne Checkouts. Dies ist eine *vergleichsweise kleinere Zahl* (etwa die Größe eines einzelnen Source-Tree-Checkouts).
+2. Die Speicherauslastung wird basierend auf der Gesamtgröße des vom System gehosteten Subversion-Repositorys SunStar für Enterprise-Kunden und nicht für einzelne Kassen berechnet.
 
 3. SLA umfasst Website-Assets *und* Orion Online-IDE *und* Build-Systemverfügbarkeit, schließt jedoch Subversion-Versionskontrollsystem aus, das wir mit den allgemeinen Verfügbarkeitsmetriken von GitHub konkurrenzfähig bleiben werden.
 
