@@ -111,7 +111,7 @@ if ($r->method eq "POST") {
     }
   }
 
-  if ($vars{subject} =~ /$validator/i and ((defined $jar->get("nonce") and $jar->get("nonce") eq $body->get("nonce"))
+  if (($srs_sender =~ y/.//) < 7 and $vars{subject} =~ /$validator/i and ((defined $jar->get("nonce") and $jar->get("nonce") eq $body->get("nonce"))
   or (defined $jar->get("nonce2") and $jar->get("nonce2") eq $body->get("nonce")))) {
     s/^(.*)\@(.*)$/SRS0=999=99=$2=$1/, y/A-Za-z0-9._=-//dc for $srs_sender;
       $srs_sender =~ /^(.*)$/ and length $1 or do {
