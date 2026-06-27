@@ -1,6 +1,6 @@
 Title: Orion API - Text Document Format
 Keywords: markdown,csv,yaml
-status: verified=44283
+status: verified=44287
 Dependencies: *.md.en
 
 ## Text Document Format (`markdown`, `YAML`, `CSV`)
@@ -221,6 +221,21 @@ Asymptote Vector Graphics `iframe` renderer.
 `d3-graphviz dot` renderer.
 
 </div></div>
+</div>
+
+<div class="card border-primary mb-3">
+  <div class="card-header">
+
+##### `@`-links
+
+</div>
+  <div class="card-body">
+    <div class="card-title">
+
+GitHub/X/User/Group shortcuts
+
+</div>
+</div>
 </div>
 
 <div class="card border-primary mb-3">
