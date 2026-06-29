@@ -3709,7 +3709,7 @@
 				return xcache.get($b);
 			    return $a;
 			}
-                        else return "<a href=\"https://github.com/" + $b + "\" title=\"@" + $b + "\" class=\"at-link\">" + $a + "</a>";
+                        else return "<a href=\"https://github.com/" + $b + "\" title=\"&#64;" + $b + "\" class=\"at-link\">" + $a + "</a>";
                     }).replace(/_#_&#64;_#_/g, "@");
                 }
 
