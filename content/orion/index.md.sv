@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=45754
+status: verifierad=46761
 title: SunStar Orion för system
 ---
 
@@ -71,7 +71,7 @@ title: SunStar Orion för system
 
 &nbsp;
 
-Vad som verkligen sätter Orion isär är inte bara en annan wiki-plattform &mdash; Det är vår egenutvecklade Orion Technology, ett patentsökt tillvägagångssätt som ger en elegant användarupplevelse med oöverträffad effektivitet.
+Vad som verkligen sätter Orion isär är inte bara en annan wiki-plattform &mdash; Det är vår egenutvecklade Orion Technology, ett patentsökt tillvägagångssätt som ger en elegant användarupplevelse med oöverträffad säkerhet, tillförlitlighet och effektivitet.
 
 &nbsp;
 
@@ -90,8 +90,11 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 &nbsp;
 
 <div class="fade">
+<center>
+<img src="index.page/hipaa" style="width:25%">
+</center>
 
-- :fa-city: **Hälsovård, regeringen &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven på FedRAMP-infrastruktur, NIST 800-207 zero-trust och HIPPA. Njut av detaljerade åtkomstkontroller i din versionskontrolldatabas &mdash; Allt med FIPS 140-3-kompatibel säkerhet och installationsbar inuti din VPN.
+- :fa-building-columns: **Hälsovård, regeringen &amp; försvar IT beslutsfattare** &mdash; Uppfyll kraven i FedRAMP infrastructure, NIST 800-207 zero-trust och HIPAA. Njut av detaljerade åtkomstkontroller i din versionskontrolldatabas &mdash; Allt med FIPS 140-3-kompatibel säkerhet och installationsbar inuti din VPN.
 
 </div>
 
@@ -148,7 +151,7 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Komma igång</div>
 <div class="card-body">
 
@@ -164,7 +167,7 @@ Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-ma
 </div>
 </center>
 </div>
-<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
@@ -208,13 +211,17 @@ Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total
 
 &nbsp;
 
-Detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
+Ta arkitektoniska ledtrådar från [David Wheeler's](https://justatheory.com) berömd [Brikolage CMS](https://bricolagecms.org/), detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
+
+&nbsp;
+
+När Apache-projektgrupper presenterades med ett fritt val mellan att använda Confluence-stödda webbplatser, eller använda Orions rötter som Apache CMS, valde de överväldigande Apache CMS. Vi tror att du också kommer att göra det, med dess kraftigt förbättrade Orion!
 
 &nbsp;
 
 <h4>Vill du ge det en snabb snurr för att se hur snabbt och enkelt det är?</h4>
 
-Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du inte kan göra är att bekräfta och se dina ändringar bygga och driftsätta; det är begränsat till vår personal av uppenbara skäl.
+Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du inte kan göra är att bekräfta och se dina ändringar bygga och driftsätta; det är begränsat till vår personal av uppenbara skäl.
 
 Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi är för närvarande på fyra kontinenter och har en bicoastal närvaro inom USA.  Och vi expanderar snabbt - nästa upp Afrika och Östasien!
 

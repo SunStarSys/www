@@ -1,8 +1,9 @@
 ---
 acl: '@staff=rw, *=r'
+categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: التحقق
+status: التحقق = 46761
 title: SunStar أوريون الأنظمة
 ---
 
@@ -70,7 +71,7 @@ title: SunStar أوريون الأنظمة
 
 &nbsp;
 
-ما يميز Orion حقًا ليس مجرد منصة wiki أخرى &mdash; إنها تقنية Orion Technology الخاصة بنا، وهي نهج معلق لبراءات الاختراع تم اختباره في المعركة يوفر تجربة مستخدم أنيقة بكفاءة لا مثيل لها.
+ما يميز Orion حقًا ليس مجرد منصة wiki أخرى &mdash; إنها تقنية Orion الخاصة بنا، وهي نهج معلق لبراءات الاختراع تم اختباره في المعركة يوفر تجربة مستخدم أنيقة مع أمان وموثوقية وكفاءة لا مثيل لهما.
 
 &nbsp;
 
@@ -89,8 +90,11 @@ title: SunStar أوريون الأنظمة
 &nbsp;
 
 <div class="fade">
+<center>
+<img src="index.page/hipaa" style="width:25%">
+</center>
 
-- :fa-city: **الرعاية الصحية، الحكومة &amp; صناع القرار في مجال تكنولوجيا المعلومات الدفاعية** &mdash; تلبية متطلبات البنية التحتية FedRAMP، NIST 800-207 الثقة الصفرية وHIPPA. تمتع بعناصر تحكم دقيقة في الوصول إلى مستودع التحكم في الإصدار &mdash; كل ذلك مع أمان متوافق مع FIPS 140-3 وقابل للتثبيت داخل VPN الخاص بك.
+- :fa-building-columns: **الرعاية الصحية، الحكومة &amp; صناع القرار في مجال تكنولوجيا المعلومات الدفاعية** &mdash; تلبية البنية التحتية FedRAMP، NIST 800-207 صفر الثقة ومتطلبات HIPAA. تمتع بعناصر تحكم دقيقة في الوصول إلى مستودع التحكم في الإصدار &mdash; كل ذلك مع أمان متوافق مع FIPS 140-3 وقابل للتثبيت داخل VPN الخاص بك.
 
 </div>
 
@@ -147,7 +151,7 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">البدء</div>
 <div class="card-body">
 
@@ -163,7 +167,7 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 </div>
 </center>
 </div>
-<div class="col-lg-6 border-start" style="border-color: #A9BDBD ">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
@@ -207,13 +211,17 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-هذا [التكنولوجيا](https://iconoclasts.blog/joe/apache-cms) تم اختراعه لأول مرة في أواخر عام 2010 بواسطة [بول كيرنا](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)دانيال شهاب، ديف فيشر، و [جو شايفر](https://iconoclasts.blog/joe/) كأعضاء في فريق البنية التحتية لأباتشي. العبارة "JAMstack" تم صياغته بعد سنوات (2015)، من قبل مجموعة غير مدركة لفننا السابق في هذا المجال.  لكن [سجل عام](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) هذا العرض الجديد من SunStar Systems هو شهادة على هذا الإرث الأصلي وأصوله الحقيقية مفتوحة المصدر.
+أخذ الإشارات المعمارية من [ديفيد ويلر](https://justatheory.com) شهير [Bricolage CMS](https://bricolagecms.org/)، هذا [التكنولوجيا](https://iconoclasts.blog/joe/apache-cms) تم اختراعه لأول مرة في أواخر عام 2010 بواسطة [بول كيرنا](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)دانيال شهاب، ديف فيشر، و [جو شايفر](https://iconoclasts.blog/joe/) كأعضاء في فريق البنية التحتية لأباتشي. العبارة "JAMstack" تم صياغته بعد سنوات (2015)، من قبل مجموعة غير مدركة لفننا السابق في هذا المجال.  لكن [سجل عام](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) هذا العرض الجديد من SunStar Systems هو شهادة على هذا الإرث الأصلي وأصوله الحقيقية مفتوحة المصدر.
+
+&nbsp;
+
+عندما تم تقديم مجتمعات مشروع برنامج أباتشي مع خيار مجاني بين استخدام المواقع المدعومة من Confluence، أو استخدام جذور أوريون كـ Apache CMS، اختاروا بأغلبية ساحقة Apache CMS. ونحن نعتقد أنك سوف أيضا، مع تحسن كبير أوريون!
 
 &nbsp;
 
 <h4>تريد أن تعطيه تدور سريع لمعرفة مدى سرعة وسهولة ذلك؟</h4>
 
-يتم استضافة هذا الموقع ذاتيًا على Orion ؛ كل تلك الساحات قلم رصاص وردي ساخن [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) في أعلى اليمين يعيش.  لا تتردد في التجول والتجربة مع أي شيء تراه!  الشيء الوحيد الذي لا يمكنك القيام به هو الالتزام ومشاهدة التغييرات الخاصة بك بناء ونشر؛ وهذا يقتصر على موظفينا لأسباب واضحة.
+يتم استضافة هذا الموقع ذاتيًا على Orion ؛ كل تلك الساحات قلم رصاص وردي ساخن [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) في أعلى اليمين يعيش.  لا تتردد في التجول والتجربة مع أي شيء تراه!  الشيء الوحيد الذي لا يمكنك القيام به هو الالتزام ومشاهدة التغييرات الخاصة بك بناء ونشر؛ وهذا يقتصر على موظفينا لأسباب واضحة.
 
 تضمن شبكتنا العالمية لنقطة التواجد (POP) اتصالات منخفضة زمن الوصول إلى كل من أوريون &trade; ومواقع التسليم النهائي التي نستضيفها.  نحن حاليا في أربع قارات ولدينا وجود ثانوي داخل الولايات المتحدة.  ونحن نتوسع بسرعة في أفريقيا وشرق آسيا!
 

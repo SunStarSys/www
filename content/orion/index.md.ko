@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=45754
+status: 확인=46761
 title: SunStar 시스템스 오리온
 ---
 
@@ -71,7 +71,7 @@ title: SunStar 시스템스 오리온
 
 &nbsp;
 
-Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash; Oracle의 독자적인 Orion Technology는 탁월한 효율성을 자랑하는 우아한 사용자 경험을 제공하는 특허 출원 중인 전투 테스트 접근 방식입니다.
+Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash; Oracle의 독자적인 Orion Technology는 탁월한 보안, 안정성 및 효율성을 갖춘 우아한 사용자 경험을 제공하는 특허 출원 중인 전투 테스트 접근 방식입니다.
 
 &nbsp;
 
@@ -90,8 +90,11 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 &nbsp;
 
 <div class="fade">
+<center>
+<img src="index.page/hipaa" style="width:25%">
+</center>
 
-- :fa-city:** 건강 관리, 정부 &amp; 국방 IT 의사 결정자** &mdash; FedRAMP 인프라, NIST 800-207 제로 트러스트 및 HIPPA 요구 사항을 충족합니다. 버전 제어 저장소에서 세분화된 액세스 제어 활용 &mdash; 모든 FIPS 140-3 호환 보안 및 VPN 내부 설치 가능.
+- :fa-building-columns:** 건강 관리, 정부 &amp; 국방 IT 의사 결정자** &mdash; FedRAMP 인프라, NIST 800-207 제로 트러스트 및 HIPAA 요구 사항을 충족합니다. 버전 제어 저장소에서 세분화된 액세스 제어 활용 &mdash; 모든 FIPS 140-3 호환 보안 및 VPN 내부 설치 가능.
 
 </div>
 
@@ -148,7 +151,7 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">시작하기</div>
 <div class="card-body">
 
@@ -164,7 +167,7 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 </div>
 </center>
 </div>
-<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
@@ -208,13 +211,17 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-여기 [기술](https://iconoclasts.blog/joe/apache-cms) 2010년 말에 처음 발명된 [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)다니엘 샤하프, 데이브 피셔, 그리고 [Joe Schaefer](https://iconoclasts.blog/joe/) 아파치 인프라 팀의 일원으로. 구문 "JAMstack" 몇 년 후 (2015),이 공간에서 우리의 이전 예술을 모르는 그룹에 의해 만들어졌습니다.  그러나 [공개 레코드](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systems의 새로운 오퍼링은 원래 레거시와 진정한 오픈 소스 기원에 대한 간증입니다.
+아키텍처 큐 활용 [데이비드 휠러스](https://justatheory.com) 유명 인사 [Bricolage CMS](https://bricolagecms.org/)이 경우 [기술](https://iconoclasts.blog/joe/apache-cms) 2010년 말에 처음 발명된 [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)다니엘 샤하프, 데이브 피셔, 그리고 [Joe Schaefer](https://iconoclasts.blog/joe/) 아파치 인프라 팀의 일원으로. 구문 "JAMstack" 몇 년 후 (2015),이 공간에서 우리의 이전 예술을 모르는 그룹에 의해 만들어졌습니다.  그러나 [공개 레코드](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systems의 새로운 오퍼링은 원래 레거시와 진정한 오픈 소스 기원에 대한 간증입니다.
+
+&nbsp;
+
+아파치 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트를 사용하거나 Orion의 뿌리를 아파치 CMS로 사용하는 것 사이에서 자유로운 선택을 받았을 때, 그들은 압도적으로 아파치 CMS를 선택했다. 우리는 또한 당신이 크게 개선 된 오리온과 함께 할 것이라고 생각합니다!
 
 &nbsp;
 
 <h4>빠른 스핀을 제공하여 얼마나 빠르고 쉬운지 확인하고 싶습니까?</h4>
 
-이 웹 사이트는 Orion에서 자체 호스팅됩니다; 모든 핫 핑크 연필 광장 [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 오른쪽 맨 위는 살아있다.  주위를 둘러보고 당신이 보는 모든 것을 실험하십시오!  당신이 할 수없는 유일한 것은 커밋하고 변경 사항을보고 구축 및 배포하는 것입니다; 그것은 명백한 이유로 우리의 직원으로 제한됩니다.
+이 웹 사이트는 Orion에서 자체 호스팅됩니다; 모든 핫 핑크 연필 광장 [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 오른쪽 맨 위는 살아있다.  주위를 둘러보고 당신이 보는 모든 것을 실험하십시오!  당신이 할 수없는 유일한 것은 커밋하고 변경 사항을보고 구축 및 배포하는 것입니다; 그것은 명백한 이유로 우리의 직원으로 제한됩니다.
 
 오라클의 글로벌 POP(Point of Presence) 네트워크는 두 Orion에 대한 대기 시간이 짧은 연결을 보장합니다. &trade; 그리고 우리가 호스팅하는 최종 배달 웹 사이트.  우리는 현재 네 대륙에 있으며 미국 내에서 바이코아스탈 입지를 가지고 있습니다.  그리고 우리는 아프리카와 동아시아를 빠르게 확장하고 있습니다!
 

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=45754
+status: 確認済み=46761
 title: SunStarシステムのOrion
 ---
 
@@ -71,7 +71,7 @@ title: SunStarシステムのOrion
 
 &nbsp;
 
-Orionを本当に切り離すものは、単なるWikiプラットフォームではありません。&mdash; オラクル独自のOrion Technologyは、比類のない効率でエレガントなユーザーエクスペリエンスを提供する、バトルテスト済みの特許出願中のアプローチです。
+Orionを本当に切り離すものは、単なるWikiプラットフォームではありません。&mdash; オラクル独自のOrion Technologyは、比類のないセキュリティ、信頼性、効率性を備えたエレガントなユーザー・エクスペリエンスを提供する、実証済みの特許出願中のアプローチです。
 
 &nbsp;
 
@@ -90,8 +90,11 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 &nbsp;
 
 <div class="fade">
+<center>
+<img src="index.page/hipaa" style="width:25%">
+</center>
 
-- :fa-city: **医療、行政&amp; 防衛ITの意思決定者** &mdash; FedRAMPインフラストラクチャ、NIST 800-207ゼロトラストおよびHIPPAの要件を満たします。バージョン管理リポジトリできめ細かいアクセス制御をお楽しみください&mdash; FIPS 140-3準拠のセキュリティとVPN内のインストールが可能です。
+- :fa-building-columns: **医療、行政&amp; 防衛ITの意思決定者** &mdash; FedRAMPインフラストラクチャ、NIST 800-207ゼロトラストおよびHIPAAの要件を満たします。バージョン管理リポジトリできめ細かいアクセス制御をお楽しみください&mdash; FIPS 140-3準拠のセキュリティとVPN内のインストールが可能です。
 
 </div>
 
@@ -148,7 +151,7 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">はじめに</div>
 <div class="card-body">
 
@@ -164,7 +167,7 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 </div>
 </center>
 </div>
-<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
@@ -208,13 +211,17 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-この[工業技術](https://iconoclasts.blog/joe/apache-cms) 最初に発明されたのは2010年後半。[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)ダニエル・シャハフ、デイヴ・フィッシャー、[Joe Schaefer](https://iconoclasts.blog/joe/) Apache Infrastructure Teamのメンバー。フレーズ"JAMstack" 数年後(2015年)、この宇宙における私たちの以前の芸術を知らないグループによって造られました。しかし、[公開レコード](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systemsによるこの新しいサービスは、そのオリジナルのレガシーと真のオープンソースの起源に対する証言です。
+アーキテクチャに関する手掛かり[David Wheeler's](https://justatheory.com) 名高い[ブリコラージュCMS](https://bricolagecms.org/)この[工業技術](https://iconoclasts.blog/joe/apache-cms) 最初に発明されたのは2010年後半。[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)ダニエル・シャハフ、デイヴ・フィッシャー、[Joe Schaefer](https://iconoclasts.blog/joe/) Apache Infrastructure Teamのメンバー。フレーズ"JAMstack" 数年後(2015年)、この宇宙における私たちの以前の芸術を知らないグループによって造られました。しかし、[公開レコード](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systemsによるこの新しいサービスは、そのオリジナルのレガシーと真のオープンソースの起源に対する証言です。
+
+&nbsp;
+
+Apacheソフトウェア・プロジェクト・コミュニティが、Confluenceが支援するサイトを使用するか、OrionのルーツをApache CMSとして使用するかの無料の選択肢を提示したとき、彼らは圧倒的にApache CMSを選んだ。きっとあなたも元気になってくれると思います!
 
 &nbsp;
 
 <h4>それがどれだけ速く、容易であるか見るために速い回転を与えることを望みますか。</h4>
 
-このウェブサイトは、オリオンで自己ホストされています; すべてのホットピンクの鉛筆の正方形[<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上は生きている。気軽に周りを回って、どんなものでも試してみてください! 唯一できないことは、コミットして、変更のビルドとデプロイを監視することです。これは、明らかな理由で担当者に制限されています。
+このウェブサイトは、オリオンで自己ホストされています; すべてのホットピンクの鉛筆の正方形[<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上は生きている。気軽に周りを回って、どんなものでも試してみてください! 唯一できないことは、コミットして、変更のビルドとデプロイを監視することです。これは、明らかな理由で担当者に制限されています。
 
 当社のグローバルPoint of Presence (POP)ネットワークは、両方のOrionへの低レイテンシ接続を保証します&trade; 当社が主催する最終配信サイト。我々は現在四大陸にいて、米国内に巨大な存在を有している。アフリカと東アジアを急成長させています!
 

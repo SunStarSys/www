@@ -1,8 +1,9 @@
 ---
 acl: '@staff=rw, *=r'
+categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: draft
+status: אומתו 46761
 title: SunStar אוריון מערכות
 ---
 
@@ -70,7 +71,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-מה שבאמת מבדיל את אוריון הוא לא רק עוד פלטפורמת ויקי &mdash; זוהי טכנולוגיית אוריון הקניינית שלנו, גישה שנבדקה על ידי מאבק וממתינה לפטנט, המספקת חוויית משתמש אלגנטית עם יעילות ללא תחרות.
+מה שבאמת מבדיל את אוריון הוא לא רק עוד פלטפורמת ויקי &mdash; זוהי טכנולוגיית אוריון הקניינית שלנו, גישה שנבדקה על ידי מערכה וממתינה לפטנט, המספקת חוויית משתמש אלגנטית עם אבטחה, אמינות ויעילות ללא תחרות.
 
 &nbsp;
 
@@ -89,8 +90,11 @@ title: SunStar אוריון מערכות
 &nbsp;
 
 <div class="fade">
+<center>
+<img src="index.page/hipaa" style="width:25%">
+</center>
 
-- :fa-city: **שירותי בריאות, ממשלה &amp; הגנה על מקבלי החלטות בתחום ה-IT** &mdash; עמדו בדרישות התשתית FedRAMP,  NIST 800-207 עם אפס אמון ו-HIPPA. תוכל ליהנות מבקרות גישה מפורטות במאגר בקרת הגרסאות שלך &mdash; הכול עם אבטחה תואמת FIPS 140-3 וניתנת להתקנה בתוך ה-VPN שלך.
+- :fa-building-columns: **שירותי בריאות, ממשלה &amp; הגנה על מקבלי החלטות בתחום ה-IT** &mdash; עמדו בדרישות התשתית FedRAMP,  NIST 800-207 עם אפס אמון ו- HIPAA. תוכל ליהנות מבקרות גישה מפורטות במאגר בקרת הגרסאות שלך &mdash; הכול עם אבטחה תואמת FIPS 140-3 וניתנת להתקנה בתוך ה-VPN שלך.
 
 </div>
 
@@ -147,7 +151,7 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">צעדים ראשונים</div>
 <div class="card-body">
 
@@ -163,7 +167,7 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 </div>
 </center>
 </div>
-<div class="col-lg-6 border-start" style="border-color: #A9BDBD ">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
@@ -207,13 +211,17 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-זה [טכנולוגיה](https://iconoclasts.blog/joe/apache-cms) הומצא לראשונה בסוף 2010 על ידי [פול קרנה](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)דניאל שחף, דייב פישר [ג'ו שפר](https://iconoclasts.blog/joe/) חברי צוות התשתיות של אפאצ'י. הביטוי "JAMstack" נטבע שנים מאוחר יותר (2015), על ידי קבוצה שלא ידעה על האמנות הקודמת שלנו במרחב זה.  אבל [רשומה ציבורית](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ברור לחלוטין, והיצע חדש זה של SunStar Systems הוא עדות למורשת המקורית ולמקור הקוד הפתוח האמיתי שלה.
+קבלת רמזים ארכיטקטוניים מ [דייוויד וילר](https://justatheory.com) מפורסם [בריקולאז' CMS](https://bricolagecms.org/), זה [טכנולוגיה](https://iconoclasts.blog/joe/apache-cms) הומצא לראשונה בסוף 2010 על ידי [פול קרנה](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)דניאל שחף, דייב פישר [ג'ו שפר](https://iconoclasts.blog/joe/) חברי צוות התשתיות של אפאצ'י. הביטוי "JAMstack" נטבע שנים מאוחר יותר (2015), על ידי קבוצה שלא ידעה על האמנות הקודמת שלנו במרחב זה.  אבל [רשומה ציבורית](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ברור לחלוטין, והיצע חדש זה של SunStar Systems הוא עדות למורשת המקורית ולמקור הקוד הפתוח האמיתי שלה.
+
+&nbsp;
+
+כאשר קהילות פרויקטי תוכנה של אפאצ'י הוצגו עם בחירה חופשית בין שימוש באתרים המגובים ב-Confluence, או שימוש בשורשיו של אוריון כ-Apache CMS, הם בחרו באופן גורף ב-Apache CMS. אנחנו חושבים שגם אתם, עם האוריון המשופר שלה!
 
 &nbsp;
 
 <h4>רוצה לתת לו ספין מהיר כדי לראות כמה מהר וקל זה?</h4>
 
-אתר זה מארח את עצמו על אוריון; כל אלה ריבועים עיפרון ורוד חם [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) הימין העליון חי.  תרגישו חופשי להתנסות ולהתנסות בכל מה שאתם רואים!  הדבר היחיד שאתה לא יכול לעשות הוא להתחייב ולצפות בשינויים שלך לבנות ולפרוס; זה מוגבל לצוות שלנו מסיבות ברורות.
+אתר זה מארח את עצמו על אוריון; כל אלה ריבועים עיפרון ורוד חם [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) הימין העליון חי.  תרגישו חופשי להתנסות ולהתנסות בכל מה שאתם רואים!  הדבר היחיד שאתה לא יכול לעשות הוא להתחייב ולצפות בשינויים שלך לבנות ולפרוס; זה מוגבל לצוות שלנו מסיבות ברורות.
 
 רשת Point of Presence  (POP) הגלובלית שלנו מבטיחה חיבורים בעלי זמן השהיה קצר לאוריון &trade; ואת אתרי האינטרנט של המסירה הסופית שאנו מארחים.  אנו נמצאים כעת בארבע יבשות ויש לנו נוכחות קיצונית בתוך ארה"ב.  ואנחנו מתרחבים במהירות - הבא אפריקה ומזרח אסיה!
 

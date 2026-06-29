@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: wiki,jamstack,blog,sicher,sicher
-status: überprüft=45754
+status: überprüft=46761
 title: SunStar System-Orion
 ---
 
@@ -71,7 +71,7 @@ title: SunStar System-Orion
 
 &nbsp;
 
-Was Orion wirklich auszeichnet, ist nicht nur eine andere Wiki-Plattform &mdash; Es ist unsere proprietäre Orion-Technologie, ein kampferprobter, zum Patent angemeldeter Ansatz, der eine elegante Benutzererfahrung mit unübertroffener Effizienz bietet.
+Was Orion wirklich auszeichnet, ist nicht nur eine andere Wiki-Plattform &mdash; Es ist unsere proprietäre Orion-Technologie, ein kampferprobter, zum Patent angemeldeter Ansatz, der eine elegante Benutzererfahrung mit unübertroffener Sicherheit, Zuverlässigkeit und Effizienz bietet.
 
 &nbsp;
 
@@ -90,8 +90,11 @@ Auf diese Weise können wir extrem niedrige Betriebskosten verursachen und gleic
 &nbsp;
 
 <div class="fade">
+<center>
+<img src="index.page/hipaa" style="width:25%">
+</center>
 
-- :fa-city: **Gesundheitswesen, Regierung &amp; IT-Entscheider im Verteidigungsbereich** &mdash; Erfüllen Sie die Anforderungen von FedRAMP Infrastructure, NIST 800-207 Zero-Trust und HIPPA. Genießen Sie feingranulierte Zugriffskontrollen in Ihrem Versionskontroll-Repository &mdash; Alles mit FIPS 140-3-konformer Sicherheit und in Ihrem VPN installierbar.
+- :fa-building-columns: **Gesundheitswesen, Regierung &amp; IT-Entscheider im Verteidigungsbereich** &mdash; Erfüllen Sie die Anforderungen von FedRAMP Infrastructure, NIST 800-207 Zero-Trust und HIPAA. Genießen Sie feingranulierte Zugriffskontrollen in Ihrem Versionskontroll-Repository &mdash; Alles mit FIPS 140-3-konformer Sicherheit und in Ihrem VPN installierbar.
 
 </div>
 
@@ -148,7 +151,7 @@ Das ist kein Marketing-Spin &mdash; Es ist ein nachweisbares, offenes technische
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">Erste Schritte</div>
 <div class="card-body">
 
@@ -164,7 +167,7 @@ Benötigen Sie Hilfe bei der Anpassung der `Perl` System erstellen in `lib/` und
 </div>
 </center>
 </div>
-<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
@@ -208,13 +211,17 @@ Multi-Gigabyte-Quellbäume sind einfach keine Übereinstimmung dafür &mdash; Di
 
 &nbsp;
 
-Dies [Technologie](https://iconoclasts.blog/joe/apache-cms) wurde erstmals Ende 2010 von [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher und [Joe Schaefer](https://iconoclasts.blog/joe/) als Mitglied des Apache Infrastructure Teams. Der Satz "JAMstack" wurde Jahre später (2015) von einer Gruppe geprägt, die sich unseres Standes der Technik in diesem Raum nicht bewusst war.  Aber die [Öffentlicher Datensatz](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ist kristallklar, und dieses neue Angebot von SunStar Systems zeugt von diesem ursprünglichen Erbe und seinen wahren Open-Source-Ursprüngen.
+Architektonische Hinweise aus [David Wheeler's](https://justatheory.com) berühmt [Bricolage CMS](https://bricolagecms.org/), diese [Technologie](https://iconoclasts.blog/joe/apache-cms) wurde erstmals Ende 2010 von [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher und [Joe Schaefer](https://iconoclasts.blog/joe/) als Mitglied des Apache Infrastructure Teams. Der Satz "JAMstack" wurde Jahre später (2015) von einer Gruppe geprägt, die sich unseres Standes der Technik in diesem Raum nicht bewusst war.  Aber die [Öffentlicher Datensatz](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) ist kristallklar, und dieses neue Angebot von SunStar Systems zeugt von diesem ursprünglichen Erbe und seinen wahren Open-Source-Ursprüngen.
+
+&nbsp;
+
+Als Apache-Software-Projekt-Communities die freie Wahl zwischen der Verwendung von Confluence-unterstützten Websites oder der Verwendung von Orions Wurzeln als Apache-CMS erhielten, wählten sie überwiegend das Apache-CMS. Wir denken, Sie werden es auch tun, mit seinem stark verbesserten Orion!
 
 &nbsp;
 
 <h4>Möchten Sie es kurz drehen, um zu sehen, wie schnell und einfach es ist?</h4>
 
-Diese Website ist selbst gehostet auf Orion; all diese hot-pink Bleistift Quadrate [<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) rechts oben sind live.  Fühlen Sie sich frei herumzustoßen und mit allem zu experimentieren, was Sie sehen!  Das einzige, was Sie nicht tun können, ist zu beobachten, wie Ihre Änderungen erstellt und bereitgestellt werden. Das ist auf unsere Mitarbeiter aus offensichtlichen Gründen beschränkt.
+Diese Website ist selbst gehostet auf Orion; all diese hot-pink Bleistift Quadrate [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) rechts oben sind live.  Fühlen Sie sich frei herumzustoßen und mit allem zu experimentieren, was Sie sehen!  Das einzige, was Sie nicht tun können, ist zu beobachten, wie Ihre Änderungen erstellt und bereitgestellt werden. Das ist auf unsere Mitarbeiter aus offensichtlichen Gründen beschränkt.
 
 Unser globales Point of Presence (POP)-Netzwerk stellt Verbindungen mit geringer Latenz zu beiden Orion sicher &trade; und die End-Delivery-Websites, die wir hosten.  Wir sind derzeit auf vier Kontinenten und haben eine bicoastale Präsenz in den USA.  Und wir expandieren rasant – nach Afrika und Ostasien!
 

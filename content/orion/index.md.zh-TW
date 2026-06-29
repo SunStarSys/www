@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =45754
+status: 驗證 =46761
 title: SunStar 系統的 Orion
 ---
 
@@ -71,7 +71,7 @@ title: SunStar 系統的 Orion
 
 &nbsp;
 
-Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有的 Orion Technology，這是一項經過嚴格測試的專利申請方法，以無與倫比的效率提供優雅的使用者體驗。
+Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有的 Orion Technology，這是經過嚴格測試的專利申請方法，以無與倫比的安全性、可靠性及效率，提供優雅的使用者體驗。
 
 &nbsp;
 
@@ -90,8 +90,11 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 &nbsp;
 
 <div class="fade">
+<center>
+<img src="index.page/hipaa" style="width:25%">
+</center>
 
-- :fa-city: **健康照護，政府&amp; 防禦 IT 決策者** &mdash; 符合 FedRAMP 基礎架構、NIST 800-207 零信任和 HIPPA 需求。在版本控制儲存區域上享受微點存取控制&mdash; 符合 FIPS 140-3 標準的安全性，可在您的 VPN 中安裝。
+- :fa-building-columns: **健康照護，政府&amp; 防禦 IT 決策者** &mdash; 符合 FedRAMP 基礎架構、NIST 800-207 零信任和 HIPAA 需求。在版本控制儲存區域上享受微點存取控制&mdash; 符合 FIPS 140-3 標準的安全性，可在您的 VPN 中安裝。
 
 </div>
 
@@ -148,7 +151,7 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis" style="max-width:25rem;background-color:transparent;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
 <div class="card-header">入門</div>
 <div class="card-body">
 
@@ -164,7 +167,7 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 </div>
 </center>
 </div>
-<div class="col-lg-6" style="border-left: solid #A9BDBD 1px">
+<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
 [<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
 
@@ -208,13 +211,17 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-這是[技術](https://iconoclasts.blog/joe/apache-cms) 於 2010 年底首次發明者[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/),Daniel Shahaf,Dave Fisher, [Joe Schaefer](https://iconoclasts.blog/joe/) 作為 Apache 基礎架構小組的成員。片語"JAMstack" 多年後 (2015 年)，由一個團體不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
+從以下位置取得建築線索[David Wheeler's](https://justatheory.com) 知名品牌[工程案例](https://bricolagecms.org/)，此[技術](https://iconoclasts.blog/joe/apache-cms) 於 2010 年底首次發明者[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/),Daniel Shahaf,Dave Fisher, [Joe Schaefer](https://iconoclasts.blog/joe/) 作為 Apache 基礎架構小組的成員。片語"JAMstack" 多年後 (2015 年)，由一個團體不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
+
+&nbsp;
+
+當 Apache 軟體專案社群在使用 Confluence 支援的網站，或使用 Orion 的根目錄作為 Apache CMS 時，他們大多選擇 Apache CMS。我們認為，隨著 Orion 的大幅改善，你也會喜歡。
 
 &nbsp;
 
 <h4>想要讓它快速旋轉，看看它的速度和簡易性如何？</h4>
 
-本網站由奧里昂自行代管；所有熱粉紅色鉛筆方塊[<img src="../images/edit.png" style="width:20px">](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上角已上線。快來玩，並對您看到的任何東西進行實驗！唯一無法做的事是確認並觀察您的變更建置與部署，這僅限於我們的人員，原因很明顯。
+本網站由奧里昂自行代管；所有熱粉紅色鉛筆方塊[<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上角已上線。快來玩，並對您看到的任何東西進行實驗！唯一無法做的事是確認並觀察您的變更建置與部署，這僅限於我們的人員，原因很明顯。
 
 我們的全球網路連接點 (POP) 可確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於四大洲，在美國境內也有雙海濱。我們正在快速擴展非洲和東亞！
 
