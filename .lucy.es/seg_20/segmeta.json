@@ -1,13 +1,9 @@
 {
   "deletions": {
     "files": {
-      "seg_2f": {
+      "seg_1z": {
         "count": "7",
-        "filename": "seg_2m/deletions-seg_2f.bv"
-      },
-      "seg_2l": {
-        "count": "7",
-        "filename": "seg_2m/deletions-seg_2l.bv"
+        "filename": "seg_20/deletions-seg_1z.bv"
       }
     },
     "format": "1"
@@ -21,11 +17,11 @@
   "lexicon": {
     "counts": {
       "acl": "3",
-      "content": "2243",
-      "keywords": "30",
+      "content": "2249",
+      "keywords": "31",
       "path": "7",
       "status": "5",
-      "title": "10"
+      "title": "12"
     },
     "format": "3",
     "index_counts": {
@@ -54,7 +50,7 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_2m"
+    "name": "seg_20"
   },
   "sort": {
     "counts": {
