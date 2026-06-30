@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=46922
+status: verified=46926
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -172,6 +172,8 @@ This isn't marketing spin &mdash; it's verifiable, open engineering heritage dat
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
+<a href="https://iconoclasts.blog/joe/wikis">
+
 ```mermaid
 mindmap
   root((KMS))
@@ -201,6 +203,7 @@ mindmap
      CLI
 ```
 
+</a>
 
 &nbsp;
 
