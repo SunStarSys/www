@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 46903
+status: טיוטה
 title: SunStar אוריון מערכות
 ---
 
@@ -175,7 +175,42 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((KMS))
+    (פלטפורמות Wiki)
+      ((אוריון))
+      [השפעה]
+      [רעיון]
+    (בקרת גרסאות)
+      [שימושים]
+        אוצרות תוכן
+        בקרות גישה
+        היסטוריה שאינה ניתנת לשינוי
+      [כלים]
+        גיט
+        תת-גרסה
+    (ג'מסטאק)
+      [CMS]
+        מחברים
+        חוקרים
+        אוצרים
+      [בניות אתר]
+        מפתחים
+        אדריכלים
+      [אבטחה]
+    (בינה מלאכותית)
+     אדום, צהוב וירוק
+     ממשק לקוח
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ div#lightning img {width:100%}
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">צעדים ראשונים</div>
 <div class="card-body">
 

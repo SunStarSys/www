@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=46903
+status: 下書き
 title: SunStarシステムのOrion
 ---
 
@@ -175,7 +175,42 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((KMS))
+    (Wikiプラットフォーム)
+      ((オリオン))
+      [影響]
+      [注釈]
+    (バージョン管理)
+      [使用]
+        コンテンツキュレーション
+        アクセス制御
+        不変履歴
+      [ツール]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        作者
+        研究者
+        責任者
+      [サイト構築]
+        開発者
+        建築家
+      [セキュリティ]
+    (AI)
+     RAG
+     CLI
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ Apacheソフトウェア・プロジェクト・コミュニティが、Confluen
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">はじめに</div>
 <div class="card-body">
 

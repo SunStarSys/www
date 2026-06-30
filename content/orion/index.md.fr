@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-status: vérifié=46903
+status: projet
 title: SunStar Orion de Systems
 ---
 
@@ -175,7 +175,42 @@ Ce n'est pas du marketing spin &mdash; C'est un patrimoine d'ingénierie vérifi
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((KMS))
+    (Plateformes Wiki)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Contrôle de version)
+      [Utilisations]
+        Durée du contenu
+        Contrôles d'accès
+        Historique immuable
+      [Outils]
+        Git
+        Subversion
+    (Pile)
+      [CMS]
+        Auteurs
+        Chercheurs
+        Superviseurs
+      [Builds de site]
+        Développeurs
+        Architectes
+      [Sécurité]
+    (IA)
+     RAG
+     CLI
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ En outre, tous les clients disposent d'interfaces gratuites, personnalisables pa
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">Mise en route</div>
 <div class="card-body">
 

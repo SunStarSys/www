@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=46903
+status: borrador
 title: SunStar Orión de los Sistemas
 ---
 
@@ -175,7 +175,42 @@ Esto no es marketing spin &mdash; Es un patrimonio de ingeniería verificable y 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((KMS))
+    (Plataformas wiki)
+      ((Orión))
+      [Confluencia]
+      [Noción]
+    (Control de versiones)
+      [Usos]
+        Curación de contenido
+        Controles de acceso
+        Historial inmutable
+      [Herramientas]
+        Git
+        Subversión
+    (Jamstack)
+      [CMS]
+        Autores
+        Investigadores
+        Curadores
+      [Compilaciones del sitio]
+        Desarrolladores
+        Arquitectos
+      [Seguridad]
+    (IA)
+     RAG
+     CLI
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ Además, todos los clientes tienen interfaces gratuitas, personalizables por pla
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">Introducción</div>
 <div class="card-body">
 

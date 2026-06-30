@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=46903
+status: 초안
 title: SunStar 시스템스 오리온
 ---
 
@@ -175,7 +175,42 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((KMS))
+    (위키 플랫폼)
+      ((오리온))
+      [영향]
+      [개념]
+    (버전 관리)
+      [사용]
+        콘텐츠 큐레이션
+        액세스 제어
+        변경할 수 없는 내역
+      [도구]
+        Git
+        하위 버전
+    (잼스택)
+      [CMS]
+        저자
+        연구원
+        큐레이션 그룹
+      [사이트 빌드]
+        개발자
+        아키텍트
+      [보안]
+    (AI)
+     RAG
+     CLI
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ div#lightning img {width:100%}
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">시작하기</div>
 <div class="card-body">
 

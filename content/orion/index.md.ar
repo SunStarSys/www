@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: التحقق = 46903
+status: مُسَوَّدَة
 title: SunStar أوريون الأنظمة
 ---
 
@@ -175,7 +175,42 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((نظام إدارة المحتوى))
+    (منصات ويكي)
+      ((أوريون))
+      [التوافق]
+      [الفكرة]
+    (التحكم في الإصدار)
+      [الاستخدامات]
+        معالجة المحتوى
+        عناصر التحكم في الوصول
+        تاريخ غير قابل للتغيير
+      [الأدوات]
+        غيت
+        الإصدار الفرعي
+    (جامستاك)
+      [نظام إدارة المحتوى]
+        المؤلفون
+        باحثون
+        الأمناء
+      [إصدارات الموقع]
+        المطورين
+        معماريون
+      [الأمان]
+    (الذكاء الاصطناعي)
+     RAG
+     CLI
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ div#lightning img {width:100%}
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">البدء</div>
 <div class="card-body">
 

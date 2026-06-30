@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=46903
+status: skiss
 title: SunStar Orion för system
 ---
 
@@ -175,7 +175,42 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((KMS))
+    (Wiki-plattformar)
+      ((Orion))
+      [Påverkan]
+      [Begrepp]
+    (Versionskontroll)
+      [Användningar]
+        Innehållskurering
+        Åtkomstkontroller
+        Oföränderlig historik
+      [Verktyg]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Upphovsmän
+        Forskare
+        Kuratorer
+      [Platsbyggen]
+        Utvecklare
+        Arkitekter
+      [Säkerhet]
+    (AI)
+     RAG
+     kommandoradsgränssnitt
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">Komma igång</div>
 <div class="card-body">
 

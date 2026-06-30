@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=46903
+status: черновик
 title: SunStar Орион систем
 ---
 
@@ -175,7 +175,42 @@ The underlying Static Site Generator: с открытым исходным ко�
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+<a href="https://iconoclasts.blog/joe/wikis">
+
+```mermaid
+mindmap
+  root((КМС))
+    (Платформы Wiki)
+      ((Орион))
+      [Слияние]
+      [Понятие]
+    (Контроль версий)
+      [Использование]
+        Курация контента
+        Управление доступом
+        Неизменяемая история
+      [Инструменты]
+        Гит
+        Подвержение
+    (Джамстек)
+      [CMS]
+        Авторы
+        Исследователи
+        Кураторы
+      [Сборки сайтов]
+        Разработчики
+        Архитекторы
+      [Безопасность]
+    (ИИ)
+     RAG
+     Клиника
+```
+
+</a>
+
+&nbsp;
+
+&nbsp;
 
 &nbsp;
 
@@ -250,7 +285,7 @@ div#lightning img {width:100%}
 &nbsp;
 
 <center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">Начало работы</div>
 <div class="card-body">
 
