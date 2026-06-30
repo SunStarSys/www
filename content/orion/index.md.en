@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=46918
+status: verified=46922
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -172,7 +172,35 @@ This isn't marketing spin &mdash; it's verifiable, open engineering heritage dat
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
-[<img src="index.page/ad-top" style="width: 100%;margin-top: 4px">](features)
+```mermaid
+mindmap
+  root((KMS))
+    (Wiki Platforms)
+      ((Orion))
+      [Confluence]
+      [Notion]
+    (Version Control)
+      [Uses]
+        Content Curation
+        Access Controls
+        Immutable History
+      [Tools]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Authors
+        Researchers
+        Curators
+      [Site Builds]
+        Developers
+        Architects
+      [Security]
+    (AI)
+     RAG
+     CLI
+```
+
 
 &nbsp;
 
