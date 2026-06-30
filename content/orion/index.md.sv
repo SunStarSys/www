@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=46761
+status: verifierad=46903
 title: SunStar Orion för system
 ---
 
@@ -65,7 +65,7 @@ title: SunStar Orion för system
 
 &nbsp;
 
-### Här är platsen, beslutsfattare för ledningen...
+### Här är avkastningen på investeringen, beslutsfattare för ledningen :fa-chart-line:...
 
 <span class="text-white">Varför välja Orion? Jamstack Wiki-plattformen som överträffar &mdash; och kostar betydligt mindre</span>
 
@@ -79,11 +79,37 @@ Det gör att vi kan köra extremt låga driftskostnader samtidigt som vi erbjude
 
 &nbsp;
 
+Ingenting kommer att ge bättre avkastning på investeringen än Orion i kunskapshanteringssystemutrymmet.  Vi skräddarsyr varje installation efter dina specifika krav och är alltid tillgängliga för konsultation och professionell coachning för att säkerställa att du maximerar avkastningen på din investering i våra produkter och tjänster.
+
+&nbsp;
+
+Ditt **team har en partner i oss** när det gäller att se till att du ser produktivitetsvinsterna i samband med Orion &mdash; utformad för robust, verifierad, samarbetsorienterad kunskapsskapande; och enkel, omfattande, precisionsinformationssökning därav.
+
+&nbsp;
+
+<span class="text-white">Lämna de ekonomiskt dränerande smärtpunkterna i det förflutna bakom sig...</span>
+
+För många företag är Jira ett fantastiskt effektivt verktyg för projektledning. Men med tiden börjar man inse att [Confluence är bara tagging tillsammans för resan](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
+
+Om det resonerar, är du trött på att kasta mer bra pengar på en dålig investering på grund av den osammanhängande, denormaliserade, oupprätthållbara, inaktuella, länk-rotted Confluence röra med en usel textredigerare och ännu elakare sökmotor?
+
+&nbsp;
+
+Vill inte istället slösa dyrbart kapital på en [prestanda som försämras](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/) dyrt, uppblåst, [inte tillförlitlig](https://isdown.app/status/notion), en plattform-till-regel-dem-alla OCD-älskarens SaaS tjänst som inte kan uppfylla sina förbättrade produktivitetslöften? Med andra ord, något som begreppet?
+
+Föredrar *grokability *av ett system som Orion &mdash; organiseras runt *dokument med bifogade data*; istället för Notions *databaser med bifogade dokument*?
+
+&nbsp;
+
+Vill du ha ett mer konservativt tillvägagångssätt än att bara exponera alla dina företagshemligheter för skrupelfria AI-leverantörer och deras missförstådda gränsmodeller?
+
+&nbsp;
+
 <span class="text-white">Orion är byggd för ledare som vägrar att bosätta sig:</span>
 
 <div class="fade">
 
-- :fa-school-flag: **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar <span class="text-primary-emphasis">Öppen vetenskap</span> plattform.
+- :fa-school-flag: **Universitetsledare** &mdash; Eliminera campusplagiering och stärk säkert samarbete med versionskontrollerad dokumentdelning, kurering och onlinepublicering. Förvandla din akademiska kunskapshantering till en modern, granskningsbar [Öppen vetenskap](https://www.iconoclasts.blog/joe/triple-products) plattform.
 
 </div>
 
@@ -146,26 +172,6 @@ The underlying Static Site Generator: öppen källkod på GitHub under Apache Li
 
 Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ingenjörsarv som går tillbaka till F/OSS-innovationer som lanserades 2011. Redo att uppleva en wiki som faktiskt sparar tid, pengar och huvudvärk? [Ring eller skicka ett meddelande till oss](/contact) idag.
 
-&nbsp;
-
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
-<div class="card-header">Komma igång</div>
-<div class="card-body">
-
-Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions standardversion av <https://iconoclasts.blog> och urholka nedsättningskällorna i `trunk/content`. ~90 % av stylinganpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
-
-De andra 10 % innebär att välja en lämplig bootstrap 5 CSS tema för att ersätta motsvarande filer i `content/css/bootstrap.*`Vi rekommenderar <https://bootswatch.com> för idéer.
-
-Det sista steget är att avlyssna navigeringsmenyerna i `templates/main.html.*`. Vår AI-översättare håller allt synkroniserat på begäran.
-
-Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-mallar i `templates/` för att passa ditt användningsfall?  Vi står till din tjänst!
-
-</div>
-</div>
-</center>
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
@@ -235,7 +241,31 @@ Gå i din egen takt, använd så många anställda / förhandsvisningar / redige
 
 Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade gränssnitt till vår kraftfulla, egenutvecklade PCRE-sökmotor.
 
+&nbsp;
+
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+
+&nbsp;
+
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card-header">Komma igång</div>
+<div class="card-body">
+
+Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions standardversion av <https://iconoclasts.blog> och urholka nedsättningskällorna i `trunk/content`. ~90 % av stylinganpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
+
+De andra 10 % innebär att välja en lämplig bootstrap 5 CSS tema för att ersätta motsvarande filer i `content/css/bootstrap.*`Vi rekommenderar <https://bootswatch.com> för idéer.
+
+Det sista steget är att avlyssna navigeringsmenyerna i `templates/main.html.*`. Vår AI-översättare håller allt synkroniserat på begäran.
+
+Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-mallar i `templates/` för att passa ditt användningsfall?  Vi står till din tjänst!
+
+</div>
+</div>
+</center>
+
 </div>
 </div>
 

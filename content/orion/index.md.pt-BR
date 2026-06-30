@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=46761
+status: verificado=46903
 title: SunStar Orion dos Sistemas
 ---
 
@@ -65,7 +65,7 @@ title: SunStar Orion dos Sistemas
 
 &nbsp;
 
-### Aqui está o passo, tomador de decisão executivo...
+### Aqui está o ROI, Tomador de Decisão Executivo :fa-chart-line:...
 
 <span class="text-white">Por que escolher o Orion? O Jamstack Wiki Plataforma Que Supera &mdash; Custos muito menores</span>
 
@@ -79,11 +79,37 @@ Isso nos permite executar custos operacionais ultrabaixos, oferecendo controles 
 
 &nbsp;
 
+Nada produzirá melhor ROI do que a Orion no espaço do Knowledge Management System.  Adaptamos cada instalação às suas necessidades específicas e estamos sempre disponíveis para consulta e coaching profissional para garantir que você maximize os retornos de seu investimento em nossos produtos e serviços.
+
+&nbsp;
+
+Sua **equipe tem um parceiro em nós** em termos de garantir que você veja os ganhos de produtividade associados à Orion &mdash; projetado para a criação de conhecimento robusto, verificado e colaborativo; e fácil, abrangente, recuperação de informações de precisão.
+
+&nbsp;
+
+<span class="text-white">Deixe os pontos de dor financeiramente drenantes do passado para trás...</span>
+
+Para muitas empresas, o Jira é uma ferramenta maravilhosamente eficaz para o gerenciamento de projetos. No entanto, com o tempo você começa a perceber que [Confluence está apenas marcando para o passeio](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
+
+Se isso ressoar, você está cansado de jogar mais dinheiro bom em um mau investimento por causa da desarticulada, desnormalizada, inalterável, obsoleta, link-rotted Confluence bagunça com um editor de texto ruim e ainda mais ruim Search Engine?
+
+&nbsp;
+
+Não quero desperdiçar capital precioso em um [deterioração do desempenho](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/) caro, inchado, [não confiável](https://isdown.app/status/notion), o serviço SaaS do OCD-lover de uma plataforma para uma regra que não pode cumprir suas promessas de produtividade aprimoradas? Em outras palavras, algo como Noção?
+
+Prefira o *grokability* de um sistema como o Orion &mdash; organizado em torno de *documentos com dados anexados*; em vez de *bancos de dados da Notion com documentos anexados*?
+
+&nbsp;
+
+Quer uma abordagem mais conservadora do que simplesmente expor todos os seus segredos corporativos a fornecedores de IA sem escrúpulos e seus modelos de fronteira ilícitos?
+
+&nbsp;
+
 <span class="text-white">Orion é construído para líderes que se recusam a se estabelecer:</span>
 
 <div class="fade">
 
-- :fa-school-flag: **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, <span class="text-primary-emphasis">Ciência aberta</span> plataforma.
+- :fa-school-flag: **Líderes universitários** &mdash; Elimine o plágio do campus e capacite a colaboração segura e de acesso aberto com compartilhamento de documentos controlados por versão, curadoria e publicação on-line. Transforme seu gerenciamento de conhecimento acadêmico em um moderno, auditável, [Ciência aberta](https://www.iconoclasts.blog/joe/triple-products) plataforma.
 
 </div>
 
@@ -146,26 +172,6 @@ The underlying Static Site Generator: open-sourced on GitHub under Apache Licens
 
 Isso não é marketing spin &mdash; É uma herança de engenharia aberta verificável que remonta às inovações da F/OSS pioneiras em 2011. Pronto para experimentar uma wiki que realmente economiza tempo, dinheiro e dores de cabeça? [Entre em contato conosco ou envie uma mensagem](/contact) hoje.
 
-&nbsp;
-
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
-<div class="card-header">Conceitos Básicos</div>
-<div class="card-body">
-
-A maneira mais rápida de começar é jogar com o build padrão do @SunStarSys/orion de <https://iconoclasts.blog> e esvaziar as fontes de markdown em `trunk/content`.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
-
-O outro 10% envolve a escolha de um tema CSS bootstrap 5 apropriado para substituir os arquivos correspondentes em `content/css/bootstrap.*`; recomendamos <https://bootswatch.com> para ideias.
-
-O passo final é rejigger os menus de navegação topmatter em `templates/main.html.*`. Nosso tradutor de IA manterá tudo sincronizado sob demanda.
-
-Precisa de ajuda para personalizar o `Perl` sistema de compilação em `lib/` e outros modelos Django em `templates/` para se adequar ao seu caso de uso?  Estamos ao seu serviço!
-
-</div>
-</div>
-</center>
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
@@ -235,7 +241,31 @@ Vá no seu próprio ritmo, use quantos funcionários / visualizações / ediçõ
 
 Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habilitadas para javascript para o nosso poderoso e proprietário mecanismo de pesquisa PCRE.
 
+&nbsp;
+
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+
+&nbsp;
+
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card-header">Conceitos Básicos</div>
+<div class="card-body">
+
+A maneira mais rápida de começar é jogar com o build padrão do @SunStarSys/orion de <https://iconoclasts.blog> e esvaziar as fontes de markdown em `trunk/content`.  ~90% das personalizações de estilo estão em [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Ajuste-se ao gosto!
+
+O outro 10% envolve a escolha de um tema CSS bootstrap 5 apropriado para substituir os arquivos correspondentes em `content/css/bootstrap.*`; recomendamos <https://bootswatch.com> para ideias.
+
+O passo final é rejigger os menus de navegação topmatter em `templates/main.html.*`. Nosso tradutor de IA manterá tudo sincronizado sob demanda.
+
+Precisa de ajuda para personalizar o `Perl` sistema de compilação em `lib/` e outros modelos Django em `templates/` para se adequar ao seu caso de uso?  Estamos ao seu serviço!
+
+</div>
+</div>
+</center>
+
 </div>
 </div>
 

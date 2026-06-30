@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=46761
+status: 確認済み=46903
 title: SunStarシステムのOrion
 ---
 
@@ -65,7 +65,7 @@ title: SunStarシステムのOrion
 
 &nbsp;
 
-### ピッチ、エグゼクティブ・ディシジョン・メーカー...
+### ROI、エグゼクティブ・ディシジョン・メーカー:fa-chart-line:...
 
 <span class="text-white">なぜオリオンを選ぶのか? ジャムスタックWikiプラットフォーム&mdash; コスト削減</span>
 
@@ -79,11 +79,37 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
+ナレッジ・マネジメント・システムの領域では、Orionよりも優れたROIは得られません。私達はあなたの特定の条件にあらゆる取付けを調整し、私達のプロダクトおよびサービスへのあなたの投資の利益を最大にすることを保障するために相談および専門のコーチングのために常に利用できます。
+
+&nbsp;
+
+オリオンに関連する生産性の向上を確認するという点で、**チームにはパートナーがいます** &mdash; 堅牢で検証済みの協調的なナレッジ作成のために設計されており、簡単で包括的な精密な情報取得が可能です。
+
+&nbsp;
+
+<span class="text-white">過去の財政的な苦痛ポイントを残す...</span>
+
+多くの企業にとって、Jiraはプロジェクト管理にとって非常に効果的なツールです。しかし、時間が経つにつれて、あなたはそれを認識し始めます[コンフルエンスはただ乗り物のためにタグ付けしています](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
+
+それが共鳴した場合、あなたは失点、非正規化、維持不可能な、古い、リンクが張られた混乱のため、悪い投資でより多くの良いお金を投げることに飽きていますか? Lousy Text EditorとさらにLousier Search Engineで混乱?
+
+&nbsp;
+
+Don't Want To Waste Precious Capital On Aシングル[パフォーマンスの低下](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/) 高価、膨らんだ、[信頼できない](https://isdown.app/status/notion)OCD-loverのSaaSサービスは、生産性の向上を約束できないプラットフォームです。言い換えれば、概念のようなものでしょうか。
+
+Orionのようなシステムの*grokability*を優先する&mdash; 添付されたデータ*を含む*ドキュメントを中心に編成されています。Notionの*データベースではなく、ドキュメント*が添付されていますか。
+
+&nbsp;
+
+企業の秘密を、ばかげたAIベンダーやその未知のフロンティア・モデルに公開するだけではなく、より保守的なアプローチをお望みですか?
+
+&nbsp;
+
 <span class="text-white">Orionは、解決を拒否するリーダー向けに構築されています。</span>
 
 <div class="fade">
 
-- :fa-school-flag: **大学リーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換<span class="text-primary-emphasis">オープンサイエンス</span> プラットフォーム
+- :fa-school-flag: **大学リーダー** &mdash; キャンパスの盗用を排除し、バージョン管理されたドキュメント共有、キュレーション、オンライン公開により、セキュアでオープンアクセスのコラボレーションを強化します。学術知識管理を最新の監査可能なものに変換[オープンサイエンス](https://www.iconoclasts.blog/joe/triple-products) プラットフォーム
 
 </div>
 
@@ -146,26 +172,6 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 これはマーケティング・スピンではありません&mdash; 2011年に開拓されたF/OSSイノベーションにさかのぼる検証可能なオープン・エンジニアリングの遺産です。実際に時間、お金、頭痛を節約するWikiを体験する準備はできていますか? [私たちに電話をかけるか、メモをください](/contact) 本日。
 
-&nbsp;
-
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
-<div class="card-header">はじめに</div>
-<div class="card-body">
-
-最も簡単な方法は、@SunStarSys/orionのデフォルトのビルドで再生することです。<https://iconoclasts.blog> でマークダウンソースを空にする`trunk/content`.  スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
-
-他の10%は、対応するファイルを置き換えるために適切なブートストラップ5 CSSテーマを選択することを含みます`content/css/bootstrap.*`; 推奨<https://bootswatch.com> アイデア
-
-最後のステップは、トマッタのナビゲーション・メニューを再トリガーすることです。`templates/main.html.*`。AI翻訳者は、すべてをオンデマンドで同期します。
-
-カスタマイズに関するサポートが必要`Perl` システム構築`lib/` その他のDjangoテンプレート`templates/` ユースケースに合うか? 私たちはあなたのサービスにいます!
-
-</div>
-</div>
-</center>
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
@@ -235,7 +241,31 @@ Apacheソフトウェア・プロジェクト・コミュニティが、Confluen
 
 さらに、すべてのクライアントには、強力な独自のPCRE検索エンジンへの、テンプレートでカスタマイズ可能な、またはjavascript対応の無料インタフェースがあります。
 
+&nbsp;
+
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+
+&nbsp;
+
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card-header">はじめに</div>
+<div class="card-body">
+
+最も簡単な方法は、@SunStarSys/orionのデフォルトのビルドで再生することです。<https://iconoclasts.blog> でマークダウンソースを空にする`trunk/content`.  スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
+
+他の10%は、対応するファイルを置き換えるために適切なブートストラップ5 CSSテーマを選択することを含みます`content/css/bootstrap.*`; 推奨<https://bootswatch.com> アイデア
+
+最後のステップは、トマッタのナビゲーション・メニューを再トリガーすることです。`templates/main.html.*`。AI翻訳者は、すべてをオンデマンドで同期します。
+
+カスタマイズに関するサポートが必要`Perl` システム構築`lib/` その他のDjangoテンプレート`templates/` ユースケースに合うか? 私たちはあなたのサービスにいます!
+
+</div>
+</div>
+</center>
+
 </div>
 </div>
 

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 46761
+status: אומתו 46903
 title: SunStar אוריון מערכות
 ---
 
@@ -65,7 +65,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-### הנה המגרש, מקבל החלטות מנהלים...
+### הנה ה-ROI, מקבל ההחלטות הפועל :fa-chart-line:...
 
 <span class="text-white">למה לבחור באוריון? ג'יימסטק וויקי פלטפורמה שעולה על הביצועים &mdash; עלויות הרבה פחות</span>
 
@@ -79,11 +79,37 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
+שום דבר לא יניב החזר השקעה טוב יותר מאשר אוריון במרחב מערכת ניהול הידע.  אנו מתאימים כל התקנה לדרישות הספציפיות שלך, וזמינים תמיד להתייעצות ואימון מקצועי כדי להבטיח לך למקסם את התשואה על ההשקעה שלך במוצרים ובשירותים שלנו.
+
+&nbsp;
+
+לצוות שלך יש שותף בתוכנו** במונחים של הבטחה שתראה את רווחי הפרודוקטיביות הקשורים לאוריון &mdash; מיועד ליצירת ידע חזק, מאומת, שיתופי; ואחזור מידע קל, מקיף ומדויק.
+
+&nbsp;
+
+<span class="text-white">השאירו את נקודות הכאב של העבר מאחור...</span>
+
+עבור חברות רבות, ג'ירה היא כלי יעיל להפליא לניהול פרויקטים. עם הזמן אתה מתחיל להבין כי [ההשפעה היא רק תיוג לאורך הנסיעה](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
+
+אם זה מהדהד, נמאס לך לזרוק יותר כסף טוב על השקעה גרועה בגלל מאוכזב, לא מנורמל, לא ניתן לתחזוקה, מיושן, קישור מוטה בלגן עם עורך טקסט מחורבן ואפילו מנוע חיפוש מחורבן יותר?
+
+&nbsp;
+
+לא רוצה לבזבז הון יקר על [הביצועים מתדרדרים](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/) יקר, נפוח, [לא אמין](https://isdown.app/status/notion), שירות SaaS של אוהבי OCD אחד לפלטפורמה לכל אחד מהם שאינו יכול לעמוד בהבטחות הפרודוקטיביות המשופרות שלו? או משהו כמו רעיון?
+
+מעדיף את יכולת השחיקה של מערכת כמו אוריון &mdash; מאורגן סביב *מסמכים עם נתונים מצורפים*; במקום מסדי הנתונים *של Notion עם מסמכים מצורפים*?
+
+&nbsp;
+
+רוצים גישה שמרנית יותר מאשר פשוט לחשוף את כל הסודות הארגוניים שלכם לספקי בינה מלאכותית חסרי מצפון ולמודלים המתקדמים שלהם?
+
+&nbsp;
+
 <span class="text-white">אוריון בנוי למנהיגים שמסרבים להתיישב:</span>
 
 <div class="fade">
 
-- :fa-school-flag: מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, <span class="text-primary-emphasis">מדע פתוח</span> פלטפורמה.
+- :fa-school-flag: מנהיגות אוניברסיטאית** &mdash; סלק את גנבות הקמפוס והעצים שיתוף פעולה מאובטח עם גישה פתוחה עם שיתוף מסמכים, אוצרות ופרסום מקוון בשליטת גרסאות. להפוך את ניהול הידע האקדמי שלך למודרני, ניתן לביקורת, [מדע פתוח](https://www.iconoclasts.blog/joe/triple-products) פלטפורמה.
 
 </div>
 
@@ -146,26 +172,6 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 
 זה לא ספין שיווקי &mdash; מורשת הנדסית פתוחה וניתנת לאימות החל מחידושי F/OSS החלוצים בשנת 2011. מוכנים לחוות ויקי שבאמת חוסך זמן, כסף וכאבי ראש? [שלחו לנו הודעה או שלחו לנו הודעה](/contact) היום.
 
-&nbsp;
-
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
-<div class="card-header">צעדים ראשונים</div>
-<div class="card-body">
-
-הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's default build של <https://iconoclasts.blog> ולחלול את מקורות markdown ב `trunk/content`.  כ-90% מההתאמות האישיות של העיצוב נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
-
-10% האחרים כוללים בחירת ערכת bootstrap 5 CSS מתאימה כדי להחליף את הקבצים המתאימים ב `content/css/bootstrap.*`; אנו ממליצים <https://bootswatch.com> לרעיונות.
-
-השלב האחרון הוא לחדש את תפריטי הניווט העליון ב `templates/main.html.*`. מתרגם הבינה המלאכותית שלנו ישמור הכל מסונכרן לפי דרישה.
-
-זקוק לעזרה בהתאמה אישית `Perl` בניית מערכת ב- `lib/` ותבניות ג'אנגו אחרות ב `templates/` כדי להתאים למקרה השימוש שלך?  אנחנו לשירותכם!
-
-</div>
-</div>
-</center>
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
@@ -235,7 +241,31 @@ div#lightning img {width:100%}
 
 בנוסף, לכל הלקוחות יש ממשקים חינמיים, הניתנים להתאמה אישית על-ידי התבנית או התומכים ב-javascript למנוע החיפוש הקנייני שלנו PCRE.
 
+&nbsp;
+
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+
+&nbsp;
+
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card-header">צעדים ראשונים</div>
+<div class="card-body">
+
+הדרך המהירה ביותר ללכת היא לשחק עם @SunStarSys/orion's default build של <https://iconoclasts.blog> ולחלול את מקורות markdown ב `trunk/content`.  כ-90% מההתאמות האישיות של העיצוב נמצאות ב- [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; התאמה לטעם!
+
+10% האחרים כוללים בחירת ערכת bootstrap 5 CSS מתאימה כדי להחליף את הקבצים המתאימים ב `content/css/bootstrap.*`; אנו ממליצים <https://bootswatch.com> לרעיונות.
+
+השלב האחרון הוא לחדש את תפריטי הניווט העליון ב `templates/main.html.*`. מתרגם הבינה המלאכותית שלנו ישמור הכל מסונכרן לפי דרישה.
+
+זקוק לעזרה בהתאמה אישית `Perl` בניית מערכת ב- `lib/` ותבניות ג'אנגו אחרות ב `templates/` כדי להתאים למקרה השימוש שלך?  אנחנו לשירותכם!
+
+</div>
+</div>
+</center>
+
 </div>
 </div>
 

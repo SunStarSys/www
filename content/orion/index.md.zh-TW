@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =46761
+status: 驗證 =46903
 title: SunStar 系統的 Orion
 ---
 
@@ -65,7 +65,7 @@ title: SunStar 系統的 Orion
 
 &nbsp;
 
-### 下面是高階主管決策者...
+### 以下是 ROI、執行決策者:fa-chart-line:...
 
 <span class="text-white">為何選擇 Orion？The Jamstack Wiki 平台的效能超越&mdash; 與成本更少</span>
 
@@ -79,11 +79,37 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
+知識管理系統空間中的投資報酬率不會比 Orion 更高。我們根據您的具體要求量身訂做每項安裝，並隨時提供諮詢和專業指導，以確保您對我們產品和服務的投資獲得最大回報。
+
+&nbsp;
+
+您的 **團隊在我們** 中有合作夥伴，以確保您看到與 Orion 相關的生產力提升&mdash; 專為建立強大、經過驗證的協作知識而設計；且可輕鬆、全面、精確地擷取資訊。
+
+&nbsp;
+
+<span class="text-white">留下過去背後的財務痛點...</span>
+
+對許多公司來說，Jira 是非常有效的專案管理工具。不過，隨著時間的推移，您開始瞭解到[Confluence 只是為旅程加上標籤](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
+
+如果這種共鳴，您是否厭倦了因為失望、反正規化、無法維護、過時、連鎖節奏的 Confluence 訊息，連同眾多的文字編輯器，甚至是更寬鬆的搜尋引擎而投注更多資金？
+
+&nbsp;
+
+不想改為浪費寶貴的資本[效能惡化](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/) 昂貴、浮動、[不可靠](https://isdown.app/status/notion)，一個平台到所有 OCD-lover 的 SaaS 服務無法實現其增強的生產力承諾嗎？換句話說，像是「概念」？
+
+偏好使用 Orion 等系統的 *grokability* &mdash; 依據 *文件與附加資料* 進行組織；而不是 Notion 的 *資料庫與附加的文件 *？
+
+&nbsp;
+
+想要一個更保守的方法，不只是向不正當的 AI 供應商及其未被遺忘的邊界模型公開您的所有公司祕書嗎？
+
+&nbsp;
+
 <span class="text-white">Orion 專為拒絕解決的領導者而打造：</span>
 
 <div class="fade">
 
-- :fa-school-flag: **大學領袖** &mdash; 透過由版本控制的文件共用、策展和線上發布，消除校園困擾，並強化安全、開放存取的協作。將您的學術知識管理轉變為現代化且可稽核的<span class="text-primary-emphasis">開放科學</span> 平台。
+- :fa-school-flag: **大學領袖** &mdash; 透過由版本控制的文件共用、策展和線上發布，消除校園困擾，並強化安全、開放存取的協作。將您的學術知識管理轉變為現代化且可稽核的[開放科學](https://www.iconoclasts.blog/joe/triple-products) 平台。
 
 </div>
 
@@ -146,26 +172,6 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 這不是行銷微調&mdash; 它是可驗證的開放式工程傳統，可追溯至 2011 年 F/OSS 創新技術。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？[給我們打電話或給我們留言](/contact) 今天。
 
-&nbsp;
-
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:transparent;color:#392806">
-<div class="card-header">入門</div>
-<div class="card-body">
-
-最快的方法是使用 @SunStarSys/orion 的預設建置版本來播放<https://iconoclasts.blog> 並清除以下的 Markdown 來源：`trunk/content`。   約 90% 的樣式自訂項目位於[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
-
-其他 10% 涉及選擇適當的啟動安裝 5 CSS 主題來取代下列位置的對應檔案：`content/css/bootstrap.*`我們建議<https://bootswatch.com> 意見。
-
-最後一個步驟是重新觸發頂端內容導覽功能表，位於`templates/main.html.*`。我們的 AI 翻譯人員將隨時隨地保持同步。
-
-需要自訂說明`Perl` 建立系統於`lib/` 與其他 Django 範本位於`templates/` 符合您的使用案例？我們為您服務！
-
-</div>
-</div>
-</center>
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 
@@ -235,7 +241,31 @@ div#lightning img {width:100%}
 
 此外，所有客戶都擁有免費、可自訂範本或支援 javascript 的介面，適用於我們強大的專屬 PCRE 搜尋引擎。
 
+&nbsp;
+
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+
+&nbsp;
+
+&nbsp;
+
+<center>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:white;color:#392806">
+<div class="card-header">入門</div>
+<div class="card-body">
+
+最快的方法是使用 @SunStarSys/orion 的預設建置版本來播放<https://iconoclasts.blog> 並清除以下的 Markdown 來源：`trunk/content`。   約 90% 的樣式自訂項目位於[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
+
+其他 10% 涉及選擇適當的啟動安裝 5 CSS 主題來取代下列位置的對應檔案：`content/css/bootstrap.*`我們建議<https://bootswatch.com> 意見。
+
+最後一個步驟是重新觸發頂端內容導覽功能表，位於`templates/main.html.*`。我們的 AI 翻譯人員將隨時隨地保持同步。
+
+需要自訂說明`Perl` 建立系統於`lib/` 與其他 Django 範本位於`templates/` 符合您的使用案例？我們為您服務！
+
+</div>
+</div>
+</center>
+
 </div>
 </div>
 
