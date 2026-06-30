@@ -174,41 +174,7 @@ The underlying Static Site Generator: с открытым исходным ко�
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((КМС))
-    (Платформы Wiki)
-      ((Орион))
-      [Слияние]
-      [Понятие]
-    (Контроль версий)
-      [Использование]
-        Курация контента
-        Управление доступом
-        Неизменяемая история
-      [Инструменты]
-        Гит
-        Подвержение
-    (Джамстек)
-      [CMS]
-        Авторы
-        Исследователи
-        Кураторы
-      [Сборки сайтов]
-        Разработчики
-        Архитекторы
-      [Безопасность]
-    (ИИ)
-     RAG
-     Клиника
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((КМС))
+    (Платформы Wiki)
+      ((Орион))
+      [Слияние]
+      [Понятие]
+    (Контроль версий)
+      [Использование]
+        Курация контента
+        Управление доступом
+        Неизменяемая история
+      [Инструменты]
+        Гит
+        Подвержение
+    (Джамстек)
+      [CMS]
+        Авторы
+        Исследователи
+        Кураторы
+      [Сборки сайтов]
+        Разработчики
+        Архитекторы
+      [Безопасность]
+    (ИИ)
+     RAG
+     Клиника
+```
+
+</a>
 
 &nbsp;
 

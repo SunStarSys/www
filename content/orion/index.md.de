@@ -174,41 +174,7 @@ Das ist kein Marketing-Spin &mdash; Es ist ein nachweisbares, offenes technische
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Wiki-Plattformen)
-      ((Orion))
-      [Konflikt]
-      [Begriff]
-    (Versionskontrolle)
-      [Verwendungen]
-        Inhaltskuratierung
-        Zugriffskontrollen
-        Unveränderliche Geschichte
-      [Werkzeuge]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        Autoren
-        Forscher
-        Verwalter
-      [Site-Builds]
-        Entwickler
-        Architekten
-      [Sicherheit]
-    (KI)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ Darüber hinaus verfügen alle Kunden über kostenlose, anpassbare oder javascri
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((KMS))
+    (Wiki-Plattformen)
+      ((Orion))
+      [Konflikt]
+      [Begriff]
+    (Versionskontrolle)
+      [Verwendungen]
+        Inhaltskuratierung
+        Zugriffskontrollen
+        Unveränderliche Geschichte
+      [Werkzeuge]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Autoren
+        Forscher
+        Verwalter
+      [Site-Builds]
+        Entwickler
+        Architekten
+      [Sicherheit]
+    (KI)
+     RAG
+     CLI
+```
+
+</a>
 
 &nbsp;
 

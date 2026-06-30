@@ -174,41 +174,7 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Wikiプラットフォーム)
-      ((オリオン))
-      [影響]
-      [注釈]
-    (バージョン管理)
-      [使用]
-        コンテンツキュレーション
-        アクセス制御
-        不変履歴
-      [ツール]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        作者
-        研究者
-        責任者
-      [サイト構築]
-        開発者
-        建築家
-      [セキュリティ]
-    (AI)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ Apacheソフトウェア・プロジェクト・コミュニティが、Confluen
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((KMS))
+    (Wikiプラットフォーム)
+      ((オリオン))
+      [影響]
+      [注釈]
+    (バージョン管理)
+      [使用]
+        コンテンツキュレーション
+        アクセス制御
+        不変履歴
+      [ツール]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        作者
+        研究者
+        責任者
+      [サイト構築]
+        開発者
+        建築家
+      [セキュリティ]
+    (AI)
+     RAG
+     CLI
+```
+
+</a>
 
 &nbsp;
 

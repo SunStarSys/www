@@ -174,41 +174,7 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Wiki 平台)
-      ((奧里昂))
-      [影響]
-      [概念]
-    (版本控制)
-      [使用]
-        內容策展
-        存取控制
-        不可變歷史記錄
-      [工具]
-        Git
-        子版本
-    (Jamstack)
-      [CMS]
-        作者
-        研究業績
-        群組負責人
-      [網站建置版本]
-        開發者
-        架構師
-      [安全]
-    (AI)
-     紅色、綠色
-     CLI
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((KMS))
+    (Wiki 平台)
+      ((奧里昂))
+      [影響]
+      [概念]
+    (版本控制)
+      [使用]
+        內容策展
+        存取控制
+        不可變歷史記錄
+      [工具]
+        Git
+        子版本
+    (Jamstack)
+      [CMS]
+        作者
+        研究業績
+        群組負責人
+      [網站建置版本]
+        開發者
+        架構師
+      [安全]
+    (AI)
+     紅色、綠色
+     CLI
+```
+
+</a>
 
 &nbsp;
 

@@ -174,41 +174,7 @@ Esto no es marketing spin &mdash; Es un patrimonio de ingeniería verificable y 
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Plataformas wiki)
-      ((Orión))
-      [Confluencia]
-      [Noción]
-    (Control de versiones)
-      [Usos]
-        Curación de contenido
-        Controles de acceso
-        Historial inmutable
-      [Herramientas]
-        Git
-        Subversión
-    (Jamstack)
-      [CMS]
-        Autores
-        Investigadores
-        Curadores
-      [Compilaciones del sitio]
-        Desarrolladores
-        Arquitectos
-      [Seguridad]
-    (IA)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ Además, todos los clientes tienen interfaces gratuitas, personalizables por pla
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((KMS))
+    (Plataformas wiki)
+      ((Orión))
+      [Confluencia]
+      [Noción]
+    (Control de versiones)
+      [Usos]
+        Curación de contenido
+        Controles de acceso
+        Historial inmutable
+      [Herramientas]
+        Git
+        Subversión
+    (Jamstack)
+      [CMS]
+        Autores
+        Investigadores
+        Curadores
+      [Compilaciones del sitio]
+        Desarrolladores
+        Arquitectos
+      [Seguridad]
+    (IA)
+     RAG
+     CLI
+```
+
+</a>
 
 &nbsp;
 

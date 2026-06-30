@@ -174,41 +174,7 @@ Isso não é marketing spin &mdash; É uma herança de engenharia aberta verific
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Plataformas Wiki)
-      ((Orion))
-      [Confluência]
-      [Noção]
-    (Controle de Versão)
-      [Usos]
-        Curadoria de Conteúdo
-        Controles de Acesso
-        Histórico imutável
-      [Ferramentas]
-        Git
-        Subversão
-    (Jamstack)
-      [CMS]
-        Autores
-        Pesquisadores
-        Curadores
-      [Compilações de sites]
-        Desenvolvedores
-        Arquitetos
-      [Segurança]
-    (IA)
-     RAG
-     CLIENTE
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ Além disso, todos os clientes têm interfaces gratuitas, customizáveis ou habi
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((KMS))
+    (Plataformas Wiki)
+      ((Orion))
+      [Confluência]
+      [Noção]
+    (Controle de Versão)
+      [Usos]
+        Curadoria de Conteúdo
+        Controles de Acesso
+        Histórico imutável
+      [Ferramentas]
+        Git
+        Subversão
+    (Jamstack)
+      [CMS]
+        Autores
+        Pesquisadores
+        Curadores
+      [Compilações de sites]
+        Desenvolvedores
+        Arquitetos
+      [Segurança]
+    (IA)
+     RAG
+     CLIENTE
+```
+
+</a>
 
 &nbsp;
 

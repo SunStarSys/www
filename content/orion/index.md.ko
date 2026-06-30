@@ -174,41 +174,7 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (위키 플랫폼)
-      ((오리온))
-      [영향]
-      [개념]
-    (버전 관리)
-      [사용]
-        콘텐츠 큐레이션
-        액세스 제어
-        변경할 수 없는 내역
-      [도구]
-        Git
-        하위 버전
-    (잼스택)
-      [CMS]
-        저자
-        연구원
-        큐레이션 그룹
-      [사이트 빌드]
-        개발자
-        아키텍트
-      [보안]
-    (AI)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((KMS))
+    (위키 플랫폼)
+      ((오리온))
+      [영향]
+      [개념]
+    (버전 관리)
+      [사용]
+        콘텐츠 큐레이션
+        액세스 제어
+        변경할 수 없는 내역
+      [도구]
+        Git
+        하위 버전
+    (잼스택)
+      [CMS]
+        저자
+        연구원
+        큐레이션 그룹
+      [사이트 빌드]
+        개발자
+        아키텍트
+      [보안]
+    (AI)
+     RAG
+     CLI
+```
+
+</a>
 
 &nbsp;
 

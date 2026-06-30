@@ -174,41 +174,7 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Wiki-plattformar)
-      ((Orion))
-      [Påverkan]
-      [Begrepp]
-    (Versionskontroll)
-      [Användningar]
-        Innehållskurering
-        Åtkomstkontroller
-        Oföränderlig historik
-      [Verktyg]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        Upphovsmän
-        Forskare
-        Kuratorer
-      [Platsbyggen]
-        Utvecklare
-        Arkitekter
-      [Säkerhet]
-    (AI)
-     RAG
-     kommandoradsgränssnitt
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((KMS))
+    (Wiki-plattformar)
+      ((Orion))
+      [Påverkan]
+      [Begrepp]
+    (Versionskontroll)
+      [Användningar]
+        Innehållskurering
+        Åtkomstkontroller
+        Oföränderlig historik
+      [Verktyg]
+        Git
+        Subversion
+    (Jamstack)
+      [CMS]
+        Upphovsmän
+        Forskare
+        Kuratorer
+      [Platsbyggen]
+        Utvecklare
+        Arkitekter
+      [Säkerhet]
+    (AI)
+     RAG
+     kommandoradsgränssnitt
+```
+
+</a>
 
 &nbsp;
 

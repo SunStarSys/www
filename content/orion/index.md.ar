@@ -174,41 +174,7 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((نظام إدارة المحتوى))
-    (منصات ويكي)
-      ((أوريون))
-      [التوافق]
-      [الفكرة]
-    (التحكم في الإصدار)
-      [الاستخدامات]
-        معالجة المحتوى
-        عناصر التحكم في الوصول
-        تاريخ غير قابل للتغيير
-      [الأدوات]
-        غيت
-        الإصدار الفرعي
-    (جامستاك)
-      [نظام إدارة المحتوى]
-        المؤلفون
-        باحثون
-        الأمناء
-      [إصدارات الموقع]
-        المطورين
-        معماريون
-      [الأمان]
-    (الذكاء الاصطناعي)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -278,9 +244,38 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="https://iconoclasts.blog/joe/wikis">
 
-&nbsp;
+```mermaid
+mindmap
+  root((نظام إدارة المحتوى))
+    (منصات ويكي)
+      ((أوريون))
+      [التوافق]
+      [الفكرة]
+    (التحكم في الإصدار)
+      [الاستخدامات]
+        معالجة المحتوى
+        عناصر التحكم في الوصول
+        تاريخ غير قابل للتغيير
+      [الأدوات]
+        غيت
+        الإصدار الفرعي
+    (جامستاك)
+      [نظام إدارة المحتوى]
+        المؤلفون
+        باحثون
+        الأمناء
+      [إصدارات الموقع]
+        المطورين
+        معماريون
+      [الأمان]
+    (الذكاء الاصطناعي)
+     RAG
+     CLI
+```
+
+</a>
 
 &nbsp;
 
