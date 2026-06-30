@@ -83,7 +83,7 @@ Ingenting kommer att ge bättre avkastning på investeringen än Orion i kunskap
 
 &nbsp;
 
-Ditt **team har en partner i oss** när det gäller att se till att du ser produktivitetsvinsterna i samband med Orion &mdash; utformad för robust, verifierad, samarbetsorienterad kunskapsskapande; och enkel, omfattande, precisionsinformationssökning därav.
+Ditt **team har en partner inom oss** för att se till att du ser de förväntade produktivitetsvinsterna och kundnöjdheten i samband med Orion &mdash; utformad för robust, verifierad, samarbetsorienterad kunskapsskapande; och enkel, omfattande, precisionsinformationssökning därav.
 
 &nbsp;
 

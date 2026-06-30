@@ -83,7 +83,7 @@ Nada producirá mejor ROI que Orion en el espacio del Sistema de Gestión del Co
 
 &nbsp;
 
-Su **equipo tiene un socio en nosotros** para garantizar que vea las ganancias de productividad asociadas con Orion &mdash; Diseñado para la creación de conocimiento robusto, verificado y colaborativo; y la recuperación de información fácil, completa y precisa de la misma.
+Su **equipo tiene un socio en nosotros** para garantizar que vea las ganancias de productividad anticipadas y la satisfacción del cliente asociadas con Orion &mdash; Diseñado para la creación de conocimiento robusto, verificado y colaborativo; y la recuperación de información fácil, completa y precisa de la misma.
 
 &nbsp;
 
