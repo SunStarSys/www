@@ -1,0 +1,69 @@
+{
+  "deletions": {
+    "files": {
+      "seg_1z": {
+        "count": "7",
+        "filename": "seg_27/deletions-seg_1z.bv"
+      },
+      "seg_26": {
+        "count": "7",
+        "filename": "seg_27/deletions-seg_26.bv"
+      }
+    },
+    "format": "1"
+  },
+  "documents": {
+    "format": "2"
+  },
+  "highlight": {
+    "format": "1"
+  },
+  "lexicon": {
+    "counts": {
+      "acl": "3",
+      "content": "2254",
+      "keywords": "31",
+      "path": "7",
+      "status": "4",
+      "title": "12"
+    },
+    "format": "3",
+    "index_counts": {
+      "acl": "1",
+      "content": "18",
+      "keywords": "1",
+      "path": "1",
+      "status": "1",
+      "title": "1"
+    }
+  },
+  "postings": {
+    "format": "1"
+  },
+  "segmeta": {
+    "count": "7",
+    "field_names": [
+      "",
+      "status",
+      "categories",
+      "title",
+      "path",
+      "acl",
+      "content",
+      "type",
+      "keywords"
+    ],
+    "format": "1",
+    "name": "seg_27"
+  },
+  "sort": {
+    "counts": {
+      "path": "7"
+    },
+    "format": "3",
+    "null_ords": {},
+    "ord_widths": {
+      "path": "4"
+    }
+  }
+}
