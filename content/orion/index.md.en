@@ -88,11 +88,11 @@ Information retrieval is a fundamentally different problem domain than content c
 
 &nbsp;
 
-Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass byt the CMS. We also provide customers with a reporting infrastructure to **catch stale links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterantions to the prose, because with Orion's mermaid integration, the diagram sources are **embedded in the prose** itself.
+Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass by Orion's CMS. We also provide customers with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterantions to the prose, because with Orion's mermaid integration, the diagram sources are **embedded in the prose** itself.
 
 &nbsp;
 
-Never seen a system that can reliably integrate content/data across independent source files?  Orion can, with full respect for the access controls on each source file.  There's simply no way to launder data through the integration functionality, and there's nobody else out there who has put this much thought into the process.
+Never seen a system that can reliably integrate content/data across independent source files?  Orion can, with full respect for the access controls on each source file.  There's simply no way to launder data through the integration functionality, and there's nobody else out there who has put this much thought into securing every aspect of their product.
 
 &nbsp;
 
