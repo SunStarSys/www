@@ -84,7 +84,11 @@ Didn't find precisely what you were looking for in the search's hits? Refine you
 
 &nbsp;
 
-Taxonomies aren't tacked on as an emergent afterthought, but with structural planning and consistent heirarchical organization informed by experienced information architects across your team and ours. Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass. We also provide you with a reporting infrastructure to catch stale links on demand, even when the pages involved haven't been edited in months.
+Information retrieval is a fundamentally different problem domain than content creation/modification, but CRUD-based wiki apps cannot make this distinction in a meaningful way.  With Orion's Jamstack design, taxonomies aren't tacked on as a generic/emergent afterthought, but with structural planning and consistent heirarchical organization informed by experienced information architects across your team and ours.
+
+&nbsp;
+
+Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass byt the CMS. We also provide customers with a reporting infrastructure to **catch stale links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterantions to the prose, because with Orion's mermaid integration, the diagram sources are **embedded in the prose** itself.
 
 &nbsp;
 
