@@ -185,18 +185,6 @@ Want a more conservative approach than simply exposing all of your corporate sec
 
 Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markdown and standard Version Control workflows. No proprietary formats. No migration nightmares.
 
-&nbsp;
-
-<span class="text-white">Want transparency? See for yourself:</span>
-
-Our entire build-system logic for this very website: fewer than 100 lines of code, complete with sophisticated, memoized dependency management that auto-generates multilingual sitemaps, directory indexes, and more.
-
-View the source: [our private source lib tree](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its public [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
-
-The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → @SunStarSys/orion
-
-This isn't marketing spin &mdash; it's verifiable, open engineering heritage dating back to F/OSS innovations pioneered in 2011. Ready to experience a wiki that actually saves time, money, and headaches? [Give us a call or drop us a note](/contact) today.
-
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
@@ -269,6 +257,20 @@ In addition, all clients have free, template-customizable or javascript-enabled 
 
 &nbsp;
 
+<span class="text-white">Want transparency? See for yourself:</span>
+
+Our entire build-system logic for this very website: fewer than 100 lines of code, complete with sophisticated, memoized dependency management that auto-generates multilingual sitemaps, directory indexes, and more.
+
+View the source: [our private source lib tree](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its public [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → @SunStarSys/orion
+
+This isn't marketing spin &mdash; it's verifiable, open engineering heritage dating back to F/OSS innovations pioneered in 2011. Ready to experience a wiki that actually saves time, money, and headaches? [Give us a call or drop us a note](/contact) today.
+
+&nbsp;
+
+&nbsp;
+
 <a href="https://iconoclasts.blog/joe/wikis">
 
 ```mermaid
@@ -301,6 +303,8 @@ mindmap
 ```
 
 </a>
+
+&nbsp;
 
 &nbsp;
 
