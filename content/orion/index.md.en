@@ -76,7 +76,11 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-How so? By standardizing everything on a handful of text/source document formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. Since we search version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought information.
+How so? By standardizing everything on a handful of text/source document formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. No more lost productivity trying to find critical infosec details locked in an obscure data table somewhere in a Confluence space, and in frustration reaching out to teammates who don't know where it is, either.  And escalating the time sink to managers, and so it goes. Just not with Orion.
+
+&nbsp;
+
+Since we search version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought information. Accuracy and precision as productivity enablers.
 
 &nbsp;
 
@@ -88,15 +92,17 @@ Information retrieval is a fundamentally different problem domain than content c
 
 &nbsp;
 
-Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass by Orion's CMS. We also provide customers with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterations to the prose, because with Orion's mermaid integration, **the diagram sources are embedded in the prose** itself.
+
+With Orion, content curation tooling is a first order feature, not an opportunity to upsell. Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass by Orion's CMS. We also provide customers with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterations to the prose, because with Orion's mermaid integration, **the diagram sources are embedded in the prose** itself.  Painless recursive search / replace on those stale links is built into the PCRE search engine in the CMS.
+
 
 &nbsp;
 
-As your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated HTTP redirects from the original locations to the new targets, but also continues to enshrine the existing ACLs in perpetuity to ensure your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access to Orion's version control interfaces to your wiki.
+As your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated HTTP redirects from the original locations to the new targets, but also continues to enshrine the existing ACLs in perpetuity to ensure your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access through Orion's version control interfaces to your wiki.
 
 &nbsp;
 
-Never seen a system that can reliably integrate content/data across independent source files?  Orion can, with full respect for the cross-dependencies and access controls on each source file.  There's simply no way to launder content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications flowing downstream to induce concurrent builds of their dependent files. And there's nobody else out there who has put this much refinement into every aspect of their wiki product as a total package.
+Never seen a system that can reliably integrate content/data across independent source files?  Orion can, with full respect for the cross-dependencies and authorization controls on each source file.  There's simply no way to launder content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications flowing downstream to induce concurrent builds of their dependent files. And there's nobody else out there who has put this much refinement into every aspect of their wiki product as a total package.
 
 &nbsp;
 
