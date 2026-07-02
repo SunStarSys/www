@@ -76,7 +76,11 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-How so? By standardizing everything on a handful of text/source document formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. No more lost productivity trying to find critical infosec details locked in an obscure data table somewhere in a Confluence space, and in frustration reaching out to teammates who don't know where it is, either.  And escalating the time sink to managers, and so it goes. Just not with Orion.
+How so? By standardizing everything on a handful of text/source document formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. No more lost productivity trying to find critical infosec details locked in an obscure, externally generated data table somewhere in a Confluence space, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch it manually &mdash; **Confluence only renders the page as a javascript-based web browser application, instead of as a standards-compliant HTML5 document as Orion does** &mdash; rendering the data amenable to generic automated URL-processing tools that your engineers prefer.
+
+&nbsp;
+
+Just not with Orion.
 
 &nbsp;
 
