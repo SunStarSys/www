@@ -76,23 +76,27 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-How so? By standardizing everything on text/source document formats, even your most intricate data-generated tables and architectural diagrams are *fully searchable and AI translatable* in any of our supported natural languages. Since we search version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the same targeted information.
+How so? By standardizing everything on a handful of text/source document formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. Since we search version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought information.
 
 &nbsp;
 
-Didn't find precisely what you were looking for in the search's hits? Refine your current search with a search filter on the material you did locate. Or click on an associated keyword that the search generated from the located material to move your seach to an adjacent direction. Or expand the scope of your search to a higher level directory in the list of breadcrumbs at the top right of the page. Piece of cake with Orion, and nothing else can match its capabilities.
+Didn't find precisely what you were looking for in the search's hits? Refine your current search with a search filter on the material you did locate. Or click on an associated keyword that the search generated from the located material to move your seach in an adjacent direction. Or expand the scope of your search to a higher level directory in the list of breadcrumbs at the top right of the page. Piece of cake with Orion, and nothing else can match its flexibility.
 
 &nbsp;
 
-Information retrieval is a fundamentally different problem domain than content creation/modification, but CRUD-based wiki apps cannot make this distinction in a meaningful way.  With Orion's Jamstack design, taxonomies aren't tacked on as a generic/emergent afterthought, but with structural planning and consistent heirarchical organization informed by experienced information architects across your team and ours.
+Information retrieval is a fundamentally different problem domain than content creation/modification, but CRUD-based wiki apps do not make this distinction in a meaningful way.  With Orion's Jamstack design, taxonomies aren't tacked on as a generic/emergent afterthought, but with structural planning and consistent heirarchical organization informed by experienced information architects across your team and ours.
 
 &nbsp;
 
-Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass by Orion's CMS. We also provide customers with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterantions to the prose, because with Orion's mermaid integration, the diagram sources are **embedded in the prose** itself.
+Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass by Orion's CMS. We also provide customers with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterations to the prose, because with Orion's mermaid integration, **the diagram sources are embedded in the prose** itself.
 
 &nbsp;
 
-Never seen a system that can reliably integrate content/data across independent source files?  Orion can, with full respect for the access controls on each source file.  There's simply no way to launder data through the integration functionality, and there's nobody else out there who has put this much thought into securing every aspect of their product.
+As your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated HTTP redirects from the original locations to the new targets, but also continues to enshrine the existing ACLs in perpetuity to ensure your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access to Orion's version control interfaces to your wiki.
+
+&nbsp;
+
+Never seen a system that can reliably integrate content/data across independent source files?  Orion can, with full respect for the cross-dependencies and access controls on each source file.  There's simply no way to launder content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications flowing downstream to induce concurrent builds of their dependent files. And there's nobody else out there who has put this much refinement into every aspect of their wiki product as a total package.
 
 &nbsp;
 
@@ -100,7 +104,7 @@ And access-controlled per-user/group page comments?  Again, only with Orion.
 
 &nbsp;
 
-The system scales with you as you grow, especially at the enterprise level. The $0 per seat licensing opens up new opportunities for knowledge sharing and collaboration across teams, partners, and even the entire planet with our federated platform! We know a tiny portion of those licenses would be used to actually edit pages, but you can use an unlimited number of "associated" read-only accounts in your system to share protected information with over the internet.  Accounts that need not have any access to the Orion CMS proper- a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
+The system scales with you as you grow, especially at the enterprise level. The $0 per seat licensing opens up new opportunities for knowledge sharing and collaboration across teams, partners, and even the entire planet with our federated platform! We know a tiny portion of those licenses would be used to actually edit pages, but you can use an unlimited number of "associated" read-only accounts in our system to share protected information with over the internet. Accounts that need not have any access to the Orion CMS proper- a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
 
 &nbsp;
 
