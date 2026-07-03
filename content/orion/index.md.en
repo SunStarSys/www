@@ -82,15 +82,23 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-Firstly, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. No more lost productivity trying to relocate periodically updated critical infosec details locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repreat the process whenever you discover that the infosec data is next updated. To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of as an explicit standards-compliant HTML5 document as Orion naturally does.
+Firstly, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. **No more lost productivity** trying to relocate periodically updated critical infosec details locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated.
 
 &nbsp;
 
-Since Orion searches version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought-after information.
+To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of as an explicit standards-compliant HTML5 document as Orion naturally does.
 
 &nbsp;
 
-That externally generated infosec table as above gets incorporated into your Orion wiki as a **searchable** CSV file attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply **subscribe to the CSV file**. Upon notification, you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment. Convenience, accuracy, and precision, in persuit of the single source of truth, function as major productivity enablers for your most time-constrained employees.
+Since Orion searches version-controlled sources instead of ephemerally built pages, your staff will efficiently locate the true permalink originals of the materials they seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought-after information.
+
+&nbsp;
+
+That externally generated infosec table as above gets incorporated into your Orion wiki as a **searchable CSV file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply **subscribe to the CSV file**. Upon notification, you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment.
+
+&nbsp;
+
+Convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees.
 
 &nbsp;
 
