@@ -130,7 +130,9 @@ Ever seen a system that can reliably integrate filtered content/data across inde
 
 Applying this technology to the infosec table situation: your team could use it to integrate and filter the pemalinked csv attachment into its own wiki page, and Orion ensures the content on the page is updated whenever the permalinked infosec table is, not just when the wiki page is edited by hand.
 
-Of course none of this is possible with Notion because it is impossible to replace an existing CSV generated database with an updated CSV file; you have to delete and recreate it, or potentially use third party tooling.  By deleting the original database, you also destroy all the links and associated watch lists for it. "Unpleasant" doesn't begin to cover it. YAML isn't even a supported data format!
+&nbsp;
+
+Of course none of this is possible with Notion because it is impossible to reseed an existing generated database with an updated import; you have to delete and recreate it, or potentially use third party tooling.  By deleting the original database, you also destroy all the wiki links and associated user watch notification lists for it. "Unpleasant" doesn't begin to cover it. Besides, YAML/JSON aren't even supported data ingestion formats!  If you can't shove externally generated data into a CSV table, all you have left are bare text blocks with which you can waste more time better spent on mastering Orion.
 
 &nbsp;
 
