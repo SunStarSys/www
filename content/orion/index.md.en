@@ -78,7 +78,17 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-#### <span class="text-white">How so?</span>&nbsp;[TL;DR](#-span-class-text-white-leave-the-draining-pain-points-of-the-past-behind-span-3)
+<div class="accordion" id="how-so-container">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+#### How so?
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container">
 
 &nbsp;
 
@@ -144,8 +154,10 @@ As your personnel's corporate status evolves over time, Orion makes it easy for 
 
 Finally, we tailor every installation to your specific requirements, and are **always available for consultation and professional coaching** to ensure you maximize returns on your investment in our products and services. **Your team has a partner in us** in terms of ensuring you see the anticipated productivity gains and customer satisfaction associated with Orion &mdash; designed for robust, verified, collaborative knowledge creation/curation; and easy, comprehensive, precision information retrieval thereof.
 
-&nbsp;
+</div>
+</div>
 
+&nbsp;
 #### <span class="text-white">Leave the draining pain points of the past behind...</span>
 
 For a lot of firms, Jira is a wonderfully effective tool for project management. However, over time you begin to realize that [Confluence is just tagging along for the ride](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
