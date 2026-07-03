@@ -86,7 +86,11 @@ Firstly, by focusing on a handful of industry standard text/source document/data
 
 &nbsp;
 
-Since Orion searches version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought-after information. That externally generated infosec table as above gets incorporated into your Orion wiki as a searchable CSV file attached to an underlying markdown document which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply subscribe to the CSV file. Upon notification, you can skip the embedded HTML5 rendered markdown page and instead directly fetch Orion's JSON build of its CSV attachment. Convenience, accuracy, and precision, in persuit of the single source of truth, function as major productivity enablers for your most time-constrained employees.
+Since Orion searches version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought-after information.
+
+&nbsp;
+
+That externally generated infosec table as above gets incorporated into your Orion wiki as a searchable CSV file attached to an underlying markdown document which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply subscribe to the CSV file. Upon notification, you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment. Convenience, accuracy, and precision, in persuit of the single source of truth, function as major productivity enablers for your most time-constrained employees.
 
 &nbsp;
 
