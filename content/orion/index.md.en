@@ -126,7 +126,7 @@ Ever seen a system that can reliably integrate filtered content/data across inde
 
 &nbsp;
 
-Of course none of this is possible with products like Notion because it is impossible to reseed an existing generated database with an updated import; you have to delete and recreate the entire database (or possibly use third party tooling). By deleting the original database, you also destroy all the wiki links and associated user watch notification lists for it. "Unpleasant" doesn't begin to cover it. Besides, YAML/JSON aren't even supported data ingestion formats!  If you can't shove externally generated data into a CSV table, all you have left are bare page blocks with which you can waste more time better spent on mastering Orion.
+Of course none of this is possible with products like Notion because it is impossible to reseed an existing generated database with an updated import; you have to delete and recreate the entire database (or possibly use third party tooling). By deleting the original database, you also destroy all the wiki links and associated user watch notification lists for it. "Unpleasant" doesn't begin to cover it. Besides, YAML/JSON aren't even supported data ingestion formats!  If you can't shoehorn externally generated treelike data into a CSV table, all you have left are bare page blocks with which you can waste more time better spent on mastering Orion.
 
 &nbsp;
 
