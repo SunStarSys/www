@@ -82,7 +82,7 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-Firstly, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. **No more lost productivity** trying to acquire periodically updated critical, confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
+Firstly, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. **No more lost productivity** trying to acquire periodically updated, critical, confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
 
 &nbsp;
 
@@ -94,15 +94,15 @@ That externally generated infosec table :fa-network-wired: gets incorporated int
 
 &nbsp;
 
-**Convenience, accuracy, and precision, in the endless persuit of the current single source of truth**, function as major productivity enablers for your most time-constrained employees. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited feature set.
+**Convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting miniature, internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited data integration feature set.
 
 &nbsp;
 
-Contrarily, Orion will surface your once-lost, externally generated infosec details :fa-network-wired: on demand, and **render it in a manner amenable to the automatable web-enabled/AI agents that your talent prefers**. With unparalleled alacrity and reliability. Want to perfect your search by hand tuning to taste, until you ultimately prefer JSON to HTML5 in your results? Again, Orion delivers (same URL, different `Accept` header.)[^refinements]
+Contrarily, Orion will surface your once-lost, externally generated infosec details :fa-network-wired: on demand, and **render them in a manner amenable to the automatable web-enabled/AI agents that your talent prefers**. With unparalleled alacrity and reliability. Want to perfect your search by hand tuning to taste, until you ultimately prefer JSON to HTML5 in your results? Again, Orion delivers (same URL, different `Accept` header.)[^refinements]
 
 &nbsp;
 
-In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought; but instead are informed with structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours.
+In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought culled from SQL tables on demand. Instead, they are informed with careful structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours[^sprawl].
 
 &nbsp;
 
@@ -378,6 +378,11 @@ Does your current solution offer your staff this level of exploratory search cap
 &nbsp;
 
 [^application]. Applying this technology to the infosec table :fa-network-wired: situation: your team could use it to integrate and filter the Orion-pemalinked CSV attachment into its own separate wiki page, and Orion will ensure the content on that separate page is updated whenever the permalinked infosec table :fa-network-wired: is, not just when the wiki page is edited by hand. As is the case with other wiki solutions.
+
+&nbsp;
+
+[^sprawl]. Orion has many tools for controlling wiki sprawl; from building dynamic topological constraints into the site-wide ACLs, to simply supporting **document archival** &mdash; which is a document [`Status`](api/doc#-code-status-code-5) setting that signals to Orion that the page should be elided from its dependency management topology; effectively unlinking it from all document indexes and cross-references, and instructing Orion to ignorie it CMS directory listings, while preserving the file as a permalink and archiving a copy of it to a corresponding current year/month timestamped location elsewhere on the wiki.
+
 
 &nbsp;
 
