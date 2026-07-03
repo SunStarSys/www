@@ -98,7 +98,7 @@ That externally generated infosec table as above gets incorporated into your Ori
 
 &nbsp;
 
-**Convenience, accuracy, and precision, in the endless persuit of the current single source of truth**, function as major productivity enablers for your most time-constrained employees. The real consequences of not having these Orion-only features is that your IT division is forced to waste $10-100K annually on creating, building, and supporting internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited feature set.
+**Convenience, accuracy, and precision, in the endless persuit of the current single source of truth**, function as major productivity enablers for your most time-constrained employees. The likely consequences of not having these Orion-only features is that your Platform Engineers will be forced to waste $10-100K annually on makework: creating, building, and supporting internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited feature set.
 
 &nbsp;
 
@@ -114,7 +114,7 @@ Does your current solution offer your staff this level of exploratory search cap
 
 &nbsp;
 
-In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. With Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought, but with structural planning and consistently enforced, heirarchical organization informed by experienced information architects across your team and ours.
+In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought; but informed with structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours.
 
 &nbsp;
 
@@ -122,7 +122,7 @@ Next, **content curation tooling** is an essential feature of Orion, not an oppo
 
 &nbsp;
 
-So instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, MIME-type based, pre-commit linting pass by Orion's CMS editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the PCRE search engine in the CMS.
+So instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, MIME-type based, pre-commit linting pass by Orion's CMS editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the PCRE search engine in the CMS. Your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding delight for them to use and enhance.**
 
 &nbsp;
 
