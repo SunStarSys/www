@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=47317
+status: draft
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -190,7 +190,7 @@ Does your current solution offer your staff this level of exploratory search cap
 
 &nbsp;
 
-[^sprawl]. Orion has many tools for controlling wiki sprawl; from building dynamic topological constraints into the site-wide `ACL`s, to simply supporting **document archival** &mdash; which is a document [`Status`](api/doc#-code-status-code-5) setting that signals to Orion that the page should be elided from its dependency management topology; effectively unlinking it from all document indexes and cross-references, and instructing Orion to ignore it in `CMS` directory listings, while preserving the file as a permalink and archiving a copy of it to a corresponding current year/month timestamped location elsewhere on the wiki.
+[^sprawl]. Orion has many tools for controlling wiki sprawl; from building dynamic topological constraints into the site-wide `ACL`s, to simply supporting **document archival** &mdash; which is a document [`Status`](api/doc#-code-status-code-5) setting that signals to Orion that the page should be elided from its dependency management topology; effectively unlinking it from all document indexes and cross-references, and instructing Orion to ignore it in `CMS` directory listings, while preserving the file as a searchable permalink and archiving a copy of it to a corresponding current year/month timestamped location elsewhere on the wiki.
 
 &nbsp;
 
