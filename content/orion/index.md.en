@@ -111,7 +111,7 @@ Next, **content curation tooling** is an essential feature of Orion, not an oppo
 
 &nbsp;
 
-So instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, MIME-type based, pre-commit linting pass by Orion's CMS editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep consistent with alterations to the prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the associated cruft as it accumulates is built into the PCRE search engine in the CMS.
+So instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, MIME-type based, pre-commit linting pass by Orion's CMS editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep consistent with alterations to the prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the PCRE search engine in the CMS.
 
 &nbsp;
 
