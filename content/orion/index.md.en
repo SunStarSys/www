@@ -66,7 +66,7 @@ acl: @staff=rw, *=r
 
 &nbsp;
 
-<span class="text-white">Why Choose Orion? The Jamstack Wiki Platform That Outperforms &mdash; and Costs Far Less</span>
+<span class="text-white">Why Choose Orion? The Jamstack Wiki Platform that Outshines &mdash; and Costs Far Less</span>
 
 &nbsp;
 
@@ -82,11 +82,7 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-Firstly, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. **No more lost productivity** trying to relocate periodically updated critical, confidential infosec cloud asset configuration details locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated.
-
-&nbsp;
-
-To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of as an explicit standards-compliant HTML5 document as Orion naturally does.
+Firstly, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. **No more lost productivity** trying to relocate periodically updated critical, confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
 
 &nbsp;
 
@@ -94,23 +90,15 @@ Since Orion searches version-controlled sources instead of ephemerally built pag
 
 &nbsp;
 
-That externally generated infosec table as above gets incorporated into your Orion wiki as a **searchable CSV file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply **subscribe to the CSV file**. Upon notification during your next visit to the wiki (and not via email spam), you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment.
+That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable CSV file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply **subscribe to the CSV file**. Upon notification during your next visit to the wiki (and not via email spam), you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment.
 
 &nbsp;
 
-**Convenience, accuracy, and precision, in the endless persuit of the current single source of truth**, function as major productivity enablers for your most time-constrained employees. The likely consequences of not having these Orion-only features is that your Platform Engineers will be forced to waste $10-100K annually on makework: creating, building, and supporting internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited feature set.
+**Convenience, accuracy, and precision, in the endless persuit of the current single source of truth**, function as major productivity enablers for your most time-constrained employees. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited feature set.
 
 &nbsp;
 
-Contrarily, Orion will surface your once-lost, externally generated infosec details on demand, and **render it in a manner amenable to the automatable web-enabled/AI agents that your talent prefers**. With unparalleled alacrity and reliability. Want to perfect your search by hand tuning to taste, until you ultimately prefer JSON to HTML5 in your results? Again, Orion delivers (same URL, different `Accept` header.)
-
-&nbsp;
-
-Didn't immediately find what you were looking for in Orion's search hits? Refine your current search with a search filter on the material you did locate; repeat if necessary. Or click on a suggested associated keyword generated from the located material to shift your seach in an adjacent direction. Or expand the scope of your search to a higher level in the list of directory breadcrumbs at the upper end of the page. Or switch to a PCRE regex search instead of the Lucene natural-language-stemmed bareword match popularized by Google in its formative years.
-
-&nbsp;
-
-Does your current solution offer your staff this level of exploratory search capability? Definitely not, if it's Confluence or Notion.
+Contrarily, Orion will surface your once-lost, externally generated infosec details :fa-network-wired: on demand, and **render it in a manner amenable to the automatable web-enabled/AI agents that your talent prefers**. With unparalleled alacrity and reliability. Want to perfect your search by hand tuning to taste, until you ultimately prefer JSON to HTML5 in your results? Again, Orion delivers (same URL, different `Accept` header.)[^refinements]
 
 &nbsp;
 
@@ -122,7 +110,11 @@ Next, **content curation tooling** is an essential feature of Orion, not an oppo
 
 &nbsp;
 
-So instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, MIME-type based, pre-commit linting pass by Orion's CMS editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the PCRE search engine in the CMS. Your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding delight for them to use and enhance.**
+So instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, MIME-type based, pre-commit linting pass by Orion's CMS editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the PCRE search engine in the CMS.
+
+&nbsp;
+
+Your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding resource for them to use and enhance.**
 
 &nbsp;
 
@@ -130,11 +122,7 @@ Third, as your site evolves to the point where files or folders need to be reloc
 
 &nbsp;
 
-Ever seen a system that can reliably integrate filtered content/data across independent source files?  [**Orion can**](https://www.iconoclasts.blog/joe/), with full suppport for the [**cyclic cross-dependencies**](https://www.iconoclasts.blog/joe/dependencies) and authorization controls on each source file.  There's simply no way to accidentally (or maliciously) launder access-controlled content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files.
-
-&nbsp;
-
-Applying this technology to the infosec table situation: your team could use it to integrate and filter the pemalinked CSV attachment into its own separate wiki page, and Orion will ensure the content on that page is updated whenever the permalinked infosec table is, not just when the wiki page is edited by hand. As is the case with other wiki solutions.
+Ever seen a system that can reliably integrate filtered content/data across independent source files?  [**Orion can**](https://www.iconoclasts.blog/joe/), with full suppport for the [**cyclic cross-dependencies**](https://www.iconoclasts.blog/joe/dependencies) and authorization controls on each source file.  There's simply no way to accidentally (or maliciously) launder access-controlled content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files[^application].
 
 &nbsp;
 
@@ -150,11 +138,7 @@ Futhermore, Orion scales with you as you grow, especially at the enterprise leve
 
 &nbsp;
 
-As your personnel's corporate status evolves over time, Orion makes it easy for wiki administrators to deal with the wiki reauthorizations involved. Doing a mass search and replace on every acl setting on the site that's tied to an ex-employee's account is as trivially automatable as onboarding a new staffer or upgrading an existing one by dropping them into the appropriate version-control authorization groups that your team designed.
-
-&nbsp;
-
-In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more natural, collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. Locking down pages to individual user accounts/"authors" is anathema to the collaborative ideals of wikis, but it is certainly possible moving forward with explicit ACL header assignments on the pages involved.
+As your personnel's corporate status evolves over time, Orion makes it easy for wiki administrators to deal with the wiki reauthorizations involved. Doing a mass search and replace on every acl setting on the site that's tied to an ex-employee's account is as trivially automatable as onboarding a new staffer or upgrading an existing one by dropping them into the appropriate version-control authorization groups that your team designed[^ownership].
 
 &nbsp;
 
@@ -380,6 +364,26 @@ Need help customizing the `Perl` build system in `lib/` and other Django templat
 </div>
 
 &nbsp;
+
+### Footnotes
+
+[^HTML5]. To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of as an explicit standards-compliant HTML5 document as Orion naturally does.
+
+&nbsp;
+
+[^refinements]. Didn't immediately find what you were looking for in Orion's search hits? Refine your current search with a search filter on the material you did locate; repeat if necessary. Or click on a suggested associated keyword generated from the located material to shift your seach in an adjacent direction. Or expand the scope of your search to a higher level in the list of directory breadcrumbs at the upper end of the page. Or switch to a PCRE regex search instead of the Lucene natural-language-stemmed bareword match popularized by Google in its formative years.
+
+Does your current solution offer your staff this level of exploratory search capability? Definitely not, if it's Confluence or Notion.
+
+&nbsp;
+
+[^application]. Applying this technology to the infosec table :fa-network-wired: situation: your team could use it to integrate and filter the Orion-pemalinked CSV attachment into its own separate wiki page, and Orion will ensure the content on that separate page is updated whenever the permalinked infosec table :fa-network-wired: is, not just when the wiki page is edited by hand. As is the case with other wiki solutions.
+
+&nbsp;
+
+[^ownership]. In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more natural, collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. Locking down pages to individual user accounts/"authors" is anathema to the collaborative ideals of wikis, but it is certainly possible moving forward with explicit ACL header assignments on the pages involved.
+
+
 
 ### Feature Comparison Grid
 
