@@ -458,6 +458,8 @@ Does your current solution offer your staff this level of exploratory search cap
   100% { opacity: 1; }
 }
 
+button h4 {color: black;}
+
 .theme-showcase {
 	-webkit-animation-name: FADEY;
 	-webkit-animation-duration: 2s;
