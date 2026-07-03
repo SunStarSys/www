@@ -108,7 +108,7 @@ Since Orion searches version-controlled sources instead of ephemerally built pag
 
 &nbsp;
 
-That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable `CSV` file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table.
+That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable `CSV` file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded `HTML5` table.
 
 &nbsp;
 
@@ -116,11 +116,11 @@ Want to be notified when that attached `CSV` is altered? Simply subscribe to the
 
 &nbsp;
 
-**Timeliness, convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting miniature, internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited data integration feature set.
+**Timeliness, convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting miniature, internal websites with `REST`-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited data integration feature set.
 
 &nbsp;
 
-Contrarily, Orion will surface your once-lost, externally generated infosec details :fa-network-wired: on demand, and **render them in a manner amenable to the automatable web-enabled/AI agents that your talent prefers**. With unparalleled alacrity and reliability. Want to perfect your search by hand tuning to taste, until you ultimately prefer JSON to HTML5 in your results? Again, Orion delivers (same URL, different `Accept` header.)[^refinements]
+Contrarily, Orion will surface your once-lost, externally generated infosec details :fa-network-wired: on demand, and **render them in a manner amenable to the automatable web-enabled/AI agents that your talent prefers**. With unparalleled alacrity and reliability. Want to perfect your search by hand tuning to taste, until you ultimately prefer `JSON` to `HTML5` in your results? Again, Orion delivers (same `URL`, different `Accept` header.)[^refinements]
 
 &nbsp;
 
