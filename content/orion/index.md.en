@@ -100,7 +100,7 @@ One fundamental flaw of wiki-like products other than Orion is that they utterly
 
 &nbsp;
 
-For example, you will see **no more lost productivity** for staff trying to acquire periodically updated, critical, confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
+For example, you will see **no more lost productivity** for staff trying to acquire periodically updated, critically confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
 
 &nbsp;
 
@@ -174,7 +174,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 ##### Footnotes
 
-[^HTML5]. To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of as an explicit standards-compliant HTML5 document as Orion naturally does.
+[^HTML5]. To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of Orion's explicit standards-compliant `HTML5` document. This implies, among other things, that even if your wiki's search engine surfaces the tables you need, you can't directly access those tables as agentic downloadable wiki content unless the infosec team goes through the trouble of consistently deleting and re-exporting the table (as a `CSV` attachment) whenever the data is updated.
 
 &nbsp;
 
