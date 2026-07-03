@@ -82,7 +82,7 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
-<div class="accordion" id="how-so-container">
+<div class="accordion" id="how-so-container" style="background-color: transparent !important">
 <div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-controls="how-so-target">
@@ -96,7 +96,11 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
-Firstly, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. **No more lost productivity** trying to acquire periodically updated, critical, confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
+One fundamental flaw of wiki-like products other than Orion is that they utterly fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**. However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
+
+&nbsp;
+
+For example, you will see **no more lost productivity** for staff trying to acquire periodically updated, critical, confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
 
 &nbsp;
 
@@ -104,11 +108,15 @@ Since Orion searches version-controlled sources instead of ephemerally built pag
 
 &nbsp;
 
-That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable CSV file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply **subscribe to the CSV file**. Upon notification during your next visit to the wiki (and not via email spam), you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment.
+That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable CSV file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table.
 
 &nbsp;
 
-**Convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting miniature, internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited data integration feature set.
+Want to be notified when that attached CSV is altered? Simply subscribe to the CSV file! Upon notification during your next visit to the wiki (and not via email spam), you can skip the embedded HTML5 rendered markdown table and instead directly fetch exactly what you need from Orion's JSON build of the CSV attachment using standard CLI tools like `curl` and `jq`.
+
+&nbsp;
+
+**Timeliness, convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting miniature, internal websites with REST-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited data integration feature set.
 
 &nbsp;
 
@@ -116,7 +124,7 @@ Contrarily, Orion will surface your once-lost, externally generated infosec deta
 
 &nbsp;
 
-In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought culled from SQL tables on demand. Instead, they are informed with careful structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours[^sprawl].
+In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought culled from overtaxed SQL tables upon demand. Instead, they are informed with careful structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours[^sprawl].
 
 &nbsp;
 
