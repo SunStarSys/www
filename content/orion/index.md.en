@@ -94,7 +94,7 @@ Since Orion searches version-controlled sources instead of ephemerally built pag
 
 &nbsp;
 
-That externally generated infosec table as above gets incorporated into your Orion wiki as a **searchable CSV file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply **subscribe to the CSV file**. Upon notification, you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment.
+That externally generated infosec table as above gets incorporated into your Orion wiki as a **searchable CSV file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded HTML5 table. Want to be notified when that attached CSV is altered? Simply **subscribe to the CSV file**. Upon notification during your next visit to the wiki (and not via email spam), you can skip the embedded HTML5 rendered markdown table and instead directly fetch Orion's JSON build of the CSV attachment.
 
 &nbsp;
 
