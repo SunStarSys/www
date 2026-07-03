@@ -178,21 +178,21 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
-[^refinements]. Didn't immediately find what you were looking for in Orion's search hits? Refine your current search with a search filter on the material you did locate; repeat if necessary. Or click on a suggested associated keyword generated from the located material to shift your seach in an adjacent direction. Or expand the scope of your search to a higher level in the list of directory breadcrumbs at the upper end of the page. Or switch to a PCRE regex search instead of the Lucene natural-language-stemmed bareword match popularized by Google in its formative years.
+[^refinements]. Didn't immediately find what you were looking for in Orion's search hits? Refine your current search with a search filter on the material you did locate; repeat if necessary. Or click on a suggested associated keyword generated from the located material to shift your seach in an adjacent direction. Or expand the scope of your search to a higher level in the list of directory breadcrumbs at the upper end of the page. Or switch to a `PCRE` regex search instead of the Lucene natural-language-stemmed bareword match popularized by Google in its formative years.
 
-Does your current solution offer your staff this level of exploratory search capability? Definitely not, if it's Confluence or Notion.
-
-&nbsp;
-
-[^application]. Applying this technology to the infosec table :fa-network-wired: situation: your team could use it to integrate and filter the Orion-pemalinked CSV attachment into its own separate wiki page, and Orion will ensure the content on that separate page is updated whenever the permalinked infosec table :fa-network-wired: is, not just when the wiki page is edited by hand. As is the case with other wiki solutions.
+Does your current solution offer your staff this level of exploratory search capability? Definitely not if it's Confluence or Notion.
 
 &nbsp;
 
-[^sprawl]. Orion has many tools for controlling wiki sprawl; from building dynamic topological constraints into the site-wide ACLs, to simply supporting **document archival** &mdash; which is a document [`Status`](api/doc#-code-status-code-5) setting that signals to Orion that the page should be elided from its dependency management topology; effectively unlinking it from all document indexes and cross-references, and instructing Orion to ignore it in CMS directory listings, while preserving the file as a permalink and archiving a copy of it to a corresponding current year/month timestamped location elsewhere on the wiki.
+[^application]. Applying this technology to the infosec table :fa-network-wired: situation: your team could use it to integrate and filter the Orion-pemalinked `CSV` attachment into its own separate wiki page, and Orion will ensure the content on that separate page is updated whenever the permalinked infosec table :fa-network-wired: is, not just when the wiki page is edited by hand. As is the case with other wiki solutions.
 
 &nbsp;
 
-[^ownership]. In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more natural, collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. Locking down pages to individual user accounts/"authors" is anathema to the collaborative ideals of wikis, but it is certainly possible moving forward with explicit ACL header assignments on the pages involved.
+[^sprawl]. Orion has many tools for controlling wiki sprawl; from building dynamic topological constraints into the site-wide `ACL`s, to simply supporting **document archival** &mdash; which is a document [`Status`](api/doc#-code-status-code-5) setting that signals to Orion that the page should be elided from its dependency management topology; effectively unlinking it from all document indexes and cross-references, and instructing Orion to ignore it in `CMS` directory listings, while preserving the file as a permalink and archiving a copy of it to a corresponding current year/month timestamped location elsewhere on the wiki.
+
+&nbsp;
+
+[^ownership]. In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more natural, collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. Locking down pages to individual user accounts/"authors" is anathema to the collaborative ideals of wikis, but it is certainly possible moving forward with explicit `ACL` header assignments on the pages involved.
 
 </div>
 </div>
