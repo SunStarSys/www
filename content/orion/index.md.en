@@ -124,7 +124,7 @@ Contrarily, Orion will surface your once-lost, externally generated infosec deta
 
 &nbsp;
 
-In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought culled from overtaxed SQL tables upon demand. Instead, they are informed with careful structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours[^sprawl].
+In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought culled from overtaxed `SQL` tables. Instead, they are informed with careful structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours[^sprawl].
 
 &nbsp;
 
@@ -136,11 +136,11 @@ So instead of the inevitable, entropic link rot innate to other wiki products, y
 
 &nbsp;
 
-Your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding resource for them to use and enhance.**  Meaingful ROI growth across your organization is a follow-on consequence of the gardening and caretaking abilities unique to our wiki platform.
+Your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding resource for them to use and enhance.**  Meaingful ROI growth across your organization is a follow-on, continuous blooming effect of the gardening and caretaking abilities unique to our wiki platform.
 
 &nbsp;
 
-Moreover, as your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated `HTTP` redirects from the original locations to the new targets, but also continues to enshrine into rule the existing ACLs on the original locations in perpetuity. This ensures your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access to Orion's version control interfaces to your wiki's sources.
+Moreover, as your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated `HTTP` redirects from the original locations to the new targets, but also continues to enshrine into rule the existing `ACL`s on the original locations in perpetuity. This ensures your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access to Orion's version control interfaces to your wiki's sources.
 
 &nbsp;
 
@@ -295,7 +295,7 @@ If you are tired of the per-seat licensing and per-CPU-cycle choices weighing yo
 
 &nbsp;
 
-Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
+Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online CMS Editor/IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
 
 <div id="lightning">
 
@@ -343,7 +343,7 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure. Just bring your own AI enhanced css/javascript framework, perl scripts, and Django Templates, and we will take care of the rest of your setup at no additional charge. We recommend **Bootstrap 5** for css/js styling, as it is what we use internally; but that is entirely up to you.
 
-In addition, all clients have free, template-customizable or javascript-enabled interfaces to our powerful, proprietary PCRE search engine.
+In addition, all clients have free, template-customizable or javascript-enabled interfaces to our powerful, proprietary `PCRE` search engine.
 
 &nbsp;
 
