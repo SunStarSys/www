@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: draft
+status: verified=47317
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -195,6 +195,8 @@ Does your current solution offer your staff this level of exploratory search cap
 &nbsp;
 
 [^ownership]. In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more natural, collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. Locking down pages to individual user accounts/"authors" is anathema to the collaborative ideals of wikis, but it is certainly possible moving forward with explicit `ACL` header assignments on the pages involved.
+
+&nbsp;
 
 -----
 
