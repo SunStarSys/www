@@ -72,49 +72,59 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-**Nothing will yield better ROI than Orion** in the Knowledge Management System market. Unlike the products your competitors are stuck using, Orion is a framework designed to yield superior, maintainable, easily locatable corporate documentation with the richest, yet most comprehensible, automated link/dependency network on the market. It turns your organization’s collective experience from a liability that leaks away into your most durable competitive advantage.
+**Nothing will yield better ROI than Orion** in the Knowledge Management System market. Unlike the products your competitors are stuck using, Orion is a framework designed to yield superior, maintainable, easily locatable corporate documentation with the richest, yet most comprehensible, managed link/dependency network on the market. It turns your organization’s collective experience from a liability that leaks away into your most durable competitive advantage.
 
 &nbsp;
 
-How so? By standardizing everything on a handful of text/source document formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. No more lost productivity trying to find critical infosec details locked in an obscure, externally generated data table somewhere in a Confluence space, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch it manually &mdash; **Confluence only renders the page as a javascript-based web browser application, instead of as a standards-compliant HTML5 document as Orion does** &mdash; rendering the data amenable to generic automated URL-processing tools that your engineers prefer.
+How so? By standardizing everything on a handful of text/source document formats, even your most intricate data-generated tables and architectural diagrams are **fully searchable and AI translatable** in any of our supported natural languages. No more lost productivity trying to relocate periodically updated critical infosec details locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who don't know where it is, which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and search it manually**. Then repreat the process whenever you discover that the infosec data is next updated. To add insult to injury, it turns out your existing wiki only renders page contents as a javascript-based web browser application, instead of as a standards-compliant HTML5 document as Orion naturally does.
 
 &nbsp;
 
-Just not with Orion.
+In short, Orion renders your wiki content in a manner amenable to the automatable web-enabled/AI agents that your talent prefers. With unparalleled alacrity and reliability. Does your current solution? Definitely not if it's Confluence or Notion.
 
 &nbsp;
 
-Since we search version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought information. Accuracy and precision as productivity enablers.
+Since Orion searches version-controlled sources instead of ephemerally built pages, you will locate the true permalink originals of the material you seek- not amass artificially elevated hits buried in a dozen different peripheral copies of the sought information. Accuracy and precision as productivity enablers for your most busy employees.
 
 &nbsp;
 
-Didn't find precisely what you were looking for in the search's hits? Refine your current search with a search filter on the material you did locate. Or click on an associated keyword that the search generated from the located material to move your seach in an adjacent direction. Or expand the scope of your search to a higher level directory in the list of breadcrumbs at the top right of the page. Piece of cake with Orion, and nothing else can match its flexibility.
+Didn't immediately find what you were looking for in Orion's search hits? Refine your current search with a search filter on the material you did locate; repeat if necessary. Or click on a suggested associated keyword generated from the located material to shift your seach in an adjacent direction. Or expand the scope of your search to a higher level in the list of directory breadcrumbs at the upper end of the page. Or switch to a PCRE regex search instead of the Lucene natural-language-stemmed bareword match popularized by Google in its formative years.
 
 &nbsp;
 
-Information retrieval is a fundamentally different problem domain than content creation/modification, but CRUD-based wiki apps do not make this distinction in a meaningful way.  With Orion's Jamstack design, taxonomies aren't tacked on as a generic/emergent afterthought, but with structural planning and consistent heirarchical organization informed by experienced information architects across your team and ours.
+Piece of cake with Orion, and nothing else can match its flexibility.
 
 &nbsp;
 
-
-With Orion, content curation tooling is a first order feature, not an opportunity to upsell. Instead of eventual link rot, you get **internal/external link validation** at page modification time during a pre-commit linting pass by Orion's CMS. We also provide customers with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been edited in months.  Diagrams are easy to keep consistent with alterations to the prose, because with Orion's mermaid integration, **the diagram sources are embedded in the prose** itself.  Painless recursive search / replace on those stale links is built into the PCRE search engine in the CMS.
-
+**Information retrieval** is a fundamentally different problem domain than content creation/modification, but the CRUD-based wiki apps from our competitors do not make this distinction in a meaningful way. With Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable generic/emergent afterthought, but with structural planning and consistent heirarchical organization informed by experienced information architects across your team and ours.
 
 &nbsp;
 
-As your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated HTTP redirects from the original locations to the new targets, but also continues to enshrine the existing ACLs in perpetuity to ensure your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access through Orion's version control interfaces to your wiki.
+With Orion, **content curation tooling** is a first order feature, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
-Never seen a system that can reliably integrate content/data across independent source files?  Orion can, with full respect for the cross-dependencies and authorization controls on each source file.  There's simply no way to launder content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications flowing downstream to induce concurrent builds of their dependent files. And there's nobody else out there who has put this much refinement into every aspect of their wiki product as a total package.
+Moreover, instead of the inevitable, entropic link rot of other wiki products, you get **internal/external link validation** at page modification time during a pre-commit linting pass by Orion's CMS Editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep consistent with alterations to the prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the associated cruft is built into the PCRE search engine in the CMS.
 
 &nbsp;
 
-And access-controlled per-user/group page comments?  Again, only with Orion.
+As your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated HTTP redirects from the original locations to the new targets, but also continues to enshrine the existing ACLs on the original locations in perpetuity. This ensures your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access to Orion's version control interfaces to your wiki's sources.
 
 &nbsp;
 
-The system scales with you as you grow, especially at the enterprise level. The $0 per seat licensing and unlimited number of websites opens up new opportunities for knowledge sharing and collaboration across teams, partners, and even the entire planet with our federated platform! We know a tiny portion of those licenses would be used to actually edit pages, but you can use an unlimited number of "associated" read-only accounts in our system to share protected information with over the internet. Accounts that need not have any access to the Orion CMS proper- a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
+Never seen a system that can reliably integrate filtered content/data across independent source files?  **Orion can**, with full respect for the cross-dependencies and authorization controls on each source file.  There's simply no way to launder content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications flowing downstream to induce concurrent builds of their dependent files. And there's nobody else out there who has put this much refinement into every aspect of their wiki product as a total package.
+
+&nbsp;
+
+The system scales with you as you grow, especially at the enterprise level. The $0 per seat licensing and unlimited number of websites opens up new opportunities for knowledge sharing and collaboration across teams, partners, websites, and even the entire planet with our federated platform! We know a tiny portion of those licenses would be used to actually edit pages, but you can use an unlimited number of "associated" read-only accounts in our system to share protected information with over the internet. Accounts that need not have any access to the Orion CMS proper- a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
+
+&nbsp;
+
+As your personnel's corporate status changes over time, Orion makes it easy for wiki administrators to deal with the wiki reauthorizations involved. Doing a mass search and replace on every acl setting on the site that's associated with an ex-employee is as trivial as onboarding a new staffer or upgrading an existing one by dropping them into the appropriate version-control authorization groups.
+
+&nbsp;
+
+Further, there is no formal concept of content ownership in the system. Orion's version control just tracks the authorized commits of staff at the time of commit, lending to a more natural, collegial operating environment towards the collective content than in any other system. Locking down pages to individual user accounts/authors is anathema to the collaborative ideals of wikis, but is certainly possible moving forward with explicit ACL header modifications.
 
 &nbsp;
 
