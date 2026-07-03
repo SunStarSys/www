@@ -123,7 +123,7 @@ Third, as your site evolves to the point where files or folders need to be reloc
 
 &nbsp;
 
-Ever seen a system that can reliably integrate filtered content/data across independent source files?  **Orion can**, with full suppport for the cross-dependencies and authorization controls on each source file.  There's simply no way to launder content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files.
+Ever seen a system that can reliably integrate filtered content/data across independent source files?  [**Orion can**](https://www.iconoclasts.blog/joe/), with full suppport for the cross-dependencies and authorization controls on each source file.  There's simply no way to launder content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files.
 
 &nbsp;
 
