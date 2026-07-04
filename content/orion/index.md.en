@@ -104,7 +104,7 @@ Setting aside the security advantages, a fundamental flaw of wiki-like products 
 
 &nbsp;
 
-For example, you will see **no more lost productivity** for staff trying to acquire periodically updated, critically confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who also don't recall where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, and because the table is huge and you just want the contents of one element in a single row, you have to fetch and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
+For example, you will see **no more lost productivity** for staff trying to acquire periodically updated, critically confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who also don't recall where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, but because the table is huge and you just want the contents of one element in a single row, you have to fetch it with a browser and eyeball scan it manually. Then repeat the process whenever you discover that the infosec data is next updated[^HTML5].
 
 &nbsp;
 
@@ -120,7 +120,7 @@ Want to be notified when that attached `CSV` is altered? Simply subscribe to the
 
 &nbsp;
 
-**Timeliness, convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, and supporting miniature, internal websites with `REST`-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited searchable and retrievable data integration feature set.
+**Timeliness, convenience, accuracy, and precision, in the endless persuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be **forced to waste $10-100K annually on makework** by creating, building, **documenting**, and supporting miniature, internal websites with `REST`-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited searchable and retrievable data integration feature set.
 
 &nbsp;
 
@@ -140,7 +140,7 @@ So instead of the inevitable, entropic link rot innate to other wiki products, y
 
 &nbsp;
 
-With Orion, your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding resource for them to use and enhance.**  Also, you don't need to be a wiki administrator to use these tools &mdash; almost anyone can voluntarily participate in the grooming process, or perhaps be organizationally delegated to perform this duty as team leads. Measurable ROI growth across your organization is a follow-on, continuous blooming effect of the aggregate gardening and caretaking abilities unique to our wiki platform.
+With Orion, your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding resource for them to use and enhance.**  Also, you don't need to be a wiki administrator to use these tools &mdash; almost anyone can voluntarily participate in the grooming activities, or perhaps be organizationally delegated to perform this duty as team leads. Measurable ROI growth across your organization is a follow-on, continuous blooming effect of the aggregate gardening and caretaking abilities unique to our wiki platform.
 
 &nbsp;
 
@@ -184,7 +184,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
-[^HTML5]. To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of Orion's explicit standards-compliant `HTML5` document. This implies, among other things, that even if your wiki's search engine surfaces the tables you need, you can't directly access those tables as agentic downloadable wiki content unless the infosec team goes through the trouble of consistently deleting and re-exporting the table (as a `CSV` attachment) whenever the data is updated.
+[^HTML5]. (True story!) To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of Orion's explicit standards-compliant `HTML5` document. This implies, among other things, that even if your wiki's search engine surfaces the tables you need, you can't directly access those tables as agentic downloadable wiki content unless the infosec team goes through the trouble of consistently deleting and re-exporting the table (as a `CSV` attachment) whenever the data is updated.
 
 &nbsp;
 
