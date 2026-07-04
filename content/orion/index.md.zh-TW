@@ -67,7 +67,9 @@ title: SunStar 系統的 Orion
 
 ### 以下是 ROI、執行決策者:fa-chart-line:...
 
-<span class="text-white">為何選擇 Orion？The Jamstack Wiki 平台的效能超越&mdash; 與成本更少</span>
+&nbsp;
+
+<span class="text-white">為何選擇 Orion？Outshines 的 Jamstack Wiki 平台&mdash; 與成本更少</span>
 
 &nbsp;
 
@@ -75,19 +77,145 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-這讓我們能夠執行超低營運成本，同時提供卓越的編輯控制功能、企業級安全性，以及突破性的功能，而傳統 Wiki 則完全無法匹配。我們將這些龐大的儲蓄金額直接傳遞給您。只預期您使用的確切雲端資源只有中度、透明的向上收費&mdash; 沒有浮動定價層級或隱藏費用。
+<span class="text-white">知識管理系統市場的投資報酬率不會比 Orion 更高。</span>
 
 &nbsp;
 
-知識管理系統空間中的投資報酬率不會比 Orion 更高。我們根據您的具體要求量身訂做每項安裝，並隨時提供諮詢和專業指導，以確保您對我們產品和服務的投資獲得最大回報。
+與競爭對手停滯的產品不同，Orion 是設計用來提供卓越、可維護、機密且易於定位的企業文件架構，具備市場上最豐富且可理解的託管連結 / 相依性網路。這樣一來，您組織的整體體驗就會流失，成為您最持久的競爭優勢。
 
 &nbsp;
 
-您的 **團隊在我們** 中有合作夥伴，以確保您看到與 Orion 相關的預期生產力提升和客戶滿意度&mdash; 專為建立強大、經過驗證的協作知識而設計；且可輕鬆、全面、精確地擷取資訊。
+<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+#### 如何做？
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
 
 &nbsp;
 
-<span class="text-white">留下過去背後的財務痛點...</span>
+除了 Orion 以外的類似 Wiki 產品，其中一項基本缺點是，他們顯然無法提供 **一致的整合 / 介面，以進行外部產生的資料檔格式的整合和定期維護 **。不過，您可以將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使是您最複雜的資料產生表格、圖表、圖表、地圖及架構圖表，也可在任何 Orion 支援的自然語言中 **完全可搜尋且可翻譯 AI**。
+
+&nbsp;
+
+例如，您會看到 **不再失去生產力 **，因為員工嘗試定期取得重要機密資訊網路雲端資產組態明細:fa-network-wired: 鎖定在目前 Wiki 的某個地方，外部產生的資料表中，以及對團隊成員的挫折感，他們也不會回想到哪裡。那樣自然地向主管提昇了不斷變化的沉澱時間，以致於如此。除非有人記得，而且因為表格很龐大，而且您只想要在單一資料列中包含一個元素的內容，您才必須手動擷取並進行眼球掃描。然後在您發現資訊系統資料下次更新時重複處理[^HTML5].
+
+&nbsp;
+
+由於 Orion 會搜尋由版本控制的來源，而非臨時建立的頁面，因此您的員工會有效率地找到他們所尋找材料的真實永久連結原始內容，而不會混淆大量人為高度的命中，埋藏在經過搜尋資訊後十幾個不同的週邊複本。
+
+&nbsp;
+
+該外部產生的 Infosec 表格:fa-network-wired: 在您的 Orion wiki 中被整合為 **可搜尋`CSV` 附加至基礎減價文件的檔案 **，否則會在建置階段將其轉譯為內嵌`HTML5` 表格。
+
+&nbsp;
+
+想要在附加時收到通知`CSV` 已變更？只需訂閱`CSV` 檔案！在您下次造訪維基 (而不是透過電子郵件垃圾郵件) 時收到通知，您可以略過內嵌內容`HTML5` 呈現的減價表，而是直接擷取 Orion 所需的內容`JSON` 建置`CSV` 使用標準附件`CLI` 工具類`curl` 與`jq`.
+
+&nbsp;
+
+**適時性、便利性、準確性和精準度，在目前單一事實來源的無盡觀點下，作為最受限時間員工的主要生產力推動 **。如果沒有這些純 Orion 功能的可能後果，您的平台工程師將 **透過建立、建置及支援小型的內部網站，每年在製造業** 浪費 $10-100K 美元。`REST`這些共用資料集的 -based 介面，作為 Wiki 供應商有限的可搜尋和可擷取資料整合功能集的擴增解決方法。
+
+&nbsp;
+
+相反地，Orion 會顯示您一次遺失、外部產生的 Infosec 明細:fa-network-wired: 隨選提供 **，讓人才偏好具備可自動化 Web 支援 /AI 代理程式 **的方式。具備無與倫比的敏捷性和可靠性。想要以手調調味品完美搜尋，直到您最喜歡`JSON` 至`HTML5` 您的結果？再次，Orion 傳遞 (相同) `URL`，不同`Accept` 標頭。)[細項 (&amp;R)]
+
+&nbsp;
+
+換句話說，** 資訊擷取 **是與內容建立 / 修改基本上不同的問題領域，但來自競爭對手的 CRUD 型 Wiki 應用程式不會以有意義的方式造成此差異。此外，使用 Orion 的 Jamstack 設計時，分類不會被視為無法管理、一般 / 緊急產生的分類，但卻從超稅中累積`SQL` 表格。相反地，他們會收到仔細的結構規劃資訊，並由團隊和我們的經驗豐富的資訊架構師持續執行階層組織。[展開 (&amp;S)].
+
+&nbsp;
+
+接下來，** 內容策展工具 **是 Orion 的重要功能，而非向上銷售的機會。我們的每個 Wiki 事實資料庫是業界第一&mdash; 在整個網站管理一致的名稱標記或相關軟體使用者自建物件描述資料等功能，只要編輯一行即可[YAML 檔案](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+
+&nbsp;
+
+因此，除了不可避免的熵連結之外，您還可以在全面性的頁面修改期間，在頁面修改時取得** 內部 / 外部連結驗證 **。`MIME`以類型為基礎的預先確認列印通過，由 Orion 的`CMS` 編輯器。我們也為每位客戶提供一個報告基礎架構，以 **按要求擷取過時的內部 / 外部連結 **，即使相關頁面未在幾個月內變更。由於 Orion 的 Mermaid 整合，** 圖表來源內嵌於頁面的 prose** 本身，因此圖表與逐漸變化的 Markdown 程序保持同步。無痛的遞迴搜尋 / 更換以修復累積的殘骸已內建於`PCRE` 搜尋引擎`CMS`.
+
+&nbsp;
+
+您的 Wiki 已不再惡化團隊的公用程式；但是變成 **獎勵資源，供其使用及增強。**   此外，您不需要是 Wiki 管理員，即可使用這些工具。&mdash; 幾乎任何人都可以自願參與美容程序，或可能被組織委派以執行這項職責作為團隊領導人。整個組織的可衡量投資報酬率成長，是我們 Wiki 平台特有的聚總園藝和護理能力的後續持續影響。
+
+&nbsp;
+
+此外，由於您的網站演進到需要重新定位或刪除檔案或資料夾的時間點，Orion 不僅透過部署自動化來追蹤位置移動。`HTTP` 從原始位置重新導向至新目標，但也會繼續強制規則現有目標`ACL`s 在原始位置的永久性。這可確保您的機密內容不會受到歷史搜尋的保護，因為系統中的未經授權使用者可能無法直接存取您 Wiki 來源的 Orion 版本控制介面。
+
+&nbsp;
+
+曾經見過能夠可靠地整合跨獨立來源檔案之篩選內容 / 資料的系統嗎？[** 訂單可以 **](https://www.iconoclasts.blog/joe/)，具有完整支援[** 週期性交叉相依性 **](https://www.iconoclasts.blog/joe/dependencies) 以及每個來源檔案的授權控制。透過內容整合功能不小心 (或惡意) 啟動器存取控制內容，而且在沒有這些修改的情況下，無法修改這類檔案中的內容 / 資料，以產生其相依檔案的並行建置[應用程式 (&amp;A)].
+
+&nbsp;
+
+當然，就像 Notion 這樣的產品都不可能發生這種情況，因為無法利用更新的外部檔案匯入來重新內建現有的產生資料庫；您必須刪除並重新建立整個資料庫 (或使用協力廠商工具)。若刪除原始資料庫，您也會 **毀棄所有 Wiki 連結及其相關使用者監看通知清單 **。"不愉快" 不會開始加以遮蓋。
+
+&nbsp;
+
+此外，`YAML/JSON` Notion 中甚至不支援資料擷取格式！如果您無法將外部產生的類似樹狀結構資料變為某個資料`CSV` 左側的桌子都是裸頁區塊，您可以節省更多時間來掌握我們的 Orion 平台。
+
+&nbsp;
+
+這個產業沒有人將這個精簡程度投入 Wiki 產品的各個面向，成為整體包裝。
+
+&nbsp;
+
+Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。每個座位授權 $0 和不限數目的網站透過我們的聯合平台，為團隊、合作夥伴、網站甚至整個地球的受控知識共享和協作帶來新機會！我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
+
+&nbsp;
+
+隨著您人員的企業狀態隨著時間演進，Orion 讓 Wiki 管理員能夠輕鬆處理所涉及的 Wiki 重新授權。在每一個明確上執行整批搜尋並取代`ACL` 在與前任員工帳戶相關的網站上設定，在新進人員入職或將現有人員退選至您團隊所設計的適當版本控制授權群組中，可真正自動化[所有權 (&amp;O)].
+
+&nbsp;
+
+與其他市場解決方案[沒有保費計劃，您可自行選擇](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+
+&nbsp;
+
+最後，我們根據您的特定要求量身打造每項安裝，並 **隨時提供諮詢和專業指導 **，以確保您對我們產品和服務的投資獲得最大回報。** 您的團隊有我們的合作夥伴 **，以確保您看到與 Orion 相關的預期生產力增加和客戶滿意度。&mdash; 專為建立 / 策劃強大、經過驗證的協作知識而設計；且擷取簡便、全面且精確的資訊。
+
+&nbsp;
+
+##### 註腳
+
+&nbsp;
+
+[^HTML5]。為了增加成人傷害，它將您現有的維基僅會將頁面內容轉譯為隱含的 javascript 式網頁瀏覽器應用程式，而不是 Orion 的明確標準相容性`HTML5` 文件。這意味著 (其中包括) 即使您的 Wiki 搜尋引擎會呈現您需要的表格，您也無法以專員可下載的 Wiki 內容直接存取這些表格，除非 Infosec 團隊持續刪除並重新匯出表格 (作為一個) `CSV` 附件) 每當資料更新時。
+
+&nbsp;
+
+[細項 (&amp;R)]。沒有立即在 Orion 的搜尋點閱中找到您要找的內容？使用您找到之材料的搜尋篩選來縮小目前的搜尋範圍；必要時重複執行。或按一下從找到的材料產生的建議相關關鍵字，以相鄰方向移動您的搜尋。或者，將搜尋範圍展開至頁面上方目錄來源路徑清單中的較高層次。或切換至`PCRE` 正規表示式搜尋 (而非 Lucene 自然語言樣式的 bareword) 與 Google 在正式年度中廣受歡迎。
+
+您目前的解決方案是否為您的員工提供此等級的探索搜尋功能？絕對不是「影響」或「概念」。
+
+&nbsp;
+
+[應用程式 (&amp;A)]。將這項技術應用於資訊交換表格:fa-network-wired: 狀況：您的團隊可以用它來整合和篩選 Orion-pemalinked `CSV` 連附至自己的個別 Wiki 頁面，而 Orion 將確保每當永久連結的 Infosec 表格時，該個別頁面上的內容都會更新:fa-network-wired: 不只是手邊編輯 Wiki 頁面。與其他 Wiki 解決方案相同。
+
+&nbsp;
+
+[展開 (&amp;S)]。Orion 有許多控制 Wiki 擴散的工具；從建立動態拓樸限制到全網站`ACL`s，僅支援 **文件存檔** &mdash; 這是一份文件[`Status`](api/doc#-code-status-code-5) 設定向 Orion 發出訊號，指示該頁面應從其相依性管理圖表取得；有效地取消其與所有文件索引和交互參照的連結，並指示 Orion 忽略它`CMS` 目錄清單，同時將檔案保留為可搜尋的永久連結，並將其複本存檔至 Wiki 上其他位置的對應目前年度 / 月份時戳位置。
+
+&nbsp;
+
+[所有權 (&amp;O)]。事實上，系統中 **沒有頁面所有權的正式概念 **。Orion 的版本控制功能只會在使用者確認的變更時，追蹤每位使用者授權的員工變更集，借貸至比任何其他類似系統更自然、更合法的公司成就，以實現 Wiki 的合併工作產品。將頁面鎖定至個別使用者帳戶 /"作者" 對維基的協作意識形態感到厭惡，但確實能夠以明確的方式前進`ACL` 相關頁面上的標頭指派。
+
+&nbsp;
+
+-----
+
+</div>
+</div>
+</div>
+
+&nbsp;
+
+#### 留下過去的排水痛點...
+
+&nbsp;
 
 對許多公司來說，Jira 是非常有效的專案管理工具。不過，隨著時間的推移，您開始瞭解到[Confluence 只是為旅程加上標籤](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
 
@@ -105,7 +233,9 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-<span class="text-white">Orion 專為拒絕解決的領導者而打造：</span>
+### Orion 專為拒絕解決的領導者而設
+
+&nbsp;
 
 <div class="fade">
 
@@ -160,18 +290,6 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 零供應商鎖定&mdash; 和 *我們證明 *。您的內容生活在乾淨的 Markdown 和標準版本控制工作流程中。沒有專屬格式。沒有遷移惡夢。
 
-&nbsp;
-
-<span class="text-white">想要透明化？為自己見：</span>
-
-Our entire build-system logic for this very website: 不到 100 行的程式碼，完全運用複雜的重複相依性管理，自動產生多語言網站地圖、目錄索引等功能。
-
-View the source: [我們的私有源庫樹](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)，或其公開[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](https://github.com/SunStarSys/www/tree/trunk/lib).
-
-The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 → @SunStarSys/orion
-
-這不是行銷微調&mdash; 它是可驗證的開放式工程傳統，可追溯至 2011 年 F/OSS 創新技術。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？[給我們打電話或給我們留言](/contact) 今天。
-
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
@@ -192,7 +310,7 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 &nbsp;
 
-絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 IDE 的設計可讓您隨時進行 **僅限瀏覽器的工作流程 **。* 立即 *，即使是行動 (瀏覽器) 介面也能順利完成。
+絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 CMS 編輯器 /IDE 的設計可讓您隨時進行 **僅限瀏覽器的工作流程 **。* 立即 *，即使是行動 (瀏覽器) 介面也能順利完成。
 
 <div id="lightning">
 
@@ -240,7 +358,21 @@ div#lightning img {width:100%}
 
 您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分行，並僅支付在我們的基礎設施上使用 *的費用。只要攜帶您自己的 AI 增強型 css/javascript 架構、Perl 指令碼和 Django 範本，我們就能免費處理其他設定。建議使用 **Bootstrap 5** 作為 css/js 樣式，因為它是內部使用的；但完全由您決定。
 
-此外，所有客戶都擁有免費、可自訂範本或支援 javascript 的介面，適用於我們強大的專屬 PCRE 搜尋引擎。
+此外，所有客戶均擁有免費、可自訂範本或支援 javascript 的介面，可滿足我們的強大、專有需求`PCRE` 搜尋引擎。
+
+&nbsp;
+
+<span class="text-white">想要透明化？為自己見：</span>
+
+Our entire build-system logic for this very website: 不到 100 行的程式碼，完全運用複雜的重複相依性管理，自動產生多語言網站地圖、目錄索引等功能。
+
+View the source: [我們的私有源庫樹](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)，或其公開[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](https://github.com/SunStarSys/www/tree/trunk/lib).
+
+The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 → @SunStarSys/orion
+
+這不是行銷微調&mdash; 它是可驗證的開放式工程遺產，可追溯至 2010 年開創的 F/OSS 創新。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？[給我們打電話或給我們留言](/contact) 今天。
+
+&nbsp;
 
 &nbsp;
 
@@ -276,6 +408,8 @@ mindmap
 ```
 
 </a>
+
+&nbsp;
 
 &nbsp;
 
@@ -351,6 +485,8 @@ mindmap
   0%   { opacity: 0; }
   100% { opacity: 1; }
 }
+
+button h4 {color: gray;}
 
 .theme-showcase {
 	-webkit-animation-name: FADEY;
