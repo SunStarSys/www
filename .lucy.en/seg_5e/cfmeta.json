@@ -4,137 +4,137 @@
       "length": "4",
       "offset": "0"
     },
-    "deletions-seg_5c.bv": {
+    "deletions-seg_5d.bv": {
       "length": "1",
       "offset": "8"
     },
     "documents.dat": {
-      "length": "77058",
+      "length": "77056",
       "offset": "16"
     },
     "documents.ix": {
       "length": "72",
-      "offset": "77080"
+      "offset": "77072"
     },
     "highlight.dat": {
       "length": "7",
-      "offset": "77152"
+      "offset": "77144"
     },
     "highlight.ix": {
       "length": "72",
-      "offset": "77160"
+      "offset": "77152"
     },
     "lexicon-1.dat": {
-      "length": "44",
-      "offset": "77232"
+      "length": "39",
+      "offset": "77224"
     },
     "lexicon-1.ix": {
       "length": "4",
-      "offset": "77280"
+      "offset": "77264"
     },
     "lexicon-1.ixix": {
       "length": "8",
-      "offset": "77288"
+      "offset": "77272"
     },
     "lexicon-3.dat": {
       "length": "96",
-      "offset": "77296"
+      "offset": "77280"
     },
     "lexicon-3.ix": {
       "length": "4",
-      "offset": "77392"
+      "offset": "77376"
     },
     "lexicon-3.ixix": {
       "length": "8",
-      "offset": "77400"
+      "offset": "77384"
     },
     "lexicon-4.dat": {
       "length": "128",
-      "offset": "77408"
+      "offset": "77392"
     },
     "lexicon-4.ix": {
       "length": "4",
-      "offset": "77536"
+      "offset": "77520"
     },
     "lexicon-4.ixix": {
       "length": "8",
-      "offset": "77544"
+      "offset": "77528"
     },
     "lexicon-5.dat": {
       "length": "19",
-      "offset": "77552"
+      "offset": "77536"
     },
     "lexicon-5.ix": {
       "length": "4",
-      "offset": "77576"
+      "offset": "77560"
     },
     "lexicon-5.ixix": {
       "length": "8",
-      "offset": "77584"
+      "offset": "77568"
     },
     "lexicon-6.dat": {
-      "length": "17214",
-      "offset": "77592"
+      "length": "17207",
+      "offset": "77576"
     },
     "lexicon-6.ix": {
-      "length": "233",
-      "offset": "94808"
+      "length": "236",
+      "offset": "94784"
     },
     "lexicon-6.ixix": {
       "length": "160",
-      "offset": "95048"
+      "offset": "95024"
     },
     "lexicon-8.dat": {
       "length": "271",
-      "offset": "95208"
+      "offset": "95184"
     },
     "lexicon-8.ix": {
       "length": "4",
-      "offset": "95480"
+      "offset": "95456"
     },
     "lexicon-8.ixix": {
       "length": "8",
-      "offset": "95488"
+      "offset": "95464"
     },
     "postings-1.dat": {
       "length": "24",
-      "offset": "95496"
+      "offset": "95472"
     },
     "postings-3.dat": {
       "length": "48",
-      "offset": "95520"
+      "offset": "95496"
     },
     "postings-4.dat": {
       "length": "21",
-      "offset": "95568"
+      "offset": "95544"
     },
     "postings-5.dat": {
       "length": "18",
-      "offset": "95592"
+      "offset": "95568"
     },
     "postings-6.dat": {
-      "length": "27480",
-      "offset": "95616"
+      "length": "27477",
+      "offset": "95592"
     },
     "postings-8.dat": {
       "length": "108",
-      "offset": "123096"
+      "offset": "123072"
     },
     "postings.skip": {
       "length": "0",
-      "offset": "123208"
+      "offset": "123184"
     },
     "sort-4.dat": {
       "length": "143",
-      "offset": "123208"
+      "offset": "123184"
     },
     "sort-4.ix": {
       "length": "64",
-      "offset": "123352"
+      "offset": "123328"
     },
     "sort-4.ord": {
       "length": "4",
-      "offset": "123416"
+      "offset": "123392"
     }
   },
   "format": "2"
