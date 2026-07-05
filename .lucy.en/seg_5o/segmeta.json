@@ -3,11 +3,11 @@
     "files": {
       "seg_5a": {
         "count": "8",
-        "filename": "seg_5n/deletions-seg_5a.bv"
+        "filename": "seg_5o/deletions-seg_5a.bv"
       },
-      "seg_5m": {
+      "seg_5n": {
         "count": "7",
-        "filename": "seg_5n/deletions-seg_5m.bv"
+        "filename": "seg_5o/deletions-seg_5n.bv"
       }
     },
     "format": "1"
@@ -54,14 +54,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_5n"
+    "name": "seg_5o"
   },
   "sort": {
     "counts": {
-      "path": "8"
+      "path": "9"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "8"
+    },
     "ord_widths": {
       "path": "4"
     }
