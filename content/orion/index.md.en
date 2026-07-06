@@ -325,6 +325,8 @@ If you are tired of the per-seat licensing and per-CPU-cycle choices weighing yo
 
 Never having to deal directly with a version control system, or even a static site generator, on your own personal computer is up to you. The online CMS Editor/IDE is designed and ready for your **browser-only workflow** whenever you are.  In a pinch, even the mobile (browser) interface will get it done, *instantly*.
 
+&nbsp;
+
 <div id="lightning">
 
 ![Lightning](index.page/lightning)
@@ -359,7 +361,11 @@ When Apache software project communities were presented with a free choice betwe
 
 <h4>Want to give it a quick spin to see how fast and easy it is?</h4>
 
+&nbsp;
+
 This website is self-hosted on Orion; all those hot-pink pencil squares [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
+
+&nbsp;
 
 Our global Point of Presence (POP) network ensures low-latency connections to both Orion &trade; and the end-delivery websites we host.  We are currently on four continents and have a bicoastal presence within the US.  And we're expanding rapidly- next up Africa and East Asia!
 
@@ -371,17 +377,27 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 
 Go at your own pace, use as many employees / previews / edits / commits / branches as you like, and only pay for what you *actually use* on our infrastructure. Just bring your own AI enhanced css/javascript framework, perl scripts, and Django Templates, and we will take care of the rest of your setup at no additional charge. We recommend **Bootstrap 5** for css/js styling, as it is what we use internally; but that is entirely up to you.
 
+&nbsp;
+
 In addition, all clients have free, template-customizable or javascript-enabled interfaces to our powerful, proprietary `PCRE` search engine.
 
 &nbsp;
 
 <span class="text-white">Want transparency? See for yourself:</span>
 
+&nbsp;
+
 Our entire build-system logic for this very website: fewer than 100 lines of code, complete with sophisticated, memoized dependency management that auto-generates multilingual sitemaps, directory indexes, and more.
+
+&nbsp;
 
 View the source: [our private source lib tree](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/), or its public [<i class="fa fa-github fa-emoji" title="Github"></i> GitHub mirror](https://github.com/SunStarSys/www/tree/trunk/lib).
 
+&nbsp;
+
 The underlying Static Site Generator: open-sourced on GitHub under Apache License 2.0 → @SunStarSys/orion
+
+&nbsp;
 
 This isn't marketing spin &mdash; it's verifiable, open engineering heritage dating back to F/OSS innovations pioneered in 2010. Ready to experience a wiki that actually saves time, money, and headaches? [Give us a call or drop us a note](/contact) today.
 
