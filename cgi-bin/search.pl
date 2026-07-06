@@ -786,7 +786,7 @@ if ($re !~ $specials_re) {
     next if $data{content} =~ /{% ssi \`.*\` %}/;
     my ($title) = $data{headers}{title} // $data{content} =~ m/<h1>(.*?)<\/h1>/;
     next unless $title;
-    my $status = uc($data{headers}{status} // "draft");
+    my $status = uc($data{headers}{status} // "published");
     my ($rev) = $data{content} =~ /\$Revision: (\d+) \$/;
     if ($rev and $markdown) {
       $rev = qq(&nbsp; <a href="./?regex=diff=$rev;lang=$lang;markdown_search=1"><span class="text-success">r$rev</span></a>);
