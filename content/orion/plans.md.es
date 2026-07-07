@@ -99,10 +99,10 @@ $100 / mes / sitio alojado, ~50% de descuento en todos los modelos de precios de
 <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
   <div class="card-header text-white">Plan de empresa</div>
     <div class="card-body">
-Tarifa plana para más de 1000 asientos
+Tarifa plana para más de 500 asientos
 <hr />
 <p style="min-height:100px">
-Contáctenos
+Contáctenos y guarde $100K anualmente
 </p>
 
 &nbsp;

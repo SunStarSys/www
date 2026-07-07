@@ -99,10 +99,10 @@ $100 / месяц / размещенный сайт, ~50% от всех моде
 <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
   <div class="card-header text-white">План предприятия</div>
     <div class="card-body">
-Фиксированная ставка для более чем 1000 мест
+Фиксированная ставка для более чем 500 мест
 <hr />
 <p style="min-height:100px">
-Контакты
+Свяжитесь с нами и экономьте $100K ежегодно
 </p>
 
 &nbsp;

@@ -99,10 +99,10 @@ $ 100 / månad / värd webbplats, ~ 50 % rabatt på alla konkurrent prismodeller
 <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
   <div class="card-header text-white">Företagsplan</div>
     <div class="card-body">
-Fast pris för fler än 1000 platser
+Fast pris för fler än 500 platser
 <hr />
 <p style="min-height:100px">
-Kontakta oss
+Kontakta oss och spara $100K årligen
 </p>
 
 &nbsp;
