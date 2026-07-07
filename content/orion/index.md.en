@@ -62,7 +62,7 @@ acl: @staff=rw, *=r
 
 &nbsp;
 
-<div class="border-top" style="border-color: #A9BDBD; padding-top: 10px">
+<div class="border-top" style="border-color: #A9BDBD; padding-top: 20px">
 
 # Here's the ROI, Executive Decision Maker :fa-chart-line:...
 
@@ -179,7 +179,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
------
+<div class="border-top" style="border-color: #A9BDBD;">&nbsp;</div>
 
 </div>
 </div>
@@ -274,7 +274,7 @@ Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markd
 
 &nbsp;
 
-<div class="border-top" style="border-color: #A9BDBD; padding-top: 10px">
+<div class="border-top" style="border-color: #A9BDBD; padding-top: 20px">
 
 # Here's&nbsp;Why,&nbsp;Young&nbsp;Academic&nbsp;:fa-orcid: / Full&nbsp;Stack&nbsp;Developer&nbsp;:fa-stack-overflow: / Public&nbsp;Blogger&nbsp;:fa-blog:&nbsp;...
 
@@ -315,10 +315,6 @@ Multi-gigabyte source trees are simply no match for it &mdash; full site build d
 <center>
 <span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>We only build what you need built.</em></span>&trade;
 </center>
-
-&nbsp;
-
-Taking architectural cues from [David Wheeler's](https://justatheory.com) famous [Bricolage CMS](https://bricolagecms.org/), this [technology](https://iconoclasts.blog/joe/apache-cms) was first invented in late 2010 by [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/), Daniel Shahaf, Dave Fisher, and [Joe Schaefer](https://iconoclasts.blog/joe/) as members of the Apache Infrastructure Team. The phrase "JAMstack" was coined years later (2015), by a group unaware of our prior art in this space.  But the [public record](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) is crystal clear, and this new offering by SunStar Systems is testimony to that original legacy and its true open source origins.
 
 &nbsp;
 
@@ -452,27 +448,6 @@ Need help customizing the `Perl` build system in `lib/` and other Django templat
 <hr>
 <br><br><br>
 
-# A Few Representative Screen Shots
-
-<br>
-<h3>IDE View with German, French, Hebrew, and Russian (UTF-8).</h3>
-<center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE Editor View.</h3>
-<center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE Editor View (Spanish).</h3>
-<center><img src="../images/ide-es.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE Full Site Build.</h3>
-<center><img src="../images/ide-build.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE Typical Site Build.</h3>
-<center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/><br><br>
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE Search</a> <small>(those links in <span style="color:#e83e8c">hot pink</span> will drop you directly into an editor screen, with the cursor placed exactly according to the matching text)</small>.</h3>
-<center><img src="../images/ide-search.png" style="width:800px"></center>
-</div>
 
 <style type="text/css">
 /*-------------------------------------------
