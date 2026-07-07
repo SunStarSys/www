@@ -82,19 +82,6 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
-<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
-<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
-<div class="accordion-header" id="how-so-heading">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
-
-#### Better ROI - how so?
-
-</button>
-</div>
-
-<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
-
-&nbsp;
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
@@ -104,7 +91,7 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Substantial Security Risk Reduction
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math/Data Integration w/ Search and AI Translation
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math/Data Integration w/ Search and AI Translation and Data Processing Engine / Vector Graphics Package
 
 &nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. True Agentic AI Support
 
@@ -120,27 +107,27 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
+<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+#### Better ROI - how so?
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
+
+&nbsp;
+
 [^1]. Adopting Orion immediately reduces your risk of a major security incident; and the peace of mind delivered matters more to your board of directors than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
 
 &nbsp;
 
 [^2]. Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of wiki-like products other than Orion is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**. However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated mathematical tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
 
-&nbsp;
-
-For example, you will see **no more lost productivity** for staff trying to acquire periodically updated, critically confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who also don't recall where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, but because the table is huge and they just want the contents of one element in a single row, so they have to fetch it with a browser and eyeball scan it manually. Then repeat the process whenever they discover that the infosec data is next updated[^HTML5].
-
-&nbsp;
-
-Besides, `YAML/JSON` aren't even supported data ingestion formats in Notion (or Confluence)!  If you can't shoehorn externally generated tree-like data into a `CSV` table, all you have left are bare page blocks with which you can waste more time better spent mastering our Orion platform.
-
-&nbsp;
-
-That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable `CSV` file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded `HTML5` table. Not only that, but Orion provides a vector database API integration (`PDL`) for processing numerical, columnar table data within Orion itself. **No other wiki provides a numerical, columnar vector database engine at any price**.
-
-&nbsp;
-
-They want to be notified when that attached `CSV` is altered? Simply subscribe to the `CSV` file! Upon notification during their next visit to the wiki (and not via email spam), they can skip the embedded `HTML5` rendered markdown table and instead directly fetch exactly what they need from Orion's `JSON` build of the `CSV` attachment using standard `CLI` tools like `curl` and `jq`. **No other wiki supports this workflow today.**
+Orion completes its data integration picture with a columnar vector database engine `PDL` and a bundled vector graphics package `Asymptote` for your interactive number-crunching needs.
 
 &nbsp;
 
@@ -148,27 +135,11 @@ They want to be notified when that attached `CSV` is altered? Simply subscribe t
 
 &nbsp;
 
-**Timeliness, convenience, accuracy, and precision, in the endless pursuit of the current single source of truth, function as major productivity enablers for your most time-constrained employees**. The likely consequences of not having these Orion-only features is that your Platform Engineers will be <span class="text-white">**forced to waste $10-100K annually on makework**</span> by creating, building, **documenting**, and supporting miniature, internal websites with `REST`-based interfaces to these shared datasets, as augmentation workarounds for your wiki vendor's limited searchable and retrievable data integration feature set.
-
-&nbsp;
-
-Contrarily, Orion will surface your once-lost, externally generated infosec details :fa-network-wired: on demand, and **render them in a manner amenable to the automatable web-enabled/AI agents that your talent prefers**. With unparalleled alacrity and reliability. Want to perfect your search by hand tuning to taste, until you ultimately prefer `JSON` to `HTML5` in your results? Again, Orion delivers (same `URL`, different `Accept` header.)[^refinements]
-
-&nbsp;
-
-In other words, **information retrieval** is a fundamentally different problem domain than content creation/modification, but the [CRUD-based](https://crudly.ai/crud-app/) wiki apps from our competitors do not make this distinction in a meaningful way. Additionally, with Orion's Jamstack design, taxonomies aren't tacked on as an unmanageable, generic/emergent dynamically generated afterthought culled from overtaxed `SQL` tables. Instead, they are informed with careful structural planning and consistently enforced, heirarchical organization by experienced information architects across your team and ours[^sprawl].
-
-&nbsp;
-
 [^4]. Next, **content curation tooling** is an essential feature of Orion, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
-So instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, `MIME`-type based, pre-commit linting pass by Orion's `CMS` editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the `PCRE` search engine in the `CMS`.
-
-&nbsp;
-
-With Orion, your wiki is no longer of deteriorating utility for your teams; but becomes **a rewarding resource for them to use and enhance.**  Also, you don't need to be a wiki administrator to use these tools &mdash; almost anyone can voluntarily participate in the grooming activities, or perhaps be organizationally delegated to perform this duty as team leads.
+Instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, `MIME`-type based, pre-commit linting pass by Orion's `CMS` editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the `PCRE` search engine in the `CMS`.
 
 &nbsp;
 
@@ -176,19 +147,7 @@ With Orion, your wiki is no longer of deteriorating utility for your teams; but 
 
 &nbsp;
 
-Moreover, as your site evolves to the point where files or folders need to be relocated or deleted, Orion not only tracks location moves by deploying automated `HTTP` redirects from the original locations to the new targets, but also continues to enshrine into rule the existing `ACL`s on the original locations in perpetuity. This ensures your confidential content remains protected against historical searches from unauthorized users in the system who might otherwise have direct access to Orion's version control interfaces to your wiki's sources.
-
-&nbsp;
-
-Ever seen a system that can reliably integrate filtered content/data across independent source files?  [**Orion can**](https://www.iconoclasts.blog/joe/), with full suppport for the [**cyclic cross-dependencies**](https://www.iconoclasts.blog/joe/dependencies) and authorization controls on each source file.  There's simply no way to accidentally (or maliciously) launder access-controlled content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files[^application].
-
-&nbsp;
-
-Of course none of this is possible with products like Notion because it is impossible to reseed an existing generated database with an updated external file import; you have to delete and recreate the entire database (or possibly use third party tooling). By deleting the original database, you also **destroy all the wiki links and associated user watch notification lists for it**. "Unpleasant" doesn't begin to cover it.
-
-&nbsp;
-
-There's nobody else in the industry who has put this much refinement into every aspect of their wiki product as a total package.
+Ever seen a wiki system that can reliably integrate filtered content/data across independent source files?  [**Orion can**](https://www.iconoclasts.blog/joe/), with full suppport for the [**cyclic cross-dependencies**](https://www.iconoclasts.blog/joe/dependencies) and authorization controls on each source file.  There's simply no way to accidentally (or maliciously) launder access-controlled content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files[^application].
 
 &nbsp;
 
@@ -212,21 +171,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
-[^HTML5]. (True story!) To add insult to injury, it turns out your existing wiki only renders page contents as an implicit javascript-based web browser application, instead of Orion's explicit standards-compliant `HTML5` document. This implies, among other things, that even if your wiki's search engine surfaces the tables you need, you can't directly access those tables as agentic downloadable wiki content unless the infosec team goes through the trouble of consistently deleting and re-exporting the table (as a `CSV` attachment) whenever the data is updated.
-
-&nbsp;
-
-[^refinements]. Didn't immediately find what you were looking for in Orion's search hits? Refine your current search with a search filter on the material you did locate; repeat if necessary. Or click on a suggested associated keyword generated from the located material to shift your seach in an adjacent direction. Or expand the scope of your search to a higher level in the list of directory breadcrumbs at the upper end of the page. Or switch to a `PCRE` regex search instead of the Lucene natural-language-stemmed bareword match popularized by Google in its formative years.
-
-Does your current solution offer your staff this level of exploratory search capability? Definitely not if it's Confluence or Notion.
-
-&nbsp;
-
 [^application]. Applying this technology to the infosec table :fa-network-wired: situation: your team could use it to integrate and filter the Orion-pemalinked `CSV` attachment into its own separate wiki page, and Orion will ensure the content on that separate page is updated whenever the permalinked infosec table :fa-network-wired: is, not just when the wiki page is edited by hand. As is the case with other wiki solutions.
-
-&nbsp;
-
-[^sprawl]. Orion has many tools for controlling wiki sprawl; from building dynamic topological constraints into the site-wide `ACL`s, to simply supporting **document archival** &mdash; which is a document [`Status`](api/doc#-code-status-code-5) setting that signals to Orion that the page should be elided from its dependency management graph; effectively unlinking it from all document indexes and cross-references, and instructing Orion to ignore it in `CMS` directory listings, while preserving the file as a searchable permalink and archiving a copy of it to a corresponding current year/month timestamped location elsewhere on the wiki.
 
 &nbsp;
 
