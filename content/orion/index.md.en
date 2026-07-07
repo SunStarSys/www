@@ -175,7 +175,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
-[^ownership]. In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more natural, collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. Locking down pages to individual user accounts/"authors" is anathema to the collaborative ideals of wikis, but it is certainly possible moving forward with explicit `ACL` header assignments on the pages involved.
+[^ownership]. In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. However, it is certainly possible to facilitate and support "authorship" moving forward with explicit `ACL` header assignments on the pages involved, and/or a custom `view` that incorporates an `Author` header or similar into wiki page-builds.
 
 &nbsp;
 
