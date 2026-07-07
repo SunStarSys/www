@@ -132,7 +132,7 @@ That externally generated infosec table :fa-network-wired: gets incorporated int
 
 &nbsp;
 
-They want to be notified when that attached `CSV` is altered? Simply subscribe to the `CSV` file! Upon notification during their next visit to the wiki (and not via email spam), they can skip the embedded `HTML5` rendered markdown table and instead directly fetch exactly what they need from Orion's `JSON` build of the `CSV` attachment using standard `CLI` tools like `curl` and `jq`.
+They want to be notified when that attached `CSV` is altered? Simply subscribe to the `CSV` file! Upon notification during their next visit to the wiki (and not via email spam), they can skip the embedded `HTML5` rendered markdown table and instead directly fetch exactly what they need from Orion's `JSON` build of the `CSV` attachment using standard `CLI` tools like `curl` and `jq`. No other wiki supports this workflow today.
 
 &nbsp;
 
