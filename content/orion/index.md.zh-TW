@@ -12,7 +12,7 @@ title: SunStar 系統的 Orion
 <div class="row">
 <div class="col-lg-5">
 <p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&amp;nbsp<em>Jamstack Wiki 平台。</em></span>&trade;
+	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>Jamstack Wiki 平台。</em></span>&trade;
 </p>
 <br>
 <span class="text-white">SunStar 系統的 Orion</span> &nbsp; 是一個
@@ -99,15 +99,35 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-除了 Orion 以外的類似 Wiki 產品，其中一項基本缺點是，他們顯然無法提供 **一致的整合 / 介面，以進行外部產生的資料檔格式的整合和定期維護 **。不過，您可以將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使是您最複雜的資料產生表格、圖表、圖表、地圖及架構圖表，也可在任何 Orion 支援的自然語言中 **完全可搜尋且可翻譯 AI**。
+<span class="text-white">更安全、更優質的產品，更省錢</span>
+
+&nbsp;&nbsp;<a id="fn-1" href="#1">1 個</a>。重大證券風險降低
+
+&nbsp;&nbsp;<a id="fn-2" href="#2">2 個</a>。搜尋與 AI 翻譯的真實數學 / 資料整合
+
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。True Agent AI 支援
+
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。組合內容策展工具
+
+&nbsp;&nbsp;<a id="fn-5" href="#5">5 個</a>. [<span class="text-white">每年儲存 $100K</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的每座位 $0 / 每網站企業授權](plans)
+
+&nbsp;&nbsp;<a id="fn-6" href="#6">6 歲</a>. [<span class="text-white">每年節省 50%</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的業務計畫](plans) 超過功能可比較的 Confluence Premium
 
 &nbsp;
 
-例如，您會看到 **不再失去生產力 **，因為員工嘗試定期取得重要機密資訊網路雲端資產組態明細:fa-network-wired: 鎖定在目前 Wiki 的某個地方，外部產生的資料表中，以及對團隊成員的挫折感，他們也不會回想到哪裡。那樣自然地向主管提昇了不斷變化的沉澱時間，以致於如此。除非有人記得，而且因為表格很龐大，而且您只想要在單一資料列中包含一個元素的內容，您才必須手動擷取並進行眼球掃描。然後在您發現資訊系統資料下次更新時重複處理[^HTML5].
+[^1]。立刻採用 Orion 可降低您發生重大安全事故的風險；而安心地將事宜傳遞給您的董事會而非[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
 
 &nbsp;
 
-由於 Orion 會搜尋由版本控制的來源，而非臨時建立的頁面，因此您的員工會有效率地找到他們所尋找材料的真實永久連結原始內容，而不會混淆大量人為高度的命中，埋藏在經過搜尋資訊後十幾個不同的週邊複本。
+[^2]。旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，除了 Orion 以外的類似 Wiki 的產品，其基本缺點是，他們無法提供 **一致的整合 / 介面以進行註冊，並定期維護外部產生的資料檔格式 **。不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
+
+&nbsp;
+
+例如，您會看到 **不再失去生產力 **，因為員工嘗試定期取得重要機密資訊網路雲端資產組態明細:fa-network-wired: 鎖定在目前 Wiki 的某個地方，外部產生的資料表中，以及對團隊成員的挫折感，他們也不會回想到哪裡。那樣自然地向主管提昇了不斷變化的沉澱時間，以致於如此。除非有人記得，但因為表格很龐大，而且他們只想要單一資料列中某個元素的內容，所以必須使用瀏覽器擷取該元素，然後手動掃描。然後在發現資訊系統資料下次更新時重複處理[^HTML5].
+
+&nbsp;
+
+此外，`YAML/JSON` 在 Notion (或 Confluence) 中甚至不支援資料擷取格式！如果您無法將外部產生的類似樹狀結構資料變為某個資料`CSV` 左側的桌子都是裸頁區塊，您可以節省更多時間來掌握我們的 Orion 平台。
 
 &nbsp;
 
@@ -115,11 +135,15 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-想要在附加時收到通知`CSV` 已變更？只需訂閱`CSV` 檔案！在您下次造訪維基 (而不是透過電子郵件垃圾郵件) 時收到通知，您可以略過內嵌內容`HTML5` 呈現的減價表，而是直接擷取 Orion 所需的內容`JSON` 建置`CSV` 使用標準附件`CLI` 工具類`curl` 與`jq`.
+他們想要在附加時收到通知`CSV` 已變更？只需訂閱`CSV` 檔案！在下次造訪 Wiki 時收到通知 (而不是透過電子郵件垃圾郵件)，他們可以略過內嵌內容`HTML5` 呈現的減價表，而是直接擷取 Orion 所需的內容`JSON` 建置`CSV` 使用標準附件`CLI` 工具類`curl` 與`jq`。** 目前沒有其他 Wiki 支援此工作流程。**
 
 &nbsp;
 
-**適時性、便利性、準確性和精準度，在目前單一事實來源的無盡觀點下，作為最受限時間員工的主要生產力推動 **。如果沒有這些純 Orion 功能的可能後果，您的平台工程師將 **透過建立、建置及支援小型的內部網站，每年在製造業** 浪費 $10-100K 美元。`REST`這些共用資料集的 -based 介面，作為 Wiki 供應商有限的可搜尋和可擷取資料整合功能集的擴增解決方法。
+[第 3 天]. <span class="text-white">`MCP` 是翻轉。`RAG` 甚至更糟。您想要的是雙向版本控制與`git`。將您公司的當地 Agentic AI 解決方案融入團隊的 Wiki 工作流程中，不會比使用 Orion 更安全、更簡單或更低的成本。</span>
+
+&nbsp;
+
+**適時性、便利性、準確性和精準度，在不斷追求目前的單一事實來源中，作為最受限時間員工的主要生產力支援配套。** 沒有這些僅限 Orion 功能的可能後果是您的平台工程師將會<span class="text-white">** 強制每年在做工時浪費 $10-100K**</span> 透過建立、建置、** 文件 **以及支援小型的內部網站`REST`這些共用資料集的 -based 介面，作為 Wiki 供應商有限的可搜尋和可擷取資料整合功能集的擴增解決方法。
 
 &nbsp;
 
@@ -127,11 +151,11 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-換句話說，** 資訊擷取 **是與內容建立 / 修改基本上不同的問題領域，但來自競爭對手的 CRUD 型 Wiki 應用程式不會以有意義的方式造成此差異。此外，使用 Orion 的 Jamstack 設計時，分類不會被視為無法管理、一般 / 緊急產生的分類，但卻從超稅中累積`SQL` 表格。相反地，他們會收到仔細的結構規劃資訊，並由團隊和我們的經驗豐富的資訊架構師持續執行階層組織。[展開 (&amp;S)].
+換句話說，** 資訊擷取 **是與內容建立 / 修改基本上不同的問題領域，但[基於 CRUD](https://crudly.ai/crud-app/) 來自競爭對手的維基應用程式不會以有意義的方式造成這種區別。此外，使用 Orion 的 Jamstack 設計時，分類不會被視為無法管理、一般 / 緊急產生的分類，但卻從超稅中累積`SQL` 表格。相反地，他們會收到仔細的結構規劃資訊，並由團隊和我們的經驗豐富的資訊架構師持續執行階層組織。[展開 (&amp;S)].
 
 &nbsp;
 
-接下來，** 內容策展工具 **是 Orion 的重要功能，而非向上銷售的機會。我們的每個 Wiki 事實資料庫是業界第一&mdash; 在整個網站管理一致的名稱標記或相關軟體使用者自建物件描述資料等功能，只要編輯一行即可[YAML 檔案](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[第 4 天]。接下來，** 內容策展工具 **是 Orion 的重要功能，而非向上銷售的機會。我們的每個 Wiki 事實資料庫是業界第一&mdash; 在整個網站管理一致的名稱標記或相關軟體使用者自建物件描述資料等功能，只要編輯一行即可[YAML 檔案](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -139,7 +163,11 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-您的 Wiki 已不再惡化團隊的公用程式；但是變成 **獎勵資源，供其使用及增強。**   此外，您不需要是 Wiki 管理員，即可使用這些工具。&mdash; 幾乎任何人都可以自願參與美容程序，或可能被組織委派以執行這項職責作為團隊領導人。整個組織的可衡量投資報酬率成長，是我們 Wiki 平台特有的聚總園藝和護理能力的後續持續影響。
+使用 Orion 時，您的 Wiki 不再讓團隊使用效能變差；但是 **獎勵資源供團隊使用與增強。**   此外，您不需要是 Wiki 管理員才能使用這些工具。&mdash; 幾乎任何人都可以自願參與美容活動，或可能被組織委派，以擔任團隊負責人。
+
+&nbsp;
+
+<span class="text-white">整個組織的可衡量投資報酬率成長，是我們 Wiki 平台特有的聚總園藝和護理能力的後續持續影響。</span>
 
 &nbsp;
 
@@ -155,15 +183,11 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-此外，`YAML/JSON` Notion 中甚至不支援資料擷取格式！如果您無法將外部產生的類似樹狀結構資料變為某個資料`CSV` 左側的桌子都是裸頁區塊，您可以節省更多時間來掌握我們的 Orion 平台。
-
-&nbsp;
-
 這個產業沒有人將這個精簡程度投入 Wiki 產品的各個面向，成為整體包裝。
 
 &nbsp;
 
-Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。每個座位授權 $0 和不限數目的網站透過我們的聯合平台，為團隊、合作夥伴、網站甚至整個地球的受控知識共享和協作帶來新機會！我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
+[第 5 天]。Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。繁體中文<span class="text-white">** 每張座位授權 $0 及無限數量的網站 **</span> 透過我們的聯合平台，為團隊、合作夥伴、網站甚至整個地球的受控知識共享和協作創造新的機會！我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
 
 &nbsp;
 
@@ -171,7 +195,7 @@ Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。�
 
 &nbsp;
 
-與其他市場解決方案[沒有保費計劃，您可自行選擇](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]。與其他市場解決方案[沒有保費計劃，您可自行選擇](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
 
 &nbsp;
 
@@ -183,7 +207,7 @@ Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。�
 
 &nbsp;
 
-[^HTML5]。為了增加成人傷害，它將您現有的維基僅會將頁面內容轉譯為隱含的 javascript 式網頁瀏覽器應用程式，而不是 Orion 的明確標準相容性`HTML5` 文件。這意味著 (其中包括) 即使您的 Wiki 搜尋引擎會呈現您需要的表格，您也無法以專員可下載的 Wiki 內容直接存取這些表格，除非 Infosec 團隊持續刪除並重新匯出表格 (作為一個) `CSV` 附件) 每當資料更新時。
+[^HTML5]。 (真實故事！) 為了增加成人傷害，它將您現有的維基僅會將頁面內容轉譯為隱含的 javascript 式網頁瀏覽器應用程式，而不是 Orion 的明確標準相容性`HTML5` 文件。這意味著 (其中包括) 即使您的 Wiki 搜尋引擎會呈現您需要的表格，您也無法以專員可下載的 Wiki 內容直接存取這些表格，除非 Infosec 團隊持續刪除並重新匯出表格 (作為一個) `CSV` 附件) 每當資料更新時。
 
 &nbsp;
 
@@ -219,17 +243,17 @@ Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。�
 
 對許多公司來說，Jira 是非常有效的專案管理工具。不過，隨著時間的推移，您開始瞭解到[Confluence 只是為旅程加上標籤](https://projectmanagers.net/top-10-cons-disadvantages-of-using-confluence/)...
 
-如果這種共鳴，您是否厭倦了因為失望、反正規化、無法維護、過時、連鎖節奏的 Confluence 訊息，連同眾多的文字編輯器，甚至是更寬鬆的搜尋引擎而投注更多資金？
+如果這種共鳴，您是否厭倦以壞投資投入更多資金？
 
 &nbsp;
 
-不想改為浪費寶貴的資本[效能惡化](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/) 昂貴、浮動、[不可靠](https://isdown.app/status/notion)，一個平台到所有 OCD-lover 的 SaaS 服務無法實現其增強的生產力承諾嗎？換句話說，像是「概念」？
+不想改為浪費寶貴的資本[效能惡化](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)，昂貴，[不可靠](https://isdown.app/status/notion) 無法履行其增強生產力承諾的 SaaS 服務？換句話說，像是「概念」？
 
 偏好使用 Orion 等系統的 *grokability* &mdash; 依據 *文件與附加資料* 進行組織；而不是 Notion 的 *資料庫與附加的文件 *？
 
 &nbsp;
 
-想要一個更保守的方法，不只是向不正當的 AI 供應商及其未被遺忘的邊界模型公開您的所有公司祕書嗎？
+想要一個更保守的 / 主權方法，而不是只向不正當的 AI 供應商及其未被遺忘的邊界模型公開您的所有公司祕書？
 
 &nbsp;
 
@@ -290,9 +314,13 @@ Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。�
 
 零供應商鎖定&mdash; 和 *我們證明 *。您的內容生活在乾淨的 Markdown 和標準版本控制工作流程中。沒有專屬格式。沒有遷移惡夢。
 
+&nbsp;
+
+[聯系我們](../contact) 立即參加免費示範。
+
 </div>
 <div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px" src="index.page/ad1"></a>
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px;margin-top:3px;" src="index.page/ad1"></a>
 
 &nbsp;
 
@@ -311,6 +339,8 @@ Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。�
 &nbsp;
 
 絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 CMS 編輯器 /IDE 的設計可讓您隨時進行 **僅限瀏覽器的工作流程 **。* 立即 *，即使是行動 (瀏覽器) 介面也能順利完成。
+
+&nbsp;
 
 <div id="lightning">
 
@@ -346,7 +376,11 @@ div#lightning img {width:100%}
 
 <h4>想要讓它快速旋轉，看看它的速度和簡易性如何？</h4>
 
+&nbsp;
+
 本網站由奧里昂自行代管；所有熱粉紅色鉛筆方塊[<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上角已上線。快來玩，並對您看到的任何東西進行實驗！唯一無法做的事是確認並觀察您的變更建置與部署，這僅限於我們的人員，原因很明顯。
+
+&nbsp;
 
 我們的全球網路連接點 (POP) 可確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於四大洲，在美國境內也有雙海濱。我們正在快速擴展非洲和東亞！
 
@@ -358,17 +392,27 @@ div#lightning img {width:100%}
 
 您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分行，並僅支付在我們的基礎設施上使用 *的費用。只要攜帶您自己的 AI 增強型 css/javascript 架構、Perl 指令碼和 Django 範本，我們就能免費處理其他設定。建議使用 **Bootstrap 5** 作為 css/js 樣式，因為它是內部使用的；但完全由您決定。
 
-此外，所有客戶均擁有免費、可自訂範本或支援 javascript 的介面，可滿足我們的強大、專有需求`PCRE` 搜尋引擎。
+&nbsp;
+
+此外，所有客戶均擁有免費、可自訂範本或支援 javascript 的介面，可滿足我們的強大、專有需求`PCRE` 根據 Apache 已授權的搜尋引擎[`pffxg.sh`](https://github.com/joesuf4/home/blob/wsl/bin/pffxg.sh) 指令碼。
 
 &nbsp;
 
 <span class="text-white">想要透明化？為自己見：</span>
 
+&nbsp;
+
 Our entire build-system logic for this very website: 不到 100 行的程式碼，完全運用複雜的重複相依性管理，自動產生多語言網站地圖、目錄索引等功能。
+
+&nbsp;
 
 View the source: [我們的私有源庫樹](https://vcs.sunstarsys.com/repos/svn/public/cms-sites/www.sunstarsys.com/trunk/lib/)，或其公開[<i class="fa fa-github fa-emoji" title="Github"></i> GitHub 鏡像](https://github.com/SunStarSys/www/tree/trunk/lib).
 
+&nbsp;
+
 The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 → @SunStarSys/orion
+
+&nbsp;
 
 這不是行銷微調&mdash; 它是可驗證的開放式工程遺產，可追溯至 2010 年開創的 F/OSS 創新。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？[給我們打電話或給我們留言](/contact) 今天。
 
