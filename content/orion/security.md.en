@@ -2,7 +2,7 @@ Title: Orion Security
 Dependencies: *.md.en api/index.md.en
 ACL: @staff=rw, *=r
 Keywords: security,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-Status: verified=45849
+status: draft
 
 <div class="right">
 
@@ -167,7 +167,7 @@ Subversion Server-Side Commit Hooks are also customizable to your oversight conc
 
 #### Separation of Concerns and Engineering Tradeoffs
 
-In a nutshell, the way every other wiki platform works is as an SQL [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app that makes it quick and easy to modify content, for which the results have to be reconstructed in real-time (or from a webpage cache) every time someone needs to view that content online.
+In a nutshell, the way every other wiki platform works is as a Dynamic CMS, SQL-backed [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app that makes it quick and easy to modify content, for which the results have to be reconstructed in real-time (or from a webpage cache) every time someone needs to view that content online.
 
 In (noSQL) Orion, we take editing and rendering as two separate concerns that should be handled by two independent software stacks; where much more process, design, validation, and dependency management is invested in the editing interface. This is so that we can limit the software on the rendering stack to be a barebones SSI-enabled Apache file server with bog-standard web authentication and access controls involved, and optimistically we expect that the content is viewed an order of magnitude more often than it is edited.
 
