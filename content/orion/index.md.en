@@ -62,7 +62,7 @@ acl: @staff=rw, *=r
 
 &nbsp;
 
-### Here's the ROI, Executive Decision Maker :fa-chart-line:...
+# Here's the ROI, Executive Decision Maker :fa-chart-line:...
 
 &nbsp;
 
@@ -112,7 +112,7 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-#### Better ROI - how so?
+## Better ROI - how so?
 
 </button>
 </div>
@@ -167,7 +167,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
-##### Footnotes
+### Footnotes
 
 &nbsp;
 
@@ -183,7 +183,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
-#### Leave the draining pain points of the past behind...
+## Leave the draining pain points of the past behind...
 
 &nbsp;
 
@@ -203,7 +203,7 @@ Want a more conservative/sovereign approach than simply exposing all of your cor
 
 &nbsp;
 
-### Orion is built for leaders who refuse to settle
+## Orion is built for leaders who refuse to settle
 
 &nbsp;
 
@@ -272,7 +272,7 @@ Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markd
 
 &nbsp;
 
-### Here's&nbsp;Why,&nbsp;Young&nbsp;Academic&nbsp;:fa-orcid: / Full&nbsp;Stack&nbsp;Developer&nbsp;:fa-stack-overflow: / Public&nbsp;Blogger&nbsp;:fa-blog:&nbsp;...
+# Here's&nbsp;Why,&nbsp;Young&nbsp;Academic&nbsp;:fa-orcid: / Full&nbsp;Stack&nbsp;Developer&nbsp;:fa-stack-overflow: / Public&nbsp;Blogger&nbsp;:fa-blog:&nbsp;...
 
 &nbsp;
 
@@ -320,11 +320,11 @@ When Apache software project communities were presented with a free choice betwe
 
 &nbsp;
 
-<h4>Want to give it a quick spin to see how fast and easy it is?</h4>
+## Want to give it a quick spin to see how fast and easy it is?
 
 &nbsp;
 
-This website is self-hosted on Orion; all those hot-pink pencil squares [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live.  Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
+This website is self-hosted on Orion; all those hot-pink pencil squares [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) at the top right are live. Feel free to poke around and experiment with anything you see!  The only thing you can't do is commit and watch your changes build and deploy; that's restricted to our personnel for obvious reasons.
 
 &nbsp;
 
@@ -332,7 +332,7 @@ Our global Point of Presence (POP) network ensures low-latency connections to bo
 
 &nbsp;
 
-<h3>It's time for a sea change in how you manage and deliver your site to your target audience.</h3>
+### It's time for a sea change in how you manage and deliver your site to your target audience.
 
 &nbsp;
 
@@ -426,7 +426,7 @@ Need help customizing the `Perl` build system in `lib/` and other Django templat
 
 &nbsp;
 
-### Feature Comparison Grid
+# Feature Comparison Grid
 
 <br />
 
@@ -437,7 +437,7 @@ Need help customizing the `Perl` build system in `lib/` and other Django templat
 
 <br />
 
-### Details
+# Details
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
@@ -446,7 +446,7 @@ Need help customizing the `Perl` build system in `lib/` and other Django templat
 <hr>
 <br><br><br>
 
-## A Few Representative Screen Shots
+# A Few Representative Screen Shots
 
 <br>
 <h3>IDE View with German, French, Hebrew, and Russian (UTF-8).</h3>
