@@ -368,44 +368,7 @@ This isn't marketing spin &mdash; it's verifiable, open engineering heritage dat
 
 &nbsp;
 
-<a href="https://iconoclasts.blog/joe/wikis">
 
-```mermaid
-mindmap
-  root((KMS))
-    (Wiki Platforms)
-      ((Orion))
-      [Confluence]
-      [Notion]
-    (Version Control)
-      [Uses]
-        Content Curation
-        Access Controls
-        Immutable History
-      [Tools]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        Authors
-        Researchers
-        Curators
-      [Site Builds]
-        Developers
-        Architects
-      [Security]
-    (AI)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
-
-&nbsp;
-
-<center>
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">Getting Started</div>
 <div class="card-body">
