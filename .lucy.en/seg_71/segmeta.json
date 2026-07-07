@@ -3,11 +3,11 @@
     "files": {
       "seg_6d": {
         "count": "7",
-        "filename": "seg_70/deletions-seg_6d.bv"
+        "filename": "seg_71/deletions-seg_6d.bv"
       },
-      "seg_6z": {
+      "seg_70": {
         "count": "7",
-        "filename": "seg_70/deletions-seg_6z.bv"
+        "filename": "seg_71/deletions-seg_70.bv"
       }
     },
     "format": "1"
@@ -21,7 +21,7 @@
   "lexicon": {
     "counts": {
       "acl": "3",
-      "content": "2352",
+      "content": "2353",
       "keywords": "30",
       "path": "7",
       "status": "2",
@@ -54,7 +54,7 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_70"
+    "name": "seg_71"
   },
   "sort": {
     "counts": {
