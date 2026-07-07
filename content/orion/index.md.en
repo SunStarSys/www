@@ -96,15 +96,27 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
-Adopting Orion immediately reduces your risk of a major security incident; and the peace of mind delivered matters more to your board of directors than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
+- Substantial Security Risk Reduction[^1]
+- Real Data Integration w/ Search and AI Translation[^2]
+- True Agentic AI Support[^3]
+- Gratis Content Curation Tooling[^4]
+- $0 Per-Seat / Per-Website Enterprise Licensing[^5]
 
 &nbsp;
 
-Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of wiki-like products other than Orion is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**. However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
+[^1]. Adopting Orion immediately reduces your risk of a major security incident; and the peace of mind delivered matters more to your board of directors than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
+
+&nbsp;
+
+[^2]. Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of wiki-like products other than Orion is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**. However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
 
 &nbsp;
 
 For example, you will see **no more lost productivity** for staff trying to acquire periodically updated, critically confidential infosec cloud asset configuration details :fa-network-wired: locked in an obscurely tagged, externally generated data table somewhere in your present wiki, and in frustration reaching out to teammates who also don't recall where it is. Which naturally escalates the evolving time sink to managers; and so it goes. Until someone remembers, but because the table is huge and they just want the contents of one element in a single row, so they have to fetch it with a browser and eyeball scan it manually. Then repeat the process whenever they discover that the infosec data is next updated[^HTML5].
+
+&nbsp;
+
+Besides, `YAML/JSON` aren't even supported data ingestion formats in Notion (or Confluence)!  If you can't shoehorn externally generated tree-like data into a `CSV` table, all you have left are bare page blocks with which you can waste more time better spent mastering our Orion platform.
 
 &nbsp;
 
@@ -116,7 +128,7 @@ They want to be notified when that attached `CSV` is altered? Simply subscribe t
 
 &nbsp;
 
-<span class="text-white">`MCP` is a ripoff. `RAG` is even worse. What you want is bidirectional version-control sync with `git`. Hooking your company's local Agentic AI solution into your team's wiki workflow doesn't get any safer, easier or less expensive than with Orion.</span>
+[^3]. <span class="text-white">`MCP` is a ripoff. `RAG` is even worse. What you want is bidirectional version-control sync with `git`. Hooking your company's local Agentic AI solution into your team's wiki workflow doesn't get any safer, easier or less expensive than with Orion.</span>
 
 &nbsp;
 
@@ -132,7 +144,7 @@ In other words, **information retrieval** is a fundamentally different problem d
 
 &nbsp;
 
-Next, **content curation tooling** is an essential feature of Orion, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^4]. Next, **content curation tooling** is an essential feature of Orion, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -160,15 +172,11 @@ Of course none of this is possible with products like Notion because it is impos
 
 &nbsp;
 
-Besides, `YAML/JSON` aren't even supported data ingestion formats in Notion (or Confluence)!  If you can't shoehorn externally generated tree-like data into a `CSV` table, all you have left are bare page blocks with which you can waste more time better spent mastering our Orion platform.
-
-&nbsp;
-
 There's nobody else in the industry who has put this much refinement into every aspect of their wiki product as a total package.
 
 &nbsp;
 
-Futhermore, Orion scales with you as you grow, especially at the enterprise level. The **$0 per seat licensing and unlimited number of websites** opens up new opportunities for controlled knowledge sharing and collaboration across teams, partners, websites, and even the entire planet with our federated platform! We know that for most clients, just a tiny portion of those seat licenses would be used to actually edit pages, but they can use an unlimited number of "associated" read-only accounts in their wikis to share protected information with over the internet. Accounts that need not have any access to the Orion `CMS` proper- a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
+[^5]. Futhermore, Orion scales with you as you grow, especially at the enterprise level. The <span class="text-white">**$0 per seat licensing and unlimited number of websites**</span> opens up new opportunities for controlled knowledge sharing and collaboration across teams, partners, websites, and even the entire planet with our federated platform! We know that for most clients, just a tiny portion of those seat licenses would be used to actually edit pages, but they can use an unlimited number of "associated" read-only accounts in their wikis to share protected information with over the internet. Accounts that need not have any access to the Orion `CMS` proper- a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
 
 &nbsp;
 
