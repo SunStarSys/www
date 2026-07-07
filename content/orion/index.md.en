@@ -128,7 +128,7 @@ Besides, `YAML/JSON` aren't even supported data ingestion formats in Notion (or 
 
 &nbsp;
 
-That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable `CSV` file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded `HTML5` table.
+That externally generated infosec table :fa-network-wired: gets incorporated into your Orion wiki as a **searchable `CSV` file** attached to an underlying markdown document, which otherwise renders it at build time into an embedded `HTML5` table. Not only that, but Orion provides a vector database API integration (`PDL`) for processing numerical columnar table data within Orion itself. No other wiki provides a vector database API for any price.
 
 &nbsp;
 
