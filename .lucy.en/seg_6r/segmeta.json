@@ -3,11 +3,7 @@
     "files": {
       "seg_6d": {
         "count": "7",
-        "filename": "seg_6q/deletions-seg_6d.bv"
-      },
-      "seg_6p": {
-        "count": "7",
-        "filename": "seg_6q/deletions-seg_6p.bv"
+        "filename": "seg_6r/deletions-seg_6d.bv"
       }
     },
     "format": "1"
@@ -54,14 +50,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_6q"
+    "name": "seg_6r"
   },
   "sort": {
     "counts": {
-      "path": "7"
+      "path": "8"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "7"
+    },
     "ord_widths": {
       "path": "4"
     }
