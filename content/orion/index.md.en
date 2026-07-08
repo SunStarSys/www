@@ -105,6 +105,8 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Save 50% / year</span>](https://www.atlassian.com/software/confluence/pricing) with [Orion's Business Plan](plans) over feature-comparable Confluence Premium
 
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Affordable, Amortizable Switching Costs from Confluence
+
 </div>
 </div>
 </center>
@@ -164,6 +166,20 @@ As your personnel's corporate status evolves over time, Orion makes it easy for 
 &nbsp;
 
 [^6]. With other market solutions, [without a premium plan you are on your own](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+
+&nbsp;
+
+[^7]. Switching/Onboarding Costs from Confluence can be as low as $100 total for SMB, and amortized over the first three years of service for customers needing a more hands-on approach. The overall process is four-fold:
+
+1. agree on desired topology of the site map from individual Confluence spaces to Orion wiki files and folders,
+
+2. design and implement `Django` template files and `Perl` build logic to accomodate above topology, branding, and desired look-and-feel of the built `HTML` pre-go-live,
+
+3. configure the `xsltproc` scripting to execute the transformation of an `XML` dump of the entire Confluence space into the desired source tree layout, and
+
+4. build the Orion wiki site and return to the above steps for tweaking and retuning until customer is satisfied and ready for final contract signing.
+
+It may appear that step 2 above is where significant costs may accrue; however the bulk of that step is amenable to AI assistance. Customers may also elect to hold onto their Confluence subscriptions for as long as they like without introducing conflicts with their new Orion wikis, just to mitigate associated risks.
 
 &nbsp;
 
