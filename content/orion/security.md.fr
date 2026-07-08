@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: sécurité,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: vérifié=44370
+status: projet
 title: Sécurité d'Orion
 ---
 
@@ -168,9 +168,12 @@ Les crochets de validation côté serveur Subversion sont également personnalis
 
 ### [La SSR publique est une odeur](https://queue.acm.org/detail.cfm?id=2721993)
 
+Le dynamisme du genou et le suivi de la foule ont conduit à des risques catastrophiques et à des coûts déraisonnables pour ceux qui construisent et exploitent des systèmes en ligne. Orion adopte une approche plus réfléchie et développe une technologie de contenu statique qui brouille la distinction traditionnelle en matière de réactivité entre les systèmes statiques et dynamiques. Je pense que Joe est sur quelque chose avec cette approche, et je suis impatient de voir où il peut l'emmener.
+> -- Paul Vixie, Pionnier de l'Internet
+
 #### Séparation des préoccupations et compromis techniques
 
-En un mot, la façon dont toutes les autres plates-formes wiki fonctionnent est comme un SQL. [CRU](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) application qui permet de modifier rapidement et facilement le contenu, pour lequel les résultats doivent être reconstruits en temps réel (ou à partir d'un cache de page Web) chaque fois que quelqu'un a besoin de voir ce contenu en ligne.
+En un mot, la façon dont toutes les autres plates-formes wiki fonctionnent est comme un CMS dynamique, soutenu par SQL [CRU](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) application qui permet de modifier rapidement et facilement le contenu, pour lequel les résultats doivent être reconstruits en temps réel (ou à partir d'un cache de page Web) chaque fois que quelqu'un a besoin de voir ce contenu en ligne.
 
 Dans (noSQL) Orion, nous considérons l'édition et le rendu comme deux préoccupations distinctes qui devraient être traitées par deux piles de logiciels indépendantes ; où beaucoup plus de processus, de conception, de validation et de gestion des dépendances est investi dans l'interface d'édition. Cela nous permet de limiter le logiciel de la pile de rendu à un serveur de fichiers Apache compatible SSI Barebones avec authentification Web standard et contrôles d'accès impliqués, et de manière optimale, nous prévoyons que le contenu est vu plus souvent qu'il n'est modifié.
 
@@ -207,7 +210,7 @@ Tout le stockage des informations d'identification des cookies est également ch
 
 ### Bcrypt pour les mots de passe Subversion
 
-Nombre d'arrondi réglable (actuellement, la valeur par défaut est 5).
+Nombre d'arrondi réglable (actuellement, la valeur par défaut est 5). Voici un [entrée blog](https://www.iconoclasts.blog/joe/wishful-thinking) Cela explique la pertinence.
 
 ### Protection des données endommagées
 
@@ -223,7 +226,9 @@ Wiki security involves several factors:
 
 3. Protections de traversée de modèle
 
-4. Compatibilité ACL du moteur de recherche
+4. Sécurité littérale de chaîne de modèle
+
+5. Compatibilité ACL du moteur de recherche
 
 Nous explorons ces questions en relation avec Orion ci-dessous.
 
@@ -265,7 +270,7 @@ Le système de construction est all-seeing et all-knowing, mais nous pouvons nou
 
 Le système de compilation affiche la liste des noms de fichier qu'il a créés via l'IDE du navigateur lors d'une validation, mais cette liste est uniquement basée sur l'accès en lecture d'un utilisateur aux ressources dépendantes des actions d'ajout, de mise à jour ou de suppression de contenu de l'utilisateur dans la validation.
 
-##### Contrôles de traversée de modèle
+#### Contrôles de traversée de modèle
 
 Voir [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
@@ -273,11 +278,11 @@ Voir [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 Ce code applique les règles qui suivent ci-dessous dans cette section.
 
-###### inclure et étendre les balises
+##### inclure et étendre les balises
 
 Tous les fichiers cible se trouvent dans un sous-dossier de `/templates/` et doit être référencé en tant que chemins absolus ancrés dans ce dossier.
 
-###### balise ssi
+##### balise ssi
 
 Tous les fichiers cible se trouvent dans un sous-dossier de `/content/` et doit être référencé en tant que chemins absolus ancrés dans ce dossier.
 
@@ -285,7 +290,7 @@ Si le chemin cible n'est pas configuré dans `@path::patterns` avec un paramètr
 
 C'est parce que `ssi` Le support est un prérequis pour ces jeux de fonctionnalités, afin de préserver la cible de votre site *permalinks*.
 
-###### Sécurité des filtres impliquant des expressions régulières transmises en tant que littéraux de type chaîne
+##### Sécurité des filtres impliquant des expressions régulières transmises en tant que littéraux de type chaîne
 
 `Dotiac::DTL` urlencode en interne tous les littéraux de type chaîne avant de les exposer à `eval` pour des raisons de sécurité.  Il les laisse ensuite codés lorsqu'ils sont transmis en tant qu'arguments de filtre, ce qui est frustrant lorsque vous travaillez avec des littéraux de chaîne PCRE.
 

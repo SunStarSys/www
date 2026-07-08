@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: seguridad,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,cerotrust
-status: verificado=44370
+status: borrador
 title: Seguridad de Orion
 ---
 
@@ -168,9 +168,12 @@ Los ganchos de confirmación del lado del servidor de Subversion también se pue
 
 ### [La SSR pública es un olor](https://queue.acm.org/detail.cfm?id=2721993)
 
+El dinamismo y el seguimiento de la multitud han llevado a riesgos catastróficos y costos irrazonables para aquellos que construyen y operan sistemas en línea. Orion está tomando un enfoque más considerado y está desarrollando tecnología de contenido estático que difumina la distinción tradicional en la capacidad de respuesta entre sistemas estáticos y dinámicos. Creo que Joe está en algo con este enfoque, y estoy ansioso por ver dónde puede tomarlo.
+Paul Vixie, pionero de Internet
+
 #### Separación de preocupaciones e ingeniería
 
-En pocas palabras, la forma en que funciona cualquier otra plataforma wiki es como SQL. [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) aplicación que hace que sea rápido y fácil modificar el contenido, para lo cual los resultados tienen que ser reconstruidos en tiempo real (o desde una caché de página web) cada vez que alguien necesita ver ese contenido en línea.
+En pocas palabras, la forma en que funciona cualquier otra plataforma wiki es como un CMS dinámico, respaldado por SQL [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) aplicación que hace que sea rápido y fácil modificar el contenido, para lo cual los resultados tienen que ser reconstruidos en tiempo real (o desde una caché de página web) cada vez que alguien necesita ver ese contenido en línea.
 
 En (noSQL) Orion, tomamos la edición y la representación como dos preocupaciones separadas que deben ser manejadas por dos pilas de software independientes; donde se invierte mucho más en la interfaz de edición, diseño, validación y gestión de dependencias. Esto es para que podamos limitar el software en la pila de presentación a ser un servidor de archivos Apache habilitado para SSI con autenticación web estándar de bog y controles de acceso involucrados, y de manera optimista esperamos que el contenido se vea en un orden de magnitud más a menudo de lo que se edita.
 
@@ -207,7 +210,7 @@ Todo el almacenamiento de credenciales de cookies también está cifrado AES-256
 
 ### Cifrar para contraseñas de subversión
 
-Número ajustable de rondas (el valor por defecto actual es 5).
+Número ajustable de rondas (el valor por defecto actual es 5). Esta es una [entrada de blog](https://www.iconoclasts.blog/joe/wishful-thinking) que explica la relevancia.
 
 ### Protecciones de datos contaminados
 
@@ -223,7 +226,9 @@ Wiki security involves several factors:
 
 3. Protecciones de recorrido de plantilla
 
-4. Compatibilidad con ACL del motor de búsqueda
+4. Seguridad literal de cadena de plantilla
+
+5. Compatibilidad con ACL del motor de búsqueda
 
 A continuación profundizamos en estos temas relacionados con Orión.
 
@@ -265,7 +270,7 @@ El sistema de construcción es todo lo que se ve y todo lo que se sabe, pero pod
 
 El sistema de creación mostrará la lista de nombres de archivo que creó a través del IDE del explorador tras una confirmación, pero esa lista solo se basa en el acceso de lectura de un usuario a los recursos que dependen de las acciones de adición, actualización o supresión de contenido del usuario en la confirmación.
 
-##### Controles de recorrido de plantilla
+#### Controles de recorrido de plantilla
 
 Ver [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
@@ -273,11 +278,11 @@ Ver [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 Este código aplica las reglas que se indican a continuación en esta sección.
 
-###### incluir y ampliar etiquetas
+##### incluir y ampliar etiquetas
 
 Todos los archivos de destino están en una subcarpeta de la `/templates/` carpeta, y se debe hacer referencia a ella como rutas de acceso absolutas con raíz en esa carpeta.
 
-###### etiqueta ssi
+##### etiqueta ssi
 
 Todos los archivos de destino están en una subcarpeta de la `/content/` carpeta, y se debe hacer referencia a ella como rutas de acceso absolutas con raíz en esa carpeta.
 
@@ -285,7 +290,7 @@ Si la ruta de destino no está configurada en `@path::patterns` con una configur
 
 Esto se debe a `ssi` el soporte es un requisito previo para esos conjuntos de funciones, para preservar los *permalinks* de destino de su sitio.
 
-###### Filtrar seguridad que implica expresiones regulares transferidas como literales de cadena
+##### Filtrar seguridad que implica expresiones regulares transferidas como literales de cadena
 
 `Dotiac::DTL` codifica internamente todos los literales de cadena antes de exponerlos a `eval` por razones de seguridad.  A continuación, los deja codificados cuando se pasan como argumentos de filtro, lo que es frustrante cuando se trabaja con literales de cadena PCRE.
 

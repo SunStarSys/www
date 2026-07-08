@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: säkerhet,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: verifierad=44370
+status: skiss
 title: Orion-säkerhet
 ---
 
@@ -168,9 +168,12 @@ Subversion Server-Side Commit Hooks är också anpassningsbara för dina tillsyn
 
 ### [SSR är en lukt](https://queue.acm.org/detail.cfm?id=2721993)
 
+Knee-jerk dynamik och publikföljning har lett till katastrofala risker och orimliga kostnader för dem som bygger och driver online-system. Orion tar ett mer genomtänkt tillvägagångssätt och utvecklar statisk innehållsteknik som suddar ut den traditionella skillnaden i responsivitet mellan statiska och dynamiska system. Jag tror att Joe är på något med detta tillvägagångssätt, och jag är angelägen om att se var han kan ta det.
+> -- Paul Vixie, Internet Pioneer
+
 #### Separation av bekymmer och tekniska avvägningar
 
-I ett nötskal är hur alla andra wiki-plattformar fungerar som en SQL [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app som gör det snabbt och enkelt att ändra innehåll, för vilket resultaten måste rekonstrueras i realtid (eller från en webbsidescache) varje gång någon behöver visa det innehållet online.
+I ett nötskal är hur varje annan wiki-plattform fungerar som en dynamisk CMS, SQL-stödd [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app som gör det snabbt och enkelt att ändra innehåll, för vilket resultaten måste rekonstrueras i realtid (eller från en webbsidescache) varje gång någon behöver visa det innehållet online.
 
 I (noSQL) Orion tar vi redigering och rendering som två separata problem som ska hanteras av två oberoende programvarustackar; där mycket mer process, design, validering och beroendehantering investeras i redigeringsgränssnittet. Detta är så att vi kan begränsa programvaran på renderingsstacken till att vara en barebones SSI-aktiverad Apache-filserver med bog-standard webbautentisering och åtkomstkontroller inblandade, och optimistiskt förväntar vi oss att innehållet ses en storleksordning oftare än den redigeras.
 
@@ -207,7 +210,7 @@ All lagring av cookie-inloggningsuppgifter är dessutom AES-256 krypterad under 
 
 ### Bcrypt för Subversion-lösenord
 
-Justerbart antal rundor (för närvarande är standardvärdet 5).
+Justerbart antal rundor (för närvarande är standardvärdet 5). Här är en [blogginlägg](https://www.iconoclasts.blog/joe/wishful-thinking) Det förklarar relevansen.
 
 ### Målade dataskydd
 
@@ -223,7 +226,9 @@ Wiki security involves several factors:
 
 3. Traversskydd för mall
 
-4. ACL-kompatibilitet för sökmotor
+4. Litteral säkerhet för mallsträng
+
+5. ACL-kompatibilitet för sökmotor
 
 Vi gräver i dessa frågor som de relaterar till Orion nedan.
 
@@ -265,7 +270,7 @@ Byggsystemet är allseende och allvetande, men vi kan se till att dina byggda, s
 
 Byggsystemet visar listan över filnamn som byggts via webbläsarens IDE vid en bekräftelse, men den listan baseras bara på en användares läsbehörighet till resurserna som är beroende av användarens åtgärder för att lägga till, uppdatera eller ta bort innehåll i bekräftelsen.
 
-##### Mallkontroller för traversering
+#### Mallkontroller för traversering
 
 Se [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
@@ -273,11 +278,11 @@ Se [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 Koden tillämpar de regler som följer nedan i det här avsnittet.
 
-###### inkluderar och utökar taggar
+##### inkluderar och utökar taggar
 
 Alla målfiler finns i en undermapp i `/templates/` och måste refereras som absoluta sökvägar som är rotade i den mappen.
 
-###### ssi-tagg
+##### ssi-tagg
 
 Alla målfiler finns i en undermapp i `/content/` och måste refereras som absoluta sökvägar som är rotade i den mappen.
 
@@ -285,7 +290,7 @@ Om målsökvägen inte har konfigurerats i `@path::patterns` med en matchande in
 
 Detta beror på att `ssi` support är en förutsättning för dessa funktionsuppsättningar, för att bevara webbplatsens mål *permalinks*.
 
-###### Filtrera säkerhet med reguljära uttryck som överförts som stränglitteraler
+##### Filtrera säkerhet med reguljära uttryck som överförts som stränglitteraler
 
 `Dotiac::DTL` internt urlenkodar alla stränglitteraler innan de exponeras för `eval` av säkerhetsskäl.  Det lämnar dem sedan kodade när de skickas som filterargument, vilket är frustrerande när man arbetar med PCRE stränglitteraler.
 

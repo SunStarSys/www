@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: security，安全性，infosec，appsec，ipsec，devsecops，it，acl，svnauthz，zerotrust
-status: 驗證 =44370
+status: 草稿
 title: Orion 安全
 ---
 
@@ -168,9 +168,12 @@ Subversion 伺服器端確認鉤點也可根據您的監督問題自訂。從簡
 
 ### [公用 SSR 是氣味](https://queue.acm.org/detail.cfm?id=2721993)
 
+> Knee-jerk 的活力和群眾跟蹤導致了災難性的風險和不合理的成本。Orion 採用更廣泛的方法，正在開發靜態內容技術，使靜態與動態系統之間的回應速度與傳統上的區別變得模糊。我認為喬是用這種方法去做些事，我很想看到他可以去的地方。
+> -- Paul Vixie, Internet Pioneer
+
 #### 關心與工程的分離權衡
 
-簡而言之，其他 Wiki 平台的運作方式就是 SQL [克魯德](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 此應用程式可讓您快速輕鬆地修改內容，每當有人需要在線上檢視該內容時，就必須即時 (或從網頁快取中) 重新建構結果。
+簡而言之，其他 Wiki 平台的運作方式就是「動態 CMS」，由 SQL 支援[克魯德](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) 此應用程式可讓您快速輕鬆地修改內容，每當有人需要在線上檢視該內容時，就必須即時 (或從網頁快取中) 重新建構結果。
 
 在 (noSQL) Orion 中，我們會將編輯和轉譯視為兩個獨立軟體堆疊應處理的個別問題；其中更多的程序、設計、驗證和相依性管理都投資於編輯介面。這樣一來，我們就可以將彩現堆疊上的軟體限制為支援 SSI 的裸機 Apache 檔案伺服器，其中包含標準的 Web 認證和存取控制，而且我們以最佳方式預期檢視內容的頻率比編輯的還要高。
 
@@ -207,7 +210,7 @@ Orion 的安全模型由包含的設定集中管理[`@path::acl`](https://github
 
 ### Subversion 密碼的加密
 
-可調整的捨入次數 (目前預設值為 5)。
+可調整的捨入次數 (目前預設值為 5)。以下是[部落格項目](https://www.iconoclasts.blog/joe/wishful-thinking) 這說明了相關性。
 
 ### 隱匿的資料保護
 
@@ -223,7 +226,9 @@ Wiki security involves several factors:
 
 3. 範本遍訪保護
 
-4. 搜尋引擎 ACL 相容性
+4. 範本字串文字安全性
+
+5. 搜尋引擎 ACL 相容性
 
 我們探討這些與以下 Orion 有關的問題。
 
@@ -265,7 +270,7 @@ Wiki security involves several factors:
 
 建置系統會在確認時，顯示透過瀏覽器 IDE 建立的檔案名稱清單，但該清單僅根據使用者在確認中新增、更新或刪除內容動作，對資源的讀取存取權。
 
-##### 範本追蹤控制項
+#### 範本追蹤控制項
 
 請參閱[sanitize_relative_path]({{snippetC.pretty_uri}}):
 
@@ -273,11 +278,11 @@ Wiki security involves several factors:
 
 此程式碼會強制執行以下段落中的規則。
 
-###### 包含和延伸標籤
+##### 包含和延伸標籤
 
 所有目標檔案都位於子資料夾中`/templates/` 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
 
-###### ssi 標籤
+##### ssi 標籤
 
 所有目標檔案都位於子資料夾中`/content/` 資料夾，且必須作為根目錄位於該資料夾的絕對路徑。
 
@@ -285,7 +290,7 @@ Wiki security involves several factors:
 
 這是因為`ssi` 支援是這些功能集的先決條件，以保留您網站的目標 *permalinks*。
 
-###### 涉及以字串常值形式傳送之正規表示式的篩選安全性
+##### 涉及以字串常值形式傳送之正規表示式的篩選安全性
 
 `Dotiac::DTL` 對所有字串文字進行內部 URL 編碼後，再將其公開`eval` 基於安全理由。然後，當以篩選引數傳送時，它會保留編碼，這在使用 PCRE 字串文字時會令人失望。
 

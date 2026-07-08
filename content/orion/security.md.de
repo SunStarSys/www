@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: Sicherheit,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: überprüft=44370
+status: Entwurf
 title: Orion-Sicherheit
 ---
 
@@ -168,9 +168,12 @@ Subversion Server-seitige Commit-Hooks sind auch an Ihre Aufsichtsprobleme anpas
 
 ### [Öffentliche SSR ist ein Geruch](https://queue.acm.org/detail.cfm?id=2721993)
 
+"Knie-Ruck-Dynamik und Crowd-Following haben zu katastrophalen Risiken und unvernünftigen Kosten für diejenigen geführt, die Online-Systeme bauen und betreiben. Orion verfolgt einen mehr überlegten Ansatz und entwickelt statische Content-Technologie, die den traditionellen Unterschied in der Reaktionsfähigkeit zwischen statischen und dynamischen Systemen verwischt. Ich denke, Joe ist auf etwas mit diesem Ansatz, und ich bin gespannt, wo er es nehmen kann.
+> -- Paul Vixie, Internet-Pionier
+
 #### Trennung von Bedenken und technischen Kompromissen
 
-Kurz gesagt: Jede andere Wiki-Plattform funktioniert als SQL [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) App, die es schnell und einfach macht, Inhalte zu ändern, für die die Ergebnisse in Echtzeit (oder aus einem Webseiten-Cache) jedes Mal neu erstellt werden müssen, wenn jemand diesen Inhalt online ansehen muss.
+Kurz gesagt, die Art und Weise, wie jede andere Wiki-Plattform funktioniert, ist als dynamisches CMS, SQL-gestützt. [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) App, die es schnell und einfach macht, Inhalte zu ändern, für die die Ergebnisse in Echtzeit (oder aus einem Webseiten-Cache) jedes Mal neu erstellt werden müssen, wenn jemand diesen Inhalt online ansehen muss.
 
 In (noSQL) Orion nehmen wir das Bearbeiten und Rendering als zwei separate Bedenken an, die von zwei unabhängigen Software-Stacks behandelt werden sollten; wobei viel mehr Prozess-, Design-, Validierungs- und Abhängigkeitsmanagement in die Bearbeitungsoberfläche investiert wird. Dies ist so, dass wir die Software auf dem Rendering-Stack auf einen Barebones SSI-fähigen Apache-Dateiserver mit moorstandardmäßiger Webauthentifizierung und Zugriffskontrolle beschränken können, und optimistisch erwarten wir, dass der Inhalt öfter in einer Größenordnung angezeigt wird, als er bearbeitet wird.
 
@@ -207,7 +210,7 @@ Alle Cookie-Zugangsdaten werden zusätzlich AES-256 verschlüsselt unter einem H
 
 ### Bcrypt für Subversion-Kennwörter
 
-Anpassbare Anzahl von Runden (derzeit standardmäßig 5).
+Anpassbare Anzahl von Runden (derzeit standardmäßig 5). Hier ist ein [Blog-Eintrag](https://www.iconoclasts.blog/joe/wishful-thinking) Das erklärt die Relevanz.
 
 ### Beschädigter Datenschutz
 
@@ -223,7 +226,9 @@ Wiki security involves several factors:
 
 3. Schutz vor Vorlagendurchlauf
 
-4. ACL-Kompatibilität für Suchmaschine
+4. Vorlagenzeichenfolge - Literale Sicherheit
+
+5. ACL-Kompatibilität für Suchmaschine
 
 Wir befassen uns mit diesen Themen, wie sie sich unten auf Orion beziehen.
 
@@ -265,7 +270,7 @@ Das Build-System ist allsehend und allwissend, aber wir können sicherstellen, d
 
 Das Build-System zeigt die Liste der Dateinamen an, die es bei einem Commit über die Browser-IDE erstellt hat. Diese Liste basiert jedoch nur auf dem Lesezugriff eines Benutzers auf die Ressourcen, je nachdem, welche Inhaltsaktionen der Benutzer beim Commit hinzufügen, aktualisieren oder löschen.
 
-##### Durchlaufkontrollen für Vorlage
+#### Durchlaufkontrollen für Vorlage
 
 Siehe [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
@@ -273,11 +278,11 @@ Siehe [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 Dieser Code erzwingt die folgenden Regeln in diesem Abschnitt.
 
-###### Tags einschließen und erweitern
+##### Tags einschließen und erweitern
 
 Alle Zieldateien befinden sich in einem Unterordner der `/templates/` Ordner und muss als absolute Pfade referenziert werden, die in diesem Ordner verwurzelt sind.
 
-###### SSI-Tag
+##### SSI-Tag
 
 Alle Zieldateien befinden sich in einem Unterordner der `/content/` Ordner und muss als absolute Pfade referenziert werden, die in diesem Ordner verwurzelt sind.
 
@@ -285,7 +290,7 @@ Wenn der Zielpfad nicht konfiguriert ist in `@path::patterns` mit einer überein
 
 Das liegt daran, `ssi` Unterstützung ist eine Voraussetzung für diese Featuresets, um das Ziel Ihrer Site *permalinks* beizubehalten.
 
-###### Filtersicherheit für reguläre Ausdrücke, die als Zeichenfolgenliterale übergeben werden
+##### Filtersicherheit für reguläre Ausdrücke, die als Zeichenfolgenliterale übergeben werden
 
 `Dotiac::DTL` intern urlenkodiert alle Zeichenfolgenliterale, bevor sie `eval` aus Sicherheitsgründen.  Es lässt sie dann codiert, wenn sie als Filterargumente übergeben werden, was bei der Arbeit mit PCRE-Zeichenfolgenliteralen frustrierend ist.
 

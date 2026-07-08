@@ -165,6 +165,10 @@ Subversion Server-Side Commit Hooks are also customizable to your oversight conc
 
 ### [Public SSR is a smell](https://queue.acm.org/detail.cfm?id=2721993)
 
+> Knee-jerk dynamism and crowd-following has led to catastrophic risks and unreasonable costs to those who build and operate online systems. Orion is taking a more considered approach and is developing static content technology that blurs the traditional distinction in responsiveness between static and dynamic systems. I think Joe is onto something with this approach, and I am eager to see where he can take it.
+> -- Paul Vixie, Internet Pioneer
+
+
 #### Separation of Concerns and Engineering Tradeoffs
 
 In a nutshell, the way every other wiki platform works is as a Dynamic CMS, SQL-backed [CRUD](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) app that makes it quick and easy to modify content, for which the results have to be reconstructed in real-time (or from a webpage cache) every time someone needs to view that content online.

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: segurança,infosec,appsec,ipsec,devsecops,it,acl,svnauthz,zerotrust
-status: verificado=44370
+status: rascunho
 title: Segurança Orion
 ---
 
@@ -168,9 +168,12 @@ Subversion Server-Side Commit Hooks também são personalizáveis para suas preo
 
 ### [SSR público é um cheiro](https://queue.acm.org/detail.cfm?id=2721993)
 
+O dinamismo do joelho e o acompanhamento de multidões levaram a riscos catastróficos e custos irracionais para aqueles que criam e operam sistemas on-line. Orion está tomando uma abordagem mais considerada e está desenvolvendo tecnologia de conteúdo estático que borra a distinção tradicional em capacidade de resposta entre sistemas estáticos e dinâmicos. Acho que Joe está em alguma coisa com essa abordagem, e estou ansioso para ver onde ele pode levá-lo.
+> -- Paul Vixie, Internet Pioneer
+
 #### Separação de preocupações e compensações de engenharia
 
-Resumindo, a forma como cada outra plataforma wiki funciona é como um SQL [CRUDO](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) aplicativo que torna rápido e fácil modificar o conteúdo, para o qual os resultados devem ser reconstruídos em tempo real (ou a partir de um cache de página da Web) toda vez que alguém precisa visualizar esse conteúdo on-line.
+Em poucas palavras, a forma como todas as outras plataformas wiki funcionam é como um CMS dinâmico, apoiado por SQL. [CRUDO](https://en.wikipedia.org/wiki/Create,_read,_update_and_delete) aplicativo que torna rápido e fácil modificar o conteúdo, para o qual os resultados devem ser reconstruídos em tempo real (ou a partir de um cache de página da Web) toda vez que alguém precisa visualizar esse conteúdo on-line.
 
 Em (noSQL) Orion, tomamos edição e renderização como duas preocupações separadas que devem ser tratadas por duas pilhas de software independentes; onde muito mais processo, design, validação e gerenciamento de dependência são investidos na interface de edição. Isso é para que possamos limitar o software na pilha de renderização para ser um servidor de arquivos Apache habilitado para SSI barebones com autenticação da web padrão e controles de acesso envolvidos, e otimisticamente esperamos que o conteúdo seja visualizado em uma ordem de magnitude com mais frequência do que é editado.
 
@@ -207,7 +210,7 @@ Todo o armazenamento de credenciais de cookie é também AES-256 criptografado s
 
 ### Bcrypt para senhas do Subversion
 
-Número ajustável de rodadas (atualmente o padrão é 5).
+Número ajustável de rodadas (atualmente o padrão é 5). Aqui está um [entrada do blog](https://www.iconoclasts.blog/joe/wishful-thinking) Isso explica a relevância.
 
 ### Proteções de dados contaminadas
 
@@ -223,7 +226,9 @@ Wiki security involves several factors:
 
 3. Proteções Transversais do Modelo
 
-4. Compatibilidade de ACL do mecanismo de pesquisa
+4. Segurança Literal da String do Modelo
+
+5. Compatibilidade de ACL do mecanismo de pesquisa
 
 Nós nos aprofundamos nessas questões como eles se relacionam com Orion abaixo.
 
@@ -265,7 +270,7 @@ O sistema de compilação é onisciente e onisciente, mas podemos garantir que s
 
 O sistema de compilação revelará a lista de nomes de arquivos que ele criou por meio do IDE do browser em um commit, mas essa lista é baseada apenas no acesso de leitura de um usuário aos recursos dependentes das ações de adição, atualização ou exclusão de conteúdo no commit do usuário.
 
-##### Controles Transversais do Modelo
+#### Controles Transversais do Modelo
 
 Consulte [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
@@ -273,11 +278,11 @@ Consulte [sanitize_relative_path]({{snippetC.pretty_uri}}):
 
 Este código impõe as regras a seguir nesta seção.
 
-###### incluir e estender tags
+##### incluir e estender tags
 
 Todos os arquivos de destino estão em uma subpasta do `/templates/` e deve ser referenciado como caminhos absolutos com raiz nessa pasta.
 
-###### tag ssi
+##### tag ssi
 
 Todos os arquivos de destino estão em uma subpasta do `/content/` e deve ser referenciado como caminhos absolutos com raiz nessa pasta.
 
@@ -285,7 +290,7 @@ Se o caminho de destino não estiver configurado no `@path::patterns` com uma co
 
 Isso porque `ssi` o suporte é um pré-requisito para esses conjuntos de recursos, para preservar os *permalinks*. do alvo do seu site
 
-###### Filtrar Segurança Envolvendo Expressões Regulares Passadas como Literais de String
+##### Filtrar Segurança Envolvendo Expressões Regulares Passadas como Literais de String
 
 `Dotiac::DTL` urlencodes internamente todos os literais de string antes de expô-los a `eval` por razões de segurança.  Em seguida, deixa-os codificados quando passados como argumentos de filtro, o que é frustrante ao trabalhar com literais de string PCRE.
 
