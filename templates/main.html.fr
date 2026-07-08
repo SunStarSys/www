@@ -163,7 +163,7 @@
   {% block content %}
   <div class="breadcrumbs">
       {{ breadcrumbs|safe }}&nbsp;&nbsp;<a href="javascript:void(location.href='https://cms.sunstarsys.com/redirect?uri='+escape(location.href))">
-        <img src="/images/edit.png" alt="Edit Icon" />
+        <i class="fa fa-file-pen text-danger"></i>
       </a>
   </div>
   <h1>{{ headers.title|safe }}</h1>
@@ -225,7 +225,7 @@ for (const e of $("body").find(".graphviz").toArray()) {
     }
     if (document.cookie.indexOf("gdpr_analytics=1") == -1 &&
     document.cookie.indexOf("gdpr_decline=1") == -1) {
-        for (const h1 of document.getElementsByTagName("h1")) {
+        for (const main of document.getElementsByTagName("main")) {
             var html = `<div id="analytics"><br><div class="card border-warning">
 <div class="card-header">
   <h3 class="card-title text-dark">This Site Uses Cookies for Analytics.</h4>
@@ -245,7 +245,7 @@ for (const e of $("body").find(".graphviz").toArray()) {
 </div>
 </div>
 </div>`;
-            h1.insertAdjacentHTML('beforeend', html);
+            main.insertAdjacentHTML('beforeend', html);
         }
     }
     else if (document.cookie.indexOf("gdpr_decline=1") == -1) {
