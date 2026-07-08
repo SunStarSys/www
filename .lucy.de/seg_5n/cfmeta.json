@@ -1,0 +1,133 @@
+{
+  "files": {
+    "documents.dat": {
+      "length": "150530",
+      "offset": "0"
+    },
+    "documents.ix": {
+      "length": "224",
+      "offset": "150536"
+    },
+    "highlight.dat": {
+      "length": "26",
+      "offset": "150760"
+    },
+    "highlight.ix": {
+      "length": "224",
+      "offset": "150792"
+    },
+    "lexicon-1.dat": {
+      "length": "73",
+      "offset": "151016"
+    },
+    "lexicon-1.ix": {
+      "length": "4",
+      "offset": "151096"
+    },
+    "lexicon-1.ixix": {
+      "length": "8",
+      "offset": "151104"
+    },
+    "lexicon-3.dat": {
+      "length": "440",
+      "offset": "151112"
+    },
+    "lexicon-3.ix": {
+      "length": "4",
+      "offset": "151552"
+    },
+    "lexicon-3.ixix": {
+      "length": "8",
+      "offset": "151560"
+    },
+    "lexicon-4.dat": {
+      "length": "468",
+      "offset": "151568"
+    },
+    "lexicon-4.ix": {
+      "length": "4",
+      "offset": "152040"
+    },
+    "lexicon-4.ixix": {
+      "length": "8",
+      "offset": "152048"
+    },
+    "lexicon-5.dat": {
+      "length": "19",
+      "offset": "152056"
+    },
+    "lexicon-5.ix": {
+      "length": "4",
+      "offset": "152080"
+    },
+    "lexicon-5.ixix": {
+      "length": "8",
+      "offset": "152088"
+    },
+    "lexicon-6.dat": {
+      "length": "34471",
+      "offset": "152096"
+    },
+    "lexicon-6.ix": {
+      "length": "482",
+      "offset": "186568"
+    },
+    "lexicon-6.ixix": {
+      "length": "272",
+      "offset": "187056"
+    },
+    "lexicon-8.dat": {
+      "length": "704",
+      "offset": "187328"
+    },
+    "lexicon-8.ix": {
+      "length": "4",
+      "offset": "188032"
+    },
+    "lexicon-8.ixix": {
+      "length": "8",
+      "offset": "188040"
+    },
+    "postings-1.dat": {
+      "length": "69",
+      "offset": "188048"
+    },
+    "postings-3.dat": {
+      "length": "174",
+      "offset": "188120"
+    },
+    "postings-4.dat": {
+      "length": "78",
+      "offset": "188296"
+    },
+    "postings-5.dat": {
+      "length": "18",
+      "offset": "188376"
+    },
+    "postings-6.dat": {
+      "length": "44503",
+      "offset": "188400"
+    },
+    "postings-8.dat": {
+      "length": "306",
+      "offset": "232904"
+    },
+    "postings.skip": {
+      "length": "39",
+      "offset": "233216"
+    },
+    "sort-4.dat": {
+      "length": "560",
+      "offset": "233256"
+    },
+    "sort-4.ix": {
+      "length": "216",
+      "offset": "233816"
+    },
+    "sort-4.ord": {
+      "length": "27",
+      "offset": "234032"
+    }
+  },
+  "format": "2"
+}
