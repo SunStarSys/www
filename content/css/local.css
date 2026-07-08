@@ -19,6 +19,7 @@ a > code {color:inherit !important}
 blockquote {
   padding: 2px 10px 2px 10px;
   color: white;
+  text-style: italic;
   border-left: solid 5px #A9BDBD;
 }
 
