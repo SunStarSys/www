@@ -16,6 +16,11 @@ div.essay code {color: #29942c}
 div.jumbotron code {color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity,1))}
 a > code {color:inherit !important}
 
+blockquote {
+  padding: 2px 10px 2px 10px;
+  border-left: solid 5px #A9BDBD;
+}
+
 div.jumbotron {
 	color: black;
 }
