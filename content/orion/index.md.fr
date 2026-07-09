@@ -3,11 +3,9 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-status: vérifié=47833
+status: vérifié=47904
 title: SunStar Orion de Systems
 ---
-
-[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5">
@@ -66,6 +64,10 @@ title: SunStar Orion de Systems
 &nbsp;
 
 <div class="border-top" style="padding-top: 20px">
+
+# <span class="text-warning-emphasis">Pour les dirigeants d'entreprise</span><br>&nbsp;
+
+&nbsp;
 
 # Voici le ROI qui offre réellement : une gestion des connaissances sécurisée et performante à une fraction du coût :fa-chart-line:
 
@@ -131,6 +133,8 @@ Contrairement aux produits que vos concurrents utilisent, Orion est un cadre con
 
 [^2]. Mettre de côté le [avantages de la sécurité](https://www.iconoclasts.blog/joe/wishful-thinking) et [pénalités de raidissement](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) pour [violation de la confidentialité des données HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), un défaut fondamental des produits de type wiki autres qu'Orion est qu'ils ne fournissent pas **des intégrations/interfaces cohérentes pour l'incorporation et la maintenance périodique des formats de fichiers de données générés en externe**. Cependant, en se concentrant sur une poignée de formats de texte / document source / données standard du secteur, même vos tableaux mathématiques, graphiques, graphiques, cartes et diagrammes architecturaux les plus complexes générés par les données sont **entièrement consultables et traduisibles par l'IA** dans n'importe quel langage naturel pris en charge par Orion.
 
+&nbsp;
+
 Orion complète son image d'intégration de données avec un moteur de base de données vectoriel en colonnes `PDL` et un package de graphiques vectoriels groupés `Asymptote` pour vos besoins interactifs de numérisation.
 
 &nbsp;
@@ -143,7 +147,15 @@ Orion complète son image d'intégration de données avec un moteur de base de d
 
 &nbsp;
 
-Au lieu d'inévitable, lien entropique tourner innée à d'autres produits wiki, vous obtenez **validation de lien interne / externe** au moment de la modification de la page au cours d'une complète, `MIME`-pass de peluche pré-commit basé sur type par Orion `CMS` éditeur. Nous fournissons également à chaque client une infrastructure de reporting pour **capter les liens internes/externes obsolètes à la demande**, même lorsque les pages concernées n'ont pas été modifiées depuis des mois. Les diagrammes sont tout aussi faciles à synchroniser avec l'évolution des modifications apportées à la prose de démarque, car avec l'intégration sirène d'Orion, **les sources de diagrammes sont intégrées à la prose de la page** elle-même. La recherche / le remplacement récursif indolore pour réparer le cruft accumulé est intégré dans `PCRE` moteur de recherche dans la `CMS`.
+Au lieu d'inévitable, lien entropique tourner innée à d'autres produits wiki, vous obtenez **validation de lien interne / externe** au moment de la modification de la page au cours d'une complète, `MIME`-pass de peluche pré-commit basé sur type par Orion `CMS` éditeur. Nous fournissons également à chaque client une infrastructure de reporting pour **capter les liens internes/externes obsolètes à la demande**, même lorsque les pages concernées n'ont pas été modifiées depuis des mois.
+
+&nbsp;
+
+Les diagrammes sont tout aussi faciles à synchroniser avec l'évolution des modifications apportées à la prose de démarque, car avec l'intégration sirène d'Orion, **les sources de diagrammes sont intégrées à la prose de la page** elle-même.
+
+&nbsp;
+
+La recherche / le remplacement récursif indolore pour réparer le cruft accumulé est intégré dans `PCRE` moteur de recherche dans la `CMS`.
 
 &nbsp;
 
@@ -282,6 +294,10 @@ Aucun verrouillage de fournisseur &mdash; et *nous le prouvons* Votre contenu r�
 
 [Nous contacter](../contact) pour les tarifs d'entreprise et une démonstration gratuite
 
+&nbsp;
+
+[Aller à la grille de comparaison des fonctionnalités](#h1-feature-comparison-grid)
+
 </div>
 <div class="col-lg-6 border-start">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
@@ -290,8 +306,11 @@ Aucun verrouillage de fournisseur &mdash; et *nous le prouvons* Votre contenu r�
 
 <div class="border-top" style="padding-top: 20px">
 
-# &nbsp;Jeune&nbsp;Universitaire&nbsp;:fa-orcid: / Complet&nbsp;Pile&nbsp;Développeur&nbsp;:fa-stack-overflow: / Public&nbsp;Blogueur&nbsp;:fa-blog:&nbsp;... Besoin d'un site personnel ultra-rapide et sécurisé qui soit simple à gérer &mdash; Incroyablement puissant ?
+# <span class="text-warning-emphasis">Pour les jeunes&nbsp;Universitaire&nbsp;:fa-orcid: / Complet&nbsp;Pile&nbsp;Développeurs&nbsp;:fa-stack-overflow: / Public&nbsp;Blogueurs&nbsp;:fa-blog:&nbsp;</span>
 
+&nbsp;
+
+# Besoin d'un site personnel ultra-rapide et sécurisé qui soit simple à gérer &mdash; Incroyablement puissant ?
 </div>
 
 &nbsp;

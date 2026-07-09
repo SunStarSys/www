@@ -3,11 +3,9 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=47833
+status: verificado=47904
 title: SunStar Orión de los Sistemas
 ---
-
-[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5">
@@ -66,6 +64,10 @@ title: SunStar Orión de los Sistemas
 &nbsp;
 
 <div class="border-top" style="padding-top: 20px">
+
+# <span class="text-warning-emphasis">Para ejecutivos de negocios</span><br>&nbsp;
+
+&nbsp;
 
 # Este es el ROI que realmente ofrece: gestión de conocimiento segura y de alto rendimiento a una fracción del costo :fa-chart-line:
 
@@ -131,6 +133,8 @@ A diferencia de los productos que utilizan sus competidores, Orion es un marco d
 
 [^2]. Dejando de lado el [ventajas de seguridad](https://www.iconoclasts.blog/joe/wishful-thinking) y el [endurecimiento de las sanciones](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) para [violaciones de confidencialidad de los datos HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), un defecto fundamental de los productos similares a wiki distintos de Orion es que no proporcionan **integraciones/interfaces coherentes para la incorporación y el mantenimiento periódico de formatos de archivos de datos generados externamente**. Sin embargo, al centrarse en un puñado de formatos estándar de texto/documentos de origen/datos del sector, incluso las tablas, gráficos, mapas y diagramas matemáticos generados por datos más complejos **son totalmente aptas para la búsqueda y la IA traducibles** en cualquiera de los lenguajes naturales soportados de Orion.
 
+&nbsp;
+
 Orion completa su imagen de integración de datos con un motor de base de datos vectorial columnar `PDL` y un paquete de gráficos vectoriales agrupados `Asymptote` para sus necesidades interactivas de numeración.
 
 &nbsp;
@@ -143,7 +147,15 @@ Orion completa su imagen de integración de datos con un motor de base de datos 
 
 &nbsp;
 
-En lugar de la inevitable rotación del enlace entropico innata a otros productos wiki, se obtiene la **validación de enlace interno/externo** en el momento de la modificación de la página durante un proceso completo, `MIME`-tipo basado, pre-commit linting pass por Orion's `CMS` editor. También proporcionamos a cada cliente una infraestructura de generación de informes para **obtener enlaces internos/externos anticuados a demanda**, incluso cuando las páginas implicadas no se han modificado en meses. Los diagramas son igual de fáciles de mantener en sincronía con la evolución de las alteraciones en la prosa de rebaja, porque con la integración de sirena de Orion, **los orígenes del diagrama se incrustan en la prosa** de la página misma. La búsqueda / reemplazo recursivo sin dolor para reparar el crudo acumulado está incorporado en la `PCRE` motor de búsqueda en el `CMS`.
+En lugar de la inevitable rotación del enlace entropico innata a otros productos wiki, se obtiene la **validación de enlace interno/externo** en el momento de la modificación de la página durante un proceso completo, `MIME`-tipo basado, pre-commit linting pass por Orion's `CMS` editor. También proporcionamos a cada cliente una infraestructura de generación de informes para **obtener enlaces internos/externos anticuados a demanda**, incluso cuando las páginas implicadas no se han modificado en meses.
+
+&nbsp;
+
+Los diagramas son igual de fáciles de mantener en sincronía con la evolución de las alteraciones en la prosa de rebaja, porque con la integración de sirena de Orion, **los orígenes del diagrama se incrustan en la prosa** de la página misma.
+
+&nbsp;
+
+La búsqueda / reemplazo recursivo sin dolor para reparar el crudo acumulado está incorporado en la `PCRE` motor de búsqueda en el `CMS`.
 
 &nbsp;
 
@@ -282,6 +294,10 @@ Sin dependencia de proveedores &mdash; y *lo demostramos*. Su contenido reside e
 
 [Contacta con nosotros](../contact) para precios empresariales y una demostración gratuita
 
+&nbsp;
+
+[Saltar a la cuadrícula de comparación de funciones](#h1-feature-comparison-grid)
+
 </div>
 <div class="col-lg-6 border-start">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
@@ -290,8 +306,11 @@ Sin dependencia de proveedores &mdash; y *lo demostramos*. Su contenido reside e
 
 <div class="border-top" style="padding-top: 20px">
 
-# &nbsp;Joven&nbsp;Académico&nbsp;:fa-orcid: / Completo&nbsp;Pila&nbsp;Desarrollador&nbsp;:fa-stack-overflow: / Público&nbsp;Blogger&nbsp;:fa-blog:&nbsp;... Desea un sitio personal rápido y seguro que sea fácil de administrar &mdash; ¿Increíblemente poderoso?
+# <span class="text-warning-emphasis">Para jóvenes&nbsp;Académicos&nbsp;:fa-orcid: / Completo&nbsp;Pila&nbsp;Desarrolladores&nbsp;:fa-stack-overflow: / Público&nbsp;Bloggers&nbsp;:fa-blog:&nbsp;</span>
 
+&nbsp;
+
+# Desea un sitio personal rápido y seguro que sea fácil de administrar &mdash; ¿Increíblemente poderoso?
 </div>
 
 &nbsp;

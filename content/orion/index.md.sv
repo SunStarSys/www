@@ -3,11 +3,9 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=47833
+status: verifierad=47904
 title: SunStar Orion för system
 ---
-
-[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5">
@@ -66,6 +64,10 @@ title: SunStar Orion för system
 &nbsp;
 
 <div class="border-top" style="padding-top: 20px">
+
+# <span class="text-warning-emphasis">För företagsledare</span><br>&nbsp;
+
+&nbsp;
 
 # Här är avkastningen som faktiskt levererar: Säker, högpresterande kunskapshantering på en bråkdel av kostnaden :fa-chart-line:
 
@@ -131,6 +133,8 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 
 [^2]. Lägg undan [säkerhetsfördelar](https://www.iconoclasts.blog/joe/wishful-thinking) och [skärpta påföljder](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) för [sekretessöverträdelser av HIPAA-data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), en grundläggande brist hos andra wikiliknande produkter än Orion är att de inte tillhandahåller **sammanhängande integreringar / gränssnitt för införlivande och periodiskt underhåll av externt genererade datafilformat**. Men genom att fokusera på en handfull branschstandardiserade text-/källdokument-/dataformat är även dina mest invecklade datagenererade matematiska tabeller, grafer, diagram, kartor och arkitektoniska diagram **fullt sökbara och AI-översättningsbara** på något av Orions naturliga språk som stöds.
 
+&nbsp;
+
 Orion slutför sin dataintegreringsbild med en kolumnvektordatabasmotor `PDL` och ett paket vektorgrafikpaket `Asymptote` för dina interaktiva nummerkrossningsbehov.
 
 &nbsp;
@@ -143,7 +147,15 @@ Orion slutför sin dataintegreringsbild med en kolumnvektordatabasmotor `PDL` oc
 
 &nbsp;
 
-I stället för den oundvikliga entropiska länken roterar med andra wiki-produkter får du **intern/extern länkvalidering** vid sidmodifieringstid under en omfattande, `MIME`-typ baserad, pre-commit linting pass av Orion's `CMS` redaktör. Vi tillhandahåller också varje kund en rapporteringsinfrastruktur för att **fånga inaktuella interna/externa länkar på begäran**, även när de berörda sidorna inte har ändrats på flera månader. Diagram är lika enkla att synkronisera med utvecklande ändringar av nedsättningsprosa, eftersom med Orions sjöjungfruintegration **är diagramkällorna inbäddade i själva sidans prosa**. Smärtsam rekursiv sökning / ersättning för att reparera den ackumulerade cruft är inbyggd i `PCRE` Sökmotor i `CMS`.
+I stället för den oundvikliga entropiska länken roterar med andra wiki-produkter får du **intern/extern länkvalidering** vid sidmodifieringstid under en omfattande, `MIME`-typ baserad, pre-commit linting pass av Orion's `CMS` redaktör. Vi tillhandahåller också varje kund en rapporteringsinfrastruktur för att **fånga inaktuella interna/externa länkar på begäran**, även när de berörda sidorna inte har ändrats på flera månader.
+
+&nbsp;
+
+Diagram är lika enkla att synkronisera med utvecklande ändringar av nedsättningsprosa, eftersom med Orions sjöjungfruintegration **är diagramkällorna inbäddade i själva sidans prosa**.
+
+&nbsp;
+
+Smärtsam rekursiv sökning / ersättning för att reparera den ackumulerade cruft är inbyggd i `PCRE` Sökmotor i `CMS`.
 
 &nbsp;
 
@@ -282,6 +294,10 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 [Kontakta oss](../contact) för företagspriser och en kostnadsfri demo
 
+&nbsp;
+
+[Gå till funktionsjämförelserutnät](#h1-feature-comparison-grid)
+
 </div>
 <div class="col-lg-6 border-start">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
@@ -290,8 +306,11 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 <div class="border-top" style="padding-top: 20px">
 
-# &nbsp;Unga&nbsp;Akademisk&nbsp;:fa-orcid: / Fullständig&nbsp;Stack&nbsp;Utvecklare&nbsp;:fa-stack-overflow: / Allmänt&nbsp;Bloggare&nbsp;:fa-blog:&nbsp;... Vill ha en blixt-snabb, säker personlig webbplats som är död-enkel att hantera &mdash; Otroligt kraftfull?
+# <span class="text-warning-emphasis">För unga&nbsp;Akademiker&nbsp;:fa-orcid: / Fullständig&nbsp;Stack&nbsp;Utvecklare&nbsp;:fa-stack-overflow: / Allmänt&nbsp;Bloggare&nbsp;:fa-blog:&nbsp;</span>
 
+&nbsp;
+
+# Vill ha en blixt-snabb, säker personlig webbplats som är död-enkel att hantera &mdash; Otroligt kraftfull?
 </div>
 
 &nbsp;

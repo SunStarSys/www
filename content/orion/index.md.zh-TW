@@ -3,11 +3,9 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =47833
+status: 驗證 =47904
 title: SunStar 系統的 Orion
 ---
-
-[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5">
@@ -66,6 +64,10 @@ title: SunStar 系統的 Orion
 &nbsp;
 
 <div class="border-top" style="padding-top: 20px">
+
+# <span class="text-warning-emphasis">業務主管</span><br>&nbsp;
+
+&nbsp;
 
 # 以下為實際交付的投資報酬率：安全、高效能的知識管理，成本只有一小部分:fa-chart-line:
 
@@ -131,6 +133,8 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 [^2]。旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，除了 Orion 以外的類似 Wiki 的產品，其基本缺點是，他們無法提供 **一致的整合 / 介面以進行註冊，並定期維護外部產生的資料檔格式 **。不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
 
+&nbsp;
+
 Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組合向量圖形套件`Asymptote` 滿足您的互動打卡需求。
 
 &nbsp;
@@ -143,7 +147,15 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-除了不可避免的熱帶鏈接旋轉到其他維基產品之外，您還可以在全面性的頁面修改時間獲得** 內部 / 外部鏈接驗證 **。`MIME`以類型為基礎的預先確認列印通過，由 Orion 的`CMS` 編輯器。我們也為每位客戶提供一個報告基礎架構，以 **按要求擷取過時的內部 / 外部連結 **，即使相關頁面未在幾個月內變更。由於 Orion 的 Mermaid 整合，** 圖表來源內嵌於頁面的 prose** 本身，因此圖表與逐漸變化的 Markdown 程序保持同步。無痛的遞迴搜尋 / 更換以修復累積的殘骸已內建於`PCRE` 搜尋引擎`CMS`.
+除了不可避免的熱帶鏈接旋轉到其他維基產品之外，您還可以在全面性的頁面修改時間獲得** 內部 / 外部鏈接驗證 **。`MIME`以類型為基礎的預先確認列印通過，由 Orion 的`CMS` 編輯器。我們也為每位客戶提供一個報告基礎架構，以 **按要求擷取過時的內部 / 外部連結 **，即使相關頁面未在幾個月內變更。
+
+&nbsp;
+
+由於 Orion 的 Mermaid 整合，** 圖表來源內嵌於頁面的 prose** 本身，因此圖表與逐漸變化的 Markdown 程序保持同步。
+
+&nbsp;
+
+無痛的遞迴搜尋 / 更換以修復累積的殘骸已內建於`PCRE` 搜尋引擎`CMS`.
 
 &nbsp;
 
@@ -282,6 +294,10 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 [聯系我們](../contact) 適用於企業定價和免費示範
 
+&nbsp;
+
+[跳至功能比較方格](#h1-feature-comparison-grid)
+
 </div>
 <div class="col-lg-6 border-start">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
@@ -290,8 +306,11 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 <div class="border-top" style="padding-top: 20px">
 
-# &nbsp;年輕&nbsp;學術&nbsp;:fa-orcid: / 全部&nbsp;堆疊&nbsp;開發人員&nbsp;:fa-stack-overflow: / 公共&nbsp;部落格&nbsp;:fa-blog:&nbsp;... 想要一個快如閃電的安全個性化網站，難以管理&mdash; 然而，強大的功能？
+# <span class="text-warning-emphasis">青少年&nbsp;學術&nbsp;:fa-orcid: / 全部&nbsp;堆疊&nbsp;開發者&nbsp;:fa-stack-overflow: / 公共&nbsp;部落客&nbsp;:fa-blog:&nbsp;</span>
 
+&nbsp;
+
+# 想要一個快如閃電的安全個性化網站，難以管理&mdash; 然而，強大的功能？
 </div>
 
 &nbsp;

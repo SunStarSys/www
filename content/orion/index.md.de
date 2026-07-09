@@ -3,11 +3,9 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: wiki,jamstack,blog,sicher,sicher
-status: überprüft=47833
+status: überprüft=47904
 title: SunStar System-Orion
 ---
-
-[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5">
@@ -66,6 +64,10 @@ title: SunStar System-Orion
 &nbsp;
 
 <div class="border-top" style="padding-top: 20px">
+
+# <span class="text-warning-emphasis">Für Führungskräfte</span><br>&nbsp;
+
+&nbsp;
 
 # Hier ist der ROI, der tatsächlich liefert: Sicheres, leistungsstarkes Wissensmanagement zu einem Bruchteil der Kosten :fa-chart-line:
 
@@ -131,6 +133,8 @@ Im Gegensatz zu den Produkten, die Ihre Mitbewerber nicht verwenden, ist Orion e
 
 [2]. Beiseite legen [Sicherheitsvorteile](https://www.iconoclasts.blog/joe/wishful-thinking) und die [Versteifungsstrafen](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) für [Datenschutzverletzungen bei HIPAA-Daten](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)ein grundlegender Fehler von Wiki-ähnlichen Produkten außer Orion ist, dass sie **kohärente Integrationen/Schnittstellen für die Integration und regelmäßige Wartung von extern generierten Datendateiformaten** nicht bereitstellen. Indem Sie sich jedoch auf eine Handvoll branchenüblicher Text-/Quelldokument-/Datenformate konzentrieren, sind selbst Ihre komplexesten datengenerierten mathematischen Tabellen, Diagramme, Diagramme, Karten und Architekturdiagramme **vollständig durchsuchbar und KI übersetzbar** in einer der von Orion unterstützten natürlichen Sprachen.
 
+&nbsp;
+
 Orion vervollständigt sein Datenintegrationsbild mit einer spaltenförmigen Vektordatenbank-Engine `PDL` und ein gebündeltes Vektorgrafikpaket `Asymptote` für Ihr interaktives Zahlen-Crunching.
 
 &nbsp;
@@ -143,7 +147,15 @@ Orion vervollständigt sein Datenintegrationsbild mit einer spaltenförmigen Vek
 
 &nbsp;
 
-Anstatt den unvermeidlichen, entropischen Link zu anderen Wiki-Produkten zu drehen, erhalten Sie **interne/externe Link-Validierung** zur Zeit der Seitenänderung während einer umfassenden, `MIME`-Typbasierter, Pre-Commit-Futterpass von Orion's `CMS` Editor. Außerdem stellen wir jedem Kunden eine Reporting-Infrastruktur zur Verfügung, um **veraltete interne/externe Links bei Bedarf zu erfassen**, selbst wenn die betroffenen Seiten seit Monaten nicht mehr geändert wurden. Diagramme lassen sich genauso einfach mit sich entwickelnden Änderungen am Markdown-Prosa synchronisieren, da mit Orions Meerjungfrauenintegration **die Diagrammquellen in die Prosa der Seite** selbst eingebettet sind. Schmerzlose rekursive Suche / Ersetzen, um die angesammelte Krümel zu reparieren, ist in die `PCRE` Suchmaschine im `CMS`.
+Anstatt den unvermeidlichen, entropischen Link zu anderen Wiki-Produkten zu drehen, erhalten Sie **interne/externe Link-Validierung** zur Zeit der Seitenänderung während einer umfassenden, `MIME`-Typbasierter, Pre-Commit-Futterpass von Orion's `CMS` Editor. Außerdem stellen wir jedem Kunden eine Reporting-Infrastruktur zur Verfügung, um **veraltete interne/externe Links bei Bedarf zu erfassen**, selbst wenn die betroffenen Seiten seit Monaten nicht mehr geändert wurden.
+
+&nbsp;
+
+Diagramme lassen sich genauso einfach mit sich entwickelnden Änderungen am Markdown-Prosa synchronisieren, da mit Orions Meerjungfrauenintegration **die Diagrammquellen in die Prosa der Seite** selbst eingebettet sind.
+
+&nbsp;
+
+Schmerzlose rekursive Suche / Ersetzen, um die angesammelte Krümel zu reparieren, ist in die `PCRE` Suchmaschine im `CMS`.
 
 &nbsp;
 
@@ -282,6 +294,10 @@ Keine Anbieterbindung &mdash; Und *wir beweisen es*. Ihre Inhalte befinden sich 
 
 [Kontakt](../contact) für Enterprise Pricing und eine kostenlose Demo
 
+&nbsp;
+
+[Zum Funktionsvergleichsraster springen](#h1-feature-comparison-grid)
+
 </div>
 <div class="col-lg-6 border-start">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
@@ -290,8 +306,11 @@ Keine Anbieterbindung &mdash; Und *wir beweisen es*. Ihre Inhalte befinden sich 
 
 <div class="border-top" style="padding-top: 20px">
 
-# &nbsp;Jung&nbsp;Akademisch&nbsp;:fa-orcid: / Vollständig&nbsp;Stapel&nbsp;Entwickler&nbsp;:fa-stack-overflow: / Öffentlich&nbsp;Blogger&nbsp;:fa-blog:&nbsp;... Möchten Sie eine blitzschnelle, sichere persönliche Website, die einfach zu verwalten ist &mdash; Und doch unglaublich mächtig?
+# <span class="text-warning-emphasis">Für Jung&nbsp;Akademiker&nbsp;:fa-orcid: / Vollständig&nbsp;Stapel&nbsp;Entwickler&nbsp;:fa-stack-overflow: / Öffentlich&nbsp;Blogger&nbsp;:fa-blog:&nbsp;</span>
 
+&nbsp;
+
+# Möchten Sie eine blitzschnelle, sichere persönliche Website, die einfach zu verwalten ist &mdash; Und doch unglaublich mächtig?
 </div>
 
 &nbsp;

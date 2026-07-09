@@ -3,11 +3,9 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=47833
+status: 確認済み=47904
 title: SunStarシステムのOrion
 ---
-
-[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5">
@@ -66,6 +64,10 @@ title: SunStarシステムのOrion
 &nbsp;
 
 <div class="border-top" style="padding-top: 20px">
+
+# <span class="text-warning-emphasis">ビジネス・エグゼクティブ向け</span><br>&nbsp;
+
+&nbsp;
 
 # 実際に提供するROI: セキュアで高パフォーマンスのナレッジ・マネジメントのコストの一部:fa-chart-line:
 
@@ -131,6 +133,8 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 [^2]。を除く。[セキュリティ上の利点](https://www.iconoclasts.blog/joe/wishful-thinking) および[強化ペナルティ](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 対象[HIPAAデータの機密性侵害](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)Orion以外のwikiに似た製品の基本的な欠陥は、外部で生成されたデータファイル形式を組み込み、定期的にメンテナンスするための**一貫した統合/インタフェースを提供できないことです**。ただし、業界標準の一握りのテキスト/ソース文書/データ形式に焦点を当てることによって、最も複雑なデータ生成の数学的表、グラフ、チャート、マップ、アーキテクチャ図であっても、**完全に検索可能で、AI翻訳可能**は、Orionでサポートされている自然言語のいずれかです。
 
+&nbsp;
+
 Orion、列ベクトル・データベース・エンジンでデータ統合の全体像を完成`PDL` そして束ねられたベクターのグラフィック パッケージ`Asymptote` インタラクティブナンバークランチングのニーズのために。
 
 &nbsp;
@@ -143,7 +147,15 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 &nbsp;
 
-避けられないエントロピックリンクが他のwiki製品に宿る代わりに、包括的なページ変更時に**内部/外部リンク検証**が得られます。`MIME`- タイプベース、オリオンズによるプリコミットリンティングパス`CMS` エディタまた、関係するページが数か月で変更されていない場合でも、すべてのお客様に、オンデマンドで失効した内部/外部リンクをキャッチするレポート・インフラストラクチャを提供します。図は、Orionのマーメイド統合により、**図ソースがページの提案に埋め込まれている**ため、マークダウン・プロセスの進化する変更と同期するのと同じくらい簡単です。蓄積された残骸を修理するために痛みのない再帰的な検索/取り替えは作り付けられます`PCRE` 検索エンジン`CMS`.
+避けられないエントロピックリンクが他のwiki製品に宿る代わりに、包括的なページ変更時に**内部/外部リンク検証**が得られます。`MIME`- タイプベース、オリオンズによるプリコミットリンティングパス`CMS` エディタまた、関係するページが数か月で変更されていない場合でも、すべてのお客様に、オンデマンドで失効した内部/外部リンクをキャッチするレポート・インフラストラクチャを提供します。
+
+&nbsp;
+
+図は、Orionのマーメイド統合により、**図ソースがページの提案に埋め込まれている**ため、マークダウン・プロセスの進化する変更と同期するのと同じくらい簡単です。
+
+&nbsp;
+
+蓄積された残骸を修理するために痛みのない再帰的な検索/取り替えは作り付けられます`PCRE` 検索エンジン`CMS`.
 
 &nbsp;
 
@@ -282,6 +294,10 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 [お問い合わせ](../contact) エンタープライズ向け価格と無料デモ
 
+&nbsp;
+
+[フィーチャ比較グリッドに移動](#h1-feature-comparison-grid)
+
 </div>
 <div class="col-lg-6 border-start">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
@@ -290,8 +306,11 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 <div class="border-top" style="padding-top: 20px">
 
-# &nbsp;若い&nbsp;学業&nbsp;:fa-orcid: /フル&nbsp;スタック&nbsp;開発者&nbsp;:fa-stack-overflow: /パブリック&nbsp;ブロガー&nbsp;:fa-blog:&nbsp;...非常に簡単に管理できるLightning-Fastで安全な個人用サイトが必要&mdash; 驚くほど強力?
+# <span class="text-warning-emphasis">若者向け&nbsp;アカデミック&nbsp;:fa-orcid: /フル&nbsp;スタック&nbsp;開発者&nbsp;:fa-stack-overflow: /パブリック&nbsp;ブロガー&nbsp;:fa-blog:&nbsp;</span>
 
+&nbsp;
+
+# 非常に簡単に管理できるLightning-Fastで安全な個人用サイトが必要&mdash; 驚くほど強力?
 </div>
 
 &nbsp;

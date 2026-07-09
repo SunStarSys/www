@@ -3,11 +3,9 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=47833
+status: verificado=47904
 title: SunStar Orion dos Sistemas
 ---
-
-[TOC]#sidebar
 
 <div class="row">
 <div class="col-lg-5">
@@ -66,6 +64,10 @@ title: SunStar Orion dos Sistemas
 &nbsp;
 
 <div class="border-top" style="padding-top: 20px">
+
+# <span class="text-warning-emphasis">Para Executivos de Negócios</span><br>&nbsp;
+
+&nbsp;
 
 # Aqui está o ROI que realmente oferece: gerenciamento de conhecimento seguro e de alto desempenho com uma fração do custo :fa-chart-line:
 
@@ -131,6 +133,8 @@ Ao contrário dos produtos que seus concorrentes estão usando, o Orion é uma e
 
 [^2]. Deixando de lado o [vantagens de segurança](https://www.iconoclasts.blog/joe/wishful-thinking) e o [penalidades rígidas](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) para [violações de confidencialidade dos dados da HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), uma falha fundamental de produtos semelhantes a wiki que não o Orion é que eles não fornecem **integrações/interfaces coerentes para incorporação e manutenção periódica de formatos de arquivos de dados gerados externamente**. No entanto, ao se concentrar em um punhado de formatos de texto/documento de origem/dados padrão do setor, até mesmo suas tabelas matemáticas, gráficos, gráficos, mapas e diagramas arquitetônicos mais complexos gerados por dados são **totalmente pesquisáveis e traduzíveis por IA** em qualquer uma das linguagens naturais suportadas pelo Orion.
 
+&nbsp;
+
 Orion completa sua imagem de integração de dados com um mecanismo de banco de dados vetorial colunar `PDL` e um pacote de gráficos vetoriais `Asymptote` para suas necessidades interativas de análise de números.
 
 &nbsp;
@@ -143,7 +147,15 @@ Orion completa sua imagem de integração de dados com um mecanismo de banco de 
 
 &nbsp;
 
-Em vez do inevitável e entrópico link girar inata para outros produtos wiki, você recebe **validação de link interno/externo** no momento da modificação da página durante um abrangente, `MIME`-tipo baseado, pré-commit linting passar por Orion's `CMS` editor. Também fornecemos a todos os clientes uma infraestrutura de relatórios para **capturar links internos/externos desatualizados sob demanda**, mesmo quando as páginas envolvidas não são alteradas em meses. Os diagramas são tão fáceis de manter em sincronia com as alterações em evolução da prosa de markdown, porque com a integração da sereia de Orion, **as fontes do diagrama são incorporadas na prosa** da página. busca recursiva indolor / substituir para reparar o cruzamento acumulado é construído no `PCRE` mecanismo de pesquisa no `CMS`.
+Em vez do inevitável e entrópico link girar inata para outros produtos wiki, você recebe **validação de link interno/externo** no momento da modificação da página durante um abrangente, `MIME`-tipo baseado, pré-commit linting passar por Orion's `CMS` editor. Também fornecemos a todos os clientes uma infraestrutura de relatórios para **capturar links internos/externos desatualizados sob demanda**, mesmo quando as páginas envolvidas não são alteradas em meses.
+
+&nbsp;
+
+Os diagramas são tão fáceis de manter em sincronia com as alterações em evolução da prosa de markdown, porque com a integração da sereia de Orion, **as fontes do diagrama são incorporadas na prosa** da página.
+
+&nbsp;
+
+busca recursiva indolor / substituir para reparar o cruzamento acumulado é construído no `PCRE` mecanismo de pesquisa no `CMS`.
 
 &nbsp;
 
@@ -282,6 +294,10 @@ Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive 
 
 [Fale conosco](../contact) para Sistema de Preços Empresarial e uma Demonstração Gratuita
 
+&nbsp;
+
+[Ir para Grade de Comparação de Recursos](#h1-feature-comparison-grid)
+
 </div>
 <div class="col-lg-6 border-start">
 <a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
@@ -290,8 +306,11 @@ Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive 
 
 <div class="border-top" style="padding-top: 20px">
 
-# &nbsp;Jovem&nbsp;Acadêmico&nbsp;:fa-orcid: / Completo&nbsp;Pilha&nbsp;Desenvolvedor&nbsp;:fa-stack-overflow: / Público&nbsp;Blogger&nbsp;:fa-blog:&nbsp;... Quer um site pessoal extremamente rápido e seguro que seja simples de gerenciar &mdash; Incrivelmente poderoso?
+# <span class="text-warning-emphasis">Para Jovem&nbsp;Acadêmicas&nbsp;:fa-orcid: / Completo&nbsp;Pilha&nbsp;Desenvolvedores&nbsp;:fa-stack-overflow: / Público&nbsp;Blogs&nbsp;:fa-blog:&nbsp;</span>
 
+&nbsp;
+
+# Quer um site pessoal extremamente rápido e seguro que seja simples de gerenciar &mdash; Incrivelmente poderoso?
 </div>
 
 &nbsp;
