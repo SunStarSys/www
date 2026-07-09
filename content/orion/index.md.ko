@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인됨
+status: 확인=48093
 title: SunStar 시스템스 오리온
 ---
 
@@ -90,7 +90,9 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
-<div class="card-header">안전한, 더 나은 제품 <span class="text-white">더 적은 돈</span></div>
+<div class="card-header">안전한, 더 나은 제품 <span class="text-white">더 적은 돈</span>&nbsp;<i class="fa fa-chart-line"></i>
+
+</div>
 <div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. 상당한 보안 위험 감소 :fa-lock:
@@ -101,9 +103,9 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. 번들 콘텐츠 큐레이션 툴링 :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">저장 $100K / 년</span>](https://www.atlassian.com/software/confluence/pricing) 포함 [Orion's $0 Per-Seat / 웹 사이트별 엔터프라이즈 라이선스](plans)
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">저장 $100K / 년</span>](https://www.atlassian.com/software/confluence/pricing) 포함 [Orion's $0 Per-Seat / 웹 사이트별 엔터프라이즈 라이선스](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">저장 50%/년</span>](https://www.atlassian.com/software/confluence/pricing) 포함 [Orion의 사업 계획](plans) 기능 비교 가능 Confluence Premium
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">저장 50%/년</span>](https://www.atlassian.com/software/confluence/pricing) 포함 [Orion의 사업 계획](plans) 기능 비교 가능 Confluence Premium :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. 변동에 따른 경제적이고 상각 가능한 전환 비용 :fa-arrow-right-arrow-left:
 
@@ -118,7 +120,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## ROI 세부정보 표시
+## ROI 세부정보 표시 :fa-chart-line:
 
 </button>
 </div>
@@ -159,7 +161,7 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 &nbsp;
 
-<span class="text-white">조직 전반의 측정 가능한 ROI 성장은 당사 위키 플랫폼에 고유한 종합 원예 및 관리 능력의 후속적이고 지속적인 꽃 피는 효과입니다.</span>
+<span class="text-white">조직 전반의 측정 가능한 ROI 성장은 당사 위키 플랫폼에 고유한 종합 원예 및 관리 능력을 행사하는 후속적이고 지속적인 꽃 피는 효과입니다.</span>
 
 &nbsp;
 
@@ -167,7 +169,7 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 &nbsp;
 
-[^5]. Futhermore, Orion은 특히 기업 수준에서 성장함에 따라 귀하와 함께 확장합니다. 해당 <span class="text-white">**좌석당 $0 및 무제한 웹사이트 수**</span> Oracle의 통합 플랫폼을 통해 팀, 파트너, 웹사이트, 심지어 지구 전체의 통제된 지식 공유 및 협업을 위한 새로운 기회를 열어 보세요! 우리는 대부분의 고객을 위해, 그 좌석 면허의 단지 작은 부분이 실제로 페이지를 편집하는 데 사용될 것이라는 것을 알고 있습니다, 그러나 그들은 무제한의 수를 사용할 수 있습니다 "연관됨" 인터넷을 통해 보호 된 정보를 공유하기 위해 위키의 읽기 전용 계정. Orion에 대한 액세스 권한이 없는 계정 `CMS` 적절한 - 유일한 기업 지원 **엔터프라이즈 잼스택 위키**로 오리온 고유의 비용 절감 기능.
+[^5]. :fa-scale-balanced: Futhermore, Orion은 특히 기업 수준에서 성장함에 따라 귀하와 함께 확장합니다. 해당 <span class="text-white">**좌석당 $0 및 무제한 웹사이트 수**</span> Oracle의 통합 플랫폼을 통해 팀, 파트너, 웹사이트, 심지어 지구 전체의 통제된 지식 공유 및 협업을 위한 새로운 기회를 열어 보세요! 우리는 대부분의 고객을 위해, 그 좌석 면허의 단지 작은 부분이 실제로 페이지를 편집하는 데 사용될 것이라는 것을 알고 있습니다, 그러나 그들은 무제한의 수를 사용할 수 있습니다 "연관됨" 인터넷을 통해 보호 된 정보를 공유하기 위해 위키의 읽기 전용 계정. Orion에 대한 액세스 권한이 없는 계정 `CMS` 적절한 &mdash; 기업이 지원하는 유일한 **Enterprise Jamstack Wiki**로 Orion 고유의 비용 절감 기능입니다.
 
 &nbsp;
 
@@ -175,7 +177,9 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 &nbsp;
 
-[^6]. 다른 시장 솔루션과 함께, [당신이 당신 자신의 프리미엄 계획없이](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]. :fa-money-check-dollar: 다른 시장 솔루션과 함께, [당신이 당신 자신의 프리미엄 계획없이](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager). Orion의 월간 구독 가격 [사업계획은 300석에 달당 ~$2500입니다.](plans); [Confluence Premium은 동일한 300 석에 대해 $ 3000 +의 북쪽에 있습니다.](https://www.atlassian.com/software/confluence/pricing).
+
+좌석 수가 300에서 어느 방향으로든 이동하면 **절감이 증가합니다**. &gt;500은 우리의 기업 수준에 당신을 두었습니다[^5]** 50 석에서 월간 요금은 현재 Atlassian에게 지불하는 1/5입니다.**
 
 &nbsp;
 
@@ -189,7 +193,7 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 4. Orion wiki 사이트를 구축하고 고객이 만족하고 최종 계약 서명을 할 준비가 될 때까지 조정 및 재조정을 위해 위의 단계로 돌아갑니다.
 
-위의 2단계에서는 상당한 비용이 발생할 수 있지만 그 단계의 대부분은 AI 지원에 도움이 될 수 있습니다. 고객은 관련 위험을 완화하기 위해 새로운 Orion 위키와의 충돌을 도입하지 않고 원하는 기간 동안 Confluence 구독을 보류하도록 선택할 수도 있습니다.
+위의 2단계는 상당한 비용이 발생할 수 있지만 그 단계의 대부분은 AI 자동화에 능숙합니다. 고객은 관련 위험을 완화하기 위해 새로운 Orion 위키와의 충돌을 도입하지 않고 원하는 기간 동안 Confluence 구독을 보류하도록 선택할 수도 있습니다.
 
 &nbsp;
 
@@ -223,13 +227,13 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 &nbsp;
 
-대신 귀중한 자본을 낭비하고 싶지 않아 [성능 저하](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)비싼, [신뢰할 수 없음](https://isdown.app/status/notion) SaaS 향상된 생산성 약속을 이행할 수 없는 서비스 예를 들어, 개념과 같은 것이 있습니다.
+대신 귀중한 자본을 낭비하고 싶지 않아 [보안하기 어려움](https://matthiasfrank.de/en/notion-security/), [성능 저하](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), [기업에 더 비싼 규모](https://www.notion.com/pricing), [신뢰할 수 없음](https://isdown.app/status/notion) SaaS 향상된 생산성 약속을 이행할 수 없는 서비스 예를 들어, 개념과 같은 것이 있습니다.
 
-Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부된 문서*를 중심으로 구성되었습니다. Notion의 *데이터베이스가 첨부된 문서*가 아닌가요?
+Orion과 같은 시스템의 *grokability* 선호 &mdash; 첨부된 데이터*가 포함된 *문서를 중심으로 구성되었습니다. 별도의 Notion의 *데이터베이스가 첨부된 문서*가 아닌가요?
 
 &nbsp;
 
-기업이 보유한 모든 비밀을 모호한 AI 공급업체와 그에 맞지 않는 프론티어 모델에 간단히 노출시키는 것보다 더 보수적이고 주권적인 접근 방식을 원하십니까?
+기업의 모든 비밀을 모호한 AI 공급업체에 노출하는 것보다 더 보수적인/주권적인 접근 방식을 원함 :fa-openai: 그리고 그들의 아픈 국경 모델?
 
 &nbsp;
 
@@ -298,7 +302,7 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 <center>
 
-[문의하기](../contact) 엔터프라이즈 가격 및 무료 데모용
+<span class="btn bg-secondary">[<span class="text-white">엔터프라이즈 가격 및 무료 데모 문의](../contact)</span>
 
 </center>
 </div>
@@ -326,7 +330,7 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 &nbsp;
 
-더 많은 마력 필요 [원 트릭 포니 위고](https://www.iconoclasts.blog/joe/ssg) 소집할 수 있나요?
+더 많은 마력 필요 [원 트릭 포니 위고](https://www.iconoclasts.blog/joe/ssg) 버터 수 :fa-horse:?
 
 &nbsp;
 

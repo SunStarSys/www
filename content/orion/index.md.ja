@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: ベファーナ
+status: 確認済み=48093
 title: SunStarシステムのOrion
 ---
 
@@ -90,7 +90,9 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
-<div class="card-header">より安全で優れた製品<span class="text-white">少ないお金</span></div>
+<div class="card-header">より安全で優れた製品<span class="text-white">少ないお金</span>&nbsp;<i class="fa fa-chart-line"></i>
+
+</div>
 <div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>。重大なセキュリティ・リスクの軽減:fa-lock:
@@ -101,9 +103,9 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。バンドルされたコンテンツのキュレーション・ツール:fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">保存 $100K /年</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionの0ドル/座席/Webサイトごとのエンタープライズライセンス](plans)
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">保存 $100K /年</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionの0ドル/座席/Webサイトごとのエンタープライズライセンス](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">年間50%割引</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionのビジネスプラン](plans) 比類のないコンフルエンスプレミアム
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">年間50%割引</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionのビジネスプラン](plans) 比類のないコンフルエンスプレミアム:fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>。手頃な価格で償却可能な切り替えコストをコンフルエンスから:fa-arrow-right-arrow-left:
 
@@ -118,7 +120,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## ROI詳細の表示
+## ROI詳細の表示:fa-chart-line:
 
 </button>
 </div>
@@ -159,7 +161,7 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 &nbsp;
 
-<span class="text-white">組織全体の測定可能なROI成長は、当社のwikiプラットフォームに固有の総合的なガーデニングと介護能力のフォローオンで継続的な咲く効果です。</span>
+<span class="text-white">組織全体の測定可能なROI成長は、当社のwikiプラットフォームに特有の集約的なガーデニングと介護能力の運動のフォローオンで継続的な咲く効果です。</span>
 
 &nbsp;
 
@@ -167,7 +169,7 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 &nbsp;
 
-[5(&amp;5)]。Futhermore、Orionは、成長に応じて、特に企業レベルでスケーリングします。▲<span class="text-white">**1シートライセンスあたり$0、ウェブサイトの数は無制限**</span> 私たちのフェデレーテッドプラットフォームで、チーム、パートナー、ウェブサイト、さらには地球全体にわたる管理された知識の共有とコラボレーションのための新しい機会を開きます! ほとんどのクライアントでは、これらのシート・ライセンスのほんの一部が実際にページを編集するために使用されることがわかっていますが、無制限の数のページを使用できます"関連" ウィキの読み取り専用アカウントは、保護された情報をインターネット上で共有します。Orionにアクセスする必要がないアカウント`CMS` proper- 唯一の企業支援**Enterprise Jamstack Wiki**としてOrionに特有のコスト削減機能。
+[5(&amp;5)]. :fa-scale-balanced: Futhermore、Orionは、成長に応じて、特に企業レベルでスケーリングします。▲<span class="text-white">**1シートライセンスあたり$0、ウェブサイトの数は無制限**</span> 私たちのフェデレーテッドプラットフォームで、チーム、パートナー、ウェブサイト、さらには地球全体にわたる管理された知識の共有とコラボレーションのための新しい機会を開きます! ほとんどのクライアントでは、これらのシート・ライセンスのほんの一部が実際にページを編集するために使用されることがわかっていますが、無制限の数のページを使用できます"関連" ウィキの読み取り専用アカウントは、保護された情報をインターネット上で共有します。Orionにアクセスする必要がないアカウント`CMS` 固有種&mdash; 唯一の企業支援**Enterprise Jamstack Wiki**としてOrionに特有のコスト削減機能。
 
 &nbsp;
 
@@ -175,7 +177,9 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 &nbsp;
 
-[^6]。他の市場ソリューションでは、[あなただけのプレミアムプランなし](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]. :fa-money-check-dollar: 他の市場ソリューションでは、[あなただけのプレミアムプランなし](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager)。Orionの月次サブスクリプション価格[ビジネスプランは300席につき2500ドル/月](plans); [Confluence Premiumは、同じ300席で3000ドル以上](https://www.atlassian.com/software/confluence/pricing).
+
+座席数が300からどちらかの方向に移動すると、**貯蓄**が増加します。&gt;500は私達の企業レベルであなたを置きます[5(&amp;5)]**50席で毎月の料金は1/5で、現在アトラシアンに支払っている金額です**。
 
 &nbsp;
 
@@ -189,7 +193,7 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 4. Orion wikiサイトを構築し、顧客が満足し、最終的な契約署名の準備ができるまで、調整と再チューニングのために上記の手順に戻ります。
 
-上記のステップ2は、大きなコストが発生する可能性があるように見えるかもしれませんが、そのステップの大部分はAI支援に対応できます。また、お客様は、関連するリスクを軽減するために、新しいOrion Wikiとの競合を導入することなく、必要に応じてConfluenceサブスクリプションを保持することもできます。
+前述のステップ2では、大幅なコストが発生する可能性がありますが、そのステップの大部分はAI自動化に対応できます。また、お客様は、関連するリスクを軽減するために、新しいOrion Wikiとの競合を導入することなく、必要に応じてConfluenceサブスクリプションを保持することもできます。
 
 &nbsp;
 
@@ -223,13 +227,13 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 &nbsp;
 
-Don't Want To Waste Precious Capital On Aシングル[パフォーマンスの低下](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)高価、[信頼できない](https://isdown.app/status/notion) 生産性の向上を約束できないSaaSサービス言い換えれば、概念のようなものでしょうか。
+Don't Want To Waste Precious Capital On Aシングル[確保が難しい](https://matthiasfrank.de/en/notion-security/), [パフォーマンスの低下](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)A [企業にとってより高価な大きさの順序](https://www.notion.com/pricing), [信頼できない](https://isdown.app/status/notion) 生産性の向上を約束できないSaaSサービス言い換えれば、概念のようなものでしょうか。
 
-Orionのようなシステムの*grokability*を優先する&mdash; 添付されたデータ*を含む*ドキュメントを中心に編成されています。Notionの*データベースではなく、ドキュメント*が添付されていますか。
+Orionのようなシステムの*grokability*を優先する&mdash; *documents with attached data*; instead of a peculiar Notion's *databases with attached documents*?
 
 &nbsp;
 
-単なる企業秘密のすべてを、ばかげたAIベンダーとその未知のフロンティア・モデルに公開するよりも、保守的/主権的なアプローチが必要ですか?
+企業の秘密を、単なるばかりのないAIベンダーに公開するよりも、より保守的/主権的なアプローチを求めている:fa-openai: 未知のフロンティアモデル?
 
 &nbsp;
 
@@ -298,7 +302,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 <center>
 
-[お問い合わせ](../contact) エンタープライズ向け価格と無料デモ
+<span class="btn bg-secondary">[<span class="text-white">エンタープライズ価格と無料デモについてはお問い合わせください](../contact)</span>
 
 </center>
 </div>
@@ -326,7 +330,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-Aよりも多くの馬力が必要[Hugoのようなワントリックポニー](https://www.iconoclasts.blog/joe/ssg) musterできる?
+Aよりも多くの馬力が必要[Hugoのようなワントリックポニー](https://www.iconoclasts.blog/joe/ssg) 缶詰:fa-horse:?
 
 &nbsp;
 

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: مؤكّد
+status: التحقق = 48093
 title: SunStar أوريون الأنظمة
 ---
 
@@ -90,7 +90,9 @@ title: SunStar أوريون الأنظمة
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
-<div class="card-header">منتج أكثر أمانًا وأفضل لـ <span class="text-white">أقل من المال</span></div>
+<div class="card-header">منتج أكثر أمانًا وأفضل لـ <span class="text-white">أقل من المال</span>&nbsp;<i class="fa fa-chart-line"></i>
+
+</div>
 <div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. تخفيض كبير في مخاطر الأوراق المالية :fa-lock:
@@ -101,9 +103,9 @@ title: SunStar أوريون الأنظمة
 
 &nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. أدوات معالجة المحتوى المجمعة :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">حفظ $100K / سنة</span>](https://www.atlassian.com/software/confluence/pricing) مع [ترخيص مؤسسة Orion's $0 لكل مقعد / لكل موقع](plans)
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">حفظ $100K / سنة</span>](https://www.atlassian.com/software/confluence/pricing) مع [ترخيص مؤسسة Orion's $0 لكل مقعد / لكل موقع](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">وفر 50% / سنة</span>](https://www.atlassian.com/software/confluence/pricing) مع [خطة عمل أوريون](plans) أكثر من ميزة مقارنة قسط Confluence
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">وفر 50% / سنة</span>](https://www.atlassian.com/software/confluence/pricing) مع [خطة عمل أوريون](plans) أكثر من ميزة مقارنة قسط Confluence :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. تكاليف تبديل بأسعار معقولة وقابلة للإهلاك من Confluence :fa-arrow-right-arrow-left:
 
@@ -118,7 +120,7 @@ title: SunStar أوريون الأنظمة
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## إظهار تفاصيل عائد الاستثمار
+## إظهار تفاصيل عائد الاستثمار :fa-chart-line:
 
 </button>
 </div>
@@ -159,7 +161,7 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-<span class="text-white">إن نمو العائد على الاستثمار القابل للقياس في جميع أنحاء مؤسستك هو تأثير متابع ومستمر للازدهار في البستنة الإجمالية وقدرات الرعاية الفريدة لمنصة wiki الخاصة بنا.</span>
+<span class="text-white">إن نمو العائد على الاستثمار القابل للقياس في جميع أنحاء مؤسستك هو تأثير متابع ومستمر ومزدهر لممارسة البستنة الإجمالية وقدرات الرعاية الفريدة لمنصة الويكي الخاصة بنا.</span>
 
 &nbsp;
 
@@ -167,7 +169,7 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-[^5]. Futhermore، تتوسع Orion معك أثناء نموك، خاصة على مستوى المؤسسة. الـ <span class="text-white">**$0 لكل ترخيص مقعد وعدد غير محدود من المواقع**</span> تفتح فرصًا جديدة لمشاركة المعرفة الخاضعة للرقابة والتعاون عبر الفرق والشركاء والمواقع الإلكترونية وحتى الكوكب بأكمله من خلال منصتنا الموحدة! نحن نعلم أنه بالنسبة لمعظم العملاء، سيتم استخدام جزء صغير فقط من تراخيص المقاعد هذه لتحرير الصفحات بالفعل، ولكن يمكنهم استخدام عدد غير محدود من "مرتبط" حسابات للقراءة فقط في مواقع الويكي الخاصة بهم لمشاركة المعلومات المحمية عبر الإنترنت. الحسابات التي لا تحتاج إلى أي وصول إلى Orion `CMS` ميزة توفير التكاليف فريدة من نوعها لأوريون باعتبارها الشركة الوحيدة المدعومة **Enterprise Jamstack Wiki**.
+[^5]. :fa-scale-balanced: Futhermore، تتوسع Orion معك أثناء نموك، خاصة على مستوى المؤسسة. الـ <span class="text-white">**$0 لكل ترخيص مقعد وعدد غير محدود من المواقع**</span> تفتح فرصًا جديدة لمشاركة المعرفة الخاضعة للرقابة والتعاون عبر الفرق والشركاء والمواقع الإلكترونية وحتى الكوكب بأكمله من خلال منصتنا الموحدة! نحن نعلم أنه بالنسبة لمعظم العملاء، سيتم استخدام جزء صغير فقط من تراخيص المقاعد هذه لتحرير الصفحات بالفعل، ولكن يمكنهم استخدام عدد غير محدود من "مرتبط" حسابات للقراءة فقط في مواقع الويكي الخاصة بهم لمشاركة المعلومات المحمية عبر الإنترنت. الحسابات التي لا تحتاج إلى أي وصول إلى Orion `CMS` مناسب &mdash; ميزة توفير التكاليف فريدة من نوعها لأوريون باعتبارها الشركة الوحيدة المدعومة **Enterprise Jamstack Wiki**.
 
 &nbsp;
 
@@ -175,7 +177,9 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-[^6]. مع حلول السوق الأخرى، [بدون خطة متميزة أنت وحدك](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]. :fa-money-check-dollar: مع حلول السوق الأخرى، [بدون خطة متميزة أنت وحدك](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager). سعر الاشتراك الشهري لـ Orion [خطة العمل هي حوالي 2500 دولار / شهر ل 300 مقعد](plans); [يقع Confluence Premium في الشمال من 3000 دولار + لنفس المقاعد 300](https://www.atlassian.com/software/confluence/pricing).
+
+مع تحرك عدد المقاعد في أي من الاتجاهين من 300، تزداد **وفوراتك**. &gt;500 يضعك على مستوى المؤسسة[^5]في **50 مقعدًا، تبلغ فاتورتك الشهرية 1/5 ما تدفعه إلى Atlassian الآن**.
 
 &nbsp;
 
@@ -189,7 +193,7 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 4. بناء موقع ويكي أوريون والعودة إلى الخطوات المذكورة أعلاه للتغيير وإعادة الضبط حتى يكون العميل راضيا وجاهزا للتوقيع النهائي على العقد.
 
-قد يبدو أن الخطوة 2 أعلاه هي المكان الذي قد تتراكم فيه تكاليف كبيرة؛ ومع ذلك فإن الجزء الأكبر من هذه الخطوة قابل للمساعدة في الذكاء الاصطناعي. قد يختار العملاء أيضًا الاحتفاظ باشتراكاتهم في Confluence طالما كانوا يحبون دون إدخال تعارضات مع wikis Orion الجديدة، لمجرد التخفيف من المخاطر المرتبطة بها.
+قد يبدو أن الخطوة 2 أعلاه هي المكان الذي قد تتراكم فيه تكاليف كبيرة؛ ومع ذلك فإن الجزء الأكبر من هذه الخطوة قابل لأتمتة الذكاء الاصطناعي. قد يختار العملاء أيضًا الاحتفاظ باشتراكاتهم في Confluence طالما كانوا يحبون دون إدخال تعارضات مع wikis Orion الجديدة، لمجرد التخفيف من المخاطر المرتبطة بها.
 
 &nbsp;
 
@@ -223,13 +227,13 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-لا تريد بدلاً من ذلك إهدار رأس المال الثمين على [تدهور الأداء](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)، باهظة الثمن، [غير موثوق به](https://isdown.app/status/notion) SaaS خدمة لا يمكنها الوفاء بوعود الإنتاجية المحسنة؟ وبعبارة أخرى، شيء مثل مفهوم؟
+لا تريد بدلاً من ذلك إهدار رأس المال الثمين على [صعب التأمين](https://matthiasfrank.de/en/notion-security/), [تدهور الأداء](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)، و [ترتيب الحجم أكثر تكلفة للشركات](https://www.notion.com/pricing), [غير موثوق به](https://isdown.app/status/notion) SaaS خدمة لا يمكنها الوفاء بوعود الإنتاجية المحسنة؟ وبعبارة أخرى، شيء مثل مفهوم؟
 
-تفضل *القابلية للتزوير* لنظام مثل Orion &mdash; نظمت حول *الوثائق مع البيانات المرفقة *؛ بدلا من قواعد البيانات *الخاصة بـ Notion مع المستندات المرفقة *؟
+تفضل *القابلية للتزوير* لنظام مثل Orion &mdash; نظمت حول *الوثائق مع البيانات المرفقة *؛ بدلا من قواعد البيانات *مفهوم غريبة مع الوثائق المرفقة *؟
 
 &nbsp;
 
-هل تريد نهجًا أكثر تحفظًا/سيادة من مجرد تعريض جميع أسرار شركتك لموردي الذكاء الاصطناعي عديمي الضمير ونماذجهم الحدودية غير المشروعة؟
+تريد نهجًا أكثر تحفظًا/سيادة من مجرد تعريض جميع أسرار شركتك لموردي الذكاء الاصطناعي عديمي الضمير :fa-openai: ونماذجهم الحدودية غير المشروعة؟
 
 &nbsp;
 
@@ -298,7 +302,7 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 <center>
 
-[اتصل بنا](../contact) لتسعير المؤسسة وعرض توضيحي مجاني
+<span class="btn bg-secondary">[<span class="text-white">اتصل بنا للحصول على أسعار المؤسسات وعرض تجريبي مجاني](../contact)</span>
 
 </center>
 </div>
@@ -326,7 +330,7 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-تحتاج إلى قوة حصانية أكثر من [خدعة واحدة مثل هوغو](https://www.iconoclasts.blog/joe/ssg) هل يمكن للحشد؟
+تحتاج إلى قوة حصانية أكثر من [خدعة واحدة مثل هوغو](https://www.iconoclasts.blog/joe/ssg) علب :fa-horse:?
 
 &nbsp;
 

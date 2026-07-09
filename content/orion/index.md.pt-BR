@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado
+status: verificado=48093
 title: SunStar Orion dos Sistemas
 ---
 
@@ -90,7 +90,9 @@ Ao contrário dos produtos que seus concorrentes estão usando, o Orion é uma e
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
-<div class="card-header">Produto Mais Seguro e Melhor para <span class="text-white">Menos dinheiro</span></div>
+<div class="card-header">Produto Mais Seguro e Melhor para <span class="text-white">Menos dinheiro</span>&nbsp;<i class="fa fa-chart-line"></i>
+
+</div>
 <div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Redução substancial do risco de segurança :fa-lock:
@@ -101,9 +103,9 @@ Ao contrário dos produtos que seus concorrentes estão usando, o Orion é uma e
 
 &nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Ferramentas de Curadoria de Conteúdo Agrupado :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Economize $100K / ano</span>](https://www.atlassian.com/software/confluence/pricing) com [Licenciamento corporativo por assento / por site de US $ 0 da Orion](plans)
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Economize $100K / ano</span>](https://www.atlassian.com/software/confluence/pricing) com [Licenciamento corporativo por assento / por site de US $ 0 da Orion](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Economize 50% / ano</span>](https://www.atlassian.com/software/confluence/pricing) com [Plano de negócios de Orion](plans) sobre o Confluence Premium comparável a recursos
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Economize 50% / ano</span>](https://www.atlassian.com/software/confluence/pricing) com [Plano de negócios de Orion](plans) sobre o Confluence Premium comparável a recursos :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Custos de troca acessíveis e amortizáveis da Confluence :fa-arrow-right-arrow-left:
 
@@ -118,7 +120,7 @@ Ao contrário dos produtos que seus concorrentes estão usando, o Orion é uma e
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## Mostre-me os detalhes de ROI
+## Mostre-me os detalhes de ROI :fa-chart-line:
 
 </button>
 </div>
@@ -159,7 +161,7 @@ busca recursiva indolor / substituir para reparar o cruzamento acumulado é cons
 
 &nbsp;
 
-<span class="text-white">O crescimento mensurável do ROI em toda a sua organização é um efeito contínuo e contínuo de florescimento das habilidades agregadas de jardinagem e cuidado exclusivas da nossa plataforma wiki.</span>
+<span class="text-white">O crescimento mensurável do ROI em toda a sua organização é um efeito contínuo e contínuo de florescimento do exercício de habilidades agregadas de jardinagem e cuidado exclusivas da nossa plataforma wiki.</span>
 
 &nbsp;
 
@@ -167,7 +169,7 @@ Já viu um sistema wiki que pode integrar de forma confiável conteúdo/dados fi
 
 &nbsp;
 
-[^5]. Além disso, a Orion escala com você à medida que você cresce, especialmente no nível empresarial. O <span class="text-white">**US$ 0 por assento e número ilimitado de sites**</span> abre novas oportunidades para o compartilhamento de conhecimento controlado e colaboração entre equipes, parceiros, sites e até mesmo todo o planeta com nossa plataforma federada! Sabemos que, para a maioria dos clientes, apenas uma pequena parte dessas licenças de assento seria usada para editar páginas, mas eles podem usar um número ilimitado de licenças. "associado" contas somente leitura em suas wikis para compartilhar informações protegidas pela internet. Contas que não precisam ter acesso ao Orion `CMS` apropriado- um recurso de economia de custos exclusivo para Orion como o único corporation-backed **Enterprise Jamstack Wiki**.
+[^5]. :fa-scale-balanced: Além disso, a Orion escala com você à medida que você cresce, especialmente no nível empresarial. O <span class="text-white">**US$ 0 por assento e número ilimitado de sites**</span> abre novas oportunidades para o compartilhamento de conhecimento controlado e colaboração entre equipes, parceiros, sites e até mesmo todo o planeta com nossa plataforma federada! Sabemos que, para a maioria dos clientes, apenas uma pequena parte dessas licenças de assento seria usada para editar páginas, mas eles podem usar um número ilimitado de licenças. "associado" contas somente leitura em suas wikis para compartilhar informações protegidas pela internet. Contas que não precisam ter acesso ao Orion `CMS` adequado &mdash; Um recurso de economia de custos exclusivo do Orion como o único **Enterprise Jamstack Wiki** apoiado pela corporação.
 
 &nbsp;
 
@@ -175,7 +177,9 @@ Já viu um sistema wiki que pode integrar de forma confiável conteúdo/dados fi
 
 &nbsp;
 
-[^6]. Com outras soluções de mercado, [Sem um plano premium você está por conta própria](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]. :fa-money-check-dollar: Com outras soluções de mercado, [Sem um plano premium você está por conta própria](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager). Preço de assinatura mensal da Orion para um [Plano de negócios é de ~ $ 2500 / mês para 300 lugares](plans); [Confluence Premium fica a norte de US $ 3000 + para os mesmos 300 assentos](https://www.atlassian.com/software/confluence/pricing).
+
+À medida que o número de assentos se move em qualquer direção a partir de 300, sua **poupança aumenta**. &gt;500 coloca você em nosso nível corporativo[^5]; e em **50 assentos sua conta mensal é 1/5 o que você está pagando para Atlassian agora**.
 
 &nbsp;
 
@@ -189,7 +193,7 @@ Já viu um sistema wiki que pode integrar de forma confiável conteúdo/dados fi
 
 4. construir o site da wiki Orion e voltar às etapas acima para ajustar e reajustar até que o cliente esteja satisfeito e pronto para a assinatura final do contrato.
 
-Pode parecer que o passo 2 acima é onde os custos significativos podem acumular; no entanto, a maior parte desse passo é passível de assistência de IA. Os clientes também podem optar por manter suas assinaturas Confluence pelo tempo que quiserem sem introduzir conflitos com suas novas wikis Orion, apenas para mitigar os riscos associados.
+Pode parecer que o passo 2 acima é onde os custos significativos podem acumular; no entanto, a maior parte dessa etapa é passível de automação de IA. Os clientes também podem optar por manter suas assinaturas Confluence pelo tempo que quiserem sem introduzir conflitos com suas novas wikis Orion, apenas para mitigar os riscos associados.
 
 &nbsp;
 
@@ -223,13 +227,13 @@ Se isso ressoar, você está cansado de jogar mais dinheiro bom em um mau invest
 
 &nbsp;
 
-Não quero desperdiçar capital precioso em um [deterioração do desempenho](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), caro, [não confiável](https://isdown.app/status/notion) Serviço SaaS que não pode cumprir suas promessas de produtividade aprimorada? Em outras palavras, algo como Noção?
+Não quero desperdiçar capital precioso em um [difícil de garantir](https://matthiasfrank.de/en/notion-security/), [deterioração do desempenho](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), um [ordem de grandeza mais cara para as empresas](https://www.notion.com/pricing), [não confiável](https://isdown.app/status/notion) Serviço SaaS que não pode cumprir suas promessas de produtividade aprimorada? Em outras palavras, algo como Noção?
 
-Prefira o *grokability* de um sistema como o Orion &mdash; organizado em torno de *documentos com dados anexados*; em vez de *bancos de dados da Notion com documentos anexados*?
+Prefira o *grokability* de um sistema como o Orion &mdash; organizado em torno de *documentos com dados anexados*; em vez de *bancos de dados de uma Noção peculiar com documentos anexados*?
 
 &nbsp;
 
-Quer uma abordagem mais conservadora/soberana do que simplesmente expor todos os seus segredos corporativos a fornecedores de IA sem escrúpulos e seus modelos de fronteira ilícitos?
+Quer uma abordagem mais conservadora/soberana do que simplesmente expor todos os seus segredos corporativos a fornecedores de IA sem escrúpulos :fa-openai: e seus modelos de fronteira ilícitos?
 
 &nbsp;
 
@@ -298,7 +302,7 @@ Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive 
 
 <center>
 
-[Fale conosco](../contact) para Sistema de Preços Empresarial e uma Demonstração Gratuita
+<span class="btn bg-secondary">[<span class="text-white">Entre em contato conosco para obter preços corporativos e uma demonstração gratuita](../contact)</span>
 
 </center>
 </div>
@@ -326,7 +330,7 @@ Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive 
 
 &nbsp;
 
-Precisa de mais potência do que um [pônei de um truque como Hugo](https://www.iconoclasts.blog/joe/ssg) pode mostro?
+Precisa de mais potência do que um [pônei de um truque como Hugo](https://www.iconoclasts.blog/joe/ssg) caixa :fa-horse:?
 
 &nbsp;
 

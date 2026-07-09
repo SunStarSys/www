@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 已驗證
+status: 驗證 =48093
 title: SunStar 系統的 Orion
 ---
 
@@ -90,7 +90,9 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
-<div class="card-header">更安全、更好的產品<span class="text-white">減少金錢</span></div>
+<div class="card-header">更安全、更好的產品<span class="text-white">減少金錢</span>&nbsp;<i class="fa fa-chart-line"></i>
+
+</div>
 <div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1 個</a>。重大證券風險降低:fa-lock:
@@ -101,9 +103,9 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。組合內容策展工具:fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5 個</a>. [<span class="text-white">每年儲存 $100K</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的每座位 $0 / 每網站企業授權](plans)
+&nbsp;&nbsp;<a id="fn-5" href="#5">5 個</a>. [<span class="text-white">每年儲存 $100K</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的每座位 $0 / 每網站企業授權](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6 歲</a>. [<span class="text-white">每年節省 50%</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的業務計畫](plans) 超過功能可比較的 Confluence Premium
+&nbsp;&nbsp;<a id="fn-6" href="#6">6 歲</a>. [<span class="text-white">每年節省 50%</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的業務計畫](plans) 超過功能可比較的 Confluence Premium :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7 天</a>。經濟實惠、可攤銷的轉換成本:fa-arrow-right-arrow-left:
 
@@ -118,7 +120,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## 顯示投資報酬率明細
+## 顯示投資報酬率明細:fa-chart-line:
 
 </button>
 </div>
@@ -167,7 +169,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-[第 5 天]。Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。繁體中文<span class="text-white">** 每張座位授權 $0 及無限數量的網站 **</span> 透過我們的聯合平台，為團隊、合作夥伴、網站甚至整個地球的受控知識共享和協作創造新的機會！我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
+[第 5 天]. :fa-scale-balanced: Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。繁體中文<span class="text-white">** 每張座位授權 $0 及無限數量的網站 **</span> 透過我們的聯合平台，為團隊、合作夥伴、網站甚至整個地球的受控知識共享和協作創造新的機會！我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` 適當&mdash; Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
 
 &nbsp;
 
@@ -175,7 +177,9 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-[^6]。與其他市場解決方案[沒有保費計劃，您可自行選擇](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]. :fa-money-check-dollar: 與其他市場解決方案[沒有保費計劃，您可自行選擇](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager)。Orion 的每月訂閱價格[300 個座位的商務計劃每月為 $2500](plans); [Confluence Premium 位於 $3000+ 以北 3000 位](https://www.atlassian.com/software/confluence/pricing).
+
+當座位數從 300 方向移動時，您的 **節省金額會增加 **。&gt;500 讓您進入我們的企業級[第 5 天]在 **50 個座位上，您的每月帳單為 1/5，您現在支付給 Atlassian**。
 
 &nbsp;
 
@@ -189,7 +193,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 4. 建立 Orion wiki 網站，並返回上述步驟進行調整和調整，直到客戶滿意並準備好進行最終合約簽署為止。
 
-上述步驟 2 可能出現重大成本可能累積的情況；不過，大部分步驟都需要 AI 協助。客戶也可以選擇保留其 Confluence 訂閱，只要他們喜歡，而不與新的 Orion Wiki 發生衝突，只是為了降低相關風險。
+上述第 2 步可能出現重大成本可能累積的情況；不過，該步驟的大部分都可用於 AI 自動化。客戶也可以選擇保留其 Confluence 訂閱，只要他們喜歡，而不與新的 Orion Wiki 發生衝突，只是為了降低相關風險。
 
 &nbsp;
 
@@ -223,13 +227,13 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-不想改為浪費寶貴的資本[效能惡化](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)，昂貴，[不可靠](https://isdown.app/status/notion) 無法履行其增強生產力承諾的 SaaS 服務？換句話說，像是「概念」？
+不想改為浪費寶貴的資本[難以保護](https://matthiasfrank.de/en/notion-security/), [效能惡化](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)，一個[對企業而言，規模順序更昂貴](https://www.notion.com/pricing), [不可靠](https://isdown.app/status/notion) 無法履行其增強生產力承諾的 SaaS 服務？換句話說，像是「概念」？
 
-偏好使用 Orion 等系統的 *grokability* &mdash; 依據 *文件與附加資料* 進行組織；而不是 Notion 的 *資料庫與附加的文件 *？
+偏好使用 Orion 等系統的 *grokability* &mdash; 以 *文件與附加資料* 進行組織，而不是以 peculiar Notion 的 *資料庫與附加的文件 *？
 
 &nbsp;
 
-想要一個更保守的 / 主權方法，而不是只向不正當的 AI 供應商及其未被遺忘的邊界模型公開您的所有公司祕書？
+想要更保守 / 更主權的方法，不只是向不正當的 AI 供應商揭露所有公司祕書:fa-openai: 以及它們未被遺忘的邊界模型？
 
 &nbsp;
 
@@ -298,7 +302,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 <center>
 
-[聯系我們](../contact) 適用於企業定價和免費示範
+<span class="btn bg-secondary">[<span class="text-white">如需企業定價和免費示範，請與我們聯絡](../contact)</span>
 
 </center>
 </div>
@@ -326,7 +330,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-需要更多的馬力比一個[像 Hugo 這樣的單色小馬](https://www.iconoclasts.blog/joe/ssg) 是否必須？
+需要更多的馬力比一個[像 Hugo 這樣的單色小馬](https://www.iconoclasts.blog/joe/ssg) 罐頭:fa-horse:?
 
 &nbsp;
 

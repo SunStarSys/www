@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad
+status: verifierad=48093
 title: SunStar Orion för system
 ---
 
@@ -90,7 +90,9 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
-<div class="card-header">Säkrare, bättre produkt för <span class="text-white">Mindre pengar</span></div>
+<div class="card-header">Säkrare, bättre produkt för <span class="text-white">Mindre pengar</span>&nbsp;<i class="fa fa-chart-line"></i>
+
+</div>
 <div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Minskning av väsentliga säkerhetsrisker :fa-lock:
@@ -101,9 +103,9 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 
 &nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Verktyg för sammanslagen innehållskuratering :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Spara $100K / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions företagslicensiering för 0 USD per plats/per webbplats](plans)
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Spara $100K / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions företagslicensiering för 0 USD per plats/per webbplats](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Spara 50 % / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions affärsplan](plans) Över funktionsjämförbar Confluence Premium
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Spara 50 % / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions affärsplan](plans) Över funktionsjämförbar Confluence Premium :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Prisvärd, avskrivningsbar växlingskostnad från sammanflöde :fa-arrow-right-arrow-left:
 
@@ -118,7 +120,7 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## Visa information om avkastning på investering
+## Visa information om avkastning på investering :fa-chart-line:
 
 </button>
 </div>
@@ -159,7 +161,7 @@ Smärtsam rekursiv sökning / ersättning för att reparera den ackumulerade cru
 
 &nbsp;
 
-<span class="text-white">Mätbar ROI-tillväxt i hela organisationen är en uppföljande, kontinuerlig blommande effekt av de samlade trädgårds- och omsorgsförmågorna som är unika för vår wiki-plattform.</span>
+<span class="text-white">Mätbar ROI-tillväxt i hela organisationen är en uppföljande, kontinuerlig blommande effekt av utövandet av aggregerad trädgårdsarbete och vårdande förmågor som är unika för vår wiki-plattform.</span>
 
 &nbsp;
 
@@ -167,7 +169,7 @@ Har du någonsin sett ett wikisystem som tillförlitligt kan integrera filtrerat
 
 &nbsp;
 
-[^5]. I framtiden skalar Orion med dig när du växer, särskilt på företagsnivå. Den <span class="text-white">**$0 per platslicensiering och obegränsat antal webbplatser**</span> öppnar nya möjligheter för kontrollerad kunskapsdelning och samarbete mellan team, partners, webbplatser och till och med hela planeten med vår samordnade plattform! Vi vet att för de flesta kunder skulle bara en liten del av dessa platslicenser användas för att faktiskt redigera sidor, men de kan använda ett obegränsat antal "associerad" Skrivskyddade konton i sina wikis för att dela skyddad information med över internet. Konton som inte behöver ha åtkomst till Orion `CMS` ordentlig- en kostnadsbesparande funktion som är unik för Orion som den enda företagsstödda **Enterprise Jamstack Wiki**.
+[^5]. :fa-scale-balanced: I framtiden skalar Orion med dig när du växer, särskilt på företagsnivå. Den <span class="text-white">**$0 per platslicensiering och obegränsat antal webbplatser**</span> öppnar nya möjligheter för kontrollerad kunskapsdelning och samarbete mellan team, partners, webbplatser och till och med hela planeten med vår samordnade plattform! Vi vet att för de flesta kunder skulle bara en liten del av dessa platslicenser användas för att faktiskt redigera sidor, men de kan använda ett obegränsat antal "associerad" Skrivskyddade konton i sina wikis för att dela skyddad information med över internet. Konton som inte behöver ha åtkomst till Orion `CMS` korrekt &mdash; En kostnadsbesparande funktion som är unik för Orion som den enda företagsstödda **Enterprise Jamstack Wiki**.
 
 &nbsp;
 
@@ -175,7 +177,9 @@ I takt med att personalens företagsstatus utvecklas över tid gör Orion det en
 
 &nbsp;
 
-[^6]. med andra marknadslösningar, [Utan en premium plan du är på egen hand](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]. :fa-money-check-dollar: med andra marknadslösningar, [Utan en premium plan du är på egen hand](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager). Orions månatliga prenumerationspris för en [Affärsplanen är ~ $ 2500 / månad för 300 platser](plans); [Confluence Premium är norr om $ 3000 + för samma 300 platser](https://www.atlassian.com/software/confluence/pricing).
+
+När antalet platser rör sig i båda riktningarna från 300 ökar dina **besparingar**. &gt;500 sätter dig på vår företagsnivå[^5]; och på **50 platser är din månadskostnad 1/5 vad du betalar till Atlassian nu**.
 
 &nbsp;
 
@@ -189,7 +193,7 @@ I takt med att personalens företagsstatus utvecklas över tid gör Orion det en
 
 4. bygga Orions wiki-webbplats och gå tillbaka till ovanstående steg för att justera och justera tills kunden är nöjd och redo för slutlig kontraktssignering.
 
-Det kan tyckas att steg 2 ovan är där betydande kostnader kan uppstå, men huvuddelen av det steget är mottagligt för AI-hjälp. Kunderna kan också välja att behålla sina Confluence-prenumerationer så länge de vill utan att införa konflikter med sina nya Orion-wikier, bara för att minska tillhörande risker.
+Det kan tyckas att steg 2 ovan är där betydande kostnader kan uppstå, men huvuddelen av det steget är mottaglig för AI-automatisering. Kunderna kan också välja att behålla sina Confluence-prenumerationer så länge de vill utan att införa konflikter med sina nya Orion-wikier, bara för att minska tillhörande risker.
 
 &nbsp;
 
@@ -223,13 +227,13 @@ Om det resonerar, är du trött på att kasta mer bra pengar på en dålig inves
 
 &nbsp;
 
-Vill inte istället slösa dyrbart kapital på en [prestanda som försämras](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), dyr, [inte tillförlitlig](https://isdown.app/status/notion) SaaS tjänst som inte kan uppfylla sina förbättrade produktivitetslöften? Med andra ord, något som begreppet?
+Vill inte istället slösa dyrbart kapital på en [Svårt att säkra](https://matthiasfrank.de/en/notion-security/), [prestanda som försämras](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), ett [Storleksordningen dyrare för företag](https://www.notion.com/pricing), [inte tillförlitlig](https://isdown.app/status/notion) SaaS tjänst som inte kan uppfylla sina förbättrade produktivitetslöften? Med andra ord, något som begreppet?
 
-Föredrar *grokability *av ett system som Orion &mdash; organiseras runt *dokument med bifogade data*; istället för Notions *databaser med bifogade dokument*?
+Föredrar *grokability *av ett system som Orion &mdash; organiseras runt *dokument med bifogade data *; i stället för en märklig Notions *databaser med bifogade dokument *?
 
 &nbsp;
 
-Vill du ha ett mer konservativt/suveränt tillvägagångssätt än att bara exponera alla dina företagshemligheter för skrupelfria AI-leverantörer och deras felfångade gränsmodeller?
+Vill ha en mer konservativ/suverän strategi än att bara exponera alla dina företagshemligheter för skrupelfria AI-leverantörer :fa-openai: och deras missgynnade gränsmodeller?
 
 &nbsp;
 
@@ -298,7 +302,7 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 <center>
 
-[Kontakta oss](../contact) för företagspriser och en kostnadsfri demo
+<span class="btn bg-secondary">[<span class="text-white">Kontakta oss för företagspriser och en kostnadsfri demo](../contact)</span>
 
 </center>
 </div>
@@ -326,7 +330,7 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 &nbsp;
 
-Behöver mer hästkraft än en [En ponny som Hugo](https://www.iconoclasts.blog/joe/ssg) kanon?
+Behöver mer hästkraft än en [En ponny som Hugo](https://www.iconoclasts.blog/joe/ssg) konservburk :fa-horse:?
 
 &nbsp;
 

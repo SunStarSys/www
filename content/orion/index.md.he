@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: מאומת
+status: אומתו 48093
 title: SunStar אוריון מערכות
 ---
 
@@ -90,7 +90,9 @@ title: SunStar אוריון מערכות
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
-<div class="card-header">מוצר בטוח וטוב יותר עבור <span class="text-white">פחות כסף</span></div>
+<div class="card-header">מוצר בטוח וטוב יותר עבור <span class="text-white">פחות כסף</span>&nbsp;<i class="fa fa-chart-line"></i>
+
+</div>
 <div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. הפחתת סיכון אבטחה מהותית :fa-lock:
@@ -101,9 +103,9 @@ title: SunStar אוריון מערכות
 
 &nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. כלי לאיסוף תוכן בחבילה :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">שמור $100K / שנה</span>](https://www.atlassian.com/software/confluence/pricing) עם [0$ לכל מושב / רישוי ארגוני לכל אתר](plans)
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">שמור $100K / שנה</span>](https://www.atlassian.com/software/confluence/pricing) עם [0$ לכל מושב / רישוי ארגוני לכל אתר](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">חסכו 50% לשנה</span>](https://www.atlassian.com/software/confluence/pricing) עם [תוכנית עסקית של אוריון](plans) פרמיית השפעה תואמת-יתר
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">חסכו 50% לשנה</span>](https://www.atlassian.com/software/confluence/pricing) עם [תוכנית עסקית של אוריון](plans) פרמיית השפעה תואמת-יתר :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. עלויות מיתוג במחיר נוח וניתנות להפחתה כתוצאה מהשפעה :fa-arrow-right-arrow-left:
 
@@ -118,7 +120,7 @@ title: SunStar אוריון מערכות
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## הצג לי את פרטי החזר ההשקעה
+## הצג לי את פרטי החזר ההשקעה :fa-chart-line:
 
 </button>
 </div>
@@ -159,7 +161,7 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-<span class="text-white">גידול מדוד בתשואה להשקעה ברחבי הארגון שלכם הוא אפקט מתמשך ומתמשך של יכולות הגינון והטיפול המצרפי הייחודיות לפלטפורמת הוויקי שלנו.</span>
+<span class="text-white">גידול מדוד בתשואה להשקעה ברחבי הארגון שלכם הוא אפקט מתמשך ומתמשך של מימוש יכולות גינון וטיפול מצטברות ייחודיות לפלטפורמת הוויקי שלנו.</span>
 
 &nbsp;
 
@@ -167,7 +169,7 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-[^5]. Futhermore, אוריון מתרחב איתך ככל שאתה גדל, במיוחד ברמה הארגונית. דה <span class="text-white">**רישוי של 0$ לכל מושב ומספר בלתי מוגבל של אתרים**</span> פותחת הזדמנויות חדשות לשיתוף ושיתוף ידע מבוקר בין צוותים, שותפים, אתרי אינטרנט ואפילו כדור הארץ כולו באמצעות הפלטפורמה המאוחדת שלנו! אנו יודעים כי עבור רוב הלקוחות, רק חלק זעיר של רישיונות מושב אלה ישמשו לעריכת דפים בפועל, אבל הם יכולים להשתמש במספר בלתי מוגבל של "משויך" חשבונות לקריאה בלבד באתרי האינטרנט שלהם לשתף מידע מוגן באמצעות האינטרנט. חשבונות שאין להם גישה לאוריון `CMS` ראוי - תכונה חסכונית ייחודית לאוריון כגיבוי התאגיד היחיד **Enterprise Jamstack Wiki**.
+[^5]. :fa-scale-balanced: Futhermore, אוריון מתרחב איתך ככל שאתה גדל, במיוחד ברמה הארגונית. דה <span class="text-white">**רישוי של 0$ לכל מושב ומספר בלתי מוגבל של אתרים**</span> פותחת הזדמנויות חדשות לשיתוף ושיתוף ידע מבוקר בין צוותים, שותפים, אתרי אינטרנט ואפילו כדור הארץ כולו באמצעות הפלטפורמה המאוחדת שלנו! אנו יודעים כי עבור רוב הלקוחות, רק חלק זעיר של רישיונות מושב אלה ישמשו לעריכת דפים בפועל, אבל הם יכולים להשתמש במספר בלתי מוגבל של "משויך" חשבונות לקריאה בלבד באתרי האינטרנט שלהם לשתף מידע מוגן באמצעות האינטרנט. חשבונות שאין להם גישה לאוריון `CMS` תקין &mdash; תכונה חסכונית ייחודית לאוריון כגיבוי התאגיד היחיד **Enterprise Jamstack Wiki**.
 
 &nbsp;
 
@@ -175,7 +177,9 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-[^6]. עם פתרונות אחרים בשוק, [ללא תוכנית פרימיום אתה לבד](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager).
+[^6]. :fa-money-check-dollar: עם פתרונות אחרים בשוק, [ללא תוכנית פרימיום אתה לבד](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager). מחיר המנוי החודשי של אוריון [התוכנית העסקית היא 2500 $ לחודש עבור 300 מושבים](plans); [Confluence Premium הוא 3000 $ עבור אותו 300 מושבים](https://www.atlassian.com/software/confluence/pricing).
+
+כאשר מספר המושבים נע משני הכיוונים מ-300, החיסכון שלך **גדל**. &gt;500 מציב אותך ברמה הארגונית שלנו[^5]; וב- **50 מושבים החשבון החודשי שלך הוא 1/5 מה שאתה משלם לאטלסיאן עכשיו**.
 
 &nbsp;
 
@@ -189,7 +193,7 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 4. לבנות את אתר ויקי אוריון ולחזור לצעדים הנ"ל לעיוות וכוונון מחדש עד שהלקוח יהיה מרוצה ומוכן לחתימה סופית על החוזה.
 
-נראה כי שלב 2 לעיל הוא המקום שבו עלויות משמעותיות עשויות לצבור; עם זאת, חלק הארי של שלב זה ניתן לסיוע AI. לקוחות יכולים גם לבחור להחזיק במנויי ההשפעה שלהם כל עוד הם רוצים מבלי להציג קונפליקטים עם אתרי אוריון החדשים שלהם, רק כדי להפחית את הסיכונים הקשורים.
+נראה כי שלב 2 לעיל הוא המקום שבו עלויות משמעותיות עשויות להצטבר; עם זאת, חלק הארי של הצעד הזה ניתן לאוטומציה של בינה מלאכותית. לקוחות יכולים גם לבחור להחזיק במנויי ההשפעה שלהם כל עוד הם רוצים מבלי להציג קונפליקטים עם אתרי אוריון החדשים שלהם, רק כדי להפחית את הסיכונים הקשורים.
 
 &nbsp;
 
@@ -223,13 +227,13 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-לא רוצה לבזבז הון יקר על [הביצועים מתדרדרים](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), יקר, [לא אמין](https://isdown.app/status/notion) שירות SaaS שאינו יכול לעמוד בהבטחות הפרודוקטיביות המשופרות שלו? או משהו כמו רעיון?
+לא רוצה לבזבז הון יקר על [קשה לאבטחה](https://matthiasfrank.de/en/notion-security/), [הביצועים מתדרדרים](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), א [סדר גודל יקר יותר לעסקים](https://www.notion.com/pricing), [לא אמין](https://isdown.app/status/notion) שירות SaaS שאינו יכול לעמוד בהבטחות הפרודוקטיביות המשופרות שלו? או משהו כמו רעיון?
 
-מעדיף את יכולת השחיקה של מערכת כמו אוריון &mdash; מאורגן סביב *מסמכים עם נתונים מצורפים*; במקום מסדי הנתונים *של Notion עם מסמכים מצורפים*?
+מעדיף את יכולת השחיקה של מערכת כמו אוריון &mdash; מאורגן סביב *מסמכים עם נתונים מצורפים*; במקום מסדי הנתונים המוזרים של Notion עם מסמכים מצורפים*?
 
 &nbsp;
 
-רוצה גישה שמרנית/ריבונית יותר מאשר פשוט לחשוף את כל הסודות הארגוניים שלך לספקי AI חסרי מצפון ולמודלים שלהם המשתמשים בגבול בלתי נשכחים?
+רוצה גישה שמרנית/ריבונית יותר מאשר לחשוף את כל הסודות התאגידיים שלך לספקי AI חסרי מצפון :fa-openai: והמודלים הלא-מוגבלים שלהם?
 
 &nbsp;
 
@@ -298,7 +302,7 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 <center>
 
-[צרו קשר](../contact) לתמחור ארגוני ולהדגמה בחינם
+<span class="btn bg-secondary">[<span class="text-white">צרו איתנו קשר עבור תמחור ארגוני והדגמה בחינם](../contact)</span>
 
 </center>
 </div>
@@ -326,7 +330,7 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-צריך יותר כוח סוס מאשר [פוני חד-טריק כמו הוגו](https://www.iconoclasts.blog/joe/ssg) אפשר?
+צריך יותר כוח סוס מאשר [פוני חד-טריק כמו הוגו](https://www.iconoclasts.blog/joe/ssg) יכול חרדל :fa-horse:?
 
 &nbsp;
 
