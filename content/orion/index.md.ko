@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 초안
+status: 확인=47833
 title: SunStar 시스템스 오리온
 ---
 
@@ -65,11 +65,15 @@ title: SunStar 시스템스 오리온
 
 &nbsp;
 
-### ROI, 경영진 의사 결정자 :fa-chart-line:...
+<div class="border-top" style="padding-top: 20px">
+
+# 실제로 제공하는 ROI: 비용의 일부분에서 안전한 고성능 지식 관리 :fa-chart-line:
+
+</div>
 
 &nbsp;
 
-<span class="text-white">왜 Orion을 선택해야합니까? 잼스택 위키 플랫폼 &mdash; 비용 절감</span>
+<span class="text-white">침해 위험을 줄이고 실제 데이터/수학/AI를 원활하게 통합하며 경제적으로 확장할 수 있는 입증된 Jamstack 기술 &mdash; Orion이 레거시 도구를 능가하는 7 가지 방법을 참조하십시오.</span>
 
 &nbsp;
 
@@ -77,33 +81,19 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;
 
-<span class="text-white">지식 관리 시스템 시장에서 Orion보다 더 나은 ROI를 창출하는 것은 없습니다.</span>
+경쟁업체가 사용하고 있는 제품과 달리 Orion은 시장에서 가장 풍부하면서도 가장 이해하기 쉽게 관리되는 링크/종속성 네트워크를 통해 우수하고 유지 관리 가능하며 기밀이 유지 가능하면서도 쉽게 위치할 수 있는 기업 문서를 제공하도록 설계된 프레임워크입니다. **조직의 집단적 경험을 가장 내구성이 뛰어난 경쟁 우위로 뛰어넘는 책임으로부터 바꿉니다.**
 
 &nbsp;
 
-경쟁업체가 사용하고 있는 제품과 달리 Orion은 시장에서 가장 풍부하면서도 가장 이해하기 쉬운 관리형 링크/종속성 네트워크를 통해 우수하고 유지 관리 가능하며 기밀이 유지 가능하면서도 쉽게 위치할 수 있는 기업 문서를 제공하도록 설계된 프레임워크입니다. 조직의 집단적 경험을 누수된 책임으로부터 가장 내구성이 뛰어난 경쟁 우위로 바꿉니다.
+<center>
 
-&nbsp;
-
-<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
-<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
-<div class="accordion-header" id="how-so-heading">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
-
-#### 어떻게?
-
-</button>
-</div>
-
-<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
-
-&nbsp;
-
-<span class="text-white">더 적은 돈을 위해 더 안전하고 더 나은 제품</span>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card-header">안전한, 더 나은 제품 <span class="text-white">더 적은 돈</span></div>
+<div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. 상당한 보안 위험 감소
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. 검색 및 AI 번역이 포함된 실제 수학/데이터 통합
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. 검색 및 AI 번역을 통한 실제 수학/데이터 통합, 데이터 처리 엔진 및 벡터 그래픽 패키지
 
 &nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. 진정한 에이전트 AI 지원
 
@@ -113,29 +103,35 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">저장 50%/년</span>](https://www.atlassian.com/software/confluence/pricing) 포함 [Orion의 사업 계획](plans) 기능 비교 가능 Confluence Premium
 
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. 변동에 따른 경제적이고 상각 가능한 전환 비용
+
+</div>
+</div>
+</center>
+
 &nbsp;
 
-[^1]. Orion을 채택하면 주요 보안 사고의 위험이 즉시 줄어들고 마음의 평화는 이사회에보다 더 많은 문제를 전달했습니다. [비싼 랜섬웨어 보험 정책](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 청구서를 제출할 필요가 없습니다.
+<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+## ROI 세부정보 표시
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
+
+&nbsp;
+
+[^1]. Orion 채택 [즉시 위험 감소](security#separation-of-concerns-and-engineering-tradeoffs10) 주요 보안 사고의; 그리고 마음의 평화는 당신의 이사회보다 더 많은 문제를 전달 [비싼 랜섬웨어 보험 정책](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 청구서를 제출할 필요가 없습니다.
 
 &nbsp;
 
 [^2]. 설정 항목 제외 [보안 이점](https://www.iconoclasts.blog/joe/wishful-thinking) 및 [처벌 강화](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 대상 [HIPAA 데이터의 기밀성 침해](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)Orion 이외의 Wiki와 유사한 제품의 기본적인 결함은 외부에서 생성된 데이터 파일 형식의 통합 및 정기적 유지 관리를 위해 **일관적인 통합/인터페이스를 제공하지 못한다는 것입니다**. 그러나 업계 표준 텍스트/소스 문서/데이터 형식의 일부에 초점을 맞추어 가장 복잡한 데이터 생성 수학 테이블, 그래프, 차트, 맵 및 아키텍처 다이어그램도 오리온에서 지원되는 모든 자연어로 **완전히 검색 가능하며 AI 번역 가능**합니다.
 
-&nbsp;
-
-예를 들어, 주기적으로 업데이트된 기밀 Infosec 클라우드 자산 구성 세부정보를 획득하려는 직원에게 **더 이상 생산성 손실이 발생하지 않음**이 표시됩니다. :fa-network-wired: 현재 위키 어딘가에 모호하게 태그가 지정되고 외부에서 생성된 데이터 테이블에 잠겨 있으며, 또한 어디에 있는지 기억하지 못하는 팀원들에게 좌절감을 안겨줍니다. 자연스럽게 진화하는 시간이 관리자에게 가라앉는 것이고, 그렇게 된다. 누군가가 기억할 때까지, 그러나 테이블이 거대하기 때문에 그들은 단지 하나의 행에 하나의 요소의 내용을 원하기 때문에, 그들은 브라우저와 함께 그것을 인출하고 안구는 수동으로 스캔해야합니다. 그런 다음 infosec 데이터가 다음에 업데이트되는 것을 발견 할 때마다 프로세스를 반복하십시오.[^HTML5].
-
-&nbsp;
-
-게다가, `YAML/JSON` Notion(또는 Confluence)에서 지원되는 데이터 수집 형식조차 없습니다!  외부에서 생성된 트리 유사 데이터를 다음과 같이 표현할 수 없는 경우 `CSV` 테이블, 당신이 남긴 모든 당신이 우리의 오리온 플랫폼을 마스터하는 데 더 많은 시간을 낭비 할 수있는 베어 페이지 블록입니다.
-
-&nbsp;
-
-외부에서 생성된 infosec 테이블 :fa-network-wired: Orion Wiki에 **검색 가능으로 통합됩니다. `CSV` 기본 매가인하 문서에 첨부된 파일**입니다. 그렇지 않으면 빌드 시 포함된 파일로 렌더링됩니다. `HTML5` 테이블.
-
-&nbsp;
-
-첨부 시 통지를 받으려는 경우 `CSV` 변경되었습니까? SQL*Plus 세션에서 `CSV` 파일! 다음 위키 방문(전자메일 스팸을 통한 방문이 아님) 중 통지가 있을 경우 내장된 항목을 건너뛸 수 있습니다. `HTML5` 렌더링된 마크다운 테이블 대신 Orion에서 필요한 항목을 직접 가져옵니다. `JSON` 빌드 `CSV` 표준을 사용하여 첨부 `CLI` 도구 `curl` 및 `jq`. **오늘 이 워크플로우를 지원하는 다른 위키가 없습니다.**
+Orion, 열 벡터 데이터베이스 엔진으로 데이터 통합 그림 완성 `PDL` 및 번들 벡터 그래픽 패키지 `Asymptote` 대화형 숫자 크런칭 요구 사항을 충족합니다.
 
 &nbsp;
 
@@ -143,27 +139,11 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;
 
-**현재 신뢰할 수 있는 단일 소스를 지속적으로 추구하는 적시성, 편의성, 정확성 및 정밀성은 가장 시간 제약이 있는 직원을 위한 주요 생산성 지원 요소 역할을 합니다.** 이러한 Orion 전용 기능을 사용하지 않을 경우 발생할 수 있는 결과는 플랫폼 엔지니어가 <span class="text-white">**makework에 매년 $10-100K를 낭비해야 함**</span> 다음을 사용하여 미니어처 내부 웹 사이트를 생성, 구축, **설명서** 및 지원 `REST`-이 공유 데이터 세트에 대한 기반 인터페이스로, 위키 공급업체의 제한된 검색 가능 및 검색 가능 데이터 통합 기능 세트에 대한 보강 임시해결책입니다.
-
-&nbsp;
-
-반대로, Orion은 한 번 손실 된 외부에서 생성 된 infosec 세부 정보를 표면화합니다. :fa-network-wired: 온디맨드로 **자동화된 웹 지원/AI 에이전트에 귀사의 인재가 선호하는 방식으로 제공**합니다. 탁월한 alacrity와 신뢰성으로. 당신이 궁극적으로 선호하는 때까지 맛을 손으로 조정하여 검색을 완벽하게하고 싶습니다. `JSON` 종료 `HTML5` 당신의 결과에? 다시, Orion은 (동일한)를 전달합니다 `URL`다름 `Accept` 헤더.)[수정(^R)]
-
-&nbsp;
-
-즉, **정보 검색**은 콘텐츠 생성/수정과는 근본적으로 다른 문제 도메인이지만 [CRUD 기반](https://crudly.ai/crud-app/) 경쟁업체의 Wiki 앱은 이러한 차이를 의미 있는 방식으로 만들지 않습니다. 또한 Orion의 Jamstack 설계를 통해 분류법은 과세로 인한 사고 후 동적으로 생성되는 관리 불가능하고 일반적이며 긴급한 것으로 처리되지 않습니다. `SQL` 테이블. 대신, 그들은 신중한 구조 계획과 일관되게 적용, 계층적 조직 팀 및 우리에 걸쳐 경험있는 정보 설계자에 의해[스프롤(^S)].
-
-&nbsp;
-
 [^4]. 다음으로 **콘텐츠 큐레이션 툴링**은 상향판매 기회가 아닌 오리온의 필수 기능입니다. 우리의 위키별 사실 데이터베이스는 업계 최초입니다. &mdash; 전체 웹 사이트에서 일관된 이름 브랜딩 또는 관련 소프트웨어 아티팩트 메타데이터를 관리하는 것과 같은 작업에 편리합니다. [YAML 파일](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
-따라서 피할 수없는 엔트로피 링크가 다른 위키 제품으로 회전하는 대신 포괄적 인 기간 동안 페이지 수정 시 **내부 / 외부 링크 검증**을받을 수 있습니다. `MIME`Orion's의 -type based, pre-commit linting pass `CMS` 편집자. 또한 관련된 페이지가 수개월 내에 변경되지 않은 경우에도 모든 고객에게 **요청 시 오래된 내부/외부 링크 가져오기**에 대한 보고 인프라를 제공합니다. Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 prose** 자체에 내장되기 때문에 다이어그램은 마크다운 prose에 대한 변화와 동기화하기가 쉽습니다. 무통 재귀 검색 / 축적 된 도둑질을 수리하기 위해 교체 `PCRE` 검색 엔진 `CMS`.
-
-&nbsp;
-
-Orion을 사용하면 위키가 더 이상 팀에게 악영향을 주는 유틸리티가 되지 않지만 **사용 및 향상을 위한 보람 있는 리소스가 됩니다.**  또한 이러한 툴을 사용하기 위해 위키 관리자일 필요가 없습니다. &mdash; 거의 모든 사람이 자발적으로 정리 활동에 참여하거나 팀 리더로서이 업무를 수행하도록 조직적으로 위임받을 수 있습니다.
+피할 수없는 엔트로피 링크가 다른 위키 제품으로 회전하는 대신 포괄적 인 기간 동안 페이지 수정 시 **내부 / 외부 링크 검증**을받을 수 있습니다. `MIME`Orion's의 -type based, pre-commit linting pass `CMS` 편집자. 또한 관련된 페이지가 수개월 내에 변경되지 않은 경우에도 모든 고객에게 **요청 시 오래된 내부/외부 링크 가져오기**에 대한 보고 인프라를 제공합니다. Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 prose** 자체에 내장되기 때문에 다이어그램은 마크다운 prose에 대한 변화와 동기화하기가 쉽습니다. 무통 재귀 검색 / 축적 된 도둑질을 수리하기 위해 교체 `PCRE` 검색 엔진 `CMS`.
 
 &nbsp;
 
@@ -171,19 +151,7 @@ Orion을 사용하면 위키가 더 이상 팀에게 악영향을 주는 유틸�
 
 &nbsp;
 
-또한 사이트가 파일이나 폴더를 재배치하거나 삭제해야하는 지점으로 발전함에 따라 Orion은 자동 배포를 통해 위치 이동을 추적 할뿐만 아니라 `HTTP` 원래 위치에서 새 대상으로 리디렉션되지만 기존 대상의 규칙으로 계속 사용됩니다. `ACL`관련 리뷰: Original locations in perpetuity... 이를 통해 기밀 콘텐츠는 시스템의 무단 사용자로부터의 과거 검색으로부터 보호됩니다. 그렇지 않으면 Orion의 버전 제어 인터페이스에 직접 액세스하여 위키의 소스에 액세스할 수 있습니다.
-
-&nbsp;
-
-필터링된 컨텐츠/데이터를 독립적인 소스 파일 간에 안정적으로 통합할 수 있는 시스템을 본 적이 있습니까?  [** 오리온 캔 **](https://www.iconoclasts.blog/joe/)에 대한 전체 Suppport [**순환 상호 종속성**](https://www.iconoclasts.blog/joe/dependencies) 각 소스 파일에 대한 권한 부여 제어  콘텐츠 통합 기능을 통해 실수로(또는 악의적으로) 액세스 제어 콘텐츠를 세탁할 수 있는 방법이 없으며, 종속 파일의 동시 빌드를 유도하기 위해 이러한 수정 사항 없이 해당 파일의 콘텐츠/데이터를 수정할 방법이 없습니다.[애플리케이션(^A)].
-
-&nbsp;
-
-물론 Notion과 같은 제품에서는 업데이트된 외부 파일 임포트로 기존의 생성된 데이터베이스를 다시 시드할 수 없기 때문에 이 작업을 수행할 수 없습니다. 전체 데이터베이스를 삭제하고 다시 생성하거나 타사 툴링을 사용해야 합니다. 원본 데이터베이스를 삭제하면 **모든 위키 링크 및 연관된 사용자 감시 통지 목록을 삭제합니다**. "불쾌" 그것은 그것을 덮기 시작하지 않습니다.
-
-&nbsp;
-
-업계에는 전체 패키지로서 Wiki 제품의 모든 측면에 이러한 많은 세분화를 적용한 사람이 없습니다.
+필터링된 콘텐츠/데이터를 독립 소스 파일 간에 안정적으로 통합할 수 있는 위키 시스템을 본 적이 있습니까?  [** 오리온 캔 **](https://www.iconoclasts.blog/joe/)에 대한 전체 Suppport [**순환 상호 종속성**](https://www.iconoclasts.blog/joe/dependencies) 각 소스 파일에 대한 권한 부여 제어  콘텐츠 통합 기능을 통해 실수로(또는 악의적으로) 액세스 제어 콘텐츠를 세탁할 수 있는 방법이 없으며, 종속 파일의 동시 빌드를 유도하기 위해 이러한 수정 사항 없이 해당 파일의 콘텐츠/데이터를 수정할 수 있는 방법이 없습니다.
 
 &nbsp;
 
@@ -199,37 +167,33 @@ Orion을 사용하면 위키가 더 이상 팀에게 악영향을 주는 유틸�
 
 &nbsp;
 
+[^7]. Confluence의 전환/온보딩 비용은 SMB에 대해 총 100달러만큼 낮을 수 있으며, 보다 실무적인 접근 방식이 필요한 고객을 위해 처음 3년 동안 서비스를 상각할 수 있습니다. 전체 프로세스는 4배입니다.
+
+1. 개별 Confluence 공간에서 Orion wiki 파일 및 폴더에 대한 사이트 맵의 원하는 토폴로지에 동의합니다.
+
+2. 설계 및 구현 `Django` 템플리트 파일 및 `Perl` 토폴로지, 브랜딩 및 원하는 빌드된 룩앤필을 수용하는 로직 구축 `HTML` 가동 전,
+
+3. 구성 `xsltproc` 스크립팅을 통해 [`XML` 전체 Confluence 공간의 덤프](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) 원하는 소스 트리 레이아웃에
+
+4. Orion wiki 사이트를 구축하고 고객이 만족하고 최종 계약 서명을 할 준비가 될 때까지 조정 및 재조정을 위해 위의 단계로 돌아갑니다.
+
+위의 2단계에서는 상당한 비용이 발생할 수 있지만 그 단계의 대부분은 AI 지원에 도움이 될 수 있습니다. 고객은 관련 위험을 완화하기 위해 새로운 Orion 위키와의 충돌을 도입하지 않고 원하는 기간 동안 Confluence 구독을 보류하도록 선택할 수도 있습니다.
+
+&nbsp;
+
 마지막으로, 우리는 귀하의 특정 요구 사항에 맞게 모든 설치를 조정하고 **상담 및 전문 코칭에 항상 사용할 수 있습니다** 당신은 우리의 제품과 서비스에 대한 투자 수익을 극대화 할 수 있도록. **당신의 팀은 우리에 파트너가 있습니다** 당신이 예상 생산성 향상과 오리온과 관련된 고객 만족을 볼 수 있도록하는 측면에서 &mdash; 견고하고 검증된 협업 지식 생성/채색 및 쉽고 종합적이며 정밀한 정보 검색을 위해 설계되었습니다.
 
 &nbsp;
 
-##### 각주
+### 각주
 
 &nbsp;
 
-[^HTML5](진정한 이야기!) 부상에 대한 모욕을 추가하기 위해 기존 위키가 페이지 내용을 Orion의 명시적 표준 준수 대신 암시적 자바스크립트 기반 웹 브라우저 응용 프로그램으로만 렌더링합니다. `HTML5` 문서화 이것은 무엇보다도, 위키의 검색 엔진이 필요한 테이블을 표면화하더라도, infosec 팀이 지속적으로 테이블을 삭제하고 다시 내보내는 문제를 겪지 않는 한, 해당 테이블에 에이전트 다운로드 가능한 위키 콘텐츠로 직접 액세스할 수 없다는 것을 의미합니다. `CSV` 첨부) 데이터가 업데이트될 때마다
+[소유권(^O)]. 실제로 시스템에 **페이지 소유권의 공식적인 개념이 없습니다**. 오리온의 버전 제어는 사용자가 커밋한 변경 시 직원의 사용자별 변경 세트를 추적하여 다른 유사한 시스템보다 위키의 결합된 작업 제품에 대해 더 많은 동료 기업 문화권을 제공합니다. 그러나 지원과 지원이 가능하다. "소유권" 명시적으로 `ACL` 관련 페이지 및/또는 사용자 정의의 머리글 할당 `view` 통합 "작성자" 다음과 같이 `Author` 헤더 또는 사이트의 위키 페이지 빌드와 유사합니다.
 
 &nbsp;
 
-[수정(^R)]. Orion의 검색 적중에서 찾고 있던 것을 즉시 찾지 못했습니까? 찾은 재질에 대한 검색 필터를 사용하여 현재 검색을 구체화합니다. 필요한 경우 반복합니다. 또는 찾은 재질에서 생성된 제안된 관련 키워드를 클릭하여 해변을 인접한 방향으로 이동합니다. 또는 페이지 상단의 디렉토리 이동 경로 목록에서 검색 범위를 더 높은 레벨로 확장합니다. 또는 `PCRE` 정식으로 구글에 의해 대중화 된 루세네 자연어 줄기 단어 경기 대신 regex 검색.
-
-현재 솔루션이 직원에게 이러한 수준의 탐색 검색 기능을 제공합니까? 그것이 영향이나 개념이라면 분명히 아닙니다.
-
-&nbsp;
-
-[애플리케이션(^A)]. 이 기술을 infosec 테이블에 적용 :fa-network-wired: 상황: 귀하의 팀은 Orion-pemalinked를 통합하고 필터링하는 데 사용할 수 있습니다. `CSV` 고유의 개별 위키 페이지에 첨부되며, Orion은 퍼머링크된 infosec 테이블이 있을 때마다 해당 개별 페이지의 콘텐츠가 업데이트되도록 합니다. :fa-network-wired: 즉, Wiki 페이지를 직접 편집할 때뿐만 아니라 다른 Wiki 솔루션과 마찬가지로
-
-&nbsp;
-
-[스프롤(^S)]. Orion에는 동적 위상 구속조건을 작성하는 것부터 사이트 전체에 이르기까지 Wiki 확산을 제어하는 여러 도구가 있습니다. `ACL`s - 단순히 **문서 아카이브** 지원 &mdash; 문서 [`Status`](api/doc#-code-status-code-5) 해당 페이지가 종속성 관리 그래프에서 제거되어야 한다는 신호를 Orion으로 설정하고, 모든 문서 인덱스 및 상호 참조에서 효과적으로 연결을 해제하고, Orion이 해당 페이지를 무시하도록 지시 `CMS` 디렉토리 목록, 검색 가능한 permalink로 파일을 보존하고 위키의 다른 곳에서 해당 현재 연도/월 시간 기록된 위치에 해당 복사본을 아카이브합니다.
-
-&nbsp;
-
-[소유권(^O)]. 실제로 시스템에 **페이지 소유권의 공식적인 개념이 없습니다**. 오리온의 버전 제어는 사용자가 커밋한 변경 시 직원의 사용자별 변경 세트를 추적하여 다른 유사한 시스템보다 위키의 결합된 작업 제품에 대해 보다 자연스럽고 대학적인 기업 문화권을 제공합니다. 개별 사용자 계정으로 페이지 잠금/"제작자" wikis의 협력적인 이상에 anathema, 그러나 명백하게 전진해서 확실히 가능하다 `ACL` 관련 페이지의 헤더 지정입니다.
-
-&nbsp;
-
------
+<div class="border-top">&nbsp;</div>
 
 </div>
 </div>
@@ -237,7 +201,7 @@ Orion을 사용하면 위키가 더 이상 팀에게 악영향을 주는 유틸�
 
 &nbsp;
 
-#### 과거의 배수로 인한 고통을 뒤에 두십시오....
+## 과거의 배수로 인한 고통을 뒤에 두십시오....
 
 &nbsp;
 
@@ -257,7 +221,7 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 &nbsp;
 
-### 오리온은 정착을 거부하는 지도자들을 위해 지어졌다.
+## 오리온은 정착을 거부하는 지도자들을 위해 지어졌다.
 
 &nbsp;
 
@@ -316,25 +280,27 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 &nbsp;
 
-[문의하기](../contact) 오늘 무료 데모를 위해.
+[문의하기](../contact) 엔터프라이즈 가격 및 무료 데모용
 
 </div>
-<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px;margin-top:3px;" src="index.page/ad1"></a>
+<div class="col-lg-6 border-start">
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
 
 &nbsp;
 
-&nbsp;
+<div class="border-top" style="padding-top: 20px">
 
-### 여기&nbsp;이유,&nbsp;젊은&nbsp;학업&nbsp;:fa-orcid: / 전체&nbsp;스택&nbsp;개발자&nbsp;:fa-stack-overflow: / 공개&nbsp;블로거&nbsp;:fa-blog:&nbsp;...
+# &nbsp;젊은&nbsp;학업&nbsp;:fa-orcid: / 전체&nbsp;스택&nbsp;개발자&nbsp;:fa-stack-overflow: / 공개&nbsp;블로거&nbsp;:fa-blog:&nbsp;... 간편하게 관리할 수 있는 빠르고 안전한 개인 사이트를 원함 &mdash; 그러나 매우 강력한?
 
-&nbsp;
-
-**기본 보안** 웹 사이트를 원하십니까? 기본 버전 제어 시스템의 복잡성을 숨기면서 업데이트 및 관리가 용이하지만 실제로 필요할 때 전력을 공급합니까?  원할 때 즉시 게시할 수 있습니다. 매끄럽고 스테이징된 브랜치 빌드 및 사용자 정의 가능한 세분화된 프로모션을 팀의 선호 워크플로우에 맞게 프로덕션 사이트에 적용할 수 있습니다.
+</div>
 
 &nbsp;
 
-오타를 고쳐야 할 때마다 좌석별 라이센스 및 CPU 주기별 선택에 지쳤다면, [연락하기](/contact). 콘텐츠 큐레이션을 담당하고 있으며 외부 링크를 관리하기 위해 사용자 정의 가능한 팩트 데이터베이스에 대해 파이닝하는 경우 또는 정규식으로 제공되는 사자 테이머인 경우 수십 년 동안 축적 된 레거시 HTML 콘텐츠, 또는 시장에서 다른 옵션에 불만족 한 사람 및 그들이 어떻게 대규모로 작동하는지, 우리는 당신에게 제공하는 특별한 것을 가지고 있습니다.
+더 많은 마력 필요 [원 트릭 포니 위고](https://www.iconoclasts.blog/joe/ssg) 소집할 수 있나요?
+
+&nbsp;
+
+좌석당 라이선스 및 CPU당 사이클 선택에 지쳐 다른 Jamstack 호스팅 업체와 함께 계량하는 경우, 오타를 고쳐야 할 때마다 [연락하기](/contact). 콘텐츠 큐레이션을 담당하고 있으며 외부 링크를 관리하기 위해 사용자 정의 가능한 팩트 데이터베이스에 대해 파이닝하는 경우 또는 정규식으로 제공되는 사자 테이머인 경우 수십 년 동안 축적 된 레거시 HTML 콘텐츠, 또는 시장에서 다른 옵션에 불만족 한 사람 및 그들이 어떻게 대규모로 작동하는지, 우리는 당신에게 제공하는 특별한 것을 가지고 있습니다.
 
 &nbsp;
 
@@ -366,19 +332,15 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-아키텍처 큐 활용 [데이비드 휠러스](https://justatheory.com) 유명 인사 [Bricolage CMS](https://bricolagecms.org/)이 경우 [기술](https://iconoclasts.blog/joe/apache-cms) 2010년 말에 처음 발명된 [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)다니엘 샤하프, 데이브 피셔, 그리고 [Joe Schaefer](https://iconoclasts.blog/joe/) 아파치 인프라 팀의 일원으로. 구문 "JAMstack" 몇 년 후 (2015),이 공간에서 우리의 이전 예술을 모르는 그룹에 의해 만들어졌습니다.  그러나 [공개 레코드](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systems의 새로운 오퍼링은 원래 레거시와 진정한 오픈 소스 기원에 대한 간증입니다.
+Apache 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트를 사용하거나 Orion의 뿌리를 사용하여 자유로운 선택을 제공했을 때 [아파치 CMS](https://www.iconoclasts.blog/joe/apache-cms)그들은 압도적으로 아파치 CMS를 선택했습니다. 우리는 또한 당신이 크게 개선 된 오리온과 함께 할 것이라고 생각합니다!
 
 &nbsp;
 
-아파치 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트를 사용하거나 Orion의 뿌리를 아파치 CMS로 사용하는 것 사이에서 자유로운 선택을 받았을 때, 그들은 압도적으로 아파치 CMS를 선택했다. 우리는 또한 당신이 크게 개선 된 오리온과 함께 할 것이라고 생각합니다!
+## 다른 정적 사이트 생성기보다 보안이 뛰어나고 버전이 제어되며 속도가 빠릅니다.  즉시 게시하거나 변경사항을 스테이지합니다. &mdash; 빠른 데모를 시도하고 그것이 왜 쉬운지 확인하십시오.
 
 &nbsp;
 
-<h4>빠른 스핀을 제공하여 얼마나 빠르고 쉬운지 확인하고 싶습니까?</h4>
-
-&nbsp;
-
-이 웹 사이트는 Orion에서 자체 호스팅됩니다; 모든 핫 핑크 연필 광장 [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 오른쪽 맨 위는 살아있다.  주위를 둘러보고 당신이 보는 모든 것을 실험하십시오!  당신이 할 수없는 유일한 것은 커밋하고 변경 사항을보고 구축 및 배포하는 것입니다; 그것은 명백한 이유로 우리의 직원으로 제한됩니다.
+이 웹 사이트는 Orion에서 자체 호스팅됩니다; 모든 핫 핑크 연필 광장 [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 오른쪽 맨 위는 살아있다. 주위를 둘러보고 당신이 보는 모든 것을 실험하십시오!  당신이 할 수없는 유일한 것은 커밋하고 변경 사항을보고 구축 및 배포하는 것입니다; 그것은 명백한 이유로 우리의 직원으로 제한됩니다.
 
 &nbsp;
 
@@ -386,7 +348,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<h3>이제 대상 고객을 대상으로 사이트를 관리하고 제공하는 방식이 크게 바뀌어야 할 때입니다.</h3>
+### 이제 대상 고객을 대상으로 사이트를 관리하고 제공하는 방식이 크게 바뀌어야 할 때입니다.
 
 &nbsp;
 
@@ -420,43 +382,6 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 &nbsp;
 
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (위키 플랫폼)
-      ((오리온))
-      [영향]
-      [개념]
-    (버전 관리)
-      [사용]
-        콘텐츠 큐레이션
-        액세스 제어
-        변경할 수 없는 내역
-      [도구]
-        Git
-        하위 버전
-    (잼스택)
-      [CMS]
-        저자
-        연구원
-        큐레이션 그룹
-      [사이트 빌드]
-        개발자
-        아키텍트
-      [보안]
-    (AI)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
-
-&nbsp;
-
 <center>
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">시작하기</div>
@@ -479,7 +404,7 @@ mindmap
 
 &nbsp;
 
-### 기능 비교 그리드
+# 기능 비교 그리드
 
 <br />
 
@@ -490,7 +415,7 @@ mindmap
 
 <br />
 
-### 세부정보
+# 세부정보
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
@@ -498,28 +423,6 @@ mindmap
 
 <hr>
 <br><br><br>
-
-## 대표 스크린샷이 거의 없음
-
-<br>
-<h3>독일어, 프랑스어, 히브리어 및 러시아어(UTF-8)가 포함된 IDE 뷰입니다.</h3>
-<center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 편집기 뷰.</h3>
-<center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 편집기 뷰(스페인어)</h3>
-<center><img src="../images/ide-es.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 전체 사이트 빌드.</h3>
-<center><img src="../images/ide-build.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 일반 사이트 빌드.</h3>
-<center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/><br><br>
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE 검색</a> <small>(이 링크는 <span style="color:#e83e8c">핫 핑크</span> 커서가 일치하는 텍스트에 따라 정확하게 배치되어 편집기 화면으로 바로 놓입니다.)</small>.</h3>
-<center><img src="../images/ide-search.png" style="width:800px"></center>
-</div>
 
 <style type="text/css">
 /*-------------------------------------------

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 草稿
+status: 驗證 =47833
 title: SunStar 系統的 Orion
 ---
 
@@ -65,11 +65,15 @@ title: SunStar 系統的 Orion
 
 &nbsp;
 
-### 以下是 ROI、執行決策者:fa-chart-line:...
+<div class="border-top" style="padding-top: 20px">
+
+# 以下為實際交付的投資報酬率：安全、高效能的知識管理，成本只有一小部分:fa-chart-line:
+
+</div>
 
 &nbsp;
 
-<span class="text-white">為何選擇 Orion？Outshines 的 Jamstack Wiki 平台&mdash; 與成本更少</span>
+<span class="text-white">經過驗證的 Jamstack 技術可降低資料外洩風險、無縫整合真實資料 / 數學 /AI，並經濟實惠地擴展&mdash; 瞭解 Orion 7 種方式勝過傳統工具。</span>
 
 &nbsp;
 
@@ -77,33 +81,19 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-<span class="text-white">知識管理系統市場的投資報酬率不會比 Orion 更高。</span>
+不同於競爭對手停滯的產品，Orion 是設計用來提供卓越、可維護、機密且易於定位的企業文件架構，具備市場上最豐富且最可理解的管理連結 / 相依性網路。** 它將您的組織集體體驗從負債轉變為最持久的競爭優勢。**
 
 &nbsp;
 
-與競爭對手停滯的產品不同，Orion 是設計用來提供卓越、可維護、機密且易於定位的企業文件架構，具備市場上最豐富且可理解的託管連結 / 相依性網路。這樣一來，您組織的整體體驗就會流失，成為您最持久的競爭優勢。
+<center>
 
-&nbsp;
-
-<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
-<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
-<div class="accordion-header" id="how-so-heading">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
-
-#### 如何做？
-
-</button>
-</div>
-
-<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
-
-&nbsp;
-
-<span class="text-white">更安全、更優質的產品，更省錢</span>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card-header">更安全、更好的產品<span class="text-white">減少金錢</span></div>
+<div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1 個</a>。重大證券風險降低
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2 個</a>。搜尋與 AI 翻譯的真實數學 / 資料整合
+&nbsp;&nbsp;<a id="fn-2" href="#2">2 個</a>。Real Math / Data Integration with Search and AI Translation，加上資料處理引擎和向量圖形套件
 
 &nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。True Agent AI 支援
 
@@ -113,29 +103,35 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6 歲</a>. [<span class="text-white">每年節省 50%</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的業務計畫](plans) 超過功能可比較的 Confluence Premium
 
+&nbsp;&nbsp;<a id="fn-7" href="#7">7 天</a>。經濟實惠、可攤銷的轉換成本
+
+</div>
+</div>
+</center>
+
 &nbsp;
 
-[^1]。立刻採用 Orion 可降低您發生重大安全事故的風險；而安心地將事宜傳遞給您的董事會而非[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
+<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+## 顯示投資報酬率明細
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
+
+&nbsp;
+
+[^1]。採用 Orion [立即降低風險](security#separation-of-concerns-and-engineering-tradeoffs10) 在重大安全事故中，安心向您的董事會提供比一個更重要的事宜[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
 
 &nbsp;
 
 [^2]。旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，除了 Orion 以外的類似 Wiki 的產品，其基本缺點是，他們無法提供 **一致的整合 / 介面以進行註冊，並定期維護外部產生的資料檔格式 **。不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
 
-&nbsp;
-
-例如，您會看到 **不再失去生產力 **，因為員工嘗試定期取得重要機密資訊網路雲端資產組態明細:fa-network-wired: 鎖定在目前 Wiki 的某個地方，外部產生的資料表中，以及對團隊成員的挫折感，他們也不會回想到哪裡。那樣自然地向主管提昇了不斷變化的沉澱時間，以致於如此。除非有人記得，但因為表格很龐大，而且他們只想要單一資料列中某個元素的內容，所以必須使用瀏覽器擷取該元素，然後手動掃描。然後在發現資訊系統資料下次更新時重複處理[^HTML5].
-
-&nbsp;
-
-此外，`YAML/JSON` 在 Notion (或 Confluence) 中甚至不支援資料擷取格式！如果您無法將外部產生的類似樹狀結構資料變為某個資料`CSV` 左側的桌子都是裸頁區塊，您可以節省更多時間來掌握我們的 Orion 平台。
-
-&nbsp;
-
-該外部產生的 Infosec 表格:fa-network-wired: 在您的 Orion wiki 中被整合為 **可搜尋`CSV` 附加至基礎減價文件的檔案 **，否則會在建置階段將其轉譯為內嵌`HTML5` 表格。
-
-&nbsp;
-
-他們想要在附加時收到通知`CSV` 已變更？只需訂閱`CSV` 檔案！在下次造訪 Wiki 時收到通知 (而不是透過電子郵件垃圾郵件)，他們可以略過內嵌內容`HTML5` 呈現的減價表，而是直接擷取 Orion 所需的內容`JSON` 建置`CSV` 使用標準附件`CLI` 工具類`curl` 與`jq`。** 目前沒有其他 Wiki 支援此工作流程。**
+Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組合向量圖形套件`Asymptote` 滿足您的互動打卡需求。
 
 &nbsp;
 
@@ -143,27 +139,11 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-**適時性、便利性、準確性和精準度，在不斷追求目前的單一事實來源中，作為最受限時間員工的主要生產力支援配套。** 沒有這些僅限 Orion 功能的可能後果是您的平台工程師將會<span class="text-white">** 強制每年在做工時浪費 $10-100K**</span> 透過建立、建置、** 文件 **以及支援小型的內部網站`REST`這些共用資料集的 -based 介面，作為 Wiki 供應商有限的可搜尋和可擷取資料整合功能集的擴增解決方法。
-
-&nbsp;
-
-相反地，Orion 會顯示您一次遺失、外部產生的 Infosec 明細:fa-network-wired: 隨選提供 **，讓人才偏好具備可自動化 Web 支援 /AI 代理程式 **的方式。具備無與倫比的敏捷性和可靠性。想要以手調調味品完美搜尋，直到您最喜歡`JSON` 至`HTML5` 您的結果？再次，Orion 傳遞 (相同) `URL`，不同`Accept` 標頭。)[細項 (&amp;R)]
-
-&nbsp;
-
-換句話說，** 資訊擷取 **是與內容建立 / 修改基本上不同的問題領域，但[基於 CRUD](https://crudly.ai/crud-app/) 來自競爭對手的維基應用程式不會以有意義的方式造成這種區別。此外，使用 Orion 的 Jamstack 設計時，分類不會被視為無法管理、一般 / 緊急產生的分類，但卻從超稅中累積`SQL` 表格。相反地，他們會收到仔細的結構規劃資訊，並由團隊和我們的經驗豐富的資訊架構師持續執行階層組織。[展開 (&amp;S)].
-
-&nbsp;
-
 [第 4 天]。接下來，** 內容策展工具 **是 Orion 的重要功能，而非向上銷售的機會。我們的每個 Wiki 事實資料庫是業界第一&mdash; 在整個網站管理一致的名稱標記或相關軟體使用者自建物件描述資料等功能，只要編輯一行即可[YAML 檔案](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
-因此，除了不可避免的熵連結之外，您還可以在全面性的頁面修改期間，在頁面修改時取得** 內部 / 外部連結驗證 **。`MIME`以類型為基礎的預先確認列印通過，由 Orion 的`CMS` 編輯器。我們也為每位客戶提供一個報告基礎架構，以 **按要求擷取過時的內部 / 外部連結 **，即使相關頁面未在幾個月內變更。由於 Orion 的 Mermaid 整合，** 圖表來源內嵌於頁面的 prose** 本身，因此圖表與逐漸變化的 Markdown 程序保持同步。無痛的遞迴搜尋 / 更換以修復累積的殘骸已內建於`PCRE` 搜尋引擎`CMS`.
-
-&nbsp;
-
-使用 Orion 時，您的 Wiki 不再讓團隊使用效能變差；但是 **獎勵資源供團隊使用與增強。**   此外，您不需要是 Wiki 管理員才能使用這些工具。&mdash; 幾乎任何人都可以自願參與美容活動，或可能被組織委派，以擔任團隊負責人。
+除了不可避免的熱帶鏈接旋轉到其他維基產品之外，您還可以在全面性的頁面修改時間獲得** 內部 / 外部鏈接驗證 **。`MIME`以類型為基礎的預先確認列印通過，由 Orion 的`CMS` 編輯器。我們也為每位客戶提供一個報告基礎架構，以 **按要求擷取過時的內部 / 外部連結 **，即使相關頁面未在幾個月內變更。由於 Orion 的 Mermaid 整合，** 圖表來源內嵌於頁面的 prose** 本身，因此圖表與逐漸變化的 Markdown 程序保持同步。無痛的遞迴搜尋 / 更換以修復累積的殘骸已內建於`PCRE` 搜尋引擎`CMS`.
 
 &nbsp;
 
@@ -171,19 +151,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-此外，由於您的網站演進到需要重新定位或刪除檔案或資料夾的時間點，Orion 不僅透過部署自動化來追蹤位置移動。`HTTP` 從原始位置重新導向至新目標，但也會繼續強制規則現有目標`ACL`s 在原始位置的永久性。這可確保您的機密內容不會受到歷史搜尋的保護，因為系統中的未經授權使用者可能無法直接存取您 Wiki 來源的 Orion 版本控制介面。
-
-&nbsp;
-
-曾經見過能夠可靠地整合跨獨立來源檔案之篩選內容 / 資料的系統嗎？[** 訂單可以 **](https://www.iconoclasts.blog/joe/)，具有完整支援[** 週期性交叉相依性 **](https://www.iconoclasts.blog/joe/dependencies) 以及每個來源檔案的授權控制。透過內容整合功能不小心 (或惡意) 啟動器存取控制內容，而且在沒有這些修改的情況下，無法修改這類檔案中的內容 / 資料，以產生其相依檔案的並行建置[應用程式 (&amp;A)].
-
-&nbsp;
-
-當然，就像 Notion 這樣的產品都不可能發生這種情況，因為無法利用更新的外部檔案匯入來重新內建現有的產生資料庫；您必須刪除並重新建立整個資料庫 (或使用協力廠商工具)。若刪除原始資料庫，您也會 **毀棄所有 Wiki 連結及其相關使用者監看通知清單 **。"不愉快" 不會開始加以遮蓋。
-
-&nbsp;
-
-這個產業沒有人將這個精簡程度投入 Wiki 產品的各個面向，成為整體包裝。
+曾經見過能夠可靠地整合跨獨立來源檔案之篩選內容 / 資料的 Wiki 系統嗎？[** 訂單可以 **](https://www.iconoclasts.blog/joe/)，具有完整支援[** 週期性交叉相依性 **](https://www.iconoclasts.blog/joe/dependencies) 以及每個來源檔案的授權控制。透過內容整合功能不小心 (或惡意) 啟動器存取控制內容，而且在沒有這些修改的情況下，無法修改這類檔案中的內容 / 資料，以產生其相依檔案的並行組建。
 
 &nbsp;
 
@@ -199,37 +167,33 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
+[^7]。Confluence 的切換 / 到職成本可能低至中小企業的總計 100 美元，而且對於需要更實作方式的客戶，在前三年服務中攤提。整體處理程序有四倍：
+
+1. 同意所需的地圖拓樸，從個別的影響空間到 Orion wiki 檔案和資料夾，
+
+2. 設計與實作`Django` 範本檔案與`Perl` 建立邏輯，以容納所建置拓樸、品牌及想要的外觀與風格`HTML` 上線前，
+
+3. 設定`xsltproc` 執行轉換的命令檔[`XML` 傾印整個 Confluence 空間](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) 至想要的來源樹狀結構版面配置，以及
+
+4. 建立 Orion wiki 網站，並返回上述步驟進行調整和調整，直到客戶滿意並準備好進行最終合約簽署為止。
+
+上述步驟 2 可能出現重大成本可能累積的情況；不過，大部分步驟都需要 AI 協助。客戶也可以選擇保留其 Confluence 訂閱，只要他們喜歡，而不與新的 Orion Wiki 發生衝突，只是為了降低相關風險。
+
+&nbsp;
+
 最後，我們根據您的特定要求量身打造每項安裝，並 **隨時提供諮詢和專業指導 **，以確保您對我們產品和服務的投資獲得最大回報。** 您的團隊有我們的合作夥伴 **，以確保您看到與 Orion 相關的預期生產力增加和客戶滿意度。&mdash; 專為建立 / 策劃強大、經過驗證的協作知識而設計；且擷取簡便、全面且精確的資訊。
 
 &nbsp;
 
-##### 註腳
+### 註腳
 
 &nbsp;
 
-[^HTML5]。 (真實故事！) 為了增加成人傷害，它將您現有的維基僅會將頁面內容轉譯為隱含的 javascript 式網頁瀏覽器應用程式，而不是 Orion 的明確標準相容性`HTML5` 文件。這意味著 (其中包括) 即使您的 Wiki 搜尋引擎會呈現您需要的表格，您也無法以專員可下載的 Wiki 內容直接存取這些表格，除非 Infosec 團隊持續刪除並重新匯出表格 (作為一個) `CSV` 附件) 每當資料更新時。
+[所有權 (&amp;O)]。事實上，系統中 **沒有頁面所有權的正式概念 **。Orion 的版本控制功能只會在使用者確認的變更時，追蹤每位使用者授權的員工變更集，借貸至比其他類似系統更高階的公司成就，邁向 Wiki 的合併工作產品。然而，這肯定是促進和支持的。"所有權" 以明確向前移動`ACL` 相關頁面的標頭指派和 (或) 自訂`view` 納入"作者" 作為`Author` 標頭或類似於您網站上的 Wiki 頁面建置。
 
 &nbsp;
 
-[細項 (&amp;R)]。沒有立即在 Orion 的搜尋點閱中找到您要找的內容？使用您找到之材料的搜尋篩選來縮小目前的搜尋範圍；必要時重複執行。或按一下從找到的材料產生的建議相關關鍵字，以相鄰方向移動您的搜尋。或者，將搜尋範圍展開至頁面上方目錄來源路徑清單中的較高層次。或切換至`PCRE` 正規表示式搜尋 (而非 Lucene 自然語言樣式的 bareword) 與 Google 在正式年度中廣受歡迎。
-
-您目前的解決方案是否為您的員工提供此等級的探索搜尋功能？絕對不是「影響」或「概念」。
-
-&nbsp;
-
-[應用程式 (&amp;A)]。將這項技術應用於資訊交換表格:fa-network-wired: 狀況：您的團隊可以用它來整合和篩選 Orion-pemalinked `CSV` 連附至自己的個別 Wiki 頁面，而 Orion 將確保每當永久連結的 Infosec 表格時，該個別頁面上的內容都會更新:fa-network-wired: 不只是手邊編輯 Wiki 頁面。與其他 Wiki 解決方案相同。
-
-&nbsp;
-
-[展開 (&amp;S)]。Orion 有許多控制 Wiki 擴散的工具；從建立動態拓樸限制到全網站`ACL`s，僅支援 **文件存檔** &mdash; 這是一份文件[`Status`](api/doc#-code-status-code-5) 設定向 Orion 發出訊號，指示該頁面應從其相依性管理圖表取得；有效地取消其與所有文件索引和交互參照的連結，並指示 Orion 忽略它`CMS` 目錄清單，同時將檔案保留為可搜尋的永久連結，並將其複本存檔至 Wiki 上其他位置的對應目前年度 / 月份時戳位置。
-
-&nbsp;
-
-[所有權 (&amp;O)]。事實上，系統中 **沒有頁面所有權的正式概念 **。Orion 的版本控制功能只會在使用者確認的變更時，追蹤每位使用者授權的員工變更集，借貸至比任何其他類似系統更自然、更合法的公司成就，以實現 Wiki 的合併工作產品。將頁面鎖定至個別使用者帳戶 /"作者" 對維基的協作意識形態感到厭惡，但確實能夠以明確的方式前進`ACL` 相關頁面上的標頭指派。
-
-&nbsp;
-
------
+<div class="border-top">&nbsp;</div>
 
 </div>
 </div>
@@ -237,7 +201,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-#### 留下過去的排水痛點...
+## 留下過去的排水痛點...
 
 &nbsp;
 
@@ -257,7 +221,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-### Orion 專為拒絕解決的領導者而設
+## Orion 專為拒絕解決的領導者而設
 
 &nbsp;
 
@@ -316,25 +280,27 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-[聯系我們](../contact) 立即參加免費示範。
+[聯系我們](../contact) 適用於企業定價和免費示範
 
 </div>
-<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px;margin-top:3px;" src="index.page/ad1"></a>
+<div class="col-lg-6 border-start">
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
 
 &nbsp;
 
-&nbsp;
+<div class="border-top" style="padding-top: 20px">
 
-### 以下是&nbsp;原因：&nbsp;年輕&nbsp;學術&nbsp;:fa-orcid: / 全部&nbsp;堆疊&nbsp;開發人員&nbsp;:fa-stack-overflow: / 公共&nbsp;部落格&nbsp;:fa-blog:&nbsp;...
+# &nbsp;年輕&nbsp;學術&nbsp;:fa-orcid: / 全部&nbsp;堆疊&nbsp;開發人員&nbsp;:fa-stack-overflow: / 公共&nbsp;部落格&nbsp;:fa-blog:&nbsp;... 想要一個快如閃電的安全個性化網站，難以管理&mdash; 然而，強大的功能？
 
-&nbsp;
-
-想要 **預設為安全** 的網站嗎？易於更新和管理，同時隱藏基礎版本控制系統的複雜性，但是在您真正需要時提供其完整功能？隨時隨地即時發布；順暢的暫存分支建置和可自訂的精細促銷，適合您團隊偏好的工作流程。
+</div>
 
 &nbsp;
 
-若您厭倦了每一台電腦的授權，以及每一 CPU 週期的選擇，在需要修正打字錯誤時會減輕您的負擔，[聯繫我們](/contact)。如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
+需要更多的馬力比一個[像 Hugo 這樣的單色小馬](https://www.iconoclasts.blog/joe/ssg) 是否必須？
+
+&nbsp;
+
+如果您厭倦了每一座位的授權以及每一 CPU 週期的選擇，我們會在您只需要修打字的時候，與其他代管商的 Jamstack 重點。[聯繫我們](/contact)。如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
 
 &nbsp;
 
@@ -366,15 +332,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-從以下位置取得建築線索[David Wheeler's](https://justatheory.com) 知名品牌[工程案例](https://bricolagecms.org/)，此[技術](https://iconoclasts.blog/joe/apache-cms) 於 2010 年底首次發明者[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/),Daniel Shahaf,Dave Fisher, [Joe Schaefer](https://iconoclasts.blog/joe/) 作為 Apache 基礎架構小組的成員。片語"JAMstack" 多年後 (2015 年)，由一個團體不知悉我們在此空間之前的藝術。但[公開記錄](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) 清晰明瞭，而且 SunStar Systems 的新產品對該原始舊版及其真正的開源有證詞。
+當 Apache 軟體專案社群在使用 Confluence 支援的網站，或使用 Orion 的根目錄時，提供免費選擇[Apache CMS](https://www.iconoclasts.blog/joe/apache-cms)，他們大多選擇了 Apache CMS。我們認為，隨著 Orion 的大幅改善，你也會喜歡。
 
 &nbsp;
 
-當 Apache 軟體專案社群在使用 Confluence 支援的網站，或使用 Orion 的根目錄作為 Apache CMS 時，他們大多選擇 Apache CMS。我們認為，隨著 Orion 的大幅改善，你也會喜歡。
-
-&nbsp;
-
-<h4>想要讓它快速旋轉，看看它的速度和簡易性如何？</h4>
+## 與其他靜態網站產生器相比，預設安全、受版本控制且速度更快。立即發布或暫存變更&mdash; 試用快速示範，瞭解為何不費力。
 
 &nbsp;
 
@@ -386,7 +348,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<h3>現在正是時候改變您如何管理網站並將其傳遞給目標受眾了。</h3>
+### 現在正是時候改變您如何管理網站並將其傳遞給目標受眾了。
 
 &nbsp;
 
@@ -420,43 +382,6 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 &nbsp;
 
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Wiki 平台)
-      ((奧里昂))
-      [影響]
-      [概念]
-    (版本控制)
-      [使用]
-        內容策展
-        存取控制
-        不可變歷史記錄
-      [工具]
-        Git
-        子版本
-    (Jamstack)
-      [CMS]
-        作者
-        研究業績
-        群組負責人
-      [網站建置版本]
-        開發者
-        架構師
-      [安全]
-    (AI)
-     紅色、綠色
-     CLI
-```
-
-</a>
-
-&nbsp;
-
-&nbsp;
-
 <center>
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">入門</div>
@@ -479,7 +404,7 @@ mindmap
 
 &nbsp;
 
-### 功能比較方格
+# 功能比較方格
 
 <br />
 
@@ -490,7 +415,7 @@ mindmap
 
 <br />
 
-### 明細
+# 明細
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
@@ -498,28 +423,6 @@ mindmap
 
 <hr>
 <br><br><br>
-
-## 少數代表畫面擷圖
-
-<br>
-<h3>IDE View - 德文、法文、希伯來文和俄文 (UTF-8)。</h3>
-<center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 編輯器檢視。</h3>
-<center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 編輯器檢視 (西班牙文)。</h3>
-<center><img src="../images/ide-es.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 完整網站建置。</h3>
-<center><img src="../images/ide-build.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE 一般網站建置。</h3>
-<center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/><br><br>
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE 搜尋</a> <small>(這些連結位於<span style="color:#e83e8c">熱粉紅</span> 將您直接放到編輯器螢幕中，游標會根據比對文字精確地放置)</small>.</h3>
-<center><img src="../images/ide-search.png" style="width:800px"></center>
-</div>
 
 <style type="text/css">
 /*-------------------------------------------

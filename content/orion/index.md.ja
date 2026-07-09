@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 下書き
+status: 確認済み=47833
 title: SunStarシステムのOrion
 ---
 
@@ -65,11 +65,15 @@ title: SunStarシステムのOrion
 
 &nbsp;
 
-### ROI、エグゼクティブ・ディシジョン・メーカー:fa-chart-line:...
+<div class="border-top" style="padding-top: 20px">
+
+# 実際に提供するROI: セキュアで高パフォーマンスのナレッジ・マネジメントのコストの一部:fa-chart-line:
+
+</div>
 
 &nbsp;
 
-<span class="text-white">なぜオリオンを選ぶのか? Jamstack Wikiプラットフォーム&mdash; コスト削減</span>
+<span class="text-white">実証済みのJamstackテクノロジーにより、漏洩リスクを軽減し、実際のデータ/数学/AIをシームレスに統合し、手頃な価格で拡張&mdash; Orionがレガシー・ツールを上回る7つの方法をご覧ください。</span>
 
 &nbsp;
 
@@ -77,33 +81,19 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-<span class="text-white">ナレッジ・マネジメント・システム市場において、Orionよりも優れたROIは得られません。</span>
+競合他社が使用している製品とは異なり、Orionは、市場で最も裕福で、かつ最もわかりやすいマネージドリンク/依存関係ネットワークを使用して、優れた、保守性、機密性を備えながら簡単に見つけられる企業ドキュメントを生成するように設計されたフレームワークです。**これは、組織全体の経験を、最も耐久性のある競争上の優位性にリークする責任から変えます。**
 
 &nbsp;
 
-競合他社が使用している製品とは異なり、Orionは、市場で最も裕福で、かつ最もわかりやすいマネージドリンク/依存関係ネットワークを使用して、優れた、保守性、機密性を備えながら簡単に見つけられる企業ドキュメントを生成するように設計されたフレームワークです。組織の集合的なエクスペリエンスを、最も耐久性のある競争上の優位性へとリークする責任から変えます。
+<center>
 
-&nbsp;
-
-<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
-<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
-<div class="accordion-header" id="how-so-heading">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
-
-#### どうですか?
-
-</button>
-</div>
-
-<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
-
-&nbsp;
-
-<span class="text-white">より安価で安全な製品</span>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card-header">より安全で優れた製品<span class="text-white">少ないお金</span></div>
+<div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>。重大なセキュリティ・リスクの軽減
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>。検索とAI翻訳による実際の計算/データ統合
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>。検索とAI翻訳による実数計算/データ統合に加え、データ処理エンジンとベクトルグラフィックスパッケージ
 
 &nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。真のエージェントAIサポート
 
@@ -113,29 +103,35 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">年間50%割引</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionのビジネスプラン](plans) 比類のないコンフルエンスプレミアム
 
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>。手頃な価格で償却可能な切り替えコストをコンフルエンスから
+
+</div>
+</div>
+</center>
+
 &nbsp;
 
-[^1]。Orionを導入すると、重大なセキュリティ・インシデントのリスクが即座に軽減され、安心感が取締役会により重要になります。[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。
+<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+## ROI詳細の表示
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
+
+&nbsp;
+
+[^1]。オリオンの採用[すぐにリスクを軽減](security#separation-of-concerns-and-engineering-tradeoffs10) 大規模なセキュリティ・インシデントの1つ。心の安らぎは、取締役会により、[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。
 
 &nbsp;
 
 [^2]。を除く。[セキュリティ上の利点](https://www.iconoclasts.blog/joe/wishful-thinking) および[強化ペナルティ](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 対象[HIPAAデータの機密性侵害](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)Orion以外のwikiに似た製品の基本的な欠陥は、外部で生成されたデータファイル形式を組み込み、定期的にメンテナンスするための**一貫した統合/インタフェースを提供できないことです**。ただし、業界標準の一握りのテキスト/ソース文書/データ形式に焦点を当てることによって、最も複雑なデータ生成の数学的表、グラフ、チャート、マップ、アーキテクチャ図であっても、**完全に検索可能で、AI翻訳可能**は、Orionでサポートされている自然言語のいずれかです。
 
-&nbsp;
-
-たとえば、定期的に更新され、非常に機密性の高いインフォセック・クラウド資産構成の詳細を取得しようとするスタッフには、**生産性が失われることはありません**と表示されます:fa-network-wired: 不明瞭にタグ付けされた外部で生成されたデータ表にロックされ、チームメイトにもそれがどこにあるか思い出せない不満を抱いています。進化するタイムシンクをマネージャーに自然にエスカレートさせるため、誰かが覚えているまで、しかし、テーブルは巨大で、単一の行に1つの要素の内容だけが必要なので、ブラウザでそれをフェッチし、アイボールは手動でスキャンする必要があります。次に、infosecデータが次回更新されることがわかったときにプロセスを繰り返します[^HTML5].
-
-&nbsp;
-
-さらに、`YAML/JSON` Notion(またはConfluence)では、データ取込みフォーマットもサポートされていません。外部で生成されたツリーのようなデータを`CSV` Table、 all you have left are bare page blocks with you can waste more time better spent mastering our Orion platform.テーブルは、あなたが残したものはベアページブロックです。
-
-&nbsp;
-
-外部で生成されたインフォセック表:fa-network-wired: オリオンのwikiに**検索可能として組み込まれます`CSV` file**は基礎となるマークダウン・ドキュメントに添付され、それ以外の場合はビルド時に埋込みにレンダリングされます`HTML5` テーブル
-
-&nbsp;
-
-添付された場合に通知されます`CSV` 変わる? 単に購読する`CSV` ファイル! 次回のwiki訪問中に通知されると(電子メール・スパムではなく)、埋込みをスキップできます`HTML5` マークダウンテーブルをレンダリングし、代わりにOrionから必要なものを正確にフェッチします`JSON` ビルド`CSV` 標準を使用した添付`CLI` ツール`curl` および`jq`. **このワークフローをサポートする他のWikiはありません**
+Orion、列ベクトル・データベース・エンジンでデータ統合の全体像を完成`PDL` そして束ねられたベクターのグラフィック パッケージ`Asymptote` インタラクティブナンバークランチングのニーズのために。
 
 &nbsp;
 
@@ -143,27 +139,11 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-**現在の信頼できる唯一の情報源を絶え間なく追求する適時性、利便性、正確性、および精度は、最も時間に制約のある従業員のための主要な生産性の実現要因として機能します**。これらのOrionのみの機能を持たないことによる結果として、プラットフォーム・エンジニアは<span class="text-white">**年間10ドルから100Kドルをメイクワークに無駄にする**</span> ミニチュア、内部Webサイトの作成、構築、**ドキュメント化**およびサポート`REST`- これらの共有データセットへのベース・インタフェース。Wikiベンダーの限定された検索および取得可能なデータ統合機能セットの拡張の回避策として。
-
-&nbsp;
-
-逆に、Orionはあなたの一度失われた、外部で生成されたinfosecの詳細を表面化します:fa-network-wired: オンデマンドで、**人材が好む自動化されたWeb対応/AIエージェントに適切にレンダリング**します。比類のないアレイ性と信頼性あなたが最終的に好むまで、味に手調整であなたの検索を完璧にしたい`JSON` から`HTML5` あなたの成果? また、Orionは(同じ) `URL`異なる`Accept` ヘッダー。)[調整(&amp;R)]
-
-&nbsp;
-
-つまり、**情報取得**は、コンテンツの作成/変更とは根本的に異なる問題ドメインですが、[CRUDベース](https://crudly.ai/crud-app/) 競合他社のwikiアプリでは、この区別は意味のあるものではありません。さらに、OrionのJamstack設計では、タクソノミは、過剰税による思考の後に動的に生成される管理不可能な汎用性/緊急性として扱われません`SQL` テーブル代わりに、慎重な構造計画と、チームとオラクルの経験豊富な情報アーキテクトによって一貫して実施された階層組織によって情報が提供されます。[スプロール(&amp;S)].
-
-&nbsp;
-
 [^4]。次に、**コンテンツキュレーションツール**は、アップセルの機会ではなく、Orionの重要な機能です。Wikiファクト・データベースが業界初&mdash; 一貫性のある名前ブランディングや、Webサイト全体に関連するソフトウェア・アーティファクト・メタデータを1行で編集して[YAMLファイル](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
-したがって、避けられないエントロピックリンクが他のwiki製品に宿るのではなく、包括的なページ変更時に**内部/外部リンク検証**が得られます。`MIME`- タイプベース、オリオンズによるプリコミットリンティングパス`CMS` エディタまた、関係するページが数か月で変更されていない場合でも、すべてのお客様に、オンデマンドで失効した内部/外部リンクをキャッチするレポート・インフラストラクチャを提供します。図は、Orionのマーメイド統合により、**図ソースがページの提案に埋め込まれている**ため、マークダウン・プロセスの進化する変更と同期するのと同じくらい簡単です。蓄積された残骸を修理するために痛みのない再帰的な検索/取り替えは作り付けられます`PCRE` 検索エンジン`CMS`.
-
-&nbsp;
-
-Orionを使用すると、貴社のwikiはチームにとってのユーティリティの劣化ではなくなりますが、****このユーザーが使用して強化するためのやりがいのあるリソースになります。**  また、これらのツールを使用するためにwiki管理者である必要はありません。&mdash; ほとんどの人は、自発的にグルーミング活動に参加したり、チームのリーダーとしてこの職務を遂行するために組織的に委任されたりすることができます。
+避けられないエントロピックリンクが他のwiki製品に宿る代わりに、包括的なページ変更時に**内部/外部リンク検証**が得られます。`MIME`- タイプベース、オリオンズによるプリコミットリンティングパス`CMS` エディタまた、関係するページが数か月で変更されていない場合でも、すべてのお客様に、オンデマンドで失効した内部/外部リンクをキャッチするレポート・インフラストラクチャを提供します。図は、Orionのマーメイド統合により、**図ソースがページの提案に埋め込まれている**ため、マークダウン・プロセスの進化する変更と同期するのと同じくらい簡単です。蓄積された残骸を修理するために痛みのない再帰的な検索/取り替えは作り付けられます`PCRE` 検索エンジン`CMS`.
 
 &nbsp;
 
@@ -171,19 +151,7 @@ Orionを使用すると、貴社のwikiはチームにとってのユーティ�
 
 &nbsp;
 
-さらに、ファイルやフォルダの再配置や削除が必要な場所にサイトが進化するにつれ、Orionは自動デプロイによって位置移動を追跡するだけでなく、`HTTP` 元の場所から新しいターゲットにリダイレクトしますが、既存のルールへの登録も続行します。`ACL`オリジナルタイトル: In Perpetuity これにより、機密コンテンツは、Orionのバージョン管理インタフェースにWikiのソースに直接アクセスできるシステム内の未承認ユーザーからの履歴検索から保護されます。
-
-&nbsp;
-
-独立したソース・ファイル間でフィルタされたコンテンツ/データを確実に統合できるシステムを見たことがありますか。[**オリオン缶**](https://www.iconoclasts.blog/joe/)、のための完全なsuppportと[**循環相互依存**](https://www.iconoclasts.blog/joe/dependencies) 各ソースファイルの承認制御。コンテンツ統合機能によってアクセス制御されたコンテンツを誤って(または悪意を持って)ロンダリングする方法はまったくなく、そのようなファイルのコンテンツ/データを、それらの変更を加えずに修正して、依存ファイルの同時ビルドを誘導する方法はありません。[アプリケーション(&amp;A)].
-
-&nbsp;
-
-もちろん、Notionのような製品では、既存の生成されたデータベースを更新された外部ファイル・インポートで再シードすることは不可能です。データベース全体を削除して再作成する必要があります(または、サード・パーティのツールを使用することもできます)。元のデータベースを削除すると、**すべてのwikiリンクおよび関連するユーザー・ウォッチ通知リストも破棄**されます。"不快" 覆い始めてはいない。
-
-&nbsp;
-
-業界では、このようにウィキ製品のあらゆる側面を総合的なパッケージとして洗練した人は他にいません。
+独立したソース・ファイル間でフィルタされたコンテンツ/データを確実に統合できるWikiシステムを見たことがありますか。[**オリオン缶**](https://www.iconoclasts.blog/joe/)、のための完全なsuppportと[**循環相互依存**](https://www.iconoclasts.blog/joe/dependencies) 各ソースファイルの承認制御。コンテンツ統合機能を通じて誤って(または悪意を持って)アクセス制御されたコンテンツをロンダリングする方法はなく、そのようなファイルのコンテンツ/データを変更する方法はありません。これらの変更を加えることなく、依存ファイルの同時ビルドを誘導します。
 
 &nbsp;
 
@@ -199,37 +167,33 @@ Orionを使用すると、貴社のwikiはチームにとってのユーティ�
 
 &nbsp;
 
+[^7]。Confluenceからの切り替え/オンボーディング・コストは、中小企業では合計100ドルまで低く、ハンズオン・アプローチが必要な顧客では最初の3年間のサービスで償却できます。全体的なプロセスは4倍です。
+
+1. 個々のConfluenceスペースからOrion wikiファイルやフォルダまで、サイトマップの望ましいトポロジに同意します。
+
+2. 設計および実装`Django` テンプレート・ファイル`Perl` 構築されたトポロジ、ブランディング、および希望するルック・アンド・フィールに対応するためのロジックを構築`HTML` 稼働前、
+
+3. 構成`xsltproc` の変換を実行するスクリプト[`XML` コンフルエンス領域全体のダンプ](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) 必要なソース・ツリー・レイアウト
+
+4. Orion wikiサイトを構築し、顧客が満足し、最終的な契約署名の準備ができるまで、調整と再チューニングのために上記の手順に戻ります。
+
+上記のステップ2は、大きなコストが発生する可能性があるように見えるかもしれませんが、そのステップの大部分はAI支援に対応できます。また、お客様は、関連するリスクを軽減するために、新しいOrion Wikiとの競合を導入することなく、必要に応じてConfluenceサブスクリプションを保持することもできます。
+
+&nbsp;
+
 最後に、すべてのインストールを特定の要件に合わせて調整し、**コンサルテーションとプロフェッショナルコーチングに常時利用可能**で、当社の製品およびサービスへの投資に対するリターンを最大限に高めることができます。**お客様のチームには、Orionに関連する予想される生産性の向上と顧客満足度を確認できるという点で、当社のパートナーがいます** &mdash; 堅牢で検証済みの共同知識作成/キュレーション、および簡単で包括的な精密情報取得のために設計されています。
 
 &nbsp;
 
-##### 脚注
+### 脚注
 
 &nbsp;
 
-[^HTML5](本当のストーリー!) 傷害に対する侮辱を追加するために、既存のWikiは、Orionの明示的な標準準拠ではなく、暗黙的なjavascriptベースのWebブラウザ・アプリケーションとしてページ・コンテンツのみをレンダリングします`HTML5` ドキュメント。これは、とりわけ、wikiの検索エンジンが必要なテーブルをサーフェスしても、infosecチームが一貫してテーブルを削除して再エクスポートする問題を経験しない限り、これらのテーブルにエージェント・ダウンロード可能なwikiコンテンツとして直接アクセスできないことを意味します( `CSV` データが更新されるたびに
+[所有権(&amp;O)]。実際には、**ページ所有権の正式な概念はありません**。Orionのバージョン管理は、ユーザーがコミットした変更時にユーザーごとに許可されたスタッフの変更セットを追跡するだけで、他の同様のシステムよりもwikiの複合作業製品に対するより同僚的な企業アキュレーションに貸し出されます。ただし、サポートやサポートは可能です。"所有権" 明示的な前方移動`ACL` 関連するページのヘッダー割当またはカスタム(あるいはその両方) `view` を組み込む"著述業" として`Author` あなたのサイトのwikiページビルドにヘッダーまたは類似しています。
 
 &nbsp;
 
-[調整(&amp;R)]。オリオンの検索ヒットで探していたものがすぐに見つかりませんでしたか? 検索した材料の検索フィルタを使用して現在の検索を絞り込み、必要に応じて繰り返します。または、配置されたマテリアルから生成された提案された関連キーワードをクリックして、隣接する方向にシーチをシフトします。または、ページの上端にあるディレクトリ・ブレッドクラムのリストで、検索範囲を上位レベルに展開します。またはAに切り替える`PCRE` ルーセンの自然言語をテーマにしたベアワードマッチの代わりに、正規表現検索を行う。
-
-現在のソリューションは、このレベルの探索的検索機能をスタッフに提供していますか? 意味や概念ではない。
-
-&nbsp;
-
-[アプリケーション(&amp;A)]。インフォセック表へのこのテクノロジの適用:fa-network-wired: 状況: あなたのチームはそれを使用してOrion-pemalinkedを統合し、ろ過できます`CSV` 独自のwikiページへの添付、およびOrionは、パーマリンクされたinfosecテーブルが常にその個別のページのコンテンツが更新されるようにします:fa-network-wired: これは、wikiページが手作業で編集されるときだけではありません。他のwikiソリューションも同様です。
-
-&nbsp;
-
-[スプロール(&amp;S)]。Orionには、Wikiスプロールを制御するための多くのツールがあります。動的な地質的制約の構築からサイト全体まで`ACL`単に**ドキュメント・アーカイブ**をサポートするため&mdash; ドキュメント[`Status`](api/doc#-code-status-code-5) ページを依存性管理グラフから除外する必要があることをOrionに通知するように設定し、すべてのドキュメント索引および相互参照からリンクを効果的に解除し、Orionに無視するように指示します。`CMS` ディレクトリのリストは、ファイルを検索可能なパーマリンクとして保存し、そのコピーをwiki上の他の場所に対応する現在の年/月のタイムスタンプされた場所にアーカイブします。
-
-&nbsp;
-
-[所有権(&amp;O)]。実際には、**ページ所有権の正式な概念はありません**。Orionのバージョン管理は、ユーザーがコミットした変更時にユーザーごとに許可されたスタッフの変更を追跡するだけで、他の同様のシステムよりもwikiの複合作業製品に対するより自然で同僚的な企業のアキュレーションに貸し出されます。個々のユーザー・アカウントへのページのロックダウン/"作者" wikisの協調的な理想へのアナテマですが、明確に前進することは可能です`ACL` 関連するページのヘッダー割当。
-
-&nbsp;
-
------
+<div class="border-top">&nbsp;</div>
 
 </div>
 </div>
@@ -237,7 +201,7 @@ Orionを使用すると、貴社のwikiはチームにとってのユーティ�
 
 &nbsp;
 
-#### 過去の排水の問題点を残す...
+## 過去の排水の問題点を残す...
 
 &nbsp;
 
@@ -257,7 +221,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-### オリオンは、解決を拒否するリーダーのために作られています
+## オリオンは、解決を拒否するリーダーのために作られています
 
 &nbsp;
 
@@ -316,25 +280,27 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-[お問い合わせ](../contact) 今日の無料デモ。
+[お問い合わせ](../contact) エンタープライズ向け価格と無料デモ
 
 </div>
-<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px;margin-top:3px;" src="index.page/ad1"></a>
+<div class="col-lg-6 border-start">
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
 
 &nbsp;
 
-&nbsp;
+<div class="border-top" style="padding-top: 20px">
 
-### こちら&nbsp;なぜ、&nbsp;若い&nbsp;学業&nbsp;:fa-orcid: /フル&nbsp;スタック&nbsp;開発者&nbsp;:fa-stack-overflow: /パブリック&nbsp;ブロガー&nbsp;:fa-blog:&nbsp;...
+# &nbsp;若い&nbsp;学業&nbsp;:fa-orcid: /フル&nbsp;スタック&nbsp;開発者&nbsp;:fa-stack-overflow: /パブリック&nbsp;ブロガー&nbsp;:fa-blog:&nbsp;...非常に簡単に管理できるLightning-Fastで安全な個人用サイトが必要&mdash; 驚くほど強力?
 
-&nbsp;
-
-**secure-by-default**のWebサイトが必要ですか。更新と管理が容易で、ベースとなるバージョン管理システムの複雑さを隠しつつ、本当に必要なときにフルパワーを提供しますか? 必要なときに即座に公開できます。スムーズで段階的なブランチを構築し、チームの好みのワークフローに応じて、プロダクション・サイトに詳細なプロモーションをカスタマイズできます。
+</div>
 
 &nbsp;
 
-座席ごとのライセンスとCPUごとの選択に飽きている場合は、タイポを修正する必要があるたびに体重が減少します。[お問い合わせ](/contact)。コンテンツのキュレーションを担当し、外部リンクを管理するためのカスタマイズ可能なファクト・データベース、またはレジェックス装備のライオン・タマーの場合蓄積されたレガシーHTMLコンテンツの数十年、または市場の他のオプションに不満を抱いている人、そして彼らがどのように大規模に機能するか、私たちには本当に特別なものがあります。
+Aよりも多くの馬力が必要[Hugoのようなワントリックポニー](https://www.iconoclasts.blog/joe/ssg) musterできる?
+
+&nbsp;
+
+座席ごとのライセンスとCPUごとの選択に飽きている場合、他のJamstackホスティングベンダーとの比較で、誤字を修正するだけで済む場合は、[お問い合わせ](/contact)。コンテンツのキュレーションを担当し、外部リンクを管理するためのカスタマイズ可能なファクト・データベース、またはレジェックス装備のライオン・タマーの場合蓄積されたレガシーHTMLコンテンツの数十年、または市場の他のオプションに不満を抱いている人、そして彼らがどのように大規模に機能するか、私たちには本当に特別なものがあります。
 
 &nbsp;
 
@@ -366,15 +332,11 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-アーキテクチャに関する手掛かり[David Wheeler's](https://justatheory.com) 名高い[ブリコラージュCMS](https://bricolagecms.org/)この[工業技術](https://iconoclasts.blog/joe/apache-cms) 最初に発明されたのは2010年後半。[Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)ダニエル・シャハフ、デイヴ・フィッシャー、[Joe Schaefer](https://iconoclasts.blog/joe/) Apache Infrastructure Teamのメンバー。フレーズ"JAMstack" 数年後(2015年)、この宇宙における私たちの以前の芸術を知らないグループによって造られました。しかし、[公開レコード](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) SunStar Systemsによるこの新しいサービスは、そのオリジナルのレガシーと真のオープンソースの起源に対する証言です。
+Apacheソフトウェアプロジェクトコミュニティが、Confluenceが支援するサイトを使用するか、Orionのルーツを[アパチェCMS](https://www.iconoclasts.blog/joe/apache-cms)アパチェCMSを選びました。きっとあなたも元気になってくれると思います!
 
 &nbsp;
 
-Apacheソフトウェア・プロジェクト・コミュニティが、Confluenceが支援するサイトを使用するか、OrionのルーツをApache CMSとして使用するかの無料の選択肢を提示したとき、彼らは圧倒的にApache CMSを選んだ。きっとあなたも元気になってくれると思います!
-
-&nbsp;
-
-<h4>それがどれだけ速く、容易であるか見るために速い回転を与えることを望みますか。</h4>
+## デフォルトでセキュア、バージョン管理、他の静的サイト・ジェネレータよりも高速です。即時公開または変更のステージング&mdash; 簡単なデモを試して、なぜ簡単ではないかを確認してください。
 
 &nbsp;
 
@@ -386,7 +348,7 @@ Apacheソフトウェア・プロジェクト・コミュニティが、Confluen
 
 &nbsp;
 
-<h3>今こそ、サイトを管理し、ターゲット・オーディエンスに配信する方法を変える時です。</h3>
+### 今こそ、サイトを管理し、ターゲット・オーディエンスに配信する方法を変える時です。
 
 &nbsp;
 
@@ -420,43 +382,6 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 &nbsp;
 
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Wikiプラットフォーム)
-      ((オリオン))
-      [影響]
-      [注釈]
-    (バージョン管理)
-      [使用]
-        コンテンツキュレーション
-        アクセス制御
-        不変履歴
-      [ツール]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        作者
-        研究者
-        責任者
-      [サイト構築]
-        開発者
-        建築家
-      [セキュリティ]
-    (AI)
-     RAG
-     CLI
-```
-
-</a>
-
-&nbsp;
-
-&nbsp;
-
 <center>
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">はじめに</div>
@@ -479,7 +404,7 @@ mindmap
 
 &nbsp;
 
-### 機能比較グリッド
+# 機能比較グリッド
 
 <br />
 
@@ -490,7 +415,7 @@ mindmap
 
 <br />
 
-### 詳細
+# 詳細
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
@@ -498,28 +423,6 @@ mindmap
 
 <hr>
 <br><br><br>
-
-## 少数の代表的なスクリーンショット
-
-<br>
-<h3>ドイツ語、フランス語、ヘブライ語、およびロシア語(UTF-8)のIDEビュー。</h3>
-<center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDEエディタ・ビュー。</h3>
-<center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDEエディタ・ビュー(スペイン語)。</h3>
-<center><img src="../images/ide-es.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDEフル・サイト・ビルド。</h3>
-<center><img src="../images/ide-build.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDEの一般的なサイト・ビルド。</h3>
-<center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/><br><br>
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">IDE検索</a> <small>(リンク先) <span style="color:#e83e8c">ホットピンク</span> エディタ画面に直接ドロップし、一致するテキストに従ってカーソルを置きます)</small>.</h3>
-<center><img src="../images/ide-search.png" style="width:800px"></center>
-</div>
 
 <style type="text/css">
 /*-------------------------------------------

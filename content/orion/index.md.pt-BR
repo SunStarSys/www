@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: rascunho
+status: verificado=47833
 title: SunStar Orion dos Sistemas
 ---
 
@@ -65,11 +65,15 @@ title: SunStar Orion dos Sistemas
 
 &nbsp;
 
-### Aqui está o ROI, Tomador de Decisão Executivo :fa-chart-line:...
+<div class="border-top" style="padding-top: 20px">
+
+# Aqui está o ROI que realmente oferece: gerenciamento de conhecimento seguro e de alto desempenho com uma fração do custo :fa-chart-line:
+
+</div>
 
 &nbsp;
 
-<span class="text-white">Por que escolher o Orion? Plataforma Wiki Jamstack que ofusca &mdash; Custos muito menores</span>
+<span class="text-white">Tecnologia Jamstack comprovada que reduz riscos de violação, integra dados/matemática/IA reais sem problemas e escala de forma econômica &mdash; Veja as 7 maneiras pelas quais o Orion supera as ferramentas legadas.</span>
 
 &nbsp;
 
@@ -77,33 +81,19 @@ O que realmente diferencia o Orion não é apenas mais uma plataforma wiki &mdas
 
 &nbsp;
 
-<span class="text-white">Nada produzirá melhor ROI do que a Orion no mercado do Knowledge Management System.</span>
+Ao contrário dos produtos que seus concorrentes estão usando, o Orion é uma estrutura projetada para produzir documentação corporativa superior, sustentável, confidencial, mas facilmente localizável, com a rede de link/dependência gerenciada mais rica e compreensível do mercado. **Isso transforma a experiência coletiva da sua organização de uma responsabilidade que vaza para sua vantagem competitiva mais durável.**
 
 &nbsp;
 
-Ao contrário dos produtos que seus concorrentes estão usando, Orion é uma estrutura projetada para produzir documentação corporativa superior, sustentável, confidencial, mas facilmente localizável, com a rede de link / dependência mais rica, mas mais compreensível, gerenciada no mercado. Transforma a experiência coletiva da sua organização de uma responsabilidade que vaza para sua vantagem competitiva mais durável.
+<center>
 
-&nbsp;
-
-<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
-<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
-<div class="accordion-header" id="how-so-heading">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
-
-#### Como assim?
-
-</button>
-</div>
-
-<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
-
-&nbsp;
-
-<span class="text-white">Produto mais seguro e melhor por menos dinheiro</span>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card-header">Produto Mais Seguro e Melhor para <span class="text-white">Menos dinheiro</span></div>
+<div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Redução substancial do risco de segurança
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Matemática Real/Integração de Dados com Pesquisa e Tradução de IA
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Matemática Real / Integração de Dados com Pesquisa e Tradução de IA, além do Mecanismo de Processamento de Dados e Pacote de Gráficos Vetores
 
 &nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Suporte a IA Verdadeira e Ágil
 
@@ -113,29 +103,35 @@ Ao contrário dos produtos que seus concorrentes estão usando, Orion é uma est
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Economize 50% / ano</span>](https://www.atlassian.com/software/confluence/pricing) com [Plano de negócios de Orion](plans) sobre o Confluence Premium comparável a recursos
 
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Custos de troca acessíveis e amortizáveis da Confluence
+
+</div>
+</div>
+</center>
+
 &nbsp;
 
-[^1]. Adotar o Orion imediatamente reduz o risco de um grande incidente de segurança; e a paz de espírito entregue questões mais para o seu conselho de administração do que um [apólice de seguro de ransomware caro](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Você nunca precisa apresentar uma reclamação contra.
+<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+## Mostre-me os detalhes de ROI
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
+
+&nbsp;
+
+[^1]. Adoção de Orion [reduz imediatamente o risco](security#separation-of-concerns-and-engineering-tradeoffs10) de um grande incidente de segurança; e a paz de espírito entregou questões mais ao seu conselho de administração do que [apólice de seguro de ransomware caro](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Você nunca precisa apresentar uma reclamação contra.
 
 &nbsp;
 
 [^2]. Deixando de lado o [vantagens de segurança](https://www.iconoclasts.blog/joe/wishful-thinking) e o [penalidades rígidas](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) para [violações de confidencialidade dos dados da HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), uma falha fundamental de produtos semelhantes a wiki que não o Orion é que eles não fornecem **integrações/interfaces coerentes para incorporação e manutenção periódica de formatos de arquivos de dados gerados externamente**. No entanto, ao se concentrar em um punhado de formatos de texto/documento de origem/dados padrão do setor, até mesmo suas tabelas matemáticas, gráficos, gráficos, mapas e diagramas arquitetônicos mais complexos gerados por dados são **totalmente pesquisáveis e traduzíveis por IA** em qualquer uma das linguagens naturais suportadas pelo Orion.
 
-&nbsp;
-
-Por exemplo, você verá **não mais perda de produtividade** para a equipe que está tentando adquirir detalhes de configuração de ativos em nuvem infosec criticamente confidenciais e atualizados periodicamente :fa-network-wired: trancado em uma tabela de dados obscuramente marcada e gerada externamente em algum lugar do seu wiki atual, e em frustração chegando aos colegas de equipe que também não se lembram de onde está. O que naturalmente aumenta o tempo em evolução afunda para os gerentes; e assim vai. Até que alguém se lembre, mas porque a tabela é enorme e eles só querem o conteúdo de um elemento em uma única linha, então eles têm que buscá-lo com um navegador e globo ocular digitalizá-lo manualmente. Em seguida, repita o processo sempre que descobrir que os dados de infosec são atualizados[^HTML5].
-
-&nbsp;
-
-Além disso, `YAML/JSON` Não há suporte para formatos de ingestão de dados em Notion (ou Confluence)!  Se você não puder inserir dados semelhantes a árvores gerados externamente em um `CSV` tabela, tudo o que você tem à esquerda são blocos de página bare com o qual você pode perder mais tempo melhor gasto dominando nossa plataforma Orion.
-
-&nbsp;
-
-Essa tabela de informações gerada externamente :fa-network-wired: é incorporado em sua wiki Orion como um **pesquisável `CSV` arquivo** anexado a um documento de markdown subjacente, que de outra forma o renderiza no momento da criação em um documento incorporado `HTML5` tabela.
-
-&nbsp;
-
-Eles querem ser notificados quando esse anexo `CSV` está alterado? Basta assinar o `CSV` arquivo! Após a notificação durante sua próxima visita à wiki (e não via spam por email), eles podem pular o `HTML5` tabela de markdown renderizada e, em vez disso, buscar diretamente exatamente o que eles precisam de Orion's `JSON` compilação da `CSV` anexo usando padrão `CLI` ferramentas como `curl` e `jq`. **Nenhum outro wiki suporta este workflow hoje.**
+Orion completa sua imagem de integração de dados com um mecanismo de banco de dados vetorial colunar `PDL` e um pacote de gráficos vetoriais `Asymptote` para suas necessidades interativas de análise de números.
 
 &nbsp;
 
@@ -143,27 +139,11 @@ Eles querem ser notificados quando esse anexo `CSV` está alterado? Basta assina
 
 &nbsp;
 
-**A pontualidade, a conveniência, a precisão e a precisão, na busca interminável da fonte única de verdade atual, funcionam como principais facilitadores de produtividade para seus funcionários com mais tempo limitado**. As possíveis consequências de não ter esses recursos somente do Orion é que seus Engenheiros de Plataforma serão <span class="text-white">**forçado a desperdiçar $10-100K anualmente em makework**</span> criando, criando, **documentando** e dando suporte a sites internos em miniatura com `REST`interfaces baseadas nesses conjuntos de dados compartilhados, como soluções alternativas de aumento para o conjunto limitado de recursos de integração de dados pesquisáveis e recuperáveis do seu fornecedor wiki.
-
-&nbsp;
-
-Contrariamente, Orion irá revelar seus detalhes de infosec gerados externamente, uma vez perdidos :fa-network-wired: sob demanda e **entregue-os de maneira acessível aos agentes automatizáveis habilitados para a web/IA que seu talento prefere**. Com alacridade e confiabilidade incomparáveis. Quer aperfeiçoar sua pesquisa sintonizando à mão a gosto, até que você prefira `JSON` para `HTML5` nos seus resultados? Mais uma vez, Orion entrega (mesmo `URL`, diferente `Accept` cabeçalho.)[^refinamentos]
-
-&nbsp;
-
-Em outras palavras, **recuperação de informações** é um domínio de problema fundamentalmente diferente do domínio de criação/modificação de conteúdo, mas o [Baseado em CRUD](https://crudly.ai/crud-app/) Os aplicativos wiki de nossos concorrentes não fazem essa distinção de forma significativa. Além disso, com o design Jamstack da Orion, as taxonomias não são abordadas como um pensamento posterior gerado dinamicamente, genérico/emergente e não gerenciável. `SQL` tabelas. Em vez disso, eles são informados com um planejamento estrutural cuidadoso e organização herárquica consistentemente aplicada por arquitetos de informação experientes em toda a sua equipe e na nossa[^sprawl].
-
-&nbsp;
-
 [^4]. Em seguida, **ferramentas de curadoria de conteúdo** é um recurso essencial do Orion, não uma oportunidade de upsell. Nosso banco de dados de fatos por wiki é o primeiro da indústria &mdash; útil para coisas como gerenciar marcas de nomes consistentes ou metadados de artefatos de software relacionados em todo o site com uma edição de 1 linha para um [Arquivo YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
-Então, em vez do inevitável e entrópico link girar inata para outros produtos wiki, você recebe **validação de link interno/externo** no momento da modificação da página durante um abrangente, `MIME`-tipo baseado, pré-commit linting passar por Orion's `CMS` editor. Também fornecemos a todos os clientes uma infraestrutura de relatórios para **capturar links internos/externos desatualizados sob demanda**, mesmo quando as páginas envolvidas não são alteradas em meses. Os diagramas são tão fáceis de manter em sincronia com as alterações em evolução da prosa de markdown, porque com a integração da sereia de Orion, **as fontes do diagrama são incorporadas na prosa** da página. busca recursiva indolor / substituir para reparar o cruzamento acumulado é construído no `PCRE` mecanismo de pesquisa no `CMS`.
-
-&nbsp;
-
-Com o Orion, seu wiki não é mais de utilidade em deterioração para suas equipes; mas se torna **um recurso gratificante para eles usarem e aprimorarem.**  Além disso, você não precisa ser um administrador do wiki para usar essas ferramentas &mdash; quase qualquer pessoa pode participar voluntariamente das atividades de preparação, ou talvez ser delegado organizacionalmente para desempenhar esse dever como líder de equipe.
+Em vez do inevitável e entrópico link girar inata para outros produtos wiki, você recebe **validação de link interno/externo** no momento da modificação da página durante um abrangente, `MIME`-tipo baseado, pré-commit linting passar por Orion's `CMS` editor. Também fornecemos a todos os clientes uma infraestrutura de relatórios para **capturar links internos/externos desatualizados sob demanda**, mesmo quando as páginas envolvidas não são alteradas em meses. Os diagramas são tão fáceis de manter em sincronia com as alterações em evolução da prosa de markdown, porque com a integração da sereia de Orion, **as fontes do diagrama são incorporadas na prosa** da página. busca recursiva indolor / substituir para reparar o cruzamento acumulado é construído no `PCRE` mecanismo de pesquisa no `CMS`.
 
 &nbsp;
 
@@ -171,19 +151,7 @@ Com o Orion, seu wiki não é mais de utilidade em deterioração para suas equi
 
 &nbsp;
 
-Além disso, à medida que seu site evolui para o ponto em que os arquivos ou pastas precisam ser realocados ou excluídos, o Orion não apenas rastreia os movimentos de localização implementando o sistema automatizado. `HTTP` redireciona dos locais originais para os novos alvos, mas também continua a consagrar em `ACL`s nos locais originais em perpetuidade. Isso garante que seu conteúdo confidencial permaneça protegido contra pesquisas históricas de usuários não autorizados no sistema que, de outra forma, poderiam ter acesso direto às interfaces de controle de versão da Orion para as fontes da sua wiki.
-
-&nbsp;
-
-Já viu um sistema que pode integrar de forma confiável conteúdo/dados filtrados em arquivos de origem independentes?  [**Orion can**](https://www.iconoclasts.blog/joe/), com suporte completo para o [**dependências cíclicas cruzadas**](https://www.iconoclasts.blog/joe/dependencies) e controles de autorização em cada arquivo de origem.  Simplesmente não há como lavar acidentalmente (ou maliciosamente) conteúdo controlado por acesso por meio de sua funcionalidade de integração de conteúdo, e não há como modificar conteúdo/dados em tais arquivos sem essas modificações para induzir compilações simultâneas de seus arquivos dependentes[^aplicação].
-
-&nbsp;
-
-Claro que nada disso é possível com produtos como Notion porque é impossível redimensionar um banco de dados gerado existente com uma importação de arquivo externo atualizada; você tem que excluir e recriar todo o banco de dados (ou possivelmente usar ferramentas de terceiros). Ao excluir o banco de dados original, você também **destrói todos os links wiki e as listas de notificações de observação do usuário associadas a ele**. "Desagradável" não começa a cobri-lo.
-
-&nbsp;
-
-Não há mais ninguém na indústria que tenha colocado esse refinamento em todos os aspectos de seu produto wiki como um pacote total.
+Já viu um sistema wiki que pode integrar de forma confiável conteúdo/dados filtrados em arquivos de origem independentes?  [**Orion can**](https://www.iconoclasts.blog/joe/), com suporte completo para o [**dependências cíclicas cruzadas**](https://www.iconoclasts.blog/joe/dependencies) e controles de autorização em cada arquivo de origem.  Simplesmente não há como lavar acidentalmente (ou maliciosamente) o conteúdo controlado por acesso por meio de sua funcionalidade de integração de conteúdo, e não há como modificar o conteúdo/dados em tais arquivos sem essas modificações para induzir compilações simultâneas de seus arquivos dependentes.
 
 &nbsp;
 
@@ -199,37 +167,33 @@ Não há mais ninguém na indústria que tenha colocado esse refinamento em todo
 
 &nbsp;
 
+[^7]. Os custos de troca/integração da Confluence podem chegar a US$ 100 no total para pequenas e médias empresas e ser amortizados nos três primeiros anos de serviço para clientes que precisam de uma abordagem mais prática. O processo geral é quatro vezes:
+
+1. concordar com a topologia desejada do mapa do site a partir de espaços Confluence individuais para arquivos e pastas wiki Orion,
+
+2. projetar e implementar `Django` arquivos de modelo e `Perl` construir lógica para acomodar a topologia acima, a marca e a aparência desejada do `HTML` pré-ativação,
+
+3. configurar o `xsltproc` scripting para executar a transformação de um [`XML` despejo de todo o espaço Confluence](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) no layout de árvore de origem desejado, e
+
+4. construir o site da wiki Orion e voltar às etapas acima para ajustar e reajustar até que o cliente esteja satisfeito e pronto para a assinatura final do contrato.
+
+Pode parecer que o passo 2 acima é onde os custos significativos podem acumular; no entanto, a maior parte desse passo é passível de assistência de IA. Os clientes também podem optar por manter suas assinaturas Confluence pelo tempo que quiserem sem introduzir conflitos com suas novas wikis Orion, apenas para mitigar os riscos associados.
+
+&nbsp;
+
 Finalmente, adaptamos cada instalação às suas necessidades específicas e estamos **sempre disponíveis para consulta e coaching profissional** para garantir que você maximize os retornos de seu investimento em nossos produtos e serviços. **Sua equipe tem um parceiro em nós** em termos de garantir que você veja os ganhos de produtividade previstos e a satisfação do cliente associados à Orion &mdash; projetado para criação/curadoria de conhecimento robusta, verificada e colaborativa; e fácil, abrangente, recuperação de informações de precisão.
 
 &nbsp;
 
-##### Rodapés
+### Rodapés
 
 &nbsp;
 
-[^HTML5](Verdadeira história!) Para adicionar insulto à lesão, verifica-se que seu wiki existente só renderiza o conteúdo da página como um aplicativo implícito de navegador da Web baseado em javascript, em vez de atender aos padrões explícitos da Orion. `HTML5` documento. Isso implica, entre outras coisas, que mesmo que o mecanismo de pesquisa do seu wiki apareça nas tabelas de que você precisa, você não pode acessar diretamente essas tabelas como conteúdo wiki para download, a menos que a equipe de infosec tenha o problema de excluir e reexportar consistentemente a tabela (como um `CSV` anexo) sempre que os dados forem atualizados.
+[^propriedade]. Na verdade, não há **nenhum conceito formal de propriedade da página** no sistema. O controle de versão da Orion simplesmente rastreia os conjuntos de alterações por usuário autorizados da equipe no momento das alterações comprometidas pelo usuário, emprestando a uma aculturação corporativa mais colegial para o produto de trabalho combinado de uma wiki do que em qualquer outro sistema semelhante. No entanto, é certamente possível facilitar e apoiar "propriedade" avançando com explícito `ACL` atribuições de cabeçalho nas páginas envolvidas e/ou um `view` que incorpora "autoria" como um `Author` cabeçalho ou similar em wiki page-builds no seu site.
 
 &nbsp;
 
-[^refinamentos]. Não encontrou imediatamente o que você estava procurando nos hits de busca de Orion? Refine sua pesquisa atual com um filtro de pesquisa no material que você localizou; repita se necessário. Ou clique em uma palavra-chave associada sugerida gerada a partir do material localizado para mudar sua pesquisa em uma direção adjacente. Ou expanda o escopo de sua pesquisa para um nível superior na lista de tópicos relacionados ao diretório na parte superior da página. Ou alternar para um `PCRE` pesquisa regex em vez do Lucene natural-linguagem-stemmed bareword match popularizado pelo Google em seus anos de formação.
-
-Sua solução atual oferece à sua equipe esse nível de capacidade de pesquisa exploratória? Definitivamente não se é Confluence ou Notion.
-
-&nbsp;
-
-[^aplicação]. Aplicando essa tecnologia à tabela infosec :fa-network-wired: situação: sua equipe poderia usá-lo para integrar e filtrar o Orion-pemalinked `CSV` anexo em sua própria página wiki separada, e Orion garantirá que o conteúdo dessa página separada seja atualizado sempre que a tabela infosec permalinked :fa-network-wired: é, não apenas quando a página wiki é editada à mão. Como acontece com outras soluções wiki.
-
-&nbsp;
-
-[^sprawl]. Orion tem muitas ferramentas para controlar a expansão da wiki; desde a construção de restrições topológicas dinâmicas até o local. `ACL`s, para simplesmente suportar o **arquivamento de documentos** &mdash; que é um documento [`Status`](api/doc#-code-status-code-5) definindo que sinaliza para Orion que a página deve ser elidida de seu gráfico de gerenciamento de dependência; efetivamente desvinculando-a de todos os índices de documentos e referências cruzadas, e instruindo Orion a ignorá-la em `CMS` listagens de diretórios, preservando o arquivo como um permalink pesquisável e arquivando uma cópia dele em um local correspondente com timestam do ano/mês atual em outro lugar na wiki.
-
-&nbsp;
-
-[^propriedade]. Na verdade, não há **nenhum conceito formal de propriedade da página** no sistema. O controle de versão da Orion simplesmente rastreia os conjuntos de alterações por usuário autorizados da equipe no momento das alterações comprometidas pelo usuário, emprestando a uma aculturação corporativa mais natural e colegial para o produto de trabalho combinado de uma wiki do que em qualquer outro sistema semelhante. Bloqueio de páginas em contas de usuário individuais/"autores" é um anátema para os ideais colaborativos de wikis, mas é certamente possível avançar com explícito `ACL` atribuições de cabeçalho nas páginas envolvidas.
-
-&nbsp;
-
------
+<div class="border-top">&nbsp;</div>
 
 </div>
 </div>
@@ -237,7 +201,7 @@ Sua solução atual oferece à sua equipe esse nível de capacidade de pesquisa 
 
 &nbsp;
 
-#### Deixe os pontos de dor drenantes do passado para trás...
+## Deixe os pontos de dor drenantes do passado para trás...
 
 &nbsp;
 
@@ -257,7 +221,7 @@ Quer uma abordagem mais conservadora/soberana do que simplesmente expor todos os
 
 &nbsp;
 
-### Orion é construído para líderes que se recusam a se estabelecer
+## Orion é construído para líderes que se recusam a se estabelecer
 
 &nbsp;
 
@@ -316,25 +280,27 @@ Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive 
 
 &nbsp;
 
-[Fale conosco](../contact) para uma demonstração gratuita hoje.
+[Fale conosco](../contact) para Sistema de Preços Empresarial e uma Demonstração Gratuita
 
 </div>
-<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px;margin-top:3px;" src="index.page/ad1"></a>
+<div class="col-lg-6 border-start">
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
 
 &nbsp;
 
-&nbsp;
+<div class="border-top" style="padding-top: 20px">
 
-### Aqui está&nbsp;Por que,&nbsp;Jovem&nbsp;Acadêmico&nbsp;:fa-orcid: / Completo&nbsp;Pilha&nbsp;Desenvolvedor&nbsp;:fa-stack-overflow: / Público&nbsp;Blogger&nbsp;:fa-blog:&nbsp;...
+# &nbsp;Jovem&nbsp;Acadêmico&nbsp;:fa-orcid: / Completo&nbsp;Pilha&nbsp;Desenvolvedor&nbsp;:fa-stack-overflow: / Público&nbsp;Blogger&nbsp;:fa-blog:&nbsp;... Quer um site pessoal extremamente rápido e seguro que seja simples de gerenciar &mdash; Incrivelmente poderoso?
 
-&nbsp;
-
-Quer um site que seja **seguro por padrão**? Fácil de atualizar e gerenciar, enquanto esconde a complexidade de um sistema de controle de versão subjacente, ainda lhe dando todo o seu poder quando você realmente precisa dele?  Publicação instantânea quando você quiser; criações de ramificações suaves e preparadas e promoções granulares personalizáveis para o seu site de produção, conforme adequado ao fluxo de trabalho preferido da sua equipe.
+</div>
 
 &nbsp;
 
-Se você está cansado das opções de licenciamento por assento e por ciclo de CPU que o pesam sempre que precisar corrigir um erro de digitação, [chegar até nós](/contact). Se você é responsável pela curadoria de conteúdo e está ansioso por um banco de dados de fatos personalizável para gerenciar seus links externos, ou se você é um domador de leão equipado com regex para décadas de conteúdo HTML legado acumulado, ou apenas alguém insatisfeito com as outras opções do mercado e como elas funcionam em escala, temos algo realmente especial para oferecer a você.
+Precisa de mais potência do que um [pônei de um truque como Hugo](https://www.iconoclasts.blog/joe/ssg) pode mostro?
+
+&nbsp;
+
+Se você está cansado das opções de licenciamento por assento e por ciclo de CPU que o pesam com outros fornecedores de hospedagem da Jamstack, sempre que você precisar corrigir um erro de digitação, [chegar até nós](/contact). Se você é responsável pela curadoria de conteúdo e está ansioso por um banco de dados de fatos personalizável para gerenciar seus links externos, ou se você é um domador de leão equipado com regex para décadas de conteúdo HTML legado acumulado, ou apenas alguém insatisfeito com as outras opções do mercado e como elas funcionam em escala, temos algo realmente especial para oferecer a você.
 
 &nbsp;
 
@@ -366,19 +332,15 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-Tomando pistas arquitetônicas de [David Wheeler](https://justatheory.com) famoso [CMS de Bricolagem](https://bricolagecms.org/), este [tecnologia](https://iconoclasts.blog/joe/apache-cms) foi inventado no final de 2010 por [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher, e [Joe Schaefer](https://iconoclasts.blog/joe/) como membros da equipe de infraestrutura da Apache. A frase "JAMstack" foi cunhado anos depois (2015), por um grupo inconsciente da nossa arte anterior neste espaço.  Mas o [registro público](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) é cristalino, e esta nova oferta da SunStar Systems é testemunho desse legado original e de suas verdadeiras origens de código aberto.
+Quando as comunidades de projeto do software Apache foram apresentadas com uma escolha livre entre o uso de sites apoiados pelo Confluence, ou usando as raízes de Orion como [O Apache CMS](https://www.iconoclasts.blog/joe/apache-cms)Eles escolheram o Apache CMS. Nós achamos que você também, com seu Orion muito melhorado!
 
 &nbsp;
 
-Quando as comunidades do projeto de software Apache foram apresentadas com uma escolha livre entre o uso de sites apoiados pelo Confluence, ou usando as raízes do Orion como o Apache CMS, eles escolheram esmagadoramente o Apache CMS. Nós achamos que você também, com seu Orion muito melhorado!
+## Seguro por padrão, controlado por versão e mais rápido do que outros geradores de sites estáticos.  Publicar instantaneamente ou preparar alterações &mdash; Experimente uma demonstração rápida e veja por que é fácil.
 
 &nbsp;
 
-<h4>Quer dar uma volta rápida para ver o quão rápido e fácil é?</h4>
-
-&nbsp;
-
-Este site é auto-hospedado em Orion; todos aqueles quadrados de lápis cor-de-rosa [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) No canto superior direito estão ao vivo.  Sinta-se livre para passear e experimentar com qualquer coisa que você vê!  A única coisa que você não pode fazer é confirmar e assistir suas alterações serem construídas e implantadas; isso é restrito ao nosso pessoal por razões óbvias.
+Este site é auto-hospedado em Orion; todos aqueles quadrados de lápis cor-de-rosa [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) No canto superior direito estão ao vivo. Sinta-se livre para passear e experimentar com qualquer coisa que você vê!  A única coisa que você não pode fazer é confirmar e assistir suas alterações serem construídas e implantadas; isso é restrito ao nosso pessoal por razões óbvias.
 
 &nbsp;
 
@@ -386,7 +348,7 @@ Nossa rede global de Ponto de Presença (POP) garante conexões de baixa latênc
 
 &nbsp;
 
-<h3>É hora de uma mudança radical na forma como você gerencia e entrega seu site ao seu público-alvo.</h3>
+### É hora de uma mudança radical na forma como você gerencia e entrega seu site ao seu público-alvo.
 
 &nbsp;
 
@@ -420,43 +382,6 @@ Isso não é marketing spin &mdash; É uma herança de engenharia aberta verific
 
 &nbsp;
 
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Plataformas Wiki)
-      ((Orion))
-      [Confluência]
-      [Noção]
-    (Controle de Versão)
-      [Usos]
-        Curadoria de Conteúdo
-        Controles de Acesso
-        Histórico imutável
-      [Ferramentas]
-        Git
-        Subversão
-    (Jamstack)
-      [CMS]
-        Autores
-        Pesquisadores
-        Curadores
-      [Compilações de sites]
-        Desenvolvedores
-        Arquitetos
-      [Segurança]
-    (IA)
-     RAG
-     CLIENTE
-```
-
-</a>
-
-&nbsp;
-
-&nbsp;
-
 <center>
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">Conceitos Básicos</div>
@@ -479,7 +404,7 @@ Precisa de ajuda para personalizar o `Perl` sistema de compilação em `lib/` e 
 
 &nbsp;
 
-### Grade de Comparação de Recursos
+# Grade de Comparação de Recursos
 
 <br />
 
@@ -490,7 +415,7 @@ Precisa de ajuda para personalizar o `Perl` sistema de compilação em `lib/` e 
 
 <br />
 
-### Detalhes
+# Detalhes
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
@@ -498,28 +423,6 @@ Precisa de ajuda para personalizar o `Perl` sistema de compilação em `lib/` e 
 
 <hr>
 <br><br><br>
-
-## Algumas capturas de tela representativas
-
-<br>
-<h3>IDE View com alemão, francês, hebraico e russo (UTF-8).</h3>
-<center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br><br><br>
-<h3>View do Editor IDE.</h3>
-<center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br><br><br>
-<h3>Visualização do editor IDE (espanhol).</h3>
-<center><img src="../images/ide-es.png" style="width:800px"></center>
-<br><br><br>
-<h3>Build de site completo do IDE.</h3>
-<center><img src="../images/ide-build.png" style="width:800px"></center>
-<br><br><br>
-<h3>Criação típica de site do IDE.</h3>
-<center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/><br><br>
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Pesquisa IDE</a> <small>(Esses links em <span style="color:#e83e8c">rosa quente</span> irá soltá-lo diretamente em uma tela do editor, com o cursor posicionado exatamente de acordo com o texto correspondente)</small>.</h3>
-<center><img src="../images/ide-search.png" style="width:800px"></center>
-</div>
 
 <style type="text/css">
 /*-------------------------------------------

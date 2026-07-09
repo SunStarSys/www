@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: skiss
+status: verifierad=47833
 title: SunStar Orion för system
 ---
 
@@ -65,11 +65,15 @@ title: SunStar Orion för system
 
 &nbsp;
 
-### Här är avkastningen på investeringen, beslutsfattare för ledningen :fa-chart-line:...
+<div class="border-top" style="padding-top: 20px">
+
+# Här är avkastningen som faktiskt levererar: Säker, högpresterande kunskapshantering på en bråkdel av kostnaden :fa-chart-line:
+
+</div>
 
 &nbsp;
 
-<span class="text-white">Varför välja Orion? Jamstack Wiki-plattformen som överträffar &mdash; och kostar betydligt mindre</span>
+<span class="text-white">Beprövad Jamstack-teknik som minskar risken för dataintrång, integrerar verkliga data/math/AI sömlöst och skalar prisvärt &mdash; Se de 7 sätt Orion överträffar äldre verktyg.</span>
 
 &nbsp;
 
@@ -77,33 +81,19 @@ Vad som verkligen sätter Orion isär är inte bara en annan wiki-plattform &mda
 
 &nbsp;
 
-<span class="text-white">Ingenting kommer att ge bättre avkastning än Orion på marknaden för kunskapshanteringssystem.</span>
+Till skillnad från de produkter som dina konkurrenter använder är Orion ett ramverk utformat för att ge överlägsen, underhållbar, konfidentiell men ändå lättläst företagsdokumentation med det rikaste, men mest begripliga, hanterade länk-/beroendenätverket på marknaden. **Det förvandlar din organisations kollektiva erfarenhet från ett ansvar som läcker bort till din mest hållbara konkurrensfördel.**
 
 &nbsp;
 
-Till skillnad från de produkter som dina konkurrenter använder är Orion ett ramverk som är utformat för att ge överlägsen, underhållbar, konfidentiell men ändå lätt lokaliserad företagsdokumentation med det rikaste, men mest begripliga, hanterade länk-/beroendenätverket på marknaden. Det förvandlar din organisations kollektiva erfarenhet från ett ansvar som läcker bort till din mest hållbara konkurrensfördel.
+<center>
 
-&nbsp;
-
-<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
-<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
-<div class="accordion-header" id="how-so-heading">
-<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
-
-#### Hur?
-
-</button>
-</div>
-
-<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
-
-&nbsp;
-
-<span class="text-white">Säkrare, bättre produkt för mindre pengar</span>
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card-header">Säkrare, bättre produkt för <span class="text-white">Mindre pengar</span></div>
+<div class="card-body" style="text-align:left">
 
 &nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Minskning av väsentliga säkerhetsrisker
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math/Data Integration med Sök- och AI-översättning
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math / Dataintegrering med sökning och AI-översättning, plus databehandlingsmotor och vektorgrafikpaket
 
 &nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Äkta autentiskt AI-stöd
 
@@ -113,29 +103,35 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Spara 50 % / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions affärsplan](plans) Över funktionsjämförbar Confluence Premium
 
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Prisvärd, avskrivningsbar växlingskostnad från sammanflöde
+
+</div>
+</div>
+</center>
+
 &nbsp;
 
-[^1]. Att anta Orion minskar omedelbart risken för en större säkerhetsincident; och sinnesfrid gav saker mer till din styrelse än en [dyra ransomware försäkring](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Du behöver aldrig göra anspråk mot.
+<div class="accordion" id="how-so-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="how-so-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
+
+## Visa information om avkastning på investering
+
+</button>
+</div>
+
+<div id="how-so-target" class="accordion-collapse collapse" aria-labelledby="how-so-heading" data-bs-parent="#how-so-container" style="background-color: transparent !important; border: none; color: black">
+
+&nbsp;
+
+[^1]. Antagande Orion [omedelbart minskar risken](security#separation-of-concerns-and-engineering-tradeoffs10) av en större säkerhetsincident; och sinnesfrid levererade frågor mer till din styrelse än en [dyra ransomware försäkring](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Du behöver aldrig göra anspråk mot.
 
 &nbsp;
 
 [^2]. Lägg undan [säkerhetsfördelar](https://www.iconoclasts.blog/joe/wishful-thinking) och [skärpta påföljder](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) för [sekretessöverträdelser av HIPAA-data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), en grundläggande brist hos andra wikiliknande produkter än Orion är att de inte tillhandahåller **sammanhängande integreringar / gränssnitt för införlivande och periodiskt underhåll av externt genererade datafilformat**. Men genom att fokusera på en handfull branschstandardiserade text-/källdokument-/dataformat är även dina mest invecklade datagenererade matematiska tabeller, grafer, diagram, kartor och arkitektoniska diagram **fullt sökbara och AI-översättningsbara** på något av Orions naturliga språk som stöds.
 
-&nbsp;
-
-Till exempel ser du **ingen mer förlorad produktivitet** för personal som försöker förvärva periodiskt uppdaterade, kritiskt konfidentiella konfigurationsdetaljer om molntillgångar :fa-network-wired: låses i en obskyrt taggad, externt genererad datatabell någonstans i din nuvarande wiki, och i frustration nå ut till lagkamrater som inte heller minns var det är. Vilket naturligtvis eskalerar den föränderliga tidssänkan till chefer; och så går det. Tills någon kommer ihåg, men eftersom tabellen är enorm och de bara vill ha innehållet i ett element i en enda rad, så måste de hämta det med en webbläsare och ögongloben skanna det manuellt. Upprepa sedan processen när de upptäcker att infosec-data uppdateras nästa gång.[^HTML5].
-
-&nbsp;
-
-Dessutom, `YAML/JSON` stöds inte ens dataintagsformat i Notion (eller Confluence)!  Om du inte kan skohorn externt genererade trädliknande data till en `CSV` tabell, allt du har kvar är bara sidblock med vilka du kan slösa mer tid bättre spenderade på att behärska vår Orion-plattform.
-
-&nbsp;
-
-Den externt genererade informationstabellen :fa-network-wired: Ingår i din Orion-wiki som en **sökbar `CSV` fil** bifogad till ett underliggande nedsättningsdokument, som i annat fall återger det vid uppbyggnad till en inbäddad `HTML5` tabell
-
-&nbsp;
-
-De vill bli underrättade när den bifogade `CSV` Har ändrats? Prenumerera bara på `CSV` fil! Vid anmälan under deras nästa besök på wikin (och inte via e-post spam), kan de hoppa över den inbäddade `HTML5` återgiven nedsättningstabell och i stället direkt hämta exakt vad de behöver från Orions `JSON` byggandet av `CSV` bilaga med standard `CLI` verktyg som `curl` och `jq`. **Ingen annan wiki stöder det här arbetsflödet idag.**
+Orion slutför sin dataintegreringsbild med en kolumnvektordatabasmotor `PDL` och ett paket vektorgrafikpaket `Asymptote` för dina interaktiva nummerkrossningsbehov.
 
 &nbsp;
 
@@ -143,27 +139,11 @@ De vill bli underrättade när den bifogade `CSV` Har ändrats? Prenumerera bara
 
 &nbsp;
 
-**Punktlighet, bekvämlighet, noggrannhet och precision, i den oändliga strävan efter den nuvarande enda sanningskällan, fungerar som stora produktivitets möjliggörare för dina mest tidsbegränsade anställda. De troliga konsekvenserna av att inte ha dessa Orion-bara funktioner är att dina plattformstekniker kommer att vara <span class="text-white">** tvingas att slösa bort $ 10-100K årligen på makework**</span> genom att skapa, bygga, **dokumentera** och stödja interna miniatyrwebbplatser med `REST`-baserade gränssnitt till dessa delade datamängder, som tillfälliga lösningar för din wiki-leverantörs begränsade sökbara och hämtningsbara funktionsuppsättning för dataintegrering.
-
-&nbsp;
-
-I motsats till detta kommer Orion att ytbehandla dina en gång förlorade, externt genererade infosec-detaljer. :fa-network-wired: på begäran, och **återge dem på ett sätt som är mottagligt för de automatiserade webbaktiverade / AI-agenter som din talang föredrar**. Med oöverträffad alacrity och tillförlitlighet. Vill du finslipa din sökning genom handjustering till smak, tills du slutligen föredrar `JSON` till `HTML5` i dina resultat? Återigen levererar Orion (samma `URL`, olika `Accept` sidhuvud.)[^begränsningar]
-
-&nbsp;
-
-Med andra ord är **informationssökning** en helt annan problemdomän än innehållsskapande/modifiering, men [CRUD-baserad](https://crudly.ai/crud-app/) wiki-appar från våra konkurrenter gör inte denna skillnad på ett meningsfullt sätt. Dessutom, med Orions Jamstack-design, hanteras taxonomier inte som en ohanterlig, generisk / framväxande dynamiskt genererad eftertanke från överskattad `SQL` tabeller Istället informeras de med noggrann strukturplanering och konsekvent upprätthålls, arvinge organisation av erfarna informationsarkitekter i hela ditt team och vårt[^spridning].
-
-&nbsp;
-
 [^4]. Därefter är **content curation tooling** ett viktigt inslag i Orion, inte en möjlighet till merförsäljning. Vår per-wiki faktadatabas är en bransch första &mdash; praktiskt för saker som att hantera konsekvent namn branding eller relaterad programvara artefakt metadata över hela webbplatsen med en 1-rads redigering till en [YAML-fil](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
-Så istället för den oundvikliga entropiska länken roterar medfödda till andra wiki-produkter får du **intern/extern länkvalidering** vid sidmodifieringstid under en omfattande, `MIME`-typ baserad, pre-commit linting pass av Orion's `CMS` redaktör. Vi tillhandahåller också varje kund en rapporteringsinfrastruktur för att **fånga inaktuella interna/externa länkar på begäran**, även när de berörda sidorna inte har ändrats på flera månader. Diagram är lika enkla att synkronisera med utvecklande ändringar av nedsättningsprosa, eftersom med Orions sjöjungfruintegration **är diagramkällorna inbäddade i själva sidans prosa**. Smärtsam rekursiv sökning / ersättning för att reparera den ackumulerade cruft är inbyggd i `PCRE` Sökmotor i `CMS`.
-
-&nbsp;
-
-Med Orion är din wiki inte längre av försämrat verktyg för dina team, men blir **en givande resurs för dem att använda och förbättra.**  Du behöver inte heller vara en wiki-administratör för att använda dessa verktyg &mdash; Nästan vem som helst kan frivilligt delta i grooming aktiviteter, eller kanske organisatoriskt delegeras för att utföra denna uppgift som team leder.
+I stället för den oundvikliga entropiska länken roterar med andra wiki-produkter får du **intern/extern länkvalidering** vid sidmodifieringstid under en omfattande, `MIME`-typ baserad, pre-commit linting pass av Orion's `CMS` redaktör. Vi tillhandahåller också varje kund en rapporteringsinfrastruktur för att **fånga inaktuella interna/externa länkar på begäran**, även när de berörda sidorna inte har ändrats på flera månader. Diagram är lika enkla att synkronisera med utvecklande ändringar av nedsättningsprosa, eftersom med Orions sjöjungfruintegration **är diagramkällorna inbäddade i själva sidans prosa**. Smärtsam rekursiv sökning / ersättning för att reparera den ackumulerade cruft är inbyggd i `PCRE` Sökmotor i `CMS`.
 
 &nbsp;
 
@@ -171,19 +151,7 @@ Med Orion är din wiki inte längre av försämrat verktyg för dina team, men b
 
 &nbsp;
 
-Dessutom, eftersom din webbplats utvecklas till den punkt där filer eller mappar behöver flyttas eller tas bort, spårar Orion inte bara platsförflyttningar genom att distribuera automatiserade `HTTP` omdirigerar från de ursprungliga platserna till de nya målen, men fortsätter också att förankra den befintliga `ACL`på de ursprungliga platserna i evighet. Detta säkerställer att ditt konfidentiella innehåll förblir skyddat mot historiska sökningar från obehöriga användare i systemet som annars kan ha direkt tillgång till Orions gränssnitt för versionskontroll till din wikis källor.
-
-&nbsp;
-
-Har du någonsin sett ett system som tillförlitligt kan integrera filtrerat innehåll/data över oberoende källfiler?  [**Orion kan**](https://www.iconoclasts.blog/joe/)Med fullt stöd för [**cykliska korsberoende**](https://www.iconoclasts.blog/joe/dependencies) och behörighetskontroller för varje källfil.  Det finns helt enkelt inget sätt att oavsiktligt (eller skadligt) tvätta åtkomstkontrollerat innehåll genom dess innehållsintegreringsfunktionalitet, och det finns inget sätt för innehåll / data i sådana filer att ändras utan att dessa ändringar tränger ner för att framkalla samtidiga byggen av deras beroende filer[^applikation].
-
-&nbsp;
-
-Naturligtvis är inget av detta möjligt med produkter som Notion eftersom det är omöjligt att återskapa en befintlig genererad databas med en uppdaterad extern filimport; du måste ta bort och återskapa hela databasen (eller möjligen använda verktyg från tredje part). Genom att ta bort den ursprungliga databasen **förstör du också alla wikilänkar och associerade användarbevakningslistor för den**. "Obehaglig" Börjar inte täcka den.
-
-&nbsp;
-
-Det finns ingen annan i branschen som har lagt så mycket förfining i varje aspekt av deras wiki-produkt som ett totalt paket.
+Har du någonsin sett ett wikisystem som tillförlitligt kan integrera filtrerat innehåll/data över oberoende källfiler?  [**Orion kan**](https://www.iconoclasts.blog/joe/)Med fullt stöd för [**cykliska korsberoende**](https://www.iconoclasts.blog/joe/dependencies) och behörighetskontroller för varje källfil.  Det finns helt enkelt inget sätt att oavsiktligt (eller skadligt) tvätta åtkomstkontrollerat innehåll genom dess innehållsintegreringsfunktionalitet, och det finns inget sätt för innehåll / data i sådana filer att ändras utan att dessa ändringar tränger ner för att framkalla samtidiga byggen av deras beroende filer.
 
 &nbsp;
 
@@ -199,37 +167,33 @@ I takt med att personalens företagsstatus utvecklas över tid gör Orion det en
 
 &nbsp;
 
+[^7]. Kostnader för byte/introduktion från Confluence kan vara så låga som 100 USD totalt för SMB och avskrivas under de första tre åren av service för kunder som behöver en mer praktisk strategi. Den övergripande processen är fyrfaldig:
+
+1. överens om önskad topologi på webbplatskartan från enskilda Confluence-utrymmen till Orions wiki-filer och -mappar,
+
+2. Utforma och implementera `Django` mallfiler och `Perl` bygga logik för att rymma över topologi, branding och önskad look-and-känsla av den byggda `HTML` Aktiv före aktivering,
+
+3. konfigurera `xsltproc` skript för att köra transformeringen av en [`XML` dumpning av hela Confluence-utrymmet](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) i önskad källträdslayout, och
+
+4. bygga Orions wiki-webbplats och gå tillbaka till ovanstående steg för att justera och justera tills kunden är nöjd och redo för slutlig kontraktssignering.
+
+Det kan tyckas att steg 2 ovan är där betydande kostnader kan uppstå, men huvuddelen av det steget är mottagligt för AI-hjälp. Kunderna kan också välja att behålla sina Confluence-prenumerationer så länge de vill utan att införa konflikter med sina nya Orion-wikier, bara för att minska tillhörande risker.
+
+&nbsp;
+
 Slutligen skräddarsyr vi varje installation efter dina specifika krav och är **alltid tillgängliga för konsultation och professionell coachning** för att säkerställa att du maximerar avkastningen på din investering i våra produkter och tjänster. **Ditt team har en partner i oss** när det gäller att se de förväntade produktivitetsvinsterna och kundnöjdheten i samband med Orion &mdash; utformad för robust, verifierad, samverkande kunskapsskapande / varaktighet; och enkel, omfattande, precisionsinformationssökning därav.
 
 &nbsp;
 
-##### Fotnoter
+### Fotnoter
 
 &nbsp;
 
-[^HTML5](Sann berättelse!) För att lägga till förolämpning mot skada visar det sig att din befintliga wiki bara återger sidinnehåll som en implicit javascript-baserad webbläsarapplikation, istället för Orions uttryckliga standardkompatibla `HTML5` dokument. Detta innebär bland annat att även om din wikis sökmotor visar de tabeller du behöver, kan du inte direkt komma åt dessa tabeller som agentiskt nedladdningsbart wiki-innehåll om inte infosec-teamet går igenom besväret att konsekvent radera och återexportera tabellen (som en `CSV` bilaga) när data uppdateras.
+[^ägarskap]. Faktum är att det inte finns något formellt koncept för sidägande** i systemet. Orions versionskontroll spårar helt enkelt personalens per-användare-auktoriserade förändringsuppsättningar vid tidpunkten för de användarengagerade förändringarna, utlåning till en mer kollegial företagsackulturation mot en wikis kombinerade arbetsprodukt än i något annat liknande system. Det är dock möjligt att underlätta och stödja "ägande" Framåt med explicit `ACL` huvudtilldelningar på de berörda sidorna och/eller en anpassad `view` som innehåller "författarskap" som en `Author` sidhuvud eller liknande i wiki sidbyggen på din webbplats.
 
 &nbsp;
 
-[^begränsningar]. Hittade du inte direkt vad du sökte efter i Orions sökträffar? Begränsa din aktuella sökning med ett sökfilter på materialet du hittade. Upprepa vid behov. Eller klicka på ett föreslaget tillhörande nyckelord som genereras från det lokaliserade materialet för att flytta din seach i en intilliggande riktning. Eller utöka omfattningen av din sökning till en högre nivå i listan över katalogspår längst upp på sidan. Eller växla till en `PCRE` regex search istället för Lucene natural-language-stemmed bareword match populariserad av Google i dess formativa år.
-
-Erbjuder er nuvarande lösning er personal denna nivå av utforskande sökkapacitet? Definitivt inte om det är Confluence eller Notion.
-
-&nbsp;
-
-[^applikation]. Tillämpa denna teknik på infosek-tabellen :fa-network-wired: situation: ditt team kan använda den för att integrera och filtrera Orion-pemalinked `CSV` bilaga till sin egen separata wikisida, och Orion kommer att se till att innehållet på den separata sidan uppdateras när den permalinkade infosec-tabellen :fa-network-wired: Det är inte bara när wikisidan redigeras för hand. Precis som med andra wikilösningar.
-
-&nbsp;
-
-[^spridning]. Orion har många verktyg för att kontrollera wikispridning; från att bygga dynamiska topologiska begränsningar till hela webbplatsen `ACL`s, för att helt enkelt stödja **dokumentarkivering** &mdash; som är ett dokument [`Status`](api/doc#-code-status-code-5) ställa in som signalerar till Orion att sidan ska ha utelämnats från sitt diagram för beroendehantering, effektivt koppla bort den från alla dokumentindex och korsreferenser och instruera Orion att ignorera den i `CMS` kataloglistor, samtidigt som filen bevaras som en sökbar permalänk och arkiverar en kopia av den till en motsvarande aktuell år / månad tidsstämplad plats någon annanstans på wikin.
-
-&nbsp;
-
-[^ägarskap]. Faktum är att det inte finns något formellt koncept för sidägande** i systemet. Orions versionskontroll spårar helt enkelt personalens per-användare-auktoriserade förändringsuppsättningar vid tidpunkten för användarengagerade förändringar, utlåning till en mer naturlig, kollegial företagsackulturation mot den kombinerade arbetsprodukten av en wiki än i något annat liknande system. Låser ner sidor till enskilda användarkonton/"författare" är en förbannelse för wikis samarbetsideal, men det är säkert möjligt att gå vidare med uttryckliga `ACL` huvudtilldelningar på de berörda sidorna.
-
-&nbsp;
-
------
+<div class="border-top">&nbsp;</div>
 
 </div>
 </div>
@@ -237,7 +201,7 @@ Erbjuder er nuvarande lösning er personal denna nivå av utforskande sökkapaci
 
 &nbsp;
 
-#### Lämna de dränerande smärtpunkterna i det förflutna bakom sig...
+## Lämna de dränerande smärtpunkterna i det förflutna bakom sig...
 
 &nbsp;
 
@@ -257,7 +221,7 @@ Vill du ha ett mer konservativt/suveränt tillvägagångssätt än att bara expo
 
 &nbsp;
 
-### Orion är byggd för ledare som vägrar att bosätta sig
+## Orion är byggd för ledare som vägrar att bosätta sig
 
 &nbsp;
 
@@ -316,25 +280,27 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 &nbsp;
 
-[Kontakta oss](../contact) för en kostnadsfri demo idag.
+[Kontakta oss](../contact) för företagspriser och en kostnadsfri demo
 
 </div>
-<div class="col-lg-6 border-start" style="border-color: #A9BDBD">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:0px;margin-top:3px;" src="index.page/ad1"></a>
+<div class="col-lg-6 border-start">
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
 
 &nbsp;
 
-&nbsp;
+<div class="border-top" style="padding-top: 20px">
 
-### Här är&nbsp;Varför,&nbsp;Unga&nbsp;Akademisk&nbsp;:fa-orcid: / Fullständig&nbsp;Stack&nbsp;Utvecklare&nbsp;:fa-stack-overflow: / Allmänt&nbsp;Bloggare&nbsp;:fa-blog:&nbsp;...
+# &nbsp;Unga&nbsp;Akademisk&nbsp;:fa-orcid: / Fullständig&nbsp;Stack&nbsp;Utvecklare&nbsp;:fa-stack-overflow: / Allmänt&nbsp;Bloggare&nbsp;:fa-blog:&nbsp;... Vill ha en blixt-snabb, säker personlig webbplats som är död-enkel att hantera &mdash; Otroligt kraftfull?
 
-&nbsp;
-
-Vill du ha en webbplats som är **secure-by-standard**? Lätt att uppdatera och hantera, samtidigt som du döljer komplexiteten hos ett underliggande versionskontrollsystem, men ändå ger dig full kraft när du verkligen behöver det?  Omedelbar publicering när du vill ha det; smidiga, mellanlagrade grenbyggen och anpassningsbara detaljerade kampanjer till din produktionswebbplats eftersom det passar ditt teams föredragna arbetsflöde.
+</div>
 
 &nbsp;
 
-Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig när du behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
+Behöver mer hästkraft än en [En ponny som Hugo](https://www.iconoclasts.blog/joe/ssg) kanon?
+
+&nbsp;
+
+Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig med andra Jamstack värdleverantörer, när du bara behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
 
 &nbsp;
 
@@ -366,19 +332,15 @@ Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total
 
 &nbsp;
 
-Ta arkitektoniska ledtrådar från [David Wheeler's](https://justatheory.com) berömd [Brikolage CMS](https://bricolagecms.org/), detta [teknik](https://iconoclasts.blog/joe/apache-cms) uppfanns först i slutet av 2010 av [Paul Querna](https://paul.querna.org/articles/2010/10/22/evolution-of-apaches-websites/)Daniel Shahaf, Dave Fisher och [Joe Schaefer](https://iconoclasts.blog/joe/) som medlemmar i Apache Infrastructure-teamet. Frasen "JAMstack" myntades år senare (2015), av en grupp omedveten om vår tidigare konst i detta utrymme.  Men den [allmän handling](http://web.archive.org/web/20120112045033/http://www.apache.org/dev/cms) Detta nya erbjudande från SunStar Systems vittnar om det ursprungliga arvet och dess verkliga ursprung med öppen källkod.
+När Apache-projektgrupper presenterades med ett fritt val mellan att använda Confluence-stödda webbplatser eller använda Orions rötter som [och Apache CMS](https://www.iconoclasts.blog/joe/apache-cms)De valde till stor del Apache CMS. Vi tror att du också kommer att göra det, med dess kraftigt förbättrade Orion!
 
 &nbsp;
 
-När Apache-projektgrupper presenterades med ett fritt val mellan att använda Confluence-stödda webbplatser, eller använda Orions rötter som Apache CMS, valde de överväldigande Apache CMS. Vi tror att du också kommer att göra det, med dess kraftigt förbättrade Orion!
+## Säkra som standard, versionskontrollerade och snabbare än andra statiska webbplatsgeneratorer.  Publicera direkt eller stegvisa ändringar &mdash; Prova en snabb demo och se varför det är enkelt.
 
 &nbsp;
 
-<h4>Vill du ge det en snabb snurr för att se hur snabbt och enkelt det är?</h4>
-
-&nbsp;
-
-Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live.  Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du inte kan göra är att bekräfta och se dina ändringar bygga och driftsätta; det är begränsat till vår personal av uppenbara skäl.
+Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live. Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du inte kan göra är att bekräfta och se dina ändringar bygga och driftsätta; det är begränsat till vår personal av uppenbara skäl.
 
 &nbsp;
 
@@ -386,7 +348,7 @@ Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort 
 
 &nbsp;
 
-<h3>Det är dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp.</h3>
+### Det är dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp.
 
 &nbsp;
 
@@ -420,43 +382,6 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 
 &nbsp;
 
-<a href="https://iconoclasts.blog/joe/wikis">
-
-```mermaid
-mindmap
-  root((KMS))
-    (Wiki-plattformar)
-      ((Orion))
-      [Påverkan]
-      [Begrepp]
-    (Versionskontroll)
-      [Användningar]
-        Innehållskurering
-        Åtkomstkontroller
-        Oföränderlig historik
-      [Verktyg]
-        Git
-        Subversion
-    (Jamstack)
-      [CMS]
-        Upphovsmän
-        Forskare
-        Kuratorer
-      [Platsbyggen]
-        Utvecklare
-        Arkitekter
-      [Säkerhet]
-    (AI)
-     RAG
-     kommandoradsgränssnitt
-```
-
-</a>
-
-&nbsp;
-
-&nbsp;
-
 <center>
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
 <div class="card-header">Komma igång</div>
@@ -479,7 +404,7 @@ Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-ma
 
 &nbsp;
 
-### Funktionsjämförelserutnät
+# Funktionsjämförelserutnät
 
 <br />
 
@@ -490,7 +415,7 @@ Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-ma
 
 <br />
 
-### Detaljer
+# Detaljer
 
 {% for d in deps %}
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
@@ -498,28 +423,6 @@ Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-ma
 
 <hr>
 <br><br><br>
-
-## Några representativa skärmdumpar
-
-<br>
-<h3>IDE-vy med tyska, franska, hebreiska och ryska (UTF-8).</h3>
-<center><img src="../images/ide-fa.png" style="width:800px"></center>
-<br><br><br>
-<h3>Vy över IDE-redigerare.</h3>
-<center><img src="../images/ide-editor.png" style="width:800px"></center>
-<br><br><br>
-<h3>Redigeringsvy för integrerad utvecklingsmiljö (spanska).</h3>
-<center><img src="../images/ide-es.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE: Skapa fullständig webbplats.</h3>
-<center><img src="../images/ide-build.png" style="width:800px"></center>
-<br><br><br>
-<h3>IDE: Skapa typisk plats.</h3>
-<center><img src="../images/ide-file-build.png" style="width:800px"></center>
-<br/><br><br>
-<h3><a href="https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/;action=search;regex=mailto:">Sök efter integrerad utvecklingsmiljö</a> <small>(Dessa länkar i <span style="color:#e83e8c">skär</span> kommer att släppa dig direkt i en editor skärm, med markören placerad exakt enligt den matchande texten)</small>.</h3>
-<center><img src="../images/ide-search.png" style="width:800px"></center>
-</div>
 
 <style type="text/css">
 /*-------------------------------------------
