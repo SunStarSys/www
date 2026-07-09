@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: التحقق = 47904
+status: مؤكّد
 title: SunStar أوريون الأنظمة
 ---
 
@@ -65,7 +65,7 @@ title: SunStar أوريون الأنظمة
 
 <div class="border-top" style="padding-top: 20px">
 
-# <span class="text-warning-emphasis">لمديري الأعمال التنفيذيين</span><br>&nbsp;
+# <span class="text-warning-emphasis">لمديري الأعمال التنفيذيين :fa-briefcase:</span><br>&nbsp;
 
 &nbsp;
 
@@ -93,19 +93,19 @@ title: SunStar أوريون الأنظمة
 <div class="card-header">منتج أكثر أمانًا وأفضل لـ <span class="text-white">أقل من المال</span></div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. تخفيض كبير في مخاطر الأوراق المالية
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. تخفيض كبير في مخاطر الأوراق المالية :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. تكامل البيانات/الرياضيات الحقيقية مع ترجمة البحث والذكاء الاصطناعي، بالإضافة إلى محرك معالجة البيانات وحزمة رسومات المتجهات
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. تكامل البيانات/الرياضيات الحقيقية مع ترجمة البحث والذكاء الاصطناعي، بالإضافة إلى محرك معالجة البيانات وحزمة رسومات المتجهات :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. دعم حقيقي للذكاء الاصطناعي للوكيل
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. دعم حقيقي للذكاء الاصطناعي للوكيل :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. أدوات معالجة المحتوى المجمعة
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. أدوات معالجة المحتوى المجمعة :fa-map-location-dot:
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">حفظ $100K / سنة</span>](https://www.atlassian.com/software/confluence/pricing) مع [ترخيص مؤسسة Orion's $0 لكل مقعد / لكل موقع](plans)
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">وفر 50% / سنة</span>](https://www.atlassian.com/software/confluence/pricing) مع [خطة عمل أوريون](plans) أكثر من ميزة مقارنة قسط Confluence
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. تكاليف تبديل بأسعار معقولة وقابلة للإهلاك من Confluence
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. تكاليف تبديل بأسعار معقولة وقابلة للإهلاك من Confluence :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -127,11 +127,11 @@ title: SunStar أوريون الأنظمة
 
 &nbsp;
 
-[^1]. اعتماد أوريون [على الفور يقلل من المخاطر](security#separation-of-concerns-and-engineering-tradeoffs10) من حادث أمني كبير ؛ وسلمت راحة البال الأمور إلى مجلس الإدارة أكثر من مجرد [سياسة تأمين برامج الفدية باهظة الثمن](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) لا تحتاج أبدًا إلى تقديم مطالبة ضدك.
+[^1]. :fa-lock: اعتماد أوريون [على الفور يقلل من المخاطر](security#separation-of-concerns-and-engineering-tradeoffs10) من حادث أمني كبير ؛ وسلمت راحة البال الأمور إلى مجلس الإدارة أكثر من مجرد [سياسة تأمين برامج الفدية باهظة الثمن](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) لا تحتاج أبدًا إلى تقديم مطالبة ضدك.
 
 &nbsp;
 
-[^2]. وضع جانبا [مزايا الأمان](https://www.iconoclasts.blog/joe/wishful-thinking) و [عقوبات شديدة](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) من أجل [انتهاكات السرية لبيانات HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)إن العيب الأساسي في المنتجات الشبيهة بالويكي بخلاف أوريون هو أنها تفشل في توفير **تكاملات / واجهات متماسكة لإدماج صيغ ملفات البيانات التي يتم إنشاؤها خارجيًا وصيانتها دوريًا**. ومع ذلك، من خلال التركيز على عدد قليل من تنسيقات النصوص/المصادر/البيانات القياسية في المجال، حتى الجداول الرياضية والرسوم البيانية والرسوم البيانية والخرائط والمخططات المعمارية الأكثر تعقيدًا التي يتم إنشاؤها بواسطة البيانات هي **قابلة للبحث بالكامل وقابلة للترجمة بواسطة الذكاء الاصطناعي** في أي من اللغات الطبيعية المدعومة في أوريون.
+[^2]. :fa-infinity: وضع جانبا [مزايا الأمان](https://www.iconoclasts.blog/joe/wishful-thinking) و [عقوبات شديدة](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) من أجل [انتهاكات السرية لبيانات HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)إن العيب الأساسي في المنتجات الشبيهة بالويكي بخلاف أوريون هو أنها تفشل في توفير **تكاملات / واجهات متماسكة لإدماج صيغ ملفات البيانات التي يتم إنشاؤها خارجيًا وصيانتها دوريًا**. ومع ذلك، من خلال التركيز على عدد قليل من تنسيقات النصوص/المصادر/البيانات القياسية في المجال، حتى الجداول الرياضية والرسوم البيانية والرسوم البيانية والخرائط والمخططات المعمارية الأكثر تعقيدًا التي يتم إنشاؤها بواسطة البيانات هي **قابلة للبحث بالكامل وقابلة للترجمة بواسطة الذكاء الاصطناعي** في أي من اللغات الطبيعية المدعومة في أوريون.
 
 &nbsp;
 
@@ -139,11 +139,11 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-[^33]. <span class="text-white">`MCP` هو مزق. `RAG` أسوأ من ذلك. ما تريده هو مزامنة التحكم في الإصدار ثنائي الاتجاه مع `git`. إن ربط حل الذكاء الاصطناعي الوكيل المحلي لشركتك بسير عمل ويكي فريقك لا يحصل على أي أمان أو أسهل أو أقل تكلفة من Orion.</span>
+[^33]. :fa-robot: `MCP` هو مزق. `RAG` أسوأ من ذلك. ما تريده هو **مزامنة التحكم في الإصدار ثنائية الاتجاه مع `git`.** إن ربط حل الذكاء الاصطناعي الوكيل المحلي لشركتك بسير عمل wiki الخاص بفريقك لا يحصل على أي أمان أو أسهل أو أقل تكلفة من Orion.
 
 &nbsp;
 
-[^44]. بعد ذلك، **أدوات معالجة المحتوى** هي سمة أساسية لـ Orion، وليست فرصة لزيادة المبيعات. قاعدة بيانات الحقائق لكل ويكي هي الصناعة أولاً &mdash; مفيد لأشياء مثل إدارة العلامة التجارية اسم متسق أو البيانات الوصفية البيانات الاصطناعية البرمجيات ذات الصلة عبر الموقع بأكمله مع تحرير 1 خط إلى [ملف YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^44]. :fa-map-location-dot: بعد ذلك، **أدوات معالجة المحتوى** هي سمة أساسية لـ Orion، وليست فرصة لزيادة المبيعات. قاعدة بيانات الحقائق لكل ويكي هي الصناعة أولاً &mdash; مفيد لأشياء مثل إدارة العلامة التجارية اسم متسق أو البيانات الوصفية البيانات الاصطناعية البرمجيات ذات الصلة عبر الموقع بأكمله مع تحرير 1 خط إلى [ملف YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -179,7 +179,7 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-[^7]. يمكن أن تكون تكاليف التحويل/التأهيل من Confluence منخفضة تصل إلى إجمالي 100 دولار للشركات الصغيرة والمتوسطة، ويتم استهلاكها على مدار السنوات الثلاث الأولى من الخدمة للعملاء الذين يحتاجون إلى نهج أكثر عملية. العملية الشاملة هي أربعة أضعاف:
+[^7]. :fa-arrow-left-arrow-right: يمكن أن تكون تكاليف التحويل/التأهيل من Confluence منخفضة تصل إلى إجمالي 100 دولار للشركات الصغيرة والمتوسطة، ويتم استهلاكها على مدار السنوات الثلاث الأولى من الخدمة للعملاء الذين يحتاجون إلى نهج أكثر عملية. العملية الشاملة هي أربعة أضعاف:
 
 1. توافق على الهيكل المطلوب لخريطة الموقع من مساحات Confluence الفردية إلى ملفات ومجلدات Orion wiki،
 
@@ -292,15 +292,26 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-[اتصل بنا](../contact) لتسعير المؤسسة وعرض توضيحي مجاني
+&nbsp;
 
 &nbsp;
 
-[الانتقال إلى شبكة مقارنة الميزات](#h1-feature-comparison-grid)
+<center>
 
+[اتصل بنا](../contact) لتسعير المؤسسة وعرض توضيحي مجاني
+
+</center>
 </div>
 <div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+
+&nbsp;
+
+<center>
+
+[الانتقال إلى شبكة مقارنة الميزات](#h1-feature-comparison-grid)
+
+</center>
 
 &nbsp;
 
@@ -310,7 +321,7 @@ Orion تكمل صورة تكامل البيانات مع محرك قاعدة ب�
 
 &nbsp;
 
-# تريد موقعًا شخصيًا سريعًا وآمنًا وبسيطًا لإدارة &mdash; ولكن قوية بشكل لا يصدق؟
+# تريد Lightning-Fast :fa-cloud-bolt:موقع شخصي آمن :fa-lock: هذه طريقة بسيطة لإدارة &mdash; ولكن قوية بشكل لا يصدق؟
 </div>
 
 &nbsp;
@@ -440,8 +451,7 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr>
-<br><br><br>
+&nbsp;
 
 <style type="text/css">
 /*-------------------------------------------

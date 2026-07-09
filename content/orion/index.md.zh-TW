@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =47904
+status: 已驗證
 title: SunStar 系統的 Orion
 ---
 
@@ -65,7 +65,7 @@ title: SunStar 系統的 Orion
 
 <div class="border-top" style="padding-top: 20px">
 
-# <span class="text-warning-emphasis">業務主管</span><br>&nbsp;
+# <span class="text-warning-emphasis">業務主管:fa-briefcase:</span><br>&nbsp;
 
 &nbsp;
 
@@ -93,19 +93,19 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 <div class="card-header">更安全、更好的產品<span class="text-white">減少金錢</span></div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1 個</a>。重大證券風險降低
+&nbsp;&nbsp;<a id="fn-1" href="#1">1 個</a>。重大證券風險降低:fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2 個</a>。Real Math / Data Integration with Search and AI Translation，加上資料處理引擎和向量圖形套件
+&nbsp;&nbsp;<a id="fn-2" href="#2">2 個</a>。Real Math / Data Integration with Search and AI Translation，加上資料處理引擎和向量圖形套件:fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。True Agent AI 支援
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。True Agent AI 支援:fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。組合內容策展工具
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。組合內容策展工具:fa-map-location-dot:
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5 個</a>. [<span class="text-white">每年儲存 $100K</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的每座位 $0 / 每網站企業授權](plans)
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6 歲</a>. [<span class="text-white">每年節省 50%</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的業務計畫](plans) 超過功能可比較的 Confluence Premium
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7 天</a>。經濟實惠、可攤銷的轉換成本
+&nbsp;&nbsp;<a id="fn-7" href="#7">7 天</a>。經濟實惠、可攤銷的轉換成本:fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -127,11 +127,11 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-[^1]。採用 Orion [立即降低風險](security#separation-of-concerns-and-engineering-tradeoffs10) 在重大安全事故中，安心向您的董事會提供比一個更重要的事宜[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
+[^1]. :fa-lock: 採用 Orion [立即降低風險](security#separation-of-concerns-and-engineering-tradeoffs10) 在重大安全事故中，安心向您的董事會提供比一個更重要的事宜[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
 
 &nbsp;
 
-[^2]。旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，除了 Orion 以外的類似 Wiki 的產品，其基本缺點是，他們無法提供 **一致的整合 / 介面以進行註冊，並定期維護外部產生的資料檔格式 **。不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
+[^2]. :fa-infinity: 旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，除了 Orion 以外的類似 Wiki 的產品，其基本缺點是，他們無法提供 **一致的整合 / 介面以進行註冊，並定期維護外部產生的資料檔格式 **。不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
 
 &nbsp;
 
@@ -139,11 +139,11 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-[第 3 天]. <span class="text-white">`MCP` 是翻轉。`RAG` 甚至更糟。您想要的是雙向版本控制與`git`。將您公司的當地 Agentic AI 解決方案融入團隊的 Wiki 工作流程中，不會比使用 Orion 更安全、更簡單或更低的成本。</span>
+[第 3 天]. :fa-robot: `MCP` 是翻轉。`RAG` 甚至更糟。您想要的 **雙向版本控制同步與`git`。** 將您公司的當地 Agentic AI 解決方案融入您團隊的 Wiki 工作流程中，不會比使用 Orion 更安全、更簡單或更低的成本。
 
 &nbsp;
 
-[第 4 天]。接下來，** 內容策展工具 **是 Orion 的重要功能，而非向上銷售的機會。我們的每個 Wiki 事實資料庫是業界第一&mdash; 在整個網站管理一致的名稱標記或相關軟體使用者自建物件描述資料等功能，只要編輯一行即可[YAML 檔案](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[第 4 天]. :fa-map-location-dot: 接下來，** 內容策展工具 **是 Orion 的重要功能，而非向上銷售的機會。我們的每個 Wiki 事實資料庫是業界第一&mdash; 在整個網站管理一致的名稱標記或相關軟體使用者自建物件描述資料等功能，只要編輯一行即可[YAML 檔案](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -179,7 +179,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-[^7]。Confluence 的切換 / 到職成本可能低至中小企業的總計 100 美元，而且對於需要更實作方式的客戶，在前三年服務中攤提。整體處理程序有四倍：
+[^7]. :fa-arrow-left-arrow-right: Confluence 的切換 / 到職成本可能低至中小企業的總計 100 美元，而且對於需要更實作方式的客戶，在前三年服務中攤提。整體處理程序有四倍：
 
 1. 同意所需的地圖拓樸，從個別的影響空間到 Orion wiki 檔案和資料夾，
 
@@ -292,15 +292,26 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-[聯系我們](../contact) 適用於企業定價和免費示範
+&nbsp;
 
 &nbsp;
 
-[跳至功能比較方格](#h1-feature-comparison-grid)
+<center>
 
+[聯系我們](../contact) 適用於企業定價和免費示範
+
+</center>
 </div>
 <div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+
+&nbsp;
+
+<center>
+
+[跳至功能比較方格](#h1-feature-comparison-grid)
+
+</center>
 
 &nbsp;
 
@@ -310,7 +321,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-# 想要一個快如閃電的安全個性化網站，難以管理&mdash; 然而，強大的功能？
+# 想要閃電 - 快速:fa-cloud-bolt:，安全的個人網站:fa-lock: 這對管理非常簡單&mdash; 然而，強大的功能？
 </div>
 
 &nbsp;
@@ -440,8 +451,7 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr>
-<br><br><br>
+&nbsp;
 
 <style type="text/css">
 /*-------------------------------------------

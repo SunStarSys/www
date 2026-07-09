@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=47904
+status: verifierad
 title: SunStar Orion för system
 ---
 
@@ -65,7 +65,7 @@ title: SunStar Orion för system
 
 <div class="border-top" style="padding-top: 20px">
 
-# <span class="text-warning-emphasis">För företagsledare</span><br>&nbsp;
+# <span class="text-warning-emphasis">För företagsledare :fa-briefcase:</span><br>&nbsp;
 
 &nbsp;
 
@@ -93,19 +93,19 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 <div class="card-header">Säkrare, bättre produkt för <span class="text-white">Mindre pengar</span></div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Minskning av väsentliga säkerhetsrisker
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Minskning av väsentliga säkerhetsrisker :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math / Dataintegrering med sökning och AI-översättning, plus databehandlingsmotor och vektorgrafikpaket
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math / Dataintegrering med sökning och AI-översättning, plus databehandlingsmotor och vektorgrafikpaket :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Äkta autentiskt AI-stöd
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Äkta autentiskt AI-stöd :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Verktyg för sammanslagen innehållskuratering
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Verktyg för sammanslagen innehållskuratering :fa-map-location-dot:
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Spara $100K / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions företagslicensiering för 0 USD per plats/per webbplats](plans)
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Spara 50 % / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions affärsplan](plans) Över funktionsjämförbar Confluence Premium
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Prisvärd, avskrivningsbar växlingskostnad från sammanflöde
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Prisvärd, avskrivningsbar växlingskostnad från sammanflöde :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -127,11 +127,11 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 
 &nbsp;
 
-[^1]. Antagande Orion [omedelbart minskar risken](security#separation-of-concerns-and-engineering-tradeoffs10) av en större säkerhetsincident; och sinnesfrid levererade frågor mer till din styrelse än en [dyra ransomware försäkring](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Du behöver aldrig göra anspråk mot.
+[^1]. :fa-lock: Antagande Orion [omedelbart minskar risken](security#separation-of-concerns-and-engineering-tradeoffs10) av en större säkerhetsincident; och sinnesfrid levererade frågor mer till din styrelse än en [dyra ransomware försäkring](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Du behöver aldrig göra anspråk mot.
 
 &nbsp;
 
-[^2]. Lägg undan [säkerhetsfördelar](https://www.iconoclasts.blog/joe/wishful-thinking) och [skärpta påföljder](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) för [sekretessöverträdelser av HIPAA-data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), en grundläggande brist hos andra wikiliknande produkter än Orion är att de inte tillhandahåller **sammanhängande integreringar / gränssnitt för införlivande och periodiskt underhåll av externt genererade datafilformat**. Men genom att fokusera på en handfull branschstandardiserade text-/källdokument-/dataformat är även dina mest invecklade datagenererade matematiska tabeller, grafer, diagram, kartor och arkitektoniska diagram **fullt sökbara och AI-översättningsbara** på något av Orions naturliga språk som stöds.
+[^2]. :fa-infinity: Lägg undan [säkerhetsfördelar](https://www.iconoclasts.blog/joe/wishful-thinking) och [skärpta påföljder](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) för [sekretessöverträdelser av HIPAA-data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), en grundläggande brist hos andra wikiliknande produkter än Orion är att de inte tillhandahåller **sammanhängande integreringar / gränssnitt för införlivande och periodiskt underhåll av externt genererade datafilformat**. Men genom att fokusera på en handfull branschstandardiserade text-/källdokument-/dataformat är även dina mest invecklade datagenererade matematiska tabeller, grafer, diagram, kartor och arkitektoniska diagram **fullt sökbara och AI-översättningsbara** på något av Orions naturliga språk som stöds.
 
 &nbsp;
 
@@ -139,11 +139,11 @@ Orion slutför sin dataintegreringsbild med en kolumnvektordatabasmotor `PDL` oc
 
 &nbsp;
 
-[^3]. <span class="text-white">`MCP` Det är en ripoff. `RAG` är ännu värre. Vad du vill ha är dubbelriktad versionskontrollsynkronisering med `git`. Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare eller billigare än med Orion.</span>
+[^3]. :fa-robot: `MCP` Det är en ripoff. `RAG` är ännu värre. Vad du vill ha är **bidirectional version-control synkronisering med `git`.** Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare eller billigare än med Orion.
 
 &nbsp;
 
-[^4]. Därefter är **content curation tooling** ett viktigt inslag i Orion, inte en möjlighet till merförsäljning. Vår per-wiki faktadatabas är en bransch första &mdash; praktiskt för saker som att hantera konsekvent namn branding eller relaterad programvara artefakt metadata över hela webbplatsen med en 1-rads redigering till en [YAML-fil](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^4]. :fa-map-location-dot: Därefter är **content curation tooling** ett viktigt inslag i Orion, inte en möjlighet till merförsäljning. Vår per-wiki faktadatabas är en bransch första &mdash; praktiskt för saker som att hantera konsekvent namn branding eller relaterad programvara artefakt metadata över hela webbplatsen med en 1-rads redigering till en [YAML-fil](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -179,7 +179,7 @@ I takt med att personalens företagsstatus utvecklas över tid gör Orion det en
 
 &nbsp;
 
-[^7]. Kostnader för byte/introduktion från Confluence kan vara så låga som 100 USD totalt för SMB och avskrivas under de första tre åren av service för kunder som behöver en mer praktisk strategi. Den övergripande processen är fyrfaldig:
+[^7]. :fa-arrow-left-arrow-right: Kostnader för byte/introduktion från Confluence kan vara så låga som 100 USD totalt för SMB och avskrivas under de första tre åren av service för kunder som behöver en mer praktisk strategi. Den övergripande processen är fyrfaldig:
 
 1. överens om önskad topologi på webbplatskartan från enskilda Confluence-utrymmen till Orions wiki-filer och -mappar,
 
@@ -292,15 +292,26 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 &nbsp;
 
-[Kontakta oss](../contact) för företagspriser och en kostnadsfri demo
+&nbsp;
 
 &nbsp;
 
-[Gå till funktionsjämförelserutnät](#h1-feature-comparison-grid)
+<center>
 
+[Kontakta oss](../contact) för företagspriser och en kostnadsfri demo
+
+</center>
 </div>
 <div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+
+&nbsp;
+
+<center>
+
+[Gå till funktionsjämförelserutnät](#h1-feature-comparison-grid)
+
+</center>
 
 &nbsp;
 
@@ -310,7 +321,7 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 &nbsp;
 
-# Vill ha en blixt-snabb, säker personlig webbplats som är död-enkel att hantera &mdash; Otroligt kraftfull?
+# Vill ha en blixt :fa-cloud-bolt:, Säker personlig webbplats :fa-lock: Det är enkelt att hantera &mdash; Otroligt kraftfull?
 </div>
 
 &nbsp;
@@ -440,8 +451,7 @@ Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-ma
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr>
-<br><br><br>
+&nbsp;
 
 <style type="text/css">
 /*-------------------------------------------

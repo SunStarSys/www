@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: draft
+status: verfied
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -143,7 +143,7 @@ Orion completes its data integration picture with a columnar vector database eng
 
 &nbsp;
 
-[^4]. :fa-map-locatino-dot: Next, **content curation tooling** is an essential feature of Orion, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^4]. :fa-map-location-dot: Next, **content curation tooling** is an essential feature of Orion, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 

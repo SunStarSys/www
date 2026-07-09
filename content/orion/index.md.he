@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 47904
+status: מאומת
 title: SunStar אוריון מערכות
 ---
 
@@ -65,7 +65,7 @@ title: SunStar אוריון מערכות
 
 <div class="border-top" style="padding-top: 20px">
 
-# <span class="text-warning-emphasis">למנהלי עסקים</span><br>&nbsp;
+# <span class="text-warning-emphasis">למנהלי עסקים :fa-briefcase:</span><br>&nbsp;
 
 &nbsp;
 
@@ -93,19 +93,19 @@ title: SunStar אוריון מערכות
 <div class="card-header">מוצר בטוח וטוב יותר עבור <span class="text-white">פחות כסף</span></div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. הפחתת סיכון אבטחה מהותית
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. הפחתת סיכון אבטחה מהותית :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. מתמטיקה אמיתית / שילוב נתונים עם תרגום חיפוש ובינה מלאכותית, בתוספת מנוע עיבוד נתונים וחבילת גרפיקה וקטורית
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. מתמטיקה אמיתית / שילוב נתונים עם תרגום חיפוש ובינה מלאכותית, בתוספת מנוע עיבוד נתונים וחבילת גרפיקה וקטורית :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. תמיכה אמיתית בבינה מלאכותית של סוכנים
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. תמיכה אמיתית בבינה מלאכותית של סוכנים :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. כלי לאיסוף תוכן בחבילה
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. כלי לאיסוף תוכן בחבילה :fa-map-location-dot:
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">שמור $100K / שנה</span>](https://www.atlassian.com/software/confluence/pricing) עם [0$ לכל מושב / רישוי ארגוני לכל אתר](plans)
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">חסכו 50% לשנה</span>](https://www.atlassian.com/software/confluence/pricing) עם [תוכנית עסקית של אוריון](plans) פרמיית השפעה תואמת-יתר
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. עלויות מיתוג במחיר נוח וניתנות להפחתה כתוצאה מהשפעה
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. עלויות מיתוג במחיר נוח וניתנות להפחתה כתוצאה מהשפעה :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -127,11 +127,11 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-[^1]. אימוץ אוריון [להפחית באופן מיידי את הסיכון](security#separation-of-concerns-and-engineering-tradeoffs10) של תקרית ביטחונית גדולה; והשקט הנפשי העביר את העניינים לדירקטוריון שלך יותר מאשר לדירקטוריון [פוליסת ביטוח כופר יקרה](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) אתה אף פעם לא צריך להגיש תביעה נגד.
+[^1]. :fa-lock: אימוץ אוריון [להפחית באופן מיידי את הסיכון](security#separation-of-concerns-and-engineering-tradeoffs10) של תקרית ביטחונית גדולה; והשקט הנפשי העביר את העניינים לדירקטוריון שלך יותר מאשר לדירקטוריון [פוליסת ביטוח כופר יקרה](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) אתה אף פעם לא צריך להגיש תביעה נגד.
 
 &nbsp;
 
-[^2]. הצידה את [יתרונות האבטחה](https://www.iconoclasts.blog/joe/wishful-thinking) ואת [עונשים נוקשים](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) עבור [הפרות סודיות של נתוני HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), פגם בסיסי במוצרים דמויי ויקי שאינם אוריון הוא שהם אינם מספקים **שילובים קוהרנטיים/ממשקים לשילוב ותחזוקה תקופתית של פורמטים של קובצי נתונים שנוצרו חיצונית**. עם זאת, על ידי התמקדות בקומץ של טקסט/מסמך מקור/פורמטים של נתונים סטנדרטיים בתעשייה, אפילו הטבלאות המתמטיות המורכבות ביותר שנוצרו על ידי נתונים, גרפים, תרשימים, מפות ודיאגרמות ארכיטקטוניות ניתנות לחיפוש על ידי **ו- AI ניתן לתרגום** בכל אחת מהשפות הטבעיות הנתמכות של אוריון.
+[^2]. :fa-infinity: הצידה את [יתרונות האבטחה](https://www.iconoclasts.blog/joe/wishful-thinking) ואת [עונשים נוקשים](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) עבור [הפרות סודיות של נתוני HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), פגם בסיסי במוצרים דמויי ויקי שאינם אוריון הוא שהם אינם מספקים **שילובים קוהרנטיים/ממשקים לשילוב ותחזוקה תקופתית של פורמטים של קובצי נתונים שנוצרו חיצונית**. עם זאת, על ידי התמקדות בקומץ של טקסט/מסמך מקור/פורמטים של נתונים סטנדרטיים בתעשייה, אפילו הטבלאות המתמטיות המורכבות ביותר שנוצרו על ידי נתונים, גרפים, תרשימים, מפות ודיאגרמות ארכיטקטוניות ניתנות לחיפוש על ידי **ו- AI ניתן לתרגום** בכל אחת מהשפות הטבעיות הנתמכות של אוריון.
 
 &nbsp;
 
@@ -139,11 +139,11 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-[^3]. <span class="text-white">`MCP` זה ריפוד. `RAG` זה אפילו יותר גרוע. מה שאתה רוצה הוא דו-כיווני בקרת גרסאות עם `git`. חיבור פתרון ה-Agentic AI המקומי של החברה לתהליך העבודה הוויקי של הצוות שלכם לא הופך להיות בטוח יותר, קל יותר או זול יותר מאשר עם אוריון.</span>
+[^3]. :fa-robot: `MCP` זה ריפוד. `RAG` זה אפילו יותר גרוע. מה שאתה רוצה זה **bidirectional version-control sync with `git`תקיעת פתרון ה-Agentic AI המקומי של החברה בתהליך העבודה הוויקי של הצוות שלך אינה הופכת בטוחה יותר, קלה יותר או זולה יותר מאשר עם אוריון.
 
 &nbsp;
 
-[^4]. בנוסף, **כלי אוצרות תוכן** הוא מאפיין חיוני של אוריון, ולא הזדמנות לשדרג את המכירה. מסד הנתונים שלנו לעובדות per-wiki הוא הראשון בתעשייה &mdash; שימושי עבור דברים כמו ניהול מיתוג שמות עקבי או מטא דטה ארטיפקט תוכנה קשורה ברחבי האתר כולו עם 1-קו עריכה [קובץ YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^4]. :fa-map-location-dot: בנוסף, **כלי אוצרות תוכן** הוא מאפיין חיוני של אוריון, ולא הזדמנות לשדרג את המכירה. מסד הנתונים שלנו לעובדות per-wiki הוא הראשון בתעשייה &mdash; שימושי עבור דברים כמו ניהול מיתוג שמות עקבי או מטא דטה ארטיפקט תוכנה קשורה ברחבי האתר כולו עם 1-קו עריכה [קובץ YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -179,7 +179,7 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-[^7]. עלויות מיתוג/השתלבות מ-Confluence יכולות להיות נמוכות עד לסך הכל של 100 דולר עבור עסקים קטנים ובינוניים, והן מופחתות בשלוש שנות השירות הראשונות עבור לקוחות הזקוקים לגישה מעשית יותר. התהליך הכולל הוא פי ארבעה:
+[^7]. :fa-arrow-left-arrow-right: עלויות מיתוג/השתלבות מ-Confluence יכולות להיות נמוכות עד לסך הכל של 100 דולר עבור עסקים קטנים ובינוניים, והן מופחתות בשלוש שנות השירות הראשונות עבור לקוחות הזקוקים לגישה מעשית יותר. התהליך הכולל הוא פי ארבעה:
 
 1. מסכים על הטופולוגיה הרצויה של מפת האתר ממרחבי השפעה בודדים לקבצים ותיקיות של אוריון וויקי,
 
@@ -292,15 +292,26 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-[צרו קשר](../contact) לתמחור ארגוני ולהדגמה בחינם
+&nbsp;
 
 &nbsp;
 
-[קפיצה לרשת השוואת מאפיינים](#h1-feature-comparison-grid)
+<center>
 
+[צרו קשר](../contact) לתמחור ארגוני ולהדגמה בחינם
+
+</center>
 </div>
 <div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+
+&nbsp;
+
+<center>
+
+[קפיצה לרשת השוואת מאפיינים](#h1-feature-comparison-grid)
+
+</center>
 
 &nbsp;
 
@@ -310,7 +321,7 @@ Orion משלימה את תמונת שילוב הנתונים שלה עם מנו�
 
 &nbsp;
 
-# רוצה אתר אישי מהיר ומאובטח שמת פשוט לניהול &mdash; עם זאת, עוצמה מדהימה?
+# רוצה ברק-מהיר :fa-cloud-bolt:, אתר אישי מאובטח :fa-lock: מת-פשוט לניהול &mdash; עם זאת, עוצמה מדהימה?
 </div>
 
 &nbsp;
@@ -440,8 +451,7 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr>
-<br><br><br>
+&nbsp;
 
 <style type="text/css">
 /*-------------------------------------------

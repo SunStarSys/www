@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=47904
+status: ベファーナ
 title: SunStarシステムのOrion
 ---
 
@@ -65,7 +65,7 @@ title: SunStarシステムのOrion
 
 <div class="border-top" style="padding-top: 20px">
 
-# <span class="text-warning-emphasis">ビジネス・エグゼクティブ向け</span><br>&nbsp;
+# <span class="text-warning-emphasis">ビジネス・エグゼクティブ向け:fa-briefcase:</span><br>&nbsp;
 
 &nbsp;
 
@@ -93,19 +93,19 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 <div class="card-header">より安全で優れた製品<span class="text-white">少ないお金</span></div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>。重大なセキュリティ・リスクの軽減
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>。重大なセキュリティ・リスクの軽減:fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>。検索とAI翻訳による実数計算/データ統合に加え、データ処理エンジンとベクトルグラフィックスパッケージ
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>。検索とAI翻訳による実数計算/データ統合に加え、データ処理エンジンとベクトルグラフィックスパッケージ:fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。真のエージェントAIサポート
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。真のエージェントAIサポート:fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。バンドルされたコンテンツのキュレーション・ツール
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。バンドルされたコンテンツのキュレーション・ツール:fa-map-location-dot:
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">保存 $100K /年</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionの0ドル/座席/Webサイトごとのエンタープライズライセンス](plans)
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">年間50%割引</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionのビジネスプラン](plans) 比類のないコンフルエンスプレミアム
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>。手頃な価格で償却可能な切り替えコストをコンフルエンスから
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>。手頃な価格で償却可能な切り替えコストをコンフルエンスから:fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -127,11 +127,11 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-[^1]。オリオンの採用[すぐにリスクを軽減](security#separation-of-concerns-and-engineering-tradeoffs10) 大規模なセキュリティ・インシデントの1つ。心の安らぎは、取締役会により、[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。
+[^1]. :fa-lock: オリオンの採用[すぐにリスクを軽減](security#separation-of-concerns-and-engineering-tradeoffs10) 大規模なセキュリティ・インシデントの1つ。心の安らぎは、取締役会により、[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。
 
 &nbsp;
 
-[^2]。を除く。[セキュリティ上の利点](https://www.iconoclasts.blog/joe/wishful-thinking) および[強化ペナルティ](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 対象[HIPAAデータの機密性侵害](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)Orion以外のwikiに似た製品の基本的な欠陥は、外部で生成されたデータファイル形式を組み込み、定期的にメンテナンスするための**一貫した統合/インタフェースを提供できないことです**。ただし、業界標準の一握りのテキスト/ソース文書/データ形式に焦点を当てることによって、最も複雑なデータ生成の数学的表、グラフ、チャート、マップ、アーキテクチャ図であっても、**完全に検索可能で、AI翻訳可能**は、Orionでサポートされている自然言語のいずれかです。
+[^2]. :fa-infinity: を除く。[セキュリティ上の利点](https://www.iconoclasts.blog/joe/wishful-thinking) および[強化ペナルティ](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 対象[HIPAAデータの機密性侵害](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)Orion以外のwikiに似た製品の基本的な欠陥は、外部で生成されたデータファイル形式を組み込み、定期的にメンテナンスするための**一貫した統合/インタフェースを提供できないことです**。ただし、業界標準の一握りのテキスト/ソース文書/データ形式に焦点を当てることによって、最も複雑なデータ生成の数学的表、グラフ、チャート、マップ、アーキテクチャ図であっても、**完全に検索可能で、AI翻訳可能**は、Orionでサポートされている自然言語のいずれかです。
 
 &nbsp;
 
@@ -139,11 +139,11 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 &nbsp;
 
-[3(&amp;3)]. <span class="text-white">`MCP` RIPOFFです。`RAG` さらに悪い。必要なのは、双方向バージョン管理の同期です。`git`。貴社のローカルAgentic AIソリューションをチームのWikiワークフローに組み込むと、Orionよりも安全、簡単、低コストになることはありません。</span>
+[3(&amp;3)]. :fa-robot: `MCP` RIPOFFです。`RAG` さらに悪い。必要なもの**双方向バージョン管理同期`git`.**貴社のローカルエージェントAIソリューションをチームのWikiワークフローに取り込むと、Orionよりも安全、簡単、または低コストになることはありません。
 
 &nbsp;
 
-[^4]。次に、**コンテンツキュレーションツール**は、アップセルの機会ではなく、Orionの重要な機能です。Wikiファクト・データベースが業界初&mdash; 一貫性のある名前ブランディングや、Webサイト全体に関連するソフトウェア・アーティファクト・メタデータを1行で編集して[YAMLファイル](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^4]. :fa-map-location-dot: 次に、**コンテンツキュレーションツール**は、アップセルの機会ではなく、Orionの重要な機能です。Wikiファクト・データベースが業界初&mdash; 一貫性のある名前ブランディングや、Webサイト全体に関連するソフトウェア・アーティファクト・メタデータを1行で編集して[YAMLファイル](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -179,7 +179,7 @@ Orion、列ベクトル・データベース・エンジンでデータ統合の
 
 &nbsp;
 
-[^7]。Confluenceからの切り替え/オンボーディング・コストは、中小企業では合計100ドルまで低く、ハンズオン・アプローチが必要な顧客では最初の3年間のサービスで償却できます。全体的なプロセスは4倍です。
+[^7]. :fa-arrow-left-arrow-right: Confluenceからの切り替え/オンボーディング・コストは、中小企業では合計100ドルまで低く、ハンズオン・アプローチが必要な顧客では最初の3年間のサービスで償却できます。全体的なプロセスは4倍です。
 
 1. 個々のConfluenceスペースからOrion wikiファイルやフォルダまで、サイトマップの望ましいトポロジに同意します。
 
@@ -292,15 +292,26 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-[お問い合わせ](../contact) エンタープライズ向け価格と無料デモ
+&nbsp;
 
 &nbsp;
 
-[フィーチャ比較グリッドに移動](#h1-feature-comparison-grid)
+<center>
 
+[お問い合わせ](../contact) エンタープライズ向け価格と無料デモ
+
+</center>
 </div>
 <div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+
+&nbsp;
+
+<center>
+
+[フィーチャ比較グリッドに移動](#h1-feature-comparison-grid)
+
+</center>
 
 &nbsp;
 
@@ -310,7 +321,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-# 非常に簡単に管理できるLightning-Fastで安全な個人用サイトが必要&mdash; 驚くほど強力?
+# Lightning-Fastが欲しい:fa-cloud-bolt:、安全な個人用サイト:fa-lock: 管理するのは非常に簡単です&mdash; 驚くほど強力?
 </div>
 
 &nbsp;
@@ -440,8 +451,7 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr>
-<br><br><br>
+&nbsp;
 
 <style type="text/css">
 /*-------------------------------------------

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=47904
+status: verificado
 title: SunStar Orión de los Sistemas
 ---
 
@@ -65,7 +65,7 @@ title: SunStar Orión de los Sistemas
 
 <div class="border-top" style="padding-top: 20px">
 
-# <span class="text-warning-emphasis">Para ejecutivos de negocios</span><br>&nbsp;
+# <span class="text-warning-emphasis">Para ejecutivos de negocios :fa-briefcase:</span><br>&nbsp;
 
 &nbsp;
 
@@ -93,19 +93,19 @@ A diferencia de los productos que utilizan sus competidores, Orion es un marco d
 <div class="card-header">Producto más seguro y mejor para <span class="text-white">Menos dinero</span></div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Reducción sustancial del riesgo de seguridad
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Reducción sustancial del riesgo de seguridad :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Matemáticas reales / integración de datos con búsqueda y traducción de IA, además de motor de procesamiento de datos y paquete de gráficos vectoriales
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Matemáticas reales / integración de datos con búsqueda y traducción de IA, además de motor de procesamiento de datos y paquete de gráficos vectoriales :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Soporte de IA auténtico
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Soporte de IA auténtico :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Herramientas de curado de contenido agrupado
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Herramientas de curado de contenido agrupado :fa-map-location-dot:
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Ahorre $100K / año</span>](https://www.atlassian.com/software/confluence/pricing) con [Licencias empresariales de $0 por asiento / por sitio web de Orion](plans)
 
 &nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Ahorre 50% / año</span>](https://www.atlassian.com/software/confluence/pricing) con [Plan de negocio de Orion](plans) Más sobre Confluence Premium
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Costos de cambio asequibles y amortizables de la confluencia
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Costos de cambio asequibles y amortizables de la confluencia :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -127,11 +127,11 @@ A diferencia de los productos que utilizan sus competidores, Orion es un marco d
 
 &nbsp;
 
-[^1]. Adopción de Orión [reduce inmediatamente el riesgo](security#separation-of-concerns-and-engineering-tradeoffs10) de un incidente de seguridad importante; y la tranquilidad que se brinda es más importante para su junta directiva que [costosa póliza de seguro de ransomware](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Nunca tiene que presentar una reclamación en contra.
+[^1]. :fa-lock: Adopción de Orión [reduce inmediatamente el riesgo](security#separation-of-concerns-and-engineering-tradeoffs10) de un incidente de seguridad importante; y la tranquilidad que se brinda es más importante para su junta directiva que [costosa póliza de seguro de ransomware](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Nunca tiene que presentar una reclamación en contra.
 
 &nbsp;
 
-[^2]. Dejando de lado el [ventajas de seguridad](https://www.iconoclasts.blog/joe/wishful-thinking) y el [endurecimiento de las sanciones](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) para [violaciones de confidencialidad de los datos HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), un defecto fundamental de los productos similares a wiki distintos de Orion es que no proporcionan **integraciones/interfaces coherentes para la incorporación y el mantenimiento periódico de formatos de archivos de datos generados externamente**. Sin embargo, al centrarse en un puñado de formatos estándar de texto/documentos de origen/datos del sector, incluso las tablas, gráficos, mapas y diagramas matemáticos generados por datos más complejos **son totalmente aptas para la búsqueda y la IA traducibles** en cualquiera de los lenguajes naturales soportados de Orion.
+[^2]. :fa-infinity: Dejando de lado el [ventajas de seguridad](https://www.iconoclasts.blog/joe/wishful-thinking) y el [endurecimiento de las sanciones](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) para [violaciones de confidencialidad de los datos HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), un defecto fundamental de los productos similares a wiki distintos de Orion es que no proporcionan **integraciones/interfaces coherentes para la incorporación y el mantenimiento periódico de formatos de archivos de datos generados externamente**. Sin embargo, al centrarse en un puñado de formatos estándar de texto/documentos de origen/datos del sector, incluso las tablas, gráficos, mapas y diagramas matemáticos generados por datos más complejos **son totalmente aptas para la búsqueda y la IA traducibles** en cualquiera de los lenguajes naturales soportados de Orion.
 
 &nbsp;
 
@@ -139,11 +139,11 @@ Orion completa su imagen de integración de datos con un motor de base de datos 
 
 &nbsp;
 
-[^3]. <span class="text-white">`MCP` es una polémica. `RAG` es aún peor. Lo que desea es la sincronización bidireccional de control de versiones con `git`. Conectar la solución Agentic AI local de tu empresa en el flujo de trabajo wiki de tu equipo no se vuelve más seguro, más fácil o menos costoso que con Orion.</span>
+[^3]. :fa-robot: `MCP` es una polémica. `RAG` es aún peor. Lo que quieres es **sincronización bidireccional de control de versiones con `git`.** Conectar la solución de IA Agentic local de tu empresa en el flujo de trabajo wiki de tu equipo no se vuelve más seguro, más fácil o menos costoso que con Orion.
 
 &nbsp;
 
-[^4]. A continuación, **herramientas de curación de contenido** es una función esencial de Orion, no una oportunidad de upsell. Nuestra base de datos de datos por wiki es la primera en la industria &mdash; útil para cosas como la gestión de marcas de nombres consistentes o metadatos de artefactos de software relacionados en todo el sitio web con una edición de 1 línea en un [Archivo YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^4]. :fa-map-location-dot: A continuación, **herramientas de curación de contenido** es una función esencial de Orion, no una oportunidad de upsell. Nuestra base de datos de datos por wiki es la primera en la industria &mdash; útil para cosas como la gestión de marcas de nombres consistentes o metadatos de artefactos de software relacionados en todo el sitio web con una edición de 1 línea en un [Archivo YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -179,7 +179,7 @@ A medida que el estado corporativo de su personal evoluciona con el tiempo, Orio
 
 &nbsp;
 
-[^7]. Los costos de cambio/incorporación de Confluencia pueden ser tan bajos como 100 dólares en total para las pymes y amortizarse durante los primeros tres años de servicio para los clientes que necesitan un enfoque más práctico. El proceso general se cuadruplica:
+[^7]. :fa-arrow-left-arrow-right: Los costos de cambio/incorporación de Confluencia pueden ser tan bajos como 100 dólares en total para las pymes y amortizarse durante los primeros tres años de servicio para los clientes que necesitan un enfoque más práctico. El proceso general se cuadruplica:
 
 1. acordar la topología deseada del mapa del sitio desde espacios individuales de Confluencia hasta archivos y carpetas de Orion wiki,
 
@@ -292,15 +292,26 @@ Sin dependencia de proveedores &mdash; y *lo demostramos*. Su contenido reside e
 
 &nbsp;
 
-[Contacta con nosotros](../contact) para precios empresariales y una demostración gratuita
+&nbsp;
 
 &nbsp;
 
-[Saltar a la cuadrícula de comparación de funciones](#h1-feature-comparison-grid)
+<center>
 
+[Contacta con nosotros](../contact) para precios empresariales y una demostración gratuita
+
+</center>
 </div>
 <div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:144px;margin-top:3px;" src="index.page/ad1"></a>
+<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+
+&nbsp;
+
+<center>
+
+[Saltar a la cuadrícula de comparación de funciones](#h1-feature-comparison-grid)
+
+</center>
 
 &nbsp;
 
@@ -310,7 +321,7 @@ Sin dependencia de proveedores &mdash; y *lo demostramos*. Su contenido reside e
 
 &nbsp;
 
-# Desea un sitio personal rápido y seguro que sea fácil de administrar &mdash; ¿Increíblemente poderoso?
+# Quiere un rayo rápido :fa-cloud-bolt:, Sitio personal seguro :fa-lock: Eso es Dead-Simple para administrar &mdash; ¿Increíblemente poderoso?
 </div>
 
 &nbsp;
@@ -440,8 +451,7 @@ Necesita ayuda para personalizar el `Perl` construir sistema en `lib/` y otras p
 - [{{d.1.headers.title|safe}}]({{d.0}}) &mdash; {{d.1.content|lede}}
 {% endfor %}
 
-<hr>
-<br><br><br>
+&nbsp;
 
 <style type="text/css">
 /*-------------------------------------------
