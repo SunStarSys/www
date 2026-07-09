@@ -139,7 +139,7 @@ Orion slutför sin dataintegreringsbild med en kolumnvektordatabasmotor `PDL` oc
 
 &nbsp;
 
-[^3]. :fa-robot: `MCP` Det är en ripoff. `RAG` är ännu värre. Vad du vill ha är **bidirectional version-control synkronisering med `git`.** Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare eller billigare än med Orion.
+[^3]. :fa-robot: `MCP` Det är en ripoff. `RAG` är ännu värre. Vad du vill ha är **bidirectional version-control synkronisering med `git`.** Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare, kraftfullare eller billigare än med Orion.
 
 &nbsp;
 
@@ -179,7 +179,7 @@ I takt med att personalens företagsstatus utvecklas över tid gör Orion det en
 
 &nbsp;
 
-[^7]. :fa-arrow-left-arrow-right: Kostnader för byte/introduktion från Confluence kan vara så låga som 100 USD totalt för SMB och avskrivas under de första tre åren av service för kunder som behöver en mer praktisk strategi. Den övergripande processen är fyrfaldig:
+[^7]. :fa-arrow-right-arrow-left: Kostnader för byte/introduktion från Confluence kan vara så låga som 100 USD totalt för SMB och avskrivas under de första tre åren av service för kunder som behöver en mer praktisk strategi. Den övergripande processen är fyrfaldig:
 
 1. överens om önskad topologi på webbplatskartan från enskilda Confluence-utrymmen till Orions wiki-filer och -mappar,
 

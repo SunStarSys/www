@@ -139,7 +139,7 @@ Orion completa su imagen de integración de datos con un motor de base de datos 
 
 &nbsp;
 
-[^3]. :fa-robot: `MCP` es una polémica. `RAG` es aún peor. Lo que quieres es **sincronización bidireccional de control de versiones con `git`.** Conectar la solución de IA Agentic local de tu empresa en el flujo de trabajo wiki de tu equipo no se vuelve más seguro, más fácil o menos costoso que con Orion.
+[^3]. :fa-robot: `MCP` es una polémica. `RAG` es aún peor. Lo que quieres es **sincronización bidireccional de control de versiones con `git`.** Conectar la solución de IA Agentic local de tu empresa en el flujo de trabajo wiki de tu equipo no se vuelve más seguro, más fácil, más potente o menos costoso que con Orion.
 
 &nbsp;
 
@@ -179,7 +179,7 @@ A medida que el estado corporativo de su personal evoluciona con el tiempo, Orio
 
 &nbsp;
 
-[^7]. :fa-arrow-left-arrow-right: Los costos de cambio/incorporación de Confluencia pueden ser tan bajos como 100 dólares en total para las pymes y amortizarse durante los primeros tres años de servicio para los clientes que necesitan un enfoque más práctico. El proceso general se cuadruplica:
+[^7]. :fa-arrow-right-arrow-left: Los costos de cambio/incorporación de Confluencia pueden ser tan bajos como 100 dólares en total para las pymes y amortizarse durante los primeros tres años de servicio para los clientes que necesitan un enfoque más práctico. El proceso general se cuadruplica:
 
 1. acordar la topología deseada del mapa del sitio desde espacios individuales de Confluencia hasta archivos y carpetas de Orion wiki,
 
