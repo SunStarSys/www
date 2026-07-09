@@ -127,11 +127,11 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
-[^1]. Adopting Orion [immediately reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident; and the peace of mind delivered matters more to your board of directors than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
+[^1]. :fa-lock: Adopting Orion [immediately reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident; and the peace of mind delivered matters more to your board of directors than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
 
 &nbsp;
 
-[^2]. Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of wiki-like products other than Orion is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**. However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated mathematical tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
+[^2]. :fa-infinity: Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of wiki-like products other than Orion is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**. However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated mathematical tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
 
 &nbsp;
 
@@ -139,11 +139,11 @@ Orion completes its data integration picture with a columnar vector database eng
 
 &nbsp;
 
-[^3]. <span class="text-white">`MCP` is a ripoff. `RAG` is even worse. What you want is bidirectional version-control sync with `git`. Hooking your company's local Agentic AI solution into your team's wiki workflow doesn't get any safer, easier or less expensive than with Orion.</span>
+[^3]. :fa-robot: `MCP` is a ripoff. `RAG` is even worse. What you want is **bidirectional version-control sync with `git`.** Hooking your company's local Agentic AI solution into your team's wiki workflow doesn't get any safer, easier or less expensive than with Orion.
 
 &nbsp;
 
-[^4]. Next, **content curation tooling** is an essential feature of Orion, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+[^4]. :fa-map-locatino-dot: Next, **content curation tooling** is an essential feature of Orion, not an opportunity to upsell. Our per-wiki facts database is an industry first &mdash; handy for things like managing consistent name branding or related software artifact metadata across the entire website with a 1-line edit to a [YAML file](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
 
 &nbsp;
 
@@ -179,7 +179,7 @@ As your personnel's corporate status evolves over time, Orion makes it easy for 
 
 &nbsp;
 
-[^7]. Switching/Onboarding Costs from Confluence can be as low as $100 total for SMB, and amortized over the first three years of service for customers needing a more hands-on approach. The overall process is four-fold:
+[^7]. :fa-arrow-left-arrow-right: Switching/Onboarding Costs from Confluence can be as low as $100 total for SMB, and amortized over the first three years of service for customers needing a more hands-on approach. The overall process is four-fold:
 
 1. agree on desired topology of the site map from individual Confluence spaces to Orion wiki files and folders,
 
