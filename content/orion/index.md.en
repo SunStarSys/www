@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=48013
+status: draft
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -118,7 +118,7 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## Show Me the ROI Details
+## Show Me the ROI Details :fa-chart-line:
 
 </button>
 </div>
