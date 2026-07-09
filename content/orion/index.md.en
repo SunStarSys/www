@@ -127,6 +127,8 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 [^2]. Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of wiki-like products other than Orion is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**. However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated mathematical tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
 
+&nbsp;
+
 Orion completes its data integration picture with a columnar vector database engine `PDL` and a bundled vector graphics package `Asymptote` for your interactive number-crunching needs.
 
 &nbsp;
@@ -139,7 +141,15 @@ Orion completes its data integration picture with a columnar vector database eng
 
 &nbsp;
 
-Instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, `MIME`-type based, pre-commit linting pass by Orion's `CMS` editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months. Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself. Painless recursive search / replace to repair the accumulated cruft is built into the `PCRE` search engine in the `CMS`.
+Instead of the inevitable, entropic link rot innate to other wiki products, you get **internal/external link validation** at page modification time during a comprehensive, `MIME`-type based, pre-commit linting pass by Orion's `CMS` editor. We also provide every customer with a reporting infrastructure to **catch stale internal/external links on demand**, even when the pages involved haven't been altered in months.
+
+&nbsp;
+
+Diagrams are just as easy to keep in sync with evolving alterations to the markdown prose, because with Orion's mermaid integration, **the diagram sources are embedded in the page's prose** itself.
+
+&nbsp;
+
+Painless recursive search / replace to repair the accumulated cruft is built into the `PCRE` search engine in the `CMS`.
 
 &nbsp;
 
