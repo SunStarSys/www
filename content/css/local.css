@@ -13,7 +13,7 @@ a {text-decoration:none}
 a:hover {text-decoration: underline}
 
 div.essay code {color: #29942c}
-div.jumbotron code {color: rgba(var(--bs-warning-emphasis-rgb), var(--bs-text-opacity,1))}
+div.jumbotron code {color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity,1))}
 a > code {color:inherit !important}
 
 blockquote {
