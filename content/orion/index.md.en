@@ -12,7 +12,7 @@ acl: @staff=rw, *=r
 
 &nbsp;
 
-Orion is the Jamstack Wiki Platform that delivers [unhackable](security#separation-of-concerns-and-engineering-tradeoffs10) security :fa-lock:, [lightning performance](features) :fa-cloud-bolt:, [unbreakable](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) reliability :fa-train:, and true ROI :fa-chart-line:—while costing far less than Confluence or Notion.
+Orion is the Jamstack Wiki Platform that delivers [unhackable security](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [lightning performance](features) :fa-cloud-bolt:, [unbreakable reliability](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:, and true ROI :fa-chart-line:—while costing far less than Confluence or Notion.
 
 &nbsp;
 
@@ -114,7 +114,7 @@ However, by focusing on a handful of industry standard text/source document/data
 
 &nbsp;
 
-[^3]. :fa-robot: **It's your content!** What you want is direct read-write access to it via **bidirectional version-control sync with `git`, not more opaque SaaS APIs.** Hooking your company's local Agentic AI solution into your team's wiki workflow doesn't get any safer, easier, more powerful, or less expensive than with Orion.
+[^3]. :fa-robot: **It's your content!** What you want is direct read-write access to it via **bidirectional version-control sync with `git`, not more opaque, pricey SaaS APIs.** Hooking your company's local Agentic AI solution into your team's wiki workflow doesn't get any safer, easier, more powerful, or less expensive than with Orion.
 
 &nbsp;
 
