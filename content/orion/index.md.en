@@ -4,64 +4,22 @@ keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
 
+<div class="right" style="padding-left:10px">
+<a href="features"><img id="ad1" src="index.page/ad1"></a>
+</div>
+
+<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>The Jamstack Wiki Platform.</em></span>&trade; That Finally Delivers.
+
+SunStar Systems’ Orion is [unhackable](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [unbreakable](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:, mobile-friendly :fa-mobile:, [peak-performance](features) :fa-rocket:, and federated :fa-hexagon-nodes-bolt:.
+
+It’s the enterprise platform {# lede #}for creating, managing, and delivering knowledge that actually works{# lede #}—for leaders who refuse to settle for fragile tools that drain time and money.
+
+Why Orion? Because in a world of data breaches and bloated SaaS bills, your knowledge should be your greatest asset—not a liability. Orion turns scattered documentation into a secure, searchable, self-updating competitive edge. And it does so at a fraction of the cost of legacy solutions.
+
 <div class="row">
 <div class="col-lg-5">
-<p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>The Jamstack Wiki Platform.</em></span>&trade;
-</p>
-<br>
-<span class="text-white">SunStar Systems' Orion</span> &nbsp; is an
 
-&nbsp;
-
-<p>
-<ul class="list-group">
-  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
-
-[**unhackable**](security#separation-of-concerns-and-engineering-tradeoffs10)
-
-:fa-lock:
-
-</li>
-  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
-
-[**unbreakable**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
-
-:fa-train:
-
-  </li>
-  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
-
-**mobile friendly**
-
-:fa-mobile:
-
-  </li>
-  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
-
-[**peak performance**](features)
-
-:fa-rocket:
-
-  </li>
-  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
-
-**federated**
-
-:fa-hexagon-nodes-bolt:
-
-  </li>
-</ul>
-</p>
-
-&nbsp;
-
-{# lede #}<span class="text-white">Enterprise Jamstack Wiki Platform</span>&nbsp; for <b>creating, managing, and delivering</b> static webpages using Jamstack Technology for dynamic features therein{# lede #}. For pricing information, see our [Orion Plans](plans).
-
-
-&nbsp;
-
-<div class="border-top" style="padding-top: 20px">
+<div>
 
 # <span class="text-warning-emphasis">For Business Executives :fa-briefcase:</span><br>&nbsp;
 
@@ -305,22 +263,17 @@ Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markd
 
 <span class="btn bg-secondary">[<span class="text-white">Contact us for Enterprise Pricing and a Free Demo](../contact)</span>
 
-</center>
-</div>
-<div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
-
 &nbsp;
-
-<center>
 
 [Jump to Feature Comparison Grid](#h1-feature-comparison-grid)
 
 </center>
 
-&nbsp;
 
-<div class="border-top" style="padding-top: 20px">
+</div>
+<div class="col-lg-6 border-start">
+
+<div>
 
 # <span class="text-warning-emphasis">For Young&nbsp;Academics&nbsp;:fa-orcid: / Full&nbsp;Stack&nbsp;Developers&nbsp;:fa-stack-overflow: / Public&nbsp;Bloggers&nbsp;:fa-blog:&nbsp;</span>
 
