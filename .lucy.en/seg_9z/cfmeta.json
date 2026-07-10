@@ -4,12 +4,12 @@
       "length": "4",
       "offset": "0"
     },
-    "deletions-seg_9x.bv": {
+    "deletions-seg_9y.bv": {
       "length": "1",
       "offset": "8"
     },
     "documents.dat": {
-      "length": "71968",
+      "length": "71967",
       "offset": "16"
     },
     "documents.ix": {
@@ -73,68 +73,68 @@
       "offset": "72464"
     },
     "lexicon-6.dat": {
-      "length": "16541",
+      "length": "16552",
       "offset": "72472"
     },
     "lexicon-6.ix": {
-      "length": "223",
-      "offset": "89016"
+      "length": "219",
+      "offset": "89024"
     },
     "lexicon-6.ixix": {
       "length": "152",
-      "offset": "89240"
+      "offset": "89248"
     },
     "lexicon-8.dat": {
       "length": "271",
-      "offset": "89392"
+      "offset": "89400"
     },
     "lexicon-8.ix": {
       "length": "4",
-      "offset": "89664"
+      "offset": "89672"
     },
     "lexicon-8.ixix": {
       "length": "8",
-      "offset": "89672"
+      "offset": "89680"
     },
     "postings-1.dat": {
       "length": "21",
-      "offset": "89680"
+      "offset": "89688"
     },
     "postings-3.dat": {
       "length": "48",
-      "offset": "89704"
+      "offset": "89712"
     },
     "postings-4.dat": {
       "length": "21",
-      "offset": "89752"
+      "offset": "89760"
     },
     "postings-5.dat": {
       "length": "18",
-      "offset": "89776"
+      "offset": "89784"
     },
     "postings-6.dat": {
-      "length": "25931",
-      "offset": "89800"
+      "length": "25932",
+      "offset": "89808"
     },
     "postings-8.dat": {
       "length": "108",
-      "offset": "115736"
+      "offset": "115744"
     },
     "postings.skip": {
       "length": "0",
-      "offset": "115848"
+      "offset": "115856"
     },
     "sort-4.dat": {
       "length": "143",
-      "offset": "115848"
+      "offset": "115856"
     },
     "sort-4.ix": {
       "length": "64",
-      "offset": "115992"
+      "offset": "116000"
     },
     "sort-4.ord": {
       "length": "4",
-      "offset": "116056"
+      "offset": "116064"
     }
   },
   "format": "2"
