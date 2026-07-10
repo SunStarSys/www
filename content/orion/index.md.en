@@ -102,11 +102,11 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
-[^1]. :fa-lock: Adopting Orion [immediately reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident. And the peace of mind delivered matters more to your CFO and board of directors than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
+[^1]. :fa-lock: Adopting Orion [immediately reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident. **And the peace of mind delivered matters more to your CFO and board of directors** than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
 
 &nbsp;
 
-[^2]. :fa-infinity: Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of wiki-like products other than Orion is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**.
+[^2]. :fa-infinity: Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of other wiki-like products is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**.
 
 &nbsp;
 
@@ -166,9 +166,9 @@ As the number of seats move significantly in either direction from 300, your **s
 
 1. agree on desired topology of the site map from individual Confluence spaces to Orion wiki files and folders,
 
-2. design and implement `Django` template files and `Perl` build logic to accommodate above topology, branding, and desired look-and-feel of the built `HTML` pre-go-live,
+2. design and implement template files and build logic to accommodate above topology, branding, and desired look-and-feel of the built site pre-go-live,
 
-3. transform an [`XML` dump of the entire Confluence space](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) into the desired source tree layout, and
+3. perform an automated transform of an [`XML` dump of the entire Confluence space](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) into the desired source tree layout, and
 
 4. build the Orion wiki site and return to the above steps for tweaking and retuning until customer is satisfied and ready for final contract signing.
 
@@ -176,7 +176,7 @@ It may appear that step 2 above is where significant costs may accrue; however t
 
 &nbsp;
 
-Finally, we tailor every installation to your specific requirements, and are **always available for consultation and professional coaching** to ensure you maximize returns on your investment in our products and services. **Your team has a partner in us** in terms of ensuring you see the anticipated productivity gains and customer satisfaction associated with Orion &mdash; designed for robust, verified, collaborative knowledge creation/curation; and easy, comprehensive, precision information retrieval thereof.
+Finally, we tailor every installation to your specific requirements, and are **always available for consultation and professional coaching** to ensure you maximize returns on your investment in our products and services. <span class="text-white">Your team has a partner in us</span> in ensuring you see the anticipated productivity gains and customer satisfaction.
 
 &nbsp;
 
@@ -184,7 +184,7 @@ Finally, we tailor every installation to your specific requirements, and are **a
 
 &nbsp;
 
-[^ownership]. In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. However, it is certainly possible to facilitate and support "ownership" moving forward with explicit `ACL` header assignments on the pages involved, and/or a custom `view` that incorporates "authorship" as an `Author` header or similar into wiki page-builds on your site.
+[^ownership]. (technical) In fact, there is **no formal concept of page ownership** in the system. Orion's version control simply tracks the per-user-authorized changesets of staff at the time of the user-committed changes, lending to a more collegial corporate acculturation towards the combined work product of a wiki than in any other similar system. However, it is certainly possible to facilitate and support "ownership" moving forward with explicit `ACL` header assignments on the pages involved, and/or a custom `view` that incorporates "authorship" as an `Author` header or similar into wiki page-builds on your site.
 
 &nbsp;
 
