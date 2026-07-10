@@ -165,11 +165,11 @@ Painless recursive search / replace to repair the accumulated cruft is built int
 
 &nbsp;
 
-Ever seen a wiki system that can reliably integrate filtered content/data across independent source files?  [**Orion can**](https://www.iconoclasts.blog/joe/), with full suppport for the [**cyclic cross-dependencies**](https://www.iconoclasts.blog/joe/dependencies) and authorization controls on each source file.  There's simply no way to accidentally (or maliciously) launder access-controlled content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files.
+Ever seen a wiki system that can reliably integrate filtered content/data across independent source files?  [**Orion can**](https://www.iconoclasts.blog/joe/), with full support for the [**cyclic cross-dependencies**](https://www.iconoclasts.blog/joe/dependencies) and authorization controls on each source file.  There's simply no way to accidentally (or maliciously) launder access-controlled content through its content integration functionality, and there's no way for content/data in such files to be modified without those modifications percolating down to induce concurrent builds of their dependent files.
 
 &nbsp;
 
-[^5]. :fa-scale-balanced: Futhermore, Orion scales with you as you grow, especially at the enterprise level. The <span class="text-white">**$0 per seat licensing and unlimited number of websites**</span> opens up new opportunities for controlled knowledge sharing and collaboration across teams, partners, websites, and even the entire planet with our federated platform :fa-hexagon-nodes-bolt:! We know that for most clients, just a tiny portion of those seat licenses would be used to actually edit pages, but they can use an unlimited number of "associated" read-only accounts in their wikis to share protected information with over the internet. Accounts that need not have any access to the Orion `CMS` proper &mdash; a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
+[^5]. :fa-scale-balanced: Furthermore, Orion scales with you as you grow, especially at the enterprise level. The <span class="text-white">**$0 per seat licensing and unlimited number of websites**</span> opens up new opportunities for controlled knowledge sharing and collaboration across teams, partners, websites, and even the entire planet with our federated platform :fa-hexagon-nodes-bolt:! We know that for most clients, just a tiny portion of those seat licenses would be used to actually edit pages, but they can use an unlimited number of "associated" read-only accounts in their wikis to share protected information with over the internet. Accounts that need not have any access to the Orion `CMS` proper &mdash; a cost-saving feature unique to Orion as the only corporation-backed **Enterprise Jamstack Wiki**.
 
 &nbsp;
 
@@ -188,7 +188,7 @@ As the number of seats move in either direction from 300, your **savings increas
 
 1. agree on desired topology of the site map from individual Confluence spaces to Orion wiki files and folders,
 
-2. design and implement `Django` template files and `Perl` build logic to accomodate above topology, branding, and desired look-and-feel of the built `HTML` pre-go-live,
+2. design and implement `Django` template files and `Perl` build logic to accommodate above topology, branding, and desired look-and-feel of the built `HTML` pre-go-live,
 
 3. configure the `xsltproc` scripting to execute the transformation of an [`XML` dump of the entire Confluence space](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) into the desired source tree layout, and
 
