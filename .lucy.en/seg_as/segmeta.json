@@ -3,11 +3,11 @@
     "files": {
       "seg_9u": {
         "count": "7",
-        "filename": "seg_ar/deletions-seg_9u.bv"
+        "filename": "seg_as/deletions-seg_9u.bv"
       },
-      "seg_aq": {
+      "seg_ar": {
         "count": "7",
-        "filename": "seg_ar/deletions-seg_aq.bv"
+        "filename": "seg_as/deletions-seg_ar.bv"
       }
     },
     "format": "1"
@@ -54,7 +54,7 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_ar"
+    "name": "seg_as"
   },
   "sort": {
     "counts": {
