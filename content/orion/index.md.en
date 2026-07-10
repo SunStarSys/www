@@ -299,12 +299,8 @@ Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markd
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
 <center>
-<div style="margin:3 auto auto auto;width:400px">
+<div style="margin:10 auto auto auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Contact Us for Enterprise&nbsp;Pricing and <br>a No-Obligation&nbsp;Consultation with an Engineer</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
