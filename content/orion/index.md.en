@@ -155,7 +155,7 @@ As the number of seats move significantly in either direction from 300, your **s
 
 2. design and implement `Django` template files and `Perl` build logic to accommodate above topology, branding, and desired look-and-feel of the built `HTML` pre-go-live,
 
-3. configure the `xsltproc` scripting to execute the transformation of an [`XML` dump of the entire Confluence space](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) into the desired source tree layout, and
+3. transform an [`XML` dump of the entire Confluence space](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) into the desired source tree layout, and
 
 4. build the Orion wiki site and return to the above steps for tweaking and retuning until customer is satisfied and ready for final contract signing.
 
