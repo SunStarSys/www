@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 48312
+status: אומתו 48407
 title: SunStar אוריון מערכות
 ---
 
@@ -19,7 +19,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-זוהי הפלטפורמה הארגונית {# lede #}ליצור, לנהל ולספק ידע שבאמת עובד{# lede #}למנהיגים שמסרבים להסתפק בכלים שבירים שמנקזים זמן וכסף.
+זוהי הפלטפורמה הארגונית {# lede #}ליצור, לנהל ולספק ידע שבאמת עובד{# lede #} — <span class="text-white">עבור מנהיגים שמסרבים להסתפק בכלים שבירים המנקזים זמן וכסף.</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">תזמנו הדגמה ללא מחויבות היום](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">פנה אלינו עבור Enterprise&nbsp;תמחור ו <br>ללא מחויבות&nbsp;התייעצות עם מהנדס</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">צרו איתנו קשר תמחור ארגוני וייעוץ חינם עם מהנדס](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-## אבטחה לפי ברירת המחדל, ניהול גרסאות ומהיר יותר בהשוואה לגנרטורים של אתרים סטטיים אחרים.  פרסם באופן מיידי :fa-cloud-bolt: או שינויי שלב :fa-code-branch: &mdash; נסו הדגמה מהירה ותראו מדוע היא חסרת מאמץ.
+## אבטחה לפי ברירת המחדל :fa-lock:, בניהול גרסאות :fa-code-branch:, ומהר יותר :fa-cloud-bolt: לעומת גנרטורים סטטיים אחרים.  פרסם באופן מיידי או שינויים בשלבים &mdash; נסו הדגמה מהירה ותראו מדוע היא חסרת מאמץ.
 
 &nbsp;
 
@@ -379,19 +399,26 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">תזמנו טיול חינם היום](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">תזמנו טיול חינם היום</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-רשת נקודת הנוכחות הגלובלית שלנו (POP) :fa-hexagon-nodes-bolt: מבטיח חיבורים עם זמן השהיה קצר לאוריון &trade; ואת אתרי האינטרנט של המסירה הסופית שאנו מארחים.  אנו נמצאים כעת בחמש יבשות. :fa-hexagon-node-bolt: ויש להם נוכחות קיצונית בתוך ארה"ב.  ואנחנו מתרחבים במהירות &mdash; הבא אפריקה ומערב אסיה!
+רשת נקודת הנוכחות הגלובלית שלנו (POP) :fa-hexagon-nodes-bolt: מבטיח חיבורים עם זמן השהיה קצר לאוריון &trade; ואת אתרי האינטרנט של המסירה הסופית שאנו מארחים.  אנו נמצאים כעת בחמש יבשות. :fa-hexagon-nodes-bolt: ויש להם נוכחות קיצונית בתוך ארה"ב.  ואנחנו מתרחבים במהירות &mdash; הבא אפריקה ומערב אסיה!
 
 &nbsp;
 
-### זה הזמן לשינוי בים באופן שבו אתם מנהלים ומספקים את האתר שלכם לקהל היעד שלכם.
+### הגיע הזמן לשינוי בים באופן שבו אתם מנהלים ומספקים את האתר שלכם לקהל היעד שלכם :fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-white">רוצים שקיפות? ראה בעצמך:</span>
+<span class="text-white">רוצים שקיפות? לראות בעצמך :fa-magnifying-glass-plus:</span>
 
 &nbsp;
 

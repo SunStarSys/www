@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: draft
+status: verified=48407
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -313,7 +313,7 @@ Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markd
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Consultation" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Free Consultation" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=48312
+status: 확인=48407
 title: SunStar 시스템스 오리온
 ---
 
@@ -19,7 +19,7 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
 
 &nbsp;
 
-엔터프라이즈 플랫폼 {# lede #}실제로 작동하는 지식의 생성, 관리 및 제공{# lede #}- 시간과 돈을 낭비하는 취약한 도구에 정착하기를 거부하는 지도자들을 위해.
+엔터프라이즈 플랫폼 {# lede #}실제로 작동하는 지식의 생성, 관리 및 제공{# lede #} — <span class="text-white">시간과 돈을 낭비하는 취약한 도구에 정착하기를 거부하는 지도자를 위해.</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">지금 의무 없는 데모 예약](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">기업 문의&nbsp;가격 및 <br>의무 없음&nbsp;엔지니어와의 상담</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">엔터프라이즈 가격 및 엔지니어와의 무료 상담 문의](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ Apache 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트�
 
 &nbsp;
 
-## 다른 정적 사이트 생성기보다 보안이 뛰어나고 버전이 제어되며 속도가 빠릅니다.  즉시 게시 :fa-cloud-bolt: 또는 단계 변경 :fa-code-branch: &mdash; 빠른 데모를 시도하고 그것이 왜 쉬운지 확인하십시오.
+## 기본 보안 :fa-lock:, 버전 제어 :fa-code-branch:및 더 빠름 :fa-cloud-bolt: 다른 정적 사이트 생성기보다는  즉시 게시하거나 변경사항을 스테이지합니다. &mdash; 빠른 데모를 시도하고 그것이 왜 쉬운지 확인하십시오.
 
 &nbsp;
 
@@ -379,19 +399,26 @@ Apache 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트�
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">오늘 무료 워크스루 예약](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">오늘 무료 워크스루 예약</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-글로벌 POP(Point of Presence) 네트워크 :fa-hexagon-nodes-bolt: 두 Orion에 대한 짧은 대기 시간 연결 보장 &trade; 그리고 우리가 호스팅하는 최종 배달 웹 사이트.  우리는 현재 다섯 대륙에 있습니다. :fa-hexagon-node-bolt: 그리고 미국 내에서 bicoastal 존재를 가지고.  그리고 우리는 빠르게 확장하고 있습니다. &mdash; 다음으로 아프리카와 서아시아!
+글로벌 POP(Point of Presence) 네트워크 :fa-hexagon-nodes-bolt: 두 Orion에 대한 짧은 대기 시간 연결 보장 &trade; 그리고 우리가 호스팅하는 최종 배달 웹 사이트.  우리는 현재 다섯 대륙에 있습니다. :fa-hexagon-nodes-bolt: 그리고 미국 내에서 bicoastal 존재를 가지고.  그리고 우리는 빠르게 확장하고 있습니다. &mdash; 다음으로 아프리카와 서아시아!
 
 &nbsp;
 
-### 이제 대상 고객을 대상으로 사이트를 관리하고 제공하는 방식이 크게 바뀌어야 할 때입니다.
+### 이제 사이트를 관리하고 타겟 잠재 고객에게 전달하는 방식이 바닷가로 바뀔 때입니다. :fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ Apache 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트�
 
 &nbsp;
 
-<span class="text-white">투명성을 원하십니까? 직접 보기:</span>
+<span class="text-white">투명성을 원하십니까? 직접 보기 :fa-magnifying-glass-plus:</span>
 
 &nbsp;
 

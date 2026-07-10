@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=48312
+status: 確認済み=48407
 title: SunStarシステムのOrion
 ---
 
@@ -19,7 +19,7 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-エンタープライズ・プラットフォーム{# lede #}実際に機能する知識の作成、管理、提供{# lede #}- 時間とお金を浪費する脆弱なツールの解決を拒否するリーダーのために。
+エンタープライズ・プラットフォーム{# lede #}実際に機能する知識の作成、管理、提供{# lede #} —<span class="text-white">時間とお金を浪費する脆弱なツールの解決を拒否するリーダーのために。</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">今すぐ義務のないデモをスケジュールする](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">企業向けお問い合わせ&nbsp;価格と<br>義務なし&nbsp;エンジニアとの相談</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">エンタープライズ価格とエンジニアとの無料相談についてはお問い合わせください](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ Apacheソフトウェアプロジェクトコミュニティが、Confluenceが�
 
 &nbsp;
 
-## デフォルトでセキュア、バージョン管理、他の静的サイト・ジェネレータよりも高速です。即時公開:fa-cloud-bolt: またはステージの変更:fa-code-branch: &mdash; 簡単なデモを試して、なぜ簡単ではないかを確認してください。
+## デフォルトでセキュア:fa-lock:、バージョン管理:fa-code-branch:および高速:fa-cloud-bolt: 他の静的サイトジェネレータよりも。即時公開または変更のステージング&mdash; 簡単なデモを試して、なぜ簡単ではないかを確認してください。
 
 &nbsp;
 
@@ -379,19 +399,26 @@ Apacheソフトウェアプロジェクトコミュニティが、Confluenceが�
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">今日の無料ウォークスルーをスケジュール](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">今日の無料ウォークスルーをスケジュール</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-グローバルなPoint of Presence(POP)ネットワーク:fa-hexagon-nodes-bolt: 両方のOrionへの低レイテンシの接続を保証&trade; 当社が主催する最終配信サイト。現在五大陸にいます。:fa-hexagon-node-bolt: そして、米国内にビコースターが存在する。急速に拡大しています&mdash; アフリカと西アジア!
+グローバルなPoint of Presence(POP)ネットワーク:fa-hexagon-nodes-bolt: 両方のOrionへの低レイテンシの接続を保証&trade; 当社が主催する最終配信サイト。現在五大陸にいます。:fa-hexagon-nodes-bolt: そして、米国内にビコースターが存在する。急速に拡大しています&mdash; アフリカと西アジア!
 
 &nbsp;
 
-### 今こそ、サイトを管理し、ターゲット・オーディエンスに配信する方法を変える時です。
+### 今こそ、サイトを管理し、ターゲット・オーディエンスに配信する方法を変える時です:fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ Apacheソフトウェアプロジェクトコミュニティが、Confluenceが�
 
 &nbsp;
 
-<span class="text-white">透明性が必要ですか? ご自身でご覧ください:</span>
+<span class="text-white">透明性が必要ですか? 自分で見る:fa-magnifying-glass-plus:</span>
 
 &nbsp;
 

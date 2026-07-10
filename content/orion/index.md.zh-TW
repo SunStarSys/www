@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =48312
+status: 驗證 =48407
 title: SunStar 系統的 Orion
 ---
 
@@ -19,7 +19,7 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
 
 &nbsp;
 
-它是企業平台{# lede #}用於建立、管理及提供實際運作的知識{# lede #}— 適用於拒絕結算易碎工具的領導者，這些工具會耗費時間和金錢。
+它是企業平台{# lede #}用於建立、管理及提供實際運作的知識{# lede #} —<span class="text-white">對於拒絕解決可消耗時間和金錢的脆弱工具的領導者。</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">今天排定無義務示範](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">聯絡我們企業版&nbsp;訂價與<br>無義務&nbsp;與工程師進行諮詢</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">與我們聯繫以獲得企業定價，並與工程師進行免費諮詢](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-## 與其他靜態網站產生器相比，預設安全、受版本控制且速度更快。立即發布:fa-cloud-bolt: 或階段變更:fa-code-branch: &mdash; 試用快速示範，瞭解為何不費力。
+## 依預設保護:fa-lock:，控制版本:fa-code-branch:，速度更快:fa-cloud-bolt: 而非其他靜態網站產生器。立即發布或暫存變更&mdash; 試用快速示範，瞭解為何不費力。
 
 &nbsp;
 
@@ -379,19 +399,26 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">立即安排免費直播](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">立即安排免費直播</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-我們的全球網路連接點 (POP) :fa-hexagon-nodes-bolt: 確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於五大洲:fa-hexagon-node-bolt: 而且在美國境內有雙海濱存在。我們正在快速擴展&mdash; 下一個非洲和西亞！
+我們的全球網路連接點 (POP) :fa-hexagon-nodes-bolt: 確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於五大洲:fa-hexagon-nodes-bolt: 而且在美國境內有雙海濱存在。我們正在快速擴展&mdash; 下一個非洲和西亞！
 
 &nbsp;
 
-### 現在正是時候改變您如何管理網站並將其傳遞給目標受眾了。
+### 現在正是您如何管理網站並將網站傳遞給目標受眾的最佳時機。:fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-white">想要透明化？為自己見：</span>
+<span class="text-white">想要透明化？為自己而設:fa-magnifying-glass-plus:</span>
 
 &nbsp;
 

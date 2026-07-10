@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=48312
+status: проверено=48407
 title: SunStar Орион систем
 ---
 
@@ -19,7 +19,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-Корпоративная платформа {# lede #}для создания, управления и предоставления знаний, которые действительно работают{# lede #}Для лидеров, которые отказываются соглашаться на хрупкие инструменты, которые истощают время и деньги.
+Корпоративная платформа {# lede #}для создания, управления и предоставления знаний, которые действительно работают{# lede #} — <span class="text-white">для лидеров, которые отказываются соглашаться на хрупкие инструменты, которые истощают время и деньги.</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Запланируйте демонстрацию без обязательств сегодня](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Свяжитесь с нами для предприятия&nbsp;Цены и <br>без обязательств&nbsp;Консультация с инженером</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Свяжитесь с нами для корпоративной цены и бесплатной консультации с инженером](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-## Безопасно по умолчанию, с управлением версиями и быстрее, чем у других статических генераторов сайтов.  Мгновенная публикация :fa-cloud-bolt: или изменения этапа :fa-code-branch: &mdash; Попробуйте быстрое демо и посмотрите, почему это легко.
+## Защита по умолчанию :fa-lock:, контролируемая версия :fa-code-branch:, и быстрее :fa-cloud-bolt: чем другие статические генераторы сайтов.  Мгновенная публикация или изменения этапа &mdash; Попробуйте быстрое демо и посмотрите, почему это легко.
 
 &nbsp;
 
@@ -379,19 +399,26 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Запланируйте бесплатную прогулку сегодня](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Запланируйте бесплатную прогулку сегодня</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-Наша глобальная сеть точек присутствия (POP) :fa-hexagon-nodes-bolt: обеспечивает подключение с низкой задержкой к обоим Orion &trade; и веб-сайты конечной доставки, которые мы размещаем.  Сейчас мы на пяти континентах. :fa-hexagon-node-bolt: и имеют бикостальное присутствие в США.  И мы быстро расширяемся &mdash; Африка и Западная Азия!
+Наша глобальная сеть точек присутствия (POP) :fa-hexagon-nodes-bolt: обеспечивает подключение с низкой задержкой к обоим Orion &trade; и веб-сайты конечной доставки, которые мы размещаем.  Сейчас мы на пяти континентах. :fa-hexagon-nodes-bolt: и имеют бикостальное присутствие в США.  И мы быстро расширяемся &mdash; Африка и Западная Азия!
 
 &nbsp;
 
-### Пришло время перемен в том, как вы управляете и доставляете свой сайт целевой аудитории.
+### Пришло время перемен в том, как вы управляете и доставляете свой сайт целевой аудитории :fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-white">Хотите прозрачности? Убедитесь сами:</span>
+<span class="text-white">Хотите прозрачности? Увидеть себя :fa-magnifying-glass-plus:</span>
 
 &nbsp;
 

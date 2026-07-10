@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48312
+status: verificado=48407
 title: SunStar Orion dos Sistemas
 ---
 
@@ -19,7 +19,7 @@ Orion é a plataforma Wiki Jamstack que oferece [segurança inviolável](securit
 
 &nbsp;
 
-É a plataforma empresarial {# lede #}para criar, gerenciar e fornecer conhecimento que realmente funciona{# lede #}– para os líderes que se recusam a se contentar com ferramentas frágeis que drenam tempo e dinheiro.
+É a plataforma empresarial {# lede #}para criar, gerenciar e fornecer conhecimento que realmente funciona{# lede #} — <span class="text-white">para líderes que se recusam a se contentar com ferramentas frágeis que drenam tempo e dinheiro.</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ Por que Orion? Porque em um mundo de violações de dados e contas inchadas do S
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Programar uma Demonstração de Não Obrigação Hoje](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive 
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Entre em contato conosco para a empresa&nbsp;Preços e <br>uma Ausência de Obrigação&nbsp;Consulta com um Engenheiro</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Entre em contato conosco para obter preços corporativos e uma consulta gratuita com um engenheiro](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ Quando as comunidades de projeto do software Apache foram apresentadas com uma e
 
 &nbsp;
 
-## Seguro por padrão, controlado por versão e mais rápido do que outros geradores de sites estáticos.  Publicar instantaneamente :fa-cloud-bolt: ou alterações de estágio :fa-code-branch: &mdash; Experimente uma demonstração rápida e veja por que é fácil.
+## Protegido por padrão :fa-lock:, controlado por versão :fa-code-branch:, e mais rápido :fa-cloud-bolt: do que outros geradores de locais estáticos.  Publicar instantaneamente ou preparar alterações &mdash; Experimente uma demonstração rápida e veja por que é fácil.
 
 &nbsp;
 
@@ -379,19 +399,26 @@ Este site é auto-hospedado em Orion; todos aqueles quadrados de lápis cor-de-r
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Agende uma caminhada gratuita hoje](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Agende uma caminhada gratuita hoje</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-Nossa rede global de Ponto de Presença (POP) :fa-hexagon-nodes-bolt: garante conexões de baixa latência para ambos Orion &trade; e os sites de entrega final que hospedamos.  Estamos atualmente em cinco continentes :fa-hexagon-node-bolt: e ter uma presença bicoastal dentro dos EUA.  E estamos nos expandindo rapidamente &mdash; África e Ásia Ocidental!
+Nossa rede global de Ponto de Presença (POP) :fa-hexagon-nodes-bolt: garante conexões de baixa latência para ambos Orion &trade; e os sites de entrega final que hospedamos.  Estamos atualmente em cinco continentes :fa-hexagon-nodes-bolt: e ter uma presença bicoastal dentro dos EUA.  E estamos nos expandindo rapidamente &mdash; África e Ásia Ocidental!
 
 &nbsp;
 
-### É hora de uma mudança radical na forma como você gerencia e entrega seu site ao seu público-alvo.
+### É hora de uma mudança radical na forma como você gerencia e entrega seu site ao seu público-alvo :fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ Além disso, todos os clientes têm interfaces gratuitas, customizáveis   ou ha
 
 &nbsp;
 
-<span class="text-white">Quer transparência? Veja por si mesmo:</span>
+<span class="text-white">Quer transparência? Veja por si mesmo :fa-magnifying-glass-plus:</span>
 
 &nbsp;
 

@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: التحقق = 48312
+status: التحقق = 48407
 title: SunStar أوريون الأنظمة
 ---
 
@@ -19,7 +19,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-النظام الأساسي للمؤسسة {# lede #}لإنشاء وإدارة وتقديم المعرفة التي تعمل بالفعل{# lede #}بالنسبة للقادة الذين يرفضون الاستقرار في أدوات هشة تستنزف الوقت والمال.
+النظام الأساسي للمؤسسة {# lede #}لإنشاء وإدارة وتقديم المعرفة التي تعمل بالفعل{# lede #} — <span class="text-white">بالنسبة للقادة الذين يرفضون الاستقرار في أدوات هشة تستنزف الوقت والمال.</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">جدولة عرض توضيحي بدون التزام اليوم](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">اتصل بنا للمؤسسة&nbsp;التسعير و <br>عدم الالتزام&nbsp;التشاور مع مهندس</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">اتصل بنا للحصول على أسعار المؤسسات واستشارة مجانية مع مهندس](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-## تأمين حسب الافتراض، والتحكم في الإصدار، وأسرع من مولدات المواقع الثابتة الأخرى.  نشر على الفور :fa-cloud-bolt: أو تغييرات المرحلة :fa-code-branch: &mdash; جرب عرضًا توضيحيًا سريعًا واعرف سبب عدم جهده.
+## آمن افتراضيًا :fa-lock:، خاضع للتحكم في الإصدار :fa-code-branch:، وأسرع :fa-cloud-bolt: من غيرها من مولدات المواقع الثابتة.  نشر التغييرات الفورية أو تغييرات المرحلة &mdash; جرب عرضًا توضيحيًا سريعًا واعرف سبب عدم جهده.
 
 &nbsp;
 
@@ -379,19 +399,26 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">جدولة جولة مجانية اليوم](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">جدولة جولة مجانية اليوم</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-شبكة نقاط التواجد العالمية (POP) :fa-hexagon-nodes-bolt: يضمن اتصالات منخفضة زمن الوصول إلى كل من أوريون &trade; ومواقع التسليم النهائي التي نستضيفها.  نحن حاليا في خمس قارات :fa-hexagon-node-bolt: ولديهم وجود ثوري داخل الولايات المتحدة.  ونحن نتوسع بسرعة &mdash; التالي أفريقيا وغرب آسيا!
+شبكة نقاط التواجد العالمية (POP) :fa-hexagon-nodes-bolt: يضمن اتصالات منخفضة زمن الوصول إلى كل من أوريون &trade; ومواقع التسليم النهائي التي نستضيفها.  نحن حاليا في خمس قارات :fa-hexagon-nodes-bolt: ولديهم وجود ثوري داخل الولايات المتحدة.  ونحن نتوسع بسرعة &mdash; التالي أفريقيا وغرب آسيا!
 
 &nbsp;
 
-### لقد حان الوقت لتغيير كبير في كيفية إدارة موقعك وتقديمه إلى جمهورك المستهدف.
+### حان الوقت لتغيير كبير في كيفية إدارة موقعك وتقديمه إلى جمهورك المستهدف :fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-<span class="text-white">هل تريد الشفافية؟ انظر لنفسك:</span>
+<span class="text-white">هل تريد الشفافية؟ شاهد بنفسك :fa-magnifying-glass-plus:</span>
 
 &nbsp;
 

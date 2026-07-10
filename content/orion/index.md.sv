@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=48312
+status: verifierad=48407
 title: SunStar Orion för system
 ---
 
@@ -19,7 +19,7 @@ Orion är Jamstack Wiki Platform som levererar [ej packbar säkerhet](security#s
 
 &nbsp;
 
-Det är företagsplattformen {# lede #}för att skapa, hantera och leverera kunskap som faktiskt fungerar{# lede #}För ledare som vägrar att nöja sig med bräckliga verktyg som dränerar tid och pengar.
+Det är företagsplattformen {# lede #}för att skapa, hantera och leverera kunskap som faktiskt fungerar{# lede #} — <span class="text-white">För ledare som vägrar att nöja sig med ömtåliga verktyg som dränerar tid och pengar.</span>
 
 &nbsp;
 
@@ -27,9 +27,18 @@ Varför Orion? Eftersom i en värld av dataintrång och uppsvällda SaaS räknin
 
 &nbsp;
 
-<center>
+<div style="margin:auto;width:300px">
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</div>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Boka en demo utan förpliktelser idag](../contact)</span>
+<center>
 
 &nbsp;
 
@@ -293,13 +302,24 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Kontakta oss för företag&nbsp;Priser och <br>Ingen förpliktelse&nbsp;Samråd med en ingenjör</span><br>&nbsp;<br>
+<form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Consultation" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
+
 <center>
-
-&nbsp;
-
-&nbsp;
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Kontakta oss för företagspriser och en kostnadsfri konsultation med en ingenjör](../contact)</span>
 
 &nbsp;
 
@@ -371,7 +391,7 @@ När Apache-projektgrupper presenterades med ett fritt val mellan att använda C
 
 &nbsp;
 
-## Säkra som standard, versionskontrollerade och snabbare än andra statiska webbplatsgeneratorer.  Publicera direkt :fa-cloud-bolt: eller stegändringar :fa-code-branch: &mdash; Prova en snabb demo och se varför det är enkelt.
+## Säker som standard :fa-lock:, versionskontrollerad :fa-code-branch:och snabbare :fa-cloud-bolt: än andra statiska webbplatsgeneratorer.  Publicera direkt eller stegvisa ändringar &mdash; Prova en snabb demo och se varför det är enkelt.
 
 &nbsp;
 
@@ -379,19 +399,26 @@ Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i
 
 &nbsp;
 
-<center>
-
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Boka en kostnadsfri genomgång idag](../contact)</span>
-
-</center>
+<div style="margin:auto;width:400px">
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Boka en kostnadsfri genomgång idag</span><br>&nbsp;<br>
+<form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Walk-Through" />
+      <input class="form-control me-2" type="email" name="email" required
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
+</span>
+</div>
 
 &nbsp;
 
-Vårt globala POP-nätverk :fa-hexagon-nodes-bolt: säkerställer anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi finns för närvarande på fem kontinenter. :fa-hexagon-node-bolt: och har en bicoastal närvaro i USA.  Och vi expanderar snabbt &mdash; Afrika och Västasien!
+Vårt globala POP-nätverk :fa-hexagon-nodes-bolt: säkerställer anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi finns för närvarande på fem kontinenter. :fa-hexagon-nodes-bolt: och har en bicoastal närvaro i USA.  Och vi expanderar snabbt &mdash; Afrika och Västasien!
 
 &nbsp;
 
-### Det är dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp.
+### Det är dags för en havsförändring i hur du hanterar och levererar din webbplats till din målgrupp :fa-water:
 
 &nbsp;
 
@@ -403,7 +430,7 @@ Dessutom har alla kunder gratis, mallanpassningsbara eller javascript-aktiverade
 
 &nbsp;
 
-<span class="text-white">Vill du ha transparens? Se själv:</span>
+<span class="text-white">Vill du ha transparens? Se själv :fa-magnifying-glass-plus:</span>
 
 &nbsp;
 
