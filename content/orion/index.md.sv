@@ -3,67 +3,46 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=48093
+status: verifierad=48312
 title: SunStar Orion för system
 ---
 
+<div class="right" style="padding-left:10px">
+<a href="features"><img id="ad1" src="index.page/ad1"></a>
+</div>
+
+## Din organisations kunskap: säkra det, multiplicera det, dra nytta av det - utan vanliga huvudvärk eller höga räkningar.
+
+&nbsp;
+
+Orion är Jamstack Wiki Platform som levererar [ej packbar säkerhet](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [blixtprestanda](features) :fa-cloud-bolt:, [okrossbar tillförlitlighet](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:och äkta ROI :fa-chart-line:Det kostar mycket mindre än Confluence eller Notion.
+
+&nbsp;
+
+Det är företagsplattformen {# lede #}för att skapa, hantera och leverera kunskap som faktiskt fungerar{# lede #}För ledare som vägrar att nöja sig med bräckliga verktyg som dränerar tid och pengar.
+
+&nbsp;
+
+Varför Orion? Eftersom i en värld av dataintrång och uppsvällda SaaS räkningar, bör din kunskap vara din största tillgång—inte en skuld. Orion förvandlar spridd dokumentation till en säker, sökbar, självuppdaterande konkurrensfördel. Och det gör det till en bråkdel av kostnaden för äldre lösningar.
+
+&nbsp;
+
+<center>
+
+<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Boka en demo utan förpliktelser idag](../contact)</span>
+
+&nbsp;
+
+[Gå till funktionsjämförelserutnät](#h1-feature-comparison-grid)
+
+</center>
+
+&nbsp;
+
 <div class="row">
-<div class="col-lg-5">
-<p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>Wiki-plattformen Jamstack.</em></span>&trade;
-</p>
-<br>
-<span class="text-white">SunStar Orion för system</span> &nbsp; är en
+<div class="col-lg-6">
 
-&nbsp;
-
-<p>
-<ul class="list-group">
-  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
-
-[**ej staplingsbar**](security#separation-of-concerns-and-engineering-tradeoffs10)
-
-:fa-lock:
-
-</li>
-  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
-
-[**okrossbar**](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
-
-:fa-train:
-
-</li>
-  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
-
-**Mobilvänligt**
-
-:fa-mobile:
-
-</li>
-  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
-
-[**toppprestanda**](features)
-
-:fa-rocket:
-
-</li>
-  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
-
-**Samordnad**
-
-:fa-hexagon-nodes-bolt:
-
-</li>
-</ul>
-</p>
-
-&nbsp;
-
-{# lede #}<span class="text-white">Wiki-plattformen Enterprise Jamstack</span>&nbsp; för att <b>skapa, hantera och leverera</b> statiska webbsidor som använder Jamstack-teknik för dynamiska funktioner däri{# lede #}. För prisinformation, se vår [Orionplaner](plans).
-
-&nbsp;
-
-<div class="border-top" style="padding-top: 20px">
+<div>
 
 # <span class="text-warning-emphasis">För företagsledare :fa-briefcase:</span><br>&nbsp;
 
@@ -89,7 +68,7 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 
 <center>
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
 <div class="card-header">Säkrare, bättre produkt för <span class="text-white">Mindre pengar</span>&nbsp;<i class="fa fa-chart-line"></i>
 
 </div>
@@ -129,19 +108,19 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 
 &nbsp;
 
-[^1]. :fa-lock: Antagande Orion [omedelbart minskar risken](security#separation-of-concerns-and-engineering-tradeoffs10) av en större säkerhetsincident; och sinnesfrid levererade frågor mer till din styrelse än en [dyra ransomware försäkring](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Du behöver aldrig göra anspråk mot.
+[^1]. :fa-lock: Antagande Orion [omedelbart minskar risken](security#separation-of-concerns-and-engineering-tradeoffs10) av en större säkerhetsincident. **Och sinnesfrid gav saker mer till din ekonomichef och styrelse** än en [dyra ransomware försäkring](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Du behöver aldrig göra anspråk mot.
 
 &nbsp;
 
-[^2]. :fa-infinity: Lägg undan [säkerhetsfördelar](https://www.iconoclasts.blog/joe/wishful-thinking) och [skärpta påföljder](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) för [sekretessöverträdelser av HIPAA-data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), en grundläggande brist hos andra wikiliknande produkter än Orion är att de inte tillhandahåller **sammanhängande integreringar / gränssnitt för införlivande och periodiskt underhåll av externt genererade datafilformat**. Men genom att fokusera på en handfull branschstandardiserade text-/källdokument-/dataformat är även dina mest invecklade datagenererade matematiska tabeller, grafer, diagram, kartor och arkitektoniska diagram **fullt sökbara och AI-översättningsbara** på något av Orions naturliga språk som stöds.
+[^2]. :fa-infinity: Lägg undan [säkerhetsfördelar](https://www.iconoclasts.blog/joe/wishful-thinking) och [skärpta påföljder](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) för [sekretessöverträdelser av HIPAA-data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), en grundläggande brist hos andra wikiliknande produkter är att de inte tillhandahåller **sammanhängande integreringar / gränssnitt för införlivande och periodiskt underhåll av externt genererade datafilformat**.
 
 &nbsp;
 
-Orion slutför sin dataintegreringsbild med en kolumnvektordatabasmotor `PDL` och ett paket vektorgrafikpaket `Asymptote` för dina interaktiva nummerkrossningsbehov.
+Men genom att fokusera på en handfull branschstandardiserade text-/källdokument-/dataformat är även dina mest invecklade datagenererade matematiska tabeller, grafer, diagram, kartor och arkitektoniska diagram **fullt sökbara och AI-översättningsbara** på något av Orions naturliga språk som stöds.
 
 &nbsp;
 
-[^3]. :fa-robot: `MCP` Det är en ripoff. `RAG` är ännu värre. Vad du vill ha är **bidirectional version-control synkronisering med `git`.** Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare, kraftfullare eller billigare än med Orion.
+[^3]. :fa-robot: **Det är ditt innehåll!** Vad du vill ha är direkt läs- och skrivåtkomst till det via **riktad versionskontrollsynkronisering med `git`, inte mer ogenomskinliga, dyra SaaS API:er.** Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare, kraftfullare eller billigare än med Orion.
 
 &nbsp;
 
@@ -149,7 +128,11 @@ Orion slutför sin dataintegreringsbild med en kolumnvektordatabasmotor `PDL` oc
 
 &nbsp;
 
-I stället för den oundvikliga entropiska länken roterar med andra wiki-produkter får du **intern/extern länkvalidering** vid sidmodifieringstid under en omfattande, `MIME`-typ baserad, pre-commit linting pass av Orion's `CMS` redaktör. Vi tillhandahåller också varje kund en rapporteringsinfrastruktur för att **fånga inaktuella interna/externa länkar på begäran**, även när de berörda sidorna inte har ändrats på flera månader.
+Istället för att den oundvikliga entropiska länken roterar med andra wiki-produkter får du **intern/extern länkvalidering** vid sidmodifieringstidpunkten under ett omfattande, pre-commit linting pass av Orions sida. `CMS` redaktör.
+
+&nbsp;
+
+Vi förser också varje kund med en rapporteringsinfrastruktur för att **fånga inaktuella interna/externa länkar på begäran**. Även om sidorna inte har ändrats på flera månader.
 
 &nbsp;
 
@@ -161,15 +144,19 @@ Smärtsam rekursiv sökning / ersättning för att reparera den ackumulerade cru
 
 &nbsp;
 
-<span class="text-white">Mätbar ROI-tillväxt i hela organisationen är en uppföljande, kontinuerlig blommande effekt av utövandet av aggregerad trädgårdsarbete och vårdande förmågor som är unika för vår wiki-plattform.</span>
+<span class="text-white">Mätbar ROI-tillväxt i hela organisationen är en uppföljande, kontinuerlig blommande effekt av utövandet av kollektiva trädgårds- och omsorgsförmågor som är unika för vår wiki-plattform.</span>
 
 &nbsp;
 
-Har du någonsin sett ett wikisystem som tillförlitligt kan integrera filtrerat innehåll/data över oberoende källfiler?  [**Orion kan**](https://www.iconoclasts.blog/joe/)Med fullt stöd för [**cykliska korsberoende**](https://www.iconoclasts.blog/joe/dependencies) och behörighetskontroller för varje källfil.  Det finns helt enkelt inget sätt att oavsiktligt (eller skadligt) tvätta åtkomstkontrollerat innehåll genom dess innehållsintegreringsfunktionalitet, och det finns inget sätt för innehåll / data i sådana filer att ändras utan att dessa ändringar tränger ner för att framkalla samtidiga byggen av deras beroende filer.
+[^5]. :fa-scale-balanced: Dessutom skalar Orion med dig när du växer, särskilt på företagsnivå. Den <span class="text-white">**$0 per platslicensiering och obegränsat antal webbplatser**</span> öppnar nya möjligheter för kontrollerad kunskapsdelning och samarbete mellan team, partners och webbplatser.
 
 &nbsp;
 
-[^5]. :fa-scale-balanced: I framtiden skalar Orion med dig när du växer, särskilt på företagsnivå. Den <span class="text-white">**$0 per platslicensiering och obegränsat antal webbplatser**</span> öppnar nya möjligheter för kontrollerad kunskapsdelning och samarbete mellan team, partners, webbplatser och till och med hela planeten med vår samordnade plattform! Vi vet att för de flesta kunder skulle bara en liten del av dessa platslicenser användas för att faktiskt redigera sidor, men de kan använda ett obegränsat antal "associerad" Skrivskyddade konton i sina wikis för att dela skyddad information med över internet. Konton som inte behöver ha åtkomst till Orion `CMS` korrekt &mdash; En kostnadsbesparande funktion som är unik för Orion som den enda företagsstödda **Enterprise Jamstack Wiki**.
+Och även hela planeten med vår samordnade plattform :fa-hexagon-nodes-bolt:!
+
+&nbsp;
+
+Vi vet att för de flesta kunder skulle bara en liten del av dessa platslicenser användas för att faktiskt redigera sidor, men de kan använda ett obegränsat antal "associerad" Skrivskyddade konton i sina wikis för att dela skyddad information med över internet. Konton som inte behöver ha åtkomst till Orion `CMS` korrekt &mdash; En kostnadsbesparande funktion som är unik för Orion som den enda företagsstödda **Enterprise Jamstack Wiki**.
 
 &nbsp;
 
@@ -177,9 +164,11 @@ I takt med att personalens företagsstatus utvecklas över tid gör Orion det en
 
 &nbsp;
 
-[^6]. :fa-money-check-dollar: med andra marknadslösningar, [Utan en premium plan du är på egen hand](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager). Orions månatliga prenumerationspris för en [Affärsplanen är ~ $ 2500 / månad för 300 platser](plans); [Confluence Premium är norr om $ 3000 + för samma 300 platser](https://www.atlassian.com/software/confluence/pricing).
+[^6]. :fa-money-check-dollar: med andra marknadslösningar, [Utan en premium plan du är på egen hand](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager). Orions månatliga prenumerationspris för en [Affärsplanen är ~ $ 2600 / månad för 300 platser](plans); [Confluence Premium är norr om $ 3000 + för samma 300 platser](https://www.atlassian.com/software/confluence/pricing).
 
-När antalet platser rör sig i båda riktningarna från 300 ökar dina **besparingar**. &gt;500 sätter dig på vår företagsnivå[^5]; och på **50 platser är din månadskostnad 1/5 vad du betalar till Atlassian nu**.
+&nbsp;
+
+Eftersom antalet platser rör sig avsevärt i båda riktningarna från 300 ökar dina **besparingar**. &gt;500 sätter dig på vår företagsnivå[^5]och <span class="text-white">på 50 platser din månatliga faktura är 1/5 vad du betalar till Atlassian nu</span>.
 
 &nbsp;
 
@@ -187,17 +176,17 @@ När antalet platser rör sig i båda riktningarna från 300 ökar dina **bespar
 
 1. överens om önskad topologi på webbplatskartan från enskilda Confluence-utrymmen till Orions wiki-filer och -mappar,
 
-2. Utforma och implementera `Django` mallfiler och `Perl` bygga logik för att rymma över topologi, branding och önskad look-and-känsla av den byggda `HTML` Aktiv före aktivering,
+2. designa och implementera mallfiler och bygglogik för att tillgodose ovanstående topologi, varumärkesprofilering och önskad utformning av det byggda webbplatsens pre-go-live,
 
-3. konfigurera `xsltproc` skript för att köra transformeringen av en [`XML` dumpning av hela Confluence-utrymmet](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) i önskad källträdslayout, och
+3. utföra en automatiserad transformering av en [`XML` dumpning av hela Confluence-utrymmet](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) i önskad källträdslayout, och
 
 4. bygga Orions wiki-webbplats och gå tillbaka till ovanstående steg för att justera och justera tills kunden är nöjd och redo för slutlig kontraktssignering.
 
-Det kan tyckas att steg 2 ovan är där betydande kostnader kan uppstå, men huvuddelen av det steget är mottaglig för AI-automatisering. Kunderna kan också välja att behålla sina Confluence-prenumerationer så länge de vill utan att införa konflikter med sina nya Orion-wikier, bara för att minska tillhörande risker.
+Det kan tyckas att steg 2 ovan är där betydande kostnader kan uppstå, men huvuddelen av det steget är mottaglig för AI-automatisering. Kunder kan också välja att hålla fast vid sina Confluence-prenumerationer så länge de vill utan att införa konflikter med sina nya Orion-wikier.
 
 &nbsp;
 
-Slutligen skräddarsyr vi varje installation efter dina specifika krav och är **alltid tillgängliga för konsultation och professionell coachning** för att säkerställa att du maximerar avkastningen på din investering i våra produkter och tjänster. **Ditt team har en partner i oss** när det gäller att se de förväntade produktivitetsvinsterna och kundnöjdheten i samband med Orion &mdash; utformad för robust, verifierad, samverkande kunskapsskapande / varaktighet; och enkel, omfattande, precisionsinformationssökning därav.
+Slutligen skräddarsyr vi varje installation efter dina specifika krav och är **alltid tillgängliga för konsultation och professionell coachning** för att säkerställa att du maximerar avkastningen på din investering i våra produkter och tjänster. <span class="text-white">Ditt team har en partner i oss</span> för att se till att du ser de förväntade produktivitetsvinsterna och kundnöjdheten.
 
 &nbsp;
 
@@ -205,7 +194,7 @@ Slutligen skräddarsyr vi varje installation efter dina specifika krav och är *
 
 &nbsp;
 
-[^ägarskap]. Faktum är att det inte finns något formellt koncept för sidägande** i systemet. Orions versionskontroll spårar helt enkelt personalens per-användare-auktoriserade förändringsuppsättningar vid tidpunkten för de användarengagerade förändringarna, utlåning till en mer kollegial företagsackulturation mot en wikis kombinerade arbetsprodukt än i något annat liknande system. Det är dock möjligt att underlätta och stödja "ägande" Framåt med explicit `ACL` huvudtilldelningar på de berörda sidorna och/eller en anpassad `view` som innehåller "författarskap" som en `Author` sidhuvud eller liknande i wiki sidbyggen på din webbplats.
+[^ägarskap]. (tekniskt) Det finns faktiskt **inget formellt koncept för sidägande** i systemet. Orions versionskontroll spårar helt enkelt personalens per-användare-auktoriserade förändringsuppsättningar vid tidpunkten för de användarengagerade förändringarna, utlåning till en mer kollegial företagsackulturation mot en wikis kombinerade arbetsprodukt än i något annat liknande system. Det är dock möjligt att underlätta och stödja "ägande" Framåt med explicit `ACL` huvudtilldelningar på de berörda sidorna och/eller en anpassad `view` som innehåller "författarskap" som en `Author` sidhuvud eller liknande i wiki sidbyggen på din webbplats.
 
 &nbsp;
 
@@ -217,7 +206,7 @@ Slutligen skräddarsyr vi varje installation efter dina specifika krav och är *
 
 &nbsp;
 
-## Lämna de dränerande smärtpunkterna i det förflutna bakom sig...
+## Lämna de dränerande smärtpunkterna i det förflutna bakom sig
 
 &nbsp;
 
@@ -227,13 +216,13 @@ Om det resonerar, är du trött på att kasta mer bra pengar på en dålig inves
 
 &nbsp;
 
-Vill inte istället slösa dyrbart kapital på en [Svårt att säkra](https://matthiasfrank.de/en/notion-security/), [prestanda som försämras](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), ett [Storleksordningen dyrare för företag](https://www.notion.com/pricing), [inte tillförlitlig](https://isdown.app/status/notion) SaaS tjänst som inte kan uppfylla sina förbättrade produktivitetslöften? Med andra ord, något som begreppet?
+Vill inte istället slösa dyrbart kapital på en [Mardröm för att säkra](https://matthiasfrank.de/en/notion-security/), [prestanda som försämras](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), [Storleksordningen dyrare](https://www.notion.com/pricing), [inte tillförlitlig](https://isdown.app/status/notion) SaaS tjänst som inte kan uppfylla sina förbättrade produktivitetslöften?
 
-Föredrar *grokability *av ett system som Orion &mdash; organiseras runt *dokument med bifogade data *; i stället för en märklig Notions *databaser med bifogade dokument *?
+Föredrar *grokability *av ett system som Orion &mdash; organiseras runt *dokument med bifogade data*; istället för Notions *databaser med bifogade dokument*?
 
 &nbsp;
 
-Vill ha en mer konservativ/suverän strategi än att bara exponera alla dina företagshemligheter för skrupelfria AI-leverantörer :fa-openai: och deras missgynnade gränsmodeller?
+Vill ha ett mer konservativt/suveränt/etiskt tillvägagångssätt än att bara exponera alla dina företagshemligheter för skrupelfria AI-leverantörer :fa-openai: och deras missgynnade gränsmodeller?
 
 &nbsp;
 
@@ -300,26 +289,34 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 &nbsp;
 
-<center>
-
-<span class="btn bg-secondary">[<span class="text-white">Kontakta oss för företagspriser och en kostnadsfri demo](../contact)</span>
-
-</center>
-</div>
-<div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+&nbsp;
 
 &nbsp;
 
 <center>
+
+&nbsp;
+
+&nbsp;
+
+<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Kontakta oss för företagspriser och en kostnadsfri konsultation med en ingenjör](../contact)</span>
+
+&nbsp;
+
+&nbsp;
 
 [Gå till funktionsjämförelserutnät](#h1-feature-comparison-grid)
 
-</center>
+&nbsp;
 
 &nbsp;
 
-<div class="border-top" style="padding-top: 20px">
+</center>
+
+</div>
+<div class="col-lg-6 border-start">
+
+<div>
 
 # <span class="text-warning-emphasis">För unga&nbsp;Akademiker&nbsp;:fa-orcid: / Fullständig&nbsp;Stack&nbsp;Utvecklare&nbsp;:fa-stack-overflow: / Allmänt&nbsp;Bloggare&nbsp;:fa-blog:&nbsp;</span>
 
@@ -334,11 +331,15 @@ Behöver mer hästkraft än en [En ponny som Hugo](https://www.iconoclasts.blog/
 
 &nbsp;
 
-Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig med andra Jamstack värdleverantörer, när du bara behöver fixa ett stavfel, [Kontakta oss](/contact). Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
+Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig med andra Jamstack värdleverantörer, när du bara behöver fixa ett stavfel, [Kontakta oss](/contact).
 
 &nbsp;
 
-Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. Online CMS Editor/IDE är utformad och redo för ditt **webbläsararbetsflöde** när du är det.  I en nypa kommer även det mobila (webbläsargränssnittet) att få det gjort, *direkt*.
+Om du är ansvarig för innehållshantering och letar efter en anpassningsbar faktadatabas för att hantera dina externa länkar, eller om du är en regex-utrustad lejontamer för årtionden av ackumulerat äldre HTML-innehåll, eller bara någon som är missnöjd med de andra alternativen på marknaden och hur de fungerar i stor skala, har vi något riktigt speciellt att erbjuda dig.
+
+&nbsp;
+
+Att aldrig behöva hantera direkt med ett versionskontrollsystem, eller ens en statisk webbplatsgenerator, på din egen dator är upp till dig. Online CMS Editor/IDE är utformad och redo för ditt **webbläsararbetsflöde** när du är det.  I en nypa, även det mobila (webbläsargränssnittet) :fa-mobile: kommer att få det gjort, *instant* :fa-cloud-bolt:.
 
 &nbsp;
 
@@ -361,7 +362,7 @@ Multi-gigabyte källträd är helt enkelt ingen matchning för det &mdash; Total
 &nbsp;
 
 <center>
-<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>Vi bygger bara det du behöver.</em></span>&trade;
+<span class="text-warning-emphasis"><i class="fa fa-trowel-bricks"></i> <em>Vi bygger bara det du behöver.</em></span>&trade;
 </center>
 
 &nbsp;
@@ -370,15 +371,23 @@ När Apache-projektgrupper presenterades med ett fritt val mellan att använda C
 
 &nbsp;
 
-## Säkra som standard, versionskontrollerade och snabbare än andra statiska webbplatsgeneratorer.  Publicera direkt eller stegvisa ändringar &mdash; Prova en snabb demo och se varför det är enkelt.
+## Säkra som standard, versionskontrollerade och snabbare än andra statiska webbplatsgeneratorer.  Publicera direkt :fa-cloud-bolt: eller stegändringar :fa-code-branch: &mdash; Prova en snabb demo och se varför det är enkelt.
 
 &nbsp;
 
-Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live. Känn dig fri att peta runt och experimentera med allt du ser!  Det enda du inte kan göra är att bekräfta och se dina ändringar bygga och driftsätta; det är begränsat till vår personal av uppenbara skäl.
+Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live. För att se det i aktion,
 
 &nbsp;
 
-Vårt globala POP-nätverk (Point of Presence) garanterar anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi är för närvarande på fyra kontinenter och har en bicoastal närvaro inom USA.  Och vi expanderar snabbt - nästa upp Afrika och Östasien!
+<center>
+
+<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Boka en kostnadsfri genomgång idag](../contact)</span>
+
+</center>
+
+&nbsp;
+
+Vårt globala POP-nätverk :fa-hexagon-nodes-bolt: säkerställer anslutningar med kort svarstid till båda Orion &trade; och de slutleveranswebbplatser vi är värd för.  Vi finns för närvarande på fem kontinenter. :fa-hexagon-node-bolt: och har en bicoastal närvaro i USA.  Och vi expanderar snabbt &mdash; Afrika och Västasien!
 
 &nbsp;
 
@@ -410,7 +419,15 @@ The underlying Static Site Generator: öppen källkod på GitHub under Apache Li
 
 &nbsp;
 
-Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ingenjörsarv som går tillbaka till F/OSS-innovationer som lanserades 2010. Redo att uppleva en wiki som faktiskt sparar tid, pengar och huvudvärk? [Ring eller skicka ett meddelande till oss](/contact) idag.
+Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ingenjörsarv som går tillbaka till F/OSS-innovationer som lanserades 2010. Redo att uppleva en wiki som faktiskt sparar tid, pengar och huvudvärk?
+
+&nbsp;
+
+<center>
+
+[Ring eller skicka ett meddelande till oss](/contact) idag.
+
+</center>
 
 &nbsp;
 

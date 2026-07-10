@@ -3,67 +3,46 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =48093
+status: 驗證 =48312
 title: SunStar 系統的 Orion
 ---
 
+<div class="right" style="padding-left:10px">
+<a href="features"><img id="ad1" src="index.page/ad1"></a>
+</div>
+
+## 貴組織的知識：安全、相乘、從中獲利 — 無往常的頭痛或頭痛帳單。
+
+&nbsp;
+
+Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [閃電性能](features) :fa-cloud-bolt:, [不斷的可靠性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:、真正的投資報酬率:fa-chart-line:—成本計算遠低於 Confluence 或 Notion。
+
+&nbsp;
+
+它是企業平台{# lede #}用於建立、管理及提供實際運作的知識{# lede #}— 適用於拒絕結算易碎工具的領導者，這些工具會耗費時間和金錢。
+
+&nbsp;
+
+為何選擇 Orion？由於在資料外洩和 SaaS 帳單中，您的知識應該是最大的資產，而不是負債。Orion 將分散的文件變成安全、可搜尋且自我更新的競爭優勢。舊有解決方案的成本也大幅降低。
+
+&nbsp;
+
+<center>
+
+<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">今天排定無義務示範](../contact)</span>
+
+&nbsp;
+
+[跳至功能比較方格](#h1-feature-comparison-grid)
+
+</center>
+
+&nbsp;
+
 <div class="row">
-<div class="col-lg-5">
-<p>
-	<span class="text-primary-emphasis"><img style="width:100px" src="../images/sunstar-orion-symbol-linear.png"><!-- Derived work from Dennis Moskowitz's original CC BySA v4.0 -->&nbsp;<em>Jamstack Wiki 平台。</em></span>&trade;
-</p>
-<br>
-<span class="text-white">SunStar 系統的 Orion</span> &nbsp; 是一個
+<div class="col-lg-6">
 
-&nbsp;
-
-<p>
-<ul class="list-group">
-  <li class="list-group-item list-group-item-primary d-flex justify-content-between align-items-center">
-
-[** 無法劫持 **](security#separation-of-concerns-and-engineering-tradeoffs10)
-
-:fa-lock:
-
-</li>
-  <li class="list-group-item list-group-item-secondary d-flex justify-content-between align-items-center">
-
-[** 無法中斷 **](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years)
-
-:fa-train:
-
-</li>
-  <li class="list-group-item list-group-item-success d-flex justify-content-between align-items-center">
-
-**行動友善 **
-
-:fa-mobile:
-
-</li>
-  <li class="list-group-item list-group-item-info d-flex justify-content-between align-items-center">
-
-[** 高效能 **](features)
-
-:fa-rocket:
-
-</li>
-  <li class="list-group-item list-group-item-warning d-flex justify-content-between align-items-center">
-
-**同盟 **
-
-:fa-hexagon-nodes-bolt:
-
-</li>
-</ul>
-</p>
-
-&nbsp;
-
-{# lede #}<span class="text-white">企業 Jamstack Wiki 平台</span>&nbsp; 用於<b>建立、管理和提供</b> 使用 Jamstack Technology 靜態網頁，提供動態功能{# lede #}。如需價格資訊，請參閱我們的[Orion 計畫](plans).
-
-&nbsp;
-
-<div class="border-top" style="padding-top: 20px">
+<div>
 
 # <span class="text-warning-emphasis">業務主管:fa-briefcase:</span><br>&nbsp;
 
@@ -89,7 +68,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <center>
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
 <div class="card-header">更安全、更好的產品<span class="text-white">減少金錢</span>&nbsp;<i class="fa fa-chart-line"></i>
 
 </div>
@@ -129,19 +108,19 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-[^1]. :fa-lock: 採用 Orion [立即降低風險](security#separation-of-concerns-and-engineering-tradeoffs10) 在重大安全事故中，安心向您的董事會提供比一個更重要的事宜[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
+[^1]. :fa-lock: 採用 Orion [立即降低風險](security#separation-of-concerns-and-engineering-tradeoffs10) 這是一個重大安全事件。** 安心地向您的財務長和董事會提供比一個更重要的事情 **[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
 
 &nbsp;
 
-[^2]. :fa-infinity: 旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，除了 Orion 以外的類似 Wiki 的產品，其基本缺點是，他們無法提供 **一致的整合 / 介面以進行註冊，並定期維護外部產生的資料檔格式 **。不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
+[^2]. :fa-infinity: 旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，其他類似 Wiki 的產品的基本缺點是，他們無法提供** 一致的整合 / 介面來進行整合，並定期維護外部產生的資料檔案格式 **。
 
 &nbsp;
 
-Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組合向量圖形套件`Asymptote` 滿足您的互動打卡需求。
+不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
 
 &nbsp;
 
-[第 3 天]. :fa-robot: `MCP` 是翻轉。`RAG` 甚至更糟。您想要的 **雙向版本控制同步與`git`。** 將您公司的當地 Agentic AI 解決方案融入您團隊的 Wiki 工作流程中，不會比使用 Orion 更安全、更簡單、更強大或更昂貴。
+[第 3 天]. :fa-robot: **這是您的內容！** 您想要透過 **雙向版本控制的同步功能直接進行讀寫存取`git`，不透明，價格實惠的 SaaS API。** 將您公司的當地 Agentic AI 解決方案融入您團隊的 Wiki 工作流程中，不會比 Orion 更安全、更簡單、更強大或更低的成本。
 
 &nbsp;
 
@@ -149,7 +128,11 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-除了不可避免的熱帶鏈接旋轉到其他維基產品之外，您還可以在全面性的頁面修改時間獲得** 內部 / 外部鏈接驗證 **。`MIME`以類型為基礎的預先確認列印通過，由 Orion 的`CMS` 編輯器。我們也為每位客戶提供一個報告基礎架構，以 **按要求擷取過時的內部 / 外部連結 **，即使相關頁面未在幾個月內變更。
+在 Orion 的全方位預先確認列印通過期間，您將** 內部 / 外部連結驗證 **取得頁面修改時間，而不是無可避免的熱帶連結旋轉到其他 Wiki 產品。`CMS` 編輯器。
+
+&nbsp;
+
+我們也為每位客戶提供一個報告基礎架構，** 按要求擷取過時的內部 / 外部連結 **。即使涉及的頁面未在幾個月內變更。
 
 &nbsp;
 
@@ -161,15 +144,19 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-<span class="text-white">整個組織的可衡量投資報酬率成長，是我們 Wiki 平台特有的聚總園藝和護理能力的後續持續影響。</span>
+<span class="text-white">整個組織的可衡量投資報酬率成長，是我們 Wiki 平台特有的集體園藝和護理能力的後續追蹤、持續影響。</span>
 
 &nbsp;
 
-曾經見過能夠可靠地整合跨獨立來源檔案之篩選內容 / 資料的 Wiki 系統嗎？[** 訂單可以 **](https://www.iconoclasts.blog/joe/)，具有完整支援[** 週期性交叉相依性 **](https://www.iconoclasts.blog/joe/dependencies) 以及每個來源檔案的授權控制。透過內容整合功能不小心 (或惡意) 啟動器存取控制內容，而且在沒有這些修改的情況下，無法修改這類檔案中的內容 / 資料，以產生其相依檔案的並行組建。
+[第 5 天]. :fa-scale-balanced: 此外，Orion 會隨您的成長而擴展，尤其是企業級。繁體中文<span class="text-white">** 每張座位授權 $0 及無限數量的網站 **</span> 跨團隊、合作夥伴、網站開啟受控知識共享與協同合作的新機會。
 
 &nbsp;
 
-[第 5 天]. :fa-scale-balanced: Futhermore，Orion 可隨著您的成長而擴展，尤其是在企業層次。繁體中文<span class="text-white">** 每張座位授權 $0 及無限數量的網站 **</span> 透過我們的聯合平台，為團隊、合作夥伴、網站甚至整個地球的受控知識共享和協作創造新的機會！我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` 適當&mdash; Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
+甚至是我們的聯合平台:fa-hexagon-nodes-bolt:!
+
+&nbsp;
+
+我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` 適當&mdash; Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
 
 &nbsp;
 
@@ -177,9 +164,11 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-[^6]. :fa-money-check-dollar: 與其他市場解決方案[沒有保費計劃，您可自行選擇](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager)。Orion 的每月訂閱價格[300 個座位的商務計劃每月為 $2500](plans); [Confluence Premium 位於 $3000+ 以北 3000 位](https://www.atlassian.com/software/confluence/pricing).
+[^6]. :fa-money-check-dollar: 與其他市場解決方案[沒有保費計劃，您可自行選擇](https://www.atlassian.com/software/confluence/resources/guides/premium-admin/manage-content-at-scale#what-is-content-manager)。Orion 的每月訂閱價格[300 個座位的商務計劃每月約為 $2600](plans); [Confluence Premium 位於 $3000+ 以北 3000 位](https://www.atlassian.com/software/confluence/pricing).
 
-當座位數從 300 方向移動時，您的 **節省金額會增加 **。&gt;500 讓您進入我們的企業級[第 5 天]在 **50 個座位上，您的每月帳單為 1/5，您現在支付給 Atlassian**。
+&nbsp;
+
+由於座位數從 300 方向大幅移動，因此您的 **節省金額增加 **。&gt;500 讓您進入我們的企業級[第 5 天]；和<span class="text-white">在 50 個座位上，您的每月帳單為 1/5，您現在支付給亞特拉西亞人的費用</span>.
 
 &nbsp;
 
@@ -187,17 +176,17 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 1. 同意所需的地圖拓樸，從個別的影響空間到 Orion wiki 檔案和資料夾，
 
-2. 設計與實作`Django` 範本檔案與`Perl` 建立邏輯，以容納所建置拓樸、品牌及想要的外觀與風格`HTML` 上線前，
+2. 設計和實作範本檔案並建立邏輯，以容納上述拓樸、品牌和想要查看並實現的內建網站預先上線，
 
-3. 設定`xsltproc` 執行轉換的命令檔[`XML` 傾印整個 Confluence 空間](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) 至想要的來源樹狀結構版面配置，以及
+3. 執行自動轉換[`XML` 傾印整個 Confluence 空間](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) 至想要的來源樹狀結構版面配置，以及
 
 4. 建立 Orion wiki 網站，並返回上述步驟進行調整和調整，直到客戶滿意並準備好進行最終合約簽署為止。
 
-上述第 2 步可能出現重大成本可能累積的情況；不過，該步驟的大部分都可用於 AI 自動化。客戶也可以選擇保留其 Confluence 訂閱，只要他們喜歡，而不與新的 Orion Wiki 發生衝突，只是為了降低相關風險。
+上述第 2 步可能出現重大成本可能累積的情況；不過，該步驟的大部分都可用於 AI 自動化。客戶也可以選擇保留其 Confluence 訂閱，只要他們喜歡，而不與新的 Orion Wiki 發生衝突。
 
 &nbsp;
 
-最後，我們根據您的特定要求量身打造每項安裝，並 **隨時提供諮詢和專業指導 **，以確保您對我們產品和服務的投資獲得最大回報。** 您的團隊有我們的合作夥伴 **，以確保您看到與 Orion 相關的預期生產力增加和客戶滿意度。&mdash; 專為建立 / 策劃強大、經過驗證的協作知識而設計；且擷取簡便、全面且精確的資訊。
+最後，我們根據您的特定要求量身打造每項安裝，並 **隨時提供諮詢和專業指導 **，以確保您對我們的產品和服務投資獲得最大的回報。<span class="text-white">您的團隊有我們的合作夥伴</span> 確保您看到預期的生產力提升和客戶滿意度。
 
 &nbsp;
 
@@ -205,7 +194,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-[所有權 (&amp;O)]。事實上，系統中 **沒有頁面所有權的正式概念 **。Orion 的版本控制功能只會在使用者確認的變更時，追蹤每位使用者授權的員工變更集，借貸至比其他類似系統更高階的公司成就，邁向 Wiki 的合併工作產品。然而，這肯定是促進和支持的。"所有權" 以明確向前移動`ACL` 相關頁面的標頭指派和 (或) 自訂`view` 納入"作者" 作為`Author` 標頭或類似於您網站上的 Wiki 頁面建置。
+[所有權 (&amp;O)]。 (技術) 事實上，系統中 **沒有頁面所有權的正式概念 **。Orion 的版本控制功能只會在使用者確認的變更時，追蹤每位使用者授權的員工變更集，借貸至比其他類似系統更高階的公司成就，邁向 Wiki 的合併工作產品。然而，這肯定是促進和支持的。"所有權" 以明確向前移動`ACL` 相關頁面的標頭指派和 (或) 自訂`view` 納入"作者" 作為`Author` 標頭或類似於您網站上的 Wiki 頁面建置。
 
 &nbsp;
 
@@ -217,7 +206,7 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-## 留下過去的排水痛點...
+## 留下過去的排水痛點
 
 &nbsp;
 
@@ -227,13 +216,13 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-不想改為浪費寶貴的資本[難以保護](https://matthiasfrank.de/en/notion-security/), [效能惡化](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/)，一個[對企業而言，規模順序更昂貴](https://www.notion.com/pricing), [不可靠](https://isdown.app/status/notion) 無法履行其增強生產力承諾的 SaaS 服務？換句話說，像是「概念」？
+不想改為浪費寶貴的資本[安全的夜市](https://matthiasfrank.de/en/notion-security/), [效能惡化](https://www.reddit.com/r/Notion/comments/1rdals6/is_notion_getting_slower_or_is_it_just_me/), [星等順序更昂貴](https://www.notion.com/pricing), [不可靠](https://isdown.app/status/notion) 無法履行其增強生產力承諾的 SaaS 服務？
 
-偏好使用 Orion 等系統的 *grokability* &mdash; 以 *文件與附加資料* 進行組織，而不是以 peculiar Notion 的 *資料庫與附加的文件 *？
+偏好使用 Orion 等系統的 *grokability* &mdash; 依據 *文件與附加資料* 進行組織；而不是 Notion 的 *資料庫與附加的文件 *？
 
 &nbsp;
 
-想要更保守 / 更主權的方法，不只是向不正當的 AI 供應商揭露所有公司祕書:fa-openai: 以及它們未被遺忘的邊界模型？
+想要比只向不普及的 AI 供應商公開所有公司祕書，更保守 / 主權 / 道德的方法:fa-openai: 以及它們未被遺忘的邊界模型？
 
 &nbsp;
 
@@ -300,26 +289,34 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-<center>
-
-<span class="btn bg-secondary">[<span class="text-white">如需企業定價和免費示範，請與我們聯絡](../contact)</span>
-
-</center>
-</div>
-<div class="col-lg-6 border-start">
-<a href="features"><img id="ad1" style="width:100%;margin-bottom:64px;margin-top:3px;" src="index.page/ad1"></a>
+&nbsp;
 
 &nbsp;
 
 <center>
+
+&nbsp;
+
+&nbsp;
+
+<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">與我們聯繫以獲得企業定價，並與工程師進行免費諮詢](../contact)</span>
+
+&nbsp;
+
+&nbsp;
 
 [跳至功能比較方格](#h1-feature-comparison-grid)
 
-</center>
+&nbsp;
 
 &nbsp;
 
-<div class="border-top" style="padding-top: 20px">
+</center>
+
+</div>
+<div class="col-lg-6 border-start">
+
+<div>
 
 # <span class="text-warning-emphasis">青少年&nbsp;學術&nbsp;:fa-orcid: / 全部&nbsp;堆疊&nbsp;開發者&nbsp;:fa-stack-overflow: / 公共&nbsp;部落客&nbsp;:fa-blog:&nbsp;</span>
 
@@ -334,11 +331,15 @@ Orion 使用分欄向量資料庫引擎完成其資料整合圖片`PDL` 與組�
 
 &nbsp;
 
-如果您厭倦了每一座位的授權以及每一 CPU 週期的選擇，我們會在您只需要修打字的時候，與其他代管商的 Jamstack 重點。[聯繫我們](/contact)。如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
+如果您厭倦了每一座位的授權以及每一 CPU 週期的選擇，我們會在您只需要修打字的時候，與其他代管商的 Jamstack 重點。[聯繫我們](/contact).
 
 &nbsp;
 
-絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 CMS 編輯器 /IDE 的設計可讓您隨時進行 **僅限瀏覽器的工作流程 **。* 立即 *，即使是行動 (瀏覽器) 介面也能順利完成。
+如果您負責內容策展，並正在為可自訂的事實資料庫進行點餐以管理您的外部連結，或者您是具備正規表示式功能的獅子遊戲機數十年累積的傳統 HTML 內容，或只有某人不滿意市場上的其他選項，以及他們如何大規模地運作，我們非常特別為您提供。
+
+&nbsp;
+
+絕對不必直接處理版本控制系統，甚至是在您自己的個人電腦上的靜態網站產生器。線上 CMS 編輯器 /IDE 的設計可讓您隨時進行 **僅限瀏覽器的工作流程 **。就算是行動 (瀏覽器) 介面也可使用手指:fa-mobile: 完成後，* 立即 *:fa-cloud-bolt:.
 
 &nbsp;
 
@@ -356,12 +357,12 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以 *秒* (而非小時和分鐘) 計算。系統容易維持於[`300 MB/s`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新思考：
+多 GB 來源樹狀結構不相符&mdash; 完整網站建置持續時間是以* 秒 *(而非小時和分鐘) 計算。系統容易維持於[`300 MB/s`](features) 處理完整網站建置的來源時，但指定其<span class="text-white">獨特的專利申請相依性管理</span> 功能性，幾乎不需要重新思考：
 
 &nbsp;
 
 <center>
-<span class="text-primary-emphasis"><i class="fa fa-trowel-bricks"></i> <em>我們只建立您需要的建置項目。</em></span>&trade;
+<span class="text-warning-emphasis"><i class="fa fa-trowel-bricks"></i> <em>我們只建立您需要的建置項目。</em></span>&trade;
 </center>
 
 &nbsp;
@@ -370,15 +371,23 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-## 與其他靜態網站產生器相比，預設安全、受版本控制且速度更快。立即發布或暫存變更&mdash; 試用快速示範，瞭解為何不費力。
+## 與其他靜態網站產生器相比，預設安全、受版本控制且速度更快。立即發布:fa-cloud-bolt: 或階段變更:fa-code-branch: &mdash; 試用快速示範，瞭解為何不費力。
 
 &nbsp;
 
-本網站由奧里昂自行代管；所有熱粉紅色鉛筆方塊[<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上角已上線。快來玩，並對您看到的任何東西進行實驗！唯一無法做的事是確認並觀察您的變更建置與部署，這僅限於我們的人員，原因很明顯。
+本網站由奧里昂自行代管；所有熱粉紅色鉛筆方塊[<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) 右上角已上線。若要瞭解實際情況，
 
 &nbsp;
 
-我們的全球網路連接點 (POP) 可確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於四大洲，在美國境內也有雙海濱。我們正在快速擴展非洲和東亞！
+<center>
+
+<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">立即安排免費直播](../contact)</span>
+
+</center>
+
+&nbsp;
+
+我們的全球網路連接點 (POP) :fa-hexagon-nodes-bolt: 確保與 Orion 的低延遲連線&trade; 以及我們代管的最終交付網站。我們目前位於五大洲:fa-hexagon-node-bolt: 而且在美國境內有雙海濱存在。我們正在快速擴展&mdash; 下一個非洲和西亞！
 
 &nbsp;
 
@@ -386,7 +395,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分行，並僅支付在我們的基礎設施上使用 *的費用。只要攜帶您自己的 AI 增強型 css/javascript 架構、Perl 指令碼和 Django 範本，我們就能免費處理其他設定。建議使用 **Bootstrap 5** 作為 css/js 樣式，因為它是內部使用的；但完全由您決定。
+您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分行，並僅支付在我們的基礎設施上使用* 的費用。只要攜帶您自己的 AI 增強型 css/javascript 架構、Perl 指令碼和 Django 範本，我們就能免費處理其他設定。建議使用 **Bootstrap 5** 作為 css/js 樣式，因為它是內部使用的；但完全由您決定。
 
 &nbsp;
 
@@ -410,7 +419,15 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 &nbsp;
 
-這不是行銷微調&mdash; 它是可驗證的開放式工程遺產，可追溯至 2010 年開創的 F/OSS 創新。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？[給我們打電話或給我們留言](/contact) 今天。
+這不是行銷微調&mdash; 它是可驗證的開放式工程遺產，可追溯至 2010 年開創的 F/OSS 創新。準備好體驗一個實際節省時間、金錢和頭痛的維基嗎？
+
+&nbsp;
+
+<center>
+
+[給我們打電話或給我們留言](/contact) 今天。
+
+</center>
 
 &nbsp;
 
