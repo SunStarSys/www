@@ -306,14 +306,14 @@ Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markd
 &nbsp;
 
 <div style="margin:auto;width:400px">
-<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Contact Us for Enterprise&nbsp;Pricing and <br>a No-Obligation&nbsp;Consultation with an Engineer</span>
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Contact Us for Enterprise&nbsp;Pricing and <br>a No-Obligation&nbsp;Consultation with an Engineer</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Consultation" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email for Free Consultation" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Free Consultation" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -401,14 +401,14 @@ This website is self-hosted on Orion; all those hot-pink pencil squares [<i clas
 
 
 <div style="margin:auto;width:400px">
-<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Schedule a Free Walk-Through Today</span>
+<span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Schedule a Free Walk-Through Today</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Walk-Through" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email for Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
