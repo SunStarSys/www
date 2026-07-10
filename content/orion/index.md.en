@@ -26,7 +26,14 @@ Why Orion? Because in a world of data breaches and bloated SaaS bills, your know
 
 <center>
 
-<span class="btn" style="background-color: #A9BDBD">[<span class="text-warning-emphasis">Contact Us for a Free Brochure](../contact)</span>
+<form style="width:50%" id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
+      <input type="hidden" name="path" value="{{path}}" />
+      <input type="hidden" name="nonce" value="{{ nonce }}" />
+      <input type="hidden" name="lang" value="{{ lang }}" />
+      <input type="hidden" name="subject" value="Orion Brochure" />
+      <input class="form-control me-2" type="email" name="email" required
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+</form>
 
 &nbsp;
 
