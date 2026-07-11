@@ -3,11 +3,7 @@
     "files": {
       "seg_84": {
         "count": "8",
-        "filename": "seg_8x/deletions-seg_84.bv"
-      },
-      "seg_8w": {
-        "count": "8",
-        "filename": "seg_8x/deletions-seg_8w.bv"
+        "filename": "seg_8y/deletions-seg_84.bv"
       }
     },
     "format": "1"
@@ -54,14 +50,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_8x"
+    "name": "seg_8y"
   },
   "sort": {
     "counts": {
-      "path": "8"
+      "path": "9"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "8"
+    },
     "ord_widths": {
       "path": "4"
     }
