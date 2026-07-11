@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ar api/index.md.ar'
 keywords: wiki،jamstack،blog،آمن،آمن
-status: التحقق = 48407
+status: التحقق = 48522
 title: SunStar أوريون الأنظمة
 ---
 
@@ -19,7 +19,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-النظام الأساسي للمؤسسة {# lede #}لإنشاء وإدارة وتقديم المعرفة التي تعمل بالفعل{# lede #} — <span class="text-white">بالنسبة للقادة الذين يرفضون الاستقرار في أدوات هشة تستنزف الوقت والمال.</span>
+النظام الأساسي للمؤسسة {# lede #}لإنشاء وإدارة وتقديم المعرفة التي تعمل بالفعل{# lede #} — <span class="text-white">للقادة الذين يرفضون الاستقرار على الأدوات الهشة التي تستنزف الوقت والمال :fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## إظهار تفاصيل عائد الاستثمار :fa-chart-line:
+## أظهر لي تفاصيل عائد الاستثمار لهذه الطرق السبعة :fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-[^33]. :fa-robot: **إنه المحتوى الخاص بك!** ما تريده هو الوصول المباشر للقراءة والكتابة إليه عبر **مزامنة التحكم في الإصدار ثنائية الاتجاه مع `git`ليس أكثر غموضًا، وواجهات برمجة تطبيقات SaaS باهظة الثمن.** لا يحصل ربط حل الذكاء الاصطناعي الوكيل المحلي لشركتك بسير عمل wiki لفريقك على أي شيء أكثر أمانًا وأسهل وأقوى أو أقل تكلفة من Orion.
+[^33]. :fa-robot: **إنه المحتوى الخاص بك!** ما تريده هو الوصول المباشر للقراءة والكتابة إليه عبر **مزامنة التحكم في الإصدار ثنائية الاتجاه مع `git` :fa-code-compare:ليس أكثر غموضًا، وواجهات برمجة تطبيقات SaaS باهظة الثمن.** لا يحصل ربط حل الذكاء الاصطناعي الوكيل المحلي لشركتك بسير عمل wiki لفريقك على أي شيء أكثر أمانًا وأسهل وأقوى أو أقل تكلفة من Orion.
 
 &nbsp;
 
@@ -153,7 +152,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-<span class="text-white">إن نمو العائد على الاستثمار القابل للقياس في جميع أنحاء مؤسستك هو تأثير متابع ومستمر ومزدهر لممارسة البستنة الجماعية وقدرات الرعاية الفريدة لمنصة الويكي الخاصة بنا.</span>
+<span class="text-white">يعد نمو عائد الاستثمار القابل للقياس في جميع أنحاء مؤسستك تأثيرًا متابعًا ومستمرًا ومزدهرًا لممارسة البستنة الجماعية وقدرات الرعاية الفريدة لمنصة wiki الخاصة بنا :fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-مع تحرك عدد المقاعد بشكل كبير في أي من الاتجاهين من 300، تزداد **وفوراتك**. &gt;500 يضعك على مستوى المؤسسة[^5]؛ و <span class="text-white">في 50 مقعدًا، تبلغ فاتورتك الشهرية 1/5 ما تدفعه إلى Atlassian الآن</span>.
+مع تحرك عدد المقاعد بشكل كبير في أي من الاتجاهين من 300، تزداد **وفوراتك**. &gt;500 يضعك على مستوى المؤسسة[^5]؛ و <span class="text-white">في 50 مقعدا فاتورتك الشهرية هي فقط 1/5 ما كنت تدفع الآن.</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-## اترك نقاط الألم في الماضي وراءك
+## اترك نقاط الألم في الماضي وراءك :fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-## تم بناء أوريون للقادة الذين يرفضون الاستقرار
+## تم بناء أوريون للقادة الذين يرفضون الاستقرار :fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Orion هي منصة ويكي Jamstack التي تقدم [أمان غير قاب�
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">اتصل بنا للمؤسسة&nbsp;التسعير و <br>عدم الالتزام&nbsp;التشاور مع مهندس</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">جدولة جولة مجانية اليوم</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ The underlying Static Site Generator: مفتوح المصدر على GitHub بم
 
 [اتصل بنا أو أرسل لنا ملاحظة](/contact) اليوم.
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">البدء</div>
 <div class="card-body">
 

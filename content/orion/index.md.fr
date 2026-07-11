@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.fr api/index.md.fr'
 keywords: wiki, pile de james, blog, sécurisé
-status: vérifié=48407
+status: vérifié=48522
 title: SunStar Orion de Systems
 ---
 
@@ -19,7 +19,7 @@ Orion est la plateforme Wiki Jamstack qui livre [sécurité non piratable](secur
 
 &nbsp;
 
-C'est la plate-forme d'entreprise {# lede #}pour créer, gérer et fournir des connaissances qui fonctionnent réellement{# lede #} — <span class="text-white">pour les dirigeants qui refusent de se contenter d'outils fragiles qui drainent le temps et l'argent.</span>
+C'est la plate-forme d'entreprise {# lede #}pour créer, gérer et fournir des connaissances qui fonctionnent réellement{# lede #} — <span class="text-white">pour les dirigeants qui refusent de se contenter d'outils fragiles qui drainent du temps et de l'argent :fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ Pourquoi Orion ? Parce que dans un monde de violations de données et de facture
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ Pourquoi Orion ? Parce que dans un monde de violations de données et de facture
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Contrairement aux produits que vos concurrents utilisent, Orion est un cadre con
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## Afficher les détails du retour sur investissement :fa-chart-line:
+## Montrez-moi les détails du retour sur investissement pour ces sept façons :fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Cependant, en se concentrant sur une poignée de formats de texte / document sou
 
 &nbsp;
 
-[^3]. :fa-robot: **C'est votre contenu !** Ce que vous voulez, c'est un accès direct en lecture-écriture via **la synchronisation bidirectionnelle version-contrôle avec `git`, pas des API SaaS plus opaques et coûteuses.** Intégrer la solution d'IA agentique locale de votre entreprise dans le workflow wiki de votre équipe n'est pas plus sûr, plus facile, plus puissant ou moins cher qu'avec Orion.
+[^3]. :fa-robot: **C'est votre contenu !** Ce que vous voulez, c'est un accès direct en lecture-écriture via **la synchronisation bidirectionnelle version-contrôle avec `git` :fa-code-compare:, pas des API SaaS plus opaques et coûteuses.** Intégrer la solution d'IA agentique locale de votre entreprise dans le workflow wiki de votre équipe n'est pas plus sûr, plus facile, plus puissant ou moins cher qu'avec Orion.
 
 &nbsp;
 
@@ -153,7 +152,7 @@ La recherche / le remplacement récursif indolore pour réparer le cruft accumul
 
 &nbsp;
 
-<span class="text-white">La croissance du retour sur investissement mesurable au sein de votre organisation est un effet de floraison continu et continu de l'exercice des capacités collectives de jardinage et de prise en charge propres à notre plateforme wiki.</span>
+<span class="text-white">La croissance du retour sur investissement mesurable au sein de votre organisation est un effet florissant continu et continu de l'exercice des capacités collectives de jardinage et de prise en charge propres à notre plateforme wiki. :fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ Au fur et à mesure que le statut de votre personnel évolue au fil du temps, Or
 
 &nbsp;
 
-Au fur et à mesure que le nombre de sièges passe de 300 à 300, vos **économies augmentent**. &gt;500 vous place au niveau de notre entreprise[^5] ; et <span class="text-white">à 50 places votre facture mensuelle est de 1/5 ce que vous payez à Atlassian maintenant</span>.
+Au fur et à mesure que le nombre de sièges passe de 300 à 300, vos **économies augmentent**. &gt;500 vous place au niveau de notre entreprise[^5] ; et <span class="text-white">À 50 places, votre facture mensuelle n'est que de 1/5 de ce que vous payez maintenant.</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Enfin, nous adaptons chaque installation à vos besoins spécifiques et nous som
 
 &nbsp;
 
-## Laissez les points douloureux épuisants du passé derrière vous
+## Laissez les points douloureux épuisants du passé derrière vous :fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Vous voulez une approche plus conservatrice / souveraine / éthique que de simpl
 
 &nbsp;
 
-## Orion est construit pour les dirigeants qui refusent de s'installer
+## Orion est construit pour les dirigeants qui refusent de s'installer :fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Aucun verrouillage de fournisseur &mdash; et *nous le prouvons* Votre contenu r�
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Contactez-nous pour Enterprise&nbsp;Tarification et <br>une absence d'obligation&nbsp;Consultation avec un ingénieur</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ Ce site web est auto-hébergé sur Orion ; tous ces carrés de crayon rose chaud
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Planifiez une visite gratuite aujourd'hui</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ Ce n'est pas du marketing spin &mdash; C'est un patrimoine d'ingénierie vérifi
 
 [Appelez-nous ou envoyez-nous une note](/contact) aujourd'hui.
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">Mise en route</div>
 <div class="card-body">
 

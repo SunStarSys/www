@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=48407
+status: 확인=48522
 title: SunStar 시스템스 오리온
 ---
 
@@ -19,7 +19,7 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
 
 &nbsp;
 
-엔터프라이즈 플랫폼 {# lede #}실제로 작동하는 지식의 생성, 관리 및 제공{# lede #} — <span class="text-white">시간과 돈을 낭비하는 취약한 도구에 정착하기를 거부하는 지도자를 위해.</span>
+엔터프라이즈 플랫폼 {# lede #}실제로 작동하는 지식의 생성, 관리 및 제공{# lede #} — <span class="text-white">시간과 돈을 낭비하는 취약한 도구에 정착하기를 거부하는 리더들을 위해 :fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## ROI 세부정보 표시 :fa-chart-line:
+## 이 일곱 가지 방법에 대한 ROI 세부정보 표시 :fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;
 
-[^3]. :fa-robot: **귀하의 콘텐츠입니다!** **양방향 버전 제어 동기화를 통해 직접 읽기-쓰기 액세스가 필요합니다. `git`, 불투명하고 가격이 비싼 SaaS API가 아닙니다.** 귀사의 로컬 Agentic AI 솔루션을 팀의 위키 워크플로우에 연결해도 Orion보다 더 안전하고, 쉽고, 강력하고, 비용이 적게 들지 않습니다.
+[^3]. :fa-robot: **귀하의 콘텐츠입니다!** **양방향 버전 제어 동기화를 통해 직접 읽기-쓰기 액세스가 필요합니다. `git` :fa-code-compare:, 불투명하고 가격이 비싼 SaaS API가 아닙니다.** 귀사의 로컬 Agentic AI 솔루션을 팀의 위키 워크플로우에 연결해도 Orion보다 더 안전하고, 쉽고, 강력하고, 비용이 적게 들지 않습니다.
 
 &nbsp;
 
@@ -153,7 +152,7 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 &nbsp;
 
-<span class="text-white">조직 전반에 걸쳐 측정 가능한 ROI 성장은 위키 플랫폼에 고유한 집단 원예 및 관리 능력을 행사하는 후속적이고 지속적인 꽃 피는 효과입니다.</span>
+<span class="text-white">조직 전반의 측정 가능한 ROI 성장은 위키 플랫폼에 고유한 집단 원예 및 관리 능력을 행사하는 후속적이고 지속적인 꽃 피는 효과입니다. :fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 &nbsp;
 
-좌석 수가 300에서 어느 방향으로나 크게 이동하면 **절감이 증가합니다**. &gt;500은 우리의 기업 수준에 당신을 두었습니다[^5]; 및 <span class="text-white">at 50 seats your monthly bill is 1/5 당신이 지금 Atlassian에 지불하고있는 것</span>.
+좌석 수가 300에서 어느 방향으로나 크게 이동하면 **절감이 증가합니다**. &gt;500은 우리의 기업 수준에 당신을 두었습니다[^5]; 및 <span class="text-white">50 석에 월간 청구서는 현재 지불 한 금액의 1/5에 불과합니다.</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Orion의 인어 통합을 사용하면 **다이어그램 소스가 페이지의 
 
 &nbsp;
 
-## 과거의 배수로 인한 고통을 뒤에 두십시오.
+## 과거의 배수로 인한 고통을 뒤에 두십시오. :fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 &nbsp;
 
-## 오리온은 정착을 거부하는 지도자들을 위해 지어졌다.
+## 오리온은 정착을 거부하는 지도자들을 위해 지어졌다. :fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">기업 문의&nbsp;가격 및 <br>의무 없음&nbsp;엔지니어와의 상담</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ Apache 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트�
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">오늘 무료 워크스루 예약</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 [우리에게 전화를하거나 우리에게 메모를 드롭](/contact) 오늘.
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">시작하기</div>
 <div class="card-body">
 

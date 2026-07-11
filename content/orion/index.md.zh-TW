@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =48407
+status: 驗證 =48522
 title: SunStar 系統的 Orion
 ---
 
@@ -19,7 +19,7 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
 
 &nbsp;
 
-它是企業平台{# lede #}用於建立、管理及提供實際運作的知識{# lede #} —<span class="text-white">對於拒絕解決可消耗時間和金錢的脆弱工具的領導者。</span>
+它是企業平台{# lede #}用於建立、管理及提供實際運作的知識{# lede #} —<span class="text-white">給拒絕解決易碎工具的領導者，這些工具會耗費時間和金錢:fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## 顯示投資報酬率明細:fa-chart-line:
+## 顯示以下七種方式的投資報酬率明細:fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-[第 3 天]. :fa-robot: **這是您的內容！** 您想要透過 **雙向版本控制的同步功能直接進行讀寫存取`git`，不透明，價格實惠的 SaaS API。** 將您公司的當地 Agentic AI 解決方案融入您團隊的 Wiki 工作流程中，不會比 Orion 更安全、更簡單、更強大或更低的成本。
+[第 3 天]. :fa-robot: **這是您的內容！** 您想要透過 **雙向版本控制的同步功能直接進行讀寫存取`git` :fa-code-compare:，不透明，價格實惠的 SaaS API。** 將您公司的當地 Agentic AI 解決方案融入您團隊的 Wiki 工作流程中，不會比 Orion 更安全、更簡單、更強大或更低的成本。
 
 &nbsp;
 
@@ -153,7 +152,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-<span class="text-white">整個組織的可衡量投資報酬率成長，是我們 Wiki 平台特有的集體園藝和護理能力的後續追蹤、持續影響。</span>
+<span class="text-white">整個組織的可衡量投資報酬率成長，是我們 Wiki 平台獨有的集體園藝和護理能力的後續、持續影響:fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-由於座位數從 300 方向大幅移動，因此您的 **節省金額增加 **。&gt;500 讓您進入我們的企業級[第 5 天]；和<span class="text-white">在 50 個座位上，您的每月帳單為 1/5，您現在支付給亞特拉西亞人的費用</span>.
+由於座位數從 300 方向大幅移動，因此您的 **節省金額增加 **。&gt;500 讓您進入我們的企業級[第 5 天]；和<span class="text-white">每月帳單只有 50 個座位，現在只需支付 1/5 個費用。</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-## 留下過去的排水痛點
+## 留下過去的排水痛點:fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-## Orion 專為拒絕解決的領導者而設
+## Orion 專為拒絕解決的領導者而設:fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">聯絡我們企業版&nbsp;訂價與<br>無義務&nbsp;與工程師進行諮詢</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">立即安排免費直播</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 [給我們打電話或給我們留言](/contact) 今天。
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">入門</div>
 <div class="card-body">
 

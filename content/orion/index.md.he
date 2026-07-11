@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 48407
+status: אומתה=48522
 title: SunStar אוריון מערכות
 ---
 
@@ -19,7 +19,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-זוהי הפלטפורמה הארגונית {# lede #}ליצור, לנהל ולספק ידע שבאמת עובד{# lede #} — <span class="text-white">עבור מנהיגים שמסרבים להסתפק בכלים שבירים המנקזים זמן וכסף.</span>
+זוהי הפלטפורמה הארגונית {# lede #}ליצור, לנהל ולספק ידע שבאמת עובד{# lede #} — <span class="text-white">למנהיגים שמסרבים להסתפק בכלים שבירים שמנקזים זמן וכסף :fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ title: SunStar אוריון מערכות
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ title: SunStar אוריון מערכות
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## הצג לי את פרטי החזר ההשקעה :fa-chart-line:
+## הצג לי את פרטי החזר ההשקעה לשבע הדרכים האלה :fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-[^3]. :fa-robot: **זה התוכן שלך!** מה שאתה רוצה הוא גישת קריאה-כתיבה ישירה אליו באמצעות **סנכרון בקרת גרסאות דו-כיווני עם `git`, ממשקי API אטומים ויקרים של SaaS.** הכנסת פתרון Agentic AI המקומי של החברה לתהליך העבודה של הצוות שלך, לא תהפוך לבטוחה יותר, קלה יותר, עוצמתית יותר או יקרה פחות מאשר אצל אוריון.
+[^3]. :fa-robot: **זה התוכן שלך!** מה שאתה רוצה הוא גישת קריאה-כתיבה ישירה אליו באמצעות **סנכרון בקרת גרסאות דו-כיווני עם `git` :fa-code-compare:, ממשקי API אטומים ויקרים של SaaS.** הכנסת פתרון Agentic AI המקומי של החברה לתהליך העבודה של הצוות שלך, לא תהפוך לבטוחה יותר, קלה יותר, עוצמתית יותר או יקרה פחות מאשר אצל אוריון.
 
 &nbsp;
 
@@ -153,7 +152,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-<span class="text-white">צמיחת ROI מדידה ברחבי הארגון שלך היא אפקט פורח מתמשך של פעילות הגינון הקולקטיבי ויכולות הטיפול הייחודיות לפלטפורמת הוויקי שלנו.</span>
+<span class="text-white">גידול מדוד בתשואה להשקעה ברחבי הארגון שלכם הוא אפקט פורח מתמשך ומעקב של מימוש יכולות גינון וטיפול קולקטיביות ייחודיות לפלטפורמת הוויקי שלנו. :fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-כאשר מספר המושבים נע באופן משמעותי בכל כיוון מ -300, החיסכון שלך **גדל**. &gt;500 מציב אותך ברמה הארגונית שלנו[^5]; וגם <span class="text-white">ב 50 מושבים החשבון החודשי שלך הוא 1/5 מה שאתה משלם אטלסי עכשיו</span>.
+כאשר מספר המושבים נע באופן משמעותי בכל כיוון מ -300, החיסכון שלך **גדל**. &gt;500 מציב אותך ברמה הארגונית שלנו[^5]; וגם <span class="text-white">ב 50 מושבים החשבון החודשי שלך הוא רק 1/5 מה שאתה משלם עכשיו.</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-## השאירו את נקודות הכאב של העבר מאחור
+## השאירו את נקודות הכאב של העבר מאחור :fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-## אוריון נבנה עבור מנהיגים שמסרבים להתיישב
+## אוריון נבנה עבור מנהיגים שמסרבים להתיישב :fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">פנה אלינו עבור Enterprise&nbsp;תמחור ו <br>ללא מחויבות&nbsp;התייעצות עם מהנדס</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">תזמנו טיול חינם היום</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ The underlying Static Site Generator: GitHub תחת רישיון אפאצ'י 2.0
 
 [שלחו לנו הודעה או שלחו לנו הודעה](/contact) היום.
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">צעדים ראשונים</div>
 <div class="card-body">
 

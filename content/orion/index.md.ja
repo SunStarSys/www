@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=48407
+status: 確認済み=48522
 title: SunStarシステムのOrion
 ---
 
@@ -19,7 +19,7 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-エンタープライズ・プラットフォーム{# lede #}実際に機能する知識の作成、管理、提供{# lede #} —<span class="text-white">時間とお金を浪費する脆弱なツールの解決を拒否するリーダーのために。</span>
+エンタープライズ・プラットフォーム{# lede #}実際に機能する知識の作成、管理、提供{# lede #} —<span class="text-white">時間とお金を浪費する脆弱なツールの解決を拒否するリーダーのために:fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## ROI詳細の表示:fa-chart-line:
+## この7つの方法のROI詳細を表示:fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-[3(&amp;3)]. :fa-robot: **コンテンツです!** **双方向バージョン・コントロール同期による読取り/書込みの直接アクセスが必要です`git`、より不透明で高価なSaaS API。**貴社のローカルAgentic AIソリューションをチームのWikiワークフローに取り込むと、Orionよりも安全、簡単、強力、または低コストになることはありません。
+[3(&amp;3)]. :fa-robot: **コンテンツです!** **双方向バージョン・コントロール同期による読取り/書込みの直接アクセスが必要です`git` :fa-code-compare:、より不透明で高価なSaaS API。**貴社のローカルAgentic AIソリューションをチームのWikiワークフローに取り込むと、Orionよりも安全、簡単、強力、または低コストになることはありません。
 
 &nbsp;
 
@@ -153,7 +152,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-<span class="text-white">組織全体の測定可能なROI成長は、当社のwikiプラットフォームに特有の集団ガーデニングと介護能力の運動のフォローオンで継続的な咲く効果です。</span>
+<span class="text-white">組織全体の測定可能なROI成長は、当社のwikiプラットフォームに特有の集団ガーデニングと介護能力の運動のフォローオンで継続的な咲く効果です:fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-座席数が300からどちらかの方向に大きく移動すると、**節約額**が増加します。&gt;500は私達の企業レベルであなたを置きます[5(&amp;5)]; および<span class="text-white">50席で毎月の請求は1/5で、今アトラシアンに支払っています</span>.
+座席数が300からどちらかの方向に大きく移動すると、**節約額**が増加します。&gt;500は私達の企業レベルであなたを置きます[5(&amp;5)]; および<span class="text-white">50席で毎月の請求額は、現在支払っている金額が1/5になります。</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-## 過去の排水の問題点を残す
+## 過去の排水の問題点を残す:fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-## オリオンは、解決を拒否するリーダーのために作られています
+## オリオンは、解決を拒否するリーダーのために作られています:fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">企業向けお問い合わせ&nbsp;価格と<br>義務なし&nbsp;エンジニアとの相談</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ Apacheソフトウェアプロジェクトコミュニティが、Confluenceが�
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">今日の無料ウォークスルーをスケジュール</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 [私たちに電話をかけるか、メモをください](/contact) 本日。
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">はじめに</div>
 <div class="card-body">
 

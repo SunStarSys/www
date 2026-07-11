@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=48407
+status: проверено=48522
 title: SunStar Орион систем
 ---
 
@@ -19,7 +19,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-Корпоративная платформа {# lede #}для создания, управления и предоставления знаний, которые действительно работают{# lede #} — <span class="text-white">для лидеров, которые отказываются соглашаться на хрупкие инструменты, которые истощают время и деньги.</span>
+Корпоративная платформа {# lede #}для создания, управления и предоставления знаний, которые действительно работают{# lede #} — <span class="text-white">для лидеров, которые отказываются соглашаться на хрупкие инструменты, которые истощают время и деньги :fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## Показать сведения о ROI :fa-chart-line:
+## Показать сведения о ROI для этих семи способов :fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-[^3]. :fa-robot: **Это ваш контент!** То, что вы хотите, это прямой доступ к нему для чтения-записи через **двустороннюю синхронизацию управления версиями с `git`, не более непрозрачные, дорогостоящие API-интерфейсы SaaS.** Подключение локального решения агента ИИ вашей компании к рабочему процессу вики вашей команды не становится безопаснее, проще, мощнее или дешевле, чем с Orion.
+[^3]. :fa-robot: **Это ваш контент!** То, что вы хотите, это прямой доступ к нему для чтения-записи через **двустороннюю синхронизацию управления версиями с `git` :fa-code-compare:, не более непрозрачные, дорогостоящие API-интерфейсы SaaS.** Подключение локального решения агента ИИ вашей компании к рабочему процессу вики вашей команды не становится безопаснее, проще, мощнее или дешевле, чем с Orion.
 
 &nbsp;
 
@@ -153,7 +152,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-<span class="text-white">Измеримый рост окупаемости инвестиций в вашей организации – это последовательный, непрерывный цветущий эффект от использования коллективных способностей садоводства и ухода, уникальных для нашей вики-платформы.</span>
+<span class="text-white">Измеримый рост окупаемости инвестиций в вашей организации – это последовательный, непрерывный цветущий эффект от использования коллективных способностей садоводства и ухода, уникальных для нашей вики-платформы. :fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-По мере того, как количество мест значительно перемещается в любом направлении с 300, ваши **сбережения увеличиваются**. &gt;500 ставит вас на уровень предприятия[^5]; и <span class="text-white">на 50 мест ваш ежемесячный счет 1/5 то, что вы платите Atlassian сейчас</span>.
+По мере того, как количество мест значительно перемещается в любом направлении с 300, ваши **сбережения увеличиваются**. &gt;500 ставит вас на уровень предприятия[^5]; и <span class="text-white">на 50 мест ваш ежемесячный счет составляет всего 1/5 того, что вы платите сейчас.</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-## Оставьте истощающие болевые точки прошлого позади
+## Оставьте истощающие болевые точки прошлого позади :fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-## Орион создан для лидеров, которые отказываются селиться
+## Орион создан для лидеров, которые отказываются селиться :fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Свяжитесь с нами для предприятия&nbsp;Цены и <br>без обязательств&nbsp;Консультация с инженером</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Запланируйте бесплатную прогулку сегодня</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ The underlying Static Site Generator: с открытым исходным ко�
 
 [Позвоните нам или напишите нам](/contact) сегодня.
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">Начало работы</div>
 <div class="card-body">
 

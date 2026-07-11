@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=48407
+status: verifierad=48522
 title: SunStar Orion för system
 ---
 
@@ -19,7 +19,7 @@ Orion är Jamstack Wiki Platform som levererar [ej packbar säkerhet](security#s
 
 &nbsp;
 
-Det är företagsplattformen {# lede #}för att skapa, hantera och leverera kunskap som faktiskt fungerar{# lede #} — <span class="text-white">För ledare som vägrar att nöja sig med ömtåliga verktyg som dränerar tid och pengar.</span>
+Det är företagsplattformen {# lede #}för att skapa, hantera och leverera kunskap som faktiskt fungerar{# lede #} — <span class="text-white">för ledare som vägrar att nöja sig med ömtåliga verktyg som dränerar tid och pengar :fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ Varför Orion? Eftersom i en värld av dataintrång och uppsvällda SaaS räknin
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ Varför Orion? Eftersom i en värld av dataintrång och uppsvällda SaaS räknin
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## Visa information om avkastning på investering :fa-chart-line:
+## Visa mig ROI-detaljer för dessa sju sätt :fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Men genom att fokusera på en handfull branschstandardiserade text-/källdokumen
 
 &nbsp;
 
-[^3]. :fa-robot: **Det är ditt innehåll!** Vad du vill ha är direkt läs- och skrivåtkomst till det via **riktad versionskontrollsynkronisering med `git`, inte mer ogenomskinliga, dyra SaaS API:er.** Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare, kraftfullare eller billigare än med Orion.
+[^3]. :fa-robot: **Det är ditt innehåll!** Vad du vill ha är direkt läs- och skrivåtkomst till det via **riktad versionskontrollsynkronisering med `git` :fa-code-compare:, inte mer ogenomskinliga, dyra SaaS API:er.** Att ansluta ditt företags lokala Agentic AI-lösning till ditt teams wiki-arbetsflöde blir inte säkrare, enklare, kraftfullare eller billigare än med Orion.
 
 &nbsp;
 
@@ -153,7 +152,7 @@ Smärtsam rekursiv sökning / ersättning för att reparera den ackumulerade cru
 
 &nbsp;
 
-<span class="text-white">Mätbar ROI-tillväxt i hela organisationen är en uppföljande, kontinuerlig blommande effekt av utövandet av kollektiva trädgårds- och omsorgsförmågor som är unika för vår wiki-plattform.</span>
+<span class="text-white">Mätbar ROI-tillväxt i hela organisationen är en uppföljande, kontinuerlig blommande effekt av utövandet av kollektiva trädgårds- och omsorgsförmågor som är unika för vår wiki-plattform :fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ I takt med att personalens företagsstatus utvecklas över tid gör Orion det en
 
 &nbsp;
 
-Eftersom antalet platser rör sig avsevärt i båda riktningarna från 300 ökar dina **besparingar**. &gt;500 sätter dig på vår företagsnivå[^5]och <span class="text-white">på 50 platser din månatliga faktura är 1/5 vad du betalar till Atlassian nu</span>.
+Eftersom antalet platser rör sig avsevärt i båda riktningarna från 300 ökar dina **besparingar**. &gt;500 sätter dig på vår företagsnivå[^5]och <span class="text-white">Vid 50 platser är din månadskostnad bara 1/5 vad du betalar nu.</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Slutligen skräddarsyr vi varje installation efter dina specifika krav och är *
 
 &nbsp;
 
-## Lämna de dränerande smärtpunkterna i det förflutna bakom sig
+## Lämna de dränerande smärtpunkterna i det förflutna bakom sig :fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Vill ha ett mer konservativt/suveränt/etiskt tillvägagångssätt än att bara 
 
 &nbsp;
 
-## Orion är byggd för ledare som vägrar att bosätta sig
+## Orion är byggd för ledare som vägrar att bosätta sig :fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Kontakta oss för företag&nbsp;Priser och <br>Ingen förpliktelse&nbsp;Samråd med en ingenjör</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Boka en kostnadsfri genomgång idag</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 
 [Ring eller skicka ett meddelande till oss](/contact) idag.
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">Komma igång</div>
 <div class="card-body">
 

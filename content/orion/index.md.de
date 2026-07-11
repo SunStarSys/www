@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: wiki,jamstack,blog,sicher,sicher
-status: überprüft=48407
+status: überprüft=48522
 title: SunStar System-Orion
 ---
 
@@ -19,7 +19,7 @@ Orion ist die Jamstack Wiki Plattform, die [Nicht bestätigte Sicherheit](securi
 
 &nbsp;
 
-Es ist die Unternehmensplattform {# lede #}für die Erstellung, Verwaltung und Bereitstellung von Wissen, das tatsächlich funktioniert{# lede #} — <span class="text-white">für Führungskräfte, die sich weigern, sich mit fragilen Werkzeugen zufrieden zu geben, die Zeit und Geld entleeren.</span>
+Es ist die Unternehmensplattform {# lede #}für die Erstellung, Verwaltung und Bereitstellung von Wissen, das tatsächlich funktioniert{# lede #} — <span class="text-white">für Führungskräfte, die sich weigern, sich mit fragilen Werkzeugen zufrieden zu geben, die Zeit und Geld entleeren :fa-industry:.</span>
 
 &nbsp;
 
@@ -27,7 +27,8 @@ Warum Orion? Weil in einer Welt von Datenverletzungen und aufgeblähten SaaS-Rec
 
 &nbsp;
 
-<div style="margin:auto;width:300px">
+<center>
+<div style="margin:auto;width:250px">
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
       <input type="hidden" name="nonce" value="{{ nonce }}" />
@@ -37,8 +38,6 @@ Warum Orion? Weil in einer Welt von Datenverletzungen und aufgeblähten SaaS-Rec
         placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -108,7 +107,7 @@ Im Gegensatz zu den Produkten, die Ihre Mitbewerber nicht verwenden, ist Orion e
 <div class="accordion-header" id="how-so-heading">
 <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#how-so-target" aria-expanded="false" aria-controls="how-so-target">
 
-## ROI-Details anzeigen :fa-chart-line:
+## Zeigen Sie mir die ROI-Details für diese sieben Möglichkeiten :fa-chart-line:
 
 </button>
 </div>
@@ -129,7 +128,7 @@ Indem Sie sich jedoch auf eine Handvoll branchenüblicher Text-/Quelldokument-/D
 
 &nbsp;
 
-[3]. :fa-robot: **Es ist Ihr Inhalt!** Was Sie wünschen, ist der direkte Lese-/Schreibzugriff über **bidirektionale Versionskontrollsynchronisierung mit `git`, nicht mehr undurchsichtiger, teurer SaaS APIs.** Wenn Sie die lokale Agentic AI-Lösung Ihres Unternehmens in den Wiki-Workflow Ihres Teams integrieren, wird dies nicht sicherer, einfacher, leistungsfähiger oder kostengünstiger als bei Orion.
+[3]. :fa-robot: **Es ist Ihr Inhalt!** Was Sie wünschen, ist der direkte Lese-/Schreibzugriff über **bidirektionale Versionskontrollsynchronisierung mit `git` :fa-code-compare:, nicht mehr undurchsichtiger, teurer SaaS APIs.** Wenn Sie die lokale Agentic AI-Lösung Ihres Unternehmens in den Wiki-Workflow Ihres Teams integrieren, wird dies nicht sicherer, einfacher, leistungsfähiger oder kostengünstiger als bei Orion.
 
 &nbsp;
 
@@ -153,7 +152,7 @@ Schmerzlose rekursive Suche / Ersetzen, um die angesammelte Krümel zu repariere
 
 &nbsp;
 
-<span class="text-white">Das messbare ROI-Wachstum in Ihrem Unternehmen ist ein nachfolgender, kontinuierlicher blühender Effekt der Ausübung kollektiver Gartenarbeit und Pflegefähigkeiten, die einzigartig auf unserer Wiki-Plattform sind.</span>
+<span class="text-white">Das messbare ROI-Wachstum in Ihrem Unternehmen ist ein nachfolgender, kontinuierlicher blühender Effekt der Ausübung kollektiver Gartenarbeit und Pflegefähigkeiten, die einzigartig auf unserer Wiki-Plattform sind :fa-seedling:</span>
 
 &nbsp;
 
@@ -177,7 +176,7 @@ Da sich der Unternehmensstatus Ihres Personals im Laufe der Zeit weiterentwickel
 
 &nbsp;
 
-Da sich die Anzahl der Sitze von 300 in beide Richtungen deutlich bewegt, erhöhen sich Ihre **Einsparungen**. &gt;500 bringt Sie auf unsere Enterprise-Ebene[5]; und <span class="text-white">Bei 50 Plätzen ist Ihre monatliche Rechnung 1/5, was Sie jetzt an Atlassian zahlen</span>.
+Da sich die Anzahl der Sitze von 300 in beide Richtungen deutlich bewegt, erhöhen sich Ihre **Einsparungen**. &gt;500 bringt Sie auf unsere Enterprise-Ebene[5]; und <span class="text-white">Bei 50 Plätzen ist Ihre monatliche Rechnung nur 1/5, was Sie jetzt bezahlen.</span>
 
 &nbsp;
 
@@ -215,7 +214,7 @@ Schließlich passen wir jede Installation an Ihre spezifischen Anforderungen an 
 
 &nbsp;
 
-## Lassen Sie die ableitenden Schmerzpunkte der Vergangenheit zurück
+## Lassen Sie die ableitenden Schmerzpunkte der Vergangenheit zurück :fa-plant-wilt:
 
 &nbsp;
 
@@ -235,7 +234,7 @@ Sie wollen einen konservativeren/souveränen/ethischeren Ansatz, als alle Ihre U
 
 &nbsp;
 
-## Orion ist für Führer gebaut, die sich weigern, sich niederzulassen
+## Orion ist für Führer gebaut, die sich weigern, sich niederzulassen :fa-seedling:
 
 &nbsp;
 
@@ -302,11 +301,8 @@ Keine Anbieterbindung &mdash; Und *wir beweisen es*. Ihre Inhalte befinden sich 
 
 &nbsp;
 
-&nbsp;
-
-&nbsp;
-
-<div style="margin:auto;width:400px">
+<center>
+<div style="margin:auto;padding-top:64px;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Kontaktieren Sie uns für Unternehmen&nbsp;Preisgestaltung und <br>eine Nicht-Verpflichtung&nbsp;Beratung mit einem Ingenieure</span><br>&nbsp;<br>
 <form id="consult" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
       <input type="hidden" name="path" value="{{path}}" />
@@ -318,8 +314,6 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
-
-<center>
 
 &nbsp;
 
@@ -399,6 +393,7 @@ Diese Website ist selbst gehostet auf Orion; all diese hot-pink Bleistift Quadra
 
 &nbsp;
 
+<center>
 <div style="margin:auto;width:400px">
 <span class="btn" style="background-color: #A9BDBD"><span class="text-warning-emphasis">Planen Sie noch heute einen kostenlosen Spaziergang</span><br>&nbsp;<br>
 <form id="brochure" action="/dynamic/enquiry{% ifequal path|dirname "/" %}{% else %}{{ path|dirname }}{% endifequal %}/" class="d-flex form-inline text-light" method="POST">
@@ -411,6 +406,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 </form>
 </span>
 </div>
+</center>
 
 &nbsp;
 
@@ -454,14 +450,9 @@ Das ist kein Marketing-Spin &mdash; Es ist ein nachweisbares, offenes technische
 
 [Rufen Sie uns an oder schreiben Sie uns eine Nachricht](/contact) heute.
 
-</center>
-
 &nbsp;
 
-&nbsp;
-
-<center>
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806">
+<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
 <div class="card-header">Erste Schritte</div>
 <div class="card-body">
 
