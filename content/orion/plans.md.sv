@@ -58,7 +58,7 @@ $ 25 / månad / värd webbplats. Bästa marknadsvärdet för små team eller ens
 			Bra för SMB
 <hr />
 <p style="min-height:100px">
-$ 100 / månad / värd webbplats, ~ 50 % rabatt på alla konkurrent prismodeller!
+$ 100 / månad / värd webbplats, spara $ 400 + av Confluence Premium!
 </p>
 
 &nbsp;

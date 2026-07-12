@@ -58,7 +58,7 @@ $25/mes/sitio alojado. Mejor valor de mercado para equipos pequeños o profesion
 			Ideal para pymes
 <hr />
 <p style="min-height:100px">
-$100 / mes / sitio alojado, ~50% de descuento en todos los modelos de precios de la competencia!
+$ 100 / mes / sitio alojado, ahorre $ 400 + de Confluence Premium!
 </p>
 
 &nbsp;
