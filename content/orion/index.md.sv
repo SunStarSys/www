@@ -389,7 +389,7 @@ När Apache-projektgrupper presenterades med ett fritt val mellan att använda C
 
 &nbsp;
 
-Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i class='fa fa-file-pen text-danger'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live. För att se det i aktion,
+Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i class='fa fa-file-pen text-danger-emphasis'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Högst upp till höger är live. För att se det i aktion,
 
 &nbsp;
 
