@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48522
+status: verificado=48537
 title: SunStar Orión de los Sistemas
 ---
 
@@ -92,7 +92,7 @@ A diferencia de los productos que utilizan sus competidores, Orion es un marco d
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Ahorre $100K / año</span>](https://www.atlassian.com/software/confluence/pricing) con [Licencias empresariales de $0 por asiento / por sitio web de Orion](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Ahorre 50% / año</span>](https://www.atlassian.com/software/confluence/pricing) con [Plan de negocio de Orion](plans) Más sobre Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Ahorre más de $400/mes</span>](https://www.atlassian.com/software/confluence/pricing) con [Plan de negocio de Orion](plans) Más sobre Confluence Premium :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Costos de cambio asequibles y amortizables de la confluencia :fa-arrow-right-arrow-left:
 

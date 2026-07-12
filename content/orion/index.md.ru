@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=48522
+status: проверено=48537
 title: SunStar Орион систем
 ---
 
@@ -92,7 +92,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Экономьте $100K / год</span>](https://www.atlassian.com/software/confluence/pricing) со [Корпоративное лицензирование Orion $0 за место / на веб-сайте](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Экономия 50% в год</span>](https://www.atlassian.com/software/confluence/pricing) со [Бизнес-план Ориона](plans) над совместимым функцией Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Сэкономьте $400+ в месяц</span>](https://www.atlassian.com/software/confluence/pricing) со [Бизнес-план Ориона](plans) над совместимым функцией Confluence Premium :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Доступные и амортизируемые затраты на переключение от слияния :fa-arrow-right-arrow-left:
 

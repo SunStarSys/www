@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=48522
+status: verifierad=48537
 title: SunStar Orion för system
 ---
 
@@ -92,7 +92,7 @@ Till skillnad från de produkter som dina konkurrenter använder är Orion ett r
 
 &nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Spara $100K / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions företagslicensiering för 0 USD per plats/per webbplats](plans) :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Spara 50 % / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions affärsplan](plans) Över funktionsjämförbar Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Spara $400+/månad</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions affärsplan](plans) Över funktionsjämförbar Confluence Premium :fa-money-check-dollar:
 
 &nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Prisvärd, avskrivningsbar växlingskostnad från sammanflöde :fa-arrow-right-arrow-left:
 
