@@ -32,7 +32,7 @@ Why Orion? Because in a world of data breaches and bloated SaaS bills, your know
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Brochure" />
       <input class="form-control me-2" type="email" name="email" required
-        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
 
@@ -308,7 +308,7 @@ Zero vendor lock-in &mdash; and *we prove it*. Your content lives in clean Markd
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Consultation" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -401,7 +401,7 @@ This website is self-hosted on Orion; all those hot-pink pencil squares [<i clas
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Walk-Through" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
