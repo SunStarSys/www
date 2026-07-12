@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48598
+status: verificado=48648
 title: SunStar Orión de los Sistemas
 ---
 
@@ -389,7 +389,7 @@ Cuando a las comunidades de proyectos de software de Apache se les presentó una
 
 &nbsp;
 
-Este sitio web se aloja automáticamente en Orion; todos esos cuadrados de lápiz rosa caliente [<i class='fa fa-file-pen text-danger-emphasis'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En la parte superior derecha están vivos. Para verlo en acción,
+Este sitio web se aloja en Orión; todos esos cuadrados de lápiz de color rojo oscuro [<i class='fa fa-file-pen text-danger-emphasis'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) En la parte superior derecha están vivos. Para verlo en acción,
 
 &nbsp;
 

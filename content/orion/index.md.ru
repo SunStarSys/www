@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=48598
+status: проверено=48648
 title: SunStar Орион систем
 ---
 
@@ -389,7 +389,7 @@ div#lightning img {width:100%}
 
 &nbsp;
 
-Этот веб-сайт самостоятельно размещен на Orion; все эти горяче-розовые квадраты карандашей [<i class='fa fa-file-pen text-danger-emphasis'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Справа сверху живут. Чтобы увидеть это в действии,
+Этот сайт является самостоятельным хостингом на Orion; все эти темно-красные квадраты карандашей [<i class='fa fa-file-pen text-danger-emphasis'></i>](https://cms.sunstarsys.com/redirect?uri=https://www.sunstarsys.com/index) Справа сверху живут. Чтобы увидеть это в действии,
 
 &nbsp;
 
