@@ -70,6 +70,10 @@ div.right img {
   color:#114056;
 }
 
+.breadcrumbs a i {
+  color: var(--bs-danger-text-emphasis)
+}
+
 div.essay {
     background-color: #002B36;
 	padding-top:10px;
