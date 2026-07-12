@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=48537
+status: draft
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -479,7 +479,7 @@ Need help customizing the `Perl` build system in `lib/` and other Django templat
 
 | Feature     |   Orion       | Notion | Confluence |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger-emphasis">{{ row.Notion|safe }}</span> |  <span class="text-danger-emphasis">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
