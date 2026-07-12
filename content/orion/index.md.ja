@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=48537
+status: 確認済み=48598
 title: SunStarシステムのOrion
 ---
 
@@ -35,7 +35,7 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Brochure" />
       <input class="form-control me-2" type="email" name="email" required
-        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
 
@@ -310,7 +310,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Consultation" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -402,7 +402,7 @@ Apacheソフトウェアプロジェクトコミュニティが、Confluenceが�
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Walk-Through" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -479,7 +479,7 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 |機能     |   Orion       |概念|影響|
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} | <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> | <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} | <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger-emphasis">{{ row.Notion|safe }}</span> | <span class="text-danger-emphasis">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

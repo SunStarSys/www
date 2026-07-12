@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48537
+status: verificado=48598
 title: SunStar Orion dos Sistemas
 ---
 
@@ -35,7 +35,7 @@ Por que Orion? Porque em um mundo de violações de dados e contas inchadas do S
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Brochure" />
       <input class="form-control me-2" type="email" name="email" required
-        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
 
@@ -310,7 +310,7 @@ Sem restrição de fornecedor &mdash; E nós provamos isso*. Seu conteúdo vive 
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Consultation" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -402,7 +402,7 @@ Este site é auto-hospedado em Orion; todos aqueles quadrados de lápis cor-de-r
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Walk-Through" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -479,7 +479,7 @@ Precisa de ajuda para personalizar o `Perl` sistema de compilação em `lib/` e 
 
 | Recurso     |   Orion       | Noção | Confluência |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger-emphasis">{{ row.Notion|safe }}</span> |  <span class="text-danger-emphasis">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

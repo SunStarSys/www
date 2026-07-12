@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=48537
+status: 확인=48598
 title: SunStar 시스템스 오리온
 ---
 
@@ -35,7 +35,7 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Brochure" />
       <input class="form-control me-2" type="email" name="email" required
-        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
 
@@ -310,7 +310,7 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Consultation" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -402,7 +402,7 @@ Apache 소프트웨어 프로젝트 커뮤니티가 Confluence 지원 사이트�
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Walk-Through" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -479,7 +479,7 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 | 기능     |   오리온       | 개념 | 영향 |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger-emphasis">{{ row.Notion|safe }}</span> |  <span class="text-danger-emphasis">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />

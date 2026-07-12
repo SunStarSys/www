@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=48537
+status: verifierad=48598
 title: SunStar Orion för system
 ---
 
@@ -35,7 +35,7 @@ Varför Orion? Eftersom i en värld av dataintrång och uppsvällda SaaS räknin
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Brochure" />
       <input class="form-control me-2" type="email" name="email" required
-        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+        placeholder="Email Free Brochure" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </div>
 
@@ -310,7 +310,7 @@ Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns 
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Consultation" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -402,7 +402,7 @@ Denna webbplats är själv värd på Orion; alla dessa heta rosa penna rutor [<i
       <input type="hidden" name="lang" value="{{ lang }}" />
       <input type="hidden" name="subject" value="Orion Walk-Through" />
       <input class="form-control me-2" type="email" name="email" required
-placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger"><i class="fa fa-envelope-open"></i></button>
+placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" value="1" class="btn btn-outline-danger" style="--bs-btn-color: var(--bs-danger-text-emphasis); border-color: var(--bs-danger-text-emphasis) !important"><i class="fa fa-envelope-open"></i></button>
 </form>
 </span>
 </div>
@@ -479,7 +479,7 @@ Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-ma
 
 | Funktion     |   Orion       | Begrepp | Påverkan |
 |:^-----------|:-------------:|:------:|:----------:|
-{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger">{{ row.Notion|safe }}</span> |  <span class="text-danger">{{ row.Confluence|safe }}</span> |
+{% for row in grid.content %}| {{ row.Feature|safe }} |  <span class="text-primary-emphasis">{{ row.Orion|safe }}</span> | <span class="text-danger-emphasis">{{ row.Notion|safe }}</span> |  <span class="text-danger-emphasis">{{ row.Confluence|safe }}</span> |
 {% endfor -%}
 
 <br />
