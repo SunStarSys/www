@@ -295,7 +295,7 @@ Quiere un enfoque más conservador/soberano/ético que simplemente exponer todos
 
 <div class="fade">
 
-- :fa-business-time: **Cualquier negocio cansado de la economía wiki** &mdash; Elimina las costosas suscripciones a SaaS, las frágiles herramientas gratuitas que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 25.000 / año para el uso completo de la empresa).
+- :fa-business-time: **Cualquier negocio cansado de la economía wiki** &mdash; Elimina las costosas suscripciones a SaaS, las frágiles herramientas gratuitas que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 50 000 / año para el uso completo de la empresa).
 
 </div>
 

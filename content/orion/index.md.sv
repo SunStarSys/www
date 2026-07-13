@@ -295,7 +295,7 @@ Vill ha ett mer konservativt/suveränt/etiskt tillvägagångssätt än att bara 
 
 <div class="fade">
 
-- :fa-business-time: Alla företag trött på wiki-ekonomi &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 25 000 dollar per år för full företagsanvändning).
+- :fa-business-time: Alla företag trött på wiki-ekonomi &mdash; Ditch dyra SaaS-prenumerationer, ömtåliga gratisverktyg som tömmer personalens tid och föråldrade system som saktar ner ditt team. Orion ger dig företagskraft till en bråkdel av den totala ägandekostnaden (ofta under 50 000 dollar per år för full företagsanvändning).
 
 </div>
 
