@@ -168,8 +168,8 @@ Los ganchos de confirmación del lado del servidor de Subversion también se pue
 
 ### [La SSR pública es un olor](https://queue.acm.org/detail.cfm?id=2721993)
 
-El dinamismo y el seguimiento de la multitud han llevado a riesgos catastróficos y costos irrazonables para aquellos que construyen y operan sistemas en línea. Orion está tomando un enfoque más considerado y está desarrollando tecnología de contenido estático que difumina la distinción tradicional en la capacidad de respuesta entre sistemas estáticos y dinámicos. Creo que Joe está en algo con este enfoque, y estoy ansioso por ver dónde puede tomarlo.
-Paul Vixie, pionero de Internet
+> El dinamismo y el seguimiento de la multitud han llevado a riesgos catastróficos y costos irrazonables para aquellos que construyen y operan sistemas en línea. Orion está tomando un enfoque más considerado y está desarrollando tecnología de contenido estático que difumina la distinción tradicional en la capacidad de respuesta entre sistemas estáticos y dinámicos. Creo que Joe está en algo con este enfoque, y estoy ansioso por ver dónde puede tomarlo.
+> -- Paul Vixie, pionero de Internet
 
 #### Separación de preocupaciones e ingeniería
 
