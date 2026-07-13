@@ -14,7 +14,7 @@ title: 오리온 참조
 
 Orion의 발음을 Orion &trade;IDE, 방문 <https://www.openoffice.org/> 대규모 사이트, 또는 <https://thrift.apache.org/> 를 클릭하고 위의 책갈피를 클릭하여 실제 프로토타입을 확인합니다.
 
-그것이 당신을 위해 너무 많은 귀찮게하는 경우,이 웹 사이트는 Orion에서 자체 호스팅됩니다. &trade;및 {# lede #}핫 핑크 연필 아이콘 [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 이동 경로와 함께 오른쪽 상단에 라이브 데모를 제공합니다{# lede #} 시스템 작동 방식(sans commit/build 액세스, 직원만 잠김)
+그것이 당신을 위해 너무 많은 귀찮게하는 경우,이 웹 사이트는 Orion에서 자체 호스팅됩니다. &trade;및 {# lede #}어두운 빨간색 연필 아이콘 [<span class="text-danger-emphasis">:fa-file-edit:</span>](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 이동 경로와 함께 오른쪽 상단에 라이브 데모를 제공합니다{# lede #} 시스템 작동 방식(sans commit/build 액세스, 직원만 잠김)
 
 ## 권장 책갈피
 
@@ -41,15 +41,9 @@ Orion의 발음을 Orion &trade;IDE, 방문 <https://www.openoffice.org/> 대규
 
 ## 온보딩 프로세스
 
-조기 입양자를 위해, Orion &trade; 서비스는 Subversion 저장소의 웹 사이트 소스 트리와 최종 사용자에게 사이트 콘텐츠를 전달하는 라이브 프로덕션 웹 서버 사이에 있습니다.  온보딩은 자체 svnpubsub 사용 Subversion 서비스를 이미 실행 중인 조직에 대해 불필요한 작업입니다.
-
-1. Subversion에서 사이트 소스의 URL을 제공하십시오.
+1. @SunStarSys/orion SSG를 통해 구축할 수 있는 사이트 소스를 제공합니다.
 
 2. 사이트 개발 및 유지보수 문제에 대해 논의하기 위한 (역할 또는 메일링 목록) 이메일 주소를 제공하고, 주소가 [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- 조정 시설의 측면에서 준수.
-
-3. 생산 웹 서버 구독 `svnwcsub` 우리의 대중에게 데몬 `svnpubsub` 서비스.  이러한 독립형 소프트웨어 구성 요소는 각각의 새로운 Subversion 소스 릴리스의 일부이며, Subversion 개발 팀에서 합리적으로 성숙하고 잘 지원합니다.  python3 포트가 완료될 때까지 기다릴 수 없는 경우 대신 스레드된 포트를 사용할 수 있습니다.
-
-4. 발송된 빌드의 콘텐츠 차별속성 및 전달할 이메일 주소를 원하는지 알려주십시오.
 
 ## 소스 디렉토리 레이아웃
 
@@ -71,7 +65,7 @@ Orion의 발음을 Orion &trade;IDE, 방문 <https://www.openoffice.org/> 대규
 
 기본적인 개념은 프로파일이 많은 소스 페이지 중 일부가 "동적" 콘텐츠(빌드는 Jira 폭포 또는 현재 메일링 리스트 스레드와 같은 다른 온라인 사이트의 끊임없이 변화하는 스니펫을 통합합니다.)
 
-이것의 좋은 예는 "최신 뉴스" 섹션 [ASF 홈페이지](https://www.apache.org/), 다음은 여기에 설명된 것처럼 약간의 shell+svn+cron 매직과 함께 작동되는 백그라운드 방법입니다(동적 빌드의 소스 파일을 다음과 같이 사용). `$파일` 아래:
+이것의 좋은 예는 "최신 뉴스" 섹션 [ASF 홈페이지](https://www.apache.org/), 다음은 여기에 설명된 것처럼 약간의 shell+svn+cron 매직과 함께 작동되는 백그라운드 방법입니다(동적 빌드의 소스 파일을 다음과 같이 사용). `$file` 아래:
 
 ```shell
 % cp $file $file.tmp

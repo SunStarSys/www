@@ -14,7 +14,7 @@ title: Orion参照
 
 Orionのデモ&trade;IDE、訪問<https://www.openoffice.org/> 大規模なサイト、または<https://thrift.apache.org/> 複雑なものの場合は、上記のブックマークレットをクリックしてライブプロトタイプを表示します。
 
-それがあなたにとってあまりにも迷惑な場合、このウェブサイトはOrionで自己ホストされています&trade;および{# lede #}ホットピンクの鉛筆アイコン[<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 右上のブレッドクラムでライブデモンストレーションを行います{# lede #} システムがどのように機能するか(コミット/ビルド・アクセスは、スタッフのみにロックダウンされます)
+それがあなたにとってあまりにも迷惑な場合、このウェブサイトはOrionで自己ホストされています&trade;および{# lede #}暗い赤の鉛筆アイコン[<span class="text-danger-emphasis">:fa-file-edit:</span>](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 右上のブレッドクラムでライブデモンストレーションを行います{# lede #} システムがどのように機能するか(コミット/ビルド・アクセスは、スタッフのみにロックダウンされます)
 
 ## 推奨ブックマーク
 
@@ -41,15 +41,9 @@ Orionのデモ&trade;IDE、訪問<https://www.openoffice.org/> 大規模なサ�
 
 ## オンボーディング・プロセス
 
-アーリーアダプター用、オリオン&trade; サービスは、SubversionリポジトリのWebサイト・ソース・ツリーと、エンド・ユーザーにサイト・コンテンツを配信するライブ本番Webサーバーの間に配置されます。独自のsvnpubsub対応Subversionサービスをすでに実行している組織にとって、オンボーディングは簡単です。
-
-1. SubversionでサイトのソースのURLを提供してください。
+1. @SunStarSys/orion SSGを介して構築できるサイトのソースを提供してください。
 
 2. サイトの開発やメンテナンスに関する問題について、弊社(ロール、またはメーリングリスト)の電子メールアドレスをご提供いただき、アドレスが[SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- モデレーション施設の観点から準拠しています。
-
-3. 本番Webサーバーのサブスクライブ`svnwcsub` デーモンをパブリックに`svnpubsub` サービスこれらのスタンドアロン・ソフトウェア・コンポーネントは、新しい各Subversionソース・リリースの一部であり、かなり成熟しており、Subversion開発チームによって適切にサポートされています。python3ポートが終了するまで待機できない場合は、かわりに(スレッド化された)ポートを使用できます。
-
-4. 送信されたビルドの内容と配信先の電子メール・アドレスが異なる場合はお知らせください。
 
 ## ソースディレクトリレイアウト
 

@@ -14,7 +14,7 @@ title: Orionreferens
 
 För en demonstration av Orion &trade;'s IDE, besök <https://www.openoffice.org/> för en massiv webbplats, eller <https://thrift.apache.org/> för en invecklad en, och klicka på ovanstående bokmärke för att se en levande prototyp i aktion.
 
-Om det är för mycket besvär för dig, är denna webbplats själv värd på Orion &trade;och {# lede #}dessa heta rosa penna ikoner [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) längst upp till höger bredvid brödsmulorna kommer att ge dig en levande demonstration{# lede #} hur systemet fungerar (utan bekräftelse-/byggbehörighet, som endast är låst för personal).
+Om det är för mycket besvär för dig, är denna webbplats själv värd på Orion &trade;och {# lede #}de mörkröda pennikonerna [<span class="text-danger-emphasis">:fa-file-edit:</span>](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) längst upp till höger bredvid brödsmulorna kommer att ge dig en levande demonstration{# lede #} hur systemet fungerar (utan bekräftelse-/byggbehörighet, som endast är låst för personal).
 
 ## Rekommenderade bokmärken
 
@@ -41,15 +41,9 @@ Om du vill använda bokmärket bläddrar du bara till din aktiva produktionswebb
 
 ## Introduktionsprocess
 
-För tidiga adoptörer, Orion &trade; Tjänsten ligger mellan källträdet för Subversion-databasen och de produktionswebbservrar som levererar webbplatsinnehåll till slutanvändarna.  Introduktionen är enkel för organisationer som redan kör sin egen svnpubsub-aktiverade Subversion-tjänst:
-
-1. Ge oss URL:en till din webbplats källor i Subversion.
+1. Ge oss med din webbplats källor som kan byggas via vår @SunStarSys/orion SSG.
 
 2. Ge oss e-postadressen (roll eller e-postlista) för att diskutera problem med webbplatsutveckling och underhåll, och se till att adressen är [SBS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-efterlevnad när det gäller måttliga anläggningar.
-
-3. Prenumerera på dina produktionswebbservrar" `Täcksub` Demon till vår publik `svnpubsub` tjänst  Dessa fristående programvarukomponenter är en del av varje ny Subversion-källversion, och är rimligt mogna och väl stödda av Subversion Development Team.  Om du bara inte kan vänta på att python3-porten ska slutföras kan vi låta dig använda våra (trådade) portar istället.
-
-4. Låt oss veta om du vill att innehåll skiljer sig från de byggen som skickas ut, och till vilken e-postadress du vill att de ska levereras.
 
 ## Källkataloglayout
 
@@ -71,7 +65,7 @@ Se <https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> för ett leva
 
 Grundtanken är att några av dina högprofilerade källsidor byggs med "dynamisk" innehåll (bygg innehåller ständigt föränderliga utdrag från andra online-webbplatser, som Jira vattenfall eller aktuella sändlistetrådar).
 
-Ett bra exempel på detta är "Senaste nytt" sektion av [ASF: Hemsida](https://www.apache.org/), och här är bakom kulisserna hur det fungerar, med lite skal + svn + cron magi som exemplifieras här (ta den dynamiska byggets källfil som `$fil` nedan:
+Ett bra exempel på detta är "Senaste nytt" sektion av [ASF: Hemsida](https://www.apache.org/), och här är bakom kulisserna hur det fungerar, med lite skal + svn + cron magi som exemplifieras här (ta den dynamiska byggets källfil som `$file` nedan:
 
 ```shell
 % cp $file $file.tmp

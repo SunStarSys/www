@@ -14,7 +14,7 @@ title: Référence Orion
 
 Pour une démonstration d'Orion &trade;IDE, visite <https://www.openoffice.org/> pour un site massif, ou <https://thrift.apache.org/> et cliquez sur le bookmarklet ci-dessus pour voir un prototype en direct en action.
 
-Si c'est trop gênant pour vous, ce site est auto-hébergé sur Orion &trade;, et {# lede #}ces icônes de crayon rose chaud [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en haut à droite à côté du chemin de navigation vous donnera une démonstration en direct{# lede #} de la façon dont le système fonctionne (sans accès commit/build, qui est verrouillé pour le personnel uniquement).
+Si c'est trop gênant pour vous, ce site est auto-hébergé sur Orion &trade;, et {# lede #}ces icônes au crayon rouge foncé [<span class="text-danger-emphasis">:fa-file-edit:</span>](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en haut à droite à côté du chemin de navigation vous donnera une démonstration en direct{# lede #} de la façon dont le système fonctionne (sans accès commit/build, qui est verrouillé pour le personnel uniquement).
 
 ## Bookmarklet recommandé
 
@@ -41,15 +41,9 @@ Pour utiliser le bookmarklet, accédez simplement à votre site de production en
 
 ## Processus d'intégration
 
-Pour les débutants, Orion &trade; le service se trouve entre l'arborescence source du site Web de votre référentiel Subversion et vos serveurs Web de production en direct qui fournissent le contenu du site à vos utilisateurs finaux.  L'intégration est simple pour les organisations qui exécutent déjà leur propre service Subversion compatible svnpubsub :
-
-1. Fournissez-nous l'URL des sources de votre site dans Subversion.
+1. Fournissez-nous les sources de votre site qui peuvent être construites via notre @SunStarSys/orion SSG.
 
 2. Fournissez-nous l'adresse e-mail (rôle ou liste de diffusion) pour discuter des problèmes de développement et de maintenance du site, et assurez-vous que l'adresse est [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- conforme en termes de facilités de modération.
-
-3. Abonnez vos serveurs Web de production `svnwcsub` démon à notre public `svnpubsub` service.  Ces composants logiciels autonomes font partie de chaque nouvelle version de Subversion et sont raisonnablement matures et bien supportées par l'équipe de développement Subversion.  Si vous ne pouvez pas attendre la fin du port python3, nous pouvons vous laisser utiliser nos ports (thread).
-
-4. Faites-nous savoir si vous souhaitez que le contenu diffère des builds envoyés et à quelle adresse électronique vous souhaitez qu'ils soient livrés.
 
 ## Présentation du répertoire source
 
@@ -71,7 +65,7 @@ Voir <https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> pour un exe
 
 L'idée de base est que certaines de vos pages source haut de gamme construisent avec "dynamique" contenu (construction incorpore des extraits en constante évolution d'autres sites en ligne, comme les cascades Jira ou les fils de liste de diffusion actuels).
 
-Un bon exemple de ceci est "Dernières nouvelles" section de [ASF - Page d'accueil](https://www.apache.org/), et voici les coulisses de son fonctionnement, avec un peu de magie shell+svn+cron comme illustré ici (prenez le fichier source de la construction dynamique comme `Fichier $` ci-dessous :
+Un bon exemple de ceci est "Dernières nouvelles" section de [ASF - Page d'accueil](https://www.apache.org/), et voici les coulisses de son fonctionnement, avec un peu de magie shell+svn+cron comme illustré ici (prenez le fichier source de la construction dynamique comme `$file` ci-dessous :
 
 ```shell
 % cp $file $file.tmp

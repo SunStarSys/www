@@ -14,7 +14,7 @@ title: Referencia de Orion
 
 Para una demostración de Orión &trade;IDE, visite <https://www.openoffice.org/> para un sitio masivo, o <https://thrift.apache.org/> para obtener una intrincada, y haga clic en el marcador anterior para ver un prototipo en vivo en acción.
 
-Si eso es demasiado molesto para usted, este sitio web se aloja automáticamente en Orion &trade;y {# lede #}esos iconos de lápiz rosa caliente [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en la parte superior derecha junto a las migas de pan le dará una demostración en vivo{# lede #} de cómo funciona el sistema (sin acceso de confirmación/creación, que está bloqueado únicamente para el personal).
+Si eso es demasiado molesto para usted, este sitio web se aloja automáticamente en Orion &trade;y {# lede #}esos iconos de lápiz rojo oscuro [<span class="text-danger-emphasis">:fa-file-edit:</span>](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) en la parte superior derecha junto a las migas de pan le dará una demostración en vivo{# lede #} de cómo funciona el sistema (sin acceso de confirmación/creación, que está bloqueado únicamente para el personal).
 
 ## Bookmarklet recomendado
 
@@ -41,15 +41,9 @@ Para usar el marcador simplemente navegue a su sitio de producción en vivo (NO 
 
 ## Proceso de vinculación
 
-Para los primeros usuarios, Orion &trade; el servicio se encuentra entre el árbol de origen del sitio web del repositorio de Subversion y los servidores web de producción en directo que entregan contenido del sitio a los usuarios finales.  La incorporación es muy sencilla para las organizaciones que ya ejecutan su propio servicio Subversion habilitado para svnpubsub:
-
-1. Proporcionarnos la URL de las fuentes de su sitio en Subversion.
+1. Proporcionarnos las fuentes de su sitio que se pueden construir a través de nuestro @SunStarSys / orion SSG.
 
 2. Proporcionarnos la dirección de correo electrónico (rol, o lista de correo) para analizar los problemas de desarrollo y mantenimiento del sitio, y garantizar que la dirección sea [SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-compatible en términos de facilidades de moderación.
-
-3. Suscribe a tus servidores web de producción `svnwcsub` daemon a nuestro público `svnpubsub` servicio.  Estos componentes de software independientes son parte de cada nueva versión de origen de Subversion, y están razonablemente maduros y bien respaldados por el equipo de desarrollo de Subversion.  Si no puede esperar a que finalice el puerto python3, podemos permitirle usar nuestros puertos (thread) en su lugar.
-
-4. Háganos saber si desea que se envíen las diferencias de contenido de las compilaciones y a qué dirección de correo electrónico desea que se entreguen.
 
 ## Diseño de directorio de origen
 
@@ -71,7 +65,7 @@ Ver <https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> para un ejem
 
 La idea básica es que algunas de sus páginas de origen de alto perfil construyen con "dinámica" contenido (build incorpora fragmentos en constante cambio de otros sitios en línea, como cascadas de Jira o hilos de listas de correo actuales).
 
-Un buen ejemplo de ello es "Últimas noticias" sección de [Página de inicio de ASF](https://www.apache.org/), y aquí está la forma detrás de escena en que funciona, con un poco de magia shell+svn+cron como se ejemplifica aquí (tome el archivo de origen de la compilación dinámica como `$archivo` abajo):
+Un buen ejemplo de ello es "Últimas noticias" sección de [Página de inicio de ASF](https://www.apache.org/), y aquí está la forma detrás de escena en que funciona, con un poco de magia shell+svn+cron como se ejemplifica aquí (tome el archivo de origen de la compilación dinámica como `$file` abajo):
 
 ```shell
 % cp $file $file.tmp

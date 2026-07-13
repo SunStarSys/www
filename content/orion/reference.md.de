@@ -14,7 +14,7 @@ title: Orion-Referenz
 
 Für eine Demonstration von Orion &trade;'s IDE, besuchen <https://www.openoffice.org/> für eine riesige Website oder <https://thrift.apache.org/> Klicken Sie auf das obige Bookmarklet, um einen Live-Prototyp in Aktion anzuzeigen.
 
-Wenn das zu viel Ärger für Sie ist, ist diese Website auf Orion selbst gehostet &trade;und {# lede #}Diese Hot-Pink-Bleistift-Symbole [<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) oben rechts neben den Brotkrümeln gibt Ihnen eine Live-Demonstration{# lede #} der Funktionsweise des Systems (ohne Commit/Build-Zugriff, der nur für Mitarbeiter gesperrt ist).
+Wenn das zu viel Ärger für Sie ist, ist diese Website auf Orion selbst gehostet &trade;und {# lede #}Diese dunkelroten Bleistiftsymbole [<span class="text-danger-emphasis">:fa-file-edit:</span>](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) oben rechts neben den Brotkrümeln gibt Ihnen eine Live-Demonstration{# lede #} der Funktionsweise des Systems (ohne Commit/Build-Zugriff, der nur für Mitarbeiter gesperrt ist).
 
 ## Empfohlenes Lesezeichen
 
@@ -41,15 +41,9 @@ Um das Bookmarklet zu verwenden, navigieren Sie einfach zu Ihrer Live-Produktion
 
 ## Onboardingprozess
 
-Für Early Adopters, Orion &trade; Der Service befindet sich zwischen dem Website-Quellbaum Ihres Subversion-Repositorys und Ihren Live-Produktionswebservern, die Ihren Endbenutzern Site-Inhalte bereitstellen.  Onboarding ist für Organisationen, die bereits ihren eigenen Subversion-Service mit svnpubsub-Unterstützung ausführen, einfach:
-
-1. Geben Sie uns die URL der Quellen Ihrer Website in Subversion.
+1. Stellen Sie uns die Quellen Ihrer Website zur Verfügung, die über unsere @SunStarSys/orion SSG erstellt werden können.
 
 2. Geben Sie die E-Mail-Adresse (Rolle oder Mailingliste) an, um Probleme bei der Entwicklung und Wartung der Website zu besprechen, und stellen Sie sicher, dass die Adresse [Standardprozesse](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)-konform in Bezug auf Moderationseinrichtungen.
-
-3. Abonnieren Sie Ihre Produktionswebserver' `svnwcsub` Daemon für unsere Öffentlichkeit `svnpubsub` Service.  Diese eigenständigen Softwarekomponenten sind Teil jeder neuen Subversion-Quellversion und werden vom Subversion Development Team angemessen ausgereift und gut unterstützt.  Wenn Sie nur nicht warten können, bis der python3-Port fertig ist, können Sie stattdessen unsere (Thread-)Ports verwenden.
-
-4. Teilen Sie uns mit, ob Sie die Inhaltsunterschiede der gesendeten Builds und die E-Mail-Adresse, an die sie gesendet werden sollen, berücksichtigen möchten.
 
 ## Quellverzeichnislayout
 
@@ -71,7 +65,7 @@ Siehe <https://github.com/SunStarSys/www.iconoclasts.blog/tree/trunk> für ein L
 
 Die Grundidee ist, dass einige Ihrer hochkarätigen Quellseiten mit "dynamisch" Inhalt (Build enthält sich ständig ändernde Snippets von anderen Online-Sites, wie Jira Wasserfälle oder aktuelle Mailinglisten-Threads).
 
-Ein gutes Beispiel dafür ist "Aktuelle News" Abschnitt [Die ASF-Homepage](https://www.apache.org/), und hier ist die Art und Weise hinter den Kulissen, wie es funktioniert, mit ein wenig Shell+svn+cron Magie, wie hier veranschaulicht (nehmen Sie die Quelldatei des dynamischen Build als `$Datei` unten:
+Ein gutes Beispiel dafür ist "Aktuelle News" Abschnitt [Die ASF-Homepage](https://www.apache.org/), und hier ist die Art und Weise hinter den Kulissen, wie es funktioniert, mit ein wenig Shell+svn+cron Magie, wie hier veranschaulicht (nehmen Sie die Quelldatei des dynamischen Build als `$file` unten:
 
 ```shell
 % cp $file $file.tmp

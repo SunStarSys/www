@@ -14,7 +14,7 @@ title: Orion 參考
 
 針對 Orion 的示範&trade;的 IDE，造訪<https://www.openoffice.org/> 針對大型網站，或<https://thrift.apache.org/> 如果是複雜的，請按一下上方的 Bookmarklet 以檢視即時原型。
 
-如果這對您來說太自豪，本網站將自行託管於 Orion &trade;，和{# lede #}那些熱粉紅色鉛筆圖示[<img style="width:20px" src="../images/edit.png">](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 在右上方與來源路徑旁邊，將為您提供即時示範{# lede #} 系統運作方式 (僅對員工鎖定的確認 / 建置存取權)。
+如果這對您來說太自豪，本網站將自行託管於 Orion &trade;，和{# lede #}那些深紅色鉛筆圖示[<span class="text-danger-emphasis">:fa-file-edit:</span>](javascript:location.href='https://cms.sunstarsys.com/redirect?uri='+location.href) 在右上方與來源路徑旁邊，將為您提供即時示範{# lede #} 系統運作方式 (僅對員工鎖定的確認 / 建置存取權)。
 
 ## 建議的 Bookmarklet
 
@@ -41,15 +41,9 @@ title: Orion 參考
 
 ## 入職流程
 
-對於早期採用者，Orion &trade; 服務位於您的 Subversion 儲存區域的網站來源樹狀結構和將網站內容傳遞給一般使用者的即時生產環境 Web 伺服器之間。若組織已執行自己的已啟用 svnpubsub 的 Subversion 服務，則 Onboarding 非常簡單：
-
-1. 請提供 Subversion 中您網站來源的 URL。
+1. 為我們提供您的網站來源，可透過我們的 @SunStarSys/orion SSG 建立。
 
 2. 提供我們討論網站開發和維護問題的 (角色或郵寄清單) 電子郵件地址，並確保地址正確無誤[SRS](https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme)- 符合調適設施。
-
-3. 訂閱您的生產 Web 伺服器`svnwcsub` 公開的協助程式`svnpub` 服務。這些獨立軟體元件是每個新 Subversion 來源發行版本的一部分，並且經過 Subversion 開發團隊合理地成熟，也受到支援。如果您只是無法等候 python3 連接埠完成，我們可以讓您改用我們的 (執行緒) 連接埠。
-
-4. 若您喜歡不同組建的內容，以及想要收到的電子郵件地址，請讓我們知道。
 
 ## 來源目錄版面配置
 
@@ -71,7 +65,7 @@ title: Orion 參考
 
 基本概念是，部分高設定檔來源頁面是使用"動態" 內容 (組建包含來自其他線上網站 (例如 Jira Waterfalls 或目前的郵寄清單繫線) 的不斷變更程式碼片段)。
 
-這是一個很好的例子"最新消息" 區段[ASF 首頁](https://www.apache.org/)，以下是其運作的幕後方式，這裡有一些 shell+svn+cron 魔術 (將動態組建的來源檔案視為`$ 檔案` 下方：
+這是一個很好的例子"最新消息" 區段[ASF 首頁](https://www.apache.org/)，以下是其運作的幕後方式，這裡有一些 shell+svn+cron 魔術 (將動態組建的來源檔案視為`$file` 下方：
 
 ```shell
 % cp $file $file.tmp
