@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=48663
+status: verified=48745
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -61,7 +61,7 @@ Why Orion? Because in a world of data breaches and bloated SaaS bills, your know
 
 <center>
 
-![7 Ways](index.page/7ways)
+<img src="index.page/7ways" style="width:100%" title="7 Ways">
 
 </center>
 
