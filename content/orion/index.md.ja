@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=48648
+status: 確認済み=48749
 title: SunStarシステムのOrion
 ---
 
@@ -59,6 +59,14 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 # 実際に提供するROI: セキュアで高パフォーマンスのナレッジ・マネジメントのコストの一部:fa-chart-line:
 
 </div>
+
+&nbsp;
+
+<center>
+
+<img src="index.page/7ways" style="width:100%" title="7 Ways">
+
+</center>
 
 &nbsp;
 
@@ -290,14 +298,6 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 &nbsp;
 
 ベンダーのロックインが不要&mdash; 『We Prove It』コンテンツはクリーン・マークダウンおよび標準バージョン管理ワークフローに存在します。独自のフォーマットはありません。移行の悪夢はありません。
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 

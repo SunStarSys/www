@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=48648
+status: verifierad=48749
 title: SunStar Orion för system
 ---
 
@@ -59,6 +59,14 @@ Varför Orion? Eftersom i en värld av dataintrång och uppsvällda SaaS räknin
 # Här är avkastningen som faktiskt levererar: Säker, högpresterande kunskapshantering på en bråkdel av kostnaden :fa-chart-line:
 
 </div>
+
+&nbsp;
+
+<center>
+
+<img src="index.page/7ways" style="width:100%" title="7 Ways">
+
+</center>
 
 &nbsp;
 
@@ -290,14 +298,6 @@ Vill ha ett mer konservativt/suveränt/etiskt tillvägagångssätt än att bara 
 &nbsp;
 
 Inget leverantörsinlåsning &mdash; och *vi bevisar det*. Ditt innehåll finns i rena arbetsflöden för Markdown och standardversionskontroll. Inga proprietära format. Inga mardrömmar om migration.
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 

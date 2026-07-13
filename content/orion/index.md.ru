@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=48648
+status: проверено=48749
 title: SunStar Орион систем
 ---
 
@@ -59,6 +59,14 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 # Вот окупаемость инвестиций, которая на самом деле обеспечивает: безопасное, высокопроизводительное управление знаниями за долю затрат :fa-chart-line:
 
 </div>
+
+&nbsp;
+
+<center>
+
+<img src="index.page/7ways" style="width:100%" title="7 Ways">
+
+</center>
 
 &nbsp;
 
@@ -290,14 +298,6 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 &nbsp;
 
 Отсутствие привязки к поставщику &mdash; И мы докажем это*. Ваш контент живет в чистых Markdown и стандартных рабочих процессах управления версиями. Нет фирменных форматов. Никаких миграционных кошмаров.
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 

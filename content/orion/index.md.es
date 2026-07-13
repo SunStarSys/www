@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48648
+status: verificado=48749
 title: SunStar Orión de los Sistemas
 ---
 
@@ -59,6 +59,14 @@ Es la plataforma empresarial {# lede #}para crear, gestionar y entregar conocimi
 # Este es el ROI que realmente ofrece: gestión de conocimiento segura y de alto rendimiento a una fracción del costo :fa-chart-line:
 
 </div>
+
+&nbsp;
+
+<center>
+
+<img src="index.page/7ways" style="width:100%" title="7 Ways">
+
+</center>
 
 &nbsp;
 
@@ -290,14 +298,6 @@ Quiere un enfoque más conservador/soberano/ético que simplemente exponer todos
 &nbsp;
 
 Sin dependencia de proveedores &mdash; y *lo demostramos*. Su contenido reside en flujos de trabajo limpios de Markdown y control de versiones estándar. Sin formatos propios. Sin pesadillas migratorias.
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
 
 &nbsp;
 
