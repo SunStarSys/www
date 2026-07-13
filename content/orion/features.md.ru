@@ -120,10 +120,10 @@ title: Особенности Orion
 
 ## Согласованная рендеринг GitHub-Flavored Markdown (GFM) с Editor.md :editormd-logo-1x: и Django Templating
 
-- [x x] **ВЫСИВЫГ:** {# lede #}Один и тот же механизм рендеринга кода Java в браузере и в сценарии сборки markdown.js (на основе node.js){# lede #} обеспечивает 100% структурную согласованность между окном предварительного просмотра Markdown Editor.md и производственной площадкой.
-- [x x] Теперь полностью поддерживаются заголовки YAML в исходных файлах (разметках).
+- [x] **ВЫСИВЫГ:** {# lede #}Один и тот же механизм рендеринга кода Java в браузере и в сценарии сборки markdown.js (на основе node.js){# lede #} обеспечивает 100% структурную согласованность между окном предварительного просмотра Markdown Editor.md и производственной площадкой.
+- [x] Теперь полностью поддерживаются заголовки YAML в исходных файлах (разметках).
 
-- [x x] Собственная поддержка d3-graphviz.js:
+- [x] Собственная поддержка d3-graphviz.js:
 
 ```graphviz
 digraph {
@@ -135,7 +135,7 @@ a -> c [color=red];
 ----
 &nbsp;
 
-- [x x] Родной @mermaid-js/mermaid v11.15.0 с поддержкой карты ума:
+- [x] Родной @mermaid-js/mermaid v11.15.0 с поддержкой карты ума:
 
 ```mermaid
 graph TD
@@ -355,17 +355,17 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 ----
 &nbsp;
 
-- [x x] Markmap.js Посмотреть поддержку
+- [x] Markmap.js Посмотреть поддержку
 
-- [x x] Дон Кнутс [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Академия Кан [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) поддержка математики, физики и химии:
+- [x] Дон Кнутс [$$\TeX$$](https://www.iconoclasts.blog/joe/triple-products.pdf) / Академия Кан [$$\KaTeX$$](https://en.wikipedia.org/wiki/KaTeX) поддержка математики, физики и химии:
 
 ```math
 \ce{ Zn^2+ <=>[\ce{+ 2OH-}][\ce{+ 2H+}]$\underset{\text{amphoteric hydroxide}}{\ce{Zn(OH)2 v}}$<=>C[+2OH-][{+ 2H+}]$\underset{\text{tetrahydroxozincate}}{\ce{[Zn(OH)4]^2-}}$ }
 ```
 
-- [x x] Синхронное, двунаправленное создание $$\LaTeX$$ Исходные файлы в Markdown+$$\KaTeX$$ Файлы.
+- [x] Синхронное, двунаправленное создание $$\LaTeX$$ Исходные файлы в Markdown+$$\KaTeX$$ Файлы.
 
-- [x x] Навье-Стокс в системе обозначений Эйнштейна [БОЛЬ](https://en.wikipedia.org/wiki/Abstract_index_notation))
+- [x] Навье-Стокс в системе обозначений Эйнштейна [БОЛЬ](https://en.wikipedia.org/wiki/Abstract_index_notation))
 
 ```math
 \begin{aligned}
@@ -375,7 +375,7 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 \end{aligned}
 ```
 
-- [x x] Навье-Стокс в классической нотации
+- [x] Навье-Стокс в классической нотации
 
 ```math
 \begin{aligned}
@@ -387,14 +387,14 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ----
 
-- [x x] Электрический!
+- [x] Электрический!
 
 Редактор будет автодополнять и автоотступать; имеет полноэкранный режим, а также поддержку нескольких других режимов создания контента, доступных для его подсветки синтаксиса CodeMirror 5.
 
 ## Полная поддержка построения филиалов
 
-- [x x] Больше нет промежуточного хранения/публикации: заменено ветвью по ресурсам <span class="text-white">Промоакция</span>.
-- [x x] <span class="text-white">Откат</span> и <span class="text-white">Синхронизация</span> Объединение полностью поддерживается.
+- [x] Больше нет промежуточного хранения/публикации: заменено ветвью по ресурсам <span class="text-white">Промоакция</span>.
+- [x] <span class="text-white">Откат</span> и <span class="text-white">Синхронизация</span> Объединение полностью поддерживается.
 
 ## Поисковая система Live Source Tree
 
@@ -415,8 +415,8 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 <br>
 
-- [x x] На основе совместимого регулярного выражения Perl (PCRE).
-- [x x] Глобальная функция поиска и замены (уникальная поддержка PCRE); поддерживает захват регулярных выражений.
+- [x] На основе совместимого регулярного выражения Perl (PCRE).
+- [x] Глобальная функция поиска и замены (уникальная поддержка PCRE); поддерживает захват регулярных выражений.
 - [ ] PDF поиск скоро.
 - [ ] Скоро появится поддержка GraphQL/AI. Безопасность выглядит весело!
 
@@ -428,9 +428,9 @@ click A3 "https://github.com/csymapp/mermaid-c4-model/blob/master/containerDiagr
 
 ## Интерактивная математическая векторная графика с @vectorgraphics/asymptote
 
-- [x x] Подсветка синтаксиса для асимптота
-- [x x] CMS быстро выйдет из строя на непередаваемых блоках кода Asymptote
-- [x x] WebGL включен, многопоточный вывод HTML
+- [x] Подсветка синтаксиса для асимптота
+- [x] CMS быстро выйдет из строя на непередаваемых блоках кода Asymptote
+- [x] WebGL включен, многопоточный вывод HTML
 
 ```asy
 // tubular trefoil knot -*- asy -*-
