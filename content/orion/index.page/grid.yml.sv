@@ -94,7 +94,7 @@ title: Tabelldata för rutnät för funktionsjämförelse
   Orion: "&check;"
 - Feature: "16-256-vägs samtidiga byggen"
   Orion: "&check;"
-- Feature: "Total ägandekostnad &lt; 25000 USD/år för företag"
+- Feature: "Total ägandekostnad &lt; 50000 USD/år för företag"
   Orion: "&check;"
 - Feature: "Omfattande servicenivåavtal på 99,99 %"
   Orion: "Företag &amp; Serverinstallation"
