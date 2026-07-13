@@ -8,7 +8,7 @@ title: Planes de Orion
 
 <div class="row fade">
   <div class="col-lg-4 plans">
-    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
       <div class="card-header text-white">Plan profesional</div>
         <div class="card-body">
 			Ideal para bloggers independientes
@@ -52,7 +52,7 @@ $25/mes/sitio alojado. Mejor valor de mercado para equipos pequeños o profesion
 </div>
 </div>
 <div class="col-lg-4 plans">
-  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
     <div class="card-header text-white">Plan de negocio</div>
       <div class="card-body">
 			Ideal para pymes
@@ -96,7 +96,7 @@ $ 100 / mes / sitio alojado, ahorre $ 400 + de Confluence Premium!
 </div>
 </div>
 <div class="col-lg-4 plans">
-<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+<div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
   <div class="card-header text-white">Plan de empresa</div>
     <div class="card-body">
 Tarifa plana para más de 500 asientos

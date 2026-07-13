@@ -8,7 +8,7 @@ title: Планы Ориона
 
 <div class="row fade">
   <div class="col-lg-4 plans">
-    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
       <div class="card-header text-white">Профессиональный план</div>
         <div class="card-body">
 			Идеально подходит для независимых блоггеров
@@ -52,7 +52,7 @@ $25 в месяц / размещенный сайт. Лучшая рыночна
 </div>
 </div>
 <div class="col-lg-4 plans">
-  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
     <div class="card-header text-white">Бизнес-план</div>
       <div class="card-body">
 			Отлично подходит для малого и среднего бизнеса
@@ -96,7 +96,7 @@ $100 / месяц / размещенный сайт, сэкономить $400 +
 </div>
 </div>
 <div class="col-lg-4 plans">
-<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+<div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
   <div class="card-header text-white">План предприятия</div>
     <div class="card-body">
 Фиксированная ставка для более чем 500 мест

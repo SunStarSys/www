@@ -8,7 +8,7 @@ title: Orionplaner
 
 <div class="row fade">
   <div class="col-lg-4 plans">
-    <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+    <div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
       <div class="card-header text-white">Vårdpersonalplan</div>
         <div class="card-body">
 			Perfekt för oberoende bloggare
@@ -52,7 +52,7 @@ $ 25 / månad / värd webbplats. Bästa marknadsvärdet för små team eller ens
 </div>
 </div>
 <div class="col-lg-4 plans">
-  <div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+  <div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
     <div class="card-header text-white">Affärsplan</div>
       <div class="card-body">
 			Bra för SMB
@@ -96,7 +96,7 @@ $ 100 / månad / värd webbplats, spara $ 400 + av Confluence Premium!
 </div>
 </div>
 <div class="col-lg-4 plans">
-<div class="card mb-3" style="max-width: 20rem;min-height:1200px;background-color:transparent;color:black;border-color:black">
+<div class="card mb-3" style="max-width: 20rem;min-height:1500px;background-color:transparent;color:black;border-color:black">
   <div class="card-header text-white">Företagsplan</div>
     <div class="card-body">
 Fast pris för fler än 500 platser
