@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=48749
+status: 確認済み=48784
 title: SunStarシステムのOrion
 ---
 
@@ -15,7 +15,7 @@ title: SunStarシステムのOrion
 
 &nbsp;
 
-OrionはJamstack Wikiプラットフォームです。[ハッキング不能なセキュリティ](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [電光性能](features) :fa-cloud-bolt:, [画期的な信頼性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:真のROI :fa-chart-line:コストはConfluenceやNotionよりもはるかに少ない。
+OrionはJamstack Wikiプラットフォームです。[ハッキング不能なセキュリティ](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [電光性能](features) :fa-cloud-bolt:, [画期的な信頼性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:真のROI :fa-chart-line: コストはConfluenceやNotionよりもはるかに少ない。
 
 &nbsp;
 
@@ -23,7 +23,7 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-なぜオリオン? データ侵害やSaaSの請求書が膨らむ世界では、あなたの知識は最大の資産であり、責任ではないはずです。Orionは、散在するドキュメントを、安全で検索しやすい、自己更新型の競争力に変えています。これは、レガシー・ソリューションのコストの一部で行われます。
+なぜオリオン? データ侵害やSaaSの請求書が膨らむ世界では、あなたの知識は最大の資産であるべきであり、責任ではありません。Orionは、散在するドキュメントを、安全で検索しやすい、自己更新型の競争力に変えています。これは、レガシー・ソリューションのコストの一部で行われます。
 
 &nbsp;
 
@@ -124,7 +124,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-[^1]. :fa-lock: オリオンの採用[すぐにリスクを軽減](security#separation-of-concerns-and-engineering-tradeoffs10) 大規模なセキュリティ・インシデント。**安心して、CFOおよび取締役会**に、[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。
+[^1]. :fa-lock: オリオンの採用[リスクを大幅に軽減](security#separation-of-concerns-and-engineering-tradeoffs10) 大規模なセキュリティ・インシデント。**安心して、CFOおよび取締役会**に、[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。
 
 &nbsp;
 
@@ -133,6 +133,10 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 &nbsp;
 
 ただし、業界標準の一握りのテキスト/ソース文書/データ形式に焦点を当てることによって、最も複雑なデータ生成の数学的表、グラフ、チャート、マップ、アーキテクチャ図であっても、**完全に検索可能で、AI翻訳可能**は、Orionでサポートされている自然言語のいずれかです。
+
+&nbsp;
+
+例えば、このページの[機能比較グリッド](#h1-feature-comparison-grid) 検索可能な**a-natural-language-translatableからOrionビルドによって生成されます。`YAML` このページに添付**; ビルドが同時に変換されること[`JSON`](index.page/grid.json{{lang}})。他のwikiソリューションとの文字通りの不可能性。
 
 &nbsp;
 

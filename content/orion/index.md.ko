@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=48749
+status: 확인=48784
 title: SunStar 시스템스 오리온
 ---
 
@@ -15,7 +15,7 @@ title: SunStar 시스템스 오리온
 
 &nbsp;
 
-Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가능한 보안](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [번개 성능](features) :fa-cloud-bolt:, [탁월한 신뢰성](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:진정한 ROI :fa-chart-line:- Confluence 또는 Notion보다 비용이 훨씬 적게 듭니다.
+Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가능한 보안](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [번개 성능](features) :fa-cloud-bolt:, [탁월한 신뢰성](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:진정한 ROI :fa-chart-line: - Confluence 또는 Notion보다 비용이 훨씬 적게 듭니다.
 
 &nbsp;
 
@@ -23,7 +23,7 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
 
 &nbsp;
 
-왜 Orion? 데이터 침해와 SaaS 청구서로 가득 찬 세상에서 귀하의 지식은 책임감이 아닌 가장 큰 자산이어야합니다. Orion은 분산된 문서를 안전하고 검색 가능한 자체 업데이트 경쟁 우위로 전환합니다. 또한 레거시 솔루션 비용의 일부에 불과합니다.
+왜 Orion? 데이터 침해와 SaaS 청구서로 가득 찬 세상에서 귀하의 지식은 책임이 아닌 가장 큰 자산이어야합니다. Orion은 분산된 문서를 안전하고 검색 가능한 자체 업데이트 경쟁 우위로 전환합니다. 또한 레거시 솔루션 비용의 일부에 불과합니다.
 
 &nbsp;
 
@@ -124,7 +124,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;
 
-[^1]. :fa-lock: Orion 채택 [즉시 위험 감소](security#separation-of-concerns-and-engineering-tradeoffs10) 주요 보안 사고 중. **그리고 안심은 CFO와 이사회에 문제를 더 많이 전달했습니다.** [비싼 랜섬웨어 보험 정책](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 청구서를 제출할 필요가 없습니다.
+[^1]. :fa-lock: Orion 채택 [위험 감소](security#separation-of-concerns-and-engineering-tradeoffs10) 주요 보안 사고 중. **그리고 안심은 CFO와 이사회에 문제를 더 많이 전달했습니다.** [비싼 랜섬웨어 보험 정책](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 청구서를 제출할 필요가 없습니다.
 
 &nbsp;
 
@@ -133,6 +133,10 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 &nbsp;
 
 그러나 업계 표준 텍스트/소스 문서/데이터 형식의 일부에 초점을 맞추어 가장 복잡한 데이터 생성 수학 테이블, 그래프, 차트, 맵 및 아키텍처 다이어그램도 오리온에서 지원되는 모든 자연어로 **완전히 검색 가능하며 AI 번역 가능**합니다.
+
+&nbsp;
+
+예를 들어, 이 페이지의 [기능 비교 그리드](#h1-feature-comparison-grid) **a-natural-language-translatable, searchable에서 Orion 빌드에 의해 생성됩니다. `YAML` 이 페이지에 첨부**: 빌드가 동시에 [`JSON`](index.page/grid.json{{lang}}). 다른 위키 솔루션과의 문자적 불가능성.
 
 &nbsp;
 

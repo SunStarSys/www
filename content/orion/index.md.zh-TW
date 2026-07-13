@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =48749
+status: 驗證 =48784
 title: SunStar 系統的 Orion
 ---
 
@@ -15,7 +15,7 @@ title: SunStar 系統的 Orion
 
 &nbsp;
 
-Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [閃電性能](features) :fa-cloud-bolt:, [不斷的可靠性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:、真正的投資報酬率:fa-chart-line:—成本計算遠低於 Confluence 或 Notion。
+Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [閃電性能](features) :fa-cloud-bolt:, [不斷的可靠性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:、真正的投資報酬率:fa-chart-line: — 成本計算遠低於 Confluence 或 Notion。
 
 &nbsp;
 
@@ -124,7 +124,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-[^1]. :fa-lock: 採用 Orion [立即降低風險](security#separation-of-concerns-and-engineering-tradeoffs10) 這是一個重大安全事件。** 安心地向您的財務長和董事會提供比一個更重要的事情 **[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
+[^1]. :fa-lock: 採用 Orion [大幅降低您的風險](security#separation-of-concerns-and-engineering-tradeoffs10) 這是一個重大安全事件。** 安心地向您的財務長和董事會提供比一個更重要的事情 **[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
 
 &nbsp;
 
@@ -133,6 +133,10 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 &nbsp;
 
 不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
+
+&nbsp;
+
+例如，這個非常頁面[功能比較方格](#h1-feature-comparison-grid) 由 **a-natural-language-translatable，searchable 所產生的 Orion 版本`YAML` 此頁面的附件 **；組建會同時轉換成[`JSON`](index.page/grid.json{{lang}})。與其他 Wiki 解決方案的文字不穩定。
 
 &nbsp;
 

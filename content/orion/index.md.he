@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.he api/index.md.he'
 keywords: wiki,jamstack,blog,מאובטח,בטוח
-status: אומתו 48749
+status: אומתו 48784
 title: SunStar אוריון מערכות
 ---
 
@@ -15,7 +15,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-אוריון היא הפלטפורמה של Jamstack Wiki שמספקת [אבטחה בלתי ניתנת לפיצוח](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [ביצועי ברק](features) :fa-cloud-bolt:, [אמינות בלתי שבירה](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:ROI אמיתי :fa-chart-line:זה עולה הרבה פחות מהשפעה או רעיון.
+אוריון היא הפלטפורמה של Jamstack Wiki שמספקת [אבטחה בלתי ניתנת לפיצוח](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [ביצועי ברק](features) :fa-cloud-bolt:, [אמינות בלתי שבירה](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:ROI אמיתי :fa-chart-line: המחיר נמוך בהרבה מההשפעה או המושג.
 
 &nbsp;
 
@@ -124,7 +124,7 @@ title: SunStar אוריון מערכות
 
 &nbsp;
 
-[^1]. :fa-lock: אימוץ אוריון [להפחית באופן מיידי את הסיכון](security#separation-of-concerns-and-engineering-tradeoffs10) על תקרית אבטחה מרכזית. **השקט הנפשי חולק חשיבות רבה יותר לסמנכ"ל הכספים ולדירקטוריון** שלכם [פוליסת ביטוח כופר יקרה](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) אתה אף פעם לא צריך להגיש תביעה נגד.
+[^1]. :fa-lock: אימוץ אוריון [להפחית באופן דרמטי את הסיכון](security#separation-of-concerns-and-engineering-tradeoffs10) על תקרית אבטחה מרכזית. **השקט הנפשי חולק חשיבות רבה יותר לסמנכ"ל הכספים ולדירקטוריון** שלכם [פוליסת ביטוח כופר יקרה](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) אתה אף פעם לא צריך להגיש תביעה נגד.
 
 &nbsp;
 
@@ -133,6 +133,10 @@ title: SunStar אוריון מערכות
 &nbsp;
 
 עם זאת, על ידי התמקדות בקומץ של טקסט/מסמך מקור/פורמטים של נתונים סטנדרטיים בתעשייה, אפילו הטבלאות המתמטיות המורכבות ביותר שנוצרו על ידי נתונים, גרפים, תרשימים, מפות ודיאגרמות ארכיטקטוניות ניתנות לחיפוש על ידי **ו- AI ניתן לתרגום** בכל אחת מהשפות הטבעיות הנתמכות של אוריון.
+
+&nbsp;
+
+לדוגמה, דף זה [רשת השוואת מאפיינים](#h1-feature-comparison-grid) נוצר על ידי אוריון לבנות מ **a-טבעי שפה-מתורגם, ניתן לחיפוש `YAML` נספח** לדף זה; שהבנייה הופכת בו-זמנית [`JSON`](index.page/grid.json{{lang}}). חוסר יכולת מילולית עם פתרונות ויקי אחרים.
 
 &nbsp;
 

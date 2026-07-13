@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: wiki,jamstack,blog,sicher,sicher
-status: überprüft=48749
+status: überprüft=48784
 title: SunStar System-Orion
 ---
 
@@ -15,7 +15,7 @@ title: SunStar System-Orion
 
 &nbsp;
 
-Orion ist die Jamstack Wiki Plattform, die [Nicht bestätigte Sicherheit](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [Blitzleistung](features) :fa-cloud-bolt:, [unzerbrechliche Zuverlässigkeit](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:und wahrer ROI :fa-chart-line:— bei weitem weniger Kosten als Konflikt oder Begriff.
+Orion ist die Jamstack Wiki Plattform, die [Nicht bestätigte Sicherheit](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [Blitzleistung](features) :fa-cloud-bolt:, [unzerbrechliche Zuverlässigkeit](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:und wahrer ROI :fa-chart-line: — bei weitem geringerem Kostenaufwand als Konflikt oder Begriff.
 
 &nbsp;
 
@@ -23,7 +23,7 @@ Es ist die Unternehmensplattform {# lede #}für die Erstellung, Verwaltung und B
 
 &nbsp;
 
-Warum Orion? Weil in einer Welt von Datenverletzungen und aufgeblähten SaaS-Rechnungen Ihr Wissen Ihr größtes Kapital sein sollte – keine Haftung. Orion verwandelt verstreute Dokumentation in einen sicheren, durchsuchbaren, sich selbst aktualisierenden Wettbewerbsvorteil. Und das zu einem Bruchteil der Kosten für Legacy-Lösungen.
+Warum Orion? Weil in einer Welt von Datenverletzungen und aufgeblähten SaaS-Rechnungen Ihr Wissen Ihr größtes Kapital sein sollte - keine Haftung. Orion verwandelt verstreute Dokumentation in einen sicheren, durchsuchbaren, sich selbst aktualisierenden Wettbewerbsvorteil. Und das zu einem Bruchteil der Kosten für Legacy-Lösungen.
 
 &nbsp;
 
@@ -124,7 +124,7 @@ Im Gegensatz zu den Produkten, die Ihre Mitbewerber nicht verwenden, ist Orion e
 
 &nbsp;
 
-[1]. :fa-lock: Annahme von Orion [reduziert sofort Ihr Risiko](security#separation-of-concerns-and-engineering-tradeoffs10) von einem wichtigen Sicherheitsvorfall. **Und die Gewissheit hat Ihrem CFO und dem Verwaltungsrat mehr Bedeutung gegeben** als [teure Ransomware-Versicherung](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Sie müssen nie eine Forderung gegen.
+[1]. :fa-lock: Annahme von Orion [reduziert Ihr Risiko drastisch](security#separation-of-concerns-and-engineering-tradeoffs10) von einem wichtigen Sicherheitsvorfall. **Und die Gewissheit hat Ihrem CFO und dem Verwaltungsrat mehr Bedeutung gegeben** als [teure Ransomware-Versicherung](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Sie müssen nie eine Forderung gegen.
 
 &nbsp;
 
@@ -133,6 +133,10 @@ Im Gegensatz zu den Produkten, die Ihre Mitbewerber nicht verwenden, ist Orion e
 &nbsp;
 
 Indem Sie sich jedoch auf eine Handvoll branchenüblicher Text-/Quelldokument-/Datenformate konzentrieren, sind selbst Ihre komplexesten datengenerierten mathematischen Tabellen, Diagramme, Diagramme, Karten und Architekturdiagramme **vollständig durchsuchbar und KI übersetzbar** in einer der von Orion unterstützten natürlichen Sprachen.
+
+&nbsp;
+
+Zum Beispiel, diese Seite ist [Funktionsvergleichsraster](#h1-feature-comparison-grid) wird vom Orion-Build aus **a-natural-language-translatable, searchable generiert `YAML` Anhang** zu dieser Seite; dass der Build gleichzeitig in [`JSON`](index.page/grid.json{{lang}}). Eine buchstäbliche Unmöglichkeit mit anderen Wiki-Lösungen.
 
 &nbsp;
 

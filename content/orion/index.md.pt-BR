@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.pt-BR api/index.md.pt-BR'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48749
+status: verificado=48784
 title: SunStar Orion dos Sistemas
 ---
 
@@ -15,7 +15,7 @@ title: SunStar Orion dos Sistemas
 
 &nbsp;
 
-Orion é a plataforma Wiki Jamstack que oferece [segurança inviolável](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [desempenho de raio](features) :fa-cloud-bolt:, [confiabilidade inquebrável](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:ROI verdadeiro e verdadeiro :fa-chart-line:ao mesmo tempo custando muito menos do que Confluence ou Notion.
+Orion é a plataforma Wiki Jamstack que oferece [segurança inviolável](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [desempenho de raio](features) :fa-cloud-bolt:, [confiabilidade inquebrável](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:ROI verdadeiro e verdadeiro :fa-chart-line: — custando muito menos do que Confluence ou Notion.
 
 &nbsp;
 
@@ -23,7 +23,7 @@ Orion é a plataforma Wiki Jamstack que oferece [segurança inviolável](securit
 
 &nbsp;
 
-Por que Orion? Porque em um mundo de violações de dados e contas inchadas do SaaS, seu conhecimento deve ser seu maior ativo, não um passivo. O Orion transforma a documentação dispersa em uma vantagem competitiva segura, pesquisável e autoatualizada. E o faz por uma fração do custo de soluções legadas.
+Por que Orion? Porque em um mundo de violações de dados e contas inchadas do SaaS, seu conhecimento deve ser seu maior ativo - não um passivo. O Orion transforma a documentação dispersa em uma vantagem competitiva segura, pesquisável e autoatualizada. E o faz por uma fração do custo de soluções legadas.
 
 &nbsp;
 
@@ -124,7 +124,7 @@ Ao contrário dos produtos que seus concorrentes estão usando, o Orion é uma e
 
 &nbsp;
 
-[^1]. :fa-lock: Adoção de Orion [reduz imediatamente o risco](security#separation-of-concerns-and-engineering-tradeoffs10) de um grande incidente de segurança. **E a paz de espírito entregou questões mais ao seu CFO e conselho de administração** do que um [apólice de seguro de ransomware caro](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Você nunca precisa apresentar uma reclamação contra.
+[^1]. :fa-lock: Adoção de Orion [Reduz drasticamente o risco](security#separation-of-concerns-and-engineering-tradeoffs10) de um grande incidente de segurança. **E a paz de espírito entregou questões mais ao seu CFO e conselho de administração** do que um [apólice de seguro de ransomware caro](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Você nunca precisa apresentar uma reclamação contra.
 
 &nbsp;
 
@@ -133,6 +133,10 @@ Ao contrário dos produtos que seus concorrentes estão usando, o Orion é uma e
 &nbsp;
 
 No entanto, ao se concentrar em um punhado de formatos de texto/documento de origem/dados padrão do setor, até mesmo suas tabelas matemáticas, gráficos, gráficos, mapas e diagramas arquitetônicos mais complexos gerados por dados são **totalmente pesquisáveis e traduzíveis por IA** em qualquer uma das linguagens naturais suportadas pelo Orion.
+
+&nbsp;
+
+Por exemplo, esta mesma página é [Grade de Comparação de Recursos](#h1-feature-comparison-grid) é gerado pela construção Orion de **a-natural-language-translatable, pesquisável `YAML` anexo** a esta página; que a construção se transforma simultaneamente em [`JSON`](index.page/grid.json{{lang}}). Uma impossibilidade literal com outras soluções wiki.
 
 &nbsp;
 
