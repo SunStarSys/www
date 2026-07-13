@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=48768
+status: draft
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -122,7 +122,7 @@ Unlike the products your competitors are stuck using, Orion is a framework desig
 
 &nbsp;
 
-[^1]. :fa-lock: Adopting Orion [dramtically reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident. **And the peace of mind delivered matters more to your CFO and board of directors** than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
+[^1]. :fa-lock: Adopting Orion [dramatically reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident. **And the peace of mind delivered matters more to your CFO and board of directors** than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
 
 &nbsp;
 
