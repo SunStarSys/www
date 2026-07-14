@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=48939
+status: verified=48943
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -134,15 +134,11 @@ What truly sets Orion apart isn't just another wiki platform &mdash; it's our pr
 
 &nbsp;
 
-[^1]. :fa-lock: Adopting Orion [dramatically reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident. **And the peace of mind delivered matters more to your CFO and board of directors** than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against.
+[^1]. :fa-lock: Adopting Orion [dramatically reduces your risk](security#separation-of-concerns-and-engineering-tradeoffs10) of a major security incident. **And the peace of mind delivered matters more to your CFO and board of directors** than an [expensive ransomware insurance policy](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) you never need to file a claim against. Orion’s zero-trust architecture and fine-grained controls give you enterprise-grade protection without the usual complexity.
 
 &nbsp;
 
-[^2]. :fa-infinity: Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), a fundamental flaw of other wiki-like products is that they fail to provide **coherent integrations/interfaces for incorporation and periodic maintenance of externally-generated data file formats**.
-
-&nbsp;
-
-However, by focusing on a handful of industry standard text/source document/data formats, even your most intricate data-generated mathematical tables, graphs, charts, maps, and architectural diagrams are **fully searchable and AI translatable** in any of Orion's supported natural languages.
+[^2]. :fa-infinity: Setting aside the [security advantages](https://www.iconoclasts.blog/joe/wishful-thinking) and the [stiffening penalties](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) for [confidentiality breaches of HIPAA data](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), Orion lets you embed real mathematical tables, graphs, charts, diagrams, and vector graphics directly into your documentation — and keeps them fully searchable and AI-translatable across languages. Most wikis either break this content or hide it. Orion turns intricate data into a working, accessible part of your knowledge base.
 
 &nbsp;
 
