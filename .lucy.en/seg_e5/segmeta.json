@@ -1,9 +1,13 @@
 {
   "deletions": {
     "files": {
-      "seg_9y": {
+      "seg_dh": {
+        "count": "8",
+        "filename": "seg_e5/deletions-seg_dh.bv"
+      },
+      "seg_e4": {
         "count": "7",
-        "filename": "seg_a1/deletions-seg_9y.bv"
+        "filename": "seg_e5/deletions-seg_e4.bv"
       }
     },
     "format": "1"
@@ -17,16 +21,16 @@
   "lexicon": {
     "counts": {
       "acl": "3",
-      "content": "2466",
+      "content": "2375",
       "keywords": "30",
-      "path": "7",
-      "status": "4",
-      "title": "14"
+      "path": "8",
+      "status": "2",
+      "title": "15"
     },
     "format": "3",
     "index_counts": {
       "acl": "1",
-      "content": "20",
+      "content": "19",
       "keywords": "1",
       "path": "1",
       "status": "1",
@@ -37,7 +41,7 @@
     "format": "1"
   },
   "segmeta": {
-    "count": "7",
+    "count": "8",
     "field_names": [
       "",
       "status",
@@ -50,15 +54,15 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_a1"
+    "name": "seg_e5"
   },
   "sort": {
     "counts": {
-      "path": "8"
+      "path": "9"
     },
     "format": "3",
     "null_ords": {
-      "path": "7"
+      "path": "8"
     },
     "ord_widths": {
       "path": "4"
