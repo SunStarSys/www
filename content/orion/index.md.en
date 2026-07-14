@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=48943
+status: verified=48947
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -12,7 +12,7 @@ acl: @staff=rw, *=r
 
 &nbsp;
 
-Orion is the Jamstack Wiki Platform that delivers [unhackable security](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [lightning performance](features) :fa-cloud-bolt:, [unbreakable reliability](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:, and true ROI :fa-chart-line: — while costing far less than Confluence or Notion.
+Orion is the <img style="height:25px" src="index.page/jamstack-logo"> Wiki Platform that delivers [unhackable security](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [lightning performance](features) :fa-cloud-bolt:, [unbreakable reliability](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:, and true ROI :fa-chart-line: — while costing far less than Confluence or Notion.
 
 &nbsp;
 
