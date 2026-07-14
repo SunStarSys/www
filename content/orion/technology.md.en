@@ -9,6 +9,7 @@ Status: draft
 
 </center>
 
+&nbsp;
 
 ## Solaris 11.4
 
@@ -18,13 +19,19 @@ Status: draft
 
 - Zones &mdash; provides service isolation and suitably sandboxed site builds.
 
+&nbsp;
+
 ## node.js v21.6.1
 
 - Because Editor.md is **awesome**, we ported it to `node.js` &mdash; WYSIWYG, regardless of the viewer's context (editing in our online IDE, or browsing the resultant production site).
 
+&nbsp;
+
 ## Perl v5.38.2
 
 - {# lede #}Now w/ mod_perl v2.0.14 w/ ithreads and httpd v2.4.67 w/ event mpm.{# lede #}
+
+&nbsp;
 
 ## Subversion v1.14.6
 
@@ -40,12 +47,13 @@ Status: draft
 
 ## Some Remarks on the Roads Not (Yet?) Taken...
 
-<br/>
+&nbsp;
 
 ### SQL
 
 We're a NoSQL shop for our entire website infrastructure, and if you are saddled with a giant single-point-of-failure known as an RDBMS driving your site's assets, please reconsider a more decentralized approach based on the Jamstack and Serverless Technology. Even if it's not ours. You will thank us later!
 
+&nbsp;
 
 ### Why not Git?
 
@@ -64,6 +72,8 @@ We're a NoSQL shop for our entire website infrastructure, and if you are saddled
 - For the IDE, we would need read+write Perl bindings for `libgit2` (which is **not provided by the actual git development team**, and is largely backed by megalithic corporations who do NOT provide an online IDE for git as a comparable SaaS product; and no, GitHub isn't it) in order to match svn's httpd-compatible memory management regime and POSIX (+ Perl ithreads) thread safety, in a persistent runtime, and across multiple server-side on-disk git repositories of client website trees.  The maturity of that open-source infrastructure is not bankable for 2020 in our estimation, but we will keep tabs on the developments moving forward.  Looking at you, `Git::Raw`!
 
 - I still don't know how to make a posix-thread-safe git porcelain.  Thread-safety across separate repos, but within a common process's RAM, is the use case, not thread-safety within a given repo (which is a nutty ask).
+
+&nbsp;
 
 ### Why not Python or Ruby or Javascript or Go?
 
@@ -122,11 +132,15 @@ joe@zeus:/x1/Orion% wc -l */lib/SunStarSys/**/*.pm
 
 - Yes, Perl's popularity trajectory ironically tracks that of COBOL, or  even Common Lisp, despite Unix's dominance in the server marketplace; but some things age better than others. The solid (and uniquely Perl) `ithread` engineering out of `p5p`, in preparation for the advent of Perl 7, is welcome news to mod_perl developers still clinging to Doug MacEachern's original vision.  If you find yourself knee-deep in 100+ LOC Perl sources to get what you need out of our current Perl-only build system, let's chat &mdash;  maybe we can collaborate on something less complex for you to use to build your site.  Less is more with Perl.
 
+&nbsp;
+
 ### Why not with something based on the JVM?
 
 -  Just worked out that way, given my 20 year history with the LAMP Stack and constructive contributions to the extended Apache HTTPd webserver community.  Doable, but again a massive undertaking with lots of hard engineering problems to solve along the way.
 
 --------
+
+&nbsp;
 
 ## Index
 
