@@ -4,12 +4,12 @@
       "length": "4",
       "offset": "0"
     },
-    "deletions-seg_dw.bv": {
+    "deletions-seg_dx.bv": {
       "length": "1",
       "offset": "8"
     },
     "documents.dat": {
-      "length": "71022",
+      "length": "71021",
       "offset": "16"
     },
     "documents.ix": {
@@ -113,28 +113,28 @@
       "offset": "88624"
     },
     "postings-6.dat": {
-      "length": "25493",
+      "length": "25485",
       "offset": "88648"
     },
     "postings-8.dat": {
       "length": "108",
-      "offset": "114144"
+      "offset": "114136"
     },
     "postings.skip": {
       "length": "0",
-      "offset": "114256"
+      "offset": "114248"
     },
     "sort-4.dat": {
       "length": "143",
-      "offset": "114256"
+      "offset": "114248"
     },
     "sort-4.ix": {
       "length": "64",
-      "offset": "114400"
+      "offset": "114392"
     },
     "sort-4.ord": {
       "length": "4",
-      "offset": "114464"
+      "offset": "114456"
     }
   },
   "format": "2"
