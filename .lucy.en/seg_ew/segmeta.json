@@ -3,11 +3,7 @@
     "files": {
       "seg_ea": {
         "count": "7",
-        "filename": "seg_ev/deletions-seg_ea.bv"
-      },
-      "seg_eu": {
-        "count": "7",
-        "filename": "seg_ev/deletions-seg_eu.bv"
+        "filename": "seg_ew/deletions-seg_ea.bv"
       }
     },
     "format": "1"
@@ -54,14 +50,16 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_ev"
+    "name": "seg_ew"
   },
   "sort": {
     "counts": {
-      "path": "7"
+      "path": "8"
     },
     "format": "3",
-    "null_ords": {},
+    "null_ords": {
+      "path": "7"
+    },
     "ord_widths": {
       "path": "4"
     }
