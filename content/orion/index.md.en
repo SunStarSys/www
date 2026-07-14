@@ -204,6 +204,8 @@ As the number of seats move significantly in either direction from 300, your **s
 
 [^7]. :fa-arrow-right-arrow-left: Switching/Onboarding Costs from Confluence can be as low as $100 total for SMB, and amortized over the first three years of service for customers needing a more hands-on approach. The overall process is four-fold:
 
+&nbsp;
+
 1. agree on desired topology of the site map from individual Confluence spaces to Orion wiki files and folders,
 
 2. design and implement template files and build logic to accommodate above topology, branding, and desired look-and-feel of the built site pre-go-live,
@@ -211,6 +213,8 @@ As the number of seats move significantly in either direction from 300, your **s
 3. perform an automated transform of an [`XML` dump of the entire Confluence space](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) into the desired source tree layout, and
 
 4. build the Orion wiki site and return to the above steps for tweaking and retuning until customer is satisfied and ready for final contract signing.
+
+&nbsp;
 
 It may appear that step 2 above is where significant costs may accrue; however the bulk of that step is amenable to AI automation. Customers may also elect to hold onto their Confluence subscriptions for as long as they like without introducing conflicts with their new Orion wikis.
 
