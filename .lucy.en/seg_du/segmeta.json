@@ -3,11 +3,11 @@
     "files": {
       "seg_dh": {
         "count": "7",
-        "filename": "seg_dt/deletions-seg_dh.bv"
+        "filename": "seg_du/deletions-seg_dh.bv"
       },
-      "seg_ds": {
+      "seg_dt": {
         "count": "7",
-        "filename": "seg_dt/deletions-seg_ds.bv"
+        "filename": "seg_du/deletions-seg_dt.bv"
       }
     },
     "format": "1"
@@ -24,7 +24,7 @@
       "content": "2355",
       "keywords": "30",
       "path": "7",
-      "status": "2",
+      "status": "4",
       "title": "10"
     },
     "format": "3",
@@ -54,7 +54,7 @@
       "keywords"
     ],
     "format": "1",
-    "name": "seg_dt"
+    "name": "seg_du"
   },
   "sort": {
     "counts": {
