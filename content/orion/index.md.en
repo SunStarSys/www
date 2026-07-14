@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=48979
+status: draft
 keywords: wiki,jamstack,blog,secure,safe
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -368,9 +368,16 @@ Need more horsepower than a [one-trick pony like Hugo](https://www.iconoclasts.b
 
 &nbsp;
 
-<center>
-<img src="technology.page/stack" title="tech stack" style="width:100%">
-</center>
+```mermaid
+mindmap
+  root(Version Control System)
+    Static Site Generator
+      Full Site Builds
+      Incremental Builds
+    CMS Editor
+      Pre-Commit Linter
+      Search Engine
+```
 
 &nbsp;
 
