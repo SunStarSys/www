@@ -381,13 +381,15 @@ mindmap
   root(Version
         Control
         System)
-    Static Site Generator
+    ((Static
+	Site Generator))
       Full Site Builds
       Incremental Builds
-    CMS Editor
+    ((CMS Editor))
       Pre-Commit Linter
       Search+Replace Engine
-    Deployed Production Site
+    ((Deployed
+	Production Site))
       (Confidential Built Content)
       (Multi-Purpose Search Engine)
       (Form To Email Gateway)
