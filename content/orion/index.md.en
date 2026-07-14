@@ -370,7 +370,7 @@ Need more horsepower than a [one-trick pony like Hugo](https://www.iconoclasts.b
 
 ```mermaid
 mindmap
-  root(Version Control System)
+  ::root(Version Control System)
     Static Site Generator
       Full Site Builds
       Incremental Builds
