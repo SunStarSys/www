@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =48904
+status: 驗證 =49063
 title: SunStar 系統的 Orion
 ---
 
@@ -15,7 +15,7 @@ title: SunStar 系統的 Orion
 
 &nbsp;
 
-Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [閃電性能](features) :fa-cloud-bolt:, [不斷的可靠性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:、真正的投資報酬率:fa-chart-line: — 成本計算遠低於 Confluence 或 Notion。
+Orion 是<a href="https://jamstack.org"><img style="height:28px;width:120px" src="index.page/jamstack-logo"></a>Wiki 平台提供[不可駭客的安全性](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [閃電性能](features) :fa-cloud-bolt:, [不斷的可靠性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:、真正的投資報酬率:fa-chart-line: — 成本計算遠低於 Confluence 或 Notion。
 
 &nbsp;
 
@@ -23,7 +23,7 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
 
 &nbsp;
 
-**以 Orion 取代您的舊系統 **
+**瞭解如何使用 Orion 取代您的舊系統 **
 
 <center>
 
@@ -82,7 +82,7 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
 
 &nbsp;
 
-<span class="text-white">經過驗證的 Jamstack 技術可降低資料外洩風險、無縫整合真實資料 / 數學 /AI，並經濟實惠地擴展&mdash; 瞭解 Orion 7 種方式勝過傳統工具。</span>
+<span class="text-white">已證明<img style="height:28px;width:120px" src="index.page/jamstack-logo">降低資料外洩風險、無縫整合真實資料 / 數學 /AI 及經濟實惠擴展的技術&mdash; 瞭解 Orion 7 種方式勝過傳統工具。</span>
 
 &nbsp;
 
@@ -136,43 +136,51 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-[^1]. :fa-lock: 採用 Orion [大幅降低您的風險](security#separation-of-concerns-and-engineering-tradeoffs10) 這是一個重大安全事件。** 安心地向您的財務長和董事會提供比一個更重要的事情 **[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。
+[^1]. :fa-lock: 採用 Orion [大幅降低您的風險](security#separation-of-concerns-and-engineering-tradeoffs10) 這是一個重大安全事件。** 安心地向您的財務長和董事會提供比一個更重要的事情 **[昂貴的勒索軟體保險單](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 您絕不需要提出申請。Orion 的零信任架構和微點控制可為您提供企業級的保護，無需常用的複雜性。
 
 &nbsp;
 
-[^2]. :fa-infinity: 旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，其他類似 Wiki 的產品的基本缺點是，他們無法提供** 一致的整合 / 介面來進行整合，並定期維護外部產生的資料檔案格式 **。
+[^2]. :fa-infinity: 旁邊設定[安全優點](https://www.iconoclasts.blog/joe/wishful-thinking) 以及[加勁處罰](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 針對[違反 HIPAA 資料的機密性](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)，大多數維基人遇到 (或只是忽略) 真實數學表格、圖形、圖表、地圖和技術圖表的難題。Orion 不同。
 
 &nbsp;
 
-不過，將焦點放在一些業界標準文字 / 來源文件 / 資料格式，即使您最複雜的資料產生數學表格、圖表、圖表、地圖及架構圖表，也能以任何 Orion 支援的自然語言 **完整搜尋及翻譯 AI**。
+它將業界標準資料格式視為一流的公民。結果：您最複雜的內容保持完全可搜尋，且 AI 可跨語言翻譯。
 
 &nbsp;
 
-例如，這個非常頁面[功能比較方格](#h1-feature-comparison-grid) 由 **a-natural-language-translatable，searchable 所產生的 Orion 版本`YAML` 此頁面的附件 **；組建會同時轉換成[`JSON`](index.page/grid.json{{lang}}) 針對[外部消費](https://www.erenkrantz.com/CREST/)。與其他 Wiki 解決方案的文字不穩定。
+此非常頁面[功能比較方格](#h1-feature-comparison-grid) 由可搜尋項目產生`YAML` 附件並自動轉換為[`JSON`](index.page/grid.json{{lang}}) — 其他 Wiki 平台只是無法執行。
 
 &nbsp;
 
-[第 3 天]. :fa-robot: **這是您的內容！** 您想要透過 **雙向版本控制的同步功能直接進行讀寫存取`git` :fa-code-compare:，不透明，價格實惠的 SaaS API。** 將您公司的當地 Agentic AI 解決方案融入您團隊的 Wiki 工作流程中，不會比 Orion 更安全、更簡單、更強大或更低的成本。
+[第 3 天]. :fa-robot:** 您擁有自己的內容。** 您應該控制 AI 與其互動的方式。
 
 &nbsp;
 
-[第 4 天]. :fa-map-location-dot: 接下來，** 內容策展工具 **是 Orion 的重要功能，而非向上銷售的機會。我們的每個 Wiki 事實資料庫是業界第一&mdash; 在整個網站管理一致的名稱標記或相關軟體使用者自建物件描述資料等功能，只要編輯一行即可[YAML 檔案](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+Orion 透過版本控制提供直接的雙向存取 AI 工具 (而不是透過昂貴的不透明 SaaS API)。這樣一來，整合本機或私人代理 AI 與一般平台相比更安全、更簡單、更強大且成本更低。
 
 &nbsp;
 
-在 Orion 的全方位預先確認列印通過期間，您將** 內部 / 外部連結驗證 **取得頁面修改時間，而不是無可避免的熱帶連結旋轉到其他 Wiki 產品。`CMS` 編輯器。
+[第 4 天]. :fa-map-location-dot: 內容品質不應需要定期手動清潔或昂貴的附加元件。
 
 &nbsp;
 
-我們也為每位客戶提供一個報告基礎架構，** 按要求擷取過時的內部 / 外部連結 **。即使涉及的頁面未在幾個月內變更。
+Orion includes professional content curation tools as a core feature:
 
 &nbsp;
 
-由於 Orion 的 Mermaid 整合，** 圖表來源內嵌於頁面的 prose** 本身，因此圖表與逐漸變化的 Markdown 程序保持同步。
+- 每個 Wiki 事實資料庫，提供一致的品牌和中繼資料 (通常以單線 YAML 變更修正)
+
+- 確認時自動進行內部和外部連結驗證
+
+- 隨選報告過時的連結 — 即使是過去數月未觸及的頁面
+
+- 與周圍文字保持同步的 Mermaid 圖表，因為來源位於頁面
+
+- 強大的搜尋功能，可快速清除累積的問題
 
 &nbsp;
 
-無痛的遞迴搜尋 / 更換以修復累積的殘骸已內建於`PCRE` 搜尋引擎`CMS`.
+其結果是保持準確和專業的文件，但持續工作較少。
 
 &nbsp;
 
@@ -180,19 +188,11 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-[第 5 天]. :fa-scale-balanced: 此外，Orion 會隨您的成長而擴展，尤其是企業級。繁體中文<span class="text-white">** 每張座位授權 $0 及無限數量的網站 **</span> 跨團隊、合作夥伴、網站開啟受控知識共享與協同合作的新機會。
+[第 5 天]. :fa-scale-balanced: Orion 的企業授權為<span class="text-white">** 每位 $0 及每位 $0。**</span> 您可以擴大使用者群、新增唯讀利害關係人，或啟動其他網站而不需注意成本爆炸。這是少數企業級的 Wiki 平台之一，這些平台不會使您獲致成功。
 
 &nbsp;
 
-甚至是我們的聯合平台:fa-hexagon-nodes-bolt:!
-
-&nbsp;
-
-我們知道，對大多數客戶來說，只有少數的座位授權會用於實際編輯頁面，但他們可以使用不限數目的頁面。"相關" Wiki 中的唯讀帳戶，可透過網際網路共用受保護的資訊。無權存取 Orion 的帳戶`CMS` 適當&mdash; Orion 是唯一一家以公司為後盾的 **Enterprise Jamstack Wiki** 節省成本的功能。
-
-&nbsp;
-
-隨著您人員的企業狀態隨著時間演進，Orion 讓 Wiki 管理員能夠輕鬆處理所涉及的 Wiki 重新授權。在每一個明確上執行整批搜尋並取代`ACL` 在與前任員工帳戶相關的網站上設定，在新進人員入職或將現有人員退選至您團隊所設計的適當版本控制授權群組中，可真正自動化[所有權 (&amp;O)].
+當您的人員公司狀態隨著時間演變時，Orion 讓 Wiki 管理員能夠輕鬆處理所涉及的 Wiki 重新授權。在每一個明確上執行整批搜尋並取代`ACL` 在與前任員工帳戶相關的網站上設定，在新進人員入職或將現有人員退選至您團隊所設計的適當版本控制授權群組中，可真正自動化[所有權 (&amp;O)].
 
 &nbsp;
 
@@ -206,6 +206,8 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 [^7]. :fa-arrow-right-arrow-left: Confluence 的切換 / 到職成本可能低至中小企業的總計 100 美元，而且對於需要更實作方式的客戶，在前三年服務中攤提。整體處理程序有四倍：
 
+&nbsp;
+
 1. 同意所需的地圖拓樸，從個別的影響空間到 Orion wiki 檔案和資料夾，
 
 2. 設計和實作範本檔案並建立邏輯，以容納上述拓樸、品牌和想要查看並實現的內建網站預先上線，
@@ -213,6 +215,8 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 3. 執行自動轉換[`XML` 傾印整個 Confluence 空間](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) 至想要的來源樹狀結構版面配置，以及
 
 4. 建立 Orion wiki 網站，並返回上述步驟進行調整和調整，直到客戶滿意並準備好進行最終合約簽署為止。
+
+&nbsp;
 
 上述第 2 步可能出現重大成本可能累積的情況；不過，該步驟的大部分都可用於 AI 自動化。客戶也可以選擇保留其 Confluence 訂閱，只要他們喜歡，而不與新的 Orion Wiki 發生衝突。
 
@@ -258,7 +262,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-**以 Orion 取代您的傳統 Confluence wiki**
+**從舊有影響切換至 Orion**
 
 <center>
 
@@ -266,7 +270,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 </center>
 
-**現代化、可擴展的高效能知識管理系統。**
+**現代化、經濟實惠、高效能的知識管理系統。**
 
 &nbsp;
 
@@ -311,7 +315,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- :fa-compass-drafting: **高可用性架構師&amp; 主要工程師** &mdash; 將洩漏到 SQL 型 LAMP 堆疊中的單一失敗點遁離。擁抱真正的 Jamstack 可擴展性：並行建置、增量更新、全球 POP 涵蓋範圍和尖峰效能 (毫秒)。
+- :fa-compass-drafting: **高可用性架構師&amp; 主要工程師** &mdash; 將洩漏到 SQL 型 LAMP 堆疊中的單一失敗點遁離。擁抱真<img style="height:28px;width:120px" src="index.page/jamstack-logo">擴展性：並行組建、增量更新、全域 POP 涵蓋範圍和尖峰效能 (以毫秒為單位測量)。
 
 </div>
 
@@ -373,13 +377,28 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 
 &nbsp;
 
-<center>
-<img src="technology.page/stack" title="tech stack" style="width:100%">
-</center>
+```mermaid
+mindmap
+  root(版本
+        控制
+        系統)
+    ((靜態
+	網站產生器))
+      完整網站組建
+      增量建置
+    ((CMS 編輯器))
+      預先確認的印表機
+      搜尋+取代引擎
+    ((已部署
+	生產據點))
+      (機密的內建內容)
+      (多用途搜尋引擎)
+      (表單對電子郵件閘道)
+```
 
 &nbsp;
 
-如果您厭倦了每一座位的授權以及每一 CPU 週期的選擇，我們會在您只需要修打字的時候，與其他代管商的 Jamstack 重點。[聯繫我們](/contact).
+如果您厭倦了個別使用者授權，以及依 CPU 週期的選擇，請將您視為其他使用者<img style="height:28px;width:120px" src="index.page/jamstack-logo">只要您只需要打字就能代管供應商，[聯繫我們](/contact).
 
 &nbsp;
 
@@ -500,11 +519,19 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 <div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
+&nbsp;
+
 最快的方法是使用 @SunStarSys/orion 的預設建置版本來播放<https://iconoclasts.blog> 並清除以下的 Markdown 來源：`trunk/content`。   約 90% 的樣式自訂項目位於[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
+
+&nbsp;
 
 其他 10% 涉及選擇適當的啟動安裝 5 CSS 主題來取代下列位置的對應檔案：`content/css/bootstrap.*`我們建議<https://bootswatch.com> 意見。
 
+&nbsp;
+
 最後一個步驟是重新觸發頂端內容導覽功能表，位於`templates/main.html.*`。我們的 AI 翻譯人員將隨時隨地保持同步。
+
+&nbsp;
 
 需要自訂說明`Perl` 建立系統於`lib/` 與其他 Django 範本位於`templates/` 符合您的使用案例？我們為您服務！
 

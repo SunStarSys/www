@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48904
+status: verificado=49063
 title: SunStar Orión de los Sistemas
 ---
 
@@ -15,7 +15,7 @@ title: SunStar Orión de los Sistemas
 
 &nbsp;
 
-Orion es la plataforma Wiki de Jamstack que ofrece [seguridad ilegible](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [rendimiento del rayo](features) :fa-cloud-bolt:, [fiabilidad irrompible](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:y verdadero ROI :fa-chart-line: — mientras cuesta mucho menos que Confluencia o Noción.
+Orión es el <a href="https://jamstack.org"><img style="height:28px;width:120px" src="index.page/jamstack-logo"></a>Plataforma wiki que ofrece [seguridad ilegible](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [rendimiento del rayo](features) :fa-cloud-bolt:, [fiabilidad irrompible](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:y verdadero ROI :fa-chart-line: — mientras cuesta mucho menos que Confluencia o Noción.
 
 &nbsp;
 
@@ -23,7 +23,7 @@ Es la plataforma empresarial {# lede #}para crear, gestionar y entregar conocimi
 
 &nbsp;
 
-**Sustituya su sistema antiguo por Orion**
+**Descubra cómo sustituir su sistema heredado por Orion**
 
 <center>
 
@@ -82,7 +82,7 @@ Es la plataforma empresarial {# lede #}para crear, gestionar y entregar conocimi
 
 &nbsp;
 
-<span class="text-white">Tecnología probada de Jamstack que reduce los riesgos de incumplimiento, integra datos reales, matemáticas e IA sin problemas y se amplía de manera asequible &mdash; Ver las 7 formas en que Orion supera a las herramientas heredadas.</span>
+<span class="text-white">Probado <img style="height:28px;width:120px" src="index.page/jamstack-logo">Tecnología que reduce los riesgos de incumplimiento, integra datos reales, matemáticas e inteligencia artificial sin problemas y se amplía de forma asequible &mdash; Ver las 7 formas en que Orion supera a las herramientas heredadas.</span>
 
 &nbsp;
 
@@ -136,43 +136,51 @@ Lo que realmente distingue a Orion no es solo otra plataforma wiki &mdash; Es nu
 
 &nbsp;
 
-[^1]. :fa-lock: Adopción de Orión [reduce drásticamente el riesgo](security#separation-of-concerns-and-engineering-tradeoffs10) de un incidente de seguridad importante. **Y la tranquilidad que ofrece es más importante para su director financiero y su junta directiva** que para un [costosa póliza de seguro de ransomware](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Nunca tiene que presentar una reclamación en contra.
+[^1]. :fa-lock: Adopción de Orión [reduce drásticamente el riesgo](security#separation-of-concerns-and-engineering-tradeoffs10) de un incidente de seguridad importante. **Y la tranquilidad que ofrece es más importante para su director financiero y su junta directiva** que para un [costosa póliza de seguro de ransomware](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) Nunca tiene que presentar una reclamación en contra. La arquitectura de confianza cero y los controles detallados de Orion le brindan protección de nivel empresarial sin la complejidad habitual.
 
 &nbsp;
 
-[^2]. :fa-infinity: Dejando de lado el [ventajas de seguridad](https://www.iconoclasts.blog/joe/wishful-thinking) y el [endurecimiento de las sanciones](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) para [violaciones de confidencialidad de los datos HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/), un defecto fundamental de otros productos similares a wiki es que no proporcionan **integraciones/interfaces coherentes para la incorporación y el mantenimiento periódico de formatos de archivo de datos generados externamente**.
+[^2]. :fa-infinity: Dejando de lado el [ventajas de seguridad](https://www.iconoclasts.blog/joe/wishful-thinking) y el [endurecimiento de las sanciones](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) para [violaciones de confidencialidad de los datos HIPAA](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)La mayoría de los wikis luchan con (o simplemente ignoran) tablas matemáticas reales, gráficos, gráficos, mapas y diagramas técnicos. Orión es diferente.
 
 &nbsp;
 
-Sin embargo, al centrarse en un puñado de formatos estándar de texto/documentos de origen/datos del sector, incluso las tablas, gráficos, mapas y diagramas matemáticos generados por datos más complejos **son totalmente aptas para la búsqueda y la IA traducibles** en cualquiera de los lenguajes naturales soportados de Orion.
+Trata los formatos de datos estándar de la industria como ciudadanos de primera clase. El resultado: su contenido más complejo se puede buscar por completo y se puede traducir mediante IA en varios idiomas.
 
 &nbsp;
 
-Por ejemplo, esta misma página [Cuadrícula de comparación de funciones](#h1-feature-comparison-grid) es generado por la construcción de Orion a partir de **un lenguaje natural traducible, buscable `YAML` adjunto** a esta página; que la creación se transforma simultáneamente en [`JSON`](index.page/grid.json{{lang}}) para [consumo externo](https://www.erenkrantz.com/CREST/). Imposibilidad literal con otras soluciones wiki.
+Esta misma página [Cuadrícula de comparación de funciones](#h1-feature-comparison-grid) se genera a partir de un elemento que se puede buscar `YAML` adjunto y transformado automáticamente en  [`JSON`](index.page/grid.json{{lang}}) Algo que otras plataformas wiki simplemente no pueden hacer.
 
 &nbsp;
 
-[^3]. :fa-robot: **¡Es su contenido!** Lo que desea es acceso directo de lectura y escritura a través de la **sincronización de control de versiones bidireccional con `git` :fa-code-compare:, no más opacas y costosas API de SaaS.** Conectar la solución de IA Agentic local de tu empresa en el flujo de trabajo wiki de tu equipo no es más seguro, fácil, más potente o menos costoso que con Orion.
+[^3]. :fa-robot: **Es propietario de su contenido.** Debe controlar cómo interactúa la IA con él.
 
 &nbsp;
 
-[^4]. :fa-map-location-dot: A continuación, **herramientas de curación de contenido** es una función esencial de Orion, no una oportunidad de upsell. Nuestra base de datos de datos por wiki es la primera en la industria &mdash; útil para cosas como la gestión de marcas de nombres consistentes o metadatos de artefactos de software relacionados en todo el sitio web con una edición de 1 línea en un [Archivo YAML](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+Orion ofrece a sus herramientas de IA acceso directo y bidireccional a través del control de versiones (no a través de API SaaS costosas y opacas). Esto hace que la integración de la IA local o privada sea más segura, más sencilla, más potente y menos costosa que con las plataformas típicas.
 
 &nbsp;
 
-En lugar de la inevitable rotación de enlaces entropícos innata a otros productos wiki, obtienes la **validación de enlaces internos/externos** en el momento de la modificación de la página durante un completo pase de pelado previo a la confirmación por parte de Orion. `CMS` editor.
+[^4]. :fa-map-location-dot: La calidad del contenido no debe requerir una limpieza manual constante ni complementos costosos.
 
 &nbsp;
 
-También proporcionamos a cada cliente una infraestructura de generación de informes para **obtener enlaces internos/externos anticuados a demanda**. Incluso cuando las páginas involucradas no han sido alteradas en meses.
+Orion includes professional content curation tools as a core feature:
 
 &nbsp;
 
-Los diagramas son igual de fáciles de mantener en sincronía con la evolución de las alteraciones en la prosa de rebaja, porque con la integración de sirena de Orion, **los orígenes del diagrama se incrustan en la prosa** de la página misma.
+Una base de datos de hechos por wiki para una marca y metadatos consistentes (a menudo corregidos con un cambio de YAML de una línea)
+
+- Validación automática de enlaces internos y externos en el momento de la confirmación
+
+- Informes bajo demanda para enlaces obsoletos, incluso en páginas que no se han tocado en meses
+
+- Diagramas de sirena que permanecen sincronizados con el texto circundante porque la fuente reside dentro de la página
+
+- Potente búsqueda y reemplazo para limpiar los problemas acumulados rápidamente
 
 &nbsp;
 
-La búsqueda / reemplazo recursivo sin dolor para reparar el crudo acumulado está incorporado en la `PCRE` motor de búsqueda en el `CMS`.
+El resultado es una documentación que se mantiene precisa y profesional con mucho menos esfuerzo continuo.
 
 &nbsp;
 
@@ -180,19 +188,11 @@ La búsqueda / reemplazo recursivo sin dolor para reparar el crudo acumulado est
 
 &nbsp;
 
-[^5]. :fa-scale-balanced: Además, Orion escala con usted a medida que crece, especialmente a nivel empresarial. El <span class="text-white">**0 $ por licencia de asiento y número ilimitado de sitios web**</span> abre nuevas oportunidades para el intercambio de conocimientos controlado y la colaboración entre equipos, socios y sitios web.
+[^5]. :fa-scale-balanced: La licencia empresarial de Orion es <span class="text-white">**$0 por asiento y $0 por sitio web.**</span> Puede aumentar su base de usuarios, agregar partes interesadas de solo lectura o iniciar sitios adicionales sin ver cómo aumentan los costos. Esta es una de las pocas plataformas wiki de nivel empresarial que no te penaliza por el éxito.
 
 &nbsp;
 
-Y hasta el planeta entero con nuestra plataforma federada :fa-hexagon-nodes-bolt:!
-
-&nbsp;
-
-Sabemos que para la mayoría de los clientes, solo una pequeña parte de esas licencias de asiento se usarían para editar páginas, pero pueden usar un número ilimitado de "asociado" cuentas de sólo lectura en sus wikis para compartir información protegida a través de Internet. Cuentas que no necesitan tener acceso a la Orión `CMS` adecuado &mdash; Una función de ahorro de costos única para Orion como la única **Wiki Enterprise Jamstack** respaldada por corporación.
-
-&nbsp;
-
-A medida que el estado corporativo de su personal evoluciona con el tiempo, Orion hace que sea fácil para los administradores de wiki lidiar con las reautorizaciones de wiki involucradas. Hacer una búsqueda masiva y reemplazar en cada explícito `ACL` la configuración del sitio que está vinculada a la cuenta de un ex empleado es tan trivialmente automatizable como la incorporación de un nuevo empleado o la actualización de uno existente dejándolos en los grupos de autorización de control de versiones adecuados diseñados por su equipo[^propiedad].
+Cuando el estado corporativo de su personal evoluciona con el tiempo, Orion hace que sea fácil para los administradores de wiki lidiar con las reautorizaciones de wiki involucradas. Hacer una búsqueda masiva y reemplazar en cada explícito `ACL` la configuración del sitio que está vinculada a la cuenta de un ex empleado es tan trivialmente automatizable como la incorporación de un nuevo empleado o la actualización de uno existente dejándolos en los grupos de autorización de control de versiones adecuados diseñados por su equipo[^propiedad].
 
 &nbsp;
 
@@ -206,6 +206,8 @@ A medida que el número de asientos se mueve significativamente en cualquier dir
 
 [^7]. :fa-arrow-right-arrow-left: Los costos de cambio/incorporación de Confluencia pueden ser tan bajos como 100 dólares en total para las pymes y amortizarse durante los primeros tres años de servicio para los clientes que necesitan un enfoque más práctico. El proceso general se cuadruplica:
 
+&nbsp;
+
 1. acordar la topología deseada del mapa del sitio desde espacios individuales de Confluencia hasta archivos y carpetas de Orion wiki,
 
 2. diseñar e implantar archivos de plantilla y la lógica de creación para adaptarse a la topología, la marca y el aspecto deseado del sitio incorporado antes de la puesta en marcha,
@@ -213,6 +215,8 @@ A medida que el número de asientos se mueve significativamente en cualquier dir
 3. realizar una transformación automatizada de un [`XML` Volcado de todo el espacio de Confluencia](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) en el diseño de árbol de origen deseado, y
 
 4. Construir el sitio wiki de Orion y volver a los pasos anteriores para ajustar y volver a ajustar hasta que el cliente esté satisfecho y listo para la firma final del contrato.
+
+&nbsp;
 
 Puede parecer que el paso 2 anterior es donde pueden acumularse costos significativos; sin embargo, la mayor parte de ese paso es susceptible a la automatización de la IA. Los clientes también pueden optar por mantener sus suscripciones de Confluence durante el tiempo que deseen sin introducir conflictos con sus nuevas wikis de Orion.
 
@@ -258,7 +262,7 @@ Quiere un enfoque más conservador/soberano/ético que simplemente exponer todos
 
 &nbsp;
 
-**Reemplaza tu wiki de Confluencia con Orión**
+**Cambiar de Confluencia heredada a Orión**
 
 <center>
 
@@ -266,7 +270,7 @@ Quiere un enfoque más conservador/soberano/ético que simplemente exponer todos
 
 </center>
 
-**el sistema de gestión del conocimiento moderno, escalable y de alto rendimiento.**
+**el Sistema de Gestión del Conocimiento moderno, asequible y de alto rendimiento.**
 
 &nbsp;
 
@@ -311,7 +315,7 @@ Quiere un enfoque más conservador/soberano/ético que simplemente exponer todos
 
 <div class="fade">
 
-- :fa-compass-drafting: **Arquitectos de alta disponibilidad &amp; ingenieros de principios** &mdash; Escape de los puntos únicos de fallo agrupados en pilas de LAMP basadas en SQL. Adopte la verdadera escalabilidad de Jamstack: compilaciones simultáneas, actualizaciones incrementales, cobertura POP global y rendimiento máximo medido en milisegundos.
+- :fa-compass-drafting: **Arquitectos de alta disponibilidad &amp; ingenieros de principios** &mdash; Escape de los puntos únicos de fallo agrupados en pilas de LAMP basadas en SQL. Abrazar verdadero <img style="height:28px;width:120px" src="index.page/jamstack-logo">escalabilidad: compilaciones simultáneas, actualizaciones incrementales, cobertura POP global y rendimiento máximo medido en milisegundos.
 
 </div>
 
@@ -373,13 +377,28 @@ Necesita más caballos de fuerza que [Pony de un trick como Hugo](https://www.ic
 
 &nbsp;
 
-<center>
-<img src="technology.page/stack" title="tech stack" style="width:100%">
-</center>
+```mermaid
+mindmap
+  root(Versión
+        Control
+        Sistema)
+    ((Estático
+	Generador de sitios))
+      Compilaciones completas del sitio
+      Compilaciones incrementales
+    ((Editor de CMS))
+      Indicador previo a la confirmación
+      Buscar+Reemplazar motor
+    ((Desplegado
+	Sitio de producción))
+      (Contenido generado confidencial)
+      (Motor de búsqueda multipropósito)
+      (Pasarela de formulario a correo electrónico)
+```
 
 &nbsp;
 
-Si está cansado de las opciones de licencias por asiento y por ciclo de CPU que lo pesan con otros proveedores de alojamiento de Jamstack, siempre que solo necesite corregir un error tipográfico, [llegar a nosotros](/contact).
+Si está cansado de las licencias por asiento y las opciones por ciclo de CPU que lo pesan con otras <img style="height:28px;width:120px" src="index.page/jamstack-logo">proveedores de alojamiento, siempre que solo necesite corregir un error tipográfico, [llegar a nosotros](/contact).
 
 &nbsp;
 
@@ -500,11 +519,19 @@ Esto no es marketing spin &mdash; Es un patrimonio de ingeniería verificable y 
 
 <div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
+&nbsp;
+
 La forma más rápida de ponerse en marcha es jugar con la versión predeterminada de @SunStarSys/orion de <https://iconoclasts.blog> y vaciar las fuentes de rebaja en `trunk/content`.  ~90% de las personalizaciones de estilo están en [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; ¡Adáptate al gusto!
+
+&nbsp;
 
 El otro 10% implica elegir un tema CSS de bootstrap 5 adecuado para reemplazar los archivos correspondientes en `content/css/bootstrap.*`; recomendamos <https://bootswatch.com> para ideas.
 
+&nbsp;
+
 El paso final es reajustar los menús de navegación topmatter en `templates/main.html.*`. Nuestro traductor de IA mantendrá todo sincronizado bajo demanda.
+
+&nbsp;
 
 Necesita ayuda para personalizar el `Perl` construir sistema en `lib/` y otras plantillas de Django en `templates/` para adaptarse a su caso de uso?  ¡Estamos a su servicio!
 

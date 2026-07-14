@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=48904
+status: 確認済み=49063
 title: SunStarシステムのOrion
 ---
 
@@ -15,7 +15,7 @@ title: SunStarシステムのOrion
 
 &nbsp;
 
-OrionはJamstack Wikiプラットフォームです。[ハッキング不能なセキュリティ](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [電光性能](features) :fa-cloud-bolt:, [画期的な信頼性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:真のROI :fa-chart-line: コストはConfluenceやNotionよりもはるかに少ない。
+オリオンは<a href="https://jamstack.org"><img style="height:28px;width:120px" src="index.page/jamstack-logo"></a>配信するWikiプラットフォーム[ハッキング不能なセキュリティ](security#separation-of-concerns-and-engineering-tradeoffs10) :fa-lock:, [電光性能](features) :fa-cloud-bolt:, [画期的な信頼性](https://iconoclasts.blog/joe/apache-cms#:~:text=7%20years) :fa-train:真のROI :fa-chart-line: コストはConfluenceやNotionよりもはるかに少ない。
 
 &nbsp;
 
@@ -23,7 +23,7 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-**レガシー・システムをOrionに置き換える**
+**レガシー・システムをOrionに置き換える方法をご覧ください**
 
 <center>
 
@@ -82,7 +82,7 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-<span class="text-white">実証済みのJamstackテクノロジーにより、漏洩リスクを軽減し、実際のデータ/数学/AIをシームレスに統合し、手頃な価格で拡張&mdash; Orionがレガシー・ツールを上回る7つの方法をご覧ください。</span>
+<span class="text-white">実績<img style="height:28px;width:120px" src="index.page/jamstack-logo">漏洩リスクを軽減し、実際のデータ/数学/AIをシームレスに統合し、手頃な価格で拡張するテクノロジー&mdash; Orionがレガシー・ツールを上回る7つの方法をご覧ください。</span>
 
 &nbsp;
 
@@ -136,43 +136,51 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-[^1]. :fa-lock: オリオンの採用[リスクを大幅に軽減](security#separation-of-concerns-and-engineering-tradeoffs10) 大規模なセキュリティ・インシデント。**安心して、CFOおよび取締役会**に、[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。
+[^1]. :fa-lock: オリオンの採用[リスクを大幅に軽減](security#separation-of-concerns-and-engineering-tradeoffs10) 大規模なセキュリティ・インシデント。**安心して、CFOおよび取締役会**に、[高価なランサムウェア保険](https://thedfirreport.com/2025/02/24/confluence-exploit-leads-to-lockbit-ransomware/) 決して主張する必要はない。Orionのゼロトラスト・アーキテクチャとファイングレイン・コントロールにより、通常の複雑さなしにエンタープライズ・グレードの保護が可能になります。
 
 &nbsp;
 
-[^2]. :fa-infinity: を除く。[セキュリティ上の利点](https://www.iconoclasts.blog/joe/wishful-thinking) および[強化ペナルティ](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 対象[HIPAAデータの機密性侵害](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)他のwikiに似た製品の基本的な欠陥は、外部で生成されたデータファイル形式を組み込み、定期的にメンテナンスするための**一貫した統合/インタフェースを提供できないことです。**
+[^2]. :fa-infinity: を除く。[セキュリティ上の利点](https://www.iconoclasts.blog/joe/wishful-thinking) および[強化ペナルティ](https://www.hipaajournal.com/what-are-the-penalties-for-hipaa-violations-7096/) 対象[HIPAAデータの機密性侵害](https://cybersecuritynews.com/how-the-atlassian-confluence-breach-rewrites-data-center-security-rules/)ほとんどのウィキは、実数表、グラフ、チャート、マップ、技術図に苦労している(または単に無視する)。Orionは違う。
 
 &nbsp;
 
-ただし、業界標準の一握りのテキスト/ソース文書/データ形式に焦点を当てることによって、最も複雑なデータ生成の数学的表、グラフ、チャート、マップ、アーキテクチャ図であっても、**完全に検索可能で、AI翻訳可能**は、Orionでサポートされている自然言語のいずれかです。
+業界標準のデータ形式は一流の市民として扱われます。その結果、最も複雑なコンテンツは、完全に検索可能で、言語間でAIを翻訳できます。
 
 &nbsp;
 
-例えば、このページの[機能比較グリッド](#h1-feature-comparison-grid) 検索可能な**a-natural-language-translatableからOrionビルドによって生成されます。`YAML` このページに添付**; ビルドが同時に変換されること[`JSON`](index.page/grid.json{{lang}}) 対象[外部消費](https://www.erenkrantz.com/CREST/)。他のwikiソリューションとの文字通りの不可能性。
+このページまさに[機能比較グリッド](#h1-feature-comparison-grid) 検索可能から生成されます。`YAML` 添付および自動変換[`JSON`](index.page/grid.json{{lang}}) 他のwikiプラットフォームではできません。
 
 &nbsp;
 
-[3(&amp;3)]. :fa-robot: **コンテンツです!** **双方向バージョン・コントロール同期による読取り/書込みの直接アクセスが必要です`git` :fa-code-compare:、より不透明で高価なSaaS API。**貴社のローカルAgentic AIソリューションをチームのWikiワークフローに取り込むと、Orionよりも安全、簡単、強力、または低コストになることはありません。
+[3(&amp;3)]. :fa-robot: **自分のコンテンツを所有しています。** AIと対話する方法を制御する必要があります。
 
 &nbsp;
 
-[^4]. :fa-map-location-dot: 次に、**コンテンツキュレーションツール**は、アップセルの機会ではなく、Orionの重要な機能です。Wikiファクト・データベースが業界初&mdash; 一貫性のある名前ブランディングや、Webサイト全体に関連するソフトウェア・アーティファクト・メタデータを1行で編集して[YAMLファイル](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/lib/facts.yml).
+Orionは、AIツールに(高価で不透明なSaaS APIではなく)バージョン管理を通じて直接双方向アクセスを提供します。これにより、ローカルまたはプライベートのエージェント型AIの統合が、通常のプラットフォームよりも安全、シンプル、強力、低コストになります。
 
 &nbsp;
 
-避けられないエントロピック・リンクが他のwiki製品に宿るのではなく、オリオンの包括的なプリコミット・リンティング・パス中にページ変更時に**内部/外部リンク検証**が得られます`CMS` エディタ
+[^4]. :fa-map-location-dot: コンテンツの品質には、定期的な手動でのクリーンアップや高価なアドオンは必要ありません。
 
 &nbsp;
 
-また、すべてのお客様に、オンデマンドで失効した内部/外部リンクをキャッチするレポート・インフラストラクチャを提供します**。関係するページが何ヶ月も変更されていないとき。
+Orion includes professional content curation tools as a core feature:
 
 &nbsp;
 
-図は、Orionのマーメイド統合により、**図ソースがページの提案に埋め込まれている**ため、マークダウン・プロセスの進化する変更と同期するのと同じくらい簡単です。
+- 一貫したブランディングとメタデータ(多くの場合、1行のYAML変更で修正)のためのwikiファクト・データベース
+
+- コミット時の内部および外部リンクの自動検証
+
+- 古いリンクのオンデマンド・レポート- 数か月以内に触れていないページでも
+
+- ソースがページ内に存在するため、周囲のテキストと同期したままの人魚図
+
+- 蓄積された問題を迅速にクリーンアップするための強力な検索と置換
 
 &nbsp;
 
-蓄積された残骸を修理するために痛みのない再帰的な検索/取り替えは作り付けられます`PCRE` 検索エンジン`CMS`.
+その結果、正確でプロフェッショナルなドキュメントが残され、これまでの作業ははるかに少なくなります。
 
 &nbsp;
 
@@ -180,19 +188,11 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-[5(&amp;5)]. :fa-scale-balanced: さらに、Orionは、成長に応じて、特に企業レベルでスケーリングします。▲<span class="text-white">**1シートライセンスあたり$0、ウェブサイトの数は無制限**</span> これにより、チーム、パートナー、Webサイト間で管理されたナレッジの共有とコラボレーションが可能になりました。
+[5(&amp;5)]. :fa-scale-balanced: Orionのエンタープライズライセンスは<span class="text-white">**1席当たり$0、Webサイト当たり$0。**</span> コストが爆発するのを見ずに、ユーザー・ベースの拡大、読取り専用ステークホルダーの追加、またはサイトの追加を開始できます。これは、成功に悪影響を及ぼさない数少ないエンタープライズ・グレードのWikiプラットフォームの1つです。
 
 &nbsp;
 
-そして、私たちのフェデレーテッドプラットフォームで地球全体も:fa-hexagon-nodes-bolt:!
-
-&nbsp;
-
-ほとんどのクライアントでは、これらのシート・ライセンスのほんの一部が実際にページを編集するために使用されることがわかっていますが、無制限の数のページを使用できます"関連" ウィキの読み取り専用アカウントは、保護された情報をインターネット上で共有します。Orionにアクセスする必要がないアカウント`CMS` 固有種&mdash; 唯一の企業支援**Enterprise Jamstack Wiki**としてOrionに特有のコスト削減機能。
-
-&nbsp;
-
-人事の企業状況が時間の経過とともに変化するにつれて、Orionは、Wiki管理者が関連するWikiの再承認を簡単に処理できるようにします。すべての明示的な一括検索および置換の実行`ACL` 元従業員のアカウントに関連付けられたサイトでの設定は、チームが設計した適切なバージョン管理承認グループにそれらを削除することで、新しいステファのオンボーディングや既存のステファのアップグレードと同様に簡単です。[所有権(&amp;O)].
+人事の企業状況が時間の経過とともに変化すると、Orionは、Wiki管理者が関連するWikiの再承認を簡単に処理できるようにします。すべての明示的な一括検索および置換の実行`ACL` 元従業員のアカウントに関連付けられたサイトでの設定は、チームが設計した適切なバージョン管理承認グループにそれらを削除することで、新しいステファのオンボーディングや既存のステファのアップグレードと同様に簡単です。[所有権(&amp;O)].
 
 &nbsp;
 
@@ -206,6 +206,8 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 [^7]. :fa-arrow-right-arrow-left: Confluenceからの切り替え/オンボーディング・コストは、中小企業では合計100ドルまで低く、ハンズオン・アプローチが必要な顧客では最初の3年間のサービスで償却できます。全体的なプロセスは4倍です。
 
+&nbsp;
+
 1. 個々のConfluenceスペースからOrion wikiファイルやフォルダまで、サイトマップの望ましいトポロジに同意します。
 
 2. テンプレート・ファイルを設計および実装し、構築されたサイトの稼働前のトポロジ、ブランディング、および希望するルック・アンド・フィールに対応するためのロジックを構築します。
@@ -213,6 +215,8 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 3. の自動変換を実行する[`XML` コンフルエンス領域全体のダンプ](https://confluence.atlassian.com/doc/export-content-to-word-pdf-html-and-xml-139475.html) 必要なソース・ツリー・レイアウト
 
 4. Orion wikiサイトを構築し、顧客が満足し、最終的な契約署名の準備ができるまで、調整と再チューニングのために上記の手順に戻ります。
+
+&nbsp;
 
 前述のステップ2では、大幅なコストが発生する可能性がありますが、そのステップの大部分はAI自動化に対応できます。また、お客様は、新しいOrionウィキとの競合を導入することなく、必要に応じてConfluenceサブスクリプションを保持することもできます。
 
@@ -258,7 +262,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
-**レガシーConfluence wikiをOrionに置き換える**
+**レガシーConfluenceからOrionに切り替える**
 
 <center>
 
@@ -266,7 +270,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 </center>
 
-**最新のスケーラブルで高パフォーマンスのナレッジ管理システム**
+**最新の低コストで高パフォーマンスのナレッジ管理システム**
 
 &nbsp;
 
@@ -311,7 +315,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 <div class="fade">
 
-- :fa-compass-drafting: **高可用性アーキテクト&amp; 原則エンジニア** &mdash; SQLベースのLAMPスタックにベイクされた単一障害点をエスケープします。真のJamstackスケーラビリティを採用: 同時ビルド、増分更新、グローバルPOPカバレッジ、およびミリ秒単位のピーク・パフォーマンス。
+- :fa-compass-drafting: **高可用性アーキテクト&amp; 原則エンジニア** &mdash; SQLベースのLAMPスタックにベイクされた単一障害点をエスケープします。真を受け入れる<img style="height:28px;width:120px" src="index.page/jamstack-logo">スケーラビリティ: 同時ビルド、増分更新、グローバルPOPカバレッジ、およびミリ秒単位のピーク・パフォーマンス。
 
 </div>
 
@@ -373,13 +377,28 @@ Aよりも多くの馬力が必要[Hugoのようなワントリックポニー](
 
 &nbsp;
 
-<center>
-<img src="technology.page/stack" title="tech stack" style="width:100%">
-</center>
+```mermaid
+mindmap
+  root(バージョン
+        コントロール
+        システム)
+    ((静的
+	サイト・ジェネレータ))
+      完全なサイト構築
+      増分ビルド
+    ((CMSエディタ))
+      コミット前Linter
+      検索+置換エンジン
+    ((デプロイ済
+	生産サイト))
+      (機密性の高いコンテンツ)
+      (多目的検索エンジン)
+      (Eメール・ゲートウェイへのフォーム)
+```
 
 &nbsp;
 
-座席ごとのライセンスとCPUごとの選択に飽きている場合、他のJamstackホスティングベンダーとの比較で、誤字を修正するだけで済む場合は、[お問い合わせ](/contact).
+座席ごとのライセンスとCPUごとの選択に飽きている場合は、他のユーザーとの比較<img style="height:28px;width:120px" src="index.page/jamstack-logo">ホスティングベンダー、あなたがちょうどtypoを修正する必要があるとき、[お問い合わせ](/contact).
 
 &nbsp;
 
@@ -500,11 +519,19 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 <div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
+&nbsp;
+
 最も簡単な方法は、@SunStarSys/orionのデフォルトのビルドで再生することです。<https://iconoclasts.blog> でマークダウンソースを空にする`trunk/content`.  スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
+
+&nbsp;
 
 他の10%は、対応するファイルを置き換えるために適切なブートストラップ5 CSSテーマを選択することを含みます`content/css/bootstrap.*`; 推奨<https://bootswatch.com> アイデア
 
+&nbsp;
+
 最後のステップは、トマッタのナビゲーション・メニューを再トリガーすることです。`templates/main.html.*`。AI翻訳者は、すべてをオンデマンドで同期します。
+
+&nbsp;
 
 カスタマイズに関するサポートが必要`Perl` システム構築`lib/` その他のDjangoテンプレート`templates/` ユースケースに合うか? 私たちはあなたのサービスにいます!
 
