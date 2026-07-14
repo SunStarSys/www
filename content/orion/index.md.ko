@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ko api/index.md.ko'
 keywords: 위키,잼스택,블로그,안전,안전
-status: 확인=48784
+status: 확인=48904
 title: SunStar 시스템스 오리온
 ---
 
@@ -23,7 +23,19 @@ Orion은 다음을 제공하는 Jamstack Wiki 플랫폼입니다. [해킹 불가
 
 &nbsp;
 
-왜 Orion? 데이터 침해와 SaaS 청구서로 가득 찬 세상에서 귀하의 지식은 책임이 아닌 가장 큰 자산이어야합니다. Orion은 분산된 문서를 안전하고 검색 가능한 자체 업데이트 경쟁 우위로 전환합니다. 또한 레거시 솔루션 비용의 일부에 불과합니다.
+**레거시 시스템을 Orion으로 교체**
+
+<center>
+
+![Orion 로고](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**확장 가능한 최신 고성능 지식 관리 시스템**
+
+&nbsp;
+
+왜 Orion? 데이터 침해와 SaaS 청구서로 가득 찬 세상에서 귀하의 지식은 책임이 아닌 가장 큰 자산이어야합니다. **Orion은 분산 된 문서를 안전하고 검색 가능한 자체 업데이트 경쟁 우위로 전환합니다. 또한 레거시 솔루션 비용의 일부만으로도 가능합니다.**
 
 &nbsp;
 
@@ -78,31 +90,31 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;
 
-경쟁업체가 사용하고 있는 제품과 달리 Orion은 시장에서 가장 풍부하면서도 가장 이해하기 쉽게 관리되는 링크/종속성 네트워크를 통해 우수하고 유지 관리 가능하며 기밀이 유지 가능하면서도 쉽게 위치할 수 있는 기업 문서를 제공하도록 설계된 프레임워크입니다. **조직의 집단적 경험을 가장 내구성이 뛰어난 경쟁 우위로 뛰어넘는 책임으로부터 바꿉니다.**
+**<span class="text-white">조직의 집단적 경험을 누수된 책임으로부터 가장 내구성이 뛰어난 경쟁 우위로 바꿉니다.</span>**
 
 &nbsp;
 
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
-<div class="card-header">안전한, 더 나은 제품 <span class="text-white">더 적은 돈</span>&nbsp;<i class="fa fa-chart-line"></i>
+<div class="card-header">Orion을 통해 ROI를 향상시키는 7가지 방법 <i class="fa fa-chart-line"></i>
 
 </div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. 상당한 보안 위험 감소 :fa-lock:
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. 보안 위험 대폭 감소 :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. 검색 및 AI 번역을 통한 실제 수학/데이터 통합, 데이터 처리 엔진 및 벡터 그래픽 패키지 :fa-infinity:
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. 실제 사용 가능한 복합 데이터 만들기 :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. 진정한 에이전트 AI 지원 :fa-robot:
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. 실제 에이전트 AI 지원 받기(위험 없음) :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. 번들 콘텐츠 큐레이션 툴링 :fa-map-location-dot:
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. 컨텐츠를 깨끗하고 안정적으로 유지 :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">저장 $100K / 년</span>](https://www.atlassian.com/software/confluence/pricing) 포함 [Orion's $0 Per-Seat / 웹 사이트별 엔터프라이즈 라이선스](plans) :fa-scale-balanced:
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. 좌석당 비용 없이 확장 :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">저장 $400+/매월</span>](https://www.atlassian.com/software/confluence/pricing) 포함 [Orion의 사업 계획](plans) 기능 비교 가능 Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. 위키 비용 대폭 절감 :fa-money-check-dollar:
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. 변동에 따른 경제적이고 상각 가능한 전환 비용 :fa-arrow-right-arrow-left:
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. 일반적인 통증과 비용 없이 전환 :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -136,7 +148,7 @@ Orion을 차별화하는 것은 다른 위키 플랫폼이 아닙니다. &mdash;
 
 &nbsp;
 
-예를 들어, 이 페이지의 [기능 비교 그리드](#h1-feature-comparison-grid) **a-natural-language-translatable, searchable에서 Orion 빌드에 의해 생성됩니다. `YAML` 이 페이지에 첨부**: 빌드가 동시에 [`JSON`](index.page/grid.json{{lang}}). 다른 위키 솔루션과의 문자적 불가능성.
+예를 들어, 이 페이지의 [기능 비교 그리드](#h1-feature-comparison-grid) **a-natural-language-translatable, searchable에서 Orion 빌드에 의해 생성됩니다. `YAML` 이 페이지에 첨부**: 빌드가 동시에 [`JSON`](index.page/grid.json{{lang}}) 대상 [외부 소비](https://www.erenkrantz.com/CREST/). 다른 위키 솔루션과의 문자적 불가능성.
 
 &nbsp;
 
@@ -246,6 +258,18 @@ Orion과 같은 시스템의 *grokability* 선호 &mdash; *데이터가 첨부�
 
 &nbsp;
 
+**레거시 Confluence 위키를 Orion으로 바꾸기**
+
+<center>
+
+![Orion 로고](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**확장 가능한 최신 고성능 지식 관리 시스템**
+
+&nbsp;
+
 ## 오리온은 정착을 거부하는 지도자들을 위해 지어졌다. :fa-seedling:
 
 &nbsp;
@@ -349,6 +373,12 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 
 &nbsp;
 
+<center>
+<img src="technology.page/stack" title="tech stack" style="width:100%">
+</center>
+
+&nbsp;
+
 좌석당 라이선스 및 CPU당 사이클 선택에 지쳐 다른 Jamstack 호스팅 업체와 함께 계량하는 경우, 오타를 고쳐야 할 때마다 [연락하기](/contact).
 
 &nbsp;
@@ -422,7 +452,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 
 &nbsp;
 
-원하는 만큼의 직원/미리보기/편집/커밋/분기를 사용하고 인프라에서 실제로 사용하는 것에 대해서만 비용을 지불합니다. 자체 AI 고급 CSS/자바스크립트 프레임워크, 펄 스크립트 및 장고 템플릿을 가져오면 추가 비용 없이 나머지 설정을 관리할 수 있습니다. css/js 스타일링의 경우 **Bootstrap 5**를 사용하는 것이 내부적으로 사용되지만 이는 전적으로 귀하에게 달려 있습니다.
+원하는 만큼의 직원/미리보기/편집/커밋/분기를 사용하고 인프라에서 실제로 사용하는 것에 대해서만 비용을 지불합니다.
 
 &nbsp;
 
@@ -454,11 +484,21 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 [우리에게 전화를하거나 우리에게 메모를 드롭](/contact) 오늘.
 
+</center>
+
 &nbsp;
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
-<div class="card-header">시작하기</div>
-<div class="card-body">
+<div class="accordion" id="getting-started-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="getting-started-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-target" aria-expanded="false" aria-controls="getting-started-target">
+
+## 시작하기
+
+</button>
+</div>
+
+<div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
 가장 빠른 방법은 @SunStarSys/orion의 기본 빌드로 플레이하는 것입니다. <https://iconoclasts.blog> 다음에서 마크다운 출처를 비웁니다. `trunk/content`. 스타일 지정 사용자 정의의 최대 90%가 [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 맛에 적응하라!
 
@@ -470,8 +510,7 @@ The underlying Static Site Generator: 아파치 라이선스 2.0에서 GitHub에
 
 </div>
 </div>
-</center>
-
+</div>
 </div>
 </div>
 

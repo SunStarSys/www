@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ja api/index.md.ja'
 keywords: wiki、jamstack、ブログ、安全
-status: 確認済み=48784
+status: 確認済み=48904
 title: SunStarシステムのOrion
 ---
 
@@ -23,7 +23,19 @@ OrionはJamstack Wikiプラットフォームです。[ハッキング不能な�
 
 &nbsp;
 
-なぜオリオン? データ侵害やSaaSの請求書が膨らむ世界では、あなたの知識は最大の資産であるべきであり、責任ではありません。Orionは、散在するドキュメントを、安全で検索しやすい、自己更新型の競争力に変えています。これは、レガシー・ソリューションのコストの一部で行われます。
+**レガシー・システムをOrionに置き換える**
+
+<center>
+
+![Orionのロゴ](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**最新のスケーラブルで高パフォーマンスのナレッジ管理システム**
+
+&nbsp;
+
+なぜオリオン? データ漏洩や膨大なSaaS請求の世界では、あなたの知識は責任ではなく、あなたの最大の資産であるべきです。**Orionは、散らばったドキュメントをセキュアで検索可能な自動更新の競争力に変えます。これは、レガシー・ソリューションのコストの一部で行われます。**
 
 &nbsp;
 
@@ -78,31 +90,31 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-競合他社が使用している製品とは異なり、Orionは、市場で最も裕福で、かつ最もわかりやすいマネージドリンク/依存関係ネットワークを使用して、優れた、保守性、機密性を備えながら簡単に見つけられる企業ドキュメントを生成するように設計されたフレームワークです。**これは、組織全体の経験を、最も耐久性のある競争上の優位性にリークする責任から変えます。**
+**<span class="text-white">組織の集合的なエクスペリエンスを、最も耐久性のある競争上の優位性へとリークする責任から変えます。</span>**
 
 &nbsp;
 
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
-<div class="card-header">より安全で優れた製品<span class="text-white">少ないお金</span>&nbsp;<i class="fa fa-chart-line"></i>
+<div class="card-header">OrionでROIを向上させる7つの方法<i class="fa fa-chart-line"></i>
 
 </div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>。重大なセキュリティ・リスクの軽減:fa-lock:
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>。セキュリティ・リスクを大幅に低減:fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>。検索とAI翻訳による実数計算/データ統合に加え、データ処理エンジンとベクトルグラフィックスパッケージ:fa-infinity:
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>。複雑なデータを実際に使用可能にする:fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。真のエージェントAIサポート:fa-robot:
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。リアルなエージェントAIサポート(リスクなし) :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。バンドルされたコンテンツのキュレーション・ツール:fa-map-location-dot:
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。コンテンツをクリーンで信頼性の高い状態に保つ:fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">保存 $100K /年</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionの0ドル/座席/Webサイトごとのエンタープライズライセンス](plans) :fa-scale-balanced:
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>。座席ごとの費用なしでスケール:fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">$400+ /月を保存</span>](https://www.atlassian.com/software/confluence/pricing) 対象[Orionのビジネスプラン](plans) 比類のないコンフルエンスプレミアム:fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>。Wikiコストを大幅に削減:fa-money-check-dollar:
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>。手頃な価格で償却可能な切り替えコストをコンフルエンスから:fa-arrow-right-arrow-left:
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>。通常の痛みと経費なしで切り替え:fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -136,7 +148,7 @@ Orionを本当に切り離すものは、単なるWikiプラットフォーム�
 
 &nbsp;
 
-例えば、このページの[機能比較グリッド](#h1-feature-comparison-grid) 検索可能な**a-natural-language-translatableからOrionビルドによって生成されます。`YAML` このページに添付**; ビルドが同時に変換されること[`JSON`](index.page/grid.json{{lang}})。他のwikiソリューションとの文字通りの不可能性。
+例えば、このページの[機能比較グリッド](#h1-feature-comparison-grid) 検索可能な**a-natural-language-translatableからOrionビルドによって生成されます。`YAML` このページに添付**; ビルドが同時に変換されること[`JSON`](index.page/grid.json{{lang}}) 対象[外部消費](https://www.erenkrantz.com/CREST/)。他のwikiソリューションとの文字通りの不可能性。
 
 &nbsp;
 
@@ -246,6 +258,18 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 &nbsp;
 
+**レガシーConfluence wikiをOrionに置き換える**
+
+<center>
+
+![Orionのロゴ](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**最新のスケーラブルで高パフォーマンスのナレッジ管理システム**
+
+&nbsp;
+
 ## オリオンは、解決を拒否するリーダーのために作られています:fa-seedling:
 
 &nbsp;
@@ -295,7 +319,7 @@ Orionのようなシステムの*grokability*を優先する&mdash; 添付され
 
 <div class="fade">
 
-- :fa-business-time: **ウィキ経済に飽きているビジネス** &mdash; 高価なSaaSサブスクリプション、スタッフの時間を浪費する脆弱なフリー・ツール、チームの時間を短縮する時代遅れのシステムを捨てます。Orionは、総所有コストのほんの一部で企業力を供給します(企業全体で使用する場合、年間50,000ドル未満であることが多い)。
+- :fa-business-time: **ウィキ経済に飽きているビジネス** &mdash; 高価なSaaSサブスクリプション、スタッフの時間を浪費する脆弱なフリー・ツール、チームの時間を短縮する時代遅れのシステムを捨てます。Orionは、総所有コストのほんの一部で企業の力を供給します(企業全体で使用する場合、年間50,000ドル未満であることが多い)。
 
 </div>
 
@@ -346,6 +370,12 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 &nbsp;
 
 Aよりも多くの馬力が必要[Hugoのようなワントリックポニー](https://www.iconoclasts.blog/joe/ssg) 缶詰:fa-horse:?
+
+&nbsp;
+
+<center>
+<img src="technology.page/stack" title="tech stack" style="width:100%">
+</center>
 
 &nbsp;
 
@@ -422,7 +452,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 
 &nbsp;
 
-自分のペースで進み、必要な数の従業員/プレビュー/編集/コミット/ブランチを使用し、インフラストラクチャ上で実際に使用した分だけ支払います。独自のAI拡張css/javascriptフレームワーク、perlスクリプト、およびDjango Templatesを導入するだけで、追加料金なしで残りのセットアップを処理します。css/jsスタイリングには**Bootstrap 5**をお勧めします。これは内部的に使用するものです。しかし、それはあなた次第です。
+自分のペースで進み、必要な数の従業員/プレビュー/編集/コミット/ブランチを使用し、インフラストラクチャ上で実際に使用した分だけ支払います。
 
 &nbsp;
 
@@ -454,11 +484,21 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 [私たちに電話をかけるか、メモをください](/contact) 本日。
 
+</center>
+
 &nbsp;
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
-<div class="card-header">はじめに</div>
-<div class="card-body">
+<div class="accordion" id="getting-started-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="getting-started-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-target" aria-expanded="false" aria-controls="getting-started-target">
+
+## はじめに
+
+</button>
+</div>
+
+<div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
 最も簡単な方法は、@SunStarSys/orionのデフォルトのビルドで再生することです。<https://iconoclasts.blog> でマークダウンソースを空にする`trunk/content`.  スタイル設定のカスタマイズの90%が[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 味に合わせる!
 
@@ -470,8 +510,7 @@ The underlying Static Site Generator: GitHubにApache License 2.0でオープン
 
 </div>
 </div>
-</center>
-
+</div>
 </div>
 </div>
 

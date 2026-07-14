@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.de api/index.md.de'
 keywords: wiki,jamstack,blog,sicher,sicher
-status: überprüft=48784
+status: überprüft=48904
 title: SunStar System-Orion
 ---
 
@@ -23,7 +23,19 @@ Es ist die Unternehmensplattform {# lede #}für die Erstellung, Verwaltung und B
 
 &nbsp;
 
-Warum Orion? Weil in einer Welt von Datenverletzungen und aufgeblähten SaaS-Rechnungen Ihr Wissen Ihr größtes Kapital sein sollte - keine Haftung. Orion verwandelt verstreute Dokumentation in einen sicheren, durchsuchbaren, sich selbst aktualisierenden Wettbewerbsvorteil. Und das zu einem Bruchteil der Kosten für Legacy-Lösungen.
+**Ersetzen Sie Ihr Altsystem durch Orion**
+
+<center>
+
+![Orion-Logo](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**das moderne, skalierbare und leistungsstarke Knowledge Management System.**
+
+&nbsp;
+
+Warum Orion? Weil in einer Welt von Datenlecks und aufgeblähten SaaS-Rechnungen Ihr Wissen Ihr größtes Kapital sein sollte - keine Haftung. **Orion verwandelt verstreute Dokumentation in einen sicheren, durchsuchbaren, selbst aktualisierenden Wettbewerbsvorteil. Und das zu einem Bruchteil der Kosten für Legacy-Lösungen.**
 
 &nbsp;
 
@@ -78,31 +90,31 @@ Was Orion wirklich auszeichnet, ist nicht nur eine andere Wiki-Plattform &mdash;
 
 &nbsp;
 
-Im Gegensatz zu den Produkten, die Ihre Mitbewerber nicht verwenden, ist Orion ein Framework, das auf überlegene, wartbare, vertrauliche und dennoch leicht zu findende Unternehmensdokumentation mit dem umfangreichsten, aber verständlichsten verwalteten Link-/Abhängigkeitsnetzwerk auf dem Markt ausgelegt ist. **Es verwandelt die kollektive Erfahrung Ihres Unternehmens aus einer Haftung, die ausläuft, in Ihren dauerhaftesten Wettbewerbsvorteil.**
+**<span class="text-white">Es verwandelt die kollektive Erfahrung Ihres Unternehmens von einer Haftung, die ausläuft, in Ihren dauerhaftesten Wettbewerbsvorteil.</span>**
 
 &nbsp;
 
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
-<div class="card-header">Sicheres, besseres Produkt für <span class="text-white">Weniger Geld</span>&nbsp;<i class="fa fa-chart-line"></i>
+<div class="card-header">7 Wege zu einem besseren ROI mit Orion <i class="fa fa-chart-line"></i>
 
 </div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Wesentliche Reduzierung des Sicherheitsrisikos :fa-lock:
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Senken Sie Ihr Sicherheitsrisiko drastisch :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math / Data Integration mit Search und AI Translation sowie Data Processing Engine und Vector Graphics Package :fa-infinity:
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Komplexe Daten tatsächlich nutzbar machen :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Unterstützung für echte Agent-KI :fa-robot:
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Real Agentic AI Support (ohne Risiko) :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Kuratierungstool für gebündelte Inhalte :fa-map-location-dot:
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Halten Sie Ihre Inhalte sauber und zuverlässig :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Sparen Sie $100K / Jahr</span>](https://www.atlassian.com/software/confluence/pricing) mit [0 US-Dollar pro Sitzplatz / Pro-Website-Unternehmenslizenzierung](plans) :fa-scale-balanced:
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. Skalierung ohne Kosten pro Platz :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Sparen Sie $400+ / Monat</span>](https://www.atlassian.com/software/confluence/pricing) mit [Geschäftsplan von Orion](plans) über funktionsvergleichbare Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. Reduzieren Sie Ihre Wiki-Kosten erheblich :fa-money-check-dollar:
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Erschwingliche, amortisierbare Umschaltkosten von Konflikten :fa-arrow-right-arrow-left:
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Wechseln Sie ohne die üblichen Schmerzen und Kosten :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -136,7 +148,7 @@ Indem Sie sich jedoch auf eine Handvoll branchenüblicher Text-/Quelldokument-/D
 
 &nbsp;
 
-Zum Beispiel, diese Seite ist [Funktionsvergleichsraster](#h1-feature-comparison-grid) wird vom Orion-Build aus **a-natural-language-translatable, searchable generiert `YAML` Anhang** zu dieser Seite; dass der Build gleichzeitig in [`JSON`](index.page/grid.json{{lang}}). Eine buchstäbliche Unmöglichkeit mit anderen Wiki-Lösungen.
+Zum Beispiel, diese Seite ist [Funktionsvergleichsraster](#h1-feature-comparison-grid) wird vom Orion-Build aus **a-natural-language-translatable, searchable generiert `YAML` Anhang** zu dieser Seite; dass der Build gleichzeitig in [`JSON`](index.page/grid.json{{lang}}) für [externer Verbrauch](https://www.erenkrantz.com/CREST/). Eine buchstäbliche Unmöglichkeit mit anderen Wiki-Lösungen.
 
 &nbsp;
 
@@ -246,6 +258,18 @@ Sie wollen einen konservativeren/souveränen/ethischeren Ansatz, als alle Ihre U
 
 &nbsp;
 
+**Ersetzen Sie Ihr Legacy-Wiki Confluence durch Orion**
+
+<center>
+
+![Orion-Logo](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**das moderne, skalierbare und leistungsstarke Knowledge Management System.**
+
+&nbsp;
+
 ## Orion ist für Führer gebaut, die sich weigern, sich niederzulassen :fa-seedling:
 
 &nbsp;
@@ -295,7 +319,7 @@ Sie wollen einen konservativeren/souveränen/ethischeren Ansatz, als alle Ihre U
 
 <div class="fade">
 
-- :fa-business-time: **Jedes Unternehmen, das die Wiki-Ökonomie satt hat** &mdash; Verlassen Sie teure SaaS-Abonnements, fragile kostenlose Tools, die Zeit für das Personal sparen, und veraltete Systeme, die Ihr Team verlangsamen. Orion gibt Ihnen Unternehmensmacht zu einem Bruchteil der Gesamtbetriebskosten (oft unter 50 000 US-Dollar pro Jahr für die vollständige Nutzung des Unternehmens).
+- :fa-business-time: **Jedes Unternehmen, das die Wiki-Ökonomie satt hat** &mdash; Verlassen Sie teure SaaS-Abonnements, fragile kostenlose Tools, die Zeit für das Personal sparen, und veraltete Systeme, die Ihr Team verlangsamen. Orion gibt Ihnen Unternehmensmacht zu einem Bruchteil der Gesamtbetriebskosten (oft unter 50.000 US-Dollar pro Jahr für die vollständige Unternehmensnutzung).
 
 </div>
 
@@ -346,6 +370,12 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 &nbsp;
 
 Sie brauchen mehr Leistung als eine [One-Trick-Pony wie Hugo](https://www.iconoclasts.blog/joe/ssg) kann muster :fa-horse:?
+
+&nbsp;
+
+<center>
+<img src="technology.page/stack" title="tech stack" style="width:100%">
+</center>
 
 &nbsp;
 
@@ -422,7 +452,7 @@ Unser globales Point of Presence (POP)-Netzwerk :fa-hexagon-nodes-bolt: stellt V
 
 &nbsp;
 
-Gehen Sie in Ihrem eigenen Tempo, verwenden Sie so viele Mitarbeiter / Vorschauen / Bearbeitungen / Commits / Filialen, wie Sie möchten, und bezahlen Sie nur für das, was Sie *wirklich* in unserer Infrastruktur verwenden. Bringen Sie einfach Ihr eigenes KI-optimiertes CSS/Javascript-Framework, Perl-Skripte und Django-Vorlagen mit, und wir kümmern uns um den Rest Ihres Setups ohne zusätzliche Kosten. Wir empfehlen **Bootstrap 5** für das CSS/js-Styling, da es das ist, was wir intern verwenden; aber das liegt ganz bei Ihnen.
+Gehen Sie in Ihrem eigenen Tempo, verwenden Sie so viele Mitarbeiter / Vorschauen / Bearbeitungen / Commits / Filialen, wie Sie möchten, und bezahlen Sie nur für das, was Sie *wirklich* in unserer Infrastruktur verwenden.
 
 &nbsp;
 
@@ -454,11 +484,21 @@ Das ist kein Marketing-Spin &mdash; Es ist ein nachweisbares, offenes technische
 
 [Rufen Sie uns an oder schreiben Sie uns eine Nachricht](/contact) heute.
 
+</center>
+
 &nbsp;
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
-<div class="card-header">Erste Schritte</div>
-<div class="card-body">
+<div class="accordion" id="getting-started-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="getting-started-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-target" aria-expanded="false" aria-controls="getting-started-target">
+
+## Erste Schritte
+
+</button>
+</div>
+
+<div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
 Der schnellste Weg, um loszulegen, ist das Spielen mit @SunStarSys/orions Standard-Build von <https://iconoclasts.blog> Aushöhlen der Markdown-Quellen in `trunk/content`. ~90% der Stylinganpassungen sind in [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassung an den Geschmack!
 
@@ -470,8 +510,7 @@ Benötigen Sie Hilfe bei der Anpassung der `Perl` System erstellen in `lib/` und
 
 </div>
 </div>
-</center>
-
+</div>
 </div>
 </div>
 

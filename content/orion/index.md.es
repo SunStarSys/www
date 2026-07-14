@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.es api/index.md.es'
 keywords: wiki,jamstack,blog,seguro,seguro
-status: verificado=48784
+status: verificado=48904
 title: SunStar Orión de los Sistemas
 ---
 
@@ -23,7 +23,19 @@ Es la plataforma empresarial {# lede #}para crear, gestionar y entregar conocimi
 
 &nbsp;
 
-¿Por qué Orión? Porque en un mundo de infracciones de datos y facturas hinchadas de SaaS, su conocimiento debe ser su mayor activo, no un pasivo. Orion convierte la documentación dispersa en una ventaja competitiva segura, que se puede buscar y actualizar automáticamente. Y lo hace a una fracción del costo de las soluciones heredadas.
+**Sustituya su sistema antiguo por Orion**
+
+<center>
+
+![Logotipo de Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**el sistema de gestión del conocimiento moderno, escalable y de alto rendimiento.**
+
+&nbsp;
+
+¿Por qué Orión? Debido a que en un mundo de infracciones de datos y facturas SaaS infladas, su conocimiento debe ser su mayor activo, no un pasivo. **Orion convierte la documentación dispersa en una ventaja competitiva segura, que se puede buscar y que se puede actualizar automáticamente. Y lo hace a una fracción del costo de las soluciones heredadas.**
 
 &nbsp;
 
@@ -78,31 +90,31 @@ Lo que realmente distingue a Orion no es solo otra plataforma wiki &mdash; Es nu
 
 &nbsp;
 
-A diferencia de los productos que utilizan sus competidores, Orion es un marco diseñado para producir documentación corporativa superior, mantenible, confidencial y fácilmente localizable con la red de enlace/dependencia gestionada más rica pero comprensible del mercado. **Convierte la experiencia colectiva de su organización de una responsabilidad que se filtra en su ventaja competitiva más duradera.**
+**<span class="text-white">Convierte la experiencia colectiva de su organización de una responsabilidad que se filtra en su ventaja competitiva más duradera.</span>**
 
 &nbsp;
 
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
-<div class="card-header">Producto más seguro y mejor para <span class="text-white">Menos dinero</span>&nbsp;<i class="fa fa-chart-line"></i>
+<div class="card-header">7 formas de mejorar el ROI con Orion <i class="fa fa-chart-line"></i>
 
 </div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Reducción sustancial del riesgo de seguridad :fa-lock:
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Reduce drásticamente tu riesgo de seguridad :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Matemáticas reales / integración de datos con búsqueda y traducción de IA, además de motor de procesamiento de datos y paquete de gráficos vectoriales :fa-infinity:
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Hacer que los datos complejos sean realmente útiles :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Soporte de IA auténtico :fa-robot:
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Obtenga soporte de IA auténtico (sin riesgo) :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Herramientas de curado de contenido agrupado :fa-map-location-dot:
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Mantenga su contenido limpio y confiable :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Ahorre $100K / año</span>](https://www.atlassian.com/software/confluence/pricing) con [Licencias empresariales de $0 por asiento / por sitio web de Orion](plans) :fa-scale-balanced:
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. Escala sin costos por asiento :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Ahorre más de $400/mes</span>](https://www.atlassian.com/software/confluence/pricing) con [Plan de negocio de Orion](plans) Más sobre Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. Reduzca sus costos de wiki significativamente :fa-money-check-dollar:
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Costos de cambio asequibles y amortizables de la confluencia :fa-arrow-right-arrow-left:
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Cambiar sin dolor y gastos habituales :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -136,7 +148,7 @@ Sin embargo, al centrarse en un puñado de formatos estándar de texto/documento
 
 &nbsp;
 
-Por ejemplo, esta misma página [Cuadrícula de comparación de funciones](#h1-feature-comparison-grid) es generado por la construcción de Orion a partir de **un lenguaje natural traducible, buscable `YAML` adjunto** a esta página; que la creación se transforma simultáneamente en [`JSON`](index.page/grid.json{{lang}}). Imposibilidad literal con otras soluciones wiki.
+Por ejemplo, esta misma página [Cuadrícula de comparación de funciones](#h1-feature-comparison-grid) es generado por la construcción de Orion a partir de **un lenguaje natural traducible, buscable `YAML` adjunto** a esta página; que la creación se transforma simultáneamente en [`JSON`](index.page/grid.json{{lang}}) para [consumo externo](https://www.erenkrantz.com/CREST/). Imposibilidad literal con otras soluciones wiki.
 
 &nbsp;
 
@@ -246,6 +258,18 @@ Quiere un enfoque más conservador/soberano/ético que simplemente exponer todos
 
 &nbsp;
 
+**Reemplaza tu wiki de Confluencia con Orión**
+
+<center>
+
+![Logotipo de Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**el sistema de gestión del conocimiento moderno, escalable y de alto rendimiento.**
+
+&nbsp;
+
 ## Orión está construida para líderes que se niegan a establecerse :fa-seedling:
 
 &nbsp;
@@ -295,7 +319,7 @@ Quiere un enfoque más conservador/soberano/ético que simplemente exponer todos
 
 <div class="fade">
 
-- :fa-business-time: **Cualquier negocio cansado de la economía wiki** &mdash; Elimina las costosas suscripciones a SaaS, las frágiles herramientas gratuitas que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 50 000 / año para el uso completo de la empresa).
+- :fa-business-time: **Cualquier negocio cansado de la economía wiki** &mdash; Elimina las costosas suscripciones a SaaS, las frágiles herramientas gratuitas que agotan el tiempo del personal y los sistemas obsoletos que ralentizan a tu equipo. Orion le da poder empresarial a una fracción del costo total de propiedad (a menudo menos de $ 50.000 / año para el uso completo de la empresa).
 
 </div>
 
@@ -346,6 +370,12 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 &nbsp;
 
 Necesita más caballos de fuerza que [Pony de un trick como Hugo](https://www.iconoclasts.blog/joe/ssg) puede reunir :fa-horse:?
+
+&nbsp;
+
+<center>
+<img src="technology.page/stack" title="tech stack" style="width:100%">
+</center>
 
 &nbsp;
 
@@ -422,7 +452,7 @@ Nuestra red global de puntos de presencia (POP) :fa-hexagon-nodes-bolt: garantiz
 
 &nbsp;
 
-Vaya a su propio ritmo, utilice tantos empleados, previsualizaciones, ediciones, confirmaciones y sucursales como desee y solo pague por lo que *utilice realmente* en nuestra infraestructura. Solo tiene que traer su propio marco css/javascript mejorado por IA, scripts perl y plantillas Django, y nos encargaremos del resto de su configuración sin costo adicional. Recomendamos **Bootstrap 5** para el estilo css/js, ya que es lo que usamos internamente, pero eso depende totalmente de usted.
+Vaya a su propio ritmo, utilice tantos empleados, previsualizaciones, ediciones, confirmaciones y sucursales como desee y solo pague por lo que *utilice realmente* en nuestra infraestructura.
 
 &nbsp;
 
@@ -454,11 +484,21 @@ Esto no es marketing spin &mdash; Es un patrimonio de ingeniería verificable y 
 
 [Llámenos o envíenos una nota](/contact) hoy.
 
+</center>
+
 &nbsp;
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
-<div class="card-header">Introducción</div>
-<div class="card-body">
+<div class="accordion" id="getting-started-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="getting-started-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-target" aria-expanded="false" aria-controls="getting-started-target">
+
+## Introducción
+
+</button>
+</div>
+
+<div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
 La forma más rápida de ponerse en marcha es jugar con la versión predeterminada de @SunStarSys/orion de <https://iconoclasts.blog> y vaciar las fuentes de rebaja en `trunk/content`.  ~90% de las personalizaciones de estilo están en [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; ¡Adáptate al gusto!
 
@@ -470,8 +510,7 @@ Necesita ayuda para personalizar el `Perl` construir sistema en `lib/` y otras p
 
 </div>
 </div>
-</center>
-
+</div>
 </div>
 </div>
 

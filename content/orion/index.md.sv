@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.sv api/index.md.sv'
 keywords: wiki,jamstack,blogg,säker,säker
-status: verifierad=48784
+status: verifierad=48904
 title: SunStar Orion för system
 ---
 
@@ -23,7 +23,19 @@ Det är företagsplattformen {# lede #}för att skapa, hantera och leverera kuns
 
 &nbsp;
 
-Varför Orion? För i en värld av dataintrång och uppsvällda SaaS räkningar, bör din kunskap vara din största tillgång - inte en skuld. Orion förvandlar spridd dokumentation till en säker, sökbar, självuppdaterande konkurrensfördel. Och det gör det till en bråkdel av kostnaden för äldre lösningar.
+**Ersätt ditt befintliga system med Orion**
+
+<center>
+
+![Orion-logotyp](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**det moderna, skalbara och högpresterande kunskapshanteringssystemet.**
+
+&nbsp;
+
+Varför Orion? Eftersom i en värld av dataintrång och uppsvällda SaaS räkningar, bör din kunskap vara din största tillgång — inte en skuld. **Orion förvandlar spridd dokumentation till en säker, sökbar, självuppdaterande konkurrensfördel. Och det gör det till en bråkdel av kostnaden för äldre lösningar.**
 
 &nbsp;
 
@@ -78,31 +90,31 @@ Vad som verkligen sätter Orion isär är inte bara en annan wiki-plattform &mda
 
 &nbsp;
 
-Till skillnad från de produkter som dina konkurrenter använder är Orion ett ramverk utformat för att ge överlägsen, underhållbar, konfidentiell men ändå lättläst företagsdokumentation med det rikaste, men mest begripliga, hanterade länk-/beroendenätverket på marknaden. **Det förvandlar din organisations kollektiva erfarenhet från ett ansvar som läcker bort till din mest hållbara konkurrensfördel.**
+**<span class="text-white">Det förvandlar din organisations kollektiva erfarenhet från ett ansvar som läcker bort till din mest hållbara konkurrensfördel.</span>**
 
 &nbsp;
 
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
-<div class="card-header">Säkrare, bättre produkt för <span class="text-white">Mindre pengar</span>&nbsp;<i class="fa fa-chart-line"></i>
+<div class="card-header">7 sätt att få bättre avkastning med Orion <i class="fa fa-chart-line"></i>
 
 </div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Minskning av väsentliga säkerhetsrisker :fa-lock:
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Sänk din säkerhetsrisk dramatiskt :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Real Math / Dataintegrering med sökning och AI-översättning, plus databehandlingsmotor och vektorgrafikpaket :fa-infinity:
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Gör komplexa data faktiskt användbara :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Äkta autentiskt AI-stöd :fa-robot:
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Få Real Agentic AI-stöd (utan risk) :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Verktyg för sammanslagen innehållskuratering :fa-map-location-dot:
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Håll ditt innehåll rent och tillförlitligt :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Spara $100K / år</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions företagslicensiering för 0 USD per plats/per webbplats](plans) :fa-scale-balanced:
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. Skaländra utan kostnader per sittplats :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Spara $400+/månad</span>](https://www.atlassian.com/software/confluence/pricing) med [Orions affärsplan](plans) Över funktionsjämförbar Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. Sänk dina Wiki-kostnader avsevärt :fa-money-check-dollar:
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Prisvärd, avskrivningsbar växlingskostnad från sammanflöde :fa-arrow-right-arrow-left:
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Växla utan den vanliga smärtan och kostnaden :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -136,7 +148,7 @@ Men genom att fokusera på en handfull branschstandardiserade text-/källdokumen
 
 &nbsp;
 
-Till exempel, denna sida är [Funktionsjämförelserutnät](#h1-feature-comparison-grid) genereras av Orion-byggnaden från **en-naturligt-språk-översättningsbar, sökbar `YAML` bilaga** till den här sidan; att bygget samtidigt omvandlas till [`JSON`](index.page/grid.json{{lang}}). En bokstavlig omöjlighet med andra wiki-lösningar.
+Till exempel, denna sida är [Funktionsjämförelserutnät](#h1-feature-comparison-grid) genereras av Orion-byggnaden från **en-naturligt-språk-översättningsbar, sökbar `YAML` bilaga** till den här sidan; att bygget samtidigt omvandlas till [`JSON`](index.page/grid.json{{lang}}) för [extern konsumtion](https://www.erenkrantz.com/CREST/). En bokstavlig omöjlighet med andra wiki-lösningar.
 
 &nbsp;
 
@@ -246,6 +258,18 @@ Vill ha ett mer konservativt/suveränt/etiskt tillvägagångssätt än att bara 
 
 &nbsp;
 
+**Ersätt din äldre Confluence-wiki med Orion**
+
+<center>
+
+![Logotyp för Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**det moderna, skalbara och högpresterande kunskapshanteringssystemet.**
+
+&nbsp;
+
 ## Orion är byggd för ledare som vägrar att bosätta sig :fa-seedling:
 
 &nbsp;
@@ -349,6 +373,12 @@ Behöver mer hästkraft än en [En ponny som Hugo](https://www.iconoclasts.blog/
 
 &nbsp;
 
+<center>
+<img src="technology.page/stack" title="tech stack" style="width:100%">
+</center>
+
+&nbsp;
+
 Om du är trött på per-sits licensiering och per-CPU-cykel val som tynger dig med andra Jamstack värdleverantörer, när du bara behöver fixa ett stavfel, [Kontakta oss](/contact).
 
 &nbsp;
@@ -422,7 +452,7 @@ Vårt globala POP-nätverk :fa-hexagon-nodes-bolt: säkerställer anslutningar m
 
 &nbsp;
 
-Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du *faktiskt använder* på vår infrastruktur. Ta bara med ditt eget AI-förbättrade css/javascript-ramverk, perl-skript och Django-mallar, så tar vi hand om resten av din installation utan extra kostnad. Vi rekommenderar **Bootstrap 5** för css/js styling, eftersom det är vad vi använder internt; men det är helt upp till dig.
+Gå i din egen takt, använd så många anställda / förhandsvisningar / redigeringar / åtaganden / grenar som du vill, och betala bara för vad du *faktiskt använder* på vår infrastruktur.
 
 &nbsp;
 
@@ -454,11 +484,21 @@ Detta är inte marknadsföring spin &mdash; Det är ett verifierbart, öppet ing
 
 [Ring eller skicka ett meddelande till oss](/contact) idag.
 
+</center>
+
 &nbsp;
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
-<div class="card-header">Komma igång</div>
-<div class="card-body">
+<div class="accordion" id="getting-started-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="getting-started-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-target" aria-expanded="false" aria-controls="getting-started-target">
+
+## Komma igång
+
+</button>
+</div>
+
+<div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
 Det snabbaste sättet att komma igång är att spela med @SunStarSys/orions standardversion av <https://iconoclasts.blog> och urholka nedsättningskällorna i `trunk/content`. ~90 % av stylinganpassningarna finns i [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Anpassa efter smak!
 
@@ -470,8 +510,7 @@ Behöver hjälp med att anpassa `Perl` skapa system i `lib/` och andra Django-ma
 
 </div>
 </div>
-</center>
-
+</div>
 </div>
 </div>
 

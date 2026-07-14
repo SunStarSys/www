@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.ru api/index.md.ru'
 keywords: wiki,jamstack,блог,безопасно,безопасно
-status: проверено=48784
+status: проверено=48904
 title: SunStar Орион систем
 ---
 
@@ -23,7 +23,19 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-Почему Орион? Потому что в мире утечек данных и раздутых счетов SaaS ваши знания должны быть вашим самым большим активом, а не обязательством. Orion превращает разрозненную документацию в безопасное конкурентное преимущество с возможностью поиска и самообновления. И это за долю стоимости унаследованных решений.
+**Замените устаревшую систему на Orion**
+
+<center>
+
+![Логотип Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**современная, масштабируемая, высокопроизводительная система управления знаниями.**
+
+&nbsp;
+
+Почему Орион? Потому что в мире утечек данных и раздутых счетов SaaS ваши знания должны быть вашим самым большим активом, а не обязательством. **Orion превращает разрозненную документацию в безопасное, доступное для поиска, самообновляющееся конкурентное преимущество. И это за небольшую долю стоимости устаревших решений.**
 
 &nbsp;
 
@@ -78,31 +90,31 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-В отличие от продуктов, которые используют ваши конкуренты, Orion – это платформа, предназначенная для получения превосходной, обслуживаемой, конфиденциальной, но легко находимой корпоративной документации с самой богатой, но наиболее понятной, управляемой сетью ссылок / зависимостей на рынке. **Это превращает коллективный опыт вашей организации из обязательства, которое утекает в ваше самое надежное конкурентное преимущество. **
+**<span class="text-white">Это превращает коллективный опыт вашей организации из обязательства, которое утекает в ваше самое долговременное конкурентное преимущество.</span>**
 
 &nbsp;
 
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
-<div class="card-header">Более безопасный и лучший продукт для <span class="text-white">Меньше денег</span>&nbsp;<i class="fa fa-chart-line"></i>
+<div class="card-header">7 способов повысить окупаемость инвестиций с Orion <i class="fa fa-chart-line"></i>
 
 </div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Существенное снижение риска безопасности :fa-lock:
+&nbsp;&nbsp;<a id="fn-1" href="#1">1</a>. Значительное снижение рисков безопасности :fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Реальная математика / интеграция данных с поиском и преобразованием ИИ, а также ядро обработки данных и пакет векторной графики :fa-infinity:
+&nbsp;&nbsp;<a id="fn-2" href="#2">2</a>. Сделать сложные данные действительно полезными :fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Поддержка искусственного интеллекта :fa-robot:
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>. Получите реальную поддержку ИИ от агентов (без риска) :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Инструментарий обработки содержимого в наборе :fa-map-location-dot:
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>. Держите ваш контент чистым и надежным :fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. [<span class="text-white">Экономьте $100K / год</span>](https://www.atlassian.com/software/confluence/pricing) со [Корпоративное лицензирование Orion $0 за место / на веб-сайте](plans) :fa-scale-balanced:
+&nbsp;&nbsp;<a id="fn-5" href="#5">5</a>. Масштабирование без затрат на место :fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. [<span class="text-white">Сэкономьте $400+ в месяц</span>](https://www.atlassian.com/software/confluence/pricing) со [Бизнес-план Ориона](plans) над совместимым функцией Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6</a>. Значительно сократите расходы на вики :fa-money-check-dollar:
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Доступные и амортизируемые затраты на переключение от слияния :fa-arrow-right-arrow-left:
+&nbsp;&nbsp;<a id="fn-7" href="#7">7</a>. Переключение без обычных проблем и расходов :fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -136,7 +148,7 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
-Например, эта страница [Сетка сравнения характеристик](#h1-feature-comparison-grid) генерируется сборкой Ориона из **а-естественного языка-переводимого, доступного для поиска `YAML` вложение** на эту страницу; что сборка одновременно превращается в [`JSON`](index.page/grid.json{{lang}}). Буквальная невозможность с другими вики-решениями.
+Например, эта страница [Сетка сравнения характеристик](#h1-feature-comparison-grid) генерируется сборкой Ориона из **а-естественного языка-переводимого, доступного для поиска `YAML` вложение** на эту страницу; что сборка одновременно превращается в [`JSON`](index.page/grid.json{{lang}}) для [внешнее потребление](https://www.erenkrantz.com/CREST/). Буквальная невозможность с другими вики-решениями.
 
 &nbsp;
 
@@ -246,6 +258,18 @@ Orion – это платформа Jamstack Wiki, которая обеспеч
 
 &nbsp;
 
+**Замените свою старую вики-версию Confluence на Орион**
+
+<center>
+
+![Логотип Orion](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**современная, масштабируемая, высокопроизводительная система управления знаниями.**
+
+&nbsp;
+
 ## Орион создан для лидеров, которые отказываются селиться :fa-seedling:
 
 &nbsp;
@@ -349,6 +373,12 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 
 &nbsp;
 
+<center>
+<img src="technology.page/stack" title="tech stack" style="width:100%">
+</center>
+
+&nbsp;
+
 Если вы устали от лицензирования на место и выбора на ЦП, взвешивая вас с другими поставщиками хостинга Jamstack, когда вам просто нужно исправить опечатку, [связаться с нами](/contact).
 
 &nbsp;
@@ -422,7 +452,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 
 &nbsp;
 
-Идите в своем собственном темпе, используйте столько сотрудников / предварительный просмотр / правки / фиксации / филиалы, сколько вам нравится, и платите только за то, что вы *фактически используете* в нашей инфраструктуре. Просто возьмите с собой улучшенную платформу CSS / JavaScript, сценарии perl и шаблоны Django, и мы позаботимся об остальной части вашей настройки без дополнительной платы. Мы рекомендуем **Bootstrap 5** для стилей css/js, так как это то, что мы используем внутри; но это полностью зависит от вас.
+Идите в своем собственном темпе, используйте столько сотрудников / предварительный просмотр / правки / фиксации / филиалы, сколько вам нравится, и платите только за то, что вы *фактически используете* в нашей инфраструктуре.
 
 &nbsp;
 
@@ -454,11 +484,21 @@ The underlying Static Site Generator: с открытым исходным ко�
 
 [Позвоните нам или напишите нам](/contact) сегодня.
 
+</center>
+
 &nbsp;
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
-<div class="card-header">Начало работы</div>
-<div class="card-body">
+<div class="accordion" id="getting-started-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="getting-started-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-target" aria-expanded="false" aria-controls="getting-started-target">
+
+## Начало работы
+
+</button>
+</div>
+
+<div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
 Самый быстрый способ начать – играть с сборкой по умолчанию @SunStarSys/orion <https://iconoclasts.blog> и погасить источники разметки в `trunk/content`.  ~90% настроек стилей находятся в [`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; Приспосабливайтесь к вкусу!
 
@@ -470,8 +510,7 @@ The underlying Static Site Generator: с открытым исходным ко�
 
 </div>
 </div>
-</center>
-
+</div>
 </div>
 </div>
 

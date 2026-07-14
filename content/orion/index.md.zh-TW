@@ -3,7 +3,7 @@ acl: '@staff=rw, *=r'
 categories: ~
 dependencies: '*.md.zh-TW api/index.md.zh-TW'
 keywords: wiki、jamstack、blog、secure、safe
-status: 驗證 =48784
+status: 驗證 =48904
 title: SunStar 系統的 Orion
 ---
 
@@ -23,7 +23,19 @@ Orion 是提供服務的 Jamstack Wiki 平台[不可駭客的安全性](security
 
 &nbsp;
 
-為何選擇 Orion？由於在資料外洩和 SaaS 帳單中，您的知識應該是最大的資產，而不是負債。Orion 將分散的文件變成安全、可搜尋且自我更新的競爭優勢。舊有解決方案的成本也大幅降低。
+**以 Orion 取代您的舊系統 **
+
+<center>
+
+![Orion 標誌](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**現代化、可擴展的高效能知識管理系統。**
+
+&nbsp;
+
+為何選擇 Orion？由於在資料外洩和 SaaS 帳單中，您的知識應該是最大的資產，而不是負債。**Orion 會將分散的文件變成安全、可搜尋且自我更新的競爭優勢。這樣一來，舊有解決方案的成本就會大幅降低。**
 
 &nbsp;
 
@@ -78,31 +90,31 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-不同於競爭對手停滯的產品，Orion 是設計用來提供卓越、可維護、機密且易於定位的企業文件架構，具備市場上最豐富且最可理解的管理連結 / 相依性網路。** 它將您的組織集體體驗從負債轉變為最持久的競爭優勢。**
+**<span class="text-white">這樣一來，您組織的整體體驗就會流失，成為您最持久的競爭優勢。</span>**
 
 &nbsp;
 
 <center>
 
 <div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-bottom:16px">
-<div class="card-header">更安全、更好的產品<span class="text-white">減少金錢</span>&nbsp;<i class="fa fa-chart-line"></i>
+<div class="card-header">運用 Orion 提升投資報酬率的 7 種方法<i class="fa fa-chart-line"></i>
 
 </div>
 <div class="card-body" style="text-align:left">
 
-&nbsp;&nbsp;<a id="fn-1" href="#1">1 個</a>。重大證券風險降低:fa-lock:
+&nbsp;&nbsp;<a id="fn-1" href="#1">1 個</a>。大幅降低您的安全性風險:fa-lock:
 
-&nbsp;&nbsp;<a id="fn-2" href="#2">2 個</a>。Real Math / Data Integration with Search and AI Translation，加上資料處理引擎和向量圖形套件:fa-infinity:
+&nbsp;&nbsp;<a id="fn-2" href="#2">2 個</a>。使複雜資料可實際使用:fa-infinity:
 
-&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。True Agent AI 支援:fa-robot:
+&nbsp;&nbsp;<a id="fn-3" href="#3">3</a>。取得 Real Agentic AI 支援 (無風險) :fa-robot:
 
-&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。組合內容策展工具:fa-map-location-dot:
+&nbsp;&nbsp;<a id="fn-4" href="#4">4</a>。保持您的內容清晰可靠:fa-map-location-dot:
 
-&nbsp;&nbsp;<a id="fn-5" href="#5">5 個</a>. [<span class="text-white">每年儲存 $100K</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的每座位 $0 / 每網站企業授權](plans) :fa-scale-balanced:
+&nbsp;&nbsp;<a id="fn-5" href="#5">5 個</a>。不使用每座位成本調整規模:fa-scale-balanced:
 
-&nbsp;&nbsp;<a id="fn-6" href="#6">6 歲</a>. [<span class="text-white">每月節省 $400 以上</span>](https://www.atlassian.com/software/confluence/pricing) 取代為[Orion 的業務計畫](plans) 超過功能可比較的 Confluence Premium :fa-money-check-dollar:
+&nbsp;&nbsp;<a id="fn-6" href="#6">6 歲</a>。顯著降低您的 Wiki 成本:fa-money-check-dollar:
 
-&nbsp;&nbsp;<a id="fn-7" href="#7">7 天</a>。經濟實惠、可攤銷的轉換成本:fa-arrow-right-arrow-left:
+&nbsp;&nbsp;<a id="fn-7" href="#7">7 天</a>。切換沒有一般疼痛與費用:fa-arrow-right-arrow-left:
 
 </div>
 </div>
@@ -136,7 +148,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
-例如，這個非常頁面[功能比較方格](#h1-feature-comparison-grid) 由 **a-natural-language-translatable，searchable 所產生的 Orion 版本`YAML` 此頁面的附件 **；組建會同時轉換成[`JSON`](index.page/grid.json{{lang}})。與其他 Wiki 解決方案的文字不穩定。
+例如，這個非常頁面[功能比較方格](#h1-feature-comparison-grid) 由 **a-natural-language-translatable，searchable 所產生的 Orion 版本`YAML` 此頁面的附件 **；組建會同時轉換成[`JSON`](index.page/grid.json{{lang}}) 針對[外部消費](https://www.erenkrantz.com/CREST/)。與其他 Wiki 解決方案的文字不穩定。
 
 &nbsp;
 
@@ -246,6 +258,18 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 &nbsp;
 
+**以 Orion 取代您的傳統 Confluence wiki**
+
+<center>
+
+![Orion 標誌](https://www.sunstarsys.com/images/sunstar-orion-symbol-linear.png)
+
+</center>
+
+**現代化、可擴展的高效能知識管理系統。**
+
+&nbsp;
+
 ## Orion 專為拒絕解決的領導者而設:fa-seedling:
 
 &nbsp;
@@ -295,7 +319,7 @@ Orion 的真正設定不僅僅是另一個 Wiki 平台&mdash; 這是我們專有
 
 <div class="fade">
 
-- :fa-business-time: **任何商務疲累的維基經濟體** &mdash; 消除昂貴的 SaaS 訂閱、可減少員工時間的脆弱免費工具，以及拖慢團隊運作的過時系統。Orion 讓您以部分總體擁有成本擁有企業電力 (通常不到 50,000 美元，適用於整個企業使用)。
+- :fa-business-time: **任何商務疲累的維基經濟體** &mdash; 消除昂貴的 SaaS 訂閱、可減少員工時間的脆弱免費工具，以及拖慢團隊運作的過時系統。Orion 讓您以部分總體擁有成本擁有企業電力 (通常在每年 5 萬美元以下以供全企業使用)。
 
 </div>
 
@@ -346,6 +370,12 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 &nbsp;
 
 需要更多的馬力比一個[像 Hugo 這樣的單色小馬](https://www.iconoclasts.blog/joe/ssg) 罐頭:fa-horse:?
+
+&nbsp;
+
+<center>
+<img src="technology.page/stack" title="tech stack" style="width:100%">
+</center>
 
 &nbsp;
 
@@ -422,7 +452,7 @@ placeholder="Email Walk-Through" />&nbsp;<button type="submit" name="submit" val
 
 &nbsp;
 
-您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分行，並僅支付在我們的基礎設施上使用* 的費用。只要攜帶您自己的 AI 增強型 css/javascript 架構、Perl 指令碼和 Django 範本，我們就能免費處理其他設定。建議使用 **Bootstrap 5** 作為 css/js 樣式，因為它是內部使用的；但完全由您決定。
+您可以按照自己的步調，使用任意數量的員工 / 預覽 / 編輯 / 確認 / 分行，並僅支付在我們的基礎設施上使用* 的費用。
 
 &nbsp;
 
@@ -454,11 +484,21 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 [給我們打電話或給我們留言](/contact) 今天。
 
+</center>
+
 &nbsp;
 
-<div class="card border-primary-emphasis fade" style="max-width:25rem;background-color:#A9BDBD;color:#392806;margin-top:10px">
-<div class="card-header">入門</div>
-<div class="card-body">
+<div class="accordion" id="getting-started-container" style="background-color: transparent !important; color: black">
+<div class="accordion-item" style="background-color: transparent !important; padding-bottom: 0px; border: none">
+<div class="accordion-header" id="getting-started-heading">
+<button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#getting-started-target" aria-expanded="false" aria-controls="getting-started-target">
+
+## 入門
+
+</button>
+</div>
+
+<div id="getting-started-target" class="accordion-collapse collapse" aria-labelledby="getting-started-heading" data-bs-parent="#getting-started-container" style="background-color: transparent !important; border: none; color: black">
 
 最快的方法是使用 @SunStarSys/orion 的預設建置版本來播放<https://iconoclasts.blog> 並清除以下的 Markdown 來源：`trunk/content`。   約 90% 的樣式自訂項目位於[`trunk/content/css/local.css`](https://github.com/SunStarSys/www.iconoclasts.blog/blob/trunk/content/css/local.css) &mdash; 調整品味！
 
@@ -470,8 +510,7 @@ The underlying Static Site Generator: 開源於 GitHub 的 Apache License 2.0 �
 
 </div>
 </div>
-</center>
-
+</div>
 </div>
 </div>
 
