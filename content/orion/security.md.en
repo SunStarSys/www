@@ -179,7 +179,7 @@ Consequently, the editing experience happens on an impossible-to-access-without-
 
 In reality, the cost is a few seconds more of exposure to the build's technical machinery and static file deployment process before being able to view committed, published changes on the live production website.
 
-And the benefit? You will **never see your live website get hacked again** through [zero-day or unpatched vulnerabilities](https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html) in the rendering webserver's software stack. Moreover, the editing site is **invulnerable to anonymous hacking efforts**, so you are in a much better security-architectural position with us than with any other wiki vendor on Earth, regardless of the additional protections implemented in the remainder of this document.
+And the benefit? You will **never see your live website get hacked again** through [zero-day](https://www.cvedetails.com/cve/CVE-2026-58521/) or [unpatched vulnerabilities](https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html) in the rendering webserver's software stack. Moreover, the editing site is **invulnerable to anonymous hacking efforts**, so you are in a much better security-architectural position with us than with any other wiki vendor on Earth, regardless of the additional protections implemented in the remainder of this document.
 
 Neat trick, ain't it?
 
