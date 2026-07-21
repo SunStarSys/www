@@ -1,5 +1,5 @@
 title: SunStar Systems' Orion
-status: verified=49987
+status: verified=49991
 keywords: wiki,jamstack,blog,secure,safe,confluence,notion
 dependencies: *.md.en api/index.md.en
 acl: @staff=rw, *=r
@@ -378,7 +378,7 @@ placeholder="Email Free Consult" />&nbsp;<button type="submit" name="submit" val
 
 Need more horsepower than a [one-trick pony like Hugo](https://www.iconoclasts.blog/joe/ssg) can muster :fa-horse:?
 
-Tired of the PHP [security theater](https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html) :fa-masks-theater:?
+Tired of the PHP [security](https://www.cvedetails.com/cve/CVE-2026-58521/) [theater](https://thehackernews.com/2026/07/new-wp2shell-wordpress-core-flaw-lets.html) :fa-masks-theater:?
 
 &nbsp;
 
